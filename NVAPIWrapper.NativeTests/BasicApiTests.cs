@@ -71,6 +71,36 @@ namespace NVAPIWrapper.NativeTests
             Assert.Contains(functions, entry => entry.Name == "NvAPI_GetErrorMessage" && entry.IsAvailable);
         }
 
+        [SkippableFact]
+        public unsafe void EnumeratePhysicalGpus_ShouldReturnArray()
+        {
+            Skip.If(_api == null, _skipReason);
+
+            var gpus = _api.EnumeratePhysicalGpus();
+            Assert.NotNull(gpus);
+            Assert.InRange(gpus.Length, 0, NVAPI.NVAPI_MAX_PHYSICAL_GPUS);
+        }
+
+        [SkippableFact]
+        public unsafe void EnumerateLogicalGpus_ShouldReturnArray()
+        {
+            Skip.If(_api == null, _skipReason);
+
+            var gpus = _api.EnumerateLogicalGpus();
+            Assert.NotNull(gpus);
+            Assert.InRange(gpus.Length, 0, NVAPI.NVAPI_MAX_LOGICAL_GPUS);
+        }
+
+        [SkippableFact]
+        public unsafe void EnumerateNvidiaDisplayHandles_ShouldReturnArray()
+        {
+            Skip.If(_api == null, _skipReason);
+
+            var displays = _api.EnumerateNvidiaDisplayHandles();
+            Assert.NotNull(displays);
+            Assert.InRange(displays.Length, 0, NVAPI.NVAPI_MAX_DISPLAYS);
+        }
+
         public void Dispose()
         {
             _api?.Dispose();

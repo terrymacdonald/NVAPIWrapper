@@ -13,6 +13,9 @@ namespace NVAPIWrapper
         private const uint NvApiIdUnload = 0xD22BDD7E;
         private const uint NvApiIdGetErrorMessage = 0x6C2D048C;
         private const uint NvApiIdGetInterfaceVersionString = 0x01053FA5;
+        private const uint NvApiIdEnumPhysicalGPUs = 0xE5AC921F;
+        private const uint NvApiIdEnumLogicalGPUs = 0x48B3EA59;
+        private const uint NvApiIdEnumNvidiaDisplayHandle = 0x9ABDD40D;
 
         private readonly NVAPINative.NvApiQueryInterfaceDelegate _queryInterface;
         private IntPtr _module;
@@ -156,6 +159,107 @@ namespace NVAPIWrapper
         }
 
         /// <summary>
+        /// Enumerate physical GPU handles.
+        /// </summary>
+        /// <returns>Array of physical GPU handles, or empty if none are found.</returns>
+        public unsafe NvPhysicalGpuHandle__*[] EnumeratePhysicalGpus()
+        {
+            ThrowIfDisposed();
+
+            var enumPhysical = GetRequiredFunction<NvApiEnumPhysicalGPUsDelegate>(NvApiIdEnumPhysicalGPUs, "NvAPI_EnumPhysicalGPUs");
+            var handles = stackalloc NvPhysicalGpuHandle__*[NVAPI.NVAPI_MAX_PHYSICAL_GPUS];
+            uint count = 0;
+
+            var status = enumPhysical(handles, &count);
+            if (status == _NvAPI_Status.NVAPI_NVIDIA_DEVICE_NOT_FOUND || status == _NvAPI_Status.NVAPI_NOT_SUPPORTED)
+                return new NvPhysicalGpuHandle__*[0];
+
+            if (status != _NvAPI_Status.NVAPI_OK)
+                throw new NVAPIException(status, TryGetErrorMessage(status));
+
+            if (count == 0)
+                return new NvPhysicalGpuHandle__*[0];
+
+            var max = (int)Math.Min(count, NVAPI.NVAPI_MAX_PHYSICAL_GPUS);
+            var result = new NvPhysicalGpuHandle__*[max];
+            for (var i = 0; i < max; i++)
+            {
+                result[i] = handles[i];
+            }
+
+            return result;
+        }
+
+        /// <summary>
+        /// Enumerate logical GPU handles.
+        /// </summary>
+        /// <returns>Array of logical GPU handles, or empty if none are found.</returns>
+        public unsafe NvLogicalGpuHandle__*[] EnumerateLogicalGpus()
+        {
+            ThrowIfDisposed();
+
+            var enumLogical = GetRequiredFunction<NvApiEnumLogicalGPUsDelegate>(NvApiIdEnumLogicalGPUs, "NvAPI_EnumLogicalGPUs");
+            var handles = stackalloc NvLogicalGpuHandle__*[NVAPI.NVAPI_MAX_LOGICAL_GPUS];
+            uint count = 0;
+
+            var status = enumLogical(handles, &count);
+            if (status == _NvAPI_Status.NVAPI_NVIDIA_DEVICE_NOT_FOUND || status == _NvAPI_Status.NVAPI_NOT_SUPPORTED)
+                return new NvLogicalGpuHandle__*[0];
+
+            if (status != _NvAPI_Status.NVAPI_OK)
+                throw new NVAPIException(status, TryGetErrorMessage(status));
+
+            if (count == 0)
+                return new NvLogicalGpuHandle__*[0];
+
+            var max = (int)Math.Min(count, NVAPI.NVAPI_MAX_LOGICAL_GPUS);
+            var result = new NvLogicalGpuHandle__*[max];
+            for (var i = 0; i < max; i++)
+            {
+                result[i] = handles[i];
+            }
+
+            return result;
+        }
+
+        /// <summary>
+        /// Enumerate NVIDIA display handles.
+        /// </summary>
+        /// <returns>Array of display handles, or empty if none are found.</returns>
+        public unsafe NvDisplayHandle__*[] EnumerateNvidiaDisplayHandles()
+        {
+            ThrowIfDisposed();
+
+            var enumDisplays = GetRequiredFunction<NvApiEnumNvidiaDisplayHandleDelegate>(NvApiIdEnumNvidiaDisplayHandle, "NvAPI_EnumNvidiaDisplayHandle");
+            var handles = new NvDisplayHandle__*[NVAPI.NVAPI_MAX_DISPLAYS];
+            var count = 0;
+
+            for (uint index = 0; index < NVAPI.NVAPI_MAX_DISPLAYS; index++)
+            {
+                NvDisplayHandle__* handle;
+                var status = enumDisplays(index, &handle);
+
+                if (status == _NvAPI_Status.NVAPI_END_ENUMERATION)
+                    break;
+
+                if (status == _NvAPI_Status.NVAPI_NVIDIA_DEVICE_NOT_FOUND || status == _NvAPI_Status.NVAPI_NOT_SUPPORTED)
+                    return new NvDisplayHandle__*[0];
+
+                if (status != _NvAPI_Status.NVAPI_OK)
+                    throw new NVAPIException(status, TryGetErrorMessage(status));
+
+                handles[count++] = handle;
+            }
+
+            if (count == 0)
+                return new NvDisplayHandle__*[0];
+
+            var result = new NvDisplayHandle__*[count];
+            Array.Copy(handles, result, count);
+            return result;
+        }
+
+        /// <summary>
         /// Dispose the NVAPI wrapper and release native resources.
         /// </summary>
         public void Dispose()
@@ -245,5 +349,14 @@ namespace NVAPIWrapper
 
         [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
         private unsafe delegate _NvAPI_Status NvApiGetInterfaceVersionStringDelegate(sbyte* description);
+
+        [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
+        private unsafe delegate _NvAPI_Status NvApiEnumPhysicalGPUsDelegate(NvPhysicalGpuHandle__** nvGPUHandle, uint* pGpuCount);
+
+        [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
+        private unsafe delegate _NvAPI_Status NvApiEnumLogicalGPUsDelegate(NvLogicalGpuHandle__** nvGPUHandle, uint* pGpuCount);
+
+        [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
+        private unsafe delegate _NvAPI_Status NvApiEnumNvidiaDisplayHandleDelegate(uint thisEnum, NvDisplayHandle__** pNvDispHandle);
     }
 }

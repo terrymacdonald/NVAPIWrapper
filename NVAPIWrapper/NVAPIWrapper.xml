@@ -34,6 +34,24 @@
             </summary>
             <returns>List of function info entries.</returns>
         </member>
+        <member name="M:NVAPIWrapper.NVAPIApi.EnumeratePhysicalGpus">
+            <summary>
+            Enumerate physical GPU handles.
+            </summary>
+            <returns>Array of physical GPU handles, or empty if none are found.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIApi.EnumerateLogicalGpus">
+            <summary>
+            Enumerate logical GPU handles.
+            </summary>
+            <returns>Array of logical GPU handles, or empty if none are found.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIApi.EnumerateNvidiaDisplayHandles">
+            <summary>
+            Enumerate NVIDIA display handles.
+            </summary>
+            <returns>Array of display handles, or empty if none are found.</returns>
+        </member>
         <member name="M:NVAPIWrapper.NVAPIApi.Dispose">
             <summary>
             Dispose the NVAPI wrapper and release native resources.
