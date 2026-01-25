@@ -77,6 +77,24 @@ __nvapi_deprecated_function
 --exclude
 __nvapi_deprecated_datatype
 
+# Force unsigned backing for NVAPI driver settings value enums that use unsigned literals.
+--with-type
+EValues_OGL_THREAD_CONTROL=uint
+--with-type
+EValues_OGL_DEFAULT_SWAP_INTERVAL_FRACTIONAL=uint
+--with-type
+EValues_SHIM_MCCOMPAT=uint
+--with-type
+EValues_SHIM_RENDERING_MODE=uint
+--with-type
+EValues_SHIM_RENDERING_OPTIONS=uint
+
+# NV_TRUE/NV_FALSE use NvBool; ClangSharp emits invalid bool->byte casts.
+--exclude
+NV_TRUE
+--exclude
+NV_FALSE
+
 # --- CONFIG ---
 --config
 latest-codegen

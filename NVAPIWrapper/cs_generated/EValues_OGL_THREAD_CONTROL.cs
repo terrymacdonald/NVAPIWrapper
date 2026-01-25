@@ -1,7 +1,8 @@
 namespace NVAPIWrapper
 {
     /// <include file='EValues_OGL_THREAD_CONTROL.xml' path='doc/member[@name="EValues_OGL_THREAD_CONTROL"]/*' />
-    public enum EValues_OGL_THREAD_CONTROL
+    [NativeTypeName("int")]
+    public enum EValues_OGL_THREAD_CONTROL : uint
     {
         /// <include file='EValues_OGL_THREAD_CONTROL.xml' path='doc/member[@name="EValues_OGL_THREAD_CONTROL.OGL_THREAD_CONTROL_ENABLE"]/*' />
         OGL_THREAD_CONTROL_ENABLE = 0x00000001,

@@ -1,7 +1,8 @@
 namespace NVAPIWrapper
 {
     /// <include file='EValues_SHIM_RENDERING_OPTIONS.xml' path='doc/member[@name="EValues_SHIM_RENDERING_OPTIONS"]/*' />
-    public enum EValues_SHIM_RENDERING_OPTIONS
+    [NativeTypeName("int")]
+    public enum EValues_SHIM_RENDERING_OPTIONS : uint
     {
         /// <include file='EValues_SHIM_RENDERING_OPTIONS.xml' path='doc/member[@name="EValues_SHIM_RENDERING_OPTIONS.SHIM_RENDERING_OPTIONS_DEFAULT_RENDERING_MODE"]/*' />
         SHIM_RENDERING_OPTIONS_DEFAULT_RENDERING_MODE = 0x00000000U,

@@ -1,7 +1,8 @@
 namespace NVAPIWrapper
 {
     /// <include file='EValues_SHIM_MCCOMPAT.xml' path='doc/member[@name="EValues_SHIM_MCCOMPAT"]/*' />
-    public enum EValues_SHIM_MCCOMPAT
+    [NativeTypeName("int")]
+    public enum EValues_SHIM_MCCOMPAT : uint
     {
         /// <include file='EValues_SHIM_MCCOMPAT.xml' path='doc/member[@name="EValues_SHIM_MCCOMPAT.SHIM_MCCOMPAT_INTEGRATED"]/*' />
         SHIM_MCCOMPAT_INTEGRATED = 0x00000000U,
@@ -25,7 +26,7 @@ namespace NVAPIWrapper
         SHIM_MCCOMPAT_AUTO_SELECT = 0x00000010U,
 
         /// <include file='EValues_SHIM_MCCOMPAT.xml' path='doc/member[@name="EValues_SHIM_MCCOMPAT.SHIM_MCCOMPAT_OVERRIDE_BIT"]/*' />
-        SHIM_MCCOMPAT_OVERRIDE_BIT = unchecked((int)(0x80000000U)),
+        SHIM_MCCOMPAT_OVERRIDE_BIT = 0x80000000U,
 
         /// <include file='EValues_SHIM_MCCOMPAT.xml' path='doc/member[@name="EValues_SHIM_MCCOMPAT.SHIM_MCCOMPAT_NUM_VALUES"]/*' />
         SHIM_MCCOMPAT_NUM_VALUES = 8,

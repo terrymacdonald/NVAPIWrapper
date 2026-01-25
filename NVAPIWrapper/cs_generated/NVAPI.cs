@@ -4132,12 +4132,6 @@ namespace NVAPIWrapper
         [NativeTypeName("#define NVAPI_SDK_VERSION 59145")]
         public const int NVAPI_SDK_VERSION = 59145;
 
-        [NativeTypeName("#define NV_TRUE ((NvBool)(0 == 0))")]
-        public const byte NV_TRUE = ((byte)(0 == 0));
-
-        [NativeTypeName("#define NV_FALSE ((NvBool)(0 != 0))")]
-        public const byte NV_FALSE = ((byte)(0 != 0));
-
         [NativeTypeName("#define NVAPI_DEFAULT_HANDLE 0")]
         public const int NVAPI_DEFAULT_HANDLE = 0;
 

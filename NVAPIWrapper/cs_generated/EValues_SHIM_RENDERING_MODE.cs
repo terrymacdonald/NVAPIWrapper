@@ -1,7 +1,8 @@
 namespace NVAPIWrapper
 {
     /// <include file='EValues_SHIM_RENDERING_MODE.xml' path='doc/member[@name="EValues_SHIM_RENDERING_MODE"]/*' />
-    public enum EValues_SHIM_RENDERING_MODE
+    [NativeTypeName("int")]
+    public enum EValues_SHIM_RENDERING_MODE : uint
     {
         /// <include file='EValues_SHIM_RENDERING_MODE.xml' path='doc/member[@name="EValues_SHIM_RENDERING_MODE.SHIM_RENDERING_MODE_INTEGRATED"]/*' />
         SHIM_RENDERING_MODE_INTEGRATED = 0x00000000U,
@@ -25,7 +26,7 @@ namespace NVAPIWrapper
         SHIM_RENDERING_MODE_AUTO_SELECT = 0x00000010U,
 
         /// <include file='EValues_SHIM_RENDERING_MODE.xml' path='doc/member[@name="EValues_SHIM_RENDERING_MODE.SHIM_RENDERING_MODE_OVERRIDE_BIT"]/*' />
-        SHIM_RENDERING_MODE_OVERRIDE_BIT = unchecked((int)(0x80000000U)),
+        SHIM_RENDERING_MODE_OVERRIDE_BIT = 0x80000000U,
 
         /// <include file='EValues_SHIM_RENDERING_MODE.xml' path='doc/member[@name="EValues_SHIM_RENDERING_MODE.SHIM_RENDERING_MODE_NUM_VALUES"]/*' />
         SHIM_RENDERING_MODE_NUM_VALUES = 8,

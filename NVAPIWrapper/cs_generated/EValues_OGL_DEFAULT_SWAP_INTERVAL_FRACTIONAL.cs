@@ -1,7 +1,8 @@
 namespace NVAPIWrapper
 {
     /// <include file='EValues_OGL_DEFAULT_SWAP_INTERVAL_FRACTIONAL.xml' path='doc/member[@name="EValues_OGL_DEFAULT_SWAP_INTERVAL_FRACTIONAL"]/*' />
-    public enum EValues_OGL_DEFAULT_SWAP_INTERVAL_FRACTIONAL
+    [NativeTypeName("int")]
+    public enum EValues_OGL_DEFAULT_SWAP_INTERVAL_FRACTIONAL : uint
     {
         /// <include file='EValues_OGL_DEFAULT_SWAP_INTERVAL_FRACTIONAL.xml' path='doc/member[@name="EValues_OGL_DEFAULT_SWAP_INTERVAL_FRACTIONAL.OGL_DEFAULT_SWAP_INTERVAL_FRACTIONAL_ZERO_SCANLINES"]/*' />
         OGL_DEFAULT_SWAP_INTERVAL_FRACTIONAL_ZERO_SCANLINES = 0,
