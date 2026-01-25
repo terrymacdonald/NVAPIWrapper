@@ -58,6 +58,19 @@ namespace NVAPIWrapper.NativeTests
             Assert.False(string.IsNullOrWhiteSpace(version));
         }
 
+        [SkippableFact]
+        public void GetAvailableFunctions_ShouldIncludeCoreEntries()
+        {
+            Skip.If(_api == null, _skipReason);
+
+            var functions = _api.GetAvailableFunctions();
+            Assert.NotEmpty(functions);
+
+            Assert.Contains(functions, entry => entry.Name == "NvAPI_Initialize" && entry.IsAvailable);
+            Assert.Contains(functions, entry => entry.Name == "NvAPI_Unload" && entry.IsAvailable);
+            Assert.Contains(functions, entry => entry.Name == "NvAPI_GetErrorMessage" && entry.IsAvailable);
+        }
+
         public void Dispose()
         {
             _api?.Dispose();

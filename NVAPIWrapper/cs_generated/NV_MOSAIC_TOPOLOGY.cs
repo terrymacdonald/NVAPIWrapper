@@ -45,7 +45,7 @@ namespace NVAPIWrapper
         [InlineArray(8 * 8)]
         public partial struct _gpuLayout_e__FixedBuffer
         {
-            public _Anonymous-1_e__Struct e0_0;
+            public NV_MOSAIC_GPU_LAYOUT_CELL e0_0;
         }
     }
 }
