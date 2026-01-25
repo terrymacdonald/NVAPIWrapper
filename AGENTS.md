@@ -14,21 +14,27 @@ This file captures the essential rules and context for agents working on this NV
     - Facade: This level uses helper functions to abstract away any memory management, and to make it very easy and simple to access the information provided by the NVAPI SDK.
 
 ## Core Development Rules
-- ALWAYS MAKE SURE THAT YOU TELL THE USER YOUR PLAN BEFORE YOU MAKE ANY CHANGES TO FILES AND GIVE THE USER A CHANCE TO REVIEW. ONLY MAKE CHANGS ONCE THE USER HAS GIVEN THEIR APPROVAL. THe user can tell you to perform multiple steps of a plan if you want to.
+- ALWAYS MAKE SURE THAT YOU TELL THE USER YOUR PLAN BEFORE YOU MAKE ANY CHANGES TO FILES AND GIVE THE USER A CHANCE TO REVIEW. ONLY MAKE CHANGS ONCE THE USER HAS GIVEN THEIR APPROVAL. The user can tell you to perform multiple steps of a plan if you want to.
 - When PLANNING, if you think you will get confused and lose track of where you are in your plan, then please write it down into a PLAN.md document. Keep the PLAN.md updated as you go, and make sure that the information you store in the PLAN.md is very descriptive and detailed, so that if you lose track in the future you can review the PLAN.md and you will know what to do and will do it well. Do not be overly concise as you lose a lot of nuance that will be important.
-- DO NOT MAKE THINGS UP. Always check the NVIDIA NVAPI SDK header files in `NVAPI\SDK\Include`, or the NVIDIA NVAPI SDK docs in `NVAPI\SDKDocs`, or the NVAPIWrapper code in `NVAPIWrapper` if you need more information. If you are unsure then tell the user. The user wants you to only use facts - not conjecture. Tune your temperature to the lowest you can. 
+- DO NOT MAKE THINGS UP. Always check the NVIDIA NVAPI SDK header files in `NVAPI\`, or the NVIDIA NVAPI SDK docs in `NVAPI\docs`, or the NVAPIWrapper code in `NVAPIWrapper` if you need more information. If you are unsure then tell the user. The user wants you to only use facts - not conjecture. Tune your temperature to the lowest you can. You must be factual in your answers - DO NOT INVENT OR MAKJE ANYTHING UP. ACCURACY IS THE MOST IMPORTANT THING.
 - Write code that tries to be robust and cope with problems getting the information requested, but without causing an exception or a crash. 
-- Naming/patterns: Preserve established helper naming (`NVAPI<Feature>ServicesHelper`, `Get<Feature>ServicesNative()`, `Get<Feature>Services()`). Replicate existing helper/test patterns for new features. Consistently of API is key. The user has spent a long time trying to keep everything standard and consistent, so make sure new creations align with existing patterns. Ask for permission for anything that does not align.
+- Naming/patterns: Preserve established coding patterns and styles across this project. Ask the user for permission if you need to deviate from those styles.
+- Preserve established helper naming (`NVAPI<Feature>ServicesHelper`, `Get<Feature>ServicesNative()`, `Get<Feature>Services()`). Replicate existing helper/test patterns for new features. Consistently of API is key. The user has spent a long time trying to keep everything standard and consistent, so make sure new creations align with existing patterns. Ask for permission for anything that does not align.
 - Platform: Windows-only, x64; relies on AMD Adrenalin drivers. Lightweight check is `IsNVAPIDllAvailable`.
 - Any initialisation code generated needs to avoid it or handle it when getting an NVAPI_ALREADY_INITIALIZED exception when trying to initialise NVAPI a second time, and avoid or handle NVAPI_NOT_SUPPORTED exceptions on optional functions.
+- Always make sure that the XML Comments that describe a function are always added to any functions and structs/enums so that XML documents can be generated for the DLL , so that they will be available in Intellisense when the VSCode or Visual Studio IDE is used.
+- If you need to run scripts, note that all development is being done on Windows 11 x64 machines, and within Powershell terminals. You MUST make sure that your scripts will run in a powershell environment on a Windows 11 x64 machine.
+
+## ClangSharpPInvokeGenerator development rules
+- If you need to change the ClangSharp created functions or tests, then the only way to modify them is by tweaking the ClangSharpConfig.rsp file within the `NVAPIWrapper\` folder.
+- Make sure that you only provide valid commands that can be used by ClangSharpPInvokeGenerator. Make sure the commands are valid before using them.
 
 ## Core Native-specific Development Rules
 - Follow the usage patterns shown in the NVIDIA NVAPI SDK Samples as closely as possible to ensure that the C# Native functions will work. The NVAPI SDK Samples can be found in NVAPI/Samples. Please also look at the NVAPI/Include folder and the NVAPI/SDKDoc folder for more information about how the NVAPI SDK works. 
 - Generated code: Do not hand-edit `cs_generated/`. Changes come from headers/config used by `ClangSharpPInvokeGenerator` (`GenerateBindings` target in `NVAPIWrapper.csproj`).
 - The Native level functions should always be developed and tested first. Those low level functions will be used by Facade level functions, so its important that we make sure that they Native functinos work before moving up to the higher-level Facade functions.
-- Initialization (Native): Use `using var NVAPI = NVAPIApi.Initialize();` by default, or `NVAPIApi.InitializeWithCallerAdl()` when integrating with an existing NVAPI session. Retrieve native system services via `NVAPI.GetSystemServices()` and wrap returned pointers in `ComPtr<T>` for lifetime safety.
-- Disposal (Native): Dispose any system services and child COM pointers before disposing `NVAPI`. `NVAPIApi.Dispose` calls `NVAPITerminate` and unloads the DLL; any call after disposal should throw `ObjectDisposedException`.
-
+- Initialization (Native): Use `using var NVAPI = NVAPIApi.Initialize();`.  `NVAPIApi.Initialize()` calls `NVAPI_Initialize()` and unloads the DLL;Wrap returned pointers for lifetime safety if needed.
+- Disposal (Native): Dispose any system services and child pointers before disposing `NVAPI`. `NVAPIApi.Dispose` calls `NVAPI_Unload` and unloads the DLL; any call after disposal should throw `ObjectDisposedException`.
 
 ## Core Facade-Specific Development Rules
 - Facade level objects should handle all underlying Native level memory management themselves. The user should not need to worry about it. This includes memory creation, disposal when objects are deleted, and handling functions being called multiple times in threads. Our aim is to never have memory leaks when using Facades.
@@ -44,6 +50,8 @@ This file captures the essential rules and context for agents working on this NV
 - Release ZIP: `./create_nvapi_release_zip.ps1` (produces artifacts/NVAPIwrapper-<version>-Release.zip).
 
 ## Testing Expectations
+- CRITICAL: The tests are designed to find errors in the NVAPIWrapper library. DO NOT PATCH TESTS SO THAT THEY RUN SUCCESSFULLY TO AVOID UNDERLYING ERRORS IN THE NVAPIWRAPPER LIBRARY. THE WHOLE POINT OF TESTING IS TO FIND UNDERLYING ERRORS IN THE NVAPIWRAPPER LIBRARY SO THAT THEY CAN BE FIXED. Any tests for 
+- Unsupported functionality: THere may be some features that are offered by the NVAPI SDK that are not supported by our tests hardware or the version of the driver we are using. ANY OPTIONAL FEATURES SHOULD BE GATED BYT TESTS THAT CONFIRM THEIR SUPPORT BEFORE THEY ARE RUN. Unsupported features should be skipped using xUnit.Skip.
 - Suites: xUnit in `NVAPIWrapper.NativeTests` (Native) and `NVAPIWrapper.FacadeTests` (Facade) targeting `net10.0`; hardware-aware and read-only (no tuning changes). Global xUnit parallelization is disabled.
 - Test one feature per individual test case, as we want to keep good visibility for the user as to which test fails.
 - Run (Native first): `dotnet test NVAPIWrapper.NativeTests/NVAPIWrapper.NativeTests.csproj --verbosity normal` (or from tests folder), or `./test_NVAPI.ps1`. Then run facades with `dotnet test NVAPIWrapper.FacadeTests/NVAPIWrapper.FacadeTests.csproj --verbosity normal`.
@@ -59,7 +67,7 @@ This file captures the essential rules and context for agents working on this NV
 - Hardware skip: Tests that need AMD GPU/driver or NVAPI DLL gracefully skip when missing.
 
 ## Usage Notes
-- DLL loading: `NVAPIApi` dynamically loads `amdNVAPI64.dll` via `LoadLibraryEx`; keep `NVAPINative.GetDllName()` and `NVAPIApi.LoadNVAPIDll()` in sync if names/paths change; surface errors via `NVAPIException`.
+- DLL loading: `NVAPIApi` dynamically loads `nvapi64.dll` via `LoadLibraryEx`; keep `NVAPINative.GetDllName()` and `NVAPIApi.LoadNVAPIDll()` in sync if names/paths change; surface errors via `NVAPIException`.
 - Data shapes: Helpers expose serializable `Info` structs (e.g., `GpuInfo`, `DisplayInfo`) and support apply/restore flows.
 - Samples: See `NVAPIWrapper/README.md` and `Samples/` for usage patterns (enumeration, capability checks, event listeners).
 

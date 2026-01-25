@@ -16,7 +16,7 @@ Write-Host ""
 $zipUrl = "https://github.com/NVIDIA/nvapi/archive/refs/heads/main.zip"
 $zipFilePath = Join-Path $scriptRoot "nvapi-main.zip"
 $destinationFolder = Join-Path $scriptRoot "nvapi"
-$tempExtractFolder = Join-Path $scriptRoot "nvapi-master"
+$tempExtractFolder = Join-Path $scriptRoot "nvapi-main"
 $outFolder = Join-Path $scriptRoot "out"
 
 # Function to validate NVAPI SDK completeness
