@@ -140,20 +140,16 @@ namespace NVAPIWrapper
         {
             ThrowIfDisposed();
 
-            var table = NVAPI.nvapi_interface_table;
+            var table = NVAPIInterfaceTable.Entries;
             var functions = new List<NVAPIFunctionInfo>(table.Length);
 
             foreach (var entry in table)
             {
-                if (entry.func == null)
+                if (string.IsNullOrEmpty(entry.Name))
                     continue;
 
-                var name = Marshal.PtrToStringAnsi((IntPtr)entry.func);
-                if (string.IsNullOrEmpty(name))
-                    continue;
-
-                var available = TryGetFunctionPointer(entry.id) != IntPtr.Zero;
-                functions.Add(new NVAPIFunctionInfo(name, entry.id, available));
+                var available = TryGetFunctionPointer(entry.Id) != IntPtr.Zero;
+                functions.Add(new NVAPIFunctionInfo(entry.Name, entry.Id, available));
             }
 
             return functions;

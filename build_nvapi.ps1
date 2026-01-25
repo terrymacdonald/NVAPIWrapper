@@ -136,7 +136,7 @@ try {
 
 Write-Host "Checking for NVIDIA NVAPI SDK..." -ForegroundColor Yellow
 # Check if NVAPI SDK headers are present
-$nvapiHeaderPath = "drivers.gpu.control-library\include\nvapi_api.h"
+$nvapiHeaderPath = "nvapi\\nvapi.h"
 if (-not (Test-Path $nvapiHeaderPath)) {
     Write-Host "Warning: NVAPI SDK headers not found at $nvapiHeaderPath" -ForegroundColor Yellow
     Write-Host "Please run prepare_nvapi.ps1 first to download the NVAPI SDK." -ForegroundColor Yellow

@@ -111,4 +111,8 @@
 		<Touch Files="$(BaseIntermediateOutputPath)ClangSharp.stamp" AlwaysCreate="true" />
 	</Target>
 
+	<Target Name="GenerateNvapiInterfaceTable" AfterTargets="GenerateFromClangSharp" BeforeTargets="CoreCompile">
+		<Exec Command="powershell -NoProfile -ExecutionPolicy Bypass -File &quot;$(MSBuildProjectDirectory)\..\generate_nvapi_interface_table.ps1&quot;" />
+	</Target>
+
 </Project>
