@@ -151,8 +151,8 @@ Deliverable:
 ## Current Status
 - Phase 0 and Phase 1 are complete.
 - Phase 2 is complete (ClangSharp config, shim header, csproj wiring, and solution scaffolding).
+- Phase 3 is in progress (NVAPINative loader, NVAPIApi initialization/unload, and NVAPIException added).
 - AGENTS.md updated to align with NVAPI concepts and paths.
-- No native API implementation work started yet.
 
 ## Next Action
 Begin Phase 3 by confirming the `NvAPI_QueryInterface` entrypoint signature and implementing the core native loader (`NVAPINative`) and `NVAPIApi` initialization/unload flow.
