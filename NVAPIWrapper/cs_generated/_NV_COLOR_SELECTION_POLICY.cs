@@ -1,0 +1,18 @@
+namespace NVAPIWrapper
+{
+    /// <include file='_NV_COLOR_SELECTION_POLICY.xml' path='doc/member[@name="_NV_COLOR_SELECTION_POLICY"]/*' />
+    public enum _NV_COLOR_SELECTION_POLICY
+    {
+        /// <include file='_NV_COLOR_SELECTION_POLICY.xml' path='doc/member[@name="_NV_COLOR_SELECTION_POLICY.NV_COLOR_SELECTION_POLICY_USER"]/*' />
+        NV_COLOR_SELECTION_POLICY_USER = 0,
+
+        /// <include file='_NV_COLOR_SELECTION_POLICY.xml' path='doc/member[@name="_NV_COLOR_SELECTION_POLICY.NV_COLOR_SELECTION_POLICY_BEST_QUALITY"]/*' />
+        NV_COLOR_SELECTION_POLICY_BEST_QUALITY = 1,
+
+        /// <include file='_NV_COLOR_SELECTION_POLICY.xml' path='doc/member[@name="_NV_COLOR_SELECTION_POLICY.NV_COLOR_SELECTION_POLICY_DEFAULT"]/*' />
+        NV_COLOR_SELECTION_POLICY_DEFAULT = NV_COLOR_SELECTION_POLICY_BEST_QUALITY,
+
+        /// <include file='_NV_COLOR_SELECTION_POLICY.xml' path='doc/member[@name="_NV_COLOR_SELECTION_POLICY.NV_COLOR_SELECTION_POLICY_UNKNOWN"]/*' />
+        NV_COLOR_SELECTION_POLICY_UNKNOWN = 0xFF,
+    }
+}

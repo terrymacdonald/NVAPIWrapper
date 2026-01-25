@@ -1,0 +1,21 @@
+namespace NVAPIWrapper
+{
+    /// <include file='_NV_DISPLAYCONFIG_FLAGS.xml' path='doc/member[@name="_NV_DISPLAYCONFIG_FLAGS"]/*' />
+    public enum _NV_DISPLAYCONFIG_FLAGS
+    {
+        /// <include file='_NV_DISPLAYCONFIG_FLAGS.xml' path='doc/member[@name="_NV_DISPLAYCONFIG_FLAGS.NV_DISPLAYCONFIG_VALIDATE_ONLY"]/*' />
+        NV_DISPLAYCONFIG_VALIDATE_ONLY = 0x00000001,
+
+        /// <include file='_NV_DISPLAYCONFIG_FLAGS.xml' path='doc/member[@name="_NV_DISPLAYCONFIG_FLAGS.NV_DISPLAYCONFIG_SAVE_TO_PERSISTENCE"]/*' />
+        NV_DISPLAYCONFIG_SAVE_TO_PERSISTENCE = 0x00000002,
+
+        /// <include file='_NV_DISPLAYCONFIG_FLAGS.xml' path='doc/member[@name="_NV_DISPLAYCONFIG_FLAGS.NV_DISPLAYCONFIG_DRIVER_RELOAD_ALLOWED"]/*' />
+        NV_DISPLAYCONFIG_DRIVER_RELOAD_ALLOWED = 0x00000004,
+
+        /// <include file='_NV_DISPLAYCONFIG_FLAGS.xml' path='doc/member[@name="_NV_DISPLAYCONFIG_FLAGS.NV_DISPLAYCONFIG_FORCE_MODE_ENUMERATION"]/*' />
+        NV_DISPLAYCONFIG_FORCE_MODE_ENUMERATION = 0x00000008,
+
+        /// <include file='_NV_DISPLAYCONFIG_FLAGS.xml' path='doc/member[@name="_NV_DISPLAYCONFIG_FLAGS.NV_FORCE_COMMIT_VIDPN"]/*' />
+        NV_FORCE_COMMIT_VIDPN = 0x00000010,
+    }
+}

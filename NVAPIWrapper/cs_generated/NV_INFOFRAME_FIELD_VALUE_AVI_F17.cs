@@ -1,0 +1,15 @@
+namespace NVAPIWrapper
+{
+    /// <include file='NV_INFOFRAME_FIELD_VALUE_AVI_F17.xml' path='doc/member[@name="NV_INFOFRAME_FIELD_VALUE_AVI_F17"]/*' />
+    public enum NV_INFOFRAME_FIELD_VALUE_AVI_F17
+    {
+        /// <include file='NV_INFOFRAME_FIELD_VALUE_AVI_F17.xml' path='doc/member[@name="NV_INFOFRAME_FIELD_VALUE_AVI_F17.NV_INFOFRAME_FIELD_VALUE_AVI_F17_FALSE"]/*' />
+        NV_INFOFRAME_FIELD_VALUE_AVI_F17_FALSE = 0,
+
+        /// <include file='NV_INFOFRAME_FIELD_VALUE_AVI_F17.xml' path='doc/member[@name="NV_INFOFRAME_FIELD_VALUE_AVI_F17.NV_INFOFRAME_FIELD_VALUE_AVI_F17_TRUE"]/*' />
+        NV_INFOFRAME_FIELD_VALUE_AVI_F17_TRUE,
+
+        /// <include file='NV_INFOFRAME_FIELD_VALUE_AVI_F17.xml' path='doc/member[@name="NV_INFOFRAME_FIELD_VALUE_AVI_F17.NV_INFOFRAME_FIELD_VALUE_AVI_F17_AUTO"]/*' />
+        NV_INFOFRAME_FIELD_VALUE_AVI_F17_AUTO = 3,
+    }
+}

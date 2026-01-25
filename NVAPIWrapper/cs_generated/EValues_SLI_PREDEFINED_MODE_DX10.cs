@@ -1,0 +1,30 @@
+namespace NVAPIWrapper
+{
+    /// <include file='EValues_SLI_PREDEFINED_MODE_DX10.xml' path='doc/member[@name="EValues_SLI_PREDEFINED_MODE_DX10"]/*' />
+    public enum EValues_SLI_PREDEFINED_MODE_DX10
+    {
+        /// <include file='EValues_SLI_PREDEFINED_MODE_DX10.xml' path='doc/member[@name="EValues_SLI_PREDEFINED_MODE_DX10.SLI_PREDEFINED_MODE_DX10_AUTOSELECT"]/*' />
+        SLI_PREDEFINED_MODE_DX10_AUTOSELECT = 0x00000000,
+
+        /// <include file='EValues_SLI_PREDEFINED_MODE_DX10.xml' path='doc/member[@name="EValues_SLI_PREDEFINED_MODE_DX10.SLI_PREDEFINED_MODE_DX10_FORCE_SINGLE"]/*' />
+        SLI_PREDEFINED_MODE_DX10_FORCE_SINGLE = 0x00000001,
+
+        /// <include file='EValues_SLI_PREDEFINED_MODE_DX10.xml' path='doc/member[@name="EValues_SLI_PREDEFINED_MODE_DX10.SLI_PREDEFINED_MODE_DX10_FORCE_AFR"]/*' />
+        SLI_PREDEFINED_MODE_DX10_FORCE_AFR = 0x00000002,
+
+        /// <include file='EValues_SLI_PREDEFINED_MODE_DX10.xml' path='doc/member[@name="EValues_SLI_PREDEFINED_MODE_DX10.SLI_PREDEFINED_MODE_DX10_FORCE_AFR2"]/*' />
+        SLI_PREDEFINED_MODE_DX10_FORCE_AFR2 = 0x00000003,
+
+        /// <include file='EValues_SLI_PREDEFINED_MODE_DX10.xml' path='doc/member[@name="EValues_SLI_PREDEFINED_MODE_DX10.SLI_PREDEFINED_MODE_DX10_FORCE_SFR"]/*' />
+        SLI_PREDEFINED_MODE_DX10_FORCE_SFR = 0x00000004,
+
+        /// <include file='EValues_SLI_PREDEFINED_MODE_DX10.xml' path='doc/member[@name="EValues_SLI_PREDEFINED_MODE_DX10.SLI_PREDEFINED_MODE_DX10_FORCE_AFR_OF_SFR__FALLBACK_3AFR"]/*' />
+        SLI_PREDEFINED_MODE_DX10_FORCE_AFR_OF_SFR__FALLBACK_3AFR = 0x00000005,
+
+        /// <include file='EValues_SLI_PREDEFINED_MODE_DX10.xml' path='doc/member[@name="EValues_SLI_PREDEFINED_MODE_DX10.SLI_PREDEFINED_MODE_DX10_NUM_VALUES"]/*' />
+        SLI_PREDEFINED_MODE_DX10_NUM_VALUES = 6,
+
+        /// <include file='EValues_SLI_PREDEFINED_MODE_DX10.xml' path='doc/member[@name="EValues_SLI_PREDEFINED_MODE_DX10.SLI_PREDEFINED_MODE_DX10_DEFAULT"]/*' />
+        SLI_PREDEFINED_MODE_DX10_DEFAULT = SLI_PREDEFINED_MODE_DX10_AUTOSELECT,
+    }
+}

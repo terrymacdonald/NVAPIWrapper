@@ -1,0 +1,60 @@
+namespace NVAPIWrapper
+{
+    /// <include file='NV_NGX_DLSS_OVERRIDE_BITFIELD.xml' path='doc/member[@name="NV_NGX_DLSS_OVERRIDE_BITFIELD"]/*' />
+    public enum NV_NGX_DLSS_OVERRIDE_BITFIELD
+    {
+        /// <include file='NV_NGX_DLSS_OVERRIDE_BITFIELD.xml' path='doc/member[@name="NV_NGX_DLSS_OVERRIDE_BITFIELD.NV_NGX_DLSS_OVERRIDE_FLAG_INITIALIZED"]/*' />
+        NV_NGX_DLSS_OVERRIDE_FLAG_INITIALIZED = (1 << (0)),
+
+        /// <include file='NV_NGX_DLSS_OVERRIDE_BITFIELD.xml' path='doc/member[@name="NV_NGX_DLSS_OVERRIDE_BITFIELD.NV_NGX_DLSS_OVERRIDE_FLAG_ENABLED"]/*' />
+        NV_NGX_DLSS_OVERRIDE_FLAG_ENABLED = (1 << (1)),
+
+        /// <include file='NV_NGX_DLSS_OVERRIDE_BITFIELD.xml' path='doc/member[@name="NV_NGX_DLSS_OVERRIDE_BITFIELD.NV_NGX_DLSS_OVERRIDE_FLAG_DLL_EXISTS"]/*' />
+        NV_NGX_DLSS_OVERRIDE_FLAG_DLL_EXISTS = (1 << (2)),
+
+        /// <include file='NV_NGX_DLSS_OVERRIDE_BITFIELD.xml' path='doc/member[@name="NV_NGX_DLSS_OVERRIDE_BITFIELD.NV_NGX_DLSS_OVERRIDE_FLAG_DLL_LOADED"]/*' />
+        NV_NGX_DLSS_OVERRIDE_FLAG_DLL_LOADED = (1 << (3)),
+
+        /// <include file='NV_NGX_DLSS_OVERRIDE_BITFIELD.xml' path='doc/member[@name="NV_NGX_DLSS_OVERRIDE_BITFIELD.NV_NGX_DLSS_OVERRIDE_FLAG_DLL_SELECTED"]/*' />
+        NV_NGX_DLSS_OVERRIDE_FLAG_DLL_SELECTED = (1 << (4)),
+
+        /// <include file='NV_NGX_DLSS_OVERRIDE_BITFIELD.xml' path='doc/member[@name="NV_NGX_DLSS_OVERRIDE_BITFIELD.NV_NGX_DLSS_OVERRIDE_FLAG_PRESET"]/*' />
+        NV_NGX_DLSS_OVERRIDE_FLAG_PRESET = (1 << (5)),
+
+        /// <include file='NV_NGX_DLSS_OVERRIDE_BITFIELD.xml' path='doc/member[@name="NV_NGX_DLSS_OVERRIDE_BITFIELD.NV_NGX_DLSS_OVERRIDE_FLAG_PERF_MODE"]/*' />
+        NV_NGX_DLSS_OVERRIDE_FLAG_PERF_MODE = (1 << (6)),
+
+        /// <include file='NV_NGX_DLSS_OVERRIDE_BITFIELD.xml' path='doc/member[@name="NV_NGX_DLSS_OVERRIDE_BITFIELD.NV_NGX_DLSS_OVERRIDE_FLAG_SCALING_RATIO"]/*' />
+        NV_NGX_DLSS_OVERRIDE_FLAG_SCALING_RATIO = (1 << (7)),
+
+        /// <include file='NV_NGX_DLSS_OVERRIDE_BITFIELD.xml' path='doc/member[@name="NV_NGX_DLSS_OVERRIDE_BITFIELD.NV_NGX_DLSS_OVERRIDE_FLAG_OPTIMAL_SETTINGS"]/*' />
+        NV_NGX_DLSS_OVERRIDE_FLAG_OPTIMAL_SETTINGS = (1 << (8)),
+
+        /// <include file='NV_NGX_DLSS_OVERRIDE_BITFIELD.xml' path='doc/member[@name="NV_NGX_DLSS_OVERRIDE_BITFIELD.NV_NGX_DLSS_OVERRIDE_FLAG_CREATED"]/*' />
+        NV_NGX_DLSS_OVERRIDE_FLAG_CREATED = (1 << (9)),
+
+        /// <include file='NV_NGX_DLSS_OVERRIDE_BITFIELD.xml' path='doc/member[@name="NV_NGX_DLSS_OVERRIDE_BITFIELD.NV_NGX_DLSS_OVERRIDE_FLAG_EVALUATE"]/*' />
+        NV_NGX_DLSS_OVERRIDE_FLAG_EVALUATE = (1 << (10)),
+
+        /// <include file='NV_NGX_DLSS_OVERRIDE_BITFIELD.xml' path='doc/member[@name="NV_NGX_DLSS_OVERRIDE_BITFIELD.NV_NGX_DLSS_OVERRIDE_FLAG_SR_DLAA_MODE"]/*' />
+        NV_NGX_DLSS_OVERRIDE_FLAG_SR_DLAA_MODE = (1 << (14)),
+
+        /// <include file='NV_NGX_DLSS_OVERRIDE_BITFIELD.xml' path='doc/member[@name="NV_NGX_DLSS_OVERRIDE_BITFIELD.NV_NGX_DLSS_OVERRIDE_FLAG_FG_MULTI_FRAME"]/*' />
+        NV_NGX_DLSS_OVERRIDE_FLAG_FG_MULTI_FRAME = (1 << (15)),
+
+        /// <include file='NV_NGX_DLSS_OVERRIDE_BITFIELD.xml' path='doc/member[@name="NV_NGX_DLSS_OVERRIDE_BITFIELD.NV_NGX_DLSS_OVERRIDE_FLAG_ERR_FAILED"]/*' />
+        NV_NGX_DLSS_OVERRIDE_FLAG_ERR_FAILED = (1 << (16)),
+
+        /// <include file='NV_NGX_DLSS_OVERRIDE_BITFIELD.xml' path='doc/member[@name="NV_NGX_DLSS_OVERRIDE_BITFIELD.NV_NGX_DLSS_OVERRIDE_FLAG_ERR_DENIED"]/*' />
+        NV_NGX_DLSS_OVERRIDE_FLAG_ERR_DENIED = (1 << (17)),
+
+        /// <include file='NV_NGX_DLSS_OVERRIDE_BITFIELD.xml' path='doc/member[@name="NV_NGX_DLSS_OVERRIDE_BITFIELD.NV_NGX_DLSS_OVERRIDE_FLAG_ERR_DRS"]/*' />
+        NV_NGX_DLSS_OVERRIDE_FLAG_ERR_DRS = (1 << (18)),
+
+        /// <include file='NV_NGX_DLSS_OVERRIDE_BITFIELD.xml' path='doc/member[@name="NV_NGX_DLSS_OVERRIDE_BITFIELD.NV_NGX_DLSS_OVERRIDE_FLAG_ERR_NOT_FOUND"]/*' />
+        NV_NGX_DLSS_OVERRIDE_FLAG_ERR_NOT_FOUND = (1 << (19)),
+
+        /// <include file='NV_NGX_DLSS_OVERRIDE_BITFIELD.xml' path='doc/member[@name="NV_NGX_DLSS_OVERRIDE_BITFIELD.NV_NGX_DLSS_OVERRIDE_FLAG_ERR_DLL_LOAD"]/*' />
+        NV_NGX_DLSS_OVERRIDE_FLAG_ERR_DLL_LOAD = (1 << (20)),
+    }
+}

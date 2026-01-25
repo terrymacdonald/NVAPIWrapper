@@ -1,0 +1,18 @@
+namespace NVAPIWrapper
+{
+    /// <include file='EValues_PS_TEXFILTER_NO_NEG_LODBIAS.xml' path='doc/member[@name="EValues_PS_TEXFILTER_NO_NEG_LODBIAS"]/*' />
+    public enum EValues_PS_TEXFILTER_NO_NEG_LODBIAS
+    {
+        /// <include file='EValues_PS_TEXFILTER_NO_NEG_LODBIAS.xml' path='doc/member[@name="EValues_PS_TEXFILTER_NO_NEG_LODBIAS.PS_TEXFILTER_NO_NEG_LODBIAS_OFF"]/*' />
+        PS_TEXFILTER_NO_NEG_LODBIAS_OFF = 0x00000000,
+
+        /// <include file='EValues_PS_TEXFILTER_NO_NEG_LODBIAS.xml' path='doc/member[@name="EValues_PS_TEXFILTER_NO_NEG_LODBIAS.PS_TEXFILTER_NO_NEG_LODBIAS_ON"]/*' />
+        PS_TEXFILTER_NO_NEG_LODBIAS_ON = 0x00000001,
+
+        /// <include file='EValues_PS_TEXFILTER_NO_NEG_LODBIAS.xml' path='doc/member[@name="EValues_PS_TEXFILTER_NO_NEG_LODBIAS.PS_TEXFILTER_NO_NEG_LODBIAS_NUM_VALUES"]/*' />
+        PS_TEXFILTER_NO_NEG_LODBIAS_NUM_VALUES = 2,
+
+        /// <include file='EValues_PS_TEXFILTER_NO_NEG_LODBIAS.xml' path='doc/member[@name="EValues_PS_TEXFILTER_NO_NEG_LODBIAS.PS_TEXFILTER_NO_NEG_LODBIAS_DEFAULT"]/*' />
+        PS_TEXFILTER_NO_NEG_LODBIAS_DEFAULT = PS_TEXFILTER_NO_NEG_LODBIAS_OFF,
+    }
+}

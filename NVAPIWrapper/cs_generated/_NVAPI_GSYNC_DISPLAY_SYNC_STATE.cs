@@ -1,0 +1,15 @@
+namespace NVAPIWrapper
+{
+    /// <include file='_NVAPI_GSYNC_DISPLAY_SYNC_STATE.xml' path='doc/member[@name="_NVAPI_GSYNC_DISPLAY_SYNC_STATE"]/*' />
+    public enum _NVAPI_GSYNC_DISPLAY_SYNC_STATE
+    {
+        /// <include file='_NVAPI_GSYNC_DISPLAY_SYNC_STATE.xml' path='doc/member[@name="_NVAPI_GSYNC_DISPLAY_SYNC_STATE.NVAPI_GSYNC_DISPLAY_SYNC_STATE_UNSYNCED"]/*' />
+        NVAPI_GSYNC_DISPLAY_SYNC_STATE_UNSYNCED = 0,
+
+        /// <include file='_NVAPI_GSYNC_DISPLAY_SYNC_STATE.xml' path='doc/member[@name="_NVAPI_GSYNC_DISPLAY_SYNC_STATE.NVAPI_GSYNC_DISPLAY_SYNC_STATE_SLAVE"]/*' />
+        NVAPI_GSYNC_DISPLAY_SYNC_STATE_SLAVE = 1,
+
+        /// <include file='_NVAPI_GSYNC_DISPLAY_SYNC_STATE.xml' path='doc/member[@name="_NVAPI_GSYNC_DISPLAY_SYNC_STATE.NVAPI_GSYNC_DISPLAY_SYNC_STATE_MASTER"]/*' />
+        NVAPI_GSYNC_DISPLAY_SYNC_STATE_MASTER = 2,
+    }
+}

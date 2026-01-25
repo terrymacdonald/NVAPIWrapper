@@ -1,0 +1,21 @@
+namespace NVAPIWrapper
+{
+    /// <include file='EValues_REFRESH_RATE_OVERRIDE.xml' path='doc/member[@name="EValues_REFRESH_RATE_OVERRIDE"]/*' />
+    public enum EValues_REFRESH_RATE_OVERRIDE
+    {
+        /// <include file='EValues_REFRESH_RATE_OVERRIDE.xml' path='doc/member[@name="EValues_REFRESH_RATE_OVERRIDE.REFRESH_RATE_OVERRIDE_APPLICATION_CONTROLLED"]/*' />
+        REFRESH_RATE_OVERRIDE_APPLICATION_CONTROLLED = 0x00000000,
+
+        /// <include file='EValues_REFRESH_RATE_OVERRIDE.xml' path='doc/member[@name="EValues_REFRESH_RATE_OVERRIDE.REFRESH_RATE_OVERRIDE_HIGHEST_AVAILABLE"]/*' />
+        REFRESH_RATE_OVERRIDE_HIGHEST_AVAILABLE = 0x00000001,
+
+        /// <include file='EValues_REFRESH_RATE_OVERRIDE.xml' path='doc/member[@name="EValues_REFRESH_RATE_OVERRIDE.REFRESH_RATE_OVERRIDE_LOW_LATENCY_RR_MASK"]/*' />
+        REFRESH_RATE_OVERRIDE_LOW_LATENCY_RR_MASK = 0x00000FF0,
+
+        /// <include file='EValues_REFRESH_RATE_OVERRIDE.xml' path='doc/member[@name="EValues_REFRESH_RATE_OVERRIDE.REFRESH_RATE_OVERRIDE_NUM_VALUES"]/*' />
+        REFRESH_RATE_OVERRIDE_NUM_VALUES = 3,
+
+        /// <include file='EValues_REFRESH_RATE_OVERRIDE.xml' path='doc/member[@name="EValues_REFRESH_RATE_OVERRIDE.REFRESH_RATE_OVERRIDE_DEFAULT"]/*' />
+        REFRESH_RATE_OVERRIDE_DEFAULT = REFRESH_RATE_OVERRIDE_APPLICATION_CONTROLLED,
+    }
+}

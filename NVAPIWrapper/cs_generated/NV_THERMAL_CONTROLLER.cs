@@ -1,0 +1,45 @@
+namespace NVAPIWrapper
+{
+    /// <include file='NV_THERMAL_CONTROLLER.xml' path='doc/member[@name="NV_THERMAL_CONTROLLER"]/*' />
+    public enum NV_THERMAL_CONTROLLER
+    {
+        /// <include file='NV_THERMAL_CONTROLLER.xml' path='doc/member[@name="NV_THERMAL_CONTROLLER.NVAPI_THERMAL_CONTROLLER_NONE"]/*' />
+        NVAPI_THERMAL_CONTROLLER_NONE = 0,
+
+        /// <include file='NV_THERMAL_CONTROLLER.xml' path='doc/member[@name="NV_THERMAL_CONTROLLER.NVAPI_THERMAL_CONTROLLER_GPU_INTERNAL"]/*' />
+        NVAPI_THERMAL_CONTROLLER_GPU_INTERNAL,
+
+        /// <include file='NV_THERMAL_CONTROLLER.xml' path='doc/member[@name="NV_THERMAL_CONTROLLER.NVAPI_THERMAL_CONTROLLER_ADM1032"]/*' />
+        NVAPI_THERMAL_CONTROLLER_ADM1032,
+
+        /// <include file='NV_THERMAL_CONTROLLER.xml' path='doc/member[@name="NV_THERMAL_CONTROLLER.NVAPI_THERMAL_CONTROLLER_MAX6649"]/*' />
+        NVAPI_THERMAL_CONTROLLER_MAX6649,
+
+        /// <include file='NV_THERMAL_CONTROLLER.xml' path='doc/member[@name="NV_THERMAL_CONTROLLER.NVAPI_THERMAL_CONTROLLER_MAX1617"]/*' />
+        NVAPI_THERMAL_CONTROLLER_MAX1617,
+
+        /// <include file='NV_THERMAL_CONTROLLER.xml' path='doc/member[@name="NV_THERMAL_CONTROLLER.NVAPI_THERMAL_CONTROLLER_LM99"]/*' />
+        NVAPI_THERMAL_CONTROLLER_LM99,
+
+        /// <include file='NV_THERMAL_CONTROLLER.xml' path='doc/member[@name="NV_THERMAL_CONTROLLER.NVAPI_THERMAL_CONTROLLER_LM89"]/*' />
+        NVAPI_THERMAL_CONTROLLER_LM89,
+
+        /// <include file='NV_THERMAL_CONTROLLER.xml' path='doc/member[@name="NV_THERMAL_CONTROLLER.NVAPI_THERMAL_CONTROLLER_LM64"]/*' />
+        NVAPI_THERMAL_CONTROLLER_LM64,
+
+        /// <include file='NV_THERMAL_CONTROLLER.xml' path='doc/member[@name="NV_THERMAL_CONTROLLER.NVAPI_THERMAL_CONTROLLER_ADT7473"]/*' />
+        NVAPI_THERMAL_CONTROLLER_ADT7473,
+
+        /// <include file='NV_THERMAL_CONTROLLER.xml' path='doc/member[@name="NV_THERMAL_CONTROLLER.NVAPI_THERMAL_CONTROLLER_SBMAX6649"]/*' />
+        NVAPI_THERMAL_CONTROLLER_SBMAX6649,
+
+        /// <include file='NV_THERMAL_CONTROLLER.xml' path='doc/member[@name="NV_THERMAL_CONTROLLER.NVAPI_THERMAL_CONTROLLER_VBIOSEVT"]/*' />
+        NVAPI_THERMAL_CONTROLLER_VBIOSEVT,
+
+        /// <include file='NV_THERMAL_CONTROLLER.xml' path='doc/member[@name="NV_THERMAL_CONTROLLER.NVAPI_THERMAL_CONTROLLER_OS"]/*' />
+        NVAPI_THERMAL_CONTROLLER_OS,
+
+        /// <include file='NV_THERMAL_CONTROLLER.xml' path='doc/member[@name="NV_THERMAL_CONTROLLER.NVAPI_THERMAL_CONTROLLER_UNKNOWN"]/*' />
+        NVAPI_THERMAL_CONTROLLER_UNKNOWN = -1,
+    }
+}

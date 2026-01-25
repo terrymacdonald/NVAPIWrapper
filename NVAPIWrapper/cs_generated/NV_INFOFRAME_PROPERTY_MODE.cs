@@ -1,0 +1,18 @@
+namespace NVAPIWrapper
+{
+    /// <include file='NV_INFOFRAME_PROPERTY_MODE.xml' path='doc/member[@name="NV_INFOFRAME_PROPERTY_MODE"]/*' />
+    public enum NV_INFOFRAME_PROPERTY_MODE
+    {
+        /// <include file='NV_INFOFRAME_PROPERTY_MODE.xml' path='doc/member[@name="NV_INFOFRAME_PROPERTY_MODE.NV_INFOFRAME_PROPERTY_MODE_AUTO"]/*' />
+        NV_INFOFRAME_PROPERTY_MODE_AUTO = 0,
+
+        /// <include file='NV_INFOFRAME_PROPERTY_MODE.xml' path='doc/member[@name="NV_INFOFRAME_PROPERTY_MODE.NV_INFOFRAME_PROPERTY_MODE_ENABLE"]/*' />
+        NV_INFOFRAME_PROPERTY_MODE_ENABLE,
+
+        /// <include file='NV_INFOFRAME_PROPERTY_MODE.xml' path='doc/member[@name="NV_INFOFRAME_PROPERTY_MODE.NV_INFOFRAME_PROPERTY_MODE_DISABLE"]/*' />
+        NV_INFOFRAME_PROPERTY_MODE_DISABLE,
+
+        /// <include file='NV_INFOFRAME_PROPERTY_MODE.xml' path='doc/member[@name="NV_INFOFRAME_PROPERTY_MODE.NV_INFOFRAME_PROPERTY_MODE_ALLOW_OVERRIDE"]/*' />
+        NV_INFOFRAME_PROPERTY_MODE_ALLOW_OVERRIDE,
+    }
+}

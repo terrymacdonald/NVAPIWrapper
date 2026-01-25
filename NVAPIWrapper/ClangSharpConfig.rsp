@@ -68,6 +68,10 @@ NVFORMAT_MAKEFOURCC
 NvU32TONvF32
 --exclude
 NvF32TONvU32
+--exclude
+__nvapi_deprecated_function
+--exclude
+__nvapi_deprecated_datatype
 
 # --- CONFIG ---
 --config

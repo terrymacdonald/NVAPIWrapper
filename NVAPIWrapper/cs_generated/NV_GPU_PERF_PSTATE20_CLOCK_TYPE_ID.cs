@@ -1,0 +1,12 @@
+namespace NVAPIWrapper
+{
+    /// <include file='NV_GPU_PERF_PSTATE20_CLOCK_TYPE_ID.xml' path='doc/member[@name="NV_GPU_PERF_PSTATE20_CLOCK_TYPE_ID"]/*' />
+    public enum NV_GPU_PERF_PSTATE20_CLOCK_TYPE_ID
+    {
+        /// <include file='NV_GPU_PERF_PSTATE20_CLOCK_TYPE_ID.xml' path='doc/member[@name="NV_GPU_PERF_PSTATE20_CLOCK_TYPE_ID.NVAPI_GPU_PERF_PSTATE20_CLOCK_TYPE_SINGLE"]/*' />
+        NVAPI_GPU_PERF_PSTATE20_CLOCK_TYPE_SINGLE = 0,
+
+        /// <include file='NV_GPU_PERF_PSTATE20_CLOCK_TYPE_ID.xml' path='doc/member[@name="NV_GPU_PERF_PSTATE20_CLOCK_TYPE_ID.NVAPI_GPU_PERF_PSTATE20_CLOCK_TYPE_RANGE"]/*' />
+        NVAPI_GPU_PERF_PSTATE20_CLOCK_TYPE_RANGE,
+    }
+}

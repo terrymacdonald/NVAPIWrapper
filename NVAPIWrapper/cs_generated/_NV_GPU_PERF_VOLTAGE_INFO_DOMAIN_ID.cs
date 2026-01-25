@@ -1,0 +1,12 @@
+namespace NVAPIWrapper
+{
+    /// <include file='_NV_GPU_PERF_VOLTAGE_INFO_DOMAIN_ID.xml' path='doc/member[@name="_NV_GPU_PERF_VOLTAGE_INFO_DOMAIN_ID"]/*' />
+    public enum _NV_GPU_PERF_VOLTAGE_INFO_DOMAIN_ID
+    {
+        /// <include file='_NV_GPU_PERF_VOLTAGE_INFO_DOMAIN_ID.xml' path='doc/member[@name="_NV_GPU_PERF_VOLTAGE_INFO_DOMAIN_ID.NVAPI_GPU_PERF_VOLTAGE_INFO_DOMAIN_CORE"]/*' />
+        NVAPI_GPU_PERF_VOLTAGE_INFO_DOMAIN_CORE = 0,
+
+        /// <include file='_NV_GPU_PERF_VOLTAGE_INFO_DOMAIN_ID.xml' path='doc/member[@name="_NV_GPU_PERF_VOLTAGE_INFO_DOMAIN_ID.NVAPI_GPU_PERF_VOLTAGE_INFO_DOMAIN_UNDEFINED"]/*' />
+        NVAPI_GPU_PERF_VOLTAGE_INFO_DOMAIN_UNDEFINED = 16,
+    }
+}

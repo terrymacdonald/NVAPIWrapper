@@ -1,0 +1,30 @@
+using System.Runtime.InteropServices;
+using Xunit;
+
+namespace NVAPIWrapper.UnitTests
+{
+    /// <summary>Provides validation of the <see cref="_NV_MONITOR_COLOR_DATA" /> struct.</summary>
+    public static unsafe partial class _NV_MONITOR_COLOR_DATATests
+    {
+        /// <summary>Validates that the <see cref="_NV_MONITOR_COLOR_DATA" /> struct is blittable.</summary>
+        [Fact]
+        public static void IsBlittableTest()
+        {
+            Assert.Equal(sizeof(_NV_MONITOR_COLOR_DATA), Marshal.SizeOf<_NV_MONITOR_COLOR_DATA>());
+        }
+
+        /// <summary>Validates that the <see cref="_NV_MONITOR_COLOR_DATA" /> struct has the right <see cref="LayoutKind" />.</summary>
+        [Fact]
+        public static void IsLayoutSequentialTest()
+        {
+            Assert.True(typeof(_NV_MONITOR_COLOR_DATA).IsLayoutSequential);
+        }
+
+        /// <summary>Validates that the <see cref="_NV_MONITOR_COLOR_DATA" /> struct has the correct size.</summary>
+        [Fact]
+        public static void SizeOfTest()
+        {
+            Assert.Equal(12, sizeof(_NV_MONITOR_COLOR_DATA));
+        }
+    }
+}

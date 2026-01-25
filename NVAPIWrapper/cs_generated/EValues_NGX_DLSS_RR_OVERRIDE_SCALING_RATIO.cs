@@ -1,0 +1,18 @@
+namespace NVAPIWrapper
+{
+    /// <include file='EValues_NGX_DLSS_RR_OVERRIDE_SCALING_RATIO.xml' path='doc/member[@name="EValues_NGX_DLSS_RR_OVERRIDE_SCALING_RATIO"]/*' />
+    public enum EValues_NGX_DLSS_RR_OVERRIDE_SCALING_RATIO
+    {
+        /// <include file='EValues_NGX_DLSS_RR_OVERRIDE_SCALING_RATIO.xml' path='doc/member[@name="EValues_NGX_DLSS_RR_OVERRIDE_SCALING_RATIO.NGX_DLSS_RR_OVERRIDE_SCALING_RATIO_MIN"]/*' />
+        NGX_DLSS_RR_OVERRIDE_SCALING_RATIO_MIN = 33,
+
+        /// <include file='EValues_NGX_DLSS_RR_OVERRIDE_SCALING_RATIO.xml' path='doc/member[@name="EValues_NGX_DLSS_RR_OVERRIDE_SCALING_RATIO.NGX_DLSS_RR_OVERRIDE_SCALING_RATIO_MAX"]/*' />
+        NGX_DLSS_RR_OVERRIDE_SCALING_RATIO_MAX = 100,
+
+        /// <include file='EValues_NGX_DLSS_RR_OVERRIDE_SCALING_RATIO.xml' path='doc/member[@name="EValues_NGX_DLSS_RR_OVERRIDE_SCALING_RATIO.NGX_DLSS_RR_OVERRIDE_SCALING_RATIO_DEFAULT"]/*' />
+        NGX_DLSS_RR_OVERRIDE_SCALING_RATIO_DEFAULT = 0,
+
+        /// <include file='EValues_NGX_DLSS_RR_OVERRIDE_SCALING_RATIO.xml' path='doc/member[@name="EValues_NGX_DLSS_RR_OVERRIDE_SCALING_RATIO.NGX_DLSS_RR_OVERRIDE_SCALING_RATIO_NUM_VALUES"]/*' />
+        NGX_DLSS_RR_OVERRIDE_SCALING_RATIO_NUM_VALUES = 3,
+    }
+}

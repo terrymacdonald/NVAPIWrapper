@@ -1,0 +1,27 @@
+namespace NVAPIWrapper
+{
+    /// <include file='_NVAPI_GPU_PERF_DECREASE.xml' path='doc/member[@name="_NVAPI_GPU_PERF_DECREASE"]/*' />
+    public enum _NVAPI_GPU_PERF_DECREASE
+    {
+        /// <include file='_NVAPI_GPU_PERF_DECREASE.xml' path='doc/member[@name="_NVAPI_GPU_PERF_DECREASE.NV_GPU_PERF_DECREASE_NONE"]/*' />
+        NV_GPU_PERF_DECREASE_NONE = 0,
+
+        /// <include file='_NVAPI_GPU_PERF_DECREASE.xml' path='doc/member[@name="_NVAPI_GPU_PERF_DECREASE.NV_GPU_PERF_DECREASE_REASON_THERMAL_PROTECTION"]/*' />
+        NV_GPU_PERF_DECREASE_REASON_THERMAL_PROTECTION = 0x00000001,
+
+        /// <include file='_NVAPI_GPU_PERF_DECREASE.xml' path='doc/member[@name="_NVAPI_GPU_PERF_DECREASE.NV_GPU_PERF_DECREASE_REASON_POWER_CONTROL"]/*' />
+        NV_GPU_PERF_DECREASE_REASON_POWER_CONTROL = 0x00000002,
+
+        /// <include file='_NVAPI_GPU_PERF_DECREASE.xml' path='doc/member[@name="_NVAPI_GPU_PERF_DECREASE.NV_GPU_PERF_DECREASE_REASON_AC_BATT"]/*' />
+        NV_GPU_PERF_DECREASE_REASON_AC_BATT = 0x00000004,
+
+        /// <include file='_NVAPI_GPU_PERF_DECREASE.xml' path='doc/member[@name="_NVAPI_GPU_PERF_DECREASE.NV_GPU_PERF_DECREASE_REASON_API_TRIGGERED"]/*' />
+        NV_GPU_PERF_DECREASE_REASON_API_TRIGGERED = 0x00000008,
+
+        /// <include file='_NVAPI_GPU_PERF_DECREASE.xml' path='doc/member[@name="_NVAPI_GPU_PERF_DECREASE.NV_GPU_PERF_DECREASE_REASON_INSUFFICIENT_POWER"]/*' />
+        NV_GPU_PERF_DECREASE_REASON_INSUFFICIENT_POWER = 0x00000010,
+
+        /// <include file='_NVAPI_GPU_PERF_DECREASE.xml' path='doc/member[@name="_NVAPI_GPU_PERF_DECREASE.NV_GPU_PERF_DECREASE_REASON_UNKNOWN"]/*' />
+        NV_GPU_PERF_DECREASE_REASON_UNKNOWN = unchecked((int)(0x80000000)),
+    }
+}
