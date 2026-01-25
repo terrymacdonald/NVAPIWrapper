@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.Runtime.InteropServices;
 
 namespace NVAPIWrapper
@@ -129,6 +130,33 @@ namespace NVAPIWrapper
 
                 return Marshal.PtrToStringAnsi((IntPtr)pBuffer);
             }
+        }
+
+        /// <summary>
+        /// Enumerate NVAPI function IDs and indicate which are available in the loaded driver.
+        /// </summary>
+        /// <returns>List of function info entries.</returns>
+        public unsafe IReadOnlyList<NVAPIFunctionInfo> GetAvailableFunctions()
+        {
+            ThrowIfDisposed();
+
+            var table = NVAPI.nvapi_interface_table;
+            var functions = new List<NVAPIFunctionInfo>(table.Length);
+
+            foreach (var entry in table)
+            {
+                if (entry.func == null)
+                    continue;
+
+                var name = Marshal.PtrToStringAnsi((IntPtr)entry.func);
+                if (string.IsNullOrEmpty(name))
+                    continue;
+
+                var available = TryGetFunctionPointer(entry.id) != IntPtr.Zero;
+                functions.Add(new NVAPIFunctionInfo(name, entry.id, available));
+            }
+
+            return functions;
         }
 
         /// <summary>

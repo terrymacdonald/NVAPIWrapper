@@ -151,7 +151,8 @@ Deliverable:
 ## Current Status
 - Phase 0 and Phase 1 are complete.
 - Phase 2 is complete (ClangSharp config, shim header, csproj wiring, and solution scaffolding).
-- Phase 3 is in progress (NVAPINative loader, NVAPIApi initialization/unload, and NVAPIException added).
+- Phase 3 is in progress (NVAPINative loader, NVAPIApi initialization/unload, NVAPIException, and function availability map added).
+- Phase 4 started with BasicApiTests in `NVAPIWrapper.NativeTests`.
 - AGENTS.md updated to align with NVAPI concepts and paths.
 
 ## Next Action
