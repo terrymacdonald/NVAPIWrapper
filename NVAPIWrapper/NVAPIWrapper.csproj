@@ -101,6 +101,8 @@
 		<Exec Command="ClangSharpPInvokeGenerator %40&quot;@(ClangSharpPInvokeGenerator)&quot;" />
 		<ItemGroup>
 			<Compile Include="$(ClangSharpGeneratedDir)\**\*.cs" />
+			<Compile Remove="$(ClangSharpGeneratedDir)\NV_MOSAIC_TOPOLOGY.cs" />
+			<Compile Remove="$(ClangSharpGeneratedDir)\NV_MOSAIC_TOPO_DETAILS.cs" />
 		</ItemGroup>
 		<ItemGroup>
 			<FileWrites Include="$(ClangSharpGeneratedDir)\**\*" />

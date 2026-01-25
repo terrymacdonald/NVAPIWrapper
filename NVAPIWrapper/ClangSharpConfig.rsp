@@ -1,10 +1,5 @@
 # ClangSharp P/Invoke Generator Configuration - NVAPI
 
-# --- REMAPS ---
-# Avoid invalid C# identifiers from anonymous struct names.
---remap
-_Anonymous-1_e__Struct=NV_MOSAIC_GPU_LAYOUT_CELL
-
 # --- INPUT ---
 # Use one shim header to avoid duplicate inclusion.
 --file
@@ -57,6 +52,10 @@ c++
 
 # --- EXCLUDES ---
 # Function-like macros ClangSharp can't bind; exclude to avoid generator errors.
+--exclude
+NV_MOSAIC_TOPOLOGY
+--exclude
+NV_MOSAIC_TOPO_DETAILS
 --exclude
 NV_DECLARE_HANDLE
 --exclude
