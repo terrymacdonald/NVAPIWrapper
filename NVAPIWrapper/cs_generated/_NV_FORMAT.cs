@@ -1,7 +1,8 @@
 namespace NVAPIWrapper
 {
     /// <include file='_NV_FORMAT.xml' path='doc/member[@name="_NV_FORMAT"]/*' />
-    public enum _NV_FORMAT
+    [NativeTypeName("int")]
+    public enum _NV_FORMAT : byte
     {
         /// <include file='_NV_FORMAT.xml' path='doc/member[@name="_NV_FORMAT.NV_FORMAT_UNKNOWN"]/*' />
         NV_FORMAT_UNKNOWN = 0,

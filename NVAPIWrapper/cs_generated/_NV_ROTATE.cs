@@ -1,7 +1,8 @@
 namespace NVAPIWrapper
 {
     /// <include file='_NV_ROTATE.xml' path='doc/member[@name="_NV_ROTATE"]/*' />
-    public enum _NV_ROTATE
+    [NativeTypeName("int")]
+    public enum _NV_ROTATE : byte
     {
         /// <include file='_NV_ROTATE.xml' path='doc/member[@name="_NV_ROTATE.NV_ROTATE_0"]/*' />
         NV_ROTATE_0 = 0,

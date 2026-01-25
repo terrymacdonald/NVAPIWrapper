@@ -1,7 +1,8 @@
 namespace NVAPIWrapper
 {
     /// <include file='_NV_SCALING.xml' path='doc/member[@name="_NV_SCALING"]/*' />
-    public enum _NV_SCALING
+    [NativeTypeName("int")]
+    public enum _NV_SCALING : byte
     {
         /// <include file='_NV_SCALING.xml' path='doc/member[@name="_NV_SCALING.NV_SCALING_DEFAULT"]/*' />
         NV_SCALING_DEFAULT = 0,

@@ -97,12 +97,15 @@
 		<Message Text="-&gt; NVAPIWrapper Version: $(AppVersion) (Major/Minor from file, Patch is commits since change)" Importance="high" />
 	</Target>
 
-	<Target Name="GenerateFromClangSharp" BeforeTargets="CoreCompile" Inputs="@(ClangSharpPInvokeGenerator)" Outputs="$(BaseIntermediateOutputPath)ClangSharp.stamp">
+	<Target Name="GenerateFromClangSharp" BeforeTargets="CoreCompile" Inputs="@(ClangSharpPInvokeGenerator)" Outputs="$(BaseIntermediateOutputPath)ClangSharp.stamp;$(ClangSharpGeneratedDir)\NativeTypeNameAttribute.cs">
 		<Exec Command="ClangSharpPInvokeGenerator %40&quot;@(ClangSharpPInvokeGenerator)&quot;" />
 		<ItemGroup>
 			<Compile Include="$(ClangSharpGeneratedDir)\**\*.cs" />
 			<Compile Remove="$(ClangSharpGeneratedDir)\NV_MOSAIC_TOPOLOGY.cs" />
 			<Compile Remove="$(ClangSharpGeneratedDir)\NV_MOSAIC_TOPO_DETAILS.cs" />
+			<Compile Remove="$(ClangSharpGeneratedDir)\NV_TIMING_FLAG.cs" />
+			<Compile Remove="$(ClangSharpGeneratedDir)\NV_GPU_ECC_STATUS_INFO.cs" />
+			<Compile Remove="$(ClangSharpGeneratedDir)\_NV_DISPLAYCONFIG_PATH_ADVANCED_TARGET_INFO_V1.cs" />
 		</ItemGroup>
 		<ItemGroup>
 			<FileWrites Include="$(ClangSharpGeneratedDir)\**\*" />

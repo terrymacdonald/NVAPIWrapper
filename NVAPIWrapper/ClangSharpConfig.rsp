@@ -59,6 +59,10 @@ NV_MOSAIC_TOPO_DETAILS
 --exclude
 nvapi_interface_table
 --exclude
+NV_TIMING_FLAG
+--exclude
+NV_GPU_ECC_STATUS_INFO
+--exclude
 NV_DECLARE_HANDLE
 --exclude
 NV_BIT
@@ -90,6 +94,14 @@ EValues_SHIM_MCCOMPAT=uint
 EValues_SHIM_RENDERING_MODE=uint
 --with-type
 EValues_SHIM_RENDERING_OPTIONS=uint
+
+# Match NVAPI short enum layout for display path struct sizing.
+--with-type
+_NV_FORMAT=byte
+--with-type
+_NV_ROTATE=byte
+--with-type
+_NV_SCALING=byte
 
 # NV_TRUE/NV_FALSE use NvBool; ClangSharp emits invalid bool->byte casts.
 --exclude

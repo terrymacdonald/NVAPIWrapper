@@ -942,6 +942,54 @@
         <member name="M:NVAPIWrapper.NVAPI.NvAPI_UninstallRise(NVAPIWrapper._NV_UNINSTALL_RISE_SETTINGS_V1*)">
             <!-- Failed to insert some or all of included XML --><include file="NVAPI.xml" path="doc/member[@name=&quot;NVAPI.NvAPI_UninstallRise&quot;]/*" />
         </member>
+        <member name="T:NVAPIWrapper._NV_DISPLAYCONFIG_PATH_ADVANCED_TARGET_INFO_V1">
+            <summary>Advanced target settings for display configuration paths.</summary>
+        </member>
+        <member name="F:NVAPIWrapper._NV_DISPLAYCONFIG_PATH_ADVANCED_TARGET_INFO_V1.version">
+            <summary>Structure version.</summary>
+        </member>
+        <member name="F:NVAPIWrapper._NV_DISPLAYCONFIG_PATH_ADVANCED_TARGET_INFO_V1.rotation">
+            <summary>Rotation setting.</summary>
+        </member>
+        <member name="F:NVAPIWrapper._NV_DISPLAYCONFIG_PATH_ADVANCED_TARGET_INFO_V1.scaling">
+            <summary>Scaling setting.</summary>
+        </member>
+        <member name="F:NVAPIWrapper._NV_DISPLAYCONFIG_PATH_ADVANCED_TARGET_INFO_V1.refreshRate1K">
+            <summary>Non-interlaced refresh rate multiplied by 1000; 0 means ignored.</summary>
+        </member>
+        <member name="F:NVAPIWrapper._NV_DISPLAYCONFIG_PATH_ADVANCED_TARGET_INFO_V1._bitfield">
+            <summary>Bitfield storage for flags.</summary>
+        </member>
+        <member name="P:NVAPIWrapper._NV_DISPLAYCONFIG_PATH_ADVANCED_TARGET_INFO_V1.interlaced">
+            <summary>Interlaced mode flag.</summary>
+        </member>
+        <member name="P:NVAPIWrapper._NV_DISPLAYCONFIG_PATH_ADVANCED_TARGET_INFO_V1.primary">
+            <summary>Primary display flag.</summary>
+        </member>
+        <member name="P:NVAPIWrapper._NV_DISPLAYCONFIG_PATH_ADVANCED_TARGET_INFO_V1.reservedBit1">
+            <summary>Reserved bit.</summary>
+        </member>
+        <member name="P:NVAPIWrapper._NV_DISPLAYCONFIG_PATH_ADVANCED_TARGET_INFO_V1.disableVirtualModeSupport">
+            <summary>Disable virtual mode support flag.</summary>
+        </member>
+        <member name="P:NVAPIWrapper._NV_DISPLAYCONFIG_PATH_ADVANCED_TARGET_INFO_V1.isPreferredUnscaledTarget">
+            <summary>Preferred unscaled target flag.</summary>
+        </member>
+        <member name="P:NVAPIWrapper._NV_DISPLAYCONFIG_PATH_ADVANCED_TARGET_INFO_V1.reserved">
+            <summary>Reserved flags.</summary>
+        </member>
+        <member name="F:NVAPIWrapper._NV_DISPLAYCONFIG_PATH_ADVANCED_TARGET_INFO_V1.connector">
+            <summary>Connector type for TV outputs.</summary>
+        </member>
+        <member name="F:NVAPIWrapper._NV_DISPLAYCONFIG_PATH_ADVANCED_TARGET_INFO_V1.tvFormat">
+            <summary>TV format.</summary>
+        </member>
+        <member name="F:NVAPIWrapper._NV_DISPLAYCONFIG_PATH_ADVANCED_TARGET_INFO_V1.timingOverride">
+            <summary>Timing override mode.</summary>
+        </member>
+        <member name="F:NVAPIWrapper._NV_DISPLAYCONFIG_PATH_ADVANCED_TARGET_INFO_V1.timing">
+            <summary>Scan out timing for custom timing overrides.</summary>
+        </member>
         <member name="T:NVAPIWrapper.NVAPIException">
             <summary>
             Exception thrown when an NVAPI call fails.
@@ -1081,6 +1129,30 @@
             <summary>
             Resolve the nvapi_QueryInterface export and return a delegate.
             </summary>
+        </member>
+        <member name="T:NVAPIWrapper.NV_TIMING_FLAG">
+            <summary>Used in NvAPI_DISP_GetTiming.</summary>
+        </member>
+        <member name="F:NVAPIWrapper.NV_TIMING_FLAG.flags">
+            <summary>Interlaced flag and related packed fields.</summary>
+        </member>
+        <member name="F:NVAPIWrapper.NV_TIMING_FLAG.tvFormat">
+            <summary>TV format or related packed fields.</summary>
+        </member>
+        <member name="T:NVAPIWrapper.NV_GPU_ECC_STATUS_INFO">
+            <summary>Used in NvAPI_GPU_GetECCStatusInfo.</summary>
+        </member>
+        <member name="F:NVAPIWrapper.NV_GPU_ECC_STATUS_INFO.version">
+            <summary>Structure version.</summary>
+        </member>
+        <member name="F:NVAPIWrapper.NV_GPU_ECC_STATUS_INFO.configurationOptions">
+            <summary>Supported ECC configuration options.</summary>
+        </member>
+        <member name="P:NVAPIWrapper.NV_GPU_ECC_STATUS_INFO.isSupported">
+            <summary>ECC memory feature support.</summary>
+        </member>
+        <member name="P:NVAPIWrapper.NV_GPU_ECC_STATUS_INFO.isEnabled">
+            <summary>Active ECC memory setting.</summary>
         </member>
         <member name="T:NVAPIWrapper.ESetting">
             <!-- Failed to insert some or all of included XML --><include file="ESetting.xml" path="doc/member[@name=&quot;ESetting&quot;]/*" />
@@ -5416,21 +5488,6 @@
         <member name="F:NVAPIWrapper.NV_GPU_ECC_ERROR_INFO._aggregate_e__Struct.doubleBitErrors">
             <!-- Failed to insert some or all of included XML --><include file="_aggregate_e__Struct.xml" path="doc/member[@name=&quot;_aggregate_e__Struct.doubleBitErrors&quot;]/*" />
         </member>
-        <member name="T:NVAPIWrapper.NV_GPU_ECC_STATUS_INFO">
-            <!-- Failed to insert some or all of included XML --><include file="NV_GPU_ECC_STATUS_INFO.xml" path="doc/member[@name=&quot;NV_GPU_ECC_STATUS_INFO&quot;]/*" />
-        </member>
-        <member name="F:NVAPIWrapper.NV_GPU_ECC_STATUS_INFO.version">
-            <!-- Failed to insert some or all of included XML --><include file="NV_GPU_ECC_STATUS_INFO.xml" path="doc/member[@name=&quot;NV_GPU_ECC_STATUS_INFO.version&quot;]/*" />
-        </member>
-        <member name="P:NVAPIWrapper.NV_GPU_ECC_STATUS_INFO.isSupported">
-            <!-- Failed to insert some or all of included XML --><include file="NV_GPU_ECC_STATUS_INFO.xml" path="doc/member[@name=&quot;NV_GPU_ECC_STATUS_INFO.isSupported&quot;]/*" />
-        </member>
-        <member name="F:NVAPIWrapper.NV_GPU_ECC_STATUS_INFO.configurationOptions">
-            <!-- Failed to insert some or all of included XML --><include file="NV_GPU_ECC_STATUS_INFO.xml" path="doc/member[@name=&quot;NV_GPU_ECC_STATUS_INFO.configurationOptions&quot;]/*" />
-        </member>
-        <member name="P:NVAPIWrapper.NV_GPU_ECC_STATUS_INFO.isEnabled">
-            <!-- Failed to insert some or all of included XML --><include file="NV_GPU_ECC_STATUS_INFO.xml" path="doc/member[@name=&quot;NV_GPU_ECC_STATUS_INFO.isEnabled&quot;]/*" />
-        </member>
         <member name="T:NVAPIWrapper.NV_GPU_GET_HDCP_SUPPORT_STATUS">
             <!-- Failed to insert some or all of included XML --><include file="NV_GPU_GET_HDCP_SUPPORT_STATUS.xml" path="doc/member[@name=&quot;NV_GPU_GET_HDCP_SUPPORT_STATUS&quot;]/*" />
         </member>
@@ -7650,42 +7707,6 @@
         </member>
         <member name="F:NVAPIWrapper.NV_THERMAL_TARGET.NVAPI_THERMAL_TARGET_UNKNOWN">
             <!-- Failed to insert some or all of included XML --><include file="NV_THERMAL_TARGET.xml" path="doc/member[@name=&quot;NV_THERMAL_TARGET.NVAPI_THERMAL_TARGET_UNKNOWN&quot;]/*" />
-        </member>
-        <member name="T:NVAPIWrapper.NV_TIMING_FLAG">
-            <!-- Failed to insert some or all of included XML --><include file="NV_TIMING_FLAG.xml" path="doc/member[@name=&quot;NV_TIMING_FLAG&quot;]/*" />
-        </member>
-        <member name="P:NVAPIWrapper.NV_TIMING_FLAG.isInterlaced">
-            <!-- Failed to insert some or all of included XML --><include file="NV_TIMING_FLAG.xml" path="doc/member[@name=&quot;NV_TIMING_FLAG.isInterlaced&quot;]/*" />
-        </member>
-        <member name="P:NVAPIWrapper.NV_TIMING_FLAG.reserved0">
-            <!-- Failed to insert some or all of included XML --><include file="NV_TIMING_FLAG.xml" path="doc/member[@name=&quot;NV_TIMING_FLAG.reserved0&quot;]/*" />
-        </member>
-        <member name="F:NVAPIWrapper.NV_TIMING_FLAG.Anonymous">
-            <!-- Failed to insert some or all of included XML --><include file="NV_TIMING_FLAG.xml" path="doc/member[@name=&quot;NV_TIMING_FLAG.Anonymous&quot;]/*" />
-        </member>
-        <member name="P:NVAPIWrapper.NV_TIMING_FLAG.scaling">
-            <!-- Failed to insert some or all of included XML --><include file="NV_TIMING_FLAG.xml" path="doc/member[@name=&quot;NV_TIMING_FLAG.scaling&quot;]/*" />
-        </member>
-        <member name="P:NVAPIWrapper.NV_TIMING_FLAG.tvFormat">
-            <!-- Failed to insert some or all of included XML --><include file="_Anonymous_e__Union.xml" path="doc/member[@name=&quot;_Anonymous_e__Union.tvFormat&quot;]/*" />
-        </member>
-        <member name="P:NVAPIWrapper.NV_TIMING_FLAG.ceaId">
-            <!-- Failed to insert some or all of included XML --><include file="_Anonymous_e__Union.xml" path="doc/member[@name=&quot;_Anonymous_e__Union.ceaId&quot;]/*" />
-        </member>
-        <member name="P:NVAPIWrapper.NV_TIMING_FLAG.nvPsfId">
-            <!-- Failed to insert some or all of included XML --><include file="_Anonymous_e__Union.xml" path="doc/member[@name=&quot;_Anonymous_e__Union.nvPsfId&quot;]/*" />
-        </member>
-        <member name="T:NVAPIWrapper.NV_TIMING_FLAG._Anonymous_e__Union">
-            <!-- Failed to insert some or all of included XML --><include file="_Anonymous_e__Union.xml" path="doc/member[@name=&quot;_Anonymous_e__Union&quot;]/*" />
-        </member>
-        <member name="P:NVAPIWrapper.NV_TIMING_FLAG._Anonymous_e__Union.tvFormat">
-            <!-- Failed to insert some or all of included XML --><include file="_Anonymous_e__Union.xml" path="doc/member[@name=&quot;_Anonymous_e__Union.tvFormat&quot;]/*" />
-        </member>
-        <member name="P:NVAPIWrapper.NV_TIMING_FLAG._Anonymous_e__Union.ceaId">
-            <!-- Failed to insert some or all of included XML --><include file="_Anonymous_e__Union.xml" path="doc/member[@name=&quot;_Anonymous_e__Union.ceaId&quot;]/*" />
-        </member>
-        <member name="P:NVAPIWrapper.NV_TIMING_FLAG._Anonymous_e__Union.nvPsfId">
-            <!-- Failed to insert some or all of included XML --><include file="_Anonymous_e__Union.xml" path="doc/member[@name=&quot;_Anonymous_e__Union.nvPsfId&quot;]/*" />
         </member>
         <member name="T:NVAPIWrapper.NV_VIEWPORTF">
             <!-- Failed to insert some or all of included XML --><include file="NV_VIEWPORTF.xml" path="doc/member[@name=&quot;NV_VIEWPORTF&quot;]/*" />
@@ -10701,51 +10722,6 @@
         </member>
         <member name="F:NVAPIWrapper._NV_DISPLAYCONFIG_FLAGS.NV_FORCE_COMMIT_VIDPN">
             <!-- Failed to insert some or all of included XML --><include file="_NV_DISPLAYCONFIG_FLAGS.xml" path="doc/member[@name=&quot;_NV_DISPLAYCONFIG_FLAGS.NV_FORCE_COMMIT_VIDPN&quot;]/*" />
-        </member>
-        <member name="T:NVAPIWrapper._NV_DISPLAYCONFIG_PATH_ADVANCED_TARGET_INFO_V1">
-            <!-- Failed to insert some or all of included XML --><include file="_NV_DISPLAYCONFIG_PATH_ADVANCED_TARGET_INFO_V1.xml" path="doc/member[@name=&quot;_NV_DISPLAYCONFIG_PATH_ADVANCED_TARGET_INFO_V1&quot;]/*" />
-        </member>
-        <member name="F:NVAPIWrapper._NV_DISPLAYCONFIG_PATH_ADVANCED_TARGET_INFO_V1.version">
-            <!-- Failed to insert some or all of included XML --><include file="_NV_DISPLAYCONFIG_PATH_ADVANCED_TARGET_INFO_V1.xml" path="doc/member[@name=&quot;_NV_DISPLAYCONFIG_PATH_ADVANCED_TARGET_INFO_V1.version&quot;]/*" />
-        </member>
-        <member name="F:NVAPIWrapper._NV_DISPLAYCONFIG_PATH_ADVANCED_TARGET_INFO_V1.rotation">
-            <!-- Failed to insert some or all of included XML --><include file="_NV_DISPLAYCONFIG_PATH_ADVANCED_TARGET_INFO_V1.xml" path="doc/member[@name=&quot;_NV_DISPLAYCONFIG_PATH_ADVANCED_TARGET_INFO_V1.rotation&quot;]/*" />
-        </member>
-        <member name="F:NVAPIWrapper._NV_DISPLAYCONFIG_PATH_ADVANCED_TARGET_INFO_V1.scaling">
-            <!-- Failed to insert some or all of included XML --><include file="_NV_DISPLAYCONFIG_PATH_ADVANCED_TARGET_INFO_V1.xml" path="doc/member[@name=&quot;_NV_DISPLAYCONFIG_PATH_ADVANCED_TARGET_INFO_V1.scaling&quot;]/*" />
-        </member>
-        <member name="F:NVAPIWrapper._NV_DISPLAYCONFIG_PATH_ADVANCED_TARGET_INFO_V1.refreshRate1K">
-            <!-- Failed to insert some or all of included XML --><include file="_NV_DISPLAYCONFIG_PATH_ADVANCED_TARGET_INFO_V1.xml" path="doc/member[@name=&quot;_NV_DISPLAYCONFIG_PATH_ADVANCED_TARGET_INFO_V1.refreshRate1K&quot;]/*" />
-        </member>
-        <member name="P:NVAPIWrapper._NV_DISPLAYCONFIG_PATH_ADVANCED_TARGET_INFO_V1.interlaced">
-            <!-- Failed to insert some or all of included XML --><include file="_NV_DISPLAYCONFIG_PATH_ADVANCED_TARGET_INFO_V1.xml" path="doc/member[@name=&quot;_NV_DISPLAYCONFIG_PATH_ADVANCED_TARGET_INFO_V1.interlaced&quot;]/*" />
-        </member>
-        <member name="P:NVAPIWrapper._NV_DISPLAYCONFIG_PATH_ADVANCED_TARGET_INFO_V1.primary">
-            <!-- Failed to insert some or all of included XML --><include file="_NV_DISPLAYCONFIG_PATH_ADVANCED_TARGET_INFO_V1.xml" path="doc/member[@name=&quot;_NV_DISPLAYCONFIG_PATH_ADVANCED_TARGET_INFO_V1.primary&quot;]/*" />
-        </member>
-        <member name="P:NVAPIWrapper._NV_DISPLAYCONFIG_PATH_ADVANCED_TARGET_INFO_V1.reservedBit1">
-            <!-- Failed to insert some or all of included XML --><include file="_NV_DISPLAYCONFIG_PATH_ADVANCED_TARGET_INFO_V1.xml" path="doc/member[@name=&quot;_NV_DISPLAYCONFIG_PATH_ADVANCED_TARGET_INFO_V1.reservedBit1&quot;]/*" />
-        </member>
-        <member name="P:NVAPIWrapper._NV_DISPLAYCONFIG_PATH_ADVANCED_TARGET_INFO_V1.disableVirtualModeSupport">
-            <!-- Failed to insert some or all of included XML --><include file="_NV_DISPLAYCONFIG_PATH_ADVANCED_TARGET_INFO_V1.xml" path="doc/member[@name=&quot;_NV_DISPLAYCONFIG_PATH_ADVANCED_TARGET_INFO_V1.disableVirtualModeSupport&quot;]/*" />
-        </member>
-        <member name="P:NVAPIWrapper._NV_DISPLAYCONFIG_PATH_ADVANCED_TARGET_INFO_V1.isPreferredUnscaledTarget">
-            <!-- Failed to insert some or all of included XML --><include file="_NV_DISPLAYCONFIG_PATH_ADVANCED_TARGET_INFO_V1.xml" path="doc/member[@name=&quot;_NV_DISPLAYCONFIG_PATH_ADVANCED_TARGET_INFO_V1.isPreferredUnscaledTarget&quot;]/*" />
-        </member>
-        <member name="P:NVAPIWrapper._NV_DISPLAYCONFIG_PATH_ADVANCED_TARGET_INFO_V1.reserved">
-            <!-- Failed to insert some or all of included XML --><include file="_NV_DISPLAYCONFIG_PATH_ADVANCED_TARGET_INFO_V1.xml" path="doc/member[@name=&quot;_NV_DISPLAYCONFIG_PATH_ADVANCED_TARGET_INFO_V1.reserved&quot;]/*" />
-        </member>
-        <member name="F:NVAPIWrapper._NV_DISPLAYCONFIG_PATH_ADVANCED_TARGET_INFO_V1.connector">
-            <!-- Failed to insert some or all of included XML --><include file="_NV_DISPLAYCONFIG_PATH_ADVANCED_TARGET_INFO_V1.xml" path="doc/member[@name=&quot;_NV_DISPLAYCONFIG_PATH_ADVANCED_TARGET_INFO_V1.connector&quot;]/*" />
-        </member>
-        <member name="F:NVAPIWrapper._NV_DISPLAYCONFIG_PATH_ADVANCED_TARGET_INFO_V1.tvFormat">
-            <!-- Failed to insert some or all of included XML --><include file="_NV_DISPLAYCONFIG_PATH_ADVANCED_TARGET_INFO_V1.xml" path="doc/member[@name=&quot;_NV_DISPLAYCONFIG_PATH_ADVANCED_TARGET_INFO_V1.tvFormat&quot;]/*" />
-        </member>
-        <member name="F:NVAPIWrapper._NV_DISPLAYCONFIG_PATH_ADVANCED_TARGET_INFO_V1.timingOverride">
-            <!-- Failed to insert some or all of included XML --><include file="_NV_DISPLAYCONFIG_PATH_ADVANCED_TARGET_INFO_V1.xml" path="doc/member[@name=&quot;_NV_DISPLAYCONFIG_PATH_ADVANCED_TARGET_INFO_V1.timingOverride&quot;]/*" />
-        </member>
-        <member name="F:NVAPIWrapper._NV_DISPLAYCONFIG_PATH_ADVANCED_TARGET_INFO_V1.timing">
-            <!-- Failed to insert some or all of included XML --><include file="_NV_DISPLAYCONFIG_PATH_ADVANCED_TARGET_INFO_V1.xml" path="doc/member[@name=&quot;_NV_DISPLAYCONFIG_PATH_ADVANCED_TARGET_INFO_V1.timing&quot;]/*" />
         </member>
         <member name="T:NVAPIWrapper._NV_DISPLAYCONFIG_PATH_INFO">
             <!-- Failed to insert some or all of included XML --><include file="_NV_DISPLAYCONFIG_PATH_INFO.xml" path="doc/member[@name=&quot;_NV_DISPLAYCONFIG_PATH_INFO&quot;]/*" />
