@@ -102,17 +102,50 @@ Deliverable:
 Objective: Provide safe, ergonomic wrappers around native APIs.
 
 Steps:
-1) Implement `NVAPIApiHelper` and helper factories.
-2) Build helper classes per feature group:
-   - Maintain naming and layout patterns.
-3) Implement DTOs for data structures:
+1) Implement `NVAPIApiHelper` as the only entry point.
+   - Do not expose direct accessors for helpers if multiple instances are possible.
+   - Provide enumeration methods that return helper instances when multiple items exist.
+2) Build helper classes per feature group (no "Services" in names):
+   - `NVAPIPhysicalGpuHelper` and `NVAPILogicalGpuHelper` (logical GPUs included).
+   - `NVAPIDisplayHelper` (enumerated via GPU helpers).
+   - Maintain existing naming/pattern consistency.
+3) Helper methods should map closely to native NVAPI function names:
+   - e.g., `EnumeratePhysicalGpus`, `EnumerateLogicalGpus`, `EnumerateNvidiaDisplayHandles`.
+   - Use the closest native-equivalent name for each helper function.
+4) Implement DTOs for data structures:
    - Convert native structs to managed DTOs.
    - Ensure proper struct size/version setup.
-4) Implement safe lifetime handling:
-   - Dispose properly; use exceptions on disposed usage.
+5) Implement strict lifetime and memory ownership rules:
+   - Each helper owns any unmanaged memory it allocates.
+   - Guard against use-after-dispose (throw `ObjectDisposedException`).
+   - Avoid memory leaks and double-free scenarios.
+6) Detailed implementation sequence for Phase 5:
+   - Create `NVAPIApiHelper`:
+     - Wrap `NVAPIApi` and expose `EnumeratePhysicalGpus()` and `EnumerateLogicalGpus()` returning helper instances.
+     - Enforce disposal checks on every public method.
+   - Create `NVAPIPhysicalGpuHelper`:
+     - Store `NvPhysicalGpuHandle` internally (no raw pointer exposure).
+     - Add read-only GPU methods aligned to native calls:
+       - `GetFullName()` -> `NvAPI_GPU_GetFullName`
+       - `GetBusId()` -> `NvAPI_GPU_GetBusId`
+       - `GetBusType()` -> `NvAPI_GPU_GetBusType`
+       - `GetGpuType()` -> `NvAPI_GPU_GetGPUType`
+     - Add display enumeration:
+       - `EnumerateNvidiaDisplayHandles()` returning `NVAPIDisplayHelper[]`.
+       - Filter via `NvAPI_EnumNvidiaDisplayHandle` + `NvAPI_GetPhysicalGPUsFromDisplay`.
+   - Create `NVAPILogicalGpuHelper`:
+     - Store `NvLogicalGpuHandle` internally.
+     - Add `GetPhysicalGpus()` -> `NvAPI_GetPhysicalGPUsFromLogicalGPU`.
+   - Create `NVAPIDisplayHelper`:
+     - Store `NvDisplayHandle` internally.
+     - Add initial read-only display methods aligned to native calls (pick minimal safe set).
+   - Add facade tests (hardware-aware):
+     - `NVAPIPhysicalGpuHelperFacadeTests.cs`
+     - `NVAPILogicalGpuHelperFacadeTests.cs`
+     - `NVAPIDisplayHelperFacadeTests.cs`
 
 Deliverable:
-- `NVAPIApiHelper` and feature helpers with DTOs.
+- `NVAPIApiHelper` and feature helpers with DTOs, enumerations, and safe lifetime handling.
 
 ## Phase 6: Facade Tests
 Objective: Verify facade ergonomics and ensure native correctness via high-level flows.
@@ -151,9 +184,12 @@ Deliverable:
 ## Current Status
 - Phase 0 and Phase 1 are complete.
 - Phase 2 is complete (ClangSharp config, shim header, csproj wiring, and solution scaffolding).
-- Phase 3 is in progress (NVAPINative loader, NVAPIApi initialization/unload, NVAPIException, and function availability map added).
-- Phase 4 started with BasicApiTests in `NVAPIWrapper.NativeTests`.
+- Phase 3 is complete (NVAPINative loader, NVAPIApi initialization/unload, NVAPIException, function availability map, and enumeration helpers).
+- Phase 4 is complete (BasicApiTests in `NVAPIWrapper.NativeTests` passing with hardware-aware skips).
 - AGENTS.md updated to align with NVAPI concepts and paths.
+- Phase 5 is in progress (facade helper design updated; implementation pending).
 
 ## Next Action
-Begin Phase 3 by confirming the `NvAPI_QueryInterface` entrypoint signature and implementing the core native loader (`NVAPINative`) and `NVAPIApi` initialization/unload flow.
+Begin Phase 5 by implementing `NVAPIApiHelper` and the first helper set:
+- `NVAPIPhysicalGpuHelper` and `NVAPILogicalGpuHelper` with enumeration methods.
+- `NVAPIDisplayHelper` enumerated from GPU helpers.
