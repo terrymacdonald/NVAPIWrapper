@@ -75,5 +75,83 @@ namespace NVAPIWrapper.FacadeTests
             var gpuType = gpus[0].GetGpuType();
             Assert.True(gpuType.HasValue);
         }
+
+        [SkippableFact]
+        public void GetPCIIdentifiers_ShouldReturnValue()
+        {
+            Skip.If(_fixture.ApiHelper == null, _fixture.SkipReason);
+
+            var gpus = _fixture.ApiHelper.EnumeratePhysicalGpus();
+            Skip.If(gpus.Length == 0, "No NVIDIA physical GPUs found.");
+
+            var pci = gpus[0].GetPCIIdentifiers();
+            Skip.If(pci == null, "PCI identifiers not supported.");
+            Assert.True(pci.HasValue);
+        }
+
+        [SkippableFact]
+        public void GetBusSlotId_ShouldReturnValue()
+        {
+            Skip.If(_fixture.ApiHelper == null, _fixture.SkipReason);
+
+            var gpus = _fixture.ApiHelper.EnumeratePhysicalGpus();
+            Skip.If(gpus.Length == 0, "No NVIDIA physical GPUs found.");
+
+            var busSlotId = gpus[0].GetBusSlotId();
+            Skip.If(busSlotId == null, "Bus slot ID not supported.");
+            Assert.True(busSlotId.HasValue);
+        }
+
+        [SkippableFact]
+        public void GetVbiosVersionString_ShouldReturnValue()
+        {
+            Skip.If(_fixture.ApiHelper == null, _fixture.SkipReason);
+
+            var gpus = _fixture.ApiHelper.EnumeratePhysicalGpus();
+            Skip.If(gpus.Length == 0, "No NVIDIA physical GPUs found.");
+
+            var vbios = gpus[0].GetVbiosVersionString();
+            Skip.If(string.IsNullOrWhiteSpace(vbios), "VBIOS version not supported.");
+            Assert.False(string.IsNullOrWhiteSpace(vbios));
+        }
+
+        [SkippableFact]
+        public void GetPhysicalFrameBufferSize_ShouldReturnValue()
+        {
+            Skip.If(_fixture.ApiHelper == null, _fixture.SkipReason);
+
+            var gpus = _fixture.ApiHelper.EnumeratePhysicalGpus();
+            Skip.If(gpus.Length == 0, "No NVIDIA physical GPUs found.");
+
+            var size = gpus[0].GetPhysicalFrameBufferSize();
+            Skip.If(size == null, "Physical frame buffer size not supported.");
+            Assert.True(size.HasValue);
+        }
+
+        [SkippableFact]
+        public void GetVirtualFrameBufferSize_ShouldReturnValue()
+        {
+            Skip.If(_fixture.ApiHelper == null, _fixture.SkipReason);
+
+            var gpus = _fixture.ApiHelper.EnumeratePhysicalGpus();
+            Skip.If(gpus.Length == 0, "No NVIDIA physical GPUs found.");
+
+            var size = gpus[0].GetVirtualFrameBufferSize();
+            Skip.If(size == null, "Virtual frame buffer size not supported.");
+            Assert.True(size.HasValue);
+        }
+
+        [SkippableFact]
+        public void GetTachReading_ShouldReturnValue()
+        {
+            Skip.If(_fixture.ApiHelper == null, _fixture.SkipReason);
+
+            var gpus = _fixture.ApiHelper.EnumeratePhysicalGpus();
+            Skip.If(gpus.Length == 0, "No NVIDIA physical GPUs found.");
+
+            var tach = gpus[0].GetTachReading();
+            Skip.If(tach == null, "Tach reading not supported.");
+            Assert.True(tach.HasValue);
+        }
     }
 }

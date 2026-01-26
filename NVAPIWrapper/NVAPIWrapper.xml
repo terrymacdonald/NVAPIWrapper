@@ -57,6 +57,34 @@
             Dispose the NVAPI wrapper and release native resources.
             </summary>
         </member>
+        <member name="T:NVAPIWrapper.NVAPIApiHelper">
+            <summary>
+            Facade entry point for NVAPI helper objects.
+            </summary>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIApiHelper.Initialize">
+            <summary>
+            Initialize NVAPI and return a facade helper that owns the library lifetime.
+            </summary>
+            <returns>Initialized NVAPI helper.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIApiHelper.EnumeratePhysicalGpus">
+            <summary>
+            Enumerate physical GPU helpers.
+            </summary>
+            <returns>Array of physical GPU helpers, or empty if none are found.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIApiHelper.EnumerateLogicalGpus">
+            <summary>
+            Enumerate logical GPU helpers.
+            </summary>
+            <returns>Array of logical GPU helpers, or empty if none are found.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIApiHelper.Dispose">
+            <summary>
+            Dispose the NVAPI helper and release native resources.
+            </summary>
+        </member>
         <member name="F:NVAPIWrapper.NVAPI.NV_TRUE">
             <summary>NVAPI boolean true value (NvBool).</summary>
         </member>
@@ -1008,6 +1036,46 @@
         <member name="F:NVAPIWrapper._NV_DISPLAYCONFIG_PATH_ADVANCED_TARGET_INFO_V1.timing">
             <summary>Scan out timing for custom timing overrides.</summary>
         </member>
+        <member name="T:NVAPIWrapper.NVAPIDisplayHelper">
+            <summary>
+            Facade helper for an NVIDIA display handle.
+            </summary>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDisplayHelper.GetPhysicalGpusFromDisplay">
+            <summary>
+            Get physical GPUs associated with this display.
+            </summary>
+            <returns>Array of physical GPU helpers, or empty if unavailable.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDisplayHelper.GetLogicalGpuFromDisplay">
+            <summary>
+            Get the logical GPU associated with this display.
+            </summary>
+            <returns>Logical GPU helper, or null if unavailable.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDisplayHelper.GetAssociatedNvidiaDisplayName">
+            <summary>
+            Get the associated NVIDIA display name.
+            </summary>
+            <returns>Display name, or null if unavailable.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDisplayHelper.GetAssociatedDisplayOutputId">
+            <summary>
+            Get the output ID associated with this display.
+            </summary>
+            <returns>Output ID, or null if unavailable.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDisplayHelper.GetVBlankCounter">
+            <summary>
+            Get the current VBlank counter for this display.
+            </summary>
+            <returns>VBlank counter value, or null if unavailable.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDisplayHelper.Dispose">
+            <summary>
+            Dispose the helper and prevent further use.
+            </summary>
+        </member>
         <member name="T:NVAPIWrapper.NVAPIException">
             <summary>
             Exception thrown when an NVAPI call fails.
@@ -1070,6 +1138,22 @@
         </member>
         <member name="F:NVAPIWrapper.NVAPIInterfaceTable.Entries">
             <summary>All known NVAPI interface table entries.</summary>
+        </member>
+        <member name="T:NVAPIWrapper.NVAPILogicalGpuHelper">
+            <summary>
+            Facade helper for a logical GPU.
+            </summary>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPILogicalGpuHelper.GetPhysicalGpusFromLogicalGpu">
+            <summary>
+            Get physical GPUs that make up this logical GPU.
+            </summary>
+            <returns>Array of physical GPU helpers, or empty if unavailable.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPILogicalGpuHelper.Dispose">
+            <summary>
+            Dispose the helper and prevent further use.
+            </summary>
         </member>
         <member name="T:NVAPIWrapper.NV_MOSAIC_GPU_LAYOUT_CELL">
             <summary>Represents a Mosaic GPU layout cell entry.</summary>
@@ -1146,6 +1230,102 @@
         <member name="M:NVAPIWrapper.NVAPINative.GetQueryInterface(System.IntPtr)">
             <summary>
             Resolve the nvapi_QueryInterface export and return a delegate.
+            </summary>
+        </member>
+        <member name="T:NVAPIWrapper.NVAPIPciIdentifiers">
+            <summary>
+            PCI identifiers reported by NVAPI.
+            </summary>
+        </member>
+        <member name="P:NVAPIWrapper.NVAPIPciIdentifiers.DeviceId">
+            <summary>PCI device ID.</summary>
+        </member>
+        <member name="P:NVAPIWrapper.NVAPIPciIdentifiers.SubSystemId">
+            <summary>PCI subsystem ID.</summary>
+        </member>
+        <member name="P:NVAPIWrapper.NVAPIPciIdentifiers.RevisionId">
+            <summary>PCI revision ID.</summary>
+        </member>
+        <member name="P:NVAPIWrapper.NVAPIPciIdentifiers.ExtDeviceId">
+            <summary>PCI extended device ID.</summary>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIPciIdentifiers.#ctor(System.UInt32,System.UInt32,System.UInt32,System.UInt32)">
+            <summary>Create a PCI identifier set.</summary>
+        </member>
+        <member name="T:NVAPIWrapper.NVAPIPhysicalGpuHelper">
+            <summary>
+            Facade helper for a physical GPU.
+            </summary>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIPhysicalGpuHelper.GetFullName">
+            <summary>
+            Get the full name of the GPU.
+            </summary>
+            <returns>GPU name string, or null if unavailable.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIPhysicalGpuHelper.GetBusId">
+            <summary>
+            Get the PCI bus ID for the GPU.
+            </summary>
+            <returns>Bus ID, or null if unavailable.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIPhysicalGpuHelper.GetBusType">
+            <summary>
+            Get the GPU bus type.
+            </summary>
+            <returns>Bus type, or null if unavailable.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIPhysicalGpuHelper.GetGpuType">
+            <summary>
+            Get the GPU type.
+            </summary>
+            <returns>GPU type, or null if unavailable.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIPhysicalGpuHelper.GetPCIIdentifiers">
+            <summary>
+            Get PCI identifiers for the GPU.
+            </summary>
+            <returns>PCI identifiers, or null if unavailable.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIPhysicalGpuHelper.GetBusSlotId">
+            <summary>
+            Get the PCI bus slot ID for the GPU.
+            </summary>
+            <returns>Bus slot ID, or null if unavailable.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIPhysicalGpuHelper.GetVbiosVersionString">
+            <summary>
+            Get the VBIOS version string.
+            </summary>
+            <returns>VBIOS version string, or null if unavailable.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIPhysicalGpuHelper.GetPhysicalFrameBufferSize">
+            <summary>
+            Get the physical frame buffer size in kilobytes.
+            </summary>
+            <returns>Physical frame buffer size in KB, or null if unavailable.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIPhysicalGpuHelper.GetVirtualFrameBufferSize">
+            <summary>
+            Get the virtual frame buffer size in kilobytes.
+            </summary>
+            <returns>Virtual frame buffer size in KB, or null if unavailable.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIPhysicalGpuHelper.GetTachReading">
+            <summary>
+            Get the GPU tachometer reading.
+            </summary>
+            <returns>Tachometer value, or null if unavailable.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIPhysicalGpuHelper.EnumerateNvidiaDisplayHandles">
+            <summary>
+            Enumerate NVIDIA display handles associated with this GPU.
+            </summary>
+            <returns>Array of display helpers, or empty if none are found.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIPhysicalGpuHelper.Dispose">
+            <summary>
+            Dispose the helper and prevent further use.
             </summary>
         </member>
         <member name="T:NVAPIWrapper.NV_TIMING_FLAG">

@@ -115,6 +115,7 @@ Steps:
 4) Implement DTOs for data structures:
    - Convert native structs to managed DTOs.
    - Ensure proper struct size/version setup.
+   - Helpers remain stateful wrappers; getters return DTOs for snapshot/equality/persistence, setters accept DTOs to apply settings.
 5) Implement strict lifetime and memory ownership rules:
    - Each helper owns any unmanaged memory it allocates.
    - Guard against use-after-dispose (throw `ObjectDisposedException`).
@@ -143,6 +144,12 @@ Steps:
      - `NVAPIPhysicalGpuHelperFacadeTests.cs`
      - `NVAPILogicalGpuHelperFacadeTests.cs`
      - `NVAPIDisplayHelperFacadeTests.cs`
+
+### Facade DTO Pattern
+- Helpers are stateful wrappers around NVAPI handles and lifetime checks.
+- Getter methods return DTO snapshots for persistence/equality control.
+- Setter methods accept DTOs and apply settings via native calls.
+- DTOs are the boundary for equality and storage; helpers manage interop and memory.
 
 Deliverable:
 - `NVAPIApiHelper` and feature helpers with DTOs, enumerations, and safe lifetime handling.

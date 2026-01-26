@@ -12,6 +12,12 @@ namespace NVAPIWrapper
         private const uint NvApiIdGpuGetGpuType = 0xC33BAEB1;
         private const uint NvApiIdGpuGetBusType = 0x1BB18724;
         private const uint NvApiIdGpuGetBusId = 0x1BE0B8E5;
+        private const uint NvApiIdGpuGetPciIdentifiers = 0x2DDFB66E;
+        private const uint NvApiIdGpuGetBusSlotId = 0x2A0A350F;
+        private const uint NvApiIdGpuGetVbiosVersionString = 0xA561FD7D;
+        private const uint NvApiIdGpuGetPhysicalFrameBufferSize = 0x46FBEB03;
+        private const uint NvApiIdGpuGetVirtualFrameBufferSize = 0x5A04B644;
+        private const uint NvApiIdGpuGetTachReading = 0x5F608315;
         private const uint NvApiIdEnumNvidiaDisplayHandle = 0x9ABDD40D;
         private const uint NvApiIdGetPhysicalGpusFromDisplay = 0x34EF9506;
 
@@ -111,6 +117,139 @@ namespace NVAPIWrapper
         }
 
         /// <summary>
+        /// Get PCI identifiers for the GPU.
+        /// </summary>
+        /// <returns>PCI identifiers, or null if unavailable.</returns>
+        public unsafe NVAPIPciIdentifiers? GetPCIIdentifiers()
+        {
+            ThrowIfDisposed();
+
+            var getPci = GetDelegate<NvApiGpuGetPciIdentifiersDelegate>(NvApiIdGpuGetPciIdentifiers, "NvAPI_GPU_GetPCIIdentifiers");
+            uint deviceId = 0;
+            uint subSystemId = 0;
+            uint revisionId = 0;
+            uint extDeviceId = 0;
+
+            var status = getPci(GetHandle(), &deviceId, &subSystemId, &revisionId, &extDeviceId);
+            if (status == _NvAPI_Status.NVAPI_OK)
+                return new NVAPIPciIdentifiers(deviceId, subSystemId, revisionId, extDeviceId);
+
+            if (status == _NvAPI_Status.NVAPI_NOT_SUPPORTED || status == _NvAPI_Status.NVAPI_NVIDIA_DEVICE_NOT_FOUND)
+                return null;
+
+            throw new NVAPIException(status);
+        }
+
+        /// <summary>
+        /// Get the PCI bus slot ID for the GPU.
+        /// </summary>
+        /// <returns>Bus slot ID, or null if unavailable.</returns>
+        public unsafe uint? GetBusSlotId()
+        {
+            ThrowIfDisposed();
+
+            var getBusSlotId = GetDelegate<NvApiGpuGetBusSlotIdDelegate>(NvApiIdGpuGetBusSlotId, "NvAPI_GPU_GetBusSlotId");
+            uint busSlotId = 0;
+            var status = getBusSlotId(GetHandle(), &busSlotId);
+            if (status == _NvAPI_Status.NVAPI_OK)
+                return busSlotId;
+
+            if (status == _NvAPI_Status.NVAPI_NOT_SUPPORTED || status == _NvAPI_Status.NVAPI_NVIDIA_DEVICE_NOT_FOUND)
+                return null;
+
+            throw new NVAPIException(status);
+        }
+
+        /// <summary>
+        /// Get the VBIOS version string.
+        /// </summary>
+        /// <returns>VBIOS version string, or null if unavailable.</returns>
+        public unsafe string? GetVbiosVersionString()
+        {
+            ThrowIfDisposed();
+
+            var getVbios = GetDelegate<NvApiGpuGetVbiosVersionStringDelegate>(NvApiIdGpuGetVbiosVersionString, "NvAPI_GPU_GetVbiosVersionString");
+            Span<sbyte> buffer = stackalloc sbyte[NVAPI.NVAPI_SHORT_STRING_MAX];
+            buffer[0] = 0;
+
+            fixed (sbyte* pBuffer = buffer)
+            {
+                var status = getVbios(GetHandle(), pBuffer);
+                if (status == _NvAPI_Status.NVAPI_OK)
+                    return Marshal.PtrToStringAnsi((IntPtr)pBuffer);
+
+                if (status == _NvAPI_Status.NVAPI_NOT_SUPPORTED || status == _NvAPI_Status.NVAPI_NVIDIA_DEVICE_NOT_FOUND)
+                    return null;
+
+                throw new NVAPIException(status);
+            }
+        }
+
+        /// <summary>
+        /// Get the physical frame buffer size in kilobytes.
+        /// </summary>
+        /// <returns>Physical frame buffer size in KB, or null if unavailable.</returns>
+        public unsafe uint? GetPhysicalFrameBufferSize()
+        {
+            ThrowIfDisposed();
+
+            var getPhysical = GetDelegate<NvApiGpuGetPhysicalFrameBufferSizeDelegate>(
+                NvApiIdGpuGetPhysicalFrameBufferSize,
+                "NvAPI_GPU_GetPhysicalFrameBufferSize");
+            uint size = 0;
+            var status = getPhysical(GetHandle(), &size);
+            if (status == _NvAPI_Status.NVAPI_OK)
+                return size;
+
+            if (status == _NvAPI_Status.NVAPI_NOT_SUPPORTED || status == _NvAPI_Status.NVAPI_NVIDIA_DEVICE_NOT_FOUND)
+                return null;
+
+            throw new NVAPIException(status);
+        }
+
+        /// <summary>
+        /// Get the virtual frame buffer size in kilobytes.
+        /// </summary>
+        /// <returns>Virtual frame buffer size in KB, or null if unavailable.</returns>
+        public unsafe uint? GetVirtualFrameBufferSize()
+        {
+            ThrowIfDisposed();
+
+            var getVirtual = GetDelegate<NvApiGpuGetVirtualFrameBufferSizeDelegate>(
+                NvApiIdGpuGetVirtualFrameBufferSize,
+                "NvAPI_GPU_GetVirtualFrameBufferSize");
+            uint size = 0;
+            var status = getVirtual(GetHandle(), &size);
+            if (status == _NvAPI_Status.NVAPI_OK)
+                return size;
+
+            if (status == _NvAPI_Status.NVAPI_NOT_SUPPORTED || status == _NvAPI_Status.NVAPI_NVIDIA_DEVICE_NOT_FOUND)
+                return null;
+
+            throw new NVAPIException(status);
+        }
+
+        /// <summary>
+        /// Get the GPU tachometer reading.
+        /// </summary>
+        /// <returns>Tachometer value, or null if unavailable.</returns>
+        public unsafe uint? GetTachReading()
+        {
+            ThrowIfDisposed();
+
+            var getTach = GetDelegate<NvApiGpuGetTachReadingDelegate>(NvApiIdGpuGetTachReading, "NvAPI_GPU_GetTachReading");
+            uint value = 0;
+            var status = getTach(GetHandle(), &value);
+            if (status == _NvAPI_Status.NVAPI_OK)
+                return value;
+
+            if (status == _NvAPI_Status.NVAPI_NOT_SUPPORTED || status == _NvAPI_Status.NVAPI_NVIDIA_DEVICE_NOT_FOUND)
+                return null;
+
+            throw new NVAPIException(status);
+        }
+
+        /// <summary>
         /// Enumerate NVIDIA display handles associated with this GPU.
         /// </summary>
         /// <returns>Array of display helpers, or empty if none are found.</returns>
@@ -128,6 +267,8 @@ namespace NVAPIWrapper
             var helpers = new NVAPIDisplayHelper[NVAPI.NVAPI_MAX_DISPLAYS];
             var count = 0;
 
+            var gpuHandles = stackalloc NvPhysicalGpuHandle__*[NVAPI.NVAPI_MAX_PHYSICAL_GPUS];
+
             for (uint index = 0; index < NVAPI.NVAPI_MAX_DISPLAYS; index++)
             {
                 NvDisplayHandle__* displayHandle;
@@ -142,7 +283,6 @@ namespace NVAPIWrapper
                 if (status != _NvAPI_Status.NVAPI_OK)
                     throw new NVAPIException(status);
 
-                var gpuHandles = stackalloc NvPhysicalGpuHandle__*[NVAPI.NVAPI_MAX_PHYSICAL_GPUS];
                 uint gpuCount = 0;
                 status = getPhysicalFromDisplay(displayHandle, gpuHandles, &gpuCount);
 
@@ -220,6 +360,24 @@ namespace NVAPIWrapper
 
         [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
         private unsafe delegate _NvAPI_Status NvApiGpuGetGpuTypeDelegate(NvPhysicalGpuHandle__* hPhysicalGpu, _NV_GPU_TYPE* pGpuType);
+
+        [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
+        private unsafe delegate _NvAPI_Status NvApiGpuGetPciIdentifiersDelegate(NvPhysicalGpuHandle__* hPhysicalGpu, uint* pDeviceId, uint* pSubSystemId, uint* pRevisionId, uint* pExtDeviceId);
+
+        [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
+        private unsafe delegate _NvAPI_Status NvApiGpuGetBusSlotIdDelegate(NvPhysicalGpuHandle__* hPhysicalGpu, uint* pBusSlotId);
+
+        [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
+        private unsafe delegate _NvAPI_Status NvApiGpuGetVbiosVersionStringDelegate(NvPhysicalGpuHandle__* hPhysicalGpu, sbyte* szBiosRevision);
+
+        [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
+        private unsafe delegate _NvAPI_Status NvApiGpuGetPhysicalFrameBufferSizeDelegate(NvPhysicalGpuHandle__* hPhysicalGpu, uint* pSize);
+
+        [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
+        private unsafe delegate _NvAPI_Status NvApiGpuGetVirtualFrameBufferSizeDelegate(NvPhysicalGpuHandle__* hPhysicalGpu, uint* pSize);
+
+        [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
+        private unsafe delegate _NvAPI_Status NvApiGpuGetTachReadingDelegate(NvPhysicalGpuHandle__* hPhysicalGpu, uint* pValue);
 
         [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
         private unsafe delegate _NvAPI_Status NvApiEnumNvidiaDisplayHandleDelegate(uint thisEnum, NvDisplayHandle__** pNvDispHandle);
