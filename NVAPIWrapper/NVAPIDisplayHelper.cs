@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Runtime.InteropServices;
+using System.Text;
 
 namespace NVAPIWrapper
 {
@@ -16,6 +17,26 @@ namespace NVAPIWrapper
         private const uint NvApiIdGetVBlankCounter = 0x67B5DB55;
         private const uint NvApiIdDispGetDisplayConfig = 0x11ABCCF8;
         private const uint NvApiIdDispSetDisplayConfig = 0x5D8CF8DE;
+        private const uint NvApiIdDispGetDisplayIdByDisplayName = 0xAE457190;
+        private const uint NvApiIdDispGetGdiPrimaryDisplayId = 0x1E9D8A31;
+        private const uint NvApiIdGetSupportedViews = 0x66FB7FC0;
+        private const uint NvApiIdDispGetEdidData = 0x436CED76;
+        private const uint NvApiIdDispGetTiming = 0x175167E9;
+        private const uint NvApiIdDispGetMonitorCapabilities = 0x3B05C7E1;
+        private const uint NvApiIdDispGetMonitorColorCapabilities = 0x6AE4CFB5;
+        private const uint NvApiIdGetDisplayPortInfo = 0xC64FF367;
+        private const uint NvApiIdSetDisplayPort = 0xFA13E65A;
+        private const uint NvApiIdGetHdmiSupportInfo = 0x6AE16EC3;
+        private const uint NvApiIdDispGetVrrInfo = 0xDF8FDA57;
+        private const uint NvApiIdDispGetAdaptiveSyncData = 0xB73D1EE9;
+        private const uint NvApiIdDispSetAdaptiveSyncData = 0x3EEBBA1D;
+        private const uint NvApiIdDispGetVirtualRefreshRateData = 0x8C00429A;
+        private const uint NvApiIdDispSetVirtualRefreshRateData = 0x5ABBE6A3;
+        private const uint NvApiIdDispSetPreferredStereoDisplay = 0xC9D0E25F;
+        private const uint NvApiIdDispGetPreferredStereoDisplay = 0x1F6B4666;
+        private const uint NvApiIdEnableHwCursor = 0x2863148D;
+        private const uint NvApiIdDisableHwCursor = 0xAB163097;
+        private const uint NvApiIdSetRefreshRateOverride = 0x3092AC32;
 
         private readonly NVAPIApiHelper _apiHelper;
         private readonly IntPtr _handle;
@@ -230,6 +251,707 @@ namespace NVAPIWrapper
             throw new NVAPIException(status);
         }
 
+        /// <summary>
+        /// Get the display ID associated with a display name.
+        /// </summary>
+        /// <param name="displayName">Display name (e.g., "\\.\DISPLAY1"). If null, uses this display handle's name.</param>
+        /// <returns>Display ID, or null if unavailable.</returns>
+        public unsafe uint? GetDisplayIdByDisplayName(string? displayName = null)
+        {
+            ThrowIfDisposed();
+
+            var name = displayName;
+            if (string.IsNullOrWhiteSpace(name))
+            {
+                name = GetAssociatedNvidiaDisplayName();
+                if (string.IsNullOrWhiteSpace(name))
+                    return null;
+            }
+
+            if (!TryGetDisplayIdByName(name, out var displayId))
+                return null;
+
+            return displayId;
+        }
+
+        /// <summary>
+        /// Get the display ID for the GDI primary display.
+        /// </summary>
+        /// <returns>Display ID, or null if unavailable.</returns>
+        public unsafe uint? GetGdiPrimaryDisplayId()
+        {
+            ThrowIfDisposed();
+
+            var getPrimary = GetDelegate<NvApiDispGetGdiPrimaryDisplayIdDelegate>(
+                NvApiIdDispGetGdiPrimaryDisplayId,
+                "NvAPI_DISP_GetGDIPrimaryDisplayId");
+            uint displayId = 0;
+            var status = getPrimary(&displayId);
+            if (status == _NvAPI_Status.NVAPI_OK)
+                return displayId;
+
+            if (status == _NvAPI_Status.NVAPI_NOT_SUPPORTED || status == _NvAPI_Status.NVAPI_NVIDIA_DEVICE_NOT_FOUND)
+                return null;
+
+            throw new NVAPIException(status);
+        }
+
+        /// <summary>
+        /// Get the supported view modes for this display handle.
+        /// </summary>
+        /// <returns>Supported view modes, or null if unavailable.</returns>
+        public unsafe NVAPISupportedViewsDto? GetSupportedViews()
+        {
+            ThrowIfDisposed();
+
+            var getViews = GetDelegate<NvApiGetSupportedViewsDelegate>(
+                NvApiIdGetSupportedViews,
+                "NvAPI_GetSupportedViews");
+            uint viewCount = 0;
+            var status = getViews(GetHandle(), null, &viewCount);
+            if (status == _NvAPI_Status.NVAPI_NOT_SUPPORTED || status == _NvAPI_Status.NVAPI_NVIDIA_DEVICE_NOT_FOUND)
+                return null;
+
+            if (status != _NvAPI_Status.NVAPI_OK)
+                throw new NVAPIException(status);
+
+            if (viewCount == 0)
+                return new NVAPISupportedViewsDto(Array.Empty<NV_TARGET_VIEW_MODE>());
+
+            var views = new NV_TARGET_VIEW_MODE[viewCount];
+            fixed (NV_TARGET_VIEW_MODE* pViews = views)
+            {
+                status = getViews(GetHandle(), pViews, &viewCount);
+            }
+
+            if (status != _NvAPI_Status.NVAPI_OK)
+                throw new NVAPIException(status);
+
+            if (viewCount != views.Length)
+            {
+                var trimmed = new NV_TARGET_VIEW_MODE[viewCount];
+                Array.Copy(views, trimmed, (int)viewCount);
+                views = trimmed;
+            }
+
+            return new NVAPISupportedViewsDto(views);
+        }
+
+        /// <summary>
+        /// Get EDID data for the display.
+        /// </summary>
+        /// <param name="flag">EDID flag selection.</param>
+        /// <returns>EDID data DTO, or null if unavailable.</returns>
+        public unsafe NVAPIDisplayEdidDataDto? GetEdidData(NV_EDID_FLAG flag = NV_EDID_FLAG.NV_EDID_FLAG_DEFAULT)
+        {
+            ThrowIfDisposed();
+
+            if (!TryGetDisplayId(out var displayId))
+                return null;
+
+            var getEdid = GetDelegate<NvApiDispGetEdidDataDelegate>(
+                NvApiIdDispGetEdidData,
+                "NvAPI_DISP_GetEdidData");
+
+            var edid = new _NV_EDID_DATA_V2
+            {
+                version = NVAPI.NV_EDID_DATA_VER,
+                pEDID = null,
+                sizeOfEDID = 0,
+            };
+
+            var status = getEdid(displayId, &edid, &flag);
+            if (status == _NvAPI_Status.NVAPI_NOT_SUPPORTED || status == _NvAPI_Status.NVAPI_NVIDIA_DEVICE_NOT_FOUND)
+                return null;
+
+            if (status != _NvAPI_Status.NVAPI_OK && status != _NvAPI_Status.NVAPI_INSUFFICIENT_BUFFER)
+                throw new NVAPIException(status);
+
+            if (edid.sizeOfEDID == 0)
+                return new NVAPIDisplayEdidDataDto(Array.Empty<byte>(), flag, 0);
+
+            var data = new byte[edid.sizeOfEDID];
+            fixed (byte* pData = data)
+            {
+                edid.pEDID = pData;
+                status = getEdid(displayId, &edid, &flag);
+            }
+
+            if (status == _NvAPI_Status.NVAPI_OK)
+                return new NVAPIDisplayEdidDataDto(data, flag, edid.sizeOfEDID);
+
+            if (status == _NvAPI_Status.NVAPI_INSUFFICIENT_BUFFER && edid.sizeOfEDID > data.Length)
+            {
+                data = new byte[edid.sizeOfEDID];
+                fixed (byte* pData = data)
+                {
+                    edid.pEDID = pData;
+                    status = getEdid(displayId, &edid, &flag);
+                }
+
+                if (status == _NvAPI_Status.NVAPI_OK)
+                    return new NVAPIDisplayEdidDataDto(data, flag, edid.sizeOfEDID);
+            }
+
+            if (status == _NvAPI_Status.NVAPI_NOT_SUPPORTED || status == _NvAPI_Status.NVAPI_NVIDIA_DEVICE_NOT_FOUND)
+                return null;
+
+            throw new NVAPIException(status);
+        }
+
+        /// <summary>
+        /// Get timing data based on timing input parameters.
+        /// </summary>
+        /// <param name="input">Timing input parameters.</param>
+        /// <returns>Timing DTO, or null if unavailable.</returns>
+        public unsafe NVAPITimingDto? GetTiming(NVAPITimingInputDto input)
+        {
+            ThrowIfDisposed();
+
+            if (!TryGetDisplayId(out var displayId))
+                return null;
+
+            var getTiming = GetDelegate<NvApiDispGetTimingDelegate>(
+                NvApiIdDispGetTiming,
+                "NvAPI_DISP_GetTiming");
+
+            var nativeInput = new _NV_TIMING_INPUT
+            {
+                version = NVAPI.NV_TIMING_INPUT_VER,
+                width = input.Width,
+                height = input.Height,
+                rr = input.RefreshRate,
+                flag = input.Flag,
+                type = input.OverrideType,
+            };
+
+            var timing = new _NV_TIMING();
+            var status = getTiming(displayId, &nativeInput, &timing);
+            if (status == _NvAPI_Status.NVAPI_NOT_SUPPORTED || status == _NvAPI_Status.NVAPI_NVIDIA_DEVICE_NOT_FOUND)
+                return null;
+
+            if (status != _NvAPI_Status.NVAPI_OK)
+                throw new NVAPIException(status);
+
+            return new NVAPITimingDto(timing);
+        }
+
+        /// <summary>
+        /// Get monitor capabilities for the display.
+        /// </summary>
+        /// <returns>Monitor capabilities DTO, or null if unavailable.</returns>
+        public unsafe NVAPIMonitorCapabilitiesDto? GetMonitorCapabilities()
+        {
+            ThrowIfDisposed();
+
+            if (!TryGetDisplayId(out var displayId))
+                return null;
+
+            var getCaps = GetDelegate<NvApiDispGetMonitorCapabilitiesDelegate>(
+                NvApiIdDispGetMonitorCapabilities,
+                "NvAPI_DISP_GetMonitorCapabilities");
+
+            var caps = new _NV_MONITOR_CAPABILITIES_V1
+            {
+                version = NVAPI.NV_MONITOR_CAPABILITIES_VER,
+            };
+
+            var status = getCaps(displayId, &caps);
+            if (status == _NvAPI_Status.NVAPI_NOT_SUPPORTED || status == _NvAPI_Status.NVAPI_NVIDIA_DEVICE_NOT_FOUND)
+                return null;
+
+            if (status != _NvAPI_Status.NVAPI_OK)
+                throw new NVAPIException(status);
+
+            return new NVAPIMonitorCapabilitiesDto(caps);
+        }
+
+        /// <summary>
+        /// Get monitor color capabilities for the display.
+        /// </summary>
+        /// <returns>Monitor color capabilities DTO, or null if unavailable.</returns>
+        public unsafe NVAPIMonitorColorCapabilitiesDto? GetMonitorColorCapabilities()
+        {
+            ThrowIfDisposed();
+
+            if (!TryGetDisplayId(out var displayId))
+                return null;
+
+            var getCaps = GetDelegate<NvApiDispGetMonitorColorCapabilitiesDelegate>(
+                NvApiIdDispGetMonitorColorCapabilities,
+                "NvAPI_DISP_GetMonitorColorCapabilities");
+
+            uint count = 0;
+            var status = getCaps(displayId, null, &count);
+            if (status == _NvAPI_Status.NVAPI_NOT_SUPPORTED || status == _NvAPI_Status.NVAPI_NVIDIA_DEVICE_NOT_FOUND)
+                return null;
+
+            if (status != _NvAPI_Status.NVAPI_OK && status != _NvAPI_Status.NVAPI_INSUFFICIENT_BUFFER)
+                throw new NVAPIException(status);
+
+            if (count == 0)
+                return new NVAPIMonitorColorCapabilitiesDto(Array.Empty<_NV_MONITOR_COLOR_DATA>());
+
+            var caps = new _NV_MONITOR_COLOR_DATA[count];
+            for (var i = 0; i < caps.Length; i++)
+            {
+                caps[i].version = NVAPI.NV_MONITOR_COLOR_CAPS_VER;
+            }
+
+            fixed (_NV_MONITOR_COLOR_DATA* pCaps = caps)
+            {
+                status = getCaps(displayId, pCaps, &count);
+            }
+
+            if (status == _NvAPI_Status.NVAPI_INSUFFICIENT_BUFFER && count > caps.Length)
+            {
+                caps = new _NV_MONITOR_COLOR_DATA[count];
+                for (var i = 0; i < caps.Length; i++)
+                {
+                    caps[i].version = NVAPI.NV_MONITOR_COLOR_CAPS_VER;
+                }
+
+                fixed (_NV_MONITOR_COLOR_DATA* pCaps = caps)
+                {
+                    status = getCaps(displayId, pCaps, &count);
+                }
+            }
+
+            if (status != _NvAPI_Status.NVAPI_OK)
+                throw new NVAPIException(status);
+
+            if (count != caps.Length)
+            {
+                var trimmed = new _NV_MONITOR_COLOR_DATA[count];
+                Array.Copy(caps, trimmed, (int)count);
+                caps = trimmed;
+            }
+
+            return new NVAPIMonitorColorCapabilitiesDto(caps);
+        }
+
+        /// <summary>
+        /// Get display port information.
+        /// </summary>
+        /// <param name="outputId">Optional output ID override.</param>
+        /// <returns>Display port info DTO, or null if unavailable.</returns>
+        public unsafe NVAPIDisplayPortInfoDto? GetDisplayPortInfo(uint? outputId = null)
+        {
+            ThrowIfDisposed();
+
+            if (!TryGetOutputId(outputId, out var resolvedOutputId))
+                return null;
+
+            var getInfo = GetDelegate<NvApiGetDisplayPortInfoDelegate>(
+                NvApiIdGetDisplayPortInfo,
+                "NvAPI_GetDisplayPortInfo");
+
+            var info = new _NV_DISPLAY_PORT_INFO_V1
+            {
+                version = NVAPI.NV_DISPLAY_PORT_INFO_VER,
+            };
+
+            var status = getInfo(GetHandle(), resolvedOutputId, &info);
+            if (status == _NvAPI_Status.NVAPI_NOT_SUPPORTED || status == _NvAPI_Status.NVAPI_NVIDIA_DEVICE_NOT_FOUND)
+                return null;
+
+            if (status != _NvAPI_Status.NVAPI_OK)
+                throw new NVAPIException(status);
+
+            return new NVAPIDisplayPortInfoDto(info);
+        }
+
+        /// <summary>
+        /// Set display port configuration.
+        /// </summary>
+        /// <param name="config">Display port configuration DTO.</param>
+        /// <param name="outputId">Optional output ID override.</param>
+        /// <returns>True if applied, false if unavailable.</returns>
+        public unsafe bool SetDisplayPort(NVAPIDisplayPortConfigDto config, uint? outputId = null)
+        {
+            ThrowIfDisposed();
+
+            if (!TryGetOutputId(outputId, out var resolvedOutputId))
+                return false;
+
+            var setConfig = GetDelegate<NvApiSetDisplayPortDelegate>(
+                NvApiIdSetDisplayPort,
+                "NvAPI_SetDisplayPort");
+
+            var nativeConfig = config.Config;
+            nativeConfig.version = NVAPI.NV_DISPLAY_PORT_CONFIG_VER;
+            var status = setConfig(GetHandle(), resolvedOutputId, &nativeConfig);
+            if (status == _NvAPI_Status.NVAPI_OK)
+                return true;
+
+            if (status == _NvAPI_Status.NVAPI_NOT_SUPPORTED || status == _NvAPI_Status.NVAPI_NVIDIA_DEVICE_NOT_FOUND)
+                return false;
+
+            throw new NVAPIException(status);
+        }
+
+        /// <summary>
+        /// Get HDMI support information.
+        /// </summary>
+        /// <param name="outputId">Optional output ID override.</param>
+        /// <returns>HDMI support info DTO, or null if unavailable.</returns>
+        public unsafe NVAPIDisplayHdmiSupportInfoDto? GetHdmiSupportInfo(uint? outputId = null)
+        {
+            ThrowIfDisposed();
+
+            if (!TryGetOutputId(outputId, out var resolvedOutputId))
+                return null;
+
+            var getInfo = GetDelegate<NvApiGetHdmiSupportInfoDelegate>(
+                NvApiIdGetHdmiSupportInfo,
+                "NvAPI_GetHDMISupportInfo");
+
+            var info = new _NV_HDMI_SUPPORT_INFO_V2
+            {
+                version = NVAPI.NV_HDMI_SUPPORT_INFO_VER,
+            };
+
+            var status = getInfo(GetHandle(), resolvedOutputId, &info);
+            if (status == _NvAPI_Status.NVAPI_NOT_SUPPORTED || status == _NvAPI_Status.NVAPI_NVIDIA_DEVICE_NOT_FOUND)
+                return null;
+
+            if (status != _NvAPI_Status.NVAPI_OK)
+                throw new NVAPIException(status);
+
+            return new NVAPIDisplayHdmiSupportInfoDto(info);
+        }
+
+        /// <summary>
+        /// Get VRR information for this display.
+        /// </summary>
+        /// <returns>VRR info DTO, or null if unavailable.</returns>
+        public unsafe NVAPIVrrInfoDto? GetVrrInfo()
+        {
+            ThrowIfDisposed();
+
+            if (!TryGetDisplayId(out var displayId))
+                return null;
+
+            var getVrr = GetDelegate<NvApiDispGetVrrInfoDelegate>(
+                NvApiIdDispGetVrrInfo,
+                "NvAPI_Disp_GetVRRInfo");
+
+            var info = new _NV_GET_VRR_INFO_V1
+            {
+                version = NVAPI.NV_GET_VRR_INFO_VER,
+            };
+
+            var status = getVrr(displayId, &info);
+            if (status == _NvAPI_Status.NVAPI_NOT_SUPPORTED || status == _NvAPI_Status.NVAPI_NVIDIA_DEVICE_NOT_FOUND)
+                return null;
+
+            if (status != _NvAPI_Status.NVAPI_OK)
+                throw new NVAPIException(status);
+
+            return new NVAPIVrrInfoDto(info);
+        }
+
+        /// <summary>
+        /// Get adaptive sync data for this display.
+        /// </summary>
+        /// <returns>Adaptive sync data DTO, or null if unavailable.</returns>
+        public unsafe NVAPIAdaptiveSyncGetDataDto? GetAdaptiveSyncData()
+        {
+            ThrowIfDisposed();
+
+            if (!TryGetDisplayId(out var displayId))
+                return null;
+
+            var getData = GetDelegate<NvApiDispGetAdaptiveSyncDataDelegate>(
+                NvApiIdDispGetAdaptiveSyncData,
+                "NvAPI_DISP_GetAdaptiveSyncData");
+
+            var data = new _NV_GET_ADAPTIVE_SYNC_DATA_V1
+            {
+                version = NVAPI.NV_GET_ADAPTIVE_SYNC_DATA_VER,
+            };
+
+            var status = getData(displayId, &data);
+            if (status == _NvAPI_Status.NVAPI_NOT_SUPPORTED || status == _NvAPI_Status.NVAPI_NVIDIA_DEVICE_NOT_FOUND)
+                return null;
+
+            if (status != _NvAPI_Status.NVAPI_OK)
+                throw new NVAPIException(status);
+
+            return new NVAPIAdaptiveSyncGetDataDto(data);
+        }
+
+        /// <summary>
+        /// Set adaptive sync data for this display.
+        /// </summary>
+        /// <param name="data">Adaptive sync data DTO.</param>
+        /// <returns>True if applied, false if unavailable.</returns>
+        public unsafe bool SetAdaptiveSyncData(NVAPIAdaptiveSyncSetDataDto data)
+        {
+            ThrowIfDisposed();
+
+            if (!TryGetDisplayId(out var displayId))
+                return false;
+
+            var setData = GetDelegate<NvApiDispSetAdaptiveSyncDataDelegate>(
+                NvApiIdDispSetAdaptiveSyncData,
+                "NvAPI_DISP_SetAdaptiveSyncData");
+
+            var nativeData = data.Data;
+            nativeData.version = NVAPI.NV_SET_ADAPTIVE_SYNC_DATA_VER;
+            var status = setData(displayId, &nativeData);
+            if (status == _NvAPI_Status.NVAPI_OK)
+                return true;
+
+            if (status == _NvAPI_Status.NVAPI_NOT_SUPPORTED || status == _NvAPI_Status.NVAPI_NVIDIA_DEVICE_NOT_FOUND)
+                return false;
+
+            throw new NVAPIException(status);
+        }
+
+        /// <summary>
+        /// Get virtual refresh rate data for this display.
+        /// </summary>
+        /// <returns>Virtual refresh rate data DTO, or null if unavailable.</returns>
+        public unsafe NVAPIVirtualRefreshRateDataDto? GetVirtualRefreshRateData()
+        {
+            ThrowIfDisposed();
+
+            if (!TryGetDisplayId(out var displayId))
+                return null;
+
+            var getData = GetDelegate<NvApiDispGetVirtualRefreshRateDataDelegate>(
+                NvApiIdDispGetVirtualRefreshRateData,
+                "NvAPI_DISP_GetVirtualRefreshRateData");
+
+            var data = new _NV_GET_VIRTUAL_REFRESH_RATE_DATA_V2
+            {
+                version = NVAPI.NV_GET_VIRTUAL_REFRESH_RATE_DATA_VER,
+            };
+
+            var status = getData(displayId, &data);
+            if (status == _NvAPI_Status.NVAPI_NOT_SUPPORTED || status == _NvAPI_Status.NVAPI_NVIDIA_DEVICE_NOT_FOUND)
+                return null;
+
+            if (status != _NvAPI_Status.NVAPI_OK)
+                throw new NVAPIException(status);
+
+            return new NVAPIVirtualRefreshRateDataDto(data.frameIntervalUs, data.rrx1k, data.bIsGamingVrr != 0, data.frameIntervalNs);
+        }
+
+        /// <summary>
+        /// Set virtual refresh rate data for this display.
+        /// </summary>
+        /// <param name="data">Virtual refresh rate data DTO.</param>
+        /// <returns>True if applied, false if unavailable.</returns>
+        public unsafe bool SetVirtualRefreshRateData(NVAPIVirtualRefreshRateDataDto data)
+        {
+            ThrowIfDisposed();
+
+            if (!TryGetDisplayId(out var displayId))
+                return false;
+
+            var setData = GetDelegate<NvApiDispSetVirtualRefreshRateDataDelegate>(
+                NvApiIdDispSetVirtualRefreshRateData,
+                "NvAPI_DISP_SetVirtualRefreshRateData");
+
+            var nativeData = new _NV_SET_VIRTUAL_REFRESH_RATE_DATA_V2
+            {
+                version = NVAPI.NV_SET_VIRTUAL_REFRESH_RATE_DATA_VER,
+                frameIntervalUs = data.FrameIntervalUs,
+                rrx1k = data.RefreshRate1K,
+                bIsGamingVrr = data.IsGamingVrr ? 1u : 0u,
+                frameIntervalNs = data.FrameIntervalNs,
+            };
+
+            var status = setData(displayId, &nativeData);
+            if (status == _NvAPI_Status.NVAPI_OK)
+                return true;
+
+            if (status == _NvAPI_Status.NVAPI_NOT_SUPPORTED || status == _NvAPI_Status.NVAPI_NVIDIA_DEVICE_NOT_FOUND)
+                return false;
+
+            throw new NVAPIException(status);
+        }
+
+        /// <summary>
+        /// Get the preferred stereo display.
+        /// </summary>
+        /// <returns>Preferred stereo display DTO, or null if unavailable.</returns>
+        public unsafe NVAPIPreferredStereoDisplayDto? GetPreferredStereoDisplay()
+        {
+            ThrowIfDisposed();
+
+            var getDisplay = GetDelegate<NvApiDispGetPreferredStereoDisplayDelegate>(
+                NvApiIdDispGetPreferredStereoDisplay,
+                "NvAPI_DISP_GetPreferredStereoDisplay");
+
+            var display = new NV_GET_PREFERRED_STEREO_DISPLAY_V1
+            {
+                version = NVAPI.NV_GET_PREFERRED_STEREO_DISPLAY_VER,
+            };
+
+            var status = getDisplay(&display);
+            if (status == _NvAPI_Status.NVAPI_NOT_SUPPORTED || status == _NvAPI_Status.NVAPI_NVIDIA_DEVICE_NOT_FOUND)
+                return null;
+
+            if (status != _NvAPI_Status.NVAPI_OK)
+                throw new NVAPIException(status);
+
+            return new NVAPIPreferredStereoDisplayDto(display.displayId);
+        }
+
+        /// <summary>
+        /// Set the preferred stereo display.
+        /// </summary>
+        /// <param name="display">Preferred stereo display DTO.</param>
+        /// <returns>True if applied, false if unavailable.</returns>
+        public unsafe bool SetPreferredStereoDisplay(NVAPIPreferredStereoDisplayDto display)
+        {
+            ThrowIfDisposed();
+
+            var setDisplay = GetDelegate<NvApiDispSetPreferredStereoDisplayDelegate>(
+                NvApiIdDispSetPreferredStereoDisplay,
+                "NvAPI_DISP_SetPreferredStereoDisplay");
+
+            var nativeDisplay = new NV_SET_PREFERRED_STEREO_DISPLAY_V1
+            {
+                version = NVAPI.NV_SET_PREFERRED_STEREO_DISPLAY_VER,
+                displayId = display.DisplayId,
+            };
+
+            var status = setDisplay(&nativeDisplay);
+            if (status == _NvAPI_Status.NVAPI_OK)
+                return true;
+
+            if (status == _NvAPI_Status.NVAPI_NOT_SUPPORTED || status == _NvAPI_Status.NVAPI_NVIDIA_DEVICE_NOT_FOUND)
+                return false;
+
+            throw new NVAPIException(status);
+        }
+
+        /// <summary>
+        /// Enable the hardware cursor for this display.
+        /// </summary>
+        /// <returns>True if enabled, false if unavailable.</returns>
+        public unsafe bool EnableHWCursor()
+        {
+            ThrowIfDisposed();
+
+            var enable = GetDelegate<NvApiEnableHwCursorDelegate>(
+                NvApiIdEnableHwCursor,
+                "NvAPI_EnableHWCursor");
+
+            var status = enable(GetHandle());
+            if (status == _NvAPI_Status.NVAPI_OK)
+                return true;
+
+            if (status == _NvAPI_Status.NVAPI_NOT_SUPPORTED || status == _NvAPI_Status.NVAPI_NVIDIA_DEVICE_NOT_FOUND)
+                return false;
+
+            throw new NVAPIException(status);
+        }
+
+        /// <summary>
+        /// Disable the hardware cursor for this display.
+        /// </summary>
+        /// <returns>True if disabled, false if unavailable.</returns>
+        public unsafe bool DisableHWCursor()
+        {
+            ThrowIfDisposed();
+
+            var disable = GetDelegate<NvApiDisableHwCursorDelegate>(
+                NvApiIdDisableHwCursor,
+                "NvAPI_DisableHWCursor");
+
+            var status = disable(GetHandle());
+            if (status == _NvAPI_Status.NVAPI_OK)
+                return true;
+
+            if (status == _NvAPI_Status.NVAPI_NOT_SUPPORTED || status == _NvAPI_Status.NVAPI_NVIDIA_DEVICE_NOT_FOUND)
+                return false;
+
+            throw new NVAPIException(status);
+        }
+
+        /// <summary>
+        /// Override the refresh rate for the specified output mask.
+        /// </summary>
+        /// <param name="outputsMask">Output mask to apply the override.</param>
+        /// <param name="refreshRate">Refresh rate override (0.0 cancels).</param>
+        /// <param name="setDeferred">True to defer to the next modeset.</param>
+        /// <returns>True if applied, false if unavailable.</returns>
+        public unsafe bool SetRefreshRateOverride(uint outputsMask, float refreshRate, bool setDeferred)
+        {
+            ThrowIfDisposed();
+
+            var setOverride = GetDelegate<NvApiSetRefreshRateOverrideDelegate>(
+                NvApiIdSetRefreshRateOverride,
+                "NvAPI_SetRefreshRateOverride");
+
+            var status = setOverride(GetHandle(), outputsMask, refreshRate, setDeferred ? 1u : 0u);
+            if (status == _NvAPI_Status.NVAPI_OK)
+                return true;
+
+            if (status == _NvAPI_Status.NVAPI_NOT_SUPPORTED || status == _NvAPI_Status.NVAPI_NVIDIA_DEVICE_NOT_FOUND)
+                return false;
+
+            throw new NVAPIException(status);
+        }
+
+        private unsafe bool TryGetDisplayId(out uint displayId)
+        {
+            displayId = 0;
+            var name = GetAssociatedNvidiaDisplayName();
+            if (string.IsNullOrWhiteSpace(name))
+                return false;
+
+            return TryGetDisplayIdByName(name, out displayId);
+        }
+
+        private unsafe bool TryGetDisplayIdByName(string displayName, out uint displayId)
+        {
+            displayId = 0;
+
+            var getDisplayId = GetDelegate<NvApiDispGetDisplayIdByDisplayNameDelegate>(
+                NvApiIdDispGetDisplayIdByDisplayName,
+                "NvAPI_DISP_GetDisplayIdByDisplayName");
+
+            var bytes = Encoding.ASCII.GetBytes(displayName + "\0");
+            fixed (byte* pBytes = bytes)
+            {
+                var status = getDisplayId((sbyte*)pBytes, &displayId);
+                if (status == _NvAPI_Status.NVAPI_OK)
+                    return true;
+
+                if (status == _NvAPI_Status.NVAPI_NOT_SUPPORTED ||
+                    status == _NvAPI_Status.NVAPI_NVIDIA_DEVICE_NOT_FOUND ||
+                    status == _NvAPI_Status.NVAPI_INVALID_ARGUMENT)
+                {
+                    return false;
+                }
+
+                throw new NVAPIException(status);
+            }
+        }
+
+        private bool TryGetOutputId(uint? outputId, out uint resolvedOutputId)
+        {
+            resolvedOutputId = 0;
+            if (outputId.HasValue)
+            {
+                resolvedOutputId = outputId.Value;
+                return true;
+            }
+
+            var associated = GetAssociatedDisplayOutputId();
+            if (associated == null)
+                return false;
+
+            resolvedOutputId = associated.Value;
+            return true;
+        }
+
         private unsafe NvDisplayHandle__* GetHandle()
         {
             return (NvDisplayHandle__*)_handle;
@@ -285,6 +1007,66 @@ namespace NVAPIWrapper
 
         [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
         private unsafe delegate _NvAPI_Status NvApiDispSetDisplayConfigDelegate(uint pathInfoCount, _NV_DISPLAYCONFIG_PATH_INFO* pathInfo, uint flags);
+
+        [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
+        private unsafe delegate _NvAPI_Status NvApiDispGetDisplayIdByDisplayNameDelegate(sbyte* displayName, uint* displayId);
+
+        [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
+        private unsafe delegate _NvAPI_Status NvApiDispGetGdiPrimaryDisplayIdDelegate(uint* displayId);
+
+        [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
+        private unsafe delegate _NvAPI_Status NvApiGetSupportedViewsDelegate(NvDisplayHandle__* hNvDisplay, NV_TARGET_VIEW_MODE* pTargetViews, uint* pViewCount);
+
+        [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
+        private unsafe delegate _NvAPI_Status NvApiDispGetEdidDataDelegate(uint displayId, _NV_EDID_DATA_V2* pEdidParams, NV_EDID_FLAG* pFlag);
+
+        [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
+        private unsafe delegate _NvAPI_Status NvApiDispGetTimingDelegate(uint displayId, _NV_TIMING_INPUT* timingInput, _NV_TIMING* pTiming);
+
+        [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
+        private unsafe delegate _NvAPI_Status NvApiDispGetMonitorCapabilitiesDelegate(uint displayId, _NV_MONITOR_CAPABILITIES_V1* pMonitorCapabilities);
+
+        [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
+        private unsafe delegate _NvAPI_Status NvApiDispGetMonitorColorCapabilitiesDelegate(uint displayId, _NV_MONITOR_COLOR_DATA* pMonitorColorCapabilities, uint* pColorCapsCount);
+
+        [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
+        private unsafe delegate _NvAPI_Status NvApiGetDisplayPortInfoDelegate(NvDisplayHandle__* hNvDisplay, uint outputId, _NV_DISPLAY_PORT_INFO_V1* pInfo);
+
+        [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
+        private unsafe delegate _NvAPI_Status NvApiSetDisplayPortDelegate(NvDisplayHandle__* hNvDisplay, uint outputId, NV_DISPLAY_PORT_CONFIG* pCfg);
+
+        [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
+        private unsafe delegate _NvAPI_Status NvApiGetHdmiSupportInfoDelegate(NvDisplayHandle__* hNvDisplay, uint outputId, _NV_HDMI_SUPPORT_INFO_V2* pInfo);
+
+        [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
+        private unsafe delegate _NvAPI_Status NvApiDispGetVrrInfoDelegate(uint displayId, _NV_GET_VRR_INFO_V1* pVrrInfo);
+
+        [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
+        private unsafe delegate _NvAPI_Status NvApiDispGetAdaptiveSyncDataDelegate(uint displayId, _NV_GET_ADAPTIVE_SYNC_DATA_V1* pAdaptiveSyncData);
+
+        [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
+        private unsafe delegate _NvAPI_Status NvApiDispSetAdaptiveSyncDataDelegate(uint displayId, _NV_SET_ADAPTIVE_SYNC_DATA_V1* pAdaptiveSyncData);
+
+        [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
+        private unsafe delegate _NvAPI_Status NvApiDispGetVirtualRefreshRateDataDelegate(uint displayId, _NV_GET_VIRTUAL_REFRESH_RATE_DATA_V2* pVirtualRefreshRateData);
+
+        [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
+        private unsafe delegate _NvAPI_Status NvApiDispSetVirtualRefreshRateDataDelegate(uint displayId, _NV_SET_VIRTUAL_REFRESH_RATE_DATA_V2* pVirtualRefreshRateData);
+
+        [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
+        private unsafe delegate _NvAPI_Status NvApiDispSetPreferredStereoDisplayDelegate(NV_SET_PREFERRED_STEREO_DISPLAY_V1* pPreferredStereoDisplay);
+
+        [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
+        private unsafe delegate _NvAPI_Status NvApiDispGetPreferredStereoDisplayDelegate(NV_GET_PREFERRED_STEREO_DISPLAY_V1* pPreferredStereoDisplay);
+
+        [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
+        private unsafe delegate _NvAPI_Status NvApiEnableHwCursorDelegate(NvDisplayHandle__* hNvDisplay);
+
+        [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
+        private unsafe delegate _NvAPI_Status NvApiDisableHwCursorDelegate(NvDisplayHandle__* hNvDisplay);
+
+        [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
+        private unsafe delegate _NvAPI_Status NvApiSetRefreshRateOverrideDelegate(NvDisplayHandle__* hNvDisplay, uint outputsMask, float refreshRate, uint bSetDeferred);
 
         [StructLayout(LayoutKind.Sequential)]
         private struct Luid
