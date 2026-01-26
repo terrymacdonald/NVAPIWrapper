@@ -200,3 +200,22 @@ Deliverable:
 Begin Phase 5 by implementing `NVAPIApiHelper` and the first helper set:
 - `NVAPIPhysicalGpuHelper` and `NVAPILogicalGpuHelper` with enumeration methods.
 - `NVAPIDisplayHelper` enumerated from GPU helpers.
+
+## Pending API Decisions (Discuss Later)
+- Display handle APIs to surface in facade (need guidance on placement and helper design):
+  - `NvAPI_EnumNvidiaDisplayHandle`
+  - `NvAPI_EnumNvidiaUnAttachedDisplayHandle`
+  - `NvAPI_GetAssociatedNvidiaDisplayHandle`
+  - `NvAPI_DISP_GetAssociatedUnAttachedNvidiaDisplayHandle`
+- Non-paired or workflow-dependent display APIs needing guidance:
+  - `NvAPI_CreateDisplayFromUnAttachedDisplay`
+  - `NvAPI_GetUnAttachedAssociatedDisplayName`
+  - `NvAPI_EnableHWCursor` / `NvAPI_DisableHWCursor`
+  - `NvAPI_SetRefreshRateOverride`
+  - `NvAPI_Disp_InfoFrameControl`
+  - `NvAPI_DISP_AcquireDedicatedDisplay` / `NvAPI_DISP_ReleaseDedicatedDisplay`
+  - `NvAPI_DISP_EnumCustomDisplay`
+  - `NvAPI_DISP_TryCustomDisplay`
+  - `NvAPI_DISP_DeleteCustomDisplay`
+  - `NvAPI_DISP_SaveCustomDisplay`
+  - `NvAPI_DISP_RevertCustomDisplayTrial`
