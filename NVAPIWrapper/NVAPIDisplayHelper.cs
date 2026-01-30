@@ -49,6 +49,151 @@ namespace NVAPIWrapper
         }
 
         /// <summary>
+        /// Create an EDID data struct with the version initialized.
+        /// </summary>
+        public static _NV_EDID_DATA_V2 CreateEdidData()
+        {
+            return new _NV_EDID_DATA_V2
+            {
+                version = NVAPI.NV_EDID_DATA_VER,
+                pEDID = null,
+                sizeOfEDID = 0,
+            };
+        }
+
+        /// <summary>
+        /// Create a timing input struct with the version initialized.
+        /// </summary>
+        public static _NV_TIMING_INPUT CreateTimingInput()
+        {
+            return new _NV_TIMING_INPUT
+            {
+                version = NVAPI.NV_TIMING_INPUT_VER,
+            };
+        }
+
+        /// <summary>
+        /// Create a monitor capabilities struct with the version initialized.
+        /// </summary>
+        public static _NV_MONITOR_CAPABILITIES_V1 CreateMonitorCapabilities()
+        {
+            return new _NV_MONITOR_CAPABILITIES_V1
+            {
+                version = NVAPI.NV_MONITOR_CAPABILITIES_VER,
+            };
+        }
+
+        /// <summary>
+        /// Create a display port info struct with the version initialized.
+        /// </summary>
+        public static _NV_DISPLAY_PORT_INFO_V1 CreateDisplayPortInfo()
+        {
+            return new _NV_DISPLAY_PORT_INFO_V1
+            {
+                version = NVAPI.NV_DISPLAY_PORT_INFO_VER,
+            };
+        }
+
+        /// <summary>
+        /// Create a display port config struct with the version initialized.
+        /// </summary>
+        public static NV_DISPLAY_PORT_CONFIG CreateDisplayPortConfig()
+        {
+            return new NV_DISPLAY_PORT_CONFIG
+            {
+                version = NVAPI.NV_DISPLAY_PORT_CONFIG_VER,
+            };
+        }
+
+        /// <summary>
+        /// Create an HDMI support info struct with the version initialized.
+        /// </summary>
+        public static _NV_HDMI_SUPPORT_INFO_V2 CreateHdmiSupportInfo()
+        {
+            return new _NV_HDMI_SUPPORT_INFO_V2
+            {
+                version = NVAPI.NV_HDMI_SUPPORT_INFO_VER2,
+            };
+        }
+
+        /// <summary>
+        /// Create a VRR info struct with the version initialized.
+        /// </summary>
+        public static _NV_GET_VRR_INFO_V1 CreateVrrInfo()
+        {
+            return new _NV_GET_VRR_INFO_V1
+            {
+                version = NVAPI.NV_GET_VRR_INFO_VER,
+            };
+        }
+
+        /// <summary>
+        /// Create adaptive sync GET data with the version initialized.
+        /// </summary>
+        public static _NV_GET_ADAPTIVE_SYNC_DATA_V1 CreateAdaptiveSyncGetData()
+        {
+            return new _NV_GET_ADAPTIVE_SYNC_DATA_V1
+            {
+                version = NVAPI.NV_GET_ADAPTIVE_SYNC_DATA_VER,
+            };
+        }
+
+        /// <summary>
+        /// Create adaptive sync SET data with the version initialized.
+        /// </summary>
+        public static _NV_SET_ADAPTIVE_SYNC_DATA_V1 CreateAdaptiveSyncSetData()
+        {
+            return new _NV_SET_ADAPTIVE_SYNC_DATA_V1
+            {
+                version = NVAPI.NV_SET_ADAPTIVE_SYNC_DATA_VER,
+            };
+        }
+
+        /// <summary>
+        /// Create virtual refresh rate GET data with the version initialized.
+        /// </summary>
+        public static _NV_GET_VIRTUAL_REFRESH_RATE_DATA_V2 CreateVirtualRefreshRateGetData()
+        {
+            return new _NV_GET_VIRTUAL_REFRESH_RATE_DATA_V2
+            {
+                version = NVAPI.NV_GET_VIRTUAL_REFRESH_RATE_DATA_VER,
+            };
+        }
+
+        /// <summary>
+        /// Create virtual refresh rate SET data with the version initialized.
+        /// </summary>
+        public static _NV_SET_VIRTUAL_REFRESH_RATE_DATA_V2 CreateVirtualRefreshRateSetData()
+        {
+            return new _NV_SET_VIRTUAL_REFRESH_RATE_DATA_V2
+            {
+                version = NVAPI.NV_SET_VIRTUAL_REFRESH_RATE_DATA_VER,
+            };
+        }
+
+        /// <summary>
+        /// Create preferred stereo display GET struct with the version initialized.
+        /// </summary>
+        public static NV_GET_PREFERRED_STEREO_DISPLAY_V1 CreatePreferredStereoDisplayGet()
+        {
+            return new NV_GET_PREFERRED_STEREO_DISPLAY_V1
+            {
+                version = NVAPI.NV_GET_PREFERRED_STEREO_DISPLAY_VER,
+            };
+        }
+
+        /// <summary>
+        /// Create preferred stereo display SET struct with the version initialized.
+        /// </summary>
+        public static NV_SET_PREFERRED_STEREO_DISPLAY_V1 CreatePreferredStereoDisplaySet()
+        {
+            return new NV_SET_PREFERRED_STEREO_DISPLAY_V1
+            {
+                version = NVAPI.NV_SET_PREFERRED_STEREO_DISPLAY_VER,
+            };
+        }
+
+        /// <summary>
         /// Get physical GPUs associated with this display.
         /// </summary>
         /// <returns>Array of physical GPU helpers, or empty if unavailable.</returns>
@@ -212,7 +357,7 @@ namespace NVAPIWrapper
             if (status != _NvAPI_Status.NVAPI_OK)
                 throw new NVAPIException(status);
 
-            return CreateDisplayConfigInfo(pathCount, buffer.PathInfo);
+            return NVAPIDisplayConfigDto.FromNative(pathCount, buffer.PathInfo);
         }
 
         /// <summary>
@@ -240,7 +385,7 @@ namespace NVAPIWrapper
                 NvApiIdDispSetDisplayConfig,
                 "NvAPI_DISP_SetDisplayConfig");
 
-            using var buffer = CreateDisplayConfigBuffer(paths);
+            using var buffer = config.ToNativeBuffer();
             var status = setConfig((uint)paths.Length, buffer.PathInfo, flags);
             if (status == _NvAPI_Status.NVAPI_OK)
                 return true;
@@ -316,7 +461,7 @@ namespace NVAPIWrapper
                 throw new NVAPIException(status);
 
             if (viewCount == 0)
-                return new NVAPISupportedViewsDto(Array.Empty<NV_TARGET_VIEW_MODE>());
+                return NVAPISupportedViewsDto.FromNative(Array.Empty<NV_TARGET_VIEW_MODE>());
 
             var views = new NV_TARGET_VIEW_MODE[viewCount];
             fixed (NV_TARGET_VIEW_MODE* pViews = views)
@@ -334,7 +479,7 @@ namespace NVAPIWrapper
                 views = trimmed;
             }
 
-            return new NVAPISupportedViewsDto(views);
+            return NVAPISupportedViewsDto.FromNative(views);
         }
 
         /// <summary>
@@ -353,12 +498,7 @@ namespace NVAPIWrapper
                 NvApiIdDispGetEdidData,
                 "NvAPI_DISP_GetEdidData");
 
-            var edid = new _NV_EDID_DATA_V2
-            {
-                version = NVAPI.NV_EDID_DATA_VER,
-                pEDID = null,
-                sizeOfEDID = 0,
-            };
+            var edid = CreateEdidData();
 
             var status = getEdid(displayId, &edid, &flag);
             if (status == _NvAPI_Status.NVAPI_NOT_SUPPORTED || status == _NvAPI_Status.NVAPI_NVIDIA_DEVICE_NOT_FOUND)
@@ -368,17 +508,16 @@ namespace NVAPIWrapper
                 throw new NVAPIException(status);
 
             if (edid.sizeOfEDID == 0)
-                return new NVAPIDisplayEdidDataDto(Array.Empty<byte>(), flag, 0);
+                return NVAPIDisplayEdidDataDto.FromNative(edid, flag);
 
             var data = new byte[edid.sizeOfEDID];
             fixed (byte* pData = data)
             {
                 edid.pEDID = pData;
                 status = getEdid(displayId, &edid, &flag);
+                if (status == _NvAPI_Status.NVAPI_OK)
+                    return NVAPIDisplayEdidDataDto.FromNative(edid, flag);
             }
-
-            if (status == _NvAPI_Status.NVAPI_OK)
-                return new NVAPIDisplayEdidDataDto(data, flag, edid.sizeOfEDID);
 
             if (status == _NvAPI_Status.NVAPI_INSUFFICIENT_BUFFER && edid.sizeOfEDID > data.Length)
             {
@@ -387,10 +526,9 @@ namespace NVAPIWrapper
                 {
                     edid.pEDID = pData;
                     status = getEdid(displayId, &edid, &flag);
+                    if (status == _NvAPI_Status.NVAPI_OK)
+                        return NVAPIDisplayEdidDataDto.FromNative(edid, flag);
                 }
-
-                if (status == _NvAPI_Status.NVAPI_OK)
-                    return new NVAPIDisplayEdidDataDto(data, flag, edid.sizeOfEDID);
             }
 
             if (status == _NvAPI_Status.NVAPI_NOT_SUPPORTED || status == _NvAPI_Status.NVAPI_NVIDIA_DEVICE_NOT_FOUND)
@@ -415,15 +553,7 @@ namespace NVAPIWrapper
                 NvApiIdDispGetTiming,
                 "NvAPI_DISP_GetTiming");
 
-            var nativeInput = new _NV_TIMING_INPUT
-            {
-                version = NVAPI.NV_TIMING_INPUT_VER,
-                width = input.Width,
-                height = input.Height,
-                rr = input.RefreshRate,
-                flag = input.Flag,
-                type = input.OverrideType,
-            };
+            var nativeInput = input.ToNative();
 
             var timing = new _NV_TIMING();
             var status = getTiming(displayId, &nativeInput, &timing);
@@ -433,7 +563,7 @@ namespace NVAPIWrapper
             if (status != _NvAPI_Status.NVAPI_OK)
                 throw new NVAPIException(status);
 
-            return new NVAPITimingDto(timing);
+            return NVAPITimingDto.FromNative(timing);
         }
 
         /// <summary>
@@ -451,10 +581,7 @@ namespace NVAPIWrapper
                 NvApiIdDispGetMonitorCapabilities,
                 "NvAPI_DISP_GetMonitorCapabilities");
 
-            var caps = new _NV_MONITOR_CAPABILITIES_V1
-            {
-                version = NVAPI.NV_MONITOR_CAPABILITIES_VER,
-            };
+            var caps = CreateMonitorCapabilities();
 
             var status = getCaps(displayId, &caps);
             if (status == _NvAPI_Status.NVAPI_NOT_SUPPORTED || status == _NvAPI_Status.NVAPI_NVIDIA_DEVICE_NOT_FOUND)
@@ -463,7 +590,7 @@ namespace NVAPIWrapper
             if (status != _NvAPI_Status.NVAPI_OK)
                 throw new NVAPIException(status);
 
-            return new NVAPIMonitorCapabilitiesDto(caps);
+            return NVAPIMonitorCapabilitiesDto.FromNative(caps);
         }
 
         /// <summary>
@@ -490,7 +617,7 @@ namespace NVAPIWrapper
                 throw new NVAPIException(status);
 
             if (count == 0)
-                return new NVAPIMonitorColorCapabilitiesDto(Array.Empty<_NV_MONITOR_COLOR_DATA>());
+                return NVAPIMonitorColorCapabilitiesDto.FromNative(Array.Empty<_NV_MONITOR_COLOR_DATA>());
 
             var caps = new _NV_MONITOR_COLOR_DATA[count];
             for (var i = 0; i < caps.Length; i++)
@@ -527,7 +654,7 @@ namespace NVAPIWrapper
                 caps = trimmed;
             }
 
-            return new NVAPIMonitorColorCapabilitiesDto(caps);
+            return NVAPIMonitorColorCapabilitiesDto.FromNative(caps);
         }
 
         /// <summary>
@@ -546,10 +673,7 @@ namespace NVAPIWrapper
                 NvApiIdGetDisplayPortInfo,
                 "NvAPI_GetDisplayPortInfo");
 
-            var info = new _NV_DISPLAY_PORT_INFO_V1
-            {
-                version = NVAPI.NV_DISPLAY_PORT_INFO_VER,
-            };
+            var info = CreateDisplayPortInfo();
 
             var status = getInfo(GetHandle(), resolvedOutputId, &info);
             if (status == _NvAPI_Status.NVAPI_NOT_SUPPORTED || status == _NvAPI_Status.NVAPI_NVIDIA_DEVICE_NOT_FOUND)
@@ -558,7 +682,7 @@ namespace NVAPIWrapper
             if (status != _NvAPI_Status.NVAPI_OK)
                 throw new NVAPIException(status);
 
-            return new NVAPIDisplayPortInfoDto(info);
+            return NVAPIDisplayPortInfoDto.FromNative(info);
         }
 
         /// <summary>
@@ -578,8 +702,7 @@ namespace NVAPIWrapper
                 NvApiIdSetDisplayPort,
                 "NvAPI_SetDisplayPort");
 
-            var nativeConfig = config.Config;
-            nativeConfig.version = NVAPI.NV_DISPLAY_PORT_CONFIG_VER;
+            var nativeConfig = config.ToNative();
             var status = setConfig(GetHandle(), resolvedOutputId, &nativeConfig);
             if (status == _NvAPI_Status.NVAPI_OK)
                 return true;
@@ -606,10 +729,7 @@ namespace NVAPIWrapper
                 NvApiIdGetHdmiSupportInfo,
                 "NvAPI_GetHDMISupportInfo");
 
-            var info = new _NV_HDMI_SUPPORT_INFO_V2
-            {
-                version = NVAPI.NV_HDMI_SUPPORT_INFO_VER,
-            };
+            var info = CreateHdmiSupportInfo();
 
             var status = getInfo(GetHandle(), resolvedOutputId, &info);
             if (status == _NvAPI_Status.NVAPI_NOT_SUPPORTED || status == _NvAPI_Status.NVAPI_NVIDIA_DEVICE_NOT_FOUND)
@@ -618,7 +738,7 @@ namespace NVAPIWrapper
             if (status != _NvAPI_Status.NVAPI_OK)
                 throw new NVAPIException(status);
 
-            return new NVAPIDisplayHdmiSupportInfoDto(info);
+            return NVAPIDisplayHdmiSupportInfoDto.FromNative(info);
         }
 
         /// <summary>
@@ -636,10 +756,7 @@ namespace NVAPIWrapper
                 NvApiIdDispGetVrrInfo,
                 "NvAPI_Disp_GetVRRInfo");
 
-            var info = new _NV_GET_VRR_INFO_V1
-            {
-                version = NVAPI.NV_GET_VRR_INFO_VER,
-            };
+            var info = CreateVrrInfo();
 
             var status = getVrr(displayId, &info);
             if (status == _NvAPI_Status.NVAPI_NOT_SUPPORTED || status == _NvAPI_Status.NVAPI_NVIDIA_DEVICE_NOT_FOUND)
@@ -648,7 +765,7 @@ namespace NVAPIWrapper
             if (status != _NvAPI_Status.NVAPI_OK)
                 throw new NVAPIException(status);
 
-            return new NVAPIVrrInfoDto(info);
+            return NVAPIVrrInfoDto.FromNative(info);
         }
 
         /// <summary>
@@ -666,10 +783,7 @@ namespace NVAPIWrapper
                 NvApiIdDispGetAdaptiveSyncData,
                 "NvAPI_DISP_GetAdaptiveSyncData");
 
-            var data = new _NV_GET_ADAPTIVE_SYNC_DATA_V1
-            {
-                version = NVAPI.NV_GET_ADAPTIVE_SYNC_DATA_VER,
-            };
+            var data = CreateAdaptiveSyncGetData();
 
             var status = getData(displayId, &data);
             if (status == _NvAPI_Status.NVAPI_NOT_SUPPORTED || status == _NvAPI_Status.NVAPI_NVIDIA_DEVICE_NOT_FOUND)
@@ -678,7 +792,7 @@ namespace NVAPIWrapper
             if (status != _NvAPI_Status.NVAPI_OK)
                 throw new NVAPIException(status);
 
-            return new NVAPIAdaptiveSyncGetDataDto(data);
+            return NVAPIAdaptiveSyncGetDataDto.FromNative(data);
         }
 
         /// <summary>
@@ -697,8 +811,7 @@ namespace NVAPIWrapper
                 NvApiIdDispSetAdaptiveSyncData,
                 "NvAPI_DISP_SetAdaptiveSyncData");
 
-            var nativeData = data.Data;
-            nativeData.version = NVAPI.NV_SET_ADAPTIVE_SYNC_DATA_VER;
+            var nativeData = data.ToNative();
             var status = setData(displayId, &nativeData);
             if (status == _NvAPI_Status.NVAPI_OK)
                 return true;
@@ -724,10 +837,7 @@ namespace NVAPIWrapper
                 NvApiIdDispGetVirtualRefreshRateData,
                 "NvAPI_DISP_GetVirtualRefreshRateData");
 
-            var data = new _NV_GET_VIRTUAL_REFRESH_RATE_DATA_V2
-            {
-                version = NVAPI.NV_GET_VIRTUAL_REFRESH_RATE_DATA_VER,
-            };
+            var data = CreateVirtualRefreshRateGetData();
 
             var status = getData(displayId, &data);
             if (status == _NvAPI_Status.NVAPI_NOT_SUPPORTED || status == _NvAPI_Status.NVAPI_NVIDIA_DEVICE_NOT_FOUND)
@@ -736,7 +846,7 @@ namespace NVAPIWrapper
             if (status != _NvAPI_Status.NVAPI_OK)
                 throw new NVAPIException(status);
 
-            return new NVAPIVirtualRefreshRateDataDto(data.frameIntervalUs, data.rrx1k, data.bIsGamingVrr != 0, data.frameIntervalNs);
+            return NVAPIVirtualRefreshRateDataDto.FromNative(data);
         }
 
         /// <summary>
@@ -755,14 +865,7 @@ namespace NVAPIWrapper
                 NvApiIdDispSetVirtualRefreshRateData,
                 "NvAPI_DISP_SetVirtualRefreshRateData");
 
-            var nativeData = new _NV_SET_VIRTUAL_REFRESH_RATE_DATA_V2
-            {
-                version = NVAPI.NV_SET_VIRTUAL_REFRESH_RATE_DATA_VER,
-                frameIntervalUs = data.FrameIntervalUs,
-                rrx1k = data.RefreshRate1K,
-                bIsGamingVrr = data.IsGamingVrr ? 1u : 0u,
-                frameIntervalNs = data.FrameIntervalNs,
-            };
+            var nativeData = data.ToNative();
 
             var status = setData(displayId, &nativeData);
             if (status == _NvAPI_Status.NVAPI_OK)
@@ -786,10 +889,7 @@ namespace NVAPIWrapper
                 NvApiIdDispGetPreferredStereoDisplay,
                 "NvAPI_DISP_GetPreferredStereoDisplay");
 
-            var display = new NV_GET_PREFERRED_STEREO_DISPLAY_V1
-            {
-                version = NVAPI.NV_GET_PREFERRED_STEREO_DISPLAY_VER,
-            };
+            var display = CreatePreferredStereoDisplayGet();
 
             var status = getDisplay(&display);
             if (status == _NvAPI_Status.NVAPI_NOT_SUPPORTED || status == _NvAPI_Status.NVAPI_NVIDIA_DEVICE_NOT_FOUND)
@@ -798,7 +898,7 @@ namespace NVAPIWrapper
             if (status != _NvAPI_Status.NVAPI_OK)
                 throw new NVAPIException(status);
 
-            return new NVAPIPreferredStereoDisplayDto(display.displayId);
+            return NVAPIPreferredStereoDisplayDto.FromNative(display);
         }
 
         /// <summary>
@@ -814,11 +914,7 @@ namespace NVAPIWrapper
                 NvApiIdDispSetPreferredStereoDisplay,
                 "NvAPI_DISP_SetPreferredStereoDisplay");
 
-            var nativeDisplay = new NV_SET_PREFERRED_STEREO_DISPLAY_V1
-            {
-                version = NVAPI.NV_SET_PREFERRED_STEREO_DISPLAY_VER,
-                displayId = display.DisplayId,
-            };
+            var nativeDisplay = display.ToNative();
 
             var status = setDisplay(&nativeDisplay);
             if (status == _NvAPI_Status.NVAPI_OK)
@@ -1075,7 +1171,7 @@ namespace NVAPIWrapper
             public int HighPart;
         }
 
-        private sealed class DisplayConfigBuffer : IDisposable
+        internal sealed class DisplayConfigBuffer : IDisposable
         {
             private readonly List<IntPtr> _allocations = new List<IntPtr>();
 
@@ -1151,7 +1247,7 @@ namespace NVAPIWrapper
             }
         }
 
-        private static unsafe NVAPIDisplayConfigDto CreateDisplayConfigInfo(uint pathCount, _NV_DISPLAYCONFIG_PATH_INFO* pathInfo)
+        internal static unsafe NVAPIDisplayConfigDto CreateDisplayConfigInfo(uint pathCount, _NV_DISPLAYCONFIG_PATH_INFO* pathInfo)
         {
             var paths = new NVAPIDisplayConfigPathDto[pathCount];
             for (var i = 0; i < pathCount; i++)
@@ -1173,7 +1269,7 @@ namespace NVAPIWrapper
             return new NVAPIDisplayConfigDto(paths);
         }
 
-        private static unsafe NVAPIDisplayConfigSourceModeDto? CreateSourceModeInfo(_NV_DISPLAYCONFIG_SOURCE_MODE_INFO_V1* sourcePtr)
+        internal static unsafe NVAPIDisplayConfigSourceModeDto? CreateSourceModeInfo(_NV_DISPLAYCONFIG_SOURCE_MODE_INFO_V1* sourcePtr)
         {
             if (sourcePtr == null)
                 return null;
@@ -1188,7 +1284,7 @@ namespace NVAPIWrapper
                 source.bSLIFocus != 0);
         }
 
-        private static unsafe NVAPIDisplayConfigTargetDto[] CreateTargets(uint targetCount, _NV_DISPLAYCONFIG_PATH_TARGET_INFO_V2* targetPtr)
+        internal static unsafe NVAPIDisplayConfigTargetDto[] CreateTargets(uint targetCount, _NV_DISPLAYCONFIG_PATH_TARGET_INFO_V2* targetPtr)
         {
             if (targetCount == 0 || targetPtr == null)
                 return Array.Empty<NVAPIDisplayConfigTargetDto>();
@@ -1204,7 +1300,7 @@ namespace NVAPIWrapper
             return targets;
         }
 
-        private static unsafe NVAPIDisplayConfigAdvancedTargetDto? CreateAdvancedTargetInfo(_NV_DISPLAYCONFIG_PATH_ADVANCED_TARGET_INFO_V1* detailsPtr)
+        internal static unsafe NVAPIDisplayConfigAdvancedTargetDto? CreateAdvancedTargetInfo(_NV_DISPLAYCONFIG_PATH_ADVANCED_TARGET_INFO_V1* detailsPtr)
         {
             if (detailsPtr == null)
                 return null;
@@ -1224,7 +1320,7 @@ namespace NVAPIWrapper
                 details.timing);
         }
 
-        private static unsafe long? ReadOsAdapterLuid(void* osAdapterId)
+        internal static unsafe long? ReadOsAdapterLuid(void* osAdapterId)
         {
             if (osAdapterId == null)
                 return null;
@@ -1234,7 +1330,7 @@ namespace NVAPIWrapper
             return value;
         }
 
-        private static unsafe DisplayConfigBuffer CreateDisplayConfigBuffer(NVAPIDisplayConfigPathDto[] paths)
+        internal static unsafe DisplayConfigBuffer CreateDisplayConfigBuffer(NVAPIDisplayConfigPathDto[] paths)
         {
             var buffer = new DisplayConfigBuffer((uint)paths.Length);
             var pathInfo = buffer.PathInfo;
@@ -1347,6 +1443,27 @@ namespace NVAPIWrapper
         public NVAPIDisplayConfigDto(NVAPIDisplayConfigPathDto[] paths)
         {
             Paths = paths ?? Array.Empty<NVAPIDisplayConfigPathDto>();
+        }
+
+        /// <summary>
+        /// Create a DTO from native display configuration data.
+        /// </summary>
+        /// <param name="pathCount">Number of paths.</param>
+        /// <param name="pathInfo">Pointer to native path info.</param>
+        /// <returns>Display configuration DTO.</returns>
+        public static unsafe NVAPIDisplayConfigDto FromNative(uint pathCount, _NV_DISPLAYCONFIG_PATH_INFO* pathInfo)
+        {
+            return NVAPIDisplayHelper.CreateDisplayConfigInfo(pathCount, pathInfo);
+        }
+
+        /// <summary>
+        /// Convert this DTO to a native buffer suitable for NvAPI_DISP_SetDisplayConfig.
+        /// </summary>
+        /// <returns>Native buffer that must be disposed.</returns>
+        internal unsafe NVAPIDisplayHelper.DisplayConfigBuffer ToNativeBuffer()
+        {
+            var paths = Paths ?? Array.Empty<NVAPIDisplayConfigPathDto>();
+            return NVAPIDisplayHelper.CreateDisplayConfigBuffer(paths);
         }
 
         /// <inheritdoc />
@@ -1467,6 +1584,54 @@ namespace NVAPIWrapper
             Targets = targets ?? Array.Empty<NVAPIDisplayConfigTargetDto>();
         }
 
+        /// <summary>
+        /// Create a DTO from a native path info struct.
+        /// </summary>
+        /// <param name="pathInfo">Native path info.</param>
+        /// <returns>Display config path DTO.</returns>
+        public static unsafe NVAPIDisplayConfigPathDto FromNative(_NV_DISPLAYCONFIG_PATH_INFO pathInfo)
+        {
+            var source = NVAPIDisplayHelper.CreateSourceModeInfo(pathInfo.sourceModeInfo);
+            var targets = NVAPIDisplayHelper.CreateTargets(pathInfo.targetInfoCount, pathInfo.targetInfo);
+            var osAdapterLuid = NVAPIDisplayHelper.ReadOsAdapterLuid(pathInfo.pOSAdapterID);
+
+            return new NVAPIDisplayConfigPathDto(
+                pathInfo.version,
+                pathInfo.sourceId,
+                pathInfo.IsNonNVIDIAAdapter != 0,
+                osAdapterLuid,
+                source,
+                targets);
+        }
+
+        /// <summary>
+        /// Convert this DTO to a native path info struct.
+        /// </summary>
+        /// <param name="targetInfo">Pointer to native target info array.</param>
+        /// <param name="targetInfoCount">Number of target info entries.</param>
+        /// <param name="sourceModeInfo">Pointer to native source mode info.</param>
+        /// <param name="osAdapterId">Pointer to OS adapter ID (LUID), or null.</param>
+        /// <returns>Native path info struct.</returns>
+        public unsafe _NV_DISPLAYCONFIG_PATH_INFO ToNative(
+            _NV_DISPLAYCONFIG_PATH_TARGET_INFO_V2* targetInfo,
+            uint targetInfoCount,
+            _NV_DISPLAYCONFIG_SOURCE_MODE_INFO_V1* sourceModeInfo,
+            void* osAdapterId)
+        {
+            var version = Version != 0 ? Version : NVAPI.NV_DISPLAYCONFIG_PATH_INFO_VER;
+            return new _NV_DISPLAYCONFIG_PATH_INFO
+            {
+                version = version,
+                sourceId = SourceId,
+                targetInfoCount = targetInfoCount,
+                targetInfo = targetInfo,
+                sourceModeInfo = sourceModeInfo,
+                IsNonNVIDIAAdapter = IsNonNvidiaAdapter ? 1u : 0u,
+                reserved = 0,
+                pOSAdapterID = osAdapterId,
+            };
+        }
+
         /// <inheritdoc />
         public bool Equals(NVAPIDisplayConfigPathDto other)
         {
@@ -1585,6 +1750,41 @@ namespace NVAPIWrapper
             IsSliFocus = isSliFocus;
         }
 
+        /// <summary>
+        /// Create a DTO from a native source mode info struct.
+        /// </summary>
+        /// <param name="native">Native source mode info.</param>
+        /// <returns>Source mode DTO.</returns>
+        public static NVAPIDisplayConfigSourceModeDto FromNative(_NV_DISPLAYCONFIG_SOURCE_MODE_INFO_V1 native)
+        {
+            return new NVAPIDisplayConfigSourceModeDto(
+                native.resolution,
+                native.colorFormat,
+                native.position,
+                native.spanningOrientation,
+                native.bGDIPrimary != 0,
+                native.bSLIFocus != 0);
+        }
+
+        /// <summary>
+        /// Convert this DTO to a native source mode info struct.
+        /// </summary>
+        /// <returns>Native source mode info.</returns>
+        public _NV_DISPLAYCONFIG_SOURCE_MODE_INFO_V1 ToNative()
+        {
+            var native = new _NV_DISPLAYCONFIG_SOURCE_MODE_INFO_V1
+            {
+                resolution = Resolution,
+                colorFormat = ColorFormat,
+                position = Position,
+                spanningOrientation = SpanningOrientation,
+            };
+            native.bGDIPrimary = IsGdiPrimary ? 1u : 0u;
+            native.bSLIFocus = IsSliFocus ? 1u : 0u;
+            native.reserved = 0;
+            return native;
+        }
+
         /// <inheritdoc />
         public bool Equals(NVAPIDisplayConfigSourceModeDto other)
         {
@@ -1655,6 +1855,32 @@ namespace NVAPIWrapper
             DisplayId = displayId;
             TargetId = targetId;
             Details = details;
+        }
+
+        /// <summary>
+        /// Create a DTO from a native target info struct.
+        /// </summary>
+        /// <param name="native">Native target info.</param>
+        /// <returns>Target DTO.</returns>
+        public static unsafe NVAPIDisplayConfigTargetDto FromNative(_NV_DISPLAYCONFIG_PATH_TARGET_INFO_V2 native)
+        {
+            var details = NVAPIDisplayHelper.CreateAdvancedTargetInfo(native.details);
+            return new NVAPIDisplayConfigTargetDto(native.displayId, native.targetId, details);
+        }
+
+        /// <summary>
+        /// Convert this DTO to a native target info struct.
+        /// </summary>
+        /// <param name="details">Pointer to native advanced target info, or null.</param>
+        /// <returns>Native target info.</returns>
+        public unsafe _NV_DISPLAYCONFIG_PATH_TARGET_INFO_V2 ToNative(_NV_DISPLAYCONFIG_PATH_ADVANCED_TARGET_INFO_V1* details)
+        {
+            return new _NV_DISPLAYCONFIG_PATH_TARGET_INFO_V2
+            {
+                displayId = DisplayId,
+                targetId = TargetId,
+                details = details,
+            };
         }
 
         /// <inheritdoc />
@@ -1766,6 +1992,53 @@ namespace NVAPIWrapper
             Timing = timing;
         }
 
+        /// <summary>
+        /// Create a DTO from a native advanced target info struct.
+        /// </summary>
+        /// <param name="native">Native advanced target info.</param>
+        /// <returns>Advanced target DTO.</returns>
+        public static NVAPIDisplayConfigAdvancedTargetDto FromNative(_NV_DISPLAYCONFIG_PATH_ADVANCED_TARGET_INFO_V1 native)
+        {
+            return new NVAPIDisplayConfigAdvancedTargetDto(
+                native.rotation,
+                native.scaling,
+                native.refreshRate1K,
+                native.interlaced != 0,
+                native.primary != 0,
+                native.disableVirtualModeSupport != 0,
+                native.isPreferredUnscaledTarget != 0,
+                native.connector,
+                native.tvFormat,
+                native.timingOverride,
+                native.timing);
+        }
+
+        /// <summary>
+        /// Convert this DTO to a native advanced target info struct.
+        /// </summary>
+        /// <returns>Native advanced target info.</returns>
+        public _NV_DISPLAYCONFIG_PATH_ADVANCED_TARGET_INFO_V1 ToNative()
+        {
+            var native = new _NV_DISPLAYCONFIG_PATH_ADVANCED_TARGET_INFO_V1
+            {
+                version = NVAPI.NV_DISPLAYCONFIG_PATH_ADVANCED_TARGET_INFO_VER,
+                rotation = Rotation,
+                scaling = Scaling,
+                refreshRate1K = RefreshRate1K,
+                connector = Connector,
+                tvFormat = TvFormat,
+                timingOverride = TimingOverride,
+                timing = Timing,
+            };
+            native.interlaced = Interlaced ? 1u : 0u;
+            native.primary = Primary ? 1u : 0u;
+            native.disableVirtualModeSupport = DisableVirtualModeSupport ? 1u : 0u;
+            native.isPreferredUnscaledTarget = IsPreferredUnscaledTarget ? 1u : 0u;
+            native.reservedBit1 = 0;
+            native.reserved = 0;
+            return native;
+        }
+
         /// <inheritdoc />
         public bool Equals(NVAPIDisplayConfigAdvancedTargetDto other)
         {
@@ -1848,6 +2121,50 @@ namespace NVAPIWrapper
             SizeOfEdid = sizeOfEdid;
         }
 
+        /// <summary>
+        /// Create a DTO from a native EDID struct.
+        /// </summary>
+        /// <param name="native">Native EDID data.</param>
+        /// <param name="flags">EDID flags used.</param>
+        /// <returns>EDID data DTO.</returns>
+        public static unsafe NVAPIDisplayEdidDataDto FromNative(_NV_EDID_DATA_V2 native, NV_EDID_FLAG flags)
+        {
+            if (native.pEDID == null || native.sizeOfEDID == 0)
+                return new NVAPIDisplayEdidDataDto(Array.Empty<byte>(), flags, native.sizeOfEDID);
+
+            var size = checked((int)native.sizeOfEDID);
+            var data = new byte[size];
+            Marshal.Copy((IntPtr)native.pEDID, data, 0, size);
+            return new NVAPIDisplayEdidDataDto(data, flags, native.sizeOfEDID);
+        }
+
+        /// <summary>
+        /// Convert this DTO to a native EDID struct.
+        /// </summary>
+        /// <param name="handle">Pinned handle for the EDID buffer (caller must free).</param>
+        /// <returns>Native EDID data.</returns>
+        public unsafe _NV_EDID_DATA_V2 ToNative(out GCHandle handle)
+        {
+            handle = default;
+            if (Data == null || Data.Length == 0)
+            {
+                return new _NV_EDID_DATA_V2
+                {
+                    version = NVAPI.NV_EDID_DATA_VER,
+                    pEDID = null,
+                    sizeOfEDID = 0,
+                };
+            }
+
+            handle = GCHandle.Alloc(Data, GCHandleType.Pinned);
+            return new _NV_EDID_DATA_V2
+            {
+                version = NVAPI.NV_EDID_DATA_VER,
+                pEDID = (byte*)handle.AddrOfPinnedObject(),
+                sizeOfEDID = (uint)Data.Length,
+            };
+        }
+
         /// <inheritdoc />
         public bool Equals(NVAPIDisplayEdidDataDto other)
         {
@@ -1912,6 +2229,33 @@ namespace NVAPIWrapper
             OverrideType = overrideType;
         }
 
+        /// <summary>
+        /// Create a DTO from a native timing input struct.
+        /// </summary>
+        /// <param name="native">Native timing input.</param>
+        /// <returns>Timing input DTO.</returns>
+        public static NVAPITimingInputDto FromNative(_NV_TIMING_INPUT native)
+        {
+            return new NVAPITimingInputDto(native.width, native.height, native.rr, native.flag, native.type);
+        }
+
+        /// <summary>
+        /// Convert this DTO to a native timing input struct.
+        /// </summary>
+        /// <returns>Native timing input.</returns>
+        public _NV_TIMING_INPUT ToNative()
+        {
+            return new _NV_TIMING_INPUT
+            {
+                version = NVAPI.NV_TIMING_INPUT_VER,
+                width = Width,
+                height = Height,
+                rr = RefreshRate,
+                flag = Flag,
+                type = OverrideType,
+            };
+        }
+
         /// <inheritdoc />
         public bool Equals(NVAPITimingInputDto other)
         {
@@ -1964,6 +2308,25 @@ namespace NVAPIWrapper
             Timing = timing;
         }
 
+        /// <summary>
+        /// Create a DTO from a native timing struct.
+        /// </summary>
+        /// <param name="native">Native timing.</param>
+        /// <returns>Timing DTO.</returns>
+        public static NVAPITimingDto FromNative(_NV_TIMING native)
+        {
+            return new NVAPITimingDto(native);
+        }
+
+        /// <summary>
+        /// Convert this DTO to a native timing struct.
+        /// </summary>
+        /// <returns>Native timing.</returns>
+        public _NV_TIMING ToNative()
+        {
+            return Timing;
+        }
+
         /// <inheritdoc />
         public bool Equals(NVAPITimingDto other) => Timing.Equals(other.Timing);
 
@@ -1994,6 +2357,31 @@ namespace NVAPIWrapper
             Capabilities = capabilities;
         }
 
+        /// <summary>
+        /// Create a DTO from a native monitor capabilities struct.
+        /// </summary>
+        /// <param name="native">Native monitor capabilities.</param>
+        /// <returns>Monitor capabilities DTO.</returns>
+        public static NVAPIMonitorCapabilitiesDto FromNative(_NV_MONITOR_CAPABILITIES_V1 native)
+        {
+            return new NVAPIMonitorCapabilitiesDto(native);
+        }
+
+        /// <summary>
+        /// Convert this DTO to a native monitor capabilities struct.
+        /// </summary>
+        /// <returns>Native monitor capabilities.</returns>
+        public _NV_MONITOR_CAPABILITIES_V1 ToNative()
+        {
+            var native = Capabilities;
+            if (native.version == 0)
+            {
+                native.version = NVAPI.NV_MONITOR_CAPABILITIES_VER;
+            }
+
+            return native;
+        }
+
         /// <inheritdoc />
         public bool Equals(NVAPIMonitorCapabilitiesDto other) => Capabilities.Equals(other.Capabilities);
 
@@ -2022,6 +2410,25 @@ namespace NVAPIWrapper
         public NVAPIMonitorColorCapabilitiesDto(_NV_MONITOR_COLOR_DATA[] capabilities)
         {
             Capabilities = capabilities ?? Array.Empty<_NV_MONITOR_COLOR_DATA>();
+        }
+
+        /// <summary>
+        /// Create a DTO from native monitor color capabilities.
+        /// </summary>
+        /// <param name="native">Native color capabilities array.</param>
+        /// <returns>Monitor color capabilities DTO.</returns>
+        public static NVAPIMonitorColorCapabilitiesDto FromNative(_NV_MONITOR_COLOR_DATA[] native)
+        {
+            return new NVAPIMonitorColorCapabilitiesDto(native);
+        }
+
+        /// <summary>
+        /// Convert this DTO to a native color capabilities array.
+        /// </summary>
+        /// <returns>Native color capabilities array.</returns>
+        public _NV_MONITOR_COLOR_DATA[] ToNative()
+        {
+            return Capabilities ?? Array.Empty<_NV_MONITOR_COLOR_DATA>();
         }
 
         /// <inheritdoc />
@@ -2063,6 +2470,31 @@ namespace NVAPIWrapper
             Info = info;
         }
 
+        /// <summary>
+        /// Create a DTO from a native display port info struct.
+        /// </summary>
+        /// <param name="native">Native display port info.</param>
+        /// <returns>Display port info DTO.</returns>
+        public static NVAPIDisplayPortInfoDto FromNative(_NV_DISPLAY_PORT_INFO_V1 native)
+        {
+            return new NVAPIDisplayPortInfoDto(native);
+        }
+
+        /// <summary>
+        /// Convert this DTO to a native display port info struct.
+        /// </summary>
+        /// <returns>Native display port info.</returns>
+        public _NV_DISPLAY_PORT_INFO_V1 ToNative()
+        {
+            var native = Info;
+            if (native.version == 0)
+            {
+                native.version = NVAPI.NV_DISPLAY_PORT_INFO_VER;
+            }
+
+            return native;
+        }
+
         /// <inheritdoc />
         public bool Equals(NVAPIDisplayPortInfoDto other) => Info.Equals(other.Info);
 
@@ -2091,6 +2523,31 @@ namespace NVAPIWrapper
         public NVAPIDisplayPortConfigDto(NV_DISPLAY_PORT_CONFIG config)
         {
             Config = config;
+        }
+
+        /// <summary>
+        /// Create a DTO from a native display port config struct.
+        /// </summary>
+        /// <param name="native">Native display port config.</param>
+        /// <returns>Display port config DTO.</returns>
+        public static NVAPIDisplayPortConfigDto FromNative(NV_DISPLAY_PORT_CONFIG native)
+        {
+            return new NVAPIDisplayPortConfigDto(native);
+        }
+
+        /// <summary>
+        /// Convert this DTO to a native display port config struct.
+        /// </summary>
+        /// <returns>Native display port config.</returns>
+        public NV_DISPLAY_PORT_CONFIG ToNative()
+        {
+            var native = Config;
+            if (native.version == 0)
+            {
+                native.version = NVAPI.NV_DISPLAY_PORT_CONFIG_VER;
+            }
+
+            return native;
         }
 
         /// <inheritdoc />
@@ -2123,6 +2580,31 @@ namespace NVAPIWrapper
             Info = info;
         }
 
+        /// <summary>
+        /// Create a DTO from a native HDMI support info struct.
+        /// </summary>
+        /// <param name="native">Native HDMI support info.</param>
+        /// <returns>HDMI support info DTO.</returns>
+        public static NVAPIDisplayHdmiSupportInfoDto FromNative(_NV_HDMI_SUPPORT_INFO_V2 native)
+        {
+            return new NVAPIDisplayHdmiSupportInfoDto(native);
+        }
+
+        /// <summary>
+        /// Convert this DTO to a native HDMI support info struct.
+        /// </summary>
+        /// <returns>Native HDMI support info.</returns>
+        public _NV_HDMI_SUPPORT_INFO_V2 ToNative()
+        {
+            var native = Info;
+            if (native.version == 0)
+            {
+                native.version = NVAPI.NV_HDMI_SUPPORT_INFO_VER2;
+            }
+
+            return native;
+        }
+
         /// <inheritdoc />
         public bool Equals(NVAPIDisplayHdmiSupportInfoDto other) => Info.Equals(other.Info);
 
@@ -2151,6 +2633,25 @@ namespace NVAPIWrapper
         public NVAPISupportedViewsDto(NV_TARGET_VIEW_MODE[] views)
         {
             Views = views ?? Array.Empty<NV_TARGET_VIEW_MODE>();
+        }
+
+        /// <summary>
+        /// Create a DTO from native supported views.
+        /// </summary>
+        /// <param name="native">Native view modes.</param>
+        /// <returns>Supported views DTO.</returns>
+        public static NVAPISupportedViewsDto FromNative(NV_TARGET_VIEW_MODE[] native)
+        {
+            return new NVAPISupportedViewsDto(native);
+        }
+
+        /// <summary>
+        /// Convert this DTO to a native view mode array.
+        /// </summary>
+        /// <returns>Native view modes.</returns>
+        public NV_TARGET_VIEW_MODE[] ToNative()
+        {
+            return Views ?? Array.Empty<NV_TARGET_VIEW_MODE>();
         }
 
         /// <inheritdoc />
@@ -2192,6 +2693,31 @@ namespace NVAPIWrapper
             Info = info;
         }
 
+        /// <summary>
+        /// Create a DTO from a native VRR info struct.
+        /// </summary>
+        /// <param name="native">Native VRR info.</param>
+        /// <returns>VRR info DTO.</returns>
+        public static NVAPIVrrInfoDto FromNative(_NV_GET_VRR_INFO_V1 native)
+        {
+            return new NVAPIVrrInfoDto(native);
+        }
+
+        /// <summary>
+        /// Convert this DTO to a native VRR info struct.
+        /// </summary>
+        /// <returns>Native VRR info.</returns>
+        public _NV_GET_VRR_INFO_V1 ToNative()
+        {
+            var native = Info;
+            if (native.version == 0)
+            {
+                native.version = NVAPI.NV_GET_VRR_INFO_VER;
+            }
+
+            return native;
+        }
+
         /// <inheritdoc />
         public bool Equals(NVAPIVrrInfoDto other) => Info.Equals(other.Info);
 
@@ -2222,6 +2748,31 @@ namespace NVAPIWrapper
             Data = data;
         }
 
+        /// <summary>
+        /// Create a DTO from native adaptive sync GET data.
+        /// </summary>
+        /// <param name="native">Native adaptive sync GET data.</param>
+        /// <returns>Adaptive sync GET DTO.</returns>
+        public static NVAPIAdaptiveSyncGetDataDto FromNative(_NV_GET_ADAPTIVE_SYNC_DATA_V1 native)
+        {
+            return new NVAPIAdaptiveSyncGetDataDto(native);
+        }
+
+        /// <summary>
+        /// Convert this DTO to native adaptive sync GET data.
+        /// </summary>
+        /// <returns>Native adaptive sync GET data.</returns>
+        public _NV_GET_ADAPTIVE_SYNC_DATA_V1 ToNative()
+        {
+            var native = Data;
+            if (native.version == 0)
+            {
+                native.version = NVAPI.NV_GET_ADAPTIVE_SYNC_DATA_VER;
+            }
+
+            return native;
+        }
+
         /// <inheritdoc />
         public bool Equals(NVAPIAdaptiveSyncGetDataDto other) => Data.Equals(other.Data);
 
@@ -2250,6 +2801,31 @@ namespace NVAPIWrapper
         public NVAPIAdaptiveSyncSetDataDto(_NV_SET_ADAPTIVE_SYNC_DATA_V1 data)
         {
             Data = data;
+        }
+
+        /// <summary>
+        /// Create a DTO from native adaptive sync SET data.
+        /// </summary>
+        /// <param name="native">Native adaptive sync SET data.</param>
+        /// <returns>Adaptive sync SET DTO.</returns>
+        public static NVAPIAdaptiveSyncSetDataDto FromNative(_NV_SET_ADAPTIVE_SYNC_DATA_V1 native)
+        {
+            return new NVAPIAdaptiveSyncSetDataDto(native);
+        }
+
+        /// <summary>
+        /// Convert this DTO to native adaptive sync SET data.
+        /// </summary>
+        /// <returns>Native adaptive sync SET data.</returns>
+        public _NV_SET_ADAPTIVE_SYNC_DATA_V1 ToNative()
+        {
+            var native = Data;
+            if (native.version == 0)
+            {
+                native.version = NVAPI.NV_SET_ADAPTIVE_SYNC_DATA_VER;
+            }
+
+            return native;
         }
 
         /// <inheritdoc />
@@ -2292,6 +2868,36 @@ namespace NVAPIWrapper
             RefreshRate1K = refreshRate1K;
             IsGamingVrr = isGamingVrr;
             FrameIntervalNs = frameIntervalNs;
+        }
+
+        /// <summary>
+        /// Create a DTO from native virtual refresh rate GET data.
+        /// </summary>
+        /// <param name="native">Native virtual refresh rate GET data.</param>
+        /// <returns>Virtual refresh rate DTO.</returns>
+        public static NVAPIVirtualRefreshRateDataDto FromNative(_NV_GET_VIRTUAL_REFRESH_RATE_DATA_V2 native)
+        {
+            return new NVAPIVirtualRefreshRateDataDto(
+                native.frameIntervalUs,
+                native.rrx1k,
+                native.bIsGamingVrr != 0,
+                native.frameIntervalNs);
+        }
+
+        /// <summary>
+        /// Convert this DTO to native virtual refresh rate SET data.
+        /// </summary>
+        /// <returns>Native virtual refresh rate SET data.</returns>
+        public _NV_SET_VIRTUAL_REFRESH_RATE_DATA_V2 ToNative()
+        {
+            return new _NV_SET_VIRTUAL_REFRESH_RATE_DATA_V2
+            {
+                version = NVAPI.NV_SET_VIRTUAL_REFRESH_RATE_DATA_VER,
+                frameIntervalUs = FrameIntervalUs,
+                rrx1k = RefreshRate1K,
+                bIsGamingVrr = IsGamingVrr ? 1u : 0u,
+                frameIntervalNs = FrameIntervalNs,
+            };
         }
 
         /// <inheritdoc />
@@ -2342,6 +2948,29 @@ namespace NVAPIWrapper
         public NVAPIPreferredStereoDisplayDto(uint displayId)
         {
             DisplayId = displayId;
+        }
+
+        /// <summary>
+        /// Create a DTO from native preferred stereo display GET data.
+        /// </summary>
+        /// <param name="native">Native preferred stereo display GET data.</param>
+        /// <returns>Preferred stereo display DTO.</returns>
+        public static NVAPIPreferredStereoDisplayDto FromNative(NV_GET_PREFERRED_STEREO_DISPLAY_V1 native)
+        {
+            return new NVAPIPreferredStereoDisplayDto(native.displayId);
+        }
+
+        /// <summary>
+        /// Convert this DTO to native preferred stereo display SET data.
+        /// </summary>
+        /// <returns>Native preferred stereo display SET data.</returns>
+        public NV_SET_PREFERRED_STEREO_DISPLAY_V1 ToNative()
+        {
+            return new NV_SET_PREFERRED_STEREO_DISPLAY_V1
+            {
+                version = NVAPI.NV_SET_PREFERRED_STEREO_DISPLAY_VER,
+                displayId = DisplayId,
+            };
         }
 
         /// <inheritdoc />

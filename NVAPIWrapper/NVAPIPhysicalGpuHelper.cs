@@ -132,7 +132,7 @@ namespace NVAPIWrapper
 
             var status = getPci(GetHandle(), &deviceId, &subSystemId, &revisionId, &extDeviceId);
             if (status == _NvAPI_Status.NVAPI_OK)
-                return new NVAPIPciIdentifiers(deviceId, subSystemId, revisionId, extDeviceId);
+                return NVAPIPciIdentifiers.FromNative(deviceId, subSystemId, revisionId, extDeviceId);
 
             if (status == _NvAPI_Status.NVAPI_NOT_SUPPORTED || status == _NvAPI_Status.NVAPI_NVIDIA_DEVICE_NOT_FOUND)
                 return null;
@@ -384,5 +384,66 @@ namespace NVAPIWrapper
 
         [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
         private unsafe delegate _NvAPI_Status NvApiGetPhysicalGpusFromDisplayDelegate(NvDisplayHandle__* hNvDisp, NvPhysicalGpuHandle__** nvGPUHandle, uint* pGpuCount);
+    }
+
+    /// <summary>
+    /// PCI identifiers reported by NVAPI.
+    /// </summary>
+    public readonly struct NVAPIPciIdentifiers : IEquatable<NVAPIPciIdentifiers>
+    {
+        /// <summary>PCI device ID.</summary>
+        public uint DeviceId { get; }
+
+        /// <summary>PCI subsystem ID.</summary>
+        public uint SubSystemId { get; }
+
+        /// <summary>PCI revision ID.</summary>
+        public uint RevisionId { get; }
+
+        /// <summary>PCI extended device ID.</summary>
+        public uint ExtDeviceId { get; }
+
+        /// <summary>Create a PCI identifier set.</summary>
+        public NVAPIPciIdentifiers(uint deviceId, uint subSystemId, uint revisionId, uint extDeviceId)
+        {
+            DeviceId = deviceId;
+            SubSystemId = subSystemId;
+            RevisionId = revisionId;
+            ExtDeviceId = extDeviceId;
+        }
+
+        /// <summary>Create a DTO from native PCI identifier values.</summary>
+        public static NVAPIPciIdentifiers FromNative(uint deviceId, uint subSystemId, uint revisionId, uint extDeviceId)
+        {
+            return new NVAPIPciIdentifiers(deviceId, subSystemId, revisionId, extDeviceId);
+        }
+
+        public bool Equals(NVAPIPciIdentifiers other)
+        {
+            return DeviceId == other.DeviceId
+                && SubSystemId == other.SubSystemId
+                && RevisionId == other.RevisionId
+                && ExtDeviceId == other.ExtDeviceId;
+        }
+
+        public override bool Equals(object? obj)
+        {
+            return obj is NVAPIPciIdentifiers other && Equals(other);
+        }
+
+        public override int GetHashCode()
+        {
+            unchecked
+            {
+                var hash = DeviceId.GetHashCode();
+                hash = (hash * 31) + SubSystemId.GetHashCode();
+                hash = (hash * 31) + RevisionId.GetHashCode();
+                hash = (hash * 31) + ExtDeviceId.GetHashCode();
+                return hash;
+            }
+        }
+
+        public static bool operator ==(NVAPIPciIdentifiers left, NVAPIPciIdentifiers right) => left.Equals(right);
+        public static bool operator !=(NVAPIPciIdentifiers left, NVAPIPciIdentifiers right) => !left.Equals(right);
     }
 }
