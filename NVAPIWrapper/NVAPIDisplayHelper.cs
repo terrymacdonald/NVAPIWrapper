@@ -34,6 +34,8 @@ namespace NVAPIWrapper
         private const uint NvApiIdDispSetVirtualRefreshRateData = 0x5ABBE6A3;
         private const uint NvApiIdDispSetPreferredStereoDisplay = 0xC9D0E25F;
         private const uint NvApiIdDispGetPreferredStereoDisplay = 0x1F6B4666;
+        private const uint NvApiIdSysGetGpuAndOutputIdFromDisplayId = 0x112BA1A5;
+        private const uint NvApiIdSysGetPhysicalGpuFromDisplayId = 0x9EA74659;
         private const uint NvApiIdEnableHwCursor = 0x2863148D;
         private const uint NvApiIdDisableHwCursor = 0xAB163097;
         private const uint NvApiIdSetRefreshRateOverride = 0x3092AC32;
@@ -293,6 +295,61 @@ namespace NVAPIWrapper
             var status = getOutputId(GetHandle(), &outputId);
             if (status == _NvAPI_Status.NVAPI_OK)
                 return outputId;
+
+            if (status == _NvAPI_Status.NVAPI_NOT_SUPPORTED || status == _NvAPI_Status.NVAPI_NVIDIA_DEVICE_NOT_FOUND)
+                return null;
+
+            throw new NVAPIException(status);
+        }
+
+        /// <summary>
+        /// Get the physical GPU and output ID for this display.
+        /// </summary>
+        /// <returns>GPU and output ID info, or null if unavailable.</returns>
+        public unsafe NVAPIGpuAndOutputIdDto? GetGpuAndOutputIdFromDisplayId()
+        {
+            ThrowIfDisposed();
+
+            if (!TryGetDisplayId(out var displayId))
+                return null;
+
+            var getInfo = GetDelegate<NvApiSysGetGpuAndOutputIdFromDisplayIdDelegate>(
+                NvApiIdSysGetGpuAndOutputIdFromDisplayId,
+                "NvAPI_SYS_GetGpuAndOutputIdFromDisplayId");
+
+            NvPhysicalGpuHandle__* physicalGpu = null;
+            uint outputId = 0;
+            var status = getInfo(displayId, &physicalGpu, &outputId);
+
+            if (status == _NvAPI_Status.NVAPI_OK)
+                return NVAPIGpuAndOutputIdDto.FromNative(_apiHelper, physicalGpu, outputId);
+
+            if (status == _NvAPI_Status.NVAPI_NOT_SUPPORTED || status == _NvAPI_Status.NVAPI_NVIDIA_DEVICE_NOT_FOUND)
+                return null;
+
+            throw new NVAPIException(status);
+        }
+
+        /// <summary>
+        /// Get the physical GPU that drives this display.
+        /// </summary>
+        /// <returns>Physical GPU helper, or null if unavailable.</returns>
+        public unsafe NVAPIPhysicalGpuHelper? GetPhysicalGpuFromDisplayId()
+        {
+            ThrowIfDisposed();
+
+            if (!TryGetDisplayId(out var displayId))
+                return null;
+
+            var getGpu = GetDelegate<NvApiSysGetPhysicalGpuFromDisplayIdDelegate>(
+                NvApiIdSysGetPhysicalGpuFromDisplayId,
+                "NvAPI_SYS_GetPhysicalGpuFromDisplayId");
+
+            NvPhysicalGpuHandle__* physicalGpu = null;
+            var status = getGpu(displayId, &physicalGpu);
+
+            if (status == _NvAPI_Status.NVAPI_OK)
+                return new NVAPIPhysicalGpuHelper(_apiHelper, (IntPtr)physicalGpu);
 
             if (status == _NvAPI_Status.NVAPI_NOT_SUPPORTED || status == _NvAPI_Status.NVAPI_NVIDIA_DEVICE_NOT_FOUND)
                 return null;
@@ -1094,6 +1151,12 @@ namespace NVAPIWrapper
 
         [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
         private unsafe delegate _NvAPI_Status NvApiGetAssociatedDisplayOutputIdDelegate(NvDisplayHandle__* hNvDisp, uint* pOutputId);
+
+        [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
+        private unsafe delegate _NvAPI_Status NvApiSysGetGpuAndOutputIdFromDisplayIdDelegate(uint displayId, NvPhysicalGpuHandle__** hPhysicalGpu, uint* outputId);
+
+        [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
+        private unsafe delegate _NvAPI_Status NvApiSysGetPhysicalGpuFromDisplayIdDelegate(uint displayId, NvPhysicalGpuHandle__** hPhysicalGpu);
 
         [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
         private unsafe delegate _NvAPI_Status NvApiGetVBlankCounterDelegate(NvDisplayHandle__* hNvDisp, uint* pCounter);
@@ -2987,6 +3050,49 @@ namespace NVAPIWrapper
 
         /// <summary>Compare preferred stereo display DTOs.</summary>
         public static bool operator !=(NVAPIPreferredStereoDisplayDto left, NVAPIPreferredStereoDisplayDto right) => !left.Equals(right);
+    }
+
+    /// <summary>
+    /// DTO for GPU and output ID from a display ID.
+    /// </summary>
+    public readonly struct NVAPIGpuAndOutputIdDto : IEquatable<NVAPIGpuAndOutputIdDto>
+    {
+        internal IntPtr Handle { get; }
+        public NVAPIPhysicalGpuHelper PhysicalGpu { get; }
+        public uint OutputId { get; }
+
+        internal NVAPIGpuAndOutputIdDto(IntPtr handle, NVAPIPhysicalGpuHelper physicalGpu, uint outputId)
+        {
+            Handle = handle;
+            PhysicalGpu = physicalGpu;
+            OutputId = outputId;
+        }
+
+        public static NVAPIGpuAndOutputIdDto FromNative(NVAPIApiHelper apiHelper, NvPhysicalGpuHandle__* handle, uint outputId)
+        {
+            var ptr = (IntPtr)handle;
+            return new NVAPIGpuAndOutputIdDto(ptr, new NVAPIPhysicalGpuHelper(apiHelper, ptr), outputId);
+        }
+
+        public bool Equals(NVAPIGpuAndOutputIdDto other)
+        {
+            return Handle == other.Handle && OutputId == other.OutputId;
+        }
+
+        public override bool Equals(object? obj) => obj is NVAPIGpuAndOutputIdDto other && Equals(other);
+
+        public override int GetHashCode()
+        {
+            unchecked
+            {
+                var hash = Handle.GetHashCode();
+                hash = (hash * 31) + OutputId.GetHashCode();
+                return hash;
+            }
+        }
+
+        public static bool operator ==(NVAPIGpuAndOutputIdDto left, NVAPIGpuAndOutputIdDto right) => left.Equals(right);
+        public static bool operator !=(NVAPIGpuAndOutputIdDto left, NVAPIGpuAndOutputIdDto right) => !left.Equals(right);
     }
 
     internal static class DtoHelpers

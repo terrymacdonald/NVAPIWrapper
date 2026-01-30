@@ -18,6 +18,9 @@ namespace NVAPIWrapper
         private const uint NvApiIdGpuGetPhysicalFrameBufferSize = 0x46FBEB03;
         private const uint NvApiIdGpuGetVirtualFrameBufferSize = 0x5A04B644;
         private const uint NvApiIdGpuGetTachReading = 0x5F608315;
+        private const uint NvApiIdGpuGetMemoryInfo = 0x07F9B368;
+        private const uint NvApiIdGpuGetMemoryInfoEx = 0xC0599498;
+        private const uint NvApiIdSysGetDisplayIdFromGpuAndOutputId = 0x08F2BAB4;
         private const uint NvApiIdEnumNvidiaDisplayHandle = 0x9ABDD40D;
         private const uint NvApiIdGetPhysicalGpusFromDisplay = 0x34EF9506;
 
@@ -250,6 +253,73 @@ namespace NVAPIWrapper
         }
 
         /// <summary>
+        /// Get display driver memory info (legacy).
+        /// </summary>
+        /// <returns>Memory info, or null if unavailable.</returns>
+        public unsafe NVAPIDisplayDriverMemoryInfoDto? GetMemoryInfo()
+        {
+            ThrowIfDisposed();
+
+            var getMemoryInfo = GetDelegate<NvApiGpuGetMemoryInfoDelegate>(NvApiIdGpuGetMemoryInfo, "NvAPI_GPU_GetMemoryInfo");
+            var info = CreateDisplayDriverMemoryInfo();
+
+            var status = getMemoryInfo(GetHandle(), &info);
+            if (status == _NvAPI_Status.NVAPI_OK)
+                return NVAPIDisplayDriverMemoryInfoDto.FromNative(info);
+
+            if (status == _NvAPI_Status.NVAPI_NOT_SUPPORTED || status == _NvAPI_Status.NVAPI_NVIDIA_DEVICE_NOT_FOUND)
+                return null;
+
+            throw new NVAPIException(status);
+        }
+
+        /// <summary>
+        /// Get extended GPU memory info.
+        /// </summary>
+        /// <returns>Extended memory info, or null if unavailable.</returns>
+        public unsafe NVAPIGpuMemoryInfoExDto? GetMemoryInfoEx()
+        {
+            ThrowIfDisposed();
+
+            var getMemoryInfo = GetDelegate<NvApiGpuGetMemoryInfoExDelegate>(NvApiIdGpuGetMemoryInfoEx, "NvAPI_GPU_GetMemoryInfoEx");
+            var info = CreateGpuMemoryInfoEx();
+
+            var status = getMemoryInfo(GetHandle(), &info);
+            if (status == _NvAPI_Status.NVAPI_OK)
+                return NVAPIGpuMemoryInfoExDto.FromNative(info);
+
+            if (status == _NvAPI_Status.NVAPI_NOT_SUPPORTED || status == _NvAPI_Status.NVAPI_NVIDIA_DEVICE_NOT_FOUND)
+                return null;
+
+            throw new NVAPIException(status);
+        }
+
+        /// <summary>
+        /// Convert a GPU output ID to a display ID.
+        /// </summary>
+        /// <param name="outputId">Output ID (single bit set).</param>
+        /// <returns>Display ID, or null if unavailable.</returns>
+        public unsafe uint? GetDisplayIdFromGpuAndOutputId(uint outputId)
+        {
+            ThrowIfDisposed();
+
+            var getDisplayId = GetDelegate<NvApiSysGetDisplayIdFromGpuAndOutputIdDelegate>(
+                NvApiIdSysGetDisplayIdFromGpuAndOutputId,
+                "NvAPI_SYS_GetDisplayIdFromGpuAndOutputId");
+
+            uint displayId = 0;
+            var status = getDisplayId(GetHandle(), outputId, &displayId);
+
+            if (status == _NvAPI_Status.NVAPI_OK)
+                return displayId;
+
+            if (status == _NvAPI_Status.NVAPI_NOT_SUPPORTED || status == _NvAPI_Status.NVAPI_NVIDIA_DEVICE_NOT_FOUND)
+                return null;
+
+            throw new NVAPIException(status);
+        }
+
+        /// <summary>
         /// Enumerate NVIDIA display handles associated with this GPU.
         /// </summary>
         /// <returns>Array of display helpers, or empty if none are found.</returns>
@@ -312,6 +382,16 @@ namespace NVAPIWrapper
             var result = new NVAPIDisplayHelper[count];
             Array.Copy(helpers, result, count);
             return result;
+        }
+
+        private static NV_DISPLAY_DRIVER_MEMORY_INFO_V3 CreateDisplayDriverMemoryInfo()
+        {
+            return new NV_DISPLAY_DRIVER_MEMORY_INFO_V3 { version = NVAPI.NV_DISPLAY_DRIVER_MEMORY_INFO_VER };
+        }
+
+        private static NV_GPU_MEMORY_INFO_EX_V1 CreateGpuMemoryInfoEx()
+        {
+            return new NV_GPU_MEMORY_INFO_EX_V1 { version = NVAPI.NV_GPU_MEMORY_INFO_EX_VER };
         }
 
         private unsafe NvPhysicalGpuHandle__* GetHandle()
@@ -380,6 +460,15 @@ namespace NVAPIWrapper
         private unsafe delegate _NvAPI_Status NvApiGpuGetTachReadingDelegate(NvPhysicalGpuHandle__* hPhysicalGpu, uint* pValue);
 
         [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
+        private unsafe delegate _NvAPI_Status NvApiGpuGetMemoryInfoDelegate(NvPhysicalGpuHandle__* hPhysicalGpu, NV_DISPLAY_DRIVER_MEMORY_INFO_V3* pMemoryInfo);
+
+        [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
+        private unsafe delegate _NvAPI_Status NvApiGpuGetMemoryInfoExDelegate(NvPhysicalGpuHandle__* hPhysicalGpu, NV_GPU_MEMORY_INFO_EX_V1* pMemoryInfo);
+
+        [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
+        private unsafe delegate _NvAPI_Status NvApiSysGetDisplayIdFromGpuAndOutputIdDelegate(NvPhysicalGpuHandle__* hPhysicalGpu, uint outputId, uint* displayId);
+
+        [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
         private unsafe delegate _NvAPI_Status NvApiEnumNvidiaDisplayHandleDelegate(uint thisEnum, NvDisplayHandle__** pNvDispHandle);
 
         [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
@@ -445,5 +534,199 @@ namespace NVAPIWrapper
 
         public static bool operator ==(NVAPIPciIdentifiers left, NVAPIPciIdentifiers right) => left.Equals(right);
         public static bool operator !=(NVAPIPciIdentifiers left, NVAPIPciIdentifiers right) => !left.Equals(right);
+    }
+
+    /// <summary>
+    /// Legacy display driver memory info DTO.
+    /// </summary>
+    public readonly struct NVAPIDisplayDriverMemoryInfoDto : IEquatable<NVAPIDisplayDriverMemoryInfoDto>
+    {
+        public uint DedicatedVideoMemoryKb { get; }
+        public uint AvailableDedicatedVideoMemoryKb { get; }
+        public uint SystemVideoMemoryKb { get; }
+        public uint SharedSystemMemoryKb { get; }
+        public uint CurrentAvailableDedicatedVideoMemoryKb { get; }
+        public uint DedicatedVideoMemoryEvictionsSizeKb { get; }
+        public uint DedicatedVideoMemoryEvictionCount { get; }
+
+        public NVAPIDisplayDriverMemoryInfoDto(
+            uint dedicatedVideoMemoryKb,
+            uint availableDedicatedVideoMemoryKb,
+            uint systemVideoMemoryKb,
+            uint sharedSystemMemoryKb,
+            uint currentAvailableDedicatedVideoMemoryKb,
+            uint dedicatedVideoMemoryEvictionsSizeKb,
+            uint dedicatedVideoMemoryEvictionCount)
+        {
+            DedicatedVideoMemoryKb = dedicatedVideoMemoryKb;
+            AvailableDedicatedVideoMemoryKb = availableDedicatedVideoMemoryKb;
+            SystemVideoMemoryKb = systemVideoMemoryKb;
+            SharedSystemMemoryKb = sharedSystemMemoryKb;
+            CurrentAvailableDedicatedVideoMemoryKb = currentAvailableDedicatedVideoMemoryKb;
+            DedicatedVideoMemoryEvictionsSizeKb = dedicatedVideoMemoryEvictionsSizeKb;
+            DedicatedVideoMemoryEvictionCount = dedicatedVideoMemoryEvictionCount;
+        }
+
+        public static NVAPIDisplayDriverMemoryInfoDto FromNative(NV_DISPLAY_DRIVER_MEMORY_INFO_V3 native)
+        {
+            return new NVAPIDisplayDriverMemoryInfoDto(
+                native.dedicatedVideoMemory,
+                native.availableDedicatedVideoMemory,
+                native.systemVideoMemory,
+                native.sharedSystemMemory,
+                native.curAvailableDedicatedVideoMemory,
+                native.dedicatedVideoMemoryEvictionsSize,
+                native.dedicatedVideoMemoryEvictionCount);
+        }
+
+        public NV_DISPLAY_DRIVER_MEMORY_INFO_V3 ToNative()
+        {
+            return new NV_DISPLAY_DRIVER_MEMORY_INFO_V3
+            {
+                version = NVAPI.NV_DISPLAY_DRIVER_MEMORY_INFO_VER,
+                dedicatedVideoMemory = DedicatedVideoMemoryKb,
+                availableDedicatedVideoMemory = AvailableDedicatedVideoMemoryKb,
+                systemVideoMemory = SystemVideoMemoryKb,
+                sharedSystemMemory = SharedSystemMemoryKb,
+                curAvailableDedicatedVideoMemory = CurrentAvailableDedicatedVideoMemoryKb,
+                dedicatedVideoMemoryEvictionsSize = DedicatedVideoMemoryEvictionsSizeKb,
+                dedicatedVideoMemoryEvictionCount = DedicatedVideoMemoryEvictionCount
+            };
+        }
+
+        public bool Equals(NVAPIDisplayDriverMemoryInfoDto other)
+        {
+            return DedicatedVideoMemoryKb == other.DedicatedVideoMemoryKb
+                && AvailableDedicatedVideoMemoryKb == other.AvailableDedicatedVideoMemoryKb
+                && SystemVideoMemoryKb == other.SystemVideoMemoryKb
+                && SharedSystemMemoryKb == other.SharedSystemMemoryKb
+                && CurrentAvailableDedicatedVideoMemoryKb == other.CurrentAvailableDedicatedVideoMemoryKb
+                && DedicatedVideoMemoryEvictionsSizeKb == other.DedicatedVideoMemoryEvictionsSizeKb
+                && DedicatedVideoMemoryEvictionCount == other.DedicatedVideoMemoryEvictionCount;
+        }
+
+        public override bool Equals(object? obj) => obj is NVAPIDisplayDriverMemoryInfoDto other && Equals(other);
+
+        public override int GetHashCode()
+        {
+            unchecked
+            {
+                var hash = DedicatedVideoMemoryKb.GetHashCode();
+                hash = (hash * 31) + AvailableDedicatedVideoMemoryKb.GetHashCode();
+                hash = (hash * 31) + SystemVideoMemoryKb.GetHashCode();
+                hash = (hash * 31) + SharedSystemMemoryKb.GetHashCode();
+                hash = (hash * 31) + CurrentAvailableDedicatedVideoMemoryKb.GetHashCode();
+                hash = (hash * 31) + DedicatedVideoMemoryEvictionsSizeKb.GetHashCode();
+                hash = (hash * 31) + DedicatedVideoMemoryEvictionCount.GetHashCode();
+                return hash;
+            }
+        }
+
+        public static bool operator ==(NVAPIDisplayDriverMemoryInfoDto left, NVAPIDisplayDriverMemoryInfoDto right) => left.Equals(right);
+        public static bool operator !=(NVAPIDisplayDriverMemoryInfoDto left, NVAPIDisplayDriverMemoryInfoDto right) => !left.Equals(right);
+    }
+
+    /// <summary>
+    /// Extended GPU memory info DTO.
+    /// </summary>
+    public readonly struct NVAPIGpuMemoryInfoExDto : IEquatable<NVAPIGpuMemoryInfoExDto>
+    {
+        public ulong DedicatedVideoMemoryBytes { get; }
+        public ulong AvailableDedicatedVideoMemoryBytes { get; }
+        public ulong SystemVideoMemoryBytes { get; }
+        public ulong SharedSystemMemoryBytes { get; }
+        public ulong CurrentAvailableDedicatedVideoMemoryBytes { get; }
+        public ulong DedicatedVideoMemoryEvictionsSizeBytes { get; }
+        public ulong DedicatedVideoMemoryEvictionCount { get; }
+        public ulong DedicatedVideoMemoryPromotionsSizeBytes { get; }
+        public ulong DedicatedVideoMemoryPromotionCount { get; }
+
+        public NVAPIGpuMemoryInfoExDto(
+            ulong dedicatedVideoMemoryBytes,
+            ulong availableDedicatedVideoMemoryBytes,
+            ulong systemVideoMemoryBytes,
+            ulong sharedSystemMemoryBytes,
+            ulong currentAvailableDedicatedVideoMemoryBytes,
+            ulong dedicatedVideoMemoryEvictionsSizeBytes,
+            ulong dedicatedVideoMemoryEvictionCount,
+            ulong dedicatedVideoMemoryPromotionsSizeBytes,
+            ulong dedicatedVideoMemoryPromotionCount)
+        {
+            DedicatedVideoMemoryBytes = dedicatedVideoMemoryBytes;
+            AvailableDedicatedVideoMemoryBytes = availableDedicatedVideoMemoryBytes;
+            SystemVideoMemoryBytes = systemVideoMemoryBytes;
+            SharedSystemMemoryBytes = sharedSystemMemoryBytes;
+            CurrentAvailableDedicatedVideoMemoryBytes = currentAvailableDedicatedVideoMemoryBytes;
+            DedicatedVideoMemoryEvictionsSizeBytes = dedicatedVideoMemoryEvictionsSizeBytes;
+            DedicatedVideoMemoryEvictionCount = dedicatedVideoMemoryEvictionCount;
+            DedicatedVideoMemoryPromotionsSizeBytes = dedicatedVideoMemoryPromotionsSizeBytes;
+            DedicatedVideoMemoryPromotionCount = dedicatedVideoMemoryPromotionCount;
+        }
+
+        public static NVAPIGpuMemoryInfoExDto FromNative(NV_GPU_MEMORY_INFO_EX_V1 native)
+        {
+            return new NVAPIGpuMemoryInfoExDto(
+                native.dedicatedVideoMemory,
+                native.availableDedicatedVideoMemory,
+                native.systemVideoMemory,
+                native.sharedSystemMemory,
+                native.curAvailableDedicatedVideoMemory,
+                native.dedicatedVideoMemoryEvictionsSize,
+                native.dedicatedVideoMemoryEvictionCount,
+                native.dedicatedVideoMemoryPromotionsSize,
+                native.dedicatedVideoMemoryPromotionCount);
+        }
+
+        public NV_GPU_MEMORY_INFO_EX_V1 ToNative()
+        {
+            return new NV_GPU_MEMORY_INFO_EX_V1
+            {
+                version = NVAPI.NV_GPU_MEMORY_INFO_EX_VER,
+                dedicatedVideoMemory = DedicatedVideoMemoryBytes,
+                availableDedicatedVideoMemory = AvailableDedicatedVideoMemoryBytes,
+                systemVideoMemory = SystemVideoMemoryBytes,
+                sharedSystemMemory = SharedSystemMemoryBytes,
+                curAvailableDedicatedVideoMemory = CurrentAvailableDedicatedVideoMemoryBytes,
+                dedicatedVideoMemoryEvictionsSize = DedicatedVideoMemoryEvictionsSizeBytes,
+                dedicatedVideoMemoryEvictionCount = DedicatedVideoMemoryEvictionCount,
+                dedicatedVideoMemoryPromotionsSize = DedicatedVideoMemoryPromotionsSizeBytes,
+                dedicatedVideoMemoryPromotionCount = DedicatedVideoMemoryPromotionCount
+            };
+        }
+
+        public bool Equals(NVAPIGpuMemoryInfoExDto other)
+        {
+            return DedicatedVideoMemoryBytes == other.DedicatedVideoMemoryBytes
+                && AvailableDedicatedVideoMemoryBytes == other.AvailableDedicatedVideoMemoryBytes
+                && SystemVideoMemoryBytes == other.SystemVideoMemoryBytes
+                && SharedSystemMemoryBytes == other.SharedSystemMemoryBytes
+                && CurrentAvailableDedicatedVideoMemoryBytes == other.CurrentAvailableDedicatedVideoMemoryBytes
+                && DedicatedVideoMemoryEvictionsSizeBytes == other.DedicatedVideoMemoryEvictionsSizeBytes
+                && DedicatedVideoMemoryEvictionCount == other.DedicatedVideoMemoryEvictionCount
+                && DedicatedVideoMemoryPromotionsSizeBytes == other.DedicatedVideoMemoryPromotionsSizeBytes
+                && DedicatedVideoMemoryPromotionCount == other.DedicatedVideoMemoryPromotionCount;
+        }
+
+        public override bool Equals(object? obj) => obj is NVAPIGpuMemoryInfoExDto other && Equals(other);
+
+        public override int GetHashCode()
+        {
+            unchecked
+            {
+                var hash = DedicatedVideoMemoryBytes.GetHashCode();
+                hash = (hash * 31) + AvailableDedicatedVideoMemoryBytes.GetHashCode();
+                hash = (hash * 31) + SystemVideoMemoryBytes.GetHashCode();
+                hash = (hash * 31) + SharedSystemMemoryBytes.GetHashCode();
+                hash = (hash * 31) + CurrentAvailableDedicatedVideoMemoryBytes.GetHashCode();
+                hash = (hash * 31) + DedicatedVideoMemoryEvictionsSizeBytes.GetHashCode();
+                hash = (hash * 31) + DedicatedVideoMemoryEvictionCount.GetHashCode();
+                hash = (hash * 31) + DedicatedVideoMemoryPromotionsSizeBytes.GetHashCode();
+                hash = (hash * 31) + DedicatedVideoMemoryPromotionCount.GetHashCode();
+                return hash;
+            }
+        }
+
+        public static bool operator ==(NVAPIGpuMemoryInfoExDto left, NVAPIGpuMemoryInfoExDto right) => left.Equals(right);
+        public static bool operator !=(NVAPIGpuMemoryInfoExDto left, NVAPIGpuMemoryInfoExDto right) => !left.Equals(right);
     }
 }
