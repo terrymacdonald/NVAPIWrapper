@@ -98,6 +98,12 @@
             </summary>
             <returns>Video helper instance.</returns>
         </member>
+        <member name="M:NVAPIWrapper.NVAPIApiHelper.GetOpenGLHelper">
+            <summary>
+            Get the OpenGL helper.
+            </summary>
+            <returns>OpenGL helper instance.</returns>
+        </member>
         <member name="M:NVAPIWrapper.NVAPIApiHelper.GetChipSetInfo">
             <summary>
             Get the system chipset info.
@@ -2912,6 +2918,72 @@
             Resolve the nvapi_QueryInterface export and return a delegate.
             </summary>
         </member>
+        <member name="T:NVAPIWrapper.NVAPIOpenGLHelper">
+            <summary>
+            Facade helper for OpenGL-related NVAPI functions.
+            </summary>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIOpenGLHelper.ExpertModeSet(System.UInt32,System.UInt32,System.UInt32,NVAPIWrapper.NVAPIOglExpertCallback)">
+            <summary>
+            Configure OpenGL expert mode for the current context.
+            </summary>
+            <param name="detailMask">Detail mask (NVAPI_OGLEXPERT_DETAIL_*).</param>
+            <param name="reportMask">Report mask (NVAPI_OGLEXPERT_REPORT_*).</param>
+            <param name="outputMask">Output mask (NVAPI_OGLEXPERT_OUTPUT_*).</param>
+            <param name="callback">Optional callback for output-to-callback.</param>
+            <returns>True if applied, null if unsupported.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIOpenGLHelper.ExpertModeGet">
+            <summary>
+            Get OpenGL expert mode settings for the current context.
+            </summary>
+            <returns>DTO with current settings, or null if unsupported.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIOpenGLHelper.ExpertModeDefaultsSet(System.UInt32,System.UInt32,System.UInt32)">
+            <summary>
+            Set OpenGL expert mode defaults for new contexts.
+            </summary>
+            <param name="detailMask">Detail mask (NVAPI_OGLEXPERT_DETAIL_*).</param>
+            <param name="reportMask">Report mask (NVAPI_OGLEXPERT_REPORT_*).</param>
+            <param name="outputMask">Output mask (NVAPI_OGLEXPERT_OUTPUT_*).</param>
+            <returns>True if applied, null if unsupported.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIOpenGLHelper.ExpertModeDefaultsGet">
+            <summary>
+            Get OpenGL expert mode default settings.
+            </summary>
+            <returns>DTO with defaults, or null if unsupported.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIOpenGLHelper.Dispose">
+            <summary>
+            Dispose the helper and prevent further use.
+            </summary>
+        </member>
+        <member name="T:NVAPIWrapper.NVAPIOglExpertCallback">
+            <summary>
+            Managed callback for OpenGL expert mode output.
+            </summary>
+        </member>
+        <member name="T:NVAPIWrapper.NVAPIOglExpertModeDto">
+            <summary>
+            OpenGL expert mode state DTO.
+            </summary>
+        </member>
+        <member name="T:NVAPIWrapper.NVAPIOglExpertDefaultsDto">
+            <summary>
+            OpenGL expert mode defaults DTO.
+            </summary>
+        </member>
+        <member name="T:NVAPIWrapper.NVAPIOglExpertModeNative">
+            <summary>
+            Native-shaped OpenGL expert mode data.
+            </summary>
+        </member>
+        <member name="T:NVAPIWrapper.NVAPIOglExpertDefaultsNative">
+            <summary>
+            Native-shaped OpenGL expert defaults data.
+            </summary>
+        </member>
         <member name="T:NVAPIWrapper.NVAPIPhysicalGpuHelper">
             <summary>
             Facade helper for a physical GPU.
@@ -3190,6 +3262,20 @@
             </summary>
             <returns>GPU info DTO, or null if unavailable.</returns>
         </member>
+        <member name="M:NVAPIWrapper.NVAPIPhysicalGpuHelper.I2CRead(NVAPIWrapper.NVAPII2CInfoDto)">
+            <summary>
+            Read data via I2C from a DDC port.
+            </summary>
+            <param name="request">I2C request DTO (data buffer length defines read size).</param>
+            <returns>Result DTO with read data, or null if unsupported.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIPhysicalGpuHelper.I2CWrite(NVAPIWrapper.NVAPII2CInfoDto)">
+            <summary>
+            Write data via I2C to a DDC port.
+            </summary>
+            <param name="request">I2C request DTO containing data to write.</param>
+            <returns>True if written, or null if unsupported.</returns>
+        </member>
         <member name="M:NVAPIWrapper.NVAPIPhysicalGpuHelper.Dispose">
             <summary>
             Dispose the helper and prevent further use.
@@ -3217,6 +3303,16 @@
         </member>
         <member name="M:NVAPIWrapper.NVAPIPciIdentifiers.FromNative(System.UInt32,System.UInt32,System.UInt32,System.UInt32)">
             <summary>Create a DTO from native PCI identifier values.</summary>
+        </member>
+        <member name="T:NVAPIWrapper.NVAPII2CInfoDto">
+            <summary>
+            I2C request/response DTO for NVAPI I2C operations.
+            </summary>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPII2CInfoDto.FromNative(NVAPIWrapper.NV_I2C_INFO_V3)">
+            <summary>
+            Create a DTO from a native struct. Note: pointer-backed buffers are not copied.
+            </summary>
         </member>
         <member name="T:NVAPIWrapper.NVAPIDisplayDriverMemoryInfoDto">
             <summary>

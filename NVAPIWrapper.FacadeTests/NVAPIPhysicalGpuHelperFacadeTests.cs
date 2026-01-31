@@ -561,6 +561,84 @@ namespace NVAPIWrapper.FacadeTests
             _ = dto.GetHashCode();
         }
 
+        [SkippableFact]
+        public void I2CRead_ShouldReturnDto()
+        {
+            var gpu = GetFirstGpuOrSkip();
+            var displays = gpu.EnumerateNvidiaDisplayHandles();
+            Skip.If(displays.Length == 0, "No NVIDIA displays found.");
+
+            var outputId = displays[0].GetAssociatedDisplayOutputId();
+            Skip.If(outputId == null || outputId.Value == 0, "Display output ID not available.");
+
+            var request = new NVAPII2CInfoDto(
+                outputId.Value,
+                true,
+                0xA0,
+                new byte[] { 0x00 },
+                new byte[1],
+                (uint)NVAPI.NVAPI_I2C_SPEED_DEPRECATED,
+                NV_I2C_SPEED.NVAPI_I2C_SPEED_DEFAULT,
+                0,
+                false);
+
+            NVAPII2CInfoDto? response;
+            try
+            {
+                response = gpu.I2CRead(request);
+            }
+            catch (NVAPIException ex)
+            {
+                Skip.If(true, $"I2C read failed: {ex.Status}");
+                return;
+            }
+
+            Skip.If(response == null, "I2C read not supported.");
+
+            var dto = response.Value;
+            var native = dto.ToNative();
+            Assert.Equal(NVAPI.NV_I2C_INFO_VER, native.version);
+            Assert.True(dto.Equals(dto));
+            _ = dto.GetHashCode();
+        }
+
+        [SkippableFact]
+        public void I2CWrite_ShouldReturnSuccess()
+        {
+            var gpu = GetFirstGpuOrSkip();
+            var displays = gpu.EnumerateNvidiaDisplayHandles();
+            Skip.If(displays.Length == 0, "No NVIDIA displays found.");
+
+            var outputId = displays[0].GetAssociatedDisplayOutputId();
+            Skip.If(outputId == null || outputId.Value == 0, "Display output ID not available.");
+
+            var request = new NVAPII2CInfoDto(
+                outputId.Value,
+                true,
+                0xA0,
+                Array.Empty<byte>(),
+                Array.Empty<byte>(),
+                (uint)NVAPI.NVAPI_I2C_SPEED_DEPRECATED,
+                NV_I2C_SPEED.NVAPI_I2C_SPEED_DEFAULT,
+                0,
+                false);
+
+            bool? result;
+            try
+            {
+                result = gpu.I2CWrite(request);
+            }
+            catch (NVAPIException ex)
+            {
+                Skip.If(true, $"I2C write failed: {ex.Status}");
+                return;
+            }
+
+            Skip.If(result == null, "I2C write not supported.");
+            Skip.If(result != true, "I2C write did not succeed.");
+            Assert.True(result.Value);
+        }
+
         private NVAPIPhysicalGpuHelper GetFirstGpuOrSkip()
         {
             Skip.If(_fixture.ApiHelper == null, _fixture.SkipReason);

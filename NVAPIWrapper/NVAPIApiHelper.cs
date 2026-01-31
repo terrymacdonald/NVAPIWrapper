@@ -139,6 +139,16 @@ namespace NVAPIWrapper
         }
 
         /// <summary>
+        /// Get the OpenGL helper.
+        /// </summary>
+        /// <returns>OpenGL helper instance.</returns>
+        public NVAPIOpenGLHelper GetOpenGLHelper()
+        {
+            ThrowIfDisposed();
+            return new NVAPIOpenGLHelper(this);
+        }
+
+        /// <summary>
         /// Get the system chipset info.
         /// </summary>
         /// <returns>Chipset info, or null if unavailable.</returns>

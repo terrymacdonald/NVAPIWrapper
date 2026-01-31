@@ -53,6 +53,8 @@ namespace NVAPIWrapper
         private const uint NvApiIdGpuNvlinkGetCaps = 0xBEF1119D;
         private const uint NvApiIdGpuNvlinkGetStatus = 0xC72A38E3;
         private const uint NvApiIdGpuGetGpuInfo = 0xAFD1B02C;
+        private const uint NvApiIdI2CRead = 0x2FDE12C5;
+        private const uint NvApiIdI2CWrite = 0xE812EB07;
 
         private readonly NVAPIApiHelper _apiHelper;
         private readonly IntPtr _handle;
@@ -1127,6 +1129,95 @@ namespace NVAPIWrapper
             throw new NVAPIException(status);
         }
 
+        /// <summary>
+        /// Read data via I2C from a DDC port.
+        /// </summary>
+        /// <param name="request">I2C request DTO (data buffer length defines read size).</param>
+        /// <returns>Result DTO with read data, or null if unsupported.</returns>
+        public unsafe NVAPII2CInfoDto? I2CRead(NVAPII2CInfoDto request)
+        {
+            ThrowIfDisposed();
+
+            var read = GetDelegate<NvApiI2CReadDelegate>(NvApiIdI2CRead, "NvAPI_I2CRead");
+            var regAddress = request.RegisterAddress ?? Array.Empty<byte>();
+            var data = request.Data ?? Array.Empty<byte>();
+            var native = request.ToNative();
+
+            native.regAddrSize = (uint)regAddress.Length;
+            native.cbSize = (uint)data.Length;
+
+            fixed (byte* pReg = regAddress)
+            fixed (byte* pData = data)
+            {
+                native.pbI2cRegAddress = regAddress.Length > 0 ? pReg : null;
+                native.pbData = data.Length > 0 ? pData : null;
+
+                var status = read(GetHandle(), &native);
+                if (status == _NvAPI_Status.NVAPI_OK)
+                {
+                    var regOut = regAddress.Length > 0 ? (byte[])regAddress.Clone() : Array.Empty<byte>();
+                    var dataOut = data.Length > 0 ? (byte[])data.Clone() : Array.Empty<byte>();
+                    return new NVAPII2CInfoDto(
+                        native.displayMask,
+                        native.bIsDDCPort != 0,
+                        native.i2cDevAddress,
+                        regOut,
+                        dataOut,
+                        native.i2cSpeed,
+                        native.i2cSpeedKhz,
+                        native.portId,
+                        native.bIsPortIdSet != 0);
+                }
+
+                if (status == _NvAPI_Status.NVAPI_NOT_SUPPORTED ||
+                    status == _NvAPI_Status.NVAPI_NO_IMPLEMENTATION ||
+                    status == _NvAPI_Status.NVAPI_NVIDIA_DEVICE_NOT_FOUND)
+                {
+                    return null;
+                }
+
+                throw new NVAPIException(status);
+            }
+        }
+
+        /// <summary>
+        /// Write data via I2C to a DDC port.
+        /// </summary>
+        /// <param name="request">I2C request DTO containing data to write.</param>
+        /// <returns>True if written, or null if unsupported.</returns>
+        public unsafe bool? I2CWrite(NVAPII2CInfoDto request)
+        {
+            ThrowIfDisposed();
+
+            var write = GetDelegate<NvApiI2CWriteDelegate>(NvApiIdI2CWrite, "NvAPI_I2CWrite");
+            var regAddress = request.RegisterAddress ?? Array.Empty<byte>();
+            var data = request.Data ?? Array.Empty<byte>();
+            var native = request.ToNative();
+
+            native.regAddrSize = (uint)regAddress.Length;
+            native.cbSize = (uint)data.Length;
+
+            fixed (byte* pReg = regAddress)
+            fixed (byte* pData = data)
+            {
+                native.pbI2cRegAddress = regAddress.Length > 0 ? pReg : null;
+                native.pbData = data.Length > 0 ? pData : null;
+
+                var status = write(GetHandle(), &native);
+                if (status == _NvAPI_Status.NVAPI_OK)
+                    return true;
+
+                if (status == _NvAPI_Status.NVAPI_NOT_SUPPORTED ||
+                    status == _NvAPI_Status.NVAPI_NO_IMPLEMENTATION ||
+                    status == _NvAPI_Status.NVAPI_NVIDIA_DEVICE_NOT_FOUND)
+                {
+                    return null;
+                }
+
+                throw new NVAPIException(status);
+            }
+        }
+
         private unsafe NVAPIGpuDisplayIdDto[] GetConnectedDisplayIdsWithCapacity(uint flags, uint capacity)
         {
             var getDisplayIds = GetDelegate<NvApiGpuGetConnectedDisplayIdsDelegate>(
@@ -1467,6 +1558,12 @@ namespace NVAPIWrapper
 
         [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
         private unsafe delegate _NvAPI_Status NvApiGpuGetGpuInfoDelegate(NvPhysicalGpuHandle__* hPhysicalGpu, _NV_GPU_INFO_V2* pGpuInfo);
+
+        [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
+        private unsafe delegate _NvAPI_Status NvApiI2CReadDelegate(NvPhysicalGpuHandle__* hPhysicalGpu, NV_I2C_INFO_V3* pI2cInfo);
+
+        [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
+        private unsafe delegate _NvAPI_Status NvApiI2CWriteDelegate(NvPhysicalGpuHandle__* hPhysicalGpu, NV_I2C_INFO_V3* pI2cInfo);
     }
 
     /// <summary>
@@ -1528,6 +1625,115 @@ namespace NVAPIWrapper
 
         public static bool operator ==(NVAPIPciIdentifiers left, NVAPIPciIdentifiers right) => left.Equals(right);
         public static bool operator !=(NVAPIPciIdentifiers left, NVAPIPciIdentifiers right) => !left.Equals(right);
+    }
+
+    /// <summary>
+    /// I2C request/response DTO for NVAPI I2C operations.
+    /// </summary>
+    public readonly struct NVAPII2CInfoDto : IEquatable<NVAPII2CInfoDto>
+    {
+        public uint DisplayMask { get; }
+        public bool IsDDCPort { get; }
+        public byte I2cDevAddress { get; }
+        public byte[] RegisterAddress { get; }
+        public byte[] Data { get; }
+        public uint I2cSpeed { get; }
+        public NV_I2C_SPEED I2cSpeedKhz { get; }
+        public byte PortId { get; }
+        public bool IsPortIdSet { get; }
+
+        public NVAPII2CInfoDto(
+            uint displayMask,
+            bool isDDCPort,
+            byte i2cDevAddress,
+            byte[] registerAddress,
+            byte[] data,
+            uint i2cSpeed,
+            NV_I2C_SPEED i2cSpeedKhz,
+            byte portId,
+            bool isPortIdSet)
+        {
+            DisplayMask = displayMask;
+            IsDDCPort = isDDCPort;
+            I2cDevAddress = i2cDevAddress;
+            RegisterAddress = registerAddress ?? Array.Empty<byte>();
+            Data = data ?? Array.Empty<byte>();
+            I2cSpeed = i2cSpeed;
+            I2cSpeedKhz = i2cSpeedKhz;
+            PortId = portId;
+            IsPortIdSet = isPortIdSet;
+        }
+
+        /// <summary>
+        /// Create a DTO from a native struct. Note: pointer-backed buffers are not copied.
+        /// </summary>
+        public static NVAPII2CInfoDto FromNative(NV_I2C_INFO_V3 native)
+        {
+            return new NVAPII2CInfoDto(
+                native.displayMask,
+                native.bIsDDCPort != 0,
+                native.i2cDevAddress,
+                Array.Empty<byte>(),
+                Array.Empty<byte>(),
+                native.i2cSpeed,
+                native.i2cSpeedKhz,
+                native.portId,
+                native.bIsPortIdSet != 0);
+        }
+
+        public NV_I2C_INFO_V3 ToNative()
+        {
+            return new NV_I2C_INFO_V3
+            {
+                version = NVAPI.NV_I2C_INFO_VER,
+                displayMask = DisplayMask,
+                bIsDDCPort = IsDDCPort ? (byte)1 : (byte)0,
+                i2cDevAddress = I2cDevAddress,
+                pbI2cRegAddress = null,
+                regAddrSize = (uint)(RegisterAddress?.Length ?? 0),
+                pbData = null,
+                cbSize = (uint)(Data?.Length ?? 0),
+                i2cSpeed = I2cSpeed == 0 ? (uint)NVAPI.NVAPI_I2C_SPEED_DEPRECATED : I2cSpeed,
+                i2cSpeedKhz = I2cSpeedKhz,
+                portId = PortId,
+                bIsPortIdSet = IsPortIdSet ? 1u : 0u
+            };
+        }
+
+        public bool Equals(NVAPII2CInfoDto other)
+        {
+            return DisplayMask == other.DisplayMask
+                && IsDDCPort == other.IsDDCPort
+                && I2cDevAddress == other.I2cDevAddress
+                && I2cSpeed == other.I2cSpeed
+                && I2cSpeedKhz == other.I2cSpeedKhz
+                && PortId == other.PortId
+                && IsPortIdSet == other.IsPortIdSet
+                && DtoHelpers.SequenceEquals(RegisterAddress, other.RegisterAddress)
+                && DtoHelpers.SequenceEquals(Data, other.Data);
+        }
+
+        public override bool Equals(object? obj) => obj is NVAPII2CInfoDto other && Equals(other);
+
+        public override int GetHashCode()
+        {
+            unchecked
+            {
+                var hash = DisplayMask.GetHashCode();
+                hash = (hash * 31) + IsDDCPort.GetHashCode();
+                hash = (hash * 31) + I2cDevAddress.GetHashCode();
+                hash = (hash * 31) + I2cSpeed.GetHashCode();
+                hash = (hash * 31) + I2cSpeedKhz.GetHashCode();
+                hash = (hash * 31) + PortId.GetHashCode();
+                hash = (hash * 31) + IsPortIdSet.GetHashCode();
+                hash = (hash * 31) + DtoHelpers.SequenceHashCode(RegisterAddress ?? Array.Empty<byte>());
+                hash = (hash * 31) + DtoHelpers.SequenceHashCode(Data ?? Array.Empty<byte>());
+                return hash;
+            }
+        }
+
+        public static bool operator ==(NVAPII2CInfoDto left, NVAPII2CInfoDto right) => left.Equals(right);
+        public static bool operator !=(NVAPII2CInfoDto left, NVAPII2CInfoDto right) => !left.Equals(right);
     }
 
     /// <summary>
