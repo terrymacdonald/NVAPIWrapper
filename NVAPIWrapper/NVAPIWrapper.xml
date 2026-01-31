@@ -2996,6 +2996,194 @@
             </summary>
             <returns>Array of display helpers, or empty if none are found.</returns>
         </member>
+        <member name="M:NVAPIWrapper.NVAPIPhysicalGpuHelper.GetShaderSubPipeCount">
+            <summary>
+            Get the number of shader sub-pipes.
+            </summary>
+            <returns>Shader sub-pipe count, or null if unavailable.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIPhysicalGpuHelper.GetGpuCoreCount">
+            <summary>
+            Get the number of GPU cores.
+            </summary>
+            <returns>GPU core count, or null if unavailable.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIPhysicalGpuHelper.GetSystemType">
+            <summary>
+            Get the system type for this GPU.
+            </summary>
+            <returns>System type, or null if unavailable.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIPhysicalGpuHelper.GetActiveOutputs">
+            <summary>
+            Get the active outputs bitmask for this GPU.
+            </summary>
+            <returns>Active outputs mask, or null if unavailable.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIPhysicalGpuHelper.GetConnectedDisplayIds(System.UInt32)">
+            <summary>
+            Get connected display IDs for this GPU.
+            </summary>
+            <param name="flags">Optional flags passed to NvAPI_GPU_GetConnectedDisplayIds.</param>
+            <returns>Connected display IDs, or empty if unavailable.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIPhysicalGpuHelper.GetAllDisplayIds">
+            <summary>
+            Get all display IDs for this GPU.
+            </summary>
+            <returns>Display IDs, or empty if unavailable.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIPhysicalGpuHelper.GetPerfDecreaseInfo">
+            <summary>
+            Get the performance decrease reason flags.
+            </summary>
+            <returns>Performance decrease flags, or null if unavailable.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIPhysicalGpuHelper.GetCurrentPstate">
+            <summary>
+            Get the current performance state ID.
+            </summary>
+            <returns>Current P-state ID, or null if unavailable.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIPhysicalGpuHelper.GetPstates20Info">
+            <summary>
+            Get detailed P-state information (Pstates20).
+            </summary>
+            <returns>P-state details DTO, or null if unavailable.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIPhysicalGpuHelper.GetDynamicPstatesInfoEx">
+            <summary>
+            Get dynamic P-state utilization information.
+            </summary>
+            <returns>Dynamic P-state utilization DTO, or null if unavailable.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIPhysicalGpuHelper.GetThermalSettings(System.UInt32)">
+            <summary>
+            Get thermal settings for this GPU.
+            </summary>
+            <param name="sensorIndex">Sensor index (0 for all).</param>
+            <returns>Thermal settings DTO, or null if unavailable.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIPhysicalGpuHelper.GetAllClockFrequencies(NVAPIWrapper.NV_GPU_CLOCK_FREQUENCIES_CLOCK_TYPE)">
+            <summary>
+            Get all clock frequencies for this GPU.
+            </summary>
+            <param name="clockType">Clock type selection.</param>
+            <returns>Clock frequencies DTO, or null if unavailable.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIPhysicalGpuHelper.QueryIlluminationSupport(NVAPIWrapper._NV_GPU_ILLUMINATION_ATTRIB)">
+            <summary>
+            Query illumination support for an attribute.
+            </summary>
+            <param name="attribute">Illumination attribute.</param>
+            <returns>Illumination support DTO, or null if unavailable.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIPhysicalGpuHelper.GetIllumination(NVAPIWrapper._NV_GPU_ILLUMINATION_ATTRIB)">
+            <summary>
+            Get illumination value for an attribute.
+            </summary>
+            <param name="attribute">Illumination attribute.</param>
+            <returns>Illumination DTO, or null if unavailable.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIPhysicalGpuHelper.SetIllumination(NVAPIWrapper.NVAPIGpuIlluminationDto)">
+            <summary>
+            Set illumination value for an attribute.
+            </summary>
+            <param name="illumination">Illumination settings DTO.</param>
+            <returns>True if applied, false if unavailable or unchanged.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIPhysicalGpuHelper.GetIlluminationDevicesInfo">
+            <summary>
+            Get illumination device info for this GPU.
+            </summary>
+            <returns>Illumination device info DTO, or null if unavailable.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIPhysicalGpuHelper.GetIlluminationDevicesControl">
+            <summary>
+            Get illumination device control settings for this GPU.
+            </summary>
+            <returns>Illumination device control DTO, or null if unavailable.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIPhysicalGpuHelper.SetIlluminationDevicesControl(NVAPIWrapper.NVAPIGpuIllumDeviceControlParamsDto)">
+            <summary>
+            Set illumination device control settings for this GPU.
+            </summary>
+            <param name="control">Control DTO.</param>
+            <returns>True if applied, false if unavailable or unchanged.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIPhysicalGpuHelper.GetIlluminationZonesInfo">
+            <summary>
+            Get illumination zone info for this GPU.
+            </summary>
+            <returns>Illumination zone info DTO, or null if unavailable.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIPhysicalGpuHelper.GetIlluminationZonesControl">
+            <summary>
+            Get illumination zone control for this GPU.
+            </summary>
+            <returns>Illumination zone control DTO, or null if unavailable.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIPhysicalGpuHelper.SetIlluminationZonesControl(NVAPIWrapper.NVAPIGpuIllumZoneControlParamsDto)">
+            <summary>
+            Set illumination zone control for this GPU.
+            </summary>
+            <param name="control">Zone control DTO.</param>
+            <returns>True if applied, false if unavailable or unchanged.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIPhysicalGpuHelper.GetVirtualizationInfo">
+            <summary>
+            Get virtualization information for this GPU.
+            </summary>
+            <returns>Virtualization info DTO, or null if unavailable.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIPhysicalGpuHelper.GetLicensableFeatures">
+            <summary>
+            Get licensable features for this GPU.
+            </summary>
+            <returns>Licensable features DTO, or null if unavailable.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIPhysicalGpuHelper.GetEncoderStatistics">
+            <summary>
+            Get encoder statistics for this GPU.
+            </summary>
+            <returns>Encoder statistics DTO, or null if unavailable.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIPhysicalGpuHelper.GetEncoderSessionsInfo">
+            <summary>
+            Get encoder sessions info for this GPU.
+            </summary>
+            <returns>Encoder sessions info DTO, or null if unavailable.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIPhysicalGpuHelper.GetVrReadyData">
+            <summary>
+            Get VR Ready data for this GPU.
+            </summary>
+            <returns>VR Ready DTO, or null if unavailable.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIPhysicalGpuHelper.GetGspFeatures">
+            <summary>
+            Get GSP features for this GPU.
+            </summary>
+            <returns>GSP features DTO, or null if unavailable.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIPhysicalGpuHelper.GetNvlinkCaps">
+            <summary>
+            Get NVLINK capabilities for this GPU.
+            </summary>
+            <returns>NVLINK caps DTO, or null if unavailable.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIPhysicalGpuHelper.GetNvlinkStatus">
+            <summary>
+            Get NVLINK status for this GPU.
+            </summary>
+            <returns>NVLINK status DTO, or null if unavailable.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIPhysicalGpuHelper.GetGpuInfo">
+            <summary>
+            Get GPU info for this GPU.
+            </summary>
+            <returns>GPU info DTO, or null if unavailable.</returns>
+        </member>
         <member name="M:NVAPIWrapper.NVAPIPhysicalGpuHelper.Dispose">
             <summary>
             Dispose the helper and prevent further use.
@@ -3032,6 +3220,121 @@
         <member name="T:NVAPIWrapper.NVAPIGpuMemoryInfoExDto">
             <summary>
             Extended GPU memory info DTO.
+            </summary>
+        </member>
+        <member name="T:NVAPIWrapper.NVAPIGpuDisplayIdDto">
+            <summary>
+            GPU display ID DTO.
+            </summary>
+        </member>
+        <member name="T:NVAPIWrapper.NVAPIGpuDynamicPstateUtilizationDto">
+            <summary>
+            Dynamic P-state utilization entry DTO.
+            </summary>
+        </member>
+        <member name="T:NVAPIWrapper.NVAPIGpuDynamicPstatesInfoExDto">
+            <summary>
+            Dynamic P-state info DTO.
+            </summary>
+        </member>
+        <member name="T:NVAPIWrapper.NVAPIGpuThermalSensorDto">
+            <summary>
+            Thermal sensor DTO.
+            </summary>
+        </member>
+        <member name="T:NVAPIWrapper.NVAPIGpuThermalSettingsDto">
+            <summary>
+            Thermal settings DTO.
+            </summary>
+        </member>
+        <member name="T:NVAPIWrapper.NVAPIGpuClockDomainDto">
+            <summary>
+            Clock domain DTO.
+            </summary>
+        </member>
+        <member name="T:NVAPIWrapper.NVAPIGpuClockFrequenciesDto">
+            <summary>
+            Clock frequencies DTO.
+            </summary>
+        </member>
+        <member name="T:NVAPIWrapper.NVAPIGpuIlluminationSupportDto">
+            <summary>
+            Illumination support DTO.
+            </summary>
+        </member>
+        <member name="T:NVAPIWrapper.NVAPIGpuIlluminationDto">
+            <summary>
+            Illumination value DTO.
+            </summary>
+        </member>
+        <member name="T:NVAPIWrapper.NVAPIGpuIllumDeviceInfoParamsDto">
+            <summary>
+            Illumination device info params DTO.
+            </summary>
+        </member>
+        <member name="T:NVAPIWrapper.NVAPIGpuIllumDeviceControlParamsDto">
+            <summary>
+            Illumination device control params DTO.
+            </summary>
+        </member>
+        <member name="T:NVAPIWrapper.NVAPIGpuIllumZoneInfoParamsDto">
+            <summary>
+            Illumination zone info params DTO.
+            </summary>
+        </member>
+        <member name="T:NVAPIWrapper.NVAPIGpuIllumZoneControlParamsDto">
+            <summary>
+            Illumination zone control params DTO.
+            </summary>
+        </member>
+        <member name="T:NVAPIWrapper.NVAPIGpuPerfPstates20InfoDto">
+            <summary>
+            P-states (Pstates20) DTO.
+            </summary>
+        </member>
+        <member name="T:NVAPIWrapper.NVAPIGpuVirtualizationInfoDto">
+            <summary>
+            Virtualization info DTO.
+            </summary>
+        </member>
+        <member name="T:NVAPIWrapper.NVAPILicensableFeaturesDto">
+            <summary>
+            Licensable features DTO.
+            </summary>
+        </member>
+        <member name="T:NVAPIWrapper.NVAPIEncoderStatisticsDto">
+            <summary>
+            Encoder statistics DTO.
+            </summary>
+        </member>
+        <member name="T:NVAPIWrapper.NVAPIEncoderSessionsInfoDto">
+            <summary>
+            Encoder sessions info DTO.
+            </summary>
+        </member>
+        <member name="T:NVAPIWrapper.NVAPIGpuVrReadyDto">
+            <summary>
+            VR Ready DTO.
+            </summary>
+        </member>
+        <member name="T:NVAPIWrapper.NVAPIGpuGspInfoDto">
+            <summary>
+            GSP info DTO.
+            </summary>
+        </member>
+        <member name="T:NVAPIWrapper.NVAPINvLinkCapsDto">
+            <summary>
+            NVLINK caps DTO.
+            </summary>
+        </member>
+        <member name="T:NVAPIWrapper.NVAPINvLinkStatusDto">
+            <summary>
+            NVLINK status DTO.
+            </summary>
+        </member>
+        <member name="T:NVAPIWrapper.NVAPIGpuInfoDto">
+            <summary>
+            GPU info DTO.
             </summary>
         </member>
         <member name="T:NVAPIWrapper.NV_TIMING_FLAG">

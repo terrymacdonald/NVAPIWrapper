@@ -1910,9 +1910,10 @@ namespace NVAPIWrapper
                 flags = Flags
             };
 
-            var count = Math.Min(Utilization?.Length ?? 0, 8);
+            var utilization = Utilization ?? Array.Empty<NVAPIGpuDynamicPstateUtilizationDto>();
+            var count = Math.Min(utilization.Length, 8);
             for (var i = 0; i < count; i++)
-                native.utilization[i] = Utilization[i].ToNative();
+                native.utilization[i] = utilization[i].ToNative();
 
             return native;
         }
@@ -2027,9 +2028,10 @@ namespace NVAPIWrapper
                 count = Count
             };
 
-            var count = Math.Min(Sensors?.Length ?? 0, 3);
+            var sensors = Sensors ?? Array.Empty<NVAPIGpuThermalSensorDto>();
+            var count = Math.Min(sensors.Length, 3);
             for (var i = 0; i < count; i++)
-                native.sensor[i] = Sensors[i].ToNative();
+                native.sensor[i] = sensors[i].ToNative();
 
             return native;
         }
@@ -2126,9 +2128,10 @@ namespace NVAPIWrapper
                 ClockType = (uint)ClockType
             };
 
-            var count = Math.Min(Domains?.Length ?? 0, 32);
+            var domains = Domains ?? Array.Empty<NVAPIGpuClockDomainDto>();
+            var count = Math.Min(domains.Length, 32);
             for (var i = 0; i < count; i++)
-                native.domain[i] = Domains[i].ToNative();
+                native.domain[i] = domains[i].ToNative();
 
             return native;
         }
