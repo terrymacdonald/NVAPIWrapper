@@ -1396,6 +1396,21 @@
             Dispose the helper and prevent further use.
             </summary>
         </member>
+        <member name="T:NVAPIWrapper.NVAPIDisplayTvEnums">
+            <summary>
+            TV-related enum values surfaced alongside the display helper.
+            </summary>
+        </member>
+        <member name="T:NVAPIWrapper.NVAPIDisplayTvEnums.Format">
+            <summary>
+            TV format values (native enum names preserved).
+            </summary>
+        </member>
+        <member name="T:NVAPIWrapper.NVAPIDisplayTvEnums.Connector">
+            <summary>
+            GPU connector values (native enum names preserved).
+            </summary>
+        </member>
         <member name="T:NVAPIWrapper.NVAPIDisplayConfigDto">
             <summary>
             Snapshot of the display configuration returned by NVAPI.

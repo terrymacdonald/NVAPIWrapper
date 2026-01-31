@@ -96,6 +96,31 @@ namespace NVAPIWrapper.FacadeTests
             Assert.True(outputId.HasValue);
         }
 
+        [Fact]
+        public void TvEnums_ShouldMatchNativeValues()
+        {
+            Assert.Equal(_NV_DISPLAY_TV_FORMAT.NV_DISPLAY_TV_FORMAT_SD_NTSCM, NVAPIDisplayTvEnums.Format.SdNtscM);
+            Assert.Equal(_NV_DISPLAY_TV_FORMAT.NV_DISPLAY_TV_FORMAT_HD_1080p, NVAPIDisplayTvEnums.Format.Hd1080p);
+            Assert.Equal(_NV_GPU_CONNECTOR_TYPE.NVAPI_GPU_CONNECTOR_TV_SVIDEO, NVAPIDisplayTvEnums.Connector.TvSVideo);
+            Assert.Equal(_NV_GPU_CONNECTOR_TYPE.NVAPI_GPU_CONNECTOR_TV_HDTV_COMPONENT, NVAPIDisplayTvEnums.Connector.TvHdtvComponent);
+
+            var dto = new NVAPIDisplayConfigAdvancedTargetDto(
+                _NV_ROTATE.NV_ROTATE_0,
+                _NV_SCALING.NV_SCALING_DEFAULT,
+                0,
+                false,
+                false,
+                false,
+                false,
+                NVAPIDisplayTvEnums.Connector.TvSVideo,
+                NVAPIDisplayTvEnums.Format.SdNtscM,
+                _NV_TIMING_OVERRIDE.NV_TIMING_OVERRIDE_AUTO,
+                default);
+
+            Assert.Equal(NVAPIDisplayTvEnums.Connector.TvSVideo, dto.Connector);
+            Assert.Equal(NVAPIDisplayTvEnums.Format.SdNtscM, dto.TvFormat);
+        }
+
         [SkippableFact]
         public void GetGpuAndOutputIdFromDisplayId_ShouldReturnDto()
         {
