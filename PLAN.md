@@ -213,6 +213,7 @@ Begin Phase 5 by implementing `NVAPIApiHelper` and the first helper set:
   - `NvAPI_EnableHWCursor` / `NvAPI_DisableHWCursor`
   - `NvAPI_SetRefreshRateOverride`
   - `NvAPI_Disp_InfoFrameControl`
+  - `NvAPI_Stereo_SetConfigurationProfileValue`
   - `NvAPI_DISP_AcquireDedicatedDisplay` / `NvAPI_DISP_ReleaseDedicatedDisplay`
   - `NvAPI_DISP_EnumCustomDisplay`
   - `NvAPI_DISP_TryCustomDisplay`

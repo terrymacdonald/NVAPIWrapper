@@ -92,6 +92,12 @@
             </summary>
             <returns>Mosaic helper instance.</returns>
         </member>
+        <member name="M:NVAPIWrapper.NVAPIApiHelper.GetVideoHelper">
+            <summary>
+            Get the Video helper.
+            </summary>
+            <returns>Video helper instance.</returns>
+        </member>
         <member name="M:NVAPIWrapper.NVAPIApiHelper.GetChipSetInfo">
             <summary>
             Get the system chipset info.
@@ -3360,6 +3366,289 @@
         </member>
         <member name="P:NVAPIWrapper.NV_GPU_ECC_STATUS_INFO.isEnabled">
             <summary>Active ECC memory setting.</summary>
+        </member>
+        <member name="T:NVAPIWrapper.NVAPIVideoHelper">
+            <summary>
+            Facade helper for video-related NVAPI functions (VIO + Stereo globals).
+            </summary>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIVideoHelper.EnumerateVioDevices">
+            <summary>
+            Enumerate available VIO devices.
+            </summary>
+            <returns>Array of VIO device helpers, or empty if unavailable.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIVideoHelper.QueryTopology">
+            <summary>
+            Query VIO topology.
+            </summary>
+            <returns>Topology DTO, or null if unavailable.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIVideoHelper.StereoEnable">
+            <summary>
+            Enable stereo driver mode globally.
+            </summary>
+            <returns>True if enabled, null if unsupported.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIVideoHelper.StereoDisable">
+            <summary>
+            Disable stereo driver mode globally.
+            </summary>
+            <returns>True if disabled, null if unsupported.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIVideoHelper.StereoIsEnabled">
+            <summary>
+            Get whether stereo is enabled.
+            </summary>
+            <returns>True if enabled, false if disabled, or null if unsupported.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIVideoHelper.StereoIsWindowedModeSupported">
+            <summary>
+            Check whether windowed stereo is supported.
+            </summary>
+            <returns>True if supported, false if not, or null if unsupported.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIVideoHelper.StereoSetDriverMode(NVAPIWrapper._NV_StereoDriverMode)">
+            <summary>
+            Set stereo driver mode.
+            </summary>
+            <param name="mode">Driver mode.</param>
+            <returns>True if applied, null if unsupported.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIVideoHelper.StereoSetDefaultProfile(System.String)">
+            <summary>
+            Set the default stereo profile.
+            </summary>
+            <param name="profileName">Profile name.</param>
+            <returns>True if applied, null if unsupported.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIVideoHelper.StereoGetDefaultProfile">
+            <summary>
+            Get the default stereo profile name.
+            </summary>
+            <returns>Profile name, or null if unsupported.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIVideoHelper.StereoCreateConfigurationProfileRegistryKey(NVAPIWrapper._NV_StereoRegistryProfileType)">
+            <summary>
+            Create the stereo configuration profile registry key.
+            </summary>
+            <param name="profileType">Registry profile type.</param>
+            <returns>True if created, null if unsupported.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIVideoHelper.StereoDeleteConfigurationProfileRegistryKey(NVAPIWrapper._NV_StereoRegistryProfileType)">
+            <summary>
+            Delete the stereo configuration profile registry key.
+            </summary>
+            <param name="profileType">Registry profile type.</param>
+            <returns>True if deleted, null if unsupported.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIVideoHelper.StereoDeleteConfigurationProfileValue(NVAPIWrapper._NV_StereoRegistryProfileType,NVAPIWrapper._NV_StereoRegistryID)">
+            <summary>
+            Delete a stereo configuration profile value.
+            </summary>
+            <param name="profileType">Registry profile type.</param>
+            <param name="valueId">Value identifier.</param>
+            <returns>True if deleted, null if unsupported.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIVideoHelper.Dispose">
+            <summary>
+            Dispose the helper and prevent further use.
+            </summary>
+        </member>
+        <member name="T:NVAPIWrapper.NVAPIVioDeviceHelper">
+            <summary>
+            Facade helper for a VIO device handle.
+            </summary>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIVioDeviceHelper.GetCapabilities">
+            <summary>
+            Get VIO capabilities.
+            </summary>
+            <returns>Capabilities DTO, or null if unavailable.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIVioDeviceHelper.Open(System.UInt32,NVAPIWrapper._NVVIOOWNERTYPE)">
+            <summary>
+            Open the VIO device.
+            </summary>
+            <param name="vioClass">VIO class.</param>
+            <param name="ownerType">Owner type.</param>
+            <returns>True if opened, null if unsupported.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIVioDeviceHelper.Close(System.Boolean)">
+            <summary>
+            Close the VIO device.
+            </summary>
+            <param name="release">Release resources.</param>
+            <returns>True if closed, null if unsupported.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIVioDeviceHelper.GetStatus">
+            <summary>
+            Get VIO status.
+            </summary>
+            <returns>Status DTO, or null if unavailable.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIVioDeviceHelper.SyncFormatDetect(System.UInt32)">
+            <summary>
+            Detect sync format.
+            </summary>
+            <param name="wait">Wait value.</param>
+            <returns>Updated wait value, or null if unsupported.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIVioDeviceHelper.GetConfig">
+            <summary>
+            Get VIO configuration.
+            </summary>
+            <returns>Configuration DTO, or null if unavailable.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIVioDeviceHelper.SetConfig(NVAPIWrapper.NVAPIVioConfigDto)">
+            <summary>
+            Set VIO configuration.
+            </summary>
+            <param name="config">Configuration DTO.</param>
+            <returns>True if applied, null if unsupported.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIVioDeviceHelper.GetCsc">
+            <summary>
+            Get VIO color conversion (deprecated).
+            </summary>
+            <returns>Color conversion DTO, or null if unavailable.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIVioDeviceHelper.SetCsc(NVAPIWrapper.NVAPIVioColorConversionDto)">
+            <summary>
+            Set VIO color conversion (deprecated).
+            </summary>
+            <param name="conversion">Color conversion DTO.</param>
+            <returns>True if applied, null if unsupported.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIVioDeviceHelper.GetGamma">
+            <summary>
+            Get VIO gamma correction (deprecated).
+            </summary>
+            <returns>Gamma DTO, or null if unavailable.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIVioDeviceHelper.SetGamma(NVAPIWrapper.NVAPIVioGammaDto)">
+            <summary>
+            Set VIO gamma correction (deprecated).
+            </summary>
+            <param name="gamma">Gamma DTO.</param>
+            <returns>True if applied, null if unsupported.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIVioDeviceHelper.GetSyncDelay">
+            <summary>
+            Get VIO sync delay (deprecated).
+            </summary>
+            <returns>Sync delay DTO, or null if unavailable.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIVioDeviceHelper.SetSyncDelay(NVAPIWrapper.NVAPIVioSyncDelayDto)">
+            <summary>
+            Set VIO sync delay (deprecated).
+            </summary>
+            <param name="delay">Sync delay DTO.</param>
+            <returns>True if applied, null if unsupported.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIVioDeviceHelper.GetPciInfo">
+            <summary>
+            Get PCI information for the VIO device.
+            </summary>
+            <returns>PCI info DTO, or null if unavailable.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIVioDeviceHelper.IsRunning">
+            <summary>
+            Check whether the VIO device is running.
+            </summary>
+            <returns>True if running, false if not, or null if unsupported.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIVioDeviceHelper.Start">
+            <summary>
+            Start the VIO device.
+            </summary>
+            <returns>True if started, null if unsupported.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIVioDeviceHelper.Stop">
+            <summary>
+            Stop the VIO device.
+            </summary>
+            <returns>True if stopped, null if unsupported.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIVioDeviceHelper.IsFrameLockModeCompatible(System.UInt32,System.UInt32)">
+            <summary>
+            Check frame lock mode compatibility.
+            </summary>
+            <param name="sourceIndex">Source enum index.</param>
+            <param name="destIndex">Destination enum index.</param>
+            <returns>True if compatible, false if not, or null if unsupported.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIVioDeviceHelper.EnumSignalFormats">
+            <summary>
+            Enumerate signal formats.
+            </summary>
+            <returns>Array of signal formats, or null if unavailable.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIVioDeviceHelper.EnumDataFormats">
+            <summary>
+            Enumerate data formats.
+            </summary>
+            <returns>Array of data formats, or null if unavailable.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIVioDeviceHelper.Dispose">
+            <summary>
+            Dispose the helper and prevent further use.
+            </summary>
+        </member>
+        <member name="T:NVAPIWrapper.NVAPIVioCapsDto">
+            <summary>
+            VIO capabilities DTO.
+            </summary>
+        </member>
+        <member name="T:NVAPIWrapper.NVAPIVioPciInfoDto">
+            <summary>
+            VIO PCI info DTO.
+            </summary>
+        </member>
+        <member name="T:NVAPIWrapper.NVAPIVioSignalFormatDetailDto">
+            <summary>
+            VIO signal format detail DTO.
+            </summary>
+        </member>
+        <member name="T:NVAPIWrapper.NVAPIVioDataFormatDetailDto">
+            <summary>
+            VIO data format detail DTO.
+            </summary>
+        </member>
+        <member name="T:NVAPIWrapper.NVAPIVioSyncDelayDto">
+            <summary>
+            VIO sync delay DTO.
+            </summary>
+        </member>
+        <member name="T:NVAPIWrapper.NVAPIVioColorConversionDto">
+            <summary>
+            VIO color conversion DTO.
+            </summary>
+        </member>
+        <member name="T:NVAPIWrapper.NVAPIVioConfigDto">
+            <summary>
+            VIO configuration DTO (raw bytes due to union layout).
+            </summary>
+        </member>
+        <member name="T:NVAPIWrapper.NVAPIVioStatusDto">
+            <summary>
+            VIO status DTO (raw bytes due to union layout).
+            </summary>
+        </member>
+        <member name="T:NVAPIWrapper.NVAPIVioGammaDto">
+            <summary>
+            VIO gamma correction DTO (raw bytes due to union layout).
+            </summary>
+        </member>
+        <member name="T:NVAPIWrapper.NVAPIVioTopologyDto">
+            <summary>
+            VIO topology DTO.
+            </summary>
+        </member>
+        <member name="T:NVAPIWrapper.NVAPIVioTopologyTargetDto">
+            <summary>
+            VIO topology target DTO.
+            </summary>
         </member>
         <member name="T:NVAPIWrapper.ESetting">
             <!-- Failed to insert some or all of included XML --><include file="ESetting.xml" path="doc/member[@name=&quot;ESetting&quot;]/*" />

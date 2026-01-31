@@ -1921,7 +1921,9 @@ namespace NVAPIWrapper
         public bool Equals(NVAPIGpuDynamicPstatesInfoExDto other)
         {
             return Flags == other.Flags
-                && NVAPIGpuDtoHelpers.SequenceEquals(Utilization, other.Utilization);
+                && NVAPIGpuDtoHelpers.SequenceEquals(
+                    Utilization ?? Array.Empty<NVAPIGpuDynamicPstateUtilizationDto>(),
+                    other.Utilization ?? Array.Empty<NVAPIGpuDynamicPstateUtilizationDto>());
         }
 
         public override bool Equals(object? obj) => obj is NVAPIGpuDynamicPstatesInfoExDto other && Equals(other);
@@ -1931,7 +1933,7 @@ namespace NVAPIWrapper
             unchecked
             {
                 var hash = Flags.GetHashCode();
-                hash = (hash * 31) + NVAPIGpuDtoHelpers.SequenceHashCode(Utilization);
+                hash = (hash * 31) + NVAPIGpuDtoHelpers.SequenceHashCode(Utilization ?? Array.Empty<NVAPIGpuDynamicPstateUtilizationDto>());
                 return hash;
             }
         }
@@ -2039,7 +2041,9 @@ namespace NVAPIWrapper
         public bool Equals(NVAPIGpuThermalSettingsDto other)
         {
             return Count == other.Count
-                && NVAPIGpuDtoHelpers.SequenceEquals(Sensors, other.Sensors);
+                && NVAPIGpuDtoHelpers.SequenceEquals(
+                    Sensors ?? Array.Empty<NVAPIGpuThermalSensorDto>(),
+                    other.Sensors ?? Array.Empty<NVAPIGpuThermalSensorDto>());
         }
 
         public override bool Equals(object? obj) => obj is NVAPIGpuThermalSettingsDto other && Equals(other);
@@ -2049,7 +2053,7 @@ namespace NVAPIWrapper
             unchecked
             {
                 var hash = Count.GetHashCode();
-                hash = (hash * 31) + NVAPIGpuDtoHelpers.SequenceHashCode(Sensors);
+                hash = (hash * 31) + NVAPIGpuDtoHelpers.SequenceHashCode(Sensors ?? Array.Empty<NVAPIGpuThermalSensorDto>());
                 return hash;
             }
         }
@@ -2139,7 +2143,9 @@ namespace NVAPIWrapper
         public bool Equals(NVAPIGpuClockFrequenciesDto other)
         {
             return ClockType == other.ClockType
-                && NVAPIGpuDtoHelpers.SequenceEquals(Domains, other.Domains);
+                && NVAPIGpuDtoHelpers.SequenceEquals(
+                    Domains ?? Array.Empty<NVAPIGpuClockDomainDto>(),
+                    other.Domains ?? Array.Empty<NVAPIGpuClockDomainDto>());
         }
 
         public override bool Equals(object? obj) => obj is NVAPIGpuClockFrequenciesDto other && Equals(other);
@@ -2149,7 +2155,7 @@ namespace NVAPIWrapper
             unchecked
             {
                 var hash = ClockType.GetHashCode();
-                hash = (hash * 31) + NVAPIGpuDtoHelpers.SequenceHashCode(Domains);
+                hash = (hash * 31) + NVAPIGpuDtoHelpers.SequenceHashCode(Domains ?? Array.Empty<NVAPIGpuClockDomainDto>());
                 return hash;
             }
         }

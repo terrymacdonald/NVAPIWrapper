@@ -129,6 +129,16 @@ namespace NVAPIWrapper
         }
 
         /// <summary>
+        /// Get the Video helper.
+        /// </summary>
+        /// <returns>Video helper instance.</returns>
+        public NVAPIVideoHelper GetVideoHelper()
+        {
+            ThrowIfDisposed();
+            return new NVAPIVideoHelper(this);
+        }
+
+        /// <summary>
         /// Get the system chipset info.
         /// </summary>
         /// <returns>Chipset info, or null if unavailable.</returns>
