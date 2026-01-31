@@ -68,6 +68,12 @@
             </summary>
             <returns>Initialized NVAPI helper.</returns>
         </member>
+        <member name="M:NVAPIWrapper.NVAPIApiHelper.CreateDrsSession">
+            <summary>
+            Create a DRS session helper.
+            </summary>
+            <returns>DRS helper instance, or null if unsupported.</returns>
+        </member>
         <member name="M:NVAPIWrapper.NVAPIApiHelper.EnumeratePhysicalGpus">
             <summary>
             Enumerate physical GPU helpers.
@@ -2255,6 +2261,278 @@
         <member name="T:NVAPIWrapper.NVAPIGpuAndOutputIdDto">
             <summary>
             DTO for GPU and output ID from a display ID.
+            </summary>
+        </member>
+        <member name="T:NVAPIWrapper.NVAPIDrsHelper">
+            <summary>
+            Facade helper for NVAPI Driver Settings (DRS).
+            </summary>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDrsHelper.CreateProfileInfo">
+            <summary>
+            Create a DRS profile info struct with the version initialized.
+            </summary>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDrsHelper.CreateApplicationInfo">
+            <summary>
+            Create a DRS application info struct with the version initialized.
+            </summary>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDrsHelper.CreateSetting">
+            <summary>
+            Create a DRS setting info struct with the version initialized.
+            </summary>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDrsHelper.CreateSettingValues">
+            <summary>
+            Create a DRS setting values struct with the version initialized.
+            </summary>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDrsHelper.LoadSettings">
+            <summary>
+            Load the DRS settings database into this session.
+            </summary>
+            <returns>True if loaded; false if unsupported.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDrsHelper.SaveSettings">
+            <summary>
+            Save the DRS settings database from this session.
+            </summary>
+            <returns>True if saved; false if unsupported.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDrsHelper.LoadSettingsFromFile(System.String)">
+            <summary>
+            Load DRS settings from a file.
+            </summary>
+            <param name="filePath">Path to the settings file.</param>
+            <returns>True if loaded; false if unsupported.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDrsHelper.SaveSettingsToFile(System.String)">
+            <summary>
+            Save DRS settings to a file.
+            </summary>
+            <param name="filePath">Path to the settings file.</param>
+            <returns>True if saved; false if unsupported.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDrsHelper.GetNumProfiles">
+            <summary>
+            Get the number of DRS profiles.
+            </summary>
+            <returns>Profile count, or null if unsupported.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDrsHelper.EnumProfiles">
+            <summary>
+            Enumerate all DRS profiles.
+            </summary>
+            <returns>Profiles, or empty if unsupported.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDrsHelper.FindProfileByName(System.String)">
+            <summary>
+            Find a profile by name.
+            </summary>
+            <param name="profileName">Profile name.</param>
+            <returns>Profile info, or null if not found/unsupported.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDrsHelper.GetCurrentGlobalProfile">
+            <summary>
+            Get the current global profile.
+            </summary>
+            <returns>Profile info, or null if unavailable.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDrsHelper.SetCurrentGlobalProfile(System.String)">
+            <summary>
+            Set the current global profile by name.
+            </summary>
+            <param name="profileName">Profile name.</param>
+            <returns>True if set; false if unsupported.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDrsHelper.GetBaseProfile">
+            <summary>
+            Get the base profile.
+            </summary>
+            <returns>Profile info, or null if unavailable.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDrsHelper.GetProfileInfo(NVAPIWrapper.NVAPIDrsProfileDto)">
+            <summary>
+            Get profile info for an existing profile handle.
+            </summary>
+            <param name="profile">Profile DTO.</param>
+            <returns>Profile info, or null if unavailable.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDrsHelper.SetProfileInfo(NVAPIWrapper.NVAPIDrsProfileDto)">
+            <summary>
+            Update profile info.
+            </summary>
+            <param name="profile">Profile DTO with desired values.</param>
+            <returns>True if updated; false if unsupported.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDrsHelper.CreateProfile(NVAPIWrapper.NVAPIDrsProfileDto)">
+            <summary>
+            Create a new DRS profile.
+            </summary>
+            <param name="profileInfo">Profile info.</param>
+            <returns>Created profile, or null if unsupported.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDrsHelper.DeleteProfile(NVAPIWrapper.NVAPIDrsProfileDto)">
+            <summary>
+            Delete a profile.
+            </summary>
+            <param name="profile">Profile to delete.</param>
+            <returns>True if deleted; false if unsupported.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDrsHelper.EnumApplications(NVAPIWrapper.NVAPIDrsProfileDto)">
+            <summary>
+            Enumerate applications associated with a profile.
+            </summary>
+            <param name="profile">Profile to enumerate.</param>
+            <returns>Applications, or empty if unsupported.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDrsHelper.GetApplicationInfo(NVAPIWrapper.NVAPIDrsProfileDto,System.String)">
+            <summary>
+            Get application info by name within a profile.
+            </summary>
+            <param name="profile">Profile to search.</param>
+            <param name="appName">Application name.</param>
+            <returns>Application info, or null if unavailable.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDrsHelper.FindApplicationByName(System.String)">
+            <summary>
+            Find an application by name across profiles.
+            </summary>
+            <param name="appName">Application name.</param>
+            <returns>Search result, or null if not found/unsupported.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDrsHelper.CreateApplication(NVAPIWrapper.NVAPIDrsProfileDto,NVAPIWrapper.NVAPIDrsApplicationDto)">
+            <summary>
+            Create an application entry in a profile.
+            </summary>
+            <param name="profile">Profile to update.</param>
+            <param name="application">Application info.</param>
+            <returns>True if created; false if unsupported.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDrsHelper.DeleteApplication(NVAPIWrapper.NVAPIDrsProfileDto,System.String)">
+            <summary>
+            Delete an application entry by name.
+            </summary>
+            <param name="profile">Profile to update.</param>
+            <param name="appName">Application name.</param>
+            <returns>True if deleted; false if unsupported.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDrsHelper.DeleteApplicationEx(NVAPIWrapper.NVAPIDrsProfileDto,NVAPIWrapper.NVAPIDrsApplicationDto)">
+            <summary>
+            Delete an application entry using a full application descriptor.
+            </summary>
+            <param name="profile">Profile to update.</param>
+            <param name="application">Application info.</param>
+            <returns>True if deleted; false if unsupported.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDrsHelper.GetSetting(NVAPIWrapper.NVAPIDrsProfileDto,System.UInt32)">
+            <summary>
+            Get a setting from a profile by ID.
+            </summary>
+            <param name="profile">Profile to query.</param>
+            <param name="settingId">Setting ID.</param>
+            <returns>Setting info, or null if unavailable.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDrsHelper.SetSetting(NVAPIWrapper.NVAPIDrsProfileDto,NVAPIWrapper.NVAPIDrsSettingDto)">
+            <summary>
+            Set a setting on a profile.
+            </summary>
+            <param name="profile">Profile to update.</param>
+            <param name="setting">Desired setting values.</param>
+            <returns>True if set; false if unsupported.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDrsHelper.EnumSettings(NVAPIWrapper.NVAPIDrsProfileDto)">
+            <summary>
+            Enumerate settings in a profile.
+            </summary>
+            <param name="profile">Profile to enumerate.</param>
+            <returns>Settings, or empty if unsupported.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDrsHelper.EnumAvailableSettingIds">
+            <summary>
+            Enumerate all available setting IDs recognized by NVAPI.
+            </summary>
+            <returns>Setting IDs, or empty if unsupported.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDrsHelper.EnumAvailableSettingValues(System.UInt32)">
+            <summary>
+            Enumerate all available values for a given setting.
+            </summary>
+            <param name="settingId">Setting ID.</param>
+            <returns>Setting values, or null if unsupported.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDrsHelper.GetSettingIdFromName(System.String)">
+            <summary>
+            Resolve a setting ID from a name.
+            </summary>
+            <param name="settingName">Setting name.</param>
+            <returns>Setting ID, or null if unavailable.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDrsHelper.GetSettingNameFromId(System.UInt32)">
+            <summary>
+            Resolve a setting name from its ID.
+            </summary>
+            <param name="settingId">Setting ID.</param>
+            <returns>Setting name, or null if unavailable.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDrsHelper.DeleteProfileSetting(NVAPIWrapper.NVAPIDrsProfileDto,System.UInt32)">
+            <summary>
+            Delete a profile setting by ID.
+            </summary>
+            <param name="profile">Profile to update.</param>
+            <param name="settingId">Setting ID.</param>
+            <returns>True if deleted; false if unsupported.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDrsHelper.RestoreAllDefaults">
+            <summary>
+            Restore all defaults in the DRS database.
+            </summary>
+            <returns>True if restored; false if unsupported.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDrsHelper.RestoreProfileDefault(NVAPIWrapper.NVAPIDrsProfileDto)">
+            <summary>
+            Restore a profile to its defaults.
+            </summary>
+            <param name="profile">Profile to restore.</param>
+            <returns>True if restored; false if unsupported.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDrsHelper.RestoreProfileDefaultSetting(NVAPIWrapper.NVAPIDrsProfileDto,System.UInt32)">
+            <summary>
+            Restore a profile setting to its default value.
+            </summary>
+            <param name="profile">Profile to update.</param>
+            <param name="settingId">Setting ID.</param>
+            <returns>True if restored; false if unsupported.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDrsHelper.Dispose">
+            <summary>
+            Dispose the DRS session.
+            </summary>
+        </member>
+        <member name="T:NVAPIWrapper.NVAPIDrsProfileDto">
+            <summary>
+            DRS profile info DTO.
+            </summary>
+        </member>
+        <member name="T:NVAPIWrapper.NVAPIDrsApplicationDto">
+            <summary>
+            DRS application info DTO.
+            </summary>
+        </member>
+        <member name="T:NVAPIWrapper.NVAPIDrsApplicationSearchDto">
+            <summary>
+            Result of an application search.
+            </summary>
+        </member>
+        <member name="T:NVAPIWrapper.NVAPIDrsSettingDto">
+            <summary>
+            DRS setting DTO.
+            </summary>
+        </member>
+        <member name="T:NVAPIWrapper.NVAPIDrsSettingValuesDto">
+            <summary>
+            DRS setting values DTO.
             </summary>
         </member>
         <member name="T:NVAPIWrapper.NVAPIException">

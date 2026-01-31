@@ -14,6 +14,7 @@ namespace NVAPIWrapper
         private const uint NvApiIdSysGetDisplayDriverInfo = 0x721FACEB;
         private const uint NvApiIdSysGetPhysicalGPUs = 0xD3B24D2D;
         private const uint NvApiIdSysGetLogicalGPUs = 0xCCFFFC10;
+        private const uint NvApiIdDrsCreateSession = 0x0694D52E;
 
         private readonly NVAPIApi _api;
         private bool _disposed;
@@ -30,6 +31,33 @@ namespace NVAPIWrapper
         public static NVAPIApiHelper Initialize()
         {
             return new NVAPIApiHelper(NVAPIApi.Initialize());
+        }
+
+        /// <summary>
+        /// Create a DRS session helper.
+        /// </summary>
+        /// <returns>DRS helper instance, or null if unsupported.</returns>
+        public unsafe NVAPIDrsHelper? CreateDrsSession()
+        {
+            ThrowIfDisposed();
+
+            var functionPtr = _api.TryGetFunctionPointer(NvApiIdDrsCreateSession);
+            if (functionPtr == IntPtr.Zero)
+                return null;
+
+            var create = Marshal.GetDelegateForFunctionPointer<NvApiDrsCreateSessionDelegate>(functionPtr);
+            NvDRSSessionHandle__* session;
+            var status = create(&session);
+
+            if (status == _NvAPI_Status.NVAPI_OK)
+                return new NVAPIDrsHelper(this, (IntPtr)session);
+
+            if (status == _NvAPI_Status.NVAPI_NOT_SUPPORTED
+                || status == _NvAPI_Status.NVAPI_NO_IMPLEMENTATION
+                || status == _NvAPI_Status.NVAPI_NVIDIA_DEVICE_NOT_FOUND)
+                return null;
+
+            throw new NVAPIException(status);
         }
 
         /// <summary>
@@ -314,6 +342,9 @@ namespace NVAPIWrapper
 
         [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
         private unsafe delegate _NvAPI_Status NvApiSysGetLogicalGpusDelegate(_NV_LOGICAL_GPUS* pLogicalGpus);
+
+        [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
+        private unsafe delegate _NvAPI_Status NvApiDrsCreateSessionDelegate(NvDRSSessionHandle__** phSession);
     }
 
     /// <summary>
