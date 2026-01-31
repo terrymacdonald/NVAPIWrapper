@@ -24,6 +24,11 @@ namespace NVAPIWrapper
             _api = api;
         }
 
+        ~NVAPIApiHelper()
+        {
+            Dispose(false);
+        }
+
         /// <summary>
         /// Initialize NVAPI and return a facade helper that owns the library lifetime.
         /// </summary>
@@ -305,6 +310,8 @@ namespace NVAPIWrapper
             }
         }
 
+        internal bool IsDisposed => _disposed;
+
         private T GetDelegate<T>(uint id, string name) where T : Delegate
         {
             var functionPtr = _api.TryGetFunctionPointer(id);
@@ -327,12 +334,17 @@ namespace NVAPIWrapper
         /// </summary>
         public void Dispose()
         {
+            Dispose(true);
+            GC.SuppressFinalize(this);
+        }
+
+        private void Dispose(bool disposing)
+        {
             if (_disposed)
                 return;
 
             _api.Dispose();
             _disposed = true;
-            GC.SuppressFinalize(this);
         }
 
         [UnmanagedFunctionPointer(CallingConvention.Cdecl)]

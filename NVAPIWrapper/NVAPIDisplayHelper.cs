@@ -1241,6 +1241,7 @@ namespace NVAPIWrapper
         internal sealed class DisplayConfigBuffer : IDisposable
         {
             private readonly List<IntPtr> _allocations = new List<IntPtr>();
+            private bool _disposed;
 
             public unsafe _NV_DISPLAYCONFIG_PATH_INFO* PathInfo { get; }
 
@@ -1254,6 +1255,11 @@ namespace NVAPIWrapper
                 _allocations.Add(pathPtr);
                 PathInfo = (_NV_DISPLAYCONFIG_PATH_INFO*)pathPtr;
                 new Span<byte>((void*)pathPtr, size).Clear();
+            }
+
+            ~DisplayConfigBuffer()
+            {
+                Dispose(false);
             }
 
             public unsafe void InitializePathInfoVersions()
@@ -1307,10 +1313,21 @@ namespace NVAPIWrapper
 
             public void Dispose()
             {
+                Dispose(true);
+                GC.SuppressFinalize(this);
+            }
+
+            private void Dispose(bool disposing)
+            {
+                if (_disposed)
+                    return;
+
                 for (var i = _allocations.Count - 1; i >= 0; i--)
                 {
                     Marshal.FreeHGlobal(_allocations[i]);
                 }
+
+                _disposed = true;
             }
         }
 

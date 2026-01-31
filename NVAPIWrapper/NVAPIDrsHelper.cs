@@ -53,6 +53,11 @@ namespace NVAPIWrapper
             _session = session;
         }
 
+        ~NVAPIDrsHelper()
+        {
+            Dispose(false);
+        }
+
         /// <summary>
         /// Create a DRS profile info struct with the version initialized.
         /// </summary>
@@ -1125,10 +1130,16 @@ namespace NVAPIWrapper
         /// </summary>
         public unsafe void Dispose()
         {
+            Dispose(true);
+            GC.SuppressFinalize(this);
+        }
+
+        private unsafe void Dispose(bool disposing)
+        {
             if (_disposed)
                 return;
 
-            if (_session != IntPtr.Zero)
+            if (_session != IntPtr.Zero && !_apiHelper.IsDisposed)
             {
                 try
                 {
@@ -1137,12 +1148,11 @@ namespace NVAPIWrapper
                 }
                 catch
                 {
-                    // Avoid throwing during dispose.
+                    // Avoid throwing during dispose/finalize.
                 }
-
-                _session = IntPtr.Zero;
             }
 
+            _session = IntPtr.Zero;
             _disposed = true;
         }
 
