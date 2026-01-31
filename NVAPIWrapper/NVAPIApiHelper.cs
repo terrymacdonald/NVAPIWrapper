@@ -114,6 +114,16 @@ namespace NVAPIWrapper
         }
 
         /// <summary>
+        /// Get the Mosaic helper.
+        /// </summary>
+        /// <returns>Mosaic helper instance.</returns>
+        public NVAPIMosaicHelper GetMosaicHelper()
+        {
+            ThrowIfDisposed();
+            return new NVAPIMosaicHelper(this);
+        }
+
+        /// <summary>
         /// Get the system chipset info.
         /// </summary>
         /// <returns>Chipset info, or null if unavailable.</returns>

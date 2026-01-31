@@ -86,6 +86,12 @@
             </summary>
             <returns>Driver version info, or null if unavailable.</returns>
         </member>
+        <member name="M:NVAPIWrapper.NVAPIApiHelper.GetMosaicHelper">
+            <summary>
+            Get the Mosaic helper.
+            </summary>
+            <returns>Mosaic helper instance.</returns>
+        </member>
         <member name="M:NVAPIWrapper.NVAPIApiHelper.GetChipSetInfo">
             <summary>
             Get the system chipset info.
@@ -2614,6 +2620,215 @@
             Dispose the helper and prevent further use.
             </summary>
         </member>
+        <member name="T:NVAPIWrapper.NVAPIMosaicHelper">
+            <summary>
+            Facade helper for Mosaic operations.
+            </summary>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIMosaicHelper.CreateSupportedTopoInfo">
+            <summary>
+            Create a supported topology info struct with the version initialized.
+            </summary>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIMosaicHelper.CreateTopoBrief">
+            <summary>
+            Create a Mosaic topology brief struct with the version initialized.
+            </summary>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIMosaicHelper.CreateDisplaySetting">
+            <summary>
+            Create a Mosaic display setting struct (v2) with the version initialized.
+            </summary>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIMosaicHelper.CreateTopoGroup">
+            <summary>
+            Create a Mosaic topology group struct with the version initialized.
+            </summary>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIMosaicHelper.CreateGridTopology">
+            <summary>
+            Create a Mosaic grid topology (v2) with the version initialized.
+            </summary>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIMosaicHelper.CreateDisplayTopoStatus">
+            <summary>
+            Create a Mosaic display topology status struct with the version initialized.
+            </summary>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIMosaicHelper.GetSupportedTopoInfo(NVAPIWrapper.NV_MOSAIC_TOPO_TYPE)">
+            <summary>
+            Get supported Mosaic topologies and display settings.
+            </summary>
+            <param name="type">Topology type filter.</param>
+            <returns>Supported topology info, or null if unavailable.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIMosaicHelper.GetTopoGroup(NVAPIWrapper.NVAPIMosaicTopoBriefDto)">
+            <summary>
+            Get detailed topology group data for a given topology brief.
+            </summary>
+            <param name="topoBrief">Topology brief to query.</param>
+            <returns>Topology group details, or null if unavailable.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIMosaicHelper.GetOverlapLimits(NVAPIWrapper.NVAPIMosaicTopoBriefDto,NVAPIWrapper.NVAPIMosaicDisplaySettingDto)">
+            <summary>
+            Get overlap limits for a given topology and display setting.
+            </summary>
+            <param name="topoBrief">Topology brief.</param>
+            <param name="displaySetting">Display setting.</param>
+            <returns>Overlap limits, or null if unavailable.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIMosaicHelper.SetCurrentTopo(NVAPIWrapper.NVAPIMosaicTopoBriefDto,NVAPIWrapper.NVAPIMosaicDisplaySettingDto,System.Int32,System.Int32,System.Boolean)">
+            <summary>
+            Set the current Mosaic topology.
+            </summary>
+            <param name="topoBrief">Topology brief.</param>
+            <param name="displaySetting">Display setting.</param>
+            <param name="overlapX">Horizontal overlap.</param>
+            <param name="overlapY">Vertical overlap.</param>
+            <param name="enable">Enable after setting.</param>
+            <returns>True if applied, false if unavailable.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIMosaicHelper.GetCurrentTopo">
+            <summary>
+            Get the current Mosaic topology.
+            </summary>
+            <returns>Current topology info, or null if unavailable.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIMosaicHelper.EnableCurrentTopo(System.Boolean)">
+            <summary>
+            Enable or disable the current Mosaic topology.
+            </summary>
+            <param name="enable">Enable or disable.</param>
+            <returns>True if applied, false if unavailable.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIMosaicHelper.GetDisplayViewportsByResolution(System.UInt32,System.UInt32,System.UInt32)">
+            <summary>
+            Get viewports for a display at a given resolution.
+            </summary>
+            <param name="displayId">Display ID.</param>
+            <param name="srcWidth">Source width.</param>
+            <param name="srcHeight">Source height.</param>
+            <returns>Viewport data, or null if unavailable.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIMosaicHelper.SetDisplayGrids(NVAPIWrapper.NVAPIMosaicGridTopologiesDto,System.UInt32)">
+            <summary>
+            Set display grid topologies.
+            </summary>
+            <param name="grids">Grid topologies.</param>
+            <param name="setTopoFlags">Set topology flags.</param>
+            <returns>True if applied, false if unavailable.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIMosaicHelper.ValidateDisplayGrids(System.UInt32,NVAPIWrapper.NVAPIMosaicGridTopologiesDto)">
+            <summary>
+            Validate display grid topologies.
+            </summary>
+            <param name="setTopoFlags">Set topology flags.</param>
+            <param name="grids">Grid topologies to validate.</param>
+            <returns>Status results, or null if unavailable.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIMosaicHelper.EnumDisplayModes(NVAPIWrapper.NVAPIMosaicGridTopoDto)">
+            <summary>
+            Enumerate available display modes for a grid topology.
+            </summary>
+            <param name="gridTopology">Grid topology to query.</param>
+            <returns>Display settings list, or null if unavailable.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIMosaicHelper.EnumDisplayGrids">
+            <summary>
+            Enumerate current active grid topologies.
+            </summary>
+            <returns>Grid topologies, or null if unavailable.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIMosaicHelper.Dispose">
+            <summary>
+            Dispose the helper.
+            </summary>
+        </member>
+        <member name="T:NVAPIWrapper.NVAPIMosaicSupportedTopoInfoDto">
+            <summary>
+            Snapshot of supported Mosaic topology data.
+            </summary>
+        </member>
+        <member name="T:NVAPIWrapper.NVAPIMosaicTopoBriefDto">
+            <summary>
+            Mosaic topology brief DTO.
+            </summary>
+        </member>
+        <member name="T:NVAPIWrapper.NVAPIMosaicDisplaySettingDto">
+            <summary>
+            Mosaic display setting DTO (v2).
+            </summary>
+        </member>
+        <member name="T:NVAPIWrapper.NVAPIMosaicOverlapLimitsDto">
+            <summary>
+            Mosaic overlap limits DTO.
+            </summary>
+        </member>
+        <member name="T:NVAPIWrapper.NVAPIMosaicCurrentTopoDto">
+            <summary>
+            Current Mosaic topology DTO.
+            </summary>
+        </member>
+        <member name="T:NVAPIWrapper.NVAPIMosaicTopoGroupDto">
+            <summary>
+            Mosaic topology group DTO.
+            </summary>
+        </member>
+        <member name="T:NVAPIWrapper.NVAPIMosaicTopoDetailsDto">
+            <summary>
+            Mosaic topology details DTO.
+            </summary>
+        </member>
+        <member name="T:NVAPIWrapper.NVAPIMosaicGpuLayoutCellDto">
+            <summary>
+            Mosaic GPU layout cell DTO.
+            </summary>
+        </member>
+        <member name="T:NVAPIWrapper.NVAPIMosaicGridTopoDisplayDto">
+            <summary>
+            Mosaic grid display DTO.
+            </summary>
+        </member>
+        <member name="T:NVAPIWrapper.NVAPIMosaicGridTopoDto">
+            <summary>
+            Mosaic grid topology DTO.
+            </summary>
+        </member>
+        <member name="T:NVAPIWrapper.NVAPIMosaicGridTopologiesDto">
+            <summary>
+            Mosaic grid topology collection DTO.
+            </summary>
+        </member>
+        <member name="T:NVAPIWrapper.NVAPIMosaicDisplaySettingsDto">
+            <summary>
+            Mosaic display modes DTO.
+            </summary>
+        </member>
+        <member name="T:NVAPIWrapper.NVAPIMosaicDisplayStatusEntryDto">
+            <summary>
+            Mosaic display topology status entry DTO.
+            </summary>
+        </member>
+        <member name="T:NVAPIWrapper.NVAPIMosaicDisplayTopoStatusDto">
+            <summary>
+            Mosaic display topology status DTO.
+            </summary>
+        </member>
+        <member name="T:NVAPIWrapper.NVAPIMosaicDisplayTopoStatusesDto">
+            <summary>
+            Mosaic display topology status collection DTO.
+            </summary>
+        </member>
+        <member name="T:NVAPIWrapper.NVAPIRectDto">
+            <summary>
+            Rectangle DTO for Mosaic viewports.
+            </summary>
+        </member>
+        <member name="T:NVAPIWrapper.NVAPIMosaicViewportsDto">
+            <summary>
+            Mosaic viewport list DTO.
+            </summary>
+        </member>
         <member name="T:NVAPIWrapper.NV_MOSAIC_GPU_LAYOUT_CELL">
             <summary>Represents a Mosaic GPU layout cell entry.</summary>
         </member>
@@ -2628,24 +2843,6 @@
         </member>
         <member name="F:NVAPIWrapper.NV_MOSAIC_GPU_LAYOUT_CELL.overlapY">
             <summary>Pixels of overlap on top of target (+overlap, -gap).</summary>
-        </member>
-        <member name="T:NVAPIWrapper.NV_MOSAIC_TOPOLOGY">
-            <summary>Used in NvAPI_GetCurrentMosaicTopology and NvAPI_SetCurrentMosaicTopology.</summary>
-        </member>
-        <member name="F:NVAPIWrapper.NV_MOSAIC_TOPOLOGY.version">
-            <summary>Version number of the mosaic topology.</summary>
-        </member>
-        <member name="F:NVAPIWrapper.NV_MOSAIC_TOPOLOGY.rowCount">
-            <summary>Horizontal display count.</summary>
-        </member>
-        <member name="F:NVAPIWrapper.NV_MOSAIC_TOPOLOGY.colCount">
-            <summary>Vertical display count.</summary>
-        </member>
-        <member name="F:NVAPIWrapper.NV_MOSAIC_TOPOLOGY.gpuLayout">
-            <summary>GPU layout table for the topology.</summary>
-        </member>
-        <member name="T:NVAPIWrapper.NV_MOSAIC_TOPOLOGY._gpuLayout_e__FixedBuffer">
-            <summary>Fixed buffer for the GPU layout table.</summary>
         </member>
         <member name="T:NVAPIWrapper.NV_MOSAIC_TOPO_DETAILS">
             <summary>Defines the Mosaic topology details.</summary>
@@ -2669,6 +2866,24 @@
             <summary>GPU layout table for the topology.</summary>
         </member>
         <member name="T:NVAPIWrapper.NV_MOSAIC_TOPO_DETAILS._gpuLayout_e__FixedBuffer">
+            <summary>Fixed buffer for the GPU layout table.</summary>
+        </member>
+        <member name="T:NVAPIWrapper.NV_MOSAIC_TOPOLOGY">
+            <summary>Used in legacy Mosaic topology APIs.</summary>
+        </member>
+        <member name="F:NVAPIWrapper.NV_MOSAIC_TOPOLOGY.version">
+            <summary>Version number of the mosaic topology.</summary>
+        </member>
+        <member name="F:NVAPIWrapper.NV_MOSAIC_TOPOLOGY.rowCount">
+            <summary>Horizontal display count.</summary>
+        </member>
+        <member name="F:NVAPIWrapper.NV_MOSAIC_TOPOLOGY.colCount">
+            <summary>Vertical display count.</summary>
+        </member>
+        <member name="F:NVAPIWrapper.NV_MOSAIC_TOPOLOGY.gpuLayout">
+            <summary>GPU layout table for the topology.</summary>
+        </member>
+        <member name="T:NVAPIWrapper.NV_MOSAIC_TOPOLOGY._gpuLayout_e__FixedBuffer">
             <summary>Fixed buffer for the GPU layout table.</summary>
         </member>
         <member name="T:NVAPIWrapper.NVAPINative">
