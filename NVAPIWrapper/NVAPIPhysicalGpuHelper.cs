@@ -1394,6 +1394,12 @@ namespace NVAPIWrapper
             return (NvPhysicalGpuHandle__*)_handle;
         }
 
+        internal IntPtr GetHandleOrThrow()
+        {
+            ThrowIfDisposed();
+            return _handle;
+        }
+
         private T GetDelegate<T>(uint id, string name) where T : Delegate
         {
             var functionPtr = _apiHelper.Api.TryGetFunctionPointer(id);

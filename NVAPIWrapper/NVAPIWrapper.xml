@@ -3454,6 +3454,150 @@
             GPU info DTO.
             </summary>
         </member>
+        <member name="T:NVAPIWrapper.NVAPIQuadroGSyncHelper">
+            <summary>
+            Facade helper for Quadro G-Sync (frame lock) devices.
+            </summary>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIQuadroGSyncHelper.CreateCapabilities">
+            <summary>
+            Create a G-Sync capabilities struct with the version initialized.
+            </summary>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIQuadroGSyncHelper.CreateControlParameters">
+            <summary>
+            Create a G-Sync control parameters struct with the version initialized.
+            </summary>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIQuadroGSyncHelper.CreateDelay">
+            <summary>
+            Create a G-Sync delay struct with the version initialized.
+            </summary>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIQuadroGSyncHelper.CreateSyncStatus">
+            <summary>
+            Create a G-Sync status struct with the version initialized.
+            </summary>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIQuadroGSyncHelper.CreateStatusParameters">
+            <summary>
+            Create a G-Sync status parameters struct with the version initialized.
+            </summary>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIQuadroGSyncHelper.CreateGSyncGpu">
+            <summary>
+            Create a G-Sync GPU topology struct with the version initialized.
+            </summary>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIQuadroGSyncHelper.CreateGSyncDisplay">
+            <summary>
+            Create a G-Sync display topology struct with the version initialized.
+            </summary>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIQuadroGSyncHelper.QueryCapabilities">
+            <summary>
+            Query capabilities of this G-Sync device.
+            </summary>
+            <returns>Capabilities DTO, or null if unavailable.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIQuadroGSyncHelper.GetTopology">
+            <summary>
+            Query the topology for this G-Sync device.
+            </summary>
+            <returns>Topology DTO, or null if unavailable.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIQuadroGSyncHelper.GetControlParameters">
+            <summary>
+            Get control parameters for this G-Sync device.
+            </summary>
+            <returns>Control parameters DTO, or null if unavailable.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIQuadroGSyncHelper.SetControlParameters(NVAPIWrapper.NVAPIGSyncControlParametersDto)">
+            <summary>
+            Set control parameters for this G-Sync device.
+            </summary>
+            <param name="parameters">Control parameters DTO.</param>
+            <returns>True if applied, null if unsupported.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIQuadroGSyncHelper.AdjustSyncDelay(NVAPIWrapper._NVAPI_GSYNC_DELAY_TYPE,NVAPIWrapper.NVAPIGSyncDelayDto)">
+            <summary>
+            Adjust sync delay for this G-Sync device.
+            </summary>
+            <param name="delayType">Delay type.</param>
+            <param name="delay">Delay DTO.</param>
+            <returns>Adjusted delay DTO, or null if unavailable.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIQuadroGSyncHelper.GetSyncStatus(NVAPIWrapper.NVAPIPhysicalGpuHelper)">
+            <summary>
+            Get sync status for a physical GPU attached to this G-Sync device.
+            </summary>
+            <param name="physicalGpu">Physical GPU helper.</param>
+            <returns>Sync status DTO, or null if unavailable.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIQuadroGSyncHelper.GetStatusParameters">
+            <summary>
+            Get status parameters for this G-Sync device.
+            </summary>
+            <returns>Status parameters DTO, or null if unavailable.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIQuadroGSyncHelper.SetSyncStateSettings(NVAPIWrapper.NVAPIGSyncDisplayDto[],System.UInt32)">
+            <summary>
+            Set display sync state settings for this G-Sync device.
+            </summary>
+            <param name="displays">Display DTO array.</param>
+            <param name="flags">Flags for the operation.</param>
+            <returns>True if applied, null if unsupported.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIQuadroGSyncHelper.Dispose">
+            <summary>
+            Dispose the helper.
+            </summary>
+        </member>
+        <member name="T:NVAPIWrapper.NVAPIGSyncCapabilitiesDto">
+            <summary>
+            DTO for G-Sync capabilities.
+            </summary>
+        </member>
+        <member name="T:NVAPIWrapper.NVAPIGSyncGpuDto">
+            <summary>
+            DTO for a G-Sync GPU entry in topology.
+            </summary>
+        </member>
+        <member name="T:NVAPIWrapper.NVAPIGSyncDisplayDto">
+            <summary>
+            DTO for a G-Sync display entry in topology.
+            </summary>
+        </member>
+        <member name="T:NVAPIWrapper.NVAPIGSyncTopologyDto">
+            <summary>
+            DTO for G-Sync topology results.
+            </summary>
+        </member>
+        <member name="T:NVAPIWrapper.NVAPIGSyncDelayDto">
+            <summary>
+            DTO for G-Sync delay.
+            </summary>
+        </member>
+        <member name="T:NVAPIWrapper.NVAPIGSyncAdjustedDelayDto">
+            <summary>
+            DTO for adjusted delay results.
+            </summary>
+        </member>
+        <member name="T:NVAPIWrapper.NVAPIGSyncControlParametersDto">
+            <summary>
+            DTO for G-Sync control parameters.
+            </summary>
+        </member>
+        <member name="T:NVAPIWrapper.NVAPIGSyncSyncStatusDto">
+            <summary>
+            DTO for sync status.
+            </summary>
+        </member>
+        <member name="T:NVAPIWrapper.NVAPIGSyncStatusParametersDto">
+            <summary>
+            DTO for G-Sync status parameters.
+            </summary>
+        </member>
         <member name="T:NVAPIWrapper.NV_TIMING_FLAG">
             <summary>Used in NvAPI_DISP_GetTiming.</summary>
         </member>
