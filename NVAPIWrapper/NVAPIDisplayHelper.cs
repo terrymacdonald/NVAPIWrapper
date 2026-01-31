@@ -518,10 +518,10 @@ namespace NVAPIWrapper
                 throw new NVAPIException(status);
 
             if (viewCount == 0)
-                return NVAPISupportedViewsDto.FromNative(Array.Empty<NV_TARGET_VIEW_MODE>());
+                return NVAPISupportedViewsDto.FromNative(Array.Empty<_NV_TARGET_VIEW_MODE>());
 
-            var views = new NV_TARGET_VIEW_MODE[viewCount];
-            fixed (NV_TARGET_VIEW_MODE* pViews = views)
+            var views = new _NV_TARGET_VIEW_MODE[viewCount];
+            fixed (_NV_TARGET_VIEW_MODE* pViews = views)
             {
                 status = getViews(GetHandle(), pViews, &viewCount);
             }
@@ -531,7 +531,7 @@ namespace NVAPIWrapper
 
             if (viewCount != views.Length)
             {
-                var trimmed = new NV_TARGET_VIEW_MODE[viewCount];
+                var trimmed = new _NV_TARGET_VIEW_MODE[viewCount];
                 Array.Copy(views, trimmed, (int)viewCount);
                 views = trimmed;
             }
@@ -1073,9 +1073,13 @@ namespace NVAPIWrapper
             var bytes = Encoding.ASCII.GetBytes(displayName + "\0");
             fixed (byte* pBytes = bytes)
             {
-                var status = getDisplayId((sbyte*)pBytes, &displayId);
+                uint id = 0;
+                var status = getDisplayId((sbyte*)pBytes, &id);
                 if (status == _NvAPI_Status.NVAPI_OK)
+                {
+                    displayId = id;
                     return true;
+                }
 
                 if (status == _NvAPI_Status.NVAPI_NOT_SUPPORTED ||
                     status == _NvAPI_Status.NVAPI_NVIDIA_DEVICE_NOT_FOUND ||
@@ -1174,7 +1178,7 @@ namespace NVAPIWrapper
         private unsafe delegate _NvAPI_Status NvApiDispGetGdiPrimaryDisplayIdDelegate(uint* displayId);
 
         [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
-        private unsafe delegate _NvAPI_Status NvApiGetSupportedViewsDelegate(NvDisplayHandle__* hNvDisplay, NV_TARGET_VIEW_MODE* pTargetViews, uint* pViewCount);
+        private unsafe delegate _NvAPI_Status NvApiGetSupportedViewsDelegate(NvDisplayHandle__* hNvDisplay, _NV_TARGET_VIEW_MODE* pTargetViews, uint* pViewCount);
 
         [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
         private unsafe delegate _NvAPI_Status NvApiDispGetEdidDataDelegate(uint displayId, _NV_EDID_DATA_V2* pEdidParams, NV_EDID_FLAG* pFlag);
@@ -1451,7 +1455,7 @@ namespace NVAPIWrapper
                             buffer.TrackAllocation(detailsPtr);
                             var details = (_NV_DISPLAYCONFIG_PATH_ADVANCED_TARGET_INFO_V1*)detailsPtr;
                             new Span<byte>((void*)detailsPtr, sizeof(_NV_DISPLAYCONFIG_PATH_ADVANCED_TARGET_INFO_V1)).Clear();
-                            FillAdvancedTargetInfo(details, targets[t].Details.Value);
+                            FillAdvancedTargetInfo(details, targets[t].Details.GetValueOrDefault());
                             target->details = details;
                         }
                     }
@@ -2325,7 +2329,7 @@ namespace NVAPIWrapper
             return Width == other.Width
                 && Height == other.Height
                 && RefreshRate.Equals(other.RefreshRate)
-                && Flag == other.Flag
+                && Flag.Equals(other.Flag)
                 && OverrideType == other.OverrideType;
         }
 
@@ -2690,12 +2694,12 @@ namespace NVAPIWrapper
     public readonly struct NVAPISupportedViewsDto : IEquatable<NVAPISupportedViewsDto>
     {
         /// <summary>Supported view modes.</summary>
-        public NV_TARGET_VIEW_MODE[] Views { get; }
+        public _NV_TARGET_VIEW_MODE[] Views { get; }
 
         /// <summary>Create a supported views DTO.</summary>
-        public NVAPISupportedViewsDto(NV_TARGET_VIEW_MODE[] views)
+        public NVAPISupportedViewsDto(_NV_TARGET_VIEW_MODE[] views)
         {
-            Views = views ?? Array.Empty<NV_TARGET_VIEW_MODE>();
+            Views = views ?? Array.Empty<_NV_TARGET_VIEW_MODE>();
         }
 
         /// <summary>
@@ -2703,7 +2707,7 @@ namespace NVAPIWrapper
         /// </summary>
         /// <param name="native">Native view modes.</param>
         /// <returns>Supported views DTO.</returns>
-        public static NVAPISupportedViewsDto FromNative(NV_TARGET_VIEW_MODE[] native)
+        public static NVAPISupportedViewsDto FromNative(_NV_TARGET_VIEW_MODE[] native)
         {
             return new NVAPISupportedViewsDto(native);
         }
@@ -2712,9 +2716,9 @@ namespace NVAPIWrapper
         /// Convert this DTO to a native view mode array.
         /// </summary>
         /// <returns>Native view modes.</returns>
-        public NV_TARGET_VIEW_MODE[] ToNative()
+        public _NV_TARGET_VIEW_MODE[] ToNative()
         {
-            return Views ?? Array.Empty<NV_TARGET_VIEW_MODE>();
+            return Views ?? Array.Empty<_NV_TARGET_VIEW_MODE>();
         }
 
         /// <inheritdoc />
@@ -3068,7 +3072,7 @@ namespace NVAPIWrapper
             OutputId = outputId;
         }
 
-        public static NVAPIGpuAndOutputIdDto FromNative(NVAPIApiHelper apiHelper, NvPhysicalGpuHandle__* handle, uint outputId)
+        public static unsafe NVAPIGpuAndOutputIdDto FromNative(NVAPIApiHelper apiHelper, NvPhysicalGpuHandle__* handle, uint outputId)
         {
             var ptr = (IntPtr)handle;
             return new NVAPIGpuAndOutputIdDto(ptr, new NVAPIPhysicalGpuHelper(apiHelper, ptr), outputId);
@@ -3129,7 +3133,8 @@ namespace NVAPIWrapper
                 var comparer = EqualityComparer<T>.Default;
                 for (var i = 0; i < values.Length; i++)
                 {
-                    hash = (hash * 31) + comparer.GetHashCode(values[i]);
+                    var value = values[i];
+                    hash = (hash * 31) + (value == null ? 0 : comparer.GetHashCode(value));
                 }
 
                 return hash;

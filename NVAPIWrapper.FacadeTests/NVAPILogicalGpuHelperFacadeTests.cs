@@ -8,7 +8,8 @@ namespace NVAPIWrapper.FacadeTests
     /// Facade tests for logical GPU helpers.
     /// </summary>
     [SupportedOSPlatform("windows")]
-    [Collection("NVAPI")]
+    [Collection("Passive")]
+    [Trait("Category", "Passive")]
     public class NVAPILogicalGpuHelperFacadeTests
     {
         private readonly NVAPITestFixture _fixture;

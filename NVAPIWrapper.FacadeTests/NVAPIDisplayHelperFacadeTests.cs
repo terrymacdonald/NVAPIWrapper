@@ -8,7 +8,8 @@ namespace NVAPIWrapper.FacadeTests
     /// Facade tests for display helpers.
     /// </summary>
     [SupportedOSPlatform("windows")]
-    [Collection("NVAPI")]
+    [Collection("Passive")]
+    [Trait("Category", "Passive")]
     public class NVAPIDisplayHelperFacadeTests
     {
         private readonly NVAPITestFixture _fixture;
@@ -93,6 +94,42 @@ namespace NVAPIWrapper.FacadeTests
             var outputId = displays[0].GetAssociatedDisplayOutputId();
             Skip.If(outputId == null, "Display output ID not supported.");
             Assert.True(outputId.HasValue);
+        }
+
+        [SkippableFact]
+        public void GetGpuAndOutputIdFromDisplayId_ShouldReturnDto()
+        {
+            Skip.If(_fixture.ApiHelper == null, _fixture.SkipReason);
+
+            var gpus = _fixture.ApiHelper.EnumeratePhysicalGpus();
+            Skip.If(gpus.Length == 0, "No NVIDIA physical GPUs found.");
+
+            var displays = gpus[0].EnumerateNvidiaDisplayHandles();
+            Skip.If(displays.Length == 0, "No NVIDIA displays found.");
+
+            var info = FacadeTestUtils.InvokeOrSkip(() => displays[0].GetGpuAndOutputIdFromDisplayId(), "GPU/output ID unsupported");
+            Skip.If(info == null, "GPU/output ID not supported.");
+
+            var dto = info.Value;
+            Assert.NotNull(dto.PhysicalGpu);
+            Assert.True(dto.Equals(dto));
+            _ = dto.GetHashCode();
+        }
+
+        [SkippableFact]
+        public void GetPhysicalGpuFromDisplayId_ShouldReturnHelper()
+        {
+            Skip.If(_fixture.ApiHelper == null, _fixture.SkipReason);
+
+            var gpus = _fixture.ApiHelper.EnumeratePhysicalGpus();
+            Skip.If(gpus.Length == 0, "No NVIDIA physical GPUs found.");
+
+            var displays = gpus[0].EnumerateNvidiaDisplayHandles();
+            Skip.If(displays.Length == 0, "No NVIDIA displays found.");
+
+            var physicalGpu = FacadeTestUtils.InvokeOrSkip(() => displays[0].GetPhysicalGpuFromDisplayId(), "Physical GPU lookup unsupported");
+            Skip.If(physicalGpu == null, "Physical GPU lookup not supported.");
+            Assert.NotNull(physicalGpu);
         }
 
         [SkippableFact]
@@ -212,7 +249,7 @@ namespace NVAPIWrapper.FacadeTests
             Skip.If(path.Targets.Length == 0 || !path.Targets[0].Details.HasValue, "Target details not available.");
 
             var source = path.SourceModeInfo.Value;
-            var details = path.Targets[0].Details.Value;
+            var details = path.Targets[0].Details.GetValueOrDefault();
             Skip.If(details.RefreshRate1K == 0, "Refresh rate not available.");
 
             var input = new NVAPITimingInputDto(

@@ -232,6 +232,10 @@ Tests require NVIDIA GPU hardware and the NVAPI DLLs present. They skip graceful
 dotnet test NVAPIWrapper.NativeTests/NVAPIWrapper.NativeTests.csproj
 dotnet test NVAPIWrapper.FacadeTests/NVAPIWrapper.FacadeTests.csproj
 ```
+The test runner script executes only **passive** tests (`Category=Passive`). Active tests (`Category=Active`) can change system settings and must be run manually, for example:
+```powershell
+dotnet test NVAPIWrapper.FacadeTests/NVAPIWrapper.FacadeTests.csproj --filter "Category=Active"
+```
 
 ## Updating bindings
 When NVIDIA releases a new NVAPI:

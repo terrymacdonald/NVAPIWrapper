@@ -145,25 +145,42 @@ Write-Host "Building and running Native + Facade unit tests..." -ForegroundColor
 Write-Host "============================================================================" -ForegroundColor Cyan
 Write-Host ""
 
-foreach ($path in @($nativeProjectPath, $facadeProjectPath)) {
-    Write-Host ""
-    Write-Host "Running tests in $path" -ForegroundColor Yellow
-    try {
-        & dotnet test $path --configuration Debug --verbosity normal
-        if ($LASTEXITCODE -ne 0) {
-            Write-Host ""
-            Write-Host "*** TESTS FAILED OR SKIPPED IN $path ***" -ForegroundColor Yellow
-            Read-Host "Press Enter to exit..."
-            exit 1
-        }
-    } catch {
+Write-Host ""
+Write-Host "Running tests in $nativeProjectPath" -ForegroundColor Yellow
+try {
+    & dotnet test $nativeProjectPath --configuration Debug --verbosity normal
+    if ($LASTEXITCODE -ne 0) {
         Write-Host ""
-        Write-Host "ERROR: Failed to run unit tests in $path" -ForegroundColor Red
-        Write-Host "Error: $_" -ForegroundColor Yellow
-        Write-Host ""
+        Write-Host "*** TESTS FAILED OR SKIPPED IN $nativeProjectPath ***" -ForegroundColor Yellow
         Read-Host "Press Enter to exit..."
         exit 1
     }
+} catch {
+    Write-Host ""
+    Write-Host "ERROR: Failed to run unit tests in $nativeProjectPath" -ForegroundColor Red
+    Write-Host "Error: $_" -ForegroundColor Yellow
+    Write-Host ""
+    Read-Host "Press Enter to exit..."
+    exit 1
+}
+
+Write-Host ""
+Write-Host "Running tests in $facadeProjectPath" -ForegroundColor Yellow
+try {
+    & dotnet test $facadeProjectPath --configuration Debug --verbosity normal --filter "Category=Passive"
+    if ($LASTEXITCODE -ne 0) {
+        Write-Host ""
+        Write-Host "*** TESTS FAILED OR SKIPPED IN $facadeProjectPath ***" -ForegroundColor Yellow
+        Read-Host "Press Enter to exit..."
+        exit 1
+    }
+} catch {
+    Write-Host ""
+    Write-Host "ERROR: Failed to run unit tests in $facadeProjectPath" -ForegroundColor Red
+    Write-Host "Error: $_" -ForegroundColor Yellow
+    Write-Host ""
+    Read-Host "Press Enter to exit..."
+    exit 1
 }
 
 Write-Host ""

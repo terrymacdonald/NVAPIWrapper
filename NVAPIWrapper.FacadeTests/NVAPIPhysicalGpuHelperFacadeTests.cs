@@ -8,7 +8,8 @@ namespace NVAPIWrapper.FacadeTests
     /// Facade tests for physical GPU helpers.
     /// </summary>
     [SupportedOSPlatform("windows")]
-    [Collection("NVAPI")]
+    [Collection("Passive")]
+    [Trait("Category", "Passive")]
     public class NVAPIPhysicalGpuHelperFacadeTests
     {
         private readonly NVAPITestFixture _fixture;
@@ -152,6 +153,64 @@ namespace NVAPIWrapper.FacadeTests
             var tach = gpus[0].GetTachReading();
             Skip.If(tach == null, "Tach reading not supported.");
             Assert.True(tach.HasValue);
+        }
+
+        [SkippableFact]
+        public void GetMemoryInfo_ShouldReturnDto()
+        {
+            Skip.If(_fixture.ApiHelper == null, _fixture.SkipReason);
+
+            var gpus = _fixture.ApiHelper.EnumeratePhysicalGpus();
+            Skip.If(gpus.Length == 0, "No NVIDIA physical GPUs found.");
+
+            var info = FacadeTestUtils.InvokeOrSkip(() => gpus[0].GetMemoryInfo(), "Memory info unsupported");
+            Skip.If(info == null, "Memory info not supported.");
+
+            var dto = info.Value;
+            var native = dto.ToNative();
+            Assert.Equal(NVAPI.NV_DISPLAY_DRIVER_MEMORY_INFO_VER, native.version);
+            Assert.True(dto.Equals(dto));
+            _ = dto.GetHashCode();
+        }
+
+        [SkippableFact]
+        public void GetMemoryInfoEx_ShouldReturnDto()
+        {
+            Skip.If(_fixture.ApiHelper == null, _fixture.SkipReason);
+
+            var gpus = _fixture.ApiHelper.EnumeratePhysicalGpus();
+            Skip.If(gpus.Length == 0, "No NVIDIA physical GPUs found.");
+
+            var info = FacadeTestUtils.InvokeOrSkip(() => gpus[0].GetMemoryInfoEx(), "Extended memory info unsupported");
+            Skip.If(info == null, "Extended memory info not supported.");
+
+            var dto = info.Value;
+            var native = dto.ToNative();
+            Assert.Equal(NVAPI.NV_GPU_MEMORY_INFO_EX_VER, native.version);
+            Assert.True(dto.Equals(dto));
+            _ = dto.GetHashCode();
+        }
+
+        [SkippableFact]
+        public void GetDisplayIdFromGpuAndOutputId_ShouldReturnValue()
+        {
+            Skip.If(_fixture.ApiHelper == null, _fixture.SkipReason);
+
+            var gpus = _fixture.ApiHelper.EnumeratePhysicalGpus();
+            Skip.If(gpus.Length == 0, "No NVIDIA physical GPUs found.");
+
+            var displays = gpus[0].EnumerateNvidiaDisplayHandles();
+            Skip.If(displays.Length == 0, "No NVIDIA displays found.");
+
+            var outputId = displays[0].GetAssociatedDisplayOutputId();
+            Skip.If(outputId == null, "Display output ID not supported.");
+
+            var displayId = FacadeTestUtils.InvokeOrSkip(
+                () => gpus[0].GetDisplayIdFromGpuAndOutputId(outputId.Value),
+                "Display ID lookup unsupported");
+
+            Skip.If(displayId == null, "Display ID not supported.");
+            Assert.True(displayId.HasValue);
         }
     }
 }

@@ -171,12 +171,10 @@ namespace NVAPIWrapper
                 return Array.Empty<NVAPISystemPhysicalGpuHandleDto>();
 
             var result = new NVAPISystemPhysicalGpuHandleDto[count];
-            fixed (_NV_PHYSICAL_GPU_HANDLE_DATA* pHandles = &gpus.gpuHandleData.e0)
+            var span = MemoryMarshal.CreateSpan(ref gpus.gpuHandleData.e0, NVAPI.NVAPI_MAX_PHYSICAL_GPUS);
+            for (var i = 0; i < count; i++)
             {
-                for (var i = 0; i < count; i++)
-                {
-                    result[i] = NVAPISystemPhysicalGpuHandleDto.FromNative(this, pHandles[i]);
-                }
+                result[i] = NVAPISystemPhysicalGpuHandleDto.FromNative(this, span[i]);
             }
 
             return result;
@@ -205,12 +203,10 @@ namespace NVAPIWrapper
                 return Array.Empty<NVAPISystemLogicalGpuHandleDto>();
 
             var result = new NVAPISystemLogicalGpuHandleDto[count];
-            fixed (_NV_LOGICAL_GPU_HANDLE_DATA* pHandles = &gpus.gpuHandleData.e0)
+            var span = MemoryMarshal.CreateSpan(ref gpus.gpuHandleData.e0, NVAPI.NVAPI_MAX_LOGICAL_GPUS);
+            for (var i = 0; i < count; i++)
             {
-                for (var i = 0; i < count; i++)
-                {
-                    result[i] = NVAPISystemLogicalGpuHandleDto.FromNative(this, pHandles[i]);
-                }
+                result[i] = NVAPISystemLogicalGpuHandleDto.FromNative(this, span[i]);
             }
 
             return result;
@@ -645,7 +641,7 @@ namespace NVAPIWrapper
             PhysicalGpu = new NVAPIPhysicalGpuHelper(helper, handle);
         }
 
-        public static NVAPISystemPhysicalGpuHandleDto FromNative(NVAPIApiHelper helper, _NV_PHYSICAL_GPU_HANDLE_DATA native)
+        public static unsafe NVAPISystemPhysicalGpuHandleDto FromNative(NVAPIApiHelper helper, _NV_PHYSICAL_GPU_HANDLE_DATA native)
         {
             return new NVAPISystemPhysicalGpuHandleDto((IntPtr)native.hPhysicalGpu, native.adapterType, helper);
         }
@@ -687,7 +683,7 @@ namespace NVAPIWrapper
             LogicalGpu = new NVAPILogicalGpuHelper(helper, handle);
         }
 
-        public static NVAPISystemLogicalGpuHandleDto FromNative(NVAPIApiHelper helper, _NV_LOGICAL_GPU_HANDLE_DATA native)
+        public static unsafe NVAPISystemLogicalGpuHandleDto FromNative(NVAPIApiHelper helper, _NV_LOGICAL_GPU_HANDLE_DATA native)
         {
             return new NVAPISystemLogicalGpuHandleDto((IntPtr)native.hLogicalGpu, native.adapterType, helper);
         }

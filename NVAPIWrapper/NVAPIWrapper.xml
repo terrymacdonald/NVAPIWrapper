@@ -74,6 +74,42 @@
             </summary>
             <returns>Array of physical GPU helpers, or empty if none are found.</returns>
         </member>
+        <member name="M:NVAPIWrapper.NVAPIApiHelper.GetDriverAndBranchVersion">
+            <summary>
+            Get the NVAPI driver version and branch string.
+            </summary>
+            <returns>Driver version info, or null if unavailable.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIApiHelper.GetChipSetInfo">
+            <summary>
+            Get the system chipset info.
+            </summary>
+            <returns>Chipset info, or null if unavailable.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIApiHelper.GetLidAndDockInfo">
+            <summary>
+            Get lid and dock information.
+            </summary>
+            <returns>Lid and dock info, or null if unavailable.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIApiHelper.GetDisplayDriverInfo">
+            <summary>
+            Get display driver info.
+            </summary>
+            <returns>Display driver info, or null if unavailable.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIApiHelper.GetPhysicalGpus">
+            <summary>
+            Get physical GPU handles with adapter type metadata.
+            </summary>
+            <returns>Array of physical GPU handle data, or empty if none are found.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIApiHelper.GetLogicalGpus">
+            <summary>
+            Get logical GPU handles with adapter type metadata.
+            </summary>
+            <returns>Array of logical GPU handle data, or empty if none are found.</returns>
+        </member>
         <member name="M:NVAPIWrapper.NVAPIApiHelper.EnumerateLogicalGpus">
             <summary>
             Enumerate logical GPU helpers.
@@ -83,6 +119,42 @@
         <member name="M:NVAPIWrapper.NVAPIApiHelper.Dispose">
             <summary>
             Dispose the NVAPI helper and release native resources.
+            </summary>
+        </member>
+        <member name="T:NVAPIWrapper.NVAPIDriverAndBranchVersionDto">
+            <summary>
+            Driver version and branch string.
+            </summary>
+        </member>
+        <member name="P:NVAPIWrapper.NVAPIDriverAndBranchVersionDto.DriverVersion">
+            <summary>Driver version.</summary>
+        </member>
+        <member name="P:NVAPIWrapper.NVAPIDriverAndBranchVersionDto.Branch">
+            <summary>Driver branch string.</summary>
+        </member>
+        <member name="T:NVAPIWrapper.NVAPIChipSetInfoDto">
+            <summary>
+            Chipset information DTO.
+            </summary>
+        </member>
+        <member name="T:NVAPIWrapper.NVAPILidAndDockInfoDto">
+            <summary>
+            Lid and dock information DTO.
+            </summary>
+        </member>
+        <member name="T:NVAPIWrapper.NVAPIDisplayDriverInfoDto">
+            <summary>
+            Display driver information DTO.
+            </summary>
+        </member>
+        <member name="T:NVAPIWrapper.NVAPISystemPhysicalGpuHandleDto">
+            <summary>
+            Physical GPU handle data from NvAPI_SYS_GetPhysicalGPUs.
+            </summary>
+        </member>
+        <member name="T:NVAPIWrapper.NVAPISystemLogicalGpuHandleDto">
+            <summary>
+            Logical GPU handle data from NvAPI_SYS_GetLogicalGPUs.
             </summary>
         </member>
         <member name="F:NVAPIWrapper.NVAPI.NV_TRUE">
@@ -1041,6 +1113,71 @@
             Facade helper for an NVIDIA display handle.
             </summary>
         </member>
+        <member name="M:NVAPIWrapper.NVAPIDisplayHelper.CreateEdidData">
+            <summary>
+            Create an EDID data struct with the version initialized.
+            </summary>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDisplayHelper.CreateTimingInput">
+            <summary>
+            Create a timing input struct with the version initialized.
+            </summary>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDisplayHelper.CreateMonitorCapabilities">
+            <summary>
+            Create a monitor capabilities struct with the version initialized.
+            </summary>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDisplayHelper.CreateDisplayPortInfo">
+            <summary>
+            Create a display port info struct with the version initialized.
+            </summary>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDisplayHelper.CreateDisplayPortConfig">
+            <summary>
+            Create a display port config struct with the version initialized.
+            </summary>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDisplayHelper.CreateHdmiSupportInfo">
+            <summary>
+            Create an HDMI support info struct with the version initialized.
+            </summary>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDisplayHelper.CreateVrrInfo">
+            <summary>
+            Create a VRR info struct with the version initialized.
+            </summary>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDisplayHelper.CreateAdaptiveSyncGetData">
+            <summary>
+            Create adaptive sync GET data with the version initialized.
+            </summary>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDisplayHelper.CreateAdaptiveSyncSetData">
+            <summary>
+            Create adaptive sync SET data with the version initialized.
+            </summary>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDisplayHelper.CreateVirtualRefreshRateGetData">
+            <summary>
+            Create virtual refresh rate GET data with the version initialized.
+            </summary>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDisplayHelper.CreateVirtualRefreshRateSetData">
+            <summary>
+            Create virtual refresh rate SET data with the version initialized.
+            </summary>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDisplayHelper.CreatePreferredStereoDisplayGet">
+            <summary>
+            Create preferred stereo display GET struct with the version initialized.
+            </summary>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDisplayHelper.CreatePreferredStereoDisplaySet">
+            <summary>
+            Create preferred stereo display SET struct with the version initialized.
+            </summary>
+        </member>
         <member name="M:NVAPIWrapper.NVAPIDisplayHelper.GetPhysicalGpusFromDisplay">
             <summary>
             Get physical GPUs associated with this display.
@@ -1065,15 +1202,1059 @@
             </summary>
             <returns>Output ID, or null if unavailable.</returns>
         </member>
+        <member name="M:NVAPIWrapper.NVAPIDisplayHelper.GetGpuAndOutputIdFromDisplayId">
+            <summary>
+            Get the physical GPU and output ID for this display.
+            </summary>
+            <returns>GPU and output ID info, or null if unavailable.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDisplayHelper.GetPhysicalGpuFromDisplayId">
+            <summary>
+            Get the physical GPU that drives this display.
+            </summary>
+            <returns>Physical GPU helper, or null if unavailable.</returns>
+        </member>
         <member name="M:NVAPIWrapper.NVAPIDisplayHelper.GetVBlankCounter">
             <summary>
             Get the current VBlank counter for this display.
             </summary>
             <returns>VBlank counter value, or null if unavailable.</returns>
         </member>
+        <member name="M:NVAPIWrapper.NVAPIDisplayHelper.GetDisplayConfig">
+            <summary>
+            Get the current display configuration snapshot.
+            </summary>
+            <returns>Display configuration info, or null if unavailable.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDisplayHelper.SetDisplayConfig(NVAPIWrapper.NVAPIDisplayConfigDto,System.UInt32)">
+            <summary>
+            Apply a display configuration snapshot using NvAPI_DISP_SetDisplayConfig.
+            </summary>
+            <param name="config">Desired display configuration snapshot.</param>
+            <param name="flags">Optional NVAPI display config flags.</param>
+            <returns>True if applied, false if unavailable or unchanged.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDisplayHelper.GetDisplayIdByDisplayName(System.String)">
+            <summary>
+            Get the display ID associated with a display name.
+            </summary>
+            <param name="displayName">Display name (e.g., "\\.\DISPLAY1"). If null, uses this display handle's name.</param>
+            <returns>Display ID, or null if unavailable.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDisplayHelper.GetGdiPrimaryDisplayId">
+            <summary>
+            Get the display ID for the GDI primary display.
+            </summary>
+            <returns>Display ID, or null if unavailable.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDisplayHelper.GetSupportedViews">
+            <summary>
+            Get the supported view modes for this display handle.
+            </summary>
+            <returns>Supported view modes, or null if unavailable.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDisplayHelper.GetEdidData(NVAPIWrapper.NV_EDID_FLAG)">
+            <summary>
+            Get EDID data for the display.
+            </summary>
+            <param name="flag">EDID flag selection.</param>
+            <returns>EDID data DTO, or null if unavailable.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDisplayHelper.GetTiming(NVAPIWrapper.NVAPITimingInputDto)">
+            <summary>
+            Get timing data based on timing input parameters.
+            </summary>
+            <param name="input">Timing input parameters.</param>
+            <returns>Timing DTO, or null if unavailable.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDisplayHelper.GetMonitorCapabilities">
+            <summary>
+            Get monitor capabilities for the display.
+            </summary>
+            <returns>Monitor capabilities DTO, or null if unavailable.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDisplayHelper.GetMonitorColorCapabilities">
+            <summary>
+            Get monitor color capabilities for the display.
+            </summary>
+            <returns>Monitor color capabilities DTO, or null if unavailable.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDisplayHelper.GetDisplayPortInfo(System.Nullable{System.UInt32})">
+            <summary>
+            Get display port information.
+            </summary>
+            <param name="outputId">Optional output ID override.</param>
+            <returns>Display port info DTO, or null if unavailable.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDisplayHelper.SetDisplayPort(NVAPIWrapper.NVAPIDisplayPortConfigDto,System.Nullable{System.UInt32})">
+            <summary>
+            Set display port configuration.
+            </summary>
+            <param name="config">Display port configuration DTO.</param>
+            <param name="outputId">Optional output ID override.</param>
+            <returns>True if applied, false if unavailable.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDisplayHelper.GetHdmiSupportInfo(System.Nullable{System.UInt32})">
+            <summary>
+            Get HDMI support information.
+            </summary>
+            <param name="outputId">Optional output ID override.</param>
+            <returns>HDMI support info DTO, or null if unavailable.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDisplayHelper.GetVrrInfo">
+            <summary>
+            Get VRR information for this display.
+            </summary>
+            <returns>VRR info DTO, or null if unavailable.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDisplayHelper.GetAdaptiveSyncData">
+            <summary>
+            Get adaptive sync data for this display.
+            </summary>
+            <returns>Adaptive sync data DTO, or null if unavailable.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDisplayHelper.SetAdaptiveSyncData(NVAPIWrapper.NVAPIAdaptiveSyncSetDataDto)">
+            <summary>
+            Set adaptive sync data for this display.
+            </summary>
+            <param name="data">Adaptive sync data DTO.</param>
+            <returns>True if applied, false if unavailable.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDisplayHelper.GetVirtualRefreshRateData">
+            <summary>
+            Get virtual refresh rate data for this display.
+            </summary>
+            <returns>Virtual refresh rate data DTO, or null if unavailable.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDisplayHelper.SetVirtualRefreshRateData(NVAPIWrapper.NVAPIVirtualRefreshRateDataDto)">
+            <summary>
+            Set virtual refresh rate data for this display.
+            </summary>
+            <param name="data">Virtual refresh rate data DTO.</param>
+            <returns>True if applied, false if unavailable.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDisplayHelper.GetPreferredStereoDisplay">
+            <summary>
+            Get the preferred stereo display.
+            </summary>
+            <returns>Preferred stereo display DTO, or null if unavailable.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDisplayHelper.SetPreferredStereoDisplay(NVAPIWrapper.NVAPIPreferredStereoDisplayDto)">
+            <summary>
+            Set the preferred stereo display.
+            </summary>
+            <param name="display">Preferred stereo display DTO.</param>
+            <returns>True if applied, false if unavailable.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDisplayHelper.EnableHWCursor">
+            <summary>
+            Enable the hardware cursor for this display.
+            </summary>
+            <returns>True if enabled, false if unavailable.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDisplayHelper.DisableHWCursor">
+            <summary>
+            Disable the hardware cursor for this display.
+            </summary>
+            <returns>True if disabled, false if unavailable.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDisplayHelper.SetRefreshRateOverride(System.UInt32,System.Single,System.Boolean)">
+            <summary>
+            Override the refresh rate for the specified output mask.
+            </summary>
+            <param name="outputsMask">Output mask to apply the override.</param>
+            <param name="refreshRate">Refresh rate override (0.0 cancels).</param>
+            <param name="setDeferred">True to defer to the next modeset.</param>
+            <returns>True if applied, false if unavailable.</returns>
+        </member>
         <member name="M:NVAPIWrapper.NVAPIDisplayHelper.Dispose">
             <summary>
             Dispose the helper and prevent further use.
+            </summary>
+        </member>
+        <member name="T:NVAPIWrapper.NVAPIDisplayConfigDto">
+            <summary>
+            Snapshot of the display configuration returned by NVAPI.
+            </summary>
+        </member>
+        <member name="P:NVAPIWrapper.NVAPIDisplayConfigDto.Paths">
+            <summary>
+            Display paths in the configuration.
+            </summary>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDisplayConfigDto.#ctor(NVAPIWrapper.NVAPIDisplayConfigPathDto[])">
+            <summary>
+            Create a display configuration snapshot.
+            </summary>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDisplayConfigDto.FromNative(System.UInt32,NVAPIWrapper._NV_DISPLAYCONFIG_PATH_INFO*)">
+            <summary>
+            Create a DTO from native display configuration data.
+            </summary>
+            <param name="pathCount">Number of paths.</param>
+            <param name="pathInfo">Pointer to native path info.</param>
+            <returns>Display configuration DTO.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDisplayConfigDto.ToNativeBuffer">
+            <summary>
+            Convert this DTO to a native buffer suitable for NvAPI_DISP_SetDisplayConfig.
+            </summary>
+            <returns>Native buffer that must be disposed.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDisplayConfigDto.Equals(NVAPIWrapper.NVAPIDisplayConfigDto)">
+            <inheritdoc />
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDisplayConfigDto.Equals(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDisplayConfigDto.GetHashCode">
+            <inheritdoc />
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDisplayConfigDto.op_Equality(NVAPIWrapper.NVAPIDisplayConfigDto,NVAPIWrapper.NVAPIDisplayConfigDto)">
+            <summary>
+            Compare two display configuration snapshots.
+            </summary>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDisplayConfigDto.op_Inequality(NVAPIWrapper.NVAPIDisplayConfigDto,NVAPIWrapper.NVAPIDisplayConfigDto)">
+            <summary>
+            Compare two display configuration snapshots.
+            </summary>
+        </member>
+        <member name="T:NVAPIWrapper.NVAPIDisplayConfigPathDto">
+            <summary>
+            Managed representation of an NVAPI display path configuration.
+            </summary>
+        </member>
+        <member name="P:NVAPIWrapper.NVAPIDisplayConfigPathDto.Version">
+            <summary>
+            NVAPI structure version used for this path.
+            </summary>
+        </member>
+        <member name="P:NVAPIWrapper.NVAPIDisplayConfigPathDto.SourceId">
+            <summary>
+            Windows source ID for the path.
+            </summary>
+        </member>
+        <member name="P:NVAPIWrapper.NVAPIDisplayConfigPathDto.IsNonNvidiaAdapter">
+            <summary>
+            True when the path represents a non-NVIDIA adapter.
+            </summary>
+        </member>
+        <member name="P:NVAPIWrapper.NVAPIDisplayConfigPathDto.OsAdapterLuid">
+            <summary>
+            OS adapter LUID value for non-NVIDIA adapters, or null if not present.
+            </summary>
+        </member>
+        <member name="P:NVAPIWrapper.NVAPIDisplayConfigPathDto.SourceModeInfo">
+            <summary>
+            Source mode info, or null if not present.
+            </summary>
+        </member>
+        <member name="P:NVAPIWrapper.NVAPIDisplayConfigPathDto.Targets">
+            <summary>
+            Target configurations for this path.
+            </summary>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDisplayConfigPathDto.#ctor(System.UInt32,System.UInt32,System.Boolean,System.Nullable{System.Int64},System.Nullable{NVAPIWrapper.NVAPIDisplayConfigSourceModeDto},NVAPIWrapper.NVAPIDisplayConfigTargetDto[])">
+            <summary>
+            Create a display path configuration.
+            </summary>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDisplayConfigPathDto.FromNative(NVAPIWrapper._NV_DISPLAYCONFIG_PATH_INFO)">
+            <summary>
+            Create a DTO from a native path info struct.
+            </summary>
+            <param name="pathInfo">Native path info.</param>
+            <returns>Display config path DTO.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDisplayConfigPathDto.ToNative(NVAPIWrapper._NV_DISPLAYCONFIG_PATH_TARGET_INFO_V2*,System.UInt32,NVAPIWrapper._NV_DISPLAYCONFIG_SOURCE_MODE_INFO_V1*,System.Void*)">
+            <summary>
+            Convert this DTO to a native path info struct.
+            </summary>
+            <param name="targetInfo">Pointer to native target info array.</param>
+            <param name="targetInfoCount">Number of target info entries.</param>
+            <param name="sourceModeInfo">Pointer to native source mode info.</param>
+            <param name="osAdapterId">Pointer to OS adapter ID (LUID), or null.</param>
+            <returns>Native path info struct.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDisplayConfigPathDto.Equals(NVAPIWrapper.NVAPIDisplayConfigPathDto)">
+            <inheritdoc />
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDisplayConfigPathDto.Equals(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDisplayConfigPathDto.GetHashCode">
+            <inheritdoc />
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDisplayConfigPathDto.op_Equality(NVAPIWrapper.NVAPIDisplayConfigPathDto,NVAPIWrapper.NVAPIDisplayConfigPathDto)">
+            <summary>
+            Compare two path configurations.
+            </summary>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDisplayConfigPathDto.op_Inequality(NVAPIWrapper.NVAPIDisplayConfigPathDto,NVAPIWrapper.NVAPIDisplayConfigPathDto)">
+            <summary>
+            Compare two path configurations.
+            </summary>
+        </member>
+        <member name="T:NVAPIWrapper.NVAPIDisplayConfigSourceModeDto">
+            <summary>
+            Managed representation of NVAPI display source mode info.
+            </summary>
+        </member>
+        <member name="P:NVAPIWrapper.NVAPIDisplayConfigSourceModeDto.Resolution">
+            <summary>Display resolution.</summary>
+        </member>
+        <member name="P:NVAPIWrapper.NVAPIDisplayConfigSourceModeDto.ColorFormat">
+            <summary>Color format.</summary>
+        </member>
+        <member name="P:NVAPIWrapper.NVAPIDisplayConfigSourceModeDto.Position">
+            <summary>Position for the display.</summary>
+        </member>
+        <member name="P:NVAPIWrapper.NVAPIDisplayConfigSourceModeDto.SpanningOrientation">
+            <summary>Spanning orientation.</summary>
+        </member>
+        <member name="P:NVAPIWrapper.NVAPIDisplayConfigSourceModeDto.IsGdiPrimary">
+            <summary>True if this is the GDI primary display.</summary>
+        </member>
+        <member name="P:NVAPIWrapper.NVAPIDisplayConfigSourceModeDto.IsSliFocus">
+            <summary>True if this is the SLI focus display.</summary>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDisplayConfigSourceModeDto.#ctor(NVAPIWrapper._NV_RESOLUTION,NVAPIWrapper._NV_FORMAT,NVAPIWrapper._NV_POSITION,NVAPIWrapper._NV_DISPLAYCONFIG_SPANNING_ORIENTATION,System.Boolean,System.Boolean)">
+            <summary>Create source mode info.</summary>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDisplayConfigSourceModeDto.FromNative(NVAPIWrapper._NV_DISPLAYCONFIG_SOURCE_MODE_INFO_V1)">
+            <summary>
+            Create a DTO from a native source mode info struct.
+            </summary>
+            <param name="native">Native source mode info.</param>
+            <returns>Source mode DTO.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDisplayConfigSourceModeDto.ToNative">
+            <summary>
+            Convert this DTO to a native source mode info struct.
+            </summary>
+            <returns>Native source mode info.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDisplayConfigSourceModeDto.Equals(NVAPIWrapper.NVAPIDisplayConfigSourceModeDto)">
+            <inheritdoc />
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDisplayConfigSourceModeDto.Equals(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDisplayConfigSourceModeDto.GetHashCode">
+            <inheritdoc />
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDisplayConfigSourceModeDto.op_Equality(NVAPIWrapper.NVAPIDisplayConfigSourceModeDto,NVAPIWrapper.NVAPIDisplayConfigSourceModeDto)">
+            <summary>
+            Compare source mode info values.
+            </summary>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDisplayConfigSourceModeDto.op_Inequality(NVAPIWrapper.NVAPIDisplayConfigSourceModeDto,NVAPIWrapper.NVAPIDisplayConfigSourceModeDto)">
+            <summary>
+            Compare source mode info values.
+            </summary>
+        </member>
+        <member name="T:NVAPIWrapper.NVAPIDisplayConfigTargetDto">
+            <summary>
+            Managed representation of a display target configuration.
+            </summary>
+        </member>
+        <member name="P:NVAPIWrapper.NVAPIDisplayConfigTargetDto.DisplayId">
+            <summary>Display ID.</summary>
+        </member>
+        <member name="P:NVAPIWrapper.NVAPIDisplayConfigTargetDto.TargetId">
+            <summary>Windows CCD target ID (for non-NVIDIA adapters).</summary>
+        </member>
+        <member name="P:NVAPIWrapper.NVAPIDisplayConfigTargetDto.Details">
+            <summary>Advanced target info, or null if not present.</summary>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDisplayConfigTargetDto.#ctor(System.UInt32,System.UInt32,System.Nullable{NVAPIWrapper.NVAPIDisplayConfigAdvancedTargetDto})">
+            <summary>Create target info.</summary>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDisplayConfigTargetDto.FromNative(NVAPIWrapper._NV_DISPLAYCONFIG_PATH_TARGET_INFO_V2)">
+            <summary>
+            Create a DTO from a native target info struct.
+            </summary>
+            <param name="native">Native target info.</param>
+            <returns>Target DTO.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDisplayConfigTargetDto.ToNative(NVAPIWrapper._NV_DISPLAYCONFIG_PATH_ADVANCED_TARGET_INFO_V1*)">
+            <summary>
+            Convert this DTO to a native target info struct.
+            </summary>
+            <param name="details">Pointer to native advanced target info, or null.</param>
+            <returns>Native target info.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDisplayConfigTargetDto.Equals(NVAPIWrapper.NVAPIDisplayConfigTargetDto)">
+            <inheritdoc />
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDisplayConfigTargetDto.Equals(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDisplayConfigTargetDto.GetHashCode">
+            <inheritdoc />
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDisplayConfigTargetDto.op_Equality(NVAPIWrapper.NVAPIDisplayConfigTargetDto,NVAPIWrapper.NVAPIDisplayConfigTargetDto)">
+            <summary>
+            Compare target info values.
+            </summary>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDisplayConfigTargetDto.op_Inequality(NVAPIWrapper.NVAPIDisplayConfigTargetDto,NVAPIWrapper.NVAPIDisplayConfigTargetDto)">
+            <summary>
+            Compare target info values.
+            </summary>
+        </member>
+        <member name="T:NVAPIWrapper.NVAPIDisplayConfigAdvancedTargetDto">
+            <summary>
+            Managed representation of advanced target configuration.
+            </summary>
+        </member>
+        <member name="P:NVAPIWrapper.NVAPIDisplayConfigAdvancedTargetDto.Rotation">
+            <summary>Rotation setting.</summary>
+        </member>
+        <member name="P:NVAPIWrapper.NVAPIDisplayConfigAdvancedTargetDto.Scaling">
+            <summary>Scaling setting.</summary>
+        </member>
+        <member name="P:NVAPIWrapper.NVAPIDisplayConfigAdvancedTargetDto.RefreshRate1K">
+            <summary>Refresh rate (in 1/1000 Hz).</summary>
+        </member>
+        <member name="P:NVAPIWrapper.NVAPIDisplayConfigAdvancedTargetDto.Interlaced">
+            <summary>True if the target is interlaced.</summary>
+        </member>
+        <member name="P:NVAPIWrapper.NVAPIDisplayConfigAdvancedTargetDto.Primary">
+            <summary>True if this is the primary target.</summary>
+        </member>
+        <member name="P:NVAPIWrapper.NVAPIDisplayConfigAdvancedTargetDto.DisableVirtualModeSupport">
+            <summary>True if virtual mode support is disabled.</summary>
+        </member>
+        <member name="P:NVAPIWrapper.NVAPIDisplayConfigAdvancedTargetDto.IsPreferredUnscaledTarget">
+            <summary>True if this is the preferred unscaled target.</summary>
+        </member>
+        <member name="P:NVAPIWrapper.NVAPIDisplayConfigAdvancedTargetDto.Connector">
+            <summary>Connector type.</summary>
+        </member>
+        <member name="P:NVAPIWrapper.NVAPIDisplayConfigAdvancedTargetDto.TvFormat">
+            <summary>TV format.</summary>
+        </member>
+        <member name="P:NVAPIWrapper.NVAPIDisplayConfigAdvancedTargetDto.TimingOverride">
+            <summary>Timing override mode.</summary>
+        </member>
+        <member name="P:NVAPIWrapper.NVAPIDisplayConfigAdvancedTargetDto.Timing">
+            <summary>Detailed timing.</summary>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDisplayConfigAdvancedTargetDto.#ctor(NVAPIWrapper._NV_ROTATE,NVAPIWrapper._NV_SCALING,System.UInt32,System.Boolean,System.Boolean,System.Boolean,System.Boolean,NVAPIWrapper._NV_GPU_CONNECTOR_TYPE,NVAPIWrapper._NV_DISPLAY_TV_FORMAT,NVAPIWrapper._NV_TIMING_OVERRIDE,NVAPIWrapper._NV_TIMING)">
+            <summary>Create advanced target info.</summary>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDisplayConfigAdvancedTargetDto.FromNative(NVAPIWrapper._NV_DISPLAYCONFIG_PATH_ADVANCED_TARGET_INFO_V1)">
+            <summary>
+            Create a DTO from a native advanced target info struct.
+            </summary>
+            <param name="native">Native advanced target info.</param>
+            <returns>Advanced target DTO.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDisplayConfigAdvancedTargetDto.ToNative">
+            <summary>
+            Convert this DTO to a native advanced target info struct.
+            </summary>
+            <returns>Native advanced target info.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDisplayConfigAdvancedTargetDto.Equals(NVAPIWrapper.NVAPIDisplayConfigAdvancedTargetDto)">
+            <inheritdoc />
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDisplayConfigAdvancedTargetDto.Equals(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDisplayConfigAdvancedTargetDto.GetHashCode">
+            <inheritdoc />
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDisplayConfigAdvancedTargetDto.op_Equality(NVAPIWrapper.NVAPIDisplayConfigAdvancedTargetDto,NVAPIWrapper.NVAPIDisplayConfigAdvancedTargetDto)">
+            <summary>
+            Compare advanced target info values.
+            </summary>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDisplayConfigAdvancedTargetDto.op_Inequality(NVAPIWrapper.NVAPIDisplayConfigAdvancedTargetDto,NVAPIWrapper.NVAPIDisplayConfigAdvancedTargetDto)">
+            <summary>
+            Compare advanced target info values.
+            </summary>
+        </member>
+        <member name="T:NVAPIWrapper.NVAPIDisplayEdidDataDto">
+            <summary>
+            DTO for EDID data and flags.
+            </summary>
+        </member>
+        <member name="P:NVAPIWrapper.NVAPIDisplayEdidDataDto.Data">
+            <summary>EDID data bytes.</summary>
+        </member>
+        <member name="P:NVAPIWrapper.NVAPIDisplayEdidDataDto.Flags">
+            <summary>EDID flags used when retrieving the data.</summary>
+        </member>
+        <member name="P:NVAPIWrapper.NVAPIDisplayEdidDataDto.SizeOfEdid">
+            <summary>Reported EDID size.</summary>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDisplayEdidDataDto.#ctor(System.Byte[],NVAPIWrapper.NV_EDID_FLAG,System.UInt32)">
+            <summary>Create an EDID data DTO.</summary>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDisplayEdidDataDto.FromNative(NVAPIWrapper._NV_EDID_DATA_V2,NVAPIWrapper.NV_EDID_FLAG)">
+            <summary>
+            Create a DTO from a native EDID struct.
+            </summary>
+            <param name="native">Native EDID data.</param>
+            <param name="flags">EDID flags used.</param>
+            <returns>EDID data DTO.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDisplayEdidDataDto.ToNative(System.Runtime.InteropServices.GCHandle@)">
+            <summary>
+            Convert this DTO to a native EDID struct.
+            </summary>
+            <param name="handle">Pinned handle for the EDID buffer (caller must free).</param>
+            <returns>Native EDID data.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDisplayEdidDataDto.Equals(NVAPIWrapper.NVAPIDisplayEdidDataDto)">
+            <inheritdoc />
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDisplayEdidDataDto.Equals(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDisplayEdidDataDto.GetHashCode">
+            <inheritdoc />
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDisplayEdidDataDto.op_Equality(NVAPIWrapper.NVAPIDisplayEdidDataDto,NVAPIWrapper.NVAPIDisplayEdidDataDto)">
+            <summary>Compare EDID data DTOs.</summary>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDisplayEdidDataDto.op_Inequality(NVAPIWrapper.NVAPIDisplayEdidDataDto,NVAPIWrapper.NVAPIDisplayEdidDataDto)">
+            <summary>Compare EDID data DTOs.</summary>
+        </member>
+        <member name="T:NVAPIWrapper.NVAPITimingInputDto">
+            <summary>
+            DTO for timing input data.
+            </summary>
+        </member>
+        <member name="P:NVAPIWrapper.NVAPITimingInputDto.Width">
+            <summary>Visible width.</summary>
+        </member>
+        <member name="P:NVAPIWrapper.NVAPITimingInputDto.Height">
+            <summary>Visible height.</summary>
+        </member>
+        <member name="P:NVAPIWrapper.NVAPITimingInputDto.RefreshRate">
+            <summary>Refresh rate.</summary>
+        </member>
+        <member name="P:NVAPIWrapper.NVAPITimingInputDto.Flag">
+            <summary>Timing flags.</summary>
+        </member>
+        <member name="P:NVAPIWrapper.NVAPITimingInputDto.OverrideType">
+            <summary>Timing override type.</summary>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPITimingInputDto.#ctor(System.UInt32,System.UInt32,System.Single,NVAPIWrapper.NV_TIMING_FLAG,NVAPIWrapper._NV_TIMING_OVERRIDE)">
+            <summary>Create a timing input DTO.</summary>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPITimingInputDto.FromNative(NVAPIWrapper._NV_TIMING_INPUT)">
+            <summary>
+            Create a DTO from a native timing input struct.
+            </summary>
+            <param name="native">Native timing input.</param>
+            <returns>Timing input DTO.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPITimingInputDto.ToNative">
+            <summary>
+            Convert this DTO to a native timing input struct.
+            </summary>
+            <returns>Native timing input.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPITimingInputDto.Equals(NVAPIWrapper.NVAPITimingInputDto)">
+            <inheritdoc />
+        </member>
+        <member name="M:NVAPIWrapper.NVAPITimingInputDto.Equals(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:NVAPIWrapper.NVAPITimingInputDto.GetHashCode">
+            <inheritdoc />
+        </member>
+        <member name="M:NVAPIWrapper.NVAPITimingInputDto.op_Equality(NVAPIWrapper.NVAPITimingInputDto,NVAPIWrapper.NVAPITimingInputDto)">
+            <summary>Compare timing input DTOs.</summary>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPITimingInputDto.op_Inequality(NVAPIWrapper.NVAPITimingInputDto,NVAPIWrapper.NVAPITimingInputDto)">
+            <summary>Compare timing input DTOs.</summary>
+        </member>
+        <member name="T:NVAPIWrapper.NVAPITimingDto">
+            <summary>
+            DTO for timing output data.
+            </summary>
+        </member>
+        <member name="P:NVAPIWrapper.NVAPITimingDto.Timing">
+            <summary>Timing data.</summary>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPITimingDto.#ctor(NVAPIWrapper._NV_TIMING)">
+            <summary>Create a timing DTO.</summary>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPITimingDto.FromNative(NVAPIWrapper._NV_TIMING)">
+            <summary>
+            Create a DTO from a native timing struct.
+            </summary>
+            <param name="native">Native timing.</param>
+            <returns>Timing DTO.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPITimingDto.ToNative">
+            <summary>
+            Convert this DTO to a native timing struct.
+            </summary>
+            <returns>Native timing.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPITimingDto.Equals(NVAPIWrapper.NVAPITimingDto)">
+            <inheritdoc />
+        </member>
+        <member name="M:NVAPIWrapper.NVAPITimingDto.Equals(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:NVAPIWrapper.NVAPITimingDto.GetHashCode">
+            <inheritdoc />
+        </member>
+        <member name="M:NVAPIWrapper.NVAPITimingDto.op_Equality(NVAPIWrapper.NVAPITimingDto,NVAPIWrapper.NVAPITimingDto)">
+            <summary>Compare timing DTOs.</summary>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPITimingDto.op_Inequality(NVAPIWrapper.NVAPITimingDto,NVAPIWrapper.NVAPITimingDto)">
+            <summary>Compare timing DTOs.</summary>
+        </member>
+        <member name="T:NVAPIWrapper.NVAPIMonitorCapabilitiesDto">
+            <summary>
+            DTO for monitor capabilities.
+            </summary>
+        </member>
+        <member name="P:NVAPIWrapper.NVAPIMonitorCapabilitiesDto.Capabilities">
+            <summary>Native monitor capabilities.</summary>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIMonitorCapabilitiesDto.#ctor(NVAPIWrapper._NV_MONITOR_CAPABILITIES_V1)">
+            <summary>Create a monitor capabilities DTO.</summary>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIMonitorCapabilitiesDto.FromNative(NVAPIWrapper._NV_MONITOR_CAPABILITIES_V1)">
+            <summary>
+            Create a DTO from a native monitor capabilities struct.
+            </summary>
+            <param name="native">Native monitor capabilities.</param>
+            <returns>Monitor capabilities DTO.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIMonitorCapabilitiesDto.ToNative">
+            <summary>
+            Convert this DTO to a native monitor capabilities struct.
+            </summary>
+            <returns>Native monitor capabilities.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIMonitorCapabilitiesDto.Equals(NVAPIWrapper.NVAPIMonitorCapabilitiesDto)">
+            <inheritdoc />
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIMonitorCapabilitiesDto.Equals(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIMonitorCapabilitiesDto.GetHashCode">
+            <inheritdoc />
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIMonitorCapabilitiesDto.op_Equality(NVAPIWrapper.NVAPIMonitorCapabilitiesDto,NVAPIWrapper.NVAPIMonitorCapabilitiesDto)">
+            <summary>Compare monitor capabilities DTOs.</summary>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIMonitorCapabilitiesDto.op_Inequality(NVAPIWrapper.NVAPIMonitorCapabilitiesDto,NVAPIWrapper.NVAPIMonitorCapabilitiesDto)">
+            <summary>Compare monitor capabilities DTOs.</summary>
+        </member>
+        <member name="T:NVAPIWrapper.NVAPIMonitorColorCapabilitiesDto">
+            <summary>
+            DTO for monitor color capabilities collection.
+            </summary>
+        </member>
+        <member name="P:NVAPIWrapper.NVAPIMonitorColorCapabilitiesDto.Capabilities">
+            <summary>Color capability entries.</summary>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIMonitorColorCapabilitiesDto.#ctor(NVAPIWrapper._NV_MONITOR_COLOR_DATA[])">
+            <summary>Create a monitor color capabilities DTO.</summary>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIMonitorColorCapabilitiesDto.FromNative(NVAPIWrapper._NV_MONITOR_COLOR_DATA[])">
+            <summary>
+            Create a DTO from native monitor color capabilities.
+            </summary>
+            <param name="native">Native color capabilities array.</param>
+            <returns>Monitor color capabilities DTO.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIMonitorColorCapabilitiesDto.ToNative">
+            <summary>
+            Convert this DTO to a native color capabilities array.
+            </summary>
+            <returns>Native color capabilities array.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIMonitorColorCapabilitiesDto.Equals(NVAPIWrapper.NVAPIMonitorColorCapabilitiesDto)">
+            <inheritdoc />
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIMonitorColorCapabilitiesDto.Equals(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIMonitorColorCapabilitiesDto.GetHashCode">
+            <inheritdoc />
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIMonitorColorCapabilitiesDto.op_Equality(NVAPIWrapper.NVAPIMonitorColorCapabilitiesDto,NVAPIWrapper.NVAPIMonitorColorCapabilitiesDto)">
+            <summary>Compare monitor color capabilities DTOs.</summary>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIMonitorColorCapabilitiesDto.op_Inequality(NVAPIWrapper.NVAPIMonitorColorCapabilitiesDto,NVAPIWrapper.NVAPIMonitorColorCapabilitiesDto)">
+            <summary>Compare monitor color capabilities DTOs.</summary>
+        </member>
+        <member name="T:NVAPIWrapper.NVAPIDisplayPortInfoDto">
+            <summary>
+            DTO for display port info.
+            </summary>
+        </member>
+        <member name="P:NVAPIWrapper.NVAPIDisplayPortInfoDto.Info">
+            <summary>Native display port info.</summary>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDisplayPortInfoDto.#ctor(NVAPIWrapper._NV_DISPLAY_PORT_INFO_V1)">
+            <summary>Create a display port info DTO.</summary>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDisplayPortInfoDto.FromNative(NVAPIWrapper._NV_DISPLAY_PORT_INFO_V1)">
+            <summary>
+            Create a DTO from a native display port info struct.
+            </summary>
+            <param name="native">Native display port info.</param>
+            <returns>Display port info DTO.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDisplayPortInfoDto.ToNative">
+            <summary>
+            Convert this DTO to a native display port info struct.
+            </summary>
+            <returns>Native display port info.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDisplayPortInfoDto.Equals(NVAPIWrapper.NVAPIDisplayPortInfoDto)">
+            <inheritdoc />
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDisplayPortInfoDto.Equals(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDisplayPortInfoDto.GetHashCode">
+            <inheritdoc />
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDisplayPortInfoDto.op_Equality(NVAPIWrapper.NVAPIDisplayPortInfoDto,NVAPIWrapper.NVAPIDisplayPortInfoDto)">
+            <summary>Compare display port info DTOs.</summary>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDisplayPortInfoDto.op_Inequality(NVAPIWrapper.NVAPIDisplayPortInfoDto,NVAPIWrapper.NVAPIDisplayPortInfoDto)">
+            <summary>Compare display port info DTOs.</summary>
+        </member>
+        <member name="T:NVAPIWrapper.NVAPIDisplayPortConfigDto">
+            <summary>
+            DTO for display port configuration.
+            </summary>
+        </member>
+        <member name="P:NVAPIWrapper.NVAPIDisplayPortConfigDto.Config">
+            <summary>Native display port config.</summary>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDisplayPortConfigDto.#ctor(NVAPIWrapper.NV_DISPLAY_PORT_CONFIG)">
+            <summary>Create a display port config DTO.</summary>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDisplayPortConfigDto.FromNative(NVAPIWrapper.NV_DISPLAY_PORT_CONFIG)">
+            <summary>
+            Create a DTO from a native display port config struct.
+            </summary>
+            <param name="native">Native display port config.</param>
+            <returns>Display port config DTO.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDisplayPortConfigDto.ToNative">
+            <summary>
+            Convert this DTO to a native display port config struct.
+            </summary>
+            <returns>Native display port config.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDisplayPortConfigDto.Equals(NVAPIWrapper.NVAPIDisplayPortConfigDto)">
+            <inheritdoc />
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDisplayPortConfigDto.Equals(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDisplayPortConfigDto.GetHashCode">
+            <inheritdoc />
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDisplayPortConfigDto.op_Equality(NVAPIWrapper.NVAPIDisplayPortConfigDto,NVAPIWrapper.NVAPIDisplayPortConfigDto)">
+            <summary>Compare display port config DTOs.</summary>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDisplayPortConfigDto.op_Inequality(NVAPIWrapper.NVAPIDisplayPortConfigDto,NVAPIWrapper.NVAPIDisplayPortConfigDto)">
+            <summary>Compare display port config DTOs.</summary>
+        </member>
+        <member name="T:NVAPIWrapper.NVAPIDisplayHdmiSupportInfoDto">
+            <summary>
+            DTO for HDMI support info.
+            </summary>
+        </member>
+        <member name="P:NVAPIWrapper.NVAPIDisplayHdmiSupportInfoDto.Info">
+            <summary>Native HDMI support info.</summary>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDisplayHdmiSupportInfoDto.#ctor(NVAPIWrapper._NV_HDMI_SUPPORT_INFO_V2)">
+            <summary>Create an HDMI support info DTO.</summary>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDisplayHdmiSupportInfoDto.FromNative(NVAPIWrapper._NV_HDMI_SUPPORT_INFO_V2)">
+            <summary>
+            Create a DTO from a native HDMI support info struct.
+            </summary>
+            <param name="native">Native HDMI support info.</param>
+            <returns>HDMI support info DTO.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDisplayHdmiSupportInfoDto.ToNative">
+            <summary>
+            Convert this DTO to a native HDMI support info struct.
+            </summary>
+            <returns>Native HDMI support info.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDisplayHdmiSupportInfoDto.Equals(NVAPIWrapper.NVAPIDisplayHdmiSupportInfoDto)">
+            <inheritdoc />
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDisplayHdmiSupportInfoDto.Equals(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDisplayHdmiSupportInfoDto.GetHashCode">
+            <inheritdoc />
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDisplayHdmiSupportInfoDto.op_Equality(NVAPIWrapper.NVAPIDisplayHdmiSupportInfoDto,NVAPIWrapper.NVAPIDisplayHdmiSupportInfoDto)">
+            <summary>Compare HDMI support info DTOs.</summary>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDisplayHdmiSupportInfoDto.op_Inequality(NVAPIWrapper.NVAPIDisplayHdmiSupportInfoDto,NVAPIWrapper.NVAPIDisplayHdmiSupportInfoDto)">
+            <summary>Compare HDMI support info DTOs.</summary>
+        </member>
+        <member name="T:NVAPIWrapper.NVAPISupportedViewsDto">
+            <summary>
+            DTO for supported display view modes.
+            </summary>
+        </member>
+        <member name="P:NVAPIWrapper.NVAPISupportedViewsDto.Views">
+            <summary>Supported view modes.</summary>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPISupportedViewsDto.#ctor(NVAPIWrapper._NV_TARGET_VIEW_MODE[])">
+            <summary>Create a supported views DTO.</summary>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPISupportedViewsDto.FromNative(NVAPIWrapper._NV_TARGET_VIEW_MODE[])">
+            <summary>
+            Create a DTO from native supported views.
+            </summary>
+            <param name="native">Native view modes.</param>
+            <returns>Supported views DTO.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPISupportedViewsDto.ToNative">
+            <summary>
+            Convert this DTO to a native view mode array.
+            </summary>
+            <returns>Native view modes.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPISupportedViewsDto.Equals(NVAPIWrapper.NVAPISupportedViewsDto)">
+            <inheritdoc />
+        </member>
+        <member name="M:NVAPIWrapper.NVAPISupportedViewsDto.Equals(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:NVAPIWrapper.NVAPISupportedViewsDto.GetHashCode">
+            <inheritdoc />
+        </member>
+        <member name="M:NVAPIWrapper.NVAPISupportedViewsDto.op_Equality(NVAPIWrapper.NVAPISupportedViewsDto,NVAPIWrapper.NVAPISupportedViewsDto)">
+            <summary>Compare supported views DTOs.</summary>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPISupportedViewsDto.op_Inequality(NVAPIWrapper.NVAPISupportedViewsDto,NVAPIWrapper.NVAPISupportedViewsDto)">
+            <summary>Compare supported views DTOs.</summary>
+        </member>
+        <member name="T:NVAPIWrapper.NVAPIVrrInfoDto">
+            <summary>
+            DTO for VRR info.
+            </summary>
+        </member>
+        <member name="P:NVAPIWrapper.NVAPIVrrInfoDto.Info">
+            <summary>Native VRR info.</summary>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIVrrInfoDto.#ctor(NVAPIWrapper._NV_GET_VRR_INFO_V1)">
+            <summary>Create a VRR info DTO.</summary>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIVrrInfoDto.FromNative(NVAPIWrapper._NV_GET_VRR_INFO_V1)">
+            <summary>
+            Create a DTO from a native VRR info struct.
+            </summary>
+            <param name="native">Native VRR info.</param>
+            <returns>VRR info DTO.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIVrrInfoDto.ToNative">
+            <summary>
+            Convert this DTO to a native VRR info struct.
+            </summary>
+            <returns>Native VRR info.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIVrrInfoDto.Equals(NVAPIWrapper.NVAPIVrrInfoDto)">
+            <inheritdoc />
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIVrrInfoDto.Equals(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIVrrInfoDto.GetHashCode">
+            <inheritdoc />
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIVrrInfoDto.op_Equality(NVAPIWrapper.NVAPIVrrInfoDto,NVAPIWrapper.NVAPIVrrInfoDto)">
+            <summary>Compare VRR info DTOs.</summary>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIVrrInfoDto.op_Inequality(NVAPIWrapper.NVAPIVrrInfoDto,NVAPIWrapper.NVAPIVrrInfoDto)">
+            <summary>Compare VRR info DTOs.</summary>
+        </member>
+        <member name="T:NVAPIWrapper.NVAPIAdaptiveSyncGetDataDto">
+            <summary>
+            DTO for adaptive sync GET data.
+            </summary>
+        </member>
+        <member name="P:NVAPIWrapper.NVAPIAdaptiveSyncGetDataDto.Data">
+            <summary>Native adaptive sync GET data.</summary>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIAdaptiveSyncGetDataDto.#ctor(NVAPIWrapper._NV_GET_ADAPTIVE_SYNC_DATA_V1)">
+            <summary>Create an adaptive sync GET DTO.</summary>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIAdaptiveSyncGetDataDto.FromNative(NVAPIWrapper._NV_GET_ADAPTIVE_SYNC_DATA_V1)">
+            <summary>
+            Create a DTO from native adaptive sync GET data.
+            </summary>
+            <param name="native">Native adaptive sync GET data.</param>
+            <returns>Adaptive sync GET DTO.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIAdaptiveSyncGetDataDto.ToNative">
+            <summary>
+            Convert this DTO to native adaptive sync GET data.
+            </summary>
+            <returns>Native adaptive sync GET data.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIAdaptiveSyncGetDataDto.Equals(NVAPIWrapper.NVAPIAdaptiveSyncGetDataDto)">
+            <inheritdoc />
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIAdaptiveSyncGetDataDto.Equals(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIAdaptiveSyncGetDataDto.GetHashCode">
+            <inheritdoc />
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIAdaptiveSyncGetDataDto.op_Equality(NVAPIWrapper.NVAPIAdaptiveSyncGetDataDto,NVAPIWrapper.NVAPIAdaptiveSyncGetDataDto)">
+            <summary>Compare adaptive sync GET DTOs.</summary>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIAdaptiveSyncGetDataDto.op_Inequality(NVAPIWrapper.NVAPIAdaptiveSyncGetDataDto,NVAPIWrapper.NVAPIAdaptiveSyncGetDataDto)">
+            <summary>Compare adaptive sync GET DTOs.</summary>
+        </member>
+        <member name="T:NVAPIWrapper.NVAPIAdaptiveSyncSetDataDto">
+            <summary>
+            DTO for adaptive sync SET data.
+            </summary>
+        </member>
+        <member name="P:NVAPIWrapper.NVAPIAdaptiveSyncSetDataDto.Data">
+            <summary>Native adaptive sync SET data.</summary>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIAdaptiveSyncSetDataDto.#ctor(NVAPIWrapper._NV_SET_ADAPTIVE_SYNC_DATA_V1)">
+            <summary>Create an adaptive sync SET DTO.</summary>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIAdaptiveSyncSetDataDto.FromNative(NVAPIWrapper._NV_SET_ADAPTIVE_SYNC_DATA_V1)">
+            <summary>
+            Create a DTO from native adaptive sync SET data.
+            </summary>
+            <param name="native">Native adaptive sync SET data.</param>
+            <returns>Adaptive sync SET DTO.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIAdaptiveSyncSetDataDto.ToNative">
+            <summary>
+            Convert this DTO to native adaptive sync SET data.
+            </summary>
+            <returns>Native adaptive sync SET data.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIAdaptiveSyncSetDataDto.Equals(NVAPIWrapper.NVAPIAdaptiveSyncSetDataDto)">
+            <inheritdoc />
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIAdaptiveSyncSetDataDto.Equals(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIAdaptiveSyncSetDataDto.GetHashCode">
+            <inheritdoc />
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIAdaptiveSyncSetDataDto.op_Equality(NVAPIWrapper.NVAPIAdaptiveSyncSetDataDto,NVAPIWrapper.NVAPIAdaptiveSyncSetDataDto)">
+            <summary>Compare adaptive sync SET DTOs.</summary>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIAdaptiveSyncSetDataDto.op_Inequality(NVAPIWrapper.NVAPIAdaptiveSyncSetDataDto,NVAPIWrapper.NVAPIAdaptiveSyncSetDataDto)">
+            <summary>Compare adaptive sync SET DTOs.</summary>
+        </member>
+        <member name="T:NVAPIWrapper.NVAPIVirtualRefreshRateDataDto">
+            <summary>
+            DTO for virtual refresh rate data.
+            </summary>
+        </member>
+        <member name="P:NVAPIWrapper.NVAPIVirtualRefreshRateDataDto.FrameIntervalUs">
+            <summary>Frame interval (microseconds).</summary>
+        </member>
+        <member name="P:NVAPIWrapper.NVAPIVirtualRefreshRateDataDto.RefreshRate1K">
+            <summary>Refresh rate in 1/1000 Hz.</summary>
+        </member>
+        <member name="P:NVAPIWrapper.NVAPIVirtualRefreshRateDataDto.IsGamingVrr">
+            <summary>Gaming VRR flag.</summary>
+        </member>
+        <member name="P:NVAPIWrapper.NVAPIVirtualRefreshRateDataDto.FrameIntervalNs">
+            <summary>Frame interval (nanoseconds).</summary>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIVirtualRefreshRateDataDto.#ctor(System.UInt32,System.UInt32,System.Boolean,System.UInt64)">
+            <summary>Create a virtual refresh rate DTO.</summary>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIVirtualRefreshRateDataDto.FromNative(NVAPIWrapper._NV_GET_VIRTUAL_REFRESH_RATE_DATA_V2)">
+            <summary>
+            Create a DTO from native virtual refresh rate GET data.
+            </summary>
+            <param name="native">Native virtual refresh rate GET data.</param>
+            <returns>Virtual refresh rate DTO.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIVirtualRefreshRateDataDto.ToNative">
+            <summary>
+            Convert this DTO to native virtual refresh rate SET data.
+            </summary>
+            <returns>Native virtual refresh rate SET data.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIVirtualRefreshRateDataDto.Equals(NVAPIWrapper.NVAPIVirtualRefreshRateDataDto)">
+            <inheritdoc />
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIVirtualRefreshRateDataDto.Equals(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIVirtualRefreshRateDataDto.GetHashCode">
+            <inheritdoc />
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIVirtualRefreshRateDataDto.op_Equality(NVAPIWrapper.NVAPIVirtualRefreshRateDataDto,NVAPIWrapper.NVAPIVirtualRefreshRateDataDto)">
+            <summary>Compare virtual refresh rate DTOs.</summary>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIVirtualRefreshRateDataDto.op_Inequality(NVAPIWrapper.NVAPIVirtualRefreshRateDataDto,NVAPIWrapper.NVAPIVirtualRefreshRateDataDto)">
+            <summary>Compare virtual refresh rate DTOs.</summary>
+        </member>
+        <member name="T:NVAPIWrapper.NVAPIPreferredStereoDisplayDto">
+            <summary>
+            DTO for preferred stereo display.
+            </summary>
+        </member>
+        <member name="P:NVAPIWrapper.NVAPIPreferredStereoDisplayDto.DisplayId">
+            <summary>Display ID.</summary>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIPreferredStereoDisplayDto.#ctor(System.UInt32)">
+            <summary>Create a preferred stereo display DTO.</summary>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIPreferredStereoDisplayDto.FromNative(NVAPIWrapper.NV_GET_PREFERRED_STEREO_DISPLAY_V1)">
+            <summary>
+            Create a DTO from native preferred stereo display GET data.
+            </summary>
+            <param name="native">Native preferred stereo display GET data.</param>
+            <returns>Preferred stereo display DTO.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIPreferredStereoDisplayDto.ToNative">
+            <summary>
+            Convert this DTO to native preferred stereo display SET data.
+            </summary>
+            <returns>Native preferred stereo display SET data.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIPreferredStereoDisplayDto.Equals(NVAPIWrapper.NVAPIPreferredStereoDisplayDto)">
+            <inheritdoc />
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIPreferredStereoDisplayDto.Equals(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIPreferredStereoDisplayDto.GetHashCode">
+            <inheritdoc />
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIPreferredStereoDisplayDto.op_Equality(NVAPIWrapper.NVAPIPreferredStereoDisplayDto,NVAPIWrapper.NVAPIPreferredStereoDisplayDto)">
+            <summary>Compare preferred stereo display DTOs.</summary>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIPreferredStereoDisplayDto.op_Inequality(NVAPIWrapper.NVAPIPreferredStereoDisplayDto,NVAPIWrapper.NVAPIPreferredStereoDisplayDto)">
+            <summary>Compare preferred stereo display DTOs.</summary>
+        </member>
+        <member name="T:NVAPIWrapper.NVAPIGpuAndOutputIdDto">
+            <summary>
+            DTO for GPU and output ID from a display ID.
             </summary>
         </member>
         <member name="T:NVAPIWrapper.NVAPIException">
@@ -1232,26 +2413,6 @@
             Resolve the nvapi_QueryInterface export and return a delegate.
             </summary>
         </member>
-        <member name="T:NVAPIWrapper.NVAPIPciIdentifiers">
-            <summary>
-            PCI identifiers reported by NVAPI.
-            </summary>
-        </member>
-        <member name="P:NVAPIWrapper.NVAPIPciIdentifiers.DeviceId">
-            <summary>PCI device ID.</summary>
-        </member>
-        <member name="P:NVAPIWrapper.NVAPIPciIdentifiers.SubSystemId">
-            <summary>PCI subsystem ID.</summary>
-        </member>
-        <member name="P:NVAPIWrapper.NVAPIPciIdentifiers.RevisionId">
-            <summary>PCI revision ID.</summary>
-        </member>
-        <member name="P:NVAPIWrapper.NVAPIPciIdentifiers.ExtDeviceId">
-            <summary>PCI extended device ID.</summary>
-        </member>
-        <member name="M:NVAPIWrapper.NVAPIPciIdentifiers.#ctor(System.UInt32,System.UInt32,System.UInt32,System.UInt32)">
-            <summary>Create a PCI identifier set.</summary>
-        </member>
         <member name="T:NVAPIWrapper.NVAPIPhysicalGpuHelper">
             <summary>
             Facade helper for a physical GPU.
@@ -1317,6 +2478,25 @@
             </summary>
             <returns>Tachometer value, or null if unavailable.</returns>
         </member>
+        <member name="M:NVAPIWrapper.NVAPIPhysicalGpuHelper.GetMemoryInfo">
+            <summary>
+            Get display driver memory info (legacy).
+            </summary>
+            <returns>Memory info, or null if unavailable.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIPhysicalGpuHelper.GetMemoryInfoEx">
+            <summary>
+            Get extended GPU memory info.
+            </summary>
+            <returns>Extended memory info, or null if unavailable.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIPhysicalGpuHelper.GetDisplayIdFromGpuAndOutputId(System.UInt32)">
+            <summary>
+            Convert a GPU output ID to a display ID.
+            </summary>
+            <param name="outputId">Output ID (single bit set).</param>
+            <returns>Display ID, or null if unavailable.</returns>
+        </member>
         <member name="M:NVAPIWrapper.NVAPIPhysicalGpuHelper.EnumerateNvidiaDisplayHandles">
             <summary>
             Enumerate NVIDIA display handles associated with this GPU.
@@ -1326,6 +2506,39 @@
         <member name="M:NVAPIWrapper.NVAPIPhysicalGpuHelper.Dispose">
             <summary>
             Dispose the helper and prevent further use.
+            </summary>
+        </member>
+        <member name="T:NVAPIWrapper.NVAPIPciIdentifiers">
+            <summary>
+            PCI identifiers reported by NVAPI.
+            </summary>
+        </member>
+        <member name="P:NVAPIWrapper.NVAPIPciIdentifiers.DeviceId">
+            <summary>PCI device ID.</summary>
+        </member>
+        <member name="P:NVAPIWrapper.NVAPIPciIdentifiers.SubSystemId">
+            <summary>PCI subsystem ID.</summary>
+        </member>
+        <member name="P:NVAPIWrapper.NVAPIPciIdentifiers.RevisionId">
+            <summary>PCI revision ID.</summary>
+        </member>
+        <member name="P:NVAPIWrapper.NVAPIPciIdentifiers.ExtDeviceId">
+            <summary>PCI extended device ID.</summary>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIPciIdentifiers.#ctor(System.UInt32,System.UInt32,System.UInt32,System.UInt32)">
+            <summary>Create a PCI identifier set.</summary>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIPciIdentifiers.FromNative(System.UInt32,System.UInt32,System.UInt32,System.UInt32)">
+            <summary>Create a DTO from native PCI identifier values.</summary>
+        </member>
+        <member name="T:NVAPIWrapper.NVAPIDisplayDriverMemoryInfoDto">
+            <summary>
+            Legacy display driver memory info DTO.
+            </summary>
+        </member>
+        <member name="T:NVAPIWrapper.NVAPIGpuMemoryInfoExDto">
+            <summary>
+            Extended GPU memory info DTO.
             </summary>
         </member>
         <member name="T:NVAPIWrapper.NV_TIMING_FLAG">
