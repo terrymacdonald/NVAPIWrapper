@@ -742,6 +742,12 @@
         <member name="M:NVAPIWrapper.NVAPI.NvAPI_DISP_SetNvManagedDedicatedDisplayMetadata(NVAPIWrapper._NV_MANAGED_DEDICATED_DISPLAY_METADATA*)">
             <!-- Failed to insert some or all of included XML --><include file="NVAPI.xml" path="doc/member[@name=&quot;NVAPI.NvAPI_DISP_SetNvManagedDedicatedDisplayMetadata&quot;]/*" />
         </member>
+        <member name="M:NVAPIWrapper.NVAPI.NvAPI_Disp_GetDisplayIdInfo(System.UInt32,NVAPIWrapper._NV_DISPLAY_ID_INFO_DATA_V1*)">
+            <!-- Failed to insert some or all of included XML --><include file="NVAPI.xml" path="doc/member[@name=&quot;NVAPI.NvAPI_Disp_GetDisplayIdInfo&quot;]/*" />
+        </member>
+        <member name="M:NVAPIWrapper.NVAPI.NvAPI_Disp_GetDisplayIdsFromTarget(NVAPIWrapper._NV_TARGET_INFO_DATA_V1*)">
+            <!-- Failed to insert some or all of included XML --><include file="NVAPI.xml" path="doc/member[@name=&quot;NVAPI.NvAPI_Disp_GetDisplayIdsFromTarget&quot;]/*" />
+        </member>
         <member name="M:NVAPIWrapper.NVAPI.NvAPI_Disp_GetVRRInfo(System.UInt32,NVAPIWrapper._NV_GET_VRR_INFO_V1*)">
             <!-- Failed to insert some or all of included XML --><include file="NVAPI.xml" path="doc/member[@name=&quot;NVAPI.NvAPI_Disp_GetVRRInfo&quot;]/*" />
         </member>
@@ -948,6 +954,30 @@
         </member>
         <member name="M:NVAPIWrapper.NVAPI.NvAPI_Stereo_SetNotificationMessage(System.Void*,System.UInt64,System.UInt64)">
             <!-- Failed to insert some or all of included XML --><include file="NVAPI.xml" path="doc/member[@name=&quot;NVAPI.NvAPI_Stereo_SetNotificationMessage&quot;]/*" />
+        </member>
+        <member name="M:NVAPIWrapper.NVAPI.NvAPI_Vulkan_InitLowLatencyDevice(System.Void*,System.Void**)">
+            <!-- Failed to insert some or all of included XML --><include file="NVAPI.xml" path="doc/member[@name=&quot;NVAPI.NvAPI_Vulkan_InitLowLatencyDevice&quot;]/*" />
+        </member>
+        <member name="M:NVAPIWrapper.NVAPI.NvAPI_Vulkan_DestroyLowLatencyDevice(System.Void*)">
+            <!-- Failed to insert some or all of included XML --><include file="NVAPI.xml" path="doc/member[@name=&quot;NVAPI.NvAPI_Vulkan_DestroyLowLatencyDevice&quot;]/*" />
+        </member>
+        <member name="M:NVAPIWrapper.NVAPI.NvAPI_Vulkan_GetSleepStatus(System.Void*,NVAPIWrapper._NV_VULKAN_GET_SLEEP_STATUS_PARAMS*)">
+            <!-- Failed to insert some or all of included XML --><include file="NVAPI.xml" path="doc/member[@name=&quot;NVAPI.NvAPI_Vulkan_GetSleepStatus&quot;]/*" />
+        </member>
+        <member name="M:NVAPIWrapper.NVAPI.NvAPI_Vulkan_SetSleepMode(System.Void*,NVAPIWrapper._NV_VULKAN_SET_SLEEP_MODE_PARAMS*)">
+            <!-- Failed to insert some or all of included XML --><include file="NVAPI.xml" path="doc/member[@name=&quot;NVAPI.NvAPI_Vulkan_SetSleepMode&quot;]/*" />
+        </member>
+        <member name="M:NVAPIWrapper.NVAPI.NvAPI_Vulkan_Sleep(System.Void*,System.UInt64)">
+            <!-- Failed to insert some or all of included XML --><include file="NVAPI.xml" path="doc/member[@name=&quot;NVAPI.NvAPI_Vulkan_Sleep&quot;]/*" />
+        </member>
+        <member name="M:NVAPIWrapper.NVAPI.NvAPI_Vulkan_GetLatency(System.Void*,NVAPIWrapper._NV_VULKAN_LATENCY_RESULT_PARAMS*)">
+            <!-- Failed to insert some or all of included XML --><include file="NVAPI.xml" path="doc/member[@name=&quot;NVAPI.NvAPI_Vulkan_GetLatency&quot;]/*" />
+        </member>
+        <member name="M:NVAPIWrapper.NVAPI.NvAPI_Vulkan_SetLatencyMarker(System.Void*,NVAPIWrapper._NV_VULKAN_LATENCY_MARKER_PARAMS*)">
+            <!-- Failed to insert some or all of included XML --><include file="NVAPI.xml" path="doc/member[@name=&quot;NVAPI.NvAPI_Vulkan_SetLatencyMarker&quot;]/*" />
+        </member>
+        <member name="M:NVAPIWrapper.NVAPI.NvAPI_Vulkan_NotifyOutOfBandVkQueue(System.Void*,System.Void*,NVAPIWrapper.NV_VULKAN_OUT_OF_BAND_QUEUE_TYPE)">
+            <!-- Failed to insert some or all of included XML --><include file="NVAPI.xml" path="doc/member[@name=&quot;NVAPI.NvAPI_Vulkan_NotifyOutOfBandVkQueue&quot;]/*" />
         </member>
         <member name="M:NVAPIWrapper.NVAPI.NvAPI_DRS_CreateSession(NVAPIWrapper.NvDRSSessionHandle__**)">
             <!-- Failed to insert some or all of included XML --><include file="NVAPI.xml" path="doc/member[@name=&quot;NVAPI.NvAPI_DRS_CreateSession&quot;]/*" />
@@ -3904,6 +3934,15 @@
             <summary>
             VIO topology target DTO.
             </summary>
+        </member>
+        <member name="T:NVAPIWrapper._LUID">
+            <summary>Win32 LUID (locally unique identifier).</summary>
+        </member>
+        <member name="F:NVAPIWrapper._LUID.LowPart">
+            <summary>Low 32 bits.</summary>
+        </member>
+        <member name="F:NVAPIWrapper._LUID.HighPart">
+            <summary>High 32 bits.</summary>
         </member>
         <member name="T:NVAPIWrapper.ESetting">
             <!-- Failed to insert some or all of included XML --><include file="ESetting.xml" path="doc/member[@name=&quot;ESetting&quot;]/*" />
@@ -13750,6 +13789,24 @@
         <member name="T:NVAPIWrapper._NV_DISPLAY_DRIVER_INFO_V2._szBuildBaseBranch_e__FixedBuffer">
             <!-- Failed to insert some or all of included XML --><include file="_szBuildBaseBranch_e__FixedBuffer.xml" path="doc/member[@name=&quot;_szBuildBaseBranch_e__FixedBuffer&quot;]/*" />
         </member>
+        <member name="T:NVAPIWrapper._NV_DISPLAY_ID_INFO_DATA_V1">
+            <!-- Failed to insert some or all of included XML --><include file="_NV_DISPLAY_ID_INFO_DATA_V1.xml" path="doc/member[@name=&quot;_NV_DISPLAY_ID_INFO_DATA_V1&quot;]/*" />
+        </member>
+        <member name="F:NVAPIWrapper._NV_DISPLAY_ID_INFO_DATA_V1.version">
+            <!-- Failed to insert some or all of included XML --><include file="_NV_DISPLAY_ID_INFO_DATA_V1.xml" path="doc/member[@name=&quot;_NV_DISPLAY_ID_INFO_DATA_V1.version&quot;]/*" />
+        </member>
+        <member name="F:NVAPIWrapper._NV_DISPLAY_ID_INFO_DATA_V1.adapterId">
+            <!-- Failed to insert some or all of included XML --><include file="_NV_DISPLAY_ID_INFO_DATA_V1.xml" path="doc/member[@name=&quot;_NV_DISPLAY_ID_INFO_DATA_V1.adapterId&quot;]/*" />
+        </member>
+        <member name="F:NVAPIWrapper._NV_DISPLAY_ID_INFO_DATA_V1.targetId">
+            <!-- Failed to insert some or all of included XML --><include file="_NV_DISPLAY_ID_INFO_DATA_V1.xml" path="doc/member[@name=&quot;_NV_DISPLAY_ID_INFO_DATA_V1.targetId&quot;]/*" />
+        </member>
+        <member name="F:NVAPIWrapper._NV_DISPLAY_ID_INFO_DATA_V1.reserved">
+            <!-- Failed to insert some or all of included XML --><include file="_NV_DISPLAY_ID_INFO_DATA_V1.xml" path="doc/member[@name=&quot;_NV_DISPLAY_ID_INFO_DATA_V1.reserved&quot;]/*" />
+        </member>
+        <member name="T:NVAPIWrapper._NV_DISPLAY_ID_INFO_DATA_V1._reserved_e__FixedBuffer">
+            <!-- Failed to insert some or all of included XML --><include file="_reserved_e__FixedBuffer.xml" path="doc/member[@name=&quot;_reserved_e__FixedBuffer&quot;]/*" />
+        </member>
         <member name="T:NVAPIWrapper._NV_DISPLAY_OUTPUT_MODE">
             <!-- Failed to insert some or all of included XML --><include file="_NV_DISPLAY_OUTPUT_MODE.xml" path="doc/member[@name=&quot;_NV_DISPLAY_OUTPUT_MODE&quot;]/*" />
         </member>
@@ -18388,6 +18445,33 @@
         <member name="F:NVAPIWrapper._NV_StereoSwapChainMode.NVAPI_STEREO_SWAPCHAIN_MONO">
             <!-- Failed to insert some or all of included XML --><include file="_NV_StereoSwapChainMode.xml" path="doc/member[@name=&quot;_NV_StereoSwapChainMode.NVAPI_STEREO_SWAPCHAIN_MONO&quot;]/*" />
         </member>
+        <member name="T:NVAPIWrapper._NV_TARGET_INFO_DATA_V1">
+            <!-- Failed to insert some or all of included XML --><include file="_NV_TARGET_INFO_DATA_V1.xml" path="doc/member[@name=&quot;_NV_TARGET_INFO_DATA_V1&quot;]/*" />
+        </member>
+        <member name="F:NVAPIWrapper._NV_TARGET_INFO_DATA_V1.version">
+            <!-- Failed to insert some or all of included XML --><include file="_NV_TARGET_INFO_DATA_V1.xml" path="doc/member[@name=&quot;_NV_TARGET_INFO_DATA_V1.version&quot;]/*" />
+        </member>
+        <member name="F:NVAPIWrapper._NV_TARGET_INFO_DATA_V1.adapterId">
+            <!-- Failed to insert some or all of included XML --><include file="_NV_TARGET_INFO_DATA_V1.xml" path="doc/member[@name=&quot;_NV_TARGET_INFO_DATA_V1.adapterId&quot;]/*" />
+        </member>
+        <member name="F:NVAPIWrapper._NV_TARGET_INFO_DATA_V1.targetId">
+            <!-- Failed to insert some or all of included XML --><include file="_NV_TARGET_INFO_DATA_V1.xml" path="doc/member[@name=&quot;_NV_TARGET_INFO_DATA_V1.targetId&quot;]/*" />
+        </member>
+        <member name="F:NVAPIWrapper._NV_TARGET_INFO_DATA_V1.displayId">
+            <!-- Failed to insert some or all of included XML --><include file="_NV_TARGET_INFO_DATA_V1.xml" path="doc/member[@name=&quot;_NV_TARGET_INFO_DATA_V1.displayId&quot;]/*" />
+        </member>
+        <member name="F:NVAPIWrapper._NV_TARGET_INFO_DATA_V1.displayIdCount">
+            <!-- Failed to insert some or all of included XML --><include file="_NV_TARGET_INFO_DATA_V1.xml" path="doc/member[@name=&quot;_NV_TARGET_INFO_DATA_V1.displayIdCount&quot;]/*" />
+        </member>
+        <member name="F:NVAPIWrapper._NV_TARGET_INFO_DATA_V1.reserved">
+            <!-- Failed to insert some or all of included XML --><include file="_NV_TARGET_INFO_DATA_V1.xml" path="doc/member[@name=&quot;_NV_TARGET_INFO_DATA_V1.reserved&quot;]/*" />
+        </member>
+        <member name="T:NVAPIWrapper._NV_TARGET_INFO_DATA_V1._displayId_e__FixedBuffer">
+            <!-- Failed to insert some or all of included XML --><include file="_displayId_e__FixedBuffer.xml" path="doc/member[@name=&quot;_displayId_e__FixedBuffer&quot;]/*" />
+        </member>
+        <member name="T:NVAPIWrapper._NV_TARGET_INFO_DATA_V1._reserved_e__FixedBuffer">
+            <!-- Failed to insert some or all of included XML --><include file="_reserved_e__FixedBuffer.xml" path="doc/member[@name=&quot;_reserved_e__FixedBuffer&quot;]/*" />
+        </member>
         <member name="T:NVAPIWrapper._NV_TARGET_VIEW_MODE">
             <!-- Failed to insert some or all of included XML --><include file="_NV_TARGET_VIEW_MODE.xml" path="doc/member[@name=&quot;_NV_TARGET_VIEW_MODE&quot;]/*" />
         </member>
@@ -18671,6 +18755,27 @@
             <!-- Failed to insert some or all of included XML --><include file="_frameReport_e__FixedBuffer.xml" path="doc/member[@name=&quot;_frameReport_e__FixedBuffer&quot;]/*" />
         </member>
         <member name="T:NVAPIWrapper._NV_VULKAN_LATENCY_RESULT_PARAMS._rsvd_e__FixedBuffer">
+            <!-- Failed to insert some or all of included XML --><include file="_rsvd_e__FixedBuffer.xml" path="doc/member[@name=&quot;_rsvd_e__FixedBuffer&quot;]/*" />
+        </member>
+        <member name="T:NVAPIWrapper._NV_VULKAN_SET_SLEEP_MODE_PARAMS">
+            <!-- Failed to insert some or all of included XML --><include file="_NV_VULKAN_SET_SLEEP_MODE_PARAMS.xml" path="doc/member[@name=&quot;_NV_VULKAN_SET_SLEEP_MODE_PARAMS&quot;]/*" />
+        </member>
+        <member name="F:NVAPIWrapper._NV_VULKAN_SET_SLEEP_MODE_PARAMS.version">
+            <!-- Failed to insert some or all of included XML --><include file="_NV_VULKAN_SET_SLEEP_MODE_PARAMS.xml" path="doc/member[@name=&quot;_NV_VULKAN_SET_SLEEP_MODE_PARAMS.version&quot;]/*" />
+        </member>
+        <member name="F:NVAPIWrapper._NV_VULKAN_SET_SLEEP_MODE_PARAMS.bLowLatencyMode">
+            <!-- Failed to insert some or all of included XML --><include file="_NV_VULKAN_SET_SLEEP_MODE_PARAMS.xml" path="doc/member[@name=&quot;_NV_VULKAN_SET_SLEEP_MODE_PARAMS.bLowLatencyMode&quot;]/*" />
+        </member>
+        <member name="F:NVAPIWrapper._NV_VULKAN_SET_SLEEP_MODE_PARAMS.bLowLatencyBoost">
+            <!-- Failed to insert some or all of included XML --><include file="_NV_VULKAN_SET_SLEEP_MODE_PARAMS.xml" path="doc/member[@name=&quot;_NV_VULKAN_SET_SLEEP_MODE_PARAMS.bLowLatencyBoost&quot;]/*" />
+        </member>
+        <member name="F:NVAPIWrapper._NV_VULKAN_SET_SLEEP_MODE_PARAMS.minimumIntervalUs">
+            <!-- Failed to insert some or all of included XML --><include file="_NV_VULKAN_SET_SLEEP_MODE_PARAMS.xml" path="doc/member[@name=&quot;_NV_VULKAN_SET_SLEEP_MODE_PARAMS.minimumIntervalUs&quot;]/*" />
+        </member>
+        <member name="F:NVAPIWrapper._NV_VULKAN_SET_SLEEP_MODE_PARAMS.rsvd">
+            <!-- Failed to insert some or all of included XML --><include file="_NV_VULKAN_SET_SLEEP_MODE_PARAMS.xml" path="doc/member[@name=&quot;_NV_VULKAN_SET_SLEEP_MODE_PARAMS.rsvd&quot;]/*" />
+        </member>
+        <member name="T:NVAPIWrapper._NV_VULKAN_SET_SLEEP_MODE_PARAMS._rsvd_e__FixedBuffer">
             <!-- Failed to insert some or all of included XML --><include file="_rsvd_e__FixedBuffer.xml" path="doc/member[@name=&quot;_rsvd_e__FixedBuffer&quot;]/*" />
         </member>
         <member name="T:NVAPIWrapper._SettingDWORDNameString">

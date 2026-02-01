@@ -43,6 +43,23 @@
 #ifndef __out_ecount_full_opt
 #define __out_ecount_full_opt(size)
 #endif
+#ifndef _WINNT_
+#define _WINNT_ 1
+#endif
+
+#include <stdint.h>
+
+#ifndef HANDLE
+typedef void* HANDLE;
+#endif
+
+#ifndef _LUID_DEFINED
+#define _LUID_DEFINED
+typedef struct _LUID {
+    uint32_t LowPart;
+    int32_t HighPart;
+} LUID;
+#endif
 
 #include "../nvapi/nvapi.h"
 #include "../nvapi/nvapi_interface.h"

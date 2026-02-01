@@ -951,6 +951,16 @@ namespace NVAPIWrapper
         [return: NativeTypeName("NvAPI_Status")]
         public static extern _NvAPI_Status NvAPI_DISP_SetNvManagedDedicatedDisplayMetadata([NativeTypeName("NV_MANAGED_DEDICATED_DISPLAY_METADATA *")] _NV_MANAGED_DEDICATED_DISPLAY_METADATA* pDedicatedDisplayMetadata);
 
+        /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_Disp_GetDisplayIdInfo"]/*' />
+        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
+        [return: NativeTypeName("NvAPI_Status")]
+        public static extern _NvAPI_Status NvAPI_Disp_GetDisplayIdInfo([NativeTypeName("NvU32")] uint displayId, [NativeTypeName("NV_DISPLAY_ID_INFO_DATA *")] _NV_DISPLAY_ID_INFO_DATA_V1* pDisplayIdInfoData);
+
+        /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_Disp_GetDisplayIdsFromTarget"]/*' />
+        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
+        [return: NativeTypeName("NvAPI_Status")]
+        public static extern _NvAPI_Status NvAPI_Disp_GetDisplayIdsFromTarget([NativeTypeName("NV_TARGET_INFO_DATA *")] _NV_TARGET_INFO_DATA_V1* pTargetInfoData);
+
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_Disp_GetVRRInfo"]/*' />
         [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
         [return: NativeTypeName("NvAPI_Status")]
@@ -1317,6 +1327,54 @@ namespace NVAPIWrapper
         [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
         [return: NativeTypeName("NvAPI_Status")]
         public static extern _NvAPI_Status NvAPI_Stereo_SetNotificationMessage([NativeTypeName("StereoHandle")] void* hStereoHandle, [NativeTypeName("NvU64")] ulong hWnd, [NativeTypeName("NvU64")] ulong messageID);
+
+        /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_Vulkan_InitLowLatencyDevice"]/*' />
+        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
+        [return: NativeTypeName("NvAPI_Status")]
+        [Obsolete("Do not use this function - it is deprecated in release 565.")]
+        public static extern _NvAPI_Status NvAPI_Vulkan_InitLowLatencyDevice([NativeTypeName("HANDLE")] void* vkDevice, [NativeTypeName("HANDLE *")] void** signalSemaphoreHandle);
+
+        /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_Vulkan_DestroyLowLatencyDevice"]/*' />
+        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
+        [return: NativeTypeName("NvAPI_Status")]
+        [Obsolete("Do not use this function - it is deprecated in release 565.")]
+        public static extern _NvAPI_Status NvAPI_Vulkan_DestroyLowLatencyDevice([NativeTypeName("HANDLE")] void* vkDevice);
+
+        /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_Vulkan_GetSleepStatus"]/*' />
+        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
+        [return: NativeTypeName("NvAPI_Status")]
+        [Obsolete("Do not use this function - it is deprecated in release 565.")]
+        public static extern _NvAPI_Status NvAPI_Vulkan_GetSleepStatus([NativeTypeName("HANDLE")] void* vkDevice, [NativeTypeName("NV_VULKAN_GET_SLEEP_STATUS_PARAMS *")] _NV_VULKAN_GET_SLEEP_STATUS_PARAMS* pGetSleepStatusParams);
+
+        /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_Vulkan_SetSleepMode"]/*' />
+        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
+        [return: NativeTypeName("NvAPI_Status")]
+        [Obsolete("Do not use this function - it is deprecated in release 565.")]
+        public static extern _NvAPI_Status NvAPI_Vulkan_SetSleepMode([NativeTypeName("HANDLE")] void* vkDevice, [NativeTypeName("NV_VULKAN_SET_SLEEP_MODE_PARAMS *")] _NV_VULKAN_SET_SLEEP_MODE_PARAMS* pSetSleepModeParams);
+
+        /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_Vulkan_Sleep"]/*' />
+        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
+        [return: NativeTypeName("NvAPI_Status")]
+        [Obsolete("Do not use this function - it is deprecated in release 565.")]
+        public static extern _NvAPI_Status NvAPI_Vulkan_Sleep([NativeTypeName("HANDLE")] void* vkDevice, [NativeTypeName("NvU64")] ulong signalValue);
+
+        /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_Vulkan_GetLatency"]/*' />
+        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
+        [return: NativeTypeName("NvAPI_Status")]
+        [Obsolete("Do not use this function - it is deprecated in release 565.")]
+        public static extern _NvAPI_Status NvAPI_Vulkan_GetLatency([NativeTypeName("HANDLE")] void* vkDevice, [NativeTypeName("NV_VULKAN_LATENCY_RESULT_PARAMS *")] _NV_VULKAN_LATENCY_RESULT_PARAMS* pGetLatencyParams);
+
+        /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_Vulkan_SetLatencyMarker"]/*' />
+        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
+        [return: NativeTypeName("NvAPI_Status")]
+        [Obsolete("Do not use this function - it is deprecated in release 565.")]
+        public static extern _NvAPI_Status NvAPI_Vulkan_SetLatencyMarker([NativeTypeName("HANDLE")] void* vkDevice, [NativeTypeName("NV_VULKAN_LATENCY_MARKER_PARAMS *")] _NV_VULKAN_LATENCY_MARKER_PARAMS* pSetLatencyMarkerParams);
+
+        /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_Vulkan_NotifyOutOfBandVkQueue"]/*' />
+        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
+        [return: NativeTypeName("NvAPI_Status")]
+        [Obsolete("Do not use this function - it is deprecated in release 565.")]
+        public static extern _NvAPI_Status NvAPI_Vulkan_NotifyOutOfBandVkQueue([NativeTypeName("HANDLE")] void* vkDevice, [NativeTypeName("HANDLE")] void* queueHandle, NV_VULKAN_OUT_OF_BAND_QUEUE_TYPE queueType);
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_DRS_CreateSession"]/*' />
         [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
@@ -2575,6 +2633,18 @@ namespace NVAPIWrapper
         [NativeTypeName("#define NV_MANAGED_DEDICATED_DISPLAY_METADATA_VER NV_MANAGED_DEDICATED_DISPLAY_METADATA_VER1")]
         public const uint NV_MANAGED_DEDICATED_DISPLAY_METADATA_VER = (uint)(84 | ((1) << 16));
 
+        [NativeTypeName("#define NV_DISPLAY_ID_INFO_DATA_VER1 MAKE_NVAPI_VERSION(NV_DISPLAY_ID_INFO_DATA_V1,1)")]
+        public const uint NV_DISPLAY_ID_INFO_DATA_VER1 = (uint)(32 | ((1) << 16));
+
+        [NativeTypeName("#define NV_DISPLAY_ID_INFO_DATA_VER NV_DISPLAY_ID_INFO_DATA_VER1")]
+        public const uint NV_DISPLAY_ID_INFO_DATA_VER = (uint)(32 | ((1) << 16));
+
+        [NativeTypeName("#define NV_TARGET_INFO_DATA_VER1 MAKE_NVAPI_VERSION(NV_TARGET_INFO_DATA_V1,1)")]
+        public const uint NV_TARGET_INFO_DATA_VER1 = (uint)(548 | ((1) << 16));
+
+        [NativeTypeName("#define NV_TARGET_INFO_DATA_VER NV_TARGET_INFO_DATA_VER1")]
+        public const uint NV_TARGET_INFO_DATA_VER = (uint)(548 | ((1) << 16));
+
         [NativeTypeName("#define NV_GET_VRR_INFO_VER1 MAKE_NVAPI_VERSION(NV_GET_VRR_INFO_V1,1)")]
         public const uint NV_GET_VRR_INFO_VER1 = (uint)(24 | ((1) << 16));
 
@@ -3156,6 +3226,12 @@ namespace NVAPIWrapper
 
         [NativeTypeName("#define NV_VULKAN_GET_SLEEP_STATUS_PARAMS_VER NV_VULKAN_GET_SLEEP_STATUS_PARAMS_VER1")]
         public const uint NV_VULKAN_GET_SLEEP_STATUS_PARAMS_VER = (uint)(136 | ((1) << 16));
+
+        [NativeTypeName("#define NV_VULKAN_SET_SLEEP_MODE_PARAMS_VER1 MAKE_NVAPI_VERSION(NV_VULKAN_SET_SLEEP_MODE_PARAMS_V1, 1)")]
+        public const uint NV_VULKAN_SET_SLEEP_MODE_PARAMS_VER1 = (uint)(44 | ((1) << 16));
+
+        [NativeTypeName("#define NV_VULKAN_SET_SLEEP_MODE_PARAMS_VER NV_VULKAN_SET_SLEEP_MODE_PARAMS_VER1")]
+        public const uint NV_VULKAN_SET_SLEEP_MODE_PARAMS_VER = (uint)(44 | ((1) << 16));
 
         [NativeTypeName("#define NV_VULKAN_LATENCY_RESULT_PARAMS_VER1 MAKE_NVAPI_VERSION(NV_VULKAN_LATENCY_RESULT_PARAMS_V1, 1)")]
         public const uint NV_VULKAN_LATENCY_RESULT_PARAMS_VER1 = (uint)(15400 | ((1) << 16));
