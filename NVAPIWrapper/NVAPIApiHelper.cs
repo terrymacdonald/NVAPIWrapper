@@ -1,5 +1,6 @@
 using System;
 using System.Runtime.InteropServices;
+using System.Text;
 
 namespace NVAPIWrapper
 {
@@ -15,6 +16,7 @@ namespace NVAPIWrapper
         private const uint NvApiIdSysGetPhysicalGPUs = 0xD3B24D2D;
         private const uint NvApiIdSysGetLogicalGPUs = 0xCCFFFC10;
         private const uint NvApiIdDrsCreateSession = 0x0694D52E;
+        private const uint NvApiIdDispGetAssociatedUnAttachedNvidiaDisplayHandle = 0xA70503B2;
 
         private readonly NVAPIApi _api;
         private bool _disposed;
@@ -296,6 +298,62 @@ namespace NVAPIWrapper
             return helpers;
         }
 
+        /// <summary>
+        /// Enumerate unattached display helpers.
+        /// </summary>
+        /// <returns>Array of unattached display helpers, or empty if none are found.</returns>
+        public unsafe NVAPIUnAttachedDisplayHelper[] EnumerateUnAttachedDisplayHandles()
+        {
+            ThrowIfDisposed();
+
+            var handles = _api.EnumerateNvidiaUnAttachedDisplayHandles();
+            if (handles.Length == 0)
+                return Array.Empty<NVAPIUnAttachedDisplayHelper>();
+
+            var helpers = new NVAPIUnAttachedDisplayHelper[handles.Length];
+            for (var i = 0; i < handles.Length; i++)
+            {
+                helpers[i] = new NVAPIUnAttachedDisplayHelper(this, (IntPtr)handles[i]);
+            }
+
+            return helpers;
+        }
+
+        /// <summary>
+        /// Get the unattached display helper associated with a display name (e.g., "\\.\DISPLAY1").
+        /// </summary>
+        /// <param name="displayName">Display name to resolve.</param>
+        /// <returns>Unattached display helper, or null if unavailable.</returns>
+        public unsafe NVAPIUnAttachedDisplayHelper? GetAssociatedUnAttachedNvidiaDisplayHandle(string displayName)
+        {
+            ThrowIfDisposed();
+
+            if (string.IsNullOrWhiteSpace(displayName))
+                return null;
+
+            var getHandle = GetDelegate<NvApiDispGetAssociatedUnAttachedNvidiaDisplayHandleDelegate>(
+                NvApiIdDispGetAssociatedUnAttachedNvidiaDisplayHandle,
+                "NvAPI_DISP_GetAssociatedUnAttachedNvidiaDisplayHandle");
+
+            var bytes = Encoding.ASCII.GetBytes(displayName + "\0");
+            fixed (byte* pBytes = bytes)
+            {
+                NvUnAttachedDisplayHandle__* handle = null;
+                var status = getHandle((sbyte*)pBytes, &handle);
+                if (status == _NvAPI_Status.NVAPI_OK)
+                    return new NVAPIUnAttachedDisplayHelper(this, (IntPtr)handle);
+
+                if (status == _NvAPI_Status.NVAPI_NOT_SUPPORTED ||
+                    status == _NvAPI_Status.NVAPI_NVIDIA_DEVICE_NOT_FOUND ||
+                    status == _NvAPI_Status.NVAPI_INVALID_ARGUMENT)
+                {
+                    return null;
+                }
+
+                throw new NVAPIException(status);
+            }
+        }
+
         private static NV_CHIPSET_INFO_v4 CreateChipSetInfo()
         {
             return new NV_CHIPSET_INFO_v4 { version = NVAPI.NV_CHIPSET_INFO_VER };
@@ -387,6 +445,9 @@ namespace NVAPIWrapper
 
         [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
         private unsafe delegate _NvAPI_Status NvApiDrsCreateSessionDelegate(NvDRSSessionHandle__** phSession);
+
+        [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
+        private unsafe delegate _NvAPI_Status NvApiDispGetAssociatedUnAttachedNvidiaDisplayHandleDelegate(sbyte* szDisplayName, NvUnAttachedDisplayHandle__** pNvUnAttachedDispHandle);
     }
 
     /// <summary>

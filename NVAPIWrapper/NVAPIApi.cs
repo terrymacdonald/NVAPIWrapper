@@ -16,6 +16,7 @@ namespace NVAPIWrapper
         private const uint NvApiIdEnumPhysicalGPUs = 0xE5AC921F;
         private const uint NvApiIdEnumLogicalGPUs = 0x48B3EA59;
         private const uint NvApiIdEnumNvidiaDisplayHandle = 0x9ABDD40D;
+        private const uint NvApiIdEnumNvidiaUnAttachedDisplayHandle = 0x20DE9260;
 
         private readonly NVAPINative.NvApiQueryInterfaceDelegate _queryInterface;
         private IntPtr _module;
@@ -260,6 +261,46 @@ namespace NVAPIWrapper
         }
 
         /// <summary>
+        /// Enumerate NVIDIA unattached display handles.
+        /// </summary>
+        /// <returns>Array of unattached display handles, or empty if none are found.</returns>
+        public unsafe NvUnAttachedDisplayHandle__*[] EnumerateNvidiaUnAttachedDisplayHandles()
+        {
+            ThrowIfDisposed();
+
+            var enumDisplays = GetRequiredFunction<NvApiEnumNvidiaUnAttachedDisplayHandleDelegate>(
+                NvApiIdEnumNvidiaUnAttachedDisplayHandle,
+                "NvAPI_EnumNvidiaUnAttachedDisplayHandle");
+
+            var handles = new NvUnAttachedDisplayHandle__*[NVAPI.NVAPI_MAX_DISPLAYS];
+            var count = 0;
+
+            for (uint index = 0; index < NVAPI.NVAPI_MAX_DISPLAYS; index++)
+            {
+                NvUnAttachedDisplayHandle__* handle;
+                var status = enumDisplays(index, &handle);
+
+                if (status == _NvAPI_Status.NVAPI_END_ENUMERATION)
+                    break;
+
+                if (status == _NvAPI_Status.NVAPI_NVIDIA_DEVICE_NOT_FOUND || status == _NvAPI_Status.NVAPI_NOT_SUPPORTED)
+                    return new NvUnAttachedDisplayHandle__*[0];
+
+                if (status != _NvAPI_Status.NVAPI_OK)
+                    throw new NVAPIException(status, TryGetErrorMessage(status));
+
+                handles[count++] = handle;
+            }
+
+            if (count == 0)
+                return new NvUnAttachedDisplayHandle__*[0];
+
+            var result = new NvUnAttachedDisplayHandle__*[count];
+            Array.Copy(handles, result, count);
+            return result;
+        }
+
+        /// <summary>
         /// Dispose the NVAPI wrapper and release native resources.
         /// </summary>
         public void Dispose()
@@ -358,5 +399,8 @@ namespace NVAPIWrapper
 
         [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
         private unsafe delegate _NvAPI_Status NvApiEnumNvidiaDisplayHandleDelegate(uint thisEnum, NvDisplayHandle__** pNvDispHandle);
+
+        [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
+        private unsafe delegate _NvAPI_Status NvApiEnumNvidiaUnAttachedDisplayHandleDelegate(uint thisEnum, NvUnAttachedDisplayHandle__** pNvUnAttachedDispHandle);
     }
 }

@@ -201,6 +201,26 @@ Begin Phase 5 by implementing `NVAPIApiHelper` and the first helper set:
 - `NVAPIPhysicalGpuHelper` and `NVAPILogicalGpuHelper` with enumeration methods.
 - `NVAPIDisplayHelper` enumerated from GPU helpers.
 
+## In-Progress Work (2026-02) - Display Helper DISP Expansion
+Objective: Add missing DISP display APIs to the facade (helpers + DTOs) with native and facade tests, including Active tests for setters.
+
+Steps:
+1) Unattached display support:
+   - Add `NVAPIUnAttachedDisplayHelper` with functions that operate on unattached displays.
+   - Add enumeration + lookup helpers in `NVAPIApi` and `NVAPIApiHelper`.
+2) Display helper API expansion:
+   - Add missing DISP functions to `NVAPIDisplayHelper`.
+   - Create full DTOs for all new structures (HDR, color, infoframe, display id info, target info, custom display, managed dedicated display).
+3) Native tests (first):
+   - Add `NVAPIDisplayNativeTests` covering each new native API with hardware-aware skips.
+4) Facade tests:
+   - Passive tests for getters in `NVAPIDisplayHelperFacadeTests`.
+   - Active tests for setters (safe set-to-current + revert) in `NVAPIDisplayHelperActiveTests`, following IGCL active test strategy.
+   - Facade tests for unattached display helpers.
+
+Status:
+- Not started (pending implementation of steps 1-4).
+
 ## Pending API Decisions (Discuss Later)
 - Display handle APIs to surface in facade (need guidance on placement and helper design):
   - `NvAPI_EnumNvidiaDisplayHandle`

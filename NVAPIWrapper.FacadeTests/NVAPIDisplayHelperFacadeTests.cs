@@ -416,5 +416,269 @@ namespace NVAPIWrapper.FacadeTests
             Skip.If(display == null, "Preferred stereo display not supported.");
             Assert.NotNull(display);
         }
+
+        [SkippableFact]
+        public void InfoFrameControl_ShouldReturnDto()
+        {
+            Skip.If(_fixture.ApiHelper == null, _fixture.SkipReason);
+
+            var gpus = _fixture.ApiHelper.EnumeratePhysicalGpus();
+            Skip.If(gpus.Length == 0, "No NVIDIA physical GPUs found.");
+
+            var displays = gpus[0].EnumerateNvidiaDisplayHandles();
+            Skip.If(displays.Length == 0, "No NVIDIA displays found.");
+
+            var data = NVAPIDisplayHelper.CreateInfoFrameData();
+            data.cmd = (byte)NV_INFOFRAME_CMD.NV_INFOFRAME_CMD_GET_PROPERTY;
+            data.type = (byte)NV_INFOFRAME_PROPERTY_TYPE.NV_INFOFRAME_PROPERTY_TYPE_UNKNOWN;
+
+            NVAPIInfoFrameDataDto? result;
+            try
+            {
+                result = FacadeTestUtils.InvokeOrSkip(
+                    () => displays[0].InfoFrameControl(NVAPIInfoFrameDataDto.FromNative(data)),
+                    "InfoFrame control unsupported");
+            }
+            catch (NVAPIException ex) when (ex.Status == _NvAPI_Status.NVAPI_INVALID_ARGUMENT)
+            {
+                Skip.If(true, $"InfoFrame control invalid argument: {ex.Status}");
+                return;
+            }
+
+            Skip.If(result == null, "InfoFrame control not supported.");
+            Assert.NotNull(result);
+        }
+
+        [SkippableFact]
+        public void ColorControl_ShouldReturnDto()
+        {
+            Skip.If(_fixture.ApiHelper == null, _fixture.SkipReason);
+
+            var gpus = _fixture.ApiHelper.EnumeratePhysicalGpus();
+            Skip.If(gpus.Length == 0, "No NVIDIA physical GPUs found.");
+
+            var displays = gpus[0].EnumerateNvidiaDisplayHandles();
+            Skip.If(displays.Length == 0, "No NVIDIA displays found.");
+
+            var colorData = NVAPIDisplayHelper.CreateColorData();
+            colorData.cmd = (byte)NV_COLOR_CMD.NV_COLOR_CMD_GET;
+
+            var result = FacadeTestUtils.InvokeOrSkip(
+                () => displays[0].ColorControl(NVAPIDisplayColorDataDto.FromNative(colorData)),
+                "Color control unsupported");
+
+            Skip.If(result == null, "Color control not supported.");
+            Assert.NotNull(result);
+        }
+
+        [SkippableFact]
+        public void GetHdrCapabilities_ShouldReturnDto()
+        {
+            Skip.If(_fixture.ApiHelper == null, _fixture.SkipReason);
+
+            var gpus = _fixture.ApiHelper.EnumeratePhysicalGpus();
+            Skip.If(gpus.Length == 0, "No NVIDIA physical GPUs found.");
+
+            var displays = gpus[0].EnumerateNvidiaDisplayHandles();
+            Skip.If(displays.Length == 0, "No NVIDIA displays found.");
+
+            var caps = displays[0].GetHdrCapabilities();
+            Skip.If(caps == null, "HDR capabilities not supported.");
+            Assert.NotNull(caps);
+        }
+
+        [SkippableFact]
+        public void HdrColorControl_ShouldReturnDto()
+        {
+            Skip.If(_fixture.ApiHelper == null, _fixture.SkipReason);
+
+            var gpus = _fixture.ApiHelper.EnumeratePhysicalGpus();
+            Skip.If(gpus.Length == 0, "No NVIDIA physical GPUs found.");
+
+            var displays = gpus[0].EnumerateNvidiaDisplayHandles();
+            Skip.If(displays.Length == 0, "No NVIDIA displays found.");
+
+            var caps = displays[0].GetHdrCapabilities();
+            Skip.If(caps == null || !caps.Value.IsHdrSupported, "HDR not supported.");
+
+            var hdrData = NVAPIDisplayHelper.CreateHdrColorData();
+            hdrData.cmd = NV_HDR_CMD.NV_HDR_CMD_GET;
+
+            var result = FacadeTestUtils.InvokeOrSkip(
+                () => displays[0].HdrColorControl(NVAPIHdrColorDataDto.FromNative(hdrData)),
+                "HDR color control unsupported");
+
+            Skip.If(result == null, "HDR color control not supported.");
+            Assert.NotNull(result);
+        }
+
+        [SkippableFact]
+        public void GetSourceColorSpace_ShouldReturnValue()
+        {
+            Skip.If(_fixture.ApiHelper == null, _fixture.SkipReason);
+
+            var gpus = _fixture.ApiHelper.EnumeratePhysicalGpus();
+            Skip.If(gpus.Length == 0, "No NVIDIA physical GPUs found.");
+
+            var displays = gpus[0].EnumerateNvidiaDisplayHandles();
+            Skip.If(displays.Length == 0, "No NVIDIA displays found.");
+
+            var colorSpace = displays[0].GetSourceColorSpace();
+            Skip.If(colorSpace == null, "Source color space not supported.");
+            Assert.True(colorSpace.HasValue);
+        }
+
+        [SkippableFact]
+        public void GetSourceHdrMetadata_ShouldReturnDto()
+        {
+            Skip.If(_fixture.ApiHelper == null, _fixture.SkipReason);
+
+            var gpus = _fixture.ApiHelper.EnumeratePhysicalGpus();
+            Skip.If(gpus.Length == 0, "No NVIDIA physical GPUs found.");
+
+            var displays = gpus[0].EnumerateNvidiaDisplayHandles();
+            Skip.If(displays.Length == 0, "No NVIDIA displays found.");
+
+            var caps = displays[0].GetHdrCapabilities();
+            Skip.If(caps == null || !caps.Value.IsHdrSupported, "HDR not supported.");
+
+            var metadata = displays[0].GetSourceHdrMetadata();
+            Skip.If(metadata == null, "Source HDR metadata not supported.");
+            Assert.NotNull(metadata);
+        }
+
+        [SkippableFact]
+        public void GetOutputMode_ShouldReturnValue()
+        {
+            Skip.If(_fixture.ApiHelper == null, _fixture.SkipReason);
+
+            var gpus = _fixture.ApiHelper.EnumeratePhysicalGpus();
+            Skip.If(gpus.Length == 0, "No NVIDIA physical GPUs found.");
+
+            var displays = gpus[0].EnumerateNvidiaDisplayHandles();
+            Skip.If(displays.Length == 0, "No NVIDIA displays found.");
+
+            var mode = displays[0].GetOutputMode();
+            Skip.If(mode == null, "Output mode not supported.");
+            Assert.True(mode.HasValue);
+        }
+
+        [SkippableFact]
+        public void GetHdrToneMapping_ShouldReturnValue()
+        {
+            Skip.If(_fixture.ApiHelper == null, _fixture.SkipReason);
+
+            var gpus = _fixture.ApiHelper.EnumeratePhysicalGpus();
+            Skip.If(gpus.Length == 0, "No NVIDIA physical GPUs found.");
+
+            var displays = gpus[0].EnumerateNvidiaDisplayHandles();
+            Skip.If(displays.Length == 0, "No NVIDIA displays found.");
+
+            var caps = displays[0].GetHdrCapabilities();
+            Skip.If(caps == null || !caps.Value.IsHdrSupported, "HDR not supported.");
+
+            var method = displays[0].GetHdrToneMapping();
+            Skip.If(method == null, "HDR tone mapping not supported.");
+            Assert.True(method.HasValue);
+        }
+
+        [SkippableFact]
+        public void GetColorimetry_ShouldReturnDto()
+        {
+            Skip.If(_fixture.ApiHelper == null, _fixture.SkipReason);
+
+            var gpus = _fixture.ApiHelper.EnumeratePhysicalGpus();
+            Skip.If(gpus.Length == 0, "No NVIDIA physical GPUs found.");
+
+            var displays = gpus[0].EnumerateNvidiaDisplayHandles();
+            Skip.If(displays.Length == 0, "No NVIDIA displays found.");
+
+            var colorimetry = displays[0].GetColorimetry();
+            Skip.If(colorimetry == null, "Colorimetry not supported.");
+            Assert.NotNull(colorimetry);
+        }
+
+        [SkippableFact]
+        public void GetDisplayIdInfo_ShouldReturnDto()
+        {
+            Skip.If(_fixture.ApiHelper == null, _fixture.SkipReason);
+
+            var gpus = _fixture.ApiHelper.EnumeratePhysicalGpus();
+            Skip.If(gpus.Length == 0, "No NVIDIA physical GPUs found.");
+
+            var displays = gpus[0].EnumerateNvidiaDisplayHandles();
+            Skip.If(displays.Length == 0, "No NVIDIA displays found.");
+
+            var info = displays[0].GetDisplayIdInfo();
+            Skip.If(info == null, "Display ID info not supported.");
+            Assert.NotNull(info);
+        }
+
+        [SkippableFact]
+        public void GetDisplayIdsFromTarget_ShouldReturnDto()
+        {
+            Skip.If(_fixture.ApiHelper == null, _fixture.SkipReason);
+
+            var gpus = _fixture.ApiHelper.EnumeratePhysicalGpus();
+            Skip.If(gpus.Length == 0, "No NVIDIA physical GPUs found.");
+
+            var displays = gpus[0].EnumerateNvidiaDisplayHandles();
+            Skip.If(displays.Length == 0, "No NVIDIA displays found.");
+
+            var info = displays[0].GetDisplayIdsFromTarget();
+            Skip.If(info == null, "Display IDs from target not supported.");
+            Assert.NotNull(info);
+        }
+
+        [SkippableFact]
+        public void EnumCustomDisplay_ShouldReturnDto()
+        {
+            Skip.If(_fixture.ApiHelper == null, _fixture.SkipReason);
+
+            var gpus = _fixture.ApiHelper.EnumeratePhysicalGpus();
+            Skip.If(gpus.Length == 0, "No NVIDIA physical GPUs found.");
+
+            var displays = gpus[0].EnumerateNvidiaDisplayHandles();
+            Skip.If(displays.Length == 0, "No NVIDIA displays found.");
+
+            var custom = displays[0].EnumCustomDisplay(0);
+            Skip.If(custom == null, "Custom display not supported.");
+            Assert.NotNull(custom);
+        }
+
+        [SkippableFact]
+        public void GetNvManagedDedicatedDisplays_ShouldReturnArray()
+        {
+            Skip.If(_fixture.ApiHelper == null, _fixture.SkipReason);
+
+            var gpus = _fixture.ApiHelper.EnumeratePhysicalGpus();
+            Skip.If(gpus.Length == 0, "No NVIDIA physical GPUs found.");
+
+            var displays = gpus[0].EnumerateNvidiaDisplayHandles();
+            Skip.If(displays.Length == 0, "No NVIDIA displays found.");
+
+            var managed = displays[0].GetNvManagedDedicatedDisplays();
+            Assert.NotNull(managed);
+            Assert.InRange(managed.Length, 0, NVAPI.NVAPI_MAX_DISPLAYS);
+        }
+
+        [SkippableFact]
+        public void GetNvManagedDedicatedDisplayMetadata_ShouldReturnDto()
+        {
+            Skip.If(_fixture.ApiHelper == null, _fixture.SkipReason);
+
+            var gpus = _fixture.ApiHelper.EnumeratePhysicalGpus();
+            Skip.If(gpus.Length == 0, "No NVIDIA physical GPUs found.");
+
+            var displays = gpus[0].EnumerateNvidiaDisplayHandles();
+            Skip.If(displays.Length == 0, "No NVIDIA displays found.");
+
+            var displayId = displays[0].GetDisplayIdByDisplayName();
+            Skip.If(displayId == null, "Display ID not supported.");
+
+            var metadata = displays[0].GetNvManagedDedicatedDisplayMetadata(displayId.Value);
+            Skip.If(metadata == null, "Managed dedicated display metadata not supported.");
+            Assert.NotNull(metadata);
+        }
     }
 }

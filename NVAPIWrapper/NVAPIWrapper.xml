@@ -52,6 +52,12 @@
             </summary>
             <returns>Array of display handles, or empty if none are found.</returns>
         </member>
+        <member name="M:NVAPIWrapper.NVAPIApi.EnumerateNvidiaUnAttachedDisplayHandles">
+            <summary>
+            Enumerate NVIDIA unattached display handles.
+            </summary>
+            <returns>Array of unattached display handles, or empty if none are found.</returns>
+        </member>
         <member name="M:NVAPIWrapper.NVAPIApi.Dispose">
             <summary>
             Dispose the NVAPI wrapper and release native resources.
@@ -139,6 +145,19 @@
             Enumerate logical GPU helpers.
             </summary>
             <returns>Array of logical GPU helpers, or empty if none are found.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIApiHelper.EnumerateUnAttachedDisplayHandles">
+            <summary>
+            Enumerate unattached display helpers.
+            </summary>
+            <returns>Array of unattached display helpers, or empty if none are found.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIApiHelper.GetAssociatedUnAttachedNvidiaDisplayHandle(System.String)">
+            <summary>
+            Get the unattached display helper associated with a display name (e.g., "\\.\DISPLAY1").
+            </summary>
+            <param name="displayName">Display name to resolve.</param>
+            <returns>Unattached display helper, or null if unavailable.</returns>
         </member>
         <member name="M:NVAPIWrapper.NVAPIApiHelper.Dispose">
             <summary>
@@ -1232,6 +1251,61 @@
             Create preferred stereo display SET struct with the version initialized.
             </summary>
         </member>
+        <member name="M:NVAPIWrapper.NVAPIDisplayHelper.CreateInfoFrameData">
+            <summary>
+            Create an infoframe data struct with the version initialized.
+            </summary>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDisplayHelper.CreateColorData">
+            <summary>
+            Create a color data struct with the version initialized.
+            </summary>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDisplayHelper.CreateHdrCapabilities">
+            <summary>
+            Create an HDR capabilities struct with the version initialized.
+            </summary>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDisplayHelper.CreateHdrColorData">
+            <summary>
+            Create an HDR color data struct with the version initialized.
+            </summary>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDisplayHelper.CreateHdrMetadata">
+            <summary>
+            Create an HDR metadata struct with the version initialized.
+            </summary>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDisplayHelper.CreateDisplayColorimetry">
+            <summary>
+            Create a display colorimetry struct with the version initialized.
+            </summary>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDisplayHelper.CreateCustomDisplay">
+            <summary>
+            Create a custom display struct with the version initialized.
+            </summary>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDisplayHelper.CreateManagedDedicatedDisplayInfo">
+            <summary>
+            Create a managed dedicated display info struct with the version initialized.
+            </summary>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDisplayHelper.CreateManagedDedicatedDisplayMetadata">
+            <summary>
+            Create a managed dedicated display metadata struct with the version initialized.
+            </summary>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDisplayHelper.CreateDisplayIdInfoData">
+            <summary>
+            Create a display ID info data struct with the version initialized.
+            </summary>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDisplayHelper.CreateTargetInfoData">
+            <summary>
+            Create a target info data struct with the version initialized.
+            </summary>
+        </member>
         <member name="M:NVAPIWrapper.NVAPIDisplayHelper.GetPhysicalGpusFromDisplay">
             <summary>
             Get physical GPUs associated with this display.
@@ -1419,6 +1493,188 @@
             <param name="outputsMask">Output mask to apply the override.</param>
             <param name="refreshRate">Refresh rate override (0.0 cancels).</param>
             <param name="setDeferred">True to defer to the next modeset.</param>
+            <returns>True if applied, false if unavailable.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDisplayHelper.InfoFrameControl(NVAPIWrapper.NVAPIInfoFrameDataDto)">
+            <summary>
+            Control infoframe data for this display.
+            </summary>
+            <param name="data">Infoframe data DTO.</param>
+            <returns>Updated infoframe data DTO, or null if unavailable.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDisplayHelper.ColorControl(NVAPIWrapper.NVAPIDisplayColorDataDto)">
+            <summary>
+            Control display color data for this display.
+            </summary>
+            <param name="colorData">Color data DTO.</param>
+            <returns>Updated color data DTO, or null if unavailable.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDisplayHelper.GetHdrCapabilities">
+            <summary>
+            Get HDR capabilities for this display.
+            </summary>
+            <returns>HDR capabilities DTO, or null if unavailable.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDisplayHelper.HdrColorControl(NVAPIWrapper.NVAPIHdrColorDataDto)">
+            <summary>
+            Control HDR color settings for this display.
+            </summary>
+            <param name="hdrData">HDR color data DTO.</param>
+            <returns>Updated HDR color data DTO, or null if unavailable.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDisplayHelper.SetSourceColorSpace(NVAPIWrapper._NV_COLORSPACE_TYPE)">
+            <summary>
+            Set the source color space for this display.
+            </summary>
+            <param name="colorSpaceType">Source color space type.</param>
+            <returns>True if applied, false if unavailable.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDisplayHelper.GetSourceColorSpace(System.UInt64)">
+            <summary>
+            Get the source color space for this display.
+            </summary>
+            <param name="sourcePid">Source process ID (NV_SOURCE_PID_CURRENT for current).</param>
+            <returns>Source color space type, or null if unavailable.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDisplayHelper.SetSourceHdrMetadata(NVAPIWrapper.NVAPIHdrMetadataDto)">
+            <summary>
+            Set the source HDR metadata for this display.
+            </summary>
+            <param name="metadata">HDR metadata DTO.</param>
+            <returns>True if applied, false if unavailable.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDisplayHelper.GetSourceHdrMetadata(System.UInt64)">
+            <summary>
+            Get the source HDR metadata for this display.
+            </summary>
+            <param name="sourcePid">Source process ID (NV_SOURCE_PID_CURRENT for current).</param>
+            <returns>HDR metadata DTO, or null if unavailable.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDisplayHelper.SetOutputMode(NVAPIWrapper._NV_DISPLAY_OUTPUT_MODE)">
+            <summary>
+            Set the display output mode for this display.
+            </summary>
+            <param name="displayMode">Desired output mode.</param>
+            <returns>True if applied, false if unavailable.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDisplayHelper.GetOutputMode">
+            <summary>
+            Get the display output mode for this display.
+            </summary>
+            <returns>Display output mode, or null if unavailable.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDisplayHelper.SetHdrToneMapping(NVAPIWrapper._NV_HDR_TONEMAPPING_METHOD)">
+            <summary>
+            Set the HDR tone mapping method for this display.
+            </summary>
+            <param name="hdrTonemapping">HDR tone mapping method.</param>
+            <returns>True if applied, false if unavailable.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDisplayHelper.GetHdrToneMapping">
+            <summary>
+            Get the HDR tone mapping method for this display.
+            </summary>
+            <returns>HDR tone mapping method, or null if unavailable.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDisplayHelper.GetColorimetry">
+            <summary>
+            Get display colorimetry information for this display.
+            </summary>
+            <returns>Display colorimetry DTO, or null if unavailable.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDisplayHelper.GetDisplayIdInfo(System.Nullable{System.UInt32})">
+            <summary>
+            Get display ID info for this display.
+            </summary>
+            <param name="displayId">Optional display ID override.</param>
+            <returns>Display ID info DTO, or null if unavailable.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDisplayHelper.GetDisplayIdsFromTarget">
+            <summary>
+            Get display IDs for the target associated with this display.
+            </summary>
+            <returns>Target info DTO, or null if unavailable.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDisplayHelper.GetDisplayIdsFromTarget(System.Int64,System.UInt32)">
+            <summary>
+            Get display IDs for the specified target.
+            </summary>
+            <param name="adapterLuid">Adapter LUID.</param>
+            <param name="targetId">Target ID (AdapterRelativeId).</param>
+            <returns>Target info DTO, or null if unavailable.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDisplayHelper.EnumCustomDisplay(System.UInt32,System.Nullable{System.UInt32})">
+            <summary>
+            Enumerate a custom display for the specified index.
+            </summary>
+            <param name="index">Custom display index.</param>
+            <param name="displayId">Optional display ID override.</param>
+            <returns>Custom display DTO, or null if unavailable.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDisplayHelper.TryCustomDisplay(System.UInt32[],NVAPIWrapper.NVAPICustomDisplayDto[])">
+            <summary>
+            Try applying a custom display.
+            </summary>
+            <param name="displayIds">Display IDs to apply the custom display to.</param>
+            <param name="customDisplays">Custom display DTO array.</param>
+            <returns>True if applied, false if unavailable.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDisplayHelper.DeleteCustomDisplay(System.UInt32[],NVAPIWrapper.NVAPICustomDisplayDto[])">
+            <summary>
+            Delete a custom display.
+            </summary>
+            <param name="displayIds">Display IDs to delete the custom display from.</param>
+            <param name="customDisplays">Custom display DTO array.</param>
+            <returns>True if applied, false if unavailable.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDisplayHelper.SaveCustomDisplay(System.UInt32[],System.Boolean,System.Boolean)">
+            <summary>
+            Save custom display settings for the specified displays.
+            </summary>
+            <param name="displayIds">Display IDs to save.</param>
+            <param name="isThisOutputIdOnly">True to apply only to the output ID.</param>
+            <param name="isThisMonitorIdOnly">True to apply only to the monitor ID.</param>
+            <returns>True if applied, false if unavailable.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDisplayHelper.RevertCustomDisplayTrial(System.UInt32[])">
+            <summary>
+            Revert custom display trial for the specified displays.
+            </summary>
+            <param name="displayIds">Display IDs to revert.</param>
+            <returns>True if applied, false if unavailable.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDisplayHelper.GetNvManagedDedicatedDisplays">
+            <summary>
+            Get NVIDIA managed dedicated display info entries.
+            </summary>
+            <returns>Array of managed dedicated display info DTOs, or empty if unavailable.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDisplayHelper.AcquireDedicatedDisplay(System.Nullable{System.UInt32})">
+            <summary>
+            Acquire a managed dedicated display.
+            </summary>
+            <param name="displayId">Optional display ID override.</param>
+            <returns>Display source handle, or null if unavailable.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDisplayHelper.ReleaseDedicatedDisplay(System.Nullable{System.UInt32})">
+            <summary>
+            Release a managed dedicated display.
+            </summary>
+            <param name="displayId">Optional display ID override.</param>
+            <returns>True if released, false if unavailable.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDisplayHelper.GetNvManagedDedicatedDisplayMetadata(System.UInt32)">
+            <summary>
+            Get metadata for a managed dedicated display.
+            </summary>
+            <param name="displayId">Display ID to query.</param>
+            <returns>Managed dedicated display metadata DTO, or null if unavailable.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDisplayHelper.SetNvManagedDedicatedDisplayMetadata(NVAPIWrapper.NVAPINvManagedDedicatedDisplayMetadataDto)">
+            <summary>
+            Set metadata for a managed dedicated display.
+            </summary>
+            <param name="metadata">Managed dedicated display metadata DTO.</param>
             <returns>True if applied, false if unavailable.</returns>
         </member>
         <member name="M:NVAPIWrapper.NVAPIDisplayHelper.Dispose">
@@ -2282,6 +2538,345 @@
         <member name="M:NVAPIWrapper.NVAPIVirtualRefreshRateDataDto.op_Inequality(NVAPIWrapper.NVAPIVirtualRefreshRateDataDto,NVAPIWrapper.NVAPIVirtualRefreshRateDataDto)">
             <summary>Compare virtual refresh rate DTOs.</summary>
         </member>
+        <member name="T:NVAPIWrapper.NVAPIInfoFrameDataDto">
+            <summary>
+            DTO for infoframe data.
+            </summary>
+        </member>
+        <member name="P:NVAPIWrapper.NVAPIInfoFrameDataDto.Data">
+            <summary>Native infoframe data.</summary>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIInfoFrameDataDto.#ctor(NVAPIWrapper.NV_INFOFRAME_DATA)">
+            <summary>Create an infoframe data DTO.</summary>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIInfoFrameDataDto.FromNative(NVAPIWrapper.NV_INFOFRAME_DATA)">
+            <summary>
+            Create a DTO from native infoframe data.
+            </summary>
+            <param name="native">Native infoframe data.</param>
+            <returns>Infoframe data DTO.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIInfoFrameDataDto.ToNative">
+            <summary>
+            Convert this DTO to native infoframe data.
+            </summary>
+            <returns>Native infoframe data.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIInfoFrameDataDto.Equals(NVAPIWrapper.NVAPIInfoFrameDataDto)">
+            <inheritdoc />
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIInfoFrameDataDto.Equals(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIInfoFrameDataDto.GetHashCode">
+            <inheritdoc />
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIInfoFrameDataDto.op_Equality(NVAPIWrapper.NVAPIInfoFrameDataDto,NVAPIWrapper.NVAPIInfoFrameDataDto)">
+            <summary>Compare infoframe data DTOs.</summary>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIInfoFrameDataDto.op_Inequality(NVAPIWrapper.NVAPIInfoFrameDataDto,NVAPIWrapper.NVAPIInfoFrameDataDto)">
+            <summary>Compare infoframe data DTOs.</summary>
+        </member>
+        <member name="T:NVAPIWrapper.NVAPIDisplayColorDataDto">
+            <summary>
+            DTO for display color data.
+            </summary>
+        </member>
+        <member name="P:NVAPIWrapper.NVAPIDisplayColorDataDto.Data">
+            <summary>Native color data.</summary>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDisplayColorDataDto.#ctor(NVAPIWrapper._NV_COLOR_DATA_V5)">
+            <summary>Create a display color data DTO.</summary>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDisplayColorDataDto.FromNative(NVAPIWrapper._NV_COLOR_DATA_V5)">
+            <summary>
+            Create a DTO from native color data.
+            </summary>
+            <param name="native">Native color data.</param>
+            <returns>Display color data DTO.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDisplayColorDataDto.ToNative">
+            <summary>
+            Convert this DTO to native color data.
+            </summary>
+            <returns>Native color data.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDisplayColorDataDto.Equals(NVAPIWrapper.NVAPIDisplayColorDataDto)">
+            <inheritdoc />
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDisplayColorDataDto.Equals(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDisplayColorDataDto.GetHashCode">
+            <inheritdoc />
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDisplayColorDataDto.op_Equality(NVAPIWrapper.NVAPIDisplayColorDataDto,NVAPIWrapper.NVAPIDisplayColorDataDto)">
+            <summary>Compare display color data DTOs.</summary>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDisplayColorDataDto.op_Inequality(NVAPIWrapper.NVAPIDisplayColorDataDto,NVAPIWrapper.NVAPIDisplayColorDataDto)">
+            <summary>Compare display color data DTOs.</summary>
+        </member>
+        <member name="T:NVAPIWrapper.NVAPIHdrCapabilitiesDto">
+            <summary>
+            DTO for HDR capabilities.
+            </summary>
+        </member>
+        <member name="P:NVAPIWrapper.NVAPIHdrCapabilitiesDto.Capabilities">
+            <summary>Native HDR capabilities.</summary>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIHdrCapabilitiesDto.#ctor(NVAPIWrapper._NV_HDR_CAPABILITIES_V3)">
+            <summary>Create an HDR capabilities DTO.</summary>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIHdrCapabilitiesDto.FromNative(NVAPIWrapper._NV_HDR_CAPABILITIES_V3)">
+            <summary>
+            Create a DTO from native HDR capabilities.
+            </summary>
+            <param name="native">Native HDR capabilities.</param>
+            <returns>HDR capabilities DTO.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIHdrCapabilitiesDto.ToNative">
+            <summary>
+            Convert this DTO to native HDR capabilities.
+            </summary>
+            <returns>Native HDR capabilities.</returns>
+        </member>
+        <member name="P:NVAPIWrapper.NVAPIHdrCapabilitiesDto.IsHdrSupported">
+            <summary>
+            True if any HDR capability flag is set.
+            </summary>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIHdrCapabilitiesDto.Equals(NVAPIWrapper.NVAPIHdrCapabilitiesDto)">
+            <inheritdoc />
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIHdrCapabilitiesDto.Equals(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIHdrCapabilitiesDto.GetHashCode">
+            <inheritdoc />
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIHdrCapabilitiesDto.op_Equality(NVAPIWrapper.NVAPIHdrCapabilitiesDto,NVAPIWrapper.NVAPIHdrCapabilitiesDto)">
+            <summary>Compare HDR capabilities DTOs.</summary>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIHdrCapabilitiesDto.op_Inequality(NVAPIWrapper.NVAPIHdrCapabilitiesDto,NVAPIWrapper.NVAPIHdrCapabilitiesDto)">
+            <summary>Compare HDR capabilities DTOs.</summary>
+        </member>
+        <member name="T:NVAPIWrapper.NVAPIHdrColorDataDto">
+            <summary>
+            DTO for HDR color data.
+            </summary>
+        </member>
+        <member name="P:NVAPIWrapper.NVAPIHdrColorDataDto.Data">
+            <summary>Native HDR color data.</summary>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIHdrColorDataDto.#ctor(NVAPIWrapper._NV_HDR_COLOR_DATA_V2)">
+            <summary>Create an HDR color data DTO.</summary>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIHdrColorDataDto.FromNative(NVAPIWrapper._NV_HDR_COLOR_DATA_V2)">
+            <summary>
+            Create a DTO from native HDR color data.
+            </summary>
+            <param name="native">Native HDR color data.</param>
+            <returns>HDR color data DTO.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIHdrColorDataDto.ToNative">
+            <summary>
+            Convert this DTO to native HDR color data.
+            </summary>
+            <returns>Native HDR color data.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIHdrColorDataDto.Equals(NVAPIWrapper.NVAPIHdrColorDataDto)">
+            <inheritdoc />
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIHdrColorDataDto.Equals(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIHdrColorDataDto.GetHashCode">
+            <inheritdoc />
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIHdrColorDataDto.op_Equality(NVAPIWrapper.NVAPIHdrColorDataDto,NVAPIWrapper.NVAPIHdrColorDataDto)">
+            <summary>Compare HDR color data DTOs.</summary>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIHdrColorDataDto.op_Inequality(NVAPIWrapper.NVAPIHdrColorDataDto,NVAPIWrapper.NVAPIHdrColorDataDto)">
+            <summary>Compare HDR color data DTOs.</summary>
+        </member>
+        <member name="T:NVAPIWrapper.NVAPIHdrMetadataDto">
+            <summary>
+            DTO for HDR metadata.
+            </summary>
+        </member>
+        <member name="P:NVAPIWrapper.NVAPIHdrMetadataDto.Metadata">
+            <summary>Native HDR metadata.</summary>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIHdrMetadataDto.#ctor(NVAPIWrapper._NV_HDR_METADATA_V1)">
+            <summary>Create an HDR metadata DTO.</summary>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIHdrMetadataDto.FromNative(NVAPIWrapper._NV_HDR_METADATA_V1)">
+            <summary>
+            Create a DTO from native HDR metadata.
+            </summary>
+            <param name="native">Native HDR metadata.</param>
+            <returns>HDR metadata DTO.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIHdrMetadataDto.ToNative">
+            <summary>
+            Convert this DTO to native HDR metadata.
+            </summary>
+            <returns>Native HDR metadata.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIHdrMetadataDto.Equals(NVAPIWrapper.NVAPIHdrMetadataDto)">
+            <inheritdoc />
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIHdrMetadataDto.Equals(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIHdrMetadataDto.GetHashCode">
+            <inheritdoc />
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIHdrMetadataDto.op_Equality(NVAPIWrapper.NVAPIHdrMetadataDto,NVAPIWrapper.NVAPIHdrMetadataDto)">
+            <summary>Compare HDR metadata DTOs.</summary>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIHdrMetadataDto.op_Inequality(NVAPIWrapper.NVAPIHdrMetadataDto,NVAPIWrapper.NVAPIHdrMetadataDto)">
+            <summary>Compare HDR metadata DTOs.</summary>
+        </member>
+        <member name="T:NVAPIWrapper.NVAPIDisplayColorimetryDto">
+            <summary>
+            DTO for display colorimetry.
+            </summary>
+        </member>
+        <member name="P:NVAPIWrapper.NVAPIDisplayColorimetryDto.Colorimetry">
+            <summary>Native display colorimetry.</summary>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDisplayColorimetryDto.#ctor(NVAPIWrapper._NV_DISPLAY_COLORIMETRY_V1)">
+            <summary>Create a display colorimetry DTO.</summary>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDisplayColorimetryDto.FromNative(NVAPIWrapper._NV_DISPLAY_COLORIMETRY_V1)">
+            <summary>
+            Create a DTO from native display colorimetry.
+            </summary>
+            <param name="native">Native display colorimetry.</param>
+            <returns>Display colorimetry DTO.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDisplayColorimetryDto.ToNative">
+            <summary>
+            Convert this DTO to native display colorimetry.
+            </summary>
+            <returns>Native display colorimetry.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDisplayColorimetryDto.Equals(NVAPIWrapper.NVAPIDisplayColorimetryDto)">
+            <inheritdoc />
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDisplayColorimetryDto.Equals(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDisplayColorimetryDto.GetHashCode">
+            <inheritdoc />
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDisplayColorimetryDto.op_Equality(NVAPIWrapper.NVAPIDisplayColorimetryDto,NVAPIWrapper.NVAPIDisplayColorimetryDto)">
+            <summary>Compare display colorimetry DTOs.</summary>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDisplayColorimetryDto.op_Inequality(NVAPIWrapper.NVAPIDisplayColorimetryDto,NVAPIWrapper.NVAPIDisplayColorimetryDto)">
+            <summary>Compare display colorimetry DTOs.</summary>
+        </member>
+        <member name="T:NVAPIWrapper.NVAPICustomDisplayDto">
+            <summary>
+            DTO for custom display.
+            </summary>
+        </member>
+        <member name="P:NVAPIWrapper.NVAPICustomDisplayDto.CustomDisplay">
+            <summary>Native custom display.</summary>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPICustomDisplayDto.#ctor(NVAPIWrapper.NV_CUSTOM_DISPLAY)">
+            <summary>Create a custom display DTO.</summary>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPICustomDisplayDto.FromNative(NVAPIWrapper.NV_CUSTOM_DISPLAY)">
+            <summary>
+            Create a DTO from native custom display.
+            </summary>
+            <param name="native">Native custom display.</param>
+            <returns>Custom display DTO.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPICustomDisplayDto.ToNative">
+            <summary>
+            Convert this DTO to native custom display.
+            </summary>
+            <returns>Native custom display.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPICustomDisplayDto.Equals(NVAPIWrapper.NVAPICustomDisplayDto)">
+            <inheritdoc />
+        </member>
+        <member name="M:NVAPIWrapper.NVAPICustomDisplayDto.Equals(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:NVAPIWrapper.NVAPICustomDisplayDto.GetHashCode">
+            <inheritdoc />
+        </member>
+        <member name="M:NVAPIWrapper.NVAPICustomDisplayDto.op_Equality(NVAPIWrapper.NVAPICustomDisplayDto,NVAPIWrapper.NVAPICustomDisplayDto)">
+            <summary>Compare custom display DTOs.</summary>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPICustomDisplayDto.op_Inequality(NVAPIWrapper.NVAPICustomDisplayDto,NVAPIWrapper.NVAPICustomDisplayDto)">
+            <summary>Compare custom display DTOs.</summary>
+        </member>
+        <member name="T:NVAPIWrapper.NVAPINvManagedDedicatedDisplayInfoDto">
+            <summary>
+            DTO for NVIDIA managed dedicated display info.
+            </summary>
+        </member>
+        <member name="P:NVAPIWrapper.NVAPINvManagedDedicatedDisplayInfoDto.DisplayId">
+            <summary>Display ID.</summary>
+        </member>
+        <member name="P:NVAPIWrapper.NVAPINvManagedDedicatedDisplayInfoDto.IsAcquired">
+            <summary>True if acquired by another process.</summary>
+        </member>
+        <member name="P:NVAPIWrapper.NVAPINvManagedDedicatedDisplayInfoDto.IsMosaic">
+            <summary>True if part of a Mosaic grid.</summary>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPINvManagedDedicatedDisplayInfoDto.#ctor(System.UInt32,System.Boolean,System.Boolean)">
+            <summary>Create a managed dedicated display info DTO.</summary>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPINvManagedDedicatedDisplayInfoDto.FromNative(NVAPIWrapper._NV_MANAGED_DEDICATED_DISPLAY_INFO)">
+            <summary>
+            Create a DTO from native managed dedicated display info.
+            </summary>
+            <param name="native">Native managed dedicated display info.</param>
+            <returns>Managed dedicated display info DTO.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPINvManagedDedicatedDisplayInfoDto.FromNative(NVAPIWrapper._NV_MANAGED_DEDICATED_DISPLAY_INFO[])">
+            <summary>
+            Create DTOs from a native managed dedicated display info array.
+            </summary>
+            <param name="native">Native managed dedicated display info array.</param>
+            <returns>Managed dedicated display info DTO array.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPINvManagedDedicatedDisplayInfoDto.Equals(NVAPIWrapper.NVAPINvManagedDedicatedDisplayInfoDto)">
+            <inheritdoc />
+        </member>
+        <member name="M:NVAPIWrapper.NVAPINvManagedDedicatedDisplayInfoDto.Equals(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:NVAPIWrapper.NVAPINvManagedDedicatedDisplayInfoDto.GetHashCode">
+            <inheritdoc />
+        </member>
+        <member name="M:NVAPIWrapper.NVAPINvManagedDedicatedDisplayInfoDto.op_Equality(NVAPIWrapper.NVAPINvManagedDedicatedDisplayInfoDto,NVAPIWrapper.NVAPINvManagedDedicatedDisplayInfoDto)">
+            <summary>Compare managed dedicated display info DTOs.</summary>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPINvManagedDedicatedDisplayInfoDto.op_Inequality(NVAPIWrapper.NVAPINvManagedDedicatedDisplayInfoDto,NVAPIWrapper.NVAPINvManagedDedicatedDisplayInfoDto)">
+            <summary>Compare managed dedicated display info DTOs.</summary>
+        </member>
+        <member name="T:NVAPIWrapper.NVAPINvManagedDedicatedDisplayMetadataDto">
+            <summary>
+            DTO for NVIDIA managed dedicated display metadata.
+            </summary>
+        </member>
+        <member name="T:NVAPIWrapper.NVAPIDisplayIdInfoDto">
+            <summary>
+            DTO for display ID info data.
+            </summary>
+        </member>
+        <member name="T:NVAPIWrapper.NVAPITargetInfoDto">
+            <summary>
+            DTO for target info data.
+            </summary>
+        </member>
         <member name="T:NVAPIWrapper.NVAPIPreferredStereoDisplayDto">
             <summary>
             DTO for preferred stereo display.
@@ -2324,6 +2919,16 @@
         <member name="T:NVAPIWrapper.NVAPIGpuAndOutputIdDto">
             <summary>
             DTO for GPU and output ID from a display ID.
+            </summary>
+        </member>
+        <member name="T:NVAPIWrapper.NV_INFOFRAME_PROPERTY_TYPE">
+            <summary>
+            InfoFrame property type values. No official constants are available, so this is a safe placeholder.
+            </summary>
+        </member>
+        <member name="F:NVAPIWrapper.NV_INFOFRAME_PROPERTY_TYPE.NV_INFOFRAME_PROPERTY_TYPE_UNKNOWN">
+            <summary>
+            No documentation exists that specifies the values for this field, so defaulting to zero.
             </summary>
         </member>
         <member name="T:NVAPIWrapper.NVAPIDrsHelper">
@@ -3651,6 +4256,34 @@
         </member>
         <member name="P:NVAPIWrapper.NV_GPU_ECC_STATUS_INFO.isEnabled">
             <summary>Active ECC memory setting.</summary>
+        </member>
+        <member name="T:NVAPIWrapper.NVAPIUnAttachedDisplayHelper">
+            <summary>
+            Facade helper for an NVIDIA unattached display handle.
+            </summary>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIUnAttachedDisplayHelper.GetUnAttachedAssociatedDisplayName">
+            <summary>
+            Get the associated display name for this unattached display.
+            </summary>
+            <returns>Display name, or null if unavailable.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIUnAttachedDisplayHelper.GetPhysicalGpuFromUnAttachedDisplay">
+            <summary>
+            Get the physical GPU associated with this unattached display.
+            </summary>
+            <returns>Physical GPU helper, or null if unavailable.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIUnAttachedDisplayHelper.CreateDisplayFromUnAttachedDisplay">
+            <summary>
+            Create a display handle from this unattached display.
+            </summary>
+            <returns>Display helper, or null if unavailable.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIUnAttachedDisplayHelper.Dispose">
+            <summary>
+            Dispose the helper and prevent further use.
+            </summary>
         </member>
         <member name="T:NVAPIWrapper.NVAPIVideoHelper">
             <summary>

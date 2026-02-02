@@ -39,6 +39,31 @@ namespace NVAPIWrapper
         private const uint NvApiIdEnableHwCursor = 0x2863148D;
         private const uint NvApiIdDisableHwCursor = 0xAB163097;
         private const uint NvApiIdSetRefreshRateOverride = 0x3092AC32;
+        private const uint NvApiIdDispInfoFrameControl = 0x6067AF3F;
+        private const uint NvApiIdDispColorControl = 0x92F9D80D;
+        private const uint NvApiIdDispGetHdrCapabilities = 0x84F2A8DF;
+        private const uint NvApiIdDispHdrColorControl = 0x351DA224;
+        private const uint NvApiIdDispSetSourceColorSpace = 0x473B6CAF;
+        private const uint NvApiIdDispGetSourceColorSpace = 0xCEEDC85B;
+        private const uint NvApiIdDispSetSourceHdrMetadata = 0x905EB63B;
+        private const uint NvApiIdDispGetSourceHdrMetadata = 0x0D3F52DA;
+        private const uint NvApiIdDispSetOutputMode = 0x98E7661A;
+        private const uint NvApiIdDispGetOutputMode = 0x81FED88D;
+        private const uint NvApiIdDispSetHdrToneMapping = 0xDD6DA362;
+        private const uint NvApiIdDispGetHdrToneMapping = 0xFBD36E71;
+        private const uint NvApiIdDispGetColorimetry = 0x00B421AD;
+        private const uint NvApiIdDispEnumCustomDisplay = 0xA2072D59;
+        private const uint NvApiIdDispTryCustomDisplay = 0x1F7DB630;
+        private const uint NvApiIdDispDeleteCustomDisplay = 0x552E5B9B;
+        private const uint NvApiIdDispSaveCustomDisplay = 0x49882876;
+        private const uint NvApiIdDispRevertCustomDisplayTrial = 0xCBBD40F0;
+        private const uint NvApiIdDispGetNvManagedDedicatedDisplays = 0xDBDF0CB2;
+        private const uint NvApiIdDispAcquireDedicatedDisplay = 0x47C917BA;
+        private const uint NvApiIdDispReleaseDedicatedDisplay = 0x1247825F;
+        private const uint NvApiIdDispGetNvManagedDedicatedDisplayMetadata = 0xD645D80C;
+        private const uint NvApiIdDispSetNvManagedDedicatedDisplayMetadata = 0x3D8B129A;
+        private const uint NvApiIdDispGetDisplayIdInfo = 0xBAE8AA5E;
+        private const uint NvApiIdDispGetDisplayIdsFromTarget = 0xE7E5F89E;
 
         private readonly NVAPIApiHelper _apiHelper;
         private readonly IntPtr _handle;
@@ -192,6 +217,129 @@ namespace NVAPIWrapper
             return new NV_SET_PREFERRED_STEREO_DISPLAY_V1
             {
                 version = NVAPI.NV_SET_PREFERRED_STEREO_DISPLAY_VER,
+            };
+        }
+
+        /// <summary>
+        /// Create an infoframe data struct with the version initialized.
+        /// </summary>
+        public static NV_INFOFRAME_DATA CreateInfoFrameData()
+        {
+            return new NV_INFOFRAME_DATA
+            {
+                version = NVAPI.NV_INFOFRAME_DATA_VER,
+                size = (ushort)Marshal.SizeOf<NV_INFOFRAME_DATA>(),
+            };
+        }
+
+        /// <summary>
+        /// Create a color data struct with the version initialized.
+        /// </summary>
+        public static _NV_COLOR_DATA_V5 CreateColorData()
+        {
+            return new _NV_COLOR_DATA_V5
+            {
+                version = NVAPI.NV_COLOR_DATA_VER,
+                size = (ushort)Marshal.SizeOf<_NV_COLOR_DATA_V5>(),
+            };
+        }
+
+        /// <summary>
+        /// Create an HDR capabilities struct with the version initialized.
+        /// </summary>
+        public static _NV_HDR_CAPABILITIES_V3 CreateHdrCapabilities()
+        {
+            return new _NV_HDR_CAPABILITIES_V3
+            {
+                version = NVAPI.NV_HDR_CAPABILITIES_VER,
+            };
+        }
+
+        /// <summary>
+        /// Create an HDR color data struct with the version initialized.
+        /// </summary>
+        public static _NV_HDR_COLOR_DATA_V2 CreateHdrColorData()
+        {
+            return new _NV_HDR_COLOR_DATA_V2
+            {
+                version = NVAPI.NV_HDR_COLOR_DATA_VER,
+            };
+        }
+
+        /// <summary>
+        /// Create an HDR metadata struct with the version initialized.
+        /// </summary>
+        public static _NV_HDR_METADATA_V1 CreateHdrMetadata()
+        {
+            return new _NV_HDR_METADATA_V1
+            {
+                version = NVAPI.NV_HDR_METADATA_VER,
+            };
+        }
+
+        /// <summary>
+        /// Create a display colorimetry struct with the version initialized.
+        /// </summary>
+        public static _NV_DISPLAY_COLORIMETRY_V1 CreateDisplayColorimetry()
+        {
+            return new _NV_DISPLAY_COLORIMETRY_V1
+            {
+                version = NVAPI.NV_DISPLAY_COLORIMETRY_VER,
+            };
+        }
+
+        /// <summary>
+        /// Create a custom display struct with the version initialized.
+        /// </summary>
+        public static NV_CUSTOM_DISPLAY CreateCustomDisplay()
+        {
+            return new NV_CUSTOM_DISPLAY
+            {
+                version = NVAPI.NV_CUSTOM_DISPLAY_VER,
+            };
+        }
+
+        /// <summary>
+        /// Create a managed dedicated display info struct with the version initialized.
+        /// </summary>
+        public static _NV_MANAGED_DEDICATED_DISPLAY_INFO CreateManagedDedicatedDisplayInfo()
+        {
+            return new _NV_MANAGED_DEDICATED_DISPLAY_INFO
+            {
+                version = NVAPI.NV_MANAGED_DEDICATED_DISPLAY_INFO_VER,
+            };
+        }
+
+        /// <summary>
+        /// Create a managed dedicated display metadata struct with the version initialized.
+        /// </summary>
+        public static _NV_MANAGED_DEDICATED_DISPLAY_METADATA CreateManagedDedicatedDisplayMetadata()
+        {
+            return new _NV_MANAGED_DEDICATED_DISPLAY_METADATA
+            {
+                version = NVAPI.NV_MANAGED_DEDICATED_DISPLAY_METADATA_VER,
+            };
+        }
+
+        /// <summary>
+        /// Create a display ID info data struct with the version initialized.
+        /// </summary>
+        public static _NV_DISPLAY_ID_INFO_DATA_V1 CreateDisplayIdInfoData()
+        {
+            return new _NV_DISPLAY_ID_INFO_DATA_V1
+            {
+                version = NVAPI.NV_DISPLAY_ID_INFO_DATA_VER,
+            };
+        }
+
+        /// <summary>
+        /// Create a target info data struct with the version initialized.
+        /// </summary>
+        public static _NV_TARGET_INFO_DATA_V1 CreateTargetInfoData()
+        {
+            return new _NV_TARGET_INFO_DATA_V1
+            {
+                version = NVAPI.NV_TARGET_INFO_DATA_VER,
             };
         }
 
@@ -1052,6 +1200,774 @@ namespace NVAPIWrapper
             throw new NVAPIException(status);
         }
 
+        /// <summary>
+        /// Control infoframe data for this display.
+        /// </summary>
+        /// <param name="data">Infoframe data DTO.</param>
+        /// <returns>Updated infoframe data DTO, or null if unavailable.</returns>
+        public unsafe NVAPIInfoFrameDataDto? InfoFrameControl(NVAPIInfoFrameDataDto data)
+        {
+            ThrowIfDisposed();
+
+            if (!TryGetDisplayId(out var displayId))
+                return null;
+
+            var control = GetDelegate<NvApiDispInfoFrameControlDelegate>(
+                NvApiIdDispInfoFrameControl,
+                "NvAPI_Disp_InfoFrameControl");
+
+            var native = data.ToNative();
+            var status = control(displayId, &native);
+            if (status == _NvAPI_Status.NVAPI_OK)
+                return NVAPIInfoFrameDataDto.FromNative(native);
+
+            if (status == _NvAPI_Status.NVAPI_NOT_SUPPORTED || status == _NvAPI_Status.NVAPI_NVIDIA_DEVICE_NOT_FOUND)
+                return null;
+
+            throw new NVAPIException(status);
+        }
+
+        /// <summary>
+        /// Control display color data for this display.
+        /// </summary>
+        /// <param name="colorData">Color data DTO.</param>
+        /// <returns>Updated color data DTO, or null if unavailable.</returns>
+        public unsafe NVAPIDisplayColorDataDto? ColorControl(NVAPIDisplayColorDataDto colorData)
+        {
+            ThrowIfDisposed();
+
+            if (!TryGetDisplayId(out var displayId))
+                return null;
+
+            var control = GetDelegate<NvApiDispColorControlDelegate>(
+                NvApiIdDispColorControl,
+                "NvAPI_Disp_ColorControl");
+
+            var native = colorData.ToNative();
+            var status = control(displayId, &native);
+            if (status == _NvAPI_Status.NVAPI_OK)
+                return NVAPIDisplayColorDataDto.FromNative(native);
+
+            if (status == _NvAPI_Status.NVAPI_NOT_SUPPORTED || status == _NvAPI_Status.NVAPI_NVIDIA_DEVICE_NOT_FOUND)
+                return null;
+
+            throw new NVAPIException(status);
+        }
+
+        /// <summary>
+        /// Get HDR capabilities for this display.
+        /// </summary>
+        /// <returns>HDR capabilities DTO, or null if unavailable.</returns>
+        public unsafe NVAPIHdrCapabilitiesDto? GetHdrCapabilities()
+        {
+            ThrowIfDisposed();
+
+            if (!TryGetDisplayId(out var displayId))
+                return null;
+
+            var getCaps = GetDelegate<NvApiDispGetHdrCapabilitiesDelegate>(
+                NvApiIdDispGetHdrCapabilities,
+                "NvAPI_Disp_GetHdrCapabilities");
+
+            var caps = CreateHdrCapabilities();
+            var status = getCaps(displayId, &caps);
+            if (status == _NvAPI_Status.NVAPI_OK)
+                return NVAPIHdrCapabilitiesDto.FromNative(caps);
+
+            if (status == _NvAPI_Status.NVAPI_NOT_SUPPORTED || status == _NvAPI_Status.NVAPI_NVIDIA_DEVICE_NOT_FOUND)
+                return null;
+
+            throw new NVAPIException(status);
+        }
+
+        /// <summary>
+        /// Control HDR color settings for this display.
+        /// </summary>
+        /// <param name="hdrData">HDR color data DTO.</param>
+        /// <returns>Updated HDR color data DTO, or null if unavailable.</returns>
+        public unsafe NVAPIHdrColorDataDto? HdrColorControl(NVAPIHdrColorDataDto hdrData)
+        {
+            ThrowIfDisposed();
+
+            if (!TryGetDisplayId(out var displayId))
+                return null;
+
+            var control = GetDelegate<NvApiDispHdrColorControlDelegate>(
+                NvApiIdDispHdrColorControl,
+                "NvAPI_Disp_HdrColorControl");
+
+            var native = hdrData.ToNative();
+            var status = control(displayId, &native);
+            if (status == _NvAPI_Status.NVAPI_OK)
+                return NVAPIHdrColorDataDto.FromNative(native);
+
+            if (status == _NvAPI_Status.NVAPI_NOT_SUPPORTED || status == _NvAPI_Status.NVAPI_NVIDIA_DEVICE_NOT_FOUND)
+                return null;
+
+            throw new NVAPIException(status);
+        }
+
+        /// <summary>
+        /// Set the source color space for this display.
+        /// </summary>
+        /// <param name="colorSpaceType">Source color space type.</param>
+        /// <returns>True if applied, false if unavailable.</returns>
+        public unsafe bool SetSourceColorSpace(_NV_COLORSPACE_TYPE colorSpaceType)
+        {
+            ThrowIfDisposed();
+
+            if (!TryGetDisplayId(out var displayId))
+                return false;
+
+            var setColorSpace = GetDelegate<NvApiDispSetSourceColorSpaceDelegate>(
+                NvApiIdDispSetSourceColorSpace,
+                "NvAPI_Disp_SetSourceColorSpace");
+
+            var status = setColorSpace(displayId, colorSpaceType);
+            if (status == _NvAPI_Status.NVAPI_OK)
+                return true;
+
+            if (status == _NvAPI_Status.NVAPI_NOT_SUPPORTED || status == _NvAPI_Status.NVAPI_NVIDIA_DEVICE_NOT_FOUND)
+                return false;
+
+            throw new NVAPIException(status);
+        }
+
+        /// <summary>
+        /// Get the source color space for this display.
+        /// </summary>
+        /// <param name="sourcePid">Source process ID (NV_SOURCE_PID_CURRENT for current).</param>
+        /// <returns>Source color space type, or null if unavailable.</returns>
+        public unsafe _NV_COLORSPACE_TYPE? GetSourceColorSpace(ulong sourcePid = (ulong)NVAPI.NV_SOURCE_PID_CURRENT)
+        {
+            ThrowIfDisposed();
+
+            if (!TryGetDisplayId(out var displayId))
+                return null;
+
+            var getColorSpace = GetDelegate<NvApiDispGetSourceColorSpaceDelegate>(
+                NvApiIdDispGetSourceColorSpace,
+                "NvAPI_Disp_GetSourceColorSpace");
+
+            _NV_COLORSPACE_TYPE colorSpace = default;
+            var status = getColorSpace(displayId, &colorSpace, sourcePid);
+            if (status == _NvAPI_Status.NVAPI_OK)
+                return colorSpace;
+
+            if (status == _NvAPI_Status.NVAPI_NOT_SUPPORTED || status == _NvAPI_Status.NVAPI_NVIDIA_DEVICE_NOT_FOUND)
+                return null;
+
+            throw new NVAPIException(status);
+        }
+
+        /// <summary>
+        /// Set the source HDR metadata for this display.
+        /// </summary>
+        /// <param name="metadata">HDR metadata DTO.</param>
+        /// <returns>True if applied, false if unavailable.</returns>
+        public unsafe bool SetSourceHdrMetadata(NVAPIHdrMetadataDto metadata)
+        {
+            ThrowIfDisposed();
+
+            if (!TryGetDisplayId(out var displayId))
+                return false;
+
+            var setMetadata = GetDelegate<NvApiDispSetSourceHdrMetadataDelegate>(
+                NvApiIdDispSetSourceHdrMetadata,
+                "NvAPI_Disp_SetSourceHdrMetadata");
+
+            var native = metadata.ToNative();
+            var status = setMetadata(displayId, &native);
+            if (status == _NvAPI_Status.NVAPI_OK)
+                return true;
+
+            if (status == _NvAPI_Status.NVAPI_NOT_SUPPORTED || status == _NvAPI_Status.NVAPI_NVIDIA_DEVICE_NOT_FOUND)
+                return false;
+
+            throw new NVAPIException(status);
+        }
+
+        /// <summary>
+        /// Get the source HDR metadata for this display.
+        /// </summary>
+        /// <param name="sourcePid">Source process ID (NV_SOURCE_PID_CURRENT for current).</param>
+        /// <returns>HDR metadata DTO, or null if unavailable.</returns>
+        public unsafe NVAPIHdrMetadataDto? GetSourceHdrMetadata(ulong sourcePid = (ulong)NVAPI.NV_SOURCE_PID_CURRENT)
+        {
+            ThrowIfDisposed();
+
+            if (!TryGetDisplayId(out var displayId))
+                return null;
+
+            var getMetadata = GetDelegate<NvApiDispGetSourceHdrMetadataDelegate>(
+                NvApiIdDispGetSourceHdrMetadata,
+                "NvAPI_Disp_GetSourceHdrMetadata");
+
+            var metadata = CreateHdrMetadata();
+            var status = getMetadata(displayId, &metadata, sourcePid);
+            if (status == _NvAPI_Status.NVAPI_OK)
+                return NVAPIHdrMetadataDto.FromNative(metadata);
+
+            if (status == _NvAPI_Status.NVAPI_NOT_SUPPORTED || status == _NvAPI_Status.NVAPI_NVIDIA_DEVICE_NOT_FOUND)
+                return null;
+
+            throw new NVAPIException(status);
+        }
+
+        /// <summary>
+        /// Set the display output mode for this display.
+        /// </summary>
+        /// <param name="displayMode">Desired output mode.</param>
+        /// <returns>True if applied, false if unavailable.</returns>
+        public unsafe bool SetOutputMode(_NV_DISPLAY_OUTPUT_MODE displayMode)
+        {
+            ThrowIfDisposed();
+
+            if (!TryGetDisplayId(out var displayId))
+                return false;
+
+            var setMode = GetDelegate<NvApiDispSetOutputModeDelegate>(
+                NvApiIdDispSetOutputMode,
+                "NvAPI_Disp_SetOutputMode");
+
+            var mode = displayMode;
+            var status = setMode(displayId, &mode);
+            if (status == _NvAPI_Status.NVAPI_OK)
+                return true;
+
+            if (status == _NvAPI_Status.NVAPI_NOT_SUPPORTED || status == _NvAPI_Status.NVAPI_NVIDIA_DEVICE_NOT_FOUND)
+                return false;
+
+            throw new NVAPIException(status);
+        }
+
+        /// <summary>
+        /// Get the display output mode for this display.
+        /// </summary>
+        /// <returns>Display output mode, or null if unavailable.</returns>
+        public unsafe _NV_DISPLAY_OUTPUT_MODE? GetOutputMode()
+        {
+            ThrowIfDisposed();
+
+            if (!TryGetDisplayId(out var displayId))
+                return null;
+
+            var getMode = GetDelegate<NvApiDispGetOutputModeDelegate>(
+                NvApiIdDispGetOutputMode,
+                "NvAPI_Disp_GetOutputMode");
+
+            _NV_DISPLAY_OUTPUT_MODE mode = default;
+            var status = getMode(displayId, &mode);
+            if (status == _NvAPI_Status.NVAPI_OK)
+                return mode;
+
+            if (status == _NvAPI_Status.NVAPI_NOT_SUPPORTED || status == _NvAPI_Status.NVAPI_NVIDIA_DEVICE_NOT_FOUND)
+                return null;
+
+            throw new NVAPIException(status);
+        }
+
+        /// <summary>
+        /// Set the HDR tone mapping method for this display.
+        /// </summary>
+        /// <param name="hdrTonemapping">HDR tone mapping method.</param>
+        /// <returns>True if applied, false if unavailable.</returns>
+        public unsafe bool SetHdrToneMapping(_NV_HDR_TONEMAPPING_METHOD hdrTonemapping)
+        {
+            ThrowIfDisposed();
+
+            if (!TryGetDisplayId(out var displayId))
+                return false;
+
+            var setToneMapping = GetDelegate<NvApiDispSetHdrToneMappingDelegate>(
+                NvApiIdDispSetHdrToneMapping,
+                "NvAPI_Disp_SetHdrToneMapping");
+
+            var status = setToneMapping(displayId, hdrTonemapping);
+            if (status == _NvAPI_Status.NVAPI_OK)
+                return true;
+
+            if (status == _NvAPI_Status.NVAPI_NOT_SUPPORTED || status == _NvAPI_Status.NVAPI_NVIDIA_DEVICE_NOT_FOUND)
+                return false;
+
+            throw new NVAPIException(status);
+        }
+
+        /// <summary>
+        /// Get the HDR tone mapping method for this display.
+        /// </summary>
+        /// <returns>HDR tone mapping method, or null if unavailable.</returns>
+        public unsafe _NV_HDR_TONEMAPPING_METHOD? GetHdrToneMapping()
+        {
+            ThrowIfDisposed();
+
+            if (!TryGetDisplayId(out var displayId))
+                return null;
+
+            var getToneMapping = GetDelegate<NvApiDispGetHdrToneMappingDelegate>(
+                NvApiIdDispGetHdrToneMapping,
+                "NvAPI_Disp_GetHdrToneMapping");
+
+            _NV_HDR_TONEMAPPING_METHOD toneMapping = default;
+            var status = getToneMapping(displayId, &toneMapping);
+            if (status == _NvAPI_Status.NVAPI_OK)
+                return toneMapping;
+
+            if (status == _NvAPI_Status.NVAPI_NOT_SUPPORTED || status == _NvAPI_Status.NVAPI_NVIDIA_DEVICE_NOT_FOUND)
+                return null;
+
+            throw new NVAPIException(status);
+        }
+
+        /// <summary>
+        /// Get display colorimetry information for this display.
+        /// </summary>
+        /// <returns>Display colorimetry DTO, or null if unavailable.</returns>
+        public unsafe NVAPIDisplayColorimetryDto? GetColorimetry()
+        {
+            ThrowIfDisposed();
+
+            if (!TryGetDisplayId(out var displayId))
+                return null;
+
+            var getColorimetry = GetDelegate<NvApiDispGetColorimetryDelegate>(
+                NvApiIdDispGetColorimetry,
+                "NvAPI_Disp_GetColorimetry");
+
+            var colorimetry = CreateDisplayColorimetry();
+            var status = getColorimetry(displayId, &colorimetry);
+            if (status == _NvAPI_Status.NVAPI_OK)
+                return NVAPIDisplayColorimetryDto.FromNative(colorimetry);
+
+            if (status == _NvAPI_Status.NVAPI_NOT_SUPPORTED || status == _NvAPI_Status.NVAPI_NVIDIA_DEVICE_NOT_FOUND)
+                return null;
+
+            throw new NVAPIException(status);
+        }
+
+        /// <summary>
+        /// Get display ID info for this display.
+        /// </summary>
+        /// <param name="displayId">Optional display ID override.</param>
+        /// <returns>Display ID info DTO, or null if unavailable.</returns>
+        public unsafe NVAPIDisplayIdInfoDto? GetDisplayIdInfo(uint? displayId = null)
+        {
+            ThrowIfDisposed();
+
+            if (!TryResolveDisplayId(displayId, out var resolvedDisplayId))
+                return null;
+
+            var getInfo = GetDelegate<NvApiDispGetDisplayIdInfoDelegate>(
+                NvApiIdDispGetDisplayIdInfo,
+                "NvAPI_Disp_GetDisplayIdInfo");
+
+            var info = CreateDisplayIdInfoData();
+            var status = getInfo(resolvedDisplayId, &info);
+            if (status == _NvAPI_Status.NVAPI_OK)
+                return NVAPIDisplayIdInfoDto.FromNative(info);
+
+            if (status == _NvAPI_Status.NVAPI_NOT_SUPPORTED ||
+                status == _NvAPI_Status.NVAPI_NVIDIA_DEVICE_NOT_FOUND ||
+                status == _NvAPI_Status.NVAPI_INVALID_DISPLAY_ID)
+            {
+                return null;
+            }
+
+            throw new NVAPIException(status);
+        }
+
+        /// <summary>
+        /// Get display IDs for the target associated with this display.
+        /// </summary>
+        /// <returns>Target info DTO, or null if unavailable.</returns>
+        public unsafe NVAPITargetInfoDto? GetDisplayIdsFromTarget()
+        {
+            var info = GetDisplayIdInfo();
+            if (info == null)
+                return null;
+
+            return GetDisplayIdsFromTarget(info.Value.AdapterLuid, info.Value.TargetId);
+        }
+
+        /// <summary>
+        /// Get display IDs for the specified target.
+        /// </summary>
+        /// <param name="adapterLuid">Adapter LUID.</param>
+        /// <param name="targetId">Target ID (AdapterRelativeId).</param>
+        /// <returns>Target info DTO, or null if unavailable.</returns>
+        public unsafe NVAPITargetInfoDto? GetDisplayIdsFromTarget(long adapterLuid, uint targetId)
+        {
+            ThrowIfDisposed();
+
+            var getInfo = GetDelegate<NvApiDispGetDisplayIdsFromTargetDelegate>(
+                NvApiIdDispGetDisplayIdsFromTarget,
+                "NvAPI_Disp_GetDisplayIdsFromTarget");
+
+            var info = CreateTargetInfoData();
+            info.adapterId = CreateLuid(adapterLuid);
+            info.targetId = targetId;
+
+            var status = getInfo(&info);
+            if (status == _NvAPI_Status.NVAPI_OK)
+                return NVAPITargetInfoDto.FromNative(info);
+
+            if (status == _NvAPI_Status.NVAPI_NOT_SUPPORTED ||
+                status == _NvAPI_Status.NVAPI_NVIDIA_DEVICE_NOT_FOUND ||
+                status == _NvAPI_Status.NVAPI_INVALID_DISPLAY_ID)
+            {
+                return null;
+            }
+
+            throw new NVAPIException(status);
+        }
+
+        /// <summary>
+        /// Enumerate a custom display for the specified index.
+        /// </summary>
+        /// <param name="index">Custom display index.</param>
+        /// <param name="displayId">Optional display ID override.</param>
+        /// <returns>Custom display DTO, or null if unavailable.</returns>
+        public unsafe NVAPICustomDisplayDto? EnumCustomDisplay(uint index, uint? displayId = null)
+        {
+            ThrowIfDisposed();
+
+            if (!TryResolveDisplayId(displayId, out var resolvedDisplayId))
+                return null;
+
+            var enumCustom = GetDelegate<NvApiDispEnumCustomDisplayDelegate>(
+                NvApiIdDispEnumCustomDisplay,
+                "NvAPI_DISP_EnumCustomDisplay");
+
+            var custom = CreateCustomDisplay();
+            var status = enumCustom(resolvedDisplayId, index, &custom);
+            if (status == _NvAPI_Status.NVAPI_OK)
+                return NVAPICustomDisplayDto.FromNative(custom);
+
+            if (status == _NvAPI_Status.NVAPI_END_ENUMERATION ||
+                status == _NvAPI_Status.NVAPI_NOT_SUPPORTED ||
+                status == _NvAPI_Status.NVAPI_NVIDIA_DEVICE_NOT_FOUND)
+            {
+                return null;
+            }
+
+            throw new NVAPIException(status);
+        }
+
+        /// <summary>
+        /// Try applying a custom display.
+        /// </summary>
+        /// <param name="displayIds">Display IDs to apply the custom display to.</param>
+        /// <param name="customDisplays">Custom display DTO array.</param>
+        /// <returns>True if applied, false if unavailable.</returns>
+        public unsafe bool TryCustomDisplay(uint[] displayIds, NVAPICustomDisplayDto[] customDisplays)
+        {
+            ThrowIfDisposed();
+
+            if (displayIds == null || customDisplays == null || displayIds.Length == 0)
+                return false;
+
+            if (displayIds.Length != customDisplays.Length)
+                return false;
+
+            var tryCustom = GetDelegate<NvApiDispTryCustomDisplayDelegate>(
+                NvApiIdDispTryCustomDisplay,
+                "NvAPI_DISP_TryCustomDisplay");
+
+            fixed (uint* pDisplayIds = displayIds)
+            {
+                var natives = new NV_CUSTOM_DISPLAY[customDisplays.Length];
+                for (var i = 0; i < customDisplays.Length; i++)
+                {
+                    natives[i] = customDisplays[i].ToNative();
+                }
+
+                fixed (NV_CUSTOM_DISPLAY* pCustom = natives)
+                {
+                    var status = tryCustom(pDisplayIds, (uint)displayIds.Length, pCustom);
+                    if (status == _NvAPI_Status.NVAPI_OK)
+                        return true;
+
+                    if (status == _NvAPI_Status.NVAPI_NOT_SUPPORTED || status == _NvAPI_Status.NVAPI_NVIDIA_DEVICE_NOT_FOUND)
+                        return false;
+
+                    throw new NVAPIException(status);
+                }
+            }
+        }
+
+        /// <summary>
+        /// Delete a custom display.
+        /// </summary>
+        /// <param name="displayIds">Display IDs to delete the custom display from.</param>
+        /// <param name="customDisplays">Custom display DTO array.</param>
+        /// <returns>True if applied, false if unavailable.</returns>
+        public unsafe bool DeleteCustomDisplay(uint[] displayIds, NVAPICustomDisplayDto[] customDisplays)
+        {
+            ThrowIfDisposed();
+
+            if (displayIds == null || customDisplays == null || displayIds.Length == 0)
+                return false;
+
+            if (displayIds.Length != customDisplays.Length)
+                return false;
+
+            var deleteCustom = GetDelegate<NvApiDispDeleteCustomDisplayDelegate>(
+                NvApiIdDispDeleteCustomDisplay,
+                "NvAPI_DISP_DeleteCustomDisplay");
+
+            fixed (uint* pDisplayIds = displayIds)
+            {
+                var natives = new NV_CUSTOM_DISPLAY[customDisplays.Length];
+                for (var i = 0; i < customDisplays.Length; i++)
+                {
+                    natives[i] = customDisplays[i].ToNative();
+                }
+
+                fixed (NV_CUSTOM_DISPLAY* pCustom = natives)
+                {
+                    var status = deleteCustom(pDisplayIds, (uint)displayIds.Length, pCustom);
+                    if (status == _NvAPI_Status.NVAPI_OK)
+                        return true;
+
+                    if (status == _NvAPI_Status.NVAPI_NOT_SUPPORTED || status == _NvAPI_Status.NVAPI_NVIDIA_DEVICE_NOT_FOUND)
+                        return false;
+
+                    throw new NVAPIException(status);
+                }
+            }
+        }
+
+        /// <summary>
+        /// Save custom display settings for the specified displays.
+        /// </summary>
+        /// <param name="displayIds">Display IDs to save.</param>
+        /// <param name="isThisOutputIdOnly">True to apply only to the output ID.</param>
+        /// <param name="isThisMonitorIdOnly">True to apply only to the monitor ID.</param>
+        /// <returns>True if applied, false if unavailable.</returns>
+        public unsafe bool SaveCustomDisplay(uint[] displayIds, bool isThisOutputIdOnly, bool isThisMonitorIdOnly)
+        {
+            ThrowIfDisposed();
+
+            if (displayIds == null || displayIds.Length == 0)
+                return false;
+
+            var saveCustom = GetDelegate<NvApiDispSaveCustomDisplayDelegate>(
+                NvApiIdDispSaveCustomDisplay,
+                "NvAPI_DISP_SaveCustomDisplay");
+
+            fixed (uint* pDisplayIds = displayIds)
+            {
+                var status = saveCustom(
+                    pDisplayIds,
+                    (uint)displayIds.Length,
+                    isThisOutputIdOnly ? 1u : 0u,
+                    isThisMonitorIdOnly ? 1u : 0u);
+
+                if (status == _NvAPI_Status.NVAPI_OK)
+                    return true;
+
+                if (status == _NvAPI_Status.NVAPI_NOT_SUPPORTED || status == _NvAPI_Status.NVAPI_NVIDIA_DEVICE_NOT_FOUND)
+                    return false;
+
+                throw new NVAPIException(status);
+            }
+        }
+
+        /// <summary>
+        /// Revert custom display trial for the specified displays.
+        /// </summary>
+        /// <param name="displayIds">Display IDs to revert.</param>
+        /// <returns>True if applied, false if unavailable.</returns>
+        public unsafe bool RevertCustomDisplayTrial(uint[] displayIds)
+        {
+            ThrowIfDisposed();
+
+            if (displayIds == null || displayIds.Length == 0)
+                return false;
+
+            var revert = GetDelegate<NvApiDispRevertCustomDisplayTrialDelegate>(
+                NvApiIdDispRevertCustomDisplayTrial,
+                "NvAPI_DISP_RevertCustomDisplayTrial");
+
+            fixed (uint* pDisplayIds = displayIds)
+            {
+                var status = revert(pDisplayIds, (uint)displayIds.Length);
+                if (status == _NvAPI_Status.NVAPI_OK)
+                    return true;
+
+                if (status == _NvAPI_Status.NVAPI_NOT_SUPPORTED || status == _NvAPI_Status.NVAPI_NVIDIA_DEVICE_NOT_FOUND)
+                    return false;
+
+                throw new NVAPIException(status);
+            }
+        }
+
+        /// <summary>
+        /// Get NVIDIA managed dedicated display info entries.
+        /// </summary>
+        /// <returns>Array of managed dedicated display info DTOs, or empty if unavailable.</returns>
+        public unsafe NVAPINvManagedDedicatedDisplayInfoDto[] GetNvManagedDedicatedDisplays()
+        {
+            ThrowIfDisposed();
+
+            var getDisplays = GetDelegate<NvApiDispGetNvManagedDedicatedDisplaysDelegate>(
+                NvApiIdDispGetNvManagedDedicatedDisplays,
+                "NvAPI_DISP_GetNvManagedDedicatedDisplays");
+
+            uint count = 0;
+            var status = getDisplays(&count, null);
+            if (status == _NvAPI_Status.NVAPI_NOT_SUPPORTED || status == _NvAPI_Status.NVAPI_NVIDIA_DEVICE_NOT_FOUND)
+                return Array.Empty<NVAPINvManagedDedicatedDisplayInfoDto>();
+
+            if (status != _NvAPI_Status.NVAPI_OK)
+                throw new NVAPIException(status);
+
+            if (count == 0)
+                return Array.Empty<NVAPINvManagedDedicatedDisplayInfoDto>();
+
+            var infos = new _NV_MANAGED_DEDICATED_DISPLAY_INFO[count];
+            for (var i = 0; i < infos.Length; i++)
+            {
+                infos[i].version = NVAPI.NV_MANAGED_DEDICATED_DISPLAY_INFO_VER;
+            }
+
+            fixed (_NV_MANAGED_DEDICATED_DISPLAY_INFO* pInfos = infos)
+            {
+                status = getDisplays(&count, pInfos);
+                if (status == _NvAPI_Status.NVAPI_OK)
+                {
+                    if (count != infos.Length)
+                    {
+                        var trimmed = new _NV_MANAGED_DEDICATED_DISPLAY_INFO[count];
+                        Array.Copy(infos, trimmed, (int)count);
+                        infos = trimmed;
+                    }
+
+                    return NVAPINvManagedDedicatedDisplayInfoDto.FromNative(infos);
+                }
+
+                if (status == _NvAPI_Status.NVAPI_NOT_SUPPORTED || status == _NvAPI_Status.NVAPI_NVIDIA_DEVICE_NOT_FOUND)
+                    return Array.Empty<NVAPINvManagedDedicatedDisplayInfoDto>();
+
+                throw new NVAPIException(status);
+            }
+        }
+
+        /// <summary>
+        /// Acquire a managed dedicated display.
+        /// </summary>
+        /// <param name="displayId">Optional display ID override.</param>
+        /// <returns>Display source handle, or null if unavailable.</returns>
+        public unsafe ulong? AcquireDedicatedDisplay(uint? displayId = null)
+        {
+            ThrowIfDisposed();
+
+            if (!TryResolveDisplayId(displayId, out var resolvedDisplayId))
+                return null;
+
+            var acquire = GetDelegate<NvApiDispAcquireDedicatedDisplayDelegate>(
+                NvApiIdDispAcquireDedicatedDisplay,
+                "NvAPI_DISP_AcquireDedicatedDisplay");
+
+            ulong handle = 0;
+            var status = acquire(resolvedDisplayId, &handle);
+            if (status == _NvAPI_Status.NVAPI_OK)
+                return handle;
+
+            if (status == _NvAPI_Status.NVAPI_NOT_SUPPORTED ||
+                status == _NvAPI_Status.NVAPI_NVIDIA_DEVICE_NOT_FOUND ||
+                status == _NvAPI_Status.NVAPI_UNREGISTERED_RESOURCE ||
+                status == _NvAPI_Status.NVAPI_RESOURCE_IN_USE ||
+                status == _NvAPI_Status.NVAPI_INVALID_DISPLAY_ID)
+            {
+                return null;
+            }
+
+            throw new NVAPIException(status);
+        }
+
+        /// <summary>
+        /// Release a managed dedicated display.
+        /// </summary>
+        /// <param name="displayId">Optional display ID override.</param>
+        /// <returns>True if released, false if unavailable.</returns>
+        public unsafe bool ReleaseDedicatedDisplay(uint? displayId = null)
+        {
+            ThrowIfDisposed();
+
+            if (!TryResolveDisplayId(displayId, out var resolvedDisplayId))
+                return false;
+
+            var release = GetDelegate<NvApiDispReleaseDedicatedDisplayDelegate>(
+                NvApiIdDispReleaseDedicatedDisplay,
+                "NvAPI_DISP_ReleaseDedicatedDisplay");
+
+            var status = release(resolvedDisplayId);
+            if (status == _NvAPI_Status.NVAPI_OK)
+                return true;
+
+            if (status == _NvAPI_Status.NVAPI_NOT_SUPPORTED ||
+                status == _NvAPI_Status.NVAPI_NVIDIA_DEVICE_NOT_FOUND ||
+                status == _NvAPI_Status.NVAPI_UNREGISTERED_RESOURCE ||
+                status == _NvAPI_Status.NVAPI_RESOURCE_NOT_ACQUIRED ||
+                status == _NvAPI_Status.NVAPI_INVALID_DISPLAY_ID)
+            {
+                return false;
+            }
+
+            throw new NVAPIException(status);
+        }
+
+        /// <summary>
+        /// Get metadata for a managed dedicated display.
+        /// </summary>
+        /// <param name="displayId">Display ID to query.</param>
+        /// <returns>Managed dedicated display metadata DTO, or null if unavailable.</returns>
+        public unsafe NVAPINvManagedDedicatedDisplayMetadataDto? GetNvManagedDedicatedDisplayMetadata(uint displayId)
+        {
+            ThrowIfDisposed();
+
+            var getMetadata = GetDelegate<NvApiDispGetNvManagedDedicatedDisplayMetadataDelegate>(
+                NvApiIdDispGetNvManagedDedicatedDisplayMetadata,
+                "NvAPI_DISP_GetNvManagedDedicatedDisplayMetadata");
+
+            var metadata = CreateManagedDedicatedDisplayMetadata();
+            metadata.displayId = displayId;
+
+            var status = getMetadata(&metadata);
+            if (status == _NvAPI_Status.NVAPI_OK)
+                return NVAPINvManagedDedicatedDisplayMetadataDto.FromNative(metadata);
+
+            if (status == _NvAPI_Status.NVAPI_NOT_SUPPORTED || status == _NvAPI_Status.NVAPI_NVIDIA_DEVICE_NOT_FOUND)
+                return null;
+
+            throw new NVAPIException(status);
+        }
+
+        /// <summary>
+        /// Set metadata for a managed dedicated display.
+        /// </summary>
+        /// <param name="metadata">Managed dedicated display metadata DTO.</param>
+        /// <returns>True if applied, false if unavailable.</returns>
+        public unsafe bool SetNvManagedDedicatedDisplayMetadata(NVAPINvManagedDedicatedDisplayMetadataDto metadata)
+        {
+            ThrowIfDisposed();
+
+            var setMetadata = GetDelegate<NvApiDispSetNvManagedDedicatedDisplayMetadataDelegate>(
+                NvApiIdDispSetNvManagedDedicatedDisplayMetadata,
+                "NvAPI_DISP_SetNvManagedDedicatedDisplayMetadata");
+
+            var native = metadata.ToNative();
+            var status = setMetadata(&native);
+            if (status == _NvAPI_Status.NVAPI_OK)
+                return true;
+
+            if (status == _NvAPI_Status.NVAPI_NOT_SUPPORTED || status == _NvAPI_Status.NVAPI_NVIDIA_DEVICE_NOT_FOUND)
+                return false;
+
+            throw new NVAPIException(status);
+        }
+
         private unsafe bool TryGetDisplayId(out uint displayId)
         {
             displayId = 0;
@@ -1090,6 +2006,31 @@ namespace NVAPIWrapper
 
                 throw new NVAPIException(status);
             }
+        }
+
+        private bool TryResolveDisplayId(uint? displayId, out uint resolvedDisplayId)
+        {
+            if (displayId.HasValue)
+            {
+                resolvedDisplayId = displayId.Value;
+                return true;
+            }
+
+            return TryGetDisplayId(out resolvedDisplayId);
+        }
+
+        internal static _LUID CreateLuid(long adapterLuid)
+        {
+            return new _LUID
+            {
+                LowPart = unchecked((uint)adapterLuid),
+                HighPart = unchecked((int)(adapterLuid >> 32))
+            };
+        }
+
+        internal static long ReadLuid(_LUID luid)
+        {
+            return ((long)luid.HighPart << 32) | (uint)luid.LowPart;
         }
 
         private bool TryGetOutputId(uint? outputId, out uint resolvedOutputId)
@@ -1230,6 +2171,81 @@ namespace NVAPIWrapper
 
         [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
         private unsafe delegate _NvAPI_Status NvApiSetRefreshRateOverrideDelegate(NvDisplayHandle__* hNvDisplay, uint outputsMask, float refreshRate, uint bSetDeferred);
+
+        [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
+        private unsafe delegate _NvAPI_Status NvApiDispInfoFrameControlDelegate(uint displayId, NV_INFOFRAME_DATA* pInfoframeData);
+
+        [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
+        private unsafe delegate _NvAPI_Status NvApiDispColorControlDelegate(uint displayId, _NV_COLOR_DATA_V5* pColorData);
+
+        [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
+        private unsafe delegate _NvAPI_Status NvApiDispGetHdrCapabilitiesDelegate(uint displayId, _NV_HDR_CAPABILITIES_V3* pHdrCapabilities);
+
+        [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
+        private unsafe delegate _NvAPI_Status NvApiDispHdrColorControlDelegate(uint displayId, _NV_HDR_COLOR_DATA_V2* pHdrColorData);
+
+        [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
+        private unsafe delegate _NvAPI_Status NvApiDispSetSourceColorSpaceDelegate(uint displayId, _NV_COLORSPACE_TYPE colorSpaceType);
+
+        [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
+        private unsafe delegate _NvAPI_Status NvApiDispGetSourceColorSpaceDelegate(uint displayId, _NV_COLORSPACE_TYPE* pColorSpaceType, ulong sourcePid);
+
+        [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
+        private unsafe delegate _NvAPI_Status NvApiDispSetSourceHdrMetadataDelegate(uint displayId, _NV_HDR_METADATA_V1* pMetadata);
+
+        [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
+        private unsafe delegate _NvAPI_Status NvApiDispGetSourceHdrMetadataDelegate(uint displayId, _NV_HDR_METADATA_V1* pMetadata, ulong sourcePid);
+
+        [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
+        private unsafe delegate _NvAPI_Status NvApiDispSetOutputModeDelegate(uint displayId, _NV_DISPLAY_OUTPUT_MODE* pDisplayMode);
+
+        [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
+        private unsafe delegate _NvAPI_Status NvApiDispGetOutputModeDelegate(uint displayId, _NV_DISPLAY_OUTPUT_MODE* pDisplayMode);
+
+        [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
+        private unsafe delegate _NvAPI_Status NvApiDispSetHdrToneMappingDelegate(uint displayId, _NV_HDR_TONEMAPPING_METHOD hdrTonemapping);
+
+        [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
+        private unsafe delegate _NvAPI_Status NvApiDispGetHdrToneMappingDelegate(uint displayId, _NV_HDR_TONEMAPPING_METHOD* pHdrTonemapping);
+
+        [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
+        private unsafe delegate _NvAPI_Status NvApiDispGetColorimetryDelegate(uint displayId, _NV_DISPLAY_COLORIMETRY_V1* pColorimetry);
+
+        [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
+        private unsafe delegate _NvAPI_Status NvApiDispEnumCustomDisplayDelegate(uint displayId, uint index, NV_CUSTOM_DISPLAY* pCustDisp);
+
+        [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
+        private unsafe delegate _NvAPI_Status NvApiDispTryCustomDisplayDelegate(uint* pDisplayIds, uint count, NV_CUSTOM_DISPLAY* pCustDisp);
+
+        [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
+        private unsafe delegate _NvAPI_Status NvApiDispDeleteCustomDisplayDelegate(uint* pDisplayIds, uint count, NV_CUSTOM_DISPLAY* pCustDisp);
+
+        [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
+        private unsafe delegate _NvAPI_Status NvApiDispSaveCustomDisplayDelegate(uint* pDisplayIds, uint count, uint isThisOutputIdOnly, uint isThisMonitorIdOnly);
+
+        [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
+        private unsafe delegate _NvAPI_Status NvApiDispRevertCustomDisplayTrialDelegate(uint* pDisplayIds, uint count);
+
+        [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
+        private unsafe delegate _NvAPI_Status NvApiDispGetNvManagedDedicatedDisplaysDelegate(uint* pDedicatedDisplayCount, _NV_MANAGED_DEDICATED_DISPLAY_INFO* pDedicatedDisplays);
+
+        [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
+        private unsafe delegate _NvAPI_Status NvApiDispAcquireDedicatedDisplayDelegate(uint displayId, ulong* pDisplaySourceHandle);
+
+        [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
+        private unsafe delegate _NvAPI_Status NvApiDispReleaseDedicatedDisplayDelegate(uint displayId);
+
+        [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
+        private unsafe delegate _NvAPI_Status NvApiDispGetNvManagedDedicatedDisplayMetadataDelegate(_NV_MANAGED_DEDICATED_DISPLAY_METADATA* pDedicatedDisplayMetadata);
+
+        [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
+        private unsafe delegate _NvAPI_Status NvApiDispSetNvManagedDedicatedDisplayMetadataDelegate(_NV_MANAGED_DEDICATED_DISPLAY_METADATA* pDedicatedDisplayMetadata);
+
+        [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
+        private unsafe delegate _NvAPI_Status NvApiDispGetDisplayIdInfoDelegate(uint displayId, _NV_DISPLAY_ID_INFO_DATA_V1* pDisplayIdInfoData);
+
+        [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
+        private unsafe delegate _NvAPI_Status NvApiDispGetDisplayIdsFromTargetDelegate(_NV_TARGET_INFO_DATA_V1* pTargetInfoData);
 
         [StructLayout(LayoutKind.Sequential)]
         private struct Luid
@@ -3136,6 +4152,788 @@ namespace NVAPIWrapper
     }
 
     /// <summary>
+    /// DTO for infoframe data.
+    /// </summary>
+    public readonly struct NVAPIInfoFrameDataDto : IEquatable<NVAPIInfoFrameDataDto>
+    {
+        /// <summary>Native infoframe data.</summary>
+        public NV_INFOFRAME_DATA Data { get; }
+
+        /// <summary>Create an infoframe data DTO.</summary>
+        public NVAPIInfoFrameDataDto(NV_INFOFRAME_DATA data)
+        {
+            Data = data;
+        }
+
+        /// <summary>
+        /// Create a DTO from native infoframe data.
+        /// </summary>
+        /// <param name="native">Native infoframe data.</param>
+        /// <returns>Infoframe data DTO.</returns>
+        public static NVAPIInfoFrameDataDto FromNative(NV_INFOFRAME_DATA native)
+        {
+            return new NVAPIInfoFrameDataDto(native);
+        }
+
+        /// <summary>
+        /// Convert this DTO to native infoframe data.
+        /// </summary>
+        /// <returns>Native infoframe data.</returns>
+        public NV_INFOFRAME_DATA ToNative()
+        {
+            var native = Data;
+            if (native.version == 0)
+            {
+                native.version = NVAPI.NV_INFOFRAME_DATA_VER;
+            }
+
+            if (native.size == 0)
+            {
+                native.size = (ushort)Marshal.SizeOf<NV_INFOFRAME_DATA>();
+            }
+
+            return native;
+        }
+
+        /// <inheritdoc />
+        public bool Equals(NVAPIInfoFrameDataDto other) => Data.Equals(other.Data);
+
+        /// <inheritdoc />
+        public override bool Equals(object? obj) => obj is NVAPIInfoFrameDataDto other && Equals(other);
+
+        /// <inheritdoc />
+        public override int GetHashCode() => Data.GetHashCode();
+
+        /// <summary>Compare infoframe data DTOs.</summary>
+        public static bool operator ==(NVAPIInfoFrameDataDto left, NVAPIInfoFrameDataDto right) => left.Equals(right);
+
+        /// <summary>Compare infoframe data DTOs.</summary>
+        public static bool operator !=(NVAPIInfoFrameDataDto left, NVAPIInfoFrameDataDto right) => !left.Equals(right);
+    }
+
+    /// <summary>
+    /// DTO for display color data.
+    /// </summary>
+    public readonly struct NVAPIDisplayColorDataDto : IEquatable<NVAPIDisplayColorDataDto>
+    {
+        /// <summary>Native color data.</summary>
+        public _NV_COLOR_DATA_V5 Data { get; }
+
+        /// <summary>Create a display color data DTO.</summary>
+        public NVAPIDisplayColorDataDto(_NV_COLOR_DATA_V5 data)
+        {
+            Data = data;
+        }
+
+        /// <summary>
+        /// Create a DTO from native color data.
+        /// </summary>
+        /// <param name="native">Native color data.</param>
+        /// <returns>Display color data DTO.</returns>
+        public static NVAPIDisplayColorDataDto FromNative(_NV_COLOR_DATA_V5 native)
+        {
+            return new NVAPIDisplayColorDataDto(native);
+        }
+
+        /// <summary>
+        /// Convert this DTO to native color data.
+        /// </summary>
+        /// <returns>Native color data.</returns>
+        public _NV_COLOR_DATA_V5 ToNative()
+        {
+            var native = Data;
+            if (native.version == 0)
+            {
+                native.version = NVAPI.NV_COLOR_DATA_VER;
+            }
+
+            if (native.size == 0)
+            {
+                native.size = (ushort)Marshal.SizeOf<_NV_COLOR_DATA_V5>();
+            }
+
+            return native;
+        }
+
+        /// <inheritdoc />
+        public bool Equals(NVAPIDisplayColorDataDto other) => Data.Equals(other.Data);
+
+        /// <inheritdoc />
+        public override bool Equals(object? obj) => obj is NVAPIDisplayColorDataDto other && Equals(other);
+
+        /// <inheritdoc />
+        public override int GetHashCode() => Data.GetHashCode();
+
+        /// <summary>Compare display color data DTOs.</summary>
+        public static bool operator ==(NVAPIDisplayColorDataDto left, NVAPIDisplayColorDataDto right) => left.Equals(right);
+
+        /// <summary>Compare display color data DTOs.</summary>
+        public static bool operator !=(NVAPIDisplayColorDataDto left, NVAPIDisplayColorDataDto right) => !left.Equals(right);
+    }
+
+    /// <summary>
+    /// DTO for HDR capabilities.
+    /// </summary>
+    public readonly struct NVAPIHdrCapabilitiesDto : IEquatable<NVAPIHdrCapabilitiesDto>
+    {
+        /// <summary>Native HDR capabilities.</summary>
+        public _NV_HDR_CAPABILITIES_V3 Capabilities { get; }
+
+        /// <summary>Create an HDR capabilities DTO.</summary>
+        public NVAPIHdrCapabilitiesDto(_NV_HDR_CAPABILITIES_V3 capabilities)
+        {
+            Capabilities = capabilities;
+        }
+
+        /// <summary>
+        /// Create a DTO from native HDR capabilities.
+        /// </summary>
+        /// <param name="native">Native HDR capabilities.</param>
+        /// <returns>HDR capabilities DTO.</returns>
+        public static NVAPIHdrCapabilitiesDto FromNative(_NV_HDR_CAPABILITIES_V3 native)
+        {
+            return new NVAPIHdrCapabilitiesDto(native);
+        }
+
+        /// <summary>
+        /// Convert this DTO to native HDR capabilities.
+        /// </summary>
+        /// <returns>Native HDR capabilities.</returns>
+        public _NV_HDR_CAPABILITIES_V3 ToNative()
+        {
+            var native = Capabilities;
+            if (native.version == 0)
+            {
+                native.version = NVAPI.NV_HDR_CAPABILITIES_VER;
+            }
+
+            return native;
+        }
+
+        /// <summary>
+        /// True if any HDR capability flag is set.
+        /// </summary>
+        public bool IsHdrSupported =>
+            Capabilities.isST2084EotfSupported != 0 ||
+            Capabilities.isTraditionalHdrGammaSupported != 0 ||
+            Capabilities.isEdrSupported != 0 ||
+            Capabilities.isDolbyVisionSupported != 0 ||
+            Capabilities.isHdr10PlusSupported != 0 ||
+            Capabilities.isHdr10PlusGamingSupported != 0;
+
+        /// <inheritdoc />
+        public bool Equals(NVAPIHdrCapabilitiesDto other) => Capabilities.Equals(other.Capabilities);
+
+        /// <inheritdoc />
+        public override bool Equals(object? obj) => obj is NVAPIHdrCapabilitiesDto other && Equals(other);
+
+        /// <inheritdoc />
+        public override int GetHashCode() => Capabilities.GetHashCode();
+
+        /// <summary>Compare HDR capabilities DTOs.</summary>
+        public static bool operator ==(NVAPIHdrCapabilitiesDto left, NVAPIHdrCapabilitiesDto right) => left.Equals(right);
+
+        /// <summary>Compare HDR capabilities DTOs.</summary>
+        public static bool operator !=(NVAPIHdrCapabilitiesDto left, NVAPIHdrCapabilitiesDto right) => !left.Equals(right);
+    }
+
+    /// <summary>
+    /// DTO for HDR color data.
+    /// </summary>
+    public readonly struct NVAPIHdrColorDataDto : IEquatable<NVAPIHdrColorDataDto>
+    {
+        /// <summary>Native HDR color data.</summary>
+        public _NV_HDR_COLOR_DATA_V2 Data { get; }
+
+        /// <summary>Create an HDR color data DTO.</summary>
+        public NVAPIHdrColorDataDto(_NV_HDR_COLOR_DATA_V2 data)
+        {
+            Data = data;
+        }
+
+        /// <summary>
+        /// Create a DTO from native HDR color data.
+        /// </summary>
+        /// <param name="native">Native HDR color data.</param>
+        /// <returns>HDR color data DTO.</returns>
+        public static NVAPIHdrColorDataDto FromNative(_NV_HDR_COLOR_DATA_V2 native)
+        {
+            return new NVAPIHdrColorDataDto(native);
+        }
+
+        /// <summary>
+        /// Convert this DTO to native HDR color data.
+        /// </summary>
+        /// <returns>Native HDR color data.</returns>
+        public _NV_HDR_COLOR_DATA_V2 ToNative()
+        {
+            var native = Data;
+            if (native.version == 0)
+            {
+                native.version = NVAPI.NV_HDR_COLOR_DATA_VER;
+            }
+
+            return native;
+        }
+
+        /// <inheritdoc />
+        public bool Equals(NVAPIHdrColorDataDto other) => Data.Equals(other.Data);
+
+        /// <inheritdoc />
+        public override bool Equals(object? obj) => obj is NVAPIHdrColorDataDto other && Equals(other);
+
+        /// <inheritdoc />
+        public override int GetHashCode() => Data.GetHashCode();
+
+        /// <summary>Compare HDR color data DTOs.</summary>
+        public static bool operator ==(NVAPIHdrColorDataDto left, NVAPIHdrColorDataDto right) => left.Equals(right);
+
+        /// <summary>Compare HDR color data DTOs.</summary>
+        public static bool operator !=(NVAPIHdrColorDataDto left, NVAPIHdrColorDataDto right) => !left.Equals(right);
+    }
+
+    /// <summary>
+    /// DTO for HDR metadata.
+    /// </summary>
+    public readonly struct NVAPIHdrMetadataDto : IEquatable<NVAPIHdrMetadataDto>
+    {
+        /// <summary>Native HDR metadata.</summary>
+        public _NV_HDR_METADATA_V1 Metadata { get; }
+
+        /// <summary>Create an HDR metadata DTO.</summary>
+        public NVAPIHdrMetadataDto(_NV_HDR_METADATA_V1 metadata)
+        {
+            Metadata = metadata;
+        }
+
+        /// <summary>
+        /// Create a DTO from native HDR metadata.
+        /// </summary>
+        /// <param name="native">Native HDR metadata.</param>
+        /// <returns>HDR metadata DTO.</returns>
+        public static NVAPIHdrMetadataDto FromNative(_NV_HDR_METADATA_V1 native)
+        {
+            return new NVAPIHdrMetadataDto(native);
+        }
+
+        /// <summary>
+        /// Convert this DTO to native HDR metadata.
+        /// </summary>
+        /// <returns>Native HDR metadata.</returns>
+        public _NV_HDR_METADATA_V1 ToNative()
+        {
+            var native = Metadata;
+            if (native.version == 0)
+            {
+                native.version = NVAPI.NV_HDR_METADATA_VER;
+            }
+
+            return native;
+        }
+
+        /// <inheritdoc />
+        public bool Equals(NVAPIHdrMetadataDto other) => Metadata.Equals(other.Metadata);
+
+        /// <inheritdoc />
+        public override bool Equals(object? obj) => obj is NVAPIHdrMetadataDto other && Equals(other);
+
+        /// <inheritdoc />
+        public override int GetHashCode() => Metadata.GetHashCode();
+
+        /// <summary>Compare HDR metadata DTOs.</summary>
+        public static bool operator ==(NVAPIHdrMetadataDto left, NVAPIHdrMetadataDto right) => left.Equals(right);
+
+        /// <summary>Compare HDR metadata DTOs.</summary>
+        public static bool operator !=(NVAPIHdrMetadataDto left, NVAPIHdrMetadataDto right) => !left.Equals(right);
+    }
+
+    /// <summary>
+    /// DTO for display colorimetry.
+    /// </summary>
+    public readonly struct NVAPIDisplayColorimetryDto : IEquatable<NVAPIDisplayColorimetryDto>
+    {
+        /// <summary>Native display colorimetry.</summary>
+        public _NV_DISPLAY_COLORIMETRY_V1 Colorimetry { get; }
+
+        /// <summary>Create a display colorimetry DTO.</summary>
+        public NVAPIDisplayColorimetryDto(_NV_DISPLAY_COLORIMETRY_V1 colorimetry)
+        {
+            Colorimetry = colorimetry;
+        }
+
+        /// <summary>
+        /// Create a DTO from native display colorimetry.
+        /// </summary>
+        /// <param name="native">Native display colorimetry.</param>
+        /// <returns>Display colorimetry DTO.</returns>
+        public static NVAPIDisplayColorimetryDto FromNative(_NV_DISPLAY_COLORIMETRY_V1 native)
+        {
+            return new NVAPIDisplayColorimetryDto(native);
+        }
+
+        /// <summary>
+        /// Convert this DTO to native display colorimetry.
+        /// </summary>
+        /// <returns>Native display colorimetry.</returns>
+        public _NV_DISPLAY_COLORIMETRY_V1 ToNative()
+        {
+            var native = Colorimetry;
+            if (native.version == 0)
+            {
+                native.version = NVAPI.NV_DISPLAY_COLORIMETRY_VER;
+            }
+
+            return native;
+        }
+
+        /// <inheritdoc />
+        public bool Equals(NVAPIDisplayColorimetryDto other) => Colorimetry.Equals(other.Colorimetry);
+
+        /// <inheritdoc />
+        public override bool Equals(object? obj) => obj is NVAPIDisplayColorimetryDto other && Equals(other);
+
+        /// <inheritdoc />
+        public override int GetHashCode() => Colorimetry.GetHashCode();
+
+        /// <summary>Compare display colorimetry DTOs.</summary>
+        public static bool operator ==(NVAPIDisplayColorimetryDto left, NVAPIDisplayColorimetryDto right) => left.Equals(right);
+
+        /// <summary>Compare display colorimetry DTOs.</summary>
+        public static bool operator !=(NVAPIDisplayColorimetryDto left, NVAPIDisplayColorimetryDto right) => !left.Equals(right);
+    }
+
+    /// <summary>
+    /// DTO for custom display.
+    /// </summary>
+    public readonly struct NVAPICustomDisplayDto : IEquatable<NVAPICustomDisplayDto>
+    {
+        /// <summary>Native custom display.</summary>
+        public NV_CUSTOM_DISPLAY CustomDisplay { get; }
+
+        /// <summary>Create a custom display DTO.</summary>
+        public NVAPICustomDisplayDto(NV_CUSTOM_DISPLAY customDisplay)
+        {
+            CustomDisplay = customDisplay;
+        }
+
+        /// <summary>
+        /// Create a DTO from native custom display.
+        /// </summary>
+        /// <param name="native">Native custom display.</param>
+        /// <returns>Custom display DTO.</returns>
+        public static NVAPICustomDisplayDto FromNative(NV_CUSTOM_DISPLAY native)
+        {
+            return new NVAPICustomDisplayDto(native);
+        }
+
+        /// <summary>
+        /// Convert this DTO to native custom display.
+        /// </summary>
+        /// <returns>Native custom display.</returns>
+        public NV_CUSTOM_DISPLAY ToNative()
+        {
+            var native = CustomDisplay;
+            if (native.version == 0)
+            {
+                native.version = NVAPI.NV_CUSTOM_DISPLAY_VER;
+            }
+
+            return native;
+        }
+
+        /// <inheritdoc />
+        public bool Equals(NVAPICustomDisplayDto other) => CustomDisplay.Equals(other.CustomDisplay);
+
+        /// <inheritdoc />
+        public override bool Equals(object? obj) => obj is NVAPICustomDisplayDto other && Equals(other);
+
+        /// <inheritdoc />
+        public override int GetHashCode() => CustomDisplay.GetHashCode();
+
+        /// <summary>Compare custom display DTOs.</summary>
+        public static bool operator ==(NVAPICustomDisplayDto left, NVAPICustomDisplayDto right) => left.Equals(right);
+
+        /// <summary>Compare custom display DTOs.</summary>
+        public static bool operator !=(NVAPICustomDisplayDto left, NVAPICustomDisplayDto right) => !left.Equals(right);
+    }
+
+    /// <summary>
+    /// DTO for NVIDIA managed dedicated display info.
+    /// </summary>
+    public readonly struct NVAPINvManagedDedicatedDisplayInfoDto : IEquatable<NVAPINvManagedDedicatedDisplayInfoDto>
+    {
+        /// <summary>Display ID.</summary>
+        public uint DisplayId { get; }
+
+        /// <summary>True if acquired by another process.</summary>
+        public bool IsAcquired { get; }
+
+        /// <summary>True if part of a Mosaic grid.</summary>
+        public bool IsMosaic { get; }
+
+        /// <summary>Create a managed dedicated display info DTO.</summary>
+        public NVAPINvManagedDedicatedDisplayInfoDto(uint displayId, bool isAcquired, bool isMosaic)
+        {
+            DisplayId = displayId;
+            IsAcquired = isAcquired;
+            IsMosaic = isMosaic;
+        }
+
+        /// <summary>
+        /// Create a DTO from native managed dedicated display info.
+        /// </summary>
+        /// <param name="native">Native managed dedicated display info.</param>
+        /// <returns>Managed dedicated display info DTO.</returns>
+        public static NVAPINvManagedDedicatedDisplayInfoDto FromNative(_NV_MANAGED_DEDICATED_DISPLAY_INFO native)
+        {
+            return new NVAPINvManagedDedicatedDisplayInfoDto(
+                native.displayId,
+                native.isAcquired != 0,
+                native.isMosaic != 0);
+        }
+
+        /// <summary>
+        /// Create DTOs from a native managed dedicated display info array.
+        /// </summary>
+        /// <param name="native">Native managed dedicated display info array.</param>
+        /// <returns>Managed dedicated display info DTO array.</returns>
+        public static NVAPINvManagedDedicatedDisplayInfoDto[] FromNative(_NV_MANAGED_DEDICATED_DISPLAY_INFO[] native)
+        {
+            if (native == null || native.Length == 0)
+                return Array.Empty<NVAPINvManagedDedicatedDisplayInfoDto>();
+
+            var result = new NVAPINvManagedDedicatedDisplayInfoDto[native.Length];
+            for (var i = 0; i < native.Length; i++)
+            {
+                result[i] = FromNative(native[i]);
+            }
+
+            return result;
+        }
+
+        /// <inheritdoc />
+        public bool Equals(NVAPINvManagedDedicatedDisplayInfoDto other)
+        {
+            return DisplayId == other.DisplayId &&
+                   IsAcquired == other.IsAcquired &&
+                   IsMosaic == other.IsMosaic;
+        }
+
+        /// <inheritdoc />
+        public override bool Equals(object? obj) => obj is NVAPINvManagedDedicatedDisplayInfoDto other && Equals(other);
+
+        /// <inheritdoc />
+        public override int GetHashCode()
+        {
+            unchecked
+            {
+                var hash = DisplayId.GetHashCode();
+                hash = (hash * 31) + IsAcquired.GetHashCode();
+                hash = (hash * 31) + IsMosaic.GetHashCode();
+                return hash;
+            }
+        }
+
+        /// <summary>Compare managed dedicated display info DTOs.</summary>
+        public static bool operator ==(NVAPINvManagedDedicatedDisplayInfoDto left, NVAPINvManagedDedicatedDisplayInfoDto right) => left.Equals(right);
+
+        /// <summary>Compare managed dedicated display info DTOs.</summary>
+        public static bool operator !=(NVAPINvManagedDedicatedDisplayInfoDto left, NVAPINvManagedDedicatedDisplayInfoDto right) => !left.Equals(right);
+    }
+
+    /// <summary>
+    /// DTO for NVIDIA managed dedicated display metadata.
+    /// </summary>
+    public readonly struct NVAPINvManagedDedicatedDisplayMetadataDto : IEquatable<NVAPINvManagedDedicatedDisplayMetadataDto>
+    {
+        public uint DisplayId { get; }
+        public bool SetPosition { get; }
+        public bool RemovePosition { get; }
+        public bool PositionIsAvailable { get; }
+        public bool SetName { get; }
+        public bool RemoveName { get; }
+        public bool NameIsAvailable { get; }
+        public uint Reserved { get; }
+        public int PositionX { get; }
+        public int PositionY { get; }
+        public string Name { get; }
+
+        public NVAPINvManagedDedicatedDisplayMetadataDto(
+            uint displayId,
+            bool setPosition,
+            bool removePosition,
+            bool positionIsAvailable,
+            bool setName,
+            bool removeName,
+            bool nameIsAvailable,
+            uint reserved,
+            int positionX,
+            int positionY,
+            string name)
+        {
+            DisplayId = displayId;
+            SetPosition = setPosition;
+            RemovePosition = removePosition;
+            PositionIsAvailable = positionIsAvailable;
+            SetName = setName;
+            RemoveName = removeName;
+            NameIsAvailable = nameIsAvailable;
+            Reserved = reserved;
+            PositionX = positionX;
+            PositionY = positionY;
+            Name = name ?? string.Empty;
+        }
+
+        public static NVAPINvManagedDedicatedDisplayMetadataDto FromNative(_NV_MANAGED_DEDICATED_DISPLAY_METADATA native)
+        {
+            var name = NVAPIDisplayHelperString.ReadShortString(ref native.name.e0);
+            return new NVAPINvManagedDedicatedDisplayMetadataDto(
+                native.displayId,
+                native.bSetPosition != 0,
+                native.bRemovePosition != 0,
+                native.bPositionIsAvailable != 0,
+                native.bSetName != 0,
+                native.bRemoveName != 0,
+                native.bNameIsAvailable != 0,
+                native.reserved,
+                native.positionX,
+                native.positionY,
+                name);
+        }
+
+        public _NV_MANAGED_DEDICATED_DISPLAY_METADATA ToNative()
+        {
+            var native = new _NV_MANAGED_DEDICATED_DISPLAY_METADATA
+            {
+                version = NVAPI.NV_MANAGED_DEDICATED_DISPLAY_METADATA_VER,
+                displayId = DisplayId,
+                bSetPosition = SetPosition ? 1u : 0u,
+                bRemovePosition = RemovePosition ? 1u : 0u,
+                bPositionIsAvailable = PositionIsAvailable ? 1u : 0u,
+                bSetName = SetName ? 1u : 0u,
+                bRemoveName = RemoveName ? 1u : 0u,
+                bNameIsAvailable = NameIsAvailable ? 1u : 0u,
+                reserved = Reserved,
+                positionX = PositionX,
+                positionY = PositionY
+            };
+
+            var span = MemoryMarshal.CreateSpan(ref native.name.e0, NVAPI.NVAPI_SHORT_STRING_MAX);
+            NVAPIDisplayHelperString.WriteShortString(span, Name);
+            return native;
+        }
+
+        public bool Equals(NVAPINvManagedDedicatedDisplayMetadataDto other)
+        {
+            return DisplayId == other.DisplayId
+                && SetPosition == other.SetPosition
+                && RemovePosition == other.RemovePosition
+                && PositionIsAvailable == other.PositionIsAvailable
+                && SetName == other.SetName
+                && RemoveName == other.RemoveName
+                && NameIsAvailable == other.NameIsAvailable
+                && Reserved == other.Reserved
+                && PositionX == other.PositionX
+                && PositionY == other.PositionY
+                && string.Equals(Name, other.Name, StringComparison.Ordinal);
+        }
+
+        public override bool Equals(object? obj) => obj is NVAPINvManagedDedicatedDisplayMetadataDto other && Equals(other);
+
+        public override int GetHashCode()
+        {
+            unchecked
+            {
+                var hash = DisplayId.GetHashCode();
+                hash = (hash * 31) + SetPosition.GetHashCode();
+                hash = (hash * 31) + RemovePosition.GetHashCode();
+                hash = (hash * 31) + PositionIsAvailable.GetHashCode();
+                hash = (hash * 31) + SetName.GetHashCode();
+                hash = (hash * 31) + RemoveName.GetHashCode();
+                hash = (hash * 31) + NameIsAvailable.GetHashCode();
+                hash = (hash * 31) + Reserved.GetHashCode();
+                hash = (hash * 31) + PositionX.GetHashCode();
+                hash = (hash * 31) + PositionY.GetHashCode();
+                hash = (hash * 31) + StringComparer.Ordinal.GetHashCode(Name);
+                return hash;
+            }
+        }
+
+        public static bool operator ==(NVAPINvManagedDedicatedDisplayMetadataDto left, NVAPINvManagedDedicatedDisplayMetadataDto right) => left.Equals(right);
+        public static bool operator !=(NVAPINvManagedDedicatedDisplayMetadataDto left, NVAPINvManagedDedicatedDisplayMetadataDto right) => !left.Equals(right);
+    }
+
+    /// <summary>
+    /// DTO for display ID info data.
+    /// </summary>
+    public readonly struct NVAPIDisplayIdInfoDto : IEquatable<NVAPIDisplayIdInfoDto>
+    {
+        public long AdapterLuid { get; }
+        public uint TargetId { get; }
+        public uint[] Reserved { get; }
+
+        public NVAPIDisplayIdInfoDto(long adapterLuid, uint targetId, uint[] reserved)
+        {
+            AdapterLuid = adapterLuid;
+            TargetId = targetId;
+            Reserved = reserved ?? Array.Empty<uint>();
+        }
+
+        public static NVAPIDisplayIdInfoDto FromNative(_NV_DISPLAY_ID_INFO_DATA_V1 native)
+        {
+            var reserved = new uint[4];
+            var span = MemoryMarshal.CreateSpan(ref native.reserved.e0, 4);
+            span.CopyTo(reserved);
+
+            return new NVAPIDisplayIdInfoDto(
+                NVAPIDisplayHelper.ReadLuid(native.adapterId),
+                native.targetId,
+                reserved);
+        }
+
+        public _NV_DISPLAY_ID_INFO_DATA_V1 ToNative()
+        {
+            var native = new _NV_DISPLAY_ID_INFO_DATA_V1
+            {
+                version = NVAPI.NV_DISPLAY_ID_INFO_DATA_VER,
+                adapterId = NVAPIDisplayHelper.CreateLuid(AdapterLuid),
+                targetId = TargetId
+            };
+
+            var span = MemoryMarshal.CreateSpan(ref native.reserved.e0, 4);
+            var source = Reserved ?? Array.Empty<uint>();
+            var count = Math.Min(source.Length, 4);
+            for (var i = 0; i < count; i++)
+            {
+                span[i] = source[i];
+            }
+
+            return native;
+        }
+
+        public bool Equals(NVAPIDisplayIdInfoDto other)
+        {
+            return AdapterLuid == other.AdapterLuid
+                && TargetId == other.TargetId
+                && DtoHelpers.SequenceEquals(Reserved, other.Reserved);
+        }
+
+        public override bool Equals(object? obj) => obj is NVAPIDisplayIdInfoDto other && Equals(other);
+
+        public override int GetHashCode()
+        {
+            unchecked
+            {
+                var hash = AdapterLuid.GetHashCode();
+                hash = (hash * 31) + TargetId.GetHashCode();
+                hash = (hash * 31) + DtoHelpers.SequenceHashCode(Reserved);
+                return hash;
+            }
+        }
+
+        public static bool operator ==(NVAPIDisplayIdInfoDto left, NVAPIDisplayIdInfoDto right) => left.Equals(right);
+        public static bool operator !=(NVAPIDisplayIdInfoDto left, NVAPIDisplayIdInfoDto right) => !left.Equals(right);
+    }
+
+    /// <summary>
+    /// DTO for target info data.
+    /// </summary>
+    public readonly struct NVAPITargetInfoDto : IEquatable<NVAPITargetInfoDto>
+    {
+        public long AdapterLuid { get; }
+        public uint TargetId { get; }
+        public uint[] DisplayIds { get; }
+        public uint DisplayIdCount { get; }
+        public uint[] Reserved { get; }
+
+        public NVAPITargetInfoDto(long adapterLuid, uint targetId, uint[] displayIds, uint displayIdCount, uint[] reserved)
+        {
+            AdapterLuid = adapterLuid;
+            TargetId = targetId;
+            DisplayIds = displayIds ?? Array.Empty<uint>();
+            DisplayIdCount = displayIdCount;
+            Reserved = reserved ?? Array.Empty<uint>();
+        }
+
+        public static NVAPITargetInfoDto FromNative(_NV_TARGET_INFO_DATA_V1 native)
+        {
+            var count = (int)Math.Min(native.displayIdCount, NVAPI.NVAPI_MAX_DISPLAYS);
+            var displayIds = new uint[count];
+            var displaySpan = MemoryMarshal.CreateSpan(ref native.displayId.e0, NVAPI.NVAPI_MAX_DISPLAYS);
+            displaySpan.Slice(0, count).CopyTo(displayIds);
+
+            var reserved = new uint[4];
+            var reservedSpan = MemoryMarshal.CreateSpan(ref native.reserved.e0, 4);
+            reservedSpan.CopyTo(reserved);
+
+            return new NVAPITargetInfoDto(
+                NVAPIDisplayHelper.ReadLuid(native.adapterId),
+                native.targetId,
+                displayIds,
+                native.displayIdCount,
+                reserved);
+        }
+
+        public _NV_TARGET_INFO_DATA_V1 ToNative()
+        {
+            var native = new _NV_TARGET_INFO_DATA_V1
+            {
+                version = NVAPI.NV_TARGET_INFO_DATA_VER,
+                adapterId = NVAPIDisplayHelper.CreateLuid(AdapterLuid),
+                targetId = TargetId
+            };
+
+            var displaySpan = MemoryMarshal.CreateSpan(ref native.displayId.e0, NVAPI.NVAPI_MAX_DISPLAYS);
+            displaySpan.Clear();
+            var source = DisplayIds ?? Array.Empty<uint>();
+            var count = Math.Min(source.Length, NVAPI.NVAPI_MAX_DISPLAYS);
+            for (var i = 0; i < count; i++)
+            {
+                displaySpan[i] = source[i];
+            }
+
+            native.displayIdCount = (uint)count;
+
+            var reservedSpan = MemoryMarshal.CreateSpan(ref native.reserved.e0, 4);
+            var reservedSource = Reserved ?? Array.Empty<uint>();
+            var reservedCount = Math.Min(reservedSource.Length, 4);
+            for (var i = 0; i < reservedCount; i++)
+            {
+                reservedSpan[i] = reservedSource[i];
+            }
+
+            return native;
+        }
+
+        public bool Equals(NVAPITargetInfoDto other)
+        {
+            return AdapterLuid == other.AdapterLuid
+                && TargetId == other.TargetId
+                && DisplayIdCount == other.DisplayIdCount
+                && DtoHelpers.SequenceEquals(DisplayIds, other.DisplayIds)
+                && DtoHelpers.SequenceEquals(Reserved, other.Reserved);
+        }
+
+        public override bool Equals(object? obj) => obj is NVAPITargetInfoDto other && Equals(other);
+
+        public override int GetHashCode()
+        {
+            unchecked
+            {
+                var hash = AdapterLuid.GetHashCode();
+                hash = (hash * 31) + TargetId.GetHashCode();
+                hash = (hash * 31) + DisplayIdCount.GetHashCode();
+                hash = (hash * 31) + DtoHelpers.SequenceHashCode(DisplayIds);
+                hash = (hash * 31) + DtoHelpers.SequenceHashCode(Reserved);
+                return hash;
+            }
+        }
+
+        public static bool operator ==(NVAPITargetInfoDto left, NVAPITargetInfoDto right) => left.Equals(right);
+        public static bool operator !=(NVAPITargetInfoDto left, NVAPITargetInfoDto right) => !left.Equals(right);
+    }
+
+    /// <summary>
     /// DTO for preferred stereo display.
     /// </summary>
     public readonly struct NVAPIPreferredStereoDisplayDto : IEquatable<NVAPIPreferredStereoDisplayDto>
@@ -3229,6 +5027,45 @@ namespace NVAPIWrapper
 
         public static bool operator ==(NVAPIGpuAndOutputIdDto left, NVAPIGpuAndOutputIdDto right) => left.Equals(right);
         public static bool operator !=(NVAPIGpuAndOutputIdDto left, NVAPIGpuAndOutputIdDto right) => !left.Equals(right);
+    }
+
+    /// <summary>
+    /// InfoFrame property type values. No official constants are available, so this is a safe placeholder.
+    /// </summary>
+    public enum NV_INFOFRAME_PROPERTY_TYPE : byte
+    {
+        /// <summary>
+        /// No documentation exists that specifies the values for this field, so defaulting to zero.
+        /// </summary>
+        NV_INFOFRAME_PROPERTY_TYPE_UNKNOWN = 0
+    }
+
+    internal static class NVAPIDisplayHelperString
+    {
+        public static unsafe string ReadShortString(ref sbyte first)
+        {
+            fixed (sbyte* p = &first)
+            {
+                return Marshal.PtrToStringAnsi((IntPtr)p) ?? string.Empty;
+            }
+        }
+
+        public static void WriteShortString(Span<sbyte> destination, string value)
+        {
+            destination.Clear();
+            if (string.IsNullOrEmpty(value) || destination.Length == 0)
+                return;
+
+            var max = destination.Length - 1;
+            var bytes = Encoding.ASCII.GetBytes(value);
+            var length = Math.Min(bytes.Length, max);
+            for (var i = 0; i < length; i++)
+            {
+                destination[i] = (sbyte)bytes[i];
+            }
+
+            destination[length] = 0;
+        }
     }
 
     internal static class DtoHelpers
