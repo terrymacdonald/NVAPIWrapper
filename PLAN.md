@@ -194,12 +194,13 @@ Deliverable:
 - Phase 3 is complete (NVAPINative loader, NVAPIApi initialization/unload, NVAPIException, function availability map, and enumeration helpers).
 - Phase 4 is complete (BasicApiTests in `NVAPIWrapper.NativeTests` passing with hardware-aware skips).
 - AGENTS.md updated to align with NVAPI concepts and paths.
-- Phase 5 is in progress (facade helper design updated; implementation pending).
+- Phase 5 is complete (facade helper design and implementation complete).
+- Phase 6 is complete (facade tests added and hardware-aware gating applied).
 
 ## Next Action
-Begin Phase 5 by implementing `NVAPIApiHelper` and the first helper set:
-- `NVAPIPhysicalGpuHelper` and `NVAPILogicalGpuHelper` with enumeration methods.
-- `NVAPIDisplayHelper` enumerated from GPU helpers.
+Begin Phase 7 by implementing samples and updating documentation:
+- Add sample apps in `Samples/` that exercise core enumeration and info queries.
+- Update `README.md` to reflect the current API surface and usage patterns.
 
 ## In-Progress Work (2026-02) - Display Helper DISP Expansion
 Objective: Add missing DISP display APIs to the facade (helpers + DTOs) with native and facade tests, including Active tests for setters.

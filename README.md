@@ -9,6 +9,7 @@ A modern C# wrapper for NVIDIA's NVAPI, providing easy access to NVIDIA GPU feat
 - Strongly typed structs/enums matching NVAPI headers
 - Helper methods for common adapter/display queries
 - Facade DTOs for bool-friendly helper results, with `*Native()` accessors when you need raw structs
+- Facade intentionally excludes Direct3D/DX-specific NVAPI entry points (native-only)
 - ClangSharp-generated bindings kept in sync with the SDK
 - Tests skip gracefully when hardware is absent
 - Split test suites:
@@ -153,6 +154,25 @@ Console.WriteLine("Property change observed or timeout reached.");
 
 ## Doing the same with the native API
 If you prefer direct P/Invoke access, use `NVAPIApi` and the generated structs/functions.
+
+### Direct3D (native only)
+The facade does **not** wrap Direct3D/DX-specific NVAPI functions. Those are available only via the native bindings and require D3D headers/types during generation.
+
+> Note: the following snippet is native-only and will compile only if D3D headers/types are available in your build.
+
+```csharp
+using NVAPIWrapper;
+
+using var nvapi = NVAPIApi.Initialize();
+
+// ID3D12Device* device = ... (from your D3D12 setup)
+// bool supported = false;
+// var status = NVAPI.NvAPI_D3D12_QueryPresentBarrierSupport(device, &supported);
+// if (status == _NvAPI_Status.NVAPI_OK && supported)
+// {
+//     // Use additional NvAPI_D3D12_* functions from the native bindings.
+// }
+```
 
 ### List active display resolutions (native)
 ```csharp
