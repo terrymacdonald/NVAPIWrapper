@@ -1,0 +1,1795 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class IGCLOverclockHelper | NVAPIWrapper </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class IGCLOverclockHelper | NVAPIWrapper ">
+      
+      <meta name="description" content="Overclock helper: properties, offsets, limits, telemetry, and reset.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/terrymacdonald/IGCLWrapper/new/develop/apiSpec/new?filename=IGCLWrapper_IGCLOverclockHelper.md&amp;value=---%0Auid%3A%20IGCLWrapper.IGCLOverclockHelper%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="NVAPIWrapper">
+            NVAPIWrapper
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="IGCLWrapper.IGCLOverclockHelper">
+
+
+
+  <h1 id="IGCLWrapper_IGCLOverclockHelper" data-uid="IGCLWrapper.IGCLOverclockHelper" class="text-break">
+Class IGCLOverclockHelper  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/IGCLWrapper/blob/develop/IGCLWrapper/IGCLOverclockHelper.cs/#L9"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="IGCLWrapper.html">IGCLWrapper</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>IGCLWrapper.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Overclock helper: properties, offsets, limits, telemetry, and reset.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class IGCLOverclockHelper : IDisposable</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">IGCLOverclockHelper</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="IGCLWrapper_IGCLOverclockHelper_AreOverclockPropertiesEqual_" data-uid="IGCLWrapper.IGCLOverclockHelper.AreOverclockPropertiesEqual*"></a>
+
+  <h3 id="IGCLWrapper_IGCLOverclockHelper_AreOverclockPropertiesEqual_IGCLWrapper_ctl_oc_properties_t_IGCLWrapper_ctl_oc_properties_t_" data-uid="IGCLWrapper.IGCLOverclockHelper.AreOverclockPropertiesEqual(IGCLWrapper.ctl_oc_properties_t,IGCLWrapper.ctl_oc_properties_t)">
+  AreOverclockPropertiesEqual(ctl_oc_properties_t, ctl_oc_properties_t)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/IGCLWrapper/blob/develop/IGCLWrapper/IGCLOverclockHelper.cs/#L544"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Compare overclock properties while ignoring native-only fields.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool AreOverclockPropertiesEqual(ctl_oc_properties_t left, ctl_oc_properties_t right)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>left</code> <a class="xref" href="IGCLWrapper.ctl_oc_properties_t.html">ctl_oc_properties_t</a></dt>
+    <dd><p>Left properties struct.</p>
+</dd>
+    <dt><code>right</code> <a class="xref" href="IGCLWrapper.ctl_oc_properties_t.html">ctl_oc_properties_t</a></dt>
+    <dd><p>Right properties struct.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True when equal; otherwise, false.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="IGCLWrapper_IGCLOverclockHelper_ArePowerTelemetryEqual_" data-uid="IGCLWrapper.IGCLOverclockHelper.ArePowerTelemetryEqual*"></a>
+
+  <h3 id="IGCLWrapper_IGCLOverclockHelper_ArePowerTelemetryEqual_IGCLWrapper_ctl_power_telemetry_t_IGCLWrapper_ctl_power_telemetry_t_" data-uid="IGCLWrapper.IGCLOverclockHelper.ArePowerTelemetryEqual(IGCLWrapper.ctl_power_telemetry_t,IGCLWrapper.ctl_power_telemetry_t)">
+  ArePowerTelemetryEqual(ctl_power_telemetry_t, ctl_power_telemetry_t)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/IGCLWrapper/blob/develop/IGCLWrapper/IGCLOverclockHelper.cs/#L569"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Compare power telemetry while ignoring native-only fields.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool ArePowerTelemetryEqual(ctl_power_telemetry_t left, ctl_power_telemetry_t right)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>left</code> <a class="xref" href="IGCLWrapper.ctl_power_telemetry_t.html">ctl_power_telemetry_t</a></dt>
+    <dd><p>Left telemetry struct.</p>
+</dd>
+    <dt><code>right</code> <a class="xref" href="IGCLWrapper.ctl_power_telemetry_t.html">ctl_power_telemetry_t</a></dt>
+    <dd><p>Right telemetry struct.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True when equal; otherwise, false.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="IGCLWrapper_IGCLOverclockHelper_AreVfPairEqual_" data-uid="IGCLWrapper.IGCLOverclockHelper.AreVfPairEqual*"></a>
+
+  <h3 id="IGCLWrapper_IGCLOverclockHelper_AreVfPairEqual_IGCLWrapper_ctl_oc_vf_pair_t_IGCLWrapper_ctl_oc_vf_pair_t_" data-uid="IGCLWrapper.IGCLOverclockHelper.AreVfPairEqual(IGCLWrapper.ctl_oc_vf_pair_t,IGCLWrapper.ctl_oc_vf_pair_t)">
+  AreVfPairEqual(ctl_oc_vf_pair_t, ctl_oc_vf_pair_t)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/IGCLWrapper/blob/develop/IGCLWrapper/IGCLOverclockHelper.cs/#L555"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Compare voltage/frequency pairs while ignoring native-only fields.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool AreVfPairEqual(ctl_oc_vf_pair_t left, ctl_oc_vf_pair_t right)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>left</code> <a class="xref" href="IGCLWrapper.ctl_oc_vf_pair_t.html">ctl_oc_vf_pair_t</a></dt>
+    <dd><p>Left pair struct.</p>
+</dd>
+    <dt><code>right</code> <a class="xref" href="IGCLWrapper.ctl_oc_vf_pair_t.html">ctl_oc_vf_pair_t</a></dt>
+    <dd><p>Right pair struct.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True when equal; otherwise, false.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="IGCLWrapper_IGCLOverclockHelper_AreVoltageFrequencyPointEqual_" data-uid="IGCLWrapper.IGCLOverclockHelper.AreVoltageFrequencyPointEqual*"></a>
+
+  <h3 id="IGCLWrapper_IGCLOverclockHelper_AreVoltageFrequencyPointEqual_IGCLWrapper_ctl_voltage_frequency_point_t_IGCLWrapper_ctl_voltage_frequency_point_t_" data-uid="IGCLWrapper.IGCLOverclockHelper.AreVoltageFrequencyPointEqual(IGCLWrapper.ctl_voltage_frequency_point_t,IGCLWrapper.ctl_voltage_frequency_point_t)">
+  AreVoltageFrequencyPointEqual(ctl_voltage_frequency_point_t, ctl_voltage_frequency_point_t)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/IGCLWrapper/blob/develop/IGCLWrapper/IGCLOverclockHelper.cs/#L580"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Compare voltage/frequency points while ignoring native-only fields.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool AreVoltageFrequencyPointEqual(ctl_voltage_frequency_point_t left, ctl_voltage_frequency_point_t right)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>left</code> <a class="xref" href="IGCLWrapper.ctl_voltage_frequency_point_t.html">ctl_voltage_frequency_point_t</a></dt>
+    <dd><p>Left point struct.</p>
+</dd>
+    <dt><code>right</code> <a class="xref" href="IGCLWrapper.ctl_voltage_frequency_point_t.html">ctl_voltage_frequency_point_t</a></dt>
+    <dd><p>Right point struct.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True when equal; otherwise, false.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="IGCLWrapper_IGCLOverclockHelper_CreateVfPair_" data-uid="IGCLWrapper.IGCLOverclockHelper.CreateVfPair*"></a>
+
+  <h3 id="IGCLWrapper_IGCLOverclockHelper_CreateVfPair" data-uid="IGCLWrapper.IGCLOverclockHelper.CreateVfPair">
+  CreateVfPair()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/IGCLWrapper/blob/develop/IGCLWrapper/IGCLOverclockHelper.cs/#L535"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Create a voltage/frequency pair struct with Size and Version initialized.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ctl_oc_vf_pair_t CreateVfPair()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="IGCLWrapper.ctl_oc_vf_pair_t.html">ctl_oc_vf_pair_t</a></dt>
+    <dd><p>Initialized voltage/frequency pair struct.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="IGCLWrapper_IGCLOverclockHelper_Dispose_" data-uid="IGCLWrapper.IGCLOverclockHelper.Dispose*"></a>
+
+  <h3 id="IGCLWrapper_IGCLOverclockHelper_Dispose" data-uid="IGCLWrapper.IGCLOverclockHelper.Dispose">
+  Dispose()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/IGCLWrapper/blob/develop/IGCLWrapper/IGCLOverclockHelper.cs/#L589"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Mark the helper as disposed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Dispose()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="IGCLWrapper_IGCLOverclockHelper_GetGpuFrequencyOffset_" data-uid="IGCLWrapper.IGCLOverclockHelper.GetGpuFrequencyOffset*"></a>
+
+  <h3 id="IGCLWrapper_IGCLOverclockHelper_GetGpuFrequencyOffset" data-uid="IGCLWrapper.IGCLOverclockHelper.GetGpuFrequencyOffset">
+  GetGpuFrequencyOffset()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/IGCLWrapper/blob/develop/IGCLWrapper/IGCLOverclockHelper.cs/#L476"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get the GPU frequency offset (V2 wrapper).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double GetGpuFrequencyOffset()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd><p>GPU frequency offset.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="IGCLWrapper_IGCLOverclockHelper_GetGpuVoltageOffset_" data-uid="IGCLWrapper.IGCLOverclockHelper.GetGpuVoltageOffset*"></a>
+
+  <h3 id="IGCLWrapper_IGCLOverclockHelper_GetGpuVoltageOffset" data-uid="IGCLWrapper.IGCLOverclockHelper.GetGpuVoltageOffset">
+  GetGpuVoltageOffset()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/IGCLWrapper/blob/develop/IGCLWrapper/IGCLOverclockHelper.cs/#L486"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get the GPU voltage offset (V2 wrapper).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double GetGpuVoltageOffset()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd><p>GPU voltage offset.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="IGCLWrapper_IGCLOverclockHelper_GetPowerLimit_" data-uid="IGCLWrapper.IGCLOverclockHelper.GetPowerLimit*"></a>
+
+  <h3 id="IGCLWrapper_IGCLOverclockHelper_GetPowerLimit" data-uid="IGCLWrapper.IGCLOverclockHelper.GetPowerLimit">
+  GetPowerLimit()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/IGCLWrapper/blob/develop/IGCLWrapper/IGCLOverclockHelper.cs/#L506"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get the power limit (V2 wrapper).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double GetPowerLimit()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd><p>Power limit value.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="IGCLWrapper_IGCLOverclockHelper_GetPowerTelemetry_" data-uid="IGCLWrapper.IGCLOverclockHelper.GetPowerTelemetry*"></a>
+
+  <h3 id="IGCLWrapper_IGCLOverclockHelper_GetPowerTelemetry" data-uid="IGCLWrapper.IGCLOverclockHelper.GetPowerTelemetry">
+  GetPowerTelemetry()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/IGCLWrapper/blob/develop/IGCLWrapper/IGCLOverclockHelper.cs/#L406"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get power telemetry as a DTO.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PowerTelemetryDto GetPowerTelemetry()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="IGCLWrapper.PowerTelemetryDto.html">PowerTelemetryDto</a></dt>
+    <dd><p>Power telemetry DTO.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="IGCLWrapper_IGCLOverclockHelper_GetPowerTelemetryNative_" data-uid="IGCLWrapper.IGCLOverclockHelper.GetPowerTelemetryNative*"></a>
+
+  <h3 id="IGCLWrapper_IGCLOverclockHelper_GetPowerTelemetryNative" data-uid="IGCLWrapper.IGCLOverclockHelper.GetPowerTelemetryNative">
+  GetPowerTelemetryNative()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/IGCLWrapper/blob/develop/IGCLWrapper/IGCLOverclockHelper.cs/#L392"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get power telemetry using the native struct.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ctl_power_telemetry_t GetPowerTelemetryNative()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="IGCLWrapper.ctl_power_telemetry_t.html">ctl_power_telemetry_t</a></dt>
+    <dd><p>Power telemetry struct.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="IGCLWrapper_IGCLOverclockHelper_GetProperties_" data-uid="IGCLWrapper.IGCLOverclockHelper.GetProperties*"></a>
+
+  <h3 id="IGCLWrapper_IGCLOverclockHelper_GetProperties" data-uid="IGCLWrapper.IGCLOverclockHelper.GetProperties">
+  GetProperties()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/IGCLWrapper/blob/develop/IGCLWrapper/IGCLOverclockHelper.cs/#L40"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get overclock properties as a DTO.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public OverclockPropertiesDto GetProperties()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="IGCLWrapper.OverclockPropertiesDto.html">OverclockPropertiesDto</a></dt>
+    <dd><p>Overclock properties DTO.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="IGCLWrapper_IGCLOverclockHelper_GetPropertiesNative_" data-uid="IGCLWrapper.IGCLOverclockHelper.GetPropertiesNative*"></a>
+
+  <h3 id="IGCLWrapper_IGCLOverclockHelper_GetPropertiesNative" data-uid="IGCLWrapper.IGCLOverclockHelper.GetPropertiesNative">
+  GetPropertiesNative()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/IGCLWrapper/blob/develop/IGCLWrapper/IGCLOverclockHelper.cs/#L26"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get overclock properties using the native struct.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ctl_oc_properties_t GetPropertiesNative()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="IGCLWrapper.ctl_oc_properties_t.html">ctl_oc_properties_t</a></dt>
+    <dd><p>Overclock properties struct.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="IGCLWrapper_IGCLOverclockHelper_GetTemperatureLimit_" data-uid="IGCLWrapper.IGCLOverclockHelper.GetTemperatureLimit*"></a>
+
+  <h3 id="IGCLWrapper_IGCLOverclockHelper_GetTemperatureLimit" data-uid="IGCLWrapper.IGCLOverclockHelper.GetTemperatureLimit">
+  GetTemperatureLimit()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/IGCLWrapper/blob/develop/IGCLWrapper/IGCLOverclockHelper.cs/#L516"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get the temperature limit (V2 wrapper).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double GetTemperatureLimit()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd><p>Temperature limit value.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="IGCLWrapper_IGCLOverclockHelper_GetVramFrequencyOffset_" data-uid="IGCLWrapper.IGCLOverclockHelper.GetVramFrequencyOffset*"></a>
+
+  <h3 id="IGCLWrapper_IGCLOverclockHelper_GetVramFrequencyOffset" data-uid="IGCLWrapper.IGCLOverclockHelper.GetVramFrequencyOffset">
+  GetVramFrequencyOffset()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/IGCLWrapper/blob/develop/IGCLWrapper/IGCLOverclockHelper.cs/#L496"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get the VRAM frequency offset.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double GetVramFrequencyOffset()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd><p>VRAM frequency offset.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="IGCLWrapper_IGCLOverclockHelper_OverclockGpuFrequencyOffsetGet_" data-uid="IGCLWrapper.IGCLOverclockHelper.OverclockGpuFrequencyOffsetGet*"></a>
+
+  <h3 id="IGCLWrapper_IGCLOverclockHelper_OverclockGpuFrequencyOffsetGet" data-uid="IGCLWrapper.IGCLOverclockHelper.OverclockGpuFrequencyOffsetGet">
+  OverclockGpuFrequencyOffsetGet()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/IGCLWrapper/blob/develop/IGCLWrapper/IGCLOverclockHelper.cs/#L62"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get the GPU frequency offset.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double OverclockGpuFrequencyOffsetGet()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd><p>GPU frequency offset.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="IGCLWrapper_IGCLOverclockHelper_OverclockGpuFrequencyOffsetGetV2_" data-uid="IGCLWrapper.IGCLOverclockHelper.OverclockGpuFrequencyOffsetGetV2*"></a>
+
+  <h3 id="IGCLWrapper_IGCLOverclockHelper_OverclockGpuFrequencyOffsetGetV2" data-uid="IGCLWrapper.IGCLOverclockHelper.OverclockGpuFrequencyOffsetGetV2">
+  OverclockGpuFrequencyOffsetGetV2()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/IGCLWrapper/blob/develop/IGCLWrapper/IGCLOverclockHelper.cs/#L88"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get the GPU frequency offset (V2).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double OverclockGpuFrequencyOffsetGetV2()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd><p>GPU frequency offset.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="IGCLWrapper_IGCLOverclockHelper_OverclockGpuFrequencyOffsetSet_" data-uid="IGCLWrapper.IGCLOverclockHelper.OverclockGpuFrequencyOffsetSet*"></a>
+
+  <h3 id="IGCLWrapper_IGCLOverclockHelper_OverclockGpuFrequencyOffsetSet_System_Double_" data-uid="IGCLWrapper.IGCLOverclockHelper.OverclockGpuFrequencyOffsetSet(System.Double)">
+  OverclockGpuFrequencyOffsetSet(double)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/IGCLWrapper/blob/develop/IGCLWrapper/IGCLOverclockHelper.cs/#L76"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Set the GPU frequency offset.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void OverclockGpuFrequencyOffsetSet(double offset)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>offset</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd><p>Frequency offset value.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="IGCLWrapper_IGCLOverclockHelper_OverclockGpuFrequencyOffsetSetV2_" data-uid="IGCLWrapper.IGCLOverclockHelper.OverclockGpuFrequencyOffsetSetV2*"></a>
+
+  <h3 id="IGCLWrapper_IGCLOverclockHelper_OverclockGpuFrequencyOffsetSetV2_System_Double_" data-uid="IGCLWrapper.IGCLOverclockHelper.OverclockGpuFrequencyOffsetSetV2(System.Double)">
+  OverclockGpuFrequencyOffsetSetV2(double)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/IGCLWrapper/blob/develop/IGCLWrapper/IGCLOverclockHelper.cs/#L102"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Set the GPU frequency offset (V2).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void OverclockGpuFrequencyOffsetSetV2(double offset)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>offset</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd><p>Frequency offset value.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="IGCLWrapper_IGCLOverclockHelper_OverclockGpuLockGet_" data-uid="IGCLWrapper.IGCLOverclockHelper.OverclockGpuLockGet*"></a>
+
+  <h3 id="IGCLWrapper_IGCLOverclockHelper_OverclockGpuLockGet" data-uid="IGCLWrapper.IGCLOverclockHelper.OverclockGpuLockGet">
+  OverclockGpuLockGet()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/IGCLWrapper/blob/develop/IGCLWrapper/IGCLOverclockHelper.cs/#L170"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get the GPU lock voltage/frequency pair.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ctl_oc_vf_pair_t OverclockGpuLockGet()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="IGCLWrapper.ctl_oc_vf_pair_t.html">ctl_oc_vf_pair_t</a></dt>
+    <dd><p>Voltage/frequency pair struct.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="IGCLWrapper_IGCLOverclockHelper_OverclockGpuLockSet_" data-uid="IGCLWrapper.IGCLOverclockHelper.OverclockGpuLockSet*"></a>
+
+  <h3 id="IGCLWrapper_IGCLOverclockHelper_OverclockGpuLockSet_IGCLWrapper_ctl_oc_vf_pair_t_" data-uid="IGCLWrapper.IGCLOverclockHelper.OverclockGpuLockSet(IGCLWrapper.ctl_oc_vf_pair_t)">
+  OverclockGpuLockSet(ctl_oc_vf_pair_t)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/IGCLWrapper/blob/develop/IGCLWrapper/IGCLOverclockHelper.cs/#L184"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Set the GPU lock voltage/frequency pair.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void OverclockGpuLockSet(ctl_oc_vf_pair_t pair)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>pair</code> <a class="xref" href="IGCLWrapper.ctl_oc_vf_pair_t.html">ctl_oc_vf_pair_t</a></dt>
+    <dd><p>Voltage/frequency pair struct.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="IGCLWrapper_IGCLOverclockHelper_OverclockGpuMaxVoltageOffsetGetV2_" data-uid="IGCLWrapper.IGCLOverclockHelper.OverclockGpuMaxVoltageOffsetGetV2*"></a>
+
+  <h3 id="IGCLWrapper_IGCLOverclockHelper_OverclockGpuMaxVoltageOffsetGetV2" data-uid="IGCLWrapper.IGCLOverclockHelper.OverclockGpuMaxVoltageOffsetGetV2">
+  OverclockGpuMaxVoltageOffsetGetV2()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/IGCLWrapper/blob/develop/IGCLWrapper/IGCLOverclockHelper.cs/#L142"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get the GPU max voltage offset (V2).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double OverclockGpuMaxVoltageOffsetGetV2()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd><p>GPU max voltage offset.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="IGCLWrapper_IGCLOverclockHelper_OverclockGpuMaxVoltageOffsetSetV2_" data-uid="IGCLWrapper.IGCLOverclockHelper.OverclockGpuMaxVoltageOffsetSetV2*"></a>
+
+  <h3 id="IGCLWrapper_IGCLOverclockHelper_OverclockGpuMaxVoltageOffsetSetV2_System_Double_" data-uid="IGCLWrapper.IGCLOverclockHelper.OverclockGpuMaxVoltageOffsetSetV2(System.Double)">
+  OverclockGpuMaxVoltageOffsetSetV2(double)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/IGCLWrapper/blob/develop/IGCLWrapper/IGCLOverclockHelper.cs/#L156"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Set the GPU max voltage offset (V2).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void OverclockGpuMaxVoltageOffsetSetV2(double offset)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>offset</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd><p>Voltage offset value.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="IGCLWrapper_IGCLOverclockHelper_OverclockGpuVoltageOffsetGet_" data-uid="IGCLWrapper.IGCLOverclockHelper.OverclockGpuVoltageOffsetGet*"></a>
+
+  <h3 id="IGCLWrapper_IGCLOverclockHelper_OverclockGpuVoltageOffsetGet" data-uid="IGCLWrapper.IGCLOverclockHelper.OverclockGpuVoltageOffsetGet">
+  OverclockGpuVoltageOffsetGet()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/IGCLWrapper/blob/develop/IGCLWrapper/IGCLOverclockHelper.cs/#L116"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get the GPU voltage offset.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double OverclockGpuVoltageOffsetGet()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd><p>GPU voltage offset.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="IGCLWrapper_IGCLOverclockHelper_OverclockGpuVoltageOffsetSet_" data-uid="IGCLWrapper.IGCLOverclockHelper.OverclockGpuVoltageOffsetSet*"></a>
+
+  <h3 id="IGCLWrapper_IGCLOverclockHelper_OverclockGpuVoltageOffsetSet_System_Double_" data-uid="IGCLWrapper.IGCLOverclockHelper.OverclockGpuVoltageOffsetSet(System.Double)">
+  OverclockGpuVoltageOffsetSet(double)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/IGCLWrapper/blob/develop/IGCLWrapper/IGCLOverclockHelper.cs/#L130"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Set the GPU voltage offset.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void OverclockGpuVoltageOffsetSet(double offset)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>offset</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd><p>Voltage offset value.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="IGCLWrapper_IGCLOverclockHelper_OverclockPowerLimitGet_" data-uid="IGCLWrapper.IGCLOverclockHelper.OverclockPowerLimitGet*"></a>
+
+  <h3 id="IGCLWrapper_IGCLOverclockHelper_OverclockPowerLimitGet" data-uid="IGCLWrapper.IGCLOverclockHelper.OverclockPowerLimitGet">
+  OverclockPowerLimitGet()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/IGCLWrapper/blob/develop/IGCLWrapper/IGCLOverclockHelper.cs/#L285"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get the overclock power limit.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double OverclockPowerLimitGet()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd><p>Power limit value.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="IGCLWrapper_IGCLOverclockHelper_OverclockPowerLimitGetV2_" data-uid="IGCLWrapper.IGCLOverclockHelper.OverclockPowerLimitGetV2*"></a>
+
+  <h3 id="IGCLWrapper_IGCLOverclockHelper_OverclockPowerLimitGetV2" data-uid="IGCLWrapper.IGCLOverclockHelper.OverclockPowerLimitGetV2">
+  OverclockPowerLimitGetV2()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/IGCLWrapper/blob/develop/IGCLWrapper/IGCLOverclockHelper.cs/#L311"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get the overclock power limit (V2).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double OverclockPowerLimitGetV2()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd><p>Power limit value.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="IGCLWrapper_IGCLOverclockHelper_OverclockPowerLimitSet_" data-uid="IGCLWrapper.IGCLOverclockHelper.OverclockPowerLimitSet*"></a>
+
+  <h3 id="IGCLWrapper_IGCLOverclockHelper_OverclockPowerLimitSet_System_Double_" data-uid="IGCLWrapper.IGCLOverclockHelper.OverclockPowerLimitSet(System.Double)">
+  OverclockPowerLimitSet(double)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/IGCLWrapper/blob/develop/IGCLWrapper/IGCLOverclockHelper.cs/#L299"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Set the overclock power limit.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void OverclockPowerLimitSet(double limit)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>limit</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd><p>Power limit value.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="IGCLWrapper_IGCLOverclockHelper_OverclockPowerLimitSetV2_" data-uid="IGCLWrapper.IGCLOverclockHelper.OverclockPowerLimitSetV2*"></a>
+
+  <h3 id="IGCLWrapper_IGCLOverclockHelper_OverclockPowerLimitSetV2_System_Double_" data-uid="IGCLWrapper.IGCLOverclockHelper.OverclockPowerLimitSetV2(System.Double)">
+  OverclockPowerLimitSetV2(double)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/IGCLWrapper/blob/develop/IGCLWrapper/IGCLOverclockHelper.cs/#L325"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Set the overclock power limit (V2).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void OverclockPowerLimitSetV2(double limit)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>limit</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd><p>Power limit value.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="IGCLWrapper_IGCLOverclockHelper_OverclockReadVFCurve_" data-uid="IGCLWrapper.IGCLOverclockHelper.OverclockReadVFCurve*"></a>
+
+  <h3 id="IGCLWrapper_IGCLOverclockHelper_OverclockReadVFCurve_IGCLWrapper_ctl_vf_curve_type_t_IGCLWrapper_ctl_vf_curve_details_t_" data-uid="IGCLWrapper.IGCLOverclockHelper.OverclockReadVFCurve(IGCLWrapper.ctl_vf_curve_type_t,IGCLWrapper.ctl_vf_curve_details_t)">
+  OverclockReadVFCurve(ctl_vf_curve_type_t, ctl_vf_curve_details_t)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/IGCLWrapper/blob/develop/IGCLWrapper/IGCLOverclockHelper.cs/#L430"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Read the voltage/frequency curve.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ctl_voltage_frequency_point_t[] OverclockReadVFCurve(ctl_vf_curve_type_t curveType, ctl_vf_curve_details_t detail)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>curveType</code> <a class="xref" href="IGCLWrapper.ctl_vf_curve_type_t.html">ctl_vf_curve_type_t</a></dt>
+    <dd><p>Curve type.</p>
+</dd>
+    <dt><code>detail</code> <a class="xref" href="IGCLWrapper.ctl_vf_curve_details_t.html">ctl_vf_curve_details_t</a></dt>
+    <dd><p>Curve detail flags.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="IGCLWrapper.ctl_voltage_frequency_point_t.html">ctl_voltage_frequency_point_t</a>[]</dt>
+    <dd><p>Array of voltage/frequency points.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="IGCLWrapper_IGCLOverclockHelper_OverclockTemperatureLimitGet_" data-uid="IGCLWrapper.IGCLOverclockHelper.OverclockTemperatureLimitGet*"></a>
+
+  <h3 id="IGCLWrapper_IGCLOverclockHelper_OverclockTemperatureLimitGet" data-uid="IGCLWrapper.IGCLOverclockHelper.OverclockTemperatureLimitGet">
+  OverclockTemperatureLimitGet()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/IGCLWrapper/blob/develop/IGCLWrapper/IGCLOverclockHelper.cs/#L339"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get the overclock temperature limit.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double OverclockTemperatureLimitGet()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd><p>Temperature limit value.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="IGCLWrapper_IGCLOverclockHelper_OverclockTemperatureLimitGetV2_" data-uid="IGCLWrapper.IGCLOverclockHelper.OverclockTemperatureLimitGetV2*"></a>
+
+  <h3 id="IGCLWrapper_IGCLOverclockHelper_OverclockTemperatureLimitGetV2" data-uid="IGCLWrapper.IGCLOverclockHelper.OverclockTemperatureLimitGetV2">
+  OverclockTemperatureLimitGetV2()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/IGCLWrapper/blob/develop/IGCLWrapper/IGCLOverclockHelper.cs/#L365"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get the overclock temperature limit (V2).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double OverclockTemperatureLimitGetV2()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd><p>Temperature limit value.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="IGCLWrapper_IGCLOverclockHelper_OverclockTemperatureLimitSet_" data-uid="IGCLWrapper.IGCLOverclockHelper.OverclockTemperatureLimitSet*"></a>
+
+  <h3 id="IGCLWrapper_IGCLOverclockHelper_OverclockTemperatureLimitSet_System_Double_" data-uid="IGCLWrapper.IGCLOverclockHelper.OverclockTemperatureLimitSet(System.Double)">
+  OverclockTemperatureLimitSet(double)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/IGCLWrapper/blob/develop/IGCLWrapper/IGCLOverclockHelper.cs/#L353"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Set the overclock temperature limit.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void OverclockTemperatureLimitSet(double value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd><p>Temperature limit value.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="IGCLWrapper_IGCLOverclockHelper_OverclockTemperatureLimitSetV2_" data-uid="IGCLWrapper.IGCLOverclockHelper.OverclockTemperatureLimitSetV2*"></a>
+
+  <h3 id="IGCLWrapper_IGCLOverclockHelper_OverclockTemperatureLimitSetV2_System_Double_" data-uid="IGCLWrapper.IGCLOverclockHelper.OverclockTemperatureLimitSetV2(System.Double)">
+  OverclockTemperatureLimitSetV2(double)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/IGCLWrapper/blob/develop/IGCLWrapper/IGCLOverclockHelper.cs/#L379"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Set the overclock temperature limit (V2).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void OverclockTemperatureLimitSetV2(double value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd><p>Temperature limit value.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="IGCLWrapper_IGCLOverclockHelper_OverclockVramFrequencyOffsetGet_" data-uid="IGCLWrapper.IGCLOverclockHelper.OverclockVramFrequencyOffsetGet*"></a>
+
+  <h3 id="IGCLWrapper_IGCLOverclockHelper_OverclockVramFrequencyOffsetGet" data-uid="IGCLWrapper.IGCLOverclockHelper.OverclockVramFrequencyOffsetGet">
+  OverclockVramFrequencyOffsetGet()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/IGCLWrapper/blob/develop/IGCLWrapper/IGCLOverclockHelper.cs/#L205"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get the VRAM frequency offset.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double OverclockVramFrequencyOffsetGet()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd><p>VRAM frequency offset.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="IGCLWrapper_IGCLOverclockHelper_OverclockVramFrequencyOffsetSet_" data-uid="IGCLWrapper.IGCLOverclockHelper.OverclockVramFrequencyOffsetSet*"></a>
+
+  <h3 id="IGCLWrapper_IGCLOverclockHelper_OverclockVramFrequencyOffsetSet_System_Double_" data-uid="IGCLWrapper.IGCLOverclockHelper.OverclockVramFrequencyOffsetSet(System.Double)">
+  OverclockVramFrequencyOffsetSet(double)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/IGCLWrapper/blob/develop/IGCLWrapper/IGCLOverclockHelper.cs/#L219"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Set the VRAM frequency offset.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void OverclockVramFrequencyOffsetSet(double offset)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>offset</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd><p>Frequency offset value.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="IGCLWrapper_IGCLOverclockHelper_OverclockVramMemSpeedLimitGetV2_" data-uid="IGCLWrapper.IGCLOverclockHelper.OverclockVramMemSpeedLimitGetV2*"></a>
+
+  <h3 id="IGCLWrapper_IGCLOverclockHelper_OverclockVramMemSpeedLimitGetV2" data-uid="IGCLWrapper.IGCLOverclockHelper.OverclockVramMemSpeedLimitGetV2">
+  OverclockVramMemSpeedLimitGetV2()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/IGCLWrapper/blob/develop/IGCLWrapper/IGCLOverclockHelper.cs/#L257"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get the VRAM memory speed limit (V2).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double OverclockVramMemSpeedLimitGetV2()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd><p>VRAM memory speed limit.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="IGCLWrapper_IGCLOverclockHelper_OverclockVramMemSpeedLimitSetV2_" data-uid="IGCLWrapper.IGCLOverclockHelper.OverclockVramMemSpeedLimitSetV2*"></a>
+
+  <h3 id="IGCLWrapper_IGCLOverclockHelper_OverclockVramMemSpeedLimitSetV2_System_Double_" data-uid="IGCLWrapper.IGCLOverclockHelper.OverclockVramMemSpeedLimitSetV2(System.Double)">
+  OverclockVramMemSpeedLimitSetV2(double)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/IGCLWrapper/blob/develop/IGCLWrapper/IGCLOverclockHelper.cs/#L271"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Set the VRAM memory speed limit (V2).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void OverclockVramMemSpeedLimitSetV2(double speed)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>speed</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd><p>Speed limit value.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="IGCLWrapper_IGCLOverclockHelper_OverclockVramVoltageOffsetGet_" data-uid="IGCLWrapper.IGCLOverclockHelper.OverclockVramVoltageOffsetGet*"></a>
+
+  <h3 id="IGCLWrapper_IGCLOverclockHelper_OverclockVramVoltageOffsetGet" data-uid="IGCLWrapper.IGCLOverclockHelper.OverclockVramVoltageOffsetGet">
+  OverclockVramVoltageOffsetGet()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/IGCLWrapper/blob/develop/IGCLWrapper/IGCLOverclockHelper.cs/#L231"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get the VRAM voltage offset.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double OverclockVramVoltageOffsetGet()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd><p>VRAM voltage offset.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="IGCLWrapper_IGCLOverclockHelper_OverclockVramVoltageOffsetSet_" data-uid="IGCLWrapper.IGCLOverclockHelper.OverclockVramVoltageOffsetSet*"></a>
+
+  <h3 id="IGCLWrapper_IGCLOverclockHelper_OverclockVramVoltageOffsetSet_System_Double_" data-uid="IGCLWrapper.IGCLOverclockHelper.OverclockVramVoltageOffsetSet(System.Double)">
+  OverclockVramVoltageOffsetSet(double)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/IGCLWrapper/blob/develop/IGCLWrapper/IGCLOverclockHelper.cs/#L245"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Set the VRAM voltage offset.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void OverclockVramVoltageOffsetSet(double voltage)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>voltage</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd><p>Voltage offset value.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="IGCLWrapper_IGCLOverclockHelper_OverclockWriteCustomVFCurve_" data-uid="IGCLWrapper.IGCLOverclockHelper.OverclockWriteCustomVFCurve*"></a>
+
+  <h3 id="IGCLWrapper_IGCLOverclockHelper_OverclockWriteCustomVFCurve_IGCLWrapper_ctl_voltage_frequency_point_t___" data-uid="IGCLWrapper.IGCLOverclockHelper.OverclockWriteCustomVFCurve(IGCLWrapper.ctl_voltage_frequency_point_t[])">
+  OverclockWriteCustomVFCurve(ctl_voltage_frequency_point_t[])
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/IGCLWrapper/blob/develop/IGCLWrapper/IGCLOverclockHelper.cs/#L455"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Write a custom voltage/frequency curve.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void OverclockWriteCustomVFCurve(ctl_voltage_frequency_point_t[] points)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>points</code> <a class="xref" href="IGCLWrapper.ctl_voltage_frequency_point_t.html">ctl_voltage_frequency_point_t</a>[]</dt>
+    <dd><p>Voltage/frequency points.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="IGCLWrapper_IGCLOverclockHelper_ResetToDefault_" data-uid="IGCLWrapper.IGCLOverclockHelper.ResetToDefault*"></a>
+
+  <h3 id="IGCLWrapper_IGCLOverclockHelper_ResetToDefault" data-uid="IGCLWrapper.IGCLOverclockHelper.ResetToDefault">
+  ResetToDefault()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/IGCLWrapper/blob/develop/IGCLWrapper/IGCLOverclockHelper.cs/#L415"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Reset overclock settings to default.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ResetToDefault()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="IGCLWrapper_IGCLOverclockHelper_SetGpuFrequencyOffset_" data-uid="IGCLWrapper.IGCLOverclockHelper.SetGpuFrequencyOffset*"></a>
+
+  <h3 id="IGCLWrapper_IGCLOverclockHelper_SetGpuFrequencyOffset_System_Double_" data-uid="IGCLWrapper.IGCLOverclockHelper.SetGpuFrequencyOffset(System.Double)">
+  SetGpuFrequencyOffset(double)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/IGCLWrapper/blob/develop/IGCLWrapper/IGCLOverclockHelper.cs/#L481"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Set the GPU frequency offset (V2 wrapper).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetGpuFrequencyOffset(double offset)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>offset</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd><p>Frequency offset value.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="IGCLWrapper_IGCLOverclockHelper_SetGpuVoltageOffset_" data-uid="IGCLWrapper.IGCLOverclockHelper.SetGpuVoltageOffset*"></a>
+
+  <h3 id="IGCLWrapper_IGCLOverclockHelper_SetGpuVoltageOffset_System_Double_" data-uid="IGCLWrapper.IGCLOverclockHelper.SetGpuVoltageOffset(System.Double)">
+  SetGpuVoltageOffset(double)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/IGCLWrapper/blob/develop/IGCLWrapper/IGCLOverclockHelper.cs/#L491"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Set the GPU voltage offset (V2 wrapper).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetGpuVoltageOffset(double offset)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>offset</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd><p>Voltage offset value.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="IGCLWrapper_IGCLOverclockHelper_SetPowerLimit_" data-uid="IGCLWrapper.IGCLOverclockHelper.SetPowerLimit*"></a>
+
+  <h3 id="IGCLWrapper_IGCLOverclockHelper_SetPowerLimit_System_Double_" data-uid="IGCLWrapper.IGCLOverclockHelper.SetPowerLimit(System.Double)">
+  SetPowerLimit(double)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/IGCLWrapper/blob/develop/IGCLWrapper/IGCLOverclockHelper.cs/#L511"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Set the power limit (V2 wrapper).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetPowerLimit(double limit)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>limit</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd><p>Power limit value.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="IGCLWrapper_IGCLOverclockHelper_SetTemperatureLimit_" data-uid="IGCLWrapper.IGCLOverclockHelper.SetTemperatureLimit*"></a>
+
+  <h3 id="IGCLWrapper_IGCLOverclockHelper_SetTemperatureLimit_System_Double_" data-uid="IGCLWrapper.IGCLOverclockHelper.SetTemperatureLimit(System.Double)">
+  SetTemperatureLimit(double)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/IGCLWrapper/blob/develop/IGCLWrapper/IGCLOverclockHelper.cs/#L521"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Set the temperature limit (V2 wrapper).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetTemperatureLimit(double value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd><p>Temperature limit value.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="IGCLWrapper_IGCLOverclockHelper_SetVramFrequencyOffset_" data-uid="IGCLWrapper.IGCLOverclockHelper.SetVramFrequencyOffset*"></a>
+
+  <h3 id="IGCLWrapper_IGCLOverclockHelper_SetVramFrequencyOffset_System_Double_" data-uid="IGCLWrapper.IGCLOverclockHelper.SetVramFrequencyOffset(System.Double)">
+  SetVramFrequencyOffset(double)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/IGCLWrapper/blob/develop/IGCLWrapper/IGCLOverclockHelper.cs/#L501"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Set the VRAM frequency offset.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetVramFrequencyOffset(double offset)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>offset</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd><p>Frequency offset value.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="IGCLWrapper_IGCLOverclockHelper_SetWaiver_" data-uid="IGCLWrapper.IGCLOverclockHelper.SetWaiver*"></a>
+
+  <h3 id="IGCLWrapper_IGCLOverclockHelper_SetWaiver" data-uid="IGCLWrapper.IGCLOverclockHelper.SetWaiver">
+  SetWaiver()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/IGCLWrapper/blob/develop/IGCLWrapper/IGCLOverclockHelper.cs/#L49"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Set the overclocking waiver for this adapter.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetWaiver()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/terrymacdonald/IGCLWrapper/blob/develop/IGCLWrapper/IGCLOverclockHelper.cs/#L9" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

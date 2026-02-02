@@ -1,0 +1,2878 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class NVAPIPhysicalGpuHelper | NVAPIWrapper </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class NVAPIPhysicalGpuHelper | NVAPIWrapper ">
+      
+      <meta name="description" content="Facade helper for a physical GPU.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/terrymacdonald/NVAPIWrapper/new/main/apiSpec/new?filename=NVAPIWrapper_NVAPIPhysicalGpuHelper.md&amp;value=---%0Auid%3A%20NVAPIWrapper.NVAPIPhysicalGpuHelper%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="NVAPIWrapper">
+            NVAPIWrapper
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="NVAPIWrapper.NVAPIPhysicalGpuHelper">
+
+
+
+  <h1 id="NVAPIWrapper_NVAPIPhysicalGpuHelper" data-uid="NVAPIWrapper.NVAPIPhysicalGpuHelper" class="text-break">
+Class NVAPIPhysicalGpuHelper  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L9"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="NVAPIWrapper.html">NVAPIWrapper</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>NVAPIWrapper.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Facade helper for a physical GPU.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class NVAPIPhysicalGpuHelper : IDisposable</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">NVAPIPhysicalGpuHelper</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="NVAPIWrapper_NVAPIPhysicalGpuHelper_Dispose_" data-uid="NVAPIWrapper.NVAPIPhysicalGpuHelper.Dispose*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIPhysicalGpuHelper_Dispose" data-uid="NVAPIWrapper.NVAPIPhysicalGpuHelper.Dispose">
+  Dispose()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L2236"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Dispose the helper and prevent further use.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Dispose()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIPhysicalGpuHelper_EnumerateNvidiaDisplayHandles_" data-uid="NVAPIWrapper.NVAPIPhysicalGpuHelper.EnumerateNvidiaDisplayHandles*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIPhysicalGpuHelper_EnumerateNvidiaDisplayHandles" data-uid="NVAPIWrapper.NVAPIPhysicalGpuHelper.EnumerateNvidiaDisplayHandles">
+  EnumerateNvidiaDisplayHandles()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L388"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Enumerate NVIDIA display handles associated with this GPU.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NVAPIDisplayHelper[] EnumerateNvidiaDisplayHandles()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="NVAPIWrapper.NVAPIDisplayHelper.html">NVAPIDisplayHelper</a>[]</dt>
+    <dd><p>Array of display helpers, or empty if none are found.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIPhysicalGpuHelper_GetActiveOutputs_" data-uid="NVAPIWrapper.NVAPIPhysicalGpuHelper.GetActiveOutputs*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIPhysicalGpuHelper_GetActiveOutputs" data-uid="NVAPIWrapper.NVAPIPhysicalGpuHelper.GetActiveOutputs">
+  GetActiveOutputs()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L519"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get the active outputs bitmask for this GPU.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public uint? GetActiveOutputs()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a>?</dt>
+    <dd><p>Active outputs mask, or null if unavailable.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIPhysicalGpuHelper_GetAllClockFrequencies_" data-uid="NVAPIWrapper.NVAPIPhysicalGpuHelper.GetAllClockFrequencies*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIPhysicalGpuHelper_GetAllClockFrequencies_NVAPIWrapper_NV_GPU_CLOCK_FREQUENCIES_CLOCK_TYPE_" data-uid="NVAPIWrapper.NVAPIPhysicalGpuHelper.GetAllClockFrequencies(NVAPIWrapper.NV_GPU_CLOCK_FREQUENCIES_CLOCK_TYPE)">
+  GetAllClockFrequencies(NV_GPU_CLOCK_FREQUENCIES_CLOCK_TYPE)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L716"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get all clock frequencies for this GPU.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NVAPIGpuClockFrequenciesDto? GetAllClockFrequencies(NV_GPU_CLOCK_FREQUENCIES_CLOCK_TYPE clockType = NV_GPU_CLOCK_FREQUENCIES_CLOCK_TYPE.NV_GPU_CLOCK_FREQUENCIES_CURRENT_FREQ)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>clockType</code> <a class="xref" href="NVAPIWrapper.NV_GPU_CLOCK_FREQUENCIES_CLOCK_TYPE.html">NV_GPU_CLOCK_FREQUENCIES_CLOCK_TYPE</a></dt>
+    <dd><p>Clock type selection.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="NVAPIWrapper.NVAPIGpuClockFrequenciesDto.html">NVAPIGpuClockFrequenciesDto</a>?</dt>
+    <dd><p>Clock frequencies DTO, or null if unavailable.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIPhysicalGpuHelper_GetAllDisplayIds_" data-uid="NVAPIWrapper.NVAPIPhysicalGpuHelper.GetAllDisplayIds*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIPhysicalGpuHelper_GetAllDisplayIds" data-uid="NVAPIWrapper.NVAPIPhysicalGpuHelper.GetAllDisplayIds">
+  GetAllDisplayIds()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L573"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get all display IDs for this GPU.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NVAPIGpuDisplayIdDto[] GetAllDisplayIds()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="NVAPIWrapper.NVAPIGpuDisplayIdDto.html">NVAPIGpuDisplayIdDto</a>[]</dt>
+    <dd><p>Display IDs, or empty if unavailable.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIPhysicalGpuHelper_GetArchInfo_" data-uid="NVAPIWrapper.NVAPIPhysicalGpuHelper.GetArchInfo*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIPhysicalGpuHelper_GetArchInfo" data-uid="NVAPIWrapper.NVAPIPhysicalGpuHelper.GetArchInfo">
+  GetArchInfo()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L1255"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get GPU architecture info.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NVAPIGpuArchInfoDto? GetArchInfo()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="NVAPIWrapper.NVAPIGpuArchInfoDto.html">NVAPIGpuArchInfoDto</a>?</dt>
+    <dd><p>Architecture info DTO, or null if unavailable.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIPhysicalGpuHelper_GetBoardInfo_" data-uid="NVAPIWrapper.NVAPIPhysicalGpuHelper.GetBoardInfo*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIPhysicalGpuHelper_GetBoardInfo" data-uid="NVAPIWrapper.NVAPIPhysicalGpuHelper.GetBoardInfo">
+  GetBoardInfo()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L1275"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get GPU board info.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NVAPIGpuBoardInfoDto? GetBoardInfo()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="NVAPIWrapper.NVAPIGpuBoardInfoDto.html">NVAPIGpuBoardInfoDto</a>?</dt>
+    <dd><p>Board info DTO, or null if unavailable.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIPhysicalGpuHelper_GetBusId_" data-uid="NVAPIWrapper.NVAPIPhysicalGpuHelper.GetBusId*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIPhysicalGpuHelper_GetBusId" data-uid="NVAPIWrapper.NVAPIPhysicalGpuHelper.GetBusId">
+  GetBusId()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L128"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get the PCI bus ID for the GPU.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public uint? GetBusId()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a>?</dt>
+    <dd><p>Bus ID, or null if unavailable.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIPhysicalGpuHelper_GetBusSlotId_" data-uid="NVAPIWrapper.NVAPIPhysicalGpuHelper.GetBusSlotId*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIPhysicalGpuHelper_GetBusSlotId" data-uid="NVAPIWrapper.NVAPIPhysicalGpuHelper.GetBusSlotId">
+  GetBusSlotId()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L212"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get the PCI bus slot ID for the GPU.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public uint? GetBusSlotId()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a>?</dt>
+    <dd><p>Bus slot ID, or null if unavailable.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIPhysicalGpuHelper_GetBusType_" data-uid="NVAPIWrapper.NVAPIPhysicalGpuHelper.GetBusType*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIPhysicalGpuHelper_GetBusType" data-uid="NVAPIWrapper.NVAPIPhysicalGpuHelper.GetBusType">
+  GetBusType()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L148"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get the GPU bus type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public _NV_GPU_BUS_TYPE? GetBusType()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="NVAPIWrapper._NV_GPU_BUS_TYPE.html">_NV_GPU_BUS_TYPE</a>?</dt>
+    <dd><p>Bus type, or null if unavailable.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIPhysicalGpuHelper_GetConnectedDisplayIds_" data-uid="NVAPIWrapper.NVAPIPhysicalGpuHelper.GetConnectedDisplayIds*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIPhysicalGpuHelper_GetConnectedDisplayIds_System_UInt32_" data-uid="NVAPIWrapper.NVAPIPhysicalGpuHelper.GetConnectedDisplayIds(System.UInt32)">
+  GetConnectedDisplayIds(uint)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L542"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get connected display IDs for this GPU.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NVAPIGpuDisplayIdDto[] GetConnectedDisplayIds(uint flags = 0)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>flags</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>Optional flags passed to NvAPI_GPU_GetConnectedDisplayIds.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="NVAPIWrapper.NVAPIGpuDisplayIdDto.html">NVAPIGpuDisplayIdDto</a>[]</dt>
+    <dd><p>Connected display IDs, or empty if unavailable.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIPhysicalGpuHelper_GetCurrentPcieDownstreamWidth_" data-uid="NVAPIWrapper.NVAPIPhysicalGpuHelper.GetCurrentPcieDownstreamWidth*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIPhysicalGpuHelper_GetCurrentPcieDownstreamWidth" data-uid="NVAPIWrapper.NVAPIPhysicalGpuHelper.GetCurrentPcieDownstreamWidth">
+  GetCurrentPcieDownstreamWidth()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L1335"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get current PCIe downstream width.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public uint? GetCurrentPcieDownstreamWidth()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a>?</dt>
+    <dd><p>PCIe downstream width, or null if unavailable.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIPhysicalGpuHelper_GetCurrentPstate_" data-uid="NVAPIWrapper.NVAPIPhysicalGpuHelper.GetCurrentPstate*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIPhysicalGpuHelper_GetCurrentPstate" data-uid="NVAPIWrapper.NVAPIPhysicalGpuHelper.GetCurrentPstate">
+  GetCurrentPstate()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L626"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get the current performance state ID.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public _NV_GPU_PERF_PSTATE_ID? GetCurrentPstate()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="NVAPIWrapper._NV_GPU_PERF_PSTATE_ID.html">_NV_GPU_PERF_PSTATE_ID</a>?</dt>
+    <dd><p>Current P-state ID, or null if unavailable.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIPhysicalGpuHelper_GetDisplayIdFromGpuAndOutputId_" data-uid="NVAPIWrapper.NVAPIPhysicalGpuHelper.GetDisplayIdFromGpuAndOutputId*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIPhysicalGpuHelper_GetDisplayIdFromGpuAndOutputId_System_UInt32_" data-uid="NVAPIWrapper.NVAPIPhysicalGpuHelper.GetDisplayIdFromGpuAndOutputId(System.UInt32)">
+  GetDisplayIdFromGpuAndOutputId(uint)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L364"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Convert a GPU output ID to a display ID.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public uint? GetDisplayIdFromGpuAndOutputId(uint outputId)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>outputId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>Output ID (single bit set).</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a>?</dt>
+    <dd><p>Display ID, or null if unavailable.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIPhysicalGpuHelper_GetDynamicPstatesInfoEx_" data-uid="NVAPIWrapper.NVAPIPhysicalGpuHelper.GetDynamicPstatesInfoEx*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIPhysicalGpuHelper_GetDynamicPstatesInfoEx" data-uid="NVAPIWrapper.NVAPIPhysicalGpuHelper.GetDynamicPstatesInfoEx">
+  GetDynamicPstatesInfoEx()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L670"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get dynamic P-state utilization information.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NVAPIGpuDynamicPstatesInfoExDto? GetDynamicPstatesInfoEx()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="NVAPIWrapper.NVAPIGpuDynamicPstatesInfoExDto.html">NVAPIGpuDynamicPstatesInfoExDto</a>?</dt>
+    <dd><p>Dynamic P-state utilization DTO, or null if unavailable.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIPhysicalGpuHelper_GetEccConfigurationInfo_" data-uid="NVAPIWrapper.NVAPIPhysicalGpuHelper.GetEccConfigurationInfo*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIPhysicalGpuHelper_GetEccConfigurationInfo" data-uid="NVAPIWrapper.NVAPIPhysicalGpuHelper.GetEccConfigurationInfo">
+  GetEccConfigurationInfo()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L1443"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get ECC configuration info.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NVAPIGpuEccConfigurationInfoDto? GetEccConfigurationInfo()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="NVAPIWrapper.NVAPIGpuEccConfigurationInfoDto.html">NVAPIGpuEccConfigurationInfoDto</a>?</dt>
+    <dd><p>ECC configuration DTO, or null if unavailable.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIPhysicalGpuHelper_GetEccErrorInfo_" data-uid="NVAPIWrapper.NVAPIPhysicalGpuHelper.GetEccErrorInfo*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIPhysicalGpuHelper_GetEccErrorInfo" data-uid="NVAPIWrapper.NVAPIPhysicalGpuHelper.GetEccErrorInfo">
+  GetEccErrorInfo()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L1496"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get ECC error info.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NVAPIGpuEccErrorInfoDto? GetEccErrorInfo()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="NVAPIWrapper.NVAPIGpuEccErrorInfoDto.html">NVAPIGpuEccErrorInfoDto</a>?</dt>
+    <dd><p>ECC error info DTO, or null if unavailable.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIPhysicalGpuHelper_GetEdid_" data-uid="NVAPIWrapper.NVAPIPhysicalGpuHelper.GetEdid*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIPhysicalGpuHelper_GetEdid_System_UInt32_" data-uid="NVAPIWrapper.NVAPIPhysicalGpuHelper.GetEdid(System.UInt32)">
+  GetEdid(uint)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L1564"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get EDID data for a GPU output.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NVAPIGpuEdidDto? GetEdid(uint displayOutputId)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>displayOutputId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>Display output ID.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="NVAPIWrapper.NVAPIGpuEdidDto.html">NVAPIGpuEdidDto</a>?</dt>
+    <dd><p>EDID DTO, or null if unavailable.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIPhysicalGpuHelper_GetEncoderSessionsInfo_" data-uid="NVAPIWrapper.NVAPIPhysicalGpuHelper.GetEncoderSessionsInfo*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIPhysicalGpuHelper_GetEncoderSessionsInfo" data-uid="NVAPIWrapper.NVAPIPhysicalGpuHelper.GetEncoderSessionsInfo">
+  GetEncoderSessionsInfo()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L1034"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get encoder sessions info for this GPU.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NVAPIEncoderSessionsInfoDto? GetEncoderSessionsInfo()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="NVAPIWrapper.NVAPIEncoderSessionsInfoDto.html">NVAPIEncoderSessionsInfoDto</a>?</dt>
+    <dd><p>Encoder sessions info DTO, or null if unavailable.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIPhysicalGpuHelper_GetEncoderStatistics_" data-uid="NVAPIWrapper.NVAPIPhysicalGpuHelper.GetEncoderStatistics*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIPhysicalGpuHelper_GetEncoderStatistics" data-uid="NVAPIWrapper.NVAPIPhysicalGpuHelper.GetEncoderStatistics">
+  GetEncoderStatistics()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L1012"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get encoder statistics for this GPU.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NVAPIEncoderStatisticsDto? GetEncoderStatistics()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="NVAPIWrapper.NVAPIEncoderStatisticsDto.html">NVAPIEncoderStatisticsDto</a>?</dt>
+    <dd><p>Encoder statistics DTO, or null if unavailable.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIPhysicalGpuHelper_GetFullName_" data-uid="NVAPIWrapper.NVAPIPhysicalGpuHelper.GetFullName*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIPhysicalGpuHelper_GetFullName" data-uid="NVAPIWrapper.NVAPIPhysicalGpuHelper.GetFullName">
+  GetFullName()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L103"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get the full name of the GPU.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string? GetFullName()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>GPU name string, or null if unavailable.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIPhysicalGpuHelper_GetGpuCoreCount_" data-uid="NVAPIWrapper.NVAPIPhysicalGpuHelper.GetGpuCoreCount*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIPhysicalGpuHelper_GetGpuCoreCount" data-uid="NVAPIWrapper.NVAPIPhysicalGpuHelper.GetGpuCoreCount">
+  GetGpuCoreCount()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L475"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get the number of GPU cores.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public uint? GetGpuCoreCount()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a>?</dt>
+    <dd><p>GPU core count, or null if unavailable.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIPhysicalGpuHelper_GetGpuInfo_" data-uid="NVAPIWrapper.NVAPIPhysicalGpuHelper.GetGpuInfo*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIPhysicalGpuHelper_GetGpuInfo" data-uid="NVAPIWrapper.NVAPIPhysicalGpuHelper.GetGpuInfo">
+  GetGpuInfo()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L1144"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get GPU info for this GPU.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NVAPIGpuInfoDto? GetGpuInfo()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="NVAPIWrapper.NVAPIGpuInfoDto.html">NVAPIGpuInfoDto</a>?</dt>
+    <dd><p>GPU info DTO, or null if unavailable.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIPhysicalGpuHelper_GetGpuType_" data-uid="NVAPIWrapper.NVAPIPhysicalGpuHelper.GetGpuType*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIPhysicalGpuHelper_GetGpuType" data-uid="NVAPIWrapper.NVAPIPhysicalGpuHelper.GetGpuType">
+  GetGpuType()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L168"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get the GPU type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public _NV_GPU_TYPE? GetGpuType()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="NVAPIWrapper._NV_GPU_TYPE.html">_NV_GPU_TYPE</a>?</dt>
+    <dd><p>GPU type, or null if unavailable.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIPhysicalGpuHelper_GetGspFeatures_" data-uid="NVAPIWrapper.NVAPIPhysicalGpuHelper.GetGspFeatures*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIPhysicalGpuHelper_GetGspFeatures" data-uid="NVAPIWrapper.NVAPIPhysicalGpuHelper.GetGspFeatures">
+  GetGspFeatures()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L1078"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get GSP features for this GPU.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NVAPIGpuGspInfoDto? GetGspFeatures()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="NVAPIWrapper.NVAPIGpuGspInfoDto.html">NVAPIGpuGspInfoDto</a>?</dt>
+    <dd><p>GSP features DTO, or null if unavailable.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIPhysicalGpuHelper_GetHdcpSupportStatus_" data-uid="NVAPIWrapper.NVAPIPhysicalGpuHelper.GetHdcpSupportStatus*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIPhysicalGpuHelper_GetHdcpSupportStatus" data-uid="NVAPIWrapper.NVAPIPhysicalGpuHelper.GetHdcpSupportStatus">
+  GetHdcpSupportStatus()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L1541"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get HDCP support status.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NVAPIGpuHdcpSupportStatusDto? GetHdcpSupportStatus()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="NVAPIWrapper.NVAPIGpuHdcpSupportStatusDto.html">NVAPIGpuHdcpSupportStatusDto</a>?</dt>
+    <dd><p>HDCP support status DTO, or null if unavailable.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIPhysicalGpuHelper_GetIllumination_" data-uid="NVAPIWrapper.NVAPIPhysicalGpuHelper.GetIllumination*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIPhysicalGpuHelper_GetIllumination_NVAPIWrapper__NV_GPU_ILLUMINATION_ATTRIB_" data-uid="NVAPIWrapper.NVAPIPhysicalGpuHelper.GetIllumination(NVAPIWrapper._NV_GPU_ILLUMINATION_ATTRIB)">
+  GetIllumination(_NV_GPU_ILLUMINATION_ATTRIB)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L763"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get illumination value for an attribute.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NVAPIGpuIlluminationDto? GetIllumination(_NV_GPU_ILLUMINATION_ATTRIB attribute)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>attribute</code> <a class="xref" href="NVAPIWrapper._NV_GPU_ILLUMINATION_ATTRIB.html">_NV_GPU_ILLUMINATION_ATTRIB</a></dt>
+    <dd><p>Illumination attribute.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="NVAPIWrapper.NVAPIGpuIlluminationDto.html">NVAPIGpuIlluminationDto</a>?</dt>
+    <dd><p>Illumination DTO, or null if unavailable.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIPhysicalGpuHelper_GetIlluminationDevicesControl_" data-uid="NVAPIWrapper.NVAPIPhysicalGpuHelper.GetIlluminationDevicesControl*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIPhysicalGpuHelper_GetIlluminationDevicesControl" data-uid="NVAPIWrapper.NVAPIPhysicalGpuHelper.GetIlluminationDevicesControl">
+  GetIlluminationDevicesControl()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L840"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get illumination device control settings for this GPU.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NVAPIGpuIllumDeviceControlParamsDto? GetIlluminationDevicesControl()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="NVAPIWrapper.NVAPIGpuIllumDeviceControlParamsDto.html">NVAPIGpuIllumDeviceControlParamsDto</a>?</dt>
+    <dd><p>Illumination device control DTO, or null if unavailable.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIPhysicalGpuHelper_GetIlluminationDevicesInfo_" data-uid="NVAPIWrapper.NVAPIPhysicalGpuHelper.GetIlluminationDevicesInfo*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIPhysicalGpuHelper_GetIlluminationDevicesInfo" data-uid="NVAPIWrapper.NVAPIPhysicalGpuHelper.GetIlluminationDevicesInfo">
+  GetIlluminationDevicesInfo()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L818"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get illumination device info for this GPU.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NVAPIGpuIllumDeviceInfoParamsDto? GetIlluminationDevicesInfo()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="NVAPIWrapper.NVAPIGpuIllumDeviceInfoParamsDto.html">NVAPIGpuIllumDeviceInfoParamsDto</a>?</dt>
+    <dd><p>Illumination device info DTO, or null if unavailable.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIPhysicalGpuHelper_GetIlluminationZonesControl_" data-uid="NVAPIWrapper.NVAPIPhysicalGpuHelper.GetIlluminationZonesControl*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIPhysicalGpuHelper_GetIlluminationZonesControl" data-uid="NVAPIWrapper.NVAPIPhysicalGpuHelper.GetIlluminationZonesControl">
+  GetIlluminationZonesControl()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L915"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get illumination zone control for this GPU.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NVAPIGpuIllumZoneControlParamsDto? GetIlluminationZonesControl()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="NVAPIWrapper.NVAPIGpuIllumZoneControlParamsDto.html">NVAPIGpuIllumZoneControlParamsDto</a>?</dt>
+    <dd><p>Illumination zone control DTO, or null if unavailable.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIPhysicalGpuHelper_GetIlluminationZonesInfo_" data-uid="NVAPIWrapper.NVAPIPhysicalGpuHelper.GetIlluminationZonesInfo*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIPhysicalGpuHelper_GetIlluminationZonesInfo" data-uid="NVAPIWrapper.NVAPIPhysicalGpuHelper.GetIlluminationZonesInfo">
+  GetIlluminationZonesInfo()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L893"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get illumination zone info for this GPU.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NVAPIGpuIllumZoneInfoParamsDto? GetIlluminationZonesInfo()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="NVAPIWrapper.NVAPIGpuIllumZoneInfoParamsDto.html">NVAPIGpuIllumZoneInfoParamsDto</a>?</dt>
+    <dd><p>Illumination zone info DTO, or null if unavailable.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIPhysicalGpuHelper_GetIrq_" data-uid="NVAPIWrapper.NVAPIPhysicalGpuHelper.GetIrq*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIPhysicalGpuHelper_GetIrq" data-uid="NVAPIWrapper.NVAPIPhysicalGpuHelper.GetIrq">
+  GetIrq()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L1377"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get the GPU IRQ.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public uint? GetIrq()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a>?</dt>
+    <dd><p>IRQ value, or null if unavailable.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIPhysicalGpuHelper_GetLicensableFeatures_" data-uid="NVAPIWrapper.NVAPIPhysicalGpuHelper.GetLicensableFeatures*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIPhysicalGpuHelper_GetLicensableFeatures" data-uid="NVAPIWrapper.NVAPIPhysicalGpuHelper.GetLicensableFeatures">
+  GetLicensableFeatures()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L990"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get licensable features for this GPU.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NVAPILicensableFeaturesDto? GetLicensableFeatures()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="NVAPIWrapper.NVAPILicensableFeaturesDto.html">NVAPILicensableFeaturesDto</a>?</dt>
+    <dd><p>Licensable features DTO, or null if unavailable.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIPhysicalGpuHelper_GetLogicalGpuInfo_" data-uid="NVAPIWrapper.NVAPIPhysicalGpuHelper.GetLogicalGpuInfo*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIPhysicalGpuHelper_GetLogicalGpuInfo" data-uid="NVAPIWrapper.NVAPIPhysicalGpuHelper.GetLogicalGpuInfo">
+  GetLogicalGpuInfo()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L1613"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get logical GPU info associated with this physical GPU.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NVAPILogicalGpuInfoDto? GetLogicalGpuInfo()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="NVAPIWrapper.NVAPILogicalGpuInfoDto.html">NVAPILogicalGpuInfoDto</a>?</dt>
+    <dd><p>Logical GPU info DTO, or null if unavailable.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIPhysicalGpuHelper_GetMemoryInfo_" data-uid="NVAPIWrapper.NVAPIPhysicalGpuHelper.GetMemoryInfo*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIPhysicalGpuHelper_GetMemoryInfo" data-uid="NVAPIWrapper.NVAPIPhysicalGpuHelper.GetMemoryInfo">
+  GetMemoryInfo()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L321"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get display driver memory info (legacy).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NVAPIDisplayDriverMemoryInfoDto? GetMemoryInfo()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="NVAPIWrapper.NVAPIDisplayDriverMemoryInfoDto.html">NVAPIDisplayDriverMemoryInfoDto</a>?</dt>
+    <dd><p>Memory info, or null if unavailable.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIPhysicalGpuHelper_GetMemoryInfoEx_" data-uid="NVAPIWrapper.NVAPIPhysicalGpuHelper.GetMemoryInfoEx*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIPhysicalGpuHelper_GetMemoryInfoEx" data-uid="NVAPIWrapper.NVAPIPhysicalGpuHelper.GetMemoryInfoEx">
+  GetMemoryInfoEx()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L342"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get extended GPU memory info.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NVAPIGpuMemoryInfoExDto? GetMemoryInfoEx()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="NVAPIWrapper.NVAPIGpuMemoryInfoExDto.html">NVAPIGpuMemoryInfoExDto</a>?</dt>
+    <dd><p>Extended memory info, or null if unavailable.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIPhysicalGpuHelper_GetNvlinkCaps_" data-uid="NVAPIWrapper.NVAPIPhysicalGpuHelper.GetNvlinkCaps*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIPhysicalGpuHelper_GetNvlinkCaps" data-uid="NVAPIWrapper.NVAPIPhysicalGpuHelper.GetNvlinkCaps">
+  GetNvlinkCaps()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L1100"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get NVLINK capabilities for this GPU.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NVAPINvLinkCapsDto? GetNvlinkCaps()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="NVAPIWrapper.NVAPINvLinkCapsDto.html">NVAPINvLinkCapsDto</a>?</dt>
+    <dd><p>NVLINK caps DTO, or null if unavailable.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIPhysicalGpuHelper_GetNvlinkStatus_" data-uid="NVAPIWrapper.NVAPIPhysicalGpuHelper.GetNvlinkStatus*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIPhysicalGpuHelper_GetNvlinkStatus" data-uid="NVAPIWrapper.NVAPIPhysicalGpuHelper.GetNvlinkStatus">
+  GetNvlinkStatus()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L1122"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get NVLINK status for this GPU.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NVAPINvLinkStatusDto? GetNvlinkStatus()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="NVAPIWrapper.NVAPINvLinkStatusDto.html">NVAPINvLinkStatusDto</a>?</dt>
+    <dd><p>NVLINK status DTO, or null if unavailable.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIPhysicalGpuHelper_GetOutputType_" data-uid="NVAPIWrapper.NVAPIPhysicalGpuHelper.GetOutputType*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIPhysicalGpuHelper_GetOutputType_System_UInt32_" data-uid="NVAPIWrapper.NVAPIPhysicalGpuHelper.GetOutputType(System.UInt32)">
+  GetOutputType(uint)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L1398"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get GPU output type for the specified output ID.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public _NV_GPU_OUTPUT_TYPE? GetOutputType(uint outputId)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>outputId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>Output ID (single bit set).</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="NVAPIWrapper._NV_GPU_OUTPUT_TYPE.html">_NV_GPU_OUTPUT_TYPE</a>?</dt>
+    <dd><p>Output type, or null if unavailable.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIPhysicalGpuHelper_GetPCIIdentifiers_" data-uid="NVAPIWrapper.NVAPIPhysicalGpuHelper.GetPCIIdentifiers*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIPhysicalGpuHelper_GetPCIIdentifiers" data-uid="NVAPIWrapper.NVAPIPhysicalGpuHelper.GetPCIIdentifiers">
+  GetPCIIdentifiers()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L188"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get PCI identifiers for the GPU.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NVAPIPciIdentifiers? GetPCIIdentifiers()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="NVAPIWrapper.NVAPIPciIdentifiers.html">NVAPIPciIdentifiers</a>?</dt>
+    <dd><p>PCI identifiers, or null if unavailable.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIPhysicalGpuHelper_GetPerfDecreaseInfo_" data-uid="NVAPIWrapper.NVAPIPhysicalGpuHelper.GetPerfDecreaseInfo*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIPhysicalGpuHelper_GetPerfDecreaseInfo" data-uid="NVAPIWrapper.NVAPIPhysicalGpuHelper.GetPerfDecreaseInfo">
+  GetPerfDecreaseInfo()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L604"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get the performance decrease reason flags.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public _NVAPI_GPU_PERF_DECREASE? GetPerfDecreaseInfo()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="NVAPIWrapper._NVAPI_GPU_PERF_DECREASE.html">_NVAPI_GPU_PERF_DECREASE</a>?</dt>
+    <dd><p>Performance decrease flags, or null if unavailable.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIPhysicalGpuHelper_GetPhysicalFrameBufferSize_" data-uid="NVAPIWrapper.NVAPIPhysicalGpuHelper.GetPhysicalFrameBufferSize*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIPhysicalGpuHelper_GetPhysicalFrameBufferSize" data-uid="NVAPIWrapper.NVAPIPhysicalGpuHelper.GetPhysicalFrameBufferSize">
+  GetPhysicalFrameBufferSize()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L257"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get the physical frame buffer size in kilobytes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public uint? GetPhysicalFrameBufferSize()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a>?</dt>
+    <dd><p>Physical frame buffer size in KB, or null if unavailable.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIPhysicalGpuHelper_GetPstates20Info_" data-uid="NVAPIWrapper.NVAPIPhysicalGpuHelper.GetPstates20Info*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIPhysicalGpuHelper_GetPstates20Info" data-uid="NVAPIWrapper.NVAPIPhysicalGpuHelper.GetPstates20Info">
+  GetPstates20Info()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L648"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get detailed P-state information (Pstates20).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NVAPIGpuPerfPstates20InfoDto? GetPstates20Info()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="NVAPIWrapper.NVAPIGpuPerfPstates20InfoDto.html">NVAPIGpuPerfPstates20InfoDto</a>?</dt>
+    <dd><p>P-state details DTO, or null if unavailable.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIPhysicalGpuHelper_GetRamBusWidth_" data-uid="NVAPIWrapper.NVAPIPhysicalGpuHelper.GetRamBusWidth*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIPhysicalGpuHelper_GetRamBusWidth" data-uid="NVAPIWrapper.NVAPIPhysicalGpuHelper.GetRamBusWidth">
+  GetRamBusWidth()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L1357"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get the GPU RAM bus width.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public uint? GetRamBusWidth()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a>?</dt>
+    <dd><p>RAM bus width, or null if unavailable.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIPhysicalGpuHelper_GetScanoutCompositionParameter_" data-uid="NVAPIWrapper.NVAPIPhysicalGpuHelper.GetScanoutCompositionParameter*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIPhysicalGpuHelper_GetScanoutCompositionParameter_System_UInt32_NVAPIWrapper_NV_GPU_SCANOUT_COMPOSITION_PARAMETER_" data-uid="NVAPIWrapper.NVAPIPhysicalGpuHelper.GetScanoutCompositionParameter(System.UInt32,NVAPIWrapper.NV_GPU_SCANOUT_COMPOSITION_PARAMETER)">
+  GetScanoutCompositionParameter(uint, NV_GPU_SCANOUT_COMPOSITION_PARAMETER)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L1673"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get scanout composition parameter.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NVAPIGpuScanoutCompositionParameterDto? GetScanoutCompositionParameter(uint displayId, NV_GPU_SCANOUT_COMPOSITION_PARAMETER parameter)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>displayId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>Display ID.</p>
+</dd>
+    <dt><code>parameter</code> <a class="xref" href="NVAPIWrapper.NV_GPU_SCANOUT_COMPOSITION_PARAMETER.html">NV_GPU_SCANOUT_COMPOSITION_PARAMETER</a></dt>
+    <dd><p>Parameter to query.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="NVAPIWrapper.NVAPIGpuScanoutCompositionParameterDto.html">NVAPIGpuScanoutCompositionParameterDto</a>?</dt>
+    <dd><p>Scanout composition parameter DTO, or null if unavailable.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIPhysicalGpuHelper_GetScanoutConfiguration_" data-uid="NVAPIWrapper.NVAPIPhysicalGpuHelper.GetScanoutConfiguration*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIPhysicalGpuHelper_GetScanoutConfiguration_System_UInt32_" data-uid="NVAPIWrapper.NVAPIPhysicalGpuHelper.GetScanoutConfiguration(System.UInt32)">
+  GetScanoutConfiguration(uint)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L1731"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get scanout configuration.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NVAPIGpuScanoutConfigurationDto? GetScanoutConfiguration(uint displayId)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>displayId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>Display ID.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="NVAPIWrapper.NVAPIGpuScanoutConfigurationDto.html">NVAPIGpuScanoutConfigurationDto</a>?</dt>
+    <dd><p>Scanout configuration DTO, or null if unavailable.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIPhysicalGpuHelper_GetScanoutConfigurationEx_" data-uid="NVAPIWrapper.NVAPIPhysicalGpuHelper.GetScanoutConfigurationEx*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIPhysicalGpuHelper_GetScanoutConfigurationEx_System_UInt32_" data-uid="NVAPIWrapper.NVAPIPhysicalGpuHelper.GetScanoutConfigurationEx(System.UInt32)">
+  GetScanoutConfigurationEx(uint)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L1755"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get extended scanout configuration.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NVAPIGpuScanoutConfigurationExDto? GetScanoutConfigurationEx(uint displayId)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>displayId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>Display ID.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="NVAPIWrapper.NVAPIGpuScanoutConfigurationExDto.html">NVAPIGpuScanoutConfigurationExDto</a>?</dt>
+    <dd><p>Scanout configuration DTO, or null if unavailable.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIPhysicalGpuHelper_GetScanoutIntensityState_" data-uid="NVAPIWrapper.NVAPIPhysicalGpuHelper.GetScanoutIntensityState*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIPhysicalGpuHelper_GetScanoutIntensityState_System_UInt32_" data-uid="NVAPIWrapper.NVAPIPhysicalGpuHelper.GetScanoutIntensityState(System.UInt32)">
+  GetScanoutIntensityState(uint)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L1778"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get scanout intensity state.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NVAPIGpuScanoutIntensityStateDto? GetScanoutIntensityState(uint displayId)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>displayId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>Display ID.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="NVAPIWrapper.NVAPIGpuScanoutIntensityStateDto.html">NVAPIGpuScanoutIntensityStateDto</a>?</dt>
+    <dd><p>Scanout intensity state DTO, or null if unavailable.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIPhysicalGpuHelper_GetScanoutWarpingState_" data-uid="NVAPIWrapper.NVAPIPhysicalGpuHelper.GetScanoutWarpingState*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIPhysicalGpuHelper_GetScanoutWarpingState_System_UInt32_" data-uid="NVAPIWrapper.NVAPIPhysicalGpuHelper.GetScanoutWarpingState(System.UInt32)">
+  GetScanoutWarpingState(uint)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L1836"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get scanout warping state.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NVAPIGpuScanoutWarpingStateDto? GetScanoutWarpingState(uint displayId)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>displayId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>Display ID.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="NVAPIWrapper.NVAPIGpuScanoutWarpingStateDto.html">NVAPIGpuScanoutWarpingStateDto</a>?</dt>
+    <dd><p>Scanout warping state DTO, or null if unavailable.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIPhysicalGpuHelper_GetShaderSubPipeCount_" data-uid="NVAPIWrapper.NVAPIPhysicalGpuHelper.GetShaderSubPipeCount*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIPhysicalGpuHelper_GetShaderSubPipeCount" data-uid="NVAPIWrapper.NVAPIPhysicalGpuHelper.GetShaderSubPipeCount">
+  GetShaderSubPipeCount()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L453"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get the number of shader sub-pipes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public uint? GetShaderSubPipeCount()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a>?</dt>
+    <dd><p>Shader sub-pipe count, or null if unavailable.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIPhysicalGpuHelper_GetSystemType_" data-uid="NVAPIWrapper.NVAPIPhysicalGpuHelper.GetSystemType*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIPhysicalGpuHelper_GetSystemType" data-uid="NVAPIWrapper.NVAPIPhysicalGpuHelper.GetSystemType">
+  GetSystemType()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L497"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get the system type for this GPU.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NV_SYSTEM_TYPE? GetSystemType()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="NVAPIWrapper.NV_SYSTEM_TYPE.html">NV_SYSTEM_TYPE</a>?</dt>
+    <dd><p>System type, or null if unavailable.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIPhysicalGpuHelper_GetTachReading_" data-uid="NVAPIWrapper.NVAPIPhysicalGpuHelper.GetTachReading*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIPhysicalGpuHelper_GetTachReading" data-uid="NVAPIWrapper.NVAPIPhysicalGpuHelper.GetTachReading">
+  GetTachReading()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L301"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get the GPU tachometer reading.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public uint? GetTachReading()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a>?</dt>
+    <dd><p>Tachometer value, or null if unavailable.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIPhysicalGpuHelper_GetThermalSettings_" data-uid="NVAPIWrapper.NVAPIPhysicalGpuHelper.GetThermalSettings*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIPhysicalGpuHelper_GetThermalSettings_System_UInt32_" data-uid="NVAPIWrapper.NVAPIPhysicalGpuHelper.GetThermalSettings(System.UInt32)">
+  GetThermalSettings(uint)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L693"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get thermal settings for this GPU.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NVAPIGpuThermalSettingsDto? GetThermalSettings(uint sensorIndex = 0)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>sensorIndex</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>Sensor index (0 for all).</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="NVAPIWrapper.NVAPIGpuThermalSettingsDto.html">NVAPIGpuThermalSettingsDto</a>?</dt>
+    <dd><p>Thermal settings DTO, or null if unavailable.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIPhysicalGpuHelper_GetVbiosOemRevision_" data-uid="NVAPIWrapper.NVAPIPhysicalGpuHelper.GetVbiosOemRevision*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIPhysicalGpuHelper_GetVbiosOemRevision" data-uid="NVAPIWrapper.NVAPIPhysicalGpuHelper.GetVbiosOemRevision">
+  GetVbiosOemRevision()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L1315"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get the VBIOS OEM revision.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public uint? GetVbiosOemRevision()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a>?</dt>
+    <dd><p>VBIOS OEM revision, or null if unavailable.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIPhysicalGpuHelper_GetVbiosRevision_" data-uid="NVAPIWrapper.NVAPIPhysicalGpuHelper.GetVbiosRevision*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIPhysicalGpuHelper_GetVbiosRevision" data-uid="NVAPIWrapper.NVAPIPhysicalGpuHelper.GetVbiosRevision">
+  GetVbiosRevision()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L1295"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get the VBIOS revision.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public uint? GetVbiosRevision()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a>?</dt>
+    <dd><p>VBIOS revision, or null if unavailable.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIPhysicalGpuHelper_GetVbiosVersionString_" data-uid="NVAPIWrapper.NVAPIPhysicalGpuHelper.GetVbiosVersionString*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIPhysicalGpuHelper_GetVbiosVersionString" data-uid="NVAPIWrapper.NVAPIPhysicalGpuHelper.GetVbiosVersionString">
+  GetVbiosVersionString()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L232"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get the VBIOS version string.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string? GetVbiosVersionString()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>VBIOS version string, or null if unavailable.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIPhysicalGpuHelper_GetVirtualFrameBufferSize_" data-uid="NVAPIWrapper.NVAPIPhysicalGpuHelper.GetVirtualFrameBufferSize*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIPhysicalGpuHelper_GetVirtualFrameBufferSize" data-uid="NVAPIWrapper.NVAPIPhysicalGpuHelper.GetVirtualFrameBufferSize">
+  GetVirtualFrameBufferSize()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L279"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get the virtual frame buffer size in kilobytes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public uint? GetVirtualFrameBufferSize()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a>?</dt>
+    <dd><p>Virtual frame buffer size in KB, or null if unavailable.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIPhysicalGpuHelper_GetVirtualizationInfo_" data-uid="NVAPIWrapper.NVAPIPhysicalGpuHelper.GetVirtualizationInfo*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIPhysicalGpuHelper_GetVirtualizationInfo" data-uid="NVAPIWrapper.NVAPIPhysicalGpuHelper.GetVirtualizationInfo">
+  GetVirtualizationInfo()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L968"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get virtualization information for this GPU.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NVAPIGpuVirtualizationInfoDto? GetVirtualizationInfo()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="NVAPIWrapper.NVAPIGpuVirtualizationInfoDto.html">NVAPIGpuVirtualizationInfoDto</a>?</dt>
+    <dd><p>Virtualization info DTO, or null if unavailable.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIPhysicalGpuHelper_GetVrReadyData_" data-uid="NVAPIWrapper.NVAPIPhysicalGpuHelper.GetVrReadyData*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIPhysicalGpuHelper_GetVrReadyData" data-uid="NVAPIWrapper.NVAPIPhysicalGpuHelper.GetVrReadyData">
+  GetVrReadyData()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L1056"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get VR Ready data for this GPU.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NVAPIGpuVrReadyDto? GetVrReadyData()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="NVAPIWrapper.NVAPIGpuVrReadyDto.html">NVAPIGpuVrReadyDto</a>?</dt>
+    <dd><p>VR Ready DTO, or null if unavailable.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIPhysicalGpuHelper_I2CRead_" data-uid="NVAPIWrapper.NVAPIPhysicalGpuHelper.I2CRead*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIPhysicalGpuHelper_I2CRead_NVAPIWrapper_NVAPII2CInfoDto_" data-uid="NVAPIWrapper.NVAPIPhysicalGpuHelper.I2CRead(NVAPIWrapper.NVAPII2CInfoDto)">
+  I2CRead(NVAPII2CInfoDto)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L1167"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Read data via I2C from a DDC port.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NVAPII2CInfoDto? I2CRead(NVAPII2CInfoDto request)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>request</code> <a class="xref" href="NVAPIWrapper.NVAPII2CInfoDto.html">NVAPII2CInfoDto</a></dt>
+    <dd><p>I2C request DTO (data buffer length defines read size).</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="NVAPIWrapper.NVAPII2CInfoDto.html">NVAPII2CInfoDto</a>?</dt>
+    <dd><p>Result DTO with read data, or null if unsupported.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIPhysicalGpuHelper_I2CWrite_" data-uid="NVAPIWrapper.NVAPIPhysicalGpuHelper.I2CWrite*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIPhysicalGpuHelper_I2CWrite_NVAPIWrapper_NVAPII2CInfoDto_" data-uid="NVAPIWrapper.NVAPIPhysicalGpuHelper.I2CWrite(NVAPIWrapper.NVAPII2CInfoDto)">
+  I2CWrite(NVAPII2CInfoDto)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L1218"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Write data via I2C to a DDC port.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool? I2CWrite(NVAPII2CInfoDto request)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>request</code> <a class="xref" href="NVAPIWrapper.NVAPII2CInfoDto.html">NVAPII2CInfoDto</a></dt>
+    <dd><p>I2C request DTO containing data to write.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>?</dt>
+    <dd><p>True if written, or null if unsupported.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIPhysicalGpuHelper_QueryIlluminationSupport_" data-uid="NVAPIWrapper.NVAPIPhysicalGpuHelper.QueryIlluminationSupport*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIPhysicalGpuHelper_QueryIlluminationSupport_NVAPIWrapper__NV_GPU_ILLUMINATION_ATTRIB_" data-uid="NVAPIWrapper.NVAPIPhysicalGpuHelper.QueryIlluminationSupport(NVAPIWrapper._NV_GPU_ILLUMINATION_ATTRIB)">
+  QueryIlluminationSupport(_NV_GPU_ILLUMINATION_ATTRIB)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L739"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Query illumination support for an attribute.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NVAPIGpuIlluminationSupportDto? QueryIlluminationSupport(_NV_GPU_ILLUMINATION_ATTRIB attribute)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>attribute</code> <a class="xref" href="NVAPIWrapper._NV_GPU_ILLUMINATION_ATTRIB.html">_NV_GPU_ILLUMINATION_ATTRIB</a></dt>
+    <dd><p>Illumination attribute.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="NVAPIWrapper.NVAPIGpuIlluminationSupportDto.html">NVAPIGpuIlluminationSupportDto</a>?</dt>
+    <dd><p>Illumination support DTO, or null if unavailable.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIPhysicalGpuHelper_QueryWorkstationFeatureSupport_" data-uid="NVAPIWrapper.NVAPIPhysicalGpuHelper.QueryWorkstationFeatureSupport*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIPhysicalGpuHelper_QueryWorkstationFeatureSupport_NVAPIWrapper__NV_GPU_WORKSTATION_FEATURE_TYPE_" data-uid="NVAPIWrapper.NVAPIPhysicalGpuHelper.QueryWorkstationFeatureSupport(NVAPIWrapper._NV_GPU_WORKSTATION_FEATURE_TYPE)">
+  QueryWorkstationFeatureSupport(_NV_GPU_WORKSTATION_FEATURE_TYPE)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L1910"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Query workstation feature support for this GPU.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool? QueryWorkstationFeatureSupport(_NV_GPU_WORKSTATION_FEATURE_TYPE feature)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>feature</code> <a class="xref" href="NVAPIWrapper._NV_GPU_WORKSTATION_FEATURE_TYPE.html">_NV_GPU_WORKSTATION_FEATURE_TYPE</a></dt>
+    <dd><p>Workstation feature type.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>?</dt>
+    <dd><p>True if supported, false if not supported, or null if unavailable.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIPhysicalGpuHelper_RegisterForUtilizationSampleUpdates_" data-uid="NVAPIWrapper.NVAPIPhysicalGpuHelper.RegisterForUtilizationSampleUpdates*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIPhysicalGpuHelper_RegisterForUtilizationSampleUpdates_NVAPIWrapper_NVAPIGpuUtilizationSampleCallbackSettingsDto_" data-uid="NVAPIWrapper.NVAPIPhysicalGpuHelper.RegisterForUtilizationSampleUpdates(NVAPIWrapper.NVAPIGpuUtilizationSampleCallbackSettingsDto)">
+  RegisterForUtilizationSampleUpdates(NVAPIGpuUtilizationSampleCallbackSettingsDto)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L1647"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Register or unregister for GPU utilization sample updates.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool RegisterForUtilizationSampleUpdates(NVAPIGpuUtilizationSampleCallbackSettingsDto settings)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>settings</code> <a class="xref" href="NVAPIWrapper.NVAPIGpuUtilizationSampleCallbackSettingsDto.html">NVAPIGpuUtilizationSampleCallbackSettingsDto</a></dt>
+    <dd><p>Callback settings DTO (set Callback to IntPtr.Zero to unregister).</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True if registered, false if unavailable.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIPhysicalGpuHelper_ResetEccErrorInfo_" data-uid="NVAPIWrapper.NVAPIPhysicalGpuHelper.ResetEccErrorInfo*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIPhysicalGpuHelper_ResetEccErrorInfo_System_Boolean_System_Boolean_" data-uid="NVAPIWrapper.NVAPIPhysicalGpuHelper.ResetEccErrorInfo(System.Boolean,System.Boolean)">
+  ResetEccErrorInfo(bool, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L1520"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Reset ECC error counts.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool ResetEccErrorInfo(bool resetCurrent = true, bool resetAggregate = true)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>resetCurrent</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Reset current error counts.</p>
+</dd>
+    <dt><code>resetAggregate</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Reset aggregate error counts.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True if reset, false if unavailable.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIPhysicalGpuHelper_SetEccConfiguration_" data-uid="NVAPIWrapper.NVAPIPhysicalGpuHelper.SetEccConfiguration*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIPhysicalGpuHelper_SetEccConfiguration_System_Boolean_System_Boolean_" data-uid="NVAPIWrapper.NVAPIPhysicalGpuHelper.SetEccConfiguration(System.Boolean,System.Boolean)">
+  SetEccConfiguration(bool, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L1467"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Set ECC configuration.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool SetEccConfiguration(bool enable, bool enableImmediately = true)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>enable</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True to enable ECC.</p>
+</dd>
+    <dt><code>enableImmediately</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True to enable immediately.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True if applied or unchanged, false if unavailable.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIPhysicalGpuHelper_SetEdid_" data-uid="NVAPIWrapper.NVAPIPhysicalGpuHelper.SetEdid*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIPhysicalGpuHelper_SetEdid_System_UInt32_NVAPIWrapper_NVAPIGpuEdidDto_" data-uid="NVAPIWrapper.NVAPIPhysicalGpuHelper.SetEdid(System.UInt32,NVAPIWrapper.NVAPIGpuEdidDto)">
+  SetEdid(uint, NVAPIGpuEdidDto)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L1586"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Set EDID data for a GPU output.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool SetEdid(uint displayOutputId, NVAPIGpuEdidDto edid)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>displayOutputId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>Display output ID.</p>
+</dd>
+    <dt><code>edid</code> <a class="xref" href="NVAPIWrapper.NVAPIGpuEdidDto.html">NVAPIGpuEdidDto</a></dt>
+    <dd><p>EDID data DTO.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True if applied or unchanged, false if unavailable.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIPhysicalGpuHelper_SetIllumination_" data-uid="NVAPIWrapper.NVAPIPhysicalGpuHelper.SetIllumination*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIPhysicalGpuHelper_SetIllumination_NVAPIWrapper_NVAPIGpuIlluminationDto_" data-uid="NVAPIWrapper.NVAPIPhysicalGpuHelper.SetIllumination(NVAPIWrapper.NVAPIGpuIlluminationDto)">
+  SetIllumination(NVAPIGpuIlluminationDto)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L787"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Set illumination value for an attribute.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool SetIllumination(NVAPIGpuIlluminationDto illumination)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>illumination</code> <a class="xref" href="NVAPIWrapper.NVAPIGpuIlluminationDto.html">NVAPIGpuIlluminationDto</a></dt>
+    <dd><p>Illumination settings DTO.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True if applied, false if unavailable or unchanged.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIPhysicalGpuHelper_SetIlluminationDevicesControl_" data-uid="NVAPIWrapper.NVAPIPhysicalGpuHelper.SetIlluminationDevicesControl*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIPhysicalGpuHelper_SetIlluminationDevicesControl_NVAPIWrapper_NVAPIGpuIllumDeviceControlParamsDto_" data-uid="NVAPIWrapper.NVAPIPhysicalGpuHelper.SetIlluminationDevicesControl(NVAPIWrapper.NVAPIGpuIllumDeviceControlParamsDto)">
+  SetIlluminationDevicesControl(NVAPIGpuIllumDeviceControlParamsDto)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L863"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Set illumination device control settings for this GPU.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool SetIlluminationDevicesControl(NVAPIGpuIllumDeviceControlParamsDto control)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>control</code> <a class="xref" href="NVAPIWrapper.NVAPIGpuIllumDeviceControlParamsDto.html">NVAPIGpuIllumDeviceControlParamsDto</a></dt>
+    <dd><p>Control DTO.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True if applied, false if unavailable or unchanged.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIPhysicalGpuHelper_SetIlluminationZonesControl_" data-uid="NVAPIWrapper.NVAPIPhysicalGpuHelper.SetIlluminationZonesControl*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIPhysicalGpuHelper_SetIlluminationZonesControl_NVAPIWrapper_NVAPIGpuIllumZoneControlParamsDto_" data-uid="NVAPIWrapper.NVAPIPhysicalGpuHelper.SetIlluminationZonesControl(NVAPIWrapper.NVAPIGpuIllumZoneControlParamsDto)">
+  SetIlluminationZonesControl(NVAPIGpuIllumZoneControlParamsDto)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L938"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Set illumination zone control for this GPU.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool SetIlluminationZonesControl(NVAPIGpuIllumZoneControlParamsDto control)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>control</code> <a class="xref" href="NVAPIWrapper.NVAPIGpuIllumZoneControlParamsDto.html">NVAPIGpuIllumZoneControlParamsDto</a></dt>
+    <dd><p>Zone control DTO.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True if applied, false if unavailable or unchanged.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIPhysicalGpuHelper_SetScanoutCompositionParameter_" data-uid="NVAPIWrapper.NVAPIPhysicalGpuHelper.SetScanoutCompositionParameter*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIPhysicalGpuHelper_SetScanoutCompositionParameter_System_UInt32_NVAPIWrapper_NVAPIGpuScanoutCompositionParameterDto_" data-uid="NVAPIWrapper.NVAPIPhysicalGpuHelper.SetScanoutCompositionParameter(System.UInt32,NVAPIWrapper.NVAPIGpuScanoutCompositionParameterDto)">
+  SetScanoutCompositionParameter(uint, NVAPIGpuScanoutCompositionParameterDto)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L1700"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Set scanout composition parameter.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool SetScanoutCompositionParameter(uint displayId, NVAPIGpuScanoutCompositionParameterDto parameter)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>displayId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>Display ID.</p>
+</dd>
+    <dt><code>parameter</code> <a class="xref" href="NVAPIWrapper.NVAPIGpuScanoutCompositionParameterDto.html">NVAPIGpuScanoutCompositionParameterDto</a></dt>
+    <dd><p>Parameter settings.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True if applied or unchanged, false if unavailable.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIPhysicalGpuHelper_SetScanoutIntensity_" data-uid="NVAPIWrapper.NVAPIPhysicalGpuHelper.SetScanoutIntensity*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIPhysicalGpuHelper_SetScanoutIntensity_System_UInt32_NVAPIWrapper_NVAPIGpuScanoutIntensityDataDto_" data-uid="NVAPIWrapper.NVAPIPhysicalGpuHelper.SetScanoutIntensity(System.UInt32,NVAPIWrapper.NVAPIGpuScanoutIntensityDataDto)">
+  SetScanoutIntensity(uint, NVAPIGpuScanoutIntensityDataDto)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L1802"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Set scanout intensity.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NVAPIGpuScanoutIntensityResultDto? SetScanoutIntensity(uint displayId, NVAPIGpuScanoutIntensityDataDto data)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>displayId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>Display ID.</p>
+</dd>
+    <dt><code>data</code> <a class="xref" href="NVAPIWrapper.NVAPIGpuScanoutIntensityDataDto.html">NVAPIGpuScanoutIntensityDataDto</a></dt>
+    <dd><p>Scanout intensity data.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="NVAPIWrapper.NVAPIGpuScanoutIntensityResultDto.html">NVAPIGpuScanoutIntensityResultDto</a>?</dt>
+    <dd><p>Result DTO, or null if unavailable.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIPhysicalGpuHelper_SetScanoutWarping_" data-uid="NVAPIWrapper.NVAPIPhysicalGpuHelper.SetScanoutWarping*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIPhysicalGpuHelper_SetScanoutWarping_System_UInt32_NVAPIWrapper_NVAPIGpuScanoutWarpingDataDto_" data-uid="NVAPIWrapper.NVAPIPhysicalGpuHelper.SetScanoutWarping(System.UInt32,NVAPIWrapper.NVAPIGpuScanoutWarpingDataDto)">
+  SetScanoutWarping(uint, NVAPIGpuScanoutWarpingDataDto)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L1860"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Set scanout warping.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NVAPIGpuScanoutWarpingResultDto? SetScanoutWarping(uint displayId, NVAPIGpuScanoutWarpingDataDto data)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>displayId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>Display ID.</p>
+</dd>
+    <dt><code>data</code> <a class="xref" href="NVAPIWrapper.NVAPIGpuScanoutWarpingDataDto.html">NVAPIGpuScanoutWarpingDataDto</a></dt>
+    <dd><p>Scanout warping data.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="NVAPIWrapper.NVAPIGpuScanoutWarpingResultDto.html">NVAPIGpuScanoutWarpingResultDto</a>?</dt>
+    <dd><p>Result DTO, or null if unavailable.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIPhysicalGpuHelper_ValidateOutputCombination_" data-uid="NVAPIWrapper.NVAPIPhysicalGpuHelper.ValidateOutputCombination*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIPhysicalGpuHelper_ValidateOutputCombination_System_UInt32_" data-uid="NVAPIWrapper.NVAPIPhysicalGpuHelper.ValidateOutputCombination(System.UInt32)">
+  ValidateOutputCombination(uint)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L1419"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Validate an output combination mask.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool? ValidateOutputCombination(uint outputsMask)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>outputsMask</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>Outputs mask to validate.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>?</dt>
+    <dd><p>True if valid, false if invalid, or null if unavailable.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIPhysicalGpuHelper_WorkstationFeatureQuery_" data-uid="NVAPIWrapper.NVAPIPhysicalGpuHelper.WorkstationFeatureQuery*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIPhysicalGpuHelper_WorkstationFeatureQuery" data-uid="NVAPIWrapper.NVAPIPhysicalGpuHelper.WorkstationFeatureQuery">
+  WorkstationFeatureQuery()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L1936"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Query workstation feature masks.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NVAPIGpuWorkstationFeatureQueryDto? WorkstationFeatureQuery()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="NVAPIWrapper.NVAPIGpuWorkstationFeatureQueryDto.html">NVAPIGpuWorkstationFeatureQueryDto</a>?</dt>
+    <dd><p>Workstation feature query DTO, or null if unavailable.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIPhysicalGpuHelper_WorkstationFeatureSetup_" data-uid="NVAPIWrapper.NVAPIPhysicalGpuHelper.WorkstationFeatureSetup*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIPhysicalGpuHelper_WorkstationFeatureSetup_System_UInt32_System_UInt32_" data-uid="NVAPIWrapper.NVAPIPhysicalGpuHelper.WorkstationFeatureSetup(System.UInt32,System.UInt32)">
+  WorkstationFeatureSetup(uint, uint)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L1963"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Configure workstation feature masks.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool WorkstationFeatureSetup(uint featureEnableMask, uint featureDisableMask)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>featureEnableMask</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>Features to enable.</p>
+</dd>
+    <dt><code>featureDisableMask</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>Features to disable.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True if applied, false if unavailable.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L9" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -2302,10 +2302,20 @@ namespace NVAPIWrapper
             private readonly List<IntPtr> _allocations = new List<IntPtr>();
             private bool _disposed;
 
+            /// <summary>
+            /// Gets the native path info pointer.
+            /// </summary>
             public unsafe _NV_DISPLAYCONFIG_PATH_INFO* PathInfo { get; }
 
+            /// <summary>
+            /// Gets the number of paths allocated in the buffer.
+            /// </summary>
             public uint PathCount { get; }
 
+            /// <summary>
+            /// Initialize a new display configuration buffer for a given number of paths.
+            /// </summary>
+            /// <param name="pathCount">Number of display config paths to allocate.</param>
             public unsafe DisplayConfigBuffer(uint pathCount)
             {
                 PathCount = pathCount;
@@ -2321,6 +2331,9 @@ namespace NVAPIWrapper
                 Dispose(false);
             }
 
+            /// <summary>
+            /// Initialize version fields for the path info entries.
+            /// </summary>
             public unsafe void InitializePathInfoVersions()
             {
                 for (var i = 0; i < PathCount; i++)
@@ -2329,6 +2342,9 @@ namespace NVAPIWrapper
                 }
             }
 
+            /// <summary>
+            /// Allocate nested buffers for source and target info entries.
+            /// </summary>
             public unsafe void AllocateNestedBuffers()
             {
                 for (var i = 0; i < PathCount; i++)
@@ -2365,11 +2381,18 @@ namespace NVAPIWrapper
                 }
             }
 
+            /// <summary>
+            /// Track an additional allocation for cleanup.
+            /// </summary>
+            /// <param name="ptr">Pointer to track.</param>
             public void TrackAllocation(IntPtr ptr)
             {
                 _allocations.Add(ptr);
             }
 
+            /// <summary>
+            /// Dispose the buffer and free all tracked allocations.
+            /// </summary>
             public void Dispose()
             {
                 Dispose(true);
@@ -4701,6 +4724,20 @@ namespace NVAPIWrapper
         public int PositionY { get; }
         public string Name { get; }
 
+        /// <summary>
+        /// Create a managed dedicated display metadata DTO.
+        /// </summary>
+        /// <param name="displayId">Display identifier.</param>
+        /// <param name="setPosition">Whether to set the display position.</param>
+        /// <param name="removePosition">Whether to remove the stored display position.</param>
+        /// <param name="positionIsAvailable">Whether a stored display position is available.</param>
+        /// <param name="setName">Whether to set the display name.</param>
+        /// <param name="removeName">Whether to remove the stored display name.</param>
+        /// <param name="nameIsAvailable">Whether a stored display name is available.</param>
+        /// <param name="reserved">Reserved field value.</param>
+        /// <param name="positionX">Display X position.</param>
+        /// <param name="positionY">Display Y position.</param>
+        /// <param name="name">Display name.</param>
         public NVAPINvManagedDedicatedDisplayMetadataDto(
             uint displayId,
             bool setPosition,
@@ -4727,6 +4764,11 @@ namespace NVAPIWrapper
             Name = name ?? string.Empty;
         }
 
+        /// <summary>
+        /// Create a DTO from native managed dedicated display metadata.
+        /// </summary>
+        /// <param name="native">Native managed dedicated display metadata.</param>
+        /// <returns>Managed dedicated display metadata DTO.</returns>
         public static NVAPINvManagedDedicatedDisplayMetadataDto FromNative(_NV_MANAGED_DEDICATED_DISPLAY_METADATA native)
         {
             var name = NVAPIDisplayHelperString.ReadShortString(ref native.name.e0);
@@ -4744,6 +4786,10 @@ namespace NVAPIWrapper
                 name);
         }
 
+        /// <summary>
+        /// Convert this DTO to native managed dedicated display metadata.
+        /// </summary>
+        /// <returns>Native managed dedicated display metadata.</returns>
         public _NV_MANAGED_DEDICATED_DISPLAY_METADATA ToNative()
         {
             var native = new _NV_MANAGED_DEDICATED_DISPLAY_METADATA
@@ -4766,6 +4812,11 @@ namespace NVAPIWrapper
             return native;
         }
 
+        /// <summary>
+        /// Determine whether this instance equals another managed dedicated display metadata DTO.
+        /// </summary>
+        /// <param name="other">The other DTO to compare.</param>
+        /// <returns>True if the DTOs are equal; otherwise false.</returns>
         public bool Equals(NVAPINvManagedDedicatedDisplayMetadataDto other)
         {
             return DisplayId == other.DisplayId
@@ -4781,8 +4832,17 @@ namespace NVAPIWrapper
                 && string.Equals(Name, other.Name, StringComparison.Ordinal);
         }
 
+        /// <summary>
+        /// Determine whether this instance equals another object.
+        /// </summary>
+        /// <param name="obj">The object to compare.</param>
+        /// <returns>True if the object is an equivalent DTO; otherwise false.</returns>
         public override bool Equals(object? obj) => obj is NVAPINvManagedDedicatedDisplayMetadataDto other && Equals(other);
 
+        /// <summary>
+        /// Get a hash code for this instance.
+        /// </summary>
+        /// <returns>Hash code for this instance.</returns>
         public override int GetHashCode()
         {
             unchecked
@@ -4802,7 +4862,20 @@ namespace NVAPIWrapper
             }
         }
 
+        /// <summary>
+        /// Determine whether two managed dedicated display metadata DTOs are equal.
+        /// </summary>
+        /// <param name="left">Left DTO.</param>
+        /// <param name="right">Right DTO.</param>
+        /// <returns>True if the DTOs are equal; otherwise false.</returns>
         public static bool operator ==(NVAPINvManagedDedicatedDisplayMetadataDto left, NVAPINvManagedDedicatedDisplayMetadataDto right) => left.Equals(right);
+
+        /// <summary>
+        /// Determine whether two managed dedicated display metadata DTOs are not equal.
+        /// </summary>
+        /// <param name="left">Left DTO.</param>
+        /// <param name="right">Right DTO.</param>
+        /// <returns>True if the DTOs are not equal; otherwise false.</returns>
         public static bool operator !=(NVAPINvManagedDedicatedDisplayMetadataDto left, NVAPINvManagedDedicatedDisplayMetadataDto right) => !left.Equals(right);
     }
 
@@ -4815,6 +4888,12 @@ namespace NVAPIWrapper
         public uint TargetId { get; }
         public uint[] Reserved { get; }
 
+        /// <summary>
+        /// Create a display ID info DTO.
+        /// </summary>
+        /// <param name="adapterLuid">Adapter LUID.</param>
+        /// <param name="targetId">Target identifier.</param>
+        /// <param name="reserved">Reserved values.</param>
         public NVAPIDisplayIdInfoDto(long adapterLuid, uint targetId, uint[] reserved)
         {
             AdapterLuid = adapterLuid;
@@ -4822,6 +4901,11 @@ namespace NVAPIWrapper
             Reserved = reserved ?? Array.Empty<uint>();
         }
 
+        /// <summary>
+        /// Create a DTO from native display ID info data.
+        /// </summary>
+        /// <param name="native">Native display ID info data.</param>
+        /// <returns>Display ID info DTO.</returns>
         public static NVAPIDisplayIdInfoDto FromNative(_NV_DISPLAY_ID_INFO_DATA_V1 native)
         {
             var reserved = new uint[4];
@@ -4834,6 +4918,10 @@ namespace NVAPIWrapper
                 reserved);
         }
 
+        /// <summary>
+        /// Convert this DTO to native display ID info data.
+        /// </summary>
+        /// <returns>Native display ID info data.</returns>
         public _NV_DISPLAY_ID_INFO_DATA_V1 ToNative()
         {
             var native = new _NV_DISPLAY_ID_INFO_DATA_V1
@@ -4854,6 +4942,11 @@ namespace NVAPIWrapper
             return native;
         }
 
+        /// <summary>
+        /// Determine whether this instance equals another display ID info DTO.
+        /// </summary>
+        /// <param name="other">The other DTO to compare.</param>
+        /// <returns>True if the DTOs are equal; otherwise false.</returns>
         public bool Equals(NVAPIDisplayIdInfoDto other)
         {
             return AdapterLuid == other.AdapterLuid
@@ -4861,8 +4954,17 @@ namespace NVAPIWrapper
                 && DtoHelpers.SequenceEquals(Reserved, other.Reserved);
         }
 
+        /// <summary>
+        /// Determine whether this instance equals another object.
+        /// </summary>
+        /// <param name="obj">The object to compare.</param>
+        /// <returns>True if the object is an equivalent DTO; otherwise false.</returns>
         public override bool Equals(object? obj) => obj is NVAPIDisplayIdInfoDto other && Equals(other);
 
+        /// <summary>
+        /// Get a hash code for this instance.
+        /// </summary>
+        /// <returns>Hash code for this instance.</returns>
         public override int GetHashCode()
         {
             unchecked
@@ -4874,7 +4976,20 @@ namespace NVAPIWrapper
             }
         }
 
+        /// <summary>
+        /// Determine whether two display ID info DTOs are equal.
+        /// </summary>
+        /// <param name="left">Left DTO.</param>
+        /// <param name="right">Right DTO.</param>
+        /// <returns>True if the DTOs are equal; otherwise false.</returns>
         public static bool operator ==(NVAPIDisplayIdInfoDto left, NVAPIDisplayIdInfoDto right) => left.Equals(right);
+
+        /// <summary>
+        /// Determine whether two display ID info DTOs are not equal.
+        /// </summary>
+        /// <param name="left">Left DTO.</param>
+        /// <param name="right">Right DTO.</param>
+        /// <returns>True if the DTOs are not equal; otherwise false.</returns>
         public static bool operator !=(NVAPIDisplayIdInfoDto left, NVAPIDisplayIdInfoDto right) => !left.Equals(right);
     }
 
@@ -4889,6 +5004,14 @@ namespace NVAPIWrapper
         public uint DisplayIdCount { get; }
         public uint[] Reserved { get; }
 
+        /// <summary>
+        /// Create a target info DTO.
+        /// </summary>
+        /// <param name="adapterLuid">Adapter LUID.</param>
+        /// <param name="targetId">Target identifier.</param>
+        /// <param name="displayIds">Display identifiers.</param>
+        /// <param name="displayIdCount">Display ID count reported by the API.</param>
+        /// <param name="reserved">Reserved values.</param>
         public NVAPITargetInfoDto(long adapterLuid, uint targetId, uint[] displayIds, uint displayIdCount, uint[] reserved)
         {
             AdapterLuid = adapterLuid;
@@ -4898,6 +5021,11 @@ namespace NVAPIWrapper
             Reserved = reserved ?? Array.Empty<uint>();
         }
 
+        /// <summary>
+        /// Create a DTO from native target info data.
+        /// </summary>
+        /// <param name="native">Native target info data.</param>
+        /// <returns>Target info DTO.</returns>
         public static NVAPITargetInfoDto FromNative(_NV_TARGET_INFO_DATA_V1 native)
         {
             var count = (int)Math.Min(native.displayIdCount, NVAPI.NVAPI_MAX_DISPLAYS);
@@ -4917,6 +5045,10 @@ namespace NVAPIWrapper
                 reserved);
         }
 
+        /// <summary>
+        /// Convert this DTO to native target info data.
+        /// </summary>
+        /// <returns>Native target info data.</returns>
         public _NV_TARGET_INFO_DATA_V1 ToNative()
         {
             var native = new _NV_TARGET_INFO_DATA_V1
@@ -4948,6 +5080,11 @@ namespace NVAPIWrapper
             return native;
         }
 
+        /// <summary>
+        /// Determine whether this instance equals another target info DTO.
+        /// </summary>
+        /// <param name="other">The other DTO to compare.</param>
+        /// <returns>True if the DTOs are equal; otherwise false.</returns>
         public bool Equals(NVAPITargetInfoDto other)
         {
             return AdapterLuid == other.AdapterLuid
@@ -4957,8 +5094,17 @@ namespace NVAPIWrapper
                 && DtoHelpers.SequenceEquals(Reserved, other.Reserved);
         }
 
+        /// <summary>
+        /// Determine whether this instance equals another object.
+        /// </summary>
+        /// <param name="obj">The object to compare.</param>
+        /// <returns>True if the object is an equivalent DTO; otherwise false.</returns>
         public override bool Equals(object? obj) => obj is NVAPITargetInfoDto other && Equals(other);
 
+        /// <summary>
+        /// Get a hash code for this instance.
+        /// </summary>
+        /// <returns>Hash code for this instance.</returns>
         public override int GetHashCode()
         {
             unchecked
@@ -4972,7 +5118,20 @@ namespace NVAPIWrapper
             }
         }
 
+        /// <summary>
+        /// Determine whether two target info DTOs are equal.
+        /// </summary>
+        /// <param name="left">Left DTO.</param>
+        /// <param name="right">Right DTO.</param>
+        /// <returns>True if the DTOs are equal; otherwise false.</returns>
         public static bool operator ==(NVAPITargetInfoDto left, NVAPITargetInfoDto right) => left.Equals(right);
+
+        /// <summary>
+        /// Determine whether two target info DTOs are not equal.
+        /// </summary>
+        /// <param name="left">Left DTO.</param>
+        /// <param name="right">Right DTO.</param>
+        /// <returns>True if the DTOs are not equal; otherwise false.</returns>
         public static bool operator !=(NVAPITargetInfoDto left, NVAPITargetInfoDto right) => !left.Equals(right);
     }
 
@@ -5045,19 +5204,40 @@ namespace NVAPIWrapper
             OutputId = outputId;
         }
 
+        /// <summary>
+        /// Create a DTO from native GPU and output data.
+        /// </summary>
+        /// <param name="apiHelper">API helper owning the GPU helper.</param>
+        /// <param name="handle">Native physical GPU handle.</param>
+        /// <param name="outputId">Output identifier.</param>
+        /// <returns>GPU and output ID DTO.</returns>
         public static unsafe NVAPIGpuAndOutputIdDto FromNative(NVAPIApiHelper apiHelper, NvPhysicalGpuHandle__* handle, uint outputId)
         {
             var ptr = (IntPtr)handle;
             return new NVAPIGpuAndOutputIdDto(ptr, new NVAPIPhysicalGpuHelper(apiHelper, ptr), outputId);
         }
 
+        /// <summary>
+        /// Determine whether this instance equals another GPU and output ID DTO.
+        /// </summary>
+        /// <param name="other">The other DTO to compare.</param>
+        /// <returns>True if the DTOs are equal; otherwise false.</returns>
         public bool Equals(NVAPIGpuAndOutputIdDto other)
         {
             return Handle == other.Handle && OutputId == other.OutputId;
         }
 
+        /// <summary>
+        /// Determine whether this instance equals another object.
+        /// </summary>
+        /// <param name="obj">The object to compare.</param>
+        /// <returns>True if the object is an equivalent DTO; otherwise false.</returns>
         public override bool Equals(object? obj) => obj is NVAPIGpuAndOutputIdDto other && Equals(other);
 
+        /// <summary>
+        /// Get a hash code for this instance.
+        /// </summary>
+        /// <returns>Hash code for this instance.</returns>
         public override int GetHashCode()
         {
             unchecked
@@ -5068,7 +5248,20 @@ namespace NVAPIWrapper
             }
         }
 
+        /// <summary>
+        /// Determine whether two GPU and output ID DTOs are equal.
+        /// </summary>
+        /// <param name="left">Left DTO.</param>
+        /// <param name="right">Right DTO.</param>
+        /// <returns>True if the DTOs are equal; otherwise false.</returns>
         public static bool operator ==(NVAPIGpuAndOutputIdDto left, NVAPIGpuAndOutputIdDto right) => left.Equals(right);
+
+        /// <summary>
+        /// Determine whether two GPU and output ID DTOs are not equal.
+        /// </summary>
+        /// <param name="left">Left DTO.</param>
+        /// <param name="right">Right DTO.</param>
+        /// <returns>True if the DTOs are not equal; otherwise false.</returns>
         public static bool operator !=(NVAPIGpuAndOutputIdDto left, NVAPIGpuAndOutputIdDto right) => !left.Equals(right);
     }
 
@@ -5085,6 +5278,11 @@ namespace NVAPIWrapper
 
     internal static class NVAPIDisplayHelperString
     {
+        /// <summary>
+        /// Read a null-terminated ANSI short string from a fixed buffer.
+        /// </summary>
+        /// <param name="first">First character of the buffer.</param>
+        /// <returns>Decoded string value.</returns>
         public static unsafe string ReadShortString(ref sbyte first)
         {
             fixed (sbyte* p = &first)
@@ -5093,6 +5291,11 @@ namespace NVAPIWrapper
             }
         }
 
+        /// <summary>
+        /// Write a null-terminated ANSI short string to a fixed buffer.
+        /// </summary>
+        /// <param name="destination">Destination buffer.</param>
+        /// <param name="value">String value to write.</param>
         public static void WriteShortString(Span<sbyte> destination, string value)
         {
             destination.Clear();
@@ -5113,6 +5316,13 @@ namespace NVAPIWrapper
 
     internal static class DtoHelpers
     {
+        /// <summary>
+        /// Compare two arrays for equality using the default comparer.
+        /// </summary>
+        /// <typeparam name="T">Element type.</typeparam>
+        /// <param name="left">Left array.</param>
+        /// <param name="right">Right array.</param>
+        /// <returns>True if both arrays are equal; otherwise false.</returns>
         public static bool SequenceEquals<T>(T[] left, T[] right)
         {
             if (ReferenceEquals(left, right))
@@ -5134,6 +5344,12 @@ namespace NVAPIWrapper
             return true;
         }
 
+        /// <summary>
+        /// Compute a hash code for an array using the default comparer.
+        /// </summary>
+        /// <typeparam name="T">Element type.</typeparam>
+        /// <param name="values">Array values.</param>
+        /// <returns>Hash code for the array contents.</returns>
         public static int SequenceHashCode<T>(T[] values)
         {
             if (values == null || values.Length == 0)

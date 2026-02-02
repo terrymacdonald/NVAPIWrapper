@@ -1,0 +1,1550 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class NVAPIDrsHelper | NVAPIWrapper </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class NVAPIDrsHelper | NVAPIWrapper ">
+      
+      <meta name="description" content="Facade helper for NVAPI Driver Settings (DRS).">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/terrymacdonald/NVAPIWrapper/new/main/apiSpec/new?filename=NVAPIWrapper_NVAPIDrsHelper.md&amp;value=---%0Auid%3A%20NVAPIWrapper.NVAPIDrsHelper%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="NVAPIWrapper">
+            NVAPIWrapper
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="NVAPIWrapper.NVAPIDrsHelper">
+
+
+
+  <h1 id="NVAPIWrapper_NVAPIDrsHelper" data-uid="NVAPIWrapper.NVAPIDrsHelper" class="text-break">
+Class NVAPIDrsHelper  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDrsHelper.cs/#L10"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="NVAPIWrapper.html">NVAPIWrapper</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>NVAPIWrapper.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Facade helper for NVAPI Driver Settings (DRS).</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class NVAPIDrsHelper : IDisposable</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">NVAPIDrsHelper</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="NVAPIWrapper_NVAPIDrsHelper_CreateApplication_" data-uid="NVAPIWrapper.NVAPIDrsHelper.CreateApplication*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIDrsHelper_CreateApplication_NVAPIWrapper_NVAPIDrsProfileDto_NVAPIWrapper_NVAPIDrsApplicationDto_" data-uid="NVAPIWrapper.NVAPIDrsHelper.CreateApplication(NVAPIWrapper.NVAPIDrsProfileDto,NVAPIWrapper.NVAPIDrsApplicationDto)">
+  CreateApplication(NVAPIDrsProfileDto, NVAPIDrsApplicationDto)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDrsHelper.cs/#L602"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Create an application entry in a profile.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool CreateApplication(NVAPIDrsProfileDto profile, NVAPIDrsApplicationDto application)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>profile</code> <a class="xref" href="NVAPIWrapper.NVAPIDrsProfileDto.html">NVAPIDrsProfileDto</a></dt>
+    <dd><p>Profile to update.</p>
+</dd>
+    <dt><code>application</code> <a class="xref" href="NVAPIWrapper.NVAPIDrsApplicationDto.html">NVAPIDrsApplicationDto</a></dt>
+    <dd><p>Application info.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True if created; false if unsupported.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIDrsHelper_CreateApplicationInfo_" data-uid="NVAPIWrapper.NVAPIDrsHelper.CreateApplicationInfo*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIDrsHelper_CreateApplicationInfo" data-uid="NVAPIWrapper.NVAPIDrsHelper.CreateApplicationInfo">
+  CreateApplicationInfo()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDrsHelper.cs/#L72"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Create a DRS application info struct with the version initialized.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static _NVDRS_APPLICATION_V4 CreateApplicationInfo()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="NVAPIWrapper._NVDRS_APPLICATION_V4.html">_NVDRS_APPLICATION_V4</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIDrsHelper_CreateProfile_" data-uid="NVAPIWrapper.NVAPIDrsHelper.CreateProfile*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIDrsHelper_CreateProfile_NVAPIWrapper_NVAPIDrsProfileDto_" data-uid="NVAPIWrapper.NVAPIDrsHelper.CreateProfile(NVAPIWrapper.NVAPIDrsProfileDto)">
+  CreateProfile(NVAPIDrsProfileDto)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDrsHelper.cs/#L424"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Create a new DRS profile.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NVAPIDrsProfileDto? CreateProfile(NVAPIDrsProfileDto profileInfo)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>profileInfo</code> <a class="xref" href="NVAPIWrapper.NVAPIDrsProfileDto.html">NVAPIDrsProfileDto</a></dt>
+    <dd><p>Profile info.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="NVAPIWrapper.NVAPIDrsProfileDto.html">NVAPIDrsProfileDto</a>?</dt>
+    <dd><p>Created profile, or null if unsupported.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIDrsHelper_CreateProfileInfo_" data-uid="NVAPIWrapper.NVAPIDrsHelper.CreateProfileInfo*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIDrsHelper_CreateProfileInfo" data-uid="NVAPIWrapper.NVAPIDrsHelper.CreateProfileInfo">
+  CreateProfileInfo()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDrsHelper.cs/#L64"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Create a DRS profile info struct with the version initialized.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static _NVDRS_PROFILE_V1 CreateProfileInfo()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="NVAPIWrapper._NVDRS_PROFILE_V1.html">_NVDRS_PROFILE_V1</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIDrsHelper_CreateSetting_" data-uid="NVAPIWrapper.NVAPIDrsHelper.CreateSetting*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIDrsHelper_CreateSetting" data-uid="NVAPIWrapper.NVAPIDrsHelper.CreateSetting">
+  CreateSetting()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDrsHelper.cs/#L80"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Create a DRS setting info struct with the version initialized.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static _NVDRS_SETTING_V1 CreateSetting()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="NVAPIWrapper._NVDRS_SETTING_V1.html">_NVDRS_SETTING_V1</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIDrsHelper_CreateSettingValues_" data-uid="NVAPIWrapper.NVAPIDrsHelper.CreateSettingValues*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIDrsHelper_CreateSettingValues" data-uid="NVAPIWrapper.NVAPIDrsHelper.CreateSettingValues">
+  CreateSettingValues()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDrsHelper.cs/#L88"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Create a DRS setting values struct with the version initialized.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static _NVDRS_SETTING_VALUES CreateSettingValues()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="NVAPIWrapper._NVDRS_SETTING_VALUES.html">_NVDRS_SETTING_VALUES</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIDrsHelper_DeleteApplication_" data-uid="NVAPIWrapper.NVAPIDrsHelper.DeleteApplication*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIDrsHelper_DeleteApplication_NVAPIWrapper_NVAPIDrsProfileDto_System_String_" data-uid="NVAPIWrapper.NVAPIDrsHelper.DeleteApplication(NVAPIWrapper.NVAPIDrsProfileDto,System.String)">
+  DeleteApplication(NVAPIDrsProfileDto, string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDrsHelper.cs/#L630"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Delete an application entry by name.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool DeleteApplication(NVAPIDrsProfileDto profile, string appName)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>profile</code> <a class="xref" href="NVAPIWrapper.NVAPIDrsProfileDto.html">NVAPIDrsProfileDto</a></dt>
+    <dd><p>Profile to update.</p>
+</dd>
+    <dt><code>appName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Application name.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True if deleted; false if unsupported.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIDrsHelper_DeleteApplicationEx_" data-uid="NVAPIWrapper.NVAPIDrsHelper.DeleteApplicationEx*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIDrsHelper_DeleteApplicationEx_NVAPIWrapper_NVAPIDrsProfileDto_NVAPIWrapper_NVAPIDrsApplicationDto_" data-uid="NVAPIWrapper.NVAPIDrsHelper.DeleteApplicationEx(NVAPIWrapper.NVAPIDrsProfileDto,NVAPIWrapper.NVAPIDrsApplicationDto)">
+  DeleteApplicationEx(NVAPIDrsProfileDto, NVAPIDrsApplicationDto)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDrsHelper.cs/#L665"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Delete an application entry using a full application descriptor.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool DeleteApplicationEx(NVAPIDrsProfileDto profile, NVAPIDrsApplicationDto application)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>profile</code> <a class="xref" href="NVAPIWrapper.NVAPIDrsProfileDto.html">NVAPIDrsProfileDto</a></dt>
+    <dd><p>Profile to update.</p>
+</dd>
+    <dt><code>application</code> <a class="xref" href="NVAPIWrapper.NVAPIDrsApplicationDto.html">NVAPIDrsApplicationDto</a></dt>
+    <dd><p>Application info.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True if deleted; false if unsupported.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIDrsHelper_DeleteProfile_" data-uid="NVAPIWrapper.NVAPIDrsHelper.DeleteProfile*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIDrsHelper_DeleteProfile_NVAPIWrapper_NVAPIDrsProfileDto_" data-uid="NVAPIWrapper.NVAPIDrsHelper.DeleteProfile(NVAPIWrapper.NVAPIDrsProfileDto)">
+  DeleteProfile(NVAPIDrsProfileDto)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDrsHelper.cs/#L455"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Delete a profile.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool DeleteProfile(NVAPIDrsProfileDto profile)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>profile</code> <a class="xref" href="NVAPIWrapper.NVAPIDrsProfileDto.html">NVAPIDrsProfileDto</a></dt>
+    <dd><p>Profile to delete.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True if deleted; false if unsupported.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIDrsHelper_DeleteProfileSetting_" data-uid="NVAPIWrapper.NVAPIDrsHelper.DeleteProfileSetting*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIDrsHelper_DeleteProfileSetting_NVAPIWrapper_NVAPIDrsProfileDto_System_UInt32_" data-uid="NVAPIWrapper.NVAPIDrsHelper.DeleteProfileSetting(NVAPIWrapper.NVAPIDrsProfileDto,System.UInt32)">
+  DeleteProfileSetting(NVAPIDrsProfileDto, uint)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDrsHelper.cs/#L936"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Delete a profile setting by ID.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool DeleteProfileSetting(NVAPIDrsProfileDto profile, uint settingId)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>profile</code> <a class="xref" href="NVAPIWrapper.NVAPIDrsProfileDto.html">NVAPIDrsProfileDto</a></dt>
+    <dd><p>Profile to update.</p>
+</dd>
+    <dt><code>settingId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>Setting ID.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True if deleted; false if unsupported.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIDrsHelper_Dispose_" data-uid="NVAPIWrapper.NVAPIDrsHelper.Dispose*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIDrsHelper_Dispose" data-uid="NVAPIWrapper.NVAPIDrsHelper.Dispose">
+  Dispose()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDrsHelper.cs/#L1131"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Dispose the DRS session.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Dispose()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIDrsHelper_EnumApplications_" data-uid="NVAPIWrapper.NVAPIDrsHelper.EnumApplications*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIDrsHelper_EnumApplications_NVAPIWrapper_NVAPIDrsProfileDto_" data-uid="NVAPIWrapper.NVAPIDrsHelper.EnumApplications(NVAPIWrapper.NVAPIDrsProfileDto)">
+  EnumApplications(NVAPIDrsProfileDto)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDrsHelper.cs/#L481"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Enumerate applications associated with a profile.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NVAPIDrsApplicationDto[] EnumApplications(NVAPIDrsProfileDto profile)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>profile</code> <a class="xref" href="NVAPIWrapper.NVAPIDrsProfileDto.html">NVAPIDrsProfileDto</a></dt>
+    <dd><p>Profile to enumerate.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="NVAPIWrapper.NVAPIDrsApplicationDto.html">NVAPIDrsApplicationDto</a>[]</dt>
+    <dd><p>Applications, or empty if unsupported.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIDrsHelper_EnumAvailableSettingIds_" data-uid="NVAPIWrapper.NVAPIDrsHelper.EnumAvailableSettingIds*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIDrsHelper_EnumAvailableSettingIds" data-uid="NVAPIWrapper.NVAPIDrsHelper.EnumAvailableSettingIds">
+  EnumAvailableSettingIds()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDrsHelper.cs/#L794"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Enumerate all available setting IDs recognized by NVAPI.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public uint[] EnumAvailableSettingIds()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a>[]</dt>
+    <dd><p>Setting IDs, or empty if unsupported.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIDrsHelper_EnumAvailableSettingValues_" data-uid="NVAPIWrapper.NVAPIDrsHelper.EnumAvailableSettingValues*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIDrsHelper_EnumAvailableSettingValues_System_UInt32_" data-uid="NVAPIWrapper.NVAPIDrsHelper.EnumAvailableSettingValues(System.UInt32)">
+  EnumAvailableSettingValues(uint)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDrsHelper.cs/#L842"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Enumerate all available values for a given setting.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NVAPIDrsSettingValuesDto? EnumAvailableSettingValues(uint settingId)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>settingId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>Setting ID.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="NVAPIWrapper.NVAPIDrsSettingValuesDto.html">NVAPIDrsSettingValuesDto</a>?</dt>
+    <dd><p>Setting values, or null if unsupported.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIDrsHelper_EnumProfiles_" data-uid="NVAPIWrapper.NVAPIDrsHelper.EnumProfiles*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIDrsHelper_EnumProfiles" data-uid="NVAPIWrapper.NVAPIDrsHelper.EnumProfiles">
+  EnumProfiles()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDrsHelper.cs/#L229"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Enumerate all DRS profiles.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NVAPIDrsProfileDto[] EnumProfiles()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="NVAPIWrapper.NVAPIDrsProfileDto.html">NVAPIDrsProfileDto</a>[]</dt>
+    <dd><p>Profiles, or empty if unsupported.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIDrsHelper_EnumSettings_" data-uid="NVAPIWrapper.NVAPIDrsHelper.EnumSettings*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIDrsHelper_EnumSettings_NVAPIWrapper_NVAPIDrsProfileDto_" data-uid="NVAPIWrapper.NVAPIDrsHelper.EnumSettings(NVAPIWrapper.NVAPIDrsProfileDto)">
+  EnumSettings(NVAPIDrsProfileDto)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDrsHelper.cs/#L752"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Enumerate settings in a profile.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NVAPIDrsSettingDto[] EnumSettings(NVAPIDrsProfileDto profile)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>profile</code> <a class="xref" href="NVAPIWrapper.NVAPIDrsProfileDto.html">NVAPIDrsProfileDto</a></dt>
+    <dd><p>Profile to enumerate.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="NVAPIWrapper.NVAPIDrsSettingDto.html">NVAPIDrsSettingDto</a>[]</dt>
+    <dd><p>Settings, or empty if unsupported.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIDrsHelper_Finalize_" data-uid="NVAPIWrapper.NVAPIDrsHelper.Finalize*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIDrsHelper_Finalize" data-uid="NVAPIWrapper.NVAPIDrsHelper.Finalize">
+  ~NVAPIDrsHelper()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDrsHelper.cs/#L56"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected ~NVAPIDrsHelper()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIDrsHelper_FindApplicationByName_" data-uid="NVAPIWrapper.NVAPIDrsHelper.FindApplicationByName*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIDrsHelper_FindApplicationByName_System_String_" data-uid="NVAPIWrapper.NVAPIDrsHelper.FindApplicationByName(System.String)">
+  FindApplicationByName(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDrsHelper.cs/#L560"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Find an application by name across profiles.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NVAPIDrsApplicationSearchDto? FindApplicationByName(string appName)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>appName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Application name.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="NVAPIWrapper.NVAPIDrsApplicationSearchDto.html">NVAPIDrsApplicationSearchDto</a>?</dt>
+    <dd><p>Search result, or null if not found/unsupported.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIDrsHelper_FindProfileByName_" data-uid="NVAPIWrapper.NVAPIDrsHelper.FindProfileByName*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIDrsHelper_FindProfileByName_System_String_" data-uid="NVAPIWrapper.NVAPIDrsHelper.FindProfileByName(System.String)">
+  FindProfileByName(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDrsHelper.cs/#L265"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Find a profile by name.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NVAPIDrsProfileDto? FindProfileByName(string profileName)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>profileName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Profile name.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="NVAPIWrapper.NVAPIDrsProfileDto.html">NVAPIDrsProfileDto</a>?</dt>
+    <dd><p>Profile info, or null if not found/unsupported.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIDrsHelper_GetApplicationInfo_" data-uid="NVAPIWrapper.NVAPIDrsHelper.GetApplicationInfo*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIDrsHelper_GetApplicationInfo_NVAPIWrapper_NVAPIDrsProfileDto_System_String_" data-uid="NVAPIWrapper.NVAPIDrsHelper.GetApplicationInfo(NVAPIWrapper.NVAPIDrsProfileDto,System.String)">
+  GetApplicationInfo(NVAPIDrsProfileDto, string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDrsHelper.cs/#L525"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get application info by name within a profile.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NVAPIDrsApplicationDto? GetApplicationInfo(NVAPIDrsProfileDto profile, string appName)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>profile</code> <a class="xref" href="NVAPIWrapper.NVAPIDrsProfileDto.html">NVAPIDrsProfileDto</a></dt>
+    <dd><p>Profile to search.</p>
+</dd>
+    <dt><code>appName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Application name.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="NVAPIWrapper.NVAPIDrsApplicationDto.html">NVAPIDrsApplicationDto</a>?</dt>
+    <dd><p>Application info, or null if unavailable.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIDrsHelper_GetBaseProfile_" data-uid="NVAPIWrapper.NVAPIDrsHelper.GetBaseProfile*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIDrsHelper_GetBaseProfile" data-uid="NVAPIWrapper.NVAPIDrsHelper.GetBaseProfile">
+  GetBaseProfile()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDrsHelper.cs/#L354"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get the base profile.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NVAPIDrsProfileDto? GetBaseProfile()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="NVAPIWrapper.NVAPIDrsProfileDto.html">NVAPIDrsProfileDto</a>?</dt>
+    <dd><p>Profile info, or null if unavailable.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIDrsHelper_GetCurrentGlobalProfile_" data-uid="NVAPIWrapper.NVAPIDrsHelper.GetCurrentGlobalProfile*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIDrsHelper_GetCurrentGlobalProfile" data-uid="NVAPIWrapper.NVAPIDrsHelper.GetCurrentGlobalProfile">
+  GetCurrentGlobalProfile()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDrsHelper.cs/#L296"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get the current global profile.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NVAPIDrsProfileDto? GetCurrentGlobalProfile()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="NVAPIWrapper.NVAPIDrsProfileDto.html">NVAPIDrsProfileDto</a>?</dt>
+    <dd><p>Profile info, or null if unavailable.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIDrsHelper_GetNumProfiles_" data-uid="NVAPIWrapper.NVAPIDrsHelper.GetNumProfiles*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIDrsHelper_GetNumProfiles" data-uid="NVAPIWrapper.NVAPIDrsHelper.GetNumProfiles">
+  GetNumProfiles()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDrsHelper.cs/#L207"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get the number of DRS profiles.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public uint? GetNumProfiles()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a>?</dt>
+    <dd><p>Profile count, or null if unsupported.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIDrsHelper_GetProfileInfo_" data-uid="NVAPIWrapper.NVAPIDrsHelper.GetProfileInfo*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIDrsHelper_GetProfileInfo_NVAPIWrapper_NVAPIDrsProfileDto_" data-uid="NVAPIWrapper.NVAPIDrsHelper.GetProfileInfo(NVAPIWrapper.NVAPIDrsProfileDto)">
+  GetProfileInfo(NVAPIDrsProfileDto)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDrsHelper.cs/#L378"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get profile info for an existing profile handle.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NVAPIDrsProfileDto? GetProfileInfo(NVAPIDrsProfileDto profile)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>profile</code> <a class="xref" href="NVAPIWrapper.NVAPIDrsProfileDto.html">NVAPIDrsProfileDto</a></dt>
+    <dd><p>Profile DTO.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="NVAPIWrapper.NVAPIDrsProfileDto.html">NVAPIDrsProfileDto</a>?</dt>
+    <dd><p>Profile info, or null if unavailable.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIDrsHelper_GetSetting_" data-uid="NVAPIWrapper.NVAPIDrsHelper.GetSetting*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIDrsHelper_GetSetting_NVAPIWrapper_NVAPIDrsProfileDto_System_UInt32_" data-uid="NVAPIWrapper.NVAPIDrsHelper.GetSetting(NVAPIWrapper.NVAPIDrsProfileDto,System.UInt32)">
+  GetSetting(NVAPIDrsProfileDto, uint)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDrsHelper.cs/#L693"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get a setting from a profile by ID.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NVAPIDrsSettingDto? GetSetting(NVAPIDrsProfileDto profile, uint settingId)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>profile</code> <a class="xref" href="NVAPIWrapper.NVAPIDrsProfileDto.html">NVAPIDrsProfileDto</a></dt>
+    <dd><p>Profile to query.</p>
+</dd>
+    <dt><code>settingId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>Setting ID.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="NVAPIWrapper.NVAPIDrsSettingDto.html">NVAPIDrsSettingDto</a>?</dt>
+    <dd><p>Setting info, or null if unavailable.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIDrsHelper_GetSettingIdFromName_" data-uid="NVAPIWrapper.NVAPIDrsHelper.GetSettingIdFromName*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIDrsHelper_GetSettingIdFromName_System_String_" data-uid="NVAPIWrapper.NVAPIDrsHelper.GetSettingIdFromName(System.String)">
+  GetSettingIdFromName(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDrsHelper.cs/#L870"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Resolve a setting ID from a name.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public uint? GetSettingIdFromName(string settingName)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>settingName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Setting name.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a>?</dt>
+    <dd><p>Setting ID, or null if unavailable.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIDrsHelper_GetSettingNameFromId_" data-uid="NVAPIWrapper.NVAPIDrsHelper.GetSettingNameFromId*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIDrsHelper_GetSettingNameFromId_System_UInt32_" data-uid="NVAPIWrapper.NVAPIDrsHelper.GetSettingNameFromId(System.UInt32)">
+  GetSettingNameFromId(uint)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDrsHelper.cs/#L904"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Resolve a setting name from its ID.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string? GetSettingNameFromId(uint settingId)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>settingId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>Setting ID.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Setting name, or null if unavailable.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIDrsHelper_LoadSettings_" data-uid="NVAPIWrapper.NVAPIDrsHelper.LoadSettings*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIDrsHelper_LoadSettings" data-uid="NVAPIWrapper.NVAPIDrsHelper.LoadSettings">
+  LoadSettings()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDrsHelper.cs/#L97"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Load the DRS settings database into this session.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool LoadSettings()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True if loaded; false if unsupported.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIDrsHelper_LoadSettingsFromFile_" data-uid="NVAPIWrapper.NVAPIDrsHelper.LoadSettingsFromFile*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIDrsHelper_LoadSettingsFromFile_System_String_" data-uid="NVAPIWrapper.NVAPIDrsHelper.LoadSettingsFromFile(System.String)">
+  LoadSettingsFromFile(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDrsHelper.cs/#L140"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Load DRS settings from a file.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool LoadSettingsFromFile(string filePath)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>filePath</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Path to the settings file.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True if loaded; false if unsupported.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIDrsHelper_RestoreAllDefaults_" data-uid="NVAPIWrapper.NVAPIDrsHelper.RestoreAllDefaults*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIDrsHelper_RestoreAllDefaults" data-uid="NVAPIWrapper.NVAPIDrsHelper.RestoreAllDefaults">
+  RestoreAllDefaults()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDrsHelper.cs/#L963"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Restore all defaults in the DRS database.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool RestoreAllDefaults()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True if restored; false if unsupported.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIDrsHelper_RestoreProfileDefault_" data-uid="NVAPIWrapper.NVAPIDrsHelper.RestoreProfileDefault*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIDrsHelper_RestoreProfileDefault_NVAPIWrapper_NVAPIDrsProfileDto_" data-uid="NVAPIWrapper.NVAPIDrsHelper.RestoreProfileDefault(NVAPIWrapper.NVAPIDrsProfileDto)">
+  RestoreProfileDefault(NVAPIDrsProfileDto)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDrsHelper.cs/#L988"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Restore a profile to its defaults.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool RestoreProfileDefault(NVAPIDrsProfileDto profile)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>profile</code> <a class="xref" href="NVAPIWrapper.NVAPIDrsProfileDto.html">NVAPIDrsProfileDto</a></dt>
+    <dd><p>Profile to restore.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True if restored; false if unsupported.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIDrsHelper_RestoreProfileDefaultSetting_" data-uid="NVAPIWrapper.NVAPIDrsHelper.RestoreProfileDefaultSetting*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIDrsHelper_RestoreProfileDefaultSetting_NVAPIWrapper_NVAPIDrsProfileDto_System_UInt32_" data-uid="NVAPIWrapper.NVAPIDrsHelper.RestoreProfileDefaultSetting(NVAPIWrapper.NVAPIDrsProfileDto,System.UInt32)">
+  RestoreProfileDefaultSetting(NVAPIDrsProfileDto, uint)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDrsHelper.cs/#L1017"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Restore a profile setting to its default value.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool RestoreProfileDefaultSetting(NVAPIDrsProfileDto profile, uint settingId)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>profile</code> <a class="xref" href="NVAPIWrapper.NVAPIDrsProfileDto.html">NVAPIDrsProfileDto</a></dt>
+    <dd><p>Profile to update.</p>
+</dd>
+    <dt><code>settingId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>Setting ID.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True if restored; false if unsupported.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIDrsHelper_SaveSettings_" data-uid="NVAPIWrapper.NVAPIDrsHelper.SaveSettings*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIDrsHelper_SaveSettings" data-uid="NVAPIWrapper.NVAPIDrsHelper.SaveSettings">
+  SaveSettings()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDrsHelper.cs/#L118"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Save the DRS settings database from this session.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool SaveSettings()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True if saved; false if unsupported.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIDrsHelper_SaveSettingsToFile_" data-uid="NVAPIWrapper.NVAPIDrsHelper.SaveSettingsToFile*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIDrsHelper_SaveSettingsToFile_System_String_" data-uid="NVAPIWrapper.NVAPIDrsHelper.SaveSettingsToFile(System.String)">
+  SaveSettingsToFile(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDrsHelper.cs/#L174"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Save DRS settings to a file.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool SaveSettingsToFile(string filePath)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>filePath</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Path to the settings file.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True if saved; false if unsupported.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIDrsHelper_SetCurrentGlobalProfile_" data-uid="NVAPIWrapper.NVAPIDrsHelper.SetCurrentGlobalProfile*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIDrsHelper_SetCurrentGlobalProfile_System_String_" data-uid="NVAPIWrapper.NVAPIDrsHelper.SetCurrentGlobalProfile(System.String)">
+  SetCurrentGlobalProfile(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDrsHelper.cs/#L322"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Set the current global profile by name.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool SetCurrentGlobalProfile(string profileName)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>profileName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Profile name.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True if set; false if unsupported.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIDrsHelper_SetProfileInfo_" data-uid="NVAPIWrapper.NVAPIDrsHelper.SetProfileInfo*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIDrsHelper_SetProfileInfo_NVAPIWrapper_NVAPIDrsProfileDto_" data-uid="NVAPIWrapper.NVAPIDrsHelper.SetProfileInfo(NVAPIWrapper.NVAPIDrsProfileDto)">
+  SetProfileInfo(NVAPIDrsProfileDto)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDrsHelper.cs/#L393"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Update profile info.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool SetProfileInfo(NVAPIDrsProfileDto profile)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>profile</code> <a class="xref" href="NVAPIWrapper.NVAPIDrsProfileDto.html">NVAPIDrsProfileDto</a></dt>
+    <dd><p>Profile DTO with desired values.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True if updated; false if unsupported.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIDrsHelper_SetSetting_" data-uid="NVAPIWrapper.NVAPIDrsHelper.SetSetting*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIDrsHelper_SetSetting_NVAPIWrapper_NVAPIDrsProfileDto_NVAPIWrapper_NVAPIDrsSettingDto_" data-uid="NVAPIWrapper.NVAPIDrsHelper.SetSetting(NVAPIWrapper.NVAPIDrsProfileDto,NVAPIWrapper.NVAPIDrsSettingDto)">
+  SetSetting(NVAPIDrsProfileDto, NVAPIDrsSettingDto)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDrsHelper.cs/#L721"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Set a setting on a profile.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool SetSetting(NVAPIDrsProfileDto profile, NVAPIDrsSettingDto setting)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>profile</code> <a class="xref" href="NVAPIWrapper.NVAPIDrsProfileDto.html">NVAPIDrsProfileDto</a></dt>
+    <dd><p>Profile to update.</p>
+</dd>
+    <dt><code>setting</code> <a class="xref" href="NVAPIWrapper.NVAPIDrsSettingDto.html">NVAPIDrsSettingDto</a></dt>
+    <dd><p>Desired setting values.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True if set; false if unsupported.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDrsHelper.cs/#L10" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

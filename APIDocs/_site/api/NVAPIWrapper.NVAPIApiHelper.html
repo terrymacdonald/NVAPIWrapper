@@ -1,0 +1,1188 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class NVAPIApiHelper | NVAPIWrapper </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class NVAPIApiHelper | NVAPIWrapper ">
+      
+      <meta name="description" content="Facade entry point for NVAPI helper objects.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/terrymacdonald/NVAPIWrapper/new/main/apiSpec/new?filename=NVAPIWrapper_NVAPIApiHelper.md&amp;value=---%0Auid%3A%20NVAPIWrapper.NVAPIApiHelper%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="NVAPIWrapper">
+            NVAPIWrapper
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="NVAPIWrapper.NVAPIApiHelper">
+
+
+
+  <h1 id="NVAPIWrapper_NVAPIApiHelper" data-uid="NVAPIWrapper.NVAPIApiHelper" class="text-break">
+Class NVAPIApiHelper  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIApiHelper.cs/#L10"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="NVAPIWrapper.html">NVAPIWrapper</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>NVAPIWrapper.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Facade entry point for NVAPI helper objects.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class NVAPIApiHelper : IDisposable</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">NVAPIApiHelper</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="NVAPIWrapper_NVAPIApiHelper_CreateDrsSession_" data-uid="NVAPIWrapper.NVAPIApiHelper.CreateDrsSession*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIApiHelper_CreateDrsSession" data-uid="NVAPIWrapper.NVAPIApiHelper.CreateDrsSession">
+  CreateDrsSession()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIApiHelper.cs/#L59"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Create a DRS session helper.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NVAPIDrsHelper? CreateDrsSession()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="NVAPIWrapper.NVAPIDrsHelper.html">NVAPIDrsHelper</a></dt>
+    <dd><p>DRS helper instance, or null if unsupported.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIApiHelper_Dispose_" data-uid="NVAPIWrapper.NVAPIApiHelper.Dispose*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIApiHelper_Dispose" data-uid="NVAPIWrapper.NVAPIApiHelper.Dispose">
+  Dispose()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIApiHelper.cs/#L798"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Dispose the NVAPI helper and release native resources.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Dispose()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIApiHelper_EnumerateGSyncDevices_" data-uid="NVAPIWrapper.NVAPIApiHelper.EnumerateGSyncDevices*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIApiHelper_EnumerateGSyncDevices" data-uid="NVAPIWrapper.NVAPIApiHelper.EnumerateGSyncDevices">
+  EnumerateGSyncDevices()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIApiHelper.cs/#L459"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Enumerate G-Sync device helpers.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NVAPIQuadroGSyncHelper[] EnumerateGSyncDevices()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="NVAPIWrapper.NVAPIQuadroGSyncHelper.html">NVAPIQuadroGSyncHelper</a>[]</dt>
+    <dd><p>Array of G-Sync helpers, or empty if none are found.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIApiHelper_EnumerateLogicalGpus_" data-uid="NVAPIWrapper.NVAPIApiHelper.EnumerateLogicalGpus*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIApiHelper_EnumerateLogicalGpus" data-uid="NVAPIWrapper.NVAPIApiHelper.EnumerateLogicalGpus">
+  EnumerateLogicalGpus()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIApiHelper.cs/#L378"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Enumerate logical GPU helpers.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NVAPILogicalGpuHelper[] EnumerateLogicalGpus()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="NVAPIWrapper.NVAPILogicalGpuHelper.html">NVAPILogicalGpuHelper</a>[]</dt>
+    <dd><p>Array of logical GPU helpers, or empty if none are found.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIApiHelper_EnumerateNvidiaUnAttachedDisplayHandles_" data-uid="NVAPIWrapper.NVAPIApiHelper.EnumerateNvidiaUnAttachedDisplayHandles*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIApiHelper_EnumerateNvidiaUnAttachedDisplayHandles" data-uid="NVAPIWrapper.NVAPIApiHelper.EnumerateNvidiaUnAttachedDisplayHandles">
+  EnumerateNvidiaUnAttachedDisplayHandles()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIApiHelper.cs/#L438"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Enumerate unattached display helpers.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NVAPIUnAttachedDisplayHelper[] EnumerateNvidiaUnAttachedDisplayHandles()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="NVAPIWrapper.NVAPIUnAttachedDisplayHelper.html">NVAPIUnAttachedDisplayHelper</a>[]</dt>
+    <dd><p>Array of unattached display helpers, or empty if none are found.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIApiHelper_EnumeratePhysicalGpus_" data-uid="NVAPIWrapper.NVAPIApiHelper.EnumeratePhysicalGpus*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIApiHelper_EnumeratePhysicalGpus" data-uid="NVAPIWrapper.NVAPIApiHelper.EnumeratePhysicalGpus">
+  EnumeratePhysicalGpus()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIApiHelper.cs/#L86"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Enumerate physical GPU helpers.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NVAPIPhysicalGpuHelper[] EnumeratePhysicalGpus()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="NVAPIWrapper.NVAPIPhysicalGpuHelper.html">NVAPIPhysicalGpuHelper</a>[]</dt>
+    <dd><p>Array of physical GPU helpers, or empty if none are found.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIApiHelper_EnumerateTccPhysicalGpus_" data-uid="NVAPIWrapper.NVAPIApiHelper.EnumerateTccPhysicalGpus*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIApiHelper_EnumerateTccPhysicalGpus" data-uid="NVAPIWrapper.NVAPIApiHelper.EnumerateTccPhysicalGpus">
+  EnumerateTccPhysicalGpus()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIApiHelper.cs/#L399"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Enumerate physical GPU helpers that are in TCC mode.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NVAPIPhysicalGpuHelper[] EnumerateTccPhysicalGpus()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="NVAPIWrapper.NVAPIPhysicalGpuHelper.html">NVAPIPhysicalGpuHelper</a>[]</dt>
+    <dd><p>Array of physical GPU helpers, or empty if none are found.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIApiHelper_Finalize_" data-uid="NVAPIWrapper.NVAPIApiHelper.Finalize*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIApiHelper_Finalize" data-uid="NVAPIWrapper.NVAPIApiHelper.Finalize">
+  ~NVAPIApiHelper()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIApiHelper.cs/#L41"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected ~NVAPIApiHelper()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIApiHelper_GetChipSetInfo_" data-uid="NVAPIWrapper.NVAPIApiHelper.GetChipSetInfo*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIApiHelper_GetChipSetInfo" data-uid="NVAPIWrapper.NVAPIApiHelper.GetChipSetInfo">
+  GetChipSetInfo()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIApiHelper.cs/#L251"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get the system chipset info.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NVAPIChipSetInfoDto? GetChipSetInfo()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="NVAPIWrapper.NVAPIChipSetInfoDto.html">NVAPIChipSetInfoDto</a>?</dt>
+    <dd><p>Chipset info, or null if unavailable.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIApiHelper_GetDisplayDriverInfo_" data-uid="NVAPIWrapper.NVAPIApiHelper.GetDisplayDriverInfo*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIApiHelper_GetDisplayDriverInfo" data-uid="NVAPIWrapper.NVAPIApiHelper.GetDisplayDriverInfo">
+  GetDisplayDriverInfo()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIApiHelper.cs/#L293"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get display driver info.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NVAPIDisplayDriverInfoDto? GetDisplayDriverInfo()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="NVAPIWrapper.NVAPIDisplayDriverInfoDto.html">NVAPIDisplayDriverInfoDto</a>?</dt>
+    <dd><p>Display driver info, or null if unavailable.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIApiHelper_GetDriverAndBranchVersion_" data-uid="NVAPIWrapper.NVAPIApiHelper.GetDriverAndBranchVersion*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIApiHelper_GetDriverAndBranchVersion" data-uid="NVAPIWrapper.NVAPIApiHelper.GetDriverAndBranchVersion">
+  GetDriverAndBranchVersion()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIApiHelper.cs/#L189"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get the NVAPI driver version and branch string.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NVAPIDriverAndBranchVersionDto? GetDriverAndBranchVersion()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="NVAPIWrapper.NVAPIDriverAndBranchVersionDto.html">NVAPIDriverAndBranchVersionDto</a>?</dt>
+    <dd><p>Driver version info, or null if unavailable.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIApiHelper_GetErrorMessage_" data-uid="NVAPIWrapper.NVAPIApiHelper.GetErrorMessage*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIApiHelper_GetErrorMessage_NVAPIWrapper__NvAPI_Status_" data-uid="NVAPIWrapper.NVAPIApiHelper.GetErrorMessage(NVAPIWrapper._NvAPI_Status)">
+  GetErrorMessage(_NvAPI_Status)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIApiHelper.cs/#L481"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Convert an NVAPI status to a human-readable message.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string? GetErrorMessage(_NvAPI_Status status)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>status</code> <a class="xref" href="NVAPIWrapper._NvAPI_Status.html">_NvAPI_Status</a></dt>
+    <dd><p>NVAPI status value.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Message string, or null if unavailable.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIApiHelper_GetGpuIdFromPhysicalGpu_" data-uid="NVAPIWrapper.NVAPIApiHelper.GetGpuIdFromPhysicalGpu*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIApiHelper_GetGpuIdFromPhysicalGpu_NVAPIWrapper_NVAPIPhysicalGpuHelper_" data-uid="NVAPIWrapper.NVAPIApiHelper.GetGpuIdFromPhysicalGpu(NVAPIWrapper.NVAPIPhysicalGpuHelper)">
+  GetGpuIdFromPhysicalGpu(NVAPIPhysicalGpuHelper)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIApiHelper.cs/#L161"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get the GPU ID from a physical GPU helper.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public uint? GetGpuIdFromPhysicalGpu(NVAPIPhysicalGpuHelper physicalGpu)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>physicalGpu</code> <a class="xref" href="NVAPIWrapper.NVAPIPhysicalGpuHelper.html">NVAPIPhysicalGpuHelper</a></dt>
+    <dd><p>Physical GPU helper.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a>?</dt>
+    <dd><p>GPU ID, or null if unavailable.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIApiHelper_GetInterfaceVersionString_" data-uid="NVAPIWrapper.NVAPIApiHelper.GetInterfaceVersionString*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIApiHelper_GetInterfaceVersionString" data-uid="NVAPIWrapper.NVAPIApiHelper.GetInterfaceVersionString">
+  GetInterfaceVersionString()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIApiHelper.cs/#L506"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get the NVAPI interface version string.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string? GetInterfaceVersionString()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Version string, or null if unavailable.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIApiHelper_GetLidAndDockInfo_" data-uid="NVAPIWrapper.NVAPIApiHelper.GetLidAndDockInfo*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIApiHelper_GetLidAndDockInfo" data-uid="NVAPIWrapper.NVAPIApiHelper.GetLidAndDockInfo">
+  GetLidAndDockInfo()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIApiHelper.cs/#L272"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get lid and dock information.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NVAPILidAndDockInfoDto? GetLidAndDockInfo()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="NVAPIWrapper.NVAPILidAndDockInfoDto.html">NVAPILidAndDockInfoDto</a>?</dt>
+    <dd><p>Lid and dock info, or null if unavailable.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIApiHelper_GetLogicalGpuFromPhysicalGpu_" data-uid="NVAPIWrapper.NVAPIApiHelper.GetLogicalGpuFromPhysicalGpu*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIApiHelper_GetLogicalGpuFromPhysicalGpu_NVAPIWrapper_NVAPIPhysicalGpuHelper_" data-uid="NVAPIWrapper.NVAPIApiHelper.GetLogicalGpuFromPhysicalGpu(NVAPIWrapper.NVAPIPhysicalGpuHelper)">
+  GetLogicalGpuFromPhysicalGpu(NVAPIPhysicalGpuHelper)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIApiHelper.cs/#L132"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get the logical GPU helper from a physical GPU helper.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NVAPILogicalGpuHelper? GetLogicalGpuFromPhysicalGpu(NVAPIPhysicalGpuHelper physicalGpu)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>physicalGpu</code> <a class="xref" href="NVAPIWrapper.NVAPIPhysicalGpuHelper.html">NVAPIPhysicalGpuHelper</a></dt>
+    <dd><p>Physical GPU helper.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="NVAPIWrapper.NVAPILogicalGpuHelper.html">NVAPILogicalGpuHelper</a></dt>
+    <dd><p>Logical GPU helper, or null if unavailable.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIApiHelper_GetLogicalGpus_" data-uid="NVAPIWrapper.NVAPIApiHelper.GetLogicalGpus*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIApiHelper_GetLogicalGpus" data-uid="NVAPIWrapper.NVAPIApiHelper.GetLogicalGpus">
+  GetLogicalGpus()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIApiHelper.cs/#L346"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get logical GPU handles with adapter type metadata.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NVAPISystemLogicalGpuHandleDto[] GetLogicalGpus()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="NVAPIWrapper.NVAPISystemLogicalGpuHandleDto.html">NVAPISystemLogicalGpuHandleDto</a>[]</dt>
+    <dd><p>Array of logical GPU handle data, or empty if none are found.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIApiHelper_GetMosaicHelper_" data-uid="NVAPIWrapper.NVAPIApiHelper.GetMosaicHelper*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIApiHelper_GetMosaicHelper" data-uid="NVAPIWrapper.NVAPIApiHelper.GetMosaicHelper">
+  GetMosaicHelper()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIApiHelper.cs/#L221"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get the Mosaic helper.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NVAPIMosaicHelper GetMosaicHelper()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="NVAPIWrapper.NVAPIMosaicHelper.html">NVAPIMosaicHelper</a></dt>
+    <dd><p>Mosaic helper instance.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIApiHelper_GetNgxOverrideState_" data-uid="NVAPIWrapper.NVAPIApiHelper.GetNgxOverrideState*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIApiHelper_GetNgxOverrideState_System_UInt32_" data-uid="NVAPIWrapper.NVAPIApiHelper.GetNgxOverrideState(System.UInt32)">
+  GetNgxOverrideState(uint)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIApiHelper.cs/#L547"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get the NGX override state for a process ID.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NVAPINGXOverrideStateDto? GetNgxOverrideState(uint processId)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>processId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>Process identifier.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="NVAPIWrapper.NVAPINGXOverrideStateDto.html">NVAPINGXOverrideStateDto</a>?</dt>
+    <dd><p>NGX override state DTO, or null if unsupported.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIApiHelper_GetOpenGLHelper_" data-uid="NVAPIWrapper.NVAPIApiHelper.GetOpenGLHelper*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIApiHelper_GetOpenGLHelper" data-uid="NVAPIWrapper.NVAPIApiHelper.GetOpenGLHelper">
+  GetOpenGLHelper()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIApiHelper.cs/#L241"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get the OpenGL helper.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NVAPIOpenGLHelper GetOpenGLHelper()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="NVAPIWrapper.NVAPIOpenGLHelper.html">NVAPIOpenGLHelper</a></dt>
+    <dd><p>OpenGL helper instance.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIApiHelper_GetPhysicalGpuFromGpuId_" data-uid="NVAPIWrapper.NVAPIApiHelper.GetPhysicalGpuFromGpuId*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIApiHelper_GetPhysicalGpuFromGpuId_System_UInt32_" data-uid="NVAPIWrapper.NVAPIApiHelper.GetPhysicalGpuFromGpuId(System.UInt32)">
+  GetPhysicalGpuFromGpuId(uint)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIApiHelper.cs/#L108"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get a physical GPU helper from a GPU ID.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NVAPIPhysicalGpuHelper? GetPhysicalGpuFromGpuId(uint gpuId)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>gpuId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>GPU ID.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="NVAPIWrapper.NVAPIPhysicalGpuHelper.html">NVAPIPhysicalGpuHelper</a></dt>
+    <dd><p>Physical GPU helper, or null if unavailable.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIApiHelper_GetPhysicalGpus_" data-uid="NVAPIWrapper.NVAPIApiHelper.GetPhysicalGpus*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIApiHelper_GetPhysicalGpus" data-uid="NVAPIWrapper.NVAPIApiHelper.GetPhysicalGpus">
+  GetPhysicalGpus()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIApiHelper.cs/#L314"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get physical GPU handles with adapter type metadata.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NVAPISystemPhysicalGpuHandleDto[] GetPhysicalGpus()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="NVAPIWrapper.NVAPISystemPhysicalGpuHandleDto.html">NVAPISystemPhysicalGpuHandleDto</a>[]</dt>
+    <dd><p>Array of physical GPU handle data, or empty if none are found.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIApiHelper_GetVideoHelper_" data-uid="NVAPIWrapper.NVAPIApiHelper.GetVideoHelper*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIApiHelper_GetVideoHelper" data-uid="NVAPIWrapper.NVAPIApiHelper.GetVideoHelper">
+  GetVideoHelper()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIApiHelper.cs/#L231"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get the Video helper.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NVAPIVideoHelper GetVideoHelper()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="NVAPIWrapper.NVAPIVideoHelper.html">NVAPIVideoHelper</a></dt>
+    <dd><p>Video helper instance.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIApiHelper_Initialize_" data-uid="NVAPIWrapper.NVAPIApiHelper.Initialize*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIApiHelper_Initialize" data-uid="NVAPIWrapper.NVAPIApiHelper.Initialize">
+  Initialize()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIApiHelper.cs/#L50"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Initialize NVAPI and return a facade helper that owns the library lifetime.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static NVAPIApiHelper Initialize()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="NVAPIWrapper.NVAPIApiHelper.html">NVAPIApiHelper</a></dt>
+    <dd><p>Initialized NVAPI helper.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIApiHelper_RegisterEventCallback_" data-uid="NVAPIWrapper.NVAPIApiHelper.RegisterEventCallback*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIApiHelper_RegisterEventCallback_NVAPIWrapper_NVAPIEventCallbackSettingsDto_" data-uid="NVAPIWrapper.NVAPIApiHelper.RegisterEventCallback(NVAPIWrapper.NVAPIEventCallbackSettingsDto)">
+  RegisterEventCallback(NVAPIEventCallbackSettingsDto)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIApiHelper.cs/#L518"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Register an NVAPI event callback for the current process.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NVAPIEventHandleHelper? RegisterEventCallback(NVAPIEventCallbackSettingsDto settings)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>settings</code> <a class="xref" href="NVAPIWrapper.NVAPIEventCallbackSettingsDto.html">NVAPIEventCallbackSettingsDto</a></dt>
+    <dd><p>Callback settings.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="NVAPIWrapper.NVAPIEventHandleHelper.html">NVAPIEventHandleHelper</a></dt>
+    <dd><p>Event handle helper, or null if unsupported.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="NVAPIWrapper_NVAPIApiHelper_RegisterEventCallback_NVAPIWrapper_NVAPIEventCallbackSettingsDto__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Caller must keep the callback delegate alive for the lifetime of the registration.</p>
+</div>
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIApiHelper_RegisterRiseCallback_" data-uid="NVAPIWrapper.NVAPIApiHelper.RegisterRiseCallback*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIApiHelper_RegisterRiseCallback_NVAPIWrapper_NVAPIRiseCallbackSettingsDto_" data-uid="NVAPIWrapper.NVAPIApiHelper.RegisterRiseCallback(NVAPIWrapper.NVAPIRiseCallbackSettingsDto)">
+  RegisterRiseCallback(NVAPIRiseCallbackSettingsDto)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIApiHelper.cs/#L602"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Register a RISE callback for the current process.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool? RegisterRiseCallback(NVAPIRiseCallbackSettingsDto settings)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>settings</code> <a class="xref" href="NVAPIWrapper.NVAPIRiseCallbackSettingsDto.html">NVAPIRiseCallbackSettingsDto</a></dt>
+    <dd><p>RISE callback settings.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>?</dt>
+    <dd><p>True if registered, or null if unsupported.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="NVAPIWrapper_NVAPIApiHelper_RegisterRiseCallback_NVAPIWrapper_NVAPIRiseCallbackSettingsDto__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Caller must keep the callback delegate alive for the lifetime of the registration.</p>
+</div>
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIApiHelper_RequestRise_" data-uid="NVAPIWrapper.NVAPIApiHelper.RequestRise*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIApiHelper_RequestRise_NVAPIWrapper_NVAPIRiseRequestDto_" data-uid="NVAPIWrapper.NVAPIApiHelper.RequestRise(NVAPIWrapper.NVAPIRiseRequestDto)">
+  RequestRise(NVAPIRiseRequestDto)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIApiHelper.cs/#L629"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Request RISE assistance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NVAPIRiseRequestDto? RequestRise(NVAPIRiseRequestDto request)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>request</code> <a class="xref" href="NVAPIWrapper.NVAPIRiseRequestDto.html">NVAPIRiseRequestDto</a></dt>
+    <dd><p>RISE request settings.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="NVAPIWrapper.NVAPIRiseRequestDto.html">NVAPIRiseRequestDto</a>?</dt>
+    <dd><p>Updated request DTO, or null if unsupported.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIApiHelper_SetNgxOverrideState_" data-uid="NVAPIWrapper.NVAPIApiHelper.SetNgxOverrideState*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIApiHelper_SetNgxOverrideState_NVAPIWrapper_NVAPINGXOverrideSetDto_" data-uid="NVAPIWrapper.NVAPIApiHelper.SetNgxOverrideState(NVAPIWrapper.NVAPINGXOverrideSetDto)">
+  SetNgxOverrideState(NVAPINGXOverrideSetDto)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIApiHelper.cs/#L574"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Set the NGX override state for a process.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool? SetNgxOverrideState(NVAPINGXOverrideSetDto settings)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>settings</code> <a class="xref" href="NVAPIWrapper.NVAPINGXOverrideSetDto.html">NVAPINGXOverrideSetDto</a></dt>
+    <dd><p>NGX override settings.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>?</dt>
+    <dd><p>True if set, or null if unsupported.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIApiHelper_UninstallRise_" data-uid="NVAPIWrapper.NVAPIApiHelper.UninstallRise*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIApiHelper_UninstallRise" data-uid="NVAPIWrapper.NVAPIApiHelper.UninstallRise">
+  UninstallRise()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIApiHelper.cs/#L655"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Uninstall RISE from the system.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool? UninstallRise()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>?</dt>
+    <dd><p>True if uninstalled, or null if unsupported.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIApiHelper.cs/#L10" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,847 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class NVAPIMosaicHelper | NVAPIWrapper </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class NVAPIMosaicHelper | NVAPIWrapper ">
+      
+      <meta name="description" content="Facade helper for Mosaic operations.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/terrymacdonald/NVAPIWrapper/new/main/apiSpec/new?filename=NVAPIWrapper_NVAPIMosaicHelper.md&amp;value=---%0Auid%3A%20NVAPIWrapper.NVAPIMosaicHelper%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="NVAPIWrapper">
+            NVAPIWrapper
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="NVAPIWrapper.NVAPIMosaicHelper">
+
+
+
+  <h1 id="NVAPIWrapper_NVAPIMosaicHelper" data-uid="NVAPIWrapper.NVAPIMosaicHelper" class="text-break">
+Class NVAPIMosaicHelper  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIMosaicHelper.cs/#L11"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="NVAPIWrapper.html">NVAPIWrapper</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>NVAPIWrapper.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Facade helper for Mosaic operations.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class NVAPIMosaicHelper : IDisposable</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">NVAPIMosaicHelper</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="NVAPIWrapper_NVAPIMosaicHelper_CreateDisplaySetting_" data-uid="NVAPIWrapper.NVAPIMosaicHelper.CreateDisplaySetting*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIMosaicHelper_CreateDisplaySetting" data-uid="NVAPIWrapper.NVAPIMosaicHelper.CreateDisplaySetting">
+  CreateDisplaySetting()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIMosaicHelper.cs/#L58"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Create a Mosaic display setting struct (v2) with the version initialized.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static NV_MOSAIC_DISPLAY_SETTING_V2 CreateDisplaySetting()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="NVAPIWrapper.NV_MOSAIC_DISPLAY_SETTING_V2.html">NV_MOSAIC_DISPLAY_SETTING_V2</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIMosaicHelper_CreateDisplayTopoStatus_" data-uid="NVAPIWrapper.NVAPIMosaicHelper.CreateDisplayTopoStatus*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIMosaicHelper_CreateDisplayTopoStatus" data-uid="NVAPIWrapper.NVAPIMosaicHelper.CreateDisplayTopoStatus">
+  CreateDisplayTopoStatus()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIMosaicHelper.cs/#L95"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Create a Mosaic display topology status struct with the version initialized.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static NV_MOSAIC_DISPLAY_TOPO_STATUS CreateDisplayTopoStatus()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="NVAPIWrapper.NV_MOSAIC_DISPLAY_TOPO_STATUS.html">NV_MOSAIC_DISPLAY_TOPO_STATUS</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIMosaicHelper_CreateGridTopology_" data-uid="NVAPIWrapper.NVAPIMosaicHelper.CreateGridTopology*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIMosaicHelper_CreateGridTopology" data-uid="NVAPIWrapper.NVAPIMosaicHelper.CreateGridTopology">
+  CreateGridTopology()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIMosaicHelper.cs/#L80"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Create a Mosaic grid topology (v2) with the version initialized.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static _NV_MOSAIC_GRID_TOPO_V2 CreateGridTopology()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="NVAPIWrapper._NV_MOSAIC_GRID_TOPO_V2.html">_NV_MOSAIC_GRID_TOPO_V2</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIMosaicHelper_CreateSupportedTopoInfo_" data-uid="NVAPIWrapper.NVAPIMosaicHelper.CreateSupportedTopoInfo*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIMosaicHelper_CreateSupportedTopoInfo" data-uid="NVAPIWrapper.NVAPIMosaicHelper.CreateSupportedTopoInfo">
+  CreateSupportedTopoInfo()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIMosaicHelper.cs/#L36"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Create a supported topology info struct with the version initialized.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static _NV_MOSAIC_SUPPORTED_TOPO_INFO_V2 CreateSupportedTopoInfo()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="NVAPIWrapper._NV_MOSAIC_SUPPORTED_TOPO_INFO_V2.html">_NV_MOSAIC_SUPPORTED_TOPO_INFO_V2</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIMosaicHelper_CreateTopoBrief_" data-uid="NVAPIWrapper.NVAPIMosaicHelper.CreateTopoBrief*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIMosaicHelper_CreateTopoBrief" data-uid="NVAPIWrapper.NVAPIMosaicHelper.CreateTopoBrief">
+  CreateTopoBrief()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIMosaicHelper.cs/#L47"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Create a Mosaic topology brief struct with the version initialized.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static NV_MOSAIC_TOPO_BRIEF CreateTopoBrief()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="NVAPIWrapper.NV_MOSAIC_TOPO_BRIEF.html">NV_MOSAIC_TOPO_BRIEF</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIMosaicHelper_CreateTopoGroup_" data-uid="NVAPIWrapper.NVAPIMosaicHelper.CreateTopoGroup*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIMosaicHelper_CreateTopoGroup" data-uid="NVAPIWrapper.NVAPIMosaicHelper.CreateTopoGroup">
+  CreateTopoGroup()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIMosaicHelper.cs/#L69"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Create a Mosaic topology group struct with the version initialized.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static NV_MOSAIC_TOPO_GROUP CreateTopoGroup()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="NVAPIWrapper.NV_MOSAIC_TOPO_GROUP.html">NV_MOSAIC_TOPO_GROUP</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIMosaicHelper_Dispose_" data-uid="NVAPIWrapper.NVAPIMosaicHelper.Dispose*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIMosaicHelper_Dispose" data-uid="NVAPIWrapper.NVAPIMosaicHelper.Dispose">
+  Dispose()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIMosaicHelper.cs/#L542"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Dispose the helper.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Dispose()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIMosaicHelper_EnableCurrentTopo_" data-uid="NVAPIWrapper.NVAPIMosaicHelper.EnableCurrentTopo*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIMosaicHelper_EnableCurrentTopo_System_Boolean_" data-uid="NVAPIWrapper.NVAPIMosaicHelper.EnableCurrentTopo(System.Boolean)">
+  EnableCurrentTopo(bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIMosaicHelper.cs/#L264"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Enable or disable the current Mosaic topology.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool EnableCurrentTopo(bool enable)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>enable</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Enable or disable.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True if applied, false if unavailable.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIMosaicHelper_EnumDisplayGrids_" data-uid="NVAPIWrapper.NVAPIMosaicHelper.EnumDisplayGrids*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIMosaicHelper_EnumDisplayGrids" data-uid="NVAPIWrapper.NVAPIMosaicHelper.EnumDisplayGrids">
+  EnumDisplayGrids()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIMosaicHelper.cs/#L471"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Enumerate current active grid topologies.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NVAPIMosaicGridTopologiesDto? EnumDisplayGrids()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="NVAPIWrapper.NVAPIMosaicGridTopologiesDto.html">NVAPIMosaicGridTopologiesDto</a>?</dt>
+    <dd><p>Grid topologies, or null if unavailable.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIMosaicHelper_EnumDisplayModes_" data-uid="NVAPIWrapper.NVAPIMosaicHelper.EnumDisplayModes*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIMosaicHelper_EnumDisplayModes_NVAPIWrapper_NVAPIMosaicGridTopoDto_" data-uid="NVAPIWrapper.NVAPIMosaicHelper.EnumDisplayModes(NVAPIWrapper.NVAPIMosaicGridTopoDto)">
+  EnumDisplayModes(NVAPIMosaicGridTopoDto)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIMosaicHelper.cs/#L414"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Enumerate available display modes for a grid topology.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NVAPIMosaicDisplaySettingsDto? EnumDisplayModes(NVAPIMosaicGridTopoDto gridTopology)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>gridTopology</code> <a class="xref" href="NVAPIWrapper.NVAPIMosaicGridTopoDto.html">NVAPIMosaicGridTopoDto</a></dt>
+    <dd><p>Grid topology to query.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="NVAPIWrapper.NVAPIMosaicDisplaySettingsDto.html">NVAPIMosaicDisplaySettingsDto</a>?</dt>
+    <dd><p>Display settings list, or null if unavailable.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIMosaicHelper_GetCurrentTopo_" data-uid="NVAPIWrapper.NVAPIMosaicHelper.GetCurrentTopo*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIMosaicHelper_GetCurrentTopo" data-uid="NVAPIWrapper.NVAPIMosaicHelper.GetCurrentTopo">
+  GetCurrentTopo()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIMosaicHelper.cs/#L230"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get the current Mosaic topology.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NVAPIMosaicCurrentTopoDto? GetCurrentTopo()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="NVAPIWrapper.NVAPIMosaicCurrentTopoDto.html">NVAPIMosaicCurrentTopoDto</a>?</dt>
+    <dd><p>Current topology info, or null if unavailable.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIMosaicHelper_GetDisplayViewportsByResolution_" data-uid="NVAPIWrapper.NVAPIMosaicHelper.GetDisplayViewportsByResolution*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIMosaicHelper_GetDisplayViewportsByResolution_System_UInt32_System_UInt32_System_UInt32_" data-uid="NVAPIWrapper.NVAPIMosaicHelper.GetDisplayViewportsByResolution(System.UInt32,System.UInt32,System.UInt32)">
+  GetDisplayViewportsByResolution(uint, uint, uint)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIMosaicHelper.cs/#L291"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get viewports for a display at a given resolution.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NVAPIMosaicViewportsDto? GetDisplayViewportsByResolution(uint displayId, uint srcWidth, uint srcHeight)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>displayId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>Display ID.</p>
+</dd>
+    <dt><code>srcWidth</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>Source width.</p>
+</dd>
+    <dt><code>srcHeight</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>Source height.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="NVAPIWrapper.NVAPIMosaicViewportsDto.html">NVAPIMosaicViewportsDto</a>?</dt>
+    <dd><p>Viewport data, or null if unavailable.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIMosaicHelper_GetOverlapLimits_" data-uid="NVAPIWrapper.NVAPIMosaicHelper.GetOverlapLimits*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIMosaicHelper_GetOverlapLimits_NVAPIWrapper_NVAPIMosaicTopoBriefDto_NVAPIWrapper_NVAPIMosaicDisplaySettingDto_" data-uid="NVAPIWrapper.NVAPIMosaicHelper.GetOverlapLimits(NVAPIWrapper.NVAPIMosaicTopoBriefDto,NVAPIWrapper.NVAPIMosaicDisplaySettingDto)">
+  GetOverlapLimits(NVAPIMosaicTopoBriefDto, NVAPIMosaicDisplaySettingDto)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIMosaicHelper.cs/#L163"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get overlap limits for a given topology and display setting.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NVAPIMosaicOverlapLimitsDto? GetOverlapLimits(NVAPIMosaicTopoBriefDto topoBrief, NVAPIMosaicDisplaySettingDto displaySetting)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>topoBrief</code> <a class="xref" href="NVAPIWrapper.NVAPIMosaicTopoBriefDto.html">NVAPIMosaicTopoBriefDto</a></dt>
+    <dd><p>Topology brief.</p>
+</dd>
+    <dt><code>displaySetting</code> <a class="xref" href="NVAPIWrapper.NVAPIMosaicDisplaySettingDto.html">NVAPIMosaicDisplaySettingDto</a></dt>
+    <dd><p>Display setting.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="NVAPIWrapper.NVAPIMosaicOverlapLimitsDto.html">NVAPIMosaicOverlapLimitsDto</a>?</dt>
+    <dd><p>Overlap limits, or null if unavailable.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIMosaicHelper_GetSupportedTopoInfo_" data-uid="NVAPIWrapper.NVAPIMosaicHelper.GetSupportedTopoInfo*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIMosaicHelper_GetSupportedTopoInfo_NVAPIWrapper_NV_MOSAIC_TOPO_TYPE_" data-uid="NVAPIWrapper.NVAPIMosaicHelper.GetSupportedTopoInfo(NVAPIWrapper.NV_MOSAIC_TOPO_TYPE)">
+  GetSupportedTopoInfo(NV_MOSAIC_TOPO_TYPE)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIMosaicHelper.cs/#L108"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get supported Mosaic topologies and display settings.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NVAPIMosaicSupportedTopoInfoDto? GetSupportedTopoInfo(NV_MOSAIC_TOPO_TYPE type = NV_MOSAIC_TOPO_TYPE.NV_MOSAIC_TOPO_TYPE_ALL)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>type</code> <a class="xref" href="NVAPIWrapper.NV_MOSAIC_TOPO_TYPE.html">NV_MOSAIC_TOPO_TYPE</a></dt>
+    <dd><p>Topology type filter.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="NVAPIWrapper.NVAPIMosaicSupportedTopoInfoDto.html">NVAPIMosaicSupportedTopoInfoDto</a>?</dt>
+    <dd><p>Supported topology info, or null if unavailable.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIMosaicHelper_GetTopoGroup_" data-uid="NVAPIWrapper.NVAPIMosaicHelper.GetTopoGroup*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIMosaicHelper_GetTopoGroup_NVAPIWrapper_NVAPIMosaicTopoBriefDto_" data-uid="NVAPIWrapper.NVAPIMosaicHelper.GetTopoGroup(NVAPIWrapper.NVAPIMosaicTopoBriefDto)">
+  GetTopoGroup(NVAPIMosaicTopoBriefDto)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIMosaicHelper.cs/#L134"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get detailed topology group data for a given topology brief.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NVAPIMosaicTopoGroupDto? GetTopoGroup(NVAPIMosaicTopoBriefDto topoBrief)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>topoBrief</code> <a class="xref" href="NVAPIWrapper.NVAPIMosaicTopoBriefDto.html">NVAPIMosaicTopoBriefDto</a></dt>
+    <dd><p>Topology brief to query.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="NVAPIWrapper.NVAPIMosaicTopoGroupDto.html">NVAPIMosaicTopoGroupDto</a>?</dt>
+    <dd><p>Topology group details, or null if unavailable.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIMosaicHelper_SetCurrentTopo_" data-uid="NVAPIWrapper.NVAPIMosaicHelper.SetCurrentTopo*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIMosaicHelper_SetCurrentTopo_NVAPIWrapper_NVAPIMosaicTopoBriefDto_NVAPIWrapper_NVAPIMosaicDisplaySettingDto_System_Int32_System_Int32_System_Boolean_" data-uid="NVAPIWrapper.NVAPIMosaicHelper.SetCurrentTopo(NVAPIWrapper.NVAPIMosaicTopoBriefDto,NVAPIWrapper.NVAPIMosaicDisplaySettingDto,System.Int32,System.Int32,System.Boolean)">
+  SetCurrentTopo(NVAPIMosaicTopoBriefDto, NVAPIMosaicDisplaySettingDto, int, int, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIMosaicHelper.cs/#L199"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Set the current Mosaic topology.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool SetCurrentTopo(NVAPIMosaicTopoBriefDto topoBrief, NVAPIMosaicDisplaySettingDto displaySetting, int overlapX, int overlapY, bool enable = true)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>topoBrief</code> <a class="xref" href="NVAPIWrapper.NVAPIMosaicTopoBriefDto.html">NVAPIMosaicTopoBriefDto</a></dt>
+    <dd><p>Topology brief.</p>
+</dd>
+    <dt><code>displaySetting</code> <a class="xref" href="NVAPIWrapper.NVAPIMosaicDisplaySettingDto.html">NVAPIMosaicDisplaySettingDto</a></dt>
+    <dd><p>Display setting.</p>
+</dd>
+    <dt><code>overlapX</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Horizontal overlap.</p>
+</dd>
+    <dt><code>overlapY</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Vertical overlap.</p>
+</dd>
+    <dt><code>enable</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Enable after setting.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True if applied, false if unavailable.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIMosaicHelper_SetDisplayGrids_" data-uid="NVAPIWrapper.NVAPIMosaicHelper.SetDisplayGrids*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIMosaicHelper_SetDisplayGrids_NVAPIWrapper_NVAPIMosaicGridTopologiesDto_System_UInt32_" data-uid="NVAPIWrapper.NVAPIMosaicHelper.SetDisplayGrids(NVAPIWrapper.NVAPIMosaicGridTopologiesDto,System.UInt32)">
+  SetDisplayGrids(NVAPIMosaicGridTopologiesDto, uint)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIMosaicHelper.cs/#L332"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Set display grid topologies.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool SetDisplayGrids(NVAPIMosaicGridTopologiesDto grids, uint setTopoFlags = 0)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>grids</code> <a class="xref" href="NVAPIWrapper.NVAPIMosaicGridTopologiesDto.html">NVAPIMosaicGridTopologiesDto</a></dt>
+    <dd><p>Grid topologies.</p>
+</dd>
+    <dt><code>setTopoFlags</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>Set topology flags.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True if applied, false if unavailable.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIMosaicHelper_ValidateDisplayGrids_" data-uid="NVAPIWrapper.NVAPIMosaicHelper.ValidateDisplayGrids*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIMosaicHelper_ValidateDisplayGrids_System_UInt32_NVAPIWrapper_NVAPIMosaicGridTopologiesDto_" data-uid="NVAPIWrapper.NVAPIMosaicHelper.ValidateDisplayGrids(System.UInt32,NVAPIWrapper.NVAPIMosaicGridTopologiesDto)">
+  ValidateDisplayGrids(uint, NVAPIMosaicGridTopologiesDto)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIMosaicHelper.cs/#L366"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Validate display grid topologies.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NVAPIMosaicDisplayTopoStatusesDto? ValidateDisplayGrids(uint setTopoFlags, NVAPIMosaicGridTopologiesDto grids)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>setTopoFlags</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>Set topology flags.</p>
+</dd>
+    <dt><code>grids</code> <a class="xref" href="NVAPIWrapper.NVAPIMosaicGridTopologiesDto.html">NVAPIMosaicGridTopologiesDto</a></dt>
+    <dd><p>Grid topologies to validate.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="NVAPIWrapper.NVAPIMosaicDisplayTopoStatusesDto.html">NVAPIMosaicDisplayTopoStatusesDto</a>?</dt>
+    <dd><p>Status results, or null if unavailable.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIMosaicHelper.cs/#L11" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,3049 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class NVAPIDisplayHelper | NVAPIWrapper </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class NVAPIDisplayHelper | NVAPIWrapper ">
+      
+      <meta name="description" content="Facade helper for an NVIDIA display handle.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/terrymacdonald/NVAPIWrapper/new/main/apiSpec/new?filename=NVAPIWrapper_NVAPIDisplayHelper.md&amp;value=---%0Auid%3A%20NVAPIWrapper.NVAPIDisplayHelper%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="NVAPIWrapper">
+            NVAPIWrapper
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="NVAPIWrapper.NVAPIDisplayHelper">
+
+
+
+  <h1 id="NVAPIWrapper_NVAPIDisplayHelper" data-uid="NVAPIWrapper.NVAPIDisplayHelper" class="text-break">
+Class NVAPIDisplayHelper  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L11"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="NVAPIWrapper.html">NVAPIWrapper</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>NVAPIWrapper.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Facade helper for an NVIDIA display handle.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class NVAPIDisplayHelper : IDisposable</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">NVAPIDisplayHelper</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="NVAPIWrapper_NVAPIDisplayHelper_AcquireDedicatedDisplay_" data-uid="NVAPIWrapper.NVAPIDisplayHelper.AcquireDedicatedDisplay*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIDisplayHelper_AcquireDedicatedDisplay_System_Nullable_System_UInt32__" data-uid="NVAPIWrapper.NVAPIDisplayHelper.AcquireDedicatedDisplay(System.Nullable{System.UInt32})">
+  AcquireDedicatedDisplay(uint?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L1901"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Acquire a managed dedicated display.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ulong? AcquireDedicatedDisplay(uint? displayId = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>displayId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a>?</dt>
+    <dd><p>Optional display ID override.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a>?</dt>
+    <dd><p>Display source handle, or null if unavailable.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIDisplayHelper_ColorControl_" data-uid="NVAPIWrapper.NVAPIDisplayHelper.ColorControl*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIDisplayHelper_ColorControl_NVAPIWrapper_NVAPIDisplayColorDataDto_" data-uid="NVAPIWrapper.NVAPIDisplayHelper.ColorControl(NVAPIWrapper.NVAPIDisplayColorDataDto)">
+  ColorControl(NVAPIDisplayColorDataDto)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L1236"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Control display color data for this display.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NVAPIDisplayColorDataDto? ColorControl(NVAPIDisplayColorDataDto colorData)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>colorData</code> <a class="xref" href="NVAPIWrapper.NVAPIDisplayColorDataDto.html">NVAPIDisplayColorDataDto</a></dt>
+    <dd><p>Color data DTO.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="NVAPIWrapper.NVAPIDisplayColorDataDto.html">NVAPIDisplayColorDataDto</a>?</dt>
+    <dd><p>Updated color data DTO, or null if unavailable.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIDisplayHelper_CreateAdaptiveSyncGetData_" data-uid="NVAPIWrapper.NVAPIDisplayHelper.CreateAdaptiveSyncGetData*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIDisplayHelper_CreateAdaptiveSyncGetData" data-uid="NVAPIWrapper.NVAPIDisplayHelper.CreateAdaptiveSyncGetData">
+  CreateAdaptiveSyncGetData()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L161"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Create adaptive sync GET data with the version initialized.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static _NV_GET_ADAPTIVE_SYNC_DATA_V1 CreateAdaptiveSyncGetData()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="NVAPIWrapper._NV_GET_ADAPTIVE_SYNC_DATA_V1.html">_NV_GET_ADAPTIVE_SYNC_DATA_V1</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIDisplayHelper_CreateAdaptiveSyncSetData_" data-uid="NVAPIWrapper.NVAPIDisplayHelper.CreateAdaptiveSyncSetData*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIDisplayHelper_CreateAdaptiveSyncSetData" data-uid="NVAPIWrapper.NVAPIDisplayHelper.CreateAdaptiveSyncSetData">
+  CreateAdaptiveSyncSetData()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L172"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Create adaptive sync SET data with the version initialized.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static _NV_SET_ADAPTIVE_SYNC_DATA_V1 CreateAdaptiveSyncSetData()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="NVAPIWrapper._NV_SET_ADAPTIVE_SYNC_DATA_V1.html">_NV_SET_ADAPTIVE_SYNC_DATA_V1</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIDisplayHelper_CreateColorData_" data-uid="NVAPIWrapper.NVAPIDisplayHelper.CreateColorData*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIDisplayHelper_CreateColorData" data-uid="NVAPIWrapper.NVAPIDisplayHelper.CreateColorData">
+  CreateColorData()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L239"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Create a color data struct with the version initialized.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static _NV_COLOR_DATA_V5 CreateColorData()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="NVAPIWrapper._NV_COLOR_DATA_V5.html">_NV_COLOR_DATA_V5</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIDisplayHelper_CreateCustomDisplay_" data-uid="NVAPIWrapper.NVAPIDisplayHelper.CreateCustomDisplay*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIDisplayHelper_CreateCustomDisplay" data-uid="NVAPIWrapper.NVAPIDisplayHelper.CreateCustomDisplay">
+  CreateCustomDisplay()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L295"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Create a custom display struct with the version initialized.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static NV_CUSTOM_DISPLAY CreateCustomDisplay()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="NVAPIWrapper.NV_CUSTOM_DISPLAY.html">NV_CUSTOM_DISPLAY</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIDisplayHelper_CreateDisplayColorimetry_" data-uid="NVAPIWrapper.NVAPIDisplayHelper.CreateDisplayColorimetry*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIDisplayHelper_CreateDisplayColorimetry" data-uid="NVAPIWrapper.NVAPIDisplayHelper.CreateDisplayColorimetry">
+  CreateDisplayColorimetry()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L284"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Create a display colorimetry struct with the version initialized.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static _NV_DISPLAY_COLORIMETRY_V1 CreateDisplayColorimetry()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="NVAPIWrapper._NV_DISPLAY_COLORIMETRY_V1.html">_NV_DISPLAY_COLORIMETRY_V1</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIDisplayHelper_CreateDisplayIdInfoData_" data-uid="NVAPIWrapper.NVAPIDisplayHelper.CreateDisplayIdInfoData*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIDisplayHelper_CreateDisplayIdInfoData" data-uid="NVAPIWrapper.NVAPIDisplayHelper.CreateDisplayIdInfoData">
+  CreateDisplayIdInfoData()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L328"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Create a display ID info data struct with the version initialized.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static _NV_DISPLAY_ID_INFO_DATA_V1 CreateDisplayIdInfoData()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="NVAPIWrapper._NV_DISPLAY_ID_INFO_DATA_V1.html">_NV_DISPLAY_ID_INFO_DATA_V1</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIDisplayHelper_CreateDisplayPortConfig_" data-uid="NVAPIWrapper.NVAPIDisplayHelper.CreateDisplayPortConfig*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIDisplayHelper_CreateDisplayPortConfig" data-uid="NVAPIWrapper.NVAPIDisplayHelper.CreateDisplayPortConfig">
+  CreateDisplayPortConfig()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L128"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Create a display port config struct with the version initialized.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static NV_DISPLAY_PORT_CONFIG CreateDisplayPortConfig()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="NVAPIWrapper.NV_DISPLAY_PORT_CONFIG.html">NV_DISPLAY_PORT_CONFIG</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIDisplayHelper_CreateDisplayPortInfo_" data-uid="NVAPIWrapper.NVAPIDisplayHelper.CreateDisplayPortInfo*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIDisplayHelper_CreateDisplayPortInfo" data-uid="NVAPIWrapper.NVAPIDisplayHelper.CreateDisplayPortInfo">
+  CreateDisplayPortInfo()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L117"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Create a display port info struct with the version initialized.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static _NV_DISPLAY_PORT_INFO_V1 CreateDisplayPortInfo()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="NVAPIWrapper._NV_DISPLAY_PORT_INFO_V1.html">_NV_DISPLAY_PORT_INFO_V1</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIDisplayHelper_CreateEdidData_" data-uid="NVAPIWrapper.NVAPIDisplayHelper.CreateEdidData*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIDisplayHelper_CreateEdidData" data-uid="NVAPIWrapper.NVAPIDisplayHelper.CreateEdidData">
+  CreateEdidData()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L82"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Create an EDID data struct with the version initialized.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static _NV_EDID_DATA_V2 CreateEdidData()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="NVAPIWrapper._NV_EDID_DATA_V2.html">_NV_EDID_DATA_V2</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIDisplayHelper_CreateHdmiSupportInfo_" data-uid="NVAPIWrapper.NVAPIDisplayHelper.CreateHdmiSupportInfo*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIDisplayHelper_CreateHdmiSupportInfo" data-uid="NVAPIWrapper.NVAPIDisplayHelper.CreateHdmiSupportInfo">
+  CreateHdmiSupportInfo()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L139"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Create an HDMI support info struct with the version initialized.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static _NV_HDMI_SUPPORT_INFO_V2 CreateHdmiSupportInfo()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="NVAPIWrapper._NV_HDMI_SUPPORT_INFO_V2.html">_NV_HDMI_SUPPORT_INFO_V2</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIDisplayHelper_CreateHdrCapabilities_" data-uid="NVAPIWrapper.NVAPIDisplayHelper.CreateHdrCapabilities*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIDisplayHelper_CreateHdrCapabilities" data-uid="NVAPIWrapper.NVAPIDisplayHelper.CreateHdrCapabilities">
+  CreateHdrCapabilities()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L251"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Create an HDR capabilities struct with the version initialized.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static _NV_HDR_CAPABILITIES_V3 CreateHdrCapabilities()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="NVAPIWrapper._NV_HDR_CAPABILITIES_V3.html">_NV_HDR_CAPABILITIES_V3</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIDisplayHelper_CreateHdrColorData_" data-uid="NVAPIWrapper.NVAPIDisplayHelper.CreateHdrColorData*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIDisplayHelper_CreateHdrColorData" data-uid="NVAPIWrapper.NVAPIDisplayHelper.CreateHdrColorData">
+  CreateHdrColorData()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L262"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Create an HDR color data struct with the version initialized.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static _NV_HDR_COLOR_DATA_V2 CreateHdrColorData()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="NVAPIWrapper._NV_HDR_COLOR_DATA_V2.html">_NV_HDR_COLOR_DATA_V2</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIDisplayHelper_CreateHdrMetadata_" data-uid="NVAPIWrapper.NVAPIDisplayHelper.CreateHdrMetadata*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIDisplayHelper_CreateHdrMetadata" data-uid="NVAPIWrapper.NVAPIDisplayHelper.CreateHdrMetadata">
+  CreateHdrMetadata()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L273"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Create an HDR metadata struct with the version initialized.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static _NV_HDR_METADATA_V1 CreateHdrMetadata()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="NVAPIWrapper._NV_HDR_METADATA_V1.html">_NV_HDR_METADATA_V1</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIDisplayHelper_CreateInfoFrameData_" data-uid="NVAPIWrapper.NVAPIDisplayHelper.CreateInfoFrameData*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIDisplayHelper_CreateInfoFrameData" data-uid="NVAPIWrapper.NVAPIDisplayHelper.CreateInfoFrameData">
+  CreateInfoFrameData()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L227"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Create an infoframe data struct with the version initialized.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static NV_INFOFRAME_DATA CreateInfoFrameData()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="NVAPIWrapper.NV_INFOFRAME_DATA.html">NV_INFOFRAME_DATA</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIDisplayHelper_CreateManagedDedicatedDisplayInfo_" data-uid="NVAPIWrapper.NVAPIDisplayHelper.CreateManagedDedicatedDisplayInfo*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIDisplayHelper_CreateManagedDedicatedDisplayInfo" data-uid="NVAPIWrapper.NVAPIDisplayHelper.CreateManagedDedicatedDisplayInfo">
+  CreateManagedDedicatedDisplayInfo()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L306"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Create a managed dedicated display info struct with the version initialized.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static _NV_MANAGED_DEDICATED_DISPLAY_INFO CreateManagedDedicatedDisplayInfo()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="NVAPIWrapper._NV_MANAGED_DEDICATED_DISPLAY_INFO.html">_NV_MANAGED_DEDICATED_DISPLAY_INFO</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIDisplayHelper_CreateManagedDedicatedDisplayMetadata_" data-uid="NVAPIWrapper.NVAPIDisplayHelper.CreateManagedDedicatedDisplayMetadata*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIDisplayHelper_CreateManagedDedicatedDisplayMetadata" data-uid="NVAPIWrapper.NVAPIDisplayHelper.CreateManagedDedicatedDisplayMetadata">
+  CreateManagedDedicatedDisplayMetadata()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L317"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Create a managed dedicated display metadata struct with the version initialized.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static _NV_MANAGED_DEDICATED_DISPLAY_METADATA CreateManagedDedicatedDisplayMetadata()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="NVAPIWrapper._NV_MANAGED_DEDICATED_DISPLAY_METADATA.html">_NV_MANAGED_DEDICATED_DISPLAY_METADATA</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIDisplayHelper_CreateMonitorCapabilities_" data-uid="NVAPIWrapper.NVAPIDisplayHelper.CreateMonitorCapabilities*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIDisplayHelper_CreateMonitorCapabilities" data-uid="NVAPIWrapper.NVAPIDisplayHelper.CreateMonitorCapabilities">
+  CreateMonitorCapabilities()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L106"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Create a monitor capabilities struct with the version initialized.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static _NV_MONITOR_CAPABILITIES_V1 CreateMonitorCapabilities()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="NVAPIWrapper._NV_MONITOR_CAPABILITIES_V1.html">_NV_MONITOR_CAPABILITIES_V1</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIDisplayHelper_CreatePreferredStereoDisplayGet_" data-uid="NVAPIWrapper.NVAPIDisplayHelper.CreatePreferredStereoDisplayGet*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIDisplayHelper_CreatePreferredStereoDisplayGet" data-uid="NVAPIWrapper.NVAPIDisplayHelper.CreatePreferredStereoDisplayGet">
+  CreatePreferredStereoDisplayGet()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L205"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Create preferred stereo display GET struct with the version initialized.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static NV_GET_PREFERRED_STEREO_DISPLAY_V1 CreatePreferredStereoDisplayGet()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="NVAPIWrapper.NV_GET_PREFERRED_STEREO_DISPLAY_V1.html">NV_GET_PREFERRED_STEREO_DISPLAY_V1</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIDisplayHelper_CreatePreferredStereoDisplaySet_" data-uid="NVAPIWrapper.NVAPIDisplayHelper.CreatePreferredStereoDisplaySet*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIDisplayHelper_CreatePreferredStereoDisplaySet" data-uid="NVAPIWrapper.NVAPIDisplayHelper.CreatePreferredStereoDisplaySet">
+  CreatePreferredStereoDisplaySet()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L216"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Create preferred stereo display SET struct with the version initialized.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static NV_SET_PREFERRED_STEREO_DISPLAY_V1 CreatePreferredStereoDisplaySet()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="NVAPIWrapper.NV_SET_PREFERRED_STEREO_DISPLAY_V1.html">NV_SET_PREFERRED_STEREO_DISPLAY_V1</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIDisplayHelper_CreateTargetInfoData_" data-uid="NVAPIWrapper.NVAPIDisplayHelper.CreateTargetInfoData*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIDisplayHelper_CreateTargetInfoData" data-uid="NVAPIWrapper.NVAPIDisplayHelper.CreateTargetInfoData">
+  CreateTargetInfoData()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L339"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Create a target info data struct with the version initialized.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static _NV_TARGET_INFO_DATA_V1 CreateTargetInfoData()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="NVAPIWrapper._NV_TARGET_INFO_DATA_V1.html">_NV_TARGET_INFO_DATA_V1</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIDisplayHelper_CreateTimingInput_" data-uid="NVAPIWrapper.NVAPIDisplayHelper.CreateTimingInput*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIDisplayHelper_CreateTimingInput" data-uid="NVAPIWrapper.NVAPIDisplayHelper.CreateTimingInput">
+  CreateTimingInput()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L95"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Create a timing input struct with the version initialized.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static _NV_TIMING_INPUT CreateTimingInput()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="NVAPIWrapper._NV_TIMING_INPUT.html">_NV_TIMING_INPUT</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIDisplayHelper_CreateVirtualRefreshRateGetData_" data-uid="NVAPIWrapper.NVAPIDisplayHelper.CreateVirtualRefreshRateGetData*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIDisplayHelper_CreateVirtualRefreshRateGetData" data-uid="NVAPIWrapper.NVAPIDisplayHelper.CreateVirtualRefreshRateGetData">
+  CreateVirtualRefreshRateGetData()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L183"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Create virtual refresh rate GET data with the version initialized.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static _NV_GET_VIRTUAL_REFRESH_RATE_DATA_V2 CreateVirtualRefreshRateGetData()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="NVAPIWrapper._NV_GET_VIRTUAL_REFRESH_RATE_DATA_V2.html">_NV_GET_VIRTUAL_REFRESH_RATE_DATA_V2</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIDisplayHelper_CreateVirtualRefreshRateSetData_" data-uid="NVAPIWrapper.NVAPIDisplayHelper.CreateVirtualRefreshRateSetData*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIDisplayHelper_CreateVirtualRefreshRateSetData" data-uid="NVAPIWrapper.NVAPIDisplayHelper.CreateVirtualRefreshRateSetData">
+  CreateVirtualRefreshRateSetData()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L194"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Create virtual refresh rate SET data with the version initialized.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static _NV_SET_VIRTUAL_REFRESH_RATE_DATA_V2 CreateVirtualRefreshRateSetData()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="NVAPIWrapper._NV_SET_VIRTUAL_REFRESH_RATE_DATA_V2.html">_NV_SET_VIRTUAL_REFRESH_RATE_DATA_V2</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIDisplayHelper_CreateVrrInfo_" data-uid="NVAPIWrapper.NVAPIDisplayHelper.CreateVrrInfo*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIDisplayHelper_CreateVrrInfo" data-uid="NVAPIWrapper.NVAPIDisplayHelper.CreateVrrInfo">
+  CreateVrrInfo()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L150"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Create a VRR info struct with the version initialized.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static _NV_GET_VRR_INFO_V1 CreateVrrInfo()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="NVAPIWrapper._NV_GET_VRR_INFO_V1.html">_NV_GET_VRR_INFO_V1</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIDisplayHelper_DeleteCustomDisplay_" data-uid="NVAPIWrapper.NVAPIDisplayHelper.DeleteCustomDisplay*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIDisplayHelper_DeleteCustomDisplay_System_UInt32___NVAPIWrapper_NVAPICustomDisplayDto___" data-uid="NVAPIWrapper.NVAPIDisplayHelper.DeleteCustomDisplay(System.UInt32[],NVAPIWrapper.NVAPICustomDisplayDto[])">
+  DeleteCustomDisplay(uint[], NVAPICustomDisplayDto[])
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L1744"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Delete a custom display.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool DeleteCustomDisplay(uint[] displayIds, NVAPICustomDisplayDto[] customDisplays)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>displayIds</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a>[]</dt>
+    <dd><p>Display IDs to delete the custom display from.</p>
+</dd>
+    <dt><code>customDisplays</code> <a class="xref" href="NVAPIWrapper.NVAPICustomDisplayDto.html">NVAPICustomDisplayDto</a>[]</dt>
+    <dd><p>Custom display DTO array.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True if applied, false if unavailable.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIDisplayHelper_DisableHWCursor_" data-uid="NVAPIWrapper.NVAPIDisplayHelper.DisableHWCursor*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIDisplayHelper_DisableHWCursor" data-uid="NVAPIWrapper.NVAPIDisplayHelper.DisableHWCursor">
+  DisableHWCursor()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L1161"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Disable the hardware cursor for this display.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool DisableHWCursor()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True if disabled, false if unavailable.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIDisplayHelper_Dispose_" data-uid="NVAPIWrapper.NVAPIDisplayHelper.Dispose*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIDisplayHelper_Dispose" data-uid="NVAPIWrapper.NVAPIDisplayHelper.Dispose">
+  Dispose()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L2120"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Dispose the helper and prevent further use.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Dispose()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIDisplayHelper_EnableHWCursor_" data-uid="NVAPIWrapper.NVAPIDisplayHelper.EnableHWCursor*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIDisplayHelper_EnableHWCursor" data-uid="NVAPIWrapper.NVAPIDisplayHelper.EnableHWCursor">
+  EnableHWCursor()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L1139"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Enable the hardware cursor for this display.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool EnableHWCursor()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True if enabled, false if unavailable.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIDisplayHelper_EnumCustomDisplay_" data-uid="NVAPIWrapper.NVAPIDisplayHelper.EnumCustomDisplay*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIDisplayHelper_EnumCustomDisplay_System_UInt32_System_Nullable_System_UInt32__" data-uid="NVAPIWrapper.NVAPIDisplayHelper.EnumCustomDisplay(System.UInt32,System.Nullable{System.UInt32})">
+  EnumCustomDisplay(uint, uint?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L1631"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Enumerate a custom display for the specified index.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NVAPICustomDisplayDto? EnumCustomDisplay(uint index, uint? displayId = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>index</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>Custom display index.</p>
+</dd>
+    <dt><code>displayId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a>?</dt>
+    <dd><p>Optional display ID override.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="NVAPIWrapper.NVAPICustomDisplayDto.html">NVAPICustomDisplayDto</a>?</dt>
+    <dd><p>Custom display DTO, or null if unavailable.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIDisplayHelper_GetAdaptiveSyncData_" data-uid="NVAPIWrapper.NVAPIDisplayHelper.GetAdaptiveSyncData*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIDisplayHelper_GetAdaptiveSyncData" data-uid="NVAPIWrapper.NVAPIDisplayHelper.GetAdaptiveSyncData">
+  GetAdaptiveSyncData()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L981"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get adaptive sync data for this display.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NVAPIAdaptiveSyncGetDataDto? GetAdaptiveSyncData()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="NVAPIWrapper.NVAPIAdaptiveSyncGetDataDto.html">NVAPIAdaptiveSyncGetDataDto</a>?</dt>
+    <dd><p>Adaptive sync data DTO, or null if unavailable.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIDisplayHelper_GetAssociatedDisplayOutputId_" data-uid="NVAPIWrapper.NVAPIDisplayHelper.GetAssociatedDisplayOutputId*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIDisplayHelper_GetAssociatedDisplayOutputId" data-uid="NVAPIWrapper.NVAPIDisplayHelper.GetAssociatedDisplayOutputId">
+  GetAssociatedDisplayOutputId()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L436"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get the output ID associated with this display.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public uint? GetAssociatedDisplayOutputId()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a>?</dt>
+    <dd><p>Output ID, or null if unavailable.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIDisplayHelper_GetAssociatedNvidiaDisplayHandle_" data-uid="NVAPIWrapper.NVAPIDisplayHelper.GetAssociatedNvidiaDisplayHandle*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIDisplayHelper_GetAssociatedNvidiaDisplayHandle_System_String_" data-uid="NVAPIWrapper.NVAPIDisplayHelper.GetAssociatedNvidiaDisplayHandle(System.String)">
+  GetAssociatedNvidiaDisplayHandle(string?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L1704"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get the display helper associated with a display name (e.g., &quot;\.\DISPLAY1&quot;).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NVAPIDisplayHelper? GetAssociatedNvidiaDisplayHandle(string? displayName = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>displayName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Display name to resolve. If null, uses this display handle's name.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="NVAPIWrapper.NVAPIDisplayHelper.html">NVAPIDisplayHelper</a></dt>
+    <dd><p>Display helper, or null if unavailable.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIDisplayHelper_GetAssociatedNvidiaDisplayName_" data-uid="NVAPIWrapper.NVAPIDisplayHelper.GetAssociatedNvidiaDisplayName*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIDisplayHelper_GetAssociatedNvidiaDisplayName" data-uid="NVAPIWrapper.NVAPIDisplayHelper.GetAssociatedNvidiaDisplayName">
+  GetAssociatedNvidiaDisplayName()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L409"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get the associated NVIDIA display name.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string? GetAssociatedNvidiaDisplayName()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Display name, or null if unavailable.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIDisplayHelper_GetColorimetry_" data-uid="NVAPIWrapper.NVAPIDisplayHelper.GetColorimetry*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIDisplayHelper_GetColorimetry" data-uid="NVAPIWrapper.NVAPIDisplayHelper.GetColorimetry">
+  GetColorimetry()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L1527"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get display colorimetry information for this display.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NVAPIDisplayColorimetryDto? GetColorimetry()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="NVAPIWrapper.NVAPIDisplayColorimetryDto.html">NVAPIDisplayColorimetryDto</a>?</dt>
+    <dd><p>Display colorimetry DTO, or null if unavailable.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIDisplayHelper_GetDisplayConfig_" data-uid="NVAPIWrapper.NVAPIDisplayHelper.GetDisplayConfig*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIDisplayHelper_GetDisplayConfig" data-uid="NVAPIWrapper.NVAPIDisplayHelper.GetDisplayConfig">
+  GetDisplayConfig()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L535"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get the current display configuration snapshot.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NVAPIDisplayConfigDto? GetDisplayConfig()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="NVAPIWrapper.NVAPIDisplayConfigDto.html">NVAPIDisplayConfigDto</a>?</dt>
+    <dd><p>Display configuration info, or null if unavailable.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIDisplayHelper_GetDisplayIdByDisplayName_" data-uid="NVAPIWrapper.NVAPIDisplayHelper.GetDisplayIdByDisplayName*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIDisplayHelper_GetDisplayIdByDisplayName_System_String_" data-uid="NVAPIWrapper.NVAPIDisplayHelper.GetDisplayIdByDisplayName(System.String)">
+  GetDisplayIdByDisplayName(string?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L610"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get the display ID associated with a display name.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public uint? GetDisplayIdByDisplayName(string? displayName = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>displayName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Display name (e.g., &quot;\.\DISPLAY1&quot;). If null, uses this display handle's name.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a>?</dt>
+    <dd><p>Display ID, or null if unavailable.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIDisplayHelper_GetDisplayIdInfo_" data-uid="NVAPIWrapper.NVAPIDisplayHelper.GetDisplayIdInfo*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIDisplayHelper_GetDisplayIdInfo_System_Nullable_System_UInt32__" data-uid="NVAPIWrapper.NVAPIDisplayHelper.GetDisplayIdInfo(System.Nullable{System.UInt32})">
+  GetDisplayIdInfo(uint?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L1554"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get display ID info for this display.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NVAPIDisplayIdInfoDto? GetDisplayIdInfo(uint? displayId = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>displayId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a>?</dt>
+    <dd><p>Optional display ID override.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="NVAPIWrapper.NVAPIDisplayIdInfoDto.html">NVAPIDisplayIdInfoDto</a>?</dt>
+    <dd><p>Display ID info DTO, or null if unavailable.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIDisplayHelper_GetDisplayIdsFromTarget_" data-uid="NVAPIWrapper.NVAPIDisplayHelper.GetDisplayIdsFromTarget*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIDisplayHelper_GetDisplayIdsFromTarget" data-uid="NVAPIWrapper.NVAPIDisplayHelper.GetDisplayIdsFromTarget">
+  GetDisplayIdsFromTarget()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L1584"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get display IDs for the target associated with this display.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NVAPITargetInfoDto? GetDisplayIdsFromTarget()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="NVAPIWrapper.NVAPITargetInfoDto.html">NVAPITargetInfoDto</a>?</dt>
+    <dd><p>Target info DTO, or null if unavailable.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIDisplayHelper_GetDisplayIdsFromTarget_" data-uid="NVAPIWrapper.NVAPIDisplayHelper.GetDisplayIdsFromTarget*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIDisplayHelper_GetDisplayIdsFromTarget_System_Int64_System_UInt32_" data-uid="NVAPIWrapper.NVAPIDisplayHelper.GetDisplayIdsFromTarget(System.Int64,System.UInt32)">
+  GetDisplayIdsFromTarget(long, uint)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L1599"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get display IDs for the specified target.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NVAPITargetInfoDto? GetDisplayIdsFromTarget(long adapterLuid, uint targetId)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>adapterLuid</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd><p>Adapter LUID.</p>
+</dd>
+    <dt><code>targetId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>Target ID (AdapterRelativeId).</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="NVAPIWrapper.NVAPITargetInfoDto.html">NVAPITargetInfoDto</a>?</dt>
+    <dd><p>Target info DTO, or null if unavailable.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIDisplayHelper_GetDisplayPortInfo_" data-uid="NVAPIWrapper.NVAPIDisplayHelper.GetDisplayPortInfo*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIDisplayHelper_GetDisplayPortInfo_System_Nullable_System_UInt32__" data-uid="NVAPIWrapper.NVAPIDisplayHelper.GetDisplayPortInfo(System.Nullable{System.UInt32})">
+  GetDisplayPortInfo(uint?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L871"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get display port information.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NVAPIDisplayPortInfoDto? GetDisplayPortInfo(uint? outputId = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>outputId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a>?</dt>
+    <dd><p>Optional output ID override.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="NVAPIWrapper.NVAPIDisplayPortInfoDto.html">NVAPIDisplayPortInfoDto</a>?</dt>
+    <dd><p>Display port info DTO, or null if unavailable.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIDisplayHelper_GetEdidData_" data-uid="NVAPIWrapper.NVAPIDisplayHelper.GetEdidData*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIDisplayHelper_GetEdidData_NVAPIWrapper_NV_EDID_FLAG_" data-uid="NVAPIWrapper.NVAPIDisplayHelper.GetEdidData(NVAPIWrapper.NV_EDID_FLAG)">
+  GetEdidData(NV_EDID_FLAG)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L696"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get EDID data for the display.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NVAPIDisplayEdidDataDto? GetEdidData(NV_EDID_FLAG flag = NV_EDID_FLAG.NV_EDID_FLAG_DEFAULT)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>flag</code> <a class="xref" href="NVAPIWrapper.NV_EDID_FLAG.html">NV_EDID_FLAG</a></dt>
+    <dd><p>EDID flag selection.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="NVAPIWrapper.NVAPIDisplayEdidDataDto.html">NVAPIDisplayEdidDataDto</a>?</dt>
+    <dd><p>EDID data DTO, or null if unavailable.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIDisplayHelper_GetGdiPrimaryDisplayId_" data-uid="NVAPIWrapper.NVAPIDisplayHelper.GetGdiPrimaryDisplayId*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIDisplayHelper_GetGdiPrimaryDisplayId" data-uid="NVAPIWrapper.NVAPIDisplayHelper.GetGdiPrimaryDisplayId">
+  GetGdiPrimaryDisplayId()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L632"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get the display ID for the GDI primary display.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public uint? GetGdiPrimaryDisplayId()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a>?</dt>
+    <dd><p>Display ID, or null if unavailable.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIDisplayHelper_GetGpuAndOutputIdFromDisplayId_" data-uid="NVAPIWrapper.NVAPIDisplayHelper.GetGpuAndOutputIdFromDisplayId*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIDisplayHelper_GetGpuAndOutputIdFromDisplayId" data-uid="NVAPIWrapper.NVAPIDisplayHelper.GetGpuAndOutputIdFromDisplayId">
+  GetGpuAndOutputIdFromDisplayId()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L458"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get the physical GPU and output ID for this display.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NVAPIGpuAndOutputIdDto? GetGpuAndOutputIdFromDisplayId()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="NVAPIWrapper.NVAPIGpuAndOutputIdDto.html">NVAPIGpuAndOutputIdDto</a>?</dt>
+    <dd><p>GPU and output ID info, or null if unavailable.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIDisplayHelper_GetHdmiSupportInfo_" data-uid="NVAPIWrapper.NVAPIDisplayHelper.GetHdmiSupportInfo*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIDisplayHelper_GetHdmiSupportInfo_System_Nullable_System_UInt32__" data-uid="NVAPIWrapper.NVAPIDisplayHelper.GetHdmiSupportInfo(System.Nullable{System.UInt32})">
+  GetHdmiSupportInfo(uint?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L927"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get HDMI support information.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NVAPIDisplayHdmiSupportInfoDto? GetHdmiSupportInfo(uint? outputId = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>outputId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a>?</dt>
+    <dd><p>Optional output ID override.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="NVAPIWrapper.NVAPIDisplayHdmiSupportInfoDto.html">NVAPIDisplayHdmiSupportInfoDto</a>?</dt>
+    <dd><p>HDMI support info DTO, or null if unavailable.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIDisplayHelper_GetHdrCapabilities_" data-uid="NVAPIWrapper.NVAPIDisplayHelper.GetHdrCapabilities*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIDisplayHelper_GetHdrCapabilities" data-uid="NVAPIWrapper.NVAPIDisplayHelper.GetHdrCapabilities">
+  GetHdrCapabilities()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L1262"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get HDR capabilities for this display.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NVAPIHdrCapabilitiesDto? GetHdrCapabilities()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="NVAPIWrapper.NVAPIHdrCapabilitiesDto.html">NVAPIHdrCapabilitiesDto</a>?</dt>
+    <dd><p>HDR capabilities DTO, or null if unavailable.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIDisplayHelper_GetHdrToneMapping_" data-uid="NVAPIWrapper.NVAPIDisplayHelper.GetHdrToneMapping*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIDisplayHelper_GetHdrToneMapping" data-uid="NVAPIWrapper.NVAPIDisplayHelper.GetHdrToneMapping">
+  GetHdrToneMapping()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L1501"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get the HDR tone mapping method for this display.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public _NV_HDR_TONEMAPPING_METHOD? GetHdrToneMapping()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="NVAPIWrapper._NV_HDR_TONEMAPPING_METHOD.html">_NV_HDR_TONEMAPPING_METHOD</a>?</dt>
+    <dd><p>HDR tone mapping method, or null if unavailable.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIDisplayHelper_GetLogicalGpuFromDisplay_" data-uid="NVAPIWrapper.NVAPIDisplayHelper.GetLogicalGpuFromDisplay*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIDisplayHelper_GetLogicalGpuFromDisplay" data-uid="NVAPIWrapper.NVAPIDisplayHelper.GetLogicalGpuFromDisplay">
+  GetLogicalGpuFromDisplay()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L386"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get the logical GPU associated with this display.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NVAPILogicalGpuHelper? GetLogicalGpuFromDisplay()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="NVAPIWrapper.NVAPILogicalGpuHelper.html">NVAPILogicalGpuHelper</a></dt>
+    <dd><p>Logical GPU helper, or null if unavailable.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIDisplayHelper_GetMonitorCapabilities_" data-uid="NVAPIWrapper.NVAPIDisplayHelper.GetMonitorCapabilities*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIDisplayHelper_GetMonitorCapabilities" data-uid="NVAPIWrapper.NVAPIDisplayHelper.GetMonitorCapabilities">
+  GetMonitorCapabilities()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L779"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get monitor capabilities for the display.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NVAPIMonitorCapabilitiesDto? GetMonitorCapabilities()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="NVAPIWrapper.NVAPIMonitorCapabilitiesDto.html">NVAPIMonitorCapabilitiesDto</a>?</dt>
+    <dd><p>Monitor capabilities DTO, or null if unavailable.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIDisplayHelper_GetMonitorColorCapabilities_" data-uid="NVAPIWrapper.NVAPIDisplayHelper.GetMonitorColorCapabilities*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIDisplayHelper_GetMonitorColorCapabilities" data-uid="NVAPIWrapper.NVAPIDisplayHelper.GetMonitorColorCapabilities">
+  GetMonitorColorCapabilities()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L806"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get monitor color capabilities for the display.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NVAPIMonitorColorCapabilitiesDto? GetMonitorColorCapabilities()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="NVAPIWrapper.NVAPIMonitorColorCapabilitiesDto.html">NVAPIMonitorColorCapabilitiesDto</a>?</dt>
+    <dd><p>Monitor color capabilities DTO, or null if unavailable.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIDisplayHelper_GetNvManagedDedicatedDisplayMetadata_" data-uid="NVAPIWrapper.NVAPIDisplayHelper.GetNvManagedDedicatedDisplayMetadata*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIDisplayHelper_GetNvManagedDedicatedDisplayMetadata_System_UInt32_" data-uid="NVAPIWrapper.NVAPIDisplayHelper.GetNvManagedDedicatedDisplayMetadata(System.UInt32)">
+  GetNvManagedDedicatedDisplayMetadata(uint)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L1966"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get metadata for a managed dedicated display.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NVAPINvManagedDedicatedDisplayMetadataDto? GetNvManagedDedicatedDisplayMetadata(uint displayId)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>displayId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>Display ID to query.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="NVAPIWrapper.NVAPINvManagedDedicatedDisplayMetadataDto.html">NVAPINvManagedDedicatedDisplayMetadataDto</a>?</dt>
+    <dd><p>Managed dedicated display metadata DTO, or null if unavailable.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIDisplayHelper_GetNvManagedDedicatedDisplays_" data-uid="NVAPIWrapper.NVAPIDisplayHelper.GetNvManagedDedicatedDisplays*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIDisplayHelper_GetNvManagedDedicatedDisplays" data-uid="NVAPIWrapper.NVAPIDisplayHelper.GetNvManagedDedicatedDisplays">
+  GetNvManagedDedicatedDisplays()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L1849"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get NVIDIA managed dedicated display info entries.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NVAPINvManagedDedicatedDisplayInfoDto[] GetNvManagedDedicatedDisplays()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="NVAPIWrapper.NVAPINvManagedDedicatedDisplayInfoDto.html">NVAPINvManagedDedicatedDisplayInfoDto</a>[]</dt>
+    <dd><p>Array of managed dedicated display info DTOs, or empty if unavailable.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIDisplayHelper_GetOutputMode_" data-uid="NVAPIWrapper.NVAPIDisplayHelper.GetOutputMode*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIDisplayHelper_GetOutputMode" data-uid="NVAPIWrapper.NVAPIDisplayHelper.GetOutputMode">
+  GetOutputMode()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L1449"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get the display output mode for this display.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public _NV_DISPLAY_OUTPUT_MODE? GetOutputMode()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="NVAPIWrapper._NV_DISPLAY_OUTPUT_MODE.html">_NV_DISPLAY_OUTPUT_MODE</a>?</dt>
+    <dd><p>Display output mode, or null if unavailable.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIDisplayHelper_GetPhysicalGpuFromDisplayId_" data-uid="NVAPIWrapper.NVAPIDisplayHelper.GetPhysicalGpuFromDisplayId*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIDisplayHelper_GetPhysicalGpuFromDisplayId" data-uid="NVAPIWrapper.NVAPIDisplayHelper.GetPhysicalGpuFromDisplayId">
+  GetPhysicalGpuFromDisplayId()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L486"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get the physical GPU that drives this display.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NVAPIPhysicalGpuHelper? GetPhysicalGpuFromDisplayId()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="NVAPIWrapper.NVAPIPhysicalGpuHelper.html">NVAPIPhysicalGpuHelper</a></dt>
+    <dd><p>Physical GPU helper, or null if unavailable.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIDisplayHelper_GetPhysicalGpusFromDisplay_" data-uid="NVAPIWrapper.NVAPIDisplayHelper.GetPhysicalGpusFromDisplay*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIDisplayHelper_GetPhysicalGpusFromDisplay" data-uid="NVAPIWrapper.NVAPIDisplayHelper.GetPhysicalGpusFromDisplay">
+  GetPhysicalGpusFromDisplay()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L351"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get physical GPUs associated with this display.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NVAPIPhysicalGpuHelper[] GetPhysicalGpusFromDisplay()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="NVAPIWrapper.NVAPIPhysicalGpuHelper.html">NVAPIPhysicalGpuHelper</a>[]</dt>
+    <dd><p>Array of physical GPU helpers, or empty if unavailable.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIDisplayHelper_GetPreferredStereoDisplay_" data-uid="NVAPIWrapper.NVAPIDisplayHelper.GetPreferredStereoDisplay*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIDisplayHelper_GetPreferredStereoDisplay" data-uid="NVAPIWrapper.NVAPIDisplayHelper.GetPreferredStereoDisplay">
+  GetPreferredStereoDisplay()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L1090"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get the preferred stereo display.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NVAPIPreferredStereoDisplayDto? GetPreferredStereoDisplay()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="NVAPIWrapper.NVAPIPreferredStereoDisplayDto.html">NVAPIPreferredStereoDisplayDto</a>?</dt>
+    <dd><p>Preferred stereo display DTO, or null if unavailable.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIDisplayHelper_GetSourceColorSpace_" data-uid="NVAPIWrapper.NVAPIDisplayHelper.GetSourceColorSpace*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIDisplayHelper_GetSourceColorSpace_System_UInt64_" data-uid="NVAPIWrapper.NVAPIDisplayHelper.GetSourceColorSpace(System.UInt64)">
+  GetSourceColorSpace(ulong)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L1342"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get the source color space for this display.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public _NV_COLORSPACE_TYPE? GetSourceColorSpace(ulong sourcePid = 0)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>sourcePid</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a></dt>
+    <dd><p>Source process ID (NV_SOURCE_PID_CURRENT for current).</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="NVAPIWrapper._NV_COLORSPACE_TYPE.html">_NV_COLORSPACE_TYPE</a>?</dt>
+    <dd><p>Source color space type, or null if unavailable.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIDisplayHelper_GetSourceHdrMetadata_" data-uid="NVAPIWrapper.NVAPIDisplayHelper.GetSourceHdrMetadata*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIDisplayHelper_GetSourceHdrMetadata_System_UInt64_" data-uid="NVAPIWrapper.NVAPIDisplayHelper.GetSourceHdrMetadata(System.UInt64)">
+  GetSourceHdrMetadata(ulong)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L1396"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get the source HDR metadata for this display.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NVAPIHdrMetadataDto? GetSourceHdrMetadata(ulong sourcePid = 0)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>sourcePid</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a></dt>
+    <dd><p>Source process ID (NV_SOURCE_PID_CURRENT for current).</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="NVAPIWrapper.NVAPIHdrMetadataDto.html">NVAPIHdrMetadataDto</a>?</dt>
+    <dd><p>HDR metadata DTO, or null if unavailable.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIDisplayHelper_GetSupportedViews_" data-uid="NVAPIWrapper.NVAPIDisplayHelper.GetSupportedViews*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIDisplayHelper_GetSupportedViews" data-uid="NVAPIWrapper.NVAPIDisplayHelper.GetSupportedViews">
+  GetSupportedViews()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L654"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get the supported view modes for this display handle.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NVAPISupportedViewsDto? GetSupportedViews()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="NVAPIWrapper.NVAPISupportedViewsDto.html">NVAPISupportedViewsDto</a>?</dt>
+    <dd><p>Supported view modes, or null if unavailable.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIDisplayHelper_GetTiming_" data-uid="NVAPIWrapper.NVAPIDisplayHelper.GetTiming*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIDisplayHelper_GetTiming_NVAPIWrapper_NVAPITimingInputDto_" data-uid="NVAPIWrapper.NVAPIDisplayHelper.GetTiming(NVAPIWrapper.NVAPITimingInputDto)">
+  GetTiming(NVAPITimingInputDto)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L751"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get timing data based on timing input parameters.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NVAPITimingDto? GetTiming(NVAPITimingInputDto input)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>input</code> <a class="xref" href="NVAPIWrapper.NVAPITimingInputDto.html">NVAPITimingInputDto</a></dt>
+    <dd><p>Timing input parameters.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="NVAPIWrapper.NVAPITimingDto.html">NVAPITimingDto</a>?</dt>
+    <dd><p>Timing DTO, or null if unavailable.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIDisplayHelper_GetVBlankCounter_" data-uid="NVAPIWrapper.NVAPIDisplayHelper.GetVBlankCounter*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIDisplayHelper_GetVBlankCounter" data-uid="NVAPIWrapper.NVAPIDisplayHelper.GetVBlankCounter">
+  GetVBlankCounter()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L513"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get the current VBlank counter for this display.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public uint? GetVBlankCounter()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a>?</dt>
+    <dd><p>VBlank counter value, or null if unavailable.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIDisplayHelper_GetVirtualRefreshRateData_" data-uid="NVAPIWrapper.NVAPIDisplayHelper.GetVirtualRefreshRateData*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIDisplayHelper_GetVirtualRefreshRateData" data-uid="NVAPIWrapper.NVAPIDisplayHelper.GetVirtualRefreshRateData">
+  GetVirtualRefreshRateData()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L1035"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get virtual refresh rate data for this display.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NVAPIVirtualRefreshRateDataDto? GetVirtualRefreshRateData()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="NVAPIWrapper.NVAPIVirtualRefreshRateDataDto.html">NVAPIVirtualRefreshRateDataDto</a>?</dt>
+    <dd><p>Virtual refresh rate data DTO, or null if unavailable.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIDisplayHelper_GetVrrInfo_" data-uid="NVAPIWrapper.NVAPIDisplayHelper.GetVrrInfo*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIDisplayHelper_GetVrrInfo" data-uid="NVAPIWrapper.NVAPIDisplayHelper.GetVrrInfo">
+  GetVrrInfo()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L954"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get VRR information for this display.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NVAPIVrrInfoDto? GetVrrInfo()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="NVAPIWrapper.NVAPIVrrInfoDto.html">NVAPIVrrInfoDto</a>?</dt>
+    <dd><p>VRR info DTO, or null if unavailable.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIDisplayHelper_HdrColorControl_" data-uid="NVAPIWrapper.NVAPIDisplayHelper.HdrColorControl*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIDisplayHelper_HdrColorControl_NVAPIWrapper_NVAPIHdrColorDataDto_" data-uid="NVAPIWrapper.NVAPIDisplayHelper.HdrColorControl(NVAPIWrapper.NVAPIHdrColorDataDto)">
+  HdrColorControl(NVAPIHdrColorDataDto)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L1289"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Control HDR color settings for this display.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NVAPIHdrColorDataDto? HdrColorControl(NVAPIHdrColorDataDto hdrData)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>hdrData</code> <a class="xref" href="NVAPIWrapper.NVAPIHdrColorDataDto.html">NVAPIHdrColorDataDto</a></dt>
+    <dd><p>HDR color data DTO.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="NVAPIWrapper.NVAPIHdrColorDataDto.html">NVAPIHdrColorDataDto</a>?</dt>
+    <dd><p>Updated HDR color data DTO, or null if unavailable.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIDisplayHelper_InfoFrameControl_" data-uid="NVAPIWrapper.NVAPIDisplayHelper.InfoFrameControl*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIDisplayHelper_InfoFrameControl_NVAPIWrapper_NVAPIInfoFrameDataDto_" data-uid="NVAPIWrapper.NVAPIDisplayHelper.InfoFrameControl(NVAPIWrapper.NVAPIInfoFrameDataDto)">
+  InfoFrameControl(NVAPIInfoFrameDataDto)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L1209"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Control infoframe data for this display.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NVAPIInfoFrameDataDto? InfoFrameControl(NVAPIInfoFrameDataDto data)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>data</code> <a class="xref" href="NVAPIWrapper.NVAPIInfoFrameDataDto.html">NVAPIInfoFrameDataDto</a></dt>
+    <dd><p>Infoframe data DTO.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="NVAPIWrapper.NVAPIInfoFrameDataDto.html">NVAPIInfoFrameDataDto</a>?</dt>
+    <dd><p>Updated infoframe data DTO, or null if unavailable.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIDisplayHelper_ReleaseDedicatedDisplay_" data-uid="NVAPIWrapper.NVAPIDisplayHelper.ReleaseDedicatedDisplay*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIDisplayHelper_ReleaseDedicatedDisplay_System_Nullable_System_UInt32__" data-uid="NVAPIWrapper.NVAPIDisplayHelper.ReleaseDedicatedDisplay(System.Nullable{System.UInt32})">
+  ReleaseDedicatedDisplay(uint?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L1934"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Release a managed dedicated display.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool ReleaseDedicatedDisplay(uint? displayId = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>displayId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a>?</dt>
+    <dd><p>Optional display ID override.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True if released, false if unavailable.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIDisplayHelper_RevertCustomDisplayTrial_" data-uid="NVAPIWrapper.NVAPIDisplayHelper.RevertCustomDisplayTrial*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIDisplayHelper_RevertCustomDisplayTrial_System_UInt32___" data-uid="NVAPIWrapper.NVAPIDisplayHelper.RevertCustomDisplayTrial(System.UInt32[])">
+  RevertCustomDisplayTrial(uint[])
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L1821"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Revert custom display trial for the specified displays.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool RevertCustomDisplayTrial(uint[] displayIds)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>displayIds</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a>[]</dt>
+    <dd><p>Display IDs to revert.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True if applied, false if unavailable.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIDisplayHelper_SaveCustomDisplay_" data-uid="NVAPIWrapper.NVAPIDisplayHelper.SaveCustomDisplay*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIDisplayHelper_SaveCustomDisplay_System_UInt32___System_Boolean_System_Boolean_" data-uid="NVAPIWrapper.NVAPIDisplayHelper.SaveCustomDisplay(System.UInt32[],System.Boolean,System.Boolean)">
+  SaveCustomDisplay(uint[], bool, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L1787"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Save custom display settings for the specified displays.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool SaveCustomDisplay(uint[] displayIds, bool isThisOutputIdOnly, bool isThisMonitorIdOnly)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>displayIds</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a>[]</dt>
+    <dd><p>Display IDs to save.</p>
+</dd>
+    <dt><code>isThisOutputIdOnly</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True to apply only to the output ID.</p>
+</dd>
+    <dt><code>isThisMonitorIdOnly</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True to apply only to the monitor ID.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True if applied, false if unavailable.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIDisplayHelper_SetAdaptiveSyncData_" data-uid="NVAPIWrapper.NVAPIDisplayHelper.SetAdaptiveSyncData*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIDisplayHelper_SetAdaptiveSyncData_NVAPIWrapper_NVAPIAdaptiveSyncSetDataDto_" data-uid="NVAPIWrapper.NVAPIDisplayHelper.SetAdaptiveSyncData(NVAPIWrapper.NVAPIAdaptiveSyncSetDataDto)">
+  SetAdaptiveSyncData(NVAPIAdaptiveSyncSetDataDto)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L1009"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Set adaptive sync data for this display.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool SetAdaptiveSyncData(NVAPIAdaptiveSyncSetDataDto data)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>data</code> <a class="xref" href="NVAPIWrapper.NVAPIAdaptiveSyncSetDataDto.html">NVAPIAdaptiveSyncSetDataDto</a></dt>
+    <dd><p>Adaptive sync data DTO.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True if applied, false if unavailable.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIDisplayHelper_SetDisplayConfig_" data-uid="NVAPIWrapper.NVAPIDisplayHelper.SetDisplayConfig*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIDisplayHelper_SetDisplayConfig_NVAPIWrapper_NVAPIDisplayConfigDto_System_UInt32_" data-uid="NVAPIWrapper.NVAPIDisplayHelper.SetDisplayConfig(NVAPIWrapper.NVAPIDisplayConfigDto,System.UInt32)">
+  SetDisplayConfig(NVAPIDisplayConfigDto, uint)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L575"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Apply a display configuration snapshot using NvAPI_DISP_SetDisplayConfig.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool SetDisplayConfig(NVAPIDisplayConfigDto config, uint flags = 0)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>config</code> <a class="xref" href="NVAPIWrapper.NVAPIDisplayConfigDto.html">NVAPIDisplayConfigDto</a></dt>
+    <dd><p>Desired display configuration snapshot.</p>
+</dd>
+    <dt><code>flags</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>Optional NVAPI display config flags.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True if applied, false if unavailable or unchanged.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIDisplayHelper_SetDisplayPort_" data-uid="NVAPIWrapper.NVAPIDisplayHelper.SetDisplayPort*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIDisplayHelper_SetDisplayPort_NVAPIWrapper_NVAPIDisplayPortConfigDto_System_Nullable_System_UInt32__" data-uid="NVAPIWrapper.NVAPIDisplayHelper.SetDisplayPort(NVAPIWrapper.NVAPIDisplayPortConfigDto,System.Nullable{System.UInt32})">
+  SetDisplayPort(NVAPIDisplayPortConfigDto, uint?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L900"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Set display port configuration.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool SetDisplayPort(NVAPIDisplayPortConfigDto config, uint? outputId = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>config</code> <a class="xref" href="NVAPIWrapper.NVAPIDisplayPortConfigDto.html">NVAPIDisplayPortConfigDto</a></dt>
+    <dd><p>Display port configuration DTO.</p>
+</dd>
+    <dt><code>outputId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a>?</dt>
+    <dd><p>Optional output ID override.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True if applied, false if unavailable.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIDisplayHelper_SetHdrToneMapping_" data-uid="NVAPIWrapper.NVAPIDisplayHelper.SetHdrToneMapping*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIDisplayHelper_SetHdrToneMapping_NVAPIWrapper__NV_HDR_TONEMAPPING_METHOD_" data-uid="NVAPIWrapper.NVAPIDisplayHelper.SetHdrToneMapping(NVAPIWrapper._NV_HDR_TONEMAPPING_METHOD)">
+  SetHdrToneMapping(_NV_HDR_TONEMAPPING_METHOD)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L1476"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Set the HDR tone mapping method for this display.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool SetHdrToneMapping(_NV_HDR_TONEMAPPING_METHOD hdrTonemapping)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>hdrTonemapping</code> <a class="xref" href="NVAPIWrapper._NV_HDR_TONEMAPPING_METHOD.html">_NV_HDR_TONEMAPPING_METHOD</a></dt>
+    <dd><p>HDR tone mapping method.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True if applied, false if unavailable.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIDisplayHelper_SetNvManagedDedicatedDisplayMetadata_" data-uid="NVAPIWrapper.NVAPIDisplayHelper.SetNvManagedDedicatedDisplayMetadata*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIDisplayHelper_SetNvManagedDedicatedDisplayMetadata_NVAPIWrapper_NVAPINvManagedDedicatedDisplayMetadataDto_" data-uid="NVAPIWrapper.NVAPIDisplayHelper.SetNvManagedDedicatedDisplayMetadata(NVAPIWrapper.NVAPINvManagedDedicatedDisplayMetadataDto)">
+  SetNvManagedDedicatedDisplayMetadata(NVAPINvManagedDedicatedDisplayMetadataDto)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L1992"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Set metadata for a managed dedicated display.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool SetNvManagedDedicatedDisplayMetadata(NVAPINvManagedDedicatedDisplayMetadataDto metadata)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>metadata</code> <a class="xref" href="NVAPIWrapper.NVAPINvManagedDedicatedDisplayMetadataDto.html">NVAPINvManagedDedicatedDisplayMetadataDto</a></dt>
+    <dd><p>Managed dedicated display metadata DTO.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True if applied, false if unavailable.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIDisplayHelper_SetOutputMode_" data-uid="NVAPIWrapper.NVAPIDisplayHelper.SetOutputMode*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIDisplayHelper_SetOutputMode_NVAPIWrapper__NV_DISPLAY_OUTPUT_MODE_" data-uid="NVAPIWrapper.NVAPIDisplayHelper.SetOutputMode(NVAPIWrapper._NV_DISPLAY_OUTPUT_MODE)">
+  SetOutputMode(_NV_DISPLAY_OUTPUT_MODE)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L1423"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Set the display output mode for this display.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool SetOutputMode(_NV_DISPLAY_OUTPUT_MODE displayMode)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>displayMode</code> <a class="xref" href="NVAPIWrapper._NV_DISPLAY_OUTPUT_MODE.html">_NV_DISPLAY_OUTPUT_MODE</a></dt>
+    <dd><p>Desired output mode.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True if applied, false if unavailable.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIDisplayHelper_SetPreferredStereoDisplay_" data-uid="NVAPIWrapper.NVAPIDisplayHelper.SetPreferredStereoDisplay*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIDisplayHelper_SetPreferredStereoDisplay_NVAPIWrapper_NVAPIPreferredStereoDisplayDto_" data-uid="NVAPIWrapper.NVAPIDisplayHelper.SetPreferredStereoDisplay(NVAPIWrapper.NVAPIPreferredStereoDisplayDto)">
+  SetPreferredStereoDisplay(NVAPIPreferredStereoDisplayDto)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L1115"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Set the preferred stereo display.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool SetPreferredStereoDisplay(NVAPIPreferredStereoDisplayDto display)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>display</code> <a class="xref" href="NVAPIWrapper.NVAPIPreferredStereoDisplayDto.html">NVAPIPreferredStereoDisplayDto</a></dt>
+    <dd><p>Preferred stereo display DTO.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True if applied, false if unavailable.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIDisplayHelper_SetRefreshRateOverride_" data-uid="NVAPIWrapper.NVAPIDisplayHelper.SetRefreshRateOverride*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIDisplayHelper_SetRefreshRateOverride_System_UInt32_System_Single_System_Boolean_" data-uid="NVAPIWrapper.NVAPIDisplayHelper.SetRefreshRateOverride(System.UInt32,System.Single,System.Boolean)">
+  SetRefreshRateOverride(uint, float, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L1186"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Override the refresh rate for the specified output mask.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool SetRefreshRateOverride(uint outputsMask, float refreshRate, bool setDeferred)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>outputsMask</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>Output mask to apply the override.</p>
+</dd>
+    <dt><code>refreshRate</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>Refresh rate override (0.0 cancels).</p>
+</dd>
+    <dt><code>setDeferred</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True to defer to the next modeset.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True if applied, false if unavailable.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIDisplayHelper_SetSourceColorSpace_" data-uid="NVAPIWrapper.NVAPIDisplayHelper.SetSourceColorSpace*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIDisplayHelper_SetSourceColorSpace_NVAPIWrapper__NV_COLORSPACE_TYPE_" data-uid="NVAPIWrapper.NVAPIDisplayHelper.SetSourceColorSpace(NVAPIWrapper._NV_COLORSPACE_TYPE)">
+  SetSourceColorSpace(_NV_COLORSPACE_TYPE)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L1316"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Set the source color space for this display.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool SetSourceColorSpace(_NV_COLORSPACE_TYPE colorSpaceType)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>colorSpaceType</code> <a class="xref" href="NVAPIWrapper._NV_COLORSPACE_TYPE.html">_NV_COLORSPACE_TYPE</a></dt>
+    <dd><p>Source color space type.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True if applied, false if unavailable.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIDisplayHelper_SetSourceHdrMetadata_" data-uid="NVAPIWrapper.NVAPIDisplayHelper.SetSourceHdrMetadata*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIDisplayHelper_SetSourceHdrMetadata_NVAPIWrapper_NVAPIHdrMetadataDto_" data-uid="NVAPIWrapper.NVAPIDisplayHelper.SetSourceHdrMetadata(NVAPIWrapper.NVAPIHdrMetadataDto)">
+  SetSourceHdrMetadata(NVAPIHdrMetadataDto)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L1369"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Set the source HDR metadata for this display.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool SetSourceHdrMetadata(NVAPIHdrMetadataDto metadata)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>metadata</code> <a class="xref" href="NVAPIWrapper.NVAPIHdrMetadataDto.html">NVAPIHdrMetadataDto</a></dt>
+    <dd><p>HDR metadata DTO.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True if applied, false if unavailable.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIDisplayHelper_SetVirtualRefreshRateData_" data-uid="NVAPIWrapper.NVAPIDisplayHelper.SetVirtualRefreshRateData*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIDisplayHelper_SetVirtualRefreshRateData_NVAPIWrapper_NVAPIVirtualRefreshRateDataDto_" data-uid="NVAPIWrapper.NVAPIDisplayHelper.SetVirtualRefreshRateData(NVAPIWrapper.NVAPIVirtualRefreshRateDataDto)">
+  SetVirtualRefreshRateData(NVAPIVirtualRefreshRateDataDto)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L1063"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Set virtual refresh rate data for this display.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool SetVirtualRefreshRateData(NVAPIVirtualRefreshRateDataDto data)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>data</code> <a class="xref" href="NVAPIWrapper.NVAPIVirtualRefreshRateDataDto.html">NVAPIVirtualRefreshRateDataDto</a></dt>
+    <dd><p>Virtual refresh rate data DTO.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True if applied, false if unavailable.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIDisplayHelper_TryCustomDisplay_" data-uid="NVAPIWrapper.NVAPIDisplayHelper.TryCustomDisplay*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIDisplayHelper_TryCustomDisplay_System_UInt32___NVAPIWrapper_NVAPICustomDisplayDto___" data-uid="NVAPIWrapper.NVAPIDisplayHelper.TryCustomDisplay(System.UInt32[],NVAPIWrapper.NVAPICustomDisplayDto[])">
+  TryCustomDisplay(uint[], NVAPICustomDisplayDto[])
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L1663"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Try applying a custom display.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool TryCustomDisplay(uint[] displayIds, NVAPICustomDisplayDto[] customDisplays)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>displayIds</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a>[]</dt>
+    <dd><p>Display IDs to apply the custom display to.</p>
+</dd>
+    <dt><code>customDisplays</code> <a class="xref" href="NVAPIWrapper.NVAPICustomDisplayDto.html">NVAPICustomDisplayDto</a>[]</dt>
+    <dd><p>Custom display DTO array.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True if applied, false if unavailable.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L11" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class NVAPIQuadroGSyncHelper | NVAPIWrapper </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class NVAPIQuadroGSyncHelper | NVAPIWrapper ">
+      
+      <meta name="description" content="Facade helper for Quadro G-Sync (frame lock) devices.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/terrymacdonald/NVAPIWrapper/new/main/apiSpec/new?filename=NVAPIWrapper_NVAPIQuadroGSyncHelper.md&amp;value=---%0Auid%3A%20NVAPIWrapper.NVAPIQuadroGSyncHelper%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="NVAPIWrapper">
+            NVAPIWrapper
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="NVAPIWrapper.NVAPIQuadroGSyncHelper">
+
+
+
+  <h1 id="NVAPIWrapper_NVAPIQuadroGSyncHelper" data-uid="NVAPIWrapper.NVAPIQuadroGSyncHelper" class="text-break">
+Class NVAPIQuadroGSyncHelper  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIQuadroGSyncHelper.cs/#L10"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="NVAPIWrapper.html">NVAPIWrapper</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>NVAPIWrapper.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Facade helper for Quadro G-Sync (frame lock) devices.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class NVAPIQuadroGSyncHelper : IDisposable</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">NVAPIQuadroGSyncHelper</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="NVAPIWrapper_NVAPIQuadroGSyncHelper_AdjustSyncDelay_" data-uid="NVAPIWrapper.NVAPIQuadroGSyncHelper.AdjustSyncDelay*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIQuadroGSyncHelper_AdjustSyncDelay_NVAPIWrapper__NVAPI_GSYNC_DELAY_TYPE_NVAPIWrapper_NVAPIGSyncDelayDto_" data-uid="NVAPIWrapper.NVAPIQuadroGSyncHelper.AdjustSyncDelay(NVAPIWrapper._NVAPI_GSYNC_DELAY_TYPE,NVAPIWrapper.NVAPIGSyncDelayDto)">
+  AdjustSyncDelay(_NVAPI_GSYNC_DELAY_TYPE, NVAPIGSyncDelayDto)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIQuadroGSyncHelper.cs/#L267"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Adjust sync delay for this G-Sync device.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NVAPIGSyncAdjustedDelayDto? AdjustSyncDelay(_NVAPI_GSYNC_DELAY_TYPE delayType, NVAPIGSyncDelayDto delay)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>delayType</code> <a class="xref" href="NVAPIWrapper._NVAPI_GSYNC_DELAY_TYPE.html">_NVAPI_GSYNC_DELAY_TYPE</a></dt>
+    <dd><p>Delay type.</p>
+</dd>
+    <dt><code>delay</code> <a class="xref" href="NVAPIWrapper.NVAPIGSyncDelayDto.html">NVAPIGSyncDelayDto</a></dt>
+    <dd><p>Delay DTO.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="NVAPIWrapper.NVAPIGSyncAdjustedDelayDto.html">NVAPIGSyncAdjustedDelayDto</a>?</dt>
+    <dd><p>Adjusted delay DTO, or null if unavailable.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIQuadroGSyncHelper_CreateCapabilities_" data-uid="NVAPIWrapper.NVAPIQuadroGSyncHelper.CreateCapabilities*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIQuadroGSyncHelper_CreateCapabilities" data-uid="NVAPIWrapper.NVAPIQuadroGSyncHelper.CreateCapabilities">
+  CreateCapabilities()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIQuadroGSyncHelper.cs/#L36"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Create a G-Sync capabilities struct with the version initialized.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static _NV_GSYNC_CAPABILITIES_V3 CreateCapabilities()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="NVAPIWrapper._NV_GSYNC_CAPABILITIES_V3.html">_NV_GSYNC_CAPABILITIES_V3</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIQuadroGSyncHelper_CreateControlParameters_" data-uid="NVAPIWrapper.NVAPIQuadroGSyncHelper.CreateControlParameters*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIQuadroGSyncHelper_CreateControlParameters" data-uid="NVAPIWrapper.NVAPIQuadroGSyncHelper.CreateControlParameters">
+  CreateControlParameters()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIQuadroGSyncHelper.cs/#L47"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Create a G-Sync control parameters struct with the version initialized.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static _NV_GSYNC_CONTROL_PARAMS_V2 CreateControlParameters()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="NVAPIWrapper._NV_GSYNC_CONTROL_PARAMS_V2.html">_NV_GSYNC_CONTROL_PARAMS_V2</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIQuadroGSyncHelper_CreateDelay_" data-uid="NVAPIWrapper.NVAPIQuadroGSyncHelper.CreateDelay*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIQuadroGSyncHelper_CreateDelay" data-uid="NVAPIWrapper.NVAPIQuadroGSyncHelper.CreateDelay">
+  CreateDelay()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIQuadroGSyncHelper.cs/#L58"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Create a G-Sync delay struct with the version initialized.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static _NV_GSYNC_DELAY CreateDelay()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="NVAPIWrapper._NV_GSYNC_DELAY.html">_NV_GSYNC_DELAY</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIQuadroGSyncHelper_CreateGSyncDisplay_" data-uid="NVAPIWrapper.NVAPIQuadroGSyncHelper.CreateGSyncDisplay*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIQuadroGSyncHelper_CreateGSyncDisplay" data-uid="NVAPIWrapper.NVAPIQuadroGSyncHelper.CreateGSyncDisplay">
+  CreateGSyncDisplay()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIQuadroGSyncHelper.cs/#L102"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Create a G-Sync display topology struct with the version initialized.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static _NV_GSYNC_DISPLAY CreateGSyncDisplay()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="NVAPIWrapper._NV_GSYNC_DISPLAY.html">_NV_GSYNC_DISPLAY</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIQuadroGSyncHelper_CreateGSyncGpu_" data-uid="NVAPIWrapper.NVAPIQuadroGSyncHelper.CreateGSyncGpu*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIQuadroGSyncHelper_CreateGSyncGpu" data-uid="NVAPIWrapper.NVAPIQuadroGSyncHelper.CreateGSyncGpu">
+  CreateGSyncGpu()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIQuadroGSyncHelper.cs/#L91"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Create a G-Sync GPU topology struct with the version initialized.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static _NV_GSYNC_GPU CreateGSyncGpu()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="NVAPIWrapper._NV_GSYNC_GPU.html">_NV_GSYNC_GPU</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIQuadroGSyncHelper_CreateStatusParameters_" data-uid="NVAPIWrapper.NVAPIQuadroGSyncHelper.CreateStatusParameters*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIQuadroGSyncHelper_CreateStatusParameters" data-uid="NVAPIWrapper.NVAPIQuadroGSyncHelper.CreateStatusParameters">
+  CreateStatusParameters()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIQuadroGSyncHelper.cs/#L80"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Create a G-Sync status parameters struct with the version initialized.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static _NV_GSYNC_STATUS_PARAMS_V2 CreateStatusParameters()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="NVAPIWrapper._NV_GSYNC_STATUS_PARAMS_V2.html">_NV_GSYNC_STATUS_PARAMS_V2</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIQuadroGSyncHelper_CreateSyncStatus_" data-uid="NVAPIWrapper.NVAPIQuadroGSyncHelper.CreateSyncStatus*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIQuadroGSyncHelper_CreateSyncStatus" data-uid="NVAPIWrapper.NVAPIQuadroGSyncHelper.CreateSyncStatus">
+  CreateSyncStatus()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIQuadroGSyncHelper.cs/#L69"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Create a G-Sync status struct with the version initialized.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static _NV_GSYNC_STATUS CreateSyncStatus()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="NVAPIWrapper._NV_GSYNC_STATUS.html">_NV_GSYNC_STATUS</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIQuadroGSyncHelper_Dispose_" data-uid="NVAPIWrapper.NVAPIQuadroGSyncHelper.Dispose*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIQuadroGSyncHelper_Dispose" data-uid="NVAPIWrapper.NVAPIQuadroGSyncHelper.Dispose">
+  Dispose()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIQuadroGSyncHelper.cs/#L397"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Dispose the helper.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Dispose()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIQuadroGSyncHelper_GetControlParameters_" data-uid="NVAPIWrapper.NVAPIQuadroGSyncHelper.GetControlParameters*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIQuadroGSyncHelper_GetControlParameters" data-uid="NVAPIWrapper.NVAPIQuadroGSyncHelper.GetControlParameters">
+  GetControlParameters()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIQuadroGSyncHelper.cs/#L218"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get control parameters for this G-Sync device.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NVAPIGSyncControlParametersDto? GetControlParameters()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="NVAPIWrapper.NVAPIGSyncControlParametersDto.html">NVAPIGSyncControlParametersDto</a>?</dt>
+    <dd><p>Control parameters DTO, or null if unavailable.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIQuadroGSyncHelper_GetStatusParameters_" data-uid="NVAPIWrapper.NVAPIQuadroGSyncHelper.GetStatusParameters*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIQuadroGSyncHelper_GetStatusParameters" data-uid="NVAPIWrapper.NVAPIQuadroGSyncHelper.GetStatusParameters">
+  GetStatusParameters()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIQuadroGSyncHelper.cs/#L318"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get status parameters for this G-Sync device.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NVAPIGSyncStatusParametersDto? GetStatusParameters()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="NVAPIWrapper.NVAPIGSyncStatusParametersDto.html">NVAPIGSyncStatusParametersDto</a>?</dt>
+    <dd><p>Status parameters DTO, or null if unavailable.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIQuadroGSyncHelper_GetSyncStatus_" data-uid="NVAPIWrapper.NVAPIQuadroGSyncHelper.GetSyncStatus*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIQuadroGSyncHelper_GetSyncStatus_NVAPIWrapper_NVAPIPhysicalGpuHelper_" data-uid="NVAPIWrapper.NVAPIQuadroGSyncHelper.GetSyncStatus(NVAPIWrapper.NVAPIPhysicalGpuHelper)">
+  GetSyncStatus(NVAPIPhysicalGpuHelper)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIQuadroGSyncHelper.cs/#L292"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get sync status for a physical GPU attached to this G-Sync device.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NVAPIGSyncSyncStatusDto? GetSyncStatus(NVAPIPhysicalGpuHelper physicalGpu)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>physicalGpu</code> <a class="xref" href="NVAPIWrapper.NVAPIPhysicalGpuHelper.html">NVAPIPhysicalGpuHelper</a></dt>
+    <dd><p>Physical GPU helper.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="NVAPIWrapper.NVAPIGSyncSyncStatusDto.html">NVAPIGSyncSyncStatusDto</a>?</dt>
+    <dd><p>Sync status DTO, or null if unavailable.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIQuadroGSyncHelper_GetTopology_" data-uid="NVAPIWrapper.NVAPIQuadroGSyncHelper.GetTopology*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIQuadroGSyncHelper_GetTopology" data-uid="NVAPIWrapper.NVAPIQuadroGSyncHelper.GetTopology">
+  GetTopology()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIQuadroGSyncHelper.cs/#L137"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Query the topology for this G-Sync device.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NVAPIGSyncTopologyDto? GetTopology()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="NVAPIWrapper.NVAPIGSyncTopologyDto.html">NVAPIGSyncTopologyDto</a>?</dt>
+    <dd><p>Topology DTO, or null if unavailable.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIQuadroGSyncHelper_QueryCapabilities_" data-uid="NVAPIWrapper.NVAPIQuadroGSyncHelper.QueryCapabilities*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIQuadroGSyncHelper_QueryCapabilities" data-uid="NVAPIWrapper.NVAPIQuadroGSyncHelper.QueryCapabilities">
+  QueryCapabilities()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIQuadroGSyncHelper.cs/#L114"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Query capabilities of this G-Sync device.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NVAPIGSyncCapabilitiesDto? QueryCapabilities()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="NVAPIWrapper.NVAPIGSyncCapabilitiesDto.html">NVAPIGSyncCapabilitiesDto</a>?</dt>
+    <dd><p>Capabilities DTO, or null if unavailable.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIQuadroGSyncHelper_SetControlParameters_" data-uid="NVAPIWrapper.NVAPIQuadroGSyncHelper.SetControlParameters*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIQuadroGSyncHelper_SetControlParameters_NVAPIWrapper_NVAPIGSyncControlParametersDto_" data-uid="NVAPIWrapper.NVAPIQuadroGSyncHelper.SetControlParameters(NVAPIWrapper.NVAPIGSyncControlParametersDto)">
+  SetControlParameters(NVAPIGSyncControlParametersDto)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIQuadroGSyncHelper.cs/#L242"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Set control parameters for this G-Sync device.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool? SetControlParameters(NVAPIGSyncControlParametersDto parameters)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>parameters</code> <a class="xref" href="NVAPIWrapper.NVAPIGSyncControlParametersDto.html">NVAPIGSyncControlParametersDto</a></dt>
+    <dd><p>Control parameters DTO.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>?</dt>
+    <dd><p>True if applied, null if unsupported.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIQuadroGSyncHelper_SetSyncStateSettings_" data-uid="NVAPIWrapper.NVAPIQuadroGSyncHelper.SetSyncStateSettings*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIQuadroGSyncHelper_SetSyncStateSettings_NVAPIWrapper_NVAPIGSyncDisplayDto___System_UInt32_" data-uid="NVAPIWrapper.NVAPIQuadroGSyncHelper.SetSyncStateSettings(NVAPIWrapper.NVAPIGSyncDisplayDto[],System.UInt32)">
+  SetSyncStateSettings(NVAPIGSyncDisplayDto[], uint)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIQuadroGSyncHelper.cs/#L343"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Set display sync state settings for this G-Sync device.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool? SetSyncStateSettings(NVAPIGSyncDisplayDto[] displays, uint flags = 0)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>displays</code> <a class="xref" href="NVAPIWrapper.NVAPIGSyncDisplayDto.html">NVAPIGSyncDisplayDto</a>[]</dt>
+    <dd><p>Display DTO array.</p>
+</dd>
+    <dt><code>flags</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>Flags for the operation.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>?</dt>
+    <dd><p>True if applied, null if unsupported.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIQuadroGSyncHelper.cs/#L10" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

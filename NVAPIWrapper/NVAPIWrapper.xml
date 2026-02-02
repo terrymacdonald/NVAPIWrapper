@@ -306,6 +306,42 @@
             Callback function pointer.
             </summary>
         </member>
+        <member name="M:NVAPIWrapper.NVAPIEventCallbackSettingsDto.Equals(NVAPIWrapper.NVAPIEventCallbackSettingsDto)">
+            <summary>
+            Determine whether this instance and another callback settings instance are equal.
+            </summary>
+            <param name="other">The other callback settings instance.</param>
+            <returns>True if the instances are equal; otherwise, false.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIEventCallbackSettingsDto.Equals(System.Object)">
+            <summary>
+            Determine whether this instance and a specified object are equal.
+            </summary>
+            <param name="obj">The object to compare.</param>
+            <returns>True if equal; otherwise, false.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIEventCallbackSettingsDto.GetHashCode">
+            <summary>
+            Get a hash code for this instance.
+            </summary>
+            <returns>A hash code for this instance.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIEventCallbackSettingsDto.op_Equality(NVAPIWrapper.NVAPIEventCallbackSettingsDto,NVAPIWrapper.NVAPIEventCallbackSettingsDto)">
+            <summary>
+            Determine whether two callback settings instances are equal.
+            </summary>
+            <param name="left">The left instance.</param>
+            <param name="right">The right instance.</param>
+            <returns>True if the instances are equal; otherwise, false.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIEventCallbackSettingsDto.op_Inequality(NVAPIWrapper.NVAPIEventCallbackSettingsDto,NVAPIWrapper.NVAPIEventCallbackSettingsDto)">
+            <summary>
+            Determine whether two callback settings instances are not equal.
+            </summary>
+            <param name="left">The left instance.</param>
+            <param name="right">The right instance.</param>
+            <returns>True if the instances are not equal; otherwise, false.</returns>
+        </member>
         <member name="T:NVAPIWrapper.NVAPINGXOverrideStateDto">
             <summary>
             NGX override state DTO.
@@ -361,6 +397,42 @@
             DLSS frame generation preset.
             </summary>
         </member>
+        <member name="M:NVAPIWrapper.NVAPINGXOverrideStateDto.Equals(NVAPIWrapper.NVAPINGXOverrideStateDto)">
+            <summary>
+            Determine whether this instance and another NGX override state instance are equal.
+            </summary>
+            <param name="other">The other NGX override state instance.</param>
+            <returns>True if the instances are equal; otherwise, false.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPINGXOverrideStateDto.Equals(System.Object)">
+            <summary>
+            Determine whether this instance and a specified object are equal.
+            </summary>
+            <param name="obj">The object to compare.</param>
+            <returns>True if equal; otherwise, false.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPINGXOverrideStateDto.GetHashCode">
+            <summary>
+            Get a hash code for this instance.
+            </summary>
+            <returns>A hash code for this instance.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPINGXOverrideStateDto.op_Equality(NVAPIWrapper.NVAPINGXOverrideStateDto,NVAPIWrapper.NVAPINGXOverrideStateDto)">
+            <summary>
+            Determine whether two NGX override state instances are equal.
+            </summary>
+            <param name="left">The left instance.</param>
+            <param name="right">The right instance.</param>
+            <returns>True if the instances are equal; otherwise, false.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPINGXOverrideStateDto.op_Inequality(NVAPIWrapper.NVAPINGXOverrideStateDto,NVAPIWrapper.NVAPINGXOverrideStateDto)">
+            <summary>
+            Determine whether two NGX override state instances are not equal.
+            </summary>
+            <param name="left">The left instance.</param>
+            <param name="right">The right instance.</param>
+            <returns>True if the instances are not equal; otherwise, false.</returns>
+        </member>
         <member name="T:NVAPIWrapper.NVAPINGXOverrideSetDto">
             <summary>
             NGX override set DTO.
@@ -386,6 +458,42 @@
             Feedback mask.
             </summary>
         </member>
+        <member name="M:NVAPIWrapper.NVAPINGXOverrideSetDto.Equals(NVAPIWrapper.NVAPINGXOverrideSetDto)">
+            <summary>
+            Determine whether this instance and another NGX override set instance are equal.
+            </summary>
+            <param name="other">The other NGX override set instance.</param>
+            <returns>True if the instances are equal; otherwise, false.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPINGXOverrideSetDto.Equals(System.Object)">
+            <summary>
+            Determine whether this instance and a specified object are equal.
+            </summary>
+            <param name="obj">The object to compare.</param>
+            <returns>True if equal; otherwise, false.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPINGXOverrideSetDto.GetHashCode">
+            <summary>
+            Get a hash code for this instance.
+            </summary>
+            <returns>A hash code for this instance.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPINGXOverrideSetDto.op_Equality(NVAPIWrapper.NVAPINGXOverrideSetDto,NVAPIWrapper.NVAPINGXOverrideSetDto)">
+            <summary>
+            Determine whether two NGX override set instances are equal.
+            </summary>
+            <param name="left">The left instance.</param>
+            <param name="right">The right instance.</param>
+            <returns>True if the instances are equal; otherwise, false.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPINGXOverrideSetDto.op_Inequality(NVAPIWrapper.NVAPINGXOverrideSetDto,NVAPIWrapper.NVAPINGXOverrideSetDto)">
+            <summary>
+            Determine whether two NGX override set instances are not equal.
+            </summary>
+            <param name="left">The left instance.</param>
+            <param name="right">The right instance.</param>
+            <returns>True if the instances are not equal; otherwise, false.</returns>
+        </member>
         <member name="T:NVAPIWrapper.NVAPIRiseCallbackSettingsDto">
             <summary>
             RISE callback settings DTO.
@@ -407,6 +515,42 @@
             <summary>
             Callback function pointer.
             </summary>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIRiseCallbackSettingsDto.Equals(NVAPIWrapper.NVAPIRiseCallbackSettingsDto)">
+            <summary>
+            Determine whether this instance and another RISE callback settings instance are equal.
+            </summary>
+            <param name="other">The other RISE callback settings instance.</param>
+            <returns>True if the instances are equal; otherwise, false.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIRiseCallbackSettingsDto.Equals(System.Object)">
+            <summary>
+            Determine whether this instance and a specified object are equal.
+            </summary>
+            <param name="obj">The object to compare.</param>
+            <returns>True if equal; otherwise, false.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIRiseCallbackSettingsDto.GetHashCode">
+            <summary>
+            Get a hash code for this instance.
+            </summary>
+            <returns>A hash code for this instance.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIRiseCallbackSettingsDto.op_Equality(NVAPIWrapper.NVAPIRiseCallbackSettingsDto,NVAPIWrapper.NVAPIRiseCallbackSettingsDto)">
+            <summary>
+            Determine whether two RISE callback settings instances are equal.
+            </summary>
+            <param name="left">The left instance.</param>
+            <param name="right">The right instance.</param>
+            <returns>True if the instances are equal; otherwise, false.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIRiseCallbackSettingsDto.op_Inequality(NVAPIWrapper.NVAPIRiseCallbackSettingsDto,NVAPIWrapper.NVAPIRiseCallbackSettingsDto)">
+            <summary>
+            Determine whether two RISE callback settings instances are not equal.
+            </summary>
+            <param name="left">The left instance.</param>
+            <param name="right">The right instance.</param>
+            <returns>True if the instances are not equal; otherwise, false.</returns>
         </member>
         <member name="T:NVAPIWrapper.NVAPIRiseRequestDto">
             <summary>
@@ -441,6 +585,42 @@
             True if request is completed.
             </summary>
         </member>
+        <member name="M:NVAPIWrapper.NVAPIRiseRequestDto.Equals(NVAPIWrapper.NVAPIRiseRequestDto)">
+            <summary>
+            Determine whether this instance and another RISE request instance are equal.
+            </summary>
+            <param name="other">The other RISE request instance.</param>
+            <returns>True if the instances are equal; otherwise, false.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIRiseRequestDto.Equals(System.Object)">
+            <summary>
+            Determine whether this instance and a specified object are equal.
+            </summary>
+            <param name="obj">The object to compare.</param>
+            <returns>True if equal; otherwise, false.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIRiseRequestDto.GetHashCode">
+            <summary>
+            Get a hash code for this instance.
+            </summary>
+            <returns>A hash code for this instance.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIRiseRequestDto.op_Equality(NVAPIWrapper.NVAPIRiseRequestDto,NVAPIWrapper.NVAPIRiseRequestDto)">
+            <summary>
+            Determine whether two RISE request instances are equal.
+            </summary>
+            <param name="left">The left instance.</param>
+            <param name="right">The right instance.</param>
+            <returns>True if the instances are equal; otherwise, false.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIRiseRequestDto.op_Inequality(NVAPIWrapper.NVAPIRiseRequestDto,NVAPIWrapper.NVAPIRiseRequestDto)">
+            <summary>
+            Determine whether two RISE request instances are not equal.
+            </summary>
+            <param name="left">The left instance.</param>
+            <param name="right">The right instance.</param>
+            <returns>True if the instances are not equal; otherwise, false.</returns>
+        </member>
         <member name="T:NVAPIWrapper.NVAPIDriverAndBranchVersionDto">
             <summary>
             Driver version and branch string.
@@ -452,30 +632,339 @@
         <member name="P:NVAPIWrapper.NVAPIDriverAndBranchVersionDto.Branch">
             <summary>Driver branch string.</summary>
         </member>
+        <member name="M:NVAPIWrapper.NVAPIDriverAndBranchVersionDto.#ctor(System.UInt32,System.String)">
+            <summary>
+            Initialize a new instance of the <see cref="T:NVAPIWrapper.NVAPIDriverAndBranchVersionDto"/> struct.
+            </summary>
+            <param name="driverVersion">Driver version.</param>
+            <param name="branch">Driver branch string.</param>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDriverAndBranchVersionDto.Equals(NVAPIWrapper.NVAPIDriverAndBranchVersionDto)">
+            <summary>
+            Determine whether this instance and another driver/branch instance are equal.
+            </summary>
+            <param name="other">The other driver/branch instance.</param>
+            <returns>True if the instances are equal; otherwise, false.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDriverAndBranchVersionDto.Equals(System.Object)">
+            <summary>
+            Determine whether this instance and a specified object are equal.
+            </summary>
+            <param name="obj">The object to compare.</param>
+            <returns>True if equal; otherwise, false.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDriverAndBranchVersionDto.GetHashCode">
+            <summary>
+            Get a hash code for this instance.
+            </summary>
+            <returns>A hash code for this instance.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDriverAndBranchVersionDto.op_Equality(NVAPIWrapper.NVAPIDriverAndBranchVersionDto,NVAPIWrapper.NVAPIDriverAndBranchVersionDto)">
+            <summary>
+            Determine whether two driver/branch instances are equal.
+            </summary>
+            <param name="left">The left instance.</param>
+            <param name="right">The right instance.</param>
+            <returns>True if the instances are equal; otherwise, false.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDriverAndBranchVersionDto.op_Inequality(NVAPIWrapper.NVAPIDriverAndBranchVersionDto,NVAPIWrapper.NVAPIDriverAndBranchVersionDto)">
+            <summary>
+            Determine whether two driver/branch instances are not equal.
+            </summary>
+            <param name="left">The left instance.</param>
+            <param name="right">The right instance.</param>
+            <returns>True if the instances are not equal; otherwise, false.</returns>
+        </member>
         <member name="T:NVAPIWrapper.NVAPIChipSetInfoDto">
             <summary>
             Chipset information DTO.
             </summary>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIChipSetInfoDto.#ctor(System.UInt32,System.UInt32,System.String,System.String,System.UInt32,System.UInt32,System.UInt32,System.String,System.UInt32,System.UInt32,System.UInt32,System.UInt32)">
+            <summary>
+            Initialize a new instance of the <see cref="T:NVAPIWrapper.NVAPIChipSetInfoDto"/> struct.
+            </summary>
+            <param name="vendorId">Chipset vendor ID.</param>
+            <param name="deviceId">Chipset device ID.</param>
+            <param name="vendorName">Chipset vendor name.</param>
+            <param name="chipsetName">Chipset name.</param>
+            <param name="flags">Chipset flags.</param>
+            <param name="subSystemVendorId">Subsystem vendor ID.</param>
+            <param name="subSystemDeviceId">Subsystem device ID.</param>
+            <param name="subSystemVendorName">Subsystem vendor name.</param>
+            <param name="hbVendorId">Host bridge vendor ID.</param>
+            <param name="hbDeviceId">Host bridge device ID.</param>
+            <param name="hbSubSystemVendorId">Host bridge subsystem vendor ID.</param>
+            <param name="hbSubSystemDeviceId">Host bridge subsystem device ID.</param>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIChipSetInfoDto.FromNative(NVAPIWrapper.NV_CHIPSET_INFO_v4)">
+            <summary>
+            Create a chipset DTO from the native chipset info struct.
+            </summary>
+            <param name="native">Native chipset info struct.</param>
+            <returns>Chipset info DTO.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIChipSetInfoDto.Equals(NVAPIWrapper.NVAPIChipSetInfoDto)">
+            <summary>
+            Determine whether this instance and another chipset instance are equal.
+            </summary>
+            <param name="other">The other chipset instance.</param>
+            <returns>True if the instances are equal; otherwise, false.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIChipSetInfoDto.Equals(System.Object)">
+            <summary>
+            Determine whether this instance and a specified object are equal.
+            </summary>
+            <param name="obj">The object to compare.</param>
+            <returns>True if equal; otherwise, false.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIChipSetInfoDto.GetHashCode">
+            <summary>
+            Get a hash code for this instance.
+            </summary>
+            <returns>A hash code for this instance.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIChipSetInfoDto.op_Equality(NVAPIWrapper.NVAPIChipSetInfoDto,NVAPIWrapper.NVAPIChipSetInfoDto)">
+            <summary>
+            Determine whether two chipset instances are equal.
+            </summary>
+            <param name="left">The left instance.</param>
+            <param name="right">The right instance.</param>
+            <returns>True if the instances are equal; otherwise, false.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIChipSetInfoDto.op_Inequality(NVAPIWrapper.NVAPIChipSetInfoDto,NVAPIWrapper.NVAPIChipSetInfoDto)">
+            <summary>
+            Determine whether two chipset instances are not equal.
+            </summary>
+            <param name="left">The left instance.</param>
+            <param name="right">The right instance.</param>
+            <returns>True if the instances are not equal; otherwise, false.</returns>
         </member>
         <member name="T:NVAPIWrapper.NVAPILidAndDockInfoDto">
             <summary>
             Lid and dock information DTO.
             </summary>
         </member>
+        <member name="M:NVAPIWrapper.NVAPILidAndDockInfoDto.#ctor(System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32)">
+            <summary>
+            Initialize a new instance of the <see cref="T:NVAPIWrapper.NVAPILidAndDockInfoDto"/> struct.
+            </summary>
+            <param name="currentLidState">Current lid state.</param>
+            <param name="currentDockState">Current dock state.</param>
+            <param name="currentLidPolicy">Current lid policy.</param>
+            <param name="currentDockPolicy">Current dock policy.</param>
+            <param name="forcedLidMechanismPresent">Forced lid mechanism flag.</param>
+            <param name="forcedDockMechanismPresent">Forced dock mechanism flag.</param>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPILidAndDockInfoDto.FromNative(NVAPIWrapper.NV_LID_DOCK_PARAMS)">
+            <summary>
+            Create a lid/dock DTO from the native lid/dock struct.
+            </summary>
+            <param name="native">Native lid/dock struct.</param>
+            <returns>Lid/dock info DTO.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPILidAndDockInfoDto.Equals(NVAPIWrapper.NVAPILidAndDockInfoDto)">
+            <summary>
+            Determine whether this instance and another lid/dock instance are equal.
+            </summary>
+            <param name="other">The other lid/dock instance.</param>
+            <returns>True if the instances are equal; otherwise, false.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPILidAndDockInfoDto.Equals(System.Object)">
+            <summary>
+            Determine whether this instance and a specified object are equal.
+            </summary>
+            <param name="obj">The object to compare.</param>
+            <returns>True if equal; otherwise, false.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPILidAndDockInfoDto.GetHashCode">
+            <summary>
+            Get a hash code for this instance.
+            </summary>
+            <returns>A hash code for this instance.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPILidAndDockInfoDto.op_Equality(NVAPIWrapper.NVAPILidAndDockInfoDto,NVAPIWrapper.NVAPILidAndDockInfoDto)">
+            <summary>
+            Determine whether two lid/dock instances are equal.
+            </summary>
+            <param name="left">The left instance.</param>
+            <param name="right">The right instance.</param>
+            <returns>True if the instances are equal; otherwise, false.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPILidAndDockInfoDto.op_Inequality(NVAPIWrapper.NVAPILidAndDockInfoDto,NVAPIWrapper.NVAPILidAndDockInfoDto)">
+            <summary>
+            Determine whether two lid/dock instances are not equal.
+            </summary>
+            <param name="left">The left instance.</param>
+            <param name="right">The right instance.</param>
+            <returns>True if the instances are not equal; otherwise, false.</returns>
+        </member>
         <member name="T:NVAPIWrapper.NVAPIDisplayDriverInfoDto">
             <summary>
             Display driver information DTO.
             </summary>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDisplayDriverInfoDto.#ctor(System.UInt32,System.String,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.String,System.UInt32)">
+            <summary>
+            Initialize a new instance of the <see cref="T:NVAPIWrapper.NVAPIDisplayDriverInfoDto"/> struct.
+            </summary>
+            <param name="driverVersion">Driver version.</param>
+            <param name="buildBranch">Driver build branch.</param>
+            <param name="isDchDriver">True if the driver is DCH.</param>
+            <param name="isNvidiaStudioPackage">True if the driver is an NVIDIA Studio package.</param>
+            <param name="isNvidiaGameReadyPackage">True if the driver is a Game Ready package.</param>
+            <param name="isNvidiaRtxProductionBranchPackage">True if the driver is an RTX Production Branch package.</param>
+            <param name="isNvidiaRtxNewFeatureBranchPackage">True if the driver is an RTX New Feature Branch package.</param>
+            <param name="buildBaseBranch">Driver build base branch.</param>
+            <param name="reservedEx">Reserved field value.</param>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDisplayDriverInfoDto.FromNative(NVAPIWrapper._NV_DISPLAY_DRIVER_INFO_V2)">
+            <summary>
+            Create a display driver info DTO from the native display driver info struct.
+            </summary>
+            <param name="native">Native display driver info struct.</param>
+            <returns>Display driver info DTO.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDisplayDriverInfoDto.Equals(NVAPIWrapper.NVAPIDisplayDriverInfoDto)">
+            <summary>
+            Determine whether this instance and another display driver info instance are equal.
+            </summary>
+            <param name="other">The other display driver info instance.</param>
+            <returns>True if the instances are equal; otherwise, false.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDisplayDriverInfoDto.Equals(System.Object)">
+            <summary>
+            Determine whether this instance and a specified object are equal.
+            </summary>
+            <param name="obj">The object to compare.</param>
+            <returns>True if equal; otherwise, false.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDisplayDriverInfoDto.GetHashCode">
+            <summary>
+            Get a hash code for this instance.
+            </summary>
+            <returns>A hash code for this instance.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDisplayDriverInfoDto.op_Equality(NVAPIWrapper.NVAPIDisplayDriverInfoDto,NVAPIWrapper.NVAPIDisplayDriverInfoDto)">
+            <summary>
+            Determine whether two display driver info instances are equal.
+            </summary>
+            <param name="left">The left instance.</param>
+            <param name="right">The right instance.</param>
+            <returns>True if the instances are equal; otherwise, false.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDisplayDriverInfoDto.op_Inequality(NVAPIWrapper.NVAPIDisplayDriverInfoDto,NVAPIWrapper.NVAPIDisplayDriverInfoDto)">
+            <summary>
+            Determine whether two display driver info instances are not equal.
+            </summary>
+            <param name="left">The left instance.</param>
+            <param name="right">The right instance.</param>
+            <returns>True if the instances are not equal; otherwise, false.</returns>
         </member>
         <member name="T:NVAPIWrapper.NVAPISystemPhysicalGpuHandleDto">
             <summary>
             Physical GPU handle data from NvAPI_SYS_GetPhysicalGPUs.
             </summary>
         </member>
+        <member name="M:NVAPIWrapper.NVAPISystemPhysicalGpuHandleDto.FromNative(NVAPIWrapper.NVAPIApiHelper,NVAPIWrapper._NV_PHYSICAL_GPU_HANDLE_DATA)">
+            <summary>
+            Create a system physical GPU handle DTO from native handle data.
+            </summary>
+            <param name="helper">API helper used to wrap the handle.</param>
+            <param name="native">Native physical GPU handle data.</param>
+            <returns>System physical GPU handle DTO.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPISystemPhysicalGpuHandleDto.Equals(NVAPIWrapper.NVAPISystemPhysicalGpuHandleDto)">
+            <summary>
+            Determine whether this instance and another system physical GPU handle instance are equal.
+            </summary>
+            <param name="other">The other system physical GPU handle instance.</param>
+            <returns>True if the instances are equal; otherwise, false.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPISystemPhysicalGpuHandleDto.Equals(System.Object)">
+            <summary>
+            Determine whether this instance and a specified object are equal.
+            </summary>
+            <param name="obj">The object to compare.</param>
+            <returns>True if equal; otherwise, false.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPISystemPhysicalGpuHandleDto.GetHashCode">
+            <summary>
+            Get a hash code for this instance.
+            </summary>
+            <returns>A hash code for this instance.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPISystemPhysicalGpuHandleDto.op_Equality(NVAPIWrapper.NVAPISystemPhysicalGpuHandleDto,NVAPIWrapper.NVAPISystemPhysicalGpuHandleDto)">
+            <summary>
+            Determine whether two system physical GPU handle instances are equal.
+            </summary>
+            <param name="left">The left instance.</param>
+            <param name="right">The right instance.</param>
+            <returns>True if the instances are equal; otherwise, false.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPISystemPhysicalGpuHandleDto.op_Inequality(NVAPIWrapper.NVAPISystemPhysicalGpuHandleDto,NVAPIWrapper.NVAPISystemPhysicalGpuHandleDto)">
+            <summary>
+            Determine whether two system physical GPU handle instances are not equal.
+            </summary>
+            <param name="left">The left instance.</param>
+            <param name="right">The right instance.</param>
+            <returns>True if the instances are not equal; otherwise, false.</returns>
+        </member>
         <member name="T:NVAPIWrapper.NVAPISystemLogicalGpuHandleDto">
             <summary>
             Logical GPU handle data from NvAPI_SYS_GetLogicalGPUs.
             </summary>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPISystemLogicalGpuHandleDto.FromNative(NVAPIWrapper.NVAPIApiHelper,NVAPIWrapper._NV_LOGICAL_GPU_HANDLE_DATA)">
+            <summary>
+            Create a system logical GPU handle DTO from native handle data.
+            </summary>
+            <param name="helper">API helper used to wrap the handle.</param>
+            <param name="native">Native logical GPU handle data.</param>
+            <returns>System logical GPU handle DTO.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPISystemLogicalGpuHandleDto.Equals(NVAPIWrapper.NVAPISystemLogicalGpuHandleDto)">
+            <summary>
+            Determine whether this instance and another system logical GPU handle instance are equal.
+            </summary>
+            <param name="other">The other system logical GPU handle instance.</param>
+            <returns>True if the instances are equal; otherwise, false.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPISystemLogicalGpuHandleDto.Equals(System.Object)">
+            <summary>
+            Determine whether this instance and a specified object are equal.
+            </summary>
+            <param name="obj">The object to compare.</param>
+            <returns>True if equal; otherwise, false.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPISystemLogicalGpuHandleDto.GetHashCode">
+            <summary>
+            Get a hash code for this instance.
+            </summary>
+            <returns>A hash code for this instance.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPISystemLogicalGpuHandleDto.op_Equality(NVAPIWrapper.NVAPISystemLogicalGpuHandleDto,NVAPIWrapper.NVAPISystemLogicalGpuHandleDto)">
+            <summary>
+            Determine whether two system logical GPU handle instances are equal.
+            </summary>
+            <param name="left">The left instance.</param>
+            <param name="right">The right instance.</param>
+            <returns>True if the instances are equal; otherwise, false.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPISystemLogicalGpuHandleDto.op_Inequality(NVAPIWrapper.NVAPISystemLogicalGpuHandleDto,NVAPIWrapper.NVAPISystemLogicalGpuHandleDto)">
+            <summary>
+            Determine whether two system logical GPU handle instances are not equal.
+            </summary>
+            <param name="left">The left instance.</param>
+            <param name="right">The right instance.</param>
+            <returns>True if the instances are not equal; otherwise, false.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIApiHelperString.ReadShortString(System.SByte@)">
+            <summary>
+            Read a null-terminated ANSI string from the first character reference.
+            </summary>
+            <param name="first">Reference to the first character.</param>
+            <returns>Managed string value.</returns>
         </member>
         <member name="F:NVAPIWrapper.NVAPI.NV_TRUE">
             <summary>NVAPI boolean true value (NvBool).</summary>
@@ -1966,6 +2455,43 @@
             Dispose the helper and prevent further use.
             </summary>
         </member>
+        <member name="P:NVAPIWrapper.NVAPIDisplayHelper.DisplayConfigBuffer.PathInfo">
+            <summary>
+            Gets the native path info pointer.
+            </summary>
+        </member>
+        <member name="P:NVAPIWrapper.NVAPIDisplayHelper.DisplayConfigBuffer.PathCount">
+            <summary>
+            Gets the number of paths allocated in the buffer.
+            </summary>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDisplayHelper.DisplayConfigBuffer.#ctor(System.UInt32)">
+            <summary>
+            Initialize a new display configuration buffer for a given number of paths.
+            </summary>
+            <param name="pathCount">Number of display config paths to allocate.</param>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDisplayHelper.DisplayConfigBuffer.InitializePathInfoVersions">
+            <summary>
+            Initialize version fields for the path info entries.
+            </summary>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDisplayHelper.DisplayConfigBuffer.AllocateNestedBuffers">
+            <summary>
+            Allocate nested buffers for source and target info entries.
+            </summary>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDisplayHelper.DisplayConfigBuffer.TrackAllocation(System.IntPtr)">
+            <summary>
+            Track an additional allocation for cleanup.
+            </summary>
+            <param name="ptr">Pointer to track.</param>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDisplayHelper.DisplayConfigBuffer.Dispose">
+            <summary>
+            Dispose the buffer and free all tracked allocations.
+            </summary>
+        </member>
         <member name="T:NVAPIWrapper.NVAPIDisplayTvEnums">
             <summary>
             TV-related enum values surfaced alongside the display helper.
@@ -3151,15 +3677,196 @@
             DTO for NVIDIA managed dedicated display metadata.
             </summary>
         </member>
+        <member name="M:NVAPIWrapper.NVAPINvManagedDedicatedDisplayMetadataDto.#ctor(System.UInt32,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.UInt32,System.Int32,System.Int32,System.String)">
+            <summary>
+            Create a managed dedicated display metadata DTO.
+            </summary>
+            <param name="displayId">Display identifier.</param>
+            <param name="setPosition">Whether to set the display position.</param>
+            <param name="removePosition">Whether to remove the stored display position.</param>
+            <param name="positionIsAvailable">Whether a stored display position is available.</param>
+            <param name="setName">Whether to set the display name.</param>
+            <param name="removeName">Whether to remove the stored display name.</param>
+            <param name="nameIsAvailable">Whether a stored display name is available.</param>
+            <param name="reserved">Reserved field value.</param>
+            <param name="positionX">Display X position.</param>
+            <param name="positionY">Display Y position.</param>
+            <param name="name">Display name.</param>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPINvManagedDedicatedDisplayMetadataDto.FromNative(NVAPIWrapper._NV_MANAGED_DEDICATED_DISPLAY_METADATA)">
+            <summary>
+            Create a DTO from native managed dedicated display metadata.
+            </summary>
+            <param name="native">Native managed dedicated display metadata.</param>
+            <returns>Managed dedicated display metadata DTO.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPINvManagedDedicatedDisplayMetadataDto.ToNative">
+            <summary>
+            Convert this DTO to native managed dedicated display metadata.
+            </summary>
+            <returns>Native managed dedicated display metadata.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPINvManagedDedicatedDisplayMetadataDto.Equals(NVAPIWrapper.NVAPINvManagedDedicatedDisplayMetadataDto)">
+            <summary>
+            Determine whether this instance equals another managed dedicated display metadata DTO.
+            </summary>
+            <param name="other">The other DTO to compare.</param>
+            <returns>True if the DTOs are equal; otherwise false.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPINvManagedDedicatedDisplayMetadataDto.Equals(System.Object)">
+            <summary>
+            Determine whether this instance equals another object.
+            </summary>
+            <param name="obj">The object to compare.</param>
+            <returns>True if the object is an equivalent DTO; otherwise false.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPINvManagedDedicatedDisplayMetadataDto.GetHashCode">
+            <summary>
+            Get a hash code for this instance.
+            </summary>
+            <returns>Hash code for this instance.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPINvManagedDedicatedDisplayMetadataDto.op_Equality(NVAPIWrapper.NVAPINvManagedDedicatedDisplayMetadataDto,NVAPIWrapper.NVAPINvManagedDedicatedDisplayMetadataDto)">
+            <summary>
+            Determine whether two managed dedicated display metadata DTOs are equal.
+            </summary>
+            <param name="left">Left DTO.</param>
+            <param name="right">Right DTO.</param>
+            <returns>True if the DTOs are equal; otherwise false.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPINvManagedDedicatedDisplayMetadataDto.op_Inequality(NVAPIWrapper.NVAPINvManagedDedicatedDisplayMetadataDto,NVAPIWrapper.NVAPINvManagedDedicatedDisplayMetadataDto)">
+            <summary>
+            Determine whether two managed dedicated display metadata DTOs are not equal.
+            </summary>
+            <param name="left">Left DTO.</param>
+            <param name="right">Right DTO.</param>
+            <returns>True if the DTOs are not equal; otherwise false.</returns>
+        </member>
         <member name="T:NVAPIWrapper.NVAPIDisplayIdInfoDto">
             <summary>
             DTO for display ID info data.
             </summary>
         </member>
+        <member name="M:NVAPIWrapper.NVAPIDisplayIdInfoDto.#ctor(System.Int64,System.UInt32,System.UInt32[])">
+            <summary>
+            Create a display ID info DTO.
+            </summary>
+            <param name="adapterLuid">Adapter LUID.</param>
+            <param name="targetId">Target identifier.</param>
+            <param name="reserved">Reserved values.</param>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDisplayIdInfoDto.FromNative(NVAPIWrapper._NV_DISPLAY_ID_INFO_DATA_V1)">
+            <summary>
+            Create a DTO from native display ID info data.
+            </summary>
+            <param name="native">Native display ID info data.</param>
+            <returns>Display ID info DTO.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDisplayIdInfoDto.ToNative">
+            <summary>
+            Convert this DTO to native display ID info data.
+            </summary>
+            <returns>Native display ID info data.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDisplayIdInfoDto.Equals(NVAPIWrapper.NVAPIDisplayIdInfoDto)">
+            <summary>
+            Determine whether this instance equals another display ID info DTO.
+            </summary>
+            <param name="other">The other DTO to compare.</param>
+            <returns>True if the DTOs are equal; otherwise false.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDisplayIdInfoDto.Equals(System.Object)">
+            <summary>
+            Determine whether this instance equals another object.
+            </summary>
+            <param name="obj">The object to compare.</param>
+            <returns>True if the object is an equivalent DTO; otherwise false.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDisplayIdInfoDto.GetHashCode">
+            <summary>
+            Get a hash code for this instance.
+            </summary>
+            <returns>Hash code for this instance.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDisplayIdInfoDto.op_Equality(NVAPIWrapper.NVAPIDisplayIdInfoDto,NVAPIWrapper.NVAPIDisplayIdInfoDto)">
+            <summary>
+            Determine whether two display ID info DTOs are equal.
+            </summary>
+            <param name="left">Left DTO.</param>
+            <param name="right">Right DTO.</param>
+            <returns>True if the DTOs are equal; otherwise false.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDisplayIdInfoDto.op_Inequality(NVAPIWrapper.NVAPIDisplayIdInfoDto,NVAPIWrapper.NVAPIDisplayIdInfoDto)">
+            <summary>
+            Determine whether two display ID info DTOs are not equal.
+            </summary>
+            <param name="left">Left DTO.</param>
+            <param name="right">Right DTO.</param>
+            <returns>True if the DTOs are not equal; otherwise false.</returns>
+        </member>
         <member name="T:NVAPIWrapper.NVAPITargetInfoDto">
             <summary>
             DTO for target info data.
             </summary>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPITargetInfoDto.#ctor(System.Int64,System.UInt32,System.UInt32[],System.UInt32,System.UInt32[])">
+            <summary>
+            Create a target info DTO.
+            </summary>
+            <param name="adapterLuid">Adapter LUID.</param>
+            <param name="targetId">Target identifier.</param>
+            <param name="displayIds">Display identifiers.</param>
+            <param name="displayIdCount">Display ID count reported by the API.</param>
+            <param name="reserved">Reserved values.</param>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPITargetInfoDto.FromNative(NVAPIWrapper._NV_TARGET_INFO_DATA_V1)">
+            <summary>
+            Create a DTO from native target info data.
+            </summary>
+            <param name="native">Native target info data.</param>
+            <returns>Target info DTO.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPITargetInfoDto.ToNative">
+            <summary>
+            Convert this DTO to native target info data.
+            </summary>
+            <returns>Native target info data.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPITargetInfoDto.Equals(NVAPIWrapper.NVAPITargetInfoDto)">
+            <summary>
+            Determine whether this instance equals another target info DTO.
+            </summary>
+            <param name="other">The other DTO to compare.</param>
+            <returns>True if the DTOs are equal; otherwise false.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPITargetInfoDto.Equals(System.Object)">
+            <summary>
+            Determine whether this instance equals another object.
+            </summary>
+            <param name="obj">The object to compare.</param>
+            <returns>True if the object is an equivalent DTO; otherwise false.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPITargetInfoDto.GetHashCode">
+            <summary>
+            Get a hash code for this instance.
+            </summary>
+            <returns>Hash code for this instance.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPITargetInfoDto.op_Equality(NVAPIWrapper.NVAPITargetInfoDto,NVAPIWrapper.NVAPITargetInfoDto)">
+            <summary>
+            Determine whether two target info DTOs are equal.
+            </summary>
+            <param name="left">Left DTO.</param>
+            <param name="right">Right DTO.</param>
+            <returns>True if the DTOs are equal; otherwise false.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPITargetInfoDto.op_Inequality(NVAPIWrapper.NVAPITargetInfoDto,NVAPIWrapper.NVAPITargetInfoDto)">
+            <summary>
+            Determine whether two target info DTOs are not equal.
+            </summary>
+            <param name="left">Left DTO.</param>
+            <param name="right">Right DTO.</param>
+            <returns>True if the DTOs are not equal; otherwise false.</returns>
         </member>
         <member name="T:NVAPIWrapper.NVAPIPreferredStereoDisplayDto">
             <summary>
@@ -3205,6 +3912,51 @@
             DTO for GPU and output ID from a display ID.
             </summary>
         </member>
+        <member name="M:NVAPIWrapper.NVAPIGpuAndOutputIdDto.FromNative(NVAPIWrapper.NVAPIApiHelper,NVAPIWrapper.NvPhysicalGpuHandle__*,System.UInt32)">
+            <summary>
+            Create a DTO from native GPU and output data.
+            </summary>
+            <param name="apiHelper">API helper owning the GPU helper.</param>
+            <param name="handle">Native physical GPU handle.</param>
+            <param name="outputId">Output identifier.</param>
+            <returns>GPU and output ID DTO.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIGpuAndOutputIdDto.Equals(NVAPIWrapper.NVAPIGpuAndOutputIdDto)">
+            <summary>
+            Determine whether this instance equals another GPU and output ID DTO.
+            </summary>
+            <param name="other">The other DTO to compare.</param>
+            <returns>True if the DTOs are equal; otherwise false.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIGpuAndOutputIdDto.Equals(System.Object)">
+            <summary>
+            Determine whether this instance equals another object.
+            </summary>
+            <param name="obj">The object to compare.</param>
+            <returns>True if the object is an equivalent DTO; otherwise false.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIGpuAndOutputIdDto.GetHashCode">
+            <summary>
+            Get a hash code for this instance.
+            </summary>
+            <returns>Hash code for this instance.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIGpuAndOutputIdDto.op_Equality(NVAPIWrapper.NVAPIGpuAndOutputIdDto,NVAPIWrapper.NVAPIGpuAndOutputIdDto)">
+            <summary>
+            Determine whether two GPU and output ID DTOs are equal.
+            </summary>
+            <param name="left">Left DTO.</param>
+            <param name="right">Right DTO.</param>
+            <returns>True if the DTOs are equal; otherwise false.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIGpuAndOutputIdDto.op_Inequality(NVAPIWrapper.NVAPIGpuAndOutputIdDto,NVAPIWrapper.NVAPIGpuAndOutputIdDto)">
+            <summary>
+            Determine whether two GPU and output ID DTOs are not equal.
+            </summary>
+            <param name="left">Left DTO.</param>
+            <param name="right">Right DTO.</param>
+            <returns>True if the DTOs are not equal; otherwise false.</returns>
+        </member>
         <member name="T:NVAPIWrapper.NV_INFOFRAME_PROPERTY_TYPE">
             <summary>
             InfoFrame property type values. No official constants are available, so this is a safe placeholder.
@@ -3214,6 +3966,37 @@
             <summary>
             No documentation exists that specifies the values for this field, so defaulting to zero.
             </summary>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDisplayHelperString.ReadShortString(System.SByte@)">
+            <summary>
+            Read a null-terminated ANSI short string from a fixed buffer.
+            </summary>
+            <param name="first">First character of the buffer.</param>
+            <returns>Decoded string value.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDisplayHelperString.WriteShortString(System.Span{System.SByte},System.String)">
+            <summary>
+            Write a null-terminated ANSI short string to a fixed buffer.
+            </summary>
+            <param name="destination">Destination buffer.</param>
+            <param name="value">String value to write.</param>
+        </member>
+        <member name="M:NVAPIWrapper.DtoHelpers.SequenceEquals``1(``0[],``0[])">
+            <summary>
+            Compare two arrays for equality using the default comparer.
+            </summary>
+            <typeparam name="T">Element type.</typeparam>
+            <param name="left">Left array.</param>
+            <param name="right">Right array.</param>
+            <returns>True if both arrays are equal; otherwise false.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.DtoHelpers.SequenceHashCode``1(``0[])">
+            <summary>
+            Compute a hash code for an array using the default comparer.
+            </summary>
+            <typeparam name="T">Element type.</typeparam>
+            <param name="values">Array values.</param>
+            <returns>Hash code for the array contents.</returns>
         </member>
         <member name="T:NVAPIWrapper.NVAPIDrsHelper">
             <summary>
@@ -3467,25 +4250,395 @@
             DRS profile info DTO.
             </summary>
         </member>
+        <member name="M:NVAPIWrapper.NVAPIDrsProfileDto.#ctor(System.String,NVAPIWrapper._NVDRS_GPU_SUPPORT,System.Boolean,System.UInt32,System.UInt32)">
+            <summary>
+            Create a DRS profile DTO.
+            </summary>
+            <param name="profileName">Profile name.</param>
+            <param name="gpuSupport">GPU support flags.</param>
+            <param name="isPredefined">Whether the profile is predefined.</param>
+            <param name="numOfApps">Number of applications in the profile.</param>
+            <param name="numOfSettings">Number of settings in the profile.</param>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDrsProfileDto.Create(System.String)">
+            <summary>
+            Create a DRS profile DTO for a new profile name.
+            </summary>
+            <param name="profileName">Profile name.</param>
+            <returns>DRS profile DTO.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDrsProfileDto.FromNative(NVAPIWrapper.NvDRSProfileHandle__*,NVAPIWrapper._NVDRS_PROFILE_V1)">
+            <summary>
+            Create a DRS profile DTO from native profile data.
+            </summary>
+            <param name="handle">Native profile handle.</param>
+            <param name="native">Native profile data.</param>
+            <returns>DRS profile DTO.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDrsProfileDto.ToNative">
+            <summary>
+            Convert this DTO to native profile data.
+            </summary>
+            <returns>Native profile data.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDrsProfileDto.Equals(NVAPIWrapper.NVAPIDrsProfileDto)">
+            <summary>
+            Determine whether this instance equals another DRS profile DTO.
+            </summary>
+            <param name="other">The other DTO to compare.</param>
+            <returns>True if the DTOs are equal; otherwise false.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDrsProfileDto.Equals(System.Object)">
+            <summary>
+            Determine whether this instance equals another object.
+            </summary>
+            <param name="obj">The object to compare.</param>
+            <returns>True if the object is an equivalent DTO; otherwise false.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDrsProfileDto.GetHashCode">
+            <summary>
+            Get a hash code for this instance.
+            </summary>
+            <returns>Hash code for this instance.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDrsProfileDto.op_Equality(NVAPIWrapper.NVAPIDrsProfileDto,NVAPIWrapper.NVAPIDrsProfileDto)">
+            <summary>
+            Determine whether two DRS profile DTOs are equal.
+            </summary>
+            <param name="left">Left DTO.</param>
+            <param name="right">Right DTO.</param>
+            <returns>True if the DTOs are equal; otherwise false.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDrsProfileDto.op_Inequality(NVAPIWrapper.NVAPIDrsProfileDto,NVAPIWrapper.NVAPIDrsProfileDto)">
+            <summary>
+            Determine whether two DRS profile DTOs are not equal.
+            </summary>
+            <param name="left">Left DTO.</param>
+            <param name="right">Right DTO.</param>
+            <returns>True if the DTOs are not equal; otherwise false.</returns>
+        </member>
         <member name="T:NVAPIWrapper.NVAPIDrsApplicationDto">
             <summary>
             DRS application info DTO.
             </summary>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDrsApplicationDto.#ctor(System.String,System.String,System.String,System.String,System.String,System.Boolean,System.Boolean,System.Boolean)">
+            <summary>
+            Create a DRS application DTO.
+            </summary>
+            <param name="appName">Application name.</param>
+            <param name="userFriendlyName">User-friendly application name.</param>
+            <param name="launcher">Launcher name.</param>
+            <param name="fileInFolder">File-in-folder value.</param>
+            <param name="commandLine">Command line value.</param>
+            <param name="isMetro">Whether the application is a Metro app.</param>
+            <param name="isCommandLine">Whether the application uses a command line.</param>
+            <param name="isPredefined">Whether the application is predefined.</param>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDrsApplicationDto.Create(System.String,System.String)">
+            <summary>
+            Create a DRS application DTO with the supplied names.
+            </summary>
+            <param name="appName">Application name.</param>
+            <param name="userFriendlyName">User-friendly application name.</param>
+            <returns>DRS application DTO.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDrsApplicationDto.FromNative(NVAPIWrapper._NVDRS_APPLICATION_V4)">
+            <summary>
+            Create a DRS application DTO from native data.
+            </summary>
+            <param name="native">Native application data.</param>
+            <returns>DRS application DTO.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDrsApplicationDto.ToNative">
+            <summary>
+            Convert this DTO to native application data.
+            </summary>
+            <returns>Native application data.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDrsApplicationDto.Equals(NVAPIWrapper.NVAPIDrsApplicationDto)">
+            <summary>
+            Determine whether this instance equals another DRS application DTO.
+            </summary>
+            <param name="other">The other DTO to compare.</param>
+            <returns>True if the DTOs are equal; otherwise false.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDrsApplicationDto.Equals(System.Object)">
+            <summary>
+            Determine whether this instance equals another object.
+            </summary>
+            <param name="obj">The object to compare.</param>
+            <returns>True if the object is an equivalent DTO; otherwise false.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDrsApplicationDto.GetHashCode">
+            <summary>
+            Get a hash code for this instance.
+            </summary>
+            <returns>Hash code for this instance.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDrsApplicationDto.op_Equality(NVAPIWrapper.NVAPIDrsApplicationDto,NVAPIWrapper.NVAPIDrsApplicationDto)">
+            <summary>
+            Determine whether two DRS application DTOs are equal.
+            </summary>
+            <param name="left">Left DTO.</param>
+            <param name="right">Right DTO.</param>
+            <returns>True if the DTOs are equal; otherwise false.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDrsApplicationDto.op_Inequality(NVAPIWrapper.NVAPIDrsApplicationDto,NVAPIWrapper.NVAPIDrsApplicationDto)">
+            <summary>
+            Determine whether two DRS application DTOs are not equal.
+            </summary>
+            <param name="left">Left DTO.</param>
+            <param name="right">Right DTO.</param>
+            <returns>True if the DTOs are not equal; otherwise false.</returns>
         </member>
         <member name="T:NVAPIWrapper.NVAPIDrsApplicationSearchDto">
             <summary>
             Result of an application search.
             </summary>
         </member>
+        <member name="M:NVAPIWrapper.NVAPIDrsApplicationSearchDto.#ctor(NVAPIWrapper.NVAPIDrsProfileDto,NVAPIWrapper.NVAPIDrsApplicationDto)">
+            <summary>
+            Create a DRS application search result DTO.
+            </summary>
+            <param name="profile">Profile DTO.</param>
+            <param name="application">Application DTO.</param>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDrsApplicationSearchDto.Equals(NVAPIWrapper.NVAPIDrsApplicationSearchDto)">
+            <summary>
+            Determine whether this instance equals another DRS application search result DTO.
+            </summary>
+            <param name="other">The other DTO to compare.</param>
+            <returns>True if the DTOs are equal; otherwise false.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDrsApplicationSearchDto.Equals(System.Object)">
+            <summary>
+            Determine whether this instance equals another object.
+            </summary>
+            <param name="obj">The object to compare.</param>
+            <returns>True if the object is an equivalent DTO; otherwise false.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDrsApplicationSearchDto.GetHashCode">
+            <summary>
+            Get a hash code for this instance.
+            </summary>
+            <returns>Hash code for this instance.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDrsApplicationSearchDto.op_Equality(NVAPIWrapper.NVAPIDrsApplicationSearchDto,NVAPIWrapper.NVAPIDrsApplicationSearchDto)">
+            <summary>
+            Determine whether two DRS application search result DTOs are equal.
+            </summary>
+            <param name="left">Left DTO.</param>
+            <param name="right">Right DTO.</param>
+            <returns>True if the DTOs are equal; otherwise false.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDrsApplicationSearchDto.op_Inequality(NVAPIWrapper.NVAPIDrsApplicationSearchDto,NVAPIWrapper.NVAPIDrsApplicationSearchDto)">
+            <summary>
+            Determine whether two DRS application search result DTOs are not equal.
+            </summary>
+            <param name="left">Left DTO.</param>
+            <param name="right">Right DTO.</param>
+            <returns>True if the DTOs are not equal; otherwise false.</returns>
+        </member>
         <member name="T:NVAPIWrapper.NVAPIDrsSettingDto">
             <summary>
             DRS setting DTO.
             </summary>
         </member>
+        <member name="M:NVAPIWrapper.NVAPIDrsSettingDto.#ctor(System.String,System.UInt32,NVAPIWrapper._NVDRS_SETTING_TYPE,NVAPIWrapper._NVDRS_SETTING_LOCATION,System.Boolean,System.Boolean,System.Nullable{System.UInt32},System.Nullable{System.UInt32},System.String,System.String,System.Byte[],System.Byte[])">
+            <summary>
+            Create a DRS setting DTO.
+            </summary>
+            <param name="settingName">Setting name.</param>
+            <param name="settingId">Setting identifier.</param>
+            <param name="settingType">Setting type.</param>
+            <param name="settingLocation">Setting location.</param>
+            <param name="isCurrentPredefined">Whether the current value is predefined.</param>
+            <param name="isPredefinedValid">Whether the predefined value is valid.</param>
+            <param name="predefinedDwordValue">Predefined DWORD value.</param>
+            <param name="currentDwordValue">Current DWORD value.</param>
+            <param name="predefinedStringValue">Predefined string value.</param>
+            <param name="currentStringValue">Current string value.</param>
+            <param name="predefinedBinaryValue">Predefined binary value.</param>
+            <param name="currentBinaryValue">Current binary value.</param>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDrsSettingDto.CreateDword(System.UInt32,System.UInt32,System.Nullable{System.UInt32},System.String,NVAPIWrapper._NVDRS_SETTING_LOCATION,System.Boolean,System.Boolean)">
+            <summary>
+            Create a DWORD DRS setting DTO.
+            </summary>
+            <param name="settingId">Setting identifier.</param>
+            <param name="currentValue">Current DWORD value.</param>
+            <param name="predefinedValue">Predefined DWORD value.</param>
+            <param name="settingName">Setting name.</param>
+            <param name="location">Setting location.</param>
+            <param name="isCurrentPredefined">Whether the current value is predefined.</param>
+            <param name="isPredefinedValid">Whether the predefined value is valid.</param>
+            <returns>DRS setting DTO.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDrsSettingDto.CreateString(System.UInt32,System.String,System.String,System.String,NVAPIWrapper._NVDRS_SETTING_LOCATION,System.Boolean,System.Boolean)">
+            <summary>
+            Create a string DRS setting DTO.
+            </summary>
+            <param name="settingId">Setting identifier.</param>
+            <param name="currentValue">Current string value.</param>
+            <param name="predefinedValue">Predefined string value.</param>
+            <param name="settingName">Setting name.</param>
+            <param name="location">Setting location.</param>
+            <param name="isCurrentPredefined">Whether the current value is predefined.</param>
+            <param name="isPredefinedValid">Whether the predefined value is valid.</param>
+            <returns>DRS setting DTO.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDrsSettingDto.CreateWString(System.UInt32,System.String,System.String,System.String,NVAPIWrapper._NVDRS_SETTING_LOCATION,System.Boolean,System.Boolean)">
+            <summary>
+            Create a wide-string DRS setting DTO.
+            </summary>
+            <param name="settingId">Setting identifier.</param>
+            <param name="currentValue">Current string value.</param>
+            <param name="predefinedValue">Predefined string value.</param>
+            <param name="settingName">Setting name.</param>
+            <param name="location">Setting location.</param>
+            <param name="isCurrentPredefined">Whether the current value is predefined.</param>
+            <param name="isPredefinedValid">Whether the predefined value is valid.</param>
+            <returns>DRS setting DTO.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDrsSettingDto.CreateBinary(System.UInt32,System.Byte[],System.Byte[],System.String,NVAPIWrapper._NVDRS_SETTING_LOCATION,System.Boolean,System.Boolean)">
+            <summary>
+            Create a binary DRS setting DTO.
+            </summary>
+            <param name="settingId">Setting identifier.</param>
+            <param name="currentValue">Current binary value.</param>
+            <param name="predefinedValue">Predefined binary value.</param>
+            <param name="settingName">Setting name.</param>
+            <param name="location">Setting location.</param>
+            <param name="isCurrentPredefined">Whether the current value is predefined.</param>
+            <param name="isPredefinedValid">Whether the predefined value is valid.</param>
+            <returns>DRS setting DTO.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDrsSettingDto.FromNative(NVAPIWrapper._NVDRS_SETTING_V1)">
+            <summary>
+            Create a DRS setting DTO from native setting data.
+            </summary>
+            <param name="native">Native setting data.</param>
+            <returns>DRS setting DTO.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDrsSettingDto.ToNative">
+            <summary>
+            Convert this DTO to native setting data.
+            </summary>
+            <returns>Native setting data.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDrsSettingDto.Equals(NVAPIWrapper.NVAPIDrsSettingDto)">
+            <summary>
+            Determine whether this instance equals another DRS setting DTO.
+            </summary>
+            <param name="other">The other DTO to compare.</param>
+            <returns>True if the DTOs are equal; otherwise false.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDrsSettingDto.Equals(System.Object)">
+            <summary>
+            Determine whether this instance equals another object.
+            </summary>
+            <param name="obj">The object to compare.</param>
+            <returns>True if the object is an equivalent DTO; otherwise false.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDrsSettingDto.GetHashCode">
+            <summary>
+            Get a hash code for this instance.
+            </summary>
+            <returns>Hash code for this instance.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDrsSettingDto.op_Equality(NVAPIWrapper.NVAPIDrsSettingDto,NVAPIWrapper.NVAPIDrsSettingDto)">
+            <summary>
+            Determine whether two DRS setting DTOs are equal.
+            </summary>
+            <param name="left">Left DTO.</param>
+            <param name="right">Right DTO.</param>
+            <returns>True if the DTOs are equal; otherwise false.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDrsSettingDto.op_Inequality(NVAPIWrapper.NVAPIDrsSettingDto,NVAPIWrapper.NVAPIDrsSettingDto)">
+            <summary>
+            Determine whether two DRS setting DTOs are not equal.
+            </summary>
+            <param name="left">Left DTO.</param>
+            <param name="right">Right DTO.</param>
+            <returns>True if the DTOs are not equal; otherwise false.</returns>
+        </member>
         <member name="T:NVAPIWrapper.NVAPIDrsSettingValuesDto">
             <summary>
             DRS setting values DTO.
             </summary>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDrsSettingValuesDto.#ctor(NVAPIWrapper._NVDRS_SETTING_TYPE,System.Nullable{System.UInt32},System.String,System.Byte[],System.UInt32[],System.String[],System.Byte[][])">
+            <summary>
+            Create a DRS setting values DTO.
+            </summary>
+            <param name="settingType">Setting type.</param>
+            <param name="defaultDwordValue">Default DWORD value.</param>
+            <param name="defaultStringValue">Default string value.</param>
+            <param name="defaultBinaryValue">Default binary value.</param>
+            <param name="dwordValues">Allowed DWORD values.</param>
+            <param name="stringValues">Allowed string values.</param>
+            <param name="binaryValues">Allowed binary values.</param>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDrsSettingValuesDto.FromNative(NVAPIWrapper._NVDRS_SETTING_VALUES)">
+            <summary>
+            Create a DRS setting values DTO from native values data.
+            </summary>
+            <param name="native">Native setting values data.</param>
+            <returns>DRS setting values DTO.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDrsSettingValuesDto.Equals(NVAPIWrapper.NVAPIDrsSettingValuesDto)">
+            <summary>
+            Determine whether this instance equals another DRS setting values DTO.
+            </summary>
+            <param name="other">The other DTO to compare.</param>
+            <returns>True if the DTOs are equal; otherwise false.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDrsSettingValuesDto.Equals(System.Object)">
+            <summary>
+            Determine whether this instance equals another object.
+            </summary>
+            <param name="obj">The object to compare.</param>
+            <returns>True if the object is an equivalent DTO; otherwise false.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDrsSettingValuesDto.GetHashCode">
+            <summary>
+            Get a hash code for this instance.
+            </summary>
+            <returns>Hash code for this instance.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDrsSettingValuesDto.op_Equality(NVAPIWrapper.NVAPIDrsSettingValuesDto,NVAPIWrapper.NVAPIDrsSettingValuesDto)">
+            <summary>
+            Determine whether two DRS setting values DTOs are equal.
+            </summary>
+            <param name="left">Left DTO.</param>
+            <param name="right">Right DTO.</param>
+            <returns>True if the DTOs are equal; otherwise false.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDrsSettingValuesDto.op_Inequality(NVAPIWrapper.NVAPIDrsSettingValuesDto,NVAPIWrapper.NVAPIDrsSettingValuesDto)">
+            <summary>
+            Determine whether two DRS setting values DTOs are not equal.
+            </summary>
+            <param name="left">Left DTO.</param>
+            <param name="right">Right DTO.</param>
+            <returns>True if the DTOs are not equal; otherwise false.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDrsDtoHelpers.SequenceEquals``1(``0[],``0[])">
+            <summary>
+            Compare two arrays for equality using the default comparer.
+            </summary>
+            <typeparam name="T">Element type.</typeparam>
+            <param name="left">Left array.</param>
+            <param name="right">Right array.</param>
+            <returns>True if both arrays are equal; otherwise false.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDrsDtoHelpers.SequenceHashCode``1(``0[])">
+            <summary>
+            Compute a hash code for an array using the default comparer.
+            </summary>
+            <typeparam name="T">Element type.</typeparam>
+            <param name="values">Array values.</param>
+            <returns>Hash code for the array contents.</returns>
         </member>
         <member name="T:NVAPIWrapper.NVAPIEventHandleHelper">
             <summary>
@@ -3705,85 +4858,986 @@
             Snapshot of supported Mosaic topology data.
             </summary>
         </member>
+        <member name="M:NVAPIWrapper.NVAPIMosaicSupportedTopoInfoDto.#ctor(NVAPIWrapper.NVAPIMosaicTopoBriefDto[],NVAPIWrapper.NVAPIMosaicDisplaySettingDto[])">
+            <summary>
+            Create a supported topology info DTO.
+            </summary>
+            <param name="topoBriefs">Supported topology briefs.</param>
+            <param name="displaySettings">Supported display settings.</param>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIMosaicSupportedTopoInfoDto.FromNative(NVAPIWrapper._NV_MOSAIC_SUPPORTED_TOPO_INFO_V2)">
+            <summary>
+            Create a supported topology info DTO from native data.
+            </summary>
+            <param name="native">Native supported topology info.</param>
+            <returns>Supported topology info DTO.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIMosaicSupportedTopoInfoDto.Equals(NVAPIWrapper.NVAPIMosaicSupportedTopoInfoDto)">
+            <summary>
+            Determine whether this instance equals another supported topology info DTO.
+            </summary>
+            <param name="other">The other DTO to compare.</param>
+            <returns>True if the DTOs are equal; otherwise false.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIMosaicSupportedTopoInfoDto.Equals(System.Object)">
+            <summary>
+            Determine whether this instance equals another object.
+            </summary>
+            <param name="obj">The object to compare.</param>
+            <returns>True if the object is an equivalent DTO; otherwise false.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIMosaicSupportedTopoInfoDto.GetHashCode">
+            <summary>
+            Get a hash code for this instance.
+            </summary>
+            <returns>Hash code for this instance.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIMosaicSupportedTopoInfoDto.op_Equality(NVAPIWrapper.NVAPIMosaicSupportedTopoInfoDto,NVAPIWrapper.NVAPIMosaicSupportedTopoInfoDto)">
+            <summary>
+            Determine whether two supported topology info DTOs are equal.
+            </summary>
+            <param name="left">Left DTO.</param>
+            <param name="right">Right DTO.</param>
+            <returns>True if the DTOs are equal; otherwise false.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIMosaicSupportedTopoInfoDto.op_Inequality(NVAPIWrapper.NVAPIMosaicSupportedTopoInfoDto,NVAPIWrapper.NVAPIMosaicSupportedTopoInfoDto)">
+            <summary>
+            Determine whether two supported topology info DTOs are not equal.
+            </summary>
+            <param name="left">Left DTO.</param>
+            <param name="right">Right DTO.</param>
+            <returns>True if the DTOs are not equal; otherwise false.</returns>
+        </member>
         <member name="T:NVAPIWrapper.NVAPIMosaicTopoBriefDto">
             <summary>
             Mosaic topology brief DTO.
             </summary>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIMosaicTopoBriefDto.#ctor(NVAPIWrapper.NV_MOSAIC_TOPO,System.Boolean,System.Boolean)">
+            <summary>
+            Create a Mosaic topology brief DTO.
+            </summary>
+            <param name="topo">Topology identifier.</param>
+            <param name="enabled">Whether the topology is enabled.</param>
+            <param name="isPossible">Whether the topology is possible.</param>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIMosaicTopoBriefDto.FromNative(NVAPIWrapper.NV_MOSAIC_TOPO_BRIEF)">
+            <summary>
+            Create a Mosaic topology brief DTO from native data.
+            </summary>
+            <param name="native">Native topology brief data.</param>
+            <returns>Mosaic topology brief DTO.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIMosaicTopoBriefDto.ToNative">
+            <summary>
+            Convert this DTO to native topology brief data.
+            </summary>
+            <returns>Native topology brief data.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIMosaicTopoBriefDto.Equals(NVAPIWrapper.NVAPIMosaicTopoBriefDto)">
+            <summary>
+            Determine whether this instance equals another Mosaic topology brief DTO.
+            </summary>
+            <param name="other">The other DTO to compare.</param>
+            <returns>True if the DTOs are equal; otherwise false.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIMosaicTopoBriefDto.Equals(System.Object)">
+            <summary>
+            Determine whether this instance equals another object.
+            </summary>
+            <param name="obj">The object to compare.</param>
+            <returns>True if the object is an equivalent DTO; otherwise false.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIMosaicTopoBriefDto.GetHashCode">
+            <summary>
+            Get a hash code for this instance.
+            </summary>
+            <returns>Hash code for this instance.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIMosaicTopoBriefDto.op_Equality(NVAPIWrapper.NVAPIMosaicTopoBriefDto,NVAPIWrapper.NVAPIMosaicTopoBriefDto)">
+            <summary>
+            Determine whether two Mosaic topology brief DTOs are equal.
+            </summary>
+            <param name="left">Left DTO.</param>
+            <param name="right">Right DTO.</param>
+            <returns>True if the DTOs are equal; otherwise false.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIMosaicTopoBriefDto.op_Inequality(NVAPIWrapper.NVAPIMosaicTopoBriefDto,NVAPIWrapper.NVAPIMosaicTopoBriefDto)">
+            <summary>
+            Determine whether two Mosaic topology brief DTOs are not equal.
+            </summary>
+            <param name="left">Left DTO.</param>
+            <param name="right">Right DTO.</param>
+            <returns>True if the DTOs are not equal; otherwise false.</returns>
         </member>
         <member name="T:NVAPIWrapper.NVAPIMosaicDisplaySettingDto">
             <summary>
             Mosaic display setting DTO (v2).
             </summary>
         </member>
+        <member name="M:NVAPIWrapper.NVAPIMosaicDisplaySettingDto.#ctor(System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32)">
+            <summary>
+            Create a Mosaic display setting DTO.
+            </summary>
+            <param name="width">Display width.</param>
+            <param name="height">Display height.</param>
+            <param name="bitsPerPixel">Bits per pixel.</param>
+            <param name="frequency">Display frequency.</param>
+            <param name="refreshRate1K">Refresh rate in 1K units.</param>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIMosaicDisplaySettingDto.FromNative(NVAPIWrapper.NV_MOSAIC_DISPLAY_SETTING_V2)">
+            <summary>
+            Create a Mosaic display setting DTO from native V2 data.
+            </summary>
+            <param name="native">Native display setting V2 data.</param>
+            <returns>Mosaic display setting DTO.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIMosaicDisplaySettingDto.FromNative(NVAPIWrapper._NV_MOSAIC_DISPLAY_SETTING_V1)">
+            <summary>
+            Create a Mosaic display setting DTO from native V1 data.
+            </summary>
+            <param name="native">Native display setting V1 data.</param>
+            <returns>Mosaic display setting DTO.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIMosaicDisplaySettingDto.ToNativeV2">
+            <summary>
+            Convert this DTO to native display setting V2 data.
+            </summary>
+            <returns>Native display setting V2 data.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIMosaicDisplaySettingDto.ToNativeV1">
+            <summary>
+            Convert this DTO to native display setting V1 data.
+            </summary>
+            <returns>Native display setting V1 data.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIMosaicDisplaySettingDto.Equals(NVAPIWrapper.NVAPIMosaicDisplaySettingDto)">
+            <summary>
+            Determine whether this instance equals another Mosaic display setting DTO.
+            </summary>
+            <param name="other">The other DTO to compare.</param>
+            <returns>True if the DTOs are equal; otherwise false.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIMosaicDisplaySettingDto.Equals(System.Object)">
+            <summary>
+            Determine whether this instance equals another object.
+            </summary>
+            <param name="obj">The object to compare.</param>
+            <returns>True if the object is an equivalent DTO; otherwise false.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIMosaicDisplaySettingDto.GetHashCode">
+            <summary>
+            Get a hash code for this instance.
+            </summary>
+            <returns>Hash code for this instance.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIMosaicDisplaySettingDto.op_Equality(NVAPIWrapper.NVAPIMosaicDisplaySettingDto,NVAPIWrapper.NVAPIMosaicDisplaySettingDto)">
+            <summary>
+            Determine whether two Mosaic display setting DTOs are equal.
+            </summary>
+            <param name="left">Left DTO.</param>
+            <param name="right">Right DTO.</param>
+            <returns>True if the DTOs are equal; otherwise false.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIMosaicDisplaySettingDto.op_Inequality(NVAPIWrapper.NVAPIMosaicDisplaySettingDto,NVAPIWrapper.NVAPIMosaicDisplaySettingDto)">
+            <summary>
+            Determine whether two Mosaic display setting DTOs are not equal.
+            </summary>
+            <param name="left">Left DTO.</param>
+            <param name="right">Right DTO.</param>
+            <returns>True if the DTOs are not equal; otherwise false.</returns>
+        </member>
         <member name="T:NVAPIWrapper.NVAPIMosaicOverlapLimitsDto">
             <summary>
             Mosaic overlap limits DTO.
             </summary>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIMosaicOverlapLimitsDto.#ctor(System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Create a Mosaic overlap limits DTO.
+            </summary>
+            <param name="minOverlapX">Minimum overlap on X axis.</param>
+            <param name="maxOverlapX">Maximum overlap on X axis.</param>
+            <param name="minOverlapY">Minimum overlap on Y axis.</param>
+            <param name="maxOverlapY">Maximum overlap on Y axis.</param>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIMosaicOverlapLimitsDto.Equals(NVAPIWrapper.NVAPIMosaicOverlapLimitsDto)">
+            <summary>
+            Determine whether this instance equals another Mosaic overlap limits DTO.
+            </summary>
+            <param name="other">The other DTO to compare.</param>
+            <returns>True if the DTOs are equal; otherwise false.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIMosaicOverlapLimitsDto.Equals(System.Object)">
+            <summary>
+            Determine whether this instance equals another object.
+            </summary>
+            <param name="obj">The object to compare.</param>
+            <returns>True if the object is an equivalent DTO; otherwise false.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIMosaicOverlapLimitsDto.GetHashCode">
+            <summary>
+            Get a hash code for this instance.
+            </summary>
+            <returns>Hash code for this instance.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIMosaicOverlapLimitsDto.op_Equality(NVAPIWrapper.NVAPIMosaicOverlapLimitsDto,NVAPIWrapper.NVAPIMosaicOverlapLimitsDto)">
+            <summary>
+            Determine whether two Mosaic overlap limits DTOs are equal.
+            </summary>
+            <param name="left">Left DTO.</param>
+            <param name="right">Right DTO.</param>
+            <returns>True if the DTOs are equal; otherwise false.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIMosaicOverlapLimitsDto.op_Inequality(NVAPIWrapper.NVAPIMosaicOverlapLimitsDto,NVAPIWrapper.NVAPIMosaicOverlapLimitsDto)">
+            <summary>
+            Determine whether two Mosaic overlap limits DTOs are not equal.
+            </summary>
+            <param name="left">Left DTO.</param>
+            <param name="right">Right DTO.</param>
+            <returns>True if the DTOs are not equal; otherwise false.</returns>
         </member>
         <member name="T:NVAPIWrapper.NVAPIMosaicCurrentTopoDto">
             <summary>
             Current Mosaic topology DTO.
             </summary>
         </member>
+        <member name="M:NVAPIWrapper.NVAPIMosaicCurrentTopoDto.#ctor(NVAPIWrapper.NVAPIMosaicTopoBriefDto,NVAPIWrapper.NVAPIMosaicDisplaySettingDto,System.Int32,System.Int32)">
+            <summary>
+            Create a current Mosaic topology DTO.
+            </summary>
+            <param name="topoBrief">Topology brief.</param>
+            <param name="displaySetting">Display setting.</param>
+            <param name="overlapX">Horizontal overlap.</param>
+            <param name="overlapY">Vertical overlap.</param>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIMosaicCurrentTopoDto.Equals(NVAPIWrapper.NVAPIMosaicCurrentTopoDto)">
+            <summary>
+            Determine whether this instance equals another current Mosaic topology DTO.
+            </summary>
+            <param name="other">The other DTO to compare.</param>
+            <returns>True if the DTOs are equal; otherwise false.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIMosaicCurrentTopoDto.Equals(System.Object)">
+            <summary>
+            Determine whether this instance equals another object.
+            </summary>
+            <param name="obj">The object to compare.</param>
+            <returns>True if the object is an equivalent DTO; otherwise false.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIMosaicCurrentTopoDto.GetHashCode">
+            <summary>
+            Get a hash code for this instance.
+            </summary>
+            <returns>Hash code for this instance.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIMosaicCurrentTopoDto.op_Equality(NVAPIWrapper.NVAPIMosaicCurrentTopoDto,NVAPIWrapper.NVAPIMosaicCurrentTopoDto)">
+            <summary>
+            Determine whether two current Mosaic topology DTOs are equal.
+            </summary>
+            <param name="left">Left DTO.</param>
+            <param name="right">Right DTO.</param>
+            <returns>True if the DTOs are equal; otherwise false.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIMosaicCurrentTopoDto.op_Inequality(NVAPIWrapper.NVAPIMosaicCurrentTopoDto,NVAPIWrapper.NVAPIMosaicCurrentTopoDto)">
+            <summary>
+            Determine whether two current Mosaic topology DTOs are not equal.
+            </summary>
+            <param name="left">Left DTO.</param>
+            <param name="right">Right DTO.</param>
+            <returns>True if the DTOs are not equal; otherwise false.</returns>
+        </member>
         <member name="T:NVAPIWrapper.NVAPIMosaicTopoGroupDto">
             <summary>
             Mosaic topology group DTO.
             </summary>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIMosaicTopoGroupDto.#ctor(NVAPIWrapper.NVAPIMosaicTopoBriefDto,NVAPIWrapper.NVAPIMosaicTopoDetailsDto[])">
+            <summary>
+            Create a Mosaic topology group DTO.
+            </summary>
+            <param name="brief">Topology brief.</param>
+            <param name="topos">Topology details.</param>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIMosaicTopoGroupDto.FromNative(NVAPIWrapper.NVAPIApiHelper,NVAPIWrapper.NV_MOSAIC_TOPO_GROUP)">
+            <summary>
+            Create a Mosaic topology group DTO from native data.
+            </summary>
+            <param name="apiHelper">API helper owning GPU helpers.</param>
+            <param name="native">Native topology group data.</param>
+            <returns>Mosaic topology group DTO.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIMosaicTopoGroupDto.Equals(NVAPIWrapper.NVAPIMosaicTopoGroupDto)">
+            <summary>
+            Determine whether this instance equals another Mosaic topology group DTO.
+            </summary>
+            <param name="other">The other DTO to compare.</param>
+            <returns>True if the DTOs are equal; otherwise false.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIMosaicTopoGroupDto.Equals(System.Object)">
+            <summary>
+            Determine whether this instance equals another object.
+            </summary>
+            <param name="obj">The object to compare.</param>
+            <returns>True if the object is an equivalent DTO; otherwise false.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIMosaicTopoGroupDto.GetHashCode">
+            <summary>
+            Get a hash code for this instance.
+            </summary>
+            <returns>Hash code for this instance.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIMosaicTopoGroupDto.op_Equality(NVAPIWrapper.NVAPIMosaicTopoGroupDto,NVAPIWrapper.NVAPIMosaicTopoGroupDto)">
+            <summary>
+            Determine whether two Mosaic topology group DTOs are equal.
+            </summary>
+            <param name="left">Left DTO.</param>
+            <param name="right">Right DTO.</param>
+            <returns>True if the DTOs are equal; otherwise false.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIMosaicTopoGroupDto.op_Inequality(NVAPIWrapper.NVAPIMosaicTopoGroupDto,NVAPIWrapper.NVAPIMosaicTopoGroupDto)">
+            <summary>
+            Determine whether two Mosaic topology group DTOs are not equal.
+            </summary>
+            <param name="left">Left DTO.</param>
+            <param name="right">Right DTO.</param>
+            <returns>True if the DTOs are not equal; otherwise false.</returns>
         </member>
         <member name="T:NVAPIWrapper.NVAPIMosaicTopoDetailsDto">
             <summary>
             Mosaic topology details DTO.
             </summary>
         </member>
+        <member name="M:NVAPIWrapper.NVAPIMosaicTopoDetailsDto.#ctor(System.IntPtr,System.UInt32,System.UInt32,System.UInt32,NVAPIWrapper.NVAPIMosaicGpuLayoutCellDto[])">
+            <summary>
+            Create a Mosaic topology details DTO.
+            </summary>
+            <param name="logicalGpuHandle">Logical GPU handle.</param>
+            <param name="validityMask">Validity mask.</param>
+            <param name="rowCount">Number of rows.</param>
+            <param name="colCount">Number of columns.</param>
+            <param name="gpuLayout">GPU layout cells.</param>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIMosaicTopoDetailsDto.FromNative(NVAPIWrapper.NVAPIApiHelper,NVAPIWrapper.NV_MOSAIC_TOPO_DETAILS)">
+            <summary>
+            Create a Mosaic topology details DTO from native data.
+            </summary>
+            <param name="apiHelper">API helper owning GPU helpers.</param>
+            <param name="native">Native topology details data.</param>
+            <returns>Mosaic topology details DTO.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIMosaicTopoDetailsDto.ToNative">
+            <summary>
+            Convert this DTO to native topology details data.
+            </summary>
+            <returns>Native topology details data.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIMosaicTopoDetailsDto.Equals(NVAPIWrapper.NVAPIMosaicTopoDetailsDto)">
+            <summary>
+            Determine whether this instance equals another Mosaic topology details DTO.
+            </summary>
+            <param name="other">The other DTO to compare.</param>
+            <returns>True if the DTOs are equal; otherwise false.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIMosaicTopoDetailsDto.Equals(System.Object)">
+            <summary>
+            Determine whether this instance equals another object.
+            </summary>
+            <param name="obj">The object to compare.</param>
+            <returns>True if the object is an equivalent DTO; otherwise false.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIMosaicTopoDetailsDto.GetHashCode">
+            <summary>
+            Get a hash code for this instance.
+            </summary>
+            <returns>Hash code for this instance.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIMosaicTopoDetailsDto.op_Equality(NVAPIWrapper.NVAPIMosaicTopoDetailsDto,NVAPIWrapper.NVAPIMosaicTopoDetailsDto)">
+            <summary>
+            Determine whether two Mosaic topology details DTOs are equal.
+            </summary>
+            <param name="left">Left DTO.</param>
+            <param name="right">Right DTO.</param>
+            <returns>True if the DTOs are equal; otherwise false.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIMosaicTopoDetailsDto.op_Inequality(NVAPIWrapper.NVAPIMosaicTopoDetailsDto,NVAPIWrapper.NVAPIMosaicTopoDetailsDto)">
+            <summary>
+            Determine whether two Mosaic topology details DTOs are not equal.
+            </summary>
+            <param name="left">Left DTO.</param>
+            <param name="right">Right DTO.</param>
+            <returns>True if the DTOs are not equal; otherwise false.</returns>
+        </member>
         <member name="T:NVAPIWrapper.NVAPIMosaicGpuLayoutCellDto">
             <summary>
             Mosaic GPU layout cell DTO.
             </summary>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIMosaicGpuLayoutCellDto.#ctor(System.IntPtr,System.UInt32,System.Int32,System.Int32)">
+            <summary>
+            Create a Mosaic GPU layout cell DTO.
+            </summary>
+            <param name="physicalGpuHandle">Physical GPU handle.</param>
+            <param name="displayOutputId">Display output identifier.</param>
+            <param name="overlapX">Horizontal overlap.</param>
+            <param name="overlapY">Vertical overlap.</param>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIMosaicGpuLayoutCellDto.FromNative(NVAPIWrapper.NVAPIApiHelper,NVAPIWrapper.NV_MOSAIC_GPU_LAYOUT_CELL)">
+            <summary>
+            Create a Mosaic GPU layout cell DTO from native data.
+            </summary>
+            <param name="apiHelper">API helper owning GPU helpers.</param>
+            <param name="native">Native GPU layout cell data.</param>
+            <returns>Mosaic GPU layout cell DTO.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIMosaicGpuLayoutCellDto.ToNative">
+            <summary>
+            Convert this DTO to native GPU layout cell data.
+            </summary>
+            <returns>Native GPU layout cell data.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIMosaicGpuLayoutCellDto.Equals(NVAPIWrapper.NVAPIMosaicGpuLayoutCellDto)">
+            <summary>
+            Determine whether this instance equals another Mosaic GPU layout cell DTO.
+            </summary>
+            <param name="other">The other DTO to compare.</param>
+            <returns>True if the DTOs are equal; otherwise false.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIMosaicGpuLayoutCellDto.Equals(System.Object)">
+            <summary>
+            Determine whether this instance equals another object.
+            </summary>
+            <param name="obj">The object to compare.</param>
+            <returns>True if the object is an equivalent DTO; otherwise false.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIMosaicGpuLayoutCellDto.GetHashCode">
+            <summary>
+            Get a hash code for this instance.
+            </summary>
+            <returns>Hash code for this instance.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIMosaicGpuLayoutCellDto.op_Equality(NVAPIWrapper.NVAPIMosaicGpuLayoutCellDto,NVAPIWrapper.NVAPIMosaicGpuLayoutCellDto)">
+            <summary>
+            Determine whether two Mosaic GPU layout cell DTOs are equal.
+            </summary>
+            <param name="left">Left DTO.</param>
+            <param name="right">Right DTO.</param>
+            <returns>True if the DTOs are equal; otherwise false.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIMosaicGpuLayoutCellDto.op_Inequality(NVAPIWrapper.NVAPIMosaicGpuLayoutCellDto,NVAPIWrapper.NVAPIMosaicGpuLayoutCellDto)">
+            <summary>
+            Determine whether two Mosaic GPU layout cell DTOs are not equal.
+            </summary>
+            <param name="left">Left DTO.</param>
+            <param name="right">Right DTO.</param>
+            <returns>True if the DTOs are not equal; otherwise false.</returns>
         </member>
         <member name="T:NVAPIWrapper.NVAPIMosaicGridTopoDisplayDto">
             <summary>
             Mosaic grid display DTO.
             </summary>
         </member>
+        <member name="M:NVAPIWrapper.NVAPIMosaicGridTopoDisplayDto.#ctor(System.UInt32,System.Int32,System.Int32,NVAPIWrapper._NV_ROTATE,System.UInt32,NVAPIWrapper._NV_PIXEL_SHIFT_TYPE)">
+            <summary>
+            Create a Mosaic grid topology display DTO.
+            </summary>
+            <param name="displayId">Display identifier.</param>
+            <param name="overlapX">Horizontal overlap.</param>
+            <param name="overlapY">Vertical overlap.</param>
+            <param name="rotation">Rotation value.</param>
+            <param name="cloneGroup">Clone group identifier.</param>
+            <param name="pixelShiftType">Pixel shift type.</param>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIMosaicGridTopoDisplayDto.FromNative(NVAPIWrapper._NV_MOSAIC_GRID_TOPO_DISPLAY_V2)">
+            <summary>
+            Create a Mosaic grid topology display DTO from native data.
+            </summary>
+            <param name="native">Native grid topology display data.</param>
+            <returns>Mosaic grid topology display DTO.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIMosaicGridTopoDisplayDto.ToNative">
+            <summary>
+            Convert this DTO to native grid topology display data.
+            </summary>
+            <returns>Native grid topology display data.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIMosaicGridTopoDisplayDto.Equals(NVAPIWrapper.NVAPIMosaicGridTopoDisplayDto)">
+            <summary>
+            Determine whether this instance equals another Mosaic grid topology display DTO.
+            </summary>
+            <param name="other">The other DTO to compare.</param>
+            <returns>True if the DTOs are equal; otherwise false.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIMosaicGridTopoDisplayDto.Equals(System.Object)">
+            <summary>
+            Determine whether this instance equals another object.
+            </summary>
+            <param name="obj">The object to compare.</param>
+            <returns>True if the object is an equivalent DTO; otherwise false.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIMosaicGridTopoDisplayDto.GetHashCode">
+            <summary>
+            Get a hash code for this instance.
+            </summary>
+            <returns>Hash code for this instance.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIMosaicGridTopoDisplayDto.op_Equality(NVAPIWrapper.NVAPIMosaicGridTopoDisplayDto,NVAPIWrapper.NVAPIMosaicGridTopoDisplayDto)">
+            <summary>
+            Determine whether two Mosaic grid topology display DTOs are equal.
+            </summary>
+            <param name="left">Left DTO.</param>
+            <param name="right">Right DTO.</param>
+            <returns>True if the DTOs are equal; otherwise false.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIMosaicGridTopoDisplayDto.op_Inequality(NVAPIWrapper.NVAPIMosaicGridTopoDisplayDto,NVAPIWrapper.NVAPIMosaicGridTopoDisplayDto)">
+            <summary>
+            Determine whether two Mosaic grid topology display DTOs are not equal.
+            </summary>
+            <param name="left">Left DTO.</param>
+            <param name="right">Right DTO.</param>
+            <returns>True if the DTOs are not equal; otherwise false.</returns>
+        </member>
         <member name="T:NVAPIWrapper.NVAPIMosaicGridTopoDto">
             <summary>
             Mosaic grid topology DTO.
             </summary>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIMosaicGridTopoDto.#ctor(System.UInt32,System.UInt32,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,NVAPIWrapper.NVAPIMosaicGridTopoDisplayDto[],NVAPIWrapper.NVAPIMosaicDisplaySettingDto)">
+            <summary>
+            Create a Mosaic grid topology DTO.
+            </summary>
+            <param name="rows">Row count.</param>
+            <param name="columns">Column count.</param>
+            <param name="applyWithBezelCorrect">Whether to apply with bezel correction.</param>
+            <param name="immersiveGaming">Whether immersive gaming is enabled.</param>
+            <param name="baseMosaic">Whether base Mosaic is used.</param>
+            <param name="driverReloadAllowed">Whether driver reload is allowed.</param>
+            <param name="acceleratePrimaryDisplay">Whether primary display acceleration is enabled.</param>
+            <param name="pixelShift">Whether pixel shift is enabled.</param>
+            <param name="displays">Display topology entries.</param>
+            <param name="displaySettings">Display settings.</param>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIMosaicGridTopoDto.FromNative(NVAPIWrapper._NV_MOSAIC_GRID_TOPO_V2)">
+            <summary>
+            Create a Mosaic grid topology DTO from native data.
+            </summary>
+            <param name="native">Native grid topology data.</param>
+            <returns>Mosaic grid topology DTO.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIMosaicGridTopoDto.ToNative">
+            <summary>
+            Convert this DTO to native grid topology data.
+            </summary>
+            <returns>Native grid topology data.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIMosaicGridTopoDto.Equals(NVAPIWrapper.NVAPIMosaicGridTopoDto)">
+            <summary>
+            Determine whether this instance equals another Mosaic grid topology DTO.
+            </summary>
+            <param name="other">The other DTO to compare.</param>
+            <returns>True if the DTOs are equal; otherwise false.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIMosaicGridTopoDto.Equals(System.Object)">
+            <summary>
+            Determine whether this instance equals another object.
+            </summary>
+            <param name="obj">The object to compare.</param>
+            <returns>True if the object is an equivalent DTO; otherwise false.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIMosaicGridTopoDto.GetHashCode">
+            <summary>
+            Get a hash code for this instance.
+            </summary>
+            <returns>Hash code for this instance.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIMosaicGridTopoDto.op_Equality(NVAPIWrapper.NVAPIMosaicGridTopoDto,NVAPIWrapper.NVAPIMosaicGridTopoDto)">
+            <summary>
+            Determine whether two Mosaic grid topology DTOs are equal.
+            </summary>
+            <param name="left">Left DTO.</param>
+            <param name="right">Right DTO.</param>
+            <returns>True if the DTOs are equal; otherwise false.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIMosaicGridTopoDto.op_Inequality(NVAPIWrapper.NVAPIMosaicGridTopoDto,NVAPIWrapper.NVAPIMosaicGridTopoDto)">
+            <summary>
+            Determine whether two Mosaic grid topology DTOs are not equal.
+            </summary>
+            <param name="left">Left DTO.</param>
+            <param name="right">Right DTO.</param>
+            <returns>True if the DTOs are not equal; otherwise false.</returns>
         </member>
         <member name="T:NVAPIWrapper.NVAPIMosaicGridTopologiesDto">
             <summary>
             Mosaic grid topology collection DTO.
             </summary>
         </member>
+        <member name="M:NVAPIWrapper.NVAPIMosaicGridTopologiesDto.#ctor(NVAPIWrapper.NVAPIMosaicGridTopoDto[])">
+            <summary>
+            Create a Mosaic grid topologies DTO.
+            </summary>
+            <param name="grids">Grid topologies.</param>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIMosaicGridTopologiesDto.FromNative(System.UInt32,NVAPIWrapper._NV_MOSAIC_GRID_TOPO_V2[])">
+            <summary>
+            Create a Mosaic grid topologies DTO from native data.
+            </summary>
+            <param name="count">Number of grids.</param>
+            <param name="native">Native grid topology data.</param>
+            <returns>Mosaic grid topologies DTO.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIMosaicGridTopologiesDto.Equals(NVAPIWrapper.NVAPIMosaicGridTopologiesDto)">
+            <summary>
+            Determine whether this instance equals another Mosaic grid topologies DTO.
+            </summary>
+            <param name="other">The other DTO to compare.</param>
+            <returns>True if the DTOs are equal; otherwise false.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIMosaicGridTopologiesDto.Equals(System.Object)">
+            <summary>
+            Determine whether this instance equals another object.
+            </summary>
+            <param name="obj">The object to compare.</param>
+            <returns>True if the object is an equivalent DTO; otherwise false.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIMosaicGridTopologiesDto.GetHashCode">
+            <summary>
+            Get a hash code for this instance.
+            </summary>
+            <returns>Hash code for this instance.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIMosaicGridTopologiesDto.op_Equality(NVAPIWrapper.NVAPIMosaicGridTopologiesDto,NVAPIWrapper.NVAPIMosaicGridTopologiesDto)">
+            <summary>
+            Determine whether two Mosaic grid topologies DTOs are equal.
+            </summary>
+            <param name="left">Left DTO.</param>
+            <param name="right">Right DTO.</param>
+            <returns>True if the DTOs are equal; otherwise false.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIMosaicGridTopologiesDto.op_Inequality(NVAPIWrapper.NVAPIMosaicGridTopologiesDto,NVAPIWrapper.NVAPIMosaicGridTopologiesDto)">
+            <summary>
+            Determine whether two Mosaic grid topologies DTOs are not equal.
+            </summary>
+            <param name="left">Left DTO.</param>
+            <param name="right">Right DTO.</param>
+            <returns>True if the DTOs are not equal; otherwise false.</returns>
+        </member>
         <member name="T:NVAPIWrapper.NVAPIMosaicDisplaySettingsDto">
             <summary>
             Mosaic display modes DTO.
             </summary>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIMosaicDisplaySettingsDto.#ctor(NVAPIWrapper.NVAPIMosaicDisplaySettingDto[])">
+            <summary>
+            Create a Mosaic display settings DTO.
+            </summary>
+            <param name="settings">Display settings.</param>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIMosaicDisplaySettingsDto.Equals(NVAPIWrapper.NVAPIMosaicDisplaySettingsDto)">
+            <summary>
+            Determine whether this instance equals another Mosaic display settings DTO.
+            </summary>
+            <param name="other">The other DTO to compare.</param>
+            <returns>True if the DTOs are equal; otherwise false.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIMosaicDisplaySettingsDto.Equals(System.Object)">
+            <summary>
+            Determine whether this instance equals another object.
+            </summary>
+            <param name="obj">The object to compare.</param>
+            <returns>True if the object is an equivalent DTO; otherwise false.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIMosaicDisplaySettingsDto.GetHashCode">
+            <summary>
+            Get a hash code for this instance.
+            </summary>
+            <returns>Hash code for this instance.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIMosaicDisplaySettingsDto.op_Equality(NVAPIWrapper.NVAPIMosaicDisplaySettingsDto,NVAPIWrapper.NVAPIMosaicDisplaySettingsDto)">
+            <summary>
+            Determine whether two Mosaic display settings DTOs are equal.
+            </summary>
+            <param name="left">Left DTO.</param>
+            <param name="right">Right DTO.</param>
+            <returns>True if the DTOs are equal; otherwise false.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIMosaicDisplaySettingsDto.op_Inequality(NVAPIWrapper.NVAPIMosaicDisplaySettingsDto,NVAPIWrapper.NVAPIMosaicDisplaySettingsDto)">
+            <summary>
+            Determine whether two Mosaic display settings DTOs are not equal.
+            </summary>
+            <param name="left">Left DTO.</param>
+            <param name="right">Right DTO.</param>
+            <returns>True if the DTOs are not equal; otherwise false.</returns>
         </member>
         <member name="T:NVAPIWrapper.NVAPIMosaicDisplayStatusEntryDto">
             <summary>
             Mosaic display topology status entry DTO.
             </summary>
         </member>
+        <member name="M:NVAPIWrapper.NVAPIMosaicDisplayStatusEntryDto.#ctor(System.UInt32,System.UInt32,System.UInt32,System.Boolean)">
+            <summary>
+            Create a Mosaic display status entry DTO.
+            </summary>
+            <param name="displayId">Display identifier.</param>
+            <param name="errorFlags">Error flags.</param>
+            <param name="warningFlags">Warning flags.</param>
+            <param name="supportsRotation">Whether rotation is supported.</param>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIMosaicDisplayStatusEntryDto.FromNative(NVAPIWrapper.NV_MOSAIC_DISPLAY_TOPO_STATUS._displays_e__Struct)">
+            <summary>
+            Create a Mosaic display status entry DTO from native data.
+            </summary>
+            <param name="native">Native display status entry data.</param>
+            <returns>Mosaic display status entry DTO.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIMosaicDisplayStatusEntryDto.Equals(NVAPIWrapper.NVAPIMosaicDisplayStatusEntryDto)">
+            <summary>
+            Determine whether this instance equals another Mosaic display status entry DTO.
+            </summary>
+            <param name="other">The other DTO to compare.</param>
+            <returns>True if the DTOs are equal; otherwise false.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIMosaicDisplayStatusEntryDto.Equals(System.Object)">
+            <summary>
+            Determine whether this instance equals another object.
+            </summary>
+            <param name="obj">The object to compare.</param>
+            <returns>True if the object is an equivalent DTO; otherwise false.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIMosaicDisplayStatusEntryDto.GetHashCode">
+            <summary>
+            Get a hash code for this instance.
+            </summary>
+            <returns>Hash code for this instance.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIMosaicDisplayStatusEntryDto.op_Equality(NVAPIWrapper.NVAPIMosaicDisplayStatusEntryDto,NVAPIWrapper.NVAPIMosaicDisplayStatusEntryDto)">
+            <summary>
+            Determine whether two Mosaic display status entry DTOs are equal.
+            </summary>
+            <param name="left">Left DTO.</param>
+            <param name="right">Right DTO.</param>
+            <returns>True if the DTOs are equal; otherwise false.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIMosaicDisplayStatusEntryDto.op_Inequality(NVAPIWrapper.NVAPIMosaicDisplayStatusEntryDto,NVAPIWrapper.NVAPIMosaicDisplayStatusEntryDto)">
+            <summary>
+            Determine whether two Mosaic display status entry DTOs are not equal.
+            </summary>
+            <param name="left">Left DTO.</param>
+            <param name="right">Right DTO.</param>
+            <returns>True if the DTOs are not equal; otherwise false.</returns>
+        </member>
         <member name="T:NVAPIWrapper.NVAPIMosaicDisplayTopoStatusDto">
             <summary>
             Mosaic display topology status DTO.
             </summary>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIMosaicDisplayTopoStatusDto.#ctor(System.UInt32,System.UInt32,NVAPIWrapper.NVAPIMosaicDisplayStatusEntryDto[])">
+            <summary>
+            Create a Mosaic display topology status DTO.
+            </summary>
+            <param name="errorFlags">Error flags.</param>
+            <param name="warningFlags">Warning flags.</param>
+            <param name="displays">Display status entries.</param>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIMosaicDisplayTopoStatusDto.FromNative(NVAPIWrapper.NV_MOSAIC_DISPLAY_TOPO_STATUS)">
+            <summary>
+            Create a Mosaic display topology status DTO from native data.
+            </summary>
+            <param name="native">Native display topology status data.</param>
+            <returns>Mosaic display topology status DTO.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIMosaicDisplayTopoStatusDto.Equals(NVAPIWrapper.NVAPIMosaicDisplayTopoStatusDto)">
+            <summary>
+            Determine whether this instance equals another Mosaic display topology status DTO.
+            </summary>
+            <param name="other">The other DTO to compare.</param>
+            <returns>True if the DTOs are equal; otherwise false.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIMosaicDisplayTopoStatusDto.Equals(System.Object)">
+            <summary>
+            Determine whether this instance equals another object.
+            </summary>
+            <param name="obj">The object to compare.</param>
+            <returns>True if the object is an equivalent DTO; otherwise false.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIMosaicDisplayTopoStatusDto.GetHashCode">
+            <summary>
+            Get a hash code for this instance.
+            </summary>
+            <returns>Hash code for this instance.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIMosaicDisplayTopoStatusDto.op_Equality(NVAPIWrapper.NVAPIMosaicDisplayTopoStatusDto,NVAPIWrapper.NVAPIMosaicDisplayTopoStatusDto)">
+            <summary>
+            Determine whether two Mosaic display topology status DTOs are equal.
+            </summary>
+            <param name="left">Left DTO.</param>
+            <param name="right">Right DTO.</param>
+            <returns>True if the DTOs are equal; otherwise false.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIMosaicDisplayTopoStatusDto.op_Inequality(NVAPIWrapper.NVAPIMosaicDisplayTopoStatusDto,NVAPIWrapper.NVAPIMosaicDisplayTopoStatusDto)">
+            <summary>
+            Determine whether two Mosaic display topology status DTOs are not equal.
+            </summary>
+            <param name="left">Left DTO.</param>
+            <param name="right">Right DTO.</param>
+            <returns>True if the DTOs are not equal; otherwise false.</returns>
         </member>
         <member name="T:NVAPIWrapper.NVAPIMosaicDisplayTopoStatusesDto">
             <summary>
             Mosaic display topology status collection DTO.
             </summary>
         </member>
+        <member name="M:NVAPIWrapper.NVAPIMosaicDisplayTopoStatusesDto.#ctor(NVAPIWrapper.NVAPIMosaicDisplayTopoStatusDto[])">
+            <summary>
+            Create a Mosaic display topology status collection DTO.
+            </summary>
+            <param name="statuses">Status entries.</param>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIMosaicDisplayTopoStatusesDto.Equals(NVAPIWrapper.NVAPIMosaicDisplayTopoStatusesDto)">
+            <summary>
+            Determine whether this instance equals another Mosaic display topology status collection DTO.
+            </summary>
+            <param name="other">The other DTO to compare.</param>
+            <returns>True if the DTOs are equal; otherwise false.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIMosaicDisplayTopoStatusesDto.Equals(System.Object)">
+            <summary>
+            Determine whether this instance equals another object.
+            </summary>
+            <param name="obj">The object to compare.</param>
+            <returns>True if the object is an equivalent DTO; otherwise false.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIMosaicDisplayTopoStatusesDto.GetHashCode">
+            <summary>
+            Get a hash code for this instance.
+            </summary>
+            <returns>Hash code for this instance.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIMosaicDisplayTopoStatusesDto.op_Equality(NVAPIWrapper.NVAPIMosaicDisplayTopoStatusesDto,NVAPIWrapper.NVAPIMosaicDisplayTopoStatusesDto)">
+            <summary>
+            Determine whether two Mosaic display topology status collection DTOs are equal.
+            </summary>
+            <param name="left">Left DTO.</param>
+            <param name="right">Right DTO.</param>
+            <returns>True if the DTOs are equal; otherwise false.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIMosaicDisplayTopoStatusesDto.op_Inequality(NVAPIWrapper.NVAPIMosaicDisplayTopoStatusesDto,NVAPIWrapper.NVAPIMosaicDisplayTopoStatusesDto)">
+            <summary>
+            Determine whether two Mosaic display topology status collection DTOs are not equal.
+            </summary>
+            <param name="left">Left DTO.</param>
+            <param name="right">Right DTO.</param>
+            <returns>True if the DTOs are not equal; otherwise false.</returns>
+        </member>
         <member name="T:NVAPIWrapper.NVAPIRectDto">
             <summary>
             Rectangle DTO for Mosaic viewports.
             </summary>
         </member>
+        <member name="M:NVAPIWrapper.NVAPIRectDto.#ctor(System.UInt32,System.UInt32,System.UInt32,System.UInt32)">
+            <summary>
+            Create a rectangle DTO.
+            </summary>
+            <param name="left">Left coordinate.</param>
+            <param name="top">Top coordinate.</param>
+            <param name="right">Right coordinate.</param>
+            <param name="bottom">Bottom coordinate.</param>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIRectDto.FromNative(NVAPIWrapper._NV_RECT)">
+            <summary>
+            Create a rectangle DTO from native data.
+            </summary>
+            <param name="native">Native rectangle data.</param>
+            <returns>Rectangle DTO.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIRectDto.ToNative">
+            <summary>
+            Convert this DTO to native rectangle data.
+            </summary>
+            <returns>Native rectangle data.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIRectDto.Equals(NVAPIWrapper.NVAPIRectDto)">
+            <summary>
+            Determine whether this instance equals another rectangle DTO.
+            </summary>
+            <param name="other">The other DTO to compare.</param>
+            <returns>True if the DTOs are equal; otherwise false.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIRectDto.Equals(System.Object)">
+            <summary>
+            Determine whether this instance equals another object.
+            </summary>
+            <param name="obj">The object to compare.</param>
+            <returns>True if the object is an equivalent DTO; otherwise false.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIRectDto.GetHashCode">
+            <summary>
+            Get a hash code for this instance.
+            </summary>
+            <returns>Hash code for this instance.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIRectDto.op_Equality(NVAPIWrapper.NVAPIRectDto,NVAPIWrapper.NVAPIRectDto)">
+            <summary>
+            Determine whether two rectangle DTOs are equal.
+            </summary>
+            <param name="left">Left DTO.</param>
+            <param name="right">Right DTO.</param>
+            <returns>True if the DTOs are equal; otherwise false.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIRectDto.op_Inequality(NVAPIWrapper.NVAPIRectDto,NVAPIWrapper.NVAPIRectDto)">
+            <summary>
+            Determine whether two rectangle DTOs are not equal.
+            </summary>
+            <param name="left">Left DTO.</param>
+            <param name="right">Right DTO.</param>
+            <returns>True if the DTOs are not equal; otherwise false.</returns>
+        </member>
         <member name="T:NVAPIWrapper.NVAPIMosaicViewportsDto">
             <summary>
             Mosaic viewport list DTO.
             </summary>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIMosaicViewportsDto.#ctor(NVAPIWrapper.NVAPIRectDto[],System.Boolean)">
+            <summary>
+            Create a Mosaic viewports DTO.
+            </summary>
+            <param name="viewports">Viewport rectangles.</param>
+            <param name="bezelCorrected">Whether viewports are bezel corrected.</param>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIMosaicViewportsDto.Equals(NVAPIWrapper.NVAPIMosaicViewportsDto)">
+            <summary>
+            Determine whether this instance equals another Mosaic viewports DTO.
+            </summary>
+            <param name="other">The other DTO to compare.</param>
+            <returns>True if the DTOs are equal; otherwise false.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIMosaicViewportsDto.Equals(System.Object)">
+            <summary>
+            Determine whether this instance equals another object.
+            </summary>
+            <param name="obj">The object to compare.</param>
+            <returns>True if the object is an equivalent DTO; otherwise false.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIMosaicViewportsDto.GetHashCode">
+            <summary>
+            Get a hash code for this instance.
+            </summary>
+            <returns>Hash code for this instance.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIMosaicViewportsDto.op_Equality(NVAPIWrapper.NVAPIMosaicViewportsDto,NVAPIWrapper.NVAPIMosaicViewportsDto)">
+            <summary>
+            Determine whether two Mosaic viewports DTOs are equal.
+            </summary>
+            <param name="left">Left DTO.</param>
+            <param name="right">Right DTO.</param>
+            <returns>True if the DTOs are equal; otherwise false.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIMosaicViewportsDto.op_Inequality(NVAPIWrapper.NVAPIMosaicViewportsDto,NVAPIWrapper.NVAPIMosaicViewportsDto)">
+            <summary>
+            Determine whether two Mosaic viewports DTOs are not equal.
+            </summary>
+            <param name="left">Left DTO.</param>
+            <param name="right">Right DTO.</param>
+            <returns>True if the DTOs are not equal; otherwise false.</returns>
         </member>
         <member name="T:NVAPIWrapper.NV_MOSAIC_GPU_LAYOUT_CELL">
             <summary>Represents a Mosaic GPU layout cell entry.</summary>
@@ -4781,45 +6835,580 @@
             DTO for G-Sync capabilities.
             </summary>
         </member>
+        <member name="M:NVAPIWrapper.NVAPIGSyncCapabilitiesDto.#ctor(System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.Boolean,System.UInt32)">
+            <summary>
+            Create a G-Sync capabilities DTO.
+            </summary>
+            <param name="boardId">Board identifier.</param>
+            <param name="revision">Revision value.</param>
+            <param name="capFlags">Capability flags.</param>
+            <param name="extendedRevision">Extended revision value.</param>
+            <param name="isMulDivSupported">Whether mul/div is supported.</param>
+            <param name="maxMulDivValue">Maximum mul/div value.</param>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIGSyncCapabilitiesDto.FromNative(NVAPIWrapper._NV_GSYNC_CAPABILITIES_V3)">
+            <summary>
+            Create a G-Sync capabilities DTO from native data.
+            </summary>
+            <param name="native">Native capabilities data.</param>
+            <returns>G-Sync capabilities DTO.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIGSyncCapabilitiesDto.ToNative">
+            <summary>
+            Convert this DTO to native capabilities data.
+            </summary>
+            <returns>Native capabilities data.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIGSyncCapabilitiesDto.Equals(NVAPIWrapper.NVAPIGSyncCapabilitiesDto)">
+            <summary>
+            Determine whether this instance equals another G-Sync capabilities DTO.
+            </summary>
+            <param name="other">The other DTO to compare.</param>
+            <returns>True if the DTOs are equal; otherwise false.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIGSyncCapabilitiesDto.Equals(System.Object)">
+            <summary>
+            Determine whether this instance equals another object.
+            </summary>
+            <param name="obj">The object to compare.</param>
+            <returns>True if the object is an equivalent DTO; otherwise false.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIGSyncCapabilitiesDto.GetHashCode">
+            <summary>
+            Get a hash code for this instance.
+            </summary>
+            <returns>Hash code for this instance.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIGSyncCapabilitiesDto.op_Equality(NVAPIWrapper.NVAPIGSyncCapabilitiesDto,NVAPIWrapper.NVAPIGSyncCapabilitiesDto)">
+            <summary>
+            Determine whether two G-Sync capabilities DTOs are equal.
+            </summary>
+            <param name="left">Left DTO.</param>
+            <param name="right">Right DTO.</param>
+            <returns>True if the DTOs are equal; otherwise false.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIGSyncCapabilitiesDto.op_Inequality(NVAPIWrapper.NVAPIGSyncCapabilitiesDto,NVAPIWrapper.NVAPIGSyncCapabilitiesDto)">
+            <summary>
+            Determine whether two G-Sync capabilities DTOs are not equal.
+            </summary>
+            <param name="left">Left DTO.</param>
+            <param name="right">Right DTO.</param>
+            <returns>True if the DTOs are not equal; otherwise false.</returns>
+        </member>
         <member name="T:NVAPIWrapper.NVAPIGSyncGpuDto">
             <summary>
             DTO for a G-Sync GPU entry in topology.
             </summary>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIGSyncGpuDto.#ctor(NVAPIWrapper.NVAPIPhysicalGpuHelper,NVAPIWrapper._NVAPI_GSYNC_GPU_TOPOLOGY_CONNECTOR,NVAPIWrapper.NVAPIPhysicalGpuHelper,System.Boolean)">
+            <summary>
+            Create a G-Sync GPU DTO.
+            </summary>
+            <param name="physicalGpu">Physical GPU helper.</param>
+            <param name="connector">Topology connector.</param>
+            <param name="proxyPhysicalGpu">Proxy physical GPU helper.</param>
+            <param name="isSynced">Whether the GPU is synced.</param>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIGSyncGpuDto.FromNative(NVAPIWrapper.NVAPIApiHelper,NVAPIWrapper._NV_GSYNC_GPU)">
+            <summary>
+            Create a G-Sync GPU DTO from native data.
+            </summary>
+            <param name="apiHelper">API helper owning GPU helpers.</param>
+            <param name="native">Native GPU data.</param>
+            <returns>G-Sync GPU DTO.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIGSyncGpuDto.FromNative(NVAPIWrapper.NVAPIApiHelper,NVAPIWrapper._NV_GSYNC_GPU*,System.Int32)">
+            <summary>
+            Create G-Sync GPU DTOs from a native array.
+            </summary>
+            <param name="apiHelper">API helper owning GPU helpers.</param>
+            <param name="native">Native GPU array pointer.</param>
+            <param name="count">Number of entries.</param>
+            <returns>G-Sync GPU DTO array.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIGSyncGpuDto.ToNative">
+            <summary>
+            Convert this DTO to native GPU data.
+            </summary>
+            <returns>Native GPU data.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIGSyncGpuDto.Equals(NVAPIWrapper.NVAPIGSyncGpuDto)">
+            <summary>
+            Determine whether this instance equals another G-Sync GPU DTO.
+            </summary>
+            <param name="other">The other DTO to compare.</param>
+            <returns>True if the DTOs are equal; otherwise false.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIGSyncGpuDto.Equals(System.Object)">
+            <summary>
+            Determine whether this instance equals another object.
+            </summary>
+            <param name="obj">The object to compare.</param>
+            <returns>True if the object is an equivalent DTO; otherwise false.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIGSyncGpuDto.GetHashCode">
+            <summary>
+            Get a hash code for this instance.
+            </summary>
+            <returns>Hash code for this instance.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIGSyncGpuDto.op_Equality(NVAPIWrapper.NVAPIGSyncGpuDto,NVAPIWrapper.NVAPIGSyncGpuDto)">
+            <summary>
+            Determine whether two G-Sync GPU DTOs are equal.
+            </summary>
+            <param name="left">Left DTO.</param>
+            <param name="right">Right DTO.</param>
+            <returns>True if the DTOs are equal; otherwise false.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIGSyncGpuDto.op_Inequality(NVAPIWrapper.NVAPIGSyncGpuDto,NVAPIWrapper.NVAPIGSyncGpuDto)">
+            <summary>
+            Determine whether two G-Sync GPU DTOs are not equal.
+            </summary>
+            <param name="left">Left DTO.</param>
+            <param name="right">Right DTO.</param>
+            <returns>True if the DTOs are not equal; otherwise false.</returns>
         </member>
         <member name="T:NVAPIWrapper.NVAPIGSyncDisplayDto">
             <summary>
             DTO for a G-Sync display entry in topology.
             </summary>
         </member>
+        <member name="M:NVAPIWrapper.NVAPIGSyncDisplayDto.#ctor(System.UInt32,System.Boolean,NVAPIWrapper._NVAPI_GSYNC_DISPLAY_SYNC_STATE)">
+            <summary>
+            Create a G-Sync display DTO.
+            </summary>
+            <param name="displayId">Display identifier.</param>
+            <param name="isMasterable">Whether the display is masterable.</param>
+            <param name="syncState">Display sync state.</param>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIGSyncDisplayDto.FromNative(NVAPIWrapper._NV_GSYNC_DISPLAY)">
+            <summary>
+            Create a G-Sync display DTO from native data.
+            </summary>
+            <param name="native">Native display data.</param>
+            <returns>G-Sync display DTO.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIGSyncDisplayDto.FromNative(NVAPIWrapper._NV_GSYNC_DISPLAY*,System.Int32)">
+            <summary>
+            Create G-Sync display DTOs from a native array.
+            </summary>
+            <param name="native">Native display array pointer.</param>
+            <param name="count">Number of entries.</param>
+            <returns>G-Sync display DTO array.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIGSyncDisplayDto.ToNative">
+            <summary>
+            Convert this DTO to native display data.
+            </summary>
+            <returns>Native display data.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIGSyncDisplayDto.Equals(NVAPIWrapper.NVAPIGSyncDisplayDto)">
+            <summary>
+            Determine whether this instance equals another G-Sync display DTO.
+            </summary>
+            <param name="other">The other DTO to compare.</param>
+            <returns>True if the DTOs are equal; otherwise false.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIGSyncDisplayDto.Equals(System.Object)">
+            <summary>
+            Determine whether this instance equals another object.
+            </summary>
+            <param name="obj">The object to compare.</param>
+            <returns>True if the object is an equivalent DTO; otherwise false.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIGSyncDisplayDto.GetHashCode">
+            <summary>
+            Get a hash code for this instance.
+            </summary>
+            <returns>Hash code for this instance.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIGSyncDisplayDto.op_Equality(NVAPIWrapper.NVAPIGSyncDisplayDto,NVAPIWrapper.NVAPIGSyncDisplayDto)">
+            <summary>
+            Determine whether two G-Sync display DTOs are equal.
+            </summary>
+            <param name="left">Left DTO.</param>
+            <param name="right">Right DTO.</param>
+            <returns>True if the DTOs are equal; otherwise false.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIGSyncDisplayDto.op_Inequality(NVAPIWrapper.NVAPIGSyncDisplayDto,NVAPIWrapper.NVAPIGSyncDisplayDto)">
+            <summary>
+            Determine whether two G-Sync display DTOs are not equal.
+            </summary>
+            <param name="left">Left DTO.</param>
+            <param name="right">Right DTO.</param>
+            <returns>True if the DTOs are not equal; otherwise false.</returns>
+        </member>
         <member name="T:NVAPIWrapper.NVAPIGSyncTopologyDto">
             <summary>
             DTO for G-Sync topology results.
             </summary>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIGSyncTopologyDto.#ctor(NVAPIWrapper.NVAPIGSyncGpuDto[],NVAPIWrapper.NVAPIGSyncDisplayDto[])">
+            <summary>
+            Create a G-Sync topology DTO.
+            </summary>
+            <param name="gpus">GPU entries.</param>
+            <param name="displays">Display entries.</param>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIGSyncTopologyDto.Equals(NVAPIWrapper.NVAPIGSyncTopologyDto)">
+            <summary>
+            Determine whether this instance equals another G-Sync topology DTO.
+            </summary>
+            <param name="other">The other DTO to compare.</param>
+            <returns>True if the DTOs are equal; otherwise false.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIGSyncTopologyDto.Equals(System.Object)">
+            <summary>
+            Determine whether this instance equals another object.
+            </summary>
+            <param name="obj">The object to compare.</param>
+            <returns>True if the object is an equivalent DTO; otherwise false.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIGSyncTopologyDto.GetHashCode">
+            <summary>
+            Get a hash code for this instance.
+            </summary>
+            <returns>Hash code for this instance.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIGSyncTopologyDto.op_Equality(NVAPIWrapper.NVAPIGSyncTopologyDto,NVAPIWrapper.NVAPIGSyncTopologyDto)">
+            <summary>
+            Determine whether two G-Sync topology DTOs are equal.
+            </summary>
+            <param name="left">Left DTO.</param>
+            <param name="right">Right DTO.</param>
+            <returns>True if the DTOs are equal; otherwise false.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIGSyncTopologyDto.op_Inequality(NVAPIWrapper.NVAPIGSyncTopologyDto,NVAPIWrapper.NVAPIGSyncTopologyDto)">
+            <summary>
+            Determine whether two G-Sync topology DTOs are not equal.
+            </summary>
+            <param name="left">Left DTO.</param>
+            <param name="right">Right DTO.</param>
+            <returns>True if the DTOs are not equal; otherwise false.</returns>
         </member>
         <member name="T:NVAPIWrapper.NVAPIGSyncDelayDto">
             <summary>
             DTO for G-Sync delay.
             </summary>
         </member>
+        <member name="M:NVAPIWrapper.NVAPIGSyncDelayDto.#ctor(System.UInt32,System.UInt32,System.UInt32,System.UInt32)">
+            <summary>
+            Create a G-Sync delay DTO.
+            </summary>
+            <param name="numLines">Number of lines.</param>
+            <param name="numPixels">Number of pixels.</param>
+            <param name="maxLines">Maximum lines.</param>
+            <param name="minPixels">Minimum pixels.</param>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIGSyncDelayDto.FromNative(NVAPIWrapper._NV_GSYNC_DELAY)">
+            <summary>
+            Create a G-Sync delay DTO from native data.
+            </summary>
+            <param name="native">Native delay data.</param>
+            <returns>G-Sync delay DTO.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIGSyncDelayDto.ToNative">
+            <summary>
+            Convert this DTO to native delay data.
+            </summary>
+            <returns>Native delay data.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIGSyncDelayDto.Equals(NVAPIWrapper.NVAPIGSyncDelayDto)">
+            <summary>
+            Determine whether this instance equals another G-Sync delay DTO.
+            </summary>
+            <param name="other">The other DTO to compare.</param>
+            <returns>True if the DTOs are equal; otherwise false.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIGSyncDelayDto.Equals(System.Object)">
+            <summary>
+            Determine whether this instance equals another object.
+            </summary>
+            <param name="obj">The object to compare.</param>
+            <returns>True if the object is an equivalent DTO; otherwise false.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIGSyncDelayDto.GetHashCode">
+            <summary>
+            Get a hash code for this instance.
+            </summary>
+            <returns>Hash code for this instance.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIGSyncDelayDto.op_Equality(NVAPIWrapper.NVAPIGSyncDelayDto,NVAPIWrapper.NVAPIGSyncDelayDto)">
+            <summary>
+            Determine whether two G-Sync delay DTOs are equal.
+            </summary>
+            <param name="left">Left DTO.</param>
+            <param name="right">Right DTO.</param>
+            <returns>True if the DTOs are equal; otherwise false.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIGSyncDelayDto.op_Inequality(NVAPIWrapper.NVAPIGSyncDelayDto,NVAPIWrapper.NVAPIGSyncDelayDto)">
+            <summary>
+            Determine whether two G-Sync delay DTOs are not equal.
+            </summary>
+            <param name="left">Left DTO.</param>
+            <param name="right">Right DTO.</param>
+            <returns>True if the DTOs are not equal; otherwise false.</returns>
+        </member>
         <member name="T:NVAPIWrapper.NVAPIGSyncAdjustedDelayDto">
             <summary>
             DTO for adjusted delay results.
             </summary>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIGSyncAdjustedDelayDto.#ctor(NVAPIWrapper.NVAPIGSyncDelayDto,System.UInt32)">
+            <summary>
+            Create a G-Sync adjusted delay DTO.
+            </summary>
+            <param name="delay">Delay values.</param>
+            <param name="syncSteps">Sync steps.</param>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIGSyncAdjustedDelayDto.Equals(NVAPIWrapper.NVAPIGSyncAdjustedDelayDto)">
+            <summary>
+            Determine whether this instance equals another G-Sync adjusted delay DTO.
+            </summary>
+            <param name="other">The other DTO to compare.</param>
+            <returns>True if the DTOs are equal; otherwise false.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIGSyncAdjustedDelayDto.Equals(System.Object)">
+            <summary>
+            Determine whether this instance equals another object.
+            </summary>
+            <param name="obj">The object to compare.</param>
+            <returns>True if the object is an equivalent DTO; otherwise false.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIGSyncAdjustedDelayDto.GetHashCode">
+            <summary>
+            Get a hash code for this instance.
+            </summary>
+            <returns>Hash code for this instance.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIGSyncAdjustedDelayDto.op_Equality(NVAPIWrapper.NVAPIGSyncAdjustedDelayDto,NVAPIWrapper.NVAPIGSyncAdjustedDelayDto)">
+            <summary>
+            Determine whether two G-Sync adjusted delay DTOs are equal.
+            </summary>
+            <param name="left">Left DTO.</param>
+            <param name="right">Right DTO.</param>
+            <returns>True if the DTOs are equal; otherwise false.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIGSyncAdjustedDelayDto.op_Inequality(NVAPIWrapper.NVAPIGSyncAdjustedDelayDto,NVAPIWrapper.NVAPIGSyncAdjustedDelayDto)">
+            <summary>
+            Determine whether two G-Sync adjusted delay DTOs are not equal.
+            </summary>
+            <param name="left">Left DTO.</param>
+            <param name="right">Right DTO.</param>
+            <returns>True if the DTOs are not equal; otherwise false.</returns>
         </member>
         <member name="T:NVAPIWrapper.NVAPIGSyncControlParametersDto">
             <summary>
             DTO for G-Sync control parameters.
             </summary>
         </member>
+        <member name="M:NVAPIWrapper.NVAPIGSyncControlParametersDto.#ctor(NVAPIWrapper._NVAPI_GSYNC_POLARITY,NVAPIWrapper._NVAPI_GSYNC_VIDEO_MODE,System.UInt32,NVAPIWrapper._NVAPI_GSYNC_SYNC_SOURCE,System.Boolean,System.Boolean,NVAPIWrapper.NVAPIGSyncDelayDto,NVAPIWrapper.NVAPIGSyncDelayDto,NVAPIWrapper._NVAPI_GSYNC_MULTIPLY_DIVIDE_MODE,System.Byte)">
+            <summary>
+            Create a G-Sync control parameters DTO.
+            </summary>
+            <param name="polarity">Sync polarity.</param>
+            <param name="videoMode">Video mode.</param>
+            <param name="interval">Sync interval.</param>
+            <param name="source">Sync source.</param>
+            <param name="interlaceMode">Whether interlace mode is enabled.</param>
+            <param name="syncSourceIsOutput">Whether the sync source is the output.</param>
+            <param name="syncSkew">Sync skew delay.</param>
+            <param name="startupDelay">Startup delay.</param>
+            <param name="multiplyDivideMode">Multiply/divide mode.</param>
+            <param name="multiplyDivideValue">Multiply/divide value.</param>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIGSyncControlParametersDto.FromNative(NVAPIWrapper._NV_GSYNC_CONTROL_PARAMS_V2)">
+            <summary>
+            Create a G-Sync control parameters DTO from native data.
+            </summary>
+            <param name="native">Native control parameters data.</param>
+            <returns>G-Sync control parameters DTO.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIGSyncControlParametersDto.ToNative">
+            <summary>
+            Convert this DTO to native control parameters data.
+            </summary>
+            <returns>Native control parameters data.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIGSyncControlParametersDto.Equals(NVAPIWrapper.NVAPIGSyncControlParametersDto)">
+            <summary>
+            Determine whether this instance equals another G-Sync control parameters DTO.
+            </summary>
+            <param name="other">The other DTO to compare.</param>
+            <returns>True if the DTOs are equal; otherwise false.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIGSyncControlParametersDto.Equals(System.Object)">
+            <summary>
+            Determine whether this instance equals another object.
+            </summary>
+            <param name="obj">The object to compare.</param>
+            <returns>True if the object is an equivalent DTO; otherwise false.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIGSyncControlParametersDto.GetHashCode">
+            <summary>
+            Get a hash code for this instance.
+            </summary>
+            <returns>Hash code for this instance.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIGSyncControlParametersDto.op_Equality(NVAPIWrapper.NVAPIGSyncControlParametersDto,NVAPIWrapper.NVAPIGSyncControlParametersDto)">
+            <summary>
+            Determine whether two G-Sync control parameters DTOs are equal.
+            </summary>
+            <param name="left">Left DTO.</param>
+            <param name="right">Right DTO.</param>
+            <returns>True if the DTOs are equal; otherwise false.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIGSyncControlParametersDto.op_Inequality(NVAPIWrapper.NVAPIGSyncControlParametersDto,NVAPIWrapper.NVAPIGSyncControlParametersDto)">
+            <summary>
+            Determine whether two G-Sync control parameters DTOs are not equal.
+            </summary>
+            <param name="left">Left DTO.</param>
+            <param name="right">Right DTO.</param>
+            <returns>True if the DTOs are not equal; otherwise false.</returns>
+        </member>
         <member name="T:NVAPIWrapper.NVAPIGSyncSyncStatusDto">
             <summary>
             DTO for sync status.
             </summary>
         </member>
+        <member name="M:NVAPIWrapper.NVAPIGSyncSyncStatusDto.#ctor(System.Boolean,System.Boolean,System.Boolean)">
+            <summary>
+            Create a G-Sync sync status DTO.
+            </summary>
+            <param name="isSynced">Whether sync is active.</param>
+            <param name="isStereoSynced">Whether stereo sync is active.</param>
+            <param name="isSyncSignalAvailable">Whether a sync signal is available.</param>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIGSyncSyncStatusDto.FromNative(NVAPIWrapper._NV_GSYNC_STATUS)">
+            <summary>
+            Create a G-Sync sync status DTO from native data.
+            </summary>
+            <param name="native">Native sync status data.</param>
+            <returns>G-Sync sync status DTO.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIGSyncSyncStatusDto.ToNative">
+            <summary>
+            Convert this DTO to native sync status data.
+            </summary>
+            <returns>Native sync status data.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIGSyncSyncStatusDto.Equals(NVAPIWrapper.NVAPIGSyncSyncStatusDto)">
+            <summary>
+            Determine whether this instance equals another G-Sync sync status DTO.
+            </summary>
+            <param name="other">The other DTO to compare.</param>
+            <returns>True if the DTOs are equal; otherwise false.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIGSyncSyncStatusDto.Equals(System.Object)">
+            <summary>
+            Determine whether this instance equals another object.
+            </summary>
+            <param name="obj">The object to compare.</param>
+            <returns>True if the object is an equivalent DTO; otherwise false.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIGSyncSyncStatusDto.GetHashCode">
+            <summary>
+            Get a hash code for this instance.
+            </summary>
+            <returns>Hash code for this instance.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIGSyncSyncStatusDto.op_Equality(NVAPIWrapper.NVAPIGSyncSyncStatusDto,NVAPIWrapper.NVAPIGSyncSyncStatusDto)">
+            <summary>
+            Determine whether two G-Sync sync status DTOs are equal.
+            </summary>
+            <param name="left">Left DTO.</param>
+            <param name="right">Right DTO.</param>
+            <returns>True if the DTOs are equal; otherwise false.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIGSyncSyncStatusDto.op_Inequality(NVAPIWrapper.NVAPIGSyncSyncStatusDto,NVAPIWrapper.NVAPIGSyncSyncStatusDto)">
+            <summary>
+            Determine whether two G-Sync sync status DTOs are not equal.
+            </summary>
+            <param name="left">Left DTO.</param>
+            <param name="right">Right DTO.</param>
+            <returns>True if the DTOs are not equal; otherwise false.</returns>
+        </member>
         <member name="T:NVAPIWrapper.NVAPIGSyncStatusParametersDto">
             <summary>
             DTO for G-Sync status parameters.
             </summary>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIGSyncStatusParametersDto.#ctor(System.UInt32,NVAPIWrapper._NVAPI_GSYNC_RJ45_IO[],System.UInt32[],System.UInt32,System.Boolean,System.Boolean)">
+            <summary>
+            Create a G-Sync status parameters DTO.
+            </summary>
+            <param name="refreshRate">Refresh rate.</param>
+            <param name="rj45Io">RJ45 IO values.</param>
+            <param name="rj45Ethernet">RJ45 ethernet values.</param>
+            <param name="houseSyncIncoming">House sync incoming value.</param>
+            <param name="isHouseSyncConnected">Whether house sync is connected.</param>
+            <param name="isInternalSlave">Whether this device is an internal slave.</param>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIGSyncStatusParametersDto.FromNative(NVAPIWrapper._NV_GSYNC_STATUS_PARAMS_V2)">
+            <summary>
+            Create a G-Sync status parameters DTO from native data.
+            </summary>
+            <param name="native">Native status parameters data.</param>
+            <returns>G-Sync status parameters DTO.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIGSyncStatusParametersDto.ToNative">
+            <summary>
+            Convert this DTO to native status parameters data.
+            </summary>
+            <returns>Native status parameters data.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIGSyncStatusParametersDto.Equals(NVAPIWrapper.NVAPIGSyncStatusParametersDto)">
+            <summary>
+            Determine whether this instance equals another G-Sync status parameters DTO.
+            </summary>
+            <param name="other">The other DTO to compare.</param>
+            <returns>True if the DTOs are equal; otherwise false.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIGSyncStatusParametersDto.Equals(System.Object)">
+            <summary>
+            Determine whether this instance equals another object.
+            </summary>
+            <param name="obj">The object to compare.</param>
+            <returns>True if the object is an equivalent DTO; otherwise false.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIGSyncStatusParametersDto.GetHashCode">
+            <summary>
+            Get a hash code for this instance.
+            </summary>
+            <returns>Hash code for this instance.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIGSyncStatusParametersDto.op_Equality(NVAPIWrapper.NVAPIGSyncStatusParametersDto,NVAPIWrapper.NVAPIGSyncStatusParametersDto)">
+            <summary>
+            Determine whether two G-Sync status parameters DTOs are equal.
+            </summary>
+            <param name="left">Left DTO.</param>
+            <param name="right">Right DTO.</param>
+            <returns>True if the DTOs are equal; otherwise false.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIGSyncStatusParametersDto.op_Inequality(NVAPIWrapper.NVAPIGSyncStatusParametersDto,NVAPIWrapper.NVAPIGSyncStatusParametersDto)">
+            <summary>
+            Determine whether two G-Sync status parameters DTOs are not equal.
+            </summary>
+            <param name="left">Left DTO.</param>
+            <param name="right">Right DTO.</param>
+            <returns>True if the DTOs are not equal; otherwise false.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIGSyncDtoHelpers.SequenceEquals``1(``0[],``0[])">
+            <summary>
+            Compare two arrays for equality using the default comparer.
+            </summary>
+            <typeparam name="T">Element type.</typeparam>
+            <param name="left">Left array.</param>
+            <param name="right">Right array.</param>
+            <returns>True if both arrays are equal; otherwise false.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIGSyncDtoHelpers.SequenceHashCode``1(``0[])">
+            <summary>
+            Compute a hash code for an array using the default comparer.
+            </summary>
+            <typeparam name="T">Element type.</typeparam>
+            <param name="values">Array values.</param>
+            <returns>Hash code for the array contents.</returns>
         </member>
         <member name="T:NVAPIWrapper.NV_TIMING_FLAG">
             <summary>Used in NvAPI_DISP_GetTiming.</summary>
@@ -5112,6 +7701,72 @@
             <summary>
             VIO capabilities DTO.
             </summary>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIVioCapsDto.#ctor(System.String,System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32,NVAPIWrapper._NVVIOOWNERTYPE)">
+            <summary>
+            Create a VIO capabilities DTO.
+            </summary>
+            <param name="adapterName">Adapter name.</param>
+            <param name="adapterClass">Adapter class.</param>
+            <param name="adapterCaps">Adapter capability flags.</param>
+            <param name="dipSwitch">DIP switch value.</param>
+            <param name="dipSwitchReserved">Reserved DIP switch value.</param>
+            <param name="boardId">Board identifier.</param>
+            <param name="driverMajorVersion">Driver major version.</param>
+            <param name="driverMinorVersion">Driver minor version.</param>
+            <param name="firmwareMajorVersion">Firmware major version.</param>
+            <param name="firmwareMinorVersion">Firmware minor version.</param>
+            <param name="ownerId">Owner identifier.</param>
+            <param name="ownerType">Owner type.</param>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIVioCapsDto.FromNative(NVAPIWrapper._NVVIOCAPS)">
+            <summary>
+            Create a VIO capabilities DTO from native data.
+            </summary>
+            <param name="native">Native capabilities data.</param>
+            <returns>VIO capabilities DTO.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIVioCapsDto.ToNative">
+            <summary>
+            Convert this DTO to native capabilities data.
+            </summary>
+            <returns>Native capabilities data.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIVioCapsDto.Equals(NVAPIWrapper.NVAPIVioCapsDto)">
+            <summary>
+            Determine whether this instance equals another VIO capabilities DTO.
+            </summary>
+            <param name="other">The other DTO to compare.</param>
+            <returns>True if the DTOs are equal; otherwise false.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIVioCapsDto.Equals(System.Object)">
+            <summary>
+            Determine whether this instance equals another object.
+            </summary>
+            <param name="obj">The object to compare.</param>
+            <returns>True if the object is an equivalent DTO; otherwise false.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIVioCapsDto.GetHashCode">
+            <summary>
+            Get a hash code for this instance.
+            </summary>
+            <returns>Hash code for this instance.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIVioCapsDto.op_Equality(NVAPIWrapper.NVAPIVioCapsDto,NVAPIWrapper.NVAPIVioCapsDto)">
+            <summary>
+            Determine whether two VIO capabilities DTOs are equal.
+            </summary>
+            <param name="left">Left DTO.</param>
+            <param name="right">Right DTO.</param>
+            <returns>True if the DTOs are equal; otherwise false.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIVioCapsDto.op_Inequality(NVAPIWrapper.NVAPIVioCapsDto,NVAPIWrapper.NVAPIVioCapsDto)">
+            <summary>
+            Determine whether two VIO capabilities DTOs are not equal.
+            </summary>
+            <param name="left">Left DTO.</param>
+            <param name="right">Right DTO.</param>
+            <returns>True if the DTOs are not equal; otherwise false.</returns>
         </member>
         <member name="T:NVAPIWrapper.NVAPIVioPciInfoDto">
             <summary>

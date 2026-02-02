@@ -984,6 +984,21 @@ namespace NVAPIWrapper
         public uint OwnerId { get; }
         public _NVVIOOWNERTYPE OwnerType { get; }
 
+        /// <summary>
+        /// Create a VIO capabilities DTO.
+        /// </summary>
+        /// <param name="adapterName">Adapter name.</param>
+        /// <param name="adapterClass">Adapter class.</param>
+        /// <param name="adapterCaps">Adapter capability flags.</param>
+        /// <param name="dipSwitch">DIP switch value.</param>
+        /// <param name="dipSwitchReserved">Reserved DIP switch value.</param>
+        /// <param name="boardId">Board identifier.</param>
+        /// <param name="driverMajorVersion">Driver major version.</param>
+        /// <param name="driverMinorVersion">Driver minor version.</param>
+        /// <param name="firmwareMajorVersion">Firmware major version.</param>
+        /// <param name="firmwareMinorVersion">Firmware minor version.</param>
+        /// <param name="ownerId">Owner identifier.</param>
+        /// <param name="ownerType">Owner type.</param>
         public NVAPIVioCapsDto(
             string adapterName,
             uint adapterClass,
@@ -1012,6 +1027,11 @@ namespace NVAPIWrapper
             OwnerType = ownerType;
         }
 
+        /// <summary>
+        /// Create a VIO capabilities DTO from native data.
+        /// </summary>
+        /// <param name="native">Native capabilities data.</param>
+        /// <returns>VIO capabilities DTO.</returns>
         public static unsafe NVAPIVioCapsDto FromNative(_NVVIOCAPS native)
         {
             var name = NVAPIApiHelperString.ReadShortString(ref native.adapterName.e0);
@@ -1030,6 +1050,10 @@ namespace NVAPIWrapper
                 native.ownerType);
         }
 
+        /// <summary>
+        /// Convert this DTO to native capabilities data.
+        /// </summary>
+        /// <returns>Native capabilities data.</returns>
         public unsafe _NVVIOCAPS ToNative()
         {
             var native = new _NVVIOCAPS
@@ -1054,6 +1078,11 @@ namespace NVAPIWrapper
             return native;
         }
 
+        /// <summary>
+        /// Determine whether this instance equals another VIO capabilities DTO.
+        /// </summary>
+        /// <param name="other">The other DTO to compare.</param>
+        /// <returns>True if the DTOs are equal; otherwise false.</returns>
         public bool Equals(NVAPIVioCapsDto other)
         {
             return string.Equals(AdapterName, other.AdapterName, StringComparison.Ordinal)
@@ -1070,8 +1099,17 @@ namespace NVAPIWrapper
                 && OwnerType == other.OwnerType;
         }
 
+        /// <summary>
+        /// Determine whether this instance equals another object.
+        /// </summary>
+        /// <param name="obj">The object to compare.</param>
+        /// <returns>True if the object is an equivalent DTO; otherwise false.</returns>
         public override bool Equals(object? obj) => obj is NVAPIVioCapsDto other && Equals(other);
 
+        /// <summary>
+        /// Get a hash code for this instance.
+        /// </summary>
+        /// <returns>Hash code for this instance.</returns>
         public override int GetHashCode()
         {
             unchecked
@@ -1092,7 +1130,20 @@ namespace NVAPIWrapper
             }
         }
 
+        /// <summary>
+        /// Determine whether two VIO capabilities DTOs are equal.
+        /// </summary>
+        /// <param name="left">Left DTO.</param>
+        /// <param name="right">Right DTO.</param>
+        /// <returns>True if the DTOs are equal; otherwise false.</returns>
         public static bool operator ==(NVAPIVioCapsDto left, NVAPIVioCapsDto right) => left.Equals(right);
+
+        /// <summary>
+        /// Determine whether two VIO capabilities DTOs are not equal.
+        /// </summary>
+        /// <param name="left">Left DTO.</param>
+        /// <param name="right">Right DTO.</param>
+        /// <returns>True if the DTOs are not equal; otherwise false.</returns>
         public static bool operator !=(NVAPIVioCapsDto left, NVAPIVioCapsDto right) => !left.Equals(right);
     }
 

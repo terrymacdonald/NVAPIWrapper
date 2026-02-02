@@ -982,6 +982,11 @@ namespace NVAPIWrapper
             return native;
         }
 
+        /// <summary>
+        /// Determine whether this instance and another callback settings instance are equal.
+        /// </summary>
+        /// <param name="other">The other callback settings instance.</param>
+        /// <returns>True if the instances are equal; otherwise, false.</returns>
         public bool Equals(NVAPIEventCallbackSettingsDto other)
         {
             return EventId == other.EventId
@@ -990,9 +995,33 @@ namespace NVAPIWrapper
                 && Callback == other.Callback;
         }
 
+        /// <summary>
+        /// Determine whether this instance and a specified object are equal.
+        /// </summary>
+        /// <param name="obj">The object to compare.</param>
+        /// <returns>True if equal; otherwise, false.</returns>
         public override bool Equals(object? obj) => obj is NVAPIEventCallbackSettingsDto other && Equals(other);
+
+        /// <summary>
+        /// Get a hash code for this instance.
+        /// </summary>
+        /// <returns>A hash code for this instance.</returns>
         public override int GetHashCode() => HashCode.Combine(EventId, CallbackKind, CallbackParam, Callback);
+
+        /// <summary>
+        /// Determine whether two callback settings instances are equal.
+        /// </summary>
+        /// <param name="left">The left instance.</param>
+        /// <param name="right">The right instance.</param>
+        /// <returns>True if the instances are equal; otherwise, false.</returns>
         public static bool operator ==(NVAPIEventCallbackSettingsDto left, NVAPIEventCallbackSettingsDto right) => left.Equals(right);
+
+        /// <summary>
+        /// Determine whether two callback settings instances are not equal.
+        /// </summary>
+        /// <param name="left">The left instance.</param>
+        /// <param name="right">The right instance.</param>
+        /// <returns>True if the instances are not equal; otherwise, false.</returns>
         public static bool operator !=(NVAPIEventCallbackSettingsDto left, NVAPIEventCallbackSettingsDto right) => !left.Equals(right);
     }
 
@@ -1085,6 +1114,11 @@ namespace NVAPIWrapper
                 native.frameGenerationPreset);
         }
 
+        /// <summary>
+        /// Determine whether this instance and another NGX override state instance are equal.
+        /// </summary>
+        /// <param name="other">The other NGX override state instance.</param>
+        /// <returns>True if the instances are equal; otherwise, false.</returns>
         public bool Equals(NVAPINGXOverrideStateDto other)
         {
             return ProcessId == other.ProcessId
@@ -1098,7 +1132,17 @@ namespace NVAPIWrapper
                 && FrameGenerationPreset == other.FrameGenerationPreset;
         }
 
+        /// <summary>
+        /// Determine whether this instance and a specified object are equal.
+        /// </summary>
+        /// <param name="obj">The object to compare.</param>
+        /// <returns>True if equal; otherwise, false.</returns>
         public override bool Equals(object? obj) => obj is NVAPINGXOverrideStateDto other && Equals(other);
+
+        /// <summary>
+        /// Get a hash code for this instance.
+        /// </summary>
+        /// <returns>A hash code for this instance.</returns>
         public override int GetHashCode()
         {
             var hash = new HashCode();
@@ -1114,7 +1158,20 @@ namespace NVAPIWrapper
             return hash.ToHashCode();
         }
 
+        /// <summary>
+        /// Determine whether two NGX override state instances are equal.
+        /// </summary>
+        /// <param name="left">The left instance.</param>
+        /// <param name="right">The right instance.</param>
+        /// <returns>True if the instances are equal; otherwise, false.</returns>
         public static bool operator ==(NVAPINGXOverrideStateDto left, NVAPINGXOverrideStateDto right) => left.Equals(right);
+
+        /// <summary>
+        /// Determine whether two NGX override state instances are not equal.
+        /// </summary>
+        /// <param name="left">The left instance.</param>
+        /// <param name="right">The right instance.</param>
+        /// <returns>True if the instances are not equal; otherwise, false.</returns>
         public static bool operator !=(NVAPINGXOverrideStateDto left, NVAPINGXOverrideStateDto right) => !left.Equals(right);
     }
 
@@ -1153,6 +1210,11 @@ namespace NVAPIWrapper
             return NVAPIApiHelper.CreateNgxOverrideSetParams(this);
         }
 
+        /// <summary>
+        /// Determine whether this instance and another NGX override set instance are equal.
+        /// </summary>
+        /// <param name="other">The other NGX override set instance.</param>
+        /// <returns>True if the instances are equal; otherwise, false.</returns>
         public bool Equals(NVAPINGXOverrideSetDto other)
         {
             return ProcessId == other.ProcessId
@@ -1160,9 +1222,33 @@ namespace NVAPIWrapper
                 && FeedbackMask == other.FeedbackMask;
         }
 
+        /// <summary>
+        /// Determine whether this instance and a specified object are equal.
+        /// </summary>
+        /// <param name="obj">The object to compare.</param>
+        /// <returns>True if equal; otherwise, false.</returns>
         public override bool Equals(object? obj) => obj is NVAPINGXOverrideSetDto other && Equals(other);
+
+        /// <summary>
+        /// Get a hash code for this instance.
+        /// </summary>
+        /// <returns>A hash code for this instance.</returns>
         public override int GetHashCode() => HashCode.Combine(ProcessId, Feature, FeedbackMask);
+
+        /// <summary>
+        /// Determine whether two NGX override set instances are equal.
+        /// </summary>
+        /// <param name="left">The left instance.</param>
+        /// <param name="right">The right instance.</param>
+        /// <returns>True if the instances are equal; otherwise, false.</returns>
         public static bool operator ==(NVAPINGXOverrideSetDto left, NVAPINGXOverrideSetDto right) => left.Equals(right);
+
+        /// <summary>
+        /// Determine whether two NGX override set instances are not equal.
+        /// </summary>
+        /// <param name="left">The left instance.</param>
+        /// <param name="right">The right instance.</param>
+        /// <returns>True if the instances are not equal; otherwise, false.</returns>
         public static bool operator !=(NVAPINGXOverrideSetDto left, NVAPINGXOverrideSetDto right) => !left.Equals(right);
     }
 
@@ -1197,14 +1283,43 @@ namespace NVAPIWrapper
             return NVAPIApiHelper.CreateRiseCallbackSettings(this);
         }
 
+        /// <summary>
+        /// Determine whether this instance and another RISE callback settings instance are equal.
+        /// </summary>
+        /// <param name="other">The other RISE callback settings instance.</param>
+        /// <returns>True if the instances are equal; otherwise, false.</returns>
         public bool Equals(NVAPIRiseCallbackSettingsDto other)
         {
             return CallbackParam == other.CallbackParam && Callback == other.Callback;
         }
 
+        /// <summary>
+        /// Determine whether this instance and a specified object are equal.
+        /// </summary>
+        /// <param name="obj">The object to compare.</param>
+        /// <returns>True if equal; otherwise, false.</returns>
         public override bool Equals(object? obj) => obj is NVAPIRiseCallbackSettingsDto other && Equals(other);
+
+        /// <summary>
+        /// Get a hash code for this instance.
+        /// </summary>
+        /// <returns>A hash code for this instance.</returns>
         public override int GetHashCode() => HashCode.Combine(CallbackParam, Callback);
+
+        /// <summary>
+        /// Determine whether two RISE callback settings instances are equal.
+        /// </summary>
+        /// <param name="left">The left instance.</param>
+        /// <param name="right">The right instance.</param>
+        /// <returns>True if the instances are equal; otherwise, false.</returns>
         public static bool operator ==(NVAPIRiseCallbackSettingsDto left, NVAPIRiseCallbackSettingsDto right) => left.Equals(right);
+
+        /// <summary>
+        /// Determine whether two RISE callback settings instances are not equal.
+        /// </summary>
+        /// <param name="left">The left instance.</param>
+        /// <param name="right">The right instance.</param>
+        /// <returns>True if the instances are not equal; otherwise, false.</returns>
         public static bool operator !=(NVAPIRiseCallbackSettingsDto left, NVAPIRiseCallbackSettingsDto right) => !left.Equals(right);
     }
 
@@ -1256,6 +1371,11 @@ namespace NVAPIWrapper
             return new NVAPIRiseRequestDto(original.ContentType, original.Content, native.completed != 0);
         }
 
+        /// <summary>
+        /// Determine whether this instance and another RISE request instance are equal.
+        /// </summary>
+        /// <param name="other">The other RISE request instance.</param>
+        /// <returns>True if the instances are equal; otherwise, false.</returns>
         public bool Equals(NVAPIRiseRequestDto other)
         {
             return ContentType == other.ContentType
@@ -1263,9 +1383,33 @@ namespace NVAPIWrapper
                 && Completed == other.Completed;
         }
 
+        /// <summary>
+        /// Determine whether this instance and a specified object are equal.
+        /// </summary>
+        /// <param name="obj">The object to compare.</param>
+        /// <returns>True if equal; otherwise, false.</returns>
         public override bool Equals(object? obj) => obj is NVAPIRiseRequestDto other && Equals(other);
+
+        /// <summary>
+        /// Get a hash code for this instance.
+        /// </summary>
+        /// <returns>A hash code for this instance.</returns>
         public override int GetHashCode() => HashCode.Combine(ContentType, Content, Completed);
+
+        /// <summary>
+        /// Determine whether two RISE request instances are equal.
+        /// </summary>
+        /// <param name="left">The left instance.</param>
+        /// <param name="right">The right instance.</param>
+        /// <returns>True if the instances are equal; otherwise, false.</returns>
         public static bool operator ==(NVAPIRiseRequestDto left, NVAPIRiseRequestDto right) => left.Equals(right);
+
+        /// <summary>
+        /// Determine whether two RISE request instances are not equal.
+        /// </summary>
+        /// <param name="left">The left instance.</param>
+        /// <param name="right">The right instance.</param>
+        /// <returns>True if the instances are not equal; otherwise, false.</returns>
         public static bool operator !=(NVAPIRiseRequestDto left, NVAPIRiseRequestDto right) => !left.Equals(right);
     }
 
@@ -1280,22 +1424,41 @@ namespace NVAPIWrapper
         /// <summary>Driver branch string.</summary>
         public string Branch { get; }
 
+        /// <summary>
+        /// Initialize a new instance of the <see cref="NVAPIDriverAndBranchVersionDto"/> struct.
+        /// </summary>
+        /// <param name="driverVersion">Driver version.</param>
+        /// <param name="branch">Driver branch string.</param>
         public NVAPIDriverAndBranchVersionDto(uint driverVersion, string branch)
         {
             DriverVersion = driverVersion;
             Branch = branch ?? string.Empty;
         }
 
+        /// <summary>
+        /// Determine whether this instance and another driver/branch instance are equal.
+        /// </summary>
+        /// <param name="other">The other driver/branch instance.</param>
+        /// <returns>True if the instances are equal; otherwise, false.</returns>
         public bool Equals(NVAPIDriverAndBranchVersionDto other)
         {
             return DriverVersion == other.DriverVersion && string.Equals(Branch, other.Branch, StringComparison.Ordinal);
         }
 
+        /// <summary>
+        /// Determine whether this instance and a specified object are equal.
+        /// </summary>
+        /// <param name="obj">The object to compare.</param>
+        /// <returns>True if equal; otherwise, false.</returns>
         public override bool Equals(object? obj)
         {
             return obj is NVAPIDriverAndBranchVersionDto other && Equals(other);
         }
 
+        /// <summary>
+        /// Get a hash code for this instance.
+        /// </summary>
+        /// <returns>A hash code for this instance.</returns>
         public override int GetHashCode()
         {
             unchecked
@@ -1305,8 +1468,20 @@ namespace NVAPIWrapper
                 return hash;
             }
         }
-
+        /// <summary>
+        /// Determine whether two driver/branch instances are equal.
+        /// </summary>
+        /// <param name="left">The left instance.</param>
+        /// <param name="right">The right instance.</param>
+        /// <returns>True if the instances are equal; otherwise, false.</returns>
         public static bool operator ==(NVAPIDriverAndBranchVersionDto left, NVAPIDriverAndBranchVersionDto right) => left.Equals(right);
+
+        /// <summary>
+        /// Determine whether two driver/branch instances are not equal.
+        /// </summary>
+        /// <param name="left">The left instance.</param>
+        /// <param name="right">The right instance.</param>
+        /// <returns>True if the instances are not equal; otherwise, false.</returns>
         public static bool operator !=(NVAPIDriverAndBranchVersionDto left, NVAPIDriverAndBranchVersionDto right) => !left.Equals(right);
     }
 
@@ -1328,6 +1503,21 @@ namespace NVAPIWrapper
         public uint HbSubSystemVendorId { get; }
         public uint HbSubSystemDeviceId { get; }
 
+        /// <summary>
+        /// Initialize a new instance of the <see cref="NVAPIChipSetInfoDto"/> struct.
+        /// </summary>
+        /// <param name="vendorId">Chipset vendor ID.</param>
+        /// <param name="deviceId">Chipset device ID.</param>
+        /// <param name="vendorName">Chipset vendor name.</param>
+        /// <param name="chipsetName">Chipset name.</param>
+        /// <param name="flags">Chipset flags.</param>
+        /// <param name="subSystemVendorId">Subsystem vendor ID.</param>
+        /// <param name="subSystemDeviceId">Subsystem device ID.</param>
+        /// <param name="subSystemVendorName">Subsystem vendor name.</param>
+        /// <param name="hbVendorId">Host bridge vendor ID.</param>
+        /// <param name="hbDeviceId">Host bridge device ID.</param>
+        /// <param name="hbSubSystemVendorId">Host bridge subsystem vendor ID.</param>
+        /// <param name="hbSubSystemDeviceId">Host bridge subsystem device ID.</param>
         public NVAPIChipSetInfoDto(
             uint vendorId,
             uint deviceId,
@@ -1356,6 +1546,11 @@ namespace NVAPIWrapper
             HbSubSystemDeviceId = hbSubSystemDeviceId;
         }
 
+        /// <summary>
+        /// Create a chipset DTO from the native chipset info struct.
+        /// </summary>
+        /// <param name="native">Native chipset info struct.</param>
+        /// <returns>Chipset info DTO.</returns>
         public static unsafe NVAPIChipSetInfoDto FromNative(NV_CHIPSET_INFO_v4 native)
         {
             var vendorName = NVAPIApiHelperString.ReadShortString(ref native.szVendorName.e0);
@@ -1377,6 +1572,11 @@ namespace NVAPIWrapper
                 native.HBsubSysDeviceId);
         }
 
+        /// <summary>
+        /// Determine whether this instance and another chipset instance are equal.
+        /// </summary>
+        /// <param name="other">The other chipset instance.</param>
+        /// <returns>True if the instances are equal; otherwise, false.</returns>
         public bool Equals(NVAPIChipSetInfoDto other)
         {
             return VendorId == other.VendorId
@@ -1393,8 +1593,17 @@ namespace NVAPIWrapper
                 && HbSubSystemDeviceId == other.HbSubSystemDeviceId;
         }
 
+        /// <summary>
+        /// Determine whether this instance and a specified object are equal.
+        /// </summary>
+        /// <param name="obj">The object to compare.</param>
+        /// <returns>True if equal; otherwise, false.</returns>
         public override bool Equals(object? obj) => obj is NVAPIChipSetInfoDto other && Equals(other);
 
+        /// <summary>
+        /// Get a hash code for this instance.
+        /// </summary>
+        /// <returns>A hash code for this instance.</returns>
         public override int GetHashCode()
         {
             unchecked
@@ -1415,7 +1624,20 @@ namespace NVAPIWrapper
             }
         }
 
+        /// <summary>
+        /// Determine whether two chipset instances are equal.
+        /// </summary>
+        /// <param name="left">The left instance.</param>
+        /// <param name="right">The right instance.</param>
+        /// <returns>True if the instances are equal; otherwise, false.</returns>
         public static bool operator ==(NVAPIChipSetInfoDto left, NVAPIChipSetInfoDto right) => left.Equals(right);
+
+        /// <summary>
+        /// Determine whether two chipset instances are not equal.
+        /// </summary>
+        /// <param name="left">The left instance.</param>
+        /// <param name="right">The right instance.</param>
+        /// <returns>True if the instances are not equal; otherwise, false.</returns>
         public static bool operator !=(NVAPIChipSetInfoDto left, NVAPIChipSetInfoDto right) => !left.Equals(right);
     }
 
@@ -1431,6 +1653,15 @@ namespace NVAPIWrapper
         public uint ForcedLidMechanismPresent { get; }
         public uint ForcedDockMechanismPresent { get; }
 
+        /// <summary>
+        /// Initialize a new instance of the <see cref="NVAPILidAndDockInfoDto"/> struct.
+        /// </summary>
+        /// <param name="currentLidState">Current lid state.</param>
+        /// <param name="currentDockState">Current dock state.</param>
+        /// <param name="currentLidPolicy">Current lid policy.</param>
+        /// <param name="currentDockPolicy">Current dock policy.</param>
+        /// <param name="forcedLidMechanismPresent">Forced lid mechanism flag.</param>
+        /// <param name="forcedDockMechanismPresent">Forced dock mechanism flag.</param>
         public NVAPILidAndDockInfoDto(
             uint currentLidState,
             uint currentDockState,
@@ -1447,6 +1678,11 @@ namespace NVAPIWrapper
             ForcedDockMechanismPresent = forcedDockMechanismPresent;
         }
 
+        /// <summary>
+        /// Create a lid/dock DTO from the native lid/dock struct.
+        /// </summary>
+        /// <param name="native">Native lid/dock struct.</param>
+        /// <returns>Lid/dock info DTO.</returns>
         public static NVAPILidAndDockInfoDto FromNative(NV_LID_DOCK_PARAMS native)
         {
             return new NVAPILidAndDockInfoDto(
@@ -1458,6 +1694,11 @@ namespace NVAPIWrapper
                 native.forcedDockMechanismPresent);
         }
 
+        /// <summary>
+        /// Determine whether this instance and another lid/dock instance are equal.
+        /// </summary>
+        /// <param name="other">The other lid/dock instance.</param>
+        /// <returns>True if the instances are equal; otherwise, false.</returns>
         public bool Equals(NVAPILidAndDockInfoDto other)
         {
             return CurrentLidState == other.CurrentLidState
@@ -1468,8 +1709,17 @@ namespace NVAPIWrapper
                 && ForcedDockMechanismPresent == other.ForcedDockMechanismPresent;
         }
 
+        /// <summary>
+        /// Determine whether this instance and a specified object are equal.
+        /// </summary>
+        /// <param name="obj">The object to compare.</param>
+        /// <returns>True if equal; otherwise, false.</returns>
         public override bool Equals(object? obj) => obj is NVAPILidAndDockInfoDto other && Equals(other);
 
+        /// <summary>
+        /// Get a hash code for this instance.
+        /// </summary>
+        /// <returns>A hash code for this instance.</returns>
         public override int GetHashCode()
         {
             unchecked
@@ -1484,7 +1734,20 @@ namespace NVAPIWrapper
             }
         }
 
+        /// <summary>
+        /// Determine whether two lid/dock instances are equal.
+        /// </summary>
+        /// <param name="left">The left instance.</param>
+        /// <param name="right">The right instance.</param>
+        /// <returns>True if the instances are equal; otherwise, false.</returns>
         public static bool operator ==(NVAPILidAndDockInfoDto left, NVAPILidAndDockInfoDto right) => left.Equals(right);
+
+        /// <summary>
+        /// Determine whether two lid/dock instances are not equal.
+        /// </summary>
+        /// <param name="left">The left instance.</param>
+        /// <param name="right">The right instance.</param>
+        /// <returns>True if the instances are not equal; otherwise, false.</returns>
         public static bool operator !=(NVAPILidAndDockInfoDto left, NVAPILidAndDockInfoDto right) => !left.Equals(right);
     }
 
@@ -1503,6 +1766,18 @@ namespace NVAPIWrapper
         public string BuildBaseBranch { get; }
         public uint ReservedEx { get; }
 
+        /// <summary>
+        /// Initialize a new instance of the <see cref="NVAPIDisplayDriverInfoDto"/> struct.
+        /// </summary>
+        /// <param name="driverVersion">Driver version.</param>
+        /// <param name="buildBranch">Driver build branch.</param>
+        /// <param name="isDchDriver">True if the driver is DCH.</param>
+        /// <param name="isNvidiaStudioPackage">True if the driver is an NVIDIA Studio package.</param>
+        /// <param name="isNvidiaGameReadyPackage">True if the driver is a Game Ready package.</param>
+        /// <param name="isNvidiaRtxProductionBranchPackage">True if the driver is an RTX Production Branch package.</param>
+        /// <param name="isNvidiaRtxNewFeatureBranchPackage">True if the driver is an RTX New Feature Branch package.</param>
+        /// <param name="buildBaseBranch">Driver build base branch.</param>
+        /// <param name="reservedEx">Reserved field value.</param>
         public NVAPIDisplayDriverInfoDto(
             uint driverVersion,
             string buildBranch,
@@ -1525,6 +1800,11 @@ namespace NVAPIWrapper
             ReservedEx = reservedEx;
         }
 
+        /// <summary>
+        /// Create a display driver info DTO from the native display driver info struct.
+        /// </summary>
+        /// <param name="native">Native display driver info struct.</param>
+        /// <returns>Display driver info DTO.</returns>
         public static unsafe NVAPIDisplayDriverInfoDto FromNative(_NV_DISPLAY_DRIVER_INFO_V2 native)
         {
             var buildBranch = NVAPIApiHelperString.ReadShortString(ref native.szBuildBranch.e0);
@@ -1542,6 +1822,11 @@ namespace NVAPIWrapper
                 native.reservedEx);
         }
 
+        /// <summary>
+        /// Determine whether this instance and another display driver info instance are equal.
+        /// </summary>
+        /// <param name="other">The other display driver info instance.</param>
+        /// <returns>True if the instances are equal; otherwise, false.</returns>
         public bool Equals(NVAPIDisplayDriverInfoDto other)
         {
             return DriverVersion == other.DriverVersion
@@ -1555,8 +1840,17 @@ namespace NVAPIWrapper
                 && ReservedEx == other.ReservedEx;
         }
 
+        /// <summary>
+        /// Determine whether this instance and a specified object are equal.
+        /// </summary>
+        /// <param name="obj">The object to compare.</param>
+        /// <returns>True if equal; otherwise, false.</returns>
         public override bool Equals(object? obj) => obj is NVAPIDisplayDriverInfoDto other && Equals(other);
 
+        /// <summary>
+        /// Get a hash code for this instance.
+        /// </summary>
+        /// <returns>A hash code for this instance.</returns>
         public override int GetHashCode()
         {
             unchecked
@@ -1573,8 +1867,20 @@ namespace NVAPIWrapper
                 return hash;
             }
         }
-
+        /// <summary>
+        /// Determine whether two display driver info instances are equal.
+        /// </summary>
+        /// <param name="left">The left instance.</param>
+        /// <param name="right">The right instance.</param>
+        /// <returns>True if the instances are equal; otherwise, false.</returns>
         public static bool operator ==(NVAPIDisplayDriverInfoDto left, NVAPIDisplayDriverInfoDto right) => left.Equals(right);
+
+        /// <summary>
+        /// Determine whether two display driver info instances are not equal.
+        /// </summary>
+        /// <param name="left">The left instance.</param>
+        /// <param name="right">The right instance.</param>
+        /// <returns>True if the instances are not equal; otherwise, false.</returns>
         public static bool operator !=(NVAPIDisplayDriverInfoDto left, NVAPIDisplayDriverInfoDto right) => !left.Equals(right);
     }
 
@@ -1594,18 +1900,38 @@ namespace NVAPIWrapper
             PhysicalGpu = new NVAPIPhysicalGpuHelper(helper, handle);
         }
 
+        /// <summary>
+        /// Create a system physical GPU handle DTO from native handle data.
+        /// </summary>
+        /// <param name="helper">API helper used to wrap the handle.</param>
+        /// <param name="native">Native physical GPU handle data.</param>
+        /// <returns>System physical GPU handle DTO.</returns>
         public static unsafe NVAPISystemPhysicalGpuHandleDto FromNative(NVAPIApiHelper helper, _NV_PHYSICAL_GPU_HANDLE_DATA native)
         {
             return new NVAPISystemPhysicalGpuHandleDto((IntPtr)native.hPhysicalGpu, native.adapterType, helper);
         }
 
+        /// <summary>
+        /// Determine whether this instance and another system physical GPU handle instance are equal.
+        /// </summary>
+        /// <param name="other">The other system physical GPU handle instance.</param>
+        /// <returns>True if the instances are equal; otherwise, false.</returns>
         public bool Equals(NVAPISystemPhysicalGpuHandleDto other)
         {
             return Handle == other.Handle && AdapterType == other.AdapterType;
         }
 
+        /// <summary>
+        /// Determine whether this instance and a specified object are equal.
+        /// </summary>
+        /// <param name="obj">The object to compare.</param>
+        /// <returns>True if equal; otherwise, false.</returns>
         public override bool Equals(object? obj) => obj is NVAPISystemPhysicalGpuHandleDto other && Equals(other);
 
+        /// <summary>
+        /// Get a hash code for this instance.
+        /// </summary>
+        /// <returns>A hash code for this instance.</returns>
         public override int GetHashCode()
         {
             unchecked
@@ -1616,7 +1942,20 @@ namespace NVAPIWrapper
             }
         }
 
+        /// <summary>
+        /// Determine whether two system physical GPU handle instances are equal.
+        /// </summary>
+        /// <param name="left">The left instance.</param>
+        /// <param name="right">The right instance.</param>
+        /// <returns>True if the instances are equal; otherwise, false.</returns>
         public static bool operator ==(NVAPISystemPhysicalGpuHandleDto left, NVAPISystemPhysicalGpuHandleDto right) => left.Equals(right);
+
+        /// <summary>
+        /// Determine whether two system physical GPU handle instances are not equal.
+        /// </summary>
+        /// <param name="left">The left instance.</param>
+        /// <param name="right">The right instance.</param>
+        /// <returns>True if the instances are not equal; otherwise, false.</returns>
         public static bool operator !=(NVAPISystemPhysicalGpuHandleDto left, NVAPISystemPhysicalGpuHandleDto right) => !left.Equals(right);
     }
 
@@ -1636,18 +1975,38 @@ namespace NVAPIWrapper
             LogicalGpu = new NVAPILogicalGpuHelper(helper, handle);
         }
 
+        /// <summary>
+        /// Create a system logical GPU handle DTO from native handle data.
+        /// </summary>
+        /// <param name="helper">API helper used to wrap the handle.</param>
+        /// <param name="native">Native logical GPU handle data.</param>
+        /// <returns>System logical GPU handle DTO.</returns>
         public static unsafe NVAPISystemLogicalGpuHandleDto FromNative(NVAPIApiHelper helper, _NV_LOGICAL_GPU_HANDLE_DATA native)
         {
             return new NVAPISystemLogicalGpuHandleDto((IntPtr)native.hLogicalGpu, native.adapterType, helper);
         }
 
+        /// <summary>
+        /// Determine whether this instance and another system logical GPU handle instance are equal.
+        /// </summary>
+        /// <param name="other">The other system logical GPU handle instance.</param>
+        /// <returns>True if the instances are equal; otherwise, false.</returns>
         public bool Equals(NVAPISystemLogicalGpuHandleDto other)
         {
             return Handle == other.Handle && AdapterType == other.AdapterType;
         }
 
+        /// <summary>
+        /// Determine whether this instance and a specified object are equal.
+        /// </summary>
+        /// <param name="obj">The object to compare.</param>
+        /// <returns>True if equal; otherwise, false.</returns>
         public override bool Equals(object? obj) => obj is NVAPISystemLogicalGpuHandleDto other && Equals(other);
 
+        /// <summary>
+        /// Get a hash code for this instance.
+        /// </summary>
+        /// <returns>A hash code for this instance.</returns>
         public override int GetHashCode()
         {
             unchecked
@@ -1658,12 +2017,30 @@ namespace NVAPIWrapper
             }
         }
 
+        /// <summary>
+        /// Determine whether two system logical GPU handle instances are equal.
+        /// </summary>
+        /// <param name="left">The left instance.</param>
+        /// <param name="right">The right instance.</param>
+        /// <returns>True if the instances are equal; otherwise, false.</returns>
         public static bool operator ==(NVAPISystemLogicalGpuHandleDto left, NVAPISystemLogicalGpuHandleDto right) => left.Equals(right);
+
+        /// <summary>
+        /// Determine whether two system logical GPU handle instances are not equal.
+        /// </summary>
+        /// <param name="left">The left instance.</param>
+        /// <param name="right">The right instance.</param>
+        /// <returns>True if the instances are not equal; otherwise, false.</returns>
         public static bool operator !=(NVAPISystemLogicalGpuHandleDto left, NVAPISystemLogicalGpuHandleDto right) => !left.Equals(right);
     }
 
     internal static class NVAPIApiHelperString
     {
+        /// <summary>
+        /// Read a null-terminated ANSI string from the first character reference.
+        /// </summary>
+        /// <param name="first">Reference to the first character.</param>
+        /// <returns>Managed string value.</returns>
         public static unsafe string ReadShortString(ref sbyte first)
         {
             fixed (sbyte* p = &first)

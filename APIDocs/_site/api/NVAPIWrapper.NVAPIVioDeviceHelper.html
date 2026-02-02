@@ -1,0 +1,931 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class NVAPIVioDeviceHelper | NVAPIWrapper </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class NVAPIVioDeviceHelper | NVAPIWrapper ">
+      
+      <meta name="description" content="Facade helper for a VIO device handle.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/terrymacdonald/NVAPIWrapper/new/main/apiSpec/new?filename=NVAPIWrapper_NVAPIVioDeviceHelper.md&amp;value=---%0Auid%3A%20NVAPIWrapper.NVAPIVioDeviceHelper%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="NVAPIWrapper">
+            NVAPIWrapper
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="NVAPIWrapper.NVAPIVioDeviceHelper">
+
+
+
+  <h1 id="NVAPIWrapper_NVAPIVioDeviceHelper" data-uid="NVAPIWrapper.NVAPIVioDeviceHelper" class="text-break">
+Class NVAPIVioDeviceHelper  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIVideoHelper.cs/#L410"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="NVAPIWrapper.html">NVAPIWrapper</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>NVAPIWrapper.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Facade helper for a VIO device handle.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class NVAPIVioDeviceHelper : IDisposable</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">NVAPIVioDeviceHelper</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="NVAPIWrapper_NVAPIVioDeviceHelper_Close_" data-uid="NVAPIWrapper.NVAPIVioDeviceHelper.Close*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIVioDeviceHelper_Close_System_Boolean_" data-uid="NVAPIWrapper.NVAPIVioDeviceHelper.Close(System.Boolean)">
+  Close(bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIVideoHelper.cs/#L469"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Close the VIO device.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool? Close(bool release = true)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>release</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Release resources.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>?</dt>
+    <dd><p>True if closed, null if unsupported.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIVioDeviceHelper_Dispose_" data-uid="NVAPIWrapper.NVAPIVioDeviceHelper.Dispose*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIVioDeviceHelper_Dispose" data-uid="NVAPIWrapper.NVAPIVioDeviceHelper.Dispose">
+  Dispose()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIVideoHelper.cs/#L896"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Dispose the helper and prevent further use.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Dispose()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIVioDeviceHelper_EnumDataFormats_" data-uid="NVAPIWrapper.NVAPIVioDeviceHelper.EnumDataFormats*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIVioDeviceHelper_EnumDataFormats" data-uid="NVAPIWrapper.NVAPIVioDeviceHelper.EnumDataFormats">
+  EnumDataFormats()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIVideoHelper.cs/#L848"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Enumerate data formats.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NVAPIVioDataFormatDetailDto[]? EnumDataFormats()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="NVAPIWrapper.NVAPIVioDataFormatDetailDto.html">NVAPIVioDataFormatDetailDto</a>[]</dt>
+    <dd><p>Array of data formats, or null if unavailable.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIVioDeviceHelper_EnumSignalFormats_" data-uid="NVAPIWrapper.NVAPIVioDeviceHelper.EnumSignalFormats*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIVioDeviceHelper_EnumSignalFormats" data-uid="NVAPIWrapper.NVAPIVioDeviceHelper.EnumSignalFormats">
+  EnumSignalFormats()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIVideoHelper.cs/#L818"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Enumerate signal formats.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NVAPIVioSignalFormatDetailDto[]? EnumSignalFormats()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="NVAPIWrapper.NVAPIVioSignalFormatDetailDto.html">NVAPIVioSignalFormatDetailDto</a>[]</dt>
+    <dd><p>Array of signal formats, or null if unavailable.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIVioDeviceHelper_GetCapabilities_" data-uid="NVAPIWrapper.NVAPIVioDeviceHelper.GetCapabilities*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIVioDeviceHelper_GetCapabilities" data-uid="NVAPIWrapper.NVAPIVioDeviceHelper.GetCapabilities">
+  GetCapabilities()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIVideoHelper.cs/#L426"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get VIO capabilities.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NVAPIVioCapsDto? GetCapabilities()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="NVAPIWrapper.NVAPIVioCapsDto.html">NVAPIVioCapsDto</a>?</dt>
+    <dd><p>Capabilities DTO, or null if unavailable.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIVioDeviceHelper_GetConfig_" data-uid="NVAPIWrapper.NVAPIVioDeviceHelper.GetConfig*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIVioDeviceHelper_GetConfig" data-uid="NVAPIWrapper.NVAPIVioDeviceHelper.GetConfig">
+  GetConfig()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIVideoHelper.cs/#L530"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get VIO configuration.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NVAPIVioConfigDto? GetConfig()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="NVAPIWrapper.NVAPIVioConfigDto.html">NVAPIVioConfigDto</a>?</dt>
+    <dd><p>Configuration DTO, or null if unavailable.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIVioDeviceHelper_GetCsc_" data-uid="NVAPIWrapper.NVAPIVioDeviceHelper.GetCsc*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIVioDeviceHelper_GetCsc" data-uid="NVAPIWrapper.NVAPIVioDeviceHelper.GetCsc">
+  GetCsc()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIVideoHelper.cs/#L577"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get VIO color conversion (deprecated).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Deprecated by NVAPI. Prefer GetConfig/SetConfig.&quot;)]
+public NVAPIVioColorConversionDto? GetCsc()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="NVAPIWrapper.NVAPIVioColorConversionDto.html">NVAPIVioColorConversionDto</a>?</dt>
+    <dd><p>Color conversion DTO, or null if unavailable.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIVioDeviceHelper_GetGamma_" data-uid="NVAPIWrapper.NVAPIVioDeviceHelper.GetGamma*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIVioDeviceHelper_GetGamma" data-uid="NVAPIWrapper.NVAPIVioDeviceHelper.GetGamma">
+  GetGamma()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIVideoHelper.cs/#L622"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get VIO gamma correction (deprecated).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Deprecated by NVAPI. Prefer GetConfig/SetConfig.&quot;)]
+public NVAPIVioGammaDto? GetGamma()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="NVAPIWrapper.NVAPIVioGammaDto.html">NVAPIVioGammaDto</a>?</dt>
+    <dd><p>Gamma DTO, or null if unavailable.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIVioDeviceHelper_GetPciInfo_" data-uid="NVAPIWrapper.NVAPIVioDeviceHelper.GetPciInfo*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIVioDeviceHelper_GetPciInfo" data-uid="NVAPIWrapper.NVAPIVioDeviceHelper.GetPciInfo">
+  GetPciInfo()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIVideoHelper.cs/#L712"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get PCI information for the VIO device.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NVAPIVioPciInfoDto? GetPciInfo()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="NVAPIWrapper.NVAPIVioPciInfoDto.html">NVAPIVioPciInfoDto</a>?</dt>
+    <dd><p>PCI info DTO, or null if unavailable.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIVioDeviceHelper_GetStatus_" data-uid="NVAPIWrapper.NVAPIVioDeviceHelper.GetStatus*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIVioDeviceHelper_GetStatus" data-uid="NVAPIWrapper.NVAPIVioDeviceHelper.GetStatus">
+  GetStatus()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIVideoHelper.cs/#L488"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get VIO status.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NVAPIVioStatusDto? GetStatus()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="NVAPIWrapper.NVAPIVioStatusDto.html">NVAPIVioStatusDto</a>?</dt>
+    <dd><p>Status DTO, or null if unavailable.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIVioDeviceHelper_GetSyncDelay_" data-uid="NVAPIWrapper.NVAPIVioDeviceHelper.GetSyncDelay*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIVioDeviceHelper_GetSyncDelay" data-uid="NVAPIWrapper.NVAPIVioDeviceHelper.GetSyncDelay">
+  GetSyncDelay()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIVideoHelper.cs/#L667"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get VIO sync delay (deprecated).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Deprecated by NVAPI. Prefer GetConfig/SetConfig.&quot;)]
+public NVAPIVioSyncDelayDto? GetSyncDelay()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="NVAPIWrapper.NVAPIVioSyncDelayDto.html">NVAPIVioSyncDelayDto</a>?</dt>
+    <dd><p>Sync delay DTO, or null if unavailable.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIVioDeviceHelper_IsFrameLockModeCompatible_" data-uid="NVAPIWrapper.NVAPIVioDeviceHelper.IsFrameLockModeCompatible*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIVioDeviceHelper_IsFrameLockModeCompatible_System_UInt32_System_UInt32_" data-uid="NVAPIWrapper.NVAPIVioDeviceHelper.IsFrameLockModeCompatible(System.UInt32,System.UInt32)">
+  IsFrameLockModeCompatible(uint, uint)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIVideoHelper.cs/#L795"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Check frame lock mode compatibility.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool? IsFrameLockModeCompatible(uint sourceIndex, uint destIndex)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>sourceIndex</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>Source enum index.</p>
+</dd>
+    <dt><code>destIndex</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>Destination enum index.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>?</dt>
+    <dd><p>True if compatible, false if not, or null if unsupported.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIVioDeviceHelper_IsRunning_" data-uid="NVAPIWrapper.NVAPIVioDeviceHelper.IsRunning*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIVioDeviceHelper_IsRunning" data-uid="NVAPIWrapper.NVAPIVioDeviceHelper.IsRunning">
+  IsRunning()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIVideoHelper.cs/#L733"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Check whether the VIO device is running.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool? IsRunning()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>?</dt>
+    <dd><p>True if running, false if not, or null if unsupported.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIVioDeviceHelper_Open_" data-uid="NVAPIWrapper.NVAPIVioDeviceHelper.Open*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIVioDeviceHelper_Open_System_UInt32_NVAPIWrapper__NVVIOOWNERTYPE_" data-uid="NVAPIWrapper.NVAPIVioDeviceHelper.Open(System.UInt32,NVAPIWrapper._NVVIOOWNERTYPE)">
+  Open(uint, _NVVIOOWNERTYPE)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIVideoHelper.cs/#L449"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Open the VIO device.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool? Open(uint vioClass, _NVVIOOWNERTYPE ownerType)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>vioClass</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>VIO class.</p>
+</dd>
+    <dt><code>ownerType</code> <a class="xref" href="NVAPIWrapper._NVVIOOWNERTYPE.html">_NVVIOOWNERTYPE</a></dt>
+    <dd><p>Owner type.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>?</dt>
+    <dd><p>True if opened, null if unsupported.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIVioDeviceHelper_SetConfig_" data-uid="NVAPIWrapper.NVAPIVioDeviceHelper.SetConfig*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIVioDeviceHelper_SetConfig_NVAPIWrapper_NVAPIVioConfigDto_" data-uid="NVAPIWrapper.NVAPIVioDeviceHelper.SetConfig(NVAPIWrapper.NVAPIVioConfigDto)">
+  SetConfig(NVAPIVioConfigDto)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIVideoHelper.cs/#L552"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Set VIO configuration.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool? SetConfig(NVAPIVioConfigDto config)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>config</code> <a class="xref" href="NVAPIWrapper.NVAPIVioConfigDto.html">NVAPIVioConfigDto</a></dt>
+    <dd><p>Configuration DTO.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>?</dt>
+    <dd><p>True if applied, null if unsupported.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIVioDeviceHelper_SetCsc_" data-uid="NVAPIWrapper.NVAPIVioDeviceHelper.SetCsc*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIVioDeviceHelper_SetCsc_NVAPIWrapper_NVAPIVioColorConversionDto_" data-uid="NVAPIWrapper.NVAPIVioDeviceHelper.SetCsc(NVAPIWrapper.NVAPIVioColorConversionDto)">
+  SetCsc(NVAPIVioColorConversionDto)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIVideoHelper.cs/#L600"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Set VIO color conversion (deprecated).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Deprecated by NVAPI. Prefer GetConfig/SetConfig.&quot;)]
+public bool? SetCsc(NVAPIVioColorConversionDto conversion)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>conversion</code> <a class="xref" href="NVAPIWrapper.NVAPIVioColorConversionDto.html">NVAPIVioColorConversionDto</a></dt>
+    <dd><p>Color conversion DTO.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>?</dt>
+    <dd><p>True if applied, null if unsupported.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIVioDeviceHelper_SetGamma_" data-uid="NVAPIWrapper.NVAPIVioDeviceHelper.SetGamma*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIVioDeviceHelper_SetGamma_NVAPIWrapper_NVAPIVioGammaDto_" data-uid="NVAPIWrapper.NVAPIVioDeviceHelper.SetGamma(NVAPIWrapper.NVAPIVioGammaDto)">
+  SetGamma(NVAPIVioGammaDto)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIVideoHelper.cs/#L645"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Set VIO gamma correction (deprecated).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Deprecated by NVAPI. Prefer GetConfig/SetConfig.&quot;)]
+public bool? SetGamma(NVAPIVioGammaDto gamma)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>gamma</code> <a class="xref" href="NVAPIWrapper.NVAPIVioGammaDto.html">NVAPIVioGammaDto</a></dt>
+    <dd><p>Gamma DTO.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>?</dt>
+    <dd><p>True if applied, null if unsupported.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIVioDeviceHelper_SetSyncDelay_" data-uid="NVAPIWrapper.NVAPIVioDeviceHelper.SetSyncDelay*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIVioDeviceHelper_SetSyncDelay_NVAPIWrapper_NVAPIVioSyncDelayDto_" data-uid="NVAPIWrapper.NVAPIVioDeviceHelper.SetSyncDelay(NVAPIWrapper.NVAPIVioSyncDelayDto)">
+  SetSyncDelay(NVAPIVioSyncDelayDto)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIVideoHelper.cs/#L690"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Set VIO sync delay (deprecated).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Deprecated by NVAPI. Prefer GetConfig/SetConfig.&quot;)]
+public bool? SetSyncDelay(NVAPIVioSyncDelayDto delay)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>delay</code> <a class="xref" href="NVAPIWrapper.NVAPIVioSyncDelayDto.html">NVAPIVioSyncDelayDto</a></dt>
+    <dd><p>Sync delay DTO.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>?</dt>
+    <dd><p>True if applied, null if unsupported.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIVioDeviceHelper_Start_" data-uid="NVAPIWrapper.NVAPIVioDeviceHelper.Start*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIVioDeviceHelper_Start" data-uid="NVAPIWrapper.NVAPIVioDeviceHelper.Start">
+  Start()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIVideoHelper.cs/#L755"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Start the VIO device.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool? Start()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>?</dt>
+    <dd><p>True if started, null if unsupported.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIVioDeviceHelper_Stop_" data-uid="NVAPIWrapper.NVAPIVioDeviceHelper.Stop*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIVioDeviceHelper_Stop" data-uid="NVAPIWrapper.NVAPIVioDeviceHelper.Stop">
+  Stop()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIVideoHelper.cs/#L774"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Stop the VIO device.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool? Stop()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>?</dt>
+    <dd><p>True if stopped, null if unsupported.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIVioDeviceHelper_SyncFormatDetect_" data-uid="NVAPIWrapper.NVAPIVioDeviceHelper.SyncFormatDetect*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIVioDeviceHelper_SyncFormatDetect_System_UInt32_" data-uid="NVAPIWrapper.NVAPIVioDeviceHelper.SyncFormatDetect(System.UInt32)">
+  SyncFormatDetect(uint)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIVideoHelper.cs/#L510"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Detect sync format.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public uint? SyncFormatDetect(uint wait = 0)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>wait</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>Wait value.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a>?</dt>
+    <dd><p>Updated wait value, or null if unsupported.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIVideoHelper.cs/#L410" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

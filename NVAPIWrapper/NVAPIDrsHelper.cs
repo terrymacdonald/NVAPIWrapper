@@ -1265,6 +1265,14 @@ namespace NVAPIWrapper
         public uint NumOfApps { get; }
         public uint NumOfSettings { get; }
 
+        /// <summary>
+        /// Create a DRS profile DTO.
+        /// </summary>
+        /// <param name="profileName">Profile name.</param>
+        /// <param name="gpuSupport">GPU support flags.</param>
+        /// <param name="isPredefined">Whether the profile is predefined.</param>
+        /// <param name="numOfApps">Number of applications in the profile.</param>
+        /// <param name="numOfSettings">Number of settings in the profile.</param>
         public NVAPIDrsProfileDto(
             string profileName,
             _NVDRS_GPU_SUPPORT gpuSupport,
@@ -1291,11 +1299,22 @@ namespace NVAPIWrapper
             NumOfSettings = numOfSettings;
         }
 
+        /// <summary>
+        /// Create a DRS profile DTO for a new profile name.
+        /// </summary>
+        /// <param name="profileName">Profile name.</param>
+        /// <returns>DRS profile DTO.</returns>
         public static NVAPIDrsProfileDto Create(string profileName)
         {
             return new NVAPIDrsProfileDto(profileName ?? string.Empty, default, false, 0, 0);
         }
 
+        /// <summary>
+        /// Create a DRS profile DTO from native profile data.
+        /// </summary>
+        /// <param name="handle">Native profile handle.</param>
+        /// <param name="native">Native profile data.</param>
+        /// <returns>DRS profile DTO.</returns>
         public static unsafe NVAPIDrsProfileDto FromNative(NvDRSProfileHandle__* handle, _NVDRS_PROFILE_V1 native)
         {
             var name = NVAPIDrsHelper.ReadUnicodeString(
@@ -1310,6 +1329,10 @@ namespace NVAPIWrapper
                 native.numOfSettings);
         }
 
+        /// <summary>
+        /// Convert this DTO to native profile data.
+        /// </summary>
+        /// <returns>Native profile data.</returns>
         public _NVDRS_PROFILE_V1 ToNative()
         {
             var native = NVAPIDrsHelper.CreateProfileInfo();
@@ -1323,6 +1346,11 @@ namespace NVAPIWrapper
             return native;
         }
 
+        /// <summary>
+        /// Determine whether this instance equals another DRS profile DTO.
+        /// </summary>
+        /// <param name="other">The other DTO to compare.</param>
+        /// <returns>True if the DTOs are equal; otherwise false.</returns>
         public bool Equals(NVAPIDrsProfileDto other)
         {
             return string.Equals(ProfileName, other.ProfileName, StringComparison.Ordinal)
@@ -1332,8 +1360,17 @@ namespace NVAPIWrapper
                 && NumOfSettings == other.NumOfSettings;
         }
 
+        /// <summary>
+        /// Determine whether this instance equals another object.
+        /// </summary>
+        /// <param name="obj">The object to compare.</param>
+        /// <returns>True if the object is an equivalent DTO; otherwise false.</returns>
         public override bool Equals(object? obj) => obj is NVAPIDrsProfileDto other && Equals(other);
 
+        /// <summary>
+        /// Get a hash code for this instance.
+        /// </summary>
+        /// <returns>Hash code for this instance.</returns>
         public override int GetHashCode()
         {
             unchecked
@@ -1347,7 +1384,20 @@ namespace NVAPIWrapper
             }
         }
 
+        /// <summary>
+        /// Determine whether two DRS profile DTOs are equal.
+        /// </summary>
+        /// <param name="left">Left DTO.</param>
+        /// <param name="right">Right DTO.</param>
+        /// <returns>True if the DTOs are equal; otherwise false.</returns>
         public static bool operator ==(NVAPIDrsProfileDto left, NVAPIDrsProfileDto right) => left.Equals(right);
+
+        /// <summary>
+        /// Determine whether two DRS profile DTOs are not equal.
+        /// </summary>
+        /// <param name="left">Left DTO.</param>
+        /// <param name="right">Right DTO.</param>
+        /// <returns>True if the DTOs are not equal; otherwise false.</returns>
         public static bool operator !=(NVAPIDrsProfileDto left, NVAPIDrsProfileDto right) => !left.Equals(right);
 
         private static bool GpuSupportEquals(_NVDRS_GPU_SUPPORT left, _NVDRS_GPU_SUPPORT right)
@@ -1386,6 +1436,17 @@ namespace NVAPIWrapper
         public bool IsCommandLine { get; }
         public bool IsPredefined { get; }
 
+        /// <summary>
+        /// Create a DRS application DTO.
+        /// </summary>
+        /// <param name="appName">Application name.</param>
+        /// <param name="userFriendlyName">User-friendly application name.</param>
+        /// <param name="launcher">Launcher name.</param>
+        /// <param name="fileInFolder">File-in-folder value.</param>
+        /// <param name="commandLine">Command line value.</param>
+        /// <param name="isMetro">Whether the application is a Metro app.</param>
+        /// <param name="isCommandLine">Whether the application uses a command line.</param>
+        /// <param name="isPredefined">Whether the application is predefined.</param>
         public NVAPIDrsApplicationDto(
             string appName,
             string userFriendlyName,
@@ -1406,11 +1467,22 @@ namespace NVAPIWrapper
             IsPredefined = isPredefined;
         }
 
+        /// <summary>
+        /// Create a DRS application DTO with the supplied names.
+        /// </summary>
+        /// <param name="appName">Application name.</param>
+        /// <param name="userFriendlyName">User-friendly application name.</param>
+        /// <returns>DRS application DTO.</returns>
         public static NVAPIDrsApplicationDto Create(string appName, string userFriendlyName = "")
         {
             return new NVAPIDrsApplicationDto(appName, userFriendlyName, string.Empty, string.Empty, string.Empty, false, false, false);
         }
 
+        /// <summary>
+        /// Create a DRS application DTO from native data.
+        /// </summary>
+        /// <param name="native">Native application data.</param>
+        /// <returns>DRS application DTO.</returns>
         public static unsafe NVAPIDrsApplicationDto FromNative(_NVDRS_APPLICATION_V4 native)
         {
             var appName = NVAPIDrsHelper.ReadUnicodeString(
@@ -1435,6 +1507,10 @@ namespace NVAPIWrapper
                 native.isPredefined != 0);
         }
 
+        /// <summary>
+        /// Convert this DTO to native application data.
+        /// </summary>
+        /// <returns>Native application data.</returns>
         public _NVDRS_APPLICATION_V4 ToNative()
         {
             var native = NVAPIDrsHelper.CreateApplicationInfo();
@@ -1459,6 +1535,11 @@ namespace NVAPIWrapper
             return native;
         }
 
+        /// <summary>
+        /// Determine whether this instance equals another DRS application DTO.
+        /// </summary>
+        /// <param name="other">The other DTO to compare.</param>
+        /// <returns>True if the DTOs are equal; otherwise false.</returns>
         public bool Equals(NVAPIDrsApplicationDto other)
         {
             return string.Equals(AppName, other.AppName, StringComparison.Ordinal)
@@ -1471,8 +1552,17 @@ namespace NVAPIWrapper
                 && IsPredefined == other.IsPredefined;
         }
 
+        /// <summary>
+        /// Determine whether this instance equals another object.
+        /// </summary>
+        /// <param name="obj">The object to compare.</param>
+        /// <returns>True if the object is an equivalent DTO; otherwise false.</returns>
         public override bool Equals(object? obj) => obj is NVAPIDrsApplicationDto other && Equals(other);
 
+        /// <summary>
+        /// Get a hash code for this instance.
+        /// </summary>
+        /// <returns>Hash code for this instance.</returns>
         public override int GetHashCode()
         {
             unchecked
@@ -1489,7 +1579,20 @@ namespace NVAPIWrapper
             }
         }
 
+        /// <summary>
+        /// Determine whether two DRS application DTOs are equal.
+        /// </summary>
+        /// <param name="left">Left DTO.</param>
+        /// <param name="right">Right DTO.</param>
+        /// <returns>True if the DTOs are equal; otherwise false.</returns>
         public static bool operator ==(NVAPIDrsApplicationDto left, NVAPIDrsApplicationDto right) => left.Equals(right);
+
+        /// <summary>
+        /// Determine whether two DRS application DTOs are not equal.
+        /// </summary>
+        /// <param name="left">Left DTO.</param>
+        /// <param name="right">Right DTO.</param>
+        /// <returns>True if the DTOs are not equal; otherwise false.</returns>
         public static bool operator !=(NVAPIDrsApplicationDto left, NVAPIDrsApplicationDto right) => !left.Equals(right);
     }
 
@@ -1501,19 +1604,38 @@ namespace NVAPIWrapper
         public NVAPIDrsProfileDto Profile { get; }
         public NVAPIDrsApplicationDto Application { get; }
 
+        /// <summary>
+        /// Create a DRS application search result DTO.
+        /// </summary>
+        /// <param name="profile">Profile DTO.</param>
+        /// <param name="application">Application DTO.</param>
         public NVAPIDrsApplicationSearchDto(NVAPIDrsProfileDto profile, NVAPIDrsApplicationDto application)
         {
             Profile = profile;
             Application = application;
         }
 
+        /// <summary>
+        /// Determine whether this instance equals another DRS application search result DTO.
+        /// </summary>
+        /// <param name="other">The other DTO to compare.</param>
+        /// <returns>True if the DTOs are equal; otherwise false.</returns>
         public bool Equals(NVAPIDrsApplicationSearchDto other)
         {
             return Profile.Equals(other.Profile) && Application.Equals(other.Application);
         }
 
+        /// <summary>
+        /// Determine whether this instance equals another object.
+        /// </summary>
+        /// <param name="obj">The object to compare.</param>
+        /// <returns>True if the object is an equivalent DTO; otherwise false.</returns>
         public override bool Equals(object? obj) => obj is NVAPIDrsApplicationSearchDto other && Equals(other);
 
+        /// <summary>
+        /// Get a hash code for this instance.
+        /// </summary>
+        /// <returns>Hash code for this instance.</returns>
         public override int GetHashCode()
         {
             unchecked
@@ -1524,7 +1646,20 @@ namespace NVAPIWrapper
             }
         }
 
+        /// <summary>
+        /// Determine whether two DRS application search result DTOs are equal.
+        /// </summary>
+        /// <param name="left">Left DTO.</param>
+        /// <param name="right">Right DTO.</param>
+        /// <returns>True if the DTOs are equal; otherwise false.</returns>
         public static bool operator ==(NVAPIDrsApplicationSearchDto left, NVAPIDrsApplicationSearchDto right) => left.Equals(right);
+
+        /// <summary>
+        /// Determine whether two DRS application search result DTOs are not equal.
+        /// </summary>
+        /// <param name="left">Left DTO.</param>
+        /// <param name="right">Right DTO.</param>
+        /// <returns>True if the DTOs are not equal; otherwise false.</returns>
         public static bool operator !=(NVAPIDrsApplicationSearchDto left, NVAPIDrsApplicationSearchDto right) => !left.Equals(right);
     }
 
@@ -1547,6 +1682,21 @@ namespace NVAPIWrapper
         public byte[]? PredefinedBinaryValue { get; }
         public byte[]? CurrentBinaryValue { get; }
 
+        /// <summary>
+        /// Create a DRS setting DTO.
+        /// </summary>
+        /// <param name="settingName">Setting name.</param>
+        /// <param name="settingId">Setting identifier.</param>
+        /// <param name="settingType">Setting type.</param>
+        /// <param name="settingLocation">Setting location.</param>
+        /// <param name="isCurrentPredefined">Whether the current value is predefined.</param>
+        /// <param name="isPredefinedValid">Whether the predefined value is valid.</param>
+        /// <param name="predefinedDwordValue">Predefined DWORD value.</param>
+        /// <param name="currentDwordValue">Current DWORD value.</param>
+        /// <param name="predefinedStringValue">Predefined string value.</param>
+        /// <param name="currentStringValue">Current string value.</param>
+        /// <param name="predefinedBinaryValue">Predefined binary value.</param>
+        /// <param name="currentBinaryValue">Current binary value.</param>
         public NVAPIDrsSettingDto(
             string settingName,
             uint settingId,
@@ -1575,6 +1725,17 @@ namespace NVAPIWrapper
             CurrentBinaryValue = currentBinaryValue;
         }
 
+        /// <summary>
+        /// Create a DWORD DRS setting DTO.
+        /// </summary>
+        /// <param name="settingId">Setting identifier.</param>
+        /// <param name="currentValue">Current DWORD value.</param>
+        /// <param name="predefinedValue">Predefined DWORD value.</param>
+        /// <param name="settingName">Setting name.</param>
+        /// <param name="location">Setting location.</param>
+        /// <param name="isCurrentPredefined">Whether the current value is predefined.</param>
+        /// <param name="isPredefinedValid">Whether the predefined value is valid.</param>
+        /// <returns>DRS setting DTO.</returns>
         public static NVAPIDrsSettingDto CreateDword(
             uint settingId,
             uint currentValue,
@@ -1599,6 +1760,17 @@ namespace NVAPIWrapper
                 null);
         }
 
+        /// <summary>
+        /// Create a string DRS setting DTO.
+        /// </summary>
+        /// <param name="settingId">Setting identifier.</param>
+        /// <param name="currentValue">Current string value.</param>
+        /// <param name="predefinedValue">Predefined string value.</param>
+        /// <param name="settingName">Setting name.</param>
+        /// <param name="location">Setting location.</param>
+        /// <param name="isCurrentPredefined">Whether the current value is predefined.</param>
+        /// <param name="isPredefinedValid">Whether the predefined value is valid.</param>
+        /// <returns>DRS setting DTO.</returns>
         public static NVAPIDrsSettingDto CreateString(
             uint settingId,
             string currentValue,
@@ -1623,6 +1795,17 @@ namespace NVAPIWrapper
                 null);
         }
 
+        /// <summary>
+        /// Create a wide-string DRS setting DTO.
+        /// </summary>
+        /// <param name="settingId">Setting identifier.</param>
+        /// <param name="currentValue">Current string value.</param>
+        /// <param name="predefinedValue">Predefined string value.</param>
+        /// <param name="settingName">Setting name.</param>
+        /// <param name="location">Setting location.</param>
+        /// <param name="isCurrentPredefined">Whether the current value is predefined.</param>
+        /// <param name="isPredefinedValid">Whether the predefined value is valid.</param>
+        /// <returns>DRS setting DTO.</returns>
         public static NVAPIDrsSettingDto CreateWString(
             uint settingId,
             string currentValue,
@@ -1647,6 +1830,17 @@ namespace NVAPIWrapper
                 null);
         }
 
+        /// <summary>
+        /// Create a binary DRS setting DTO.
+        /// </summary>
+        /// <param name="settingId">Setting identifier.</param>
+        /// <param name="currentValue">Current binary value.</param>
+        /// <param name="predefinedValue">Predefined binary value.</param>
+        /// <param name="settingName">Setting name.</param>
+        /// <param name="location">Setting location.</param>
+        /// <param name="isCurrentPredefined">Whether the current value is predefined.</param>
+        /// <param name="isPredefinedValid">Whether the predefined value is valid.</param>
+        /// <returns>DRS setting DTO.</returns>
         public static NVAPIDrsSettingDto CreateBinary(
             uint settingId,
             byte[] currentValue,
@@ -1671,6 +1865,11 @@ namespace NVAPIWrapper
                 currentValue);
         }
 
+        /// <summary>
+        /// Create a DRS setting DTO from native setting data.
+        /// </summary>
+        /// <param name="native">Native setting data.</param>
+        /// <returns>DRS setting DTO.</returns>
         public static unsafe NVAPIDrsSettingDto FromNative(_NVDRS_SETTING_V1 native)
         {
             var name = NVAPIDrsHelper.ReadUnicodeString(
@@ -1715,6 +1914,10 @@ namespace NVAPIWrapper
                 currentBinary);
         }
 
+        /// <summary>
+        /// Convert this DTO to native setting data.
+        /// </summary>
+        /// <returns>Native setting data.</returns>
         public _NVDRS_SETTING_V1 ToNative()
         {
             var native = NVAPIDrsHelper.CreateSetting();
@@ -1747,6 +1950,11 @@ namespace NVAPIWrapper
             return native;
         }
 
+        /// <summary>
+        /// Determine whether this instance equals another DRS setting DTO.
+        /// </summary>
+        /// <param name="other">The other DTO to compare.</param>
+        /// <returns>True if the DTOs are equal; otherwise false.</returns>
         public bool Equals(NVAPIDrsSettingDto other)
         {
             return string.Equals(SettingName, other.SettingName, StringComparison.Ordinal)
@@ -1763,8 +1971,17 @@ namespace NVAPIWrapper
                 && NVAPIDrsDtoHelpers.SequenceEquals(CurrentBinaryValue, other.CurrentBinaryValue);
         }
 
+        /// <summary>
+        /// Determine whether this instance equals another object.
+        /// </summary>
+        /// <param name="obj">The object to compare.</param>
+        /// <returns>True if the object is an equivalent DTO; otherwise false.</returns>
         public override bool Equals(object? obj) => obj is NVAPIDrsSettingDto other && Equals(other);
 
+        /// <summary>
+        /// Get a hash code for this instance.
+        /// </summary>
+        /// <returns>Hash code for this instance.</returns>
         public override int GetHashCode()
         {
             unchecked
@@ -1785,7 +2002,20 @@ namespace NVAPIWrapper
             }
         }
 
+        /// <summary>
+        /// Determine whether two DRS setting DTOs are equal.
+        /// </summary>
+        /// <param name="left">Left DTO.</param>
+        /// <param name="right">Right DTO.</param>
+        /// <returns>True if the DTOs are equal; otherwise false.</returns>
         public static bool operator ==(NVAPIDrsSettingDto left, NVAPIDrsSettingDto right) => left.Equals(right);
+
+        /// <summary>
+        /// Determine whether two DRS setting DTOs are not equal.
+        /// </summary>
+        /// <param name="left">Left DTO.</param>
+        /// <param name="right">Right DTO.</param>
+        /// <returns>True if the DTOs are not equal; otherwise false.</returns>
         public static bool operator !=(NVAPIDrsSettingDto left, NVAPIDrsSettingDto right) => !left.Equals(right);
     }
 
@@ -1802,6 +2032,16 @@ namespace NVAPIWrapper
         public string[]? StringValues { get; }
         public byte[][]? BinaryValues { get; }
 
+        /// <summary>
+        /// Create a DRS setting values DTO.
+        /// </summary>
+        /// <param name="settingType">Setting type.</param>
+        /// <param name="defaultDwordValue">Default DWORD value.</param>
+        /// <param name="defaultStringValue">Default string value.</param>
+        /// <param name="defaultBinaryValue">Default binary value.</param>
+        /// <param name="dwordValues">Allowed DWORD values.</param>
+        /// <param name="stringValues">Allowed string values.</param>
+        /// <param name="binaryValues">Allowed binary values.</param>
         public NVAPIDrsSettingValuesDto(
             _NVDRS_SETTING_TYPE settingType,
             uint? defaultDwordValue,
@@ -1820,6 +2060,11 @@ namespace NVAPIWrapper
             BinaryValues = binaryValues;
         }
 
+        /// <summary>
+        /// Create a DRS setting values DTO from native values data.
+        /// </summary>
+        /// <param name="native">Native setting values data.</param>
+        /// <returns>DRS setting values DTO.</returns>
         public static unsafe NVAPIDrsSettingValuesDto FromNative(_NVDRS_SETTING_VALUES native)
         {
             var count = (int)Math.Min(native.numSettingValues, 100u);
@@ -1878,6 +2123,11 @@ namespace NVAPIWrapper
             return new NVAPIDrsSettingValuesDto(native.settingType, null, null, null, null, null, null);
         }
 
+        /// <summary>
+        /// Determine whether this instance equals another DRS setting values DTO.
+        /// </summary>
+        /// <param name="other">The other DTO to compare.</param>
+        /// <returns>True if the DTOs are equal; otherwise false.</returns>
         public bool Equals(NVAPIDrsSettingValuesDto other)
         {
             return SettingType == other.SettingType
@@ -1889,8 +2139,17 @@ namespace NVAPIWrapper
                 && SequenceEquals(BinaryValues, other.BinaryValues);
         }
 
+        /// <summary>
+        /// Determine whether this instance equals another object.
+        /// </summary>
+        /// <param name="obj">The object to compare.</param>
+        /// <returns>True if the object is an equivalent DTO; otherwise false.</returns>
         public override bool Equals(object? obj) => obj is NVAPIDrsSettingValuesDto other && Equals(other);
 
+        /// <summary>
+        /// Get a hash code for this instance.
+        /// </summary>
+        /// <returns>Hash code for this instance.</returns>
         public override int GetHashCode()
         {
             unchecked
@@ -1906,7 +2165,20 @@ namespace NVAPIWrapper
             }
         }
 
+        /// <summary>
+        /// Determine whether two DRS setting values DTOs are equal.
+        /// </summary>
+        /// <param name="left">Left DTO.</param>
+        /// <param name="right">Right DTO.</param>
+        /// <returns>True if the DTOs are equal; otherwise false.</returns>
         public static bool operator ==(NVAPIDrsSettingValuesDto left, NVAPIDrsSettingValuesDto right) => left.Equals(right);
+
+        /// <summary>
+        /// Determine whether two DRS setting values DTOs are not equal.
+        /// </summary>
+        /// <param name="left">Left DTO.</param>
+        /// <param name="right">Right DTO.</param>
+        /// <returns>True if the DTOs are not equal; otherwise false.</returns>
         public static bool operator !=(NVAPIDrsSettingValuesDto left, NVAPIDrsSettingValuesDto right) => !left.Equals(right);
 
         private static bool SequenceEquals(byte[][]? left, byte[][]? right)
@@ -1948,6 +2220,13 @@ namespace NVAPIWrapper
 
     internal static class NVAPIDrsDtoHelpers
     {
+        /// <summary>
+        /// Compare two arrays for equality using the default comparer.
+        /// </summary>
+        /// <typeparam name="T">Element type.</typeparam>
+        /// <param name="left">Left array.</param>
+        /// <param name="right">Right array.</param>
+        /// <returns>True if both arrays are equal; otherwise false.</returns>
         public static bool SequenceEquals<T>(T[]? left, T[]? right)
         {
             if (ReferenceEquals(left, right))
@@ -1969,6 +2248,12 @@ namespace NVAPIWrapper
             return true;
         }
 
+        /// <summary>
+        /// Compute a hash code for an array using the default comparer.
+        /// </summary>
+        /// <typeparam name="T">Element type.</typeparam>
+        /// <param name="values">Array values.</param>
+        /// <returns>Hash code for the array contents.</returns>
         public static int SequenceHashCode<T>(T[]? values)
         {
             if (values == null || values.Length == 0)

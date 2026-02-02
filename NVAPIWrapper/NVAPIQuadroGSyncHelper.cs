@@ -436,6 +436,15 @@ namespace NVAPIWrapper
         public bool IsMulDivSupported { get; }
         public uint MaxMulDivValue { get; }
 
+        /// <summary>
+        /// Create a G-Sync capabilities DTO.
+        /// </summary>
+        /// <param name="boardId">Board identifier.</param>
+        /// <param name="revision">Revision value.</param>
+        /// <param name="capFlags">Capability flags.</param>
+        /// <param name="extendedRevision">Extended revision value.</param>
+        /// <param name="isMulDivSupported">Whether mul/div is supported.</param>
+        /// <param name="maxMulDivValue">Maximum mul/div value.</param>
         public NVAPIGSyncCapabilitiesDto(
             uint boardId,
             uint revision,
@@ -452,6 +461,11 @@ namespace NVAPIWrapper
             MaxMulDivValue = maxMulDivValue;
         }
 
+        /// <summary>
+        /// Create a G-Sync capabilities DTO from native data.
+        /// </summary>
+        /// <param name="native">Native capabilities data.</param>
+        /// <returns>G-Sync capabilities DTO.</returns>
         public static NVAPIGSyncCapabilitiesDto FromNative(_NV_GSYNC_CAPABILITIES_V3 native)
         {
             return new NVAPIGSyncCapabilitiesDto(
@@ -463,6 +477,10 @@ namespace NVAPIWrapper
                 native.maxMulDivValue);
         }
 
+        /// <summary>
+        /// Convert this DTO to native capabilities data.
+        /// </summary>
+        /// <returns>Native capabilities data.</returns>
         public _NV_GSYNC_CAPABILITIES_V3 ToNative()
         {
             return new _NV_GSYNC_CAPABILITIES_V3
@@ -478,6 +496,11 @@ namespace NVAPIWrapper
             };
         }
 
+        /// <summary>
+        /// Determine whether this instance equals another G-Sync capabilities DTO.
+        /// </summary>
+        /// <param name="other">The other DTO to compare.</param>
+        /// <returns>True if the DTOs are equal; otherwise false.</returns>
         public bool Equals(NVAPIGSyncCapabilitiesDto other)
         {
             return BoardId == other.BoardId
@@ -488,8 +511,17 @@ namespace NVAPIWrapper
                 && MaxMulDivValue == other.MaxMulDivValue;
         }
 
+        /// <summary>
+        /// Determine whether this instance equals another object.
+        /// </summary>
+        /// <param name="obj">The object to compare.</param>
+        /// <returns>True if the object is an equivalent DTO; otherwise false.</returns>
         public override bool Equals(object? obj) => obj is NVAPIGSyncCapabilitiesDto other && Equals(other);
 
+        /// <summary>
+        /// Get a hash code for this instance.
+        /// </summary>
+        /// <returns>Hash code for this instance.</returns>
         public override int GetHashCode()
         {
             unchecked
@@ -504,7 +536,20 @@ namespace NVAPIWrapper
             }
         }
 
+        /// <summary>
+        /// Determine whether two G-Sync capabilities DTOs are equal.
+        /// </summary>
+        /// <param name="left">Left DTO.</param>
+        /// <param name="right">Right DTO.</param>
+        /// <returns>True if the DTOs are equal; otherwise false.</returns>
         public static bool operator ==(NVAPIGSyncCapabilitiesDto left, NVAPIGSyncCapabilitiesDto right) => left.Equals(right);
+
+        /// <summary>
+        /// Determine whether two G-Sync capabilities DTOs are not equal.
+        /// </summary>
+        /// <param name="left">Left DTO.</param>
+        /// <param name="right">Right DTO.</param>
+        /// <returns>True if the DTOs are not equal; otherwise false.</returns>
         public static bool operator !=(NVAPIGSyncCapabilitiesDto left, NVAPIGSyncCapabilitiesDto right) => !left.Equals(right);
     }
 
@@ -520,6 +565,13 @@ namespace NVAPIWrapper
         public _NVAPI_GSYNC_GPU_TOPOLOGY_CONNECTOR Connector { get; }
         public bool IsSynced { get; }
 
+        /// <summary>
+        /// Create a G-Sync GPU DTO.
+        /// </summary>
+        /// <param name="physicalGpu">Physical GPU helper.</param>
+        /// <param name="connector">Topology connector.</param>
+        /// <param name="proxyPhysicalGpu">Proxy physical GPU helper.</param>
+        /// <param name="isSynced">Whether the GPU is synced.</param>
         public NVAPIGSyncGpuDto(
             NVAPIPhysicalGpuHelper physicalGpu,
             _NVAPI_GSYNC_GPU_TOPOLOGY_CONNECTOR connector,
@@ -550,6 +602,12 @@ namespace NVAPIWrapper
             IsSynced = isSynced;
         }
 
+        /// <summary>
+        /// Create a G-Sync GPU DTO from native data.
+        /// </summary>
+        /// <param name="apiHelper">API helper owning GPU helpers.</param>
+        /// <param name="native">Native GPU data.</param>
+        /// <returns>G-Sync GPU DTO.</returns>
         public static unsafe NVAPIGSyncGpuDto FromNative(NVAPIApiHelper apiHelper, _NV_GSYNC_GPU native)
         {
             var gpuHandle = (IntPtr)native.hPhysicalGpu;
@@ -568,6 +626,13 @@ namespace NVAPIWrapper
                 native.isSynced != 0);
         }
 
+        /// <summary>
+        /// Create G-Sync GPU DTOs from a native array.
+        /// </summary>
+        /// <param name="apiHelper">API helper owning GPU helpers.</param>
+        /// <param name="native">Native GPU array pointer.</param>
+        /// <param name="count">Number of entries.</param>
+        /// <returns>G-Sync GPU DTO array.</returns>
         public static unsafe NVAPIGSyncGpuDto[] FromNative(NVAPIApiHelper apiHelper, _NV_GSYNC_GPU* native, int count)
         {
             if (count <= 0 || native == null)
@@ -582,6 +647,10 @@ namespace NVAPIWrapper
             return result;
         }
 
+        /// <summary>
+        /// Convert this DTO to native GPU data.
+        /// </summary>
+        /// <returns>Native GPU data.</returns>
         public unsafe _NV_GSYNC_GPU ToNative()
         {
             var native = new _NV_GSYNC_GPU
@@ -597,6 +666,11 @@ namespace NVAPIWrapper
             return native;
         }
 
+        /// <summary>
+        /// Determine whether this instance equals another G-Sync GPU DTO.
+        /// </summary>
+        /// <param name="other">The other DTO to compare.</param>
+        /// <returns>True if the DTOs are equal; otherwise false.</returns>
         public bool Equals(NVAPIGSyncGpuDto other)
         {
             return PhysicalGpuHandle == other.PhysicalGpuHandle
@@ -605,8 +679,17 @@ namespace NVAPIWrapper
                 && IsSynced == other.IsSynced;
         }
 
+        /// <summary>
+        /// Determine whether this instance equals another object.
+        /// </summary>
+        /// <param name="obj">The object to compare.</param>
+        /// <returns>True if the object is an equivalent DTO; otherwise false.</returns>
         public override bool Equals(object? obj) => obj is NVAPIGSyncGpuDto other && Equals(other);
 
+        /// <summary>
+        /// Get a hash code for this instance.
+        /// </summary>
+        /// <returns>Hash code for this instance.</returns>
         public override int GetHashCode()
         {
             unchecked
@@ -619,7 +702,20 @@ namespace NVAPIWrapper
             }
         }
 
+        /// <summary>
+        /// Determine whether two G-Sync GPU DTOs are equal.
+        /// </summary>
+        /// <param name="left">Left DTO.</param>
+        /// <param name="right">Right DTO.</param>
+        /// <returns>True if the DTOs are equal; otherwise false.</returns>
         public static bool operator ==(NVAPIGSyncGpuDto left, NVAPIGSyncGpuDto right) => left.Equals(right);
+
+        /// <summary>
+        /// Determine whether two G-Sync GPU DTOs are not equal.
+        /// </summary>
+        /// <param name="left">Left DTO.</param>
+        /// <param name="right">Right DTO.</param>
+        /// <returns>True if the DTOs are not equal; otherwise false.</returns>
         public static bool operator !=(NVAPIGSyncGpuDto left, NVAPIGSyncGpuDto right) => !left.Equals(right);
     }
 
@@ -632,6 +728,12 @@ namespace NVAPIWrapper
         public bool IsMasterable { get; }
         public _NVAPI_GSYNC_DISPLAY_SYNC_STATE SyncState { get; }
 
+        /// <summary>
+        /// Create a G-Sync display DTO.
+        /// </summary>
+        /// <param name="displayId">Display identifier.</param>
+        /// <param name="isMasterable">Whether the display is masterable.</param>
+        /// <param name="syncState">Display sync state.</param>
         public NVAPIGSyncDisplayDto(uint displayId, bool isMasterable, _NVAPI_GSYNC_DISPLAY_SYNC_STATE syncState)
         {
             DisplayId = displayId;
@@ -639,6 +741,11 @@ namespace NVAPIWrapper
             SyncState = syncState;
         }
 
+        /// <summary>
+        /// Create a G-Sync display DTO from native data.
+        /// </summary>
+        /// <param name="native">Native display data.</param>
+        /// <returns>G-Sync display DTO.</returns>
         public static NVAPIGSyncDisplayDto FromNative(_NV_GSYNC_DISPLAY native)
         {
             return new NVAPIGSyncDisplayDto(
@@ -647,6 +754,12 @@ namespace NVAPIWrapper
                 native.syncState);
         }
 
+        /// <summary>
+        /// Create G-Sync display DTOs from a native array.
+        /// </summary>
+        /// <param name="native">Native display array pointer.</param>
+        /// <param name="count">Number of entries.</param>
+        /// <returns>G-Sync display DTO array.</returns>
         public static unsafe NVAPIGSyncDisplayDto[] FromNative(_NV_GSYNC_DISPLAY* native, int count)
         {
             if (count <= 0 || native == null)
@@ -661,6 +774,10 @@ namespace NVAPIWrapper
             return result;
         }
 
+        /// <summary>
+        /// Convert this DTO to native display data.
+        /// </summary>
+        /// <returns>Native display data.</returns>
         public _NV_GSYNC_DISPLAY ToNative()
         {
             return new _NV_GSYNC_DISPLAY
@@ -673,6 +790,11 @@ namespace NVAPIWrapper
             };
         }
 
+        /// <summary>
+        /// Determine whether this instance equals another G-Sync display DTO.
+        /// </summary>
+        /// <param name="other">The other DTO to compare.</param>
+        /// <returns>True if the DTOs are equal; otherwise false.</returns>
         public bool Equals(NVAPIGSyncDisplayDto other)
         {
             return DisplayId == other.DisplayId
@@ -680,8 +802,17 @@ namespace NVAPIWrapper
                 && SyncState == other.SyncState;
         }
 
+        /// <summary>
+        /// Determine whether this instance equals another object.
+        /// </summary>
+        /// <param name="obj">The object to compare.</param>
+        /// <returns>True if the object is an equivalent DTO; otherwise false.</returns>
         public override bool Equals(object? obj) => obj is NVAPIGSyncDisplayDto other && Equals(other);
 
+        /// <summary>
+        /// Get a hash code for this instance.
+        /// </summary>
+        /// <returns>Hash code for this instance.</returns>
         public override int GetHashCode()
         {
             unchecked
@@ -693,7 +824,20 @@ namespace NVAPIWrapper
             }
         }
 
+        /// <summary>
+        /// Determine whether two G-Sync display DTOs are equal.
+        /// </summary>
+        /// <param name="left">Left DTO.</param>
+        /// <param name="right">Right DTO.</param>
+        /// <returns>True if the DTOs are equal; otherwise false.</returns>
         public static bool operator ==(NVAPIGSyncDisplayDto left, NVAPIGSyncDisplayDto right) => left.Equals(right);
+
+        /// <summary>
+        /// Determine whether two G-Sync display DTOs are not equal.
+        /// </summary>
+        /// <param name="left">Left DTO.</param>
+        /// <param name="right">Right DTO.</param>
+        /// <returns>True if the DTOs are not equal; otherwise false.</returns>
         public static bool operator !=(NVAPIGSyncDisplayDto left, NVAPIGSyncDisplayDto right) => !left.Equals(right);
     }
 
@@ -705,20 +849,39 @@ namespace NVAPIWrapper
         public NVAPIGSyncGpuDto[] Gpus { get; }
         public NVAPIGSyncDisplayDto[] Displays { get; }
 
+        /// <summary>
+        /// Create a G-Sync topology DTO.
+        /// </summary>
+        /// <param name="gpus">GPU entries.</param>
+        /// <param name="displays">Display entries.</param>
         public NVAPIGSyncTopologyDto(NVAPIGSyncGpuDto[] gpus, NVAPIGSyncDisplayDto[] displays)
         {
             Gpus = gpus ?? Array.Empty<NVAPIGSyncGpuDto>();
             Displays = displays ?? Array.Empty<NVAPIGSyncDisplayDto>();
         }
 
+        /// <summary>
+        /// Determine whether this instance equals another G-Sync topology DTO.
+        /// </summary>
+        /// <param name="other">The other DTO to compare.</param>
+        /// <returns>True if the DTOs are equal; otherwise false.</returns>
         public bool Equals(NVAPIGSyncTopologyDto other)
         {
             return NVAPIGSyncDtoHelpers.SequenceEquals(Gpus, other.Gpus)
                 && NVAPIGSyncDtoHelpers.SequenceEquals(Displays, other.Displays);
         }
 
+        /// <summary>
+        /// Determine whether this instance equals another object.
+        /// </summary>
+        /// <param name="obj">The object to compare.</param>
+        /// <returns>True if the object is an equivalent DTO; otherwise false.</returns>
         public override bool Equals(object? obj) => obj is NVAPIGSyncTopologyDto other && Equals(other);
 
+        /// <summary>
+        /// Get a hash code for this instance.
+        /// </summary>
+        /// <returns>Hash code for this instance.</returns>
         public override int GetHashCode()
         {
             unchecked
@@ -729,7 +892,20 @@ namespace NVAPIWrapper
             }
         }
 
+        /// <summary>
+        /// Determine whether two G-Sync topology DTOs are equal.
+        /// </summary>
+        /// <param name="left">Left DTO.</param>
+        /// <param name="right">Right DTO.</param>
+        /// <returns>True if the DTOs are equal; otherwise false.</returns>
         public static bool operator ==(NVAPIGSyncTopologyDto left, NVAPIGSyncTopologyDto right) => left.Equals(right);
+
+        /// <summary>
+        /// Determine whether two G-Sync topology DTOs are not equal.
+        /// </summary>
+        /// <param name="left">Left DTO.</param>
+        /// <param name="right">Right DTO.</param>
+        /// <returns>True if the DTOs are not equal; otherwise false.</returns>
         public static bool operator !=(NVAPIGSyncTopologyDto left, NVAPIGSyncTopologyDto right) => !left.Equals(right);
     }
 
@@ -743,6 +919,13 @@ namespace NVAPIWrapper
         public uint MaxLines { get; }
         public uint MinPixels { get; }
 
+        /// <summary>
+        /// Create a G-Sync delay DTO.
+        /// </summary>
+        /// <param name="numLines">Number of lines.</param>
+        /// <param name="numPixels">Number of pixels.</param>
+        /// <param name="maxLines">Maximum lines.</param>
+        /// <param name="minPixels">Minimum pixels.</param>
         public NVAPIGSyncDelayDto(uint numLines, uint numPixels, uint maxLines, uint minPixels)
         {
             NumLines = numLines;
@@ -751,11 +934,20 @@ namespace NVAPIWrapper
             MinPixels = minPixels;
         }
 
+        /// <summary>
+        /// Create a G-Sync delay DTO from native data.
+        /// </summary>
+        /// <param name="native">Native delay data.</param>
+        /// <returns>G-Sync delay DTO.</returns>
         public static NVAPIGSyncDelayDto FromNative(_NV_GSYNC_DELAY native)
         {
             return new NVAPIGSyncDelayDto(native.numLines, native.numPixels, native.maxLines, native.minPixels);
         }
 
+        /// <summary>
+        /// Convert this DTO to native delay data.
+        /// </summary>
+        /// <returns>Native delay data.</returns>
         public _NV_GSYNC_DELAY ToNative()
         {
             return new _NV_GSYNC_DELAY
@@ -768,6 +960,11 @@ namespace NVAPIWrapper
             };
         }
 
+        /// <summary>
+        /// Determine whether this instance equals another G-Sync delay DTO.
+        /// </summary>
+        /// <param name="other">The other DTO to compare.</param>
+        /// <returns>True if the DTOs are equal; otherwise false.</returns>
         public bool Equals(NVAPIGSyncDelayDto other)
         {
             return NumLines == other.NumLines
@@ -776,8 +973,17 @@ namespace NVAPIWrapper
                 && MinPixels == other.MinPixels;
         }
 
+        /// <summary>
+        /// Determine whether this instance equals another object.
+        /// </summary>
+        /// <param name="obj">The object to compare.</param>
+        /// <returns>True if the object is an equivalent DTO; otherwise false.</returns>
         public override bool Equals(object? obj) => obj is NVAPIGSyncDelayDto other && Equals(other);
 
+        /// <summary>
+        /// Get a hash code for this instance.
+        /// </summary>
+        /// <returns>Hash code for this instance.</returns>
         public override int GetHashCode()
         {
             unchecked
@@ -790,7 +996,20 @@ namespace NVAPIWrapper
             }
         }
 
+        /// <summary>
+        /// Determine whether two G-Sync delay DTOs are equal.
+        /// </summary>
+        /// <param name="left">Left DTO.</param>
+        /// <param name="right">Right DTO.</param>
+        /// <returns>True if the DTOs are equal; otherwise false.</returns>
         public static bool operator ==(NVAPIGSyncDelayDto left, NVAPIGSyncDelayDto right) => left.Equals(right);
+
+        /// <summary>
+        /// Determine whether two G-Sync delay DTOs are not equal.
+        /// </summary>
+        /// <param name="left">Left DTO.</param>
+        /// <param name="right">Right DTO.</param>
+        /// <returns>True if the DTOs are not equal; otherwise false.</returns>
         public static bool operator !=(NVAPIGSyncDelayDto left, NVAPIGSyncDelayDto right) => !left.Equals(right);
     }
 
@@ -802,19 +1021,38 @@ namespace NVAPIWrapper
         public NVAPIGSyncDelayDto Delay { get; }
         public uint SyncSteps { get; }
 
+        /// <summary>
+        /// Create a G-Sync adjusted delay DTO.
+        /// </summary>
+        /// <param name="delay">Delay values.</param>
+        /// <param name="syncSteps">Sync steps.</param>
         public NVAPIGSyncAdjustedDelayDto(NVAPIGSyncDelayDto delay, uint syncSteps)
         {
             Delay = delay;
             SyncSteps = syncSteps;
         }
 
+        /// <summary>
+        /// Determine whether this instance equals another G-Sync adjusted delay DTO.
+        /// </summary>
+        /// <param name="other">The other DTO to compare.</param>
+        /// <returns>True if the DTOs are equal; otherwise false.</returns>
         public bool Equals(NVAPIGSyncAdjustedDelayDto other)
         {
             return Delay.Equals(other.Delay) && SyncSteps == other.SyncSteps;
         }
 
+        /// <summary>
+        /// Determine whether this instance equals another object.
+        /// </summary>
+        /// <param name="obj">The object to compare.</param>
+        /// <returns>True if the object is an equivalent DTO; otherwise false.</returns>
         public override bool Equals(object? obj) => obj is NVAPIGSyncAdjustedDelayDto other && Equals(other);
 
+        /// <summary>
+        /// Get a hash code for this instance.
+        /// </summary>
+        /// <returns>Hash code for this instance.</returns>
         public override int GetHashCode()
         {
             unchecked
@@ -825,7 +1063,20 @@ namespace NVAPIWrapper
             }
         }
 
+        /// <summary>
+        /// Determine whether two G-Sync adjusted delay DTOs are equal.
+        /// </summary>
+        /// <param name="left">Left DTO.</param>
+        /// <param name="right">Right DTO.</param>
+        /// <returns>True if the DTOs are equal; otherwise false.</returns>
         public static bool operator ==(NVAPIGSyncAdjustedDelayDto left, NVAPIGSyncAdjustedDelayDto right) => left.Equals(right);
+
+        /// <summary>
+        /// Determine whether two G-Sync adjusted delay DTOs are not equal.
+        /// </summary>
+        /// <param name="left">Left DTO.</param>
+        /// <param name="right">Right DTO.</param>
+        /// <returns>True if the DTOs are not equal; otherwise false.</returns>
         public static bool operator !=(NVAPIGSyncAdjustedDelayDto left, NVAPIGSyncAdjustedDelayDto right) => !left.Equals(right);
     }
 
@@ -845,6 +1096,19 @@ namespace NVAPIWrapper
         public _NVAPI_GSYNC_MULTIPLY_DIVIDE_MODE MultiplyDivideMode { get; }
         public byte MultiplyDivideValue { get; }
 
+        /// <summary>
+        /// Create a G-Sync control parameters DTO.
+        /// </summary>
+        /// <param name="polarity">Sync polarity.</param>
+        /// <param name="videoMode">Video mode.</param>
+        /// <param name="interval">Sync interval.</param>
+        /// <param name="source">Sync source.</param>
+        /// <param name="interlaceMode">Whether interlace mode is enabled.</param>
+        /// <param name="syncSourceIsOutput">Whether the sync source is the output.</param>
+        /// <param name="syncSkew">Sync skew delay.</param>
+        /// <param name="startupDelay">Startup delay.</param>
+        /// <param name="multiplyDivideMode">Multiply/divide mode.</param>
+        /// <param name="multiplyDivideValue">Multiply/divide value.</param>
         public NVAPIGSyncControlParametersDto(
             _NVAPI_GSYNC_POLARITY polarity,
             _NVAPI_GSYNC_VIDEO_MODE videoMode,
@@ -869,6 +1133,11 @@ namespace NVAPIWrapper
             MultiplyDivideValue = multiplyDivideValue;
         }
 
+        /// <summary>
+        /// Create a G-Sync control parameters DTO from native data.
+        /// </summary>
+        /// <param name="native">Native control parameters data.</param>
+        /// <returns>G-Sync control parameters DTO.</returns>
         public static NVAPIGSyncControlParametersDto FromNative(_NV_GSYNC_CONTROL_PARAMS_V2 native)
         {
             return new NVAPIGSyncControlParametersDto(
@@ -884,6 +1153,10 @@ namespace NVAPIWrapper
                 native.multiplyDivideValue);
         }
 
+        /// <summary>
+        /// Convert this DTO to native control parameters data.
+        /// </summary>
+        /// <returns>Native control parameters data.</returns>
         public _NV_GSYNC_CONTROL_PARAMS_V2 ToNative()
         {
             var native = new _NV_GSYNC_CONTROL_PARAMS_V2
@@ -905,6 +1178,11 @@ namespace NVAPIWrapper
             return native;
         }
 
+        /// <summary>
+        /// Determine whether this instance equals another G-Sync control parameters DTO.
+        /// </summary>
+        /// <param name="other">The other DTO to compare.</param>
+        /// <returns>True if the DTOs are equal; otherwise false.</returns>
         public bool Equals(NVAPIGSyncControlParametersDto other)
         {
             return Polarity == other.Polarity
@@ -919,8 +1197,17 @@ namespace NVAPIWrapper
                 && MultiplyDivideValue == other.MultiplyDivideValue;
         }
 
+        /// <summary>
+        /// Determine whether this instance equals another object.
+        /// </summary>
+        /// <param name="obj">The object to compare.</param>
+        /// <returns>True if the object is an equivalent DTO; otherwise false.</returns>
         public override bool Equals(object? obj) => obj is NVAPIGSyncControlParametersDto other && Equals(other);
 
+        /// <summary>
+        /// Get a hash code for this instance.
+        /// </summary>
+        /// <returns>Hash code for this instance.</returns>
         public override int GetHashCode()
         {
             unchecked
@@ -939,7 +1226,20 @@ namespace NVAPIWrapper
             }
         }
 
+        /// <summary>
+        /// Determine whether two G-Sync control parameters DTOs are equal.
+        /// </summary>
+        /// <param name="left">Left DTO.</param>
+        /// <param name="right">Right DTO.</param>
+        /// <returns>True if the DTOs are equal; otherwise false.</returns>
         public static bool operator ==(NVAPIGSyncControlParametersDto left, NVAPIGSyncControlParametersDto right) => left.Equals(right);
+
+        /// <summary>
+        /// Determine whether two G-Sync control parameters DTOs are not equal.
+        /// </summary>
+        /// <param name="left">Left DTO.</param>
+        /// <param name="right">Right DTO.</param>
+        /// <returns>True if the DTOs are not equal; otherwise false.</returns>
         public static bool operator !=(NVAPIGSyncControlParametersDto left, NVAPIGSyncControlParametersDto right) => !left.Equals(right);
     }
 
@@ -952,6 +1252,12 @@ namespace NVAPIWrapper
         public bool IsStereoSynced { get; }
         public bool IsSyncSignalAvailable { get; }
 
+        /// <summary>
+        /// Create a G-Sync sync status DTO.
+        /// </summary>
+        /// <param name="isSynced">Whether sync is active.</param>
+        /// <param name="isStereoSynced">Whether stereo sync is active.</param>
+        /// <param name="isSyncSignalAvailable">Whether a sync signal is available.</param>
         public NVAPIGSyncSyncStatusDto(bool isSynced, bool isStereoSynced, bool isSyncSignalAvailable)
         {
             IsSynced = isSynced;
@@ -959,6 +1265,11 @@ namespace NVAPIWrapper
             IsSyncSignalAvailable = isSyncSignalAvailable;
         }
 
+        /// <summary>
+        /// Create a G-Sync sync status DTO from native data.
+        /// </summary>
+        /// <param name="native">Native sync status data.</param>
+        /// <returns>G-Sync sync status DTO.</returns>
         public static NVAPIGSyncSyncStatusDto FromNative(_NV_GSYNC_STATUS native)
         {
             return new NVAPIGSyncSyncStatusDto(
@@ -967,6 +1278,10 @@ namespace NVAPIWrapper
                 native.bIsSyncSignalAvailable != 0);
         }
 
+        /// <summary>
+        /// Convert this DTO to native sync status data.
+        /// </summary>
+        /// <returns>Native sync status data.</returns>
         public _NV_GSYNC_STATUS ToNative()
         {
             return new _NV_GSYNC_STATUS
@@ -978,6 +1293,11 @@ namespace NVAPIWrapper
             };
         }
 
+        /// <summary>
+        /// Determine whether this instance equals another G-Sync sync status DTO.
+        /// </summary>
+        /// <param name="other">The other DTO to compare.</param>
+        /// <returns>True if the DTOs are equal; otherwise false.</returns>
         public bool Equals(NVAPIGSyncSyncStatusDto other)
         {
             return IsSynced == other.IsSynced
@@ -985,8 +1305,17 @@ namespace NVAPIWrapper
                 && IsSyncSignalAvailable == other.IsSyncSignalAvailable;
         }
 
+        /// <summary>
+        /// Determine whether this instance equals another object.
+        /// </summary>
+        /// <param name="obj">The object to compare.</param>
+        /// <returns>True if the object is an equivalent DTO; otherwise false.</returns>
         public override bool Equals(object? obj) => obj is NVAPIGSyncSyncStatusDto other && Equals(other);
 
+        /// <summary>
+        /// Get a hash code for this instance.
+        /// </summary>
+        /// <returns>Hash code for this instance.</returns>
         public override int GetHashCode()
         {
             unchecked
@@ -998,7 +1327,20 @@ namespace NVAPIWrapper
             }
         }
 
+        /// <summary>
+        /// Determine whether two G-Sync sync status DTOs are equal.
+        /// </summary>
+        /// <param name="left">Left DTO.</param>
+        /// <param name="right">Right DTO.</param>
+        /// <returns>True if the DTOs are equal; otherwise false.</returns>
         public static bool operator ==(NVAPIGSyncSyncStatusDto left, NVAPIGSyncSyncStatusDto right) => left.Equals(right);
+
+        /// <summary>
+        /// Determine whether two G-Sync sync status DTOs are not equal.
+        /// </summary>
+        /// <param name="left">Left DTO.</param>
+        /// <param name="right">Right DTO.</param>
+        /// <returns>True if the DTOs are not equal; otherwise false.</returns>
         public static bool operator !=(NVAPIGSyncSyncStatusDto left, NVAPIGSyncSyncStatusDto right) => !left.Equals(right);
     }
 
@@ -1014,6 +1356,15 @@ namespace NVAPIWrapper
         public bool IsHouseSyncConnected { get; }
         public bool IsInternalSlave { get; }
 
+        /// <summary>
+        /// Create a G-Sync status parameters DTO.
+        /// </summary>
+        /// <param name="refreshRate">Refresh rate.</param>
+        /// <param name="rj45Io">RJ45 IO values.</param>
+        /// <param name="rj45Ethernet">RJ45 ethernet values.</param>
+        /// <param name="houseSyncIncoming">House sync incoming value.</param>
+        /// <param name="isHouseSyncConnected">Whether house sync is connected.</param>
+        /// <param name="isInternalSlave">Whether this device is an internal slave.</param>
         public NVAPIGSyncStatusParametersDto(
             uint refreshRate,
             _NVAPI_GSYNC_RJ45_IO[] rj45Io,
@@ -1030,6 +1381,11 @@ namespace NVAPIWrapper
             IsInternalSlave = isInternalSlave;
         }
 
+        /// <summary>
+        /// Create a G-Sync status parameters DTO from native data.
+        /// </summary>
+        /// <param name="native">Native status parameters data.</param>
+        /// <returns>G-Sync status parameters DTO.</returns>
         public static NVAPIGSyncStatusParametersDto FromNative(_NV_GSYNC_STATUS_PARAMS_V2 native)
         {
             var io = new _NVAPI_GSYNC_RJ45_IO[NVAPI.NVAPI_MAX_RJ45_PER_GSYNC];
@@ -1049,6 +1405,10 @@ namespace NVAPIWrapper
                 native.bInternalSlave != 0);
         }
 
+        /// <summary>
+        /// Convert this DTO to native status parameters data.
+        /// </summary>
+        /// <returns>Native status parameters data.</returns>
         public _NV_GSYNC_STATUS_PARAMS_V2 ToNative()
         {
             var native = new _NV_GSYNC_STATUS_PARAMS_V2
@@ -1070,6 +1430,11 @@ namespace NVAPIWrapper
             return native;
         }
 
+        /// <summary>
+        /// Determine whether this instance equals another G-Sync status parameters DTO.
+        /// </summary>
+        /// <param name="other">The other DTO to compare.</param>
+        /// <returns>True if the DTOs are equal; otherwise false.</returns>
         public bool Equals(NVAPIGSyncStatusParametersDto other)
         {
             return RefreshRate == other.RefreshRate
@@ -1080,8 +1445,17 @@ namespace NVAPIWrapper
                 && IsInternalSlave == other.IsInternalSlave;
         }
 
+        /// <summary>
+        /// Determine whether this instance equals another object.
+        /// </summary>
+        /// <param name="obj">The object to compare.</param>
+        /// <returns>True if the object is an equivalent DTO; otherwise false.</returns>
         public override bool Equals(object? obj) => obj is NVAPIGSyncStatusParametersDto other && Equals(other);
 
+        /// <summary>
+        /// Get a hash code for this instance.
+        /// </summary>
+        /// <returns>Hash code for this instance.</returns>
         public override int GetHashCode()
         {
             unchecked
@@ -1096,12 +1470,32 @@ namespace NVAPIWrapper
             }
         }
 
+        /// <summary>
+        /// Determine whether two G-Sync status parameters DTOs are equal.
+        /// </summary>
+        /// <param name="left">Left DTO.</param>
+        /// <param name="right">Right DTO.</param>
+        /// <returns>True if the DTOs are equal; otherwise false.</returns>
         public static bool operator ==(NVAPIGSyncStatusParametersDto left, NVAPIGSyncStatusParametersDto right) => left.Equals(right);
+
+        /// <summary>
+        /// Determine whether two G-Sync status parameters DTOs are not equal.
+        /// </summary>
+        /// <param name="left">Left DTO.</param>
+        /// <param name="right">Right DTO.</param>
+        /// <returns>True if the DTOs are not equal; otherwise false.</returns>
         public static bool operator !=(NVAPIGSyncStatusParametersDto left, NVAPIGSyncStatusParametersDto right) => !left.Equals(right);
     }
 
     internal static class NVAPIGSyncDtoHelpers
     {
+        /// <summary>
+        /// Compare two arrays for equality using the default comparer.
+        /// </summary>
+        /// <typeparam name="T">Element type.</typeparam>
+        /// <param name="left">Left array.</param>
+        /// <param name="right">Right array.</param>
+        /// <returns>True if both arrays are equal; otherwise false.</returns>
         public static bool SequenceEquals<T>(T[] left, T[] right)
         {
             if (ReferenceEquals(left, right))
@@ -1123,6 +1517,12 @@ namespace NVAPIWrapper
             return true;
         }
 
+        /// <summary>
+        /// Compute a hash code for an array using the default comparer.
+        /// </summary>
+        /// <typeparam name="T">Element type.</typeparam>
+        /// <param name="values">Array values.</param>
+        /// <returns>Hash code for the array contents.</returns>
         public static int SequenceHashCode<T>(T[] values)
         {
             if (values == null)

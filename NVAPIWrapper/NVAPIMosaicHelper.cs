@@ -586,12 +586,22 @@ namespace NVAPIWrapper
         public NVAPIMosaicTopoBriefDto[] TopoBriefs { get; }
         public NVAPIMosaicDisplaySettingDto[] DisplaySettings { get; }
 
+        /// <summary>
+        /// Create a supported topology info DTO.
+        /// </summary>
+        /// <param name="topoBriefs">Supported topology briefs.</param>
+        /// <param name="displaySettings">Supported display settings.</param>
         public NVAPIMosaicSupportedTopoInfoDto(NVAPIMosaicTopoBriefDto[] topoBriefs, NVAPIMosaicDisplaySettingDto[] displaySettings)
         {
             TopoBriefs = topoBriefs ?? Array.Empty<NVAPIMosaicTopoBriefDto>();
             DisplaySettings = displaySettings ?? Array.Empty<NVAPIMosaicDisplaySettingDto>();
         }
 
+        /// <summary>
+        /// Create a supported topology info DTO from native data.
+        /// </summary>
+        /// <param name="native">Native supported topology info.</param>
+        /// <returns>Supported topology info DTO.</returns>
         public static NVAPIMosaicSupportedTopoInfoDto FromNative(_NV_MOSAIC_SUPPORTED_TOPO_INFO_V2 native)
         {
             var topoCount = (int)Math.Min(native.topoBriefsCount, 35u);
@@ -614,14 +624,28 @@ namespace NVAPIWrapper
             return new NVAPIMosaicSupportedTopoInfoDto(topoBriefs, displaySettings);
         }
 
+        /// <summary>
+        /// Determine whether this instance equals another supported topology info DTO.
+        /// </summary>
+        /// <param name="other">The other DTO to compare.</param>
+        /// <returns>True if the DTOs are equal; otherwise false.</returns>
         public bool Equals(NVAPIMosaicSupportedTopoInfoDto other)
         {
             return DtoHelpers.SequenceEquals(TopoBriefs, other.TopoBriefs)
                 && DtoHelpers.SequenceEquals(DisplaySettings, other.DisplaySettings);
         }
 
+        /// <summary>
+        /// Determine whether this instance equals another object.
+        /// </summary>
+        /// <param name="obj">The object to compare.</param>
+        /// <returns>True if the object is an equivalent DTO; otherwise false.</returns>
         public override bool Equals(object? obj) => obj is NVAPIMosaicSupportedTopoInfoDto other && Equals(other);
 
+        /// <summary>
+        /// Get a hash code for this instance.
+        /// </summary>
+        /// <returns>Hash code for this instance.</returns>
         public override int GetHashCode()
         {
             unchecked
@@ -632,7 +656,20 @@ namespace NVAPIWrapper
             }
         }
 
+        /// <summary>
+        /// Determine whether two supported topology info DTOs are equal.
+        /// </summary>
+        /// <param name="left">Left DTO.</param>
+        /// <param name="right">Right DTO.</param>
+        /// <returns>True if the DTOs are equal; otherwise false.</returns>
         public static bool operator ==(NVAPIMosaicSupportedTopoInfoDto left, NVAPIMosaicSupportedTopoInfoDto right) => left.Equals(right);
+
+        /// <summary>
+        /// Determine whether two supported topology info DTOs are not equal.
+        /// </summary>
+        /// <param name="left">Left DTO.</param>
+        /// <param name="right">Right DTO.</param>
+        /// <returns>True if the DTOs are not equal; otherwise false.</returns>
         public static bool operator !=(NVAPIMosaicSupportedTopoInfoDto left, NVAPIMosaicSupportedTopoInfoDto right) => !left.Equals(right);
     }
 
@@ -645,6 +682,12 @@ namespace NVAPIWrapper
         public bool Enabled { get; }
         public bool IsPossible { get; }
 
+        /// <summary>
+        /// Create a Mosaic topology brief DTO.
+        /// </summary>
+        /// <param name="topo">Topology identifier.</param>
+        /// <param name="enabled">Whether the topology is enabled.</param>
+        /// <param name="isPossible">Whether the topology is possible.</param>
         public NVAPIMosaicTopoBriefDto(NV_MOSAIC_TOPO topo, bool enabled, bool isPossible)
         {
             Topo = topo;
@@ -652,11 +695,20 @@ namespace NVAPIWrapper
             IsPossible = isPossible;
         }
 
+        /// <summary>
+        /// Create a Mosaic topology brief DTO from native data.
+        /// </summary>
+        /// <param name="native">Native topology brief data.</param>
+        /// <returns>Mosaic topology brief DTO.</returns>
         public static NVAPIMosaicTopoBriefDto FromNative(NV_MOSAIC_TOPO_BRIEF native)
         {
             return new NVAPIMosaicTopoBriefDto(native.topo, native.enabled != 0, native.isPossible != 0);
         }
 
+        /// <summary>
+        /// Convert this DTO to native topology brief data.
+        /// </summary>
+        /// <returns>Native topology brief data.</returns>
         public NV_MOSAIC_TOPO_BRIEF ToNative()
         {
             return new NV_MOSAIC_TOPO_BRIEF
@@ -668,13 +720,27 @@ namespace NVAPIWrapper
             };
         }
 
+        /// <summary>
+        /// Determine whether this instance equals another Mosaic topology brief DTO.
+        /// </summary>
+        /// <param name="other">The other DTO to compare.</param>
+        /// <returns>True if the DTOs are equal; otherwise false.</returns>
         public bool Equals(NVAPIMosaicTopoBriefDto other)
         {
             return Topo == other.Topo && Enabled == other.Enabled && IsPossible == other.IsPossible;
         }
 
+        /// <summary>
+        /// Determine whether this instance equals another object.
+        /// </summary>
+        /// <param name="obj">The object to compare.</param>
+        /// <returns>True if the object is an equivalent DTO; otherwise false.</returns>
         public override bool Equals(object? obj) => obj is NVAPIMosaicTopoBriefDto other && Equals(other);
 
+        /// <summary>
+        /// Get a hash code for this instance.
+        /// </summary>
+        /// <returns>Hash code for this instance.</returns>
         public override int GetHashCode()
         {
             unchecked
@@ -686,7 +752,20 @@ namespace NVAPIWrapper
             }
         }
 
+        /// <summary>
+        /// Determine whether two Mosaic topology brief DTOs are equal.
+        /// </summary>
+        /// <param name="left">Left DTO.</param>
+        /// <param name="right">Right DTO.</param>
+        /// <returns>True if the DTOs are equal; otherwise false.</returns>
         public static bool operator ==(NVAPIMosaicTopoBriefDto left, NVAPIMosaicTopoBriefDto right) => left.Equals(right);
+
+        /// <summary>
+        /// Determine whether two Mosaic topology brief DTOs are not equal.
+        /// </summary>
+        /// <param name="left">Left DTO.</param>
+        /// <param name="right">Right DTO.</param>
+        /// <returns>True if the DTOs are not equal; otherwise false.</returns>
         public static bool operator !=(NVAPIMosaicTopoBriefDto left, NVAPIMosaicTopoBriefDto right) => !left.Equals(right);
     }
 
@@ -701,6 +780,14 @@ namespace NVAPIWrapper
         public uint Frequency { get; }
         public uint RefreshRate1K { get; }
 
+        /// <summary>
+        /// Create a Mosaic display setting DTO.
+        /// </summary>
+        /// <param name="width">Display width.</param>
+        /// <param name="height">Display height.</param>
+        /// <param name="bitsPerPixel">Bits per pixel.</param>
+        /// <param name="frequency">Display frequency.</param>
+        /// <param name="refreshRate1K">Refresh rate in 1K units.</param>
         public NVAPIMosaicDisplaySettingDto(uint width, uint height, uint bitsPerPixel, uint frequency, uint refreshRate1K)
         {
             Width = width;
@@ -710,16 +797,30 @@ namespace NVAPIWrapper
             RefreshRate1K = refreshRate1K;
         }
 
+        /// <summary>
+        /// Create a Mosaic display setting DTO from native V2 data.
+        /// </summary>
+        /// <param name="native">Native display setting V2 data.</param>
+        /// <returns>Mosaic display setting DTO.</returns>
         public static NVAPIMosaicDisplaySettingDto FromNative(NV_MOSAIC_DISPLAY_SETTING_V2 native)
         {
             return new NVAPIMosaicDisplaySettingDto(native.width, native.height, native.bpp, native.freq, native.rrx1k);
         }
 
+        /// <summary>
+        /// Create a Mosaic display setting DTO from native V1 data.
+        /// </summary>
+        /// <param name="native">Native display setting V1 data.</param>
+        /// <returns>Mosaic display setting DTO.</returns>
         public static NVAPIMosaicDisplaySettingDto FromNative(_NV_MOSAIC_DISPLAY_SETTING_V1 native)
         {
             return new NVAPIMosaicDisplaySettingDto(native.width, native.height, native.bpp, native.freq, 0);
         }
 
+        /// <summary>
+        /// Convert this DTO to native display setting V2 data.
+        /// </summary>
+        /// <returns>Native display setting V2 data.</returns>
         public NV_MOSAIC_DISPLAY_SETTING_V2 ToNativeV2()
         {
             return new NV_MOSAIC_DISPLAY_SETTING_V2
@@ -733,6 +834,10 @@ namespace NVAPIWrapper
             };
         }
 
+        /// <summary>
+        /// Convert this DTO to native display setting V1 data.
+        /// </summary>
+        /// <returns>Native display setting V1 data.</returns>
         public _NV_MOSAIC_DISPLAY_SETTING_V1 ToNativeV1()
         {
             return new _NV_MOSAIC_DISPLAY_SETTING_V1
@@ -745,6 +850,11 @@ namespace NVAPIWrapper
             };
         }
 
+        /// <summary>
+        /// Determine whether this instance equals another Mosaic display setting DTO.
+        /// </summary>
+        /// <param name="other">The other DTO to compare.</param>
+        /// <returns>True if the DTOs are equal; otherwise false.</returns>
         public bool Equals(NVAPIMosaicDisplaySettingDto other)
         {
             return Width == other.Width
@@ -754,8 +864,17 @@ namespace NVAPIWrapper
                 && RefreshRate1K == other.RefreshRate1K;
         }
 
+        /// <summary>
+        /// Determine whether this instance equals another object.
+        /// </summary>
+        /// <param name="obj">The object to compare.</param>
+        /// <returns>True if the object is an equivalent DTO; otherwise false.</returns>
         public override bool Equals(object? obj) => obj is NVAPIMosaicDisplaySettingDto other && Equals(other);
 
+        /// <summary>
+        /// Get a hash code for this instance.
+        /// </summary>
+        /// <returns>Hash code for this instance.</returns>
         public override int GetHashCode()
         {
             unchecked
@@ -769,7 +888,20 @@ namespace NVAPIWrapper
             }
         }
 
+        /// <summary>
+        /// Determine whether two Mosaic display setting DTOs are equal.
+        /// </summary>
+        /// <param name="left">Left DTO.</param>
+        /// <param name="right">Right DTO.</param>
+        /// <returns>True if the DTOs are equal; otherwise false.</returns>
         public static bool operator ==(NVAPIMosaicDisplaySettingDto left, NVAPIMosaicDisplaySettingDto right) => left.Equals(right);
+
+        /// <summary>
+        /// Determine whether two Mosaic display setting DTOs are not equal.
+        /// </summary>
+        /// <param name="left">Left DTO.</param>
+        /// <param name="right">Right DTO.</param>
+        /// <returns>True if the DTOs are not equal; otherwise false.</returns>
         public static bool operator !=(NVAPIMosaicDisplaySettingDto left, NVAPIMosaicDisplaySettingDto right) => !left.Equals(right);
     }
 
@@ -783,6 +915,13 @@ namespace NVAPIWrapper
         public int MinOverlapY { get; }
         public int MaxOverlapY { get; }
 
+        /// <summary>
+        /// Create a Mosaic overlap limits DTO.
+        /// </summary>
+        /// <param name="minOverlapX">Minimum overlap on X axis.</param>
+        /// <param name="maxOverlapX">Maximum overlap on X axis.</param>
+        /// <param name="minOverlapY">Minimum overlap on Y axis.</param>
+        /// <param name="maxOverlapY">Maximum overlap on Y axis.</param>
         public NVAPIMosaicOverlapLimitsDto(int minOverlapX, int maxOverlapX, int minOverlapY, int maxOverlapY)
         {
             MinOverlapX = minOverlapX;
@@ -791,6 +930,11 @@ namespace NVAPIWrapper
             MaxOverlapY = maxOverlapY;
         }
 
+        /// <summary>
+        /// Determine whether this instance equals another Mosaic overlap limits DTO.
+        /// </summary>
+        /// <param name="other">The other DTO to compare.</param>
+        /// <returns>True if the DTOs are equal; otherwise false.</returns>
         public bool Equals(NVAPIMosaicOverlapLimitsDto other)
         {
             return MinOverlapX == other.MinOverlapX
@@ -799,8 +943,17 @@ namespace NVAPIWrapper
                 && MaxOverlapY == other.MaxOverlapY;
         }
 
+        /// <summary>
+        /// Determine whether this instance equals another object.
+        /// </summary>
+        /// <param name="obj">The object to compare.</param>
+        /// <returns>True if the object is an equivalent DTO; otherwise false.</returns>
         public override bool Equals(object? obj) => obj is NVAPIMosaicOverlapLimitsDto other && Equals(other);
 
+        /// <summary>
+        /// Get a hash code for this instance.
+        /// </summary>
+        /// <returns>Hash code for this instance.</returns>
         public override int GetHashCode()
         {
             unchecked
@@ -813,7 +966,20 @@ namespace NVAPIWrapper
             }
         }
 
+        /// <summary>
+        /// Determine whether two Mosaic overlap limits DTOs are equal.
+        /// </summary>
+        /// <param name="left">Left DTO.</param>
+        /// <param name="right">Right DTO.</param>
+        /// <returns>True if the DTOs are equal; otherwise false.</returns>
         public static bool operator ==(NVAPIMosaicOverlapLimitsDto left, NVAPIMosaicOverlapLimitsDto right) => left.Equals(right);
+
+        /// <summary>
+        /// Determine whether two Mosaic overlap limits DTOs are not equal.
+        /// </summary>
+        /// <param name="left">Left DTO.</param>
+        /// <param name="right">Right DTO.</param>
+        /// <returns>True if the DTOs are not equal; otherwise false.</returns>
         public static bool operator !=(NVAPIMosaicOverlapLimitsDto left, NVAPIMosaicOverlapLimitsDto right) => !left.Equals(right);
     }
 
@@ -827,6 +993,13 @@ namespace NVAPIWrapper
         public int OverlapX { get; }
         public int OverlapY { get; }
 
+        /// <summary>
+        /// Create a current Mosaic topology DTO.
+        /// </summary>
+        /// <param name="topoBrief">Topology brief.</param>
+        /// <param name="displaySetting">Display setting.</param>
+        /// <param name="overlapX">Horizontal overlap.</param>
+        /// <param name="overlapY">Vertical overlap.</param>
         public NVAPIMosaicCurrentTopoDto(NVAPIMosaicTopoBriefDto topoBrief, NVAPIMosaicDisplaySettingDto displaySetting, int overlapX, int overlapY)
         {
             TopoBrief = topoBrief;
@@ -835,6 +1008,11 @@ namespace NVAPIWrapper
             OverlapY = overlapY;
         }
 
+        /// <summary>
+        /// Determine whether this instance equals another current Mosaic topology DTO.
+        /// </summary>
+        /// <param name="other">The other DTO to compare.</param>
+        /// <returns>True if the DTOs are equal; otherwise false.</returns>
         public bool Equals(NVAPIMosaicCurrentTopoDto other)
         {
             return TopoBrief.Equals(other.TopoBrief)
@@ -843,8 +1021,17 @@ namespace NVAPIWrapper
                 && OverlapY == other.OverlapY;
         }
 
+        /// <summary>
+        /// Determine whether this instance equals another object.
+        /// </summary>
+        /// <param name="obj">The object to compare.</param>
+        /// <returns>True if the object is an equivalent DTO; otherwise false.</returns>
         public override bool Equals(object? obj) => obj is NVAPIMosaicCurrentTopoDto other && Equals(other);
 
+        /// <summary>
+        /// Get a hash code for this instance.
+        /// </summary>
+        /// <returns>Hash code for this instance.</returns>
         public override int GetHashCode()
         {
             unchecked
@@ -857,7 +1044,20 @@ namespace NVAPIWrapper
             }
         }
 
+        /// <summary>
+        /// Determine whether two current Mosaic topology DTOs are equal.
+        /// </summary>
+        /// <param name="left">Left DTO.</param>
+        /// <param name="right">Right DTO.</param>
+        /// <returns>True if the DTOs are equal; otherwise false.</returns>
         public static bool operator ==(NVAPIMosaicCurrentTopoDto left, NVAPIMosaicCurrentTopoDto right) => left.Equals(right);
+
+        /// <summary>
+        /// Determine whether two current Mosaic topology DTOs are not equal.
+        /// </summary>
+        /// <param name="left">Left DTO.</param>
+        /// <param name="right">Right DTO.</param>
+        /// <returns>True if the DTOs are not equal; otherwise false.</returns>
         public static bool operator !=(NVAPIMosaicCurrentTopoDto left, NVAPIMosaicCurrentTopoDto right) => !left.Equals(right);
     }
 
@@ -869,12 +1069,23 @@ namespace NVAPIWrapper
         public NVAPIMosaicTopoBriefDto Brief { get; }
         public NVAPIMosaicTopoDetailsDto[] Topos { get; }
 
+        /// <summary>
+        /// Create a Mosaic topology group DTO.
+        /// </summary>
+        /// <param name="brief">Topology brief.</param>
+        /// <param name="topos">Topology details.</param>
         public NVAPIMosaicTopoGroupDto(NVAPIMosaicTopoBriefDto brief, NVAPIMosaicTopoDetailsDto[] topos)
         {
             Brief = brief;
             Topos = topos ?? Array.Empty<NVAPIMosaicTopoDetailsDto>();
         }
 
+        /// <summary>
+        /// Create a Mosaic topology group DTO from native data.
+        /// </summary>
+        /// <param name="apiHelper">API helper owning GPU helpers.</param>
+        /// <param name="native">Native topology group data.</param>
+        /// <returns>Mosaic topology group DTO.</returns>
         public static NVAPIMosaicTopoGroupDto FromNative(NVAPIApiHelper apiHelper, NV_MOSAIC_TOPO_GROUP native)
         {
             var count = (int)Math.Min(native.count, 2u);
@@ -888,13 +1099,27 @@ namespace NVAPIWrapper
             return new NVAPIMosaicTopoGroupDto(NVAPIMosaicTopoBriefDto.FromNative(native.brief), details);
         }
 
+        /// <summary>
+        /// Determine whether this instance equals another Mosaic topology group DTO.
+        /// </summary>
+        /// <param name="other">The other DTO to compare.</param>
+        /// <returns>True if the DTOs are equal; otherwise false.</returns>
         public bool Equals(NVAPIMosaicTopoGroupDto other)
         {
             return Brief.Equals(other.Brief) && DtoHelpers.SequenceEquals(Topos, other.Topos);
         }
 
+        /// <summary>
+        /// Determine whether this instance equals another object.
+        /// </summary>
+        /// <param name="obj">The object to compare.</param>
+        /// <returns>True if the object is an equivalent DTO; otherwise false.</returns>
         public override bool Equals(object? obj) => obj is NVAPIMosaicTopoGroupDto other && Equals(other);
 
+        /// <summary>
+        /// Get a hash code for this instance.
+        /// </summary>
+        /// <returns>Hash code for this instance.</returns>
         public override int GetHashCode()
         {
             unchecked
@@ -905,7 +1130,20 @@ namespace NVAPIWrapper
             }
         }
 
+        /// <summary>
+        /// Determine whether two Mosaic topology group DTOs are equal.
+        /// </summary>
+        /// <param name="left">Left DTO.</param>
+        /// <param name="right">Right DTO.</param>
+        /// <returns>True if the DTOs are equal; otherwise false.</returns>
         public static bool operator ==(NVAPIMosaicTopoGroupDto left, NVAPIMosaicTopoGroupDto right) => left.Equals(right);
+
+        /// <summary>
+        /// Determine whether two Mosaic topology group DTOs are not equal.
+        /// </summary>
+        /// <param name="left">Left DTO.</param>
+        /// <param name="right">Right DTO.</param>
+        /// <returns>True if the DTOs are not equal; otherwise false.</returns>
         public static bool operator !=(NVAPIMosaicTopoGroupDto left, NVAPIMosaicTopoGroupDto right) => !left.Equals(right);
     }
 
@@ -921,6 +1159,14 @@ namespace NVAPIWrapper
         public uint ColCount { get; }
         public NVAPIMosaicGpuLayoutCellDto[] GpuLayout { get; }
 
+        /// <summary>
+        /// Create a Mosaic topology details DTO.
+        /// </summary>
+        /// <param name="logicalGpuHandle">Logical GPU handle.</param>
+        /// <param name="validityMask">Validity mask.</param>
+        /// <param name="rowCount">Number of rows.</param>
+        /// <param name="colCount">Number of columns.</param>
+        /// <param name="gpuLayout">GPU layout cells.</param>
         public NVAPIMosaicTopoDetailsDto(IntPtr logicalGpuHandle, uint validityMask, uint rowCount, uint colCount, NVAPIMosaicGpuLayoutCellDto[] gpuLayout)
         {
             LogicalGpuHandle = logicalGpuHandle;
@@ -941,6 +1187,12 @@ namespace NVAPIWrapper
             GpuLayout = gpuLayout ?? Array.Empty<NVAPIMosaicGpuLayoutCellDto>();
         }
 
+        /// <summary>
+        /// Create a Mosaic topology details DTO from native data.
+        /// </summary>
+        /// <param name="apiHelper">API helper owning GPU helpers.</param>
+        /// <param name="native">Native topology details data.</param>
+        /// <returns>Mosaic topology details DTO.</returns>
         public static unsafe NVAPIMosaicTopoDetailsDto FromNative(NVAPIApiHelper apiHelper, NV_MOSAIC_TOPO_DETAILS native)
         {
             var layoutCount = (int)Math.Min((ulong)native.rowCount * native.colCount, 64ul);
@@ -956,6 +1208,10 @@ namespace NVAPIWrapper
             return new NVAPIMosaicTopoDetailsDto(handle, helper, native.validityMask, native.rowCount, native.colCount, layout);
         }
 
+        /// <summary>
+        /// Convert this DTO to native topology details data.
+        /// </summary>
+        /// <returns>Native topology details data.</returns>
         public unsafe NV_MOSAIC_TOPO_DETAILS ToNative()
         {
             var native = new NV_MOSAIC_TOPO_DETAILS
@@ -978,6 +1234,11 @@ namespace NVAPIWrapper
             return native;
         }
 
+        /// <summary>
+        /// Determine whether this instance equals another Mosaic topology details DTO.
+        /// </summary>
+        /// <param name="other">The other DTO to compare.</param>
+        /// <returns>True if the DTOs are equal; otherwise false.</returns>
         public bool Equals(NVAPIMosaicTopoDetailsDto other)
         {
             return LogicalGpuHandle == other.LogicalGpuHandle
@@ -987,8 +1248,17 @@ namespace NVAPIWrapper
                 && DtoHelpers.SequenceEquals(GpuLayout, other.GpuLayout);
         }
 
+        /// <summary>
+        /// Determine whether this instance equals another object.
+        /// </summary>
+        /// <param name="obj">The object to compare.</param>
+        /// <returns>True if the object is an equivalent DTO; otherwise false.</returns>
         public override bool Equals(object? obj) => obj is NVAPIMosaicTopoDetailsDto other && Equals(other);
 
+        /// <summary>
+        /// Get a hash code for this instance.
+        /// </summary>
+        /// <returns>Hash code for this instance.</returns>
         public override int GetHashCode()
         {
             unchecked
@@ -1002,7 +1272,20 @@ namespace NVAPIWrapper
             }
         }
 
+        /// <summary>
+        /// Determine whether two Mosaic topology details DTOs are equal.
+        /// </summary>
+        /// <param name="left">Left DTO.</param>
+        /// <param name="right">Right DTO.</param>
+        /// <returns>True if the DTOs are equal; otherwise false.</returns>
         public static bool operator ==(NVAPIMosaicTopoDetailsDto left, NVAPIMosaicTopoDetailsDto right) => left.Equals(right);
+
+        /// <summary>
+        /// Determine whether two Mosaic topology details DTOs are not equal.
+        /// </summary>
+        /// <param name="left">Left DTO.</param>
+        /// <param name="right">Right DTO.</param>
+        /// <returns>True if the DTOs are not equal; otherwise false.</returns>
         public static bool operator !=(NVAPIMosaicTopoDetailsDto left, NVAPIMosaicTopoDetailsDto right) => !left.Equals(right);
     }
 
@@ -1017,6 +1300,13 @@ namespace NVAPIWrapper
         public int OverlapX { get; }
         public int OverlapY { get; }
 
+        /// <summary>
+        /// Create a Mosaic GPU layout cell DTO.
+        /// </summary>
+        /// <param name="physicalGpuHandle">Physical GPU handle.</param>
+        /// <param name="displayOutputId">Display output identifier.</param>
+        /// <param name="overlapX">Horizontal overlap.</param>
+        /// <param name="overlapY">Vertical overlap.</param>
         public NVAPIMosaicGpuLayoutCellDto(IntPtr physicalGpuHandle, uint displayOutputId, int overlapX, int overlapY)
         {
             PhysicalGpuHandle = physicalGpuHandle;
@@ -1035,6 +1325,12 @@ namespace NVAPIWrapper
             OverlapY = overlapY;
         }
 
+        /// <summary>
+        /// Create a Mosaic GPU layout cell DTO from native data.
+        /// </summary>
+        /// <param name="apiHelper">API helper owning GPU helpers.</param>
+        /// <param name="native">Native GPU layout cell data.</param>
+        /// <returns>Mosaic GPU layout cell DTO.</returns>
         public static unsafe NVAPIMosaicGpuLayoutCellDto FromNative(NVAPIApiHelper apiHelper, NV_MOSAIC_GPU_LAYOUT_CELL native)
         {
             var handle = (IntPtr)native.hPhysicalGPU;
@@ -1042,6 +1338,10 @@ namespace NVAPIWrapper
             return new NVAPIMosaicGpuLayoutCellDto(handle, helper, native.displayOutputId, native.overlapX, native.overlapY);
         }
 
+        /// <summary>
+        /// Convert this DTO to native GPU layout cell data.
+        /// </summary>
+        /// <returns>Native GPU layout cell data.</returns>
         public unsafe NV_MOSAIC_GPU_LAYOUT_CELL ToNative()
         {
             return new NV_MOSAIC_GPU_LAYOUT_CELL
@@ -1053,6 +1353,11 @@ namespace NVAPIWrapper
             };
         }
 
+        /// <summary>
+        /// Determine whether this instance equals another Mosaic GPU layout cell DTO.
+        /// </summary>
+        /// <param name="other">The other DTO to compare.</param>
+        /// <returns>True if the DTOs are equal; otherwise false.</returns>
         public bool Equals(NVAPIMosaicGpuLayoutCellDto other)
         {
             return PhysicalGpuHandle == other.PhysicalGpuHandle
@@ -1061,8 +1366,17 @@ namespace NVAPIWrapper
                 && OverlapY == other.OverlapY;
         }
 
+        /// <summary>
+        /// Determine whether this instance equals another object.
+        /// </summary>
+        /// <param name="obj">The object to compare.</param>
+        /// <returns>True if the object is an equivalent DTO; otherwise false.</returns>
         public override bool Equals(object? obj) => obj is NVAPIMosaicGpuLayoutCellDto other && Equals(other);
 
+        /// <summary>
+        /// Get a hash code for this instance.
+        /// </summary>
+        /// <returns>Hash code for this instance.</returns>
         public override int GetHashCode()
         {
             unchecked
@@ -1075,7 +1389,20 @@ namespace NVAPIWrapper
             }
         }
 
+        /// <summary>
+        /// Determine whether two Mosaic GPU layout cell DTOs are equal.
+        /// </summary>
+        /// <param name="left">Left DTO.</param>
+        /// <param name="right">Right DTO.</param>
+        /// <returns>True if the DTOs are equal; otherwise false.</returns>
         public static bool operator ==(NVAPIMosaicGpuLayoutCellDto left, NVAPIMosaicGpuLayoutCellDto right) => left.Equals(right);
+
+        /// <summary>
+        /// Determine whether two Mosaic GPU layout cell DTOs are not equal.
+        /// </summary>
+        /// <param name="left">Left DTO.</param>
+        /// <param name="right">Right DTO.</param>
+        /// <returns>True if the DTOs are not equal; otherwise false.</returns>
         public static bool operator !=(NVAPIMosaicGpuLayoutCellDto left, NVAPIMosaicGpuLayoutCellDto right) => !left.Equals(right);
     }
 
@@ -1091,6 +1418,15 @@ namespace NVAPIWrapper
         public uint CloneGroup { get; }
         public _NV_PIXEL_SHIFT_TYPE PixelShiftType { get; }
 
+        /// <summary>
+        /// Create a Mosaic grid topology display DTO.
+        /// </summary>
+        /// <param name="displayId">Display identifier.</param>
+        /// <param name="overlapX">Horizontal overlap.</param>
+        /// <param name="overlapY">Vertical overlap.</param>
+        /// <param name="rotation">Rotation value.</param>
+        /// <param name="cloneGroup">Clone group identifier.</param>
+        /// <param name="pixelShiftType">Pixel shift type.</param>
         public NVAPIMosaicGridTopoDisplayDto(uint displayId, int overlapX, int overlapY, _NV_ROTATE rotation, uint cloneGroup, _NV_PIXEL_SHIFT_TYPE pixelShiftType)
         {
             DisplayId = displayId;
@@ -1101,6 +1437,11 @@ namespace NVAPIWrapper
             PixelShiftType = pixelShiftType;
         }
 
+        /// <summary>
+        /// Create a Mosaic grid topology display DTO from native data.
+        /// </summary>
+        /// <param name="native">Native grid topology display data.</param>
+        /// <returns>Mosaic grid topology display DTO.</returns>
         public static NVAPIMosaicGridTopoDisplayDto FromNative(_NV_MOSAIC_GRID_TOPO_DISPLAY_V2 native)
         {
             return new NVAPIMosaicGridTopoDisplayDto(
@@ -1112,6 +1453,10 @@ namespace NVAPIWrapper
                 native.pixelShiftType);
         }
 
+        /// <summary>
+        /// Convert this DTO to native grid topology display data.
+        /// </summary>
+        /// <returns>Native grid topology display data.</returns>
         public unsafe _NV_MOSAIC_GRID_TOPO_DISPLAY_V2 ToNative()
         {
             return new _NV_MOSAIC_GRID_TOPO_DISPLAY_V2
@@ -1131,6 +1476,11 @@ namespace NVAPIWrapper
             return (uint)(sizeof(_NV_MOSAIC_GRID_TOPO_DISPLAY_V2) | (2u << 16));
         }
 
+        /// <summary>
+        /// Determine whether this instance equals another Mosaic grid topology display DTO.
+        /// </summary>
+        /// <param name="other">The other DTO to compare.</param>
+        /// <returns>True if the DTOs are equal; otherwise false.</returns>
         public bool Equals(NVAPIMosaicGridTopoDisplayDto other)
         {
             return DisplayId == other.DisplayId
@@ -1141,8 +1491,17 @@ namespace NVAPIWrapper
                 && PixelShiftType == other.PixelShiftType;
         }
 
+        /// <summary>
+        /// Determine whether this instance equals another object.
+        /// </summary>
+        /// <param name="obj">The object to compare.</param>
+        /// <returns>True if the object is an equivalent DTO; otherwise false.</returns>
         public override bool Equals(object? obj) => obj is NVAPIMosaicGridTopoDisplayDto other && Equals(other);
 
+        /// <summary>
+        /// Get a hash code for this instance.
+        /// </summary>
+        /// <returns>Hash code for this instance.</returns>
         public override int GetHashCode()
         {
             unchecked
@@ -1157,7 +1516,20 @@ namespace NVAPIWrapper
             }
         }
 
+        /// <summary>
+        /// Determine whether two Mosaic grid topology display DTOs are equal.
+        /// </summary>
+        /// <param name="left">Left DTO.</param>
+        /// <param name="right">Right DTO.</param>
+        /// <returns>True if the DTOs are equal; otherwise false.</returns>
         public static bool operator ==(NVAPIMosaicGridTopoDisplayDto left, NVAPIMosaicGridTopoDisplayDto right) => left.Equals(right);
+
+        /// <summary>
+        /// Determine whether two Mosaic grid topology display DTOs are not equal.
+        /// </summary>
+        /// <param name="left">Left DTO.</param>
+        /// <param name="right">Right DTO.</param>
+        /// <returns>True if the DTOs are not equal; otherwise false.</returns>
         public static bool operator !=(NVAPIMosaicGridTopoDisplayDto left, NVAPIMosaicGridTopoDisplayDto right) => !left.Equals(right);
     }
 
@@ -1177,6 +1549,19 @@ namespace NVAPIWrapper
         public NVAPIMosaicGridTopoDisplayDto[] Displays { get; }
         public NVAPIMosaicDisplaySettingDto DisplaySettings { get; }
 
+        /// <summary>
+        /// Create a Mosaic grid topology DTO.
+        /// </summary>
+        /// <param name="rows">Row count.</param>
+        /// <param name="columns">Column count.</param>
+        /// <param name="applyWithBezelCorrect">Whether to apply with bezel correction.</param>
+        /// <param name="immersiveGaming">Whether immersive gaming is enabled.</param>
+        /// <param name="baseMosaic">Whether base Mosaic is used.</param>
+        /// <param name="driverReloadAllowed">Whether driver reload is allowed.</param>
+        /// <param name="acceleratePrimaryDisplay">Whether primary display acceleration is enabled.</param>
+        /// <param name="pixelShift">Whether pixel shift is enabled.</param>
+        /// <param name="displays">Display topology entries.</param>
+        /// <param name="displaySettings">Display settings.</param>
         public NVAPIMosaicGridTopoDto(
             uint rows,
             uint columns,
@@ -1201,6 +1586,11 @@ namespace NVAPIWrapper
             DisplaySettings = displaySettings;
         }
 
+        /// <summary>
+        /// Create a Mosaic grid topology DTO from native data.
+        /// </summary>
+        /// <param name="native">Native grid topology data.</param>
+        /// <returns>Mosaic grid topology DTO.</returns>
         public static NVAPIMosaicGridTopoDto FromNative(_NV_MOSAIC_GRID_TOPO_V2 native)
         {
             var count = (int)Math.Min(native.displayCount, NVAPI.NV_MOSAIC_MAX_DISPLAYS);
@@ -1224,6 +1614,10 @@ namespace NVAPIWrapper
                 NVAPIMosaicDisplaySettingDto.FromNative(native.displaySettings));
         }
 
+        /// <summary>
+        /// Convert this DTO to native grid topology data.
+        /// </summary>
+        /// <returns>Native grid topology data.</returns>
         public unsafe _NV_MOSAIC_GRID_TOPO_V2 ToNative()
         {
             var native = new _NV_MOSAIC_GRID_TOPO_V2
@@ -1254,6 +1648,11 @@ namespace NVAPIWrapper
             return native;
         }
 
+        /// <summary>
+        /// Determine whether this instance equals another Mosaic grid topology DTO.
+        /// </summary>
+        /// <param name="other">The other DTO to compare.</param>
+        /// <returns>True if the DTOs are equal; otherwise false.</returns>
         public bool Equals(NVAPIMosaicGridTopoDto other)
         {
             return Rows == other.Rows
@@ -1268,8 +1667,17 @@ namespace NVAPIWrapper
                 && DtoHelpers.SequenceEquals(Displays, other.Displays);
         }
 
+        /// <summary>
+        /// Determine whether this instance equals another object.
+        /// </summary>
+        /// <param name="obj">The object to compare.</param>
+        /// <returns>True if the object is an equivalent DTO; otherwise false.</returns>
         public override bool Equals(object? obj) => obj is NVAPIMosaicGridTopoDto other && Equals(other);
 
+        /// <summary>
+        /// Get a hash code for this instance.
+        /// </summary>
+        /// <returns>Hash code for this instance.</returns>
         public override int GetHashCode()
         {
             unchecked
@@ -1288,7 +1696,20 @@ namespace NVAPIWrapper
             }
         }
 
+        /// <summary>
+        /// Determine whether two Mosaic grid topology DTOs are equal.
+        /// </summary>
+        /// <param name="left">Left DTO.</param>
+        /// <param name="right">Right DTO.</param>
+        /// <returns>True if the DTOs are equal; otherwise false.</returns>
         public static bool operator ==(NVAPIMosaicGridTopoDto left, NVAPIMosaicGridTopoDto right) => left.Equals(right);
+
+        /// <summary>
+        /// Determine whether two Mosaic grid topology DTOs are not equal.
+        /// </summary>
+        /// <param name="left">Left DTO.</param>
+        /// <param name="right">Right DTO.</param>
+        /// <returns>True if the DTOs are not equal; otherwise false.</returns>
         public static bool operator !=(NVAPIMosaicGridTopoDto left, NVAPIMosaicGridTopoDto right) => !left.Equals(right);
     }
 
@@ -1299,11 +1720,21 @@ namespace NVAPIWrapper
     {
         public NVAPIMosaicGridTopoDto[] Grids { get; }
 
+        /// <summary>
+        /// Create a Mosaic grid topologies DTO.
+        /// </summary>
+        /// <param name="grids">Grid topologies.</param>
         public NVAPIMosaicGridTopologiesDto(NVAPIMosaicGridTopoDto[] grids)
         {
             Grids = grids ?? Array.Empty<NVAPIMosaicGridTopoDto>();
         }
 
+        /// <summary>
+        /// Create a Mosaic grid topologies DTO from native data.
+        /// </summary>
+        /// <param name="count">Number of grids.</param>
+        /// <param name="native">Native grid topology data.</param>
+        /// <returns>Mosaic grid topologies DTO.</returns>
         public static NVAPIMosaicGridTopologiesDto FromNative(uint count, _NV_MOSAIC_GRID_TOPO_V2[] native)
         {
             var gridCount = (int)Math.Min(count, (uint)native.Length);
@@ -1327,16 +1758,43 @@ namespace NVAPIWrapper
             return native;
         }
 
+        /// <summary>
+        /// Determine whether this instance equals another Mosaic grid topologies DTO.
+        /// </summary>
+        /// <param name="other">The other DTO to compare.</param>
+        /// <returns>True if the DTOs are equal; otherwise false.</returns>
         public bool Equals(NVAPIMosaicGridTopologiesDto other)
         {
             return DtoHelpers.SequenceEquals(Grids, other.Grids);
         }
 
+        /// <summary>
+        /// Determine whether this instance equals another object.
+        /// </summary>
+        /// <param name="obj">The object to compare.</param>
+        /// <returns>True if the object is an equivalent DTO; otherwise false.</returns>
         public override bool Equals(object? obj) => obj is NVAPIMosaicGridTopologiesDto other && Equals(other);
 
+        /// <summary>
+        /// Get a hash code for this instance.
+        /// </summary>
+        /// <returns>Hash code for this instance.</returns>
         public override int GetHashCode() => DtoHelpers.SequenceHashCode(Grids);
 
+        /// <summary>
+        /// Determine whether two Mosaic grid topologies DTOs are equal.
+        /// </summary>
+        /// <param name="left">Left DTO.</param>
+        /// <param name="right">Right DTO.</param>
+        /// <returns>True if the DTOs are equal; otherwise false.</returns>
         public static bool operator ==(NVAPIMosaicGridTopologiesDto left, NVAPIMosaicGridTopologiesDto right) => left.Equals(right);
+
+        /// <summary>
+        /// Determine whether two Mosaic grid topologies DTOs are not equal.
+        /// </summary>
+        /// <param name="left">Left DTO.</param>
+        /// <param name="right">Right DTO.</param>
+        /// <returns>True if the DTOs are not equal; otherwise false.</returns>
         public static bool operator !=(NVAPIMosaicGridTopologiesDto left, NVAPIMosaicGridTopologiesDto right) => !left.Equals(right);
     }
 
@@ -1347,21 +1805,52 @@ namespace NVAPIWrapper
     {
         public NVAPIMosaicDisplaySettingDto[] Settings { get; }
 
+        /// <summary>
+        /// Create a Mosaic display settings DTO.
+        /// </summary>
+        /// <param name="settings">Display settings.</param>
         public NVAPIMosaicDisplaySettingsDto(NVAPIMosaicDisplaySettingDto[] settings)
         {
             Settings = settings ?? Array.Empty<NVAPIMosaicDisplaySettingDto>();
         }
 
+        /// <summary>
+        /// Determine whether this instance equals another Mosaic display settings DTO.
+        /// </summary>
+        /// <param name="other">The other DTO to compare.</param>
+        /// <returns>True if the DTOs are equal; otherwise false.</returns>
         public bool Equals(NVAPIMosaicDisplaySettingsDto other)
         {
             return DtoHelpers.SequenceEquals(Settings, other.Settings);
         }
 
+        /// <summary>
+        /// Determine whether this instance equals another object.
+        /// </summary>
+        /// <param name="obj">The object to compare.</param>
+        /// <returns>True if the object is an equivalent DTO; otherwise false.</returns>
         public override bool Equals(object? obj) => obj is NVAPIMosaicDisplaySettingsDto other && Equals(other);
 
+        /// <summary>
+        /// Get a hash code for this instance.
+        /// </summary>
+        /// <returns>Hash code for this instance.</returns>
         public override int GetHashCode() => DtoHelpers.SequenceHashCode(Settings);
 
+        /// <summary>
+        /// Determine whether two Mosaic display settings DTOs are equal.
+        /// </summary>
+        /// <param name="left">Left DTO.</param>
+        /// <param name="right">Right DTO.</param>
+        /// <returns>True if the DTOs are equal; otherwise false.</returns>
         public static bool operator ==(NVAPIMosaicDisplaySettingsDto left, NVAPIMosaicDisplaySettingsDto right) => left.Equals(right);
+
+        /// <summary>
+        /// Determine whether two Mosaic display settings DTOs are not equal.
+        /// </summary>
+        /// <param name="left">Left DTO.</param>
+        /// <param name="right">Right DTO.</param>
+        /// <returns>True if the DTOs are not equal; otherwise false.</returns>
         public static bool operator !=(NVAPIMosaicDisplaySettingsDto left, NVAPIMosaicDisplaySettingsDto right) => !left.Equals(right);
     }
 
@@ -1375,6 +1864,13 @@ namespace NVAPIWrapper
         public uint WarningFlags { get; }
         public bool SupportsRotation { get; }
 
+        /// <summary>
+        /// Create a Mosaic display status entry DTO.
+        /// </summary>
+        /// <param name="displayId">Display identifier.</param>
+        /// <param name="errorFlags">Error flags.</param>
+        /// <param name="warningFlags">Warning flags.</param>
+        /// <param name="supportsRotation">Whether rotation is supported.</param>
         public NVAPIMosaicDisplayStatusEntryDto(uint displayId, uint errorFlags, uint warningFlags, bool supportsRotation)
         {
             DisplayId = displayId;
@@ -1383,6 +1879,11 @@ namespace NVAPIWrapper
             SupportsRotation = supportsRotation;
         }
 
+        /// <summary>
+        /// Create a Mosaic display status entry DTO from native data.
+        /// </summary>
+        /// <param name="native">Native display status entry data.</param>
+        /// <returns>Mosaic display status entry DTO.</returns>
         public static NVAPIMosaicDisplayStatusEntryDto FromNative(NV_MOSAIC_DISPLAY_TOPO_STATUS._displays_e__Struct native)
         {
             return new NVAPIMosaicDisplayStatusEntryDto(
@@ -1392,6 +1893,11 @@ namespace NVAPIWrapper
                 native.supportsRotation != 0);
         }
 
+        /// <summary>
+        /// Determine whether this instance equals another Mosaic display status entry DTO.
+        /// </summary>
+        /// <param name="other">The other DTO to compare.</param>
+        /// <returns>True if the DTOs are equal; otherwise false.</returns>
         public bool Equals(NVAPIMosaicDisplayStatusEntryDto other)
         {
             return DisplayId == other.DisplayId
@@ -1400,8 +1906,17 @@ namespace NVAPIWrapper
                 && SupportsRotation == other.SupportsRotation;
         }
 
+        /// <summary>
+        /// Determine whether this instance equals another object.
+        /// </summary>
+        /// <param name="obj">The object to compare.</param>
+        /// <returns>True if the object is an equivalent DTO; otherwise false.</returns>
         public override bool Equals(object? obj) => obj is NVAPIMosaicDisplayStatusEntryDto other && Equals(other);
 
+        /// <summary>
+        /// Get a hash code for this instance.
+        /// </summary>
+        /// <returns>Hash code for this instance.</returns>
         public override int GetHashCode()
         {
             unchecked
@@ -1414,7 +1929,20 @@ namespace NVAPIWrapper
             }
         }
 
+        /// <summary>
+        /// Determine whether two Mosaic display status entry DTOs are equal.
+        /// </summary>
+        /// <param name="left">Left DTO.</param>
+        /// <param name="right">Right DTO.</param>
+        /// <returns>True if the DTOs are equal; otherwise false.</returns>
         public static bool operator ==(NVAPIMosaicDisplayStatusEntryDto left, NVAPIMosaicDisplayStatusEntryDto right) => left.Equals(right);
+
+        /// <summary>
+        /// Determine whether two Mosaic display status entry DTOs are not equal.
+        /// </summary>
+        /// <param name="left">Left DTO.</param>
+        /// <param name="right">Right DTO.</param>
+        /// <returns>True if the DTOs are not equal; otherwise false.</returns>
         public static bool operator !=(NVAPIMosaicDisplayStatusEntryDto left, NVAPIMosaicDisplayStatusEntryDto right) => !left.Equals(right);
     }
 
@@ -1427,6 +1955,12 @@ namespace NVAPIWrapper
         public uint WarningFlags { get; }
         public NVAPIMosaicDisplayStatusEntryDto[] Displays { get; }
 
+        /// <summary>
+        /// Create a Mosaic display topology status DTO.
+        /// </summary>
+        /// <param name="errorFlags">Error flags.</param>
+        /// <param name="warningFlags">Warning flags.</param>
+        /// <param name="displays">Display status entries.</param>
         public NVAPIMosaicDisplayTopoStatusDto(uint errorFlags, uint warningFlags, NVAPIMosaicDisplayStatusEntryDto[] displays)
         {
             ErrorFlags = errorFlags;
@@ -1434,6 +1968,11 @@ namespace NVAPIWrapper
             Displays = displays ?? Array.Empty<NVAPIMosaicDisplayStatusEntryDto>();
         }
 
+        /// <summary>
+        /// Create a Mosaic display topology status DTO from native data.
+        /// </summary>
+        /// <param name="native">Native display topology status data.</param>
+        /// <returns>Mosaic display topology status DTO.</returns>
         public static NVAPIMosaicDisplayTopoStatusDto FromNative(NV_MOSAIC_DISPLAY_TOPO_STATUS native)
         {
             var count = (int)Math.Min(native.displayCount, 128u);
@@ -1447,6 +1986,11 @@ namespace NVAPIWrapper
             return new NVAPIMosaicDisplayTopoStatusDto(native.errorFlags, native.warningFlags, displays);
         }
 
+        /// <summary>
+        /// Determine whether this instance equals another Mosaic display topology status DTO.
+        /// </summary>
+        /// <param name="other">The other DTO to compare.</param>
+        /// <returns>True if the DTOs are equal; otherwise false.</returns>
         public bool Equals(NVAPIMosaicDisplayTopoStatusDto other)
         {
             return ErrorFlags == other.ErrorFlags
@@ -1454,8 +1998,17 @@ namespace NVAPIWrapper
                 && DtoHelpers.SequenceEquals(Displays, other.Displays);
         }
 
+        /// <summary>
+        /// Determine whether this instance equals another object.
+        /// </summary>
+        /// <param name="obj">The object to compare.</param>
+        /// <returns>True if the object is an equivalent DTO; otherwise false.</returns>
         public override bool Equals(object? obj) => obj is NVAPIMosaicDisplayTopoStatusDto other && Equals(other);
 
+        /// <summary>
+        /// Get a hash code for this instance.
+        /// </summary>
+        /// <returns>Hash code for this instance.</returns>
         public override int GetHashCode()
         {
             unchecked
@@ -1467,7 +2020,20 @@ namespace NVAPIWrapper
             }
         }
 
+        /// <summary>
+        /// Determine whether two Mosaic display topology status DTOs are equal.
+        /// </summary>
+        /// <param name="left">Left DTO.</param>
+        /// <param name="right">Right DTO.</param>
+        /// <returns>True if the DTOs are equal; otherwise false.</returns>
         public static bool operator ==(NVAPIMosaicDisplayTopoStatusDto left, NVAPIMosaicDisplayTopoStatusDto right) => left.Equals(right);
+
+        /// <summary>
+        /// Determine whether two Mosaic display topology status DTOs are not equal.
+        /// </summary>
+        /// <param name="left">Left DTO.</param>
+        /// <param name="right">Right DTO.</param>
+        /// <returns>True if the DTOs are not equal; otherwise false.</returns>
         public static bool operator !=(NVAPIMosaicDisplayTopoStatusDto left, NVAPIMosaicDisplayTopoStatusDto right) => !left.Equals(right);
     }
 
@@ -1478,21 +2044,52 @@ namespace NVAPIWrapper
     {
         public NVAPIMosaicDisplayTopoStatusDto[] Statuses { get; }
 
+        /// <summary>
+        /// Create a Mosaic display topology status collection DTO.
+        /// </summary>
+        /// <param name="statuses">Status entries.</param>
         public NVAPIMosaicDisplayTopoStatusesDto(NVAPIMosaicDisplayTopoStatusDto[] statuses)
         {
             Statuses = statuses ?? Array.Empty<NVAPIMosaicDisplayTopoStatusDto>();
         }
 
+        /// <summary>
+        /// Determine whether this instance equals another Mosaic display topology status collection DTO.
+        /// </summary>
+        /// <param name="other">The other DTO to compare.</param>
+        /// <returns>True if the DTOs are equal; otherwise false.</returns>
         public bool Equals(NVAPIMosaicDisplayTopoStatusesDto other)
         {
             return DtoHelpers.SequenceEquals(Statuses, other.Statuses);
         }
 
+        /// <summary>
+        /// Determine whether this instance equals another object.
+        /// </summary>
+        /// <param name="obj">The object to compare.</param>
+        /// <returns>True if the object is an equivalent DTO; otherwise false.</returns>
         public override bool Equals(object? obj) => obj is NVAPIMosaicDisplayTopoStatusesDto other && Equals(other);
 
+        /// <summary>
+        /// Get a hash code for this instance.
+        /// </summary>
+        /// <returns>Hash code for this instance.</returns>
         public override int GetHashCode() => DtoHelpers.SequenceHashCode(Statuses);
 
+        /// <summary>
+        /// Determine whether two Mosaic display topology status collection DTOs are equal.
+        /// </summary>
+        /// <param name="left">Left DTO.</param>
+        /// <param name="right">Right DTO.</param>
+        /// <returns>True if the DTOs are equal; otherwise false.</returns>
         public static bool operator ==(NVAPIMosaicDisplayTopoStatusesDto left, NVAPIMosaicDisplayTopoStatusesDto right) => left.Equals(right);
+
+        /// <summary>
+        /// Determine whether two Mosaic display topology status collection DTOs are not equal.
+        /// </summary>
+        /// <param name="left">Left DTO.</param>
+        /// <param name="right">Right DTO.</param>
+        /// <returns>True if the DTOs are not equal; otherwise false.</returns>
         public static bool operator !=(NVAPIMosaicDisplayTopoStatusesDto left, NVAPIMosaicDisplayTopoStatusesDto right) => !left.Equals(right);
     }
 
@@ -1506,6 +2103,13 @@ namespace NVAPIWrapper
         public uint Right { get; }
         public uint Bottom { get; }
 
+        /// <summary>
+        /// Create a rectangle DTO.
+        /// </summary>
+        /// <param name="left">Left coordinate.</param>
+        /// <param name="top">Top coordinate.</param>
+        /// <param name="right">Right coordinate.</param>
+        /// <param name="bottom">Bottom coordinate.</param>
         public NVAPIRectDto(uint left, uint top, uint right, uint bottom)
         {
             Left = left;
@@ -1514,11 +2118,20 @@ namespace NVAPIWrapper
             Bottom = bottom;
         }
 
+        /// <summary>
+        /// Create a rectangle DTO from native data.
+        /// </summary>
+        /// <param name="native">Native rectangle data.</param>
+        /// <returns>Rectangle DTO.</returns>
         public static NVAPIRectDto FromNative(_NV_RECT native)
         {
             return new NVAPIRectDto(native.left, native.top, native.right, native.bottom);
         }
 
+        /// <summary>
+        /// Convert this DTO to native rectangle data.
+        /// </summary>
+        /// <returns>Native rectangle data.</returns>
         public _NV_RECT ToNative()
         {
             return new _NV_RECT
@@ -1530,13 +2143,27 @@ namespace NVAPIWrapper
             };
         }
 
+        /// <summary>
+        /// Determine whether this instance equals another rectangle DTO.
+        /// </summary>
+        /// <param name="other">The other DTO to compare.</param>
+        /// <returns>True if the DTOs are equal; otherwise false.</returns>
         public bool Equals(NVAPIRectDto other)
         {
             return Left == other.Left && Top == other.Top && Right == other.Right && Bottom == other.Bottom;
         }
 
+        /// <summary>
+        /// Determine whether this instance equals another object.
+        /// </summary>
+        /// <param name="obj">The object to compare.</param>
+        /// <returns>True if the object is an equivalent DTO; otherwise false.</returns>
         public override bool Equals(object? obj) => obj is NVAPIRectDto other && Equals(other);
 
+        /// <summary>
+        /// Get a hash code for this instance.
+        /// </summary>
+        /// <returns>Hash code for this instance.</returns>
         public override int GetHashCode()
         {
             unchecked
@@ -1549,7 +2176,20 @@ namespace NVAPIWrapper
             }
         }
 
+        /// <summary>
+        /// Determine whether two rectangle DTOs are equal.
+        /// </summary>
+        /// <param name="left">Left DTO.</param>
+        /// <param name="right">Right DTO.</param>
+        /// <returns>True if the DTOs are equal; otherwise false.</returns>
         public static bool operator ==(NVAPIRectDto left, NVAPIRectDto right) => left.Equals(right);
+
+        /// <summary>
+        /// Determine whether two rectangle DTOs are not equal.
+        /// </summary>
+        /// <param name="left">Left DTO.</param>
+        /// <param name="right">Right DTO.</param>
+        /// <returns>True if the DTOs are not equal; otherwise false.</returns>
         public static bool operator !=(NVAPIRectDto left, NVAPIRectDto right) => !left.Equals(right);
     }
 
@@ -1561,20 +2201,39 @@ namespace NVAPIWrapper
         public NVAPIRectDto[] Viewports { get; }
         public bool BezelCorrected { get; }
 
+        /// <summary>
+        /// Create a Mosaic viewports DTO.
+        /// </summary>
+        /// <param name="viewports">Viewport rectangles.</param>
+        /// <param name="bezelCorrected">Whether viewports are bezel corrected.</param>
         public NVAPIMosaicViewportsDto(NVAPIRectDto[] viewports, bool bezelCorrected)
         {
             Viewports = viewports ?? Array.Empty<NVAPIRectDto>();
             BezelCorrected = bezelCorrected;
         }
 
+        /// <summary>
+        /// Determine whether this instance equals another Mosaic viewports DTO.
+        /// </summary>
+        /// <param name="other">The other DTO to compare.</param>
+        /// <returns>True if the DTOs are equal; otherwise false.</returns>
         public bool Equals(NVAPIMosaicViewportsDto other)
         {
             return BezelCorrected == other.BezelCorrected
                 && DtoHelpers.SequenceEquals(Viewports, other.Viewports);
         }
 
+        /// <summary>
+        /// Determine whether this instance equals another object.
+        /// </summary>
+        /// <param name="obj">The object to compare.</param>
+        /// <returns>True if the object is an equivalent DTO; otherwise false.</returns>
         public override bool Equals(object? obj) => obj is NVAPIMosaicViewportsDto other && Equals(other);
 
+        /// <summary>
+        /// Get a hash code for this instance.
+        /// </summary>
+        /// <returns>Hash code for this instance.</returns>
         public override int GetHashCode()
         {
             unchecked
@@ -1585,7 +2244,20 @@ namespace NVAPIWrapper
             }
         }
 
+        /// <summary>
+        /// Determine whether two Mosaic viewports DTOs are equal.
+        /// </summary>
+        /// <param name="left">Left DTO.</param>
+        /// <param name="right">Right DTO.</param>
+        /// <returns>True if the DTOs are equal; otherwise false.</returns>
         public static bool operator ==(NVAPIMosaicViewportsDto left, NVAPIMosaicViewportsDto right) => left.Equals(right);
+
+        /// <summary>
+        /// Determine whether two Mosaic viewports DTOs are not equal.
+        /// </summary>
+        /// <param name="left">Left DTO.</param>
+        /// <param name="right">Right DTO.</param>
+        /// <returns>True if the DTOs are not equal; otherwise false.</returns>
         public static bool operator !=(NVAPIMosaicViewportsDto left, NVAPIMosaicViewportsDto right) => !left.Equals(right);
     }
 
