@@ -1,4 +1,4 @@
-# Create a release zip for NVIDIAWrapper
+# Create a release zip for NVAPIWrapper
 param(
     [string]$Configuration = "Release",
     [switch]$IncludeSources
@@ -11,7 +11,7 @@ if (-not $scriptRoot) {
 
 Set-Location $scriptRoot
 
-$NVIDIAHeader = Join-Path $scriptRoot "drivers.gpu.control-library/include/nvidia_api.h"
+$NVIDIAHeader = Join-Path $scriptRoot "nvapi/nvapi.h"
 if (-not (Test-Path $NVIDIAHeader)) {
     Write-Host "NVIDIA SDK headers not found. Run ./prepare_nvapi.ps1 first." -ForegroundColor Red
     exit 1
@@ -41,16 +41,16 @@ try {
 } catch {}
 $version = "$major.$minor.$patch"
 
-$projectPath = Join-Path $scriptRoot "NVIDIAWrapper/NVIDIAWrapper.csproj"
-Write-Host "Building NVIDIAWrapper ($Configuration) version $version..." -ForegroundColor Cyan
+$projectPath = Join-Path $scriptRoot "NVAPIWrapper/NVAPIWrapper.csproj"
+Write-Host "Building NVAPIWrapper ($Configuration) version $version..." -ForegroundColor Cyan
 dotnet build $projectPath -c $Configuration /p:Version=$version /p:AssemblyVersion=$version /p:FileVersion=$version
 if ($LASTEXITCODE -ne 0) {
     Write-Host "Build failed; aborting packaging." -ForegroundColor Red
     exit $LASTEXITCODE
 }
 
-$buildOutput = Join-Path $scriptRoot "NVIDIAWrapper/bin/$Configuration/net10.0"
-$assemblyPath = Join-Path $buildOutput "NVIDIAWrapper.dll"
+$buildOutput = Join-Path $scriptRoot "NVAPIWrapper/bin/$Configuration/net10.0"
+$assemblyPath = Join-Path $buildOutput "NVAPIWrapper.dll"
 if (-not (Test-Path $assemblyPath)) {
     Write-Host "Build output not found at $assemblyPath" -ForegroundColor Red
     exit 1
@@ -58,24 +58,24 @@ if (-not (Test-Path $assemblyPath)) {
 
 $artifactsDir = Join-Path $scriptRoot "release-zip"
 New-Item -ItemType Directory -Force -Path $artifactsDir | Out-Null
-$zipPath = Join-Path $artifactsDir "NVIDIAwrapper-$version-$Configuration.zip"
+$zipPath = Join-Path $artifactsDir "NVAPIWrapper-$version-$Configuration.zip"
 if (Test-Path $zipPath) { Remove-Item $zipPath }
 
 $pathsToPack = @()
 $pathsToPack += $assemblyPath
-$pathsToPack += Join-Path $buildOutput "NVIDIAWrapper.pdb"
-$pathsToPack += Join-Path $buildOutput "NVIDIAWrapper.deps.json"
-$pathsToPack += Join-Path $buildOutput "NVIDIAWrapper.xml"
+$pathsToPack += Join-Path $buildOutput "NVAPIWrapper.pdb"
+$pathsToPack += Join-Path $buildOutput "NVAPIWrapper.deps.json"
+$pathsToPack += Join-Path $buildOutput "NVAPIWrapper.xml"
 $pathsToPack += Join-Path $scriptRoot "LICENSE"
 $pathsToPack += Join-Path $scriptRoot "README.md"
-$pathsToPack += Join-Path $scriptRoot "NVIDIAWrapper/README.md"
+$pathsToPack += Join-Path $scriptRoot "NVAPIWrapper/README.md"
 $pathsToPack = $pathsToPack | Where-Object { Test-Path $_ }
 
 if ($IncludeSources) {
-    $pathsToPack += (Join-Path $scriptRoot "NVIDIAWrapper/cs_generated")
-    $sourceFiles = Get-ChildItem -Path (Join-Path $scriptRoot "NVIDIAWrapper") -Filter *.cs -File
+    $pathsToPack += (Join-Path $scriptRoot "NVAPIWrapper/cs_generated")
+    $sourceFiles = Get-ChildItem -Path (Join-Path $scriptRoot "NVAPIWrapper") -Filter *.cs -File
     $pathsToPack += $sourceFiles.FullName
-    $pathsToPack += (Join-Path $scriptRoot "NVIDIAWrapper/NVIDIAWrapper.csproj")
+    $pathsToPack += (Join-Path $scriptRoot "NVAPIWrapper/NVAPIWrapper.csproj")
 }
 
 $pathsToPack = $pathsToPack | Select-Object -Unique

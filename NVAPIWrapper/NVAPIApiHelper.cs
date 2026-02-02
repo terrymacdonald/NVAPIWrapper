@@ -50,6 +50,17 @@ namespace NVAPIWrapper
         public static NVAPIApiHelper Initialize()
         {
             return new NVAPIApiHelper(NVAPIApi.Initialize());
+
+        }
+
+        /// <summary>
+        /// Expose NVAPI DLL availability check without requiring direct use of NVAPIApi.
+        /// </summary>
+        /// <param name="errorMessage">Details about why the DLL could not be loaded.</param>
+        /// <returns>True if the NVAPI DLL can be loaded; otherwise, false.</returns>
+        public static bool IsNVAPIDllAvailable(out string errorMessage)
+        {
+            return NVAPIApi.IsNVAPIDllAvailable(out errorMessage);
         }
 
         /// <summary>
