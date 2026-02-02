@@ -92,6 +92,27 @@
             </summary>
             <returns>Array of physical GPU helpers, or empty if none are found.</returns>
         </member>
+        <member name="M:NVAPIWrapper.NVAPIApiHelper.GetPhysicalGpuFromGpuId(System.UInt32)">
+            <summary>
+            Get a physical GPU helper from a GPU ID.
+            </summary>
+            <param name="gpuId">GPU ID.</param>
+            <returns>Physical GPU helper, or null if unavailable.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIApiHelper.GetLogicalGpuFromPhysicalGpu(NVAPIWrapper.NVAPIPhysicalGpuHelper)">
+            <summary>
+            Get the logical GPU helper from a physical GPU helper.
+            </summary>
+            <param name="physicalGpu">Physical GPU helper.</param>
+            <returns>Logical GPU helper, or null if unavailable.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIApiHelper.GetGpuIdFromPhysicalGpu(NVAPIWrapper.NVAPIPhysicalGpuHelper)">
+            <summary>
+            Get the GPU ID from a physical GPU helper.
+            </summary>
+            <param name="physicalGpu">Physical GPU helper.</param>
+            <returns>GPU ID, or null if unavailable.</returns>
+        </member>
         <member name="M:NVAPIWrapper.NVAPIApiHelper.GetDriverAndBranchVersion">
             <summary>
             Get the NVAPI driver version and branch string.
@@ -3938,6 +3959,205 @@
             <param name="request">I2C request DTO containing data to write.</param>
             <returns>True if written, or null if unsupported.</returns>
         </member>
+        <member name="M:NVAPIWrapper.NVAPIPhysicalGpuHelper.GetArchInfo">
+            <summary>
+            Get GPU architecture info.
+            </summary>
+            <returns>Architecture info DTO, or null if unavailable.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIPhysicalGpuHelper.GetBoardInfo">
+            <summary>
+            Get GPU board info.
+            </summary>
+            <returns>Board info DTO, or null if unavailable.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIPhysicalGpuHelper.GetVbiosRevision">
+            <summary>
+            Get the VBIOS revision.
+            </summary>
+            <returns>VBIOS revision, or null if unavailable.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIPhysicalGpuHelper.GetVbiosOemRevision">
+            <summary>
+            Get the VBIOS OEM revision.
+            </summary>
+            <returns>VBIOS OEM revision, or null if unavailable.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIPhysicalGpuHelper.GetCurrentPcieDownstreamWidth">
+            <summary>
+            Get current PCIe downstream width.
+            </summary>
+            <returns>PCIe downstream width, or null if unavailable.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIPhysicalGpuHelper.GetRamBusWidth">
+            <summary>
+            Get the GPU RAM bus width.
+            </summary>
+            <returns>RAM bus width, or null if unavailable.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIPhysicalGpuHelper.GetIrq">
+            <summary>
+            Get the GPU IRQ.
+            </summary>
+            <returns>IRQ value, or null if unavailable.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIPhysicalGpuHelper.GetOutputType(System.UInt32)">
+            <summary>
+            Get GPU output type for the specified output ID.
+            </summary>
+            <param name="outputId">Output ID (single bit set).</param>
+            <returns>Output type, or null if unavailable.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIPhysicalGpuHelper.ValidateOutputCombination(System.UInt32)">
+            <summary>
+            Validate an output combination mask.
+            </summary>
+            <param name="outputsMask">Outputs mask to validate.</param>
+            <returns>True if valid, false if invalid, or null if unavailable.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIPhysicalGpuHelper.GetEccConfigurationInfo">
+            <summary>
+            Get ECC configuration info.
+            </summary>
+            <returns>ECC configuration DTO, or null if unavailable.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIPhysicalGpuHelper.SetEccConfiguration(System.Boolean,System.Boolean)">
+            <summary>
+            Set ECC configuration.
+            </summary>
+            <param name="enable">True to enable ECC.</param>
+            <param name="enableImmediately">True to enable immediately.</param>
+            <returns>True if applied or unchanged, false if unavailable.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIPhysicalGpuHelper.GetEccErrorInfo">
+            <summary>
+            Get ECC error info.
+            </summary>
+            <returns>ECC error info DTO, or null if unavailable.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIPhysicalGpuHelper.ResetEccErrorInfo(System.Boolean,System.Boolean)">
+            <summary>
+            Reset ECC error counts.
+            </summary>
+            <param name="resetCurrent">Reset current error counts.</param>
+            <param name="resetAggregate">Reset aggregate error counts.</param>
+            <returns>True if reset, false if unavailable.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIPhysicalGpuHelper.GetHdcpSupportStatus">
+            <summary>
+            Get HDCP support status.
+            </summary>
+            <returns>HDCP support status DTO, or null if unavailable.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIPhysicalGpuHelper.GetEdid(System.UInt32)">
+            <summary>
+            Get EDID data for a GPU output.
+            </summary>
+            <param name="displayOutputId">Display output ID.</param>
+            <returns>EDID DTO, or null if unavailable.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIPhysicalGpuHelper.SetEdid(System.UInt32,NVAPIWrapper.NVAPIGpuEdidDto)">
+            <summary>
+            Set EDID data for a GPU output.
+            </summary>
+            <param name="displayOutputId">Display output ID.</param>
+            <param name="edid">EDID data DTO.</param>
+            <returns>True if applied or unchanged, false if unavailable.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIPhysicalGpuHelper.GetLogicalGpuInfo">
+            <summary>
+            Get logical GPU info associated with this physical GPU.
+            </summary>
+            <returns>Logical GPU info DTO, or null if unavailable.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIPhysicalGpuHelper.RegisterForUtilizationSampleUpdates(NVAPIWrapper.NVAPIGpuUtilizationSampleCallbackSettingsDto)">
+            <summary>
+            Register or unregister for GPU utilization sample updates.
+            </summary>
+            <param name="settings">Callback settings DTO (set Callback to IntPtr.Zero to unregister).</param>
+            <returns>True if registered, false if unavailable.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIPhysicalGpuHelper.GetScanoutCompositionParameter(System.UInt32,NVAPIWrapper.NV_GPU_SCANOUT_COMPOSITION_PARAMETER)">
+            <summary>
+            Get scanout composition parameter.
+            </summary>
+            <param name="displayId">Display ID.</param>
+            <param name="parameter">Parameter to query.</param>
+            <returns>Scanout composition parameter DTO, or null if unavailable.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIPhysicalGpuHelper.SetScanoutCompositionParameter(System.UInt32,NVAPIWrapper.NVAPIGpuScanoutCompositionParameterDto)">
+            <summary>
+            Set scanout composition parameter.
+            </summary>
+            <param name="displayId">Display ID.</param>
+            <param name="parameter">Parameter settings.</param>
+            <returns>True if applied or unchanged, false if unavailable.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIPhysicalGpuHelper.GetScanoutConfiguration(System.UInt32)">
+            <summary>
+            Get scanout configuration.
+            </summary>
+            <param name="displayId">Display ID.</param>
+            <returns>Scanout configuration DTO, or null if unavailable.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIPhysicalGpuHelper.GetScanoutConfigurationEx(System.UInt32)">
+            <summary>
+            Get extended scanout configuration.
+            </summary>
+            <param name="displayId">Display ID.</param>
+            <returns>Scanout configuration DTO, or null if unavailable.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIPhysicalGpuHelper.GetScanoutIntensityState(System.UInt32)">
+            <summary>
+            Get scanout intensity state.
+            </summary>
+            <param name="displayId">Display ID.</param>
+            <returns>Scanout intensity state DTO, or null if unavailable.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIPhysicalGpuHelper.SetScanoutIntensity(System.UInt32,NVAPIWrapper.NVAPIGpuScanoutIntensityDataDto)">
+            <summary>
+            Set scanout intensity.
+            </summary>
+            <param name="displayId">Display ID.</param>
+            <param name="data">Scanout intensity data.</param>
+            <returns>Result DTO, or null if unavailable.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIPhysicalGpuHelper.GetScanoutWarpingState(System.UInt32)">
+            <summary>
+            Get scanout warping state.
+            </summary>
+            <param name="displayId">Display ID.</param>
+            <returns>Scanout warping state DTO, or null if unavailable.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIPhysicalGpuHelper.SetScanoutWarping(System.UInt32,NVAPIWrapper.NVAPIGpuScanoutWarpingDataDto)">
+            <summary>
+            Set scanout warping.
+            </summary>
+            <param name="displayId">Display ID.</param>
+            <param name="data">Scanout warping data.</param>
+            <returns>Result DTO, or null if unavailable.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIPhysicalGpuHelper.QueryWorkstationFeatureSupport(NVAPIWrapper._NV_GPU_WORKSTATION_FEATURE_TYPE)">
+            <summary>
+            Query workstation feature support for this GPU.
+            </summary>
+            <param name="feature">Workstation feature type.</param>
+            <returns>True if supported, false if not supported, or null if unavailable.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIPhysicalGpuHelper.WorkstationFeatureQuery">
+            <summary>
+            Query workstation feature masks.
+            </summary>
+            <returns>Workstation feature query DTO, or null if unavailable.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIPhysicalGpuHelper.WorkstationFeatureSetup(System.UInt32,System.UInt32)">
+            <summary>
+            Configure workstation feature masks.
+            </summary>
+            <param name="featureEnableMask">Features to enable.</param>
+            <param name="featureDisableMask">Features to disable.</param>
+            <returns>True if applied, false if unavailable.</returns>
+        </member>
         <member name="M:NVAPIWrapper.NVAPIPhysicalGpuHelper.Dispose">
             <summary>
             Dispose the helper and prevent further use.
@@ -4099,6 +4319,101 @@
         <member name="T:NVAPIWrapper.NVAPIGpuInfoDto">
             <summary>
             GPU info DTO.
+            </summary>
+        </member>
+        <member name="T:NVAPIWrapper.NVAPIGpuArchInfoDto">
+            <summary>
+            GPU architecture info DTO.
+            </summary>
+        </member>
+        <member name="T:NVAPIWrapper.NVAPIGpuBoardInfoDto">
+            <summary>
+            GPU board info DTO.
+            </summary>
+        </member>
+        <member name="T:NVAPIWrapper.NVAPIGpuEccConfigurationInfoDto">
+            <summary>
+            ECC configuration info DTO.
+            </summary>
+        </member>
+        <member name="T:NVAPIWrapper.NVAPIGpuEccErrorInfoDto">
+            <summary>
+            ECC error info DTO.
+            </summary>
+        </member>
+        <member name="T:NVAPIWrapper.NVAPIGpuHdcpSupportStatusDto">
+            <summary>
+            HDCP support status DTO.
+            </summary>
+        </member>
+        <member name="T:NVAPIWrapper.NVAPIGpuEdidDto">
+            <summary>
+            GPU EDID data DTO.
+            </summary>
+        </member>
+        <member name="T:NVAPIWrapper.NVAPILogicalGpuInfoDto">
+            <summary>
+            Logical GPU info DTO.
+            </summary>
+        </member>
+        <member name="T:NVAPIWrapper.NVAPISBoxDto">
+            <summary>
+            DTO for NvSBox values.
+            </summary>
+        </member>
+        <member name="T:NVAPIWrapper.NVAPIGpuScanoutConfigurationDto">
+            <summary>
+            Scanout configuration DTO.
+            </summary>
+        </member>
+        <member name="T:NVAPIWrapper.NVAPIGpuScanoutConfigurationExDto">
+            <summary>
+            Extended scanout configuration DTO.
+            </summary>
+        </member>
+        <member name="T:NVAPIWrapper.NVAPIGpuScanoutCompositionParameterDto">
+            <summary>
+            Scanout composition parameter DTO.
+            </summary>
+        </member>
+        <member name="T:NVAPIWrapper.NVAPIGpuScanoutIntensityStateDto">
+            <summary>
+            Scanout intensity state DTO.
+            </summary>
+        </member>
+        <member name="T:NVAPIWrapper.NVAPIGpuScanoutIntensityDataDto">
+            <summary>
+            Scanout intensity data DTO.
+            </summary>
+        </member>
+        <member name="T:NVAPIWrapper.NVAPIGpuScanoutIntensityResultDto">
+            <summary>
+            Scanout intensity result DTO.
+            </summary>
+        </member>
+        <member name="T:NVAPIWrapper.NVAPIGpuScanoutWarpingStateDto">
+            <summary>
+            Scanout warping state DTO.
+            </summary>
+        </member>
+        <member name="T:NVAPIWrapper.NVAPIGpuScanoutWarpingDataDto">
+            <summary>
+            Scanout warping data DTO.
+            </summary>
+        </member>
+        <member name="T:NVAPIWrapper.NVAPIGpuScanoutWarpingResultDto">
+            <summary>
+            Scanout warping result DTO.
+            </summary>
+        </member>
+        <member name="T:NVAPIWrapper.NVAPIGpuWorkstationFeatureQueryDto">
+            <summary>
+            Workstation feature query DTO.
+            </summary>
+        </member>
+        <member name="T:NVAPIWrapper.NVAPIGpuUtilizationSampleCallbackSettingsDto">
+            <summary>
+            Utilization sample callback settings DTO.
             </summary>
         </member>
         <member name="T:NVAPIWrapper.NVAPIQuadroGSyncHelper">

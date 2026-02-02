@@ -14,6 +14,36 @@ namespace NVAPIWrapper
         private const uint NvApiIdGpuGetBusId = 0x1BE0B8E5;
         private const uint NvApiIdGpuGetPciIdentifiers = 0x2DDFB66E;
         private const uint NvApiIdGpuGetBusSlotId = 0x2A0A350F;
+        private const uint NvApiIdGpuGetVbiosRevision = 0xACC3DA0A;
+        private const uint NvApiIdGpuGetVbiosOemRevision = 0x2D43FB31;
+        private const uint NvApiIdGpuGetArchInfo = 0xD8265D24;
+        private const uint NvApiIdGpuGetBoardInfo = 0x22D54523;
+        private const uint NvApiIdGpuGetCurrentPCIEDownstreamWidth = 0xD048C3B1;
+        private const uint NvApiIdGpuGetEccConfigurationInfo = 0x77A796F3;
+        private const uint NvApiIdGpuGetEccErrorInfo = 0xC71F85A6;
+        private const uint NvApiIdGpuResetEccErrorInfo = 0xC02EEC20;
+        private const uint NvApiIdGpuSetEccConfiguration = 0x1CF639D9;
+        private const uint NvApiIdGpuGetEdid = 0x37D32E69;
+        private const uint NvApiIdGpuSetEdid = 0xE83D6456;
+        private const uint NvApiIdGpuGetHdcpSupportStatus = 0xF089EEF5;
+        private const uint NvApiIdGpuGetIrq = 0xE4715417;
+        private const uint NvApiIdGpuGetLogicalGpuInfo = 0x842B066E;
+        private const uint NvApiIdGpuGetOutputType = 0x40A505E4;
+        private const uint NvApiIdGpuGetRamBusWidth = 0x7975C581;
+        private const uint NvApiIdGpuGetScanoutCompositionParameter = 0x58FE51E6;
+        private const uint NvApiIdGpuSetScanoutCompositionParameter = 0xF898247D;
+        private const uint NvApiIdGpuGetScanoutConfiguration = 0x6A9F5B63;
+        private const uint NvApiIdGpuGetScanoutConfigurationEx = 0xE2E1E6F0;
+        private const uint NvApiIdGpuGetScanoutIntensityState = 0xE81CE836;
+        private const uint NvApiIdGpuSetScanoutIntensity = 0xA57457A4;
+        private const uint NvApiIdGpuGetScanoutWarpingState = 0x6F5435AF;
+        private const uint NvApiIdGpuSetScanoutWarping = 0xB34BAB4F;
+        private const uint NvApiIdGpuValidateOutputCombination = 0x34C9C2D4;
+        private const uint NvApiIdGpuQueryWorkstationFeatureSupport = 0x80B1ABB9;
+        private const uint NvApiIdGpuWorkstationFeatureQuery = 0x004537DF;
+        private const uint NvApiIdGpuWorkstationFeatureSetup = 0x6C1F3FE4;
+        private const uint NvApiIdGpuClientRegisterForUtilizationSampleUpdates = 0xADEEAF67;
+        private const uint NvApiIdGetLogicalGpuFromPhysicalGpu = 0xADD604D1;
         private const uint NvApiIdGpuGetVbiosVersionString = 0xA561FD7D;
         private const uint NvApiIdGpuGetPhysicalFrameBufferSize = 0x46FBEB03;
         private const uint NvApiIdGpuGetVirtualFrameBufferSize = 0x5A04B644;
@@ -1218,6 +1248,737 @@ namespace NVAPIWrapper
             }
         }
 
+        /// <summary>
+        /// Get GPU architecture info.
+        /// </summary>
+        /// <returns>Architecture info DTO, or null if unavailable.</returns>
+        public unsafe NVAPIGpuArchInfoDto? GetArchInfo()
+        {
+            ThrowIfDisposed();
+
+            var getInfo = GetDelegate<NvApiGpuGetArchInfoDelegate>(NvApiIdGpuGetArchInfo, "NvAPI_GPU_GetArchInfo");
+            var info = CreateGpuArchInfo();
+            var status = getInfo(GetHandle(), &info);
+            if (status == _NvAPI_Status.NVAPI_OK)
+                return NVAPIGpuArchInfoDto.FromNative(info);
+
+            if (status == _NvAPI_Status.NVAPI_NOT_SUPPORTED || status == _NvAPI_Status.NVAPI_NVIDIA_DEVICE_NOT_FOUND)
+                return null;
+
+            throw new NVAPIException(status);
+        }
+
+        /// <summary>
+        /// Get GPU board info.
+        /// </summary>
+        /// <returns>Board info DTO, or null if unavailable.</returns>
+        public unsafe NVAPIGpuBoardInfoDto? GetBoardInfo()
+        {
+            ThrowIfDisposed();
+
+            var getInfo = GetDelegate<NvApiGpuGetBoardInfoDelegate>(NvApiIdGpuGetBoardInfo, "NvAPI_GPU_GetBoardInfo");
+            var info = CreateBoardInfo();
+            var status = getInfo(GetHandle(), &info);
+            if (status == _NvAPI_Status.NVAPI_OK)
+                return NVAPIGpuBoardInfoDto.FromNative(info);
+
+            if (status == _NvAPI_Status.NVAPI_NOT_SUPPORTED || status == _NvAPI_Status.NVAPI_NVIDIA_DEVICE_NOT_FOUND)
+                return null;
+
+            throw new NVAPIException(status);
+        }
+
+        /// <summary>
+        /// Get the VBIOS revision.
+        /// </summary>
+        /// <returns>VBIOS revision, or null if unavailable.</returns>
+        public unsafe uint? GetVbiosRevision()
+        {
+            ThrowIfDisposed();
+
+            var getRevision = GetDelegate<NvApiGpuGetVbiosRevisionDelegate>(NvApiIdGpuGetVbiosRevision, "NvAPI_GPU_GetVbiosRevision");
+            uint revision = 0;
+            var status = getRevision(GetHandle(), &revision);
+            if (status == _NvAPI_Status.NVAPI_OK)
+                return revision;
+
+            if (status == _NvAPI_Status.NVAPI_NOT_SUPPORTED || status == _NvAPI_Status.NVAPI_NVIDIA_DEVICE_NOT_FOUND)
+                return null;
+
+            throw new NVAPIException(status);
+        }
+
+        /// <summary>
+        /// Get the VBIOS OEM revision.
+        /// </summary>
+        /// <returns>VBIOS OEM revision, or null if unavailable.</returns>
+        public unsafe uint? GetVbiosOemRevision()
+        {
+            ThrowIfDisposed();
+
+            var getRevision = GetDelegate<NvApiGpuGetVbiosOemRevisionDelegate>(NvApiIdGpuGetVbiosOemRevision, "NvAPI_GPU_GetVbiosOEMRevision");
+            uint revision = 0;
+            var status = getRevision(GetHandle(), &revision);
+            if (status == _NvAPI_Status.NVAPI_OK)
+                return revision;
+
+            if (status == _NvAPI_Status.NVAPI_NOT_SUPPORTED || status == _NvAPI_Status.NVAPI_NVIDIA_DEVICE_NOT_FOUND)
+                return null;
+
+            throw new NVAPIException(status);
+        }
+
+        /// <summary>
+        /// Get current PCIe downstream width.
+        /// </summary>
+        /// <returns>PCIe downstream width, or null if unavailable.</returns>
+        public unsafe uint? GetCurrentPcieDownstreamWidth()
+        {
+            ThrowIfDisposed();
+
+            var getWidth = GetDelegate<NvApiGpuGetCurrentPcieDownstreamWidthDelegate>(
+                NvApiIdGpuGetCurrentPCIEDownstreamWidth,
+                "NvAPI_GPU_GetCurrentPCIEDownstreamWidth");
+            uint width = 0;
+            var status = getWidth(GetHandle(), &width);
+            if (status == _NvAPI_Status.NVAPI_OK)
+                return width;
+
+            if (status == _NvAPI_Status.NVAPI_NOT_SUPPORTED || status == _NvAPI_Status.NVAPI_NVIDIA_DEVICE_NOT_FOUND)
+                return null;
+
+            throw new NVAPIException(status);
+        }
+
+        /// <summary>
+        /// Get the GPU RAM bus width.
+        /// </summary>
+        /// <returns>RAM bus width, or null if unavailable.</returns>
+        public unsafe uint? GetRamBusWidth()
+        {
+            ThrowIfDisposed();
+
+            var getWidth = GetDelegate<NvApiGpuGetRamBusWidthDelegate>(NvApiIdGpuGetRamBusWidth, "NvAPI_GPU_GetRamBusWidth");
+            uint width = 0;
+            var status = getWidth(GetHandle(), &width);
+            if (status == _NvAPI_Status.NVAPI_OK)
+                return width;
+
+            if (status == _NvAPI_Status.NVAPI_NOT_SUPPORTED || status == _NvAPI_Status.NVAPI_NVIDIA_DEVICE_NOT_FOUND)
+                return null;
+
+            throw new NVAPIException(status);
+        }
+
+        /// <summary>
+        /// Get the GPU IRQ.
+        /// </summary>
+        /// <returns>IRQ value, or null if unavailable.</returns>
+        public unsafe uint? GetIrq()
+        {
+            ThrowIfDisposed();
+
+            var getIrq = GetDelegate<NvApiGpuGetIrqDelegate>(NvApiIdGpuGetIrq, "NvAPI_GPU_GetIRQ");
+            uint irq = 0;
+            var status = getIrq(GetHandle(), &irq);
+            if (status == _NvAPI_Status.NVAPI_OK)
+                return irq;
+
+            if (status == _NvAPI_Status.NVAPI_NOT_SUPPORTED || status == _NvAPI_Status.NVAPI_NVIDIA_DEVICE_NOT_FOUND)
+                return null;
+
+            throw new NVAPIException(status);
+        }
+
+        /// <summary>
+        /// Get GPU output type for the specified output ID.
+        /// </summary>
+        /// <param name="outputId">Output ID (single bit set).</param>
+        /// <returns>Output type, or null if unavailable.</returns>
+        public unsafe _NV_GPU_OUTPUT_TYPE? GetOutputType(uint outputId)
+        {
+            ThrowIfDisposed();
+
+            var getType = GetDelegate<NvApiGpuGetOutputTypeDelegate>(NvApiIdGpuGetOutputType, "NvAPI_GPU_GetOutputType");
+            _NV_GPU_OUTPUT_TYPE outputType = default;
+            var status = getType(GetHandle(), outputId, &outputType);
+            if (status == _NvAPI_Status.NVAPI_OK)
+                return outputType;
+
+            if (status == _NvAPI_Status.NVAPI_NOT_SUPPORTED || status == _NvAPI_Status.NVAPI_NVIDIA_DEVICE_NOT_FOUND)
+                return null;
+
+            throw new NVAPIException(status);
+        }
+
+        /// <summary>
+        /// Validate an output combination mask.
+        /// </summary>
+        /// <param name="outputsMask">Outputs mask to validate.</param>
+        /// <returns>True if valid, false if invalid, or null if unavailable.</returns>
+        public unsafe bool? ValidateOutputCombination(uint outputsMask)
+        {
+            ThrowIfDisposed();
+
+            var validate = GetDelegate<NvApiGpuValidateOutputCombinationDelegate>(
+                NvApiIdGpuValidateOutputCombination,
+                "NvAPI_GPU_ValidateOutputCombination");
+            var status = validate(GetHandle(), outputsMask);
+            if (status == _NvAPI_Status.NVAPI_OK)
+                return true;
+
+            if (status == _NvAPI_Status.NVAPI_INVALID_COMBINATION)
+                return false;
+
+            if (status == _NvAPI_Status.NVAPI_NOT_SUPPORTED || status == _NvAPI_Status.NVAPI_NVIDIA_DEVICE_NOT_FOUND)
+                return null;
+
+            throw new NVAPIException(status);
+        }
+
+        /// <summary>
+        /// Get ECC configuration info.
+        /// </summary>
+        /// <returns>ECC configuration DTO, or null if unavailable.</returns>
+        public unsafe NVAPIGpuEccConfigurationInfoDto? GetEccConfigurationInfo()
+        {
+            ThrowIfDisposed();
+
+            var getInfo = GetDelegate<NvApiGpuGetEccConfigurationInfoDelegate>(
+                NvApiIdGpuGetEccConfigurationInfo,
+                "NvAPI_GPU_GetECCConfigurationInfo");
+            var info = CreateEccConfigurationInfo();
+            var status = getInfo(GetHandle(), &info);
+            if (status == _NvAPI_Status.NVAPI_OK)
+                return NVAPIGpuEccConfigurationInfoDto.FromNative(info);
+
+            if (status == _NvAPI_Status.NVAPI_NOT_SUPPORTED || status == _NvAPI_Status.NVAPI_NVIDIA_DEVICE_NOT_FOUND)
+                return null;
+
+            throw new NVAPIException(status);
+        }
+
+        /// <summary>
+        /// Set ECC configuration.
+        /// </summary>
+        /// <param name="enable">True to enable ECC.</param>
+        /// <param name="enableImmediately">True to enable immediately.</param>
+        /// <returns>True if applied or unchanged, false if unavailable.</returns>
+        public unsafe bool SetEccConfiguration(bool enable, bool enableImmediately = true)
+        {
+            ThrowIfDisposed();
+
+            var current = GetEccConfigurationInfo();
+            if (current == null)
+                return false;
+
+            if (current.Value.IsEnabled == enable)
+                return true;
+
+            var setInfo = GetDelegate<NvApiGpuSetEccConfigurationDelegate>(
+                NvApiIdGpuSetEccConfiguration,
+                "NvAPI_GPU_SetECCConfiguration");
+
+            var status = setInfo(GetHandle(), enable ? (byte)1 : (byte)0, enableImmediately ? (byte)1 : (byte)0);
+            if (status == _NvAPI_Status.NVAPI_OK)
+                return true;
+
+            if (status == _NvAPI_Status.NVAPI_NOT_SUPPORTED || status == _NvAPI_Status.NVAPI_NVIDIA_DEVICE_NOT_FOUND)
+                return false;
+
+            throw new NVAPIException(status);
+        }
+
+        /// <summary>
+        /// Get ECC error info.
+        /// </summary>
+        /// <returns>ECC error info DTO, or null if unavailable.</returns>
+        public unsafe NVAPIGpuEccErrorInfoDto? GetEccErrorInfo()
+        {
+            ThrowIfDisposed();
+
+            var getInfo = GetDelegate<NvApiGpuGetEccErrorInfoDelegate>(
+                NvApiIdGpuGetEccErrorInfo,
+                "NvAPI_GPU_GetECCErrorInfo");
+            var info = CreateEccErrorInfo();
+            var status = getInfo(GetHandle(), &info);
+            if (status == _NvAPI_Status.NVAPI_OK)
+                return NVAPIGpuEccErrorInfoDto.FromNative(info);
+
+            if (status == _NvAPI_Status.NVAPI_NOT_SUPPORTED || status == _NvAPI_Status.NVAPI_NVIDIA_DEVICE_NOT_FOUND)
+                return null;
+
+            throw new NVAPIException(status);
+        }
+
+        /// <summary>
+        /// Reset ECC error counts.
+        /// </summary>
+        /// <param name="resetCurrent">Reset current error counts.</param>
+        /// <param name="resetAggregate">Reset aggregate error counts.</param>
+        /// <returns>True if reset, false if unavailable.</returns>
+        public unsafe bool ResetEccErrorInfo(bool resetCurrent = true, bool resetAggregate = true)
+        {
+            ThrowIfDisposed();
+
+            var resetInfo = GetDelegate<NvApiGpuResetEccErrorInfoDelegate>(
+                NvApiIdGpuResetEccErrorInfo,
+                "NvAPI_GPU_ResetECCErrorInfo");
+            var status = resetInfo(GetHandle(), resetCurrent ? (byte)1 : (byte)0, resetAggregate ? (byte)1 : (byte)0);
+            if (status == _NvAPI_Status.NVAPI_OK)
+                return true;
+
+            if (status == _NvAPI_Status.NVAPI_NOT_SUPPORTED || status == _NvAPI_Status.NVAPI_NVIDIA_DEVICE_NOT_FOUND)
+                return false;
+
+            throw new NVAPIException(status);
+        }
+
+        /// <summary>
+        /// Get HDCP support status.
+        /// </summary>
+        /// <returns>HDCP support status DTO, or null if unavailable.</returns>
+        public unsafe NVAPIGpuHdcpSupportStatusDto? GetHdcpSupportStatus()
+        {
+            ThrowIfDisposed();
+
+            var getStatus = GetDelegate<NvApiGpuGetHdcpSupportStatusDelegate>(
+                NvApiIdGpuGetHdcpSupportStatus,
+                "NvAPI_GPU_GetHDCPSupportStatus");
+            var statusInfo = CreateHdcpSupportStatus();
+            var status = getStatus(GetHandle(), &statusInfo);
+            if (status == _NvAPI_Status.NVAPI_OK)
+                return NVAPIGpuHdcpSupportStatusDto.FromNative(statusInfo);
+
+            if (status == _NvAPI_Status.NVAPI_NOT_SUPPORTED || status == _NvAPI_Status.NVAPI_NVIDIA_DEVICE_NOT_FOUND)
+                return null;
+
+            throw new NVAPIException(status);
+        }
+
+        /// <summary>
+        /// Get EDID data for a GPU output.
+        /// </summary>
+        /// <param name="displayOutputId">Display output ID.</param>
+        /// <returns>EDID DTO, or null if unavailable.</returns>
+        public unsafe NVAPIGpuEdidDto? GetEdid(uint displayOutputId)
+        {
+            ThrowIfDisposed();
+
+            var getEdid = GetDelegate<NvApiGpuGetEdidDelegate>(NvApiIdGpuGetEdid, "NvAPI_GPU_GetEDID");
+            var edid = CreateGpuEdid();
+            var status = getEdid(GetHandle(), displayOutputId, &edid);
+            if (status == _NvAPI_Status.NVAPI_OK)
+                return NVAPIGpuEdidDto.FromNative(edid);
+
+            if (status == _NvAPI_Status.NVAPI_NOT_SUPPORTED || status == _NvAPI_Status.NVAPI_NVIDIA_DEVICE_NOT_FOUND)
+                return null;
+
+            throw new NVAPIException(status);
+        }
+
+        /// <summary>
+        /// Set EDID data for a GPU output.
+        /// </summary>
+        /// <param name="displayOutputId">Display output ID.</param>
+        /// <param name="edid">EDID data DTO.</param>
+        /// <returns>True if applied or unchanged, false if unavailable.</returns>
+        public unsafe bool SetEdid(uint displayOutputId, NVAPIGpuEdidDto edid)
+        {
+            ThrowIfDisposed();
+
+            var current = GetEdid(displayOutputId);
+            if (current == null)
+                return false;
+
+            if (current.Value.Equals(edid))
+                return true;
+
+            var setEdid = GetDelegate<NvApiGpuSetEdidDelegate>(NvApiIdGpuSetEdid, "NvAPI_GPU_SetEDID");
+            var native = edid.ToNative();
+            var status = setEdid(GetHandle(), displayOutputId, &native);
+            if (status == _NvAPI_Status.NVAPI_OK)
+                return true;
+
+            if (status == _NvAPI_Status.NVAPI_NOT_SUPPORTED || status == _NvAPI_Status.NVAPI_NVIDIA_DEVICE_NOT_FOUND)
+                return false;
+
+            throw new NVAPIException(status);
+        }
+
+        /// <summary>
+        /// Get logical GPU info associated with this physical GPU.
+        /// </summary>
+        /// <returns>Logical GPU info DTO, or null if unavailable.</returns>
+        public unsafe NVAPILogicalGpuInfoDto? GetLogicalGpuInfo()
+        {
+            ThrowIfDisposed();
+
+            var getLogical = GetDelegate<NvApiGetLogicalGpuFromPhysicalGpuDelegate>(
+                NvApiIdGetLogicalGpuFromPhysicalGpu,
+                "NvAPI_GetLogicalGPUFromPhysicalGPU");
+            NvLogicalGpuHandle__* logical = null;
+            var status = getLogical(GetHandle(), &logical);
+            if (status == _NvAPI_Status.NVAPI_NOT_SUPPORTED || status == _NvAPI_Status.NVAPI_NVIDIA_DEVICE_NOT_FOUND)
+                return null;
+
+            if (status != _NvAPI_Status.NVAPI_OK)
+                throw new NVAPIException(status);
+
+            var getInfo = GetDelegate<NvApiGpuGetLogicalGpuInfoDelegate>(
+                NvApiIdGpuGetLogicalGpuInfo,
+                "NvAPI_GPU_GetLogicalGpuInfo");
+            var info = CreateLogicalGpuInfo();
+            status = getInfo(logical, &info);
+            if (status == _NvAPI_Status.NVAPI_OK)
+                return NVAPILogicalGpuInfoDto.FromNative(_apiHelper, info);
+
+            if (status == _NvAPI_Status.NVAPI_NOT_SUPPORTED || status == _NvAPI_Status.NVAPI_NVIDIA_DEVICE_NOT_FOUND)
+                return null;
+
+            throw new NVAPIException(status);
+        }
+
+        /// <summary>
+        /// Register or unregister for GPU utilization sample updates.
+        /// </summary>
+        /// <param name="settings">Callback settings DTO (set Callback to IntPtr.Zero to unregister).</param>
+        /// <returns>True if registered, false if unavailable.</returns>
+        public unsafe bool RegisterForUtilizationSampleUpdates(NVAPIGpuUtilizationSampleCallbackSettingsDto settings)
+        {
+            ThrowIfDisposed();
+
+            var register = GetDelegate<NvApiGpuClientRegisterForUtilizationSampleUpdatesDelegate>(
+                NvApiIdGpuClientRegisterForUtilizationSampleUpdates,
+                "NvAPI_GPU_ClientRegisterForUtilizationSampleUpdates");
+            var native = settings.ToNative();
+            var status = register(GetHandle(), &native);
+            if (status == _NvAPI_Status.NVAPI_OK)
+                return true;
+
+            if (status == _NvAPI_Status.NVAPI_NOT_SUPPORTED
+                || status == _NvAPI_Status.NVAPI_NO_IMPLEMENTATION
+                || status == _NvAPI_Status.NVAPI_NVIDIA_DEVICE_NOT_FOUND)
+                return false;
+
+            throw new NVAPIException(status);
+        }
+
+        /// <summary>
+        /// Get scanout composition parameter.
+        /// </summary>
+        /// <param name="displayId">Display ID.</param>
+        /// <param name="parameter">Parameter to query.</param>
+        /// <returns>Scanout composition parameter DTO, or null if unavailable.</returns>
+        public unsafe NVAPIGpuScanoutCompositionParameterDto? GetScanoutCompositionParameter(
+            uint displayId,
+            NV_GPU_SCANOUT_COMPOSITION_PARAMETER parameter)
+        {
+            ThrowIfDisposed();
+
+            var getParam = GetDelegate<NvApiGpuGetScanoutCompositionParameterDelegate>(
+                NvApiIdGpuGetScanoutCompositionParameter,
+                "NvAPI_GPU_GetScanoutCompositionParameter");
+            NV_GPU_SCANOUT_COMPOSITION_PARAMETER_VALUE value = default;
+            float container = 0;
+            var status = getParam(displayId, parameter, &value, &container);
+            if (status == _NvAPI_Status.NVAPI_OK)
+                return new NVAPIGpuScanoutCompositionParameterDto(parameter, value, container);
+
+            if (status == _NvAPI_Status.NVAPI_NOT_SUPPORTED || status == _NvAPI_Status.NVAPI_NVIDIA_DEVICE_NOT_FOUND)
+                return null;
+
+            throw new NVAPIException(status);
+        }
+
+        /// <summary>
+        /// Set scanout composition parameter.
+        /// </summary>
+        /// <param name="displayId">Display ID.</param>
+        /// <param name="parameter">Parameter settings.</param>
+        /// <returns>True if applied or unchanged, false if unavailable.</returns>
+        public unsafe bool SetScanoutCompositionParameter(uint displayId, NVAPIGpuScanoutCompositionParameterDto parameter)
+        {
+            ThrowIfDisposed();
+
+            var current = GetScanoutCompositionParameter(displayId, parameter.Parameter);
+            if (current == null)
+                return false;
+
+            if (current.Value.Equals(parameter))
+                return true;
+
+            var setParam = GetDelegate<NvApiGpuSetScanoutCompositionParameterDelegate>(
+                NvApiIdGpuSetScanoutCompositionParameter,
+                "NvAPI_GPU_SetScanoutCompositionParameter");
+
+            var container = parameter.Container;
+            var status = setParam(displayId, parameter.Parameter, parameter.Value, &container);
+            if (status == _NvAPI_Status.NVAPI_OK)
+                return true;
+
+            if (status == _NvAPI_Status.NVAPI_NOT_SUPPORTED || status == _NvAPI_Status.NVAPI_NVIDIA_DEVICE_NOT_FOUND)
+                return false;
+
+            throw new NVAPIException(status);
+        }
+
+        /// <summary>
+        /// Get scanout configuration.
+        /// </summary>
+        /// <param name="displayId">Display ID.</param>
+        /// <returns>Scanout configuration DTO, or null if unavailable.</returns>
+        public unsafe NVAPIGpuScanoutConfigurationDto? GetScanoutConfiguration(uint displayId)
+        {
+            ThrowIfDisposed();
+
+            var getConfig = GetDelegate<NvApiGpuGetScanoutConfigurationDelegate>(
+                NvApiIdGpuGetScanoutConfiguration,
+                "NvAPI_GPU_GetScanoutConfiguration");
+            NvSBox desktopRect = default;
+            NvSBox scanoutRect = default;
+            var status = getConfig(displayId, &desktopRect, &scanoutRect);
+            if (status == _NvAPI_Status.NVAPI_OK)
+                return NVAPIGpuScanoutConfigurationDto.FromNative(desktopRect, scanoutRect);
+
+            if (status == _NvAPI_Status.NVAPI_NOT_SUPPORTED || status == _NvAPI_Status.NVAPI_NVIDIA_DEVICE_NOT_FOUND)
+                return null;
+
+            throw new NVAPIException(status);
+        }
+
+        /// <summary>
+        /// Get extended scanout configuration.
+        /// </summary>
+        /// <param name="displayId">Display ID.</param>
+        /// <returns>Scanout configuration DTO, or null if unavailable.</returns>
+        public unsafe NVAPIGpuScanoutConfigurationExDto? GetScanoutConfigurationEx(uint displayId)
+        {
+            ThrowIfDisposed();
+
+            var getConfig = GetDelegate<NvApiGpuGetScanoutConfigurationExDelegate>(
+                NvApiIdGpuGetScanoutConfigurationEx,
+                "NvAPI_GPU_GetScanoutConfigurationEx");
+            var info = CreateScanoutInformation();
+            var status = getConfig(displayId, &info);
+            if (status == _NvAPI_Status.NVAPI_OK)
+                return NVAPIGpuScanoutConfigurationExDto.FromNative(info);
+
+            if (status == _NvAPI_Status.NVAPI_NOT_SUPPORTED || status == _NvAPI_Status.NVAPI_NVIDIA_DEVICE_NOT_FOUND)
+                return null;
+
+            throw new NVAPIException(status);
+        }
+
+        /// <summary>
+        /// Get scanout intensity state.
+        /// </summary>
+        /// <param name="displayId">Display ID.</param>
+        /// <returns>Scanout intensity state DTO, or null if unavailable.</returns>
+        public unsafe NVAPIGpuScanoutIntensityStateDto? GetScanoutIntensityState(uint displayId)
+        {
+            ThrowIfDisposed();
+
+            var getState = GetDelegate<NvApiGpuGetScanoutIntensityStateDelegate>(
+                NvApiIdGpuGetScanoutIntensityState,
+                "NvAPI_GPU_GetScanoutIntensityState");
+            var state = CreateScanoutIntensityState();
+            var status = getState(displayId, &state);
+            if (status == _NvAPI_Status.NVAPI_OK)
+                return NVAPIGpuScanoutIntensityStateDto.FromNative(state);
+
+            if (status == _NvAPI_Status.NVAPI_NOT_SUPPORTED || status == _NvAPI_Status.NVAPI_NVIDIA_DEVICE_NOT_FOUND)
+                return null;
+
+            throw new NVAPIException(status);
+        }
+
+        /// <summary>
+        /// Set scanout intensity.
+        /// </summary>
+        /// <param name="displayId">Display ID.</param>
+        /// <param name="data">Scanout intensity data.</param>
+        /// <returns>Result DTO, or null if unavailable.</returns>
+        public unsafe NVAPIGpuScanoutIntensityResultDto? SetScanoutIntensity(uint displayId, NVAPIGpuScanoutIntensityDataDto data)
+        {
+            ThrowIfDisposed();
+
+            var setIntensity = GetDelegate<NvApiGpuSetScanoutIntensityDelegate>(
+                NvApiIdGpuSetScanoutIntensity,
+                "NvAPI_GPU_SetScanoutIntensity");
+            var native = data.ToNative();
+
+            var blending = data.BlendingTexture ?? Array.Empty<float>();
+            var offset = data.OffsetTexture ?? Array.Empty<float>();
+
+            fixed (float* pBlend = blending)
+            fixed (float* pOffset = offset)
+            {
+                native.blendingTexture = blending.Length > 0 ? pBlend : null;
+                native.offsetTexture = offset.Length > 0 ? pOffset : null;
+                int sticky = 0;
+                var status = setIntensity(displayId, &native, &sticky);
+                if (status == _NvAPI_Status.NVAPI_OK)
+                    return new NVAPIGpuScanoutIntensityResultDto(sticky != 0);
+
+                if (status == _NvAPI_Status.NVAPI_NOT_SUPPORTED || status == _NvAPI_Status.NVAPI_NVIDIA_DEVICE_NOT_FOUND)
+                    return null;
+
+                throw new NVAPIException(status);
+            }
+        }
+
+        /// <summary>
+        /// Get scanout warping state.
+        /// </summary>
+        /// <param name="displayId">Display ID.</param>
+        /// <returns>Scanout warping state DTO, or null if unavailable.</returns>
+        public unsafe NVAPIGpuScanoutWarpingStateDto? GetScanoutWarpingState(uint displayId)
+        {
+            ThrowIfDisposed();
+
+            var getState = GetDelegate<NvApiGpuGetScanoutWarpingStateDelegate>(
+                NvApiIdGpuGetScanoutWarpingState,
+                "NvAPI_GPU_GetScanoutWarpingState");
+            var state = CreateScanoutWarpingState();
+            var status = getState(displayId, &state);
+            if (status == _NvAPI_Status.NVAPI_OK)
+                return NVAPIGpuScanoutWarpingStateDto.FromNative(state);
+
+            if (status == _NvAPI_Status.NVAPI_NOT_SUPPORTED || status == _NvAPI_Status.NVAPI_NVIDIA_DEVICE_NOT_FOUND)
+                return null;
+
+            throw new NVAPIException(status);
+        }
+
+        /// <summary>
+        /// Set scanout warping.
+        /// </summary>
+        /// <param name="displayId">Display ID.</param>
+        /// <param name="data">Scanout warping data.</param>
+        /// <returns>Result DTO, or null if unavailable.</returns>
+        public unsafe NVAPIGpuScanoutWarpingResultDto? SetScanoutWarping(uint displayId, NVAPIGpuScanoutWarpingDataDto data)
+        {
+            ThrowIfDisposed();
+
+            var setWarping = GetDelegate<NvApiGpuSetScanoutWarpingDelegate>(
+                NvApiIdGpuSetScanoutWarping,
+                "NvAPI_GPU_SetScanoutWarping");
+            var native = data.ToNative();
+            var vertices = data.Vertices ?? Array.Empty<float>();
+            int maxNumVertices = 0;
+            int sticky = 0;
+
+            fixed (float* pVertices = vertices)
+            {
+                native.vertices = vertices.Length > 0 ? pVertices : null;
+                native.numVertices = data.NumVertices;
+
+                if (data.TextureRect.HasValue)
+                {
+                    var rect = data.TextureRect.Value.ToNative();
+                    native.textureRect = &rect;
+                    var status = setWarping(displayId, &native, &maxNumVertices, &sticky);
+                    if (status == _NvAPI_Status.NVAPI_OK)
+                        return new NVAPIGpuScanoutWarpingResultDto(maxNumVertices, sticky != 0);
+
+                    if (status == _NvAPI_Status.NVAPI_NOT_SUPPORTED || status == _NvAPI_Status.NVAPI_NVIDIA_DEVICE_NOT_FOUND)
+                        return null;
+
+                    throw new NVAPIException(status);
+                }
+                else
+                {
+                    native.textureRect = null;
+                    var status = setWarping(displayId, &native, &maxNumVertices, &sticky);
+                    if (status == _NvAPI_Status.NVAPI_OK)
+                        return new NVAPIGpuScanoutWarpingResultDto(maxNumVertices, sticky != 0);
+
+                    if (status == _NvAPI_Status.NVAPI_NOT_SUPPORTED || status == _NvAPI_Status.NVAPI_NVIDIA_DEVICE_NOT_FOUND)
+                        return null;
+
+                    throw new NVAPIException(status);
+                }
+            }
+        }
+
+        /// <summary>
+        /// Query workstation feature support for this GPU.
+        /// </summary>
+        /// <param name="feature">Workstation feature type.</param>
+        /// <returns>True if supported, false if not supported, or null if unavailable.</returns>
+        public unsafe bool? QueryWorkstationFeatureSupport(_NV_GPU_WORKSTATION_FEATURE_TYPE feature)
+        {
+            ThrowIfDisposed();
+
+            var query = GetDelegate<NvApiGpuQueryWorkstationFeatureSupportDelegate>(
+                NvApiIdGpuQueryWorkstationFeatureSupport,
+                "NvAPI_GPU_QueryWorkstationFeatureSupport");
+            var status = query(GetHandle(), feature);
+            if (status == _NvAPI_Status.NVAPI_OK)
+                return true;
+
+            if (status == _NvAPI_Status.NVAPI_NOT_SUPPORTED)
+                return false;
+
+            if (status == _NvAPI_Status.NVAPI_SETTING_NOT_FOUND
+                || status == _NvAPI_Status.NVAPI_NO_IMPLEMENTATION
+                || status == _NvAPI_Status.NVAPI_NVIDIA_DEVICE_NOT_FOUND)
+                return null;
+
+            throw new NVAPIException(status);
+        }
+
+        /// <summary>
+        /// Query workstation feature masks.
+        /// </summary>
+        /// <returns>Workstation feature query DTO, or null if unavailable.</returns>
+        public unsafe NVAPIGpuWorkstationFeatureQueryDto? WorkstationFeatureQuery()
+        {
+            ThrowIfDisposed();
+
+            var query = GetDelegate<NvApiGpuWorkstationFeatureQueryDelegate>(
+                NvApiIdGpuWorkstationFeatureQuery,
+                "NvAPI_GPU_WorkstationFeatureQuery");
+            uint configured = 0;
+            uint consistent = 0;
+            var status = query(GetHandle(), &configured, &consistent);
+            if (status == _NvAPI_Status.NVAPI_OK)
+                return new NVAPIGpuWorkstationFeatureQueryDto(configured, consistent);
+
+            if (status == _NvAPI_Status.NVAPI_NOT_SUPPORTED
+                || status == _NvAPI_Status.NVAPI_NO_IMPLEMENTATION
+                || status == _NvAPI_Status.NVAPI_NVIDIA_DEVICE_NOT_FOUND)
+                return null;
+
+            throw new NVAPIException(status);
+        }
+
+        /// <summary>
+        /// Configure workstation feature masks.
+        /// </summary>
+        /// <param name="featureEnableMask">Features to enable.</param>
+        /// <param name="featureDisableMask">Features to disable.</param>
+        /// <returns>True if applied, false if unavailable.</returns>
+        public unsafe bool WorkstationFeatureSetup(uint featureEnableMask, uint featureDisableMask)
+        {
+            ThrowIfDisposed();
+
+            var setup = GetDelegate<NvApiGpuWorkstationFeatureSetupDelegate>(
+                NvApiIdGpuWorkstationFeatureSetup,
+                "NvAPI_GPU_WorkstationFeatureSetup");
+            var status = setup(GetHandle(), featureEnableMask, featureDisableMask);
+            if (status == _NvAPI_Status.NVAPI_OK)
+                return true;
+
+            if (status == _NvAPI_Status.NVAPI_NOT_SUPPORTED
+                || status == _NvAPI_Status.NVAPI_NO_IMPLEMENTATION
+                || status == _NvAPI_Status.NVAPI_NVIDIA_DEVICE_NOT_FOUND)
+                return false;
+
+            throw new NVAPIException(status);
+        }
+
         private unsafe NVAPIGpuDisplayIdDto[] GetConnectedDisplayIdsWithCapacity(uint flags, uint capacity)
         {
             var getDisplayIds = GetDelegate<NvApiGpuGetConnectedDisplayIdsDelegate>(
@@ -1300,6 +2061,56 @@ namespace NVAPIWrapper
             var clocks = new NV_GPU_CLOCK_FREQUENCIES_V2 { version = NVAPI.NV_GPU_CLOCK_FREQUENCIES_VER };
             clocks.ClockType = (uint)clockType;
             return clocks;
+        }
+
+        private static NV_GPU_ARCH_INFO_V2 CreateGpuArchInfo()
+        {
+            return new NV_GPU_ARCH_INFO_V2 { version = NVAPI.NV_GPU_ARCH_INFO_VER };
+        }
+
+        private static _NV_BOARD_INFO CreateBoardInfo()
+        {
+            return new _NV_BOARD_INFO { version = NVAPI.NV_BOARD_INFO_VER };
+        }
+
+        private static NV_GPU_ECC_CONFIGURATION_INFO CreateEccConfigurationInfo()
+        {
+            return new NV_GPU_ECC_CONFIGURATION_INFO { version = NVAPI.NV_GPU_ECC_CONFIGURATION_INFO_VER };
+        }
+
+        private static NV_GPU_ECC_ERROR_INFO CreateEccErrorInfo()
+        {
+            return new NV_GPU_ECC_ERROR_INFO { version = NVAPI.NV_GPU_ECC_ERROR_INFO_VER };
+        }
+
+        private static NV_GPU_GET_HDCP_SUPPORT_STATUS CreateHdcpSupportStatus()
+        {
+            return new NV_GPU_GET_HDCP_SUPPORT_STATUS { version = NVAPI.NV_GPU_GET_HDCP_SUPPORT_STATUS_VER };
+        }
+
+        private static NV_EDID_V3 CreateGpuEdid()
+        {
+            return new NV_EDID_V3 { version = NVAPI.NV_EDID_VER };
+        }
+
+        private static _NV_LOGICAL_GPU_DATA_V1 CreateLogicalGpuInfo()
+        {
+            return new _NV_LOGICAL_GPU_DATA_V1 { version = NVAPI.NV_LOGICAL_GPU_DATA_VER };
+        }
+
+        private static _NV_SCANOUT_INFORMATION CreateScanoutInformation()
+        {
+            return new _NV_SCANOUT_INFORMATION { version = NVAPI.NV_SCANOUT_INFORMATION_VER };
+        }
+
+        private static _NV_SCANOUT_INTENSITY_STATE_DATA CreateScanoutIntensityState()
+        {
+            return new _NV_SCANOUT_INTENSITY_STATE_DATA { version = NVAPI.NV_SCANOUT_INTENSITY_STATE_VER };
+        }
+
+        private static _NV_SCANOUT_WARPING_STATE_DATA CreateScanoutWarpingState()
+        {
+            return new _NV_SCANOUT_WARPING_STATE_DATA { version = NVAPI.NV_SCANOUT_WARPING_STATE_VER };
         }
 
         private unsafe _NV_GPU_QUERY_ILLUMINATION_SUPPORT_PARM_V1 CreateIlluminationSupportRequest(_NV_GPU_ILLUMINATION_ATTRIB attribute)
@@ -1389,7 +2200,7 @@ namespace NVAPIWrapper
             return new _NV_GPU_INFO_V2 { version = NVAPI.NV_GPU_INFO_VER };
         }
 
-        private unsafe NvPhysicalGpuHandle__* GetHandle()
+        internal unsafe NvPhysicalGpuHandle__* GetHandle()
         {
             return (NvPhysicalGpuHandle__*)_handle;
         }
@@ -1411,7 +2222,7 @@ namespace NVAPIWrapper
             return Marshal.GetDelegateForFunctionPointer<T>(functionPtr);
         }
 
-        private void ThrowIfDisposed()
+        internal void ThrowIfDisposed()
         {
             if (_disposed)
                 throw new ObjectDisposedException(nameof(NVAPIPhysicalGpuHelper));
@@ -1570,6 +2381,104 @@ namespace NVAPIWrapper
 
         [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
         private unsafe delegate _NvAPI_Status NvApiI2CWriteDelegate(NvPhysicalGpuHandle__* hPhysicalGpu, NV_I2C_INFO_V3* pI2cInfo);
+
+        [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
+        private unsafe delegate _NvAPI_Status NvApiGpuGetVbiosRevisionDelegate(NvPhysicalGpuHandle__* hPhysicalGpu, uint* pBiosRevision);
+
+        [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
+        private unsafe delegate _NvAPI_Status NvApiGpuGetVbiosOemRevisionDelegate(NvPhysicalGpuHandle__* hPhysicalGpu, uint* pBiosRevision);
+
+        [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
+        private unsafe delegate _NvAPI_Status NvApiGpuGetArchInfoDelegate(NvPhysicalGpuHandle__* hPhysicalGpu, NV_GPU_ARCH_INFO_V2* pGpuArchInfo);
+
+        [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
+        private unsafe delegate _NvAPI_Status NvApiGpuGetBoardInfoDelegate(NvPhysicalGpuHandle__* hPhysicalGpu, _NV_BOARD_INFO* pBoardInfo);
+
+        [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
+        private unsafe delegate _NvAPI_Status NvApiGpuGetCurrentPcieDownstreamWidthDelegate(NvPhysicalGpuHandle__* hPhysicalGpu, uint* pWidth);
+
+        [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
+        private unsafe delegate _NvAPI_Status NvApiGpuGetRamBusWidthDelegate(NvPhysicalGpuHandle__* hPhysicalGpu, uint* pWidth);
+
+        [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
+        private unsafe delegate _NvAPI_Status NvApiGpuGetIrqDelegate(NvPhysicalGpuHandle__* hPhysicalGpu, uint* pIrq);
+
+        [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
+        private unsafe delegate _NvAPI_Status NvApiGpuGetOutputTypeDelegate(NvPhysicalGpuHandle__* hPhysicalGpu, uint outputId, _NV_GPU_OUTPUT_TYPE* pOutputType);
+
+        [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
+        private unsafe delegate _NvAPI_Status NvApiGpuValidateOutputCombinationDelegate(NvPhysicalGpuHandle__* hPhysicalGpu, uint outputsMask);
+
+        [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
+        private unsafe delegate _NvAPI_Status NvApiGpuGetEccConfigurationInfoDelegate(NvPhysicalGpuHandle__* hPhysicalGpu, NV_GPU_ECC_CONFIGURATION_INFO* pEccConfigurationInfo);
+
+        [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
+        private unsafe delegate _NvAPI_Status NvApiGpuSetEccConfigurationDelegate(NvPhysicalGpuHandle__* hPhysicalGpu, byte bEnable, byte bEnableImmediately);
+
+        [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
+        private unsafe delegate _NvAPI_Status NvApiGpuGetEccErrorInfoDelegate(NvPhysicalGpuHandle__* hPhysicalGpu, NV_GPU_ECC_ERROR_INFO* pEccErrorInfo);
+
+        [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
+        private unsafe delegate _NvAPI_Status NvApiGpuResetEccErrorInfoDelegate(NvPhysicalGpuHandle__* hPhysicalGpu, byte bResetCurrent, byte bResetAggregate);
+
+        [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
+        private unsafe delegate _NvAPI_Status NvApiGpuGetHdcpSupportStatusDelegate(NvPhysicalGpuHandle__* hPhysicalGpu, NV_GPU_GET_HDCP_SUPPORT_STATUS* pGetHdcpSupportStatus);
+
+        [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
+        private unsafe delegate _NvAPI_Status NvApiGpuGetEdidDelegate(NvPhysicalGpuHandle__* hPhysicalGpu, uint displayOutputId, NV_EDID_V3* pEdid);
+
+        [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
+        private unsafe delegate _NvAPI_Status NvApiGpuSetEdidDelegate(NvPhysicalGpuHandle__* hPhysicalGpu, uint displayOutputId, NV_EDID_V3* pEdid);
+
+        [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
+        private unsafe delegate _NvAPI_Status NvApiGetLogicalGpuFromPhysicalGpuDelegate(NvPhysicalGpuHandle__* hPhysicalGpu, NvLogicalGpuHandle__** pLogicalGpu);
+
+        [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
+        private unsafe delegate _NvAPI_Status NvApiGpuGetLogicalGpuInfoDelegate(NvLogicalGpuHandle__* hLogicalGpu, _NV_LOGICAL_GPU_DATA_V1* pLogicalGpuData);
+
+        [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
+        private unsafe delegate _NvAPI_Status NvApiGpuClientRegisterForUtilizationSampleUpdatesDelegate(NvPhysicalGpuHandle__* hPhysicalGpu, _NV_GPU_CLIENT_UTILIZATION_PERIODIC_CALLBACK_SETTINGS_V1* pCallbackSettings);
+
+        [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
+        private unsafe delegate _NvAPI_Status NvApiGpuGetScanoutCompositionParameterDelegate(
+            uint displayId,
+            NV_GPU_SCANOUT_COMPOSITION_PARAMETER parameter,
+            NV_GPU_SCANOUT_COMPOSITION_PARAMETER_VALUE* parameterData,
+            float* pContainer);
+
+        [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
+        private unsafe delegate _NvAPI_Status NvApiGpuSetScanoutCompositionParameterDelegate(
+            uint displayId,
+            NV_GPU_SCANOUT_COMPOSITION_PARAMETER parameter,
+            NV_GPU_SCANOUT_COMPOSITION_PARAMETER_VALUE parameterValue,
+            float* pContainer);
+
+        [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
+        private unsafe delegate _NvAPI_Status NvApiGpuGetScanoutConfigurationDelegate(uint displayId, NvSBox* desktopRect, NvSBox* scanoutRect);
+
+        [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
+        private unsafe delegate _NvAPI_Status NvApiGpuGetScanoutConfigurationExDelegate(uint displayId, _NV_SCANOUT_INFORMATION* pScanoutInformation);
+
+        [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
+        private unsafe delegate _NvAPI_Status NvApiGpuGetScanoutIntensityStateDelegate(uint displayId, _NV_SCANOUT_INTENSITY_STATE_DATA* scanoutIntensityStateData);
+
+        [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
+        private unsafe delegate _NvAPI_Status NvApiGpuSetScanoutIntensityDelegate(uint displayId, NV_SCANOUT_INTENSITY_DATA_V2* scanoutIntensityData, int* pbSticky);
+
+        [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
+        private unsafe delegate _NvAPI_Status NvApiGpuGetScanoutWarpingStateDelegate(uint displayId, _NV_SCANOUT_WARPING_STATE_DATA* scanoutWarpingStateData);
+
+        [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
+        private unsafe delegate _NvAPI_Status NvApiGpuSetScanoutWarpingDelegate(uint displayId, NV_SCANOUT_WARPING_DATA* scanoutWarpingData, int* piMaxNumVertices, int* pbSticky);
+
+        [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
+        private unsafe delegate _NvAPI_Status NvApiGpuQueryWorkstationFeatureSupportDelegate(NvPhysicalGpuHandle__* hPhysicalGpu, _NV_GPU_WORKSTATION_FEATURE_TYPE gpuWorkstationFeature);
+
+        [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
+        private unsafe delegate _NvAPI_Status NvApiGpuWorkstationFeatureQueryDelegate(NvPhysicalGpuHandle__* hPhysicalGpu, uint* pConfiguredFeatureMask, uint* pConsistentFeatureMask);
+
+        [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
+        private unsafe delegate _NvAPI_Status NvApiGpuWorkstationFeatureSetupDelegate(NvPhysicalGpuHandle__* hPhysicalGpu, uint featureEnableMask, uint featureDisableMask);
     }
 
     /// <summary>
@@ -2988,6 +3897,957 @@ namespace NVAPIWrapper
         public override int GetHashCode() => NVAPIGpuDtoHelpers.SequenceHashCode(RawData);
         public static bool operator ==(NVAPIGpuInfoDto left, NVAPIGpuInfoDto right) => left.Equals(right);
         public static bool operator !=(NVAPIGpuInfoDto left, NVAPIGpuInfoDto right) => !left.Equals(right);
+    }
+
+    /// <summary>
+    /// GPU architecture info DTO.
+    /// </summary>
+    public readonly struct NVAPIGpuArchInfoDto : IEquatable<NVAPIGpuArchInfoDto>
+    {
+        public _NV_GPU_ARCHITECTURE_ID ArchitectureId { get; }
+        public _NV_GPU_ARCH_IMPLEMENTATION_ID ImplementationId { get; }
+        public _NV_GPU_CHIP_REVISION RevisionId { get; }
+
+        public NVAPIGpuArchInfoDto(
+            _NV_GPU_ARCHITECTURE_ID architectureId,
+            _NV_GPU_ARCH_IMPLEMENTATION_ID implementationId,
+            _NV_GPU_CHIP_REVISION revisionId)
+        {
+            ArchitectureId = architectureId;
+            ImplementationId = implementationId;
+            RevisionId = revisionId;
+        }
+
+        public static NVAPIGpuArchInfoDto FromNative(NV_GPU_ARCH_INFO_V2 native)
+        {
+            return new NVAPIGpuArchInfoDto(native.architecture_id, native.implementation_id, native.revision_id);
+        }
+
+        public NV_GPU_ARCH_INFO_V2 ToNative()
+        {
+            var native = new NV_GPU_ARCH_INFO_V2 { version = NVAPI.NV_GPU_ARCH_INFO_VER };
+            native.architecture_id = ArchitectureId;
+            native.implementation_id = ImplementationId;
+            native.revision_id = RevisionId;
+            return native;
+        }
+
+        public bool Equals(NVAPIGpuArchInfoDto other)
+        {
+            return ArchitectureId == other.ArchitectureId
+                && ImplementationId == other.ImplementationId
+                && RevisionId == other.RevisionId;
+        }
+
+        public override bool Equals(object? obj) => obj is NVAPIGpuArchInfoDto other && Equals(other);
+        public override int GetHashCode() => HashCode.Combine(ArchitectureId, ImplementationId, RevisionId);
+        public static bool operator ==(NVAPIGpuArchInfoDto left, NVAPIGpuArchInfoDto right) => left.Equals(right);
+        public static bool operator !=(NVAPIGpuArchInfoDto left, NVAPIGpuArchInfoDto right) => !left.Equals(right);
+    }
+
+    /// <summary>
+    /// GPU board info DTO.
+    /// </summary>
+    public readonly struct NVAPIGpuBoardInfoDto : IEquatable<NVAPIGpuBoardInfoDto>
+    {
+        public string BoardNumber { get; }
+        public byte[] BoardNumberRaw { get; }
+
+        public NVAPIGpuBoardInfoDto(byte[] boardNumberRaw, string boardNumber)
+        {
+            BoardNumberRaw = boardNumberRaw ?? Array.Empty<byte>();
+            BoardNumber = boardNumber ?? string.Empty;
+        }
+
+        public static NVAPIGpuBoardInfoDto FromNative(_NV_BOARD_INFO native)
+        {
+            var data = new byte[16];
+            var span = MemoryMarshal.CreateSpan(ref native.BoardNum.e0, data.Length);
+            span.CopyTo(data);
+
+            var end = Array.IndexOf(data, (byte)0);
+            var length = end >= 0 ? end : data.Length;
+            var text = System.Text.Encoding.ASCII.GetString(data, 0, length);
+            return new NVAPIGpuBoardInfoDto(data, text);
+        }
+
+        public _NV_BOARD_INFO ToNative()
+        {
+            var native = new _NV_BOARD_INFO { version = NVAPI.NV_BOARD_INFO_VER };
+            var span = MemoryMarshal.CreateSpan(ref native.BoardNum.e0, 16);
+            span.Clear();
+
+            var data = BoardNumberRaw ?? Array.Empty<byte>();
+            data.AsSpan(0, Math.Min(data.Length, span.Length)).CopyTo(span);
+            return native;
+        }
+
+        public bool Equals(NVAPIGpuBoardInfoDto other)
+        {
+            return string.Equals(BoardNumber, other.BoardNumber, StringComparison.Ordinal)
+                && NVAPIGpuDtoHelpers.SequenceEquals(BoardNumberRaw, other.BoardNumberRaw);
+        }
+
+        public override bool Equals(object? obj) => obj is NVAPIGpuBoardInfoDto other && Equals(other);
+        public override int GetHashCode()
+        {
+            unchecked
+            {
+                var hash = StringComparer.Ordinal.GetHashCode(BoardNumber);
+                hash = (hash * 31) + NVAPIGpuDtoHelpers.SequenceHashCode(BoardNumberRaw);
+                return hash;
+            }
+        }
+
+        public static bool operator ==(NVAPIGpuBoardInfoDto left, NVAPIGpuBoardInfoDto right) => left.Equals(right);
+        public static bool operator !=(NVAPIGpuBoardInfoDto left, NVAPIGpuBoardInfoDto right) => !left.Equals(right);
+    }
+
+    /// <summary>
+    /// ECC configuration info DTO.
+    /// </summary>
+    public readonly struct NVAPIGpuEccConfigurationInfoDto : IEquatable<NVAPIGpuEccConfigurationInfoDto>
+    {
+        public bool IsEnabled { get; }
+        public bool IsEnabledByDefault { get; }
+
+        public NVAPIGpuEccConfigurationInfoDto(bool isEnabled, bool isEnabledByDefault)
+        {
+            IsEnabled = isEnabled;
+            IsEnabledByDefault = isEnabledByDefault;
+        }
+
+        public static NVAPIGpuEccConfigurationInfoDto FromNative(NV_GPU_ECC_CONFIGURATION_INFO native)
+        {
+            return new NVAPIGpuEccConfigurationInfoDto(native.isEnabled != 0, native.isEnabledByDefault != 0);
+        }
+
+        public NV_GPU_ECC_CONFIGURATION_INFO ToNative()
+        {
+            return new NV_GPU_ECC_CONFIGURATION_INFO
+            {
+                version = NVAPI.NV_GPU_ECC_CONFIGURATION_INFO_VER,
+                isEnabled = IsEnabled ? 1u : 0u,
+                isEnabledByDefault = IsEnabledByDefault ? 1u : 0u
+            };
+        }
+
+        public bool Equals(NVAPIGpuEccConfigurationInfoDto other)
+        {
+            return IsEnabled == other.IsEnabled && IsEnabledByDefault == other.IsEnabledByDefault;
+        }
+
+        public override bool Equals(object? obj) => obj is NVAPIGpuEccConfigurationInfoDto other && Equals(other);
+        public override int GetHashCode() => HashCode.Combine(IsEnabled, IsEnabledByDefault);
+        public static bool operator ==(NVAPIGpuEccConfigurationInfoDto left, NVAPIGpuEccConfigurationInfoDto right) => left.Equals(right);
+        public static bool operator !=(NVAPIGpuEccConfigurationInfoDto left, NVAPIGpuEccConfigurationInfoDto right) => !left.Equals(right);
+    }
+
+    /// <summary>
+    /// ECC error info DTO.
+    /// </summary>
+    public readonly struct NVAPIGpuEccErrorInfoDto : IEquatable<NVAPIGpuEccErrorInfoDto>
+    {
+        public ulong CurrentSingleBitErrors { get; }
+        public ulong CurrentDoubleBitErrors { get; }
+        public ulong AggregateSingleBitErrors { get; }
+        public ulong AggregateDoubleBitErrors { get; }
+
+        public NVAPIGpuEccErrorInfoDto(
+            ulong currentSingleBitErrors,
+            ulong currentDoubleBitErrors,
+            ulong aggregateSingleBitErrors,
+            ulong aggregateDoubleBitErrors)
+        {
+            CurrentSingleBitErrors = currentSingleBitErrors;
+            CurrentDoubleBitErrors = currentDoubleBitErrors;
+            AggregateSingleBitErrors = aggregateSingleBitErrors;
+            AggregateDoubleBitErrors = aggregateDoubleBitErrors;
+        }
+
+        public static NVAPIGpuEccErrorInfoDto FromNative(NV_GPU_ECC_ERROR_INFO native)
+        {
+            return new NVAPIGpuEccErrorInfoDto(
+                native.current.singleBitErrors,
+                native.current.doubleBitErrors,
+                native.aggregate.singleBitErrors,
+                native.aggregate.doubleBitErrors);
+        }
+
+        public NV_GPU_ECC_ERROR_INFO ToNative()
+        {
+            return new NV_GPU_ECC_ERROR_INFO
+            {
+                version = NVAPI.NV_GPU_ECC_ERROR_INFO_VER,
+                current = new NV_GPU_ECC_ERROR_INFO._current_e__Struct
+                {
+                    singleBitErrors = CurrentSingleBitErrors,
+                    doubleBitErrors = CurrentDoubleBitErrors
+                },
+                aggregate = new NV_GPU_ECC_ERROR_INFO._aggregate_e__Struct
+                {
+                    singleBitErrors = AggregateSingleBitErrors,
+                    doubleBitErrors = AggregateDoubleBitErrors
+                }
+            };
+        }
+
+        public bool Equals(NVAPIGpuEccErrorInfoDto other)
+        {
+            return CurrentSingleBitErrors == other.CurrentSingleBitErrors
+                && CurrentDoubleBitErrors == other.CurrentDoubleBitErrors
+                && AggregateSingleBitErrors == other.AggregateSingleBitErrors
+                && AggregateDoubleBitErrors == other.AggregateDoubleBitErrors;
+        }
+
+        public override bool Equals(object? obj) => obj is NVAPIGpuEccErrorInfoDto other && Equals(other);
+        public override int GetHashCode() => HashCode.Combine(CurrentSingleBitErrors, CurrentDoubleBitErrors, AggregateSingleBitErrors, AggregateDoubleBitErrors);
+        public static bool operator ==(NVAPIGpuEccErrorInfoDto left, NVAPIGpuEccErrorInfoDto right) => left.Equals(right);
+        public static bool operator !=(NVAPIGpuEccErrorInfoDto left, NVAPIGpuEccErrorInfoDto right) => !left.Equals(right);
+    }
+
+    /// <summary>
+    /// HDCP support status DTO.
+    /// </summary>
+    public readonly struct NVAPIGpuHdcpSupportStatusDto : IEquatable<NVAPIGpuHdcpSupportStatusDto>
+    {
+        public _NV_GPU_HDCP_FUSE_STATE HdcpFuseState { get; }
+        public _NV_GPU_HDCP_KEY_SOURCE HdcpKeySource { get; }
+        public _NV_GPU_HDCP_KEY_SOURCE_STATE HdcpKeySourceState { get; }
+
+        public NVAPIGpuHdcpSupportStatusDto(
+            _NV_GPU_HDCP_FUSE_STATE hdcpFuseState,
+            _NV_GPU_HDCP_KEY_SOURCE hdcpKeySource,
+            _NV_GPU_HDCP_KEY_SOURCE_STATE hdcpKeySourceState)
+        {
+            HdcpFuseState = hdcpFuseState;
+            HdcpKeySource = hdcpKeySource;
+            HdcpKeySourceState = hdcpKeySourceState;
+        }
+
+        public static NVAPIGpuHdcpSupportStatusDto FromNative(NV_GPU_GET_HDCP_SUPPORT_STATUS native)
+        {
+            return new NVAPIGpuHdcpSupportStatusDto(native.hdcpFuseState, native.hdcpKeySource, native.hdcpKeySourceState);
+        }
+
+        public NV_GPU_GET_HDCP_SUPPORT_STATUS ToNative()
+        {
+            return new NV_GPU_GET_HDCP_SUPPORT_STATUS
+            {
+                version = NVAPI.NV_GPU_GET_HDCP_SUPPORT_STATUS_VER,
+                hdcpFuseState = HdcpFuseState,
+                hdcpKeySource = HdcpKeySource,
+                hdcpKeySourceState = HdcpKeySourceState
+            };
+        }
+
+        public bool Equals(NVAPIGpuHdcpSupportStatusDto other)
+        {
+            return HdcpFuseState == other.HdcpFuseState
+                && HdcpKeySource == other.HdcpKeySource
+                && HdcpKeySourceState == other.HdcpKeySourceState;
+        }
+
+        public override bool Equals(object? obj) => obj is NVAPIGpuHdcpSupportStatusDto other && Equals(other);
+        public override int GetHashCode() => HashCode.Combine(HdcpFuseState, HdcpKeySource, HdcpKeySourceState);
+        public static bool operator ==(NVAPIGpuHdcpSupportStatusDto left, NVAPIGpuHdcpSupportStatusDto right) => left.Equals(right);
+        public static bool operator !=(NVAPIGpuHdcpSupportStatusDto left, NVAPIGpuHdcpSupportStatusDto right) => !left.Equals(right);
+    }
+
+    /// <summary>
+    /// GPU EDID data DTO.
+    /// </summary>
+    public readonly struct NVAPIGpuEdidDto : IEquatable<NVAPIGpuEdidDto>
+    {
+        public byte[] Data { get; }
+        public uint SizeOfEdid { get; }
+        public uint EdidId { get; }
+        public uint Offset { get; }
+
+        public NVAPIGpuEdidDto(byte[] data, uint sizeOfEdid, uint edidId, uint offset)
+        {
+            Data = data ?? Array.Empty<byte>();
+            SizeOfEdid = sizeOfEdid;
+            EdidId = edidId;
+            Offset = offset;
+        }
+
+        public static NVAPIGpuEdidDto FromNative(NV_EDID_V3 native)
+        {
+            var max = Math.Min((int)native.sizeofEDID, NVAPI.NV_EDID_DATA_SIZE);
+            var data = new byte[max];
+            if (max > 0)
+            {
+                var span = MemoryMarshal.CreateSpan(ref native.EDID_Data.e0, NVAPI.NV_EDID_DATA_SIZE);
+                span.Slice(0, max).CopyTo(data);
+            }
+
+            return new NVAPIGpuEdidDto(data, native.sizeofEDID, native.edidId, native.offset);
+        }
+
+        public NV_EDID_V3 ToNative()
+        {
+            var native = new NV_EDID_V3
+            {
+                version = NVAPI.NV_EDID_VER,
+                sizeofEDID = SizeOfEdid == 0 ? (uint)(Data?.Length ?? 0) : SizeOfEdid,
+                edidId = EdidId,
+                offset = Offset
+            };
+
+            var span = MemoryMarshal.CreateSpan(ref native.EDID_Data.e0, NVAPI.NV_EDID_DATA_SIZE);
+            span.Clear();
+
+            var data = Data ?? Array.Empty<byte>();
+            data.AsSpan(0, Math.Min(data.Length, span.Length)).CopyTo(span);
+            return native;
+        }
+
+        public bool Equals(NVAPIGpuEdidDto other)
+        {
+            return SizeOfEdid == other.SizeOfEdid
+                && EdidId == other.EdidId
+                && Offset == other.Offset
+                && NVAPIGpuDtoHelpers.SequenceEquals(Data, other.Data);
+        }
+
+        public override bool Equals(object? obj) => obj is NVAPIGpuEdidDto other && Equals(other);
+        public override int GetHashCode()
+        {
+            unchecked
+            {
+                var hash = SizeOfEdid.GetHashCode();
+                hash = (hash * 31) + EdidId.GetHashCode();
+                hash = (hash * 31) + Offset.GetHashCode();
+                hash = (hash * 31) + NVAPIGpuDtoHelpers.SequenceHashCode(Data);
+                return hash;
+            }
+        }
+
+        public static bool operator ==(NVAPIGpuEdidDto left, NVAPIGpuEdidDto right) => left.Equals(right);
+        public static bool operator !=(NVAPIGpuEdidDto left, NVAPIGpuEdidDto right) => !left.Equals(right);
+    }
+
+    /// <summary>
+    /// Logical GPU info DTO.
+    /// </summary>
+    public readonly struct NVAPILogicalGpuInfoDto : IEquatable<NVAPILogicalGpuInfoDto>
+    {
+        internal IntPtr[] PhysicalGpuHandles { get; }
+        public NVAPIPhysicalGpuHelper[] PhysicalGpus { get; }
+        public uint PhysicalGpuCount { get; }
+        public _LUID? OsAdapterId { get; }
+        public uint[] Reserved { get; }
+
+        private NVAPILogicalGpuInfoDto(_LUID? osAdapterId, IntPtr[] handles, NVAPIPhysicalGpuHelper[] gpus, uint[] reserved)
+        {
+            OsAdapterId = osAdapterId;
+            PhysicalGpuHandles = handles ?? Array.Empty<IntPtr>();
+            PhysicalGpus = gpus ?? Array.Empty<NVAPIPhysicalGpuHelper>();
+            PhysicalGpuCount = (uint)PhysicalGpuHandles.Length;
+            Reserved = reserved ?? Array.Empty<uint>();
+        }
+
+        public static unsafe NVAPILogicalGpuInfoDto FromNative(NVAPIApiHelper apiHelper, _NV_LOGICAL_GPU_DATA_V1 native)
+        {
+            _LUID? luid = null;
+            if (native.pOSAdapterId != null)
+            {
+                luid = *(_LUID*)native.pOSAdapterId;
+            }
+
+            var count = (int)Math.Min(native.physicalGpuCount, NVAPI.NVAPI_MAX_PHYSICAL_GPUS);
+            var handles = new IntPtr[count];
+            var gpus = new NVAPIPhysicalGpuHelper[count];
+            for (var i = 0; i < count; i++)
+            {
+                var handle = native.physicalGpuHandles[i];
+                handles[i] = (IntPtr)handle;
+                gpus[i] = new NVAPIPhysicalGpuHelper(apiHelper, handles[i]);
+            }
+
+            var reserved = new uint[8];
+            var reservedSpan = MemoryMarshal.CreateSpan(ref native.reserved.e0, reserved.Length);
+            reservedSpan.CopyTo(reserved);
+
+            return new NVAPILogicalGpuInfoDto(luid, handles, gpus, reserved);
+        }
+
+        public bool Equals(NVAPILogicalGpuInfoDto other)
+        {
+            var luidEquals = OsAdapterId.HasValue == other.OsAdapterId.HasValue;
+            if (luidEquals && OsAdapterId.HasValue && other.OsAdapterId.HasValue)
+            {
+                var left = OsAdapterId.Value;
+                var right = other.OsAdapterId.Value;
+                luidEquals = left.LowPart == right.LowPart && left.HighPart == right.HighPart;
+            }
+
+            return luidEquals
+                && NVAPIGpuDtoHelpers.SequenceEquals(PhysicalGpuHandles, other.PhysicalGpuHandles)
+                && NVAPIGpuDtoHelpers.SequenceEquals(Reserved, other.Reserved);
+        }
+
+        public override bool Equals(object? obj) => obj is NVAPILogicalGpuInfoDto other && Equals(other);
+        public override int GetHashCode()
+        {
+            unchecked
+            {
+                var hash = OsAdapterId?.GetHashCode() ?? 0;
+                hash = (hash * 31) + NVAPIGpuDtoHelpers.SequenceHashCode(PhysicalGpuHandles);
+                hash = (hash * 31) + NVAPIGpuDtoHelpers.SequenceHashCode(Reserved);
+                return hash;
+            }
+        }
+
+        public static bool operator ==(NVAPILogicalGpuInfoDto left, NVAPILogicalGpuInfoDto right) => left.Equals(right);
+        public static bool operator !=(NVAPILogicalGpuInfoDto left, NVAPILogicalGpuInfoDto right) => !left.Equals(right);
+    }
+
+    /// <summary>
+    /// DTO for NvSBox values.
+    /// </summary>
+    public readonly struct NVAPISBoxDto : IEquatable<NVAPISBoxDto>
+    {
+        public int X { get; }
+        public int Y { get; }
+        public int Width { get; }
+        public int Height { get; }
+
+        public NVAPISBoxDto(int x, int y, int width, int height)
+        {
+            X = x;
+            Y = y;
+            Width = width;
+            Height = height;
+        }
+
+        public static NVAPISBoxDto FromNative(NvSBox native)
+        {
+            return new NVAPISBoxDto(native.sX, native.sY, native.sWidth, native.sHeight);
+        }
+
+        public NvSBox ToNative()
+        {
+            return new NvSBox
+            {
+                sX = X,
+                sY = Y,
+                sWidth = Width,
+                sHeight = Height
+            };
+        }
+
+        public bool Equals(NVAPISBoxDto other)
+        {
+            return X == other.X && Y == other.Y && Width == other.Width && Height == other.Height;
+        }
+
+        public override bool Equals(object? obj) => obj is NVAPISBoxDto other && Equals(other);
+        public override int GetHashCode() => HashCode.Combine(X, Y, Width, Height);
+        public static bool operator ==(NVAPISBoxDto left, NVAPISBoxDto right) => left.Equals(right);
+        public static bool operator !=(NVAPISBoxDto left, NVAPISBoxDto right) => !left.Equals(right);
+    }
+
+    /// <summary>
+    /// Scanout configuration DTO.
+    /// </summary>
+    public readonly struct NVAPIGpuScanoutConfigurationDto : IEquatable<NVAPIGpuScanoutConfigurationDto>
+    {
+        public NVAPISBoxDto DesktopRect { get; }
+        public NVAPISBoxDto ScanoutRect { get; }
+
+        public NVAPIGpuScanoutConfigurationDto(NVAPISBoxDto desktopRect, NVAPISBoxDto scanoutRect)
+        {
+            DesktopRect = desktopRect;
+            ScanoutRect = scanoutRect;
+        }
+
+        public static NVAPIGpuScanoutConfigurationDto FromNative(NvSBox desktopRect, NvSBox scanoutRect)
+        {
+            return new NVAPIGpuScanoutConfigurationDto(
+                NVAPISBoxDto.FromNative(desktopRect),
+                NVAPISBoxDto.FromNative(scanoutRect));
+        }
+
+        public bool Equals(NVAPIGpuScanoutConfigurationDto other)
+        {
+            return DesktopRect.Equals(other.DesktopRect) && ScanoutRect.Equals(other.ScanoutRect);
+        }
+
+        public override bool Equals(object? obj) => obj is NVAPIGpuScanoutConfigurationDto other && Equals(other);
+        public override int GetHashCode() => HashCode.Combine(DesktopRect, ScanoutRect);
+        public static bool operator ==(NVAPIGpuScanoutConfigurationDto left, NVAPIGpuScanoutConfigurationDto right) => left.Equals(right);
+        public static bool operator !=(NVAPIGpuScanoutConfigurationDto left, NVAPIGpuScanoutConfigurationDto right) => !left.Equals(right);
+    }
+
+    /// <summary>
+    /// Extended scanout configuration DTO.
+    /// </summary>
+    public readonly struct NVAPIGpuScanoutConfigurationExDto : IEquatable<NVAPIGpuScanoutConfigurationExDto>
+    {
+        public NVAPISBoxDto SourceDesktopRect { get; }
+        public NVAPISBoxDto SourceViewportRect { get; }
+        public NVAPISBoxDto TargetViewportRect { get; }
+        public uint TargetDisplayWidth { get; }
+        public uint TargetDisplayHeight { get; }
+        public uint CloneImportance { get; }
+        public _NV_ROTATE SourceToTargetRotation { get; }
+
+        public NVAPIGpuScanoutConfigurationExDto(
+            NVAPISBoxDto sourceDesktopRect,
+            NVAPISBoxDto sourceViewportRect,
+            NVAPISBoxDto targetViewportRect,
+            uint targetDisplayWidth,
+            uint targetDisplayHeight,
+            uint cloneImportance,
+            _NV_ROTATE sourceToTargetRotation)
+        {
+            SourceDesktopRect = sourceDesktopRect;
+            SourceViewportRect = sourceViewportRect;
+            TargetViewportRect = targetViewportRect;
+            TargetDisplayWidth = targetDisplayWidth;
+            TargetDisplayHeight = targetDisplayHeight;
+            CloneImportance = cloneImportance;
+            SourceToTargetRotation = sourceToTargetRotation;
+        }
+
+        public static NVAPIGpuScanoutConfigurationExDto FromNative(_NV_SCANOUT_INFORMATION native)
+        {
+            return new NVAPIGpuScanoutConfigurationExDto(
+                NVAPISBoxDto.FromNative(native.sourceDesktopRect),
+                NVAPISBoxDto.FromNative(native.sourceViewportRect),
+                NVAPISBoxDto.FromNative(native.targetViewportRect),
+                native.targetDisplayWidth,
+                native.targetDisplayHeight,
+                native.cloneImportance,
+                native.sourceToTargetRotation);
+        }
+
+        public _NV_SCANOUT_INFORMATION ToNative()
+        {
+            return new _NV_SCANOUT_INFORMATION
+            {
+                version = NVAPI.NV_SCANOUT_INFORMATION_VER,
+                sourceDesktopRect = SourceDesktopRect.ToNative(),
+                sourceViewportRect = SourceViewportRect.ToNative(),
+                targetViewportRect = TargetViewportRect.ToNative(),
+                targetDisplayWidth = TargetDisplayWidth,
+                targetDisplayHeight = TargetDisplayHeight,
+                cloneImportance = CloneImportance,
+                sourceToTargetRotation = SourceToTargetRotation
+            };
+        }
+
+        public bool Equals(NVAPIGpuScanoutConfigurationExDto other)
+        {
+            return SourceDesktopRect.Equals(other.SourceDesktopRect)
+                && SourceViewportRect.Equals(other.SourceViewportRect)
+                && TargetViewportRect.Equals(other.TargetViewportRect)
+                && TargetDisplayWidth == other.TargetDisplayWidth
+                && TargetDisplayHeight == other.TargetDisplayHeight
+                && CloneImportance == other.CloneImportance
+                && SourceToTargetRotation == other.SourceToTargetRotation;
+        }
+
+        public override bool Equals(object? obj) => obj is NVAPIGpuScanoutConfigurationExDto other && Equals(other);
+        public override int GetHashCode() => HashCode.Combine(SourceDesktopRect, SourceViewportRect, TargetViewportRect, TargetDisplayWidth, TargetDisplayHeight, CloneImportance, SourceToTargetRotation);
+        public static bool operator ==(NVAPIGpuScanoutConfigurationExDto left, NVAPIGpuScanoutConfigurationExDto right) => left.Equals(right);
+        public static bool operator !=(NVAPIGpuScanoutConfigurationExDto left, NVAPIGpuScanoutConfigurationExDto right) => !left.Equals(right);
+    }
+
+    /// <summary>
+    /// Scanout composition parameter DTO.
+    /// </summary>
+    public readonly struct NVAPIGpuScanoutCompositionParameterDto : IEquatable<NVAPIGpuScanoutCompositionParameterDto>
+    {
+        public NV_GPU_SCANOUT_COMPOSITION_PARAMETER Parameter { get; }
+        public NV_GPU_SCANOUT_COMPOSITION_PARAMETER_VALUE Value { get; }
+        public float Container { get; }
+
+        public NVAPIGpuScanoutCompositionParameterDto(
+            NV_GPU_SCANOUT_COMPOSITION_PARAMETER parameter,
+            NV_GPU_SCANOUT_COMPOSITION_PARAMETER_VALUE value,
+            float container)
+        {
+            Parameter = parameter;
+            Value = value;
+            Container = container;
+        }
+
+        public bool Equals(NVAPIGpuScanoutCompositionParameterDto other)
+        {
+            return Parameter == other.Parameter && Value == other.Value && Container.Equals(other.Container);
+        }
+
+        public override bool Equals(object? obj) => obj is NVAPIGpuScanoutCompositionParameterDto other && Equals(other);
+        public override int GetHashCode() => HashCode.Combine(Parameter, Value, Container);
+        public static bool operator ==(NVAPIGpuScanoutCompositionParameterDto left, NVAPIGpuScanoutCompositionParameterDto right) => left.Equals(right);
+        public static bool operator !=(NVAPIGpuScanoutCompositionParameterDto left, NVAPIGpuScanoutCompositionParameterDto right) => !left.Equals(right);
+    }
+
+    /// <summary>
+    /// Scanout intensity state DTO.
+    /// </summary>
+    public readonly struct NVAPIGpuScanoutIntensityStateDto : IEquatable<NVAPIGpuScanoutIntensityStateDto>
+    {
+        public bool IsEnabled { get; }
+
+        public NVAPIGpuScanoutIntensityStateDto(bool isEnabled)
+        {
+            IsEnabled = isEnabled;
+        }
+
+        public static NVAPIGpuScanoutIntensityStateDto FromNative(_NV_SCANOUT_INTENSITY_STATE_DATA native)
+        {
+            return new NVAPIGpuScanoutIntensityStateDto(native.bEnabled != 0);
+        }
+
+        public _NV_SCANOUT_INTENSITY_STATE_DATA ToNative()
+        {
+            return new _NV_SCANOUT_INTENSITY_STATE_DATA
+            {
+                version = NVAPI.NV_SCANOUT_INTENSITY_STATE_VER,
+                bEnabled = IsEnabled ? 1u : 0u
+            };
+        }
+
+        public bool Equals(NVAPIGpuScanoutIntensityStateDto other)
+        {
+            return IsEnabled == other.IsEnabled;
+        }
+
+        public override bool Equals(object? obj) => obj is NVAPIGpuScanoutIntensityStateDto other && Equals(other);
+        public override int GetHashCode() => IsEnabled.GetHashCode();
+        public static bool operator ==(NVAPIGpuScanoutIntensityStateDto left, NVAPIGpuScanoutIntensityStateDto right) => left.Equals(right);
+        public static bool operator !=(NVAPIGpuScanoutIntensityStateDto left, NVAPIGpuScanoutIntensityStateDto right) => !left.Equals(right);
+    }
+
+    /// <summary>
+    /// Scanout intensity data DTO.
+    /// </summary>
+    public readonly struct NVAPIGpuScanoutIntensityDataDto : IEquatable<NVAPIGpuScanoutIntensityDataDto>
+    {
+        public uint Width { get; }
+        public uint Height { get; }
+        public float[] BlendingTexture { get; }
+        public float[] OffsetTexture { get; }
+        public uint OffsetTexChannels { get; }
+
+        public NVAPIGpuScanoutIntensityDataDto(
+            uint width,
+            uint height,
+            float[] blendingTexture,
+            float[] offsetTexture,
+            uint offsetTexChannels)
+        {
+            Width = width;
+            Height = height;
+            BlendingTexture = blendingTexture ?? Array.Empty<float>();
+            OffsetTexture = offsetTexture ?? Array.Empty<float>();
+            OffsetTexChannels = offsetTexChannels;
+        }
+
+        public NV_SCANOUT_INTENSITY_DATA_V2 ToNative()
+        {
+            return new NV_SCANOUT_INTENSITY_DATA_V2
+            {
+                version = NVAPI.NV_SCANOUT_INTENSITY_DATA_VER,
+                width = Width,
+                height = Height,
+                blendingTexture = null,
+                offsetTexture = null,
+                offsetTexChannels = OffsetTexChannels
+            };
+        }
+
+        public bool Equals(NVAPIGpuScanoutIntensityDataDto other)
+        {
+            return Width == other.Width
+                && Height == other.Height
+                && OffsetTexChannels == other.OffsetTexChannels
+                && NVAPIGpuDtoHelpers.SequenceEquals(BlendingTexture, other.BlendingTexture)
+                && NVAPIGpuDtoHelpers.SequenceEquals(OffsetTexture, other.OffsetTexture);
+        }
+
+        public override bool Equals(object? obj) => obj is NVAPIGpuScanoutIntensityDataDto other && Equals(other);
+        public override int GetHashCode()
+        {
+            unchecked
+            {
+                var hash = Width.GetHashCode();
+                hash = (hash * 31) + Height.GetHashCode();
+                hash = (hash * 31) + OffsetTexChannels.GetHashCode();
+                hash = (hash * 31) + NVAPIGpuDtoHelpers.SequenceHashCode(BlendingTexture);
+                hash = (hash * 31) + NVAPIGpuDtoHelpers.SequenceHashCode(OffsetTexture);
+                return hash;
+            }
+        }
+
+        public static bool operator ==(NVAPIGpuScanoutIntensityDataDto left, NVAPIGpuScanoutIntensityDataDto right) => left.Equals(right);
+        public static bool operator !=(NVAPIGpuScanoutIntensityDataDto left, NVAPIGpuScanoutIntensityDataDto right) => !left.Equals(right);
+    }
+
+    /// <summary>
+    /// Scanout intensity result DTO.
+    /// </summary>
+    public readonly struct NVAPIGpuScanoutIntensityResultDto : IEquatable<NVAPIGpuScanoutIntensityResultDto>
+    {
+        public bool IsSticky { get; }
+
+        public NVAPIGpuScanoutIntensityResultDto(bool isSticky)
+        {
+            IsSticky = isSticky;
+        }
+
+        public bool Equals(NVAPIGpuScanoutIntensityResultDto other)
+        {
+            return IsSticky == other.IsSticky;
+        }
+
+        public override bool Equals(object? obj) => obj is NVAPIGpuScanoutIntensityResultDto other && Equals(other);
+        public override int GetHashCode() => IsSticky.GetHashCode();
+        public static bool operator ==(NVAPIGpuScanoutIntensityResultDto left, NVAPIGpuScanoutIntensityResultDto right) => left.Equals(right);
+        public static bool operator !=(NVAPIGpuScanoutIntensityResultDto left, NVAPIGpuScanoutIntensityResultDto right) => !left.Equals(right);
+    }
+
+    /// <summary>
+    /// Scanout warping state DTO.
+    /// </summary>
+    public readonly struct NVAPIGpuScanoutWarpingStateDto : IEquatable<NVAPIGpuScanoutWarpingStateDto>
+    {
+        public bool IsEnabled { get; }
+
+        public NVAPIGpuScanoutWarpingStateDto(bool isEnabled)
+        {
+            IsEnabled = isEnabled;
+        }
+
+        public static NVAPIGpuScanoutWarpingStateDto FromNative(_NV_SCANOUT_WARPING_STATE_DATA native)
+        {
+            return new NVAPIGpuScanoutWarpingStateDto(native.bEnabled != 0);
+        }
+
+        public _NV_SCANOUT_WARPING_STATE_DATA ToNative()
+        {
+            return new _NV_SCANOUT_WARPING_STATE_DATA
+            {
+                version = NVAPI.NV_SCANOUT_WARPING_STATE_VER,
+                bEnabled = IsEnabled ? 1u : 0u
+            };
+        }
+
+        public bool Equals(NVAPIGpuScanoutWarpingStateDto other)
+        {
+            return IsEnabled == other.IsEnabled;
+        }
+
+        public override bool Equals(object? obj) => obj is NVAPIGpuScanoutWarpingStateDto other && Equals(other);
+        public override int GetHashCode() => IsEnabled.GetHashCode();
+        public static bool operator ==(NVAPIGpuScanoutWarpingStateDto left, NVAPIGpuScanoutWarpingStateDto right) => left.Equals(right);
+        public static bool operator !=(NVAPIGpuScanoutWarpingStateDto left, NVAPIGpuScanoutWarpingStateDto right) => !left.Equals(right);
+    }
+
+    /// <summary>
+    /// Scanout warping data DTO.
+    /// </summary>
+    public readonly struct NVAPIGpuScanoutWarpingDataDto : IEquatable<NVAPIGpuScanoutWarpingDataDto>
+    {
+        public float[] Vertices { get; }
+        public NV_GPU_WARPING_VERTICE_FORMAT VertexFormat { get; }
+        public int NumVertices { get; }
+        public NVAPISBoxDto? TextureRect { get; }
+
+        public NVAPIGpuScanoutWarpingDataDto(
+            float[] vertices,
+            NV_GPU_WARPING_VERTICE_FORMAT vertexFormat,
+            int numVertices,
+            NVAPISBoxDto? textureRect)
+        {
+            Vertices = vertices ?? Array.Empty<float>();
+            VertexFormat = vertexFormat;
+            NumVertices = numVertices;
+            TextureRect = textureRect;
+        }
+
+        public NV_SCANOUT_WARPING_DATA ToNative()
+        {
+            return new NV_SCANOUT_WARPING_DATA
+            {
+                version = NVAPI.NV_SCANOUT_WARPING_VER,
+                vertices = null,
+                vertexFormat = VertexFormat,
+                numVertices = NumVertices,
+                textureRect = null
+            };
+        }
+
+        public bool Equals(NVAPIGpuScanoutWarpingDataDto other)
+        {
+            return VertexFormat == other.VertexFormat
+                && NumVertices == other.NumVertices
+                && Nullable.Equals(TextureRect, other.TextureRect)
+                && NVAPIGpuDtoHelpers.SequenceEquals(Vertices, other.Vertices);
+        }
+
+        public override bool Equals(object? obj) => obj is NVAPIGpuScanoutWarpingDataDto other && Equals(other);
+        public override int GetHashCode()
+        {
+            unchecked
+            {
+                var hash = VertexFormat.GetHashCode();
+                hash = (hash * 31) + NumVertices.GetHashCode();
+                hash = (hash * 31) + (TextureRect?.GetHashCode() ?? 0);
+                hash = (hash * 31) + NVAPIGpuDtoHelpers.SequenceHashCode(Vertices);
+                return hash;
+            }
+        }
+
+        public static bool operator ==(NVAPIGpuScanoutWarpingDataDto left, NVAPIGpuScanoutWarpingDataDto right) => left.Equals(right);
+        public static bool operator !=(NVAPIGpuScanoutWarpingDataDto left, NVAPIGpuScanoutWarpingDataDto right) => !left.Equals(right);
+    }
+
+    /// <summary>
+    /// Scanout warping result DTO.
+    /// </summary>
+    public readonly struct NVAPIGpuScanoutWarpingResultDto : IEquatable<NVAPIGpuScanoutWarpingResultDto>
+    {
+        public int MaxNumVertices { get; }
+        public bool IsSticky { get; }
+
+        public NVAPIGpuScanoutWarpingResultDto(int maxNumVertices, bool isSticky)
+        {
+            MaxNumVertices = maxNumVertices;
+            IsSticky = isSticky;
+        }
+
+        public bool Equals(NVAPIGpuScanoutWarpingResultDto other)
+        {
+            return MaxNumVertices == other.MaxNumVertices && IsSticky == other.IsSticky;
+        }
+
+        public override bool Equals(object? obj) => obj is NVAPIGpuScanoutWarpingResultDto other && Equals(other);
+        public override int GetHashCode() => HashCode.Combine(MaxNumVertices, IsSticky);
+        public static bool operator ==(NVAPIGpuScanoutWarpingResultDto left, NVAPIGpuScanoutWarpingResultDto right) => left.Equals(right);
+        public static bool operator !=(NVAPIGpuScanoutWarpingResultDto left, NVAPIGpuScanoutWarpingResultDto right) => !left.Equals(right);
+    }
+
+    /// <summary>
+    /// Workstation feature query DTO.
+    /// </summary>
+    public readonly struct NVAPIGpuWorkstationFeatureQueryDto : IEquatable<NVAPIGpuWorkstationFeatureQueryDto>
+    {
+        public uint ConfiguredFeatureMask { get; }
+        public uint ConsistentFeatureMask { get; }
+
+        public NVAPIGpuWorkstationFeatureQueryDto(uint configuredFeatureMask, uint consistentFeatureMask)
+        {
+            ConfiguredFeatureMask = configuredFeatureMask;
+            ConsistentFeatureMask = consistentFeatureMask;
+        }
+
+        public bool Equals(NVAPIGpuWorkstationFeatureQueryDto other)
+        {
+            return ConfiguredFeatureMask == other.ConfiguredFeatureMask
+                && ConsistentFeatureMask == other.ConsistentFeatureMask;
+        }
+
+        public override bool Equals(object? obj) => obj is NVAPIGpuWorkstationFeatureQueryDto other && Equals(other);
+        public override int GetHashCode() => HashCode.Combine(ConfiguredFeatureMask, ConsistentFeatureMask);
+        public static bool operator ==(NVAPIGpuWorkstationFeatureQueryDto left, NVAPIGpuWorkstationFeatureQueryDto right) => left.Equals(right);
+        public static bool operator !=(NVAPIGpuWorkstationFeatureQueryDto left, NVAPIGpuWorkstationFeatureQueryDto right) => !left.Equals(right);
+    }
+
+    /// <summary>
+    /// Utilization sample callback settings DTO.
+    /// </summary>
+    public readonly struct NVAPIGpuUtilizationSampleCallbackSettingsDto : IEquatable<NVAPIGpuUtilizationSampleCallbackSettingsDto>
+    {
+        public IntPtr CallbackParam { get; }
+        public uint CallbackPeriodMs { get; }
+        public IntPtr Callback { get; }
+        public byte[] SuperReserved { get; }
+        public byte[] PeriodicReserved { get; }
+        public byte[] Reserved { get; }
+
+        public NVAPIGpuUtilizationSampleCallbackSettingsDto(
+            IntPtr callbackParam,
+            uint callbackPeriodMs,
+            IntPtr callback,
+            byte[] superReserved,
+            byte[] periodicReserved,
+            byte[] reserved)
+        {
+            CallbackParam = callbackParam;
+            CallbackPeriodMs = callbackPeriodMs;
+            Callback = callback;
+            SuperReserved = superReserved ?? Array.Empty<byte>();
+            PeriodicReserved = periodicReserved ?? Array.Empty<byte>();
+            Reserved = reserved ?? Array.Empty<byte>();
+        }
+
+        public unsafe _NV_GPU_CLIENT_UTILIZATION_PERIODIC_CALLBACK_SETTINGS_V1 ToNative()
+        {
+            var native = new _NV_GPU_CLIENT_UTILIZATION_PERIODIC_CALLBACK_SETTINGS_V1
+            {
+                version = NVAPI.NV_GPU_CLIENT_UTILIZATION_PERIODIC_CALLBACK_SETTINGS_VER,
+                super = new _NV_GPU_CLIENT_PERIODIC_CALLBACK_SETTINGS_SUPER_V1
+                {
+                    super = new _NV_CLIENT_CALLBACK_SETTINGS_SUPER_V1
+                    {
+                        pCallbackParam = (void*)CallbackParam
+                    },
+                    callbackPeriodms = CallbackPeriodMs
+                },
+                callback = (delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, _NV_GPU_CLIENT_CALLBACK_UTILIZATION_DATA_V1*, void>)Callback
+            };
+
+            var superReserved = SuperReserved ?? Array.Empty<byte>();
+            var superSpan = MemoryMarshal.CreateSpan(ref native.super.super.rsvd.e0, 64);
+            superSpan.Clear();
+            superReserved.AsSpan(0, Math.Min(superReserved.Length, superSpan.Length)).CopyTo(superSpan);
+
+            var periodicReserved = PeriodicReserved ?? Array.Empty<byte>();
+            var periodicSpan = MemoryMarshal.CreateSpan(ref native.super.rsvd.e0, 64);
+            periodicSpan.Clear();
+            periodicReserved.AsSpan(0, Math.Min(periodicReserved.Length, periodicSpan.Length)).CopyTo(periodicSpan);
+
+            var reserved = Reserved ?? Array.Empty<byte>();
+            var reservedSpan = MemoryMarshal.CreateSpan(ref native.rsvd.e0, 64);
+            reservedSpan.Clear();
+            reserved.AsSpan(0, Math.Min(reserved.Length, reservedSpan.Length)).CopyTo(reservedSpan);
+
+            return native;
+        }
+
+        public bool Equals(NVAPIGpuUtilizationSampleCallbackSettingsDto other)
+        {
+            return CallbackParam == other.CallbackParam
+                && CallbackPeriodMs == other.CallbackPeriodMs
+                && Callback == other.Callback
+                && NVAPIGpuDtoHelpers.SequenceEquals(SuperReserved, other.SuperReserved)
+                && NVAPIGpuDtoHelpers.SequenceEquals(PeriodicReserved, other.PeriodicReserved)
+                && NVAPIGpuDtoHelpers.SequenceEquals(Reserved, other.Reserved);
+        }
+
+        public override bool Equals(object? obj) => obj is NVAPIGpuUtilizationSampleCallbackSettingsDto other && Equals(other);
+
+        public override int GetHashCode()
+        {
+            unchecked
+            {
+                var hash = CallbackParam.GetHashCode();
+                hash = (hash * 31) + CallbackPeriodMs.GetHashCode();
+                hash = (hash * 31) + Callback.GetHashCode();
+                hash = (hash * 31) + NVAPIGpuDtoHelpers.SequenceHashCode(SuperReserved);
+                hash = (hash * 31) + NVAPIGpuDtoHelpers.SequenceHashCode(PeriodicReserved);
+                hash = (hash * 31) + NVAPIGpuDtoHelpers.SequenceHashCode(Reserved);
+                return hash;
+            }
+        }
+
+        public static bool operator ==(NVAPIGpuUtilizationSampleCallbackSettingsDto left, NVAPIGpuUtilizationSampleCallbackSettingsDto right) => left.Equals(right);
+        public static bool operator !=(NVAPIGpuUtilizationSampleCallbackSettingsDto left, NVAPIGpuUtilizationSampleCallbackSettingsDto right) => !left.Equals(right);
     }
 
     internal static class NVAPIGpuDtoHelpers

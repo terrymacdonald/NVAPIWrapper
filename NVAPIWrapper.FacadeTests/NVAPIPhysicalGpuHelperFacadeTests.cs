@@ -562,6 +562,307 @@ namespace NVAPIWrapper.FacadeTests
         }
 
         [SkippableFact]
+        public void GetArchInfo_ShouldReturnDto()
+        {
+            var gpu = GetFirstGpuOrSkip();
+            var info = FacadeTestUtils.InvokeOrSkip(() => gpu.GetArchInfo(), "GPU arch info unsupported");
+            Skip.If(info == null, "GPU arch info not supported.");
+
+            var dto = info.Value;
+            var native = dto.ToNative();
+            Assert.Equal(NVAPI.NV_GPU_ARCH_INFO_VER, native.version);
+            Assert.True(dto.Equals(dto));
+            _ = dto.GetHashCode();
+        }
+
+        [SkippableFact]
+        public void GetBoardInfo_ShouldReturnDto()
+        {
+            var gpu = GetFirstGpuOrSkip();
+            var info = FacadeTestUtils.InvokeOrSkip(() => gpu.GetBoardInfo(), "Board info unsupported");
+            Skip.If(info == null, "Board info not supported.");
+
+            var dto = info.Value;
+            var native = dto.ToNative();
+            Assert.Equal(NVAPI.NV_BOARD_INFO_VER, native.version);
+            Assert.True(dto.Equals(dto));
+            _ = dto.GetHashCode();
+        }
+
+        [SkippableFact]
+        public void GetVbiosRevision_ShouldReturnValue()
+        {
+            var gpu = GetFirstGpuOrSkip();
+            var value = FacadeTestUtils.InvokeOrSkip(() => gpu.GetVbiosRevision(), "VBIOS revision unsupported");
+            Skip.If(value == null, "VBIOS revision not supported.");
+            Assert.True(value.HasValue);
+        }
+
+        [SkippableFact]
+        public void GetVbiosOemRevision_ShouldReturnValue()
+        {
+            var gpu = GetFirstGpuOrSkip();
+            var value = FacadeTestUtils.InvokeOrSkip(() => gpu.GetVbiosOemRevision(), "VBIOS OEM revision unsupported");
+            Skip.If(value == null, "VBIOS OEM revision not supported.");
+            Assert.True(value.HasValue);
+        }
+
+        [SkippableFact]
+        public void GetCurrentPcieDownstreamWidth_ShouldReturnValue()
+        {
+            var gpu = GetFirstGpuOrSkip();
+            var width = FacadeTestUtils.InvokeOrSkip(() => gpu.GetCurrentPcieDownstreamWidth(), "PCIe downstream width unsupported");
+            Skip.If(width == null, "PCIe downstream width not supported.");
+            Assert.True(width.HasValue);
+        }
+
+        [SkippableFact]
+        public void GetRamBusWidth_ShouldReturnValue()
+        {
+            var gpu = GetFirstGpuOrSkip();
+            var width = FacadeTestUtils.InvokeOrSkip(() => gpu.GetRamBusWidth(), "RAM bus width unsupported");
+            Skip.If(width == null, "RAM bus width not supported.");
+            Assert.True(width.HasValue);
+        }
+
+        [SkippableFact]
+        public void GetIrq_ShouldReturnValue()
+        {
+            var gpu = GetFirstGpuOrSkip();
+            var irq = FacadeTestUtils.InvokeOrSkip(() => gpu.GetIrq(), "IRQ unsupported");
+            Skip.If(irq == null, "IRQ not supported.");
+            Assert.True(irq.HasValue);
+        }
+
+        [SkippableFact]
+        public void GetOutputType_ShouldReturnValue()
+        {
+            var gpu = GetFirstGpuOrSkip();
+            var outputId = GetFirstOutputIdOrSkip(gpu);
+            var outputType = FacadeTestUtils.InvokeOrSkip(() => gpu.GetOutputType(outputId), "Output type unsupported");
+            Skip.If(outputType == null, "Output type not supported.");
+            Assert.True(outputType.HasValue);
+        }
+
+        [SkippableFact]
+        public void ValidateOutputCombination_ShouldReturnValue()
+        {
+            var gpu = GetFirstGpuOrSkip();
+            var outputs = FacadeTestUtils.InvokeOrSkip(() => gpu.GetActiveOutputs(), "Active outputs unsupported");
+            Skip.If(outputs == null, "Active outputs not supported.");
+
+            var mask = outputs.Value;
+            var bitCount = 0;
+            var temp = mask;
+            while (temp != 0)
+            {
+                bitCount += (int)(temp & 1);
+                temp >>= 1;
+            }
+
+            Skip.If(bitCount < 2, "Not enough active outputs to validate combination.");
+
+            var valid = FacadeTestUtils.InvokeOrSkip(() => gpu.ValidateOutputCombination(mask), "Validate output combination unsupported");
+            Skip.If(valid == null, "Validate output combination not supported.");
+            Assert.True(valid.HasValue);
+        }
+
+        [SkippableFact]
+        public void GetEccConfigurationInfo_ShouldReturnDto()
+        {
+            var gpu = GetFirstGpuOrSkip();
+            var info = FacadeTestUtils.InvokeOrSkip(() => gpu.GetEccConfigurationInfo(), "ECC configuration unsupported");
+            Skip.If(info == null, "ECC configuration not supported.");
+
+            var dto = info.Value;
+            var native = dto.ToNative();
+            Assert.Equal(NVAPI.NV_GPU_ECC_CONFIGURATION_INFO_VER, native.version);
+            Assert.True(dto.Equals(dto));
+            _ = dto.GetHashCode();
+        }
+
+        [SkippableFact]
+        public void GetEccErrorInfo_ShouldReturnDto()
+        {
+            var gpu = GetFirstGpuOrSkip();
+            var info = FacadeTestUtils.InvokeOrSkip(() => gpu.GetEccErrorInfo(), "ECC error info unsupported");
+            Skip.If(info == null, "ECC error info not supported.");
+
+            var dto = info.Value;
+            var native = dto.ToNative();
+            Assert.Equal(NVAPI.NV_GPU_ECC_ERROR_INFO_VER, native.version);
+            Assert.True(dto.Equals(dto));
+            _ = dto.GetHashCode();
+        }
+
+        [SkippableFact]
+        public void GetHdcpSupportStatus_ShouldReturnDto()
+        {
+            var gpu = GetFirstGpuOrSkip();
+            var info = FacadeTestUtils.InvokeOrSkip(() => gpu.GetHdcpSupportStatus(), "HDCP support status unsupported");
+            Skip.If(info == null, "HDCP support status not supported.");
+
+            var dto = info.Value;
+            var native = dto.ToNative();
+            Assert.Equal(NVAPI.NV_GPU_GET_HDCP_SUPPORT_STATUS_VER, native.version);
+            Assert.True(dto.Equals(dto));
+            _ = dto.GetHashCode();
+        }
+
+        [SkippableFact]
+        public void GetEdid_ShouldReturnDto()
+        {
+            var gpu = GetFirstGpuOrSkip();
+            var outputId = GetFirstOutputIdOrSkip(gpu);
+            var info = FacadeTestUtils.InvokeOrSkip(() => gpu.GetEdid(outputId), "EDID unsupported");
+            Skip.If(info == null, "EDID not supported.");
+
+            var dto = info.Value;
+            var native = dto.ToNative();
+            Assert.Equal(NVAPI.NV_EDID_VER, native.version);
+            Assert.True(dto.Equals(dto));
+            _ = dto.GetHashCode();
+        }
+
+        [SkippableFact]
+        public void GetLogicalGpuInfo_ShouldReturnDto()
+        {
+            var gpu = GetFirstGpuOrSkip();
+            var info = FacadeTestUtils.InvokeOrSkip(() => gpu.GetLogicalGpuInfo(), "Logical GPU info unsupported");
+            Skip.If(info == null, "Logical GPU info not supported.");
+
+            var dto = info.Value;
+            Assert.InRange<uint>(dto.PhysicalGpuCount, 0u, (uint)NVAPI.NVAPI_MAX_PHYSICAL_GPUS);
+            Assert.True(dto.Equals(dto));
+            _ = dto.GetHashCode();
+        }
+
+        [SkippableFact]
+        public void RegisterForUtilizationSampleUpdates_ShouldReturnValue()
+        {
+            var gpu = GetFirstGpuOrSkip();
+            var settings = new NVAPIGpuUtilizationSampleCallbackSettingsDto(
+                IntPtr.Zero,
+                0,
+                IntPtr.Zero,
+                Array.Empty<byte>(),
+                Array.Empty<byte>(),
+                Array.Empty<byte>());
+
+            var result = FacadeTestUtils.InvokeOrSkip(
+                () => gpu.RegisterForUtilizationSampleUpdates(settings),
+                "Utilization sample updates unsupported");
+
+            Skip.If(!result, "Utilization sample updates not supported.");
+            Assert.True(result);
+        }
+
+        [SkippableFact]
+        public void GetScanoutCompositionParameter_ShouldReturnDto()
+        {
+            var gpu = GetFirstGpuOrSkip();
+            var displayId = GetFirstDisplayIdOrSkip(gpu);
+            var parameter = NV_GPU_SCANOUT_COMPOSITION_PARAMETER.NV_GPU_SCANOUT_COMPOSITION_PARAMETER_WARPING_RESAMPLING_METHOD;
+            var info = FacadeTestUtils.InvokeOrSkip(
+                () => gpu.GetScanoutCompositionParameter(displayId, parameter),
+                "Scanout composition parameter unsupported");
+            Skip.If(info == null, "Scanout composition parameter not supported.");
+
+            var dto = info.Value;
+            Assert.True(dto.Equals(dto));
+            _ = dto.GetHashCode();
+        }
+
+        [SkippableFact]
+        public void GetScanoutConfiguration_ShouldReturnDto()
+        {
+            var gpu = GetFirstGpuOrSkip();
+            var displayId = GetFirstDisplayIdOrSkip(gpu);
+            var info = FacadeTestUtils.InvokeOrSkip(
+                () => gpu.GetScanoutConfiguration(displayId),
+                "Scanout configuration unsupported");
+            Skip.If(info == null, "Scanout configuration not supported.");
+
+            var dto = info.Value;
+            Assert.True(dto.Equals(dto));
+            _ = dto.GetHashCode();
+        }
+
+        [SkippableFact]
+        public void GetScanoutConfigurationEx_ShouldReturnDto()
+        {
+            var gpu = GetFirstGpuOrSkip();
+            var displayId = GetFirstDisplayIdOrSkip(gpu);
+            var info = FacadeTestUtils.InvokeOrSkip(
+                () => gpu.GetScanoutConfigurationEx(displayId),
+                "Scanout configuration ex unsupported");
+            Skip.If(info == null, "Scanout configuration ex not supported.");
+
+            var dto = info.Value;
+            var native = dto.ToNative();
+            Assert.Equal(NVAPI.NV_SCANOUT_INFORMATION_VER, native.version);
+            Assert.True(dto.Equals(dto));
+            _ = dto.GetHashCode();
+        }
+
+        [SkippableFact]
+        public void GetScanoutIntensityState_ShouldReturnDto()
+        {
+            var gpu = GetFirstGpuOrSkip();
+            var displayId = GetFirstDisplayIdOrSkip(gpu);
+            var info = FacadeTestUtils.InvokeOrSkip(
+                () => gpu.GetScanoutIntensityState(displayId),
+                "Scanout intensity state unsupported");
+            Skip.If(info == null, "Scanout intensity state not supported.");
+
+            var dto = info.Value;
+            var native = dto.ToNative();
+            Assert.Equal(NVAPI.NV_SCANOUT_INTENSITY_STATE_VER, native.version);
+            Assert.True(dto.Equals(dto));
+            _ = dto.GetHashCode();
+        }
+
+        [SkippableFact]
+        public void GetScanoutWarpingState_ShouldReturnDto()
+        {
+            var gpu = GetFirstGpuOrSkip();
+            var displayId = GetFirstDisplayIdOrSkip(gpu);
+            var info = FacadeTestUtils.InvokeOrSkip(
+                () => gpu.GetScanoutWarpingState(displayId),
+                "Scanout warping state unsupported");
+            Skip.If(info == null, "Scanout warping state not supported.");
+
+            var dto = info.Value;
+            var native = dto.ToNative();
+            Assert.Equal(NVAPI.NV_SCANOUT_WARPING_STATE_VER, native.version);
+            Assert.True(dto.Equals(dto));
+            _ = dto.GetHashCode();
+        }
+
+        [SkippableFact]
+        public void QueryWorkstationFeatureSupport_ShouldReturnValue()
+        {
+            var gpu = GetFirstGpuOrSkip();
+            var result = FacadeTestUtils.InvokeOrSkip(
+                () => gpu.QueryWorkstationFeatureSupport(_NV_GPU_WORKSTATION_FEATURE_TYPE.NV_GPU_WORKSTATION_FEATURE_TYPE_PROVIZ),
+                "Workstation feature support unsupported");
+            Skip.If(result == null, "Workstation feature support not supported.");
+            Assert.True(result.HasValue);
+        }
+
+        [SkippableFact]
+        public void WorkstationFeatureQuery_ShouldReturnDto()
+        {
+            var gpu = GetFirstGpuOrSkip();
+            var info = FacadeTestUtils.InvokeOrSkip(() => gpu.WorkstationFeatureQuery(), "Workstation feature query unsupported");
+            Skip.If(info == null, "Workstation feature query not supported.");
+
+            var dto = info.Value;
+            Assert.True(dto.Equals(dto));
+            _ = dto.GetHashCode();
+        }
+
+        [SkippableFact]
         public void I2CRead_ShouldReturnDto()
         {
             var gpu = GetFirstGpuOrSkip();
@@ -647,6 +948,29 @@ namespace NVAPIWrapper.FacadeTests
             Skip.If(gpus.Length == 0, "No NVIDIA physical GPUs found.");
 
             return gpus[0];
+        }
+
+        private NVAPIDisplayHelper GetFirstDisplayOrSkip(NVAPIPhysicalGpuHelper gpu)
+        {
+            var displays = gpu.EnumerateNvidiaDisplayHandles();
+            Skip.If(displays.Length == 0, "No NVIDIA displays found.");
+            return displays[0];
+        }
+
+        private uint GetFirstDisplayIdOrSkip(NVAPIPhysicalGpuHelper gpu)
+        {
+            var display = GetFirstDisplayOrSkip(gpu);
+            var displayId = display.GetDisplayIdByDisplayName();
+            Skip.If(displayId == null, "Display ID not available.");
+            return displayId.Value;
+        }
+
+        private uint GetFirstOutputIdOrSkip(NVAPIPhysicalGpuHelper gpu)
+        {
+            var display = GetFirstDisplayOrSkip(gpu);
+            var outputId = display.GetAssociatedDisplayOutputId();
+            Skip.If(outputId == null || outputId.Value == 0, "Display output ID not available.");
+            return outputId.Value;
         }
     }
 }

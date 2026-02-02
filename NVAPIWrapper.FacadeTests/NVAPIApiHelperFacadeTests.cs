@@ -126,5 +126,59 @@ namespace NVAPIWrapper.FacadeTests
             Assert.True(first.Equals(first));
             _ = first.GetHashCode();
         }
+
+        [SkippableFact]
+        public void GetGpuIdFromPhysicalGpu_ShouldReturnValue()
+        {
+            Skip.If(_fixture.ApiHelper == null, _fixture.SkipReason);
+
+            var gpus = _fixture.ApiHelper.EnumeratePhysicalGpus();
+            Skip.If(gpus.Length == 0, "No NVIDIA physical GPUs found.");
+
+            var gpuId = FacadeTestUtils.InvokeOrSkip(
+                () => _fixture.ApiHelper.GetGpuIdFromPhysicalGpu(gpus[0]),
+                "GPU ID lookup unsupported");
+
+            Skip.If(gpuId == null, "GPU ID lookup not supported.");
+            Assert.True(gpuId.HasValue);
+        }
+
+        [SkippableFact]
+        public void GetPhysicalGpuFromGpuId_ShouldReturnHelper()
+        {
+            Skip.If(_fixture.ApiHelper == null, _fixture.SkipReason);
+
+            var gpus = _fixture.ApiHelper.EnumeratePhysicalGpus();
+            Skip.If(gpus.Length == 0, "No NVIDIA physical GPUs found.");
+
+            var gpuId = FacadeTestUtils.InvokeOrSkip(
+                () => _fixture.ApiHelper.GetGpuIdFromPhysicalGpu(gpus[0]),
+                "GPU ID lookup unsupported");
+
+            Skip.If(gpuId == null, "GPU ID lookup not supported.");
+
+            var helper = FacadeTestUtils.InvokeOrSkip(
+                () => _fixture.ApiHelper.GetPhysicalGpuFromGpuId(gpuId.Value),
+                "Physical GPU lookup unsupported");
+
+            Skip.If(helper == null, "Physical GPU lookup not supported.");
+            Assert.NotNull(helper);
+        }
+
+        [SkippableFact]
+        public void GetLogicalGpuFromPhysicalGpu_ShouldReturnHelper()
+        {
+            Skip.If(_fixture.ApiHelper == null, _fixture.SkipReason);
+
+            var gpus = _fixture.ApiHelper.EnumeratePhysicalGpus();
+            Skip.If(gpus.Length == 0, "No NVIDIA physical GPUs found.");
+
+            var logical = FacadeTestUtils.InvokeOrSkip(
+                () => _fixture.ApiHelper.GetLogicalGpuFromPhysicalGpu(gpus[0]),
+                "Logical GPU lookup unsupported");
+
+            Skip.If(logical == null, "Logical GPU lookup not supported.");
+            Assert.NotNull(logical);
+        }
     }
 }

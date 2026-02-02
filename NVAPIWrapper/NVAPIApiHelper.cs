@@ -14,6 +14,9 @@ namespace NVAPIWrapper
         private const uint NvApiIdSysGetDisplayDriverInfo = 0x721FACEB;
         private const uint NvApiIdSysGetPhysicalGPUs = 0xD3B24D2D;
         private const uint NvApiIdSysGetLogicalGPUs = 0xCCFFFC10;
+        private const uint NvApiIdGetPhysicalGpuFromGpuId = 0x5380AD1A;
+        private const uint NvApiIdGetLogicalGpuFromPhysicalGpu = 0xADD604D1;
+        private const uint NvApiIdGetGpuIdFromPhysicalGpu = 0x6533EA3E;
         private const uint NvApiIdDrsCreateSession = 0x0694D52E;
 
         private readonly NVAPIApi _api;
@@ -84,6 +87,88 @@ namespace NVAPIWrapper
             }
 
             return helpers;
+        }
+
+        /// <summary>
+        /// Get a physical GPU helper from a GPU ID.
+        /// </summary>
+        /// <param name="gpuId">GPU ID.</param>
+        /// <returns>Physical GPU helper, or null if unavailable.</returns>
+        public unsafe NVAPIPhysicalGpuHelper? GetPhysicalGpuFromGpuId(uint gpuId)
+        {
+            ThrowIfDisposed();
+
+            var getGpu = GetDelegate<NvApiGetPhysicalGpuFromGpuIdDelegate>(
+                NvApiIdGetPhysicalGpuFromGpuId,
+                "NvAPI_GetPhysicalGPUFromGPUID");
+
+            NvPhysicalGpuHandle__* handle = null;
+            var status = getGpu(gpuId, &handle);
+            if (status == _NvAPI_Status.NVAPI_OK)
+                return new NVAPIPhysicalGpuHelper(this, (IntPtr)handle);
+
+            if (status == _NvAPI_Status.NVAPI_NOT_SUPPORTED || status == _NvAPI_Status.NVAPI_NVIDIA_DEVICE_NOT_FOUND)
+                return null;
+
+            throw new NVAPIException(status);
+        }
+
+        /// <summary>
+        /// Get the logical GPU helper from a physical GPU helper.
+        /// </summary>
+        /// <param name="physicalGpu">Physical GPU helper.</param>
+        /// <returns>Logical GPU helper, or null if unavailable.</returns>
+        public unsafe NVAPILogicalGpuHelper? GetLogicalGpuFromPhysicalGpu(NVAPIPhysicalGpuHelper physicalGpu)
+        {
+            ThrowIfDisposed();
+
+            if (physicalGpu == null)
+                throw new ArgumentNullException(nameof(physicalGpu));
+
+            physicalGpu.ThrowIfDisposed();
+
+            var getLogical = GetDelegate<NvApiGetLogicalGpuFromPhysicalGpuDelegate>(
+                NvApiIdGetLogicalGpuFromPhysicalGpu,
+                "NvAPI_GetLogicalGPUFromPhysicalGPU");
+
+            NvLogicalGpuHandle__* handle = null;
+            var status = getLogical(physicalGpu.GetHandle(), &handle);
+            if (status == _NvAPI_Status.NVAPI_OK)
+                return new NVAPILogicalGpuHelper(this, (IntPtr)handle);
+
+            if (status == _NvAPI_Status.NVAPI_NOT_SUPPORTED || status == _NvAPI_Status.NVAPI_NVIDIA_DEVICE_NOT_FOUND)
+                return null;
+
+            throw new NVAPIException(status);
+        }
+
+        /// <summary>
+        /// Get the GPU ID from a physical GPU helper.
+        /// </summary>
+        /// <param name="physicalGpu">Physical GPU helper.</param>
+        /// <returns>GPU ID, or null if unavailable.</returns>
+        public unsafe uint? GetGpuIdFromPhysicalGpu(NVAPIPhysicalGpuHelper physicalGpu)
+        {
+            ThrowIfDisposed();
+
+            if (physicalGpu == null)
+                throw new ArgumentNullException(nameof(physicalGpu));
+
+            physicalGpu.ThrowIfDisposed();
+
+            var getId = GetDelegate<NvApiGetGpuIdFromPhysicalGpuDelegate>(
+                NvApiIdGetGpuIdFromPhysicalGpu,
+                "NvAPI_GetGPUIDfromPhysicalGPU");
+
+            uint gpuId = 0;
+            var status = getId(physicalGpu.GetHandle(), &gpuId);
+            if (status == _NvAPI_Status.NVAPI_OK)
+                return gpuId;
+
+            if (status == _NvAPI_Status.NVAPI_NOT_SUPPORTED || status == _NvAPI_Status.NVAPI_NVIDIA_DEVICE_NOT_FOUND)
+                return null;
+
+            throw new NVAPIException(status);
         }
 
         /// <summary>
@@ -430,6 +515,15 @@ namespace NVAPIWrapper
 
         [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
         private unsafe delegate _NvAPI_Status NvApiDrsCreateSessionDelegate(NvDRSSessionHandle__** phSession);
+
+        [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
+        private unsafe delegate _NvAPI_Status NvApiGetPhysicalGpuFromGpuIdDelegate(uint gpuId, NvPhysicalGpuHandle__** pPhysicalGpu);
+
+        [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
+        private unsafe delegate _NvAPI_Status NvApiGetLogicalGpuFromPhysicalGpuDelegate(NvPhysicalGpuHandle__* hPhysicalGpu, NvLogicalGpuHandle__** pLogicalGpu);
+
+        [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
+        private unsafe delegate _NvAPI_Status NvApiGetGpuIdFromPhysicalGpuDelegate(NvPhysicalGpuHandle__* hPhysicalGpu, uint* pGpuId);
 
     }
 
