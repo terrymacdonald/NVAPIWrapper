@@ -81,6 +81,28 @@ namespace NVAPIWrapper.FacadeTests
         }
 
         [SkippableFact]
+        public void GetAssociatedNvidiaDisplayHandle_ShouldReturnHelper()
+        {
+            Skip.If(_fixture.ApiHelper == null, _fixture.SkipReason);
+
+            var gpus = _fixture.ApiHelper.EnumeratePhysicalGpus();
+            Skip.If(gpus.Length == 0, "No NVIDIA physical GPUs found.");
+
+            var displays = gpus[0].EnumerateNvidiaDisplayHandles();
+            Skip.If(displays.Length == 0, "No NVIDIA displays found.");
+
+            var name = displays[0].GetAssociatedNvidiaDisplayName();
+            Skip.If(string.IsNullOrWhiteSpace(name), "Display name not supported.");
+
+            var handle = FacadeTestUtils.InvokeOrSkip(
+                () => displays[0].GetAssociatedNvidiaDisplayHandle(name!),
+                "Associated display handle unsupported");
+
+            Skip.If(handle == null, "Associated display handle not supported.");
+            Assert.NotNull(handle);
+        }
+
+        [SkippableFact]
         public void GetAssociatedDisplayOutputId_ShouldReturnValue()
         {
             Skip.If(_fixture.ApiHelper == null, _fixture.SkipReason);

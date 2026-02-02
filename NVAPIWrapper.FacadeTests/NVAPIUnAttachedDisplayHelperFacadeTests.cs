@@ -73,6 +73,9 @@ namespace NVAPIWrapper.FacadeTests
         {
             Skip.If(_fixture.ApiHelper == null, _fixture.SkipReason);
 
+            var handles = _fixture.ApiHelper.EnumerateUnAttachedDisplayHandles();
+            Skip.If(handles.Length == 0, "No unattached displays found.");
+
             var gpus = _fixture.ApiHelper.EnumeratePhysicalGpus();
             Skip.If(gpus.Length == 0, "No NVIDIA physical GPUs found.");
 
@@ -82,7 +85,9 @@ namespace NVAPIWrapper.FacadeTests
             var name = displays[0].GetAssociatedNvidiaDisplayName();
             Skip.If(string.IsNullOrWhiteSpace(name), "Display name not supported.");
 
-            var handle = _fixture.ApiHelper.GetAssociatedUnAttachedNvidiaDisplayHandle(name!);
+            var handle = FacadeTestUtils.InvokeOrSkip(
+                () => handles[0].GetAssociatedUnAttachedNvidiaDisplayHandle(name!),
+                "Associated unattached display handle unsupported");
             Skip.If(handle == null, "Associated unattached display not supported.");
             Assert.NotNull(handle);
         }

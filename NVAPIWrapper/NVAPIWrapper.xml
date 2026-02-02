@@ -58,6 +58,12 @@
             </summary>
             <returns>Array of unattached display handles, or empty if none are found.</returns>
         </member>
+        <member name="M:NVAPIWrapper.NVAPIApi.EnumerateGSyncDevices">
+            <summary>
+            Enumerate G-Sync device handles.
+            </summary>
+            <returns>Array of G-Sync device handles, or empty if none are found.</returns>
+        </member>
         <member name="M:NVAPIWrapper.NVAPIApi.Dispose">
             <summary>
             Dispose the NVAPI wrapper and release native resources.
@@ -152,12 +158,11 @@
             </summary>
             <returns>Array of unattached display helpers, or empty if none are found.</returns>
         </member>
-        <member name="M:NVAPIWrapper.NVAPIApiHelper.GetAssociatedUnAttachedNvidiaDisplayHandle(System.String)">
+        <member name="M:NVAPIWrapper.NVAPIApiHelper.EnumerateGSyncDevices">
             <summary>
-            Get the unattached display helper associated with a display name (e.g., "\\.\DISPLAY1").
+            Enumerate G-Sync device helpers.
             </summary>
-            <param name="displayName">Display name to resolve.</param>
-            <returns>Unattached display helper, or null if unavailable.</returns>
+            <returns>Array of G-Sync helpers, or empty if none are found.</returns>
         </member>
         <member name="M:NVAPIWrapper.NVAPIApiHelper.Dispose">
             <summary>
@@ -1618,6 +1623,13 @@
             <param name="displayIds">Display IDs to apply the custom display to.</param>
             <param name="customDisplays">Custom display DTO array.</param>
             <returns>True if applied, false if unavailable.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIDisplayHelper.GetAssociatedNvidiaDisplayHandle(System.String)">
+            <summary>
+            Get the display helper associated with a display name (e.g., "\\.\DISPLAY1").
+            </summary>
+            <param name="displayName">Display name to resolve. If null, uses this display handle's name.</param>
+            <returns>Display helper, or null if unavailable.</returns>
         </member>
         <member name="M:NVAPIWrapper.NVAPIDisplayHelper.DeleteCustomDisplay(System.UInt32[],NVAPIWrapper.NVAPICustomDisplayDto[])">
             <summary>
@@ -4267,6 +4279,13 @@
             Get the associated display name for this unattached display.
             </summary>
             <returns>Display name, or null if unavailable.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIUnAttachedDisplayHelper.GetAssociatedUnAttachedNvidiaDisplayHandle(System.String)">
+            <summary>
+            Get the unattached display helper associated with a display name (e.g., "\\.\DISPLAY1").
+            </summary>
+            <param name="displayName">Display name to resolve. If null, uses this unattached display's name.</param>
+            <returns>Unattached display helper, or null if unavailable.</returns>
         </member>
         <member name="M:NVAPIWrapper.NVAPIUnAttachedDisplayHelper.GetPhysicalGpuFromUnAttachedDisplay">
             <summary>

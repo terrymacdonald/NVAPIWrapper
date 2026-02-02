@@ -13,6 +13,7 @@ namespace NVAPIWrapper
         private const uint NvApiIdGetPhysicalGpusFromDisplay = 0x34EF9506;
         private const uint NvApiIdGetLogicalGpuFromDisplay = 0xEE1370CF;
         private const uint NvApiIdGetAssociatedNvidiaDisplayName = 0x22A78B05;
+        private const uint NvApiIdGetAssociatedNvidiaDisplayHandle = 0x35C29134;
         private const uint NvApiIdGetAssociatedDisplayOutputId = 0xD995937E;
         private const uint NvApiIdGetVBlankCounter = 0x67B5DB55;
         private const uint NvApiIdDispGetDisplayConfig = 0x11ABCCF8;
@@ -1696,6 +1697,45 @@ namespace NVAPIWrapper
         }
 
         /// <summary>
+        /// Get the display helper associated with a display name (e.g., "\\.\DISPLAY1").
+        /// </summary>
+        /// <param name="displayName">Display name to resolve. If null, uses this display handle's name.</param>
+        /// <returns>Display helper, or null if unavailable.</returns>
+        public unsafe NVAPIDisplayHelper? GetAssociatedNvidiaDisplayHandle(string? displayName = null)
+        {
+            ThrowIfDisposed();
+
+            if (string.IsNullOrWhiteSpace(displayName))
+            {
+                displayName = GetAssociatedNvidiaDisplayName();
+                if (string.IsNullOrWhiteSpace(displayName))
+                    return null;
+            }
+
+            var getHandle = GetDelegate<NvApiGetAssociatedNvidiaDisplayHandleDelegate>(
+                NvApiIdGetAssociatedNvidiaDisplayHandle,
+                "NvAPI_GetAssociatedNvidiaDisplayHandle");
+
+            var bytes = Encoding.ASCII.GetBytes(displayName + "\0");
+            fixed (byte* pBytes = bytes)
+            {
+                NvDisplayHandle__* handle = null;
+                var status = getHandle((sbyte*)pBytes, &handle);
+                if (status == _NvAPI_Status.NVAPI_OK)
+                    return new NVAPIDisplayHelper(_apiHelper, (IntPtr)handle);
+
+                if (status == _NvAPI_Status.NVAPI_NOT_SUPPORTED ||
+                    status == _NvAPI_Status.NVAPI_NVIDIA_DEVICE_NOT_FOUND ||
+                    status == _NvAPI_Status.NVAPI_INVALID_ARGUMENT)
+                {
+                    return null;
+                }
+
+                throw new NVAPIException(status);
+            }
+        }
+
+        /// <summary>
         /// Delete a custom display.
         /// </summary>
         /// <param name="displayIds">Display IDs to delete the custom display from.</param>
@@ -2093,6 +2133,9 @@ namespace NVAPIWrapper
 
         [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
         private unsafe delegate _NvAPI_Status NvApiGetAssociatedNvidiaDisplayNameDelegate(NvDisplayHandle__* hNvDisp, sbyte* szDisplayName);
+
+        [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
+        private unsafe delegate _NvAPI_Status NvApiGetAssociatedNvidiaDisplayHandleDelegate(sbyte* displayName, NvDisplayHandle__** displayHandle);
 
         [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
         private unsafe delegate _NvAPI_Status NvApiGetAssociatedDisplayOutputIdDelegate(NvDisplayHandle__* hNvDisp, uint* pOutputId);

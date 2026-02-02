@@ -17,6 +17,7 @@ namespace NVAPIWrapper
         private const uint NvApiIdEnumLogicalGPUs = 0x48B3EA59;
         private const uint NvApiIdEnumNvidiaDisplayHandle = 0x9ABDD40D;
         private const uint NvApiIdEnumNvidiaUnAttachedDisplayHandle = 0x20DE9260;
+        private const uint NvApiIdGSyncEnumSyncDevices = 0xD9639601;
 
         private readonly NVAPINative.NvApiQueryInterfaceDelegate _queryInterface;
         private IntPtr _module;
@@ -301,6 +302,41 @@ namespace NVAPIWrapper
         }
 
         /// <summary>
+        /// Enumerate G-Sync device handles.
+        /// </summary>
+        /// <returns>Array of G-Sync device handles, or empty if none are found.</returns>
+        public unsafe NvGSyncDeviceHandle__*[] EnumerateGSyncDevices()
+        {
+            ThrowIfDisposed();
+
+            var enumDevices = GetRequiredFunction<NvApiGSyncEnumSyncDevicesDelegate>(
+                NvApiIdGSyncEnumSyncDevices,
+                "NvAPI_GSync_EnumSyncDevices");
+
+            var handles = stackalloc NvGSyncDeviceHandle__*[NVAPI.NVAPI_MAX_GSYNC_DEVICES];
+            uint count = 0;
+            var status = enumDevices(handles, &count);
+
+            if (status == _NvAPI_Status.NVAPI_NVIDIA_DEVICE_NOT_FOUND || status == _NvAPI_Status.NVAPI_NOT_SUPPORTED)
+                return new NvGSyncDeviceHandle__*[0];
+
+            if (status != _NvAPI_Status.NVAPI_OK)
+                throw new NVAPIException(status, TryGetErrorMessage(status));
+
+            if (count == 0)
+                return new NvGSyncDeviceHandle__*[0];
+
+            var max = (int)Math.Min(count, NVAPI.NVAPI_MAX_GSYNC_DEVICES);
+            var result = new NvGSyncDeviceHandle__*[max];
+            for (var i = 0; i < max; i++)
+            {
+                result[i] = handles[i];
+            }
+
+            return result;
+        }
+
+        /// <summary>
         /// Dispose the NVAPI wrapper and release native resources.
         /// </summary>
         public void Dispose()
@@ -402,5 +438,8 @@ namespace NVAPIWrapper
 
         [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
         private unsafe delegate _NvAPI_Status NvApiEnumNvidiaUnAttachedDisplayHandleDelegate(uint thisEnum, NvUnAttachedDisplayHandle__** pNvUnAttachedDispHandle);
+
+        [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
+        private unsafe delegate _NvAPI_Status NvApiGSyncEnumSyncDevicesDelegate(NvGSyncDeviceHandle__** nvGSyncHandles, uint* gsyncCount);
     }
 }

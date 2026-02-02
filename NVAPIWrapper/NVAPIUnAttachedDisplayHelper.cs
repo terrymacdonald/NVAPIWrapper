@@ -1,5 +1,6 @@
 using System;
 using System.Runtime.InteropServices;
+using System.Text;
 
 namespace NVAPIWrapper
 {
@@ -11,6 +12,7 @@ namespace NVAPIWrapper
         private const uint NvApiIdGetPhysicalGpuFromUnAttachedDisplay = 0x5018ED61;
         private const uint NvApiIdCreateDisplayFromUnAttachedDisplay = 0x63F9799E;
         private const uint NvApiIdGetUnAttachedAssociatedDisplayName = 0x4888D790;
+        private const uint NvApiIdDispGetAssociatedUnAttachedNvidiaDisplayHandle = 0xA70503B2;
 
         private readonly NVAPIApiHelper _apiHelper;
         private readonly IntPtr _handle;
@@ -45,6 +47,45 @@ namespace NVAPIWrapper
 
                 if (status == _NvAPI_Status.NVAPI_NOT_SUPPORTED || status == _NvAPI_Status.NVAPI_NVIDIA_DEVICE_NOT_FOUND)
                     return null;
+
+                throw new NVAPIException(status);
+            }
+        }
+
+        /// <summary>
+        /// Get the unattached display helper associated with a display name (e.g., "\\.\DISPLAY1").
+        /// </summary>
+        /// <param name="displayName">Display name to resolve. If null, uses this unattached display's name.</param>
+        /// <returns>Unattached display helper, or null if unavailable.</returns>
+        public unsafe NVAPIUnAttachedDisplayHelper? GetAssociatedUnAttachedNvidiaDisplayHandle(string? displayName = null)
+        {
+            ThrowIfDisposed();
+
+            if (string.IsNullOrWhiteSpace(displayName))
+            {
+                displayName = GetUnAttachedAssociatedDisplayName();
+                if (string.IsNullOrWhiteSpace(displayName))
+                    return null;
+            }
+
+            var getHandle = GetDelegate<NvApiDispGetAssociatedUnAttachedNvidiaDisplayHandleDelegate>(
+                NvApiIdDispGetAssociatedUnAttachedNvidiaDisplayHandle,
+                "NvAPI_DISP_GetAssociatedUnAttachedNvidiaDisplayHandle");
+
+            var bytes = Encoding.ASCII.GetBytes(displayName + "\0");
+            fixed (byte* pBytes = bytes)
+            {
+                NvUnAttachedDisplayHandle__* handle = null;
+                var status = getHandle((sbyte*)pBytes, &handle);
+                if (status == _NvAPI_Status.NVAPI_OK)
+                    return new NVAPIUnAttachedDisplayHelper(_apiHelper, (IntPtr)handle);
+
+                if (status == _NvAPI_Status.NVAPI_NOT_SUPPORTED ||
+                    status == _NvAPI_Status.NVAPI_NVIDIA_DEVICE_NOT_FOUND ||
+                    status == _NvAPI_Status.NVAPI_INVALID_ARGUMENT)
+                {
+                    return null;
+                }
 
                 throw new NVAPIException(status);
             }
@@ -139,5 +180,8 @@ namespace NVAPIWrapper
 
         [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
         private unsafe delegate _NvAPI_Status NvApiCreateDisplayFromUnAttachedDisplayDelegate(NvUnAttachedDisplayHandle__* hNvUnAttachedDisp, NvDisplayHandle__** pNvDisplay);
+
+        [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
+        private unsafe delegate _NvAPI_Status NvApiDispGetAssociatedUnAttachedNvidiaDisplayHandleDelegate(sbyte* szDisplayName, NvUnAttachedDisplayHandle__** pNvUnAttachedDispHandle);
     }
 }
