@@ -173,6 +173,12 @@
             </summary>
             <returns>Array of logical GPU helpers, or empty if none are found.</returns>
         </member>
+        <member name="M:NVAPIWrapper.NVAPIApiHelper.EnumerateTccPhysicalGpus">
+            <summary>
+            Enumerate physical GPU helpers that are in TCC mode.
+            </summary>
+            <returns>Array of physical GPU helpers, or empty if none are found.</returns>
+        </member>
         <member name="M:NVAPIWrapper.NVAPIApiHelper.EnumerateNvidiaUnAttachedDisplayHandles">
             <summary>
             Enumerate unattached display helpers.
@@ -185,9 +191,254 @@
             </summary>
             <returns>Array of G-Sync helpers, or empty if none are found.</returns>
         </member>
+        <member name="M:NVAPIWrapper.NVAPIApiHelper.GetErrorMessage(NVAPIWrapper._NvAPI_Status)">
+            <summary>
+            Convert an NVAPI status to a human-readable message.
+            </summary>
+            <param name="status">NVAPI status value.</param>
+            <returns>Message string, or null if unavailable.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIApiHelper.GetInterfaceVersionString">
+            <summary>
+            Get the NVAPI interface version string.
+            </summary>
+            <returns>Version string, or null if unavailable.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIApiHelper.RegisterEventCallback(NVAPIWrapper.NVAPIEventCallbackSettingsDto)">
+            <summary>
+            Register an NVAPI event callback for the current process.
+            </summary>
+            <param name="settings">Callback settings.</param>
+            <returns>Event handle helper, or null if unsupported.</returns>
+            <remarks>Caller must keep the callback delegate alive for the lifetime of the registration.</remarks>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIApiHelper.GetNgxOverrideState(System.UInt32)">
+            <summary>
+            Get the NGX override state for a process ID.
+            </summary>
+            <param name="processId">Process identifier.</param>
+            <returns>NGX override state DTO, or null if unsupported.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIApiHelper.SetNgxOverrideState(NVAPIWrapper.NVAPINGXOverrideSetDto)">
+            <summary>
+            Set the NGX override state for a process.
+            </summary>
+            <param name="settings">NGX override settings.</param>
+            <returns>True if set, or null if unsupported.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIApiHelper.RegisterRiseCallback(NVAPIWrapper.NVAPIRiseCallbackSettingsDto)">
+            <summary>
+            Register a RISE callback for the current process.
+            </summary>
+            <param name="settings">RISE callback settings.</param>
+            <returns>True if registered, or null if unsupported.</returns>
+            <remarks>Caller must keep the callback delegate alive for the lifetime of the registration.</remarks>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIApiHelper.RequestRise(NVAPIWrapper.NVAPIRiseRequestDto)">
+            <summary>
+            Request RISE assistance.
+            </summary>
+            <param name="request">RISE request settings.</param>
+            <returns>Updated request DTO, or null if unsupported.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIApiHelper.UninstallRise">
+            <summary>
+            Uninstall RISE from the system.
+            </summary>
+            <returns>True if uninstalled, or null if unsupported.</returns>
+        </member>
         <member name="M:NVAPIWrapper.NVAPIApiHelper.Dispose">
             <summary>
             Dispose the NVAPI helper and release native resources.
+            </summary>
+        </member>
+        <member name="T:NVAPIWrapper.NVAPIEventCallbackKind">
+            <summary>
+            Event callback registration kind.
+            </summary>
+        </member>
+        <member name="F:NVAPIWrapper.NVAPIEventCallbackKind.Qsync">
+            <summary>
+            QSYNC event callback.
+            </summary>
+        </member>
+        <member name="F:NVAPIWrapper.NVAPIEventCallbackKind.DisplayOutputModeChange">
+            <summary>
+            Display output mode change event callback.
+            </summary>
+        </member>
+        <member name="F:NVAPIWrapper.NVAPIEventCallbackKind.DisplayColorimetryChange">
+            <summary>
+            Display colorimetry change event callback.
+            </summary>
+        </member>
+        <member name="T:NVAPIWrapper.NVAPIEventCallbackSettingsDto">
+            <summary>
+            Event callback settings DTO.
+            </summary>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIEventCallbackSettingsDto.#ctor(NVAPIWrapper.NV_EVENT_TYPE,NVAPIWrapper.NVAPIEventCallbackKind,System.IntPtr,System.IntPtr)">
+            <summary>
+            Initializes a new instance of the <see cref="T:NVAPIWrapper.NVAPIEventCallbackSettingsDto"/> struct.
+            </summary>
+            <param name="eventId">Event type.</param>
+            <param name="callbackKind">Callback kind.</param>
+            <param name="callbackParam">Callback parameter pointer.</param>
+            <param name="callback">Callback function pointer.</param>
+        </member>
+        <member name="P:NVAPIWrapper.NVAPIEventCallbackSettingsDto.EventId">
+            <summary>
+            Event type.
+            </summary>
+        </member>
+        <member name="P:NVAPIWrapper.NVAPIEventCallbackSettingsDto.CallbackKind">
+            <summary>
+            Callback kind to map the union field.
+            </summary>
+        </member>
+        <member name="P:NVAPIWrapper.NVAPIEventCallbackSettingsDto.CallbackParam">
+            <summary>
+            Callback parameter pointer.
+            </summary>
+        </member>
+        <member name="P:NVAPIWrapper.NVAPIEventCallbackSettingsDto.Callback">
+            <summary>
+            Callback function pointer.
+            </summary>
+        </member>
+        <member name="T:NVAPIWrapper.NVAPINGXOverrideStateDto">
+            <summary>
+            NGX override state DTO.
+            </summary>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPINGXOverrideStateDto.#ctor(System.UInt32,System.UInt64,System.UInt64,System.UInt64,System.Single,System.UInt32,System.UInt32,System.UInt32,System.UInt32)">
+            <summary>
+            Initializes a new instance of the <see cref="T:NVAPIWrapper.NVAPINGXOverrideStateDto"/> struct.
+            </summary>
+        </member>
+        <member name="P:NVAPIWrapper.NVAPINGXOverrideStateDto.ProcessId">
+            <summary>
+            Process identifier.
+            </summary>
+        </member>
+        <member name="P:NVAPIWrapper.NVAPINGXOverrideStateDto.FeedbackMaskSr">
+            <summary>
+            DLSS SR feedback mask.
+            </summary>
+        </member>
+        <member name="P:NVAPIWrapper.NVAPINGXOverrideStateDto.FeedbackMaskRr">
+            <summary>
+            DLSS RR feedback mask.
+            </summary>
+        </member>
+        <member name="P:NVAPIWrapper.NVAPINGXOverrideStateDto.FeedbackMaskFg">
+            <summary>
+            DLSS FG feedback mask.
+            </summary>
+        </member>
+        <member name="P:NVAPIWrapper.NVAPINGXOverrideStateDto.ScalingRatio">
+            <summary>
+            DLSS scaling ratio.
+            </summary>
+        </member>
+        <member name="P:NVAPIWrapper.NVAPINGXOverrideStateDto.PerformanceMode">
+            <summary>
+            DLSS performance mode.
+            </summary>
+        </member>
+        <member name="P:NVAPIWrapper.NVAPINGXOverrideStateDto.RenderPreset">
+            <summary>
+            DLSS render preset.
+            </summary>
+        </member>
+        <member name="P:NVAPIWrapper.NVAPINGXOverrideStateDto.FrameGenerationCount">
+            <summary>
+            DLSS frame generation count target.
+            </summary>
+        </member>
+        <member name="P:NVAPIWrapper.NVAPINGXOverrideStateDto.FrameGenerationPreset">
+            <summary>
+            DLSS frame generation preset.
+            </summary>
+        </member>
+        <member name="T:NVAPIWrapper.NVAPINGXOverrideSetDto">
+            <summary>
+            NGX override set DTO.
+            </summary>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPINGXOverrideSetDto.#ctor(System.UInt32,System.UInt32,System.UInt64)">
+            <summary>
+            Initializes a new instance of the <see cref="T:NVAPIWrapper.NVAPINGXOverrideSetDto"/> struct.
+            </summary>
+        </member>
+        <member name="P:NVAPIWrapper.NVAPINGXOverrideSetDto.ProcessId">
+            <summary>
+            Process identifier.
+            </summary>
+        </member>
+        <member name="P:NVAPIWrapper.NVAPINGXOverrideSetDto.Feature">
+            <summary>
+            DLSS feature ID.
+            </summary>
+        </member>
+        <member name="P:NVAPIWrapper.NVAPINGXOverrideSetDto.FeedbackMask">
+            <summary>
+            Feedback mask.
+            </summary>
+        </member>
+        <member name="T:NVAPIWrapper.NVAPIRiseCallbackSettingsDto">
+            <summary>
+            RISE callback settings DTO.
+            </summary>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIRiseCallbackSettingsDto.#ctor(System.IntPtr,System.IntPtr)">
+            <summary>
+            Initializes a new instance of the <see cref="T:NVAPIWrapper.NVAPIRiseCallbackSettingsDto"/> struct.
+            </summary>
+            <param name="callbackParam">Callback parameter pointer.</param>
+            <param name="callback">Callback function pointer.</param>
+        </member>
+        <member name="P:NVAPIWrapper.NVAPIRiseCallbackSettingsDto.CallbackParam">
+            <summary>
+            Callback parameter pointer.
+            </summary>
+        </member>
+        <member name="P:NVAPIWrapper.NVAPIRiseCallbackSettingsDto.Callback">
+            <summary>
+            Callback function pointer.
+            </summary>
+        </member>
+        <member name="T:NVAPIWrapper.NVAPIRiseRequestDto">
+            <summary>
+            RISE request DTO.
+            </summary>
+        </member>
+        <member name="F:NVAPIWrapper.NVAPIRiseRequestDto.MaxContentLength">
+            <summary>
+            Maximum content length for RISE requests.
+            </summary>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIRiseRequestDto.#ctor(NVAPIWrapper._NV_RISE_CONTENT_TYPE,System.String,System.Boolean)">
+            <summary>
+            Initializes a new instance of the <see cref="T:NVAPIWrapper.NVAPIRiseRequestDto"/> struct.
+            </summary>
+            <param name="contentType">Content type.</param>
+            <param name="content">Content string.</param>
+            <param name="completed">Completed flag.</param>
+        </member>
+        <member name="P:NVAPIWrapper.NVAPIRiseRequestDto.ContentType">
+            <summary>
+            Content type.
+            </summary>
+        </member>
+        <member name="P:NVAPIWrapper.NVAPIRiseRequestDto.Content">
+            <summary>
+            Content string.
+            </summary>
+        </member>
+        <member name="P:NVAPIWrapper.NVAPIRiseRequestDto.Completed">
+            <summary>
+            True if request is completed.
             </summary>
         </member>
         <member name="T:NVAPIWrapper.NVAPIDriverAndBranchVersionDto">
@@ -3234,6 +3485,16 @@
         <member name="T:NVAPIWrapper.NVAPIDrsSettingValuesDto">
             <summary>
             DRS setting values DTO.
+            </summary>
+        </member>
+        <member name="T:NVAPIWrapper.NVAPIEventHandleHelper">
+            <summary>
+            Facade helper for an NVAPI event registration handle.
+            </summary>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIEventHandleHelper.Dispose">
+            <summary>
+            Dispose the event handle and unregister the callback.
             </summary>
         </member>
         <member name="T:NVAPIWrapper.NVAPIException">

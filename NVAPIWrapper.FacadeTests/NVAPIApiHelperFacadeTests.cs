@@ -90,6 +90,30 @@ namespace NVAPIWrapper.FacadeTests
         }
 
         [SkippableFact]
+        public void GetInterfaceVersionString_ShouldReturnValue()
+        {
+            Skip.If(_fixture.ApiHelper == null, _fixture.SkipReason);
+
+            var version = FacadeTestUtils.InvokeOrSkip(
+                () => _fixture.ApiHelper.GetInterfaceVersionString(),
+                "Interface version string unsupported");
+
+            Skip.If(string.IsNullOrWhiteSpace(version), "Interface version string not supported.");
+        }
+
+        [SkippableFact]
+        public void GetErrorMessage_ShouldReturnValue()
+        {
+            Skip.If(_fixture.ApiHelper == null, _fixture.SkipReason);
+
+            var message = FacadeTestUtils.InvokeOrSkip(
+                () => _fixture.ApiHelper.GetErrorMessage(_NvAPI_Status.NVAPI_OK),
+                "Error message unsupported");
+
+            Skip.If(string.IsNullOrWhiteSpace(message), "Error message not supported.");
+        }
+
+        [SkippableFact]
         public void GetSystemPhysicalGpus_ShouldReturnDtoArray()
         {
             Skip.If(_fixture.ApiHelper == null, _fixture.SkipReason);
@@ -106,6 +130,21 @@ namespace NVAPIWrapper.FacadeTests
             Assert.NotNull(first.PhysicalGpu);
             Assert.True(first.Equals(first));
             _ = first.GetHashCode();
+        }
+
+        [SkippableFact]
+        public void EnumerateTccPhysicalGpus_ShouldReturnArray()
+        {
+            Skip.If(_fixture.ApiHelper == null, _fixture.SkipReason);
+
+            var gpus = FacadeTestUtils.InvokeOrSkip(
+                () => _fixture.ApiHelper.EnumerateTccPhysicalGpus(),
+                "TCC physical GPU enumeration unsupported");
+
+            Assert.NotNull(gpus);
+            Assert.InRange(gpus.Length, 0, NVAPI.NVAPI_MAX_PHYSICAL_GPUS);
+            Skip.If(gpus.Length == 0, "No TCC physical GPUs found.");
+            Assert.NotNull(gpus[0]);
         }
 
         [SkippableFact]

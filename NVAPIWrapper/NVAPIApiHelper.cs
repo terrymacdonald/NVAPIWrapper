@@ -1,5 +1,6 @@
 using System;
 using System.Runtime.InteropServices;
+using System.Text;
 
 namespace NVAPIWrapper
 {
@@ -17,6 +18,16 @@ namespace NVAPIWrapper
         private const uint NvApiIdGetPhysicalGpuFromGpuId = 0x5380AD1A;
         private const uint NvApiIdGetLogicalGpuFromPhysicalGpu = 0xADD604D1;
         private const uint NvApiIdGetGpuIdFromPhysicalGpu = 0x6533EA3E;
+        private const uint NvApiIdGetErrorMessage = 0x6C2D048C;
+        private const uint NvApiIdGetInterfaceVersionString = 0x01053FA5;
+        private const uint NvApiIdEnumTccPhysicalGpus = 0xD9930B07;
+        private const uint NvApiIdEventRegisterCallback = 0xE6DBEA69;
+        private const uint NvApiIdEventUnregisterCallback = 0xDE1F9B45;
+        private const uint NvApiIdNgxGetOverrideState = 0x3FD96FBA;
+        private const uint NvApiIdNgxSetOverrideState = 0xB60FCB4E;
+        private const uint NvApiIdRegisterRiseCallback = 0x9CFE8F94;
+        private const uint NvApiIdRequestRise = 0x5047DE98;
+        private const uint NvApiIdUninstallRise = 0xAB8D09F6;
         private const uint NvApiIdDrsCreateSession = 0x0694D52E;
 
         private readonly NVAPIApi _api;
@@ -382,6 +393,45 @@ namespace NVAPIWrapper
         }
 
         /// <summary>
+        /// Enumerate physical GPU helpers that are in TCC mode.
+        /// </summary>
+        /// <returns>Array of physical GPU helpers, or empty if none are found.</returns>
+        public unsafe NVAPIPhysicalGpuHelper[] EnumerateTccPhysicalGpus()
+        {
+            ThrowIfDisposed();
+
+            var functionPtr = _api.TryGetFunctionPointer(NvApiIdEnumTccPhysicalGpus);
+            if (functionPtr == IntPtr.Zero)
+                return Array.Empty<NVAPIPhysicalGpuHelper>();
+
+            var enumerate = Marshal.GetDelegateForFunctionPointer<NvApiEnumTccPhysicalGpusDelegate>(functionPtr);
+            var handles = stackalloc NvPhysicalGpuHandle__*[NVAPI.NVAPI_MAX_PHYSICAL_GPUS];
+            uint count = 0;
+            var status = enumerate(handles, &count);
+
+            if (status == _NvAPI_Status.NVAPI_OK)
+            {
+                if (count == 0)
+                    return Array.Empty<NVAPIPhysicalGpuHelper>();
+
+                var helpers = new NVAPIPhysicalGpuHelper[count];
+                for (var i = 0; i < count; i++)
+                {
+                    helpers[i] = new NVAPIPhysicalGpuHelper(this, (IntPtr)handles[i]);
+                }
+
+                return helpers;
+            }
+
+            if (status == _NvAPI_Status.NVAPI_NOT_SUPPORTED
+                || status == _NvAPI_Status.NVAPI_NO_IMPLEMENTATION
+                || status == _NvAPI_Status.NVAPI_NVIDIA_DEVICE_NOT_FOUND)
+                return Array.Empty<NVAPIPhysicalGpuHelper>();
+
+            throw new NVAPIException(status);
+        }
+
+        /// <summary>
         /// Enumerate unattached display helpers.
         /// </summary>
         /// <returns>Array of unattached display helpers, or empty if none are found.</returns>
@@ -423,6 +473,207 @@ namespace NVAPIWrapper
             return helpers;
         }
 
+        /// <summary>
+        /// Convert an NVAPI status to a human-readable message.
+        /// </summary>
+        /// <param name="status">NVAPI status value.</param>
+        /// <returns>Message string, or null if unavailable.</returns>
+        public unsafe string? GetErrorMessage(_NvAPI_Status status)
+        {
+            ThrowIfDisposed();
+
+            var functionPtr = _api.TryGetFunctionPointer(NvApiIdGetErrorMessage);
+            if (functionPtr == IntPtr.Zero)
+                return null;
+
+            var getErrorMessage = Marshal.GetDelegateForFunctionPointer<NvApiGetErrorMessageDelegate>(functionPtr);
+            Span<sbyte> buffer = stackalloc sbyte[NVAPI.NVAPI_SHORT_STRING_MAX];
+            buffer[0] = 0;
+            fixed (sbyte* pBuffer = buffer)
+            {
+                var result = getErrorMessage(status, pBuffer);
+                if (result != _NvAPI_Status.NVAPI_OK)
+                    return null;
+
+                return Marshal.PtrToStringAnsi((IntPtr)pBuffer);
+            }
+        }
+
+        /// <summary>
+        /// Get the NVAPI interface version string.
+        /// </summary>
+        /// <returns>Version string, or null if unavailable.</returns>
+        public string? GetInterfaceVersionString()
+        {
+            ThrowIfDisposed();
+            return _api.GetInterfaceVersionString();
+        }
+
+        /// <summary>
+        /// Register an NVAPI event callback for the current process.
+        /// </summary>
+        /// <param name="settings">Callback settings.</param>
+        /// <returns>Event handle helper, or null if unsupported.</returns>
+        /// <remarks>Caller must keep the callback delegate alive for the lifetime of the registration.</remarks>
+        public unsafe NVAPIEventHandleHelper? RegisterEventCallback(NVAPIEventCallbackSettingsDto settings)
+        {
+            ThrowIfDisposed();
+
+            var functionPtr = _api.TryGetFunctionPointer(NvApiIdEventRegisterCallback);
+            if (functionPtr == IntPtr.Zero)
+                return null;
+
+            var register = Marshal.GetDelegateForFunctionPointer<NvApiEventRegisterCallbackDelegate>(functionPtr);
+            var native = settings.ToNative();
+            NvEventHandle__* handle = null;
+            var status = register(&native, &handle);
+
+            if (status == _NvAPI_Status.NVAPI_OK)
+                return new NVAPIEventHandleHelper(this, (IntPtr)handle);
+
+            if (status == _NvAPI_Status.NVAPI_NOT_SUPPORTED
+                || status == _NvAPI_Status.NVAPI_NO_IMPLEMENTATION
+                || status == _NvAPI_Status.NVAPI_NVIDIA_DEVICE_NOT_FOUND)
+                return null;
+
+            throw new NVAPIException(status);
+        }
+
+        /// <summary>
+        /// Get the NGX override state for a process ID.
+        /// </summary>
+        /// <param name="processId">Process identifier.</param>
+        /// <returns>NGX override state DTO, or null if unsupported.</returns>
+        public unsafe NVAPINGXOverrideStateDto? GetNgxOverrideState(uint processId)
+        {
+            ThrowIfDisposed();
+
+            var functionPtr = _api.TryGetFunctionPointer(NvApiIdNgxGetOverrideState);
+            if (functionPtr == IntPtr.Zero)
+                return null;
+
+            var getState = Marshal.GetDelegateForFunctionPointer<NvApiNgxGetOverrideStateDelegate>(functionPtr);
+            var native = CreateNgxOverrideGetParams(processId);
+            var status = getState(&native);
+            if (status == _NvAPI_Status.NVAPI_OK)
+                return NVAPINGXOverrideStateDto.FromNative(native);
+
+            if (status == _NvAPI_Status.NVAPI_NOT_SUPPORTED
+                || status == _NvAPI_Status.NVAPI_NO_IMPLEMENTATION
+                || status == _NvAPI_Status.NVAPI_NVIDIA_DEVICE_NOT_FOUND)
+                return null;
+
+            throw new NVAPIException(status);
+        }
+
+        /// <summary>
+        /// Set the NGX override state for a process.
+        /// </summary>
+        /// <param name="settings">NGX override settings.</param>
+        /// <returns>True if set, or null if unsupported.</returns>
+        public unsafe bool? SetNgxOverrideState(NVAPINGXOverrideSetDto settings)
+        {
+            ThrowIfDisposed();
+
+            var functionPtr = _api.TryGetFunctionPointer(NvApiIdNgxSetOverrideState);
+            if (functionPtr == IntPtr.Zero)
+                return null;
+
+            var setState = Marshal.GetDelegateForFunctionPointer<NvApiNgxSetOverrideStateDelegate>(functionPtr);
+            var native = settings.ToNative();
+            var status = setState(&native);
+            if (status == _NvAPI_Status.NVAPI_OK)
+                return true;
+
+            if (status == _NvAPI_Status.NVAPI_NOT_SUPPORTED
+                || status == _NvAPI_Status.NVAPI_NO_IMPLEMENTATION
+                || status == _NvAPI_Status.NVAPI_NVIDIA_DEVICE_NOT_FOUND)
+                return null;
+
+            throw new NVAPIException(status);
+        }
+
+        /// <summary>
+        /// Register a RISE callback for the current process.
+        /// </summary>
+        /// <param name="settings">RISE callback settings.</param>
+        /// <returns>True if registered, or null if unsupported.</returns>
+        /// <remarks>Caller must keep the callback delegate alive for the lifetime of the registration.</remarks>
+        public unsafe bool? RegisterRiseCallback(NVAPIRiseCallbackSettingsDto settings)
+        {
+            ThrowIfDisposed();
+
+            var functionPtr = _api.TryGetFunctionPointer(NvApiIdRegisterRiseCallback);
+            if (functionPtr == IntPtr.Zero)
+                return null;
+
+            var register = Marshal.GetDelegateForFunctionPointer<NvApiRegisterRiseCallbackDelegate>(functionPtr);
+            var native = settings.ToNative();
+            var status = register(&native);
+            if (status == _NvAPI_Status.NVAPI_OK)
+                return true;
+
+            if (status == _NvAPI_Status.NVAPI_NOT_SUPPORTED
+                || status == _NvAPI_Status.NVAPI_NO_IMPLEMENTATION
+                || status == _NvAPI_Status.NVAPI_NVIDIA_DEVICE_NOT_FOUND)
+                return null;
+
+            throw new NVAPIException(status);
+        }
+
+        /// <summary>
+        /// Request RISE assistance.
+        /// </summary>
+        /// <param name="request">RISE request settings.</param>
+        /// <returns>Updated request DTO, or null if unsupported.</returns>
+        public unsafe NVAPIRiseRequestDto? RequestRise(NVAPIRiseRequestDto request)
+        {
+            ThrowIfDisposed();
+
+            var functionPtr = _api.TryGetFunctionPointer(NvApiIdRequestRise);
+            if (functionPtr == IntPtr.Zero)
+                return null;
+
+            var requestRise = Marshal.GetDelegateForFunctionPointer<NvApiRequestRiseDelegate>(functionPtr);
+            var native = request.ToNative();
+            var status = requestRise(&native);
+            if (status == _NvAPI_Status.NVAPI_OK)
+                return NVAPIRiseRequestDto.FromNative(request, native);
+
+            if (status == _NvAPI_Status.NVAPI_NOT_SUPPORTED
+                || status == _NvAPI_Status.NVAPI_NO_IMPLEMENTATION
+                || status == _NvAPI_Status.NVAPI_NVIDIA_DEVICE_NOT_FOUND)
+                return null;
+
+            throw new NVAPIException(status);
+        }
+
+        /// <summary>
+        /// Uninstall RISE from the system.
+        /// </summary>
+        /// <returns>True if uninstalled, or null if unsupported.</returns>
+        public unsafe bool? UninstallRise()
+        {
+            ThrowIfDisposed();
+
+            var functionPtr = _api.TryGetFunctionPointer(NvApiIdUninstallRise);
+            if (functionPtr == IntPtr.Zero)
+                return null;
+
+            var uninstall = Marshal.GetDelegateForFunctionPointer<NvApiUninstallRiseDelegate>(functionPtr);
+            var native = CreateRiseUninstallSettings();
+            var status = uninstall(&native);
+            if (status == _NvAPI_Status.NVAPI_OK)
+                return true;
+
+            if (status == _NvAPI_Status.NVAPI_NOT_SUPPORTED
+                || status == _NvAPI_Status.NVAPI_NO_IMPLEMENTATION
+                || status == _NvAPI_Status.NVAPI_NVIDIA_DEVICE_NOT_FOUND)
+                return null;
+
+            throw new NVAPIException(status);
+        }
+
 
         private static NV_CHIPSET_INFO_v4 CreateChipSetInfo()
         {
@@ -447,6 +698,70 @@ namespace NVAPIWrapper
         private static _NV_LOGICAL_GPUS CreateLogicalGpus()
         {
             return new _NV_LOGICAL_GPUS { version = NVAPI.NV_LOGICAL_GPUS_VER };
+        }
+
+        private static _NV_NGX_DLSS_OVERRIDE_GET_STATE_PARAMS_V1 CreateNgxOverrideGetParams(uint processId)
+        {
+            return new _NV_NGX_DLSS_OVERRIDE_GET_STATE_PARAMS_V1
+            {
+                version = NVAPI.NV_NGX_DLSS_OVERRIDE_GET_STATE_PARAMS_VER,
+                processIdentifier = processId
+            };
+        }
+
+        internal static _NV_NGX_DLSS_OVERRIDE_SET_STATE_PARAMS_V1 CreateNgxOverrideSetParams(NVAPINGXOverrideSetDto settings)
+        {
+            return new _NV_NGX_DLSS_OVERRIDE_SET_STATE_PARAMS_V1
+            {
+                version = NVAPI.NV_NGX_DLSS_OVERRIDE_SET_STATE_PARAMS_VER,
+                processIdentifier = settings.ProcessId,
+                feature = settings.Feature,
+                feedbackMask = settings.FeedbackMask
+            };
+        }
+
+        internal static unsafe _NV_RISE_CALLBACK_SETTINGS_V1 CreateRiseCallbackSettings(NVAPIRiseCallbackSettingsDto settings)
+        {
+            var native = new _NV_RISE_CALLBACK_SETTINGS_V1
+            {
+                version = NVAPI.NV_RISE_CALLBACK_SETTINGS_VER,
+                callback = (delegate* unmanaged[Cdecl]<_NV_RISE_CALLBACK_DATA_V1*, void>)settings.Callback
+            };
+            native.super.pCallbackParam = (void*)settings.CallbackParam;
+            return native;
+        }
+
+        internal static _NV_REQUEST_RISE_SETTINGS_V1 CreateRiseRequestSettings(NVAPIRiseRequestDto request)
+        {
+            var native = new _NV_REQUEST_RISE_SETTINGS_V1
+            {
+                version = NVAPI.NV_REQUEST_RISE_SETTINGS_VER,
+                contentType = request.ContentType,
+                completed = 0
+            };
+            WriteRiseContent(request.Content, ref native);
+            return native;
+        }
+
+        private static _NV_UNINSTALL_RISE_SETTINGS_V1 CreateRiseUninstallSettings()
+        {
+            return new _NV_UNINSTALL_RISE_SETTINGS_V1
+            {
+                version = NVAPI.NV_UNINSTALL_RISE_SETTINGS_VER
+            };
+        }
+
+        private static void WriteRiseContent(string? content, ref _NV_REQUEST_RISE_SETTINGS_V1 native)
+        {
+            var span = MemoryMarshal.CreateSpan(ref native.content.e0, NVAPIRiseRequestDto.MaxContentLength);
+            span.Clear();
+            if (string.IsNullOrEmpty(content))
+                return;
+
+            var bytes = Encoding.ASCII.GetBytes(content);
+            var length = Math.Min(bytes.Length, span.Length - 1);
+            for (var i = 0; i < length; i++)
+                span[i] = (sbyte)bytes[i];
         }
 
         internal NVAPIApi Api
@@ -525,6 +840,433 @@ namespace NVAPIWrapper
         [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
         private unsafe delegate _NvAPI_Status NvApiGetGpuIdFromPhysicalGpuDelegate(NvPhysicalGpuHandle__* hPhysicalGpu, uint* pGpuId);
 
+        [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
+        private unsafe delegate _NvAPI_Status NvApiEnumTccPhysicalGpusDelegate(NvPhysicalGpuHandle__** nvGPUHandle, uint* pGpuCount);
+
+        [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
+        private unsafe delegate _NvAPI_Status NvApiGetErrorMessageDelegate(_NvAPI_Status status, sbyte* description);
+
+        [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
+        private unsafe delegate _NvAPI_Status NvApiEventRegisterCallbackDelegate(NV_EVENT_REGISTER_CALLBACK* eventCallback, NvEventHandle__** phClient);
+
+        [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
+        private unsafe delegate _NvAPI_Status NvApiEventUnregisterCallbackDelegate(NvEventHandle__* hClient);
+
+        [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
+        private unsafe delegate _NvAPI_Status NvApiNgxGetOverrideStateDelegate(_NV_NGX_DLSS_OVERRIDE_GET_STATE_PARAMS_V1* pGetOverrideStateParams);
+
+        [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
+        private unsafe delegate _NvAPI_Status NvApiNgxSetOverrideStateDelegate(_NV_NGX_DLSS_OVERRIDE_SET_STATE_PARAMS_V1* pSetOverrideStateParams);
+
+        [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
+        private unsafe delegate _NvAPI_Status NvApiRegisterRiseCallbackDelegate(_NV_RISE_CALLBACK_SETTINGS_V1* pCallbackSettings);
+
+        [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
+        private unsafe delegate _NvAPI_Status NvApiRequestRiseDelegate(_NV_REQUEST_RISE_SETTINGS_V1* requestContent);
+
+        [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
+        private unsafe delegate _NvAPI_Status NvApiUninstallRiseDelegate(_NV_UNINSTALL_RISE_SETTINGS_V1* requestContent);
+
+        internal unsafe void UnregisterEventHandle(IntPtr handle)
+        {
+            if (handle == IntPtr.Zero)
+                return;
+
+            var functionPtr = _api.TryGetFunctionPointer(NvApiIdEventUnregisterCallback);
+            if (functionPtr == IntPtr.Zero)
+                return;
+
+            var unregister = Marshal.GetDelegateForFunctionPointer<NvApiEventUnregisterCallbackDelegate>(functionPtr);
+            var status = unregister((NvEventHandle__*)handle);
+            if (status == _NvAPI_Status.NVAPI_OK)
+                return;
+
+            if (status == _NvAPI_Status.NVAPI_NOT_SUPPORTED
+                || status == _NvAPI_Status.NVAPI_NO_IMPLEMENTATION
+                || status == _NvAPI_Status.NVAPI_NVIDIA_DEVICE_NOT_FOUND
+                || status == _NvAPI_Status.NVAPI_INVALID_HANDLE)
+                return;
+
+            throw new NVAPIException(status);
+        }
+
+    }
+
+    /// <summary>
+    /// Event callback registration kind.
+    /// </summary>
+    public enum NVAPIEventCallbackKind
+    {
+        /// <summary>
+        /// QSYNC event callback.
+        /// </summary>
+        Qsync,
+
+        /// <summary>
+        /// Display output mode change event callback.
+        /// </summary>
+        DisplayOutputModeChange,
+
+        /// <summary>
+        /// Display colorimetry change event callback.
+        /// </summary>
+        DisplayColorimetryChange
+    }
+
+    /// <summary>
+    /// Event callback settings DTO.
+    /// </summary>
+    public readonly struct NVAPIEventCallbackSettingsDto : IEquatable<NVAPIEventCallbackSettingsDto>
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="NVAPIEventCallbackSettingsDto"/> struct.
+        /// </summary>
+        /// <param name="eventId">Event type.</param>
+        /// <param name="callbackKind">Callback kind.</param>
+        /// <param name="callbackParam">Callback parameter pointer.</param>
+        /// <param name="callback">Callback function pointer.</param>
+        public NVAPIEventCallbackSettingsDto(
+            NV_EVENT_TYPE eventId,
+            NVAPIEventCallbackKind callbackKind,
+            IntPtr callbackParam,
+            IntPtr callback)
+        {
+            EventId = eventId;
+            CallbackKind = callbackKind;
+            CallbackParam = callbackParam;
+            Callback = callback;
+        }
+
+        /// <summary>
+        /// Event type.
+        /// </summary>
+        public NV_EVENT_TYPE EventId { get; }
+
+        /// <summary>
+        /// Callback kind to map the union field.
+        /// </summary>
+        public NVAPIEventCallbackKind CallbackKind { get; }
+
+        /// <summary>
+        /// Callback parameter pointer.
+        /// </summary>
+        public IntPtr CallbackParam { get; }
+
+        /// <summary>
+        /// Callback function pointer.
+        /// </summary>
+        public IntPtr Callback { get; }
+
+        internal unsafe NV_EVENT_REGISTER_CALLBACK ToNative()
+        {
+            var native = new NV_EVENT_REGISTER_CALLBACK
+            {
+                version = NVAPI.NV_EVENT_REGISTER_CALLBACK_VERSION,
+                eventId = EventId,
+                callbackParam = (void*)CallbackParam
+            };
+
+            switch (CallbackKind)
+            {
+                case NVAPIEventCallbackKind.Qsync:
+                    native.nvCallBackFunc.nvQSYNCEventCallback = (delegate* unmanaged[Cdecl]<NV_QSYNC_EVENT_DATA, void*, void>)Callback;
+                    break;
+                case NVAPIEventCallbackKind.DisplayOutputModeChange:
+                    native.nvCallBackFunc.nvDisplayOutputModeChangeEventCallback = (delegate* unmanaged[Cdecl]<_NV_DISPLAY_OUTPUT_MODE_CHANGE_EVENT_DATA*, void*, void>)Callback;
+                    break;
+                case NVAPIEventCallbackKind.DisplayColorimetryChange:
+                    native.nvCallBackFunc.nvDisplayColorimetryChangeEventCallback = (delegate* unmanaged[Cdecl]<_NV_DISPLAY_COLORIMETRY_CHANGE_EVENT_DATA*, void*, void>)Callback;
+                    break;
+            }
+
+            return native;
+        }
+
+        public bool Equals(NVAPIEventCallbackSettingsDto other)
+        {
+            return EventId == other.EventId
+                && CallbackKind == other.CallbackKind
+                && CallbackParam == other.CallbackParam
+                && Callback == other.Callback;
+        }
+
+        public override bool Equals(object? obj) => obj is NVAPIEventCallbackSettingsDto other && Equals(other);
+        public override int GetHashCode() => HashCode.Combine(EventId, CallbackKind, CallbackParam, Callback);
+        public static bool operator ==(NVAPIEventCallbackSettingsDto left, NVAPIEventCallbackSettingsDto right) => left.Equals(right);
+        public static bool operator !=(NVAPIEventCallbackSettingsDto left, NVAPIEventCallbackSettingsDto right) => !left.Equals(right);
+    }
+
+    /// <summary>
+    /// NGX override state DTO.
+    /// </summary>
+    public readonly struct NVAPINGXOverrideStateDto : IEquatable<NVAPINGXOverrideStateDto>
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="NVAPINGXOverrideStateDto"/> struct.
+        /// </summary>
+        public NVAPINGXOverrideStateDto(
+            uint processId,
+            ulong feedbackMaskSr,
+            ulong feedbackMaskRr,
+            ulong feedbackMaskFg,
+            float scalingRatio,
+            uint performanceMode,
+            uint renderPreset,
+            uint frameGenerationCount,
+            uint frameGenerationPreset)
+        {
+            ProcessId = processId;
+            FeedbackMaskSr = feedbackMaskSr;
+            FeedbackMaskRr = feedbackMaskRr;
+            FeedbackMaskFg = feedbackMaskFg;
+            ScalingRatio = scalingRatio;
+            PerformanceMode = performanceMode;
+            RenderPreset = renderPreset;
+            FrameGenerationCount = frameGenerationCount;
+            FrameGenerationPreset = frameGenerationPreset;
+        }
+
+        /// <summary>
+        /// Process identifier.
+        /// </summary>
+        public uint ProcessId { get; }
+
+        /// <summary>
+        /// DLSS SR feedback mask.
+        /// </summary>
+        public ulong FeedbackMaskSr { get; }
+
+        /// <summary>
+        /// DLSS RR feedback mask.
+        /// </summary>
+        public ulong FeedbackMaskRr { get; }
+
+        /// <summary>
+        /// DLSS FG feedback mask.
+        /// </summary>
+        public ulong FeedbackMaskFg { get; }
+
+        /// <summary>
+        /// DLSS scaling ratio.
+        /// </summary>
+        public float ScalingRatio { get; }
+
+        /// <summary>
+        /// DLSS performance mode.
+        /// </summary>
+        public uint PerformanceMode { get; }
+
+        /// <summary>
+        /// DLSS render preset.
+        /// </summary>
+        public uint RenderPreset { get; }
+
+        /// <summary>
+        /// DLSS frame generation count target.
+        /// </summary>
+        public uint FrameGenerationCount { get; }
+
+        /// <summary>
+        /// DLSS frame generation preset.
+        /// </summary>
+        public uint FrameGenerationPreset { get; }
+
+        internal static NVAPINGXOverrideStateDto FromNative(_NV_NGX_DLSS_OVERRIDE_GET_STATE_PARAMS_V1 native)
+        {
+            return new NVAPINGXOverrideStateDto(
+                native.processIdentifier,
+                native.feedbackMaskSR,
+                native.feedbackMaskRR,
+                native.feedbackMaskFG,
+                native.scalingRatio,
+                native.performanceMode,
+                native.renderPreset,
+                native.frameGenerationCount,
+                native.frameGenerationPreset);
+        }
+
+        public bool Equals(NVAPINGXOverrideStateDto other)
+        {
+            return ProcessId == other.ProcessId
+                && FeedbackMaskSr == other.FeedbackMaskSr
+                && FeedbackMaskRr == other.FeedbackMaskRr
+                && FeedbackMaskFg == other.FeedbackMaskFg
+                && ScalingRatio.Equals(other.ScalingRatio)
+                && PerformanceMode == other.PerformanceMode
+                && RenderPreset == other.RenderPreset
+                && FrameGenerationCount == other.FrameGenerationCount
+                && FrameGenerationPreset == other.FrameGenerationPreset;
+        }
+
+        public override bool Equals(object? obj) => obj is NVAPINGXOverrideStateDto other && Equals(other);
+        public override int GetHashCode()
+        {
+            var hash = new HashCode();
+            hash.Add(ProcessId);
+            hash.Add(FeedbackMaskSr);
+            hash.Add(FeedbackMaskRr);
+            hash.Add(FeedbackMaskFg);
+            hash.Add(ScalingRatio);
+            hash.Add(PerformanceMode);
+            hash.Add(RenderPreset);
+            hash.Add(FrameGenerationCount);
+            hash.Add(FrameGenerationPreset);
+            return hash.ToHashCode();
+        }
+
+        public static bool operator ==(NVAPINGXOverrideStateDto left, NVAPINGXOverrideStateDto right) => left.Equals(right);
+        public static bool operator !=(NVAPINGXOverrideStateDto left, NVAPINGXOverrideStateDto right) => !left.Equals(right);
+    }
+
+    /// <summary>
+    /// NGX override set DTO.
+    /// </summary>
+    public readonly struct NVAPINGXOverrideSetDto : IEquatable<NVAPINGXOverrideSetDto>
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="NVAPINGXOverrideSetDto"/> struct.
+        /// </summary>
+        public NVAPINGXOverrideSetDto(uint processId, uint feature, ulong feedbackMask)
+        {
+            ProcessId = processId;
+            Feature = feature;
+            FeedbackMask = feedbackMask;
+        }
+
+        /// <summary>
+        /// Process identifier.
+        /// </summary>
+        public uint ProcessId { get; }
+
+        /// <summary>
+        /// DLSS feature ID.
+        /// </summary>
+        public uint Feature { get; }
+
+        /// <summary>
+        /// Feedback mask.
+        /// </summary>
+        public ulong FeedbackMask { get; }
+
+        internal _NV_NGX_DLSS_OVERRIDE_SET_STATE_PARAMS_V1 ToNative()
+        {
+            return NVAPIApiHelper.CreateNgxOverrideSetParams(this);
+        }
+
+        public bool Equals(NVAPINGXOverrideSetDto other)
+        {
+            return ProcessId == other.ProcessId
+                && Feature == other.Feature
+                && FeedbackMask == other.FeedbackMask;
+        }
+
+        public override bool Equals(object? obj) => obj is NVAPINGXOverrideSetDto other && Equals(other);
+        public override int GetHashCode() => HashCode.Combine(ProcessId, Feature, FeedbackMask);
+        public static bool operator ==(NVAPINGXOverrideSetDto left, NVAPINGXOverrideSetDto right) => left.Equals(right);
+        public static bool operator !=(NVAPINGXOverrideSetDto left, NVAPINGXOverrideSetDto right) => !left.Equals(right);
+    }
+
+    /// <summary>
+    /// RISE callback settings DTO.
+    /// </summary>
+    public readonly struct NVAPIRiseCallbackSettingsDto : IEquatable<NVAPIRiseCallbackSettingsDto>
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="NVAPIRiseCallbackSettingsDto"/> struct.
+        /// </summary>
+        /// <param name="callbackParam">Callback parameter pointer.</param>
+        /// <param name="callback">Callback function pointer.</param>
+        public NVAPIRiseCallbackSettingsDto(IntPtr callbackParam, IntPtr callback)
+        {
+            CallbackParam = callbackParam;
+            Callback = callback;
+        }
+
+        /// <summary>
+        /// Callback parameter pointer.
+        /// </summary>
+        public IntPtr CallbackParam { get; }
+
+        /// <summary>
+        /// Callback function pointer.
+        /// </summary>
+        public IntPtr Callback { get; }
+
+        internal unsafe _NV_RISE_CALLBACK_SETTINGS_V1 ToNative()
+        {
+            return NVAPIApiHelper.CreateRiseCallbackSettings(this);
+        }
+
+        public bool Equals(NVAPIRiseCallbackSettingsDto other)
+        {
+            return CallbackParam == other.CallbackParam && Callback == other.Callback;
+        }
+
+        public override bool Equals(object? obj) => obj is NVAPIRiseCallbackSettingsDto other && Equals(other);
+        public override int GetHashCode() => HashCode.Combine(CallbackParam, Callback);
+        public static bool operator ==(NVAPIRiseCallbackSettingsDto left, NVAPIRiseCallbackSettingsDto right) => left.Equals(right);
+        public static bool operator !=(NVAPIRiseCallbackSettingsDto left, NVAPIRiseCallbackSettingsDto right) => !left.Equals(right);
+    }
+
+    /// <summary>
+    /// RISE request DTO.
+    /// </summary>
+    public readonly struct NVAPIRiseRequestDto : IEquatable<NVAPIRiseRequestDto>
+    {
+        /// <summary>
+        /// Maximum content length for RISE requests.
+        /// </summary>
+        public const int MaxContentLength = 4096;
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="NVAPIRiseRequestDto"/> struct.
+        /// </summary>
+        /// <param name="contentType">Content type.</param>
+        /// <param name="content">Content string.</param>
+        /// <param name="completed">Completed flag.</param>
+        public NVAPIRiseRequestDto(_NV_RISE_CONTENT_TYPE contentType, string content, bool completed)
+        {
+            ContentType = contentType;
+            Content = content ?? string.Empty;
+            Completed = completed;
+        }
+
+        /// <summary>
+        /// Content type.
+        /// </summary>
+        public _NV_RISE_CONTENT_TYPE ContentType { get; }
+
+        /// <summary>
+        /// Content string.
+        /// </summary>
+        public string Content { get; }
+
+        /// <summary>
+        /// True if request is completed.
+        /// </summary>
+        public bool Completed { get; }
+
+        internal _NV_REQUEST_RISE_SETTINGS_V1 ToNative()
+        {
+            return NVAPIApiHelper.CreateRiseRequestSettings(this);
+        }
+
+        internal static NVAPIRiseRequestDto FromNative(NVAPIRiseRequestDto original, _NV_REQUEST_RISE_SETTINGS_V1 native)
+        {
+            return new NVAPIRiseRequestDto(original.ContentType, original.Content, native.completed != 0);
+        }
+
+        public bool Equals(NVAPIRiseRequestDto other)
+        {
+            return ContentType == other.ContentType
+                && string.Equals(Content, other.Content, StringComparison.Ordinal)
+                && Completed == other.Completed;
+        }
+
+        public override bool Equals(object? obj) => obj is NVAPIRiseRequestDto other && Equals(other);
+        public override int GetHashCode() => HashCode.Combine(ContentType, Content, Completed);
+        public static bool operator ==(NVAPIRiseRequestDto left, NVAPIRiseRequestDto right) => left.Equals(right);
+        public static bool operator !=(NVAPIRiseRequestDto left, NVAPIRiseRequestDto right) => !left.Equals(right);
     }
 
     /// <summary>
