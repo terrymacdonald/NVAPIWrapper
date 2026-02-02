@@ -20,11 +20,11 @@ namespace NVAPIWrapper.FacadeTests
         }
 
         [SkippableFact]
-        public void EnumerateUnAttachedDisplayHandles_ShouldReturnArray()
+        public void EnumerateNvidiaUnAttachedDisplayHandles_ShouldReturnArray()
         {
             Skip.If(_fixture.ApiHelper == null, _fixture.SkipReason);
 
-            var handles = _fixture.ApiHelper.EnumerateUnAttachedDisplayHandles();
+            var handles = _fixture.ApiHelper.EnumerateNvidiaUnAttachedDisplayHandles();
             Assert.NotNull(handles);
             Assert.InRange(handles.Length, 0, NVAPI.NVAPI_MAX_DISPLAYS);
         }
@@ -34,7 +34,7 @@ namespace NVAPIWrapper.FacadeTests
         {
             Skip.If(_fixture.ApiHelper == null, _fixture.SkipReason);
 
-            var handles = _fixture.ApiHelper.EnumerateUnAttachedDisplayHandles();
+            var handles = _fixture.ApiHelper.EnumerateNvidiaUnAttachedDisplayHandles();
             Skip.If(handles.Length == 0, "No unattached displays found.");
 
             var name = handles[0].GetUnAttachedAssociatedDisplayName();
@@ -47,7 +47,7 @@ namespace NVAPIWrapper.FacadeTests
         {
             Skip.If(_fixture.ApiHelper == null, _fixture.SkipReason);
 
-            var handles = _fixture.ApiHelper.EnumerateUnAttachedDisplayHandles();
+            var handles = _fixture.ApiHelper.EnumerateNvidiaUnAttachedDisplayHandles();
             Skip.If(handles.Length == 0, "No unattached displays found.");
 
             var gpu = handles[0].GetPhysicalGpuFromUnAttachedDisplay();
@@ -60,7 +60,7 @@ namespace NVAPIWrapper.FacadeTests
         {
             Skip.If(_fixture.ApiHelper == null, _fixture.SkipReason);
 
-            var handles = _fixture.ApiHelper.EnumerateUnAttachedDisplayHandles();
+            var handles = _fixture.ApiHelper.EnumerateNvidiaUnAttachedDisplayHandles();
             Skip.If(handles.Length == 0, "No unattached displays found.");
 
             var display = handles[0].CreateDisplayFromUnAttachedDisplay();
@@ -73,7 +73,7 @@ namespace NVAPIWrapper.FacadeTests
         {
             Skip.If(_fixture.ApiHelper == null, _fixture.SkipReason);
 
-            var handles = _fixture.ApiHelper.EnumerateUnAttachedDisplayHandles();
+            var handles = _fixture.ApiHelper.EnumerateNvidiaUnAttachedDisplayHandles();
             Skip.If(handles.Length == 0, "No unattached displays found.");
 
             var gpus = _fixture.ApiHelper.EnumeratePhysicalGpus();

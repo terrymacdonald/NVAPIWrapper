@@ -152,7 +152,7 @@
             </summary>
             <returns>Array of logical GPU helpers, or empty if none are found.</returns>
         </member>
-        <member name="M:NVAPIWrapper.NVAPIApiHelper.EnumerateUnAttachedDisplayHandles">
+        <member name="M:NVAPIWrapper.NVAPIApiHelper.EnumerateNvidiaUnAttachedDisplayHandles">
             <summary>
             Enumerate unattached display helpers.
             </summary>
