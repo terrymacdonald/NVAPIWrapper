@@ -201,7 +201,7 @@ namespace NVAPIWrapper.FacadeTests
             displayId = 0;
             try
             {
-                var displays = gpu.EnumerateNvidiaDisplayHandles();
+                var displays = gpu.EnumAllDisplays();
                 if (displays.Length == 0)
                     return false;
 
@@ -223,7 +223,7 @@ namespace NVAPIWrapper.FacadeTests
             outputId = 0;
             try
             {
-                var displays = gpu.EnumerateNvidiaDisplayHandles();
+                var displays = gpu.EnumAllDisplays();
                 if (displays.Length == 0)
                     return false;
 

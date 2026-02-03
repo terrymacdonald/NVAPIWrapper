@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.Runtime.InteropServices;
 
 namespace NVAPIWrapper
@@ -53,6 +54,7 @@ namespace NVAPIWrapper
         private const uint NvApiIdSysGetDisplayIdFromGpuAndOutputId = 0x08F2BAB4;
         private const uint NvApiIdEnumNvidiaDisplayHandle = 0x9ABDD40D;
         private const uint NvApiIdGetPhysicalGpusFromDisplay = 0x34EF9506;
+        private const uint NvApiIdGetAssociatedDisplayOutputId = 0xD995937E;
         private const uint NvApiIdGpuGetShaderSubPipeCount = 0x0BE17923;
         private const uint NvApiIdGpuGetGpuCoreCount = 0xC7026A87;
         private const uint NvApiIdGpuGetSystemType = 0xBAAABFCC;
@@ -382,12 +384,17 @@ namespace NVAPIWrapper
         }
 
         /// <summary>
-        /// Enumerate NVIDIA display handles associated with this GPU.
+        /// Enumerate all NVIDIA displays associated with this GPU.
         /// </summary>
         /// <returns>Array of display helpers, or empty if none are found.</returns>
-        public unsafe NVAPIDisplayHelper[] EnumerateNvidiaDisplayHandles()
+        public unsafe NVAPIDisplayHelper[] EnumAllDisplays()
         {
             ThrowIfDisposed();
+
+            var displayIds = GetAllDisplayIds();
+            var displayIdLookup = new Dictionary<uint, NVAPIGpuDisplayIdDto>(displayIds.Length);
+            for (var i = 0; i < displayIds.Length; i++)
+                displayIdLookup[displayIds[i].DisplayId] = displayIds[i];
 
             var enumDisplays = GetDelegate<NvApiEnumNvidiaDisplayHandleDelegate>(
                 NvApiIdEnumNvidiaDisplayHandle,
@@ -395,6 +402,9 @@ namespace NVAPIWrapper
             var getPhysicalFromDisplay = GetDelegate<NvApiGetPhysicalGpusFromDisplayDelegate>(
                 NvApiIdGetPhysicalGpusFromDisplay,
                 "NvAPI_GetPhysicalGPUsFromDisplay");
+            var getOutputId = GetDelegate<NvApiGetAssociatedDisplayOutputIdDelegate>(
+                NvApiIdGetAssociatedDisplayOutputId,
+                "NvAPI_GetAssociatedDisplayOutputId");
 
             var helpers = new NVAPIDisplayHelper[NVAPI.NVAPI_MAX_DISPLAYS];
             var count = 0;
@@ -432,7 +442,35 @@ namespace NVAPIWrapper
                 {
                     if ((IntPtr)gpuHandles[i] == _handle)
                     {
-                        helpers[count++] = new NVAPIDisplayHelper(_apiHelper, (IntPtr)displayHandle);
+                        NVAPIGpuDisplayIdDto? displayInfo = null;
+                        var addDisplay = true;
+
+                        uint outputId = 0;
+                        var outputStatus = getOutputId(displayHandle, &outputId);
+                        if (outputStatus == _NvAPI_Status.NVAPI_OK)
+                        {
+                            var displayId = GetDisplayIdFromGpuAndOutputId(outputId);
+                            if (displayId.HasValue && displayIdLookup.TryGetValue(displayId.Value, out var dto))
+                                displayInfo = dto;
+                        }
+                        else if (outputStatus == _NvAPI_Status.NVAPI_NOT_SUPPORTED ||
+                                 outputStatus == _NvAPI_Status.NVAPI_NVIDIA_DEVICE_NOT_FOUND)
+                        {
+                            displayInfo = null;
+                        }
+                        else if (outputStatus == _NvAPI_Status.NVAPI_INVALID_HANDLE ||
+                                 outputStatus == _NvAPI_Status.NVAPI_HANDLE_INVALIDATED)
+                        {
+                            addDisplay = false;
+                        }
+                        else
+                        {
+                            throw new NVAPIException(outputStatus);
+                        }
+
+                        if (addDisplay)
+                            helpers[count++] = new NVAPIDisplayHelper(_apiHelper, (IntPtr)displayHandle, displayInfo);
+
                         break;
                     }
                 }
@@ -444,6 +482,64 @@ namespace NVAPIWrapper
             var result = new NVAPIDisplayHelper[count];
             Array.Copy(helpers, result, count);
             return result;
+        }
+
+        /// <summary>
+        /// Enumerate NVIDIA displays associated with this GPU that are connected.
+        /// </summary>
+        /// <returns>Array of display helpers, or empty if none are found.</returns>
+        public NVAPIDisplayHelper[] EnumConnectedDisplays()
+        {
+            var displays = EnumAllDisplays();
+            if (displays.Length == 0)
+                return Array.Empty<NVAPIDisplayHelper>();
+
+            var result = new NVAPIDisplayHelper[displays.Length];
+            var count = 0;
+            for (var i = 0; i < displays.Length; i++)
+            {
+                if (displays[i].IsConnected)
+                    result[count++] = displays[i];
+            }
+
+            if (count == 0)
+                return Array.Empty<NVAPIDisplayHelper>();
+
+            if (count == result.Length)
+                return result;
+
+            var trimmed = new NVAPIDisplayHelper[count];
+            Array.Copy(result, trimmed, count);
+            return trimmed;
+        }
+
+        /// <summary>
+        /// Enumerate NVIDIA displays associated with this GPU that are active.
+        /// </summary>
+        /// <returns>Array of display helpers, or empty if none are found.</returns>
+        public NVAPIDisplayHelper[] EnumActiveDisplays()
+        {
+            var displays = EnumAllDisplays();
+            if (displays.Length == 0)
+                return Array.Empty<NVAPIDisplayHelper>();
+
+            var result = new NVAPIDisplayHelper[displays.Length];
+            var count = 0;
+            for (var i = 0; i < displays.Length; i++)
+            {
+                if (displays[i].IsActive)
+                    result[count++] = displays[i];
+            }
+
+            if (count == 0)
+                return Array.Empty<NVAPIDisplayHelper>();
+
+            if (count == result.Length)
+                return result;
+
+            var trimmed = new NVAPIDisplayHelper[count];
+            Array.Copy(result, trimmed, count);
+            return trimmed;
         }
 
         /// <summary>
@@ -2287,6 +2383,9 @@ namespace NVAPIWrapper
         private unsafe delegate _NvAPI_Status NvApiGetPhysicalGpusFromDisplayDelegate(NvDisplayHandle__* hNvDisp, NvPhysicalGpuHandle__** nvGPUHandle, uint* pGpuCount);
 
         [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
+        private unsafe delegate _NvAPI_Status NvApiGetAssociatedDisplayOutputIdDelegate(NvDisplayHandle__* hNvDisp, uint* pOutputId);
+
+        [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
         private unsafe delegate _NvAPI_Status NvApiGpuGetShaderSubPipeCountDelegate(NvPhysicalGpuHandle__* hPhysicalGpu, uint* pCount);
 
         [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
@@ -2859,6 +2958,7 @@ namespace NVAPIWrapper
         public bool IsOSVisible { get; }
         public bool IsWfd { get; }
         public bool IsConnected { get; }
+        public bool IsPhysicallyConnected { get; }
 
         public NVAPIGpuDisplayIdDto(
             NV_MONITOR_CONN_TYPE connectorType,
@@ -2869,7 +2969,8 @@ namespace NVAPIWrapper
             bool isCluster,
             bool isOsVisible,
             bool isWfd,
-            bool isConnected)
+            bool isConnected,
+            bool isPhysicallyConnected)
         {
             ConnectorType = connectorType;
             DisplayId = displayId;
@@ -2880,6 +2981,7 @@ namespace NVAPIWrapper
             IsOSVisible = isOsVisible;
             IsWfd = isWfd;
             IsConnected = isConnected;
+            IsPhysicallyConnected = isPhysicallyConnected;
         }
 
         public static NVAPIGpuDisplayIdDto FromNative(_NV_GPU_DISPLAYIDS native)
@@ -2893,7 +2995,8 @@ namespace NVAPIWrapper
                 native.isCluster != 0,
                 native.isOSVisible != 0,
                 native.isWFD != 0,
-                native.isConnected != 0);
+                native.isConnected != 0,
+                native.isPhysicallyConnected != 0);
         }
 
         public static NVAPIGpuDisplayIdDto[] FromNative(_NV_GPU_DISPLAYIDS[] native, uint count)
@@ -2921,7 +3024,8 @@ namespace NVAPIWrapper
                 isCluster = IsCluster ? 1u : 0u,
                 isOSVisible = IsOSVisible ? 1u : 0u,
                 isWFD = IsWfd ? 1u : 0u,
-                isConnected = IsConnected ? 1u : 0u
+                isConnected = IsConnected ? 1u : 0u,
+                isPhysicallyConnected = IsPhysicallyConnected ? 1u : 0u
             };
         }
 
@@ -2935,7 +3039,8 @@ namespace NVAPIWrapper
                 && IsCluster == other.IsCluster
                 && IsOSVisible == other.IsOSVisible
                 && IsWfd == other.IsWfd
-                && IsConnected == other.IsConnected;
+                && IsConnected == other.IsConnected
+                && IsPhysicallyConnected == other.IsPhysicallyConnected;
         }
 
         public override bool Equals(object? obj) => obj is NVAPIGpuDisplayIdDto other && Equals(other);
@@ -2953,6 +3058,7 @@ namespace NVAPIWrapper
                 hash = (hash * 31) + IsOSVisible.GetHashCode();
                 hash = (hash * 31) + IsWfd.GetHashCode();
                 hash = (hash * 31) + IsConnected.GetHashCode();
+                hash = (hash * 31) + IsPhysicallyConnected.GetHashCode();
                 return hash;
             }
         }

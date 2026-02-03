@@ -20,14 +20,14 @@ namespace NVAPIWrapper.FacadeTests
         }
 
         [SkippableFact]
-        public void EnumerateNvidiaDisplayHandles_ShouldReturnArray()
+        public void EnumAllDisplays_ShouldReturnArray()
         {
             Skip.If(_fixture.ApiHelper == null, _fixture.SkipReason);
 
             var gpus = _fixture.ApiHelper.EnumeratePhysicalGpus();
             Skip.If(gpus.Length == 0, "No NVIDIA physical GPUs found.");
 
-            var displays = gpus[0].EnumerateNvidiaDisplayHandles();
+            var displays = gpus[0].EnumAllDisplays();
             Assert.NotNull(displays);
             Assert.InRange(displays.Length, 0, NVAPI.NVAPI_MAX_DISPLAYS);
         }
@@ -40,7 +40,7 @@ namespace NVAPIWrapper.FacadeTests
             var gpus = _fixture.ApiHelper.EnumeratePhysicalGpus();
             Skip.If(gpus.Length == 0, "No NVIDIA physical GPUs found.");
 
-            var displays = gpus[0].EnumerateNvidiaDisplayHandles();
+            var displays = gpus[0].EnumAllDisplays();
             Skip.If(displays.Length == 0, "No NVIDIA displays found.");
 
             var physicalGpus = displays[0].GetPhysicalGpusFromDisplay();
@@ -56,7 +56,7 @@ namespace NVAPIWrapper.FacadeTests
             var gpus = _fixture.ApiHelper.EnumeratePhysicalGpus();
             Skip.If(gpus.Length == 0, "No NVIDIA physical GPUs found.");
 
-            var displays = gpus[0].EnumerateNvidiaDisplayHandles();
+            var displays = gpus[0].EnumAllDisplays();
             Skip.If(displays.Length == 0, "No NVIDIA displays found.");
 
             var logicalGpu = displays[0].GetLogicalGpuFromDisplay();
@@ -72,7 +72,7 @@ namespace NVAPIWrapper.FacadeTests
             var gpus = _fixture.ApiHelper.EnumeratePhysicalGpus();
             Skip.If(gpus.Length == 0, "No NVIDIA physical GPUs found.");
 
-            var displays = gpus[0].EnumerateNvidiaDisplayHandles();
+            var displays = gpus[0].EnumAllDisplays();
             Skip.If(displays.Length == 0, "No NVIDIA displays found.");
 
             var name = displays[0].GetAssociatedNvidiaDisplayName();
@@ -88,7 +88,7 @@ namespace NVAPIWrapper.FacadeTests
             var gpus = _fixture.ApiHelper.EnumeratePhysicalGpus();
             Skip.If(gpus.Length == 0, "No NVIDIA physical GPUs found.");
 
-            var displays = gpus[0].EnumerateNvidiaDisplayHandles();
+            var displays = gpus[0].EnumAllDisplays();
             Skip.If(displays.Length == 0, "No NVIDIA displays found.");
 
             var name = displays[0].GetAssociatedNvidiaDisplayName();
@@ -110,7 +110,7 @@ namespace NVAPIWrapper.FacadeTests
             var gpus = _fixture.ApiHelper.EnumeratePhysicalGpus();
             Skip.If(gpus.Length == 0, "No NVIDIA physical GPUs found.");
 
-            var displays = gpus[0].EnumerateNvidiaDisplayHandles();
+            var displays = gpus[0].EnumAllDisplays();
             Skip.If(displays.Length == 0, "No NVIDIA displays found.");
 
             var outputId = displays[0].GetAssociatedDisplayOutputId();
@@ -151,7 +151,7 @@ namespace NVAPIWrapper.FacadeTests
             var gpus = _fixture.ApiHelper.EnumeratePhysicalGpus();
             Skip.If(gpus.Length == 0, "No NVIDIA physical GPUs found.");
 
-            var displays = gpus[0].EnumerateNvidiaDisplayHandles();
+            var displays = gpus[0].EnumAllDisplays();
             Skip.If(displays.Length == 0, "No NVIDIA displays found.");
 
             var info = FacadeTestUtils.InvokeOrSkip(() => displays[0].GetGpuAndOutputIdFromDisplayId(), "GPU/output ID unsupported");
@@ -171,7 +171,7 @@ namespace NVAPIWrapper.FacadeTests
             var gpus = _fixture.ApiHelper.EnumeratePhysicalGpus();
             Skip.If(gpus.Length == 0, "No NVIDIA physical GPUs found.");
 
-            var displays = gpus[0].EnumerateNvidiaDisplayHandles();
+            var displays = gpus[0].EnumAllDisplays();
             Skip.If(displays.Length == 0, "No NVIDIA displays found.");
 
             var physicalGpu = FacadeTestUtils.InvokeOrSkip(() => displays[0].GetPhysicalGpuFromDisplayId(), "Physical GPU lookup unsupported");
@@ -187,7 +187,7 @@ namespace NVAPIWrapper.FacadeTests
             var gpus = _fixture.ApiHelper.EnumeratePhysicalGpus();
             Skip.If(gpus.Length == 0, "No NVIDIA physical GPUs found.");
 
-            var displays = gpus[0].EnumerateNvidiaDisplayHandles();
+            var displays = gpus[0].EnumAllDisplays();
             Skip.If(displays.Length == 0, "No NVIDIA displays found.");
 
             var counter = displays[0].GetVBlankCounter();
@@ -203,7 +203,7 @@ namespace NVAPIWrapper.FacadeTests
             var gpus = _fixture.ApiHelper.EnumeratePhysicalGpus();
             Skip.If(gpus.Length == 0, "No NVIDIA physical GPUs found.");
 
-            var displays = gpus[0].EnumerateNvidiaDisplayHandles();
+            var displays = gpus[0].EnumAllDisplays();
             Skip.If(displays.Length == 0, "No NVIDIA displays found.");
 
             var config = displays[0].GetDisplayConfig();
@@ -221,7 +221,7 @@ namespace NVAPIWrapper.FacadeTests
             var gpus = _fixture.ApiHelper.EnumeratePhysicalGpus();
             Skip.If(gpus.Length == 0, "No NVIDIA physical GPUs found.");
 
-            var displays = gpus[0].EnumerateNvidiaDisplayHandles();
+            var displays = gpus[0].EnumAllDisplays();
             Skip.If(displays.Length == 0, "No NVIDIA displays found.");
 
             var displayId = displays[0].GetDisplayIdByDisplayName();
@@ -237,7 +237,7 @@ namespace NVAPIWrapper.FacadeTests
             var gpus = _fixture.ApiHelper.EnumeratePhysicalGpus();
             Skip.If(gpus.Length == 0, "No NVIDIA physical GPUs found.");
 
-            var displays = gpus[0].EnumerateNvidiaDisplayHandles();
+            var displays = gpus[0].EnumAllDisplays();
             Skip.If(displays.Length == 0, "No NVIDIA displays found.");
 
             var displayId = displays[0].GetGdiPrimaryDisplayId();
@@ -253,7 +253,7 @@ namespace NVAPIWrapper.FacadeTests
             var gpus = _fixture.ApiHelper.EnumeratePhysicalGpus();
             Skip.If(gpus.Length == 0, "No NVIDIA physical GPUs found.");
 
-            var displays = gpus[0].EnumerateNvidiaDisplayHandles();
+            var displays = gpus[0].EnumAllDisplays();
             Skip.If(displays.Length == 0, "No NVIDIA displays found.");
 
             var views = displays[0].GetSupportedViews();
@@ -269,7 +269,7 @@ namespace NVAPIWrapper.FacadeTests
             var gpus = _fixture.ApiHelper.EnumeratePhysicalGpus();
             Skip.If(gpus.Length == 0, "No NVIDIA physical GPUs found.");
 
-            var displays = gpus[0].EnumerateNvidiaDisplayHandles();
+            var displays = gpus[0].EnumAllDisplays();
             Skip.If(displays.Length == 0, "No NVIDIA displays found.");
 
             var edid = displays[0].GetEdidData();
@@ -285,7 +285,7 @@ namespace NVAPIWrapper.FacadeTests
             var gpus = _fixture.ApiHelper.EnumeratePhysicalGpus();
             Skip.If(gpus.Length == 0, "No NVIDIA physical GPUs found.");
 
-            var displays = gpus[0].EnumerateNvidiaDisplayHandles();
+            var displays = gpus[0].EnumAllDisplays();
             Skip.If(displays.Length == 0, "No NVIDIA displays found.");
 
             var config = displays[0].GetDisplayConfig();
@@ -319,7 +319,7 @@ namespace NVAPIWrapper.FacadeTests
             var gpus = _fixture.ApiHelper.EnumeratePhysicalGpus();
             Skip.If(gpus.Length == 0, "No NVIDIA physical GPUs found.");
 
-            var displays = gpus[0].EnumerateNvidiaDisplayHandles();
+            var displays = gpus[0].EnumAllDisplays();
             Skip.If(displays.Length == 0, "No NVIDIA displays found.");
 
             var caps = displays[0].GetMonitorCapabilities();
@@ -335,7 +335,7 @@ namespace NVAPIWrapper.FacadeTests
             var gpus = _fixture.ApiHelper.EnumeratePhysicalGpus();
             Skip.If(gpus.Length == 0, "No NVIDIA physical GPUs found.");
 
-            var displays = gpus[0].EnumerateNvidiaDisplayHandles();
+            var displays = gpus[0].EnumAllDisplays();
             Skip.If(displays.Length == 0, "No NVIDIA displays found.");
 
             var caps = displays[0].GetMonitorColorCapabilities();
@@ -351,7 +351,7 @@ namespace NVAPIWrapper.FacadeTests
             var gpus = _fixture.ApiHelper.EnumeratePhysicalGpus();
             Skip.If(gpus.Length == 0, "No NVIDIA physical GPUs found.");
 
-            var displays = gpus[0].EnumerateNvidiaDisplayHandles();
+            var displays = gpus[0].EnumAllDisplays();
             Skip.If(displays.Length == 0, "No NVIDIA displays found.");
 
             var info = displays[0].GetDisplayPortInfo();
@@ -367,7 +367,7 @@ namespace NVAPIWrapper.FacadeTests
             var gpus = _fixture.ApiHelper.EnumeratePhysicalGpus();
             Skip.If(gpus.Length == 0, "No NVIDIA physical GPUs found.");
 
-            var displays = gpus[0].EnumerateNvidiaDisplayHandles();
+            var displays = gpus[0].EnumAllDisplays();
             Skip.If(displays.Length == 0, "No NVIDIA displays found.");
 
             var info = displays[0].GetHdmiSupportInfo();
@@ -383,7 +383,7 @@ namespace NVAPIWrapper.FacadeTests
             var gpus = _fixture.ApiHelper.EnumeratePhysicalGpus();
             Skip.If(gpus.Length == 0, "No NVIDIA physical GPUs found.");
 
-            var displays = gpus[0].EnumerateNvidiaDisplayHandles();
+            var displays = gpus[0].EnumAllDisplays();
             Skip.If(displays.Length == 0, "No NVIDIA displays found.");
 
             var info = displays[0].GetVrrInfo();
@@ -399,7 +399,7 @@ namespace NVAPIWrapper.FacadeTests
             var gpus = _fixture.ApiHelper.EnumeratePhysicalGpus();
             Skip.If(gpus.Length == 0, "No NVIDIA physical GPUs found.");
 
-            var displays = gpus[0].EnumerateNvidiaDisplayHandles();
+            var displays = gpus[0].EnumAllDisplays();
             Skip.If(displays.Length == 0, "No NVIDIA displays found.");
 
             var data = displays[0].GetAdaptiveSyncData();
@@ -415,7 +415,7 @@ namespace NVAPIWrapper.FacadeTests
             var gpus = _fixture.ApiHelper.EnumeratePhysicalGpus();
             Skip.If(gpus.Length == 0, "No NVIDIA physical GPUs found.");
 
-            var displays = gpus[0].EnumerateNvidiaDisplayHandles();
+            var displays = gpus[0].EnumAllDisplays();
             Skip.If(displays.Length == 0, "No NVIDIA displays found.");
 
             var data = displays[0].GetVirtualRefreshRateData();
@@ -431,7 +431,7 @@ namespace NVAPIWrapper.FacadeTests
             var gpus = _fixture.ApiHelper.EnumeratePhysicalGpus();
             Skip.If(gpus.Length == 0, "No NVIDIA physical GPUs found.");
 
-            var displays = gpus[0].EnumerateNvidiaDisplayHandles();
+            var displays = gpus[0].EnumAllDisplays();
             Skip.If(displays.Length == 0, "No NVIDIA displays found.");
 
             var display = displays[0].GetPreferredStereoDisplay();
@@ -447,7 +447,7 @@ namespace NVAPIWrapper.FacadeTests
             var gpus = _fixture.ApiHelper.EnumeratePhysicalGpus();
             Skip.If(gpus.Length == 0, "No NVIDIA physical GPUs found.");
 
-            var displays = gpus[0].EnumerateNvidiaDisplayHandles();
+            var displays = gpus[0].EnumAllDisplays();
             Skip.If(displays.Length == 0, "No NVIDIA displays found.");
 
             var data = NVAPIDisplayHelper.CreateInfoFrameData();
@@ -479,7 +479,7 @@ namespace NVAPIWrapper.FacadeTests
             var gpus = _fixture.ApiHelper.EnumeratePhysicalGpus();
             Skip.If(gpus.Length == 0, "No NVIDIA physical GPUs found.");
 
-            var displays = gpus[0].EnumerateNvidiaDisplayHandles();
+            var displays = gpus[0].EnumAllDisplays();
             Skip.If(displays.Length == 0, "No NVIDIA displays found.");
 
             var colorData = NVAPIDisplayHelper.CreateColorData();
@@ -501,7 +501,7 @@ namespace NVAPIWrapper.FacadeTests
             var gpus = _fixture.ApiHelper.EnumeratePhysicalGpus();
             Skip.If(gpus.Length == 0, "No NVIDIA physical GPUs found.");
 
-            var displays = gpus[0].EnumerateNvidiaDisplayHandles();
+            var displays = gpus[0].EnumAllDisplays();
             Skip.If(displays.Length == 0, "No NVIDIA displays found.");
 
             var caps = displays[0].GetHdrCapabilities();
@@ -517,7 +517,7 @@ namespace NVAPIWrapper.FacadeTests
             var gpus = _fixture.ApiHelper.EnumeratePhysicalGpus();
             Skip.If(gpus.Length == 0, "No NVIDIA physical GPUs found.");
 
-            var displays = gpus[0].EnumerateNvidiaDisplayHandles();
+            var displays = gpus[0].EnumAllDisplays();
             Skip.If(displays.Length == 0, "No NVIDIA displays found.");
 
             var caps = displays[0].GetHdrCapabilities();
@@ -542,7 +542,7 @@ namespace NVAPIWrapper.FacadeTests
             var gpus = _fixture.ApiHelper.EnumeratePhysicalGpus();
             Skip.If(gpus.Length == 0, "No NVIDIA physical GPUs found.");
 
-            var displays = gpus[0].EnumerateNvidiaDisplayHandles();
+            var displays = gpus[0].EnumAllDisplays();
             Skip.If(displays.Length == 0, "No NVIDIA displays found.");
 
             var colorSpace = displays[0].GetSourceColorSpace();
@@ -558,7 +558,7 @@ namespace NVAPIWrapper.FacadeTests
             var gpus = _fixture.ApiHelper.EnumeratePhysicalGpus();
             Skip.If(gpus.Length == 0, "No NVIDIA physical GPUs found.");
 
-            var displays = gpus[0].EnumerateNvidiaDisplayHandles();
+            var displays = gpus[0].EnumAllDisplays();
             Skip.If(displays.Length == 0, "No NVIDIA displays found.");
 
             var caps = displays[0].GetHdrCapabilities();
@@ -577,7 +577,7 @@ namespace NVAPIWrapper.FacadeTests
             var gpus = _fixture.ApiHelper.EnumeratePhysicalGpus();
             Skip.If(gpus.Length == 0, "No NVIDIA physical GPUs found.");
 
-            var displays = gpus[0].EnumerateNvidiaDisplayHandles();
+            var displays = gpus[0].EnumAllDisplays();
             Skip.If(displays.Length == 0, "No NVIDIA displays found.");
 
             var mode = displays[0].GetOutputMode();
@@ -593,7 +593,7 @@ namespace NVAPIWrapper.FacadeTests
             var gpus = _fixture.ApiHelper.EnumeratePhysicalGpus();
             Skip.If(gpus.Length == 0, "No NVIDIA physical GPUs found.");
 
-            var displays = gpus[0].EnumerateNvidiaDisplayHandles();
+            var displays = gpus[0].EnumAllDisplays();
             Skip.If(displays.Length == 0, "No NVIDIA displays found.");
 
             var caps = displays[0].GetHdrCapabilities();
@@ -612,7 +612,7 @@ namespace NVAPIWrapper.FacadeTests
             var gpus = _fixture.ApiHelper.EnumeratePhysicalGpus();
             Skip.If(gpus.Length == 0, "No NVIDIA physical GPUs found.");
 
-            var displays = gpus[0].EnumerateNvidiaDisplayHandles();
+            var displays = gpus[0].EnumAllDisplays();
             Skip.If(displays.Length == 0, "No NVIDIA displays found.");
 
             var colorimetry = displays[0].GetColorimetry();
@@ -628,7 +628,7 @@ namespace NVAPIWrapper.FacadeTests
             var gpus = _fixture.ApiHelper.EnumeratePhysicalGpus();
             Skip.If(gpus.Length == 0, "No NVIDIA physical GPUs found.");
 
-            var displays = gpus[0].EnumerateNvidiaDisplayHandles();
+            var displays = gpus[0].EnumAllDisplays();
             Skip.If(displays.Length == 0, "No NVIDIA displays found.");
 
             var info = displays[0].GetDisplayIdInfo();
@@ -644,7 +644,7 @@ namespace NVAPIWrapper.FacadeTests
             var gpus = _fixture.ApiHelper.EnumeratePhysicalGpus();
             Skip.If(gpus.Length == 0, "No NVIDIA physical GPUs found.");
 
-            var displays = gpus[0].EnumerateNvidiaDisplayHandles();
+            var displays = gpus[0].EnumAllDisplays();
             Skip.If(displays.Length == 0, "No NVIDIA displays found.");
 
             var info = displays[0].GetDisplayIdsFromTarget();
@@ -660,7 +660,7 @@ namespace NVAPIWrapper.FacadeTests
             var gpus = _fixture.ApiHelper.EnumeratePhysicalGpus();
             Skip.If(gpus.Length == 0, "No NVIDIA physical GPUs found.");
 
-            var displays = gpus[0].EnumerateNvidiaDisplayHandles();
+            var displays = gpus[0].EnumAllDisplays();
             Skip.If(displays.Length == 0, "No NVIDIA displays found.");
 
             var custom = displays[0].EnumCustomDisplay(0);
@@ -676,7 +676,7 @@ namespace NVAPIWrapper.FacadeTests
             var gpus = _fixture.ApiHelper.EnumeratePhysicalGpus();
             Skip.If(gpus.Length == 0, "No NVIDIA physical GPUs found.");
 
-            var displays = gpus[0].EnumerateNvidiaDisplayHandles();
+            var displays = gpus[0].EnumAllDisplays();
             Skip.If(displays.Length == 0, "No NVIDIA displays found.");
 
             var managed = displays[0].GetNvManagedDedicatedDisplays();
@@ -692,7 +692,7 @@ namespace NVAPIWrapper.FacadeTests
             var gpus = _fixture.ApiHelper.EnumeratePhysicalGpus();
             Skip.If(gpus.Length == 0, "No NVIDIA physical GPUs found.");
 
-            var displays = gpus[0].EnumerateNvidiaDisplayHandles();
+            var displays = gpus[0].EnumAllDisplays();
             Skip.If(displays.Length == 0, "No NVIDIA displays found.");
 
             var displayId = displays[0].GetDisplayIdByDisplayName();

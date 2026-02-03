@@ -381,11 +381,11 @@ namespace NVAPIWrapper.FacadeTests
 
                 try
                 {
-                    displays = gpu.EnumerateNvidiaDisplayHandles();
+                    displays = gpu.EnumAllDisplays();
                 }
                 catch (Exception ex)
                 {
-                    failures.Add($"{gpuLabel}: EnumerateNvidiaDisplayHandles failed: {ex.Message}");
+                    failures.Add($"{gpuLabel}: EnumAllDisplays failed: {ex.Message}");
                     continue;
                 }
 

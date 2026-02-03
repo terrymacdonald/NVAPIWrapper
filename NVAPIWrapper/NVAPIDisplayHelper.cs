@@ -68,13 +68,67 @@ namespace NVAPIWrapper
 
         private readonly NVAPIApiHelper _apiHelper;
         private readonly IntPtr _handle;
+        private readonly NVAPIGpuDisplayIdDto? _displayIdInfo;
+        private readonly uint _displayId;
         private bool _disposed;
 
-        internal NVAPIDisplayHelper(NVAPIApiHelper apiHelper, IntPtr handle)
+        internal NVAPIDisplayHelper(NVAPIApiHelper apiHelper, IntPtr handle, NVAPIGpuDisplayIdDto? displayIdInfo = null)
         {
             _apiHelper = apiHelper;
             _handle = handle;
+            _displayIdInfo = displayIdInfo;
+            _displayId = displayIdInfo?.DisplayId ?? TryGetDisplayIdNoThrow();
         }
+
+        /// <summary>
+        /// Get the display ID for this handle when available.
+        /// </summary>
+        public uint DisplayId => _displayIdInfo?.DisplayId ?? _displayId;
+
+        /// <summary>
+        /// Get the connector type for this display when available.
+        /// </summary>
+        public NV_MONITOR_CONN_TYPE ConnectorType => _displayIdInfo?.ConnectorType ?? default;
+
+        /// <summary>
+        /// Get whether this display is part of an MST topology and is dynamic.
+        /// </summary>
+        public bool IsDynamic => _displayIdInfo?.IsDynamic ?? false;
+
+        /// <summary>
+        /// Get whether this display is the multi-stream root node.
+        /// </summary>
+        public bool IsMultiStreamRootNode => _displayIdInfo?.IsMultiStreamRootNode ?? false;
+
+        /// <summary>
+        /// Get whether this display is actively driven.
+        /// </summary>
+        public bool IsActive => _displayIdInfo?.IsActive ?? false;
+
+        /// <summary>
+        /// Get whether this display is the representative display.
+        /// </summary>
+        public bool IsCluster => _displayIdInfo?.IsCluster ?? false;
+
+        /// <summary>
+        /// Get whether this display is reported to the OS.
+        /// </summary>
+        public bool IsOSVisible => _displayIdInfo?.IsOSVisible ?? false;
+
+        /// <summary>
+        /// Get whether this display is a WFD display (deprecated in NVAPI).
+        /// </summary>
+        public bool IsWfd => _displayIdInfo?.IsWfd ?? false;
+
+        /// <summary>
+        /// Get whether this display is connected.
+        /// </summary>
+        public bool IsConnected => _displayIdInfo?.IsConnected ?? false;
+
+        /// <summary>
+        /// Get whether this display is physically connected.
+        /// </summary>
+        public bool IsPhysicallyConnected => _displayIdInfo?.IsPhysicallyConnected ?? false;
 
         /// <summary>
         /// Create an EDID data struct with the version initialized.
@@ -2010,6 +2064,12 @@ namespace NVAPIWrapper
 
         private unsafe bool TryGetDisplayId(out uint displayId)
         {
+            if (DisplayId != 0)
+            {
+                displayId = DisplayId;
+                return true;
+            }
+
             displayId = 0;
             var name = GetAssociatedNvidiaDisplayName();
             if (string.IsNullOrWhiteSpace(name))
@@ -2057,6 +2117,25 @@ namespace NVAPIWrapper
             }
 
             return TryGetDisplayId(out resolvedDisplayId);
+        }
+
+        private uint TryGetDisplayIdNoThrow()
+        {
+            try
+            {
+                var name = GetAssociatedNvidiaDisplayName();
+                if (string.IsNullOrWhiteSpace(name))
+                    return 0;
+
+                if (TryGetDisplayIdByName(name, out var displayId))
+                    return displayId;
+            }
+            catch (NVAPIException)
+            {
+                return 0;
+            }
+
+            return 0;
         }
 
         internal static _LUID CreateLuid(long adapterLuid)
