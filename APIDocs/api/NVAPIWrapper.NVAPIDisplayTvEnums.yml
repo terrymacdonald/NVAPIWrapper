@@ -19,7 +19,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPIDisplayTvEnums
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 2598
+    startLine: 2677
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper

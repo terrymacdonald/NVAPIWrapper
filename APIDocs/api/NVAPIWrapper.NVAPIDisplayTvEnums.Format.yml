@@ -85,7 +85,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Format
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 2603
+    startLine: 2682
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -122,7 +122,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: None
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 2605
+    startLine: 2684
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -149,7 +149,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SdNtscM
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 2606
+    startLine: 2685
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -176,7 +176,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SdNtscJ
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 2607
+    startLine: 2686
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -203,7 +203,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SdPalM
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 2608
+    startLine: 2687
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -230,7 +230,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SdPalBdgh
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 2609
+    startLine: 2688
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -257,7 +257,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SdPalN
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 2610
+    startLine: 2689
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -284,7 +284,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SdPalNc
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 2611
+    startLine: 2690
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -311,7 +311,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Sd576i
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 2612
+    startLine: 2691
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -338,7 +338,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Sd480i
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 2613
+    startLine: 2692
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -365,7 +365,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Ed480p
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 2614
+    startLine: 2693
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -392,7 +392,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Ed576p
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 2615
+    startLine: 2694
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -419,7 +419,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Hd720p
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 2616
+    startLine: 2695
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -446,7 +446,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Hd1080i
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 2617
+    startLine: 2696
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -473,7 +473,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Hd1080p
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 2618
+    startLine: 2697
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -500,7 +500,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Hd720p50
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 2619
+    startLine: 2698
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -527,7 +527,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Hd1080p24
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 2620
+    startLine: 2699
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -554,7 +554,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Hd1080i50
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 2621
+    startLine: 2700
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -581,7 +581,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Hd1080p50
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 2622
+    startLine: 2701
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -608,7 +608,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Uhd4Kp30
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 2623
+    startLine: 2702
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -635,7 +635,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Uhd4Kp30_3840
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 2624
+    startLine: 2703
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -662,7 +662,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Uhd4Kp25
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 2625
+    startLine: 2704
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -689,7 +689,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Uhd4Kp25_3840
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 2626
+    startLine: 2705
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -716,7 +716,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Uhd4Kp24
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 2627
+    startLine: 2706
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -743,7 +743,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Uhd4Kp24_3840
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 2628
+    startLine: 2707
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -770,7 +770,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Uhd4Kp24Smpte
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 2629
+    startLine: 2708
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -797,7 +797,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Uhd4Kp50_3840
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 2630
+    startLine: 2709
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -824,7 +824,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Uhd4Kp60_3840
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 2631
+    startLine: 2710
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -851,7 +851,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Uhd4Kp30_4096
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 2632
+    startLine: 2711
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -878,7 +878,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Uhd4Kp25_4096
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 2633
+    startLine: 2712
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -905,7 +905,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Uhd4Kp24_4096
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 2634
+    startLine: 2713
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -932,7 +932,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Uhd4Kp50_4096
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 2635
+    startLine: 2714
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -959,7 +959,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Uhd4Kp60_4096
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 2636
+    startLine: 2715
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -986,7 +986,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Uhd8Kp24_7680
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 2637
+    startLine: 2716
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -1013,7 +1013,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Uhd8Kp25_7680
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 2638
+    startLine: 2717
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -1040,7 +1040,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Uhd8Kp30_7680
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 2639
+    startLine: 2718
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -1067,7 +1067,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Uhd8Kp48_7680
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 2640
+    startLine: 2719
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -1094,7 +1094,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Uhd8Kp50_7680
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 2641
+    startLine: 2720
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -1121,7 +1121,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Uhd8Kp60_7680
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 2642
+    startLine: 2721
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -1148,7 +1148,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Uhd8Kp100_7680
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 2643
+    startLine: 2722
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -1175,7 +1175,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Uhd8Kp120_7680
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 2644
+    startLine: 2723
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -1202,7 +1202,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Uhd4Kp48_3840
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 2645
+    startLine: 2724
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -1229,7 +1229,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Uhd4Kp48_4096
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 2646
+    startLine: 2725
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -1256,7 +1256,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Uhd4Kp100_4096
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 2647
+    startLine: 2726
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -1283,7 +1283,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Uhd4Kp100_3840
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 2648
+    startLine: 2727
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -1310,7 +1310,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Uhd4Kp120_4096
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 2649
+    startLine: 2728
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -1337,7 +1337,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Uhd4Kp120_3840
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 2650
+    startLine: 2729
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -1364,7 +1364,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Uhd4Kp100_5120
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 2651
+    startLine: 2730
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -1391,7 +1391,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Uhd4Kp120_5120
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 2652
+    startLine: 2731
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -1418,7 +1418,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Uhd4Kp24_5120
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 2653
+    startLine: 2732
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -1445,7 +1445,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Uhd4Kp25_5120
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 2654
+    startLine: 2733
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -1472,7 +1472,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Uhd4Kp30_5120
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 2655
+    startLine: 2734
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -1499,7 +1499,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Uhd4Kp48_5120
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 2656
+    startLine: 2735
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -1526,7 +1526,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Uhd4Kp50_5120
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 2657
+    startLine: 2736
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -1553,7 +1553,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Uhd4Kp60_5120
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 2658
+    startLine: 2737
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -1580,7 +1580,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Uhd10Kp24_10240
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 2659
+    startLine: 2738
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -1607,7 +1607,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Uhd10Kp25_10240
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 2660
+    startLine: 2739
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -1634,7 +1634,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Uhd10Kp30_10240
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 2661
+    startLine: 2740
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -1661,7 +1661,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Uhd10Kp48_10240
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 2662
+    startLine: 2741
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -1688,7 +1688,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Uhd10Kp50_10240
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 2663
+    startLine: 2742
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -1715,7 +1715,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Uhd10Kp60_10240
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 2664
+    startLine: 2743
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -1742,7 +1742,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Uhd10Kp100_10240
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 2665
+    startLine: 2744
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -1769,7 +1769,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Uhd10Kp120_10240
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 2666
+    startLine: 2745
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -1796,7 +1796,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SdOther
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 2667
+    startLine: 2746
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -1823,7 +1823,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: EdOther
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 2668
+    startLine: 2747
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -1850,7 +1850,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: HdOther
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 2669
+    startLine: 2748
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -1877,7 +1877,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Any
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 2670
+    startLine: 2749
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper

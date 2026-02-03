@@ -22,7 +22,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPIEventCallbackKind
     path: ../NVAPIWrapper/NVAPIApiHelper.cs
-    startLine: 897
+    startLine: 908
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -49,7 +49,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Qsync
     path: ../NVAPIWrapper/NVAPIApiHelper.cs
-    startLine: 902
+    startLine: 913
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -77,7 +77,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: DisplayOutputModeChange
     path: ../NVAPIWrapper/NVAPIApiHelper.cs
-    startLine: 907
+    startLine: 918
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -105,7 +105,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: DisplayColorimetryChange
     path: ../NVAPIWrapper/NVAPIApiHelper.cs
-    startLine: 912
+    startLine: 923
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper

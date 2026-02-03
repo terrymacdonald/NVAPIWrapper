@@ -38,7 +38,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPIChipSetInfoDto
     path: ../NVAPIWrapper/NVAPIApiHelper.cs
-    startLine: 1490
+    startLine: 1501
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -72,7 +72,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: VendorId
     path: ../NVAPIWrapper/NVAPIApiHelper.cs
-    startLine: 1492
+    startLine: 1503
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -101,7 +101,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: DeviceId
     path: ../NVAPIWrapper/NVAPIApiHelper.cs
-    startLine: 1493
+    startLine: 1504
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -130,7 +130,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: VendorName
     path: ../NVAPIWrapper/NVAPIApiHelper.cs
-    startLine: 1494
+    startLine: 1505
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -159,7 +159,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: ChipsetName
     path: ../NVAPIWrapper/NVAPIApiHelper.cs
-    startLine: 1495
+    startLine: 1506
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -188,7 +188,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Flags
     path: ../NVAPIWrapper/NVAPIApiHelper.cs
-    startLine: 1496
+    startLine: 1507
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -217,7 +217,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SubSystemVendorId
     path: ../NVAPIWrapper/NVAPIApiHelper.cs
-    startLine: 1497
+    startLine: 1508
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -246,7 +246,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SubSystemDeviceId
     path: ../NVAPIWrapper/NVAPIApiHelper.cs
-    startLine: 1498
+    startLine: 1509
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -275,7 +275,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SubSystemVendorName
     path: ../NVAPIWrapper/NVAPIApiHelper.cs
-    startLine: 1499
+    startLine: 1510
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -304,7 +304,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: HbVendorId
     path: ../NVAPIWrapper/NVAPIApiHelper.cs
-    startLine: 1500
+    startLine: 1511
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -333,7 +333,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: HbDeviceId
     path: ../NVAPIWrapper/NVAPIApiHelper.cs
-    startLine: 1501
+    startLine: 1512
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -362,7 +362,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: HbSubSystemVendorId
     path: ../NVAPIWrapper/NVAPIApiHelper.cs
-    startLine: 1502
+    startLine: 1513
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -391,7 +391,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: HbSubSystemDeviceId
     path: ../NVAPIWrapper/NVAPIApiHelper.cs
-    startLine: 1503
+    startLine: 1514
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -420,7 +420,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: .ctor
     path: ../NVAPIWrapper/NVAPIApiHelper.cs
-    startLine: 1520
+    startLine: 1531
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -488,7 +488,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: FromNative
     path: ../NVAPIWrapper/NVAPIApiHelper.cs
-    startLine: 1553
+    startLine: 1564
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -523,7 +523,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Equals
     path: ../NVAPIWrapper/NVAPIApiHelper.cs
-    startLine: 1579
+    startLine: 1590
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -560,7 +560,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Equals
     path: ../NVAPIWrapper/NVAPIApiHelper.cs
-    startLine: 1600
+    startLine: 1611
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -599,7 +599,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetHashCode
     path: ../NVAPIWrapper/NVAPIApiHelper.cs
-    startLine: 1606
+    startLine: 1617
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -631,7 +631,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: op_Equality
     path: ../NVAPIWrapper/NVAPIApiHelper.cs
-    startLine: 1632
+    startLine: 1643
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -672,7 +672,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: op_Inequality
     path: ../NVAPIWrapper/NVAPIApiHelper.cs
-    startLine: 1640
+    startLine: 1651
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper

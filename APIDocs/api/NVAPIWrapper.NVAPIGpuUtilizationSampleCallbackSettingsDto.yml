@@ -32,7 +32,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPIGpuUtilizationSampleCallbackSettingsDto
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 4763
+    startLine: 4869
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -66,7 +66,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: CallbackParam
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 4765
+    startLine: 4871
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -95,7 +95,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: CallbackPeriodMs
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 4766
+    startLine: 4872
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -124,7 +124,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Callback
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 4767
+    startLine: 4873
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -153,7 +153,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SuperReserved
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 4768
+    startLine: 4874
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -182,7 +182,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: PeriodicReserved
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 4769
+    startLine: 4875
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -211,7 +211,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Reserved
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 4770
+    startLine: 4876
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -240,7 +240,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: .ctor
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 4772
+    startLine: 4878
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -282,7 +282,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: ToNative
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 4788
+    startLine: 4894
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -310,7 +310,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Equals
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 4822
+    startLine: 4928
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -347,7 +347,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Equals
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 4832
+    startLine: 4938
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -386,7 +386,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetHashCode
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 4834
+    startLine: 4940
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -418,7 +418,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: op_Equality
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 4848
+    startLine: 4954
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -454,7 +454,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: op_Inequality
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 4849
+    startLine: 4955
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper

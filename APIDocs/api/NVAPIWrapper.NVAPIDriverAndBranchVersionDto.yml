@@ -27,7 +27,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPIDriverAndBranchVersionDto
     path: ../NVAPIWrapper/NVAPIApiHelper.cs
-    startLine: 1418
+    startLine: 1429
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -61,7 +61,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: DriverVersion
     path: ../NVAPIWrapper/NVAPIApiHelper.cs
-    startLine: 1421
+    startLine: 1432
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -92,7 +92,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Branch
     path: ../NVAPIWrapper/NVAPIApiHelper.cs
-    startLine: 1424
+    startLine: 1435
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -123,7 +123,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: .ctor
     path: ../NVAPIWrapper/NVAPIApiHelper.cs
-    startLine: 1431
+    startLine: 1442
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -161,7 +161,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Equals
     path: ../NVAPIWrapper/NVAPIApiHelper.cs
-    startLine: 1442
+    startLine: 1453
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -198,7 +198,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Equals
     path: ../NVAPIWrapper/NVAPIApiHelper.cs
-    startLine: 1452
+    startLine: 1463
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -237,7 +237,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetHashCode
     path: ../NVAPIWrapper/NVAPIApiHelper.cs
-    startLine: 1461
+    startLine: 1472
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -269,7 +269,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: op_Equality
     path: ../NVAPIWrapper/NVAPIApiHelper.cs
-    startLine: 1476
+    startLine: 1487
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -310,7 +310,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: op_Inequality
     path: ../NVAPIWrapper/NVAPIApiHelper.cs
-    startLine: 1484
+    startLine: 1495
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper

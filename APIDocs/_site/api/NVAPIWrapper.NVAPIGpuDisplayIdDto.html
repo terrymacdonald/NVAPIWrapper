@@ -89,7 +89,7 @@
 
 
   <h1 id="NVAPIWrapper_NVAPIGpuDisplayIdDto" data-uid="NVAPIWrapper.NVAPIGpuDisplayIdDto" class="text-break">
-Struct NVAPIGpuDisplayIdDto  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L2851"><i class="bi bi-code-slash"></i></a>
+Struct NVAPIGpuDisplayIdDto  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L2950"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -145,16 +145,16 @@ Struct NVAPIGpuDisplayIdDto  <a class="header-action link-secondary" title="View
 
   <a id="NVAPIWrapper_NVAPIGpuDisplayIdDto__ctor_" data-uid="NVAPIWrapper.NVAPIGpuDisplayIdDto.#ctor*"></a>
 
-  <h3 id="NVAPIWrapper_NVAPIGpuDisplayIdDto__ctor_NVAPIWrapper_NV_MONITOR_CONN_TYPE_System_UInt32_System_Boolean_System_Boolean_System_Boolean_System_Boolean_System_Boolean_System_Boolean_System_Boolean_" data-uid="NVAPIWrapper.NVAPIGpuDisplayIdDto.#ctor(NVAPIWrapper.NV_MONITOR_CONN_TYPE,System.UInt32,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean)">
-  NVAPIGpuDisplayIdDto(NV_MONITOR_CONN_TYPE, uint, bool, bool, bool, bool, bool, bool, bool)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L2863"><i class="bi bi-code-slash"></i></a>
+  <h3 id="NVAPIWrapper_NVAPIGpuDisplayIdDto__ctor_NVAPIWrapper_NV_MONITOR_CONN_TYPE_System_UInt32_System_Boolean_System_Boolean_System_Boolean_System_Boolean_System_Boolean_System_Boolean_System_Boolean_System_Boolean_" data-uid="NVAPIWrapper.NVAPIGpuDisplayIdDto.#ctor(NVAPIWrapper.NV_MONITOR_CONN_TYPE,System.UInt32,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean)">
+  NVAPIGpuDisplayIdDto(NV_MONITOR_CONN_TYPE, uint, bool, bool, bool, bool, bool, bool, bool, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L2963"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public NVAPIGpuDisplayIdDto(NV_MONITOR_CONN_TYPE connectorType, uint displayId, bool isDynamic, bool isMultiStreamRootNode, bool isActive, bool isCluster, bool isOsVisible, bool isWfd, bool isConnected)</code></pre>
+    <pre><code class="lang-csharp hljs">public NVAPIGpuDisplayIdDto(NV_MONITOR_CONN_TYPE connectorType, uint displayId, bool isDynamic, bool isMultiStreamRootNode, bool isActive, bool isCluster, bool isOsVisible, bool isWfd, bool isConnected, bool isPhysicallyConnected)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -177,6 +177,8 @@ Struct NVAPIGpuDisplayIdDto  <a class="header-action link-secondary" title="View
     <dd></dd>
     <dt><code>isConnected</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
     <dd></dd>
+    <dt><code>isPhysicallyConnected</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
   </dl>
 
 
@@ -198,7 +200,7 @@ Struct NVAPIGpuDisplayIdDto  <a class="header-action link-secondary" title="View
 
   <h3 id="NVAPIWrapper_NVAPIGpuDisplayIdDto_ConnectorType" data-uid="NVAPIWrapper.NVAPIGpuDisplayIdDto.ConnectorType">
   ConnectorType
-  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L2853"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L2952"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -229,7 +231,7 @@ Struct NVAPIGpuDisplayIdDto  <a class="header-action link-secondary" title="View
 
   <h3 id="NVAPIWrapper_NVAPIGpuDisplayIdDto_DisplayId" data-uid="NVAPIWrapper.NVAPIGpuDisplayIdDto.DisplayId">
   DisplayId
-  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L2854"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L2953"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -260,7 +262,7 @@ Struct NVAPIGpuDisplayIdDto  <a class="header-action link-secondary" title="View
 
   <h3 id="NVAPIWrapper_NVAPIGpuDisplayIdDto_IsActive" data-uid="NVAPIWrapper.NVAPIGpuDisplayIdDto.IsActive">
   IsActive
-  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L2857"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L2956"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -291,7 +293,7 @@ Struct NVAPIGpuDisplayIdDto  <a class="header-action link-secondary" title="View
 
   <h3 id="NVAPIWrapper_NVAPIGpuDisplayIdDto_IsCluster" data-uid="NVAPIWrapper.NVAPIGpuDisplayIdDto.IsCluster">
   IsCluster
-  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L2858"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L2957"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -322,7 +324,7 @@ Struct NVAPIGpuDisplayIdDto  <a class="header-action link-secondary" title="View
 
   <h3 id="NVAPIWrapper_NVAPIGpuDisplayIdDto_IsConnected" data-uid="NVAPIWrapper.NVAPIGpuDisplayIdDto.IsConnected">
   IsConnected
-  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L2861"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L2960"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -353,7 +355,7 @@ Struct NVAPIGpuDisplayIdDto  <a class="header-action link-secondary" title="View
 
   <h3 id="NVAPIWrapper_NVAPIGpuDisplayIdDto_IsDynamic" data-uid="NVAPIWrapper.NVAPIGpuDisplayIdDto.IsDynamic">
   IsDynamic
-  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L2855"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L2954"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -384,7 +386,7 @@ Struct NVAPIGpuDisplayIdDto  <a class="header-action link-secondary" title="View
 
   <h3 id="NVAPIWrapper_NVAPIGpuDisplayIdDto_IsMultiStreamRootNode" data-uid="NVAPIWrapper.NVAPIGpuDisplayIdDto.IsMultiStreamRootNode">
   IsMultiStreamRootNode
-  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L2856"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L2955"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -415,7 +417,7 @@ Struct NVAPIGpuDisplayIdDto  <a class="header-action link-secondary" title="View
 
   <h3 id="NVAPIWrapper_NVAPIGpuDisplayIdDto_IsOSVisible" data-uid="NVAPIWrapper.NVAPIGpuDisplayIdDto.IsOSVisible">
   IsOSVisible
-  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L2859"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L2958"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -442,11 +444,42 @@ Struct NVAPIGpuDisplayIdDto  <a class="header-action link-secondary" title="View
 
 
 
+  <a id="NVAPIWrapper_NVAPIGpuDisplayIdDto_IsPhysicallyConnected_" data-uid="NVAPIWrapper.NVAPIGpuDisplayIdDto.IsPhysicallyConnected*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIGpuDisplayIdDto_IsPhysicallyConnected" data-uid="NVAPIWrapper.NVAPIGpuDisplayIdDto.IsPhysicallyConnected">
+  IsPhysicallyConnected
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L2961"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsPhysicallyConnected { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="NVAPIWrapper_NVAPIGpuDisplayIdDto_IsWfd_" data-uid="NVAPIWrapper.NVAPIGpuDisplayIdDto.IsWfd*"></a>
 
   <h3 id="NVAPIWrapper_NVAPIGpuDisplayIdDto_IsWfd" data-uid="NVAPIWrapper.NVAPIGpuDisplayIdDto.IsWfd">
   IsWfd
-  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L2860"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L2959"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -481,7 +514,7 @@ Struct NVAPIGpuDisplayIdDto  <a class="header-action link-secondary" title="View
 
   <h3 id="NVAPIWrapper_NVAPIGpuDisplayIdDto_Equals_NVAPIWrapper_NVAPIGpuDisplayIdDto_" data-uid="NVAPIWrapper.NVAPIGpuDisplayIdDto.Equals(NVAPIWrapper.NVAPIGpuDisplayIdDto)">
   Equals(NVAPIGpuDisplayIdDto)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L2928"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L3032"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Indicates whether the current object is equal to another object of the same type.</p>
@@ -520,7 +553,7 @@ Struct NVAPIGpuDisplayIdDto  <a class="header-action link-secondary" title="View
 
   <h3 id="NVAPIWrapper_NVAPIGpuDisplayIdDto_Equals_System_Object_" data-uid="NVAPIWrapper.NVAPIGpuDisplayIdDto.Equals(System.Object)">
   Equals(object?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L2941"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L3046"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Indicates whether this instance and a specified object are equal.</p>
@@ -559,7 +592,7 @@ Struct NVAPIGpuDisplayIdDto  <a class="header-action link-secondary" title="View
 
   <h3 id="NVAPIWrapper_NVAPIGpuDisplayIdDto_FromNative_NVAPIWrapper__NV_GPU_DISPLAYIDS_" data-uid="NVAPIWrapper.NVAPIGpuDisplayIdDto.FromNative(NVAPIWrapper._NV_GPU_DISPLAYIDS)">
   FromNative(_NV_GPU_DISPLAYIDS)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L2885"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L2987"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -595,7 +628,7 @@ Struct NVAPIGpuDisplayIdDto  <a class="header-action link-secondary" title="View
 
   <h3 id="NVAPIWrapper_NVAPIGpuDisplayIdDto_FromNative_NVAPIWrapper__NV_GPU_DISPLAYIDS___System_UInt32_" data-uid="NVAPIWrapper.NVAPIGpuDisplayIdDto.FromNative(NVAPIWrapper._NV_GPU_DISPLAYIDS[],System.UInt32)">
   FromNative(_NV_GPU_DISPLAYIDS[], uint)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L2899"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L3002"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -633,7 +666,7 @@ Struct NVAPIGpuDisplayIdDto  <a class="header-action link-secondary" title="View
 
   <h3 id="NVAPIWrapper_NVAPIGpuDisplayIdDto_GetHashCode" data-uid="NVAPIWrapper.NVAPIGpuDisplayIdDto.GetHashCode">
   GetHashCode()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L2943"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L3048"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Returns the hash code for this instance.</p>
@@ -666,7 +699,7 @@ Struct NVAPIGpuDisplayIdDto  <a class="header-action link-secondary" title="View
 
   <h3 id="NVAPIWrapper_NVAPIGpuDisplayIdDto_ToNative" data-uid="NVAPIWrapper.NVAPIGpuDisplayIdDto.ToNative">
   ToNative()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L2911"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L3014"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -701,7 +734,7 @@ Struct NVAPIGpuDisplayIdDto  <a class="header-action link-secondary" title="View
 
   <h3 id="NVAPIWrapper_NVAPIGpuDisplayIdDto_op_Equality_NVAPIWrapper_NVAPIGpuDisplayIdDto_NVAPIWrapper_NVAPIGpuDisplayIdDto_" data-uid="NVAPIWrapper.NVAPIGpuDisplayIdDto.op_Equality(NVAPIWrapper.NVAPIGpuDisplayIdDto,NVAPIWrapper.NVAPIGpuDisplayIdDto)">
   operator ==(NVAPIGpuDisplayIdDto, NVAPIGpuDisplayIdDto)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L2960"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L3066"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -739,7 +772,7 @@ Struct NVAPIGpuDisplayIdDto  <a class="header-action link-secondary" title="View
 
   <h3 id="NVAPIWrapper_NVAPIGpuDisplayIdDto_op_Inequality_NVAPIWrapper_NVAPIGpuDisplayIdDto_NVAPIWrapper_NVAPIGpuDisplayIdDto_" data-uid="NVAPIWrapper.NVAPIGpuDisplayIdDto.op_Inequality(NVAPIWrapper.NVAPIGpuDisplayIdDto,NVAPIWrapper.NVAPIGpuDisplayIdDto)">
   operator !=(NVAPIGpuDisplayIdDto, NVAPIGpuDisplayIdDto)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L2961"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L3067"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -777,7 +810,7 @@ Struct NVAPIGpuDisplayIdDto  <a class="header-action link-secondary" title="View
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L2851" class="edit-link">Edit this page</a>
+          <a href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L2950" class="edit-link">Edit this page</a>
         </div>
 
 

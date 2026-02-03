@@ -34,7 +34,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPINGXOverrideStateDto
     path: ../NVAPIWrapper/NVAPIApiHelper.cs
-    startLine: 1030
+    startLine: 1041
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -68,7 +68,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: .ctor
     path: ../NVAPIWrapper/NVAPIApiHelper.cs
-    startLine: 1035
+    startLine: 1046
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -118,7 +118,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: ProcessId
     path: ../NVAPIWrapper/NVAPIApiHelper.cs
-    startLine: 1060
+    startLine: 1071
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -149,7 +149,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: FeedbackMaskSr
     path: ../NVAPIWrapper/NVAPIApiHelper.cs
-    startLine: 1065
+    startLine: 1076
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -180,7 +180,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: FeedbackMaskRr
     path: ../NVAPIWrapper/NVAPIApiHelper.cs
-    startLine: 1070
+    startLine: 1081
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -211,7 +211,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: FeedbackMaskFg
     path: ../NVAPIWrapper/NVAPIApiHelper.cs
-    startLine: 1075
+    startLine: 1086
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -242,7 +242,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: ScalingRatio
     path: ../NVAPIWrapper/NVAPIApiHelper.cs
-    startLine: 1080
+    startLine: 1091
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -273,7 +273,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: PerformanceMode
     path: ../NVAPIWrapper/NVAPIApiHelper.cs
-    startLine: 1085
+    startLine: 1096
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -304,7 +304,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: RenderPreset
     path: ../NVAPIWrapper/NVAPIApiHelper.cs
-    startLine: 1090
+    startLine: 1101
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -335,7 +335,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: FrameGenerationCount
     path: ../NVAPIWrapper/NVAPIApiHelper.cs
-    startLine: 1095
+    startLine: 1106
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -366,7 +366,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: FrameGenerationPreset
     path: ../NVAPIWrapper/NVAPIApiHelper.cs
-    startLine: 1100
+    startLine: 1111
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -397,7 +397,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Equals
     path: ../NVAPIWrapper/NVAPIApiHelper.cs
-    startLine: 1121
+    startLine: 1132
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -434,7 +434,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Equals
     path: ../NVAPIWrapper/NVAPIApiHelper.cs
-    startLine: 1139
+    startLine: 1150
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -473,7 +473,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetHashCode
     path: ../NVAPIWrapper/NVAPIApiHelper.cs
-    startLine: 1145
+    startLine: 1156
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -505,7 +505,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: op_Equality
     path: ../NVAPIWrapper/NVAPIApiHelper.cs
-    startLine: 1166
+    startLine: 1177
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -546,7 +546,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: op_Inequality
     path: ../NVAPIWrapper/NVAPIApiHelper.cs
-    startLine: 1174
+    startLine: 1185
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper

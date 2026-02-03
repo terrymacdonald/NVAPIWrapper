@@ -7,6 +7,7 @@ items:
   children:
   - NVAPIWrapper.NVAPIDisplayHelper.AcquireDedicatedDisplay(System.Nullable{System.UInt32})
   - NVAPIWrapper.NVAPIDisplayHelper.ColorControl(NVAPIWrapper.NVAPIDisplayColorDataDto)
+  - NVAPIWrapper.NVAPIDisplayHelper.ConnectorType
   - NVAPIWrapper.NVAPIDisplayHelper.CreateAdaptiveSyncGetData
   - NVAPIWrapper.NVAPIDisplayHelper.CreateAdaptiveSyncSetData
   - NVAPIWrapper.NVAPIDisplayHelper.CreateColorData
@@ -33,6 +34,7 @@ items:
   - NVAPIWrapper.NVAPIDisplayHelper.CreateVrrInfo
   - NVAPIWrapper.NVAPIDisplayHelper.DeleteCustomDisplay(System.UInt32[],NVAPIWrapper.NVAPICustomDisplayDto[])
   - NVAPIWrapper.NVAPIDisplayHelper.DisableHWCursor
+  - NVAPIWrapper.NVAPIDisplayHelper.DisplayId
   - NVAPIWrapper.NVAPIDisplayHelper.Dispose
   - NVAPIWrapper.NVAPIDisplayHelper.EnableHWCursor
   - NVAPIWrapper.NVAPIDisplayHelper.EnumCustomDisplay(System.UInt32,System.Nullable{System.UInt32})
@@ -71,6 +73,14 @@ items:
   - NVAPIWrapper.NVAPIDisplayHelper.GetVrrInfo
   - NVAPIWrapper.NVAPIDisplayHelper.HdrColorControl(NVAPIWrapper.NVAPIHdrColorDataDto)
   - NVAPIWrapper.NVAPIDisplayHelper.InfoFrameControl(NVAPIWrapper.NVAPIInfoFrameDataDto)
+  - NVAPIWrapper.NVAPIDisplayHelper.IsActive
+  - NVAPIWrapper.NVAPIDisplayHelper.IsCluster
+  - NVAPIWrapper.NVAPIDisplayHelper.IsConnected
+  - NVAPIWrapper.NVAPIDisplayHelper.IsDynamic
+  - NVAPIWrapper.NVAPIDisplayHelper.IsMultiStreamRootNode
+  - NVAPIWrapper.NVAPIDisplayHelper.IsOSVisible
+  - NVAPIWrapper.NVAPIDisplayHelper.IsPhysicallyConnected
+  - NVAPIWrapper.NVAPIDisplayHelper.IsWfd
   - NVAPIWrapper.NVAPIDisplayHelper.ReleaseDedicatedDisplay(System.Nullable{System.UInt32})
   - NVAPIWrapper.NVAPIDisplayHelper.RevertCustomDisplayTrial(System.UInt32[])
   - NVAPIWrapper.NVAPIDisplayHelper.SaveCustomDisplay(System.UInt32[],System.Boolean,System.Boolean)
@@ -120,6 +130,316 @@ items:
   - System.Object.GetType
   - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.ToString
+- uid: NVAPIWrapper.NVAPIDisplayHelper.DisplayId
+  commentId: P:NVAPIWrapper.NVAPIDisplayHelper.DisplayId
+  id: DisplayId
+  parent: NVAPIWrapper.NVAPIDisplayHelper
+  langs:
+  - csharp
+  - vb
+  name: DisplayId
+  nameWithType: NVAPIDisplayHelper.DisplayId
+  fullName: NVAPIWrapper.NVAPIDisplayHelper.DisplayId
+  type: Property
+  source:
+    remote:
+      path: NVAPIWrapper/NVAPIDisplayHelper.cs
+      branch: main
+      repo: https://github.com/terrymacdonald/NVAPIWrapper.git
+    id: DisplayId
+    path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
+    startLine: 85
+  assemblies:
+  - NVAPIWrapper
+  namespace: NVAPIWrapper
+  summary: Get the display ID for this handle when available.
+  example: []
+  syntax:
+    content: public uint DisplayId { get; }
+    parameters: []
+    return:
+      type: System.UInt32
+    content.vb: Public ReadOnly Property DisplayId As UInteger
+  overload: NVAPIWrapper.NVAPIDisplayHelper.DisplayId*
+- uid: NVAPIWrapper.NVAPIDisplayHelper.ConnectorType
+  commentId: P:NVAPIWrapper.NVAPIDisplayHelper.ConnectorType
+  id: ConnectorType
+  parent: NVAPIWrapper.NVAPIDisplayHelper
+  langs:
+  - csharp
+  - vb
+  name: ConnectorType
+  nameWithType: NVAPIDisplayHelper.ConnectorType
+  fullName: NVAPIWrapper.NVAPIDisplayHelper.ConnectorType
+  type: Property
+  source:
+    remote:
+      path: NVAPIWrapper/NVAPIDisplayHelper.cs
+      branch: main
+      repo: https://github.com/terrymacdonald/NVAPIWrapper.git
+    id: ConnectorType
+    path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
+    startLine: 90
+  assemblies:
+  - NVAPIWrapper
+  namespace: NVAPIWrapper
+  summary: Get the connector type for this display when available.
+  example: []
+  syntax:
+    content: public NV_MONITOR_CONN_TYPE ConnectorType { get; }
+    parameters: []
+    return:
+      type: NVAPIWrapper.NV_MONITOR_CONN_TYPE
+    content.vb: Public ReadOnly Property ConnectorType As NV_MONITOR_CONN_TYPE
+  overload: NVAPIWrapper.NVAPIDisplayHelper.ConnectorType*
+- uid: NVAPIWrapper.NVAPIDisplayHelper.IsDynamic
+  commentId: P:NVAPIWrapper.NVAPIDisplayHelper.IsDynamic
+  id: IsDynamic
+  parent: NVAPIWrapper.NVAPIDisplayHelper
+  langs:
+  - csharp
+  - vb
+  name: IsDynamic
+  nameWithType: NVAPIDisplayHelper.IsDynamic
+  fullName: NVAPIWrapper.NVAPIDisplayHelper.IsDynamic
+  type: Property
+  source:
+    remote:
+      path: NVAPIWrapper/NVAPIDisplayHelper.cs
+      branch: main
+      repo: https://github.com/terrymacdonald/NVAPIWrapper.git
+    id: IsDynamic
+    path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
+    startLine: 95
+  assemblies:
+  - NVAPIWrapper
+  namespace: NVAPIWrapper
+  summary: Get whether this display is part of an MST topology and is dynamic.
+  example: []
+  syntax:
+    content: public bool IsDynamic { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsDynamic As Boolean
+  overload: NVAPIWrapper.NVAPIDisplayHelper.IsDynamic*
+- uid: NVAPIWrapper.NVAPIDisplayHelper.IsMultiStreamRootNode
+  commentId: P:NVAPIWrapper.NVAPIDisplayHelper.IsMultiStreamRootNode
+  id: IsMultiStreamRootNode
+  parent: NVAPIWrapper.NVAPIDisplayHelper
+  langs:
+  - csharp
+  - vb
+  name: IsMultiStreamRootNode
+  nameWithType: NVAPIDisplayHelper.IsMultiStreamRootNode
+  fullName: NVAPIWrapper.NVAPIDisplayHelper.IsMultiStreamRootNode
+  type: Property
+  source:
+    remote:
+      path: NVAPIWrapper/NVAPIDisplayHelper.cs
+      branch: main
+      repo: https://github.com/terrymacdonald/NVAPIWrapper.git
+    id: IsMultiStreamRootNode
+    path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
+    startLine: 100
+  assemblies:
+  - NVAPIWrapper
+  namespace: NVAPIWrapper
+  summary: Get whether this display is the multi-stream root node.
+  example: []
+  syntax:
+    content: public bool IsMultiStreamRootNode { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsMultiStreamRootNode As Boolean
+  overload: NVAPIWrapper.NVAPIDisplayHelper.IsMultiStreamRootNode*
+- uid: NVAPIWrapper.NVAPIDisplayHelper.IsActive
+  commentId: P:NVAPIWrapper.NVAPIDisplayHelper.IsActive
+  id: IsActive
+  parent: NVAPIWrapper.NVAPIDisplayHelper
+  langs:
+  - csharp
+  - vb
+  name: IsActive
+  nameWithType: NVAPIDisplayHelper.IsActive
+  fullName: NVAPIWrapper.NVAPIDisplayHelper.IsActive
+  type: Property
+  source:
+    remote:
+      path: NVAPIWrapper/NVAPIDisplayHelper.cs
+      branch: main
+      repo: https://github.com/terrymacdonald/NVAPIWrapper.git
+    id: IsActive
+    path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
+    startLine: 105
+  assemblies:
+  - NVAPIWrapper
+  namespace: NVAPIWrapper
+  summary: Get whether this display is actively driven.
+  example: []
+  syntax:
+    content: public bool IsActive { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsActive As Boolean
+  overload: NVAPIWrapper.NVAPIDisplayHelper.IsActive*
+- uid: NVAPIWrapper.NVAPIDisplayHelper.IsCluster
+  commentId: P:NVAPIWrapper.NVAPIDisplayHelper.IsCluster
+  id: IsCluster
+  parent: NVAPIWrapper.NVAPIDisplayHelper
+  langs:
+  - csharp
+  - vb
+  name: IsCluster
+  nameWithType: NVAPIDisplayHelper.IsCluster
+  fullName: NVAPIWrapper.NVAPIDisplayHelper.IsCluster
+  type: Property
+  source:
+    remote:
+      path: NVAPIWrapper/NVAPIDisplayHelper.cs
+      branch: main
+      repo: https://github.com/terrymacdonald/NVAPIWrapper.git
+    id: IsCluster
+    path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
+    startLine: 110
+  assemblies:
+  - NVAPIWrapper
+  namespace: NVAPIWrapper
+  summary: Get whether this display is the representative display.
+  example: []
+  syntax:
+    content: public bool IsCluster { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsCluster As Boolean
+  overload: NVAPIWrapper.NVAPIDisplayHelper.IsCluster*
+- uid: NVAPIWrapper.NVAPIDisplayHelper.IsOSVisible
+  commentId: P:NVAPIWrapper.NVAPIDisplayHelper.IsOSVisible
+  id: IsOSVisible
+  parent: NVAPIWrapper.NVAPIDisplayHelper
+  langs:
+  - csharp
+  - vb
+  name: IsOSVisible
+  nameWithType: NVAPIDisplayHelper.IsOSVisible
+  fullName: NVAPIWrapper.NVAPIDisplayHelper.IsOSVisible
+  type: Property
+  source:
+    remote:
+      path: NVAPIWrapper/NVAPIDisplayHelper.cs
+      branch: main
+      repo: https://github.com/terrymacdonald/NVAPIWrapper.git
+    id: IsOSVisible
+    path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
+    startLine: 115
+  assemblies:
+  - NVAPIWrapper
+  namespace: NVAPIWrapper
+  summary: Get whether this display is reported to the OS.
+  example: []
+  syntax:
+    content: public bool IsOSVisible { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsOSVisible As Boolean
+  overload: NVAPIWrapper.NVAPIDisplayHelper.IsOSVisible*
+- uid: NVAPIWrapper.NVAPIDisplayHelper.IsWfd
+  commentId: P:NVAPIWrapper.NVAPIDisplayHelper.IsWfd
+  id: IsWfd
+  parent: NVAPIWrapper.NVAPIDisplayHelper
+  langs:
+  - csharp
+  - vb
+  name: IsWfd
+  nameWithType: NVAPIDisplayHelper.IsWfd
+  fullName: NVAPIWrapper.NVAPIDisplayHelper.IsWfd
+  type: Property
+  source:
+    remote:
+      path: NVAPIWrapper/NVAPIDisplayHelper.cs
+      branch: main
+      repo: https://github.com/terrymacdonald/NVAPIWrapper.git
+    id: IsWfd
+    path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
+    startLine: 120
+  assemblies:
+  - NVAPIWrapper
+  namespace: NVAPIWrapper
+  summary: Get whether this display is a WFD display (deprecated in NVAPI).
+  example: []
+  syntax:
+    content: public bool IsWfd { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsWfd As Boolean
+  overload: NVAPIWrapper.NVAPIDisplayHelper.IsWfd*
+- uid: NVAPIWrapper.NVAPIDisplayHelper.IsConnected
+  commentId: P:NVAPIWrapper.NVAPIDisplayHelper.IsConnected
+  id: IsConnected
+  parent: NVAPIWrapper.NVAPIDisplayHelper
+  langs:
+  - csharp
+  - vb
+  name: IsConnected
+  nameWithType: NVAPIDisplayHelper.IsConnected
+  fullName: NVAPIWrapper.NVAPIDisplayHelper.IsConnected
+  type: Property
+  source:
+    remote:
+      path: NVAPIWrapper/NVAPIDisplayHelper.cs
+      branch: main
+      repo: https://github.com/terrymacdonald/NVAPIWrapper.git
+    id: IsConnected
+    path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
+    startLine: 125
+  assemblies:
+  - NVAPIWrapper
+  namespace: NVAPIWrapper
+  summary: Get whether this display is connected.
+  example: []
+  syntax:
+    content: public bool IsConnected { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsConnected As Boolean
+  overload: NVAPIWrapper.NVAPIDisplayHelper.IsConnected*
+- uid: NVAPIWrapper.NVAPIDisplayHelper.IsPhysicallyConnected
+  commentId: P:NVAPIWrapper.NVAPIDisplayHelper.IsPhysicallyConnected
+  id: IsPhysicallyConnected
+  parent: NVAPIWrapper.NVAPIDisplayHelper
+  langs:
+  - csharp
+  - vb
+  name: IsPhysicallyConnected
+  nameWithType: NVAPIDisplayHelper.IsPhysicallyConnected
+  fullName: NVAPIWrapper.NVAPIDisplayHelper.IsPhysicallyConnected
+  type: Property
+  source:
+    remote:
+      path: NVAPIWrapper/NVAPIDisplayHelper.cs
+      branch: main
+      repo: https://github.com/terrymacdonald/NVAPIWrapper.git
+    id: IsPhysicallyConnected
+    path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
+    startLine: 130
+  assemblies:
+  - NVAPIWrapper
+  namespace: NVAPIWrapper
+  summary: Get whether this display is physically connected.
+  example: []
+  syntax:
+    content: public bool IsPhysicallyConnected { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsPhysicallyConnected As Boolean
+  overload: NVAPIWrapper.NVAPIDisplayHelper.IsPhysicallyConnected*
 - uid: NVAPIWrapper.NVAPIDisplayHelper.CreateEdidData
   commentId: M:NVAPIWrapper.NVAPIDisplayHelper.CreateEdidData
   id: CreateEdidData
@@ -138,7 +458,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: CreateEdidData
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 81
+    startLine: 135
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -168,7 +488,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: CreateTimingInput
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 94
+    startLine: 148
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -198,7 +518,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: CreateMonitorCapabilities
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 105
+    startLine: 159
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -228,7 +548,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: CreateDisplayPortInfo
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 116
+    startLine: 170
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -258,7 +578,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: CreateDisplayPortConfig
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 127
+    startLine: 181
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -288,7 +608,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: CreateHdmiSupportInfo
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 138
+    startLine: 192
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -318,7 +638,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: CreateVrrInfo
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 149
+    startLine: 203
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -348,7 +668,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: CreateAdaptiveSyncGetData
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 160
+    startLine: 214
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -378,7 +698,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: CreateAdaptiveSyncSetData
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 171
+    startLine: 225
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -408,7 +728,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: CreateVirtualRefreshRateGetData
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 182
+    startLine: 236
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -438,7 +758,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: CreateVirtualRefreshRateSetData
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 193
+    startLine: 247
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -468,7 +788,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: CreatePreferredStereoDisplayGet
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 204
+    startLine: 258
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -498,7 +818,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: CreatePreferredStereoDisplaySet
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 215
+    startLine: 269
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -528,7 +848,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: CreateInfoFrameData
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 226
+    startLine: 280
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -558,7 +878,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: CreateColorData
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 238
+    startLine: 292
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -588,7 +908,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: CreateHdrCapabilities
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 250
+    startLine: 304
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -618,7 +938,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: CreateHdrColorData
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 261
+    startLine: 315
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -648,7 +968,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: CreateHdrMetadata
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 272
+    startLine: 326
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -678,7 +998,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: CreateDisplayColorimetry
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 283
+    startLine: 337
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -708,7 +1028,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: CreateCustomDisplay
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 294
+    startLine: 348
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -738,7 +1058,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: CreateManagedDedicatedDisplayInfo
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 305
+    startLine: 359
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -768,7 +1088,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: CreateManagedDedicatedDisplayMetadata
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 316
+    startLine: 370
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -798,7 +1118,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: CreateDisplayIdInfoData
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 327
+    startLine: 381
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -828,7 +1148,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: CreateTargetInfoData
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 338
+    startLine: 392
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -858,7 +1178,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetPhysicalGpusFromDisplay
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 350
+    startLine: 404
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -889,7 +1209,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetLogicalGpuFromDisplay
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 385
+    startLine: 439
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -920,7 +1240,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetAssociatedNvidiaDisplayName
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 408
+    startLine: 462
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -951,7 +1271,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetAssociatedDisplayOutputId
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 435
+    startLine: 489
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -982,7 +1302,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetGpuAndOutputIdFromDisplayId
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 457
+    startLine: 511
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -1013,7 +1333,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetPhysicalGpuFromDisplayId
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 485
+    startLine: 539
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -1044,7 +1364,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetVBlankCounter
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 512
+    startLine: 566
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -1075,7 +1395,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetDisplayConfig
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 534
+    startLine: 588
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -1106,7 +1426,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SetDisplayConfig
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 574
+    startLine: 628
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -1147,7 +1467,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetDisplayIdByDisplayName
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 609
+    startLine: 663
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -1185,7 +1505,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetGdiPrimaryDisplayId
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 631
+    startLine: 685
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -1216,7 +1536,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetSupportedViews
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 653
+    startLine: 707
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -1247,7 +1567,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetEdidData
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 695
+    startLine: 749
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -1282,7 +1602,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetTiming
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 750
+    startLine: 804
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -1317,7 +1637,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetMonitorCapabilities
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 778
+    startLine: 832
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -1348,7 +1668,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetMonitorColorCapabilities
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 805
+    startLine: 859
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -1379,7 +1699,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetDisplayPortInfo
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 870
+    startLine: 924
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -1417,7 +1737,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SetDisplayPort
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 899
+    startLine: 953
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -1458,7 +1778,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetHdmiSupportInfo
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 926
+    startLine: 980
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -1496,7 +1816,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetVrrInfo
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 953
+    startLine: 1007
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -1527,7 +1847,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetAdaptiveSyncData
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 980
+    startLine: 1034
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -1558,7 +1878,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SetAdaptiveSyncData
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 1008
+    startLine: 1062
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -1593,7 +1913,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetVirtualRefreshRateData
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 1034
+    startLine: 1088
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -1624,7 +1944,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SetVirtualRefreshRateData
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 1062
+    startLine: 1116
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -1659,7 +1979,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetPreferredStereoDisplay
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 1089
+    startLine: 1143
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -1690,7 +2010,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SetPreferredStereoDisplay
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 1114
+    startLine: 1168
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -1725,7 +2045,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: EnableHWCursor
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 1138
+    startLine: 1192
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -1756,7 +2076,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: DisableHWCursor
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 1160
+    startLine: 1214
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -1787,7 +2107,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SetRefreshRateOverride
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 1185
+    startLine: 1239
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -1831,7 +2151,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: InfoFrameControl
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 1208
+    startLine: 1262
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -1866,7 +2186,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: ColorControl
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 1235
+    startLine: 1289
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -1901,7 +2221,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetHdrCapabilities
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 1261
+    startLine: 1315
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -1932,7 +2252,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: HdrColorControl
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 1288
+    startLine: 1342
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -1967,7 +2287,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SetSourceColorSpace
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 1315
+    startLine: 1369
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -2002,7 +2322,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetSourceColorSpace
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 1341
+    startLine: 1395
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -2040,7 +2360,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SetSourceHdrMetadata
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 1368
+    startLine: 1422
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -2075,7 +2395,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetSourceHdrMetadata
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 1395
+    startLine: 1449
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -2113,7 +2433,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SetOutputMode
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 1422
+    startLine: 1476
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -2148,7 +2468,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetOutputMode
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 1448
+    startLine: 1502
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -2179,7 +2499,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SetHdrToneMapping
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 1475
+    startLine: 1529
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -2214,7 +2534,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetHdrToneMapping
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 1500
+    startLine: 1554
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -2245,7 +2565,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetColorimetry
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 1526
+    startLine: 1580
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -2276,7 +2596,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetDisplayIdInfo
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 1553
+    startLine: 1607
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -2314,7 +2634,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetDisplayIdsFromTarget
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 1583
+    startLine: 1637
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -2345,7 +2665,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetDisplayIdsFromTarget
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 1598
+    startLine: 1652
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -2386,7 +2706,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: EnumCustomDisplay
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 1630
+    startLine: 1684
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -2427,7 +2747,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: TryCustomDisplay
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 1662
+    startLine: 1716
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -2468,7 +2788,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetAssociatedNvidiaDisplayHandle
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 1703
+    startLine: 1757
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -2506,7 +2826,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: DeleteCustomDisplay
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 1743
+    startLine: 1797
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -2547,7 +2867,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SaveCustomDisplay
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 1786
+    startLine: 1840
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -2591,7 +2911,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: RevertCustomDisplayTrial
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 1820
+    startLine: 1874
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -2629,7 +2949,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetNvManagedDedicatedDisplays
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 1848
+    startLine: 1902
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -2660,7 +2980,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: AcquireDedicatedDisplay
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 1900
+    startLine: 1954
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -2698,7 +3018,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: ReleaseDedicatedDisplay
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 1933
+    startLine: 1987
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -2736,7 +3056,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetNvManagedDedicatedDisplayMetadata
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 1965
+    startLine: 2019
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -2774,7 +3094,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SetNvManagedDedicatedDisplayMetadata
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 1991
+    startLine: 2045
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -2809,7 +3129,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Dispose
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 2119
+    startLine: 2198
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -3049,6 +3369,95 @@ references:
   name: System
   nameWithType: System
   fullName: System
+- uid: NVAPIWrapper.NVAPIDisplayHelper.DisplayId*
+  commentId: Overload:NVAPIWrapper.NVAPIDisplayHelper.DisplayId
+  href: NVAPIWrapper.NVAPIDisplayHelper.html#NVAPIWrapper_NVAPIDisplayHelper_DisplayId
+  name: DisplayId
+  nameWithType: NVAPIDisplayHelper.DisplayId
+  fullName: NVAPIWrapper.NVAPIDisplayHelper.DisplayId
+- uid: System.UInt32
+  commentId: T:System.UInt32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.uint32
+  name: uint
+  nameWithType: uint
+  fullName: uint
+  nameWithType.vb: UInteger
+  fullName.vb: UInteger
+  name.vb: UInteger
+- uid: NVAPIWrapper.NVAPIDisplayHelper.ConnectorType*
+  commentId: Overload:NVAPIWrapper.NVAPIDisplayHelper.ConnectorType
+  href: NVAPIWrapper.NVAPIDisplayHelper.html#NVAPIWrapper_NVAPIDisplayHelper_ConnectorType
+  name: ConnectorType
+  nameWithType: NVAPIDisplayHelper.ConnectorType
+  fullName: NVAPIWrapper.NVAPIDisplayHelper.ConnectorType
+- uid: NVAPIWrapper.NV_MONITOR_CONN_TYPE
+  commentId: T:NVAPIWrapper.NV_MONITOR_CONN_TYPE
+  parent: NVAPIWrapper
+  href: NVAPIWrapper.NV_MONITOR_CONN_TYPE.html
+  name: NV_MONITOR_CONN_TYPE
+  nameWithType: NV_MONITOR_CONN_TYPE
+  fullName: NVAPIWrapper.NV_MONITOR_CONN_TYPE
+- uid: NVAPIWrapper.NVAPIDisplayHelper.IsDynamic*
+  commentId: Overload:NVAPIWrapper.NVAPIDisplayHelper.IsDynamic
+  href: NVAPIWrapper.NVAPIDisplayHelper.html#NVAPIWrapper_NVAPIDisplayHelper_IsDynamic
+  name: IsDynamic
+  nameWithType: NVAPIDisplayHelper.IsDynamic
+  fullName: NVAPIWrapper.NVAPIDisplayHelper.IsDynamic
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: NVAPIWrapper.NVAPIDisplayHelper.IsMultiStreamRootNode*
+  commentId: Overload:NVAPIWrapper.NVAPIDisplayHelper.IsMultiStreamRootNode
+  href: NVAPIWrapper.NVAPIDisplayHelper.html#NVAPIWrapper_NVAPIDisplayHelper_IsMultiStreamRootNode
+  name: IsMultiStreamRootNode
+  nameWithType: NVAPIDisplayHelper.IsMultiStreamRootNode
+  fullName: NVAPIWrapper.NVAPIDisplayHelper.IsMultiStreamRootNode
+- uid: NVAPIWrapper.NVAPIDisplayHelper.IsActive*
+  commentId: Overload:NVAPIWrapper.NVAPIDisplayHelper.IsActive
+  href: NVAPIWrapper.NVAPIDisplayHelper.html#NVAPIWrapper_NVAPIDisplayHelper_IsActive
+  name: IsActive
+  nameWithType: NVAPIDisplayHelper.IsActive
+  fullName: NVAPIWrapper.NVAPIDisplayHelper.IsActive
+- uid: NVAPIWrapper.NVAPIDisplayHelper.IsCluster*
+  commentId: Overload:NVAPIWrapper.NVAPIDisplayHelper.IsCluster
+  href: NVAPIWrapper.NVAPIDisplayHelper.html#NVAPIWrapper_NVAPIDisplayHelper_IsCluster
+  name: IsCluster
+  nameWithType: NVAPIDisplayHelper.IsCluster
+  fullName: NVAPIWrapper.NVAPIDisplayHelper.IsCluster
+- uid: NVAPIWrapper.NVAPIDisplayHelper.IsOSVisible*
+  commentId: Overload:NVAPIWrapper.NVAPIDisplayHelper.IsOSVisible
+  href: NVAPIWrapper.NVAPIDisplayHelper.html#NVAPIWrapper_NVAPIDisplayHelper_IsOSVisible
+  name: IsOSVisible
+  nameWithType: NVAPIDisplayHelper.IsOSVisible
+  fullName: NVAPIWrapper.NVAPIDisplayHelper.IsOSVisible
+- uid: NVAPIWrapper.NVAPIDisplayHelper.IsWfd*
+  commentId: Overload:NVAPIWrapper.NVAPIDisplayHelper.IsWfd
+  href: NVAPIWrapper.NVAPIDisplayHelper.html#NVAPIWrapper_NVAPIDisplayHelper_IsWfd
+  name: IsWfd
+  nameWithType: NVAPIDisplayHelper.IsWfd
+  fullName: NVAPIWrapper.NVAPIDisplayHelper.IsWfd
+- uid: NVAPIWrapper.NVAPIDisplayHelper.IsConnected*
+  commentId: Overload:NVAPIWrapper.NVAPIDisplayHelper.IsConnected
+  href: NVAPIWrapper.NVAPIDisplayHelper.html#NVAPIWrapper_NVAPIDisplayHelper_IsConnected
+  name: IsConnected
+  nameWithType: NVAPIDisplayHelper.IsConnected
+  fullName: NVAPIWrapper.NVAPIDisplayHelper.IsConnected
+- uid: NVAPIWrapper.NVAPIDisplayHelper.IsPhysicallyConnected*
+  commentId: Overload:NVAPIWrapper.NVAPIDisplayHelper.IsPhysicallyConnected
+  href: NVAPIWrapper.NVAPIDisplayHelper.html#NVAPIWrapper_NVAPIDisplayHelper_IsPhysicallyConnected
+  name: IsPhysicallyConnected
+  nameWithType: NVAPIDisplayHelper.IsPhysicallyConnected
+  fullName: NVAPIWrapper.NVAPIDisplayHelper.IsPhysicallyConnected
 - uid: NVAPIWrapper.NVAPIDisplayHelper.CreateEdidData*
   commentId: Overload:NVAPIWrapper.NVAPIDisplayHelper.CreateEdidData
   href: NVAPIWrapper.NVAPIDisplayHelper.html#NVAPIWrapper_NVAPIDisplayHelper_CreateEdidData
@@ -3555,28 +3964,6 @@ references:
   name: NVAPIDisplayConfigDto
   nameWithType: NVAPIDisplayConfigDto
   fullName: NVAPIWrapper.NVAPIDisplayConfigDto
-- uid: System.UInt32
-  commentId: T:System.UInt32
-  parent: System
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.uint32
-  name: uint
-  nameWithType: uint
-  fullName: uint
-  nameWithType.vb: UInteger
-  fullName.vb: UInteger
-  name.vb: UInteger
-- uid: System.Boolean
-  commentId: T:System.Boolean
-  parent: System
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.boolean
-  name: bool
-  nameWithType: bool
-  fullName: bool
-  nameWithType.vb: Boolean
-  fullName.vb: Boolean
-  name.vb: Boolean
 - uid: NVAPIWrapper.NVAPIDisplayHelper.GetDisplayIdByDisplayName*
   commentId: Overload:NVAPIWrapper.NVAPIDisplayHelper.GetDisplayIdByDisplayName
   href: NVAPIWrapper.NVAPIDisplayHelper.html#NVAPIWrapper_NVAPIDisplayHelper_GetDisplayIdByDisplayName_System_String_

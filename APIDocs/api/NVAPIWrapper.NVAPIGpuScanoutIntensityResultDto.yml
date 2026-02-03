@@ -26,7 +26,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPIGpuScanoutIntensityResultDto
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 4593
+    startLine: 4699
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -60,7 +60,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: IsSticky
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 4595
+    startLine: 4701
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -89,7 +89,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: .ctor
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 4597
+    startLine: 4703
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -121,7 +121,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Equals
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 4602
+    startLine: 4708
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -158,7 +158,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Equals
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 4607
+    startLine: 4713
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -197,7 +197,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetHashCode
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 4608
+    startLine: 4714
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -229,7 +229,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: op_Equality
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 4609
+    startLine: 4715
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -265,7 +265,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: op_Inequality
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 4610
+    startLine: 4716
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper

@@ -5,7 +5,7 @@ items:
   id: NVAPIGpuDisplayIdDto
   parent: NVAPIWrapper
   children:
-  - NVAPIWrapper.NVAPIGpuDisplayIdDto.#ctor(NVAPIWrapper.NV_MONITOR_CONN_TYPE,System.UInt32,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean)
+  - NVAPIWrapper.NVAPIGpuDisplayIdDto.#ctor(NVAPIWrapper.NV_MONITOR_CONN_TYPE,System.UInt32,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean)
   - NVAPIWrapper.NVAPIGpuDisplayIdDto.ConnectorType
   - NVAPIWrapper.NVAPIGpuDisplayIdDto.DisplayId
   - NVAPIWrapper.NVAPIGpuDisplayIdDto.Equals(NVAPIWrapper.NVAPIGpuDisplayIdDto)
@@ -19,6 +19,7 @@ items:
   - NVAPIWrapper.NVAPIGpuDisplayIdDto.IsDynamic
   - NVAPIWrapper.NVAPIGpuDisplayIdDto.IsMultiStreamRootNode
   - NVAPIWrapper.NVAPIGpuDisplayIdDto.IsOSVisible
+  - NVAPIWrapper.NVAPIGpuDisplayIdDto.IsPhysicallyConnected
   - NVAPIWrapper.NVAPIGpuDisplayIdDto.IsWfd
   - NVAPIWrapper.NVAPIGpuDisplayIdDto.ToNative
   - NVAPIWrapper.NVAPIGpuDisplayIdDto.op_Equality(NVAPIWrapper.NVAPIGpuDisplayIdDto,NVAPIWrapper.NVAPIGpuDisplayIdDto)
@@ -37,7 +38,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPIGpuDisplayIdDto
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 2850
+    startLine: 2949
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -71,7 +72,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: ConnectorType
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 2852
+    startLine: 2951
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -100,7 +101,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: DisplayId
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 2853
+    startLine: 2952
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -129,7 +130,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: IsDynamic
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 2854
+    startLine: 2953
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -158,7 +159,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: IsMultiStreamRootNode
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 2855
+    startLine: 2954
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -187,7 +188,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: IsActive
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 2856
+    startLine: 2955
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -216,7 +217,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: IsCluster
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 2857
+    startLine: 2956
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -245,7 +246,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: IsOSVisible
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 2858
+    startLine: 2957
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -274,7 +275,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: IsWfd
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 2859
+    startLine: 2958
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -303,7 +304,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: IsConnected
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 2860
+    startLine: 2959
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -314,16 +315,45 @@ items:
       type: System.Boolean
     content.vb: Public ReadOnly Property IsConnected As Boolean
   overload: NVAPIWrapper.NVAPIGpuDisplayIdDto.IsConnected*
-- uid: NVAPIWrapper.NVAPIGpuDisplayIdDto.#ctor(NVAPIWrapper.NV_MONITOR_CONN_TYPE,System.UInt32,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean)
-  commentId: M:NVAPIWrapper.NVAPIGpuDisplayIdDto.#ctor(NVAPIWrapper.NV_MONITOR_CONN_TYPE,System.UInt32,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean)
-  id: '#ctor(NVAPIWrapper.NV_MONITOR_CONN_TYPE,System.UInt32,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean)'
+- uid: NVAPIWrapper.NVAPIGpuDisplayIdDto.IsPhysicallyConnected
+  commentId: P:NVAPIWrapper.NVAPIGpuDisplayIdDto.IsPhysicallyConnected
+  id: IsPhysicallyConnected
   parent: NVAPIWrapper.NVAPIGpuDisplayIdDto
   langs:
   - csharp
   - vb
-  name: NVAPIGpuDisplayIdDto(NV_MONITOR_CONN_TYPE, uint, bool, bool, bool, bool, bool, bool, bool)
-  nameWithType: NVAPIGpuDisplayIdDto.NVAPIGpuDisplayIdDto(NV_MONITOR_CONN_TYPE, uint, bool, bool, bool, bool, bool, bool, bool)
-  fullName: NVAPIWrapper.NVAPIGpuDisplayIdDto.NVAPIGpuDisplayIdDto(NVAPIWrapper.NV_MONITOR_CONN_TYPE, uint, bool, bool, bool, bool, bool, bool, bool)
+  name: IsPhysicallyConnected
+  nameWithType: NVAPIGpuDisplayIdDto.IsPhysicallyConnected
+  fullName: NVAPIWrapper.NVAPIGpuDisplayIdDto.IsPhysicallyConnected
+  type: Property
+  source:
+    remote:
+      path: NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
+      branch: main
+      repo: https://github.com/terrymacdonald/NVAPIWrapper.git
+    id: IsPhysicallyConnected
+    path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
+    startLine: 2960
+  assemblies:
+  - NVAPIWrapper
+  namespace: NVAPIWrapper
+  syntax:
+    content: public bool IsPhysicallyConnected { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsPhysicallyConnected As Boolean
+  overload: NVAPIWrapper.NVAPIGpuDisplayIdDto.IsPhysicallyConnected*
+- uid: NVAPIWrapper.NVAPIGpuDisplayIdDto.#ctor(NVAPIWrapper.NV_MONITOR_CONN_TYPE,System.UInt32,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean)
+  commentId: M:NVAPIWrapper.NVAPIGpuDisplayIdDto.#ctor(NVAPIWrapper.NV_MONITOR_CONN_TYPE,System.UInt32,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean)
+  id: '#ctor(NVAPIWrapper.NV_MONITOR_CONN_TYPE,System.UInt32,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean)'
+  parent: NVAPIWrapper.NVAPIGpuDisplayIdDto
+  langs:
+  - csharp
+  - vb
+  name: NVAPIGpuDisplayIdDto(NV_MONITOR_CONN_TYPE, uint, bool, bool, bool, bool, bool, bool, bool, bool)
+  nameWithType: NVAPIGpuDisplayIdDto.NVAPIGpuDisplayIdDto(NV_MONITOR_CONN_TYPE, uint, bool, bool, bool, bool, bool, bool, bool, bool)
+  fullName: NVAPIWrapper.NVAPIGpuDisplayIdDto.NVAPIGpuDisplayIdDto(NVAPIWrapper.NV_MONITOR_CONN_TYPE, uint, bool, bool, bool, bool, bool, bool, bool, bool)
   type: Constructor
   source:
     remote:
@@ -332,12 +362,12 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: .ctor
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 2862
+    startLine: 2962
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public NVAPIGpuDisplayIdDto(NV_MONITOR_CONN_TYPE connectorType, uint displayId, bool isDynamic, bool isMultiStreamRootNode, bool isActive, bool isCluster, bool isOsVisible, bool isWfd, bool isConnected)
+    content: public NVAPIGpuDisplayIdDto(NV_MONITOR_CONN_TYPE connectorType, uint displayId, bool isDynamic, bool isMultiStreamRootNode, bool isActive, bool isCluster, bool isOsVisible, bool isWfd, bool isConnected, bool isPhysicallyConnected)
     parameters:
     - id: connectorType
       type: NVAPIWrapper.NV_MONITOR_CONN_TYPE
@@ -357,11 +387,13 @@ items:
       type: System.Boolean
     - id: isConnected
       type: System.Boolean
-    content.vb: Public Sub New(connectorType As NV_MONITOR_CONN_TYPE, displayId As UInteger, isDynamic As Boolean, isMultiStreamRootNode As Boolean, isActive As Boolean, isCluster As Boolean, isOsVisible As Boolean, isWfd As Boolean, isConnected As Boolean)
+    - id: isPhysicallyConnected
+      type: System.Boolean
+    content.vb: Public Sub New(connectorType As NV_MONITOR_CONN_TYPE, displayId As UInteger, isDynamic As Boolean, isMultiStreamRootNode As Boolean, isActive As Boolean, isCluster As Boolean, isOsVisible As Boolean, isWfd As Boolean, isConnected As Boolean, isPhysicallyConnected As Boolean)
   overload: NVAPIWrapper.NVAPIGpuDisplayIdDto.#ctor*
-  nameWithType.vb: NVAPIGpuDisplayIdDto.New(NV_MONITOR_CONN_TYPE, UInteger, Boolean, Boolean, Boolean, Boolean, Boolean, Boolean, Boolean)
-  fullName.vb: NVAPIWrapper.NVAPIGpuDisplayIdDto.New(NVAPIWrapper.NV_MONITOR_CONN_TYPE, UInteger, Boolean, Boolean, Boolean, Boolean, Boolean, Boolean, Boolean)
-  name.vb: New(NV_MONITOR_CONN_TYPE, UInteger, Boolean, Boolean, Boolean, Boolean, Boolean, Boolean, Boolean)
+  nameWithType.vb: NVAPIGpuDisplayIdDto.New(NV_MONITOR_CONN_TYPE, UInteger, Boolean, Boolean, Boolean, Boolean, Boolean, Boolean, Boolean, Boolean)
+  fullName.vb: NVAPIWrapper.NVAPIGpuDisplayIdDto.New(NVAPIWrapper.NV_MONITOR_CONN_TYPE, UInteger, Boolean, Boolean, Boolean, Boolean, Boolean, Boolean, Boolean, Boolean)
+  name.vb: New(NV_MONITOR_CONN_TYPE, UInteger, Boolean, Boolean, Boolean, Boolean, Boolean, Boolean, Boolean, Boolean)
 - uid: NVAPIWrapper.NVAPIGpuDisplayIdDto.FromNative(NVAPIWrapper._NV_GPU_DISPLAYIDS)
   commentId: M:NVAPIWrapper.NVAPIGpuDisplayIdDto.FromNative(NVAPIWrapper._NV_GPU_DISPLAYIDS)
   id: FromNative(NVAPIWrapper._NV_GPU_DISPLAYIDS)
@@ -380,7 +412,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: FromNative
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 2884
+    startLine: 2986
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -411,7 +443,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: FromNative
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 2898
+    startLine: 3001
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -447,7 +479,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: ToNative
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 2910
+    startLine: 3013
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -475,7 +507,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Equals
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 2927
+    startLine: 3031
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -512,7 +544,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Equals
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 2940
+    startLine: 3045
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -551,7 +583,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetHashCode
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 2942
+    startLine: 3047
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -583,7 +615,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: op_Equality
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 2959
+    startLine: 3065
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -619,7 +651,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: op_Inequality
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 2960
+    startLine: 3066
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -950,9 +982,15 @@ references:
   name: IsConnected
   nameWithType: NVAPIGpuDisplayIdDto.IsConnected
   fullName: NVAPIWrapper.NVAPIGpuDisplayIdDto.IsConnected
+- uid: NVAPIWrapper.NVAPIGpuDisplayIdDto.IsPhysicallyConnected*
+  commentId: Overload:NVAPIWrapper.NVAPIGpuDisplayIdDto.IsPhysicallyConnected
+  href: NVAPIWrapper.NVAPIGpuDisplayIdDto.html#NVAPIWrapper_NVAPIGpuDisplayIdDto_IsPhysicallyConnected
+  name: IsPhysicallyConnected
+  nameWithType: NVAPIGpuDisplayIdDto.IsPhysicallyConnected
+  fullName: NVAPIWrapper.NVAPIGpuDisplayIdDto.IsPhysicallyConnected
 - uid: NVAPIWrapper.NVAPIGpuDisplayIdDto.#ctor*
   commentId: Overload:NVAPIWrapper.NVAPIGpuDisplayIdDto.#ctor
-  href: NVAPIWrapper.NVAPIGpuDisplayIdDto.html#NVAPIWrapper_NVAPIGpuDisplayIdDto__ctor_NVAPIWrapper_NV_MONITOR_CONN_TYPE_System_UInt32_System_Boolean_System_Boolean_System_Boolean_System_Boolean_System_Boolean_System_Boolean_System_Boolean_
+  href: NVAPIWrapper.NVAPIGpuDisplayIdDto.html#NVAPIWrapper_NVAPIGpuDisplayIdDto__ctor_NVAPIWrapper_NV_MONITOR_CONN_TYPE_System_UInt32_System_Boolean_System_Boolean_System_Boolean_System_Boolean_System_Boolean_System_Boolean_System_Boolean_System_Boolean_
   name: NVAPIGpuDisplayIdDto
   nameWithType: NVAPIGpuDisplayIdDto.NVAPIGpuDisplayIdDto
   fullName: NVAPIWrapper.NVAPIGpuDisplayIdDto.NVAPIGpuDisplayIdDto
