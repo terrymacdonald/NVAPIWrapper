@@ -4790,6 +4790,24 @@
             <param name="id">Function ID.</param>
             <param name="isAvailable">Availability flag.</param>
         </member>
+        <member name="T:NVAPIWrapper.NVAPIHardwareDetection">
+            <summary>
+            Hardware detection utilities for NVIDIA GPU presence.
+            </summary>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIHardwareDetection.HasNVIDIAGPU(System.String@)">
+            <summary>
+            Checks if an NVIDIA GPU is present in the system via PCI Vendor ID detection.
+            </summary>
+            <param name="errorMessage">Details about why NVIDIA GPU was not detected.</param>
+            <returns>True if NVIDIA GPU hardware is detected, false otherwise.</returns>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPIHardwareDetection.GetNVIDIAGPUNames">
+            <summary>
+            Gets the names of detected NVIDIA GPUs.
+            </summary>
+            <returns>Array of GPU names, or empty array if none found.</returns>
+        </member>
         <member name="T:NVAPIWrapper.NVAPIInterfaceTable">
             <summary>Managed copy of nvapi_interface_table for QueryInterface lookups.</summary>
         </member>

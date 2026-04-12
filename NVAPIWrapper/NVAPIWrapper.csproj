@@ -20,6 +20,7 @@
 		<PackageReference Include="ClangSharp" Version="20.1.2" PrivateAssets="all" />
 		<PackageReference Include="ClangSharp.Interop" Version="20.1.2" PrivateAssets="all" />
 		<PackageReference Include="ClangSharp.PInvokeGenerator" Version="20.1.2" PrivateAssets="all" />
+		<PackageReference Include="System.Management" Version="9.0.5" />
 	</ItemGroup>
 
 	<ItemGroup>
