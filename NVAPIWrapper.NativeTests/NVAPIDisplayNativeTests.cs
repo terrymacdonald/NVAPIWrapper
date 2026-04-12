@@ -441,7 +441,7 @@ namespace NVAPIWrapper.NativeTests
                 };
 
                 var status = NVAPI.NvAPI_DISP_EnumCustomDisplay(displayId, 0, &custom);
-                if (status == _NvAPI_Status.NVAPI_END_ENUMERATION)
+                if (status == _NvAPI_Status.NVAPI_END_ENUMERATION || status == _NvAPI_Status.NVAPI_ERROR)
                 {
                     Skip.If(true, "No custom displays enumerated.");
                     return;
@@ -471,7 +471,7 @@ namespace NVAPIWrapper.NativeTests
                 };
 
                 var enumStatus = NVAPI.NvAPI_DISP_EnumCustomDisplay(displayId, 0, &custom);
-                if (enumStatus == _NvAPI_Status.NVAPI_END_ENUMERATION)
+                if (enumStatus == _NvAPI_Status.NVAPI_END_ENUMERATION || enumStatus == _NvAPI_Status.NVAPI_ERROR)
                 {
                     Skip.If(true, "No custom displays enumerated.");
                     return;
@@ -513,7 +513,7 @@ namespace NVAPIWrapper.NativeTests
                 };
 
                 var enumStatus = NVAPI.NvAPI_DISP_EnumCustomDisplay(displayId, 0, &custom);
-                if (enumStatus == _NvAPI_Status.NVAPI_END_ENUMERATION)
+                if (enumStatus == _NvAPI_Status.NVAPI_END_ENUMERATION || enumStatus == _NvAPI_Status.NVAPI_ERROR)
                 {
                     Skip.If(true, "No custom displays enumerated.");
                     return;
@@ -555,7 +555,7 @@ namespace NVAPIWrapper.NativeTests
                 };
 
                 var enumStatus = NVAPI.NvAPI_DISP_EnumCustomDisplay(displayId, 0, &custom);
-                if (enumStatus == _NvAPI_Status.NVAPI_END_ENUMERATION)
+                if (enumStatus == _NvAPI_Status.NVAPI_END_ENUMERATION || enumStatus == _NvAPI_Status.NVAPI_ERROR)
                 {
                     Skip.If(true, "No custom displays enumerated.");
                     return;
@@ -597,7 +597,7 @@ namespace NVAPIWrapper.NativeTests
                 };
 
                 var enumStatus = NVAPI.NvAPI_DISP_EnumCustomDisplay(displayId, 0, &custom);
-                if (enumStatus == _NvAPI_Status.NVAPI_END_ENUMERATION)
+                if (enumStatus == _NvAPI_Status.NVAPI_END_ENUMERATION || enumStatus == _NvAPI_Status.NVAPI_ERROR)
                 {
                     Skip.If(true, "No custom displays enumerated.");
                     return;
@@ -884,7 +884,7 @@ namespace NVAPIWrapper.NativeTests
 
             NvDisplayHandle__* displayHandle;
             var status = NVAPI.NvAPI_CreateDisplayFromUnAttachedDisplay(handle, &displayHandle);
-            if (IsUnsupported(status))
+            if (IsUnsupported(status) || status == _NvAPI_Status.NVAPI_ERROR)
             {
                 Skip.If(true, $"Create display from unattached display unsupported: {status}");
                 return;

@@ -129,9 +129,20 @@ namespace NVAPIWrapper.NativeTests
         public unsafe void DrsGetCurrentGlobalProfile_ShouldReturnHandle()
         {
             SkipIfUnavailable("NvAPI_DRS_GetCurrentGlobalProfile");
+            SkipIfUnavailable("NvAPI_DRS_LoadSettings");
 
             WithSession(session =>
             {
+                // LoadSettings must be called before querying profiles.
+                var loadStatus = NVAPI.NvAPI_DRS_LoadSettings(session);
+                if (IsUnsupported(loadStatus))
+                {
+                    Skip.If(true, $"DRS load settings not supported: {loadStatus}");
+                    return;
+                }
+
+                Assert.Equal(_NvAPI_Status.NVAPI_OK, loadStatus);
+
                 NvDRSProfileHandle__* handle;
                 var status = NVAPI.NvAPI_DRS_GetCurrentGlobalProfile(session, &handle);
                 if (IsUnsupported(status))
@@ -141,7 +152,7 @@ namespace NVAPIWrapper.NativeTests
                 }
 
                 Assert.Equal(_NvAPI_Status.NVAPI_OK, status);
-                Assert.True(handle != null);
+                Assert.True(handle != null, "GetCurrentGlobalProfile returned a null handle.");
             });
         }
 

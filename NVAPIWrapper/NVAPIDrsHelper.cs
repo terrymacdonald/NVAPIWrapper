@@ -304,7 +304,11 @@ namespace NVAPIWrapper
             var status = getCurrent(GetSession(), &handle);
 
             if (status == _NvAPI_Status.NVAPI_OK)
+            {
+                if (handle == null)
+                    return null;
                 return GetProfileInfoInternal(handle);
+            }
 
             if (status == _NvAPI_Status.NVAPI_NOT_SUPPORTED
                 || status == _NvAPI_Status.NVAPI_NO_IMPLEMENTATION

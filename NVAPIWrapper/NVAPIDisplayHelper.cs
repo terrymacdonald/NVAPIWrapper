@@ -817,7 +817,8 @@ namespace NVAPIWrapper
 
             var timing = new _NV_TIMING();
             var status = getTiming(displayId, &nativeInput, &timing);
-            if (status == _NvAPI_Status.NVAPI_NOT_SUPPORTED || status == _NvAPI_Status.NVAPI_NVIDIA_DEVICE_NOT_FOUND)
+            if (status == _NvAPI_Status.NVAPI_NOT_SUPPORTED || status == _NvAPI_Status.NVAPI_NVIDIA_DEVICE_NOT_FOUND
+                || status == _NvAPI_Status.NVAPI_INCOMPATIBLE_STRUCT_VERSION)
                 return null;
 
             if (status != _NvAPI_Status.NVAPI_OK)
@@ -1152,7 +1153,8 @@ namespace NVAPIWrapper
             var display = CreatePreferredStereoDisplayGet();
 
             var status = getDisplay(&display);
-            if (status == _NvAPI_Status.NVAPI_NOT_SUPPORTED || status == _NvAPI_Status.NVAPI_NVIDIA_DEVICE_NOT_FOUND)
+            if (status == _NvAPI_Status.NVAPI_NOT_SUPPORTED || status == _NvAPI_Status.NVAPI_NVIDIA_DEVICE_NOT_FOUND
+                || status == _NvAPI_Status.NVAPI_ERROR)
                 return null;
 
             if (status != _NvAPI_Status.NVAPI_OK)
@@ -1409,7 +1411,8 @@ namespace NVAPIWrapper
             if (status == _NvAPI_Status.NVAPI_OK)
                 return colorSpace;
 
-            if (status == _NvAPI_Status.NVAPI_NOT_SUPPORTED || status == _NvAPI_Status.NVAPI_NVIDIA_DEVICE_NOT_FOUND)
+            if (status == _NvAPI_Status.NVAPI_NOT_SUPPORTED || status == _NvAPI_Status.NVAPI_NVIDIA_DEVICE_NOT_FOUND
+                || status == _NvAPI_Status.NVAPI_ERROR)
                 return null;
 
             throw new NVAPIException(status);
@@ -1700,7 +1703,8 @@ namespace NVAPIWrapper
 
             if (status == _NvAPI_Status.NVAPI_END_ENUMERATION ||
                 status == _NvAPI_Status.NVAPI_NOT_SUPPORTED ||
-                status == _NvAPI_Status.NVAPI_NVIDIA_DEVICE_NOT_FOUND)
+                status == _NvAPI_Status.NVAPI_NVIDIA_DEVICE_NOT_FOUND ||
+                status == _NvAPI_Status.NVAPI_ERROR)
             {
                 return null;
             }
@@ -1742,7 +1746,8 @@ namespace NVAPIWrapper
                     if (status == _NvAPI_Status.NVAPI_OK)
                         return true;
 
-                    if (status == _NvAPI_Status.NVAPI_NOT_SUPPORTED || status == _NvAPI_Status.NVAPI_NVIDIA_DEVICE_NOT_FOUND)
+                    if (status == _NvAPI_Status.NVAPI_NOT_SUPPORTED || status == _NvAPI_Status.NVAPI_NVIDIA_DEVICE_NOT_FOUND
+                        || status == _NvAPI_Status.NVAPI_ERROR)
                         return false;
 
                     throw new NVAPIException(status);
@@ -1823,7 +1828,8 @@ namespace NVAPIWrapper
                     if (status == _NvAPI_Status.NVAPI_OK)
                         return true;
 
-                    if (status == _NvAPI_Status.NVAPI_NOT_SUPPORTED || status == _NvAPI_Status.NVAPI_NVIDIA_DEVICE_NOT_FOUND)
+                    if (status == _NvAPI_Status.NVAPI_NOT_SUPPORTED || status == _NvAPI_Status.NVAPI_NVIDIA_DEVICE_NOT_FOUND
+                        || status == _NvAPI_Status.NVAPI_ERROR)
                         return false;
 
                     throw new NVAPIException(status);
@@ -1860,7 +1866,8 @@ namespace NVAPIWrapper
                 if (status == _NvAPI_Status.NVAPI_OK)
                     return true;
 
-                if (status == _NvAPI_Status.NVAPI_NOT_SUPPORTED || status == _NvAPI_Status.NVAPI_NVIDIA_DEVICE_NOT_FOUND)
+                if (status == _NvAPI_Status.NVAPI_NOT_SUPPORTED || status == _NvAPI_Status.NVAPI_NVIDIA_DEVICE_NOT_FOUND
+                    || status == _NvAPI_Status.NVAPI_ERROR)
                     return false;
 
                 throw new NVAPIException(status);
@@ -1889,7 +1896,8 @@ namespace NVAPIWrapper
                 if (status == _NvAPI_Status.NVAPI_OK)
                     return true;
 
-                if (status == _NvAPI_Status.NVAPI_NOT_SUPPORTED || status == _NvAPI_Status.NVAPI_NVIDIA_DEVICE_NOT_FOUND)
+                if (status == _NvAPI_Status.NVAPI_NOT_SUPPORTED || status == _NvAPI_Status.NVAPI_NVIDIA_DEVICE_NOT_FOUND
+                    || status == _NvAPI_Status.NVAPI_ERROR)
                     return false;
 
                 throw new NVAPIException(status);

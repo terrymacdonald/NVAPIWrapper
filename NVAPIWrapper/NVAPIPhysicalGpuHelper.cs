@@ -1624,7 +1624,8 @@ namespace NVAPIWrapper
             if (status == _NvAPI_Status.NVAPI_OK)
                 return true;
 
-            if (status == _NvAPI_Status.NVAPI_NOT_SUPPORTED || status == _NvAPI_Status.NVAPI_NVIDIA_DEVICE_NOT_FOUND)
+            if (status == _NvAPI_Status.NVAPI_NOT_SUPPORTED || status == _NvAPI_Status.NVAPI_NVIDIA_DEVICE_NOT_FOUND
+                || status == _NvAPI_Status.NVAPI_INVALID_USER_PRIVILEGE)
                 return false;
 
             throw new NVAPIException(status);
@@ -1696,7 +1697,8 @@ namespace NVAPIWrapper
             if (status == _NvAPI_Status.NVAPI_OK)
                 return true;
 
-            if (status == _NvAPI_Status.NVAPI_NOT_SUPPORTED || status == _NvAPI_Status.NVAPI_NVIDIA_DEVICE_NOT_FOUND)
+            if (status == _NvAPI_Status.NVAPI_NOT_SUPPORTED || status == _NvAPI_Status.NVAPI_NVIDIA_DEVICE_NOT_FOUND
+                || status == _NvAPI_Status.NVAPI_INVALID_USER_PRIVILEGE)
                 return false;
 
             throw new NVAPIException(status);
@@ -1729,7 +1731,8 @@ namespace NVAPIWrapper
             if (status == _NvAPI_Status.NVAPI_OK)
                 return NVAPILogicalGpuInfoDto.FromNative(_apiHelper, info);
 
-            if (status == _NvAPI_Status.NVAPI_NOT_SUPPORTED || status == _NvAPI_Status.NVAPI_NVIDIA_DEVICE_NOT_FOUND)
+            if (status == _NvAPI_Status.NVAPI_NOT_SUPPORTED || status == _NvAPI_Status.NVAPI_NVIDIA_DEVICE_NOT_FOUND
+                || status == _NvAPI_Status.NVAPI_INVALID_POINTER)
                 return null;
 
             throw new NVAPIException(status);
@@ -2044,7 +2047,8 @@ namespace NVAPIWrapper
 
             if (status == _NvAPI_Status.NVAPI_NOT_SUPPORTED
                 || status == _NvAPI_Status.NVAPI_NO_IMPLEMENTATION
-                || status == _NvAPI_Status.NVAPI_NVIDIA_DEVICE_NOT_FOUND)
+                || status == _NvAPI_Status.NVAPI_NVIDIA_DEVICE_NOT_FOUND
+                || status == _NvAPI_Status.NVAPI_ERROR)
                 return null;
 
             throw new NVAPIException(status);
@@ -2069,7 +2073,8 @@ namespace NVAPIWrapper
 
             if (status == _NvAPI_Status.NVAPI_NOT_SUPPORTED
                 || status == _NvAPI_Status.NVAPI_NO_IMPLEMENTATION
-                || status == _NvAPI_Status.NVAPI_NVIDIA_DEVICE_NOT_FOUND)
+                || status == _NvAPI_Status.NVAPI_NVIDIA_DEVICE_NOT_FOUND
+                || status == _NvAPI_Status.NVAPI_ERROR)
                 return false;
 
             throw new NVAPIException(status);

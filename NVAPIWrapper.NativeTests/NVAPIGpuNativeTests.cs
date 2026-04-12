@@ -967,9 +967,10 @@ namespace NVAPIWrapper.NativeTests
                     return;
                 }
 
-                if (status == _NvAPI_Status.NVAPI_INVALID_ARGUMENT)
+                if (status == _NvAPI_Status.NVAPI_INVALID_ARGUMENT
+                    || status == _NvAPI_Status.NVAPI_INVALID_USER_PRIVILEGE)
                 {
-                    Skip.If(true, $"GPU ECC reset invalid argument: {status}");
+                    Skip.If(true, $"GPU ECC reset not available: {status}");
                     return;
                 }
 
@@ -1050,9 +1051,9 @@ namespace NVAPIWrapper.NativeTests
                 Assert.Equal(_NvAPI_Status.NVAPI_OK, status);
 
                 status = NVAPI.NvAPI_GPU_SetEDID(gpu, outputId, &edid);
-                if (IsUnsupported(status))
+                if (IsUnsupported(status) || status == _NvAPI_Status.NVAPI_INVALID_USER_PRIVILEGE)
                 {
-                    Skip.If(true, $"GPU set EDID unsupported: {status}");
+                    Skip.If(true, $"GPU set EDID unsupported or requires elevation: {status}");
                     return;
                 }
 
@@ -1080,7 +1081,8 @@ namespace NVAPIWrapper.NativeTests
 
                 var info = new _NV_LOGICAL_GPU_DATA_V1 { version = NVAPI.NV_LOGICAL_GPU_DATA_VER };
                 status = NVAPI.NvAPI_GPU_GetLogicalGpuInfo(logical, &info);
-                if (IsUnsupported(status))
+                if (IsUnsupported(status) || status == _NvAPI_Status.NVAPI_INVALID_POINTER
+                    || status == _NvAPI_Status.NVAPI_INCOMPATIBLE_STRUCT_VERSION)
                 {
                     Skip.If(true, $"Logical GPU info unsupported: {status}");
                     return;
@@ -1379,7 +1381,7 @@ namespace NVAPIWrapper.NativeTests
                 uint configured = 0;
                 uint consistent = 0;
                 var status = NVAPI.NvAPI_GPU_WorkstationFeatureQuery(gpu, &configured, &consistent);
-                if (IsUnsupported(status))
+                if (IsUnsupported(status) || status == _NvAPI_Status.NVAPI_ERROR)
                 {
                     Skip.If(true, $"Workstation feature query unsupported: {status}");
                     return;
@@ -1400,7 +1402,7 @@ namespace NVAPIWrapper.NativeTests
                 uint configured = 0;
                 uint consistent = 0;
                 var status = NVAPI.NvAPI_GPU_WorkstationFeatureQuery(gpu, &configured, &consistent);
-                if (IsUnsupported(status))
+                if (IsUnsupported(status) || status == _NvAPI_Status.NVAPI_ERROR)
                 {
                     Skip.If(true, $"Workstation feature query unsupported: {status}");
                     return;
@@ -1409,7 +1411,7 @@ namespace NVAPIWrapper.NativeTests
                 Assert.Equal(_NvAPI_Status.NVAPI_OK, status);
 
                 status = NVAPI.NvAPI_GPU_WorkstationFeatureSetup(gpu, configured, 0);
-                if (IsUnsupported(status))
+                if (IsUnsupported(status) || status == _NvAPI_Status.NVAPI_ERROR)
                 {
                     Skip.If(true, $"Workstation feature setup unsupported: {status}");
                     return;

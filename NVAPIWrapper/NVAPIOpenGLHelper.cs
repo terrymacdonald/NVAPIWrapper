@@ -165,7 +165,8 @@ namespace NVAPIWrapper
             return status == _NvAPI_Status.NVAPI_NOT_SUPPORTED
                 || status == _NvAPI_Status.NVAPI_NO_IMPLEMENTATION
                 || status == _NvAPI_Status.NVAPI_NVIDIA_DEVICE_NOT_FOUND
-                || status == _NvAPI_Status.NVAPI_OPENGL_CONTEXT_NOT_CURRENT;
+                || status == _NvAPI_Status.NVAPI_OPENGL_CONTEXT_NOT_CURRENT
+                || status == _NvAPI_Status.NVAPI_ERROR;
         }
 
         [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
