@@ -22,7 +22,7 @@ namespace NVAPIWrapper
         public uint numClocks;
 
         /// <include file='NV_GPU_PERF_PSTATES_INFO_V1.xml' path='doc/member[@name="NV_GPU_PERF_PSTATES_INFO_V1.pstates"]/*' />
-        [NativeTypeName("struct (anonymous struct at ./../nvapi/nvapi.h:4938:5)[16]")]
+        [NativeTypeName("struct (anonymous struct at ./../nvapi/nvapi.h:4972:5)[16]")]
         public _pstates_e__FixedBuffer pstates;
 
         /// <include file='_pstates_e__Struct.xml' path='doc/member[@name="_pstates_e__Struct"]/*' />
@@ -37,7 +37,7 @@ namespace NVAPIWrapper
             public uint flags;
 
             /// <include file='_pstates_e__Struct.xml' path='doc/member[@name="_pstates_e__Struct.clocks"]/*' />
-            [NativeTypeName("struct (anonymous struct at ./../nvapi/nvapi.h:4945:9)[32]")]
+            [NativeTypeName("struct (anonymous struct at ./../nvapi/nvapi.h:4979:9)[32]")]
             public _clocks_e__FixedBuffer clocks;
 
             /// <include file='_clocks_e__Struct.xml' path='doc/member[@name="_clocks_e__Struct"]/*' />

@@ -26,7 +26,7 @@ namespace NVAPIWrapper
         public uint numVoltages;
 
         /// <include file='NV_GPU_PERF_PSTATES_INFO_V2.xml' path='doc/member[@name="NV_GPU_PERF_PSTATES_INFO_V2.pstates"]/*' />
-        [NativeTypeName("struct (anonymous struct at ./../nvapi/nvapi.h:4968:5)[16]")]
+        [NativeTypeName("struct (anonymous struct at ./../nvapi/nvapi.h:5002:5)[16]")]
         public _pstates_e__FixedBuffer pstates;
 
         /// <include file='_pstates_e__Struct.xml' path='doc/member[@name="_pstates_e__Struct"]/*' />
@@ -41,11 +41,11 @@ namespace NVAPIWrapper
             public uint flags;
 
             /// <include file='_pstates_e__Struct.xml' path='doc/member[@name="_pstates_e__Struct.clocks"]/*' />
-            [NativeTypeName("struct (anonymous struct at ./../nvapi/nvapi.h:4975:9)[32]")]
+            [NativeTypeName("struct (anonymous struct at ./../nvapi/nvapi.h:5009:9)[32]")]
             public _clocks_e__FixedBuffer clocks;
 
             /// <include file='_pstates_e__Struct.xml' path='doc/member[@name="_pstates_e__Struct.voltages"]/*' />
-            [NativeTypeName("struct (anonymous struct at ./../nvapi/nvapi.h:4983:9)[16]")]
+            [NativeTypeName("struct (anonymous struct at ./../nvapi/nvapi.h:5017:9)[16]")]
             public _voltages_e__FixedBuffer voltages;
 
             /// <include file='_clocks_e__Struct.xml' path='doc/member[@name="_clocks_e__Struct"]/*' />

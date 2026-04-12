@@ -103,7 +103,7 @@ namespace NVAPIWrapper
         public NV_STATIC_METADATA_DESCRIPTOR_ID static_metadata_descriptor_id;
 
         /// <include file='_NV_HDR_CAPABILITIES_V1.xml' path='doc/member[@name="_NV_HDR_CAPABILITIES_V1.display_data"]/*' />
-        [NativeTypeName("__AnonymousRecord_nvapi_L7760_C5")]
+        [NativeTypeName("__AnonymousRecord_nvapi_L7794_C5")]
         public _display_data_e__Struct display_data;
 
         /// <include file='_display_data_e__Struct.xml' path='doc/member[@name="_display_data_e__Struct"]/*' />

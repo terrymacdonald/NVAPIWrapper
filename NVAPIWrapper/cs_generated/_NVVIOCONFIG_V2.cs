@@ -18,7 +18,7 @@ namespace NVAPIWrapper
         public _NVVIOCONFIGTYPE nvvioConfigType;
 
         /// <include file='_NVVIOCONFIG_V2.xml' path='doc/member[@name="_NVVIOCONFIG_V2.vioConfig"]/*' />
-        [NativeTypeName("__AnonymousRecord_nvapi_L22182_C5")]
+        [NativeTypeName("__AnonymousRecord_nvapi_L22290_C5")]
         public _vioConfig_e__Union vioConfig;
 
         /// <include file='_vioConfig_e__Union.xml' path='doc/member[@name="_vioConfig_e__Union"]/*' />

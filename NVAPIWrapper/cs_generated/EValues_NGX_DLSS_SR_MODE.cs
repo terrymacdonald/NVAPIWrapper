@@ -24,8 +24,11 @@ namespace NVAPIWrapper
         /// <include file='EValues_NGX_DLSS_SR_MODE.xml' path='doc/member[@name="EValues_NGX_DLSS_SR_MODE.NGX_DLSS_SR_MODE_NGX_DLSS_SR_MODE_CUSTOM"]/*' />
         NGX_DLSS_SR_MODE_NGX_DLSS_SR_MODE_CUSTOM = 6,
 
+        /// <include file='EValues_NGX_DLSS_SR_MODE.xml' path='doc/member[@name="EValues_NGX_DLSS_SR_MODE.NGX_DLSS_SR_MODE_NGX_DLSS_SR_MODE_RESERVED_A"]/*' />
+        NGX_DLSS_SR_MODE_NGX_DLSS_SR_MODE_RESERVED_A = 7,
+
         /// <include file='EValues_NGX_DLSS_SR_MODE.xml' path='doc/member[@name="EValues_NGX_DLSS_SR_MODE.NGX_DLSS_SR_MODE_NUM_VALUES"]/*' />
-        NGX_DLSS_SR_MODE_NUM_VALUES = 7,
+        NGX_DLSS_SR_MODE_NUM_VALUES = 8,
 
         /// <include file='EValues_NGX_DLSS_SR_MODE.xml' path='doc/member[@name="EValues_NGX_DLSS_SR_MODE.NGX_DLSS_SR_MODE_DEFAULT"]/*' />
         NGX_DLSS_SR_MODE_DEFAULT = NGX_DLSS_SR_MODE_NGX_DLSS_SR_MODE_SNIPPET_CONTROLLED,

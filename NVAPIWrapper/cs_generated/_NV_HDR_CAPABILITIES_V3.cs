@@ -163,15 +163,15 @@ namespace NVAPIWrapper
         public NV_STATIC_METADATA_DESCRIPTOR_ID static_metadata_descriptor_id;
 
         /// <include file='_NV_HDR_CAPABILITIES_V3.xml' path='doc/member[@name="_NV_HDR_CAPABILITIES_V3.display_data"]/*' />
-        [NativeTypeName("__AnonymousRecord_nvapi_L7860_C5")]
+        [NativeTypeName("__AnonymousRecord_nvapi_L7894_C5")]
         public _display_data_e__Struct display_data;
 
         /// <include file='_NV_HDR_CAPABILITIES_V3.xml' path='doc/member[@name="_NV_HDR_CAPABILITIES_V3.dv_static_metadata"]/*' />
-        [NativeTypeName("__AnonymousRecord_nvapi_L7879_C5")]
+        [NativeTypeName("__AnonymousRecord_nvapi_L7913_C5")]
         public _dv_static_metadata_e__Struct dv_static_metadata;
 
         /// <include file='_NV_HDR_CAPABILITIES_V3.xml' path='doc/member[@name="_NV_HDR_CAPABILITIES_V3.hdr10plus_vsvdb"]/*' />
-        [NativeTypeName("__AnonymousRecord_nvapi_L7907_C5")]
+        [NativeTypeName("__AnonymousRecord_nvapi_L7941_C5")]
         public _hdr10plus_vsvdb_e__Struct hdr10plus_vsvdb;
 
         /// <include file='_display_data_e__Struct.xml' path='doc/member[@name="_display_data_e__Struct"]/*' />

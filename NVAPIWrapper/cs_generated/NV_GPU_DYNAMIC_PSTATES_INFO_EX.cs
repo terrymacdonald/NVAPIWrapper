@@ -14,7 +14,7 @@ namespace NVAPIWrapper
         public uint flags;
 
         /// <include file='NV_GPU_DYNAMIC_PSTATES_INFO_EX.xml' path='doc/member[@name="NV_GPU_DYNAMIC_PSTATES_INFO_EX.utilization"]/*' />
-        [NativeTypeName("struct (anonymous struct at ./../nvapi/nvapi.h:5161:5)[8]")]
+        [NativeTypeName("struct (anonymous struct at ./../nvapi/nvapi.h:5195:5)[8]")]
         public _utilization_e__FixedBuffer utilization;
 
         /// <include file='_utilization_e__Struct.xml' path='doc/member[@name="_utilization_e__Struct"]/*' />

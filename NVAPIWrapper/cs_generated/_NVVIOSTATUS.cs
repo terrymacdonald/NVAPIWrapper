@@ -14,7 +14,7 @@ namespace NVAPIWrapper
         public _NVVIOSTATUSTYPE nvvioStatusType;
 
         /// <include file='_NVVIOSTATUS.xml' path='doc/member[@name="_NVVIOSTATUS.vioStatus"]/*' />
-        [NativeTypeName("__AnonymousRecord_nvapi_L21763_C5")]
+        [NativeTypeName("__AnonymousRecord_nvapi_L21871_C5")]
         public _vioStatus_e__Union vioStatus;
 
         /// <include file='_vioStatus_e__Union.xml' path='doc/member[@name="_vioStatus_e__Union"]/*' />

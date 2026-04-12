@@ -14,7 +14,7 @@ namespace NVAPIWrapper
         public uint vioGammaCorrectionType;
 
         /// <include file='_NVVIOGAMMACORRECTION.xml' path='doc/member[@name="_NVVIOGAMMACORRECTION.gammaRamp"]/*' />
-        [NativeTypeName("__AnonymousRecord_nvapi_L21887_C5")]
+        [NativeTypeName("__AnonymousRecord_nvapi_L21995_C5")]
         public _gammaRamp_e__Union gammaRamp;
 
         /// <include file='_NVVIOGAMMACORRECTION.xml' path='doc/member[@name="_NVVIOGAMMACORRECTION.fGammaValueR"]/*' />

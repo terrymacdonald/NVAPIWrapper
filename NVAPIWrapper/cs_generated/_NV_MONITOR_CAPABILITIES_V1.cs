@@ -39,7 +39,7 @@ namespace NVAPIWrapper
         }
 
         /// <include file='_NV_MONITOR_CAPABILITIES_V1.xml' path='doc/member[@name="_NV_MONITOR_CAPABILITIES_V1.data"]/*' />
-        [NativeTypeName("__AnonymousRecord_nvapi_L8492_C5")]
+        [NativeTypeName("__AnonymousRecord_nvapi_L8526_C5")]
         public _data_e__Union data;
 
         /// <include file='_data_e__Union.xml' path='doc/member[@name="_data_e__Union"]/*' />

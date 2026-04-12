@@ -22,7 +22,7 @@ namespace NVAPIWrapper
         public uint numLinks;
 
         /// <include file='_NVVIOSTREAM.xml' path='doc/member[@name="_NVVIOSTREAM.links"]/*' />
-        [NativeTypeName("struct (anonymous struct at ./../nvapi/nvapi.h:22143:5)[2]")]
+        [NativeTypeName("struct (anonymous struct at ./../nvapi/nvapi.h:22251:5)[2]")]
         public _links_e__FixedBuffer links;
 
         /// <include file='_links_e__Struct.xml' path='doc/member[@name="_links_e__Struct"]/*' />

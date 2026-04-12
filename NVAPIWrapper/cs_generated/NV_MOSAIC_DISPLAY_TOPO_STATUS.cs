@@ -22,7 +22,7 @@ namespace NVAPIWrapper
         public uint displayCount;
 
         /// <include file='NV_MOSAIC_DISPLAY_TOPO_STATUS.xml' path='doc/member[@name="NV_MOSAIC_DISPLAY_TOPO_STATUS.displays"]/*' />
-        [NativeTypeName("struct (anonymous struct at ./../nvapi/nvapi.h:10251:5)[128]")]
+        [NativeTypeName("struct (anonymous struct at ./../nvapi/nvapi.h:10285:5)[128]")]
         public _displays_e__FixedBuffer displays;
 
         /// <include file='_displays_e__Struct.xml' path='doc/member[@name="_displays_e__Struct"]/*' />

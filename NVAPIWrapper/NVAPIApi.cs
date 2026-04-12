@@ -69,6 +69,10 @@ namespace NVAPIWrapper
                     throw new NVAPIException(status, message);
                 }
 
+                // Populate the ClangSharp-generated delegate* function-pointer
+                // fields on NVAPI so callers can invoke them directly.
+                NVAPI.InitializeManualImports(queryInterface);
+
                 api._initialized = true;
                 return api;
             }
@@ -364,6 +368,10 @@ namespace NVAPIWrapper
 
                 _initialized = false;
             }
+
+            // Clear delegate* fields before freeing the DLL to prevent
+            // dangling pointers from blocking process shutdown.
+            NVAPI.ClearManualImports();
 
             if (_module != IntPtr.Zero)
             {

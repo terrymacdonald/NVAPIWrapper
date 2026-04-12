@@ -22,7 +22,7 @@ namespace NVAPIWrapper
         public byte type;
 
         /// <include file='NV_INFOFRAME_DATA.xml' path='doc/member[@name="NV_INFOFRAME_DATA.infoframe"]/*' />
-        [NativeTypeName("__AnonymousRecord_nvapi_L7525_C5")]
+        [NativeTypeName("__AnonymousRecord_nvapi_L7559_C5")]
         public _infoframe_e__Union infoframe;
 
         /// <include file='_infoframe_e__Union.xml' path='doc/member[@name="_infoframe_e__Union"]/*' />

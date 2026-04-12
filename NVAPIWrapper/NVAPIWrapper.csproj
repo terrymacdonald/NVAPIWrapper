@@ -97,8 +97,15 @@
 		<Message Text="-&gt; NVAPIWrapper Version: $(AppVersion) (Major/Minor from file, Patch is commits since change)" Importance="high" />
 	</Target>
 
+	<Target Name="GenerateClangSharpConfig" BeforeTargets="GenerateFromClangSharp">
+		<Exec Command="powershell -NoProfile -ExecutionPolicy Bypass -File &quot;$(MSBuildProjectDirectory)\..\generate_clangsharp_config.ps1&quot;" />
+	</Target>
+
 	<Target Name="GenerateFromClangSharp" BeforeTargets="CoreCompile" Inputs="@(ClangSharpPInvokeGenerator)" Outputs="$(BaseIntermediateOutputPath)ClangSharp.stamp;$(ClangSharpGeneratedDir)\NativeTypeNameAttribute.cs">
-		<Exec Command="ClangSharpPInvokeGenerator %40&quot;@(ClangSharpPInvokeGenerator)&quot;" />
+		<Exec Command="ClangSharpPInvokeGenerator %40&quot;ClangSharpConfig.generated.rsp&quot;" />
+		<!-- ClangSharp emits manual-import delegate* fields as instance members;
+		     the NVAPI class is static, so patch them to be static too. -->
+		<Exec Command="powershell -NoProfile -ExecutionPolicy Bypass -Command &quot;(Get-Content '$(ClangSharpGeneratedDir)\NVAPI.cs' -Raw) -replace 'public delegate\*','public static delegate*' | Set-Content '$(ClangSharpGeneratedDir)\NVAPI.cs' -NoNewline&quot;" />
 		<ItemGroup>
 			<Compile Include="$(ClangSharpGeneratedDir)\**\*.cs" />
 			<Compile Remove="$(ClangSharpGeneratedDir)\NV_MOSAIC_TOPOLOGY.cs" />

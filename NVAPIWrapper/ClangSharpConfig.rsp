@@ -109,6 +109,13 @@ NV_TRUE
 --exclude
 NV_FALSE
 
+# --- MANUAL IMPORTS ---
+# NVAPI functions are not exported by nvapi64.dll; they must be resolved via
+# NvAPI_QueryInterface at runtime.  The generate_clangsharp_config.ps1 script
+# appends --with-manual-import entries for every function found in
+# nvapi_interface.h so ClangSharp emits delegate* function-pointer fields
+# instead of [DllImport] methods.  See ClangSharpConfig.generated.rsp.
+
 # --- CONFIG ---
 --config
 latest-codegen

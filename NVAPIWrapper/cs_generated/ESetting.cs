@@ -153,11 +153,23 @@ namespace NVAPIWrapper
         /// <include file='ESetting.xml' path='doc/member[@name="ESetting.NGX_DLAA_OVERRIDE_ID"]/*' />
         NGX_DLAA_OVERRIDE_ID = 0x10E41DF4,
 
+        /// <include file='ESetting.xml' path='doc/member[@name="ESetting.NGX_DLSSG_DYNAMIC_MULTI_FRAME_COUNT_MAX_ID"]/*' />
+        NGX_DLSSG_DYNAMIC_MULTI_FRAME_COUNT_MAX_ID = 0x10562D0F,
+
+        /// <include file='ESetting.xml' path='doc/member[@name="ESetting.NGX_DLSSG_DYNAMIC_TARGET_FRAME_RATE_ID"]/*' />
+        NGX_DLSSG_DYNAMIC_TARGET_FRAME_RATE_ID = 0x10CF4125,
+
+        /// <include file='ESetting.xml' path='doc/member[@name="ESetting.NGX_DLSSG_MODE_ID"]/*' />
+        NGX_DLSSG_MODE_ID = 0x10308298,
+
         /// <include file='ESetting.xml' path='doc/member[@name="ESetting.NGX_DLSSG_MULTI_FRAME_COUNT_ID"]/*' />
         NGX_DLSSG_MULTI_FRAME_COUNT_ID = 0x104D6667,
 
         /// <include file='ESetting.xml' path='doc/member[@name="ESetting.NGX_DLSS_FG_OVERRIDE_ID"]/*' />
         NGX_DLSS_FG_OVERRIDE_ID = 0x10E41E03,
+
+        /// <include file='ESetting.xml' path='doc/member[@name="ESetting.NGX_DLSS_FG_OVERRIDE_RENDER_PRESET_SELECTION_ID"]/*' />
+        NGX_DLSS_FG_OVERRIDE_RENDER_PRESET_SELECTION_ID = 0x10E41DF1,
 
         /// <include file='ESetting.xml' path='doc/member[@name="ESetting.NGX_DLSS_FG_OVERRIDE_RESERVED_KEY1_ID"]/*' />
         NGX_DLSS_FG_OVERRIDE_RESERVED_KEY1_ID = 0x10C7D57E,
@@ -364,13 +376,13 @@ namespace NVAPIWrapper
         VSYNCTEARCONTROL_ID = 0x005A375C,
 
         /// <include file='ESetting.xml' path='doc/member[@name="ESetting.TOTAL_DWORD_SETTING_NUM"]/*' />
-        TOTAL_DWORD_SETTING_NUM = 115,
+        TOTAL_DWORD_SETTING_NUM = 119,
 
         /// <include file='ESetting.xml' path='doc/member[@name="ESetting.TOTAL_WSTRING_SETTING_NUM"]/*' />
         TOTAL_WSTRING_SETTING_NUM = 5,
 
         /// <include file='ESetting.xml' path='doc/member[@name="ESetting.TOTAL_SETTING_NUM"]/*' />
-        TOTAL_SETTING_NUM = 120,
+        TOTAL_SETTING_NUM = 124,
 
         /// <include file='ESetting.xml' path='doc/member[@name="ESetting.INVALID_SETTING_ID"]/*' />
         INVALID_SETTING_ID = unchecked((int)(0xFFFFFFFF)),

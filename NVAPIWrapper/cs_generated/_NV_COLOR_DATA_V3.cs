@@ -16,7 +16,7 @@ namespace NVAPIWrapper
         public byte cmd;
 
         /// <include file='_NV_COLOR_DATA_V3.xml' path='doc/member[@name="_NV_COLOR_DATA_V3.data"]/*' />
-        [NativeTypeName("__AnonymousRecord_nvapi_L7687_C5")]
+        [NativeTypeName("__AnonymousRecord_nvapi_L7721_C5")]
         public _data_e__Struct data;
 
         /// <include file='_data_e__Struct.xml' path='doc/member[@name="_data_e__Struct"]/*' />

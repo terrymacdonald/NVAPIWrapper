@@ -13,7 +13,7 @@ namespace NVAPIWrapper
         public NV_GPU_CLIENT_ILLUM_CTRL_MODE ctrlMode;
 
         /// <include file='_NV_GPU_CLIENT_ILLUM_ZONE_CONTROL_V1.xml' path='doc/member[@name="_NV_GPU_CLIENT_ILLUM_ZONE_CONTROL_V1.data"]/*' />
-        [NativeTypeName("__AnonymousRecord_nvapi_L6456_C5")]
+        [NativeTypeName("__AnonymousRecord_nvapi_L6490_C5")]
         public _data_e__Union data;
 
         /// <include file='_NV_GPU_CLIENT_ILLUM_ZONE_CONTROL_V1.xml' path='doc/member[@name="_NV_GPU_CLIENT_ILLUM_ZONE_CONTROL_V1.rsvd"]/*' />

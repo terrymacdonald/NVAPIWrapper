@@ -14,7 +14,7 @@ namespace NVAPIWrapper
         public uint count;
 
         /// <include file='NV_GPU_THERMAL_SETTINGS_V2.xml' path='doc/member[@name="NV_GPU_THERMAL_SETTINGS_V2.sensor"]/*' />
-        [NativeTypeName("struct (anonymous struct at ./../nvapi/nvapi.h:5266:5)[3]")]
+        [NativeTypeName("struct (anonymous struct at ./../nvapi/nvapi.h:5300:5)[3]")]
         public _sensor_e__FixedBuffer sensor;
 
         /// <include file='_sensor_e__Struct.xml' path='doc/member[@name="_sensor_e__Struct"]/*' />

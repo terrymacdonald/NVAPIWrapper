@@ -7,7 +7,7 @@ namespace NVAPIWrapper
     public partial struct _NV_GPU_CLIENT_ILLUM_ZONE_CONTROL_DATA_SINGLE_COLOR
     {
         /// <include file='_NV_GPU_CLIENT_ILLUM_ZONE_CONTROL_DATA_SINGLE_COLOR.xml' path='doc/member[@name="_NV_GPU_CLIENT_ILLUM_ZONE_CONTROL_DATA_SINGLE_COLOR.data"]/*' />
-        [NativeTypeName("__AnonymousRecord_nvapi_L6432_C5")]
+        [NativeTypeName("__AnonymousRecord_nvapi_L6466_C5")]
         public _data_e__Union data;
 
         /// <include file='_NV_GPU_CLIENT_ILLUM_ZONE_CONTROL_DATA_SINGLE_COLOR.xml' path='doc/member[@name="_NV_GPU_CLIENT_ILLUM_ZONE_CONTROL_DATA_SINGLE_COLOR.rsvd"]/*' />

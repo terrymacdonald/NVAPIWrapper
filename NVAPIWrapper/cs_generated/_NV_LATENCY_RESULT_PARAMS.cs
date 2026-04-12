@@ -84,12 +84,24 @@ namespace NVAPIWrapper
             [NativeTypeName("NvU32")]
             public uint gpuFrameTimeUs;
 
+            /// <include file='FrameReport.xml' path='doc/member[@name="FrameReport.cameraConstructedTime"]/*' />
+            [NativeTypeName("NvU64")]
+            public ulong cameraConstructedTime;
+
+            /// <include file='FrameReport.xml' path='doc/member[@name="FrameReport.crossAdapterCopyTimeUs"]/*' />
+            [NativeTypeName("NvU32")]
+            public uint crossAdapterCopyTimeUs;
+
+            /// <include file='FrameReport.xml' path='doc/member[@name="FrameReport.aiFrameTimeUs"]/*' />
+            [NativeTypeName("NvU32")]
+            public uint aiFrameTimeUs;
+
             /// <include file='FrameReport.xml' path='doc/member[@name="FrameReport.rsvd"]/*' />
-            [NativeTypeName("NvU8[120]")]
+            [NativeTypeName("NvU8[104]")]
             public _rsvd_e__FixedBuffer rsvd;
 
             /// <include file='_rsvd_e__FixedBuffer.xml' path='doc/member[@name="_rsvd_e__FixedBuffer"]/*' />
-            [InlineArray(120)]
+            [InlineArray(104)]
             public partial struct _rsvd_e__FixedBuffer
             {
                 public byte e0;

@@ -34,11 +34,11 @@ namespace NVAPIWrapper
         public uint boardID;
 
         /// <include file='_NVVIOCAPS.xml' path='doc/member[@name="_NVVIOCAPS.driver"]/*' />
-        [NativeTypeName("__AnonymousRecord_nvapi_L21701_C5")]
+        [NativeTypeName("__AnonymousRecord_nvapi_L21809_C5")]
         public _driver_e__Struct driver;
 
         /// <include file='_NVVIOCAPS.xml' path='doc/member[@name="_NVVIOCAPS.firmWare"]/*' />
-        [NativeTypeName("__AnonymousRecord_nvapi_L21707_C5")]
+        [NativeTypeName("__AnonymousRecord_nvapi_L21815_C5")]
         public _firmWare_e__Struct firmWare;
 
         /// <include file='_NVVIOCAPS.xml' path='doc/member[@name="_NVVIOCAPS.ownerId"]/*' />

@@ -68,12 +68,16 @@ namespace NVAPIWrapper
         [NativeTypeName("NvU32")]
         public uint timeInQueueUsTarget;
 
+        /// <include file='_NV_SET_REFLEX_SYNC_PARAMS.xml' path='doc/member[@name="_NV_SET_REFLEX_SYNC_PARAMS.fgMultiplier"]/*' />
+        [NativeTypeName("NvU8")]
+        public byte fgMultiplier;
+
         /// <include file='_NV_SET_REFLEX_SYNC_PARAMS.xml' path='doc/member[@name="_NV_SET_REFLEX_SYNC_PARAMS.rsvd"]/*' />
-        [NativeTypeName("NvU8[28]")]
+        [NativeTypeName("NvU8[27]")]
         public _rsvd_e__FixedBuffer rsvd;
 
         /// <include file='_rsvd_e__FixedBuffer.xml' path='doc/member[@name="_rsvd_e__FixedBuffer"]/*' />
-        [InlineArray(28)]
+        [InlineArray(27)]
         public partial struct _rsvd_e__FixedBuffer
         {
             public byte e0;

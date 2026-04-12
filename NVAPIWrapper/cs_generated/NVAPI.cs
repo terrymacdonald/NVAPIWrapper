@@ -10,155 +10,95 @@ namespace NVAPIWrapper
         public static readonly NVDX_SwapChainHandle__* NVDX_SWAPCHAIN_NONE = null;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_SYS_GetDriverAndBranchVersion"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_SYS_GetDriverAndBranchVersion([NativeTypeName("NvU32 *")] uint* pDriverVersion, [NativeTypeName("NvAPI_ShortString")] sbyte* szBuildBranchString);
+        public static delegate* unmanaged[Cdecl]<uint*, sbyte*, _NvAPI_Status> NvAPI_SYS_GetDriverAndBranchVersion;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GPU_GetMemoryInfo"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
         [Obsolete("Do not use this function - it is deprecated in release 520. Instead, use NvAPI_GPU_GetMemoryInfoEx.")]
-        public static extern _NvAPI_Status NvAPI_GPU_GetMemoryInfo([NativeTypeName("NvPhysicalGpuHandle")] NvPhysicalGpuHandle__* hPhysicalGpu, [NativeTypeName("NV_DISPLAY_DRIVER_MEMORY_INFO *")] NV_DISPLAY_DRIVER_MEMORY_INFO_V3* pMemoryInfo);
+        public static delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, NV_DISPLAY_DRIVER_MEMORY_INFO_V3*, _NvAPI_Status> NvAPI_GPU_GetMemoryInfo;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GPU_GetMemoryInfoEx"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_GPU_GetMemoryInfoEx([NativeTypeName("NvPhysicalGpuHandle")] NvPhysicalGpuHandle__* hPhysicalGpu, [NativeTypeName("NV_GPU_MEMORY_INFO_EX *")] NV_GPU_MEMORY_INFO_EX_V1* pMemoryInfo);
+        public static delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, NV_GPU_MEMORY_INFO_EX_V1*, _NvAPI_Status> NvAPI_GPU_GetMemoryInfoEx;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_EnumPhysicalGPUs"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_EnumPhysicalGPUs([NativeTypeName("NvPhysicalGpuHandle[64]")] NvPhysicalGpuHandle__** nvGPUHandle, [NativeTypeName("NvU32 *")] uint* pGpuCount);
+        public static delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__**, uint*, _NvAPI_Status> NvAPI_EnumPhysicalGPUs;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_DISP_GetGDIPrimaryDisplayId"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_DISP_GetGDIPrimaryDisplayId([NativeTypeName("NvU32 *")] uint* displayId);
+        public static delegate* unmanaged[Cdecl]<uint*, _NvAPI_Status> NvAPI_DISP_GetGDIPrimaryDisplayId;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_Mosaic_GetDisplayViewportsByResolution"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_Mosaic_GetDisplayViewportsByResolution([NativeTypeName("NvU32")] uint displayId, [NativeTypeName("NvU32")] uint srcWidth, [NativeTypeName("NvU32")] uint srcHeight, [NativeTypeName("NV_RECT[64]")] _NV_RECT* viewports, [NativeTypeName("NvU8 *")] byte* bezelCorrected);
+        public static delegate* unmanaged[Cdecl]<uint, uint, uint, _NV_RECT*, byte*, _NvAPI_Status> NvAPI_Mosaic_GetDisplayViewportsByResolution;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_Stereo_Enable"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_Stereo_Enable();
+        public static delegate* unmanaged[Cdecl]<_NvAPI_Status> NvAPI_Stereo_Enable;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_Stereo_Disable"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_Stereo_Disable();
+        public static delegate* unmanaged[Cdecl]<_NvAPI_Status> NvAPI_Stereo_Disable;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_Stereo_IsEnabled"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_Stereo_IsEnabled([NativeTypeName("NvU8 *")] byte* pIsStereoEnabled);
+        public static delegate* unmanaged[Cdecl]<byte*, _NvAPI_Status> NvAPI_Stereo_IsEnabled;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_Stereo_DestroyHandle"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_Stereo_DestroyHandle([NativeTypeName("StereoHandle")] void* stereoHandle);
+        public static delegate* unmanaged[Cdecl]<void*, _NvAPI_Status> NvAPI_Stereo_DestroyHandle;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_Stereo_Activate"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_Stereo_Activate([NativeTypeName("StereoHandle")] void* stereoHandle);
+        public static delegate* unmanaged[Cdecl]<void*, _NvAPI_Status> NvAPI_Stereo_Activate;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_Stereo_Deactivate"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_Stereo_Deactivate([NativeTypeName("StereoHandle")] void* stereoHandle);
+        public static delegate* unmanaged[Cdecl]<void*, _NvAPI_Status> NvAPI_Stereo_Deactivate;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_Stereo_IsActivated"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_Stereo_IsActivated([NativeTypeName("StereoHandle")] void* stereoHandle, [NativeTypeName("NvU8 *")] byte* pIsStereoOn);
+        public static delegate* unmanaged[Cdecl]<void*, byte*, _NvAPI_Status> NvAPI_Stereo_IsActivated;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_Stereo_GetSeparation"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_Stereo_GetSeparation([NativeTypeName("StereoHandle")] void* stereoHandle, float* pSeparationPercentage);
+        public static delegate* unmanaged[Cdecl]<void*, float*, _NvAPI_Status> NvAPI_Stereo_GetSeparation;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_Stereo_SetSeparation"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_Stereo_SetSeparation([NativeTypeName("StereoHandle")] void* stereoHandle, float newSeparationPercentage);
+        public static delegate* unmanaged[Cdecl]<void*, float, _NvAPI_Status> NvAPI_Stereo_SetSeparation;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_Stereo_GetConvergence"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_Stereo_GetConvergence([NativeTypeName("StereoHandle")] void* stereoHandle, float* pConvergence);
+        public static delegate* unmanaged[Cdecl]<void*, float*, _NvAPI_Status> NvAPI_Stereo_GetConvergence;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_Stereo_SetConvergence"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_Stereo_SetConvergence([NativeTypeName("StereoHandle")] void* stereoHandle, float newConvergence);
+        public static delegate* unmanaged[Cdecl]<void*, float, _NvAPI_Status> NvAPI_Stereo_SetConvergence;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_Stereo_SetActiveEye"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_Stereo_SetActiveEye([NativeTypeName("StereoHandle")] void* hStereoHandle, [NativeTypeName("NV_STEREO_ACTIVE_EYE")] _NV_StereoActiveEye StereoEye);
+        public static delegate* unmanaged[Cdecl]<void*, _NV_StereoActiveEye, _NvAPI_Status> NvAPI_Stereo_SetActiveEye;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_Stereo_SetDriverMode"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_Stereo_SetDriverMode([NativeTypeName("NV_STEREO_DRIVER_MODE")] _NV_StereoDriverMode mode);
+        public static delegate* unmanaged[Cdecl]<_NV_StereoDriverMode, _NvAPI_Status> NvAPI_Stereo_SetDriverMode;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_Stereo_GetEyeSeparation"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_Stereo_GetEyeSeparation([NativeTypeName("StereoHandle")] void* hStereoHandle, float* pSeparation);
+        public static delegate* unmanaged[Cdecl]<void*, float*, _NvAPI_Status> NvAPI_Stereo_GetEyeSeparation;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_Stereo_IsWindowedModeSupported"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_Stereo_IsWindowedModeSupported([NativeTypeName("NvU8 *")] byte* bSupported);
+        public static delegate* unmanaged[Cdecl]<byte*, _NvAPI_Status> NvAPI_Stereo_IsWindowedModeSupported;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_Stereo_SetSurfaceCreationMode"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_Stereo_SetSurfaceCreationMode([NativeTypeName("StereoHandle")] void* hStereoHandle, [NativeTypeName("NVAPI_STEREO_SURFACECREATEMODE")] _NVAPI_STEREO_SURFACECREATEMODE creationMode);
+        public static delegate* unmanaged[Cdecl]<void*, _NVAPI_STEREO_SURFACECREATEMODE, _NvAPI_Status> NvAPI_Stereo_SetSurfaceCreationMode;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_Stereo_GetSurfaceCreationMode"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_Stereo_GetSurfaceCreationMode([NativeTypeName("StereoHandle")] void* hStereoHandle, [NativeTypeName("NVAPI_STEREO_SURFACECREATEMODE *")] _NVAPI_STEREO_SURFACECREATEMODE* pCreationMode);
+        public static delegate* unmanaged[Cdecl]<void*, _NVAPI_STEREO_SURFACECREATEMODE*, _NvAPI_Status> NvAPI_Stereo_GetSurfaceCreationMode;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_Stereo_Debug_WasLastDrawStereoized"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_Stereo_Debug_WasLastDrawStereoized([NativeTypeName("StereoHandle")] void* hStereoHandle, [NativeTypeName("NvU8 *")] byte* pWasStereoized);
+        public static delegate* unmanaged[Cdecl]<void*, byte*, _NvAPI_Status> NvAPI_Stereo_Debug_WasLastDrawStereoized;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_Stereo_SetDefaultProfile"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_Stereo_SetDefaultProfile([NativeTypeName("const char *")] sbyte* szProfileName);
+        public static delegate* unmanaged[Cdecl]<sbyte*, _NvAPI_Status> NvAPI_Stereo_SetDefaultProfile;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_Stereo_GetDefaultProfile"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_Stereo_GetDefaultProfile([NativeTypeName("NvU32")] uint cbSizeIn, [NativeTypeName("char *")] sbyte* szProfileName, [NativeTypeName("NvU32 *")] uint* pcbSizeOut);
+        public static delegate* unmanaged[Cdecl]<uint, sbyte*, uint*, _NvAPI_Status> NvAPI_Stereo_GetDefaultProfile;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_Initialize"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_Initialize();
+        public static delegate* unmanaged[Cdecl]<_NvAPI_Status> NvAPI_Initialize;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_Unload"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_Unload();
+        public static delegate* unmanaged[Cdecl]<_NvAPI_Status> NvAPI_Unload;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GetErrorMessage"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_GetErrorMessage([NativeTypeName("NvAPI_Status")] _NvAPI_Status nr, [NativeTypeName("NvAPI_ShortString")] sbyte* szDesc);
+        public static delegate* unmanaged[Cdecl]<_NvAPI_Status, sbyte*, _NvAPI_Status> NvAPI_GetErrorMessage;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GetInterfaceVersionString"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_GetInterfaceVersionString([NativeTypeName("NvAPI_ShortString")] sbyte* szDesc);
+        public static delegate* unmanaged[Cdecl]<sbyte*, _NvAPI_Status> NvAPI_GetInterfaceVersionString;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GetInterfaceVersionStringEx"]/*' />
         [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
@@ -166,1440 +106,890 @@ namespace NVAPIWrapper
         public static extern _NvAPI_Status NvAPI_GetInterfaceVersionStringEx([NativeTypeName("NvAPI_ShortString")] sbyte* szDesc);
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GPU_GetEDID"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_GPU_GetEDID([NativeTypeName("NvPhysicalGpuHandle")] NvPhysicalGpuHandle__* hPhysicalGpu, [NativeTypeName("NvU32")] uint displayOutputId, [NativeTypeName("NV_EDID *")] NV_EDID_V3* pEDID);
+        public static delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, uint, NV_EDID_V3*, _NvAPI_Status> NvAPI_GPU_GetEDID;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_SetView"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
         [Obsolete("Do not use this function - it is deprecated in release 290. Instead, use NvAPI_DISP_SetDisplayConfig.")]
-        public static extern _NvAPI_Status NvAPI_SetView([NativeTypeName("NvDisplayHandle")] NvDisplayHandle__* hNvDisplay, NV_VIEW_TARGET_INFO* pTargetInfo, [NativeTypeName("NV_TARGET_VIEW_MODE")] _NV_TARGET_VIEW_MODE targetView);
+        public static delegate* unmanaged[Cdecl]<NvDisplayHandle__*, NV_VIEW_TARGET_INFO*, _NV_TARGET_VIEW_MODE, _NvAPI_Status> NvAPI_SetView;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_SetViewEx"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
         [Obsolete("Do not use this function - it is deprecated in release 290. Instead, use NvAPI_DISP_SetDisplayConfig.")]
-        public static extern _NvAPI_Status NvAPI_SetViewEx([NativeTypeName("NvDisplayHandle")] NvDisplayHandle__* hNvDisplay, NV_DISPLAY_PATH_INFO* pPathInfo, [NativeTypeName("NV_TARGET_VIEW_MODE")] _NV_TARGET_VIEW_MODE displayView);
+        public static delegate* unmanaged[Cdecl]<NvDisplayHandle__*, NV_DISPLAY_PATH_INFO*, _NV_TARGET_VIEW_MODE, _NvAPI_Status> NvAPI_SetViewEx;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GetDisplayDriverVersion"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
         [Obsolete("Do not use this function - it is deprecated in release 290. Instead, use NvAPI_SYS_GetDriverAndBranchVersion.")]
-        public static extern _NvAPI_Status NvAPI_GetDisplayDriverVersion([NativeTypeName("NvDisplayHandle")] NvDisplayHandle__* hNvDisplay, NV_DISPLAY_DRIVER_VERSION* pVersion);
+        public static delegate* unmanaged[Cdecl]<NvDisplayHandle__*, NV_DISPLAY_DRIVER_VERSION*, _NvAPI_Status> NvAPI_GetDisplayDriverVersion;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_OGL_ExpertModeSet"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_OGL_ExpertModeSet([NativeTypeName("NvU32")] uint expertDetailLevel, [NativeTypeName("NvU32")] uint expertReportMask, [NativeTypeName("NvU32")] uint expertOutputMask, [NativeTypeName("NVAPI_OGLEXPERT_CALLBACK")] delegate* unmanaged[Cdecl]<uint, uint, uint, int, sbyte*, void> expertCallback);
+        public static delegate* unmanaged[Cdecl]<uint, uint, uint, delegate* unmanaged[Cdecl]<uint, uint, uint, int, sbyte*, void>, _NvAPI_Status> NvAPI_OGL_ExpertModeSet;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_OGL_ExpertModeGet"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_OGL_ExpertModeGet([NativeTypeName("NvU32 *")] uint* pExpertDetailLevel, [NativeTypeName("NvU32 *")] uint* pExpertReportMask, [NativeTypeName("NvU32 *")] uint* pExpertOutputMask, [NativeTypeName("NVAPI_OGLEXPERT_CALLBACK *")] delegate* unmanaged[Cdecl]<uint, uint, uint, int, sbyte*, void>* pExpertCallback);
+        public static delegate* unmanaged[Cdecl]<uint*, uint*, uint*, delegate* unmanaged[Cdecl]<uint, uint, uint, int, sbyte*, void>*, _NvAPI_Status> NvAPI_OGL_ExpertModeGet;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_OGL_ExpertModeDefaultsSet"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_OGL_ExpertModeDefaultsSet([NativeTypeName("NvU32")] uint expertDetailLevel, [NativeTypeName("NvU32")] uint expertReportMask, [NativeTypeName("NvU32")] uint expertOutputMask);
+        public static delegate* unmanaged[Cdecl]<uint, uint, uint, _NvAPI_Status> NvAPI_OGL_ExpertModeDefaultsSet;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_OGL_ExpertModeDefaultsGet"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_OGL_ExpertModeDefaultsGet([NativeTypeName("NvU32 *")] uint* pExpertDetailLevel, [NativeTypeName("NvU32 *")] uint* pExpertReportMask, [NativeTypeName("NvU32 *")] uint* pExpertOutputMask);
+        public static delegate* unmanaged[Cdecl]<uint*, uint*, uint*, _NvAPI_Status> NvAPI_OGL_ExpertModeDefaultsGet;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_EnumTCCPhysicalGPUs"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_EnumTCCPhysicalGPUs([NativeTypeName("NvPhysicalGpuHandle[64]")] NvPhysicalGpuHandle__** nvGPUHandle, [NativeTypeName("NvU32 *")] uint* pGpuCount);
+        public static delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__**, uint*, _NvAPI_Status> NvAPI_EnumTCCPhysicalGPUs;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_EnumLogicalGPUs"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_EnumLogicalGPUs([NativeTypeName("NvLogicalGpuHandle[64]")] NvLogicalGpuHandle__** nvGPUHandle, [NativeTypeName("NvU32 *")] uint* pGpuCount);
+        public static delegate* unmanaged[Cdecl]<NvLogicalGpuHandle__**, uint*, _NvAPI_Status> NvAPI_EnumLogicalGPUs;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GetPhysicalGPUsFromDisplay"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_GetPhysicalGPUsFromDisplay([NativeTypeName("NvDisplayHandle")] NvDisplayHandle__* hNvDisp, [NativeTypeName("NvPhysicalGpuHandle[64]")] NvPhysicalGpuHandle__** nvGPUHandle, [NativeTypeName("NvU32 *")] uint* pGpuCount);
+        public static delegate* unmanaged[Cdecl]<NvDisplayHandle__*, NvPhysicalGpuHandle__**, uint*, _NvAPI_Status> NvAPI_GetPhysicalGPUsFromDisplay;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GetPhysicalGPUFromUnAttachedDisplay"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_GetPhysicalGPUFromUnAttachedDisplay([NativeTypeName("NvUnAttachedDisplayHandle")] NvUnAttachedDisplayHandle__* hNvUnAttachedDisp, [NativeTypeName("NvPhysicalGpuHandle *")] NvPhysicalGpuHandle__** pPhysicalGpu);
+        public static delegate* unmanaged[Cdecl]<NvUnAttachedDisplayHandle__*, NvPhysicalGpuHandle__**, _NvAPI_Status> NvAPI_GetPhysicalGPUFromUnAttachedDisplay;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GetLogicalGPUFromDisplay"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_GetLogicalGPUFromDisplay([NativeTypeName("NvDisplayHandle")] NvDisplayHandle__* hNvDisp, [NativeTypeName("NvLogicalGpuHandle *")] NvLogicalGpuHandle__** pLogicalGPU);
+        public static delegate* unmanaged[Cdecl]<NvDisplayHandle__*, NvLogicalGpuHandle__**, _NvAPI_Status> NvAPI_GetLogicalGPUFromDisplay;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GetLogicalGPUFromPhysicalGPU"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_GetLogicalGPUFromPhysicalGPU([NativeTypeName("NvPhysicalGpuHandle")] NvPhysicalGpuHandle__* hPhysicalGPU, [NativeTypeName("NvLogicalGpuHandle *")] NvLogicalGpuHandle__** pLogicalGPU);
+        public static delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, NvLogicalGpuHandle__**, _NvAPI_Status> NvAPI_GetLogicalGPUFromPhysicalGPU;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GetPhysicalGPUsFromLogicalGPU"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_GetPhysicalGPUsFromLogicalGPU([NativeTypeName("NvLogicalGpuHandle")] NvLogicalGpuHandle__* hLogicalGPU, [NativeTypeName("NvPhysicalGpuHandle[64]")] NvPhysicalGpuHandle__** hPhysicalGPU, [NativeTypeName("NvU32 *")] uint* pGpuCount);
+        public static delegate* unmanaged[Cdecl]<NvLogicalGpuHandle__*, NvPhysicalGpuHandle__**, uint*, _NvAPI_Status> NvAPI_GetPhysicalGPUsFromLogicalGPU;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GetPhysicalGPUFromGPUID"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_GetPhysicalGPUFromGPUID([NativeTypeName("NvU32")] uint gpuId, [NativeTypeName("NvPhysicalGpuHandle *")] NvPhysicalGpuHandle__** pPhysicalGPU);
+        public static delegate* unmanaged[Cdecl]<uint, NvPhysicalGpuHandle__**, _NvAPI_Status> NvAPI_GetPhysicalGPUFromGPUID;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GetGPUIDfromPhysicalGPU"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_GetGPUIDfromPhysicalGPU([NativeTypeName("NvPhysicalGpuHandle")] NvPhysicalGpuHandle__* hPhysicalGpu, [NativeTypeName("NvU32 *")] uint* pGpuId);
+        public static delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, uint*, _NvAPI_Status> NvAPI_GetGPUIDfromPhysicalGPU;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GPU_GetShaderSubPipeCount"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_GPU_GetShaderSubPipeCount([NativeTypeName("NvPhysicalGpuHandle")] NvPhysicalGpuHandle__* hPhysicalGpu, [NativeTypeName("NvU32 *")] uint* pCount);
+        public static delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, uint*, _NvAPI_Status> NvAPI_GPU_GetShaderSubPipeCount;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GPU_GetGpuCoreCount"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_GPU_GetGpuCoreCount([NativeTypeName("NvPhysicalGpuHandle")] NvPhysicalGpuHandle__* hPhysicalGpu, [NativeTypeName("NvU32 *")] uint* pCount);
+        public static delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, uint*, _NvAPI_Status> NvAPI_GPU_GetGpuCoreCount;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GPU_GetAllOutputs"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
         [Obsolete("Do not use this function - it is deprecated in release 290. Instead, use NvAPI_GPU_GetAllDisplayIds.")]
-        public static extern _NvAPI_Status NvAPI_GPU_GetAllOutputs([NativeTypeName("NvPhysicalGpuHandle")] NvPhysicalGpuHandle__* hPhysicalGpu, [NativeTypeName("NvU32 *")] uint* pOutputsMask);
+        public static delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, uint*, _NvAPI_Status> NvAPI_GPU_GetAllOutputs;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GPU_GetConnectedOutputs"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
         [Obsolete("Do not use this function - it is deprecated in release 290. Instead, use NvAPI_GPU_GetConnectedDisplayIds.")]
-        public static extern _NvAPI_Status NvAPI_GPU_GetConnectedOutputs([NativeTypeName("NvPhysicalGpuHandle")] NvPhysicalGpuHandle__* hPhysicalGpu, [NativeTypeName("NvU32 *")] uint* pOutputsMask);
+        public static delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, uint*, _NvAPI_Status> NvAPI_GPU_GetConnectedOutputs;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GPU_GetConnectedSLIOutputs"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
         [Obsolete("Do not use this function - it is deprecated in release 290. Instead, use NvAPI_GPU_GetConnectedDisplayIds.")]
-        public static extern _NvAPI_Status NvAPI_GPU_GetConnectedSLIOutputs([NativeTypeName("NvPhysicalGpuHandle")] NvPhysicalGpuHandle__* hPhysicalGpu, [NativeTypeName("NvU32 *")] uint* pOutputsMask);
+        public static delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, uint*, _NvAPI_Status> NvAPI_GPU_GetConnectedSLIOutputs;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GPU_GetConnectedDisplayIds"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_GPU_GetConnectedDisplayIds([NativeTypeName("NvPhysicalGpuHandle")] NvPhysicalGpuHandle__* hPhysicalGpu, [NativeTypeName("NV_GPU_DISPLAYIDS *")] _NV_GPU_DISPLAYIDS* pDisplayIds, [NativeTypeName("NvU32 *")] uint* pDisplayIdCount, [NativeTypeName("NvU32")] uint flags);
+        public static delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, _NV_GPU_DISPLAYIDS*, uint*, uint, _NvAPI_Status> NvAPI_GPU_GetConnectedDisplayIds;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GPU_GetAllDisplayIds"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_GPU_GetAllDisplayIds([NativeTypeName("NvPhysicalGpuHandle")] NvPhysicalGpuHandle__* hPhysicalGpu, [NativeTypeName("NV_GPU_DISPLAYIDS *")] _NV_GPU_DISPLAYIDS* pDisplayIds, [NativeTypeName("NvU32 *")] uint* pDisplayIdCount);
+        public static delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, _NV_GPU_DISPLAYIDS*, uint*, _NvAPI_Status> NvAPI_GPU_GetAllDisplayIds;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GPU_GetConnectedOutputsWithLidState"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
         [Obsolete("Do not use this function - it is deprecated in release 290. Instead, use NvAPI_GPU_GetConnectedDisplayIds.")]
-        public static extern _NvAPI_Status NvAPI_GPU_GetConnectedOutputsWithLidState([NativeTypeName("NvPhysicalGpuHandle")] NvPhysicalGpuHandle__* hPhysicalGpu, [NativeTypeName("NvU32 *")] uint* pOutputsMask);
+        public static delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, uint*, _NvAPI_Status> NvAPI_GPU_GetConnectedOutputsWithLidState;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GPU_GetConnectedSLIOutputsWithLidState"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
         [Obsolete("Do not use this function - it is deprecated in release 290. Instead, use NvAPI_GPU_GetConnectedDisplayIds.")]
-        public static extern _NvAPI_Status NvAPI_GPU_GetConnectedSLIOutputsWithLidState([NativeTypeName("NvPhysicalGpuHandle")] NvPhysicalGpuHandle__* hPhysicalGpu, [NativeTypeName("NvU32 *")] uint* pOutputsMask);
+        public static delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, uint*, _NvAPI_Status> NvAPI_GPU_GetConnectedSLIOutputsWithLidState;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GPU_GetSystemType"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_GPU_GetSystemType([NativeTypeName("NvPhysicalGpuHandle")] NvPhysicalGpuHandle__* hPhysicalGpu, NV_SYSTEM_TYPE* pSystemType);
+        public static delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, NV_SYSTEM_TYPE*, _NvAPI_Status> NvAPI_GPU_GetSystemType;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GPU_GetActiveOutputs"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_GPU_GetActiveOutputs([NativeTypeName("NvPhysicalGpuHandle")] NvPhysicalGpuHandle__* hPhysicalGpu, [NativeTypeName("NvU32 *")] uint* pOutputsMask);
+        public static delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, uint*, _NvAPI_Status> NvAPI_GPU_GetActiveOutputs;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GPU_SetEDID"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_GPU_SetEDID([NativeTypeName("NvPhysicalGpuHandle")] NvPhysicalGpuHandle__* hPhysicalGpu, [NativeTypeName("NvU32")] uint displayOutputId, [NativeTypeName("NV_EDID *")] NV_EDID_V3* pEDID);
+        public static delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, uint, NV_EDID_V3*, _NvAPI_Status> NvAPI_GPU_SetEDID;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GPU_GetOutputType"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_GPU_GetOutputType([NativeTypeName("NvPhysicalGpuHandle")] NvPhysicalGpuHandle__* hPhysicalGpu, [NativeTypeName("NvU32")] uint outputId, [NativeTypeName("NV_GPU_OUTPUT_TYPE *")] _NV_GPU_OUTPUT_TYPE* pOutputType);
+        public static delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, uint, _NV_GPU_OUTPUT_TYPE*, _NvAPI_Status> NvAPI_GPU_GetOutputType;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GPU_ValidateOutputCombination"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_GPU_ValidateOutputCombination([NativeTypeName("NvPhysicalGpuHandle")] NvPhysicalGpuHandle__* hPhysicalGpu, [NativeTypeName("NvU32")] uint outputsMask);
+        public static delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, uint, _NvAPI_Status> NvAPI_GPU_ValidateOutputCombination;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GPU_GetFullName"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_GPU_GetFullName([NativeTypeName("NvPhysicalGpuHandle")] NvPhysicalGpuHandle__* hPhysicalGpu, [NativeTypeName("NvAPI_ShortString")] sbyte* szName);
+        public static delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, sbyte*, _NvAPI_Status> NvAPI_GPU_GetFullName;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GPU_GetPCIIdentifiers"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_GPU_GetPCIIdentifiers([NativeTypeName("NvPhysicalGpuHandle")] NvPhysicalGpuHandle__* hPhysicalGpu, [NativeTypeName("NvU32 *")] uint* pDeviceId, [NativeTypeName("NvU32 *")] uint* pSubSystemId, [NativeTypeName("NvU32 *")] uint* pRevisionId, [NativeTypeName("NvU32 *")] uint* pExtDeviceId);
+        public static delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, uint*, uint*, uint*, uint*, _NvAPI_Status> NvAPI_GPU_GetPCIIdentifiers;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GPU_GetGPUType"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_GPU_GetGPUType([NativeTypeName("NvPhysicalGpuHandle")] NvPhysicalGpuHandle__* hPhysicalGpu, [NativeTypeName("NV_GPU_TYPE *")] _NV_GPU_TYPE* pGpuType);
+        public static delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, _NV_GPU_TYPE*, _NvAPI_Status> NvAPI_GPU_GetGPUType;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GPU_GetBusType"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_GPU_GetBusType([NativeTypeName("NvPhysicalGpuHandle")] NvPhysicalGpuHandle__* hPhysicalGpu, [NativeTypeName("NV_GPU_BUS_TYPE *")] _NV_GPU_BUS_TYPE* pBusType);
+        public static delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, _NV_GPU_BUS_TYPE*, _NvAPI_Status> NvAPI_GPU_GetBusType;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GPU_GetBusId"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_GPU_GetBusId([NativeTypeName("NvPhysicalGpuHandle")] NvPhysicalGpuHandle__* hPhysicalGpu, [NativeTypeName("NvU32 *")] uint* pBusId);
+        public static delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, uint*, _NvAPI_Status> NvAPI_GPU_GetBusId;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GPU_GetBusSlotId"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_GPU_GetBusSlotId([NativeTypeName("NvPhysicalGpuHandle")] NvPhysicalGpuHandle__* hPhysicalGpu, [NativeTypeName("NvU32 *")] uint* pBusSlotId);
+        public static delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, uint*, _NvAPI_Status> NvAPI_GPU_GetBusSlotId;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GPU_GetIRQ"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_GPU_GetIRQ([NativeTypeName("NvPhysicalGpuHandle")] NvPhysicalGpuHandle__* hPhysicalGpu, [NativeTypeName("NvU32 *")] uint* pIRQ);
+        public static delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, uint*, _NvAPI_Status> NvAPI_GPU_GetIRQ;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GPU_GetVbiosRevision"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_GPU_GetVbiosRevision([NativeTypeName("NvPhysicalGpuHandle")] NvPhysicalGpuHandle__* hPhysicalGpu, [NativeTypeName("NvU32 *")] uint* pBiosRevision);
+        public static delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, uint*, _NvAPI_Status> NvAPI_GPU_GetVbiosRevision;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GPU_GetVbiosOEMRevision"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_GPU_GetVbiosOEMRevision([NativeTypeName("NvPhysicalGpuHandle")] NvPhysicalGpuHandle__* hPhysicalGpu, [NativeTypeName("NvU32 *")] uint* pBiosRevision);
+        public static delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, uint*, _NvAPI_Status> NvAPI_GPU_GetVbiosOEMRevision;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GPU_GetVbiosVersionString"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_GPU_GetVbiosVersionString([NativeTypeName("NvPhysicalGpuHandle")] NvPhysicalGpuHandle__* hPhysicalGpu, [NativeTypeName("NvAPI_ShortString")] sbyte* szBiosRevision);
+        public static delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, sbyte*, _NvAPI_Status> NvAPI_GPU_GetVbiosVersionString;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GPU_GetAGPAperture"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
         [Obsolete("Do not use this function - it is deprecated in release 455.")]
-        public static extern _NvAPI_Status NvAPI_GPU_GetAGPAperture([NativeTypeName("NvPhysicalGpuHandle")] NvPhysicalGpuHandle__* hPhysicalGpu, [NativeTypeName("NvU32 *")] uint* pSize);
+        public static delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, uint*, _NvAPI_Status> NvAPI_GPU_GetAGPAperture;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GPU_GetCurrentAGPRate"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
         [Obsolete("Do not use this function - it is deprecated in release 455.")]
-        public static extern _NvAPI_Status NvAPI_GPU_GetCurrentAGPRate([NativeTypeName("NvPhysicalGpuHandle")] NvPhysicalGpuHandle__* hPhysicalGpu, [NativeTypeName("NvU32 *")] uint* pRate);
+        public static delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, uint*, _NvAPI_Status> NvAPI_GPU_GetCurrentAGPRate;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GPU_GetCurrentPCIEDownstreamWidth"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_GPU_GetCurrentPCIEDownstreamWidth([NativeTypeName("NvPhysicalGpuHandle")] NvPhysicalGpuHandle__* hPhysicalGpu, [NativeTypeName("NvU32 *")] uint* pWidth);
+        public static delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, uint*, _NvAPI_Status> NvAPI_GPU_GetCurrentPCIEDownstreamWidth;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GPU_GetPhysicalFrameBufferSize"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_GPU_GetPhysicalFrameBufferSize([NativeTypeName("NvPhysicalGpuHandle")] NvPhysicalGpuHandle__* hPhysicalGpu, [NativeTypeName("NvU32 *")] uint* pSize);
+        public static delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, uint*, _NvAPI_Status> NvAPI_GPU_GetPhysicalFrameBufferSize;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GPU_GetVirtualFrameBufferSize"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_GPU_GetVirtualFrameBufferSize([NativeTypeName("NvPhysicalGpuHandle")] NvPhysicalGpuHandle__* hPhysicalGpu, [NativeTypeName("NvU32 *")] uint* pSize);
+        public static delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, uint*, _NvAPI_Status> NvAPI_GPU_GetVirtualFrameBufferSize;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GPU_GetQuadroStatus"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
         [Obsolete("Do not use this function - it is deprecated in release 460.")]
-        public static extern _NvAPI_Status NvAPI_GPU_GetQuadroStatus([NativeTypeName("NvPhysicalGpuHandle")] NvPhysicalGpuHandle__* hPhysicalGpu, [NativeTypeName("NvU32 *")] uint* pStatus);
+        public static delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, uint*, _NvAPI_Status> NvAPI_GPU_GetQuadroStatus;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GPU_GetBoardInfo"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_GPU_GetBoardInfo([NativeTypeName("NvPhysicalGpuHandle")] NvPhysicalGpuHandle__* hPhysicalGpu, [NativeTypeName("NV_BOARD_INFO *")] _NV_BOARD_INFO* pBoardInfo);
+        public static delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, _NV_BOARD_INFO*, _NvAPI_Status> NvAPI_GPU_GetBoardInfo;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GPU_GetRamBusWidth"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_GPU_GetRamBusWidth([NativeTypeName("NvPhysicalGpuHandle")] NvPhysicalGpuHandle__* hPhysicalGpu, [NativeTypeName("NvU32 *")] uint* pBusWidth);
+        public static delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, uint*, _NvAPI_Status> NvAPI_GPU_GetRamBusWidth;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GPU_GetArchInfo"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_GPU_GetArchInfo([NativeTypeName("NvPhysicalGpuHandle")] NvPhysicalGpuHandle__* hPhysicalGpu, [NativeTypeName("NV_GPU_ARCH_INFO *")] NV_GPU_ARCH_INFO_V2* pGpuArchInfo);
+        public static delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, NV_GPU_ARCH_INFO_V2*, _NvAPI_Status> NvAPI_GPU_GetArchInfo;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_I2CRead"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_I2CRead([NativeTypeName("NvPhysicalGpuHandle")] NvPhysicalGpuHandle__* hPhysicalGpu, [NativeTypeName("NV_I2C_INFO *")] NV_I2C_INFO_V3* pI2cInfo);
+        public static delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, NV_I2C_INFO_V3*, _NvAPI_Status> NvAPI_I2CRead;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_I2CWrite"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_I2CWrite([NativeTypeName("NvPhysicalGpuHandle")] NvPhysicalGpuHandle__* hPhysicalGpu, [NativeTypeName("NV_I2C_INFO *")] NV_I2C_INFO_V3* pI2cInfo);
+        public static delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, NV_I2C_INFO_V3*, _NvAPI_Status> NvAPI_I2CWrite;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GPU_WorkstationFeatureSetup"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_GPU_WorkstationFeatureSetup([NativeTypeName("NvPhysicalGpuHandle")] NvPhysicalGpuHandle__* hPhysicalGpu, [NativeTypeName("NvU32")] uint featureEnableMask, [NativeTypeName("NvU32")] uint featureDisableMask);
+        public static delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, uint, uint, _NvAPI_Status> NvAPI_GPU_WorkstationFeatureSetup;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GPU_WorkstationFeatureQuery"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_GPU_WorkstationFeatureQuery([NativeTypeName("NvPhysicalGpuHandle")] NvPhysicalGpuHandle__* hPhysicalGpu, [NativeTypeName("NvU32 *")] uint* pConfiguredFeatureMask, [NativeTypeName("NvU32 *")] uint* pConsistentFeatureMask);
+        public static delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, uint*, uint*, _NvAPI_Status> NvAPI_GPU_WorkstationFeatureQuery;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GPU_GetHDCPSupportStatus"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_GPU_GetHDCPSupportStatus([NativeTypeName("NvPhysicalGpuHandle")] NvPhysicalGpuHandle__* hPhysicalGpu, NV_GPU_GET_HDCP_SUPPORT_STATUS* pGetHDCPSupportStatus);
+        public static delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, NV_GPU_GET_HDCP_SUPPORT_STATUS*, _NvAPI_Status> NvAPI_GPU_GetHDCPSupportStatus;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GPU_CudaEnumComputeCapableGpus"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
         [Obsolete("Do not use this function - it is deprecated in release 319.")]
-        public static extern _NvAPI_Status NvAPI_GPU_CudaEnumComputeCapableGpus([NativeTypeName("NV_COMPUTE_GPU_TOPOLOGY *")] _NV_COMPUTE_GPU_TOPOLOGY_V2* pComputeTopo);
+        public static delegate* unmanaged[Cdecl]<_NV_COMPUTE_GPU_TOPOLOGY_V2*, _NvAPI_Status> NvAPI_GPU_CudaEnumComputeCapableGpus;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GPU_GetTachReading"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_GPU_GetTachReading([NativeTypeName("NvPhysicalGpuHandle")] NvPhysicalGpuHandle__* hPhysicalGPU, [NativeTypeName("NvU32 *")] uint* pValue);
+        public static delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, uint*, _NvAPI_Status> NvAPI_GPU_GetTachReading;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GPU_GetECCStatusInfo"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_GPU_GetECCStatusInfo([NativeTypeName("NvPhysicalGpuHandle")] NvPhysicalGpuHandle__* hPhysicalGpu, NV_GPU_ECC_STATUS_INFO* pECCStatusInfo);
+        public static delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, NV_GPU_ECC_STATUS_INFO*, _NvAPI_Status> NvAPI_GPU_GetECCStatusInfo;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GPU_GetECCErrorInfo"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_GPU_GetECCErrorInfo([NativeTypeName("NvPhysicalGpuHandle")] NvPhysicalGpuHandle__* hPhysicalGpu, NV_GPU_ECC_ERROR_INFO* pECCErrorInfo);
+        public static delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, NV_GPU_ECC_ERROR_INFO*, _NvAPI_Status> NvAPI_GPU_GetECCErrorInfo;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GPU_ResetECCErrorInfo"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_GPU_ResetECCErrorInfo([NativeTypeName("NvPhysicalGpuHandle")] NvPhysicalGpuHandle__* hPhysicalGpu, [NativeTypeName("NvU8")] byte bResetCurrent, [NativeTypeName("NvU8")] byte bResetAggregate);
+        public static delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, byte, byte, _NvAPI_Status> NvAPI_GPU_ResetECCErrorInfo;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GPU_GetECCConfigurationInfo"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_GPU_GetECCConfigurationInfo([NativeTypeName("NvPhysicalGpuHandle")] NvPhysicalGpuHandle__* hPhysicalGpu, NV_GPU_ECC_CONFIGURATION_INFO* pECCConfigurationInfo);
+        public static delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, NV_GPU_ECC_CONFIGURATION_INFO*, _NvAPI_Status> NvAPI_GPU_GetECCConfigurationInfo;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GPU_SetECCConfiguration"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_GPU_SetECCConfiguration([NativeTypeName("NvPhysicalGpuHandle")] NvPhysicalGpuHandle__* hPhysicalGpu, [NativeTypeName("NvU8")] byte bEnable, [NativeTypeName("NvU8")] byte bEnableImmediately);
+        public static delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, byte, byte, _NvAPI_Status> NvAPI_GPU_SetECCConfiguration;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GPU_QueryWorkstationFeatureSupport"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_GPU_QueryWorkstationFeatureSupport([NativeTypeName("NvPhysicalGpuHandle")] NvPhysicalGpuHandle__* physicalGpu, [NativeTypeName("NV_GPU_WORKSTATION_FEATURE_TYPE")] _NV_GPU_WORKSTATION_FEATURE_TYPE gpuWorkstationFeature);
+        public static delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, _NV_GPU_WORKSTATION_FEATURE_TYPE, _NvAPI_Status> NvAPI_GPU_QueryWorkstationFeatureSupport;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GPU_SetScanoutIntensity"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_GPU_SetScanoutIntensity([NativeTypeName("NvU32")] uint displayId, [NativeTypeName("NV_SCANOUT_INTENSITY_DATA *")] NV_SCANOUT_INTENSITY_DATA_V2* scanoutIntensityData, int* pbSticky);
+        public static delegate* unmanaged[Cdecl]<uint, NV_SCANOUT_INTENSITY_DATA_V2*, int*, _NvAPI_Status> NvAPI_GPU_SetScanoutIntensity;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GPU_GetScanoutIntensityState"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_GPU_GetScanoutIntensityState([NativeTypeName("NvU32")] uint displayId, [NativeTypeName("NV_SCANOUT_INTENSITY_STATE_DATA *")] _NV_SCANOUT_INTENSITY_STATE_DATA* scanoutIntensityStateData);
+        public static delegate* unmanaged[Cdecl]<uint, _NV_SCANOUT_INTENSITY_STATE_DATA*, _NvAPI_Status> NvAPI_GPU_GetScanoutIntensityState;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GPU_SetScanoutWarping"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_GPU_SetScanoutWarping([NativeTypeName("NvU32")] uint displayId, NV_SCANOUT_WARPING_DATA* scanoutWarpingData, int* piMaxNumVertices, int* pbSticky);
+        public static delegate* unmanaged[Cdecl]<uint, NV_SCANOUT_WARPING_DATA*, int*, int*, _NvAPI_Status> NvAPI_GPU_SetScanoutWarping;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GPU_GetScanoutWarpingState"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_GPU_GetScanoutWarpingState([NativeTypeName("NvU32")] uint displayId, [NativeTypeName("NV_SCANOUT_WARPING_STATE_DATA *")] _NV_SCANOUT_WARPING_STATE_DATA* scanoutWarpingStateData);
+        public static delegate* unmanaged[Cdecl]<uint, _NV_SCANOUT_WARPING_STATE_DATA*, _NvAPI_Status> NvAPI_GPU_GetScanoutWarpingState;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GPU_SetScanoutCompositionParameter"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_GPU_SetScanoutCompositionParameter([NativeTypeName("NvU32")] uint displayId, NV_GPU_SCANOUT_COMPOSITION_PARAMETER parameter, NV_GPU_SCANOUT_COMPOSITION_PARAMETER_VALUE parameterValue, float* pContainer);
+        public static delegate* unmanaged[Cdecl]<uint, NV_GPU_SCANOUT_COMPOSITION_PARAMETER, NV_GPU_SCANOUT_COMPOSITION_PARAMETER_VALUE, float*, _NvAPI_Status> NvAPI_GPU_SetScanoutCompositionParameter;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GPU_GetScanoutCompositionParameter"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_GPU_GetScanoutCompositionParameter([NativeTypeName("NvU32")] uint displayId, NV_GPU_SCANOUT_COMPOSITION_PARAMETER parameter, NV_GPU_SCANOUT_COMPOSITION_PARAMETER_VALUE* parameterData, float* pContainer);
+        public static delegate* unmanaged[Cdecl]<uint, NV_GPU_SCANOUT_COMPOSITION_PARAMETER, NV_GPU_SCANOUT_COMPOSITION_PARAMETER_VALUE*, float*, _NvAPI_Status> NvAPI_GPU_GetScanoutCompositionParameter;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GPU_GetScanoutConfiguration"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_GPU_GetScanoutConfiguration([NativeTypeName("NvU32")] uint displayId, NvSBox* desktopRect, NvSBox* scanoutRect);
+        public static delegate* unmanaged[Cdecl]<uint, NvSBox*, NvSBox*, _NvAPI_Status> NvAPI_GPU_GetScanoutConfiguration;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GPU_GetScanoutConfigurationEx"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_GPU_GetScanoutConfigurationEx([NativeTypeName("NvU32")] uint displayId, [NativeTypeName("NV_SCANOUT_INFORMATION *")] _NV_SCANOUT_INFORMATION* pScanoutInformation);
+        public static delegate* unmanaged[Cdecl]<uint, _NV_SCANOUT_INFORMATION*, _NvAPI_Status> NvAPI_GPU_GetScanoutConfigurationEx;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GPU_GetAdapterIdFromPhysicalGpu"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
         [Obsolete("Do not use this function - it is deprecated in release 520. Instead, use NvAPI_GPU_GetLogicalGpuInfo.")]
-        public static extern _NvAPI_Status NvAPI_GPU_GetAdapterIdFromPhysicalGpu([NativeTypeName("NvPhysicalGpuHandle")] NvPhysicalGpuHandle__* hPhysicalGpu, void* pOSAdapterId);
+        public static delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, void*, _NvAPI_Status> NvAPI_GPU_GetAdapterIdFromPhysicalGpu;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GPU_GetVirtualizationInfo"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_GPU_GetVirtualizationInfo([NativeTypeName("NvPhysicalGpuHandle")] NvPhysicalGpuHandle__* hPhysicalGpu, [NativeTypeName("NV_GPU_VIRTUALIZATION_INFO *")] _NV_GPU_VIRTUALIZATION_INFO* pVirtualizationInfo);
+        public static delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, _NV_GPU_VIRTUALIZATION_INFO*, _NvAPI_Status> NvAPI_GPU_GetVirtualizationInfo;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GPU_GetLogicalGpuInfo"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_GPU_GetLogicalGpuInfo([NativeTypeName("NvLogicalGpuHandle")] NvLogicalGpuHandle__* hLogicalGpu, [NativeTypeName("NV_LOGICAL_GPU_DATA *")] _NV_LOGICAL_GPU_DATA_V1* pLogicalGpuData);
+        public static delegate* unmanaged[Cdecl]<NvLogicalGpuHandle__*, _NV_LOGICAL_GPU_DATA_V1*, _NvAPI_Status> NvAPI_GPU_GetLogicalGpuInfo;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GPU_GetLicensableFeatures"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_GPU_GetLicensableFeatures([NativeTypeName("NvPhysicalGpuHandle")] NvPhysicalGpuHandle__* hPhysicalGpu, [NativeTypeName("NV_LICENSABLE_FEATURES *")] _NV_LICENSABLE_FEATURES_V4* pLicensableFeatures);
+        public static delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, _NV_LICENSABLE_FEATURES_V4*, _NvAPI_Status> NvAPI_GPU_GetLicensableFeatures;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GPU_GetEncoderStatistics"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_GPU_GetEncoderStatistics([NativeTypeName("NvPhysicalGpuHandle")] NvPhysicalGpuHandle__* hPhysicalGpu, [NativeTypeName("NV_ENCODER_STATISTICS *")] _NV_ENCODER_STATISTICS_V1* pEncoderStatistics);
+        public static delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, _NV_ENCODER_STATISTICS_V1*, _NvAPI_Status> NvAPI_GPU_GetEncoderStatistics;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GPU_GetEncoderSessionsInfo"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_GPU_GetEncoderSessionsInfo([NativeTypeName("NvPhysicalGpuHandle")] NvPhysicalGpuHandle__* hPhysicalGpu, [NativeTypeName("NV_ENCODER_SESSIONS_INFO *")] _NV_ENCODER_SESSIONS_INFO_V1* pEncoderSessionsInfo);
+        public static delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, _NV_ENCODER_SESSIONS_INFO_V1*, _NvAPI_Status> NvAPI_GPU_GetEncoderSessionsInfo;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GPU_GetGPUInfo"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_GPU_GetGPUInfo([NativeTypeName("NvPhysicalGpuHandle")] NvPhysicalGpuHandle__* hPhysicalGpu, [NativeTypeName("NV_GPU_INFO *")] _NV_GPU_INFO_V2* pGpuInfo);
+        public static delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, _NV_GPU_INFO_V2*, _NvAPI_Status> NvAPI_GPU_GetGPUInfo;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GPU_GetVRReadyData"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_GPU_GetVRReadyData([NativeTypeName("NvPhysicalGpuHandle")] NvPhysicalGpuHandle__* hPhysicalGpu, [NativeTypeName("NV_GPU_VR_READY *")] _NV_GPU_VR_READY_V1* pGpuVrReadyData);
+        public static delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, _NV_GPU_VR_READY_V1*, _NvAPI_Status> NvAPI_GPU_GetVRReadyData;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GPU_GetGspFeatures"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_GPU_GetGspFeatures([NativeTypeName("NvPhysicalGpuHandle")] NvPhysicalGpuHandle__* hPhysicalGpu, [NativeTypeName("NV_GPU_GSP_INFO *")] _NV_GPU_GSP_INFO_V1* pGspInfo);
+        public static delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, _NV_GPU_GSP_INFO_V1*, _NvAPI_Status> NvAPI_GPU_GetGspFeatures;
+
+        /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GPU_GetUUID"]/*' />
+        public static delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, _NV_GPU_UUID_V1*, _NvAPI_Status> NvAPI_GPU_GetUUID;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GPU_NVLINK_GetCaps"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_GPU_NVLINK_GetCaps([NativeTypeName("NvPhysicalGpuHandle")] NvPhysicalGpuHandle__* hPhysicalGpu, [NativeTypeName("NVLINK_GET_CAPS *")] NVLINK_GET_CAPS_V1* capsParams);
+        public static delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, NVLINK_GET_CAPS_V1*, _NvAPI_Status> NvAPI_GPU_NVLINK_GetCaps;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GPU_NVLINK_GetStatus"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_GPU_NVLINK_GetStatus([NativeTypeName("NvPhysicalGpuHandle")] NvPhysicalGpuHandle__* hPhysicalGpu, [NativeTypeName("NVLINK_GET_STATUS *")] NVLINK_GET_STATUS_V2* statusParams);
+        public static delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, NVLINK_GET_STATUS_V2*, _NvAPI_Status> NvAPI_GPU_NVLINK_GetStatus;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GPU_GetPerfDecreaseInfo"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_GPU_GetPerfDecreaseInfo([NativeTypeName("NvPhysicalGpuHandle")] NvPhysicalGpuHandle__* hPhysicalGpu, [NativeTypeName("NvU32 *")] uint* pPerfDecrInfo);
+        public static delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, uint*, _NvAPI_Status> NvAPI_GPU_GetPerfDecreaseInfo;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GPU_GetPstatesInfoEx"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
         [Obsolete("Do not use this function - it is deprecated in release 304. Instead, use NvAPI_GPU_GetPstates20.")]
-        public static extern _NvAPI_Status NvAPI_GPU_GetPstatesInfoEx([NativeTypeName("NvPhysicalGpuHandle")] NvPhysicalGpuHandle__* hPhysicalGpu, [NativeTypeName("NV_GPU_PERF_PSTATES_INFO *")] NV_GPU_PERF_PSTATES_INFO_V2* pPerfPstatesInfo, [NativeTypeName("NvU32")] uint inputFlags);
+        public static delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, NV_GPU_PERF_PSTATES_INFO_V2*, uint, _NvAPI_Status> NvAPI_GPU_GetPstatesInfoEx;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GPU_GetPstates20"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_GPU_GetPstates20([NativeTypeName("NvPhysicalGpuHandle")] NvPhysicalGpuHandle__* hPhysicalGpu, [NativeTypeName("NV_GPU_PERF_PSTATES20_INFO *")] _NV_GPU_PERF_PSTATES20_INFO_V2* pPstatesInfo);
+        public static delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, _NV_GPU_PERF_PSTATES20_INFO_V2*, _NvAPI_Status> NvAPI_GPU_GetPstates20;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GPU_GetCurrentPstate"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_GPU_GetCurrentPstate([NativeTypeName("NvPhysicalGpuHandle")] NvPhysicalGpuHandle__* hPhysicalGpu, [NativeTypeName("NV_GPU_PERF_PSTATE_ID *")] _NV_GPU_PERF_PSTATE_ID* pCurrentPstate);
+        public static delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, _NV_GPU_PERF_PSTATE_ID*, _NvAPI_Status> NvAPI_GPU_GetCurrentPstate;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GPU_GetDynamicPstatesInfoEx"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_GPU_GetDynamicPstatesInfoEx([NativeTypeName("NvPhysicalGpuHandle")] NvPhysicalGpuHandle__* hPhysicalGpu, NV_GPU_DYNAMIC_PSTATES_INFO_EX* pDynamicPstatesInfoEx);
+        public static delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, NV_GPU_DYNAMIC_PSTATES_INFO_EX*, _NvAPI_Status> NvAPI_GPU_GetDynamicPstatesInfoEx;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GPU_GetThermalSettings"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_GPU_GetThermalSettings([NativeTypeName("NvPhysicalGpuHandle")] NvPhysicalGpuHandle__* hPhysicalGpu, [NativeTypeName("NvU32")] uint sensorIndex, [NativeTypeName("NV_GPU_THERMAL_SETTINGS *")] NV_GPU_THERMAL_SETTINGS_V2* pThermalSettings);
+        public static delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, uint, NV_GPU_THERMAL_SETTINGS_V2*, _NvAPI_Status> NvAPI_GPU_GetThermalSettings;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GPU_GetAllClockFrequencies"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_GPU_GetAllClockFrequencies([NativeTypeName("NvPhysicalGpuHandle")] NvPhysicalGpuHandle__* hPhysicalGPU, [NativeTypeName("NV_GPU_CLOCK_FREQUENCIES *")] NV_GPU_CLOCK_FREQUENCIES_V2* pClkFreqs);
+        public static delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, NV_GPU_CLOCK_FREQUENCIES_V2*, _NvAPI_Status> NvAPI_GPU_GetAllClockFrequencies;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GPU_QueryIlluminationSupport"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_GPU_QueryIlluminationSupport([NativeTypeName("NV_GPU_QUERY_ILLUMINATION_SUPPORT_PARM *")] _NV_GPU_QUERY_ILLUMINATION_SUPPORT_PARM_V1* pIlluminationSupportInfo);
+        public static delegate* unmanaged[Cdecl]<_NV_GPU_QUERY_ILLUMINATION_SUPPORT_PARM_V1*, _NvAPI_Status> NvAPI_GPU_QueryIlluminationSupport;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GPU_GetIllumination"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_GPU_GetIllumination([NativeTypeName("NV_GPU_GET_ILLUMINATION_PARM *")] _NV_GPU_GET_ILLUMINATION_PARM_V1* pIlluminationInfo);
+        public static delegate* unmanaged[Cdecl]<_NV_GPU_GET_ILLUMINATION_PARM_V1*, _NvAPI_Status> NvAPI_GPU_GetIllumination;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GPU_SetIllumination"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_GPU_SetIllumination([NativeTypeName("NV_GPU_SET_ILLUMINATION_PARM *")] _NV_GPU_SET_ILLUMINATION_PARM_V1* pIlluminationInfo);
+        public static delegate* unmanaged[Cdecl]<_NV_GPU_SET_ILLUMINATION_PARM_V1*, _NvAPI_Status> NvAPI_GPU_SetIllumination;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GPU_ClientIllumDevicesGetInfo"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_GPU_ClientIllumDevicesGetInfo([NativeTypeName("NvPhysicalGpuHandle")] NvPhysicalGpuHandle__* hPhysicalGpu, [NativeTypeName("NV_GPU_CLIENT_ILLUM_DEVICE_INFO_PARAMS *")] _NV_GPU_CLIENT_ILLUM_DEVICE_INFO_PARAMS_V1* pIllumDevicesInfo);
+        public static delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, _NV_GPU_CLIENT_ILLUM_DEVICE_INFO_PARAMS_V1*, _NvAPI_Status> NvAPI_GPU_ClientIllumDevicesGetInfo;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GPU_ClientIllumDevicesGetControl"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_GPU_ClientIllumDevicesGetControl([NativeTypeName("NvPhysicalGpuHandle")] NvPhysicalGpuHandle__* hPhysicalGpu, [NativeTypeName("NV_GPU_CLIENT_ILLUM_DEVICE_CONTROL_PARAMS *")] NV_GPU_CLIENT_ILLUM_DEVICE_CONTROL_PARAMS_V1* pClientIllumDevicesControl);
+        public static delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, NV_GPU_CLIENT_ILLUM_DEVICE_CONTROL_PARAMS_V1*, _NvAPI_Status> NvAPI_GPU_ClientIllumDevicesGetControl;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GPU_ClientIllumDevicesSetControl"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_GPU_ClientIllumDevicesSetControl([NativeTypeName("NvPhysicalGpuHandle")] NvPhysicalGpuHandle__* hPhysicalGpu, [NativeTypeName("NV_GPU_CLIENT_ILLUM_DEVICE_CONTROL_PARAMS *")] NV_GPU_CLIENT_ILLUM_DEVICE_CONTROL_PARAMS_V1* pClientIllumDevicesControl);
+        public static delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, NV_GPU_CLIENT_ILLUM_DEVICE_CONTROL_PARAMS_V1*, _NvAPI_Status> NvAPI_GPU_ClientIllumDevicesSetControl;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GPU_ClientIllumZonesGetInfo"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_GPU_ClientIllumZonesGetInfo([NativeTypeName("NvPhysicalGpuHandle")] NvPhysicalGpuHandle__* hPhysicalGpu, [NativeTypeName("NV_GPU_CLIENT_ILLUM_ZONE_INFO_PARAMS *")] _NV_GPU_CLIENT_ILLUM_ZONE_INFO_PARAMS_V1* pIllumZonesInfo);
+        public static delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, _NV_GPU_CLIENT_ILLUM_ZONE_INFO_PARAMS_V1*, _NvAPI_Status> NvAPI_GPU_ClientIllumZonesGetInfo;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GPU_ClientIllumZonesGetControl"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_GPU_ClientIllumZonesGetControl([NativeTypeName("NvPhysicalGpuHandle")] NvPhysicalGpuHandle__* hPhysicalGpu, [NativeTypeName("NV_GPU_CLIENT_ILLUM_ZONE_CONTROL_PARAMS *")] _NV_GPU_CLIENT_ILLUM_ZONE_CONTROL_PARAMS_V1* pIllumZonesControl);
+        public static delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, _NV_GPU_CLIENT_ILLUM_ZONE_CONTROL_PARAMS_V1*, _NvAPI_Status> NvAPI_GPU_ClientIllumZonesGetControl;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GPU_ClientIllumZonesSetControl"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_GPU_ClientIllumZonesSetControl([NativeTypeName("NvPhysicalGpuHandle")] NvPhysicalGpuHandle__* hPhysicalGpu, [NativeTypeName("NV_GPU_CLIENT_ILLUM_ZONE_CONTROL_PARAMS *")] _NV_GPU_CLIENT_ILLUM_ZONE_CONTROL_PARAMS_V1* pIllumZonesControl);
+        public static delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, _NV_GPU_CLIENT_ILLUM_ZONE_CONTROL_PARAMS_V1*, _NvAPI_Status> NvAPI_GPU_ClientIllumZonesSetControl;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_Event_RegisterCallback"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_Event_RegisterCallback([NativeTypeName("PNV_EVENT_REGISTER_CALLBACK")] NV_EVENT_REGISTER_CALLBACK* eventCallback, [NativeTypeName("NvEventHandle *")] NvEventHandle__** phClient);
+        public static delegate* unmanaged[Cdecl]<NV_EVENT_REGISTER_CALLBACK*, NvEventHandle__**, _NvAPI_Status> NvAPI_Event_RegisterCallback;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_Event_UnregisterCallback"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_Event_UnregisterCallback([NativeTypeName("NvEventHandle")] NvEventHandle__* hClient);
+        public static delegate* unmanaged[Cdecl]<NvEventHandle__*, _NvAPI_Status> NvAPI_Event_UnregisterCallback;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_EnumNvidiaDisplayHandle"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_EnumNvidiaDisplayHandle([NativeTypeName("NvU32")] uint thisEnum, [NativeTypeName("NvDisplayHandle *")] NvDisplayHandle__** pNvDispHandle);
+        public static delegate* unmanaged[Cdecl]<uint, NvDisplayHandle__**, _NvAPI_Status> NvAPI_EnumNvidiaDisplayHandle;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_EnumNvidiaUnAttachedDisplayHandle"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_EnumNvidiaUnAttachedDisplayHandle([NativeTypeName("NvU32")] uint thisEnum, [NativeTypeName("NvUnAttachedDisplayHandle *")] NvUnAttachedDisplayHandle__** pNvUnAttachedDispHandle);
+        public static delegate* unmanaged[Cdecl]<uint, NvUnAttachedDisplayHandle__**, _NvAPI_Status> NvAPI_EnumNvidiaUnAttachedDisplayHandle;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_CreateDisplayFromUnAttachedDisplay"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_CreateDisplayFromUnAttachedDisplay([NativeTypeName("NvUnAttachedDisplayHandle")] NvUnAttachedDisplayHandle__* hNvUnAttachedDisp, [NativeTypeName("NvDisplayHandle *")] NvDisplayHandle__** pNvDisplay);
+        public static delegate* unmanaged[Cdecl]<NvUnAttachedDisplayHandle__*, NvDisplayHandle__**, _NvAPI_Status> NvAPI_CreateDisplayFromUnAttachedDisplay;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GetAssociatedNvidiaDisplayHandle"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_GetAssociatedNvidiaDisplayHandle([NativeTypeName("const char *")] sbyte* szDisplayName, [NativeTypeName("NvDisplayHandle *")] NvDisplayHandle__** pNvDispHandle);
+        public static delegate* unmanaged[Cdecl]<sbyte*, NvDisplayHandle__**, _NvAPI_Status> NvAPI_GetAssociatedNvidiaDisplayHandle;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_DISP_GetAssociatedUnAttachedNvidiaDisplayHandle"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_DISP_GetAssociatedUnAttachedNvidiaDisplayHandle([NativeTypeName("const char *")] sbyte* szDisplayName, [NativeTypeName("NvUnAttachedDisplayHandle *")] NvUnAttachedDisplayHandle__** pNvUnAttachedDispHandle);
+        public static delegate* unmanaged[Cdecl]<sbyte*, NvUnAttachedDisplayHandle__**, _NvAPI_Status> NvAPI_DISP_GetAssociatedUnAttachedNvidiaDisplayHandle;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GetAssociatedNvidiaDisplayName"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_GetAssociatedNvidiaDisplayName([NativeTypeName("NvDisplayHandle")] NvDisplayHandle__* NvDispHandle, [NativeTypeName("NvAPI_ShortString")] sbyte* szDisplayName);
+        public static delegate* unmanaged[Cdecl]<NvDisplayHandle__*, sbyte*, _NvAPI_Status> NvAPI_GetAssociatedNvidiaDisplayName;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GetUnAttachedAssociatedDisplayName"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_GetUnAttachedAssociatedDisplayName([NativeTypeName("NvUnAttachedDisplayHandle")] NvUnAttachedDisplayHandle__* hNvUnAttachedDisp, [NativeTypeName("NvAPI_ShortString")] sbyte* szDisplayName);
+        public static delegate* unmanaged[Cdecl]<NvUnAttachedDisplayHandle__*, sbyte*, _NvAPI_Status> NvAPI_GetUnAttachedAssociatedDisplayName;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_EnableHWCursor"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_EnableHWCursor([NativeTypeName("NvDisplayHandle")] NvDisplayHandle__* hNvDisplay);
+        public static delegate* unmanaged[Cdecl]<NvDisplayHandle__*, _NvAPI_Status> NvAPI_EnableHWCursor;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_DisableHWCursor"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_DisableHWCursor([NativeTypeName("NvDisplayHandle")] NvDisplayHandle__* hNvDisplay);
+        public static delegate* unmanaged[Cdecl]<NvDisplayHandle__*, _NvAPI_Status> NvAPI_DisableHWCursor;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GetVBlankCounter"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_GetVBlankCounter([NativeTypeName("NvDisplayHandle")] NvDisplayHandle__* hNvDisplay, [NativeTypeName("NvU32 *")] uint* pCounter);
+        public static delegate* unmanaged[Cdecl]<NvDisplayHandle__*, uint*, _NvAPI_Status> NvAPI_GetVBlankCounter;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_SetRefreshRateOverride"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_SetRefreshRateOverride([NativeTypeName("NvDisplayHandle")] NvDisplayHandle__* hNvDisplay, [NativeTypeName("NvU32")] uint outputsMask, float refreshRate, [NativeTypeName("NvU32")] uint bSetDeferred);
+        public static delegate* unmanaged[Cdecl]<NvDisplayHandle__*, uint, float, uint, _NvAPI_Status> NvAPI_SetRefreshRateOverride;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GetAssociatedDisplayOutputId"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_GetAssociatedDisplayOutputId([NativeTypeName("NvDisplayHandle")] NvDisplayHandle__* hNvDisplay, [NativeTypeName("NvU32 *")] uint* pOutputId);
+        public static delegate* unmanaged[Cdecl]<NvDisplayHandle__*, uint*, _NvAPI_Status> NvAPI_GetAssociatedDisplayOutputId;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GetDisplayPortInfo"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_GetDisplayPortInfo([NativeTypeName("NvDisplayHandle")] NvDisplayHandle__* hNvDisplay, [NativeTypeName("NvU32")] uint outputId, [NativeTypeName("NV_DISPLAY_PORT_INFO *")] _NV_DISPLAY_PORT_INFO_V1* pInfo);
+        public static delegate* unmanaged[Cdecl]<NvDisplayHandle__*, uint, _NV_DISPLAY_PORT_INFO_V1*, _NvAPI_Status> NvAPI_GetDisplayPortInfo;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_SetDisplayPort"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_SetDisplayPort([NativeTypeName("NvDisplayHandle")] NvDisplayHandle__* hNvDisplay, [NativeTypeName("NvU32")] uint outputId, NV_DISPLAY_PORT_CONFIG* pCfg);
+        public static delegate* unmanaged[Cdecl]<NvDisplayHandle__*, uint, NV_DISPLAY_PORT_CONFIG*, _NvAPI_Status> NvAPI_SetDisplayPort;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GetHDMISupportInfo"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_GetHDMISupportInfo([NativeTypeName("NvDisplayHandle")] NvDisplayHandle__* hNvDisplay, [NativeTypeName("NvU32")] uint outputId, [NativeTypeName("NV_HDMI_SUPPORT_INFO *")] _NV_HDMI_SUPPORT_INFO_V2* pInfo);
+        public static delegate* unmanaged[Cdecl]<NvDisplayHandle__*, uint, _NV_HDMI_SUPPORT_INFO_V2*, _NvAPI_Status> NvAPI_GetHDMISupportInfo;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_Disp_InfoFrameControl"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_Disp_InfoFrameControl([NativeTypeName("NvU32")] uint displayId, NV_INFOFRAME_DATA* pInfoframeData);
+        public static delegate* unmanaged[Cdecl]<uint, NV_INFOFRAME_DATA*, _NvAPI_Status> NvAPI_Disp_InfoFrameControl;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_Disp_ColorControl"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_Disp_ColorControl([NativeTypeName("NvU32")] uint displayId, [NativeTypeName("NV_COLOR_DATA *")] _NV_COLOR_DATA_V5* pColorData);
+        public static delegate* unmanaged[Cdecl]<uint, _NV_COLOR_DATA_V5*, _NvAPI_Status> NvAPI_Disp_ColorControl;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_Disp_GetHdrCapabilities"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_Disp_GetHdrCapabilities([NativeTypeName("NvU32")] uint displayId, [NativeTypeName("NV_HDR_CAPABILITIES *")] _NV_HDR_CAPABILITIES_V3* pHdrCapabilities);
+        public static delegate* unmanaged[Cdecl]<uint, _NV_HDR_CAPABILITIES_V3*, _NvAPI_Status> NvAPI_Disp_GetHdrCapabilities;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_Disp_HdrColorControl"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_Disp_HdrColorControl([NativeTypeName("NvU32")] uint displayId, [NativeTypeName("NV_HDR_COLOR_DATA *")] _NV_HDR_COLOR_DATA_V2* pHdrColorData);
+        public static delegate* unmanaged[Cdecl]<uint, _NV_HDR_COLOR_DATA_V2*, _NvAPI_Status> NvAPI_Disp_HdrColorControl;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_Disp_SetSourceColorSpace"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_Disp_SetSourceColorSpace([NativeTypeName("NvU32")] uint displayId, [NativeTypeName("NV_COLORSPACE_TYPE")] _NV_COLORSPACE_TYPE colorSpaceType);
+        public static delegate* unmanaged[Cdecl]<uint, _NV_COLORSPACE_TYPE, _NvAPI_Status> NvAPI_Disp_SetSourceColorSpace;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_Disp_GetSourceColorSpace"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_Disp_GetSourceColorSpace([NativeTypeName("NvU32")] uint displayId, [NativeTypeName("NV_COLORSPACE_TYPE *")] _NV_COLORSPACE_TYPE* pColorSpaceType, [NativeTypeName("NvU64")] ulong sourcePID);
+        public static delegate* unmanaged[Cdecl]<uint, _NV_COLORSPACE_TYPE*, ulong, _NvAPI_Status> NvAPI_Disp_GetSourceColorSpace;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_Disp_SetSourceHdrMetadata"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_Disp_SetSourceHdrMetadata([NativeTypeName("NvU32")] uint displayId, [NativeTypeName("NV_HDR_METADATA *")] _NV_HDR_METADATA_V1* pMetadata);
+        public static delegate* unmanaged[Cdecl]<uint, _NV_HDR_METADATA_V1*, _NvAPI_Status> NvAPI_Disp_SetSourceHdrMetadata;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_Disp_GetSourceHdrMetadata"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_Disp_GetSourceHdrMetadata([NativeTypeName("NvU32")] uint displayId, [NativeTypeName("NV_HDR_METADATA *")] _NV_HDR_METADATA_V1* pMetadata, [NativeTypeName("NvU64")] ulong sourcePID);
+        public static delegate* unmanaged[Cdecl]<uint, _NV_HDR_METADATA_V1*, ulong, _NvAPI_Status> NvAPI_Disp_GetSourceHdrMetadata;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_Disp_SetOutputMode"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_Disp_SetOutputMode([NativeTypeName("NvU32")] uint displayId, [NativeTypeName("NV_DISPLAY_OUTPUT_MODE *")] _NV_DISPLAY_OUTPUT_MODE* pDisplayMode);
+        public static delegate* unmanaged[Cdecl]<uint, _NV_DISPLAY_OUTPUT_MODE*, _NvAPI_Status> NvAPI_Disp_SetOutputMode;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_Disp_GetOutputMode"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_Disp_GetOutputMode([NativeTypeName("NvU32")] uint displayId, [NativeTypeName("NV_DISPLAY_OUTPUT_MODE *")] _NV_DISPLAY_OUTPUT_MODE* pDisplayMode);
+        public static delegate* unmanaged[Cdecl]<uint, _NV_DISPLAY_OUTPUT_MODE*, _NvAPI_Status> NvAPI_Disp_GetOutputMode;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_Disp_SetHdrToneMapping"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_Disp_SetHdrToneMapping([NativeTypeName("NvU32")] uint displayId, [NativeTypeName("NV_HDR_TONEMAPPING_METHOD")] _NV_HDR_TONEMAPPING_METHOD hdrTonemapping);
+        public static delegate* unmanaged[Cdecl]<uint, _NV_HDR_TONEMAPPING_METHOD, _NvAPI_Status> NvAPI_Disp_SetHdrToneMapping;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_Disp_GetHdrToneMapping"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_Disp_GetHdrToneMapping([NativeTypeName("NvU32")] uint displayId, [NativeTypeName("NV_HDR_TONEMAPPING_METHOD *")] _NV_HDR_TONEMAPPING_METHOD* pHdrTonemapping);
+        public static delegate* unmanaged[Cdecl]<uint, _NV_HDR_TONEMAPPING_METHOD*, _NvAPI_Status> NvAPI_Disp_GetHdrToneMapping;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_Disp_GetColorimetry"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_Disp_GetColorimetry([NativeTypeName("NvU32")] uint displayId, [NativeTypeName("NV_DISPLAY_COLORIMETRY *")] _NV_DISPLAY_COLORIMETRY_V1* pColorimetry);
+        public static delegate* unmanaged[Cdecl]<uint, _NV_DISPLAY_COLORIMETRY_V1*, _NvAPI_Status> NvAPI_Disp_GetColorimetry;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_DISP_GetTiming"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_DISP_GetTiming([NativeTypeName("NvU32")] uint displayId, [NativeTypeName("NV_TIMING_INPUT *")] _NV_TIMING_INPUT* timingInput, [NativeTypeName("NV_TIMING *")] _NV_TIMING* pTiming);
+        public static delegate* unmanaged[Cdecl]<uint, _NV_TIMING_INPUT*, _NV_TIMING*, _NvAPI_Status> NvAPI_DISP_GetTiming;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_DISP_GetMonitorCapabilities"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_DISP_GetMonitorCapabilities([NativeTypeName("NvU32")] uint displayId, [NativeTypeName("NV_MONITOR_CAPABILITIES *")] _NV_MONITOR_CAPABILITIES_V1* pMonitorCapabilities);
+        public static delegate* unmanaged[Cdecl]<uint, _NV_MONITOR_CAPABILITIES_V1*, _NvAPI_Status> NvAPI_DISP_GetMonitorCapabilities;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_DISP_GetMonitorColorCapabilities"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_DISP_GetMonitorColorCapabilities([NativeTypeName("NvU32")] uint displayId, [NativeTypeName("NV_MONITOR_COLOR_CAPS *")] _NV_MONITOR_COLOR_DATA* pMonitorColorCapabilities, [NativeTypeName("NvU32 *")] uint* pColorCapsCount);
+        public static delegate* unmanaged[Cdecl]<uint, _NV_MONITOR_COLOR_DATA*, uint*, _NvAPI_Status> NvAPI_DISP_GetMonitorColorCapabilities;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_DISP_EnumCustomDisplay"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_DISP_EnumCustomDisplay([NativeTypeName("NvU32")] uint displayId, [NativeTypeName("NvU32")] uint index, NV_CUSTOM_DISPLAY* pCustDisp);
+        public static delegate* unmanaged[Cdecl]<uint, uint, NV_CUSTOM_DISPLAY*, _NvAPI_Status> NvAPI_DISP_EnumCustomDisplay;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_DISP_TryCustomDisplay"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_DISP_TryCustomDisplay([NativeTypeName("NvU32 *")] uint* pDisplayIds, [NativeTypeName("NvU32")] uint count, NV_CUSTOM_DISPLAY* pCustDisp);
+        public static delegate* unmanaged[Cdecl]<uint*, uint, NV_CUSTOM_DISPLAY*, _NvAPI_Status> NvAPI_DISP_TryCustomDisplay;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_DISP_DeleteCustomDisplay"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_DISP_DeleteCustomDisplay([NativeTypeName("NvU32 *")] uint* pDisplayIds, [NativeTypeName("NvU32")] uint count, NV_CUSTOM_DISPLAY* pCustDisp);
+        public static delegate* unmanaged[Cdecl]<uint*, uint, NV_CUSTOM_DISPLAY*, _NvAPI_Status> NvAPI_DISP_DeleteCustomDisplay;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_DISP_SaveCustomDisplay"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_DISP_SaveCustomDisplay([NativeTypeName("NvU32 *")] uint* pDisplayIds, [NativeTypeName("NvU32")] uint count, [NativeTypeName("NvU32")] uint isThisOutputIdOnly, [NativeTypeName("NvU32")] uint isThisMonitorIdOnly);
+        public static delegate* unmanaged[Cdecl]<uint*, uint, uint, uint, _NvAPI_Status> NvAPI_DISP_SaveCustomDisplay;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_DISP_RevertCustomDisplayTrial"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_DISP_RevertCustomDisplayTrial([NativeTypeName("NvU32 *")] uint* pDisplayIds, [NativeTypeName("NvU32")] uint count);
+        public static delegate* unmanaged[Cdecl]<uint*, uint, _NvAPI_Status> NvAPI_DISP_RevertCustomDisplayTrial;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GetView"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
         [Obsolete("Do not use this function - it is deprecated in release 290. Instead, use NvAPI_DISP_GetDisplayConfig.")]
-        public static extern _NvAPI_Status NvAPI_GetView([NativeTypeName("NvDisplayHandle")] NvDisplayHandle__* hNvDisplay, NV_VIEW_TARGET_INFO* pTargets, [NativeTypeName("NvU32 *")] uint* pTargetMaskCount, [NativeTypeName("NV_TARGET_VIEW_MODE *")] _NV_TARGET_VIEW_MODE* pTargetView);
+        public static delegate* unmanaged[Cdecl]<NvDisplayHandle__*, NV_VIEW_TARGET_INFO*, uint*, _NV_TARGET_VIEW_MODE*, _NvAPI_Status> NvAPI_GetView;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GetViewEx"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
         [Obsolete("Do not use this function - it is deprecated in release 290. Instead, use NvAPI_DISP_GetDisplayConfig.")]
-        public static extern _NvAPI_Status NvAPI_GetViewEx([NativeTypeName("NvDisplayHandle")] NvDisplayHandle__* hNvDisplay, NV_DISPLAY_PATH_INFO* pPathInfo, [NativeTypeName("NvU32 *")] uint* pPathCount, [NativeTypeName("NV_TARGET_VIEW_MODE *")] _NV_TARGET_VIEW_MODE* pTargetViewMode);
+        public static delegate* unmanaged[Cdecl]<NvDisplayHandle__*, NV_DISPLAY_PATH_INFO*, uint*, _NV_TARGET_VIEW_MODE*, _NvAPI_Status> NvAPI_GetViewEx;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GetSupportedViews"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_GetSupportedViews([NativeTypeName("NvDisplayHandle")] NvDisplayHandle__* hNvDisplay, [NativeTypeName("NV_TARGET_VIEW_MODE *")] _NV_TARGET_VIEW_MODE* pTargetViews, [NativeTypeName("NvU32 *")] uint* pViewCount);
+        public static delegate* unmanaged[Cdecl]<NvDisplayHandle__*, _NV_TARGET_VIEW_MODE*, uint*, _NvAPI_Status> NvAPI_GetSupportedViews;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_DISP_GetDisplayIdByDisplayName"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_DISP_GetDisplayIdByDisplayName([NativeTypeName("const char *")] sbyte* displayName, [NativeTypeName("NvU32 *")] uint* displayId);
+        public static delegate* unmanaged[Cdecl]<sbyte*, uint*, _NvAPI_Status> NvAPI_DISP_GetDisplayIdByDisplayName;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_DISP_GetDisplayConfig"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_DISP_GetDisplayConfig([NativeTypeName("NvU32 *")] uint* pathInfoCount, [NativeTypeName("NV_DISPLAYCONFIG_PATH_INFO *")] _NV_DISPLAYCONFIG_PATH_INFO* pathInfo);
+        public static delegate* unmanaged[Cdecl]<uint*, _NV_DISPLAYCONFIG_PATH_INFO*, _NvAPI_Status> NvAPI_DISP_GetDisplayConfig;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_DISP_SetDisplayConfig"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_DISP_SetDisplayConfig([NativeTypeName("NvU32")] uint pathInfoCount, [NativeTypeName("NV_DISPLAYCONFIG_PATH_INFO *")] _NV_DISPLAYCONFIG_PATH_INFO* pathInfo, [NativeTypeName("NvU32")] uint flags);
+        public static delegate* unmanaged[Cdecl]<uint, _NV_DISPLAYCONFIG_PATH_INFO*, uint, _NvAPI_Status> NvAPI_DISP_SetDisplayConfig;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_DISP_GetEdidData"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_DISP_GetEdidData([NativeTypeName("NvU32")] uint displayId, [NativeTypeName("NV_EDID_DATA *")] _NV_EDID_DATA_V2* pEdidParams, NV_EDID_FLAG* pFlag);
+        public static delegate* unmanaged[Cdecl]<uint, _NV_EDID_DATA_V2*, NV_EDID_FLAG*, _NvAPI_Status> NvAPI_DISP_GetEdidData;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_DISP_GetAdaptiveSyncData"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_DISP_GetAdaptiveSyncData([NativeTypeName("NvU32")] uint displayId, [NativeTypeName("NV_GET_ADAPTIVE_SYNC_DATA *")] _NV_GET_ADAPTIVE_SYNC_DATA_V1* pAdaptiveSyncData);
+        public static delegate* unmanaged[Cdecl]<uint, _NV_GET_ADAPTIVE_SYNC_DATA_V1*, _NvAPI_Status> NvAPI_DISP_GetAdaptiveSyncData;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_DISP_SetAdaptiveSyncData"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_DISP_SetAdaptiveSyncData([NativeTypeName("NvU32")] uint displayId, [NativeTypeName("NV_SET_ADAPTIVE_SYNC_DATA *")] _NV_SET_ADAPTIVE_SYNC_DATA_V1* pAdaptiveSyncData);
+        public static delegate* unmanaged[Cdecl]<uint, _NV_SET_ADAPTIVE_SYNC_DATA_V1*, _NvAPI_Status> NvAPI_DISP_SetAdaptiveSyncData;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_DISP_GetVirtualRefreshRateData"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_DISP_GetVirtualRefreshRateData([NativeTypeName("NvU32")] uint displayId, [NativeTypeName("NV_GET_VIRTUAL_REFRESH_RATE_DATA *")] _NV_GET_VIRTUAL_REFRESH_RATE_DATA_V2* pVirtualRefreshRateData);
+        public static delegate* unmanaged[Cdecl]<uint, _NV_GET_VIRTUAL_REFRESH_RATE_DATA_V2*, _NvAPI_Status> NvAPI_DISP_GetVirtualRefreshRateData;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_DISP_SetVirtualRefreshRateData"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_DISP_SetVirtualRefreshRateData([NativeTypeName("NvU32")] uint displayId, [NativeTypeName("NV_SET_VIRTUAL_REFRESH_RATE_DATA *")] _NV_SET_VIRTUAL_REFRESH_RATE_DATA_V2* pVirtualRefreshRateData);
+        public static delegate* unmanaged[Cdecl]<uint, _NV_SET_VIRTUAL_REFRESH_RATE_DATA_V2*, _NvAPI_Status> NvAPI_DISP_SetVirtualRefreshRateData;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_DISP_SetPreferredStereoDisplay"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_DISP_SetPreferredStereoDisplay([NativeTypeName("NV_SET_PREFERRED_STEREO_DISPLAY *")] NV_SET_PREFERRED_STEREO_DISPLAY_V1* pPreferredStereoDisplay);
+        public static delegate* unmanaged[Cdecl]<NV_SET_PREFERRED_STEREO_DISPLAY_V1*, _NvAPI_Status> NvAPI_DISP_SetPreferredStereoDisplay;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_DISP_GetPreferredStereoDisplay"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_DISP_GetPreferredStereoDisplay([NativeTypeName("NV_GET_PREFERRED_STEREO_DISPLAY *")] NV_GET_PREFERRED_STEREO_DISPLAY_V1* pPreferredStereoDisplay);
+        public static delegate* unmanaged[Cdecl]<NV_GET_PREFERRED_STEREO_DISPLAY_V1*, _NvAPI_Status> NvAPI_DISP_GetPreferredStereoDisplay;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_DISP_GetNvManagedDedicatedDisplays"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_DISP_GetNvManagedDedicatedDisplays([NativeTypeName("NvU32 *")] uint* pDedicatedDisplayCount, [NativeTypeName("NV_MANAGED_DEDICATED_DISPLAY_INFO *")] _NV_MANAGED_DEDICATED_DISPLAY_INFO* pDedicatedDisplays);
+        public static delegate* unmanaged[Cdecl]<uint*, _NV_MANAGED_DEDICATED_DISPLAY_INFO*, _NvAPI_Status> NvAPI_DISP_GetNvManagedDedicatedDisplays;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_DISP_AcquireDedicatedDisplay"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_DISP_AcquireDedicatedDisplay([NativeTypeName("NvU32")] uint displayId, [NativeTypeName("NvU64 *")] ulong* pDisplaySourceHandle);
+        public static delegate* unmanaged[Cdecl]<uint, ulong*, _NvAPI_Status> NvAPI_DISP_AcquireDedicatedDisplay;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_DISP_ReleaseDedicatedDisplay"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_DISP_ReleaseDedicatedDisplay([NativeTypeName("NvU32")] uint displayId);
+        public static delegate* unmanaged[Cdecl]<uint, _NvAPI_Status> NvAPI_DISP_ReleaseDedicatedDisplay;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_DISP_GetNvManagedDedicatedDisplayMetadata"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_DISP_GetNvManagedDedicatedDisplayMetadata([NativeTypeName("NV_MANAGED_DEDICATED_DISPLAY_METADATA *")] _NV_MANAGED_DEDICATED_DISPLAY_METADATA* pDedicatedDisplayMetadata);
+        public static delegate* unmanaged[Cdecl]<_NV_MANAGED_DEDICATED_DISPLAY_METADATA*, _NvAPI_Status> NvAPI_DISP_GetNvManagedDedicatedDisplayMetadata;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_DISP_SetNvManagedDedicatedDisplayMetadata"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_DISP_SetNvManagedDedicatedDisplayMetadata([NativeTypeName("NV_MANAGED_DEDICATED_DISPLAY_METADATA *")] _NV_MANAGED_DEDICATED_DISPLAY_METADATA* pDedicatedDisplayMetadata);
+        public static delegate* unmanaged[Cdecl]<_NV_MANAGED_DEDICATED_DISPLAY_METADATA*, _NvAPI_Status> NvAPI_DISP_SetNvManagedDedicatedDisplayMetadata;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_Disp_GetDisplayIdInfo"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_Disp_GetDisplayIdInfo([NativeTypeName("NvU32")] uint displayId, [NativeTypeName("NV_DISPLAY_ID_INFO_DATA *")] _NV_DISPLAY_ID_INFO_DATA_V1* pDisplayIdInfoData);
+        public static delegate* unmanaged[Cdecl]<uint, _NV_DISPLAY_ID_INFO_DATA_V1*, _NvAPI_Status> NvAPI_Disp_GetDisplayIdInfo;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_Disp_GetDisplayIdsFromTarget"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_Disp_GetDisplayIdsFromTarget([NativeTypeName("NV_TARGET_INFO_DATA *")] _NV_TARGET_INFO_DATA_V1* pTargetInfoData);
+        public static delegate* unmanaged[Cdecl]<_NV_TARGET_INFO_DATA_V1*, _NvAPI_Status> NvAPI_Disp_GetDisplayIdsFromTarget;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_Disp_GetVRRInfo"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_Disp_GetVRRInfo([NativeTypeName("NvU32")] uint displayId, [NativeTypeName("NV_GET_VRR_INFO *")] _NV_GET_VRR_INFO_V1* pVrrInfo);
+        public static delegate* unmanaged[Cdecl]<uint, _NV_GET_VRR_INFO_V1*, _NvAPI_Status> NvAPI_Disp_GetVRRInfo;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_Mosaic_GetSupportedTopoInfo"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_Mosaic_GetSupportedTopoInfo([NativeTypeName("NV_MOSAIC_SUPPORTED_TOPO_INFO *")] _NV_MOSAIC_SUPPORTED_TOPO_INFO_V2* pSupportedTopoInfo, NV_MOSAIC_TOPO_TYPE type);
+        public static delegate* unmanaged[Cdecl]<_NV_MOSAIC_SUPPORTED_TOPO_INFO_V2*, NV_MOSAIC_TOPO_TYPE, _NvAPI_Status> NvAPI_Mosaic_GetSupportedTopoInfo;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_Mosaic_GetTopoGroup"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_Mosaic_GetTopoGroup(NV_MOSAIC_TOPO_BRIEF* pTopoBrief, NV_MOSAIC_TOPO_GROUP* pTopoGroup);
+        public static delegate* unmanaged[Cdecl]<NV_MOSAIC_TOPO_BRIEF*, NV_MOSAIC_TOPO_GROUP*, _NvAPI_Status> NvAPI_Mosaic_GetTopoGroup;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_Mosaic_GetOverlapLimits"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_Mosaic_GetOverlapLimits(NV_MOSAIC_TOPO_BRIEF* pTopoBrief, [NativeTypeName("NV_MOSAIC_DISPLAY_SETTING *")] NV_MOSAIC_DISPLAY_SETTING_V2* pDisplaySetting, [NativeTypeName("NvS32 *")] int* pMinOverlapX, [NativeTypeName("NvS32 *")] int* pMaxOverlapX, [NativeTypeName("NvS32 *")] int* pMinOverlapY, [NativeTypeName("NvS32 *")] int* pMaxOverlapY);
+        public static delegate* unmanaged[Cdecl]<NV_MOSAIC_TOPO_BRIEF*, NV_MOSAIC_DISPLAY_SETTING_V2*, int*, int*, int*, int*, _NvAPI_Status> NvAPI_Mosaic_GetOverlapLimits;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_Mosaic_SetCurrentTopo"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_Mosaic_SetCurrentTopo(NV_MOSAIC_TOPO_BRIEF* pTopoBrief, [NativeTypeName("NV_MOSAIC_DISPLAY_SETTING *")] NV_MOSAIC_DISPLAY_SETTING_V2* pDisplaySetting, [NativeTypeName("NvS32")] int overlapX, [NativeTypeName("NvS32")] int overlapY, [NativeTypeName("NvU32")] uint enable);
+        public static delegate* unmanaged[Cdecl]<NV_MOSAIC_TOPO_BRIEF*, NV_MOSAIC_DISPLAY_SETTING_V2*, int, int, uint, _NvAPI_Status> NvAPI_Mosaic_SetCurrentTopo;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_Mosaic_GetCurrentTopo"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_Mosaic_GetCurrentTopo(NV_MOSAIC_TOPO_BRIEF* pTopoBrief, [NativeTypeName("NV_MOSAIC_DISPLAY_SETTING *")] NV_MOSAIC_DISPLAY_SETTING_V2* pDisplaySetting, [NativeTypeName("NvS32 *")] int* pOverlapX, [NativeTypeName("NvS32 *")] int* pOverlapY);
+        public static delegate* unmanaged[Cdecl]<NV_MOSAIC_TOPO_BRIEF*, NV_MOSAIC_DISPLAY_SETTING_V2*, int*, int*, _NvAPI_Status> NvAPI_Mosaic_GetCurrentTopo;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_Mosaic_EnableCurrentTopo"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_Mosaic_EnableCurrentTopo([NativeTypeName("NvU32")] uint enable);
+        public static delegate* unmanaged[Cdecl]<uint, _NvAPI_Status> NvAPI_Mosaic_EnableCurrentTopo;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_Mosaic_SetDisplayGrids"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_Mosaic_SetDisplayGrids([NativeTypeName("NV_MOSAIC_GRID_TOPO *")] _NV_MOSAIC_GRID_TOPO_V2* pGridTopologies, [NativeTypeName("NvU32")] uint gridCount, [NativeTypeName("NvU32")] uint setTopoFlags);
+        public static delegate* unmanaged[Cdecl]<_NV_MOSAIC_GRID_TOPO_V2*, uint, uint, _NvAPI_Status> NvAPI_Mosaic_SetDisplayGrids;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_Mosaic_ValidateDisplayGrids"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_Mosaic_ValidateDisplayGrids([NativeTypeName("NvU32")] uint setTopoFlags, [NativeTypeName("NV_MOSAIC_GRID_TOPO *")] _NV_MOSAIC_GRID_TOPO_V2* pGridTopologies, NV_MOSAIC_DISPLAY_TOPO_STATUS* pTopoStatus, [NativeTypeName("NvU32")] uint gridCount);
+        public static delegate* unmanaged[Cdecl]<uint, _NV_MOSAIC_GRID_TOPO_V2*, NV_MOSAIC_DISPLAY_TOPO_STATUS*, uint, _NvAPI_Status> NvAPI_Mosaic_ValidateDisplayGrids;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_Mosaic_EnumDisplayModes"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_Mosaic_EnumDisplayModes([NativeTypeName("NV_MOSAIC_GRID_TOPO *")] _NV_MOSAIC_GRID_TOPO_V2* pGridTopology, [NativeTypeName("NV_MOSAIC_DISPLAY_SETTING *")] NV_MOSAIC_DISPLAY_SETTING_V2* pDisplaySettings, [NativeTypeName("NvU32 *")] uint* pDisplayCount);
+        public static delegate* unmanaged[Cdecl]<_NV_MOSAIC_GRID_TOPO_V2*, NV_MOSAIC_DISPLAY_SETTING_V2*, uint*, _NvAPI_Status> NvAPI_Mosaic_EnumDisplayModes;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_Mosaic_EnumDisplayGrids"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_Mosaic_EnumDisplayGrids([NativeTypeName("NV_MOSAIC_GRID_TOPO *")] _NV_MOSAIC_GRID_TOPO_V2* pGridTopologies, [NativeTypeName("NvU32 *")] uint* pGridCount);
+        public static delegate* unmanaged[Cdecl]<_NV_MOSAIC_GRID_TOPO_V2*, uint*, _NvAPI_Status> NvAPI_Mosaic_EnumDisplayGrids;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GetSupportedMosaicTopologies"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_GetSupportedMosaicTopologies(NV_MOSAIC_SUPPORTED_TOPOLOGIES* pMosaicTopos);
+        public static delegate* unmanaged[Cdecl]<NV_MOSAIC_SUPPORTED_TOPOLOGIES*, _NvAPI_Status> NvAPI_GetSupportedMosaicTopologies;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GetCurrentMosaicTopology"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_GetCurrentMosaicTopology(NV_MOSAIC_TOPOLOGY* pMosaicTopo, [NativeTypeName("NvU32 *")] uint* pEnabled);
+        public static delegate* unmanaged[Cdecl]<NV_MOSAIC_TOPOLOGY*, uint*, _NvAPI_Status> NvAPI_GetCurrentMosaicTopology;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_SetCurrentMosaicTopology"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_SetCurrentMosaicTopology(NV_MOSAIC_TOPOLOGY* pMosaicTopo);
+        public static delegate* unmanaged[Cdecl]<NV_MOSAIC_TOPOLOGY*, _NvAPI_Status> NvAPI_SetCurrentMosaicTopology;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_EnableCurrentMosaicTopology"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_EnableCurrentMosaicTopology([NativeTypeName("NvU32")] uint enable);
+        public static delegate* unmanaged[Cdecl]<uint, _NvAPI_Status> NvAPI_EnableCurrentMosaicTopology;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GSync_EnumSyncDevices"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_GSync_EnumSyncDevices([NativeTypeName("NvGSyncDeviceHandle[4]")] NvGSyncDeviceHandle__** nvGSyncHandles, [NativeTypeName("NvU32 *")] uint* gsyncCount);
+        public static delegate* unmanaged[Cdecl]<NvGSyncDeviceHandle__**, uint*, _NvAPI_Status> NvAPI_GSync_EnumSyncDevices;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GSync_QueryCapabilities"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_GSync_QueryCapabilities([NativeTypeName("NvGSyncDeviceHandle")] NvGSyncDeviceHandle__* hNvGSyncDevice, [NativeTypeName("NV_GSYNC_CAPABILITIES *")] _NV_GSYNC_CAPABILITIES_V3* pNvGSyncCapabilities);
+        public static delegate* unmanaged[Cdecl]<NvGSyncDeviceHandle__*, _NV_GSYNC_CAPABILITIES_V3*, _NvAPI_Status> NvAPI_GSync_QueryCapabilities;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GSync_GetTopology"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_GSync_GetTopology([NativeTypeName("NvGSyncDeviceHandle")] NvGSyncDeviceHandle__* hNvGSyncDevice, [NativeTypeName("NvU32 *")] uint* gsyncGpuCount, [NativeTypeName("NV_GSYNC_GPU *")] _NV_GSYNC_GPU* gsyncGPUs, [NativeTypeName("NvU32 *")] uint* gsyncDisplayCount, [NativeTypeName("NV_GSYNC_DISPLAY *")] _NV_GSYNC_DISPLAY* gsyncDisplays);
+        public static delegate* unmanaged[Cdecl]<NvGSyncDeviceHandle__*, uint*, _NV_GSYNC_GPU*, uint*, _NV_GSYNC_DISPLAY*, _NvAPI_Status> NvAPI_GSync_GetTopology;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GSync_SetSyncStateSettings"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_GSync_SetSyncStateSettings([NativeTypeName("NvU32")] uint gsyncDisplayCount, [NativeTypeName("NV_GSYNC_DISPLAY *")] _NV_GSYNC_DISPLAY* pGsyncDisplays, [NativeTypeName("NvU32")] uint flags);
+        public static delegate* unmanaged[Cdecl]<uint, _NV_GSYNC_DISPLAY*, uint, _NvAPI_Status> NvAPI_GSync_SetSyncStateSettings;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GSync_GetControlParameters"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_GSync_GetControlParameters([NativeTypeName("NvGSyncDeviceHandle")] NvGSyncDeviceHandle__* hNvGSyncDevice, [NativeTypeName("NV_GSYNC_CONTROL_PARAMS *")] _NV_GSYNC_CONTROL_PARAMS_V2* pGsyncControls);
+        public static delegate* unmanaged[Cdecl]<NvGSyncDeviceHandle__*, _NV_GSYNC_CONTROL_PARAMS_V2*, _NvAPI_Status> NvAPI_GSync_GetControlParameters;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GSync_SetControlParameters"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_GSync_SetControlParameters([NativeTypeName("NvGSyncDeviceHandle")] NvGSyncDeviceHandle__* hNvGSyncDevice, [NativeTypeName("NV_GSYNC_CONTROL_PARAMS *")] _NV_GSYNC_CONTROL_PARAMS_V2* pGsyncControls);
+        public static delegate* unmanaged[Cdecl]<NvGSyncDeviceHandle__*, _NV_GSYNC_CONTROL_PARAMS_V2*, _NvAPI_Status> NvAPI_GSync_SetControlParameters;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GSync_AdjustSyncDelay"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_GSync_AdjustSyncDelay([NativeTypeName("NvGSyncDeviceHandle")] NvGSyncDeviceHandle__* hNvGSyncDevice, [NativeTypeName("NVAPI_GSYNC_DELAY_TYPE")] _NVAPI_GSYNC_DELAY_TYPE delayType, [NativeTypeName("NV_GSYNC_DELAY *")] _NV_GSYNC_DELAY* pGsyncDelay, [NativeTypeName("NvU32 *")] uint* syncSteps);
+        public static delegate* unmanaged[Cdecl]<NvGSyncDeviceHandle__*, _NVAPI_GSYNC_DELAY_TYPE, _NV_GSYNC_DELAY*, uint*, _NvAPI_Status> NvAPI_GSync_AdjustSyncDelay;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GSync_GetSyncStatus"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_GSync_GetSyncStatus([NativeTypeName("NvGSyncDeviceHandle")] NvGSyncDeviceHandle__* hNvGSyncDevice, [NativeTypeName("NvPhysicalGpuHandle")] NvPhysicalGpuHandle__* hPhysicalGpu, [NativeTypeName("NV_GSYNC_STATUS *")] _NV_GSYNC_STATUS* status);
+        public static delegate* unmanaged[Cdecl]<NvGSyncDeviceHandle__*, NvPhysicalGpuHandle__*, _NV_GSYNC_STATUS*, _NvAPI_Status> NvAPI_GSync_GetSyncStatus;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GSync_GetStatusParameters"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_GSync_GetStatusParameters([NativeTypeName("NvGSyncDeviceHandle")] NvGSyncDeviceHandle__* hNvGSyncDevice, [NativeTypeName("NV_GSYNC_STATUS_PARAMS *")] _NV_GSYNC_STATUS_PARAMS_V2* pStatusParams);
+        public static delegate* unmanaged[Cdecl]<NvGSyncDeviceHandle__*, _NV_GSYNC_STATUS_PARAMS_V2*, _NvAPI_Status> NvAPI_GSync_GetStatusParameters;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_DestroyPresentBarrierClient"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_DestroyPresentBarrierClient([NativeTypeName("NvPresentBarrierClientHandle")] NvPresentBarrierClientHandle__* presentBarrierClient);
+        public static delegate* unmanaged[Cdecl]<NvPresentBarrierClientHandle__*, _NvAPI_Status> NvAPI_DestroyPresentBarrierClient;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_JoinPresentBarrier"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_JoinPresentBarrier([NativeTypeName("NvPresentBarrierClientHandle")] NvPresentBarrierClientHandle__* presentBarrierClient, [NativeTypeName("NV_JOIN_PRESENT_BARRIER_PARAMS *")] _NV_JOIN_PRESENT_BARRIER_PARAMS* pParams);
+        public static delegate* unmanaged[Cdecl]<NvPresentBarrierClientHandle__*, _NV_JOIN_PRESENT_BARRIER_PARAMS*, _NvAPI_Status> NvAPI_JoinPresentBarrier;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_LeavePresentBarrier"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_LeavePresentBarrier([NativeTypeName("NvPresentBarrierClientHandle")] NvPresentBarrierClientHandle__* presentBarrierClient);
+        public static delegate* unmanaged[Cdecl]<NvPresentBarrierClientHandle__*, _NvAPI_Status> NvAPI_LeavePresentBarrier;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_QueryPresentBarrierFrameStatistics"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_QueryPresentBarrierFrameStatistics([NativeTypeName("NvPresentBarrierClientHandle")] NvPresentBarrierClientHandle__* presentBarrierClient, [NativeTypeName("NV_PRESENT_BARRIER_FRAME_STATISTICS *")] _NV_PRESENT_BARRIER_FRAME_STATISTICS* pFrameStats);
+        public static delegate* unmanaged[Cdecl]<NvPresentBarrierClientHandle__*, _NV_PRESENT_BARRIER_FRAME_STATISTICS*, _NvAPI_Status> NvAPI_QueryPresentBarrierFrameStatistics;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_NGX_GetNGXOverrideState"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_NGX_GetNGXOverrideState([NativeTypeName("NV_NGX_DLSS_OVERRIDE_GET_STATE_PARAMS *")] _NV_NGX_DLSS_OVERRIDE_GET_STATE_PARAMS_V1* pGetOverrideStateParams);
+        public static delegate* unmanaged[Cdecl]<_NV_NGX_DLSS_OVERRIDE_GET_STATE_PARAMS_V1*, _NvAPI_Status> NvAPI_NGX_GetNGXOverrideState;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_NGX_SetNGXOverrideState"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_NGX_SetNGXOverrideState([NativeTypeName("NV_NGX_DLSS_OVERRIDE_SET_STATE_PARAMS *")] _NV_NGX_DLSS_OVERRIDE_SET_STATE_PARAMS_V1* pSetOverrideStateParams);
+        public static delegate* unmanaged[Cdecl]<_NV_NGX_DLSS_OVERRIDE_SET_STATE_PARAMS_V1*, _NvAPI_Status> NvAPI_NGX_SetNGXOverrideState;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_VIO_GetCapabilities"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
         [Obsolete("Do not use this function - it is deprecated in release 440.")]
-        public static extern _NvAPI_Status NvAPI_VIO_GetCapabilities([NativeTypeName("NvVioHandle")] NvVioHandle__* hVioHandle, [NativeTypeName("NVVIOCAPS *")] _NVVIOCAPS* pAdapterCaps);
+        public static delegate* unmanaged[Cdecl]<NvVioHandle__*, _NVVIOCAPS*, _NvAPI_Status> NvAPI_VIO_GetCapabilities;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_VIO_Open"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
         [Obsolete("Do not use this function - it is deprecated in release 440.")]
-        public static extern _NvAPI_Status NvAPI_VIO_Open([NativeTypeName("NvVioHandle")] NvVioHandle__* hVioHandle, [NativeTypeName("NvU32")] uint vioClass, [NativeTypeName("NVVIOOWNERTYPE")] _NVVIOOWNERTYPE ownerType);
+        public static delegate* unmanaged[Cdecl]<NvVioHandle__*, uint, _NVVIOOWNERTYPE, _NvAPI_Status> NvAPI_VIO_Open;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_VIO_Close"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
         [Obsolete("Do not use this function - it is deprecated in release 440.")]
-        public static extern _NvAPI_Status NvAPI_VIO_Close([NativeTypeName("NvVioHandle")] NvVioHandle__* hVioHandle, [NativeTypeName("NvU32")] uint bRelease);
+        public static delegate* unmanaged[Cdecl]<NvVioHandle__*, uint, _NvAPI_Status> NvAPI_VIO_Close;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_VIO_Status"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
         [Obsolete("Do not use this function - it is deprecated in release 440.")]
-        public static extern _NvAPI_Status NvAPI_VIO_Status([NativeTypeName("NvVioHandle")] NvVioHandle__* hVioHandle, [NativeTypeName("NVVIOSTATUS *")] _NVVIOSTATUS* pStatus);
+        public static delegate* unmanaged[Cdecl]<NvVioHandle__*, _NVVIOSTATUS*, _NvAPI_Status> NvAPI_VIO_Status;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_VIO_SyncFormatDetect"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
         [Obsolete("Do not use this function - it is deprecated in release 440.")]
-        public static extern _NvAPI_Status NvAPI_VIO_SyncFormatDetect([NativeTypeName("NvVioHandle")] NvVioHandle__* hVioHandle, [NativeTypeName("NvU32 *")] uint* pWait);
+        public static delegate* unmanaged[Cdecl]<NvVioHandle__*, uint*, _NvAPI_Status> NvAPI_VIO_SyncFormatDetect;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_VIO_GetConfig"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
         [Obsolete("Do not use this function - it is deprecated in release 440.")]
-        public static extern _NvAPI_Status NvAPI_VIO_GetConfig([NativeTypeName("NvVioHandle")] NvVioHandle__* hVioHandle, [NativeTypeName("NVVIOCONFIG *")] _NVVIOCONFIG_V3* pConfig);
+        public static delegate* unmanaged[Cdecl]<NvVioHandle__*, _NVVIOCONFIG_V3*, _NvAPI_Status> NvAPI_VIO_GetConfig;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_VIO_SetConfig"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
         [Obsolete("Do not use this function - it is deprecated in release 440.")]
-        public static extern _NvAPI_Status NvAPI_VIO_SetConfig([NativeTypeName("NvVioHandle")] NvVioHandle__* hVioHandle, [NativeTypeName("const NVVIOCONFIG *")] _NVVIOCONFIG_V3* pConfig);
+        public static delegate* unmanaged[Cdecl]<NvVioHandle__*, _NVVIOCONFIG_V3*, _NvAPI_Status> NvAPI_VIO_SetConfig;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_VIO_SetCSC"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
         [Obsolete("Do not use this function - it is deprecated in release 290. Instead, use NvAPI_VIO_SetConfig.")]
-        public static extern _NvAPI_Status NvAPI_VIO_SetCSC([NativeTypeName("NvVioHandle")] NvVioHandle__* hVioHandle, [NativeTypeName("NVVIOCOLORCONVERSION *")] _NVVIOCOLORCONVERSION* pCSC);
+        public static delegate* unmanaged[Cdecl]<NvVioHandle__*, _NVVIOCOLORCONVERSION*, _NvAPI_Status> NvAPI_VIO_SetCSC;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_VIO_GetCSC"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
         [Obsolete("Do not use this function - it is deprecated in release 290. Instead, use NvAPI_VIO_GetConfig.")]
-        public static extern _NvAPI_Status NvAPI_VIO_GetCSC([NativeTypeName("NvVioHandle")] NvVioHandle__* hVioHandle, [NativeTypeName("NVVIOCOLORCONVERSION *")] _NVVIOCOLORCONVERSION* pCSC);
+        public static delegate* unmanaged[Cdecl]<NvVioHandle__*, _NVVIOCOLORCONVERSION*, _NvAPI_Status> NvAPI_VIO_GetCSC;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_VIO_SetGamma"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
         [Obsolete("Do not use this function - it is deprecated in release 290. Instead, use NvAPI_VIO_SetConfig.")]
-        public static extern _NvAPI_Status NvAPI_VIO_SetGamma([NativeTypeName("NvVioHandle")] NvVioHandle__* hVioHandle, [NativeTypeName("NVVIOGAMMACORRECTION *")] _NVVIOGAMMACORRECTION* pGamma);
+        public static delegate* unmanaged[Cdecl]<NvVioHandle__*, _NVVIOGAMMACORRECTION*, _NvAPI_Status> NvAPI_VIO_SetGamma;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_VIO_GetGamma"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
         [Obsolete("Do not use this function - it is deprecated in release 290. Instead, use NvAPI_VIO_GetConfig.")]
-        public static extern _NvAPI_Status NvAPI_VIO_GetGamma([NativeTypeName("NvVioHandle")] NvVioHandle__* hVioHandle, [NativeTypeName("NVVIOGAMMACORRECTION *")] _NVVIOGAMMACORRECTION* pGamma);
+        public static delegate* unmanaged[Cdecl]<NvVioHandle__*, _NVVIOGAMMACORRECTION*, _NvAPI_Status> NvAPI_VIO_GetGamma;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_VIO_SetSyncDelay"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
         [Obsolete("Do not use this function - it is deprecated in release 290. Instead, use NvAPI_VIO_SetConfig.")]
-        public static extern _NvAPI_Status NvAPI_VIO_SetSyncDelay([NativeTypeName("NvVioHandle")] NvVioHandle__* hVioHandle, [NativeTypeName("const NVVIOSYNCDELAY *")] _NVVIOSYNCDELAY* pSyncDelay);
+        public static delegate* unmanaged[Cdecl]<NvVioHandle__*, _NVVIOSYNCDELAY*, _NvAPI_Status> NvAPI_VIO_SetSyncDelay;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_VIO_GetSyncDelay"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
         [Obsolete("Do not use this function - it is deprecated in release 290. Instead, use NvAPI_VIO_GetConfig.")]
-        public static extern _NvAPI_Status NvAPI_VIO_GetSyncDelay([NativeTypeName("NvVioHandle")] NvVioHandle__* hVioHandle, [NativeTypeName("NVVIOSYNCDELAY *")] _NVVIOSYNCDELAY* pSyncDelay);
+        public static delegate* unmanaged[Cdecl]<NvVioHandle__*, _NVVIOSYNCDELAY*, _NvAPI_Status> NvAPI_VIO_GetSyncDelay;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_VIO_GetPCIInfo"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
         [Obsolete("Do not use this function - it is deprecated in release 440.")]
-        public static extern _NvAPI_Status NvAPI_VIO_GetPCIInfo([NativeTypeName("NvVioHandle")] NvVioHandle__* hVioHandle, [NativeTypeName("NVVIOPCIINFO *")] _NVVIOPCIINFO* pVioPCIInfo);
+        public static delegate* unmanaged[Cdecl]<NvVioHandle__*, _NVVIOPCIINFO*, _NvAPI_Status> NvAPI_VIO_GetPCIInfo;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_VIO_IsRunning"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
         [Obsolete("Do not use this function - it is deprecated in release 440.")]
-        public static extern _NvAPI_Status NvAPI_VIO_IsRunning([NativeTypeName("NvVioHandle")] NvVioHandle__* hVioHandle);
+        public static delegate* unmanaged[Cdecl]<NvVioHandle__*, _NvAPI_Status> NvAPI_VIO_IsRunning;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_VIO_Start"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
         [Obsolete("Do not use this function - it is deprecated in release 440.")]
-        public static extern _NvAPI_Status NvAPI_VIO_Start([NativeTypeName("NvVioHandle")] NvVioHandle__* hVioHandle);
+        public static delegate* unmanaged[Cdecl]<NvVioHandle__*, _NvAPI_Status> NvAPI_VIO_Start;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_VIO_Stop"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
         [Obsolete("Do not use this function - it is deprecated in release 440.")]
-        public static extern _NvAPI_Status NvAPI_VIO_Stop([NativeTypeName("NvVioHandle")] NvVioHandle__* hVioHandle);
+        public static delegate* unmanaged[Cdecl]<NvVioHandle__*, _NvAPI_Status> NvAPI_VIO_Stop;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_VIO_IsFrameLockModeCompatible"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
         [Obsolete("Do not use this function - it is deprecated in release 440.")]
-        public static extern _NvAPI_Status NvAPI_VIO_IsFrameLockModeCompatible([NativeTypeName("NvVioHandle")] NvVioHandle__* hVioHandle, [NativeTypeName("NvU32")] uint srcEnumIndex, [NativeTypeName("NvU32")] uint destEnumIndex, [NativeTypeName("NvU32 *")] uint* pbCompatible);
+        public static delegate* unmanaged[Cdecl]<NvVioHandle__*, uint, uint, uint*, _NvAPI_Status> NvAPI_VIO_IsFrameLockModeCompatible;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_VIO_EnumDevices"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
         [Obsolete("Do not use this function - it is deprecated in release 440.")]
-        public static extern _NvAPI_Status NvAPI_VIO_EnumDevices([NativeTypeName("NvVioHandle[8]")] NvVioHandle__** hVioHandle, [NativeTypeName("NvU32 *")] uint* vioDeviceCount);
+        public static delegate* unmanaged[Cdecl]<NvVioHandle__**, uint*, _NvAPI_Status> NvAPI_VIO_EnumDevices;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_VIO_QueryTopology"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
         [Obsolete("Do not use this function - it is deprecated in release 440.")]
-        public static extern _NvAPI_Status NvAPI_VIO_QueryTopology([NativeTypeName("NV_VIO_TOPOLOGY *")] _NV_VIO_TOPOLOGY* pNvVIOTopology);
+        public static delegate* unmanaged[Cdecl]<_NV_VIO_TOPOLOGY*, _NvAPI_Status> NvAPI_VIO_QueryTopology;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_VIO_EnumSignalFormats"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
         [Obsolete("Do not use this function - it is deprecated in release 440.")]
-        public static extern _NvAPI_Status NvAPI_VIO_EnumSignalFormats([NativeTypeName("NvVioHandle")] NvVioHandle__* hVioHandle, [NativeTypeName("NvU32")] uint enumIndex, [NativeTypeName("NVVIOSIGNALFORMATDETAIL *")] _NVVIOSIGNALFORMATDETAIL* pSignalFormatDetail);
+        public static delegate* unmanaged[Cdecl]<NvVioHandle__*, uint, _NVVIOSIGNALFORMATDETAIL*, _NvAPI_Status> NvAPI_VIO_EnumSignalFormats;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_VIO_EnumDataFormats"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
         [Obsolete("Do not use this function - it is deprecated in release 440.")]
-        public static extern _NvAPI_Status NvAPI_VIO_EnumDataFormats([NativeTypeName("NvVioHandle")] NvVioHandle__* hVioHandle, [NativeTypeName("NvU32")] uint enumIndex, [NativeTypeName("NVVIODATAFORMATDETAIL *")] _NVVIODATAFORMATDETAIL* pDataFormatDetail);
+        public static delegate* unmanaged[Cdecl]<NvVioHandle__*, uint, _NVVIODATAFORMATDETAIL*, _NvAPI_Status> NvAPI_VIO_EnumDataFormats;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_Stereo_CreateConfigurationProfileRegistryKey"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_Stereo_CreateConfigurationProfileRegistryKey([NativeTypeName("NV_STEREO_REGISTRY_PROFILE_TYPE")] _NV_StereoRegistryProfileType registryProfileType);
+        public static delegate* unmanaged[Cdecl]<_NV_StereoRegistryProfileType, _NvAPI_Status> NvAPI_Stereo_CreateConfigurationProfileRegistryKey;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_Stereo_DeleteConfigurationProfileRegistryKey"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_Stereo_DeleteConfigurationProfileRegistryKey([NativeTypeName("NV_STEREO_REGISTRY_PROFILE_TYPE")] _NV_StereoRegistryProfileType registryProfileType);
+        public static delegate* unmanaged[Cdecl]<_NV_StereoRegistryProfileType, _NvAPI_Status> NvAPI_Stereo_DeleteConfigurationProfileRegistryKey;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_Stereo_SetConfigurationProfileValue"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_Stereo_SetConfigurationProfileValue([NativeTypeName("NV_STEREO_REGISTRY_PROFILE_TYPE")] _NV_StereoRegistryProfileType registryProfileType, [NativeTypeName("NV_STEREO_REGISTRY_ID")] _NV_StereoRegistryID valueRegistryID, void* pValue);
+        public static delegate* unmanaged[Cdecl]<_NV_StereoRegistryProfileType, _NV_StereoRegistryID, void*, _NvAPI_Status> NvAPI_Stereo_SetConfigurationProfileValue;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_Stereo_DeleteConfigurationProfileValue"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_Stereo_DeleteConfigurationProfileValue([NativeTypeName("NV_STEREO_REGISTRY_PROFILE_TYPE")] _NV_StereoRegistryProfileType registryProfileType, [NativeTypeName("NV_STEREO_REGISTRY_ID")] _NV_StereoRegistryID valueRegistryID);
+        public static delegate* unmanaged[Cdecl]<_NV_StereoRegistryProfileType, _NV_StereoRegistryID, _NvAPI_Status> NvAPI_Stereo_DeleteConfigurationProfileValue;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_Stereo_GetStereoSupport"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_Stereo_GetStereoSupport([NativeTypeName("NvMonitorHandle")] NvMonitorHandle__* hMonitor, [NativeTypeName("NVAPI_STEREO_CAPS *")] _NVAPI_STEREO_CAPS* pCaps);
+        public static delegate* unmanaged[Cdecl]<NvMonitorHandle__*, _NVAPI_STEREO_CAPS*, _NvAPI_Status> NvAPI_Stereo_GetStereoSupport;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_Stereo_DecreaseSeparation"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_Stereo_DecreaseSeparation([NativeTypeName("StereoHandle")] void* stereoHandle);
+        public static delegate* unmanaged[Cdecl]<void*, _NvAPI_Status> NvAPI_Stereo_DecreaseSeparation;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_Stereo_IncreaseSeparation"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_Stereo_IncreaseSeparation([NativeTypeName("StereoHandle")] void* stereoHandle);
+        public static delegate* unmanaged[Cdecl]<void*, _NvAPI_Status> NvAPI_Stereo_IncreaseSeparation;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_Stereo_DecreaseConvergence"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_Stereo_DecreaseConvergence([NativeTypeName("StereoHandle")] void* stereoHandle);
+        public static delegate* unmanaged[Cdecl]<void*, _NvAPI_Status> NvAPI_Stereo_DecreaseConvergence;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_Stereo_IncreaseConvergence"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_Stereo_IncreaseConvergence([NativeTypeName("StereoHandle")] void* stereoHandle);
+        public static delegate* unmanaged[Cdecl]<void*, _NvAPI_Status> NvAPI_Stereo_IncreaseConvergence;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_Stereo_GetFrustumAdjustMode"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_Stereo_GetFrustumAdjustMode([NativeTypeName("StereoHandle")] void* stereoHandle, [NativeTypeName("NV_FRUSTUM_ADJUST_MODE *")] _NV_FrustumAdjustMode* pFrustumAdjustMode);
+        public static delegate* unmanaged[Cdecl]<void*, _NV_FrustumAdjustMode*, _NvAPI_Status> NvAPI_Stereo_GetFrustumAdjustMode;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_Stereo_SetFrustumAdjustMode"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_Stereo_SetFrustumAdjustMode([NativeTypeName("StereoHandle")] void* stereoHandle, [NativeTypeName("NV_FRUSTUM_ADJUST_MODE")] _NV_FrustumAdjustMode newFrustumAdjustModeValue);
+        public static delegate* unmanaged[Cdecl]<void*, _NV_FrustumAdjustMode, _NvAPI_Status> NvAPI_Stereo_SetFrustumAdjustMode;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_Stereo_CaptureJpegImage"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_Stereo_CaptureJpegImage([NativeTypeName("StereoHandle")] void* stereoHandle, [NativeTypeName("NvU32")] uint quality);
+        public static delegate* unmanaged[Cdecl]<void*, uint, _NvAPI_Status> NvAPI_Stereo_CaptureJpegImage;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_Stereo_InitActivation"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_Stereo_InitActivation([NativeTypeName("StereoHandle")] void* hStereoHandle, [NativeTypeName("NVAPI_STEREO_INIT_ACTIVATION_FLAGS")] _NVAPI_STEREO_INIT_ACTIVATION_FLAGS flags);
+        public static delegate* unmanaged[Cdecl]<void*, _NVAPI_STEREO_INIT_ACTIVATION_FLAGS, _NvAPI_Status> NvAPI_Stereo_InitActivation;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_Stereo_Trigger_Activation"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_Stereo_Trigger_Activation([NativeTypeName("StereoHandle")] void* hStereoHandle);
+        public static delegate* unmanaged[Cdecl]<void*, _NvAPI_Status> NvAPI_Stereo_Trigger_Activation;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_Stereo_CapturePngImage"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_Stereo_CapturePngImage([NativeTypeName("StereoHandle")] void* stereoHandle);
+        public static delegate* unmanaged[Cdecl]<void*, _NvAPI_Status> NvAPI_Stereo_CapturePngImage;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_Stereo_ReverseStereoBlitControl"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_Stereo_ReverseStereoBlitControl([NativeTypeName("StereoHandle")] void* hStereoHandle, [NativeTypeName("NvU8")] byte TurnOn);
+        public static delegate* unmanaged[Cdecl]<void*, byte, _NvAPI_Status> NvAPI_Stereo_ReverseStereoBlitControl;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_Stereo_SetNotificationMessage"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_Stereo_SetNotificationMessage([NativeTypeName("StereoHandle")] void* hStereoHandle, [NativeTypeName("NvU64")] ulong hWnd, [NativeTypeName("NvU64")] ulong messageID);
+        public static delegate* unmanaged[Cdecl]<void*, ulong, ulong, _NvAPI_Status> NvAPI_Stereo_SetNotificationMessage;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_Vulkan_InitLowLatencyDevice"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
         [Obsolete("Do not use this function - it is deprecated in release 565.")]
-        public static extern _NvAPI_Status NvAPI_Vulkan_InitLowLatencyDevice([NativeTypeName("HANDLE")] void* vkDevice, [NativeTypeName("HANDLE *")] void** signalSemaphoreHandle);
+        public static delegate* unmanaged[Cdecl]<void*, void**, _NvAPI_Status> NvAPI_Vulkan_InitLowLatencyDevice;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_Vulkan_DestroyLowLatencyDevice"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
         [Obsolete("Do not use this function - it is deprecated in release 565.")]
-        public static extern _NvAPI_Status NvAPI_Vulkan_DestroyLowLatencyDevice([NativeTypeName("HANDLE")] void* vkDevice);
+        public static delegate* unmanaged[Cdecl]<void*, _NvAPI_Status> NvAPI_Vulkan_DestroyLowLatencyDevice;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_Vulkan_GetSleepStatus"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
         [Obsolete("Do not use this function - it is deprecated in release 565.")]
-        public static extern _NvAPI_Status NvAPI_Vulkan_GetSleepStatus([NativeTypeName("HANDLE")] void* vkDevice, [NativeTypeName("NV_VULKAN_GET_SLEEP_STATUS_PARAMS *")] _NV_VULKAN_GET_SLEEP_STATUS_PARAMS* pGetSleepStatusParams);
+        public static delegate* unmanaged[Cdecl]<void*, _NV_VULKAN_GET_SLEEP_STATUS_PARAMS*, _NvAPI_Status> NvAPI_Vulkan_GetSleepStatus;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_Vulkan_SetSleepMode"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
         [Obsolete("Do not use this function - it is deprecated in release 565.")]
-        public static extern _NvAPI_Status NvAPI_Vulkan_SetSleepMode([NativeTypeName("HANDLE")] void* vkDevice, [NativeTypeName("NV_VULKAN_SET_SLEEP_MODE_PARAMS *")] _NV_VULKAN_SET_SLEEP_MODE_PARAMS* pSetSleepModeParams);
+        public static delegate* unmanaged[Cdecl]<void*, _NV_VULKAN_SET_SLEEP_MODE_PARAMS*, _NvAPI_Status> NvAPI_Vulkan_SetSleepMode;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_Vulkan_Sleep"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
         [Obsolete("Do not use this function - it is deprecated in release 565.")]
-        public static extern _NvAPI_Status NvAPI_Vulkan_Sleep([NativeTypeName("HANDLE")] void* vkDevice, [NativeTypeName("NvU64")] ulong signalValue);
+        public static delegate* unmanaged[Cdecl]<void*, ulong, _NvAPI_Status> NvAPI_Vulkan_Sleep;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_Vulkan_GetLatency"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
         [Obsolete("Do not use this function - it is deprecated in release 565.")]
-        public static extern _NvAPI_Status NvAPI_Vulkan_GetLatency([NativeTypeName("HANDLE")] void* vkDevice, [NativeTypeName("NV_VULKAN_LATENCY_RESULT_PARAMS *")] _NV_VULKAN_LATENCY_RESULT_PARAMS* pGetLatencyParams);
+        public static delegate* unmanaged[Cdecl]<void*, _NV_VULKAN_LATENCY_RESULT_PARAMS*, _NvAPI_Status> NvAPI_Vulkan_GetLatency;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_Vulkan_SetLatencyMarker"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
         [Obsolete("Do not use this function - it is deprecated in release 565.")]
-        public static extern _NvAPI_Status NvAPI_Vulkan_SetLatencyMarker([NativeTypeName("HANDLE")] void* vkDevice, [NativeTypeName("NV_VULKAN_LATENCY_MARKER_PARAMS *")] _NV_VULKAN_LATENCY_MARKER_PARAMS* pSetLatencyMarkerParams);
+        public static delegate* unmanaged[Cdecl]<void*, _NV_VULKAN_LATENCY_MARKER_PARAMS*, _NvAPI_Status> NvAPI_Vulkan_SetLatencyMarker;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_Vulkan_NotifyOutOfBandVkQueue"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
         [Obsolete("Do not use this function - it is deprecated in release 565.")]
-        public static extern _NvAPI_Status NvAPI_Vulkan_NotifyOutOfBandVkQueue([NativeTypeName("HANDLE")] void* vkDevice, [NativeTypeName("HANDLE")] void* queueHandle, NV_VULKAN_OUT_OF_BAND_QUEUE_TYPE queueType);
+        public static delegate* unmanaged[Cdecl]<void*, void*, NV_VULKAN_OUT_OF_BAND_QUEUE_TYPE, _NvAPI_Status> NvAPI_Vulkan_NotifyOutOfBandVkQueue;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_DRS_CreateSession"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_DRS_CreateSession([NativeTypeName("NvDRSSessionHandle *")] NvDRSSessionHandle__** phSession);
+        public static delegate* unmanaged[Cdecl]<NvDRSSessionHandle__**, _NvAPI_Status> NvAPI_DRS_CreateSession;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_DRS_DestroySession"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_DRS_DestroySession([NativeTypeName("NvDRSSessionHandle")] NvDRSSessionHandle__* hSession);
+        public static delegate* unmanaged[Cdecl]<NvDRSSessionHandle__*, _NvAPI_Status> NvAPI_DRS_DestroySession;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_DRS_LoadSettings"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_DRS_LoadSettings([NativeTypeName("NvDRSSessionHandle")] NvDRSSessionHandle__* hSession);
+        public static delegate* unmanaged[Cdecl]<NvDRSSessionHandle__*, _NvAPI_Status> NvAPI_DRS_LoadSettings;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_DRS_SaveSettings"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_DRS_SaveSettings([NativeTypeName("NvDRSSessionHandle")] NvDRSSessionHandle__* hSession);
+        public static delegate* unmanaged[Cdecl]<NvDRSSessionHandle__*, _NvAPI_Status> NvAPI_DRS_SaveSettings;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_DRS_LoadSettingsFromFile"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_DRS_LoadSettingsFromFile([NativeTypeName("NvDRSSessionHandle")] NvDRSSessionHandle__* hSession, [NativeTypeName("NvAPI_UnicodeString")] ushort* fileName);
+        public static delegate* unmanaged[Cdecl]<NvDRSSessionHandle__*, ushort*, _NvAPI_Status> NvAPI_DRS_LoadSettingsFromFile;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_DRS_SaveSettingsToFile"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_DRS_SaveSettingsToFile([NativeTypeName("NvDRSSessionHandle")] NvDRSSessionHandle__* hSession, [NativeTypeName("NvAPI_UnicodeString")] ushort* fileName);
+        public static delegate* unmanaged[Cdecl]<NvDRSSessionHandle__*, ushort*, _NvAPI_Status> NvAPI_DRS_SaveSettingsToFile;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_DRS_CreateProfile"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_DRS_CreateProfile([NativeTypeName("NvDRSSessionHandle")] NvDRSSessionHandle__* hSession, [NativeTypeName("NVDRS_PROFILE *")] _NVDRS_PROFILE_V1* pProfileInfo, [NativeTypeName("NvDRSProfileHandle *")] NvDRSProfileHandle__** phProfile);
+        public static delegate* unmanaged[Cdecl]<NvDRSSessionHandle__*, _NVDRS_PROFILE_V1*, NvDRSProfileHandle__**, _NvAPI_Status> NvAPI_DRS_CreateProfile;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_DRS_DeleteProfile"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_DRS_DeleteProfile([NativeTypeName("NvDRSSessionHandle")] NvDRSSessionHandle__* hSession, [NativeTypeName("NvDRSProfileHandle")] NvDRSProfileHandle__* hProfile);
+        public static delegate* unmanaged[Cdecl]<NvDRSSessionHandle__*, NvDRSProfileHandle__*, _NvAPI_Status> NvAPI_DRS_DeleteProfile;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_DRS_SetCurrentGlobalProfile"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_DRS_SetCurrentGlobalProfile([NativeTypeName("NvDRSSessionHandle")] NvDRSSessionHandle__* hSession, [NativeTypeName("NvAPI_UnicodeString")] ushort* wszGlobalProfileName);
+        public static delegate* unmanaged[Cdecl]<NvDRSSessionHandle__*, ushort*, _NvAPI_Status> NvAPI_DRS_SetCurrentGlobalProfile;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_DRS_GetCurrentGlobalProfile"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_DRS_GetCurrentGlobalProfile([NativeTypeName("NvDRSSessionHandle")] NvDRSSessionHandle__* hSession, [NativeTypeName("NvDRSProfileHandle *")] NvDRSProfileHandle__** phProfile);
+        public static delegate* unmanaged[Cdecl]<NvDRSSessionHandle__*, NvDRSProfileHandle__**, _NvAPI_Status> NvAPI_DRS_GetCurrentGlobalProfile;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_DRS_GetProfileInfo"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_DRS_GetProfileInfo([NativeTypeName("NvDRSSessionHandle")] NvDRSSessionHandle__* hSession, [NativeTypeName("NvDRSProfileHandle")] NvDRSProfileHandle__* hProfile, [NativeTypeName("NVDRS_PROFILE *")] _NVDRS_PROFILE_V1* pProfileInfo);
+        public static delegate* unmanaged[Cdecl]<NvDRSSessionHandle__*, NvDRSProfileHandle__*, _NVDRS_PROFILE_V1*, _NvAPI_Status> NvAPI_DRS_GetProfileInfo;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_DRS_SetProfileInfo"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_DRS_SetProfileInfo([NativeTypeName("NvDRSSessionHandle")] NvDRSSessionHandle__* hSession, [NativeTypeName("NvDRSProfileHandle")] NvDRSProfileHandle__* hProfile, [NativeTypeName("NVDRS_PROFILE *")] _NVDRS_PROFILE_V1* pProfileInfo);
+        public static delegate* unmanaged[Cdecl]<NvDRSSessionHandle__*, NvDRSProfileHandle__*, _NVDRS_PROFILE_V1*, _NvAPI_Status> NvAPI_DRS_SetProfileInfo;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_DRS_FindProfileByName"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_DRS_FindProfileByName([NativeTypeName("NvDRSSessionHandle")] NvDRSSessionHandle__* hSession, [NativeTypeName("NvAPI_UnicodeString")] ushort* profileName, [NativeTypeName("NvDRSProfileHandle *")] NvDRSProfileHandle__** phProfile);
+        public static delegate* unmanaged[Cdecl]<NvDRSSessionHandle__*, ushort*, NvDRSProfileHandle__**, _NvAPI_Status> NvAPI_DRS_FindProfileByName;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_DRS_EnumProfiles"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_DRS_EnumProfiles([NativeTypeName("NvDRSSessionHandle")] NvDRSSessionHandle__* hSession, [NativeTypeName("NvU32")] uint index, [NativeTypeName("NvDRSProfileHandle *")] NvDRSProfileHandle__** phProfile);
+        public static delegate* unmanaged[Cdecl]<NvDRSSessionHandle__*, uint, NvDRSProfileHandle__**, _NvAPI_Status> NvAPI_DRS_EnumProfiles;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_DRS_GetNumProfiles"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_DRS_GetNumProfiles([NativeTypeName("NvDRSSessionHandle")] NvDRSSessionHandle__* hSession, [NativeTypeName("NvU32 *")] uint* numProfiles);
+        public static delegate* unmanaged[Cdecl]<NvDRSSessionHandle__*, uint*, _NvAPI_Status> NvAPI_DRS_GetNumProfiles;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_DRS_CreateApplication"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_DRS_CreateApplication([NativeTypeName("NvDRSSessionHandle")] NvDRSSessionHandle__* hSession, [NativeTypeName("NvDRSProfileHandle")] NvDRSProfileHandle__* hProfile, [NativeTypeName("NVDRS_APPLICATION *")] _NVDRS_APPLICATION_V4* pApplication);
+        public static delegate* unmanaged[Cdecl]<NvDRSSessionHandle__*, NvDRSProfileHandle__*, _NVDRS_APPLICATION_V4*, _NvAPI_Status> NvAPI_DRS_CreateApplication;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_DRS_DeleteApplicationEx"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_DRS_DeleteApplicationEx([NativeTypeName("NvDRSSessionHandle")] NvDRSSessionHandle__* hSession, [NativeTypeName("NvDRSProfileHandle")] NvDRSProfileHandle__* hProfile, [NativeTypeName("NVDRS_APPLICATION *")] _NVDRS_APPLICATION_V4* pApp);
+        public static delegate* unmanaged[Cdecl]<NvDRSSessionHandle__*, NvDRSProfileHandle__*, _NVDRS_APPLICATION_V4*, _NvAPI_Status> NvAPI_DRS_DeleteApplicationEx;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_DRS_DeleteApplication"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_DRS_DeleteApplication([NativeTypeName("NvDRSSessionHandle")] NvDRSSessionHandle__* hSession, [NativeTypeName("NvDRSProfileHandle")] NvDRSProfileHandle__* hProfile, [NativeTypeName("NvAPI_UnicodeString")] ushort* appName);
+        public static delegate* unmanaged[Cdecl]<NvDRSSessionHandle__*, NvDRSProfileHandle__*, ushort*, _NvAPI_Status> NvAPI_DRS_DeleteApplication;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_DRS_GetApplicationInfo"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_DRS_GetApplicationInfo([NativeTypeName("NvDRSSessionHandle")] NvDRSSessionHandle__* hSession, [NativeTypeName("NvDRSProfileHandle")] NvDRSProfileHandle__* hProfile, [NativeTypeName("NvAPI_UnicodeString")] ushort* appName, [NativeTypeName("NVDRS_APPLICATION *")] _NVDRS_APPLICATION_V4* pApplication);
+        public static delegate* unmanaged[Cdecl]<NvDRSSessionHandle__*, NvDRSProfileHandle__*, ushort*, _NVDRS_APPLICATION_V4*, _NvAPI_Status> NvAPI_DRS_GetApplicationInfo;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_DRS_EnumApplications"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_DRS_EnumApplications([NativeTypeName("NvDRSSessionHandle")] NvDRSSessionHandle__* hSession, [NativeTypeName("NvDRSProfileHandle")] NvDRSProfileHandle__* hProfile, [NativeTypeName("NvU32")] uint startIndex, [NativeTypeName("NvU32 *")] uint* appCount, [NativeTypeName("NVDRS_APPLICATION *")] _NVDRS_APPLICATION_V4* pApplication);
+        public static delegate* unmanaged[Cdecl]<NvDRSSessionHandle__*, NvDRSProfileHandle__*, uint, uint*, _NVDRS_APPLICATION_V4*, _NvAPI_Status> NvAPI_DRS_EnumApplications;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_DRS_FindApplicationByName"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_DRS_FindApplicationByName([NativeTypeName("NvDRSSessionHandle")] NvDRSSessionHandle__* hSession, [NativeTypeName("NvAPI_UnicodeString")] ushort* appName, [NativeTypeName("NvDRSProfileHandle *")] NvDRSProfileHandle__** phProfile, [NativeTypeName("NVDRS_APPLICATION *")] _NVDRS_APPLICATION_V4* pApplication);
+        public static delegate* unmanaged[Cdecl]<NvDRSSessionHandle__*, ushort*, NvDRSProfileHandle__**, _NVDRS_APPLICATION_V4*, _NvAPI_Status> NvAPI_DRS_FindApplicationByName;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_DRS_SetSetting"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_DRS_SetSetting([NativeTypeName("NvDRSSessionHandle")] NvDRSSessionHandle__* hSession, [NativeTypeName("NvDRSProfileHandle")] NvDRSProfileHandle__* hProfile, [NativeTypeName("NVDRS_SETTING *")] _NVDRS_SETTING_V1* pSetting);
+        public static delegate* unmanaged[Cdecl]<NvDRSSessionHandle__*, NvDRSProfileHandle__*, _NVDRS_SETTING_V1*, _NvAPI_Status> NvAPI_DRS_SetSetting;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_DRS_GetSetting"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_DRS_GetSetting([NativeTypeName("NvDRSSessionHandle")] NvDRSSessionHandle__* hSession, [NativeTypeName("NvDRSProfileHandle")] NvDRSProfileHandle__* hProfile, [NativeTypeName("NvU32")] uint settingId, [NativeTypeName("NVDRS_SETTING *")] _NVDRS_SETTING_V1* pSetting);
+        public static delegate* unmanaged[Cdecl]<NvDRSSessionHandle__*, NvDRSProfileHandle__*, uint, _NVDRS_SETTING_V1*, _NvAPI_Status> NvAPI_DRS_GetSetting;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_DRS_EnumSettings"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_DRS_EnumSettings([NativeTypeName("NvDRSSessionHandle")] NvDRSSessionHandle__* hSession, [NativeTypeName("NvDRSProfileHandle")] NvDRSProfileHandle__* hProfile, [NativeTypeName("NvU32")] uint startIndex, [NativeTypeName("NvU32 *")] uint* settingsCount, [NativeTypeName("NVDRS_SETTING *")] _NVDRS_SETTING_V1* pSetting);
+        public static delegate* unmanaged[Cdecl]<NvDRSSessionHandle__*, NvDRSProfileHandle__*, uint, uint*, _NVDRS_SETTING_V1*, _NvAPI_Status> NvAPI_DRS_EnumSettings;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_DRS_EnumAvailableSettingIds"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_DRS_EnumAvailableSettingIds([NativeTypeName("NvU32 *")] uint* pSettingIds, [NativeTypeName("NvU32 *")] uint* pMaxCount);
+        public static delegate* unmanaged[Cdecl]<uint*, uint*, _NvAPI_Status> NvAPI_DRS_EnumAvailableSettingIds;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_DRS_EnumAvailableSettingValues"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_DRS_EnumAvailableSettingValues([NativeTypeName("NvU32")] uint settingId, [NativeTypeName("NvU32 *")] uint* pMaxNumValues, [NativeTypeName("NVDRS_SETTING_VALUES *")] _NVDRS_SETTING_VALUES* pSettingValues);
+        public static delegate* unmanaged[Cdecl]<uint, uint*, _NVDRS_SETTING_VALUES*, _NvAPI_Status> NvAPI_DRS_EnumAvailableSettingValues;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_DRS_GetSettingIdFromName"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_DRS_GetSettingIdFromName([NativeTypeName("NvAPI_UnicodeString")] ushort* settingName, [NativeTypeName("NvU32 *")] uint* pSettingId);
+        public static delegate* unmanaged[Cdecl]<ushort*, uint*, _NvAPI_Status> NvAPI_DRS_GetSettingIdFromName;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_DRS_GetSettingNameFromId"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_DRS_GetSettingNameFromId([NativeTypeName("NvU32")] uint settingId, [NativeTypeName("NvAPI_UnicodeString *")] ushort** pSettingName);
+        public static delegate* unmanaged[Cdecl]<uint, ushort**, _NvAPI_Status> NvAPI_DRS_GetSettingNameFromId;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_DRS_DeleteProfileSetting"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_DRS_DeleteProfileSetting([NativeTypeName("NvDRSSessionHandle")] NvDRSSessionHandle__* hSession, [NativeTypeName("NvDRSProfileHandle")] NvDRSProfileHandle__* hProfile, [NativeTypeName("NvU32")] uint settingId);
+        public static delegate* unmanaged[Cdecl]<NvDRSSessionHandle__*, NvDRSProfileHandle__*, uint, _NvAPI_Status> NvAPI_DRS_DeleteProfileSetting;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_DRS_RestoreAllDefaults"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_DRS_RestoreAllDefaults([NativeTypeName("NvDRSSessionHandle")] NvDRSSessionHandle__* hSession);
+        public static delegate* unmanaged[Cdecl]<NvDRSSessionHandle__*, _NvAPI_Status> NvAPI_DRS_RestoreAllDefaults;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_DRS_RestoreProfileDefault"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_DRS_RestoreProfileDefault([NativeTypeName("NvDRSSessionHandle")] NvDRSSessionHandle__* hSession, [NativeTypeName("NvDRSProfileHandle")] NvDRSProfileHandle__* hProfile);
+        public static delegate* unmanaged[Cdecl]<NvDRSSessionHandle__*, NvDRSProfileHandle__*, _NvAPI_Status> NvAPI_DRS_RestoreProfileDefault;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_DRS_RestoreProfileDefaultSetting"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_DRS_RestoreProfileDefaultSetting([NativeTypeName("NvDRSSessionHandle")] NvDRSSessionHandle__* hSession, [NativeTypeName("NvDRSProfileHandle")] NvDRSProfileHandle__* hProfile, [NativeTypeName("NvU32")] uint settingId);
+        public static delegate* unmanaged[Cdecl]<NvDRSSessionHandle__*, NvDRSProfileHandle__*, uint, _NvAPI_Status> NvAPI_DRS_RestoreProfileDefaultSetting;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_DRS_GetBaseProfile"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_DRS_GetBaseProfile([NativeTypeName("NvDRSSessionHandle")] NvDRSSessionHandle__* hSession, [NativeTypeName("NvDRSProfileHandle *")] NvDRSProfileHandle__** phProfile);
+        public static delegate* unmanaged[Cdecl]<NvDRSSessionHandle__*, NvDRSProfileHandle__**, _NvAPI_Status> NvAPI_DRS_GetBaseProfile;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_SYS_GetChipSetInfo"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_SYS_GetChipSetInfo(NV_CHIPSET_INFO_v4* pChipSetInfo);
+        public static delegate* unmanaged[Cdecl]<NV_CHIPSET_INFO_v4*, _NvAPI_Status> NvAPI_SYS_GetChipSetInfo;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_SYS_GetLidAndDockInfo"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_SYS_GetLidAndDockInfo(NV_LID_DOCK_PARAMS* pLidAndDock);
+        public static delegate* unmanaged[Cdecl]<NV_LID_DOCK_PARAMS*, _NvAPI_Status> NvAPI_SYS_GetLidAndDockInfo;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_SYS_GetDisplayIdFromGpuAndOutputId"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_SYS_GetDisplayIdFromGpuAndOutputId([NativeTypeName("NvPhysicalGpuHandle")] NvPhysicalGpuHandle__* hPhysicalGpu, [NativeTypeName("NvU32")] uint outputId, [NativeTypeName("NvU32 *")] uint* displayId);
+        public static delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, uint, uint*, _NvAPI_Status> NvAPI_SYS_GetDisplayIdFromGpuAndOutputId;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_SYS_GetGpuAndOutputIdFromDisplayId"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_SYS_GetGpuAndOutputIdFromDisplayId([NativeTypeName("NvU32")] uint displayId, [NativeTypeName("NvPhysicalGpuHandle *")] NvPhysicalGpuHandle__** hPhysicalGpu, [NativeTypeName("NvU32 *")] uint* outputId);
+        public static delegate* unmanaged[Cdecl]<uint, NvPhysicalGpuHandle__**, uint*, _NvAPI_Status> NvAPI_SYS_GetGpuAndOutputIdFromDisplayId;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_SYS_GetPhysicalGpuFromDisplayId"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_SYS_GetPhysicalGpuFromDisplayId([NativeTypeName("NvU32")] uint displayId, [NativeTypeName("NvPhysicalGpuHandle *")] NvPhysicalGpuHandle__** hPhysicalGpu);
+        public static delegate* unmanaged[Cdecl]<uint, NvPhysicalGpuHandle__**, _NvAPI_Status> NvAPI_SYS_GetPhysicalGpuFromDisplayId;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_SYS_GetDisplayDriverInfo"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_SYS_GetDisplayDriverInfo([NativeTypeName("NV_DISPLAY_DRIVER_INFO *")] _NV_DISPLAY_DRIVER_INFO_V2* pDriverInfo);
+        public static delegate* unmanaged[Cdecl]<_NV_DISPLAY_DRIVER_INFO_V2*, _NvAPI_Status> NvAPI_SYS_GetDisplayDriverInfo;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_SYS_GetPhysicalGPUs"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_SYS_GetPhysicalGPUs([NativeTypeName("NV_PHYSICAL_GPUS *")] _NV_PHYSICAL_GPUS* pPhysicalGPUs);
+        public static delegate* unmanaged[Cdecl]<_NV_PHYSICAL_GPUS*, _NvAPI_Status> NvAPI_SYS_GetPhysicalGPUs;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_SYS_GetLogicalGPUs"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_SYS_GetLogicalGPUs([NativeTypeName("NV_LOGICAL_GPUS *")] _NV_LOGICAL_GPUS* pLogicalGPUs);
+        public static delegate* unmanaged[Cdecl]<_NV_LOGICAL_GPUS*, _NvAPI_Status> NvAPI_SYS_GetLogicalGPUs;
+
+        /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_NGX_GetDriverFeatureSupport"]/*' />
+        public static delegate* unmanaged[Cdecl]<_NV_NGX_GET_DRIVER_FEATURE_SUPPORT_PARAMS_V1*, _NvAPI_Status> NvAPI_NGX_GetDriverFeatureSupport;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GPU_ClientRegisterForUtilizationSampleUpdates"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_GPU_ClientRegisterForUtilizationSampleUpdates([NativeTypeName("NvPhysicalGpuHandle")] NvPhysicalGpuHandle__* hPhysicalGpu, [NativeTypeName("NV_GPU_CLIENT_UTILIZATION_PERIODIC_CALLBACK_SETTINGS *")] _NV_GPU_CLIENT_UTILIZATION_PERIODIC_CALLBACK_SETTINGS_V1* pCallbackSettings);
+        public static delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, _NV_GPU_CLIENT_UTILIZATION_PERIODIC_CALLBACK_SETTINGS_V1*, _NvAPI_Status> NvAPI_GPU_ClientRegisterForUtilizationSampleUpdates;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_RegisterRiseCallback"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_RegisterRiseCallback([NativeTypeName("NV_RISE_CALLBACK_SETTINGS *")] _NV_RISE_CALLBACK_SETTINGS_V1* pCallbackSettings);
+        public static delegate* unmanaged[Cdecl]<_NV_RISE_CALLBACK_SETTINGS_V1*, _NvAPI_Status> NvAPI_RegisterRiseCallback;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_RequestRise"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_RequestRise([NativeTypeName("NV_REQUEST_RISE_SETTINGS *")] _NV_REQUEST_RISE_SETTINGS_V1* requestContent);
+        public static delegate* unmanaged[Cdecl]<_NV_REQUEST_RISE_SETTINGS_V1*, _NvAPI_Status> NvAPI_RequestRise;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_UninstallRise"]/*' />
-        [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        [return: NativeTypeName("NvAPI_Status")]
-        public static extern _NvAPI_Status NvAPI_UninstallRise([NativeTypeName("NV_UNINSTALL_RISE_SETTINGS *")] _NV_UNINSTALL_RISE_SETTINGS_V1* requestContent);
+        public static delegate* unmanaged[Cdecl]<_NV_UNINSTALL_RISE_SETTINGS_V1*, _NvAPI_Status> NvAPI_UninstallRise;
 
         [NativeTypeName("#define NV_U8_MAX (+255U)")]
         public const uint NV_U8_MAX = (+255U);
@@ -1622,8 +1012,8 @@ namespace NVAPIWrapper
         [NativeTypeName("#define NVAPI_USE_STDINT 0")]
         public const int NVAPI_USE_STDINT = 0;
 
-        [NativeTypeName("#define NVAPI_SDK_VERSION 59145")]
-        public const int NVAPI_SDK_VERSION = 59145;
+        [NativeTypeName("#define NVAPI_SDK_VERSION 59596")]
+        public const int NVAPI_SDK_VERSION = 59596;
 
         [NativeTypeName("#define NVAPI_DEFAULT_HANDLE 0")]
         public const int NVAPI_DEFAULT_HANDLE = 0;
@@ -1681,6 +1071,9 @@ namespace NVAPIWrapper
 
         [NativeTypeName("#define NVAPI_SYSTEM_HWBC_INVALID_ID 0xffffffff")]
         public const uint NVAPI_SYSTEM_HWBC_INVALID_ID = 0xffffffff;
+
+        [NativeTypeName("#define NVAPI_UUID_LEN 16")]
+        public const int NVAPI_UUID_LEN = 16;
 
         [NativeTypeName("#define NVAPI_SYSTEM_MAX_DISPLAYS NVAPI_MAX_PHYSICAL_GPUS * NV_MAX_HEADS")]
         public const int NVAPI_SYSTEM_MAX_DISPLAYS = 64 * 4;
@@ -2182,6 +1575,12 @@ namespace NVAPIWrapper
 
         [NativeTypeName("#define NV_GPU_GSP_INFO_VER NV_GPU_GSP_INFO_VER1")]
         public const uint NV_GPU_GSP_INFO_VER = (uint)(72 | ((1) << 16));
+
+        [NativeTypeName("#define NV_GPU_UUID_VER1 MAKE_NVAPI_VERSION(NV_GPU_UUID_V1,1)")]
+        public const uint NV_GPU_UUID_VER1 = (uint)(20 | ((1) << 16));
+
+        [NativeTypeName("#define NV_GPU_UUID_VER NV_GPU_UUID_VER1")]
+        public const uint NV_GPU_UUID_VER = (uint)(20 | ((1) << 16));
 
         [NativeTypeName("#define NVAPI_NVLINK_COUNTER_MAX_TYPES 32")]
         public const int NVAPI_NVLINK_COUNTER_MAX_TYPES = 32;
@@ -2849,6 +2248,9 @@ namespace NVAPIWrapper
         [NativeTypeName("#define NV_PRESENT_BARRIER_FRAME_STATICS_VER1 MAKE_NVAPI_VERSION(NV_PRESENT_BARRIER_FRAME_STATISTICS,1)")]
         public const uint NV_PRESENT_BARRIER_FRAME_STATICS_VER1 = (uint)(24 | ((1) << 16));
 
+        [NativeTypeName("#define NVAPI_MAX_FRAMES_PER_FLIP_BATCH 8")]
+        public const int NVAPI_MAX_FRAMES_PER_FLIP_BATCH = 8;
+
         [NativeTypeName("#define NV_QUERY_SINGLE_PASS_STEREO_SUPPORT_PARAMS_VER1 MAKE_NVAPI_VERSION(NV_QUERY_SINGLE_PASS_STEREO_SUPPORT_PARAMS_V1, 1)")]
         public const uint NV_QUERY_SINGLE_PASS_STEREO_SUPPORT_PARAMS_VER1 = (uint)(8 | ((1) << 16));
 
@@ -3320,6 +2722,15 @@ namespace NVAPIWrapper
         [NativeTypeName("#define NV_LOGICAL_GPUS_VER NV_LOGICAL_GPUS_VER1")]
         public static readonly uint NV_LOGICAL_GPUS_VER = unchecked((uint)(sizeof(_NV_LOGICAL_GPUS) | ((1) << 16)));
 
+        [NativeTypeName("#define NVAPI_MAX_NGX_FEATURES_PER_QUERY 16")]
+        public const int NVAPI_MAX_NGX_FEATURES_PER_QUERY = 16;
+
+        [NativeTypeName("#define NV_NGX_GET_DRIVER_FEATURE_SUPPORT_PARAMS_VER1 MAKE_NVAPI_VERSION(NV_NGX_GET_DRIVER_FEATURE_SUPPORT_PARAMS_V1,1)")]
+        public const uint NV_NGX_GET_DRIVER_FEATURE_SUPPORT_PARAMS_VER1 = (uint)(288 | ((1) << 16));
+
+        [NativeTypeName("#define NV_NGX_GET_DRIVER_FEATURE_SUPPORT_PARAMS_VER NV_NGX_GET_DRIVER_FEATURE_SUPPORT_PARAMS_VER1")]
+        public const uint NV_NGX_GET_DRIVER_FEATURE_SUPPORT_PARAMS_VER = (uint)(288 | ((1) << 16));
+
         [NativeTypeName("#define NV_GPU_CLIENT_UTIL_DOMAINS_MAX_V1 (4)")]
         public const int NV_GPU_CLIENT_UTIL_DOMAINS_MAX_V1 = (4);
 
@@ -3497,11 +2908,23 @@ namespace NVAPIWrapper
         [NativeTypeName("#define NGX_DLAA_OVERRIDE_STRING L\"Override DLSS mode to be DLAA\"")]
         public const string NGX_DLAA_OVERRIDE_STRING = "Override DLSS mode to be DLAA";
 
+        [NativeTypeName("#define NGX_DLSSG_DYNAMIC_MULTI_FRAME_COUNT_MAX_STRING L\"Override maximum DLSSG dynamic multi frame count\"")]
+        public const string NGX_DLSSG_DYNAMIC_MULTI_FRAME_COUNT_MAX_STRING = "Override maximum DLSSG dynamic multi frame count";
+
+        [NativeTypeName("#define NGX_DLSSG_DYNAMIC_TARGET_FRAME_RATE_STRING L\"Override DLSSG Target Frame Rate\"")]
+        public const string NGX_DLSSG_DYNAMIC_TARGET_FRAME_RATE_STRING = "Override DLSSG Target Frame Rate";
+
+        [NativeTypeName("#define NGX_DLSSG_MODE_STRING L\"Override DLSSG mode\"")]
+        public const string NGX_DLSSG_MODE_STRING = "Override DLSSG mode";
+
         [NativeTypeName("#define NGX_DLSSG_MULTI_FRAME_COUNT_STRING L\"Override DLSSG multi-frame count\"")]
         public const string NGX_DLSSG_MULTI_FRAME_COUNT_STRING = "Override DLSSG multi-frame count";
 
         [NativeTypeName("#define NGX_DLSS_FG_OVERRIDE_STRING L\"Enable DLSS-FG override\"")]
         public const string NGX_DLSS_FG_OVERRIDE_STRING = "Enable DLSS-FG override";
+
+        [NativeTypeName("#define NGX_DLSS_FG_OVERRIDE_RENDER_PRESET_SELECTION_STRING L\"Override DLSS-FG preset\"")]
+        public const string NGX_DLSS_FG_OVERRIDE_RENDER_PRESET_SELECTION_STRING = "Override DLSS-FG preset";
 
         [NativeTypeName("#define NGX_DLSS_FG_OVERRIDE_RESERVED_KEY1_STRING L\"Override reserved key 1 for FG\"")]
         public const string NGX_DLSS_FG_OVERRIDE_RESERVED_KEY1_STRING = "Override reserved key 1 for FG";

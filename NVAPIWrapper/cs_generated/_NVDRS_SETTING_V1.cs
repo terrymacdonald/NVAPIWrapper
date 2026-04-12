@@ -37,11 +37,11 @@ namespace NVAPIWrapper
         public uint isPredefinedValid;
 
         /// <include file='_NVDRS_SETTING_V1.xml' path='doc/member[@name="_NVDRS_SETTING_V1.Anonymous1"]/*' />
-        [NativeTypeName("__AnonymousRecord_nvapi_L23972_C6")]
+        [NativeTypeName("__AnonymousRecord_nvapi_L24080_C6")]
         public _Anonymous1_e__Union Anonymous1;
 
         /// <include file='_NVDRS_SETTING_V1.xml' path='doc/member[@name="_NVDRS_SETTING_V1.Anonymous2"]/*' />
-        [NativeTypeName("__AnonymousRecord_nvapi_L23980_C6")]
+        [NativeTypeName("__AnonymousRecord_nvapi_L24088_C6")]
         public _Anonymous2_e__Union Anonymous2;
 
         /// <include file='_Anonymous1_e__Union.xml' path='doc/member[@name="_Anonymous1_e__Union.u32PredefinedValue"]/*' />

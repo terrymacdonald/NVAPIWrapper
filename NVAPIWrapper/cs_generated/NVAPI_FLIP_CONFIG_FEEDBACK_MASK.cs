@@ -1,0 +1,15 @@
+namespace NVAPIWrapper
+{
+    /// <include file='NVAPI_FLIP_CONFIG_FEEDBACK_MASK.xml' path='doc/member[@name="NVAPI_FLIP_CONFIG_FEEDBACK_MASK"]/*' />
+    public enum NVAPI_FLIP_CONFIG_FEEDBACK_MASK
+    {
+        /// <include file='NVAPI_FLIP_CONFIG_FEEDBACK_MASK.xml' path='doc/member[@name="NVAPI_FLIP_CONFIG_FEEDBACK_MASK.NVAPI_FLIP_CONFIG_FEEDBACK_OK"]/*' />
+        NVAPI_FLIP_CONFIG_FEEDBACK_OK = 0,
+
+        /// <include file='NVAPI_FLIP_CONFIG_FEEDBACK_MASK.xml' path='doc/member[@name="NVAPI_FLIP_CONFIG_FEEDBACK_MASK.NVAPI_FLIP_CONFIG_FEEDBACK_NO_IFLIP"]/*' />
+        NVAPI_FLIP_CONFIG_FEEDBACK_NO_IFLIP = (1 << (0)),
+
+        /// <include file='NVAPI_FLIP_CONFIG_FEEDBACK_MASK.xml' path='doc/member[@name="NVAPI_FLIP_CONFIG_FEEDBACK_MASK.NVAPI_FLIP_CONFIG_FEEDBACK_MIRRORING_DETECTED"]/*' />
+        NVAPI_FLIP_CONFIG_FEEDBACK_MIRRORING_DETECTED = (1 << (1)),
+    }
+}

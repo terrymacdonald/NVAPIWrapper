@@ -14,7 +14,7 @@ namespace NVAPIWrapper
         public uint ctrlModeMask;
 
         /// <include file='_NV_GPU_CLIENT_ILLUM_DEVICE_INFO_V1.xml' path='doc/member[@name="_NV_GPU_CLIENT_ILLUM_DEVICE_INFO_V1.data"]/*' />
-        [NativeTypeName("__AnonymousRecord_nvapi_L5764_C5")]
+        [NativeTypeName("__AnonymousRecord_nvapi_L5798_C5")]
         public _data_e__Union data;
 
         /// <include file='_NV_GPU_CLIENT_ILLUM_DEVICE_INFO_V1.xml' path='doc/member[@name="_NV_GPU_CLIENT_ILLUM_DEVICE_INFO_V1.rsvd"]/*' />

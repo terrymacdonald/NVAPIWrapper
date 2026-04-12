@@ -21,11 +21,11 @@ namespace NVAPIWrapper
         public _NVDRS_SETTING_TYPE settingType;
 
         /// <include file='_NVDRS_SETTING_VALUES.xml' path='doc/member[@name="_NVDRS_SETTING_VALUES.Anonymous"]/*' />
-        [NativeTypeName("__AnonymousRecord_nvapi_L23944_C6")]
+        [NativeTypeName("__AnonymousRecord_nvapi_L24052_C6")]
         public _Anonymous_e__Union Anonymous;
 
         /// <include file='_NVDRS_SETTING_VALUES.xml' path='doc/member[@name="_NVDRS_SETTING_VALUES.settingValues"]/*' />
-        [NativeTypeName("union (anonymous union at ./../nvapi/nvapi.h:23951:6)[100]")]
+        [NativeTypeName("union (anonymous union at ./../nvapi/nvapi.h:24059:6)[100]")]
         public _settingValues_e__FixedBuffer settingValues;
 
         /// <include file='_Anonymous_e__Union.xml' path='doc/member[@name="_Anonymous_e__Union.u32DefaultValue"]/*' />

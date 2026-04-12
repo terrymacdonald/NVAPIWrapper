@@ -21,7 +21,7 @@ namespace NVAPIWrapper
         public NV_GPU_CLIENT_ILLUM_ZONE_LOCATION zoneLocation;
 
         /// <include file='_NV_GPU_CLIENT_ILLUM_ZONE_INFO_V1.xml' path='doc/member[@name="_NV_GPU_CLIENT_ILLUM_ZONE_INFO_V1.data"]/*' />
-        [NativeTypeName("__AnonymousRecord_nvapi_L6005_C5")]
+        [NativeTypeName("__AnonymousRecord_nvapi_L6039_C5")]
         public _data_e__Union data;
 
         /// <include file='_NV_GPU_CLIENT_ILLUM_ZONE_INFO_V1.xml' path='doc/member[@name="_NV_GPU_CLIENT_ILLUM_ZONE_INFO_V1.rsvd"]/*' />

@@ -45,12 +45,16 @@ namespace NVAPIWrapper
         [NativeTypeName("NvU32")]
         public uint frameGenerationPreset;
 
+        /// <include file='_NV_NGX_DLSS_OVERRIDE_GET_STATE_PARAMS_V1.xml' path='doc/member[@name="_NV_NGX_DLSS_OVERRIDE_GET_STATE_PARAMS_V1.frameGenerationMode"]/*' />
+        [NativeTypeName("NvU32")]
+        public uint frameGenerationMode;
+
         /// <include file='_NV_NGX_DLSS_OVERRIDE_GET_STATE_PARAMS_V1.xml' path='doc/member[@name="_NV_NGX_DLSS_OVERRIDE_GET_STATE_PARAMS_V1.reserved"]/*' />
-        [NativeTypeName("NvU32[3]")]
+        [NativeTypeName("NvU32[2]")]
         public _reserved_e__FixedBuffer reserved;
 
         /// <include file='_reserved_e__FixedBuffer.xml' path='doc/member[@name="_reserved_e__FixedBuffer"]/*' />
-        [InlineArray(3)]
+        [InlineArray(2)]
         public partial struct _reserved_e__FixedBuffer
         {
             public uint e0;

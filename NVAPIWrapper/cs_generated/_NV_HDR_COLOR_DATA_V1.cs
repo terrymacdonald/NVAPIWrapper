@@ -17,7 +17,7 @@ namespace NVAPIWrapper
         public NV_STATIC_METADATA_DESCRIPTOR_ID static_metadata_descriptor_id;
 
         /// <include file='_NV_HDR_COLOR_DATA_V1.xml' path='doc/member[@name="_NV_HDR_COLOR_DATA_V1.mastering_display_data"]/*' />
-        [NativeTypeName("__AnonymousRecord_nvapi_L7977_C5")]
+        [NativeTypeName("__AnonymousRecord_nvapi_L8011_C5")]
         public _mastering_display_data_e__Struct mastering_display_data;
 
         /// <include file='_mastering_display_data_e__Struct.xml' path='doc/member[@name="_mastering_display_data_e__Struct"]/*' />

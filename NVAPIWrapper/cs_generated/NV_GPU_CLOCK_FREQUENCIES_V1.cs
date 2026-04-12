@@ -14,7 +14,7 @@ namespace NVAPIWrapper
         public uint reserved;
 
         /// <include file='NV_GPU_CLOCK_FREQUENCIES_V1.xml' path='doc/member[@name="NV_GPU_CLOCK_FREQUENCIES_V1.domain"]/*' />
-        [NativeTypeName("struct (anonymous struct at ./../nvapi/nvapi.h:5335:5)[32]")]
+        [NativeTypeName("struct (anonymous struct at ./../nvapi/nvapi.h:5369:5)[32]")]
         public _domain_e__FixedBuffer domain;
 
         /// <include file='_domain_e__Struct.xml' path='doc/member[@name="_domain_e__Struct"]/*' />
