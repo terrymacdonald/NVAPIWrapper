@@ -1726,13 +1726,14 @@ namespace NVAPIWrapper
             var getInfo = GetDelegate<NvApiGpuGetLogicalGpuInfoDelegate>(
                 NvApiIdGpuGetLogicalGpuInfo,
                 "NvAPI_GPU_GetLogicalGpuInfo");
+            var luid = new _LUID();
             var info = CreateLogicalGpuInfo();
+            info.pOSAdapterId = &luid;
             status = getInfo(logical, &info);
             if (status == _NvAPI_Status.NVAPI_OK)
                 return NVAPILogicalGpuInfoDto.FromNative(_apiHelper, info);
 
-            if (status == _NvAPI_Status.NVAPI_NOT_SUPPORTED || status == _NvAPI_Status.NVAPI_NVIDIA_DEVICE_NOT_FOUND
-                || status == _NvAPI_Status.NVAPI_INVALID_POINTER)
+            if (status == _NvAPI_Status.NVAPI_NOT_SUPPORTED || status == _NvAPI_Status.NVAPI_NVIDIA_DEVICE_NOT_FOUND)
                 return null;
 
             throw new NVAPIException(status);

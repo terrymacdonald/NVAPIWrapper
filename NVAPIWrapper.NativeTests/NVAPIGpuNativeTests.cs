@@ -1079,10 +1079,11 @@ namespace NVAPIWrapper.NativeTests
 
                 Assert.Equal(_NvAPI_Status.NVAPI_OK, status);
 
+                var luid = new _LUID();
                 var info = new _NV_LOGICAL_GPU_DATA_V1 { version = NVAPI.NV_LOGICAL_GPU_DATA_VER };
+                info.pOSAdapterId = &luid;
                 status = NVAPI.NvAPI_GPU_GetLogicalGpuInfo(logical, &info);
-                if (IsUnsupported(status) || status == _NvAPI_Status.NVAPI_INVALID_POINTER
-                    || status == _NvAPI_Status.NVAPI_INCOMPATIBLE_STRUCT_VERSION)
+                if (IsUnsupported(status) || status == _NvAPI_Status.NVAPI_INCOMPATIBLE_STRUCT_VERSION)
                 {
                     Skip.If(true, $"Logical GPU info unsupported: {status}");
                     return;
