@@ -940,6 +940,18 @@ namespace NVAPIWrapper.FacadeTests
             Assert.True(result.Value);
         }
 
+        [SkippableFact]
+        public void GetDisplayConfig_ShouldReturnSnapshot()
+        {
+            var gpu = GetFirstGpuOrSkip();
+
+            var config = gpu.GetDisplayConfig();
+            Skip.If(config == null, "Display config not supported.");
+
+            Assert.NotNull(config.Value.Paths);
+            Assert.InRange(config.Value.Paths.Length, 0, NVAPI.NVAPI_MAX_DISPLAYS);
+        }
+
         private NVAPIPhysicalGpuHelper GetFirstGpuOrSkip()
         {
             Skip.If(_fixture.ApiHelper == null, _fixture.SkipReason);

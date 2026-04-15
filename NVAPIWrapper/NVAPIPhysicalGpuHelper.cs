@@ -87,6 +87,8 @@ namespace NVAPIWrapper
         private const uint NvApiIdGpuGetGpuInfo = 0xAFD1B02C;
         private const uint NvApiIdI2CRead = 0x2FDE12C5;
         private const uint NvApiIdI2CWrite = 0xE812EB07;
+        private const uint NvApiIdDispGetDisplayConfig = 0x11ABCCF8;
+        private const uint NvApiIdDispSetDisplayConfig = 0x5D8CF8DE;
 
         private readonly NVAPIApiHelper _apiHelper;
         private readonly IntPtr _handle;
@@ -540,6 +542,80 @@ namespace NVAPIWrapper
             var trimmed = new NVAPIDisplayHelper[count];
             Array.Copy(result, trimmed, count);
             return trimmed;
+        }
+
+        /// <summary>
+        /// Get the current display configuration snapshot.
+        /// </summary>
+        /// <returns>Display configuration info, or null if unavailable.</returns>
+        public unsafe NVAPIDisplayConfigDto? GetDisplayConfig()
+        {
+            ThrowIfDisposed();
+
+            var getConfig = GetDelegate<NvApiDispGetDisplayConfigDelegate>(
+                NvApiIdDispGetDisplayConfig,
+                "NvAPI_DISP_GetDisplayConfig");
+            uint pathCount = 0;
+            var status = getConfig(&pathCount, null);
+            if (status == _NvAPI_Status.NVAPI_NOT_SUPPORTED || status == _NvAPI_Status.NVAPI_NVIDIA_DEVICE_NOT_FOUND)
+                return null;
+
+            if (status != _NvAPI_Status.NVAPI_OK)
+                throw new NVAPIException(status);
+
+            if (pathCount == 0)
+                return new NVAPIDisplayConfigDto(Array.Empty<NVAPIDisplayConfigPathDto>());
+
+            using var buffer = new NVAPIDisplayHelper.DisplayConfigBuffer(pathCount);
+            buffer.InitializePathInfoVersions();
+
+            status = getConfig(&pathCount, buffer.PathInfo);
+            if (status != _NvAPI_Status.NVAPI_OK)
+                throw new NVAPIException(status);
+
+            buffer.AllocateNestedBuffers();
+
+            status = getConfig(&pathCount, buffer.PathInfo);
+            if (status != _NvAPI_Status.NVAPI_OK)
+                throw new NVAPIException(status);
+
+            return NVAPIDisplayConfigDto.FromNative(pathCount, buffer.PathInfo);
+        }
+
+        /// <summary>
+        /// Apply a display configuration snapshot using NvAPI_DISP_SetDisplayConfig.
+        /// </summary>
+        /// <param name="config">Desired display configuration snapshot.</param>
+        /// <param name="flags">Optional NVAPI display config flags.</param>
+        /// <returns>True if applied, false if unavailable or unchanged.</returns>
+        public unsafe bool SetDisplayConfig(NVAPIDisplayConfigDto config, uint flags = 0)
+        {
+            ThrowIfDisposed();
+
+            var paths = config.Paths ?? Array.Empty<NVAPIDisplayConfigPathDto>();
+            if (paths.Length == 0)
+                return false;
+
+            var current = GetDisplayConfig();
+            if (current == null)
+                return false;
+
+            if (current.Value.Equals(config))
+                return true;
+
+            var setConfig = GetDelegate<NvApiDispSetDisplayConfigDelegate>(
+                NvApiIdDispSetDisplayConfig,
+                "NvAPI_DISP_SetDisplayConfig");
+
+            using var buffer = config.ToNativeBuffer();
+            var status = setConfig((uint)paths.Length, buffer.PathInfo, flags);
+            if (status == _NvAPI_Status.NVAPI_OK)
+                return true;
+
+            if (status == _NvAPI_Status.NVAPI_NOT_SUPPORTED || status == _NvAPI_Status.NVAPI_NVIDIA_DEVICE_NOT_FOUND)
+                return false;
+
+            throw new NVAPIException(status);
         }
 
         /// <summary>
@@ -2486,6 +2562,12 @@ namespace NVAPIWrapper
 
         [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
         private unsafe delegate _NvAPI_Status NvApiI2CWriteDelegate(NvPhysicalGpuHandle__* hPhysicalGpu, NV_I2C_INFO_V3* pI2cInfo);
+
+        [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
+        private unsafe delegate _NvAPI_Status NvApiDispGetDisplayConfigDelegate(uint* pathInfoCount, _NV_DISPLAYCONFIG_PATH_INFO* pathInfo);
+
+        [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
+        private unsafe delegate _NvAPI_Status NvApiDispSetDisplayConfigDelegate(uint pathInfoCount, _NV_DISPLAYCONFIG_PATH_INFO* pathInfo, uint flags);
 
         [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
         private unsafe delegate _NvAPI_Status NvApiGpuGetVbiosRevisionDelegate(NvPhysicalGpuHandle__* hPhysicalGpu, uint* pBiosRevision);

@@ -196,24 +196,6 @@ namespace NVAPIWrapper.FacadeTests
         }
 
         [SkippableFact]
-        public void GetDisplayConfig_ShouldReturnSnapshot()
-        {
-            Skip.If(_fixture.ApiHelper == null, _fixture.SkipReason);
-
-            var gpus = _fixture.ApiHelper.EnumeratePhysicalGpus();
-            Skip.If(gpus.Length == 0, "No NVIDIA physical GPUs found.");
-
-            var displays = gpus[0].EnumAllDisplays();
-            Skip.If(displays.Length == 0, "No NVIDIA displays found.");
-
-            var config = displays[0].GetDisplayConfig();
-            Skip.If(config == null, "Display config not supported.");
-
-            Assert.NotNull(config.Value.Paths);
-            Assert.InRange(config.Value.Paths.Length, 0, NVAPI.NVAPI_MAX_DISPLAYS);
-        }
-
-        [SkippableFact]
         public void GetDisplayIdByDisplayName_ShouldReturnValue()
         {
             Skip.If(_fixture.ApiHelper == null, _fixture.SkipReason);
@@ -288,7 +270,7 @@ namespace NVAPIWrapper.FacadeTests
             var displays = gpus[0].EnumAllDisplays();
             Skip.If(displays.Length == 0, "No NVIDIA displays found.");
 
-            var config = displays[0].GetDisplayConfig();
+            var config = gpus[0].GetDisplayConfig();
             Skip.If(config == null || config.Value.Paths.Length == 0, "Display config not available.");
 
             var path = config.Value.Paths[0];
