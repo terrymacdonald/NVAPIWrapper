@@ -20,7 +20,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: _rsvd_e__FixedBuffer
     path: ../NVAPIWrapper/cs_generated/_NV_SET_REFLEX_SYNC_PARAMS.cs
-    startLine: 75
+    startLine: 79
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -53,7 +53,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: e0
     path: ../NVAPIWrapper/cs_generated/_NV_SET_REFLEX_SYNC_PARAMS.cs
-    startLine: 78
+    startLine: 82
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper

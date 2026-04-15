@@ -19,7 +19,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPIOglExpertCallback
     path: ../NVAPIWrapper/NVAPIOpenGLHelper.cs
-    startLine: 208
+    startLine: 209
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper

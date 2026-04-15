@@ -128,7 +128,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: IsNVAPIDllAvailable
     path: ../NVAPIWrapper/NVAPIApi.cs
-    startLine: 93
+    startLine: 97
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -166,7 +166,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetInterfaceVersionString
     path: ../NVAPIWrapper/NVAPIApi.cs
-    startLine: 119
+    startLine: 123
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -197,7 +197,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetAvailableFunctions
     path: ../NVAPIWrapper/NVAPIApi.cs
-    startLine: 143
+    startLine: 147
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -228,7 +228,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: EnumeratePhysicalGpus
     path: ../NVAPIWrapper/NVAPIApi.cs
-    startLine: 166
+    startLine: 170
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -259,7 +259,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: EnumerateLogicalGpus
     path: ../NVAPIWrapper/NVAPIApi.cs
-    startLine: 198
+    startLine: 202
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -290,7 +290,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: EnumerateNvidiaDisplayHandles
     path: ../NVAPIWrapper/NVAPIApi.cs
-    startLine: 230
+    startLine: 234
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -321,7 +321,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: EnumerateNvidiaUnAttachedDisplayHandles
     path: ../NVAPIWrapper/NVAPIApi.cs
-    startLine: 267
+    startLine: 271
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -352,7 +352,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: EnumerateGSyncDevices
     path: ../NVAPIWrapper/NVAPIApi.cs
-    startLine: 307
+    startLine: 311
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -383,7 +383,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Dispose
     path: ../NVAPIWrapper/NVAPIApi.cs
-    startLine: 341
+    startLine: 345
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper

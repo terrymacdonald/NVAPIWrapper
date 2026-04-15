@@ -20,7 +20,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: _rsvd_e__FixedBuffer
     path: ../NVAPIWrapper/cs_generated/_NV_GET_SLEEP_STATUS_PARAMS.cs
-    startLine: 36
+    startLine: 44
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -53,7 +53,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: e0
     path: ../NVAPIWrapper/cs_generated/_NV_GET_SLEEP_STATUS_PARAMS.cs
-    startLine: 39
+    startLine: 47
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper

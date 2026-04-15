@@ -9,6 +9,7 @@ items:
   - NVAPIWrapper._NV_NGX_DLSS_OVERRIDE_GET_STATE_PARAMS_V1.feedbackMaskRR
   - NVAPIWrapper._NV_NGX_DLSS_OVERRIDE_GET_STATE_PARAMS_V1.feedbackMaskSR
   - NVAPIWrapper._NV_NGX_DLSS_OVERRIDE_GET_STATE_PARAMS_V1.frameGenerationCount
+  - NVAPIWrapper._NV_NGX_DLSS_OVERRIDE_GET_STATE_PARAMS_V1.frameGenerationMode
   - NVAPIWrapper._NV_NGX_DLSS_OVERRIDE_GET_STATE_PARAMS_V1.frameGenerationPreset
   - NVAPIWrapper._NV_NGX_DLSS_OVERRIDE_GET_STATE_PARAMS_V1.performanceMode
   - NVAPIWrapper._NV_NGX_DLSS_OVERRIDE_GET_STATE_PARAMS_V1.processIdentifier
@@ -325,6 +326,34 @@ items:
     return:
       type: System.UInt32
     content.vb: Public frameGenerationPreset As UInteger
+- uid: NVAPIWrapper._NV_NGX_DLSS_OVERRIDE_GET_STATE_PARAMS_V1.frameGenerationMode
+  commentId: F:NVAPIWrapper._NV_NGX_DLSS_OVERRIDE_GET_STATE_PARAMS_V1.frameGenerationMode
+  id: frameGenerationMode
+  parent: NVAPIWrapper._NV_NGX_DLSS_OVERRIDE_GET_STATE_PARAMS_V1
+  langs:
+  - csharp
+  - vb
+  name: frameGenerationMode
+  nameWithType: _NV_NGX_DLSS_OVERRIDE_GET_STATE_PARAMS_V1.frameGenerationMode
+  fullName: NVAPIWrapper._NV_NGX_DLSS_OVERRIDE_GET_STATE_PARAMS_V1.frameGenerationMode
+  type: Field
+  source:
+    remote:
+      path: NVAPIWrapper/cs_generated/_NV_NGX_DLSS_OVERRIDE_GET_STATE_PARAMS_V1.cs
+      branch: main
+      repo: https://github.com/terrymacdonald/NVAPIWrapper.git
+    id: frameGenerationMode
+    path: ../NVAPIWrapper/cs_generated/_NV_NGX_DLSS_OVERRIDE_GET_STATE_PARAMS_V1.cs
+    startLine: 49
+  assemblies:
+  - NVAPIWrapper
+  namespace: NVAPIWrapper
+  example: []
+  syntax:
+    content: public uint frameGenerationMode
+    return:
+      type: System.UInt32
+    content.vb: Public frameGenerationMode As UInteger
 - uid: NVAPIWrapper._NV_NGX_DLSS_OVERRIDE_GET_STATE_PARAMS_V1.reserved
   commentId: F:NVAPIWrapper._NV_NGX_DLSS_OVERRIDE_GET_STATE_PARAMS_V1.reserved
   id: reserved
@@ -343,7 +372,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: reserved
     path: ../NVAPIWrapper/cs_generated/_NV_NGX_DLSS_OVERRIDE_GET_STATE_PARAMS_V1.cs
-    startLine: 49
+    startLine: 53
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper

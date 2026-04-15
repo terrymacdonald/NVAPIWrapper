@@ -11,6 +11,7 @@ items:
   - NVAPIWrapper.EValues_NGX_DLSS_SR_MODE.NGX_DLSS_SR_MODE_NGX_DLSS_SR_MODE_DLAA
   - NVAPIWrapper.EValues_NGX_DLSS_SR_MODE.NGX_DLSS_SR_MODE_NGX_DLSS_SR_MODE_PERFORMANCE
   - NVAPIWrapper.EValues_NGX_DLSS_SR_MODE.NGX_DLSS_SR_MODE_NGX_DLSS_SR_MODE_QUALITY
+  - NVAPIWrapper.EValues_NGX_DLSS_SR_MODE.NGX_DLSS_SR_MODE_NGX_DLSS_SR_MODE_RESERVED_A
   - NVAPIWrapper.EValues_NGX_DLSS_SR_MODE.NGX_DLSS_SR_MODE_NGX_DLSS_SR_MODE_SNIPPET_CONTROLLED
   - NVAPIWrapper.EValues_NGX_DLSS_SR_MODE.NGX_DLSS_SR_MODE_NGX_DLSS_SR_MODE_ULTRA_PERFORMANCE
   - NVAPIWrapper.EValues_NGX_DLSS_SR_MODE.NGX_DLSS_SR_MODE_NUM_VALUES
@@ -225,6 +226,33 @@ items:
     content: NGX_DLSS_SR_MODE_NGX_DLSS_SR_MODE_CUSTOM = 6
     return:
       type: NVAPIWrapper.EValues_NGX_DLSS_SR_MODE
+- uid: NVAPIWrapper.EValues_NGX_DLSS_SR_MODE.NGX_DLSS_SR_MODE_NGX_DLSS_SR_MODE_RESERVED_A
+  commentId: F:NVAPIWrapper.EValues_NGX_DLSS_SR_MODE.NGX_DLSS_SR_MODE_NGX_DLSS_SR_MODE_RESERVED_A
+  id: NGX_DLSS_SR_MODE_NGX_DLSS_SR_MODE_RESERVED_A
+  parent: NVAPIWrapper.EValues_NGX_DLSS_SR_MODE
+  langs:
+  - csharp
+  - vb
+  name: NGX_DLSS_SR_MODE_NGX_DLSS_SR_MODE_RESERVED_A
+  nameWithType: EValues_NGX_DLSS_SR_MODE.NGX_DLSS_SR_MODE_NGX_DLSS_SR_MODE_RESERVED_A
+  fullName: NVAPIWrapper.EValues_NGX_DLSS_SR_MODE.NGX_DLSS_SR_MODE_NGX_DLSS_SR_MODE_RESERVED_A
+  type: Field
+  source:
+    remote:
+      path: NVAPIWrapper/cs_generated/EValues_NGX_DLSS_SR_MODE.cs
+      branch: main
+      repo: https://github.com/terrymacdonald/NVAPIWrapper.git
+    id: NGX_DLSS_SR_MODE_NGX_DLSS_SR_MODE_RESERVED_A
+    path: ../NVAPIWrapper/cs_generated/EValues_NGX_DLSS_SR_MODE.cs
+    startLine: 27
+  assemblies:
+  - NVAPIWrapper
+  namespace: NVAPIWrapper
+  example: []
+  syntax:
+    content: NGX_DLSS_SR_MODE_NGX_DLSS_SR_MODE_RESERVED_A = 7
+    return:
+      type: NVAPIWrapper.EValues_NGX_DLSS_SR_MODE
 - uid: NVAPIWrapper.EValues_NGX_DLSS_SR_MODE.NGX_DLSS_SR_MODE_NUM_VALUES
   commentId: F:NVAPIWrapper.EValues_NGX_DLSS_SR_MODE.NGX_DLSS_SR_MODE_NUM_VALUES
   id: NGX_DLSS_SR_MODE_NUM_VALUES
@@ -243,13 +271,13 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NGX_DLSS_SR_MODE_NUM_VALUES
     path: ../NVAPIWrapper/cs_generated/EValues_NGX_DLSS_SR_MODE.cs
-    startLine: 27
+    startLine: 30
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   example: []
   syntax:
-    content: NGX_DLSS_SR_MODE_NUM_VALUES = 7
+    content: NGX_DLSS_SR_MODE_NUM_VALUES = 8
     return:
       type: NVAPIWrapper.EValues_NGX_DLSS_SR_MODE
 - uid: NVAPIWrapper.EValues_NGX_DLSS_SR_MODE.NGX_DLSS_SR_MODE_DEFAULT
@@ -270,7 +298,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NGX_DLSS_SR_MODE_DEFAULT
     path: ../NVAPIWrapper/cs_generated/EValues_NGX_DLSS_SR_MODE.cs
-    startLine: 30
+    startLine: 33
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper

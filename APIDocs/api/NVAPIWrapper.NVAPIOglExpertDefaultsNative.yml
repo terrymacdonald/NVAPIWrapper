@@ -22,7 +22,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPIOglExpertDefaultsNative
     path: ../NVAPIWrapper/NVAPIOpenGLHelper.cs
-    startLine: 320
+    startLine: 321
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -56,7 +56,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: DetailMask
     path: ../NVAPIWrapper/NVAPIOpenGLHelper.cs
-    startLine: 322
+    startLine: 323
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -83,7 +83,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: ReportMask
     path: ../NVAPIWrapper/NVAPIOpenGLHelper.cs
-    startLine: 323
+    startLine: 324
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -110,7 +110,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: OutputMask
     path: ../NVAPIWrapper/NVAPIOpenGLHelper.cs
-    startLine: 324
+    startLine: 325
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper

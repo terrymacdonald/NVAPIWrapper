@@ -35,8 +35,12 @@ items:
   - NVAPIWrapper.EValues_MAXWELL_B_SAMPLE_INTERLEAVE
   - NVAPIWrapper.EValues_MCSFRSHOWSPLIT
   - NVAPIWrapper.EValues_NGX_DLAA_OVERRIDE
+  - NVAPIWrapper.EValues_NGX_DLSSG_DYNAMIC_MULTI_FRAME_COUNT_MAX
+  - NVAPIWrapper.EValues_NGX_DLSSG_DYNAMIC_TARGET_FRAME_RATE
+  - NVAPIWrapper.EValues_NGX_DLSSG_MODE
   - NVAPIWrapper.EValues_NGX_DLSSG_MULTI_FRAME_COUNT
   - NVAPIWrapper.EValues_NGX_DLSS_FG_OVERRIDE
+  - NVAPIWrapper.EValues_NGX_DLSS_FG_OVERRIDE_RENDER_PRESET_SELECTION
   - NVAPIWrapper.EValues_NGX_DLSS_FG_OVERRIDE_RESERVED_KEY1
   - NVAPIWrapper.EValues_NGX_DLSS_FG_OVERRIDE_RESERVED_KEY2
   - NVAPIWrapper.EValues_NGX_DLSS_OVERRIDE_OPTIMAL_SETTINGS
@@ -199,6 +203,7 @@ items:
   - NVAPIWrapper.NVAPIGpuVirtualizationInfoDto
   - NVAPIWrapper.NVAPIGpuVrReadyDto
   - NVAPIWrapper.NVAPIGpuWorkstationFeatureQueryDto
+  - NVAPIWrapper.NVAPIHardwareDetection
   - NVAPIWrapper.NVAPIHdrCapabilitiesDto
   - NVAPIWrapper.NVAPIHdrColorDataDto
   - NVAPIWrapper.NVAPIHdrMetadataDto
@@ -271,6 +276,7 @@ items:
   - NVAPIWrapper.NVAPIVioTopologyTargetDto
   - NVAPIWrapper.NVAPIVirtualRefreshRateDataDto
   - NVAPIWrapper.NVAPIVrrInfoDto
+  - NVAPIWrapper.NVAPI_FLIP_CONFIG_FEEDBACK_MASK
   - NVAPIWrapper.NVAPI_GPU_WORKSTATION_FEATURE_MASK
   - NVAPIWrapper.NVAPI_INTERFACE_TABLE
   - NVAPIWrapper.NVAPI_VSYNC_MODE
@@ -809,6 +815,8 @@ items:
   - NVAPIWrapper._NV_GPU_QUERY_ILLUMINATION_SUPPORT_PARM_V1
   - NVAPIWrapper._NV_GPU_SET_ILLUMINATION_PARM_V1
   - NVAPIWrapper._NV_GPU_TYPE
+  - NVAPIWrapper._NV_GPU_UUID_V1
+  - NVAPIWrapper._NV_GPU_UUID_V1._uuid_e__FixedBuffer
   - NVAPIWrapper._NV_GPU_VIRTUALIZATION_INFO
   - NVAPIWrapper._NV_GPU_VR_READY_V1
   - NVAPIWrapper._NV_GPU_WORKSTATION_FEATURE_TYPE
@@ -920,6 +928,12 @@ items:
   - NVAPIWrapper._NV_NGX_DLSS_OVERRIDE_GET_STATE_PARAMS_V1._reserved_e__FixedBuffer
   - NVAPIWrapper._NV_NGX_DLSS_OVERRIDE_SET_STATE_PARAMS_V1
   - NVAPIWrapper._NV_NGX_DLSS_OVERRIDE_SET_STATE_PARAMS_V1._reserved_e__FixedBuffer
+  - NVAPIWrapper._NV_NGX_DRIVER_FEATURE_ID
+  - NVAPIWrapper._NV_NGX_DRIVER_FEATURE_SUPPORT_INFO
+  - NVAPIWrapper._NV_NGX_DRIVER_FEATURE_SUPPORT_INFO._reserved2_e__FixedBuffer
+  - NVAPIWrapper._NV_NGX_GET_DRIVER_FEATURE_SUPPORT_PARAMS_V1
+  - NVAPIWrapper._NV_NGX_GET_DRIVER_FEATURE_SUPPORT_PARAMS_V1._featureSupportInfo_e__FixedBuffer
+  - NVAPIWrapper._NV_NGX_GET_DRIVER_FEATURE_SUPPORT_PARAMS_V1._reserved_e__FixedBuffer
   - NVAPIWrapper._NV_PHYSICAL_GPUS
   - NVAPIWrapper._NV_PHYSICAL_GPUS._gpuHandleData_e__FixedBuffer
   - NVAPIWrapper._NV_PHYSICAL_GPUS._reserved_e__FixedBuffer
@@ -1455,6 +1469,12 @@ references:
   name: NVAPIFunctionInfo
   nameWithType: NVAPIFunctionInfo
   fullName: NVAPIWrapper.NVAPIFunctionInfo
+- uid: NVAPIWrapper.NVAPIHardwareDetection
+  commentId: T:NVAPIWrapper.NVAPIHardwareDetection
+  href: NVAPIWrapper.NVAPIHardwareDetection.html
+  name: NVAPIHardwareDetection
+  nameWithType: NVAPIHardwareDetection
+  fullName: NVAPIWrapper.NVAPIHardwareDetection
 - uid: NVAPIWrapper.NVAPIInterfaceTable
   commentId: T:NVAPIWrapper.NVAPIInterfaceTable
   href: NVAPIWrapper.NVAPIInterfaceTable.html
@@ -2457,6 +2477,27 @@ references:
   name: EValues_NGX_DLAA_OVERRIDE
   nameWithType: EValues_NGX_DLAA_OVERRIDE
   fullName: NVAPIWrapper.EValues_NGX_DLAA_OVERRIDE
+- uid: NVAPIWrapper.EValues_NGX_DLSSG_DYNAMIC_MULTI_FRAME_COUNT_MAX
+  commentId: T:NVAPIWrapper.EValues_NGX_DLSSG_DYNAMIC_MULTI_FRAME_COUNT_MAX
+  parent: NVAPIWrapper
+  href: NVAPIWrapper.EValues_NGX_DLSSG_DYNAMIC_MULTI_FRAME_COUNT_MAX.html
+  name: EValues_NGX_DLSSG_DYNAMIC_MULTI_FRAME_COUNT_MAX
+  nameWithType: EValues_NGX_DLSSG_DYNAMIC_MULTI_FRAME_COUNT_MAX
+  fullName: NVAPIWrapper.EValues_NGX_DLSSG_DYNAMIC_MULTI_FRAME_COUNT_MAX
+- uid: NVAPIWrapper.EValues_NGX_DLSSG_DYNAMIC_TARGET_FRAME_RATE
+  commentId: T:NVAPIWrapper.EValues_NGX_DLSSG_DYNAMIC_TARGET_FRAME_RATE
+  parent: NVAPIWrapper
+  href: NVAPIWrapper.EValues_NGX_DLSSG_DYNAMIC_TARGET_FRAME_RATE.html
+  name: EValues_NGX_DLSSG_DYNAMIC_TARGET_FRAME_RATE
+  nameWithType: EValues_NGX_DLSSG_DYNAMIC_TARGET_FRAME_RATE
+  fullName: NVAPIWrapper.EValues_NGX_DLSSG_DYNAMIC_TARGET_FRAME_RATE
+- uid: NVAPIWrapper.EValues_NGX_DLSSG_MODE
+  commentId: T:NVAPIWrapper.EValues_NGX_DLSSG_MODE
+  parent: NVAPIWrapper
+  href: NVAPIWrapper.EValues_NGX_DLSSG_MODE.html
+  name: EValues_NGX_DLSSG_MODE
+  nameWithType: EValues_NGX_DLSSG_MODE
+  fullName: NVAPIWrapper.EValues_NGX_DLSSG_MODE
 - uid: NVAPIWrapper.EValues_NGX_DLSSG_MULTI_FRAME_COUNT
   commentId: T:NVAPIWrapper.EValues_NGX_DLSSG_MULTI_FRAME_COUNT
   parent: NVAPIWrapper
@@ -2471,6 +2512,13 @@ references:
   name: EValues_NGX_DLSS_FG_OVERRIDE
   nameWithType: EValues_NGX_DLSS_FG_OVERRIDE
   fullName: NVAPIWrapper.EValues_NGX_DLSS_FG_OVERRIDE
+- uid: NVAPIWrapper.EValues_NGX_DLSS_FG_OVERRIDE_RENDER_PRESET_SELECTION
+  commentId: T:NVAPIWrapper.EValues_NGX_DLSS_FG_OVERRIDE_RENDER_PRESET_SELECTION
+  parent: NVAPIWrapper
+  href: NVAPIWrapper.EValues_NGX_DLSS_FG_OVERRIDE_RENDER_PRESET_SELECTION.html
+  name: EValues_NGX_DLSS_FG_OVERRIDE_RENDER_PRESET_SELECTION
+  nameWithType: EValues_NGX_DLSS_FG_OVERRIDE_RENDER_PRESET_SELECTION
+  fullName: NVAPIWrapper.EValues_NGX_DLSS_FG_OVERRIDE_RENDER_PRESET_SELECTION
 - uid: NVAPIWrapper.EValues_NGX_DLSS_FG_OVERRIDE_RESERVED_KEY1
   commentId: T:NVAPIWrapper.EValues_NGX_DLSS_FG_OVERRIDE_RESERVED_KEY1
   parent: NVAPIWrapper
@@ -3028,6 +3076,13 @@ references:
   name: Nv3DVPTransceiverHandle__
   nameWithType: Nv3DVPTransceiverHandle__
   fullName: NVAPIWrapper.Nv3DVPTransceiverHandle__
+- uid: NVAPIWrapper.NVAPI_FLIP_CONFIG_FEEDBACK_MASK
+  commentId: T:NVAPIWrapper.NVAPI_FLIP_CONFIG_FEEDBACK_MASK
+  parent: NVAPIWrapper
+  href: NVAPIWrapper.NVAPI_FLIP_CONFIG_FEEDBACK_MASK.html
+  name: NVAPI_FLIP_CONFIG_FEEDBACK_MASK
+  nameWithType: NVAPI_FLIP_CONFIG_FEEDBACK_MASK
+  fullName: NVAPIWrapper.NVAPI_FLIP_CONFIG_FEEDBACK_MASK
 - uid: NVAPIWrapper.NVAPI_GPU_WORKSTATION_FEATURE_MASK
   commentId: T:NVAPIWrapper.NVAPI_GPU_WORKSTATION_FEATURE_MASK
   parent: NVAPIWrapper
@@ -9867,6 +9922,35 @@ references:
   name: _NV_GPU_TYPE
   nameWithType: _NV_GPU_TYPE
   fullName: NVAPIWrapper._NV_GPU_TYPE
+- uid: NVAPIWrapper._NV_GPU_UUID_V1
+  commentId: T:NVAPIWrapper._NV_GPU_UUID_V1
+  href: NVAPIWrapper._NV_GPU_UUID_V1.html
+  name: _NV_GPU_UUID_V1
+  nameWithType: _NV_GPU_UUID_V1
+  fullName: NVAPIWrapper._NV_GPU_UUID_V1
+- uid: NVAPIWrapper._NV_GPU_UUID_V1._uuid_e__FixedBuffer
+  commentId: T:NVAPIWrapper._NV_GPU_UUID_V1._uuid_e__FixedBuffer
+  parent: NVAPIWrapper
+  href: NVAPIWrapper._NV_GPU_UUID_V1.html
+  name: _NV_GPU_UUID_V1._uuid_e__FixedBuffer
+  nameWithType: _NV_GPU_UUID_V1._uuid_e__FixedBuffer
+  fullName: NVAPIWrapper._NV_GPU_UUID_V1._uuid_e__FixedBuffer
+  spec.csharp:
+  - uid: NVAPIWrapper._NV_GPU_UUID_V1
+    name: _NV_GPU_UUID_V1
+    href: NVAPIWrapper._NV_GPU_UUID_V1.html
+  - name: .
+  - uid: NVAPIWrapper._NV_GPU_UUID_V1._uuid_e__FixedBuffer
+    name: _uuid_e__FixedBuffer
+    href: NVAPIWrapper._NV_GPU_UUID_V1._uuid_e__FixedBuffer.html
+  spec.vb:
+  - uid: NVAPIWrapper._NV_GPU_UUID_V1
+    name: _NV_GPU_UUID_V1
+    href: NVAPIWrapper._NV_GPU_UUID_V1.html
+  - name: .
+  - uid: NVAPIWrapper._NV_GPU_UUID_V1._uuid_e__FixedBuffer
+    name: _uuid_e__FixedBuffer
+    href: NVAPIWrapper._NV_GPU_UUID_V1._uuid_e__FixedBuffer.html
 - uid: NVAPIWrapper._NV_GPU_VIRTUALIZATION_INFO
   commentId: T:NVAPIWrapper._NV_GPU_VIRTUALIZATION_INFO
   parent: NVAPIWrapper
@@ -11478,6 +11562,95 @@ references:
   - uid: NVAPIWrapper._NV_NGX_DLSS_OVERRIDE_SET_STATE_PARAMS_V1._reserved_e__FixedBuffer
     name: _reserved_e__FixedBuffer
     href: NVAPIWrapper._NV_NGX_DLSS_OVERRIDE_SET_STATE_PARAMS_V1._reserved_e__FixedBuffer.html
+- uid: NVAPIWrapper._NV_NGX_DRIVER_FEATURE_ID
+  commentId: T:NVAPIWrapper._NV_NGX_DRIVER_FEATURE_ID
+  parent: NVAPIWrapper
+  href: NVAPIWrapper._NV_NGX_DRIVER_FEATURE_ID.html
+  name: _NV_NGX_DRIVER_FEATURE_ID
+  nameWithType: _NV_NGX_DRIVER_FEATURE_ID
+  fullName: NVAPIWrapper._NV_NGX_DRIVER_FEATURE_ID
+- uid: NVAPIWrapper._NV_NGX_DRIVER_FEATURE_SUPPORT_INFO
+  commentId: T:NVAPIWrapper._NV_NGX_DRIVER_FEATURE_SUPPORT_INFO
+  parent: NVAPIWrapper
+  href: NVAPIWrapper._NV_NGX_DRIVER_FEATURE_SUPPORT_INFO.html
+  name: _NV_NGX_DRIVER_FEATURE_SUPPORT_INFO
+  nameWithType: _NV_NGX_DRIVER_FEATURE_SUPPORT_INFO
+  fullName: NVAPIWrapper._NV_NGX_DRIVER_FEATURE_SUPPORT_INFO
+- uid: NVAPIWrapper._NV_NGX_DRIVER_FEATURE_SUPPORT_INFO._reserved2_e__FixedBuffer
+  commentId: T:NVAPIWrapper._NV_NGX_DRIVER_FEATURE_SUPPORT_INFO._reserved2_e__FixedBuffer
+  parent: NVAPIWrapper
+  href: NVAPIWrapper._NV_NGX_DRIVER_FEATURE_SUPPORT_INFO.html
+  name: _NV_NGX_DRIVER_FEATURE_SUPPORT_INFO._reserved2_e__FixedBuffer
+  nameWithType: _NV_NGX_DRIVER_FEATURE_SUPPORT_INFO._reserved2_e__FixedBuffer
+  fullName: NVAPIWrapper._NV_NGX_DRIVER_FEATURE_SUPPORT_INFO._reserved2_e__FixedBuffer
+  spec.csharp:
+  - uid: NVAPIWrapper._NV_NGX_DRIVER_FEATURE_SUPPORT_INFO
+    name: _NV_NGX_DRIVER_FEATURE_SUPPORT_INFO
+    href: NVAPIWrapper._NV_NGX_DRIVER_FEATURE_SUPPORT_INFO.html
+  - name: .
+  - uid: NVAPIWrapper._NV_NGX_DRIVER_FEATURE_SUPPORT_INFO._reserved2_e__FixedBuffer
+    name: _reserved2_e__FixedBuffer
+    href: NVAPIWrapper._NV_NGX_DRIVER_FEATURE_SUPPORT_INFO._reserved2_e__FixedBuffer.html
+  spec.vb:
+  - uid: NVAPIWrapper._NV_NGX_DRIVER_FEATURE_SUPPORT_INFO
+    name: _NV_NGX_DRIVER_FEATURE_SUPPORT_INFO
+    href: NVAPIWrapper._NV_NGX_DRIVER_FEATURE_SUPPORT_INFO.html
+  - name: .
+  - uid: NVAPIWrapper._NV_NGX_DRIVER_FEATURE_SUPPORT_INFO._reserved2_e__FixedBuffer
+    name: _reserved2_e__FixedBuffer
+    href: NVAPIWrapper._NV_NGX_DRIVER_FEATURE_SUPPORT_INFO._reserved2_e__FixedBuffer.html
+- uid: NVAPIWrapper._NV_NGX_GET_DRIVER_FEATURE_SUPPORT_PARAMS_V1
+  commentId: T:NVAPIWrapper._NV_NGX_GET_DRIVER_FEATURE_SUPPORT_PARAMS_V1
+  href: NVAPIWrapper._NV_NGX_GET_DRIVER_FEATURE_SUPPORT_PARAMS_V1.html
+  name: _NV_NGX_GET_DRIVER_FEATURE_SUPPORT_PARAMS_V1
+  nameWithType: _NV_NGX_GET_DRIVER_FEATURE_SUPPORT_PARAMS_V1
+  fullName: NVAPIWrapper._NV_NGX_GET_DRIVER_FEATURE_SUPPORT_PARAMS_V1
+- uid: NVAPIWrapper._NV_NGX_GET_DRIVER_FEATURE_SUPPORT_PARAMS_V1._featureSupportInfo_e__FixedBuffer
+  commentId: T:NVAPIWrapper._NV_NGX_GET_DRIVER_FEATURE_SUPPORT_PARAMS_V1._featureSupportInfo_e__FixedBuffer
+  parent: NVAPIWrapper
+  href: NVAPIWrapper._NV_NGX_GET_DRIVER_FEATURE_SUPPORT_PARAMS_V1.html
+  name: _NV_NGX_GET_DRIVER_FEATURE_SUPPORT_PARAMS_V1._featureSupportInfo_e__FixedBuffer
+  nameWithType: _NV_NGX_GET_DRIVER_FEATURE_SUPPORT_PARAMS_V1._featureSupportInfo_e__FixedBuffer
+  fullName: NVAPIWrapper._NV_NGX_GET_DRIVER_FEATURE_SUPPORT_PARAMS_V1._featureSupportInfo_e__FixedBuffer
+  spec.csharp:
+  - uid: NVAPIWrapper._NV_NGX_GET_DRIVER_FEATURE_SUPPORT_PARAMS_V1
+    name: _NV_NGX_GET_DRIVER_FEATURE_SUPPORT_PARAMS_V1
+    href: NVAPIWrapper._NV_NGX_GET_DRIVER_FEATURE_SUPPORT_PARAMS_V1.html
+  - name: .
+  - uid: NVAPIWrapper._NV_NGX_GET_DRIVER_FEATURE_SUPPORT_PARAMS_V1._featureSupportInfo_e__FixedBuffer
+    name: _featureSupportInfo_e__FixedBuffer
+    href: NVAPIWrapper._NV_NGX_GET_DRIVER_FEATURE_SUPPORT_PARAMS_V1._featureSupportInfo_e__FixedBuffer.html
+  spec.vb:
+  - uid: NVAPIWrapper._NV_NGX_GET_DRIVER_FEATURE_SUPPORT_PARAMS_V1
+    name: _NV_NGX_GET_DRIVER_FEATURE_SUPPORT_PARAMS_V1
+    href: NVAPIWrapper._NV_NGX_GET_DRIVER_FEATURE_SUPPORT_PARAMS_V1.html
+  - name: .
+  - uid: NVAPIWrapper._NV_NGX_GET_DRIVER_FEATURE_SUPPORT_PARAMS_V1._featureSupportInfo_e__FixedBuffer
+    name: _featureSupportInfo_e__FixedBuffer
+    href: NVAPIWrapper._NV_NGX_GET_DRIVER_FEATURE_SUPPORT_PARAMS_V1._featureSupportInfo_e__FixedBuffer.html
+- uid: NVAPIWrapper._NV_NGX_GET_DRIVER_FEATURE_SUPPORT_PARAMS_V1._reserved_e__FixedBuffer
+  commentId: T:NVAPIWrapper._NV_NGX_GET_DRIVER_FEATURE_SUPPORT_PARAMS_V1._reserved_e__FixedBuffer
+  parent: NVAPIWrapper
+  href: NVAPIWrapper._NV_NGX_GET_DRIVER_FEATURE_SUPPORT_PARAMS_V1.html
+  name: _NV_NGX_GET_DRIVER_FEATURE_SUPPORT_PARAMS_V1._reserved_e__FixedBuffer
+  nameWithType: _NV_NGX_GET_DRIVER_FEATURE_SUPPORT_PARAMS_V1._reserved_e__FixedBuffer
+  fullName: NVAPIWrapper._NV_NGX_GET_DRIVER_FEATURE_SUPPORT_PARAMS_V1._reserved_e__FixedBuffer
+  spec.csharp:
+  - uid: NVAPIWrapper._NV_NGX_GET_DRIVER_FEATURE_SUPPORT_PARAMS_V1
+    name: _NV_NGX_GET_DRIVER_FEATURE_SUPPORT_PARAMS_V1
+    href: NVAPIWrapper._NV_NGX_GET_DRIVER_FEATURE_SUPPORT_PARAMS_V1.html
+  - name: .
+  - uid: NVAPIWrapper._NV_NGX_GET_DRIVER_FEATURE_SUPPORT_PARAMS_V1._reserved_e__FixedBuffer
+    name: _reserved_e__FixedBuffer
+    href: NVAPIWrapper._NV_NGX_GET_DRIVER_FEATURE_SUPPORT_PARAMS_V1._reserved_e__FixedBuffer.html
+  spec.vb:
+  - uid: NVAPIWrapper._NV_NGX_GET_DRIVER_FEATURE_SUPPORT_PARAMS_V1
+    name: _NV_NGX_GET_DRIVER_FEATURE_SUPPORT_PARAMS_V1
+    href: NVAPIWrapper._NV_NGX_GET_DRIVER_FEATURE_SUPPORT_PARAMS_V1.html
+  - name: .
+  - uid: NVAPIWrapper._NV_NGX_GET_DRIVER_FEATURE_SUPPORT_PARAMS_V1._reserved_e__FixedBuffer
+    name: _reserved_e__FixedBuffer
+    href: NVAPIWrapper._NV_NGX_GET_DRIVER_FEATURE_SUPPORT_PARAMS_V1._reserved_e__FixedBuffer.html
 - uid: NVAPIWrapper._NV_PHYSICAL_GPUS
   commentId: T:NVAPIWrapper._NV_PHYSICAL_GPUS
   href: NVAPIWrapper._NV_PHYSICAL_GPUS.html

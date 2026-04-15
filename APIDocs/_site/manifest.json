@@ -1,5 +1,5 @@
 {
-  "source_base_path": "C:/vs-code/NVAPIWrapper/APIDocs",
+  "source_base_path": "E:/vscode-projects/NVAPIWrapper/APIDocs",
   "xrefmap": "xrefmap.yml",
   "files": [
     {
@@ -5500,6 +5500,48 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/NVAPIWrapper.EValues_NGX_DLSSG_DYNAMIC_MULTI_FRAME_COUNT_MAX.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NVAPIWrapper.EValues_NGX_DLSSG_DYNAMIC_MULTI_FRAME_COUNT_MAX.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "NVAPIWrapper.EValues_NGX_DLSSG_DYNAMIC_MULTI_FRAME_COUNT_MAX",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NVAPIWrapper.EValues_NGX_DLSSG_DYNAMIC_TARGET_FRAME_RATE.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NVAPIWrapper.EValues_NGX_DLSSG_DYNAMIC_TARGET_FRAME_RATE.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "NVAPIWrapper.EValues_NGX_DLSSG_DYNAMIC_TARGET_FRAME_RATE",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NVAPIWrapper.EValues_NGX_DLSSG_MODE.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NVAPIWrapper.EValues_NGX_DLSSG_MODE.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "NVAPIWrapper.EValues_NGX_DLSSG_MODE",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/NVAPIWrapper.EValues_NGX_DLSSG_MULTI_FRAME_COUNT.yml",
       "output": {
         ".html": {
@@ -5524,6 +5566,20 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "NVAPIWrapper.EValues_NGX_DLSS_FG_OVERRIDE",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NVAPIWrapper.EValues_NGX_DLSS_FG_OVERRIDE_RENDER_PRESET_SELECTION.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NVAPIWrapper.EValues_NGX_DLSS_FG_OVERRIDE_RENDER_PRESET_SELECTION.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "NVAPIWrapper.EValues_NGX_DLSS_FG_OVERRIDE_RENDER_PRESET_SELECTION",
       "Summary": null
     },
     {
@@ -7796,6 +7852,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/NVAPIWrapper.NVAPIHardwareDetection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NVAPIWrapper.NVAPIHardwareDetection.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "NVAPIWrapper.NVAPIHardwareDetection",
+      "Summary": "<p sourcefile=\"api/NVAPIWrapper.NVAPIHardwareDetection.yml\" sourcestartlinenumber=\"1\">Hardware detection utilities for NVIDIA GPU presence.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/NVAPIWrapper.NVAPIHdrCapabilitiesDto.yml",
       "output": {
         ".html": {
@@ -8801,6 +8871,20 @@
       "IsMRef": true,
       "Title": "NVAPIWrapper.NVAPIVrrInfoDto",
       "Summary": "<p sourcefile=\"api/NVAPIWrapper.NVAPIVrrInfoDto.yml\" sourcestartlinenumber=\"1\">DTO for VRR info.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NVAPIWrapper.NVAPI_FLIP_CONFIG_FEEDBACK_MASK.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NVAPIWrapper.NVAPI_FLIP_CONFIG_FEEDBACK_MASK.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "NVAPIWrapper.NVAPI_FLIP_CONFIG_FEEDBACK_MASK",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -16336,6 +16420,34 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/NVAPIWrapper._NV_GPU_UUID_V1._uuid_e__FixedBuffer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NVAPIWrapper._NV_GPU_UUID_V1._uuid_e__FixedBuffer.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "NVAPIWrapper._NV_GPU_UUID_V1._uuid_e__FixedBuffer",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NVAPIWrapper._NV_GPU_UUID_V1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NVAPIWrapper._NV_GPU_UUID_V1.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "NVAPIWrapper._NV_GPU_UUID_V1",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/NVAPIWrapper._NV_GPU_VIRTUALIZATION_INFO.yml",
       "output": {
         ".html": {
@@ -17886,6 +17998,90 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "NVAPIWrapper._NV_NGX_DLSS_OVERRIDE_SET_STATE_PARAMS_V1",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NVAPIWrapper._NV_NGX_DRIVER_FEATURE_ID.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NVAPIWrapper._NV_NGX_DRIVER_FEATURE_ID.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "NVAPIWrapper._NV_NGX_DRIVER_FEATURE_ID",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NVAPIWrapper._NV_NGX_DRIVER_FEATURE_SUPPORT_INFO._reserved2_e__FixedBuffer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NVAPIWrapper._NV_NGX_DRIVER_FEATURE_SUPPORT_INFO._reserved2_e__FixedBuffer.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "NVAPIWrapper._NV_NGX_DRIVER_FEATURE_SUPPORT_INFO._reserved2_e__FixedBuffer",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NVAPIWrapper._NV_NGX_DRIVER_FEATURE_SUPPORT_INFO.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NVAPIWrapper._NV_NGX_DRIVER_FEATURE_SUPPORT_INFO.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "NVAPIWrapper._NV_NGX_DRIVER_FEATURE_SUPPORT_INFO",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NVAPIWrapper._NV_NGX_GET_DRIVER_FEATURE_SUPPORT_PARAMS_V1._featureSupportInfo_e__FixedBuffer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NVAPIWrapper._NV_NGX_GET_DRIVER_FEATURE_SUPPORT_PARAMS_V1._featureSupportInfo_e__FixedBuffer.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "NVAPIWrapper._NV_NGX_GET_DRIVER_FEATURE_SUPPORT_PARAMS_V1._featureSupportInfo_e__FixedBuffer",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NVAPIWrapper._NV_NGX_GET_DRIVER_FEATURE_SUPPORT_PARAMS_V1._reserved_e__FixedBuffer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NVAPIWrapper._NV_NGX_GET_DRIVER_FEATURE_SUPPORT_PARAMS_V1._reserved_e__FixedBuffer.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "NVAPIWrapper._NV_NGX_GET_DRIVER_FEATURE_SUPPORT_PARAMS_V1._reserved_e__FixedBuffer",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NVAPIWrapper._NV_NGX_GET_DRIVER_FEATURE_SUPPORT_PARAMS_V1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NVAPIWrapper._NV_NGX_GET_DRIVER_FEATURE_SUPPORT_PARAMS_V1.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "NVAPIWrapper._NV_NGX_GET_DRIVER_FEATURE_SUPPORT_PARAMS_V1",
       "Summary": null
     },
     {

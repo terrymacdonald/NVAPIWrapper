@@ -193,7 +193,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Dispose
     path: ../NVAPIWrapper/NVAPIUnAttachedDisplayHelper.cs
-    startLine: 166
+    startLine: 167
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper

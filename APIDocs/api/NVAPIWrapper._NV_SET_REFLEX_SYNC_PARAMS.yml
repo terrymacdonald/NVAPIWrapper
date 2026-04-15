@@ -8,6 +8,7 @@ items:
   - NVAPIWrapper._NV_SET_REFLEX_SYNC_PARAMS._bitfield
   - NVAPIWrapper._NV_SET_REFLEX_SYNC_PARAMS.bDisable
   - NVAPIWrapper._NV_SET_REFLEX_SYNC_PARAMS.bEnable
+  - NVAPIWrapper._NV_SET_REFLEX_SYNC_PARAMS.fgMultiplier
   - NVAPIWrapper._NV_SET_REFLEX_SYNC_PARAMS.flagsRsvd
   - NVAPIWrapper._NV_SET_REFLEX_SYNC_PARAMS.rsvd
   - NVAPIWrapper._NV_SET_REFLEX_SYNC_PARAMS.timeInQueueUs
@@ -272,6 +273,34 @@ items:
     return:
       type: System.UInt32
     content.vb: Public timeInQueueUsTarget As UInteger
+- uid: NVAPIWrapper._NV_SET_REFLEX_SYNC_PARAMS.fgMultiplier
+  commentId: F:NVAPIWrapper._NV_SET_REFLEX_SYNC_PARAMS.fgMultiplier
+  id: fgMultiplier
+  parent: NVAPIWrapper._NV_SET_REFLEX_SYNC_PARAMS
+  langs:
+  - csharp
+  - vb
+  name: fgMultiplier
+  nameWithType: _NV_SET_REFLEX_SYNC_PARAMS.fgMultiplier
+  fullName: NVAPIWrapper._NV_SET_REFLEX_SYNC_PARAMS.fgMultiplier
+  type: Field
+  source:
+    remote:
+      path: NVAPIWrapper/cs_generated/_NV_SET_REFLEX_SYNC_PARAMS.cs
+      branch: main
+      repo: https://github.com/terrymacdonald/NVAPIWrapper.git
+    id: fgMultiplier
+    path: ../NVAPIWrapper/cs_generated/_NV_SET_REFLEX_SYNC_PARAMS.cs
+    startLine: 72
+  assemblies:
+  - NVAPIWrapper
+  namespace: NVAPIWrapper
+  example: []
+  syntax:
+    content: public byte fgMultiplier
+    return:
+      type: System.Byte
+    content.vb: Public fgMultiplier As Byte
 - uid: NVAPIWrapper._NV_SET_REFLEX_SYNC_PARAMS.rsvd
   commentId: F:NVAPIWrapper._NV_SET_REFLEX_SYNC_PARAMS.rsvd
   id: rsvd
@@ -290,7 +319,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: rsvd
     path: ../NVAPIWrapper/cs_generated/_NV_SET_REFLEX_SYNC_PARAMS.cs
-    startLine: 72
+    startLine: 76
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -564,6 +593,17 @@ references:
   nameWithType.vb: Integer
   fullName.vb: Integer
   name.vb: Integer
+- uid: System.Byte
+  commentId: T:System.Byte
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.byte
+  name: byte
+  nameWithType: byte
+  fullName: byte
+  nameWithType.vb: Byte
+  fullName.vb: Byte
+  name.vb: Byte
 - uid: NVAPIWrapper._NV_SET_REFLEX_SYNC_PARAMS._rsvd_e__FixedBuffer
   commentId: T:NVAPIWrapper._NV_SET_REFLEX_SYNC_PARAMS._rsvd_e__FixedBuffer
   parent: NVAPIWrapper

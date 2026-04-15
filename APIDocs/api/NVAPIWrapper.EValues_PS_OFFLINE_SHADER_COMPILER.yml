@@ -136,7 +136,7 @@ items:
   namespace: NVAPIWrapper
   example: []
   syntax:
-    content: PS_OFFLINE_SHADER_COMPILER_DEFAULT = 119030616
+    content: PS_OFFLINE_SHADER_COMPILER_DEFAULT = 1680965906
     return:
       type: NVAPIWrapper.EValues_PS_OFFLINE_SHADER_COMPILER
 references:

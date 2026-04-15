@@ -33,7 +33,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPIDrsProfileDto
     path: ../NVAPIWrapper/NVAPIDrsHelper.cs
-    startLine: 1258
+    startLine: 1262
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -67,7 +67,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: ProfileName
     path: ../NVAPIWrapper/NVAPIDrsHelper.cs
-    startLine: 1261
+    startLine: 1265
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -96,7 +96,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GpuSupport
     path: ../NVAPIWrapper/NVAPIDrsHelper.cs
-    startLine: 1262
+    startLine: 1266
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -125,7 +125,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: IsPredefined
     path: ../NVAPIWrapper/NVAPIDrsHelper.cs
-    startLine: 1263
+    startLine: 1267
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -154,7 +154,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NumOfApps
     path: ../NVAPIWrapper/NVAPIDrsHelper.cs
-    startLine: 1264
+    startLine: 1268
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -183,7 +183,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NumOfSettings
     path: ../NVAPIWrapper/NVAPIDrsHelper.cs
-    startLine: 1265
+    startLine: 1269
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -212,7 +212,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: .ctor
     path: ../NVAPIWrapper/NVAPIDrsHelper.cs
-    startLine: 1275
+    startLine: 1279
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -259,7 +259,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Create
     path: ../NVAPIWrapper/NVAPIDrsHelper.cs
-    startLine: 1306
+    startLine: 1310
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -297,7 +297,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: FromNative
     path: ../NVAPIWrapper/NVAPIDrsHelper.cs
-    startLine: 1317
+    startLine: 1321
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -335,7 +335,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: ToNative
     path: ../NVAPIWrapper/NVAPIDrsHelper.cs
-    startLine: 1335
+    startLine: 1339
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -366,7 +366,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Equals
     path: ../NVAPIWrapper/NVAPIDrsHelper.cs
-    startLine: 1353
+    startLine: 1357
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -403,7 +403,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Equals
     path: ../NVAPIWrapper/NVAPIDrsHelper.cs
-    startLine: 1367
+    startLine: 1371
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -442,7 +442,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetHashCode
     path: ../NVAPIWrapper/NVAPIDrsHelper.cs
-    startLine: 1373
+    startLine: 1377
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -474,7 +474,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: op_Equality
     path: ../NVAPIWrapper/NVAPIDrsHelper.cs
-    startLine: 1392
+    startLine: 1396
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -515,7 +515,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: op_Inequality
     path: ../NVAPIWrapper/NVAPIDrsHelper.cs
-    startLine: 1400
+    startLine: 1404
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper

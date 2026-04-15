@@ -23,7 +23,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_MOSAIC_GPU_LAYOUT_CELL
     path: ../NVAPIWrapper/NVAPIMosaicHelper.cs
-    startLine: 2264
+    startLine: 2265
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -57,7 +57,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: hPhysicalGPU
     path: ../NVAPIWrapper/NVAPIMosaicHelper.cs
-    startLine: 2268
+    startLine: 2269
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -86,7 +86,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: displayOutputId
     path: ../NVAPIWrapper/NVAPIMosaicHelper.cs
-    startLine: 2272
+    startLine: 2273
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -115,7 +115,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: overlapX
     path: ../NVAPIWrapper/NVAPIMosaicHelper.cs
-    startLine: 2276
+    startLine: 2277
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -144,7 +144,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: overlapY
     path: ../NVAPIWrapper/NVAPIMosaicHelper.cs
-    startLine: 2280
+    startLine: 2281
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper

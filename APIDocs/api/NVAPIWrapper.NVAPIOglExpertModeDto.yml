@@ -31,7 +31,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPIOglExpertModeDto
     path: ../NVAPIWrapper/NVAPIOpenGLHelper.cs
-    startLine: 213
+    startLine: 214
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -65,7 +65,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: DetailMask
     path: ../NVAPIWrapper/NVAPIOpenGLHelper.cs
-    startLine: 215
+    startLine: 216
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -94,7 +94,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: ReportMask
     path: ../NVAPIWrapper/NVAPIOpenGLHelper.cs
-    startLine: 216
+    startLine: 217
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -123,7 +123,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: OutputMask
     path: ../NVAPIWrapper/NVAPIOpenGLHelper.cs
-    startLine: 217
+    startLine: 218
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -152,7 +152,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Callback
     path: ../NVAPIWrapper/NVAPIOpenGLHelper.cs
-    startLine: 218
+    startLine: 219
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -181,7 +181,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: .ctor
     path: ../NVAPIWrapper/NVAPIOpenGLHelper.cs
-    startLine: 220
+    startLine: 221
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -219,7 +219,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: FromNative
     path: ../NVAPIWrapper/NVAPIOpenGLHelper.cs
-    startLine: 228
+    startLine: 229
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -259,7 +259,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: ToNative
     path: ../NVAPIWrapper/NVAPIOpenGLHelper.cs
-    startLine: 233
+    startLine: 234
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -287,7 +287,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Equals
     path: ../NVAPIWrapper/NVAPIOpenGLHelper.cs
-    startLine: 244
+    startLine: 245
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -324,7 +324,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Equals
     path: ../NVAPIWrapper/NVAPIOpenGLHelper.cs
-    startLine: 252
+    startLine: 253
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -363,7 +363,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetHashCode
     path: ../NVAPIWrapper/NVAPIOpenGLHelper.cs
-    startLine: 254
+    startLine: 255
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -395,7 +395,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: op_Equality
     path: ../NVAPIWrapper/NVAPIOpenGLHelper.cs
-    startLine: 256
+    startLine: 257
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -431,7 +431,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: op_Inequality
     path: ../NVAPIWrapper/NVAPIOpenGLHelper.cs
-    startLine: 257
+    startLine: 258
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper

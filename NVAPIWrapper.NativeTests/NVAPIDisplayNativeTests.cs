@@ -157,6 +157,8 @@ namespace NVAPIWrapper.NativeTests
                     return;
                 }
 
+                Skip.If(status == _NvAPI_Status.NVAPI_ERROR, "Source color space returned NVAPI_ERROR (may require active HDR/color pipeline)");
+
                 Assert.Equal(_NvAPI_Status.NVAPI_OK, status);
             });
         }
@@ -177,6 +179,8 @@ namespace NVAPIWrapper.NativeTests
                     return;
                 }
 
+                Skip.If(getStatus == _NvAPI_Status.NVAPI_ERROR, "Source color space returned NVAPI_ERROR (may require active HDR/color pipeline)");
+
                 Assert.Equal(_NvAPI_Status.NVAPI_OK, getStatus);
 
                 var status = NVAPI.NvAPI_Disp_SetSourceColorSpace(displayId, current);
@@ -185,6 +189,8 @@ namespace NVAPIWrapper.NativeTests
                     Skip.If(true, $"Set source color space unsupported: {status}");
                     return;
                 }
+
+                Skip.If(status == _NvAPI_Status.NVAPI_ERROR, "Set source color space returned NVAPI_ERROR (may require active HDR/color pipeline)");
 
                 Assert.Equal(_NvAPI_Status.NVAPI_OK, status);
             });

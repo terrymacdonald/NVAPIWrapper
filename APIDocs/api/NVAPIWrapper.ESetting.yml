@@ -42,8 +42,12 @@ items:
   - NVAPIWrapper.ESetting.MAXWELL_B_SAMPLE_INTERLEAVE_ID
   - NVAPIWrapper.ESetting.MCSFRSHOWSPLIT_ID
   - NVAPIWrapper.ESetting.NGX_DLAA_OVERRIDE_ID
+  - NVAPIWrapper.ESetting.NGX_DLSSG_DYNAMIC_MULTI_FRAME_COUNT_MAX_ID
+  - NVAPIWrapper.ESetting.NGX_DLSSG_DYNAMIC_TARGET_FRAME_RATE_ID
+  - NVAPIWrapper.ESetting.NGX_DLSSG_MODE_ID
   - NVAPIWrapper.ESetting.NGX_DLSSG_MULTI_FRAME_COUNT_ID
   - NVAPIWrapper.ESetting.NGX_DLSS_FG_OVERRIDE_ID
+  - NVAPIWrapper.ESetting.NGX_DLSS_FG_OVERRIDE_RENDER_PRESET_SELECTION_ID
   - NVAPIWrapper.ESetting.NGX_DLSS_FG_OVERRIDE_RESERVED_KEY1_ID
   - NVAPIWrapper.ESetting.NGX_DLSS_FG_OVERRIDE_RESERVED_KEY2_ID
   - NVAPIWrapper.ESetting.NGX_DLSS_OVERRIDE_OPTIMAL_SETTINGS_ID
@@ -1501,6 +1505,87 @@ items:
     content: NGX_DLAA_OVERRIDE_ID = 283385332
     return:
       type: NVAPIWrapper.ESetting
+- uid: NVAPIWrapper.ESetting.NGX_DLSSG_DYNAMIC_MULTI_FRAME_COUNT_MAX_ID
+  commentId: F:NVAPIWrapper.ESetting.NGX_DLSSG_DYNAMIC_MULTI_FRAME_COUNT_MAX_ID
+  id: NGX_DLSSG_DYNAMIC_MULTI_FRAME_COUNT_MAX_ID
+  parent: NVAPIWrapper.ESetting
+  langs:
+  - csharp
+  - vb
+  name: NGX_DLSSG_DYNAMIC_MULTI_FRAME_COUNT_MAX_ID
+  nameWithType: ESetting.NGX_DLSSG_DYNAMIC_MULTI_FRAME_COUNT_MAX_ID
+  fullName: NVAPIWrapper.ESetting.NGX_DLSSG_DYNAMIC_MULTI_FRAME_COUNT_MAX_ID
+  type: Field
+  source:
+    remote:
+      path: NVAPIWrapper/cs_generated/ESetting.cs
+      branch: main
+      repo: https://github.com/terrymacdonald/NVAPIWrapper.git
+    id: NGX_DLSSG_DYNAMIC_MULTI_FRAME_COUNT_MAX_ID
+    path: ../NVAPIWrapper/cs_generated/ESetting.cs
+    startLine: 156
+  assemblies:
+  - NVAPIWrapper
+  namespace: NVAPIWrapper
+  example: []
+  syntax:
+    content: NGX_DLSSG_DYNAMIC_MULTI_FRAME_COUNT_MAX_ID = 274083087
+    return:
+      type: NVAPIWrapper.ESetting
+- uid: NVAPIWrapper.ESetting.NGX_DLSSG_DYNAMIC_TARGET_FRAME_RATE_ID
+  commentId: F:NVAPIWrapper.ESetting.NGX_DLSSG_DYNAMIC_TARGET_FRAME_RATE_ID
+  id: NGX_DLSSG_DYNAMIC_TARGET_FRAME_RATE_ID
+  parent: NVAPIWrapper.ESetting
+  langs:
+  - csharp
+  - vb
+  name: NGX_DLSSG_DYNAMIC_TARGET_FRAME_RATE_ID
+  nameWithType: ESetting.NGX_DLSSG_DYNAMIC_TARGET_FRAME_RATE_ID
+  fullName: NVAPIWrapper.ESetting.NGX_DLSSG_DYNAMIC_TARGET_FRAME_RATE_ID
+  type: Field
+  source:
+    remote:
+      path: NVAPIWrapper/cs_generated/ESetting.cs
+      branch: main
+      repo: https://github.com/terrymacdonald/NVAPIWrapper.git
+    id: NGX_DLSSG_DYNAMIC_TARGET_FRAME_RATE_ID
+    path: ../NVAPIWrapper/cs_generated/ESetting.cs
+    startLine: 159
+  assemblies:
+  - NVAPIWrapper
+  namespace: NVAPIWrapper
+  example: []
+  syntax:
+    content: NGX_DLSSG_DYNAMIC_TARGET_FRAME_RATE_ID = 282018085
+    return:
+      type: NVAPIWrapper.ESetting
+- uid: NVAPIWrapper.ESetting.NGX_DLSSG_MODE_ID
+  commentId: F:NVAPIWrapper.ESetting.NGX_DLSSG_MODE_ID
+  id: NGX_DLSSG_MODE_ID
+  parent: NVAPIWrapper.ESetting
+  langs:
+  - csharp
+  - vb
+  name: NGX_DLSSG_MODE_ID
+  nameWithType: ESetting.NGX_DLSSG_MODE_ID
+  fullName: NVAPIWrapper.ESetting.NGX_DLSSG_MODE_ID
+  type: Field
+  source:
+    remote:
+      path: NVAPIWrapper/cs_generated/ESetting.cs
+      branch: main
+      repo: https://github.com/terrymacdonald/NVAPIWrapper.git
+    id: NGX_DLSSG_MODE_ID
+    path: ../NVAPIWrapper/cs_generated/ESetting.cs
+    startLine: 162
+  assemblies:
+  - NVAPIWrapper
+  namespace: NVAPIWrapper
+  example: []
+  syntax:
+    content: NGX_DLSSG_MODE_ID = 271614616
+    return:
+      type: NVAPIWrapper.ESetting
 - uid: NVAPIWrapper.ESetting.NGX_DLSSG_MULTI_FRAME_COUNT_ID
   commentId: F:NVAPIWrapper.ESetting.NGX_DLSSG_MULTI_FRAME_COUNT_ID
   id: NGX_DLSSG_MULTI_FRAME_COUNT_ID
@@ -1519,7 +1604,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NGX_DLSSG_MULTI_FRAME_COUNT_ID
     path: ../NVAPIWrapper/cs_generated/ESetting.cs
-    startLine: 156
+    startLine: 165
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -1546,13 +1631,40 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NGX_DLSS_FG_OVERRIDE_ID
     path: ../NVAPIWrapper/cs_generated/ESetting.cs
-    startLine: 159
+    startLine: 168
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   example: []
   syntax:
     content: NGX_DLSS_FG_OVERRIDE_ID = 283385347
+    return:
+      type: NVAPIWrapper.ESetting
+- uid: NVAPIWrapper.ESetting.NGX_DLSS_FG_OVERRIDE_RENDER_PRESET_SELECTION_ID
+  commentId: F:NVAPIWrapper.ESetting.NGX_DLSS_FG_OVERRIDE_RENDER_PRESET_SELECTION_ID
+  id: NGX_DLSS_FG_OVERRIDE_RENDER_PRESET_SELECTION_ID
+  parent: NVAPIWrapper.ESetting
+  langs:
+  - csharp
+  - vb
+  name: NGX_DLSS_FG_OVERRIDE_RENDER_PRESET_SELECTION_ID
+  nameWithType: ESetting.NGX_DLSS_FG_OVERRIDE_RENDER_PRESET_SELECTION_ID
+  fullName: NVAPIWrapper.ESetting.NGX_DLSS_FG_OVERRIDE_RENDER_PRESET_SELECTION_ID
+  type: Field
+  source:
+    remote:
+      path: NVAPIWrapper/cs_generated/ESetting.cs
+      branch: main
+      repo: https://github.com/terrymacdonald/NVAPIWrapper.git
+    id: NGX_DLSS_FG_OVERRIDE_RENDER_PRESET_SELECTION_ID
+    path: ../NVAPIWrapper/cs_generated/ESetting.cs
+    startLine: 171
+  assemblies:
+  - NVAPIWrapper
+  namespace: NVAPIWrapper
+  example: []
+  syntax:
+    content: NGX_DLSS_FG_OVERRIDE_RENDER_PRESET_SELECTION_ID = 283385329
     return:
       type: NVAPIWrapper.ESetting
 - uid: NVAPIWrapper.ESetting.NGX_DLSS_FG_OVERRIDE_RESERVED_KEY1_ID
@@ -1573,7 +1685,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NGX_DLSS_FG_OVERRIDE_RESERVED_KEY1_ID
     path: ../NVAPIWrapper/cs_generated/ESetting.cs
-    startLine: 162
+    startLine: 174
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -1600,7 +1712,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NGX_DLSS_FG_OVERRIDE_RESERVED_KEY2_ID
     path: ../NVAPIWrapper/cs_generated/ESetting.cs
-    startLine: 165
+    startLine: 177
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -1627,7 +1739,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NGX_DLSS_OVERRIDE_OPTIMAL_SETTINGS_ID
     path: ../NVAPIWrapper/cs_generated/ESetting.cs
-    startLine: 168
+    startLine: 180
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -1654,7 +1766,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NGX_DLSS_RR_MODE_ID
     path: ../NVAPIWrapper/cs_generated/ESetting.cs
-    startLine: 171
+    startLine: 183
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -1681,7 +1793,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NGX_DLSS_RR_OVERRIDE_ID
     path: ../NVAPIWrapper/cs_generated/ESetting.cs
-    startLine: 174
+    startLine: 186
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -1708,7 +1820,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NGX_DLSS_RR_OVERRIDE_RENDER_PRESET_SELECTION_ID
     path: ../NVAPIWrapper/cs_generated/ESetting.cs
-    startLine: 177
+    startLine: 189
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -1735,7 +1847,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NGX_DLSS_RR_OVERRIDE_RESERVED_KEY1_ID
     path: ../NVAPIWrapper/cs_generated/ESetting.cs
-    startLine: 180
+    startLine: 192
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -1762,7 +1874,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NGX_DLSS_RR_OVERRIDE_RESERVED_KEY2_ID
     path: ../NVAPIWrapper/cs_generated/ESetting.cs
-    startLine: 183
+    startLine: 195
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -1789,7 +1901,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NGX_DLSS_RR_OVERRIDE_SCALING_RATIO_ID
     path: ../NVAPIWrapper/cs_generated/ESetting.cs
-    startLine: 186
+    startLine: 198
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -1816,7 +1928,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NGX_DLSS_SR_MODE_ID
     path: ../NVAPIWrapper/cs_generated/ESetting.cs
-    startLine: 189
+    startLine: 201
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -1843,7 +1955,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NGX_DLSS_SR_OVERRIDE_ID
     path: ../NVAPIWrapper/cs_generated/ESetting.cs
-    startLine: 192
+    startLine: 204
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -1870,7 +1982,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NGX_DLSS_SR_OVERRIDE_RENDER_PRESET_SELECTION_ID
     path: ../NVAPIWrapper/cs_generated/ESetting.cs
-    startLine: 195
+    startLine: 207
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -1897,7 +2009,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NGX_DLSS_SR_OVERRIDE_RESERVED_KEY1_ID
     path: ../NVAPIWrapper/cs_generated/ESetting.cs
-    startLine: 198
+    startLine: 210
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -1924,7 +2036,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NGX_DLSS_SR_OVERRIDE_RESERVED_KEY2_ID
     path: ../NVAPIWrapper/cs_generated/ESetting.cs
-    startLine: 201
+    startLine: 213
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -1951,7 +2063,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NGX_DLSS_SR_OVERRIDE_SCALING_RATIO_ID
     path: ../NVAPIWrapper/cs_generated/ESetting.cs
-    startLine: 204
+    startLine: 216
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -1978,7 +2090,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_QUALITY_UPSCALING_ID
     path: ../NVAPIWrapper/cs_generated/ESetting.cs
-    startLine: 207
+    startLine: 219
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -2005,7 +2117,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: OPTIMUS_MAXAA_ID
     path: ../NVAPIWrapper/cs_generated/ESetting.cs
-    startLine: 210
+    startLine: 222
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -2032,7 +2144,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: PHYSXINDICATOR_ID
     path: ../NVAPIWrapper/cs_generated/ESetting.cs
-    startLine: 213
+    startLine: 225
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -2059,7 +2171,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: PREFERRED_PSTATE_ID
     path: ../NVAPIWrapper/cs_generated/ESetting.cs
-    startLine: 216
+    startLine: 228
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -2086,7 +2198,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: PREVENT_UI_AF_OVERRIDE_ID
     path: ../NVAPIWrapper/cs_generated/ESetting.cs
-    startLine: 219
+    startLine: 231
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -2113,7 +2225,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SHIM_MAXRES_ID
     path: ../NVAPIWrapper/cs_generated/ESetting.cs
-    startLine: 222
+    startLine: 234
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -2140,7 +2252,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SHIM_MCCOMPAT_ID
     path: ../NVAPIWrapper/cs_generated/ESetting.cs
-    startLine: 225
+    startLine: 237
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -2167,7 +2279,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SHIM_RENDERING_MODE_ID
     path: ../NVAPIWrapper/cs_generated/ESetting.cs
-    startLine: 228
+    startLine: 240
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -2194,7 +2306,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SHIM_RENDERING_OPTIONS_ID
     path: ../NVAPIWrapper/cs_generated/ESetting.cs
-    startLine: 231
+    startLine: 243
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -2221,7 +2333,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SLI_GPU_COUNT_ID
     path: ../NVAPIWrapper/cs_generated/ESetting.cs
-    startLine: 234
+    startLine: 246
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -2248,7 +2360,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SLI_PREDEFINED_GPU_COUNT_ID
     path: ../NVAPIWrapper/cs_generated/ESetting.cs
-    startLine: 237
+    startLine: 249
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -2275,7 +2387,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SLI_PREDEFINED_GPU_COUNT_DX10_ID
     path: ../NVAPIWrapper/cs_generated/ESetting.cs
-    startLine: 240
+    startLine: 252
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -2302,7 +2414,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SLI_PREDEFINED_MODE_ID
     path: ../NVAPIWrapper/cs_generated/ESetting.cs
-    startLine: 243
+    startLine: 255
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -2329,7 +2441,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SLI_PREDEFINED_MODE_DX10_ID
     path: ../NVAPIWrapper/cs_generated/ESetting.cs
-    startLine: 246
+    startLine: 258
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -2356,7 +2468,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SLI_RENDERING_MODE_ID
     path: ../NVAPIWrapper/cs_generated/ESetting.cs
-    startLine: 249
+    startLine: 261
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -2383,7 +2495,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: VRPRERENDERLIMIT_ID
     path: ../NVAPIWrapper/cs_generated/ESetting.cs
-    startLine: 252
+    startLine: 264
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -2410,7 +2522,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: VRRFEATUREINDICATOR_ID
     path: ../NVAPIWrapper/cs_generated/ESetting.cs
-    startLine: 255
+    startLine: 267
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -2437,7 +2549,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: VRROVERLAYINDICATOR_ID
     path: ../NVAPIWrapper/cs_generated/ESetting.cs
-    startLine: 258
+    startLine: 270
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -2464,7 +2576,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: VRRREQUESTSTATE_ID
     path: ../NVAPIWrapper/cs_generated/ESetting.cs
-    startLine: 261
+    startLine: 273
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -2491,7 +2603,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: VRR_APP_OVERRIDE_ID
     path: ../NVAPIWrapper/cs_generated/ESetting.cs
-    startLine: 264
+    startLine: 276
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -2518,7 +2630,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: VRR_APP_OVERRIDE_REQUEST_STATE_ID
     path: ../NVAPIWrapper/cs_generated/ESetting.cs
-    startLine: 267
+    startLine: 279
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -2545,7 +2657,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: VRR_MODE_ID
     path: ../NVAPIWrapper/cs_generated/ESetting.cs
-    startLine: 270
+    startLine: 282
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -2572,7 +2684,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: VSYNCSMOOTHAFR_ID
     path: ../NVAPIWrapper/cs_generated/ESetting.cs
-    startLine: 273
+    startLine: 285
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -2599,7 +2711,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: VSYNCVRRCONTROL_ID
     path: ../NVAPIWrapper/cs_generated/ESetting.cs
-    startLine: 276
+    startLine: 288
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -2626,7 +2738,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: VSYNC_BEHAVIOR_FLAGS_ID
     path: ../NVAPIWrapper/cs_generated/ESetting.cs
-    startLine: 279
+    startLine: 291
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -2653,7 +2765,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: WKS_API_STEREO_EYES_EXCHANGE_ID
     path: ../NVAPIWrapper/cs_generated/ESetting.cs
-    startLine: 282
+    startLine: 294
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -2680,7 +2792,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: WKS_API_STEREO_MODE_ID
     path: ../NVAPIWrapper/cs_generated/ESetting.cs
-    startLine: 285
+    startLine: 297
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -2707,7 +2819,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: WKS_STEREO_DONGLE_SUPPORT_ID
     path: ../NVAPIWrapper/cs_generated/ESetting.cs
-    startLine: 288
+    startLine: 300
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -2734,7 +2846,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: WKS_STEREO_SUPPORT_ID
     path: ../NVAPIWrapper/cs_generated/ESetting.cs
-    startLine: 291
+    startLine: 303
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -2761,7 +2873,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: WKS_STEREO_SWAP_MODE_ID
     path: ../NVAPIWrapper/cs_generated/ESetting.cs
-    startLine: 294
+    startLine: 306
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -2788,7 +2900,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: AO_MODE_ID
     path: ../NVAPIWrapper/cs_generated/ESetting.cs
-    startLine: 297
+    startLine: 309
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -2815,7 +2927,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: AO_MODE_ACTIVE_ID
     path: ../NVAPIWrapper/cs_generated/ESetting.cs
-    startLine: 300
+    startLine: 312
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -2842,7 +2954,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: AUTO_LODBIASADJUST_ID
     path: ../NVAPIWrapper/cs_generated/ESetting.cs
-    startLine: 303
+    startLine: 315
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -2869,7 +2981,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: EXPORT_PERF_COUNTERS_DX9_ONLY_ID
     path: ../NVAPIWrapper/cs_generated/ESetting.cs
-    startLine: 306
+    startLine: 318
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -2896,7 +3008,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: ICAFE_LOGO_CONFIG_ID
     path: ../NVAPIWrapper/cs_generated/ESetting.cs
-    startLine: 309
+    startLine: 321
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -2923,7 +3035,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: LODBIASADJUST_ID
     path: ../NVAPIWrapper/cs_generated/ESetting.cs
-    startLine: 312
+    startLine: 324
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -2950,7 +3062,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: MAXWELL_B_SAMPLE_INTERLEAVE_ID
     path: ../NVAPIWrapper/cs_generated/ESetting.cs
-    startLine: 315
+    startLine: 327
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -2977,7 +3089,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: PRERENDERLIMIT_ID
     path: ../NVAPIWrapper/cs_generated/ESetting.cs
-    startLine: 318
+    startLine: 330
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -3004,7 +3116,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: PS_OFFLINE_SHADER_COMPILER_ID
     path: ../NVAPIWrapper/cs_generated/ESetting.cs
-    startLine: 321
+    startLine: 333
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -3031,7 +3143,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: PS_SHADERDISKCACHE_ID
     path: ../NVAPIWrapper/cs_generated/ESetting.cs
-    startLine: 324
+    startLine: 336
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -3058,7 +3170,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: PS_SHADERDISKCACHE_DLL_PATH_WCHAR_ID
     path: ../NVAPIWrapper/cs_generated/ESetting.cs
-    startLine: 327
+    startLine: 339
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -3085,7 +3197,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: PS_SHADERDISKCACHE_MAX_SIZE_ID
     path: ../NVAPIWrapper/cs_generated/ESetting.cs
-    startLine: 330
+    startLine: 342
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -3112,7 +3224,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: PS_TEXFILTER_ANISO_OPTS2_ID
     path: ../NVAPIWrapper/cs_generated/ESetting.cs
-    startLine: 333
+    startLine: 345
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -3139,7 +3251,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: PS_TEXFILTER_BILINEAR_IN_ANISO_ID
     path: ../NVAPIWrapper/cs_generated/ESetting.cs
-    startLine: 336
+    startLine: 348
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -3166,7 +3278,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: PS_TEXFILTER_DISABLE_TRILIN_SLOPE_ID
     path: ../NVAPIWrapper/cs_generated/ESetting.cs
-    startLine: 339
+    startLine: 351
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -3193,7 +3305,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: PS_TEXFILTER_NO_NEG_LODBIAS_ID
     path: ../NVAPIWrapper/cs_generated/ESetting.cs
-    startLine: 342
+    startLine: 354
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -3220,7 +3332,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: QUALITY_ENHANCEMENTS_ID
     path: ../NVAPIWrapper/cs_generated/ESetting.cs
-    startLine: 345
+    startLine: 357
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -3247,7 +3359,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: QUALITY_ENHANCEMENT_SUBSTITUTION_ID
     path: ../NVAPIWrapper/cs_generated/ESetting.cs
-    startLine: 348
+    startLine: 360
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -3274,7 +3386,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: REFRESH_RATE_OVERRIDE_ID
     path: ../NVAPIWrapper/cs_generated/ESetting.cs
-    startLine: 351
+    startLine: 363
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -3301,7 +3413,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SET_POWER_THROTTLE_FOR_PCIe_COMPLIANCE_ID
     path: ../NVAPIWrapper/cs_generated/ESetting.cs
-    startLine: 354
+    startLine: 366
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -3328,7 +3440,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SET_VAB_DATA_ID
     path: ../NVAPIWrapper/cs_generated/ESetting.cs
-    startLine: 357
+    startLine: 369
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -3355,7 +3467,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: VSYNCMODE_ID
     path: ../NVAPIWrapper/cs_generated/ESetting.cs
-    startLine: 360
+    startLine: 372
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -3382,7 +3494,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: VSYNCTEARCONTROL_ID
     path: ../NVAPIWrapper/cs_generated/ESetting.cs
-    startLine: 363
+    startLine: 375
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -3409,13 +3521,13 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: TOTAL_DWORD_SETTING_NUM
     path: ../NVAPIWrapper/cs_generated/ESetting.cs
-    startLine: 366
+    startLine: 378
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   example: []
   syntax:
-    content: TOTAL_DWORD_SETTING_NUM = 115
+    content: TOTAL_DWORD_SETTING_NUM = 119
     return:
       type: NVAPIWrapper.ESetting
 - uid: NVAPIWrapper.ESetting.TOTAL_WSTRING_SETTING_NUM
@@ -3436,7 +3548,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: TOTAL_WSTRING_SETTING_NUM
     path: ../NVAPIWrapper/cs_generated/ESetting.cs
-    startLine: 369
+    startLine: 381
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -3463,13 +3575,13 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: TOTAL_SETTING_NUM
     path: ../NVAPIWrapper/cs_generated/ESetting.cs
-    startLine: 372
+    startLine: 384
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   example: []
   syntax:
-    content: TOTAL_SETTING_NUM = 120
+    content: TOTAL_SETTING_NUM = 124
     return:
       type: NVAPIWrapper.ESetting
 - uid: NVAPIWrapper.ESetting.INVALID_SETTING_ID
@@ -3490,7 +3602,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: INVALID_SETTING_ID
     path: ../NVAPIWrapper/cs_generated/ESetting.cs
-    startLine: 375
+    startLine: 387
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper

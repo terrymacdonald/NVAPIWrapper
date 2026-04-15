@@ -9,6 +9,7 @@ items:
   - NVAPIWrapper.EValues_NGX_DLSSG_MULTI_FRAME_COUNT.NGX_DLSSG_MULTI_FRAME_COUNT_MAX
   - NVAPIWrapper.EValues_NGX_DLSSG_MULTI_FRAME_COUNT.NGX_DLSSG_MULTI_FRAME_COUNT_MIN
   - NVAPIWrapper.EValues_NGX_DLSSG_MULTI_FRAME_COUNT.NGX_DLSSG_MULTI_FRAME_COUNT_NUM_VALUES
+  - NVAPIWrapper.EValues_NGX_DLSSG_MULTI_FRAME_COUNT.NGX_DLSSG_MULTI_FRAME_COUNT_OFF
   langs:
   - csharp
   - vb
@@ -31,6 +32,33 @@ items:
   syntax:
     content: public enum EValues_NGX_DLSSG_MULTI_FRAME_COUNT
     content.vb: Public Enum EValues_NGX_DLSSG_MULTI_FRAME_COUNT
+- uid: NVAPIWrapper.EValues_NGX_DLSSG_MULTI_FRAME_COUNT.NGX_DLSSG_MULTI_FRAME_COUNT_OFF
+  commentId: F:NVAPIWrapper.EValues_NGX_DLSSG_MULTI_FRAME_COUNT.NGX_DLSSG_MULTI_FRAME_COUNT_OFF
+  id: NGX_DLSSG_MULTI_FRAME_COUNT_OFF
+  parent: NVAPIWrapper.EValues_NGX_DLSSG_MULTI_FRAME_COUNT
+  langs:
+  - csharp
+  - vb
+  name: NGX_DLSSG_MULTI_FRAME_COUNT_OFF
+  nameWithType: EValues_NGX_DLSSG_MULTI_FRAME_COUNT.NGX_DLSSG_MULTI_FRAME_COUNT_OFF
+  fullName: NVAPIWrapper.EValues_NGX_DLSSG_MULTI_FRAME_COUNT.NGX_DLSSG_MULTI_FRAME_COUNT_OFF
+  type: Field
+  source:
+    remote:
+      path: NVAPIWrapper/cs_generated/EValues_NGX_DLSSG_MULTI_FRAME_COUNT.cs
+      branch: main
+      repo: https://github.com/terrymacdonald/NVAPIWrapper.git
+    id: NGX_DLSSG_MULTI_FRAME_COUNT_OFF
+    path: ../NVAPIWrapper/cs_generated/EValues_NGX_DLSSG_MULTI_FRAME_COUNT.cs
+    startLine: 6
+  assemblies:
+  - NVAPIWrapper
+  namespace: NVAPIWrapper
+  example: []
+  syntax:
+    content: NGX_DLSSG_MULTI_FRAME_COUNT_OFF = 0
+    return:
+      type: NVAPIWrapper.EValues_NGX_DLSSG_MULTI_FRAME_COUNT
 - uid: NVAPIWrapper.EValues_NGX_DLSSG_MULTI_FRAME_COUNT.NGX_DLSSG_MULTI_FRAME_COUNT_MIN
   commentId: F:NVAPIWrapper.EValues_NGX_DLSSG_MULTI_FRAME_COUNT.NGX_DLSSG_MULTI_FRAME_COUNT_MIN
   id: NGX_DLSSG_MULTI_FRAME_COUNT_MIN
@@ -49,7 +77,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NGX_DLSSG_MULTI_FRAME_COUNT_MIN
     path: ../NVAPIWrapper/cs_generated/EValues_NGX_DLSSG_MULTI_FRAME_COUNT.cs
-    startLine: 6
+    startLine: 9
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -76,40 +104,13 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NGX_DLSSG_MULTI_FRAME_COUNT_MAX
     path: ../NVAPIWrapper/cs_generated/EValues_NGX_DLSSG_MULTI_FRAME_COUNT.cs
-    startLine: 9
-  assemblies:
-  - NVAPIWrapper
-  namespace: NVAPIWrapper
-  example: []
-  syntax:
-    content: NGX_DLSSG_MULTI_FRAME_COUNT_MAX = 15
-    return:
-      type: NVAPIWrapper.EValues_NGX_DLSSG_MULTI_FRAME_COUNT
-- uid: NVAPIWrapper.EValues_NGX_DLSSG_MULTI_FRAME_COUNT.NGX_DLSSG_MULTI_FRAME_COUNT_DEFAULT
-  commentId: F:NVAPIWrapper.EValues_NGX_DLSSG_MULTI_FRAME_COUNT.NGX_DLSSG_MULTI_FRAME_COUNT_DEFAULT
-  id: NGX_DLSSG_MULTI_FRAME_COUNT_DEFAULT
-  parent: NVAPIWrapper.EValues_NGX_DLSSG_MULTI_FRAME_COUNT
-  langs:
-  - csharp
-  - vb
-  name: NGX_DLSSG_MULTI_FRAME_COUNT_DEFAULT
-  nameWithType: EValues_NGX_DLSSG_MULTI_FRAME_COUNT.NGX_DLSSG_MULTI_FRAME_COUNT_DEFAULT
-  fullName: NVAPIWrapper.EValues_NGX_DLSSG_MULTI_FRAME_COUNT.NGX_DLSSG_MULTI_FRAME_COUNT_DEFAULT
-  type: Field
-  source:
-    remote:
-      path: NVAPIWrapper/cs_generated/EValues_NGX_DLSSG_MULTI_FRAME_COUNT.cs
-      branch: main
-      repo: https://github.com/terrymacdonald/NVAPIWrapper.git
-    id: NGX_DLSSG_MULTI_FRAME_COUNT_DEFAULT
-    path: ../NVAPIWrapper/cs_generated/EValues_NGX_DLSSG_MULTI_FRAME_COUNT.cs
     startLine: 12
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   example: []
   syntax:
-    content: NGX_DLSSG_MULTI_FRAME_COUNT_DEFAULT = 1
+    content: NGX_DLSSG_MULTI_FRAME_COUNT_MAX = 15
     return:
       type: NVAPIWrapper.EValues_NGX_DLSSG_MULTI_FRAME_COUNT
 - uid: NVAPIWrapper.EValues_NGX_DLSSG_MULTI_FRAME_COUNT.NGX_DLSSG_MULTI_FRAME_COUNT_NUM_VALUES
@@ -137,6 +138,33 @@ items:
   example: []
   syntax:
     content: NGX_DLSSG_MULTI_FRAME_COUNT_NUM_VALUES = 3
+    return:
+      type: NVAPIWrapper.EValues_NGX_DLSSG_MULTI_FRAME_COUNT
+- uid: NVAPIWrapper.EValues_NGX_DLSSG_MULTI_FRAME_COUNT.NGX_DLSSG_MULTI_FRAME_COUNT_DEFAULT
+  commentId: F:NVAPIWrapper.EValues_NGX_DLSSG_MULTI_FRAME_COUNT.NGX_DLSSG_MULTI_FRAME_COUNT_DEFAULT
+  id: NGX_DLSSG_MULTI_FRAME_COUNT_DEFAULT
+  parent: NVAPIWrapper.EValues_NGX_DLSSG_MULTI_FRAME_COUNT
+  langs:
+  - csharp
+  - vb
+  name: NGX_DLSSG_MULTI_FRAME_COUNT_DEFAULT
+  nameWithType: EValues_NGX_DLSSG_MULTI_FRAME_COUNT.NGX_DLSSG_MULTI_FRAME_COUNT_DEFAULT
+  fullName: NVAPIWrapper.EValues_NGX_DLSSG_MULTI_FRAME_COUNT.NGX_DLSSG_MULTI_FRAME_COUNT_DEFAULT
+  type: Field
+  source:
+    remote:
+      path: NVAPIWrapper/cs_generated/EValues_NGX_DLSSG_MULTI_FRAME_COUNT.cs
+      branch: main
+      repo: https://github.com/terrymacdonald/NVAPIWrapper.git
+    id: NGX_DLSSG_MULTI_FRAME_COUNT_DEFAULT
+    path: ../NVAPIWrapper/cs_generated/EValues_NGX_DLSSG_MULTI_FRAME_COUNT.cs
+    startLine: 18
+  assemblies:
+  - NVAPIWrapper
+  namespace: NVAPIWrapper
+  example: []
+  syntax:
+    content: NGX_DLSSG_MULTI_FRAME_COUNT_DEFAULT = 0
     return:
       type: NVAPIWrapper.EValues_NGX_DLSSG_MULTI_FRAME_COUNT
 references:

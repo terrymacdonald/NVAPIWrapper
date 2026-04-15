@@ -526,7 +526,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SetDisplayGrids
     path: ../NVAPIWrapper/NVAPIMosaicHelper.cs
-    startLine: 331
+    startLine: 332
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -567,7 +567,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: ValidateDisplayGrids
     path: ../NVAPIWrapper/NVAPIMosaicHelper.cs
-    startLine: 365
+    startLine: 366
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -608,7 +608,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: EnumDisplayModes
     path: ../NVAPIWrapper/NVAPIMosaicHelper.cs
-    startLine: 413
+    startLine: 414
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -643,7 +643,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: EnumDisplayGrids
     path: ../NVAPIWrapper/NVAPIMosaicHelper.cs
-    startLine: 470
+    startLine: 471
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -674,7 +674,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Dispose
     path: ../NVAPIWrapper/NVAPIMosaicHelper.cs
-    startLine: 541
+    startLine: 542
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper

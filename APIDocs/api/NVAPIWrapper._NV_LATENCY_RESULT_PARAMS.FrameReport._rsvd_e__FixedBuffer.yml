@@ -20,7 +20,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: _rsvd_e__FixedBuffer
     path: ../NVAPIWrapper/cs_generated/_NV_LATENCY_RESULT_PARAMS.cs
-    startLine: 91
+    startLine: 103
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -53,7 +53,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: e0
     path: ../NVAPIWrapper/cs_generated/_NV_LATENCY_RESULT_PARAMS.cs
-    startLine: 94
+    startLine: 106
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper

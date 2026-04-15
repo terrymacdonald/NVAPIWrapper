@@ -7,8 +7,10 @@ items:
   children:
   - NVAPIWrapper._NV_GET_SLEEP_STATUS_PARAMS.bCplVsyncOn
   - NVAPIWrapper._NV_GET_SLEEP_STATUS_PARAMS.bFsVrr
+  - NVAPIWrapper._NV_GET_SLEEP_STATUS_PARAMS.bFullscreenIFlip
   - NVAPIWrapper._NV_GET_SLEEP_STATUS_PARAMS.bLowLatencyMode
   - NVAPIWrapper._NV_GET_SLEEP_STATUS_PARAMS.bUseGameSleep
+  - NVAPIWrapper._NV_GET_SLEEP_STATUS_PARAMS.fgMultiplier
   - NVAPIWrapper._NV_GET_SLEEP_STATUS_PARAMS.rsvd
   - NVAPIWrapper._NV_GET_SLEEP_STATUS_PARAMS.sleepIntervalUs
   - NVAPIWrapper._NV_GET_SLEEP_STATUS_PARAMS.version
@@ -209,6 +211,62 @@ items:
     return:
       type: System.Byte
     content.vb: Public bUseGameSleep As Byte
+- uid: NVAPIWrapper._NV_GET_SLEEP_STATUS_PARAMS.bFullscreenIFlip
+  commentId: F:NVAPIWrapper._NV_GET_SLEEP_STATUS_PARAMS.bFullscreenIFlip
+  id: bFullscreenIFlip
+  parent: NVAPIWrapper._NV_GET_SLEEP_STATUS_PARAMS
+  langs:
+  - csharp
+  - vb
+  name: bFullscreenIFlip
+  nameWithType: _NV_GET_SLEEP_STATUS_PARAMS.bFullscreenIFlip
+  fullName: NVAPIWrapper._NV_GET_SLEEP_STATUS_PARAMS.bFullscreenIFlip
+  type: Field
+  source:
+    remote:
+      path: NVAPIWrapper/cs_generated/_NV_GET_SLEEP_STATUS_PARAMS.cs
+      branch: main
+      repo: https://github.com/terrymacdonald/NVAPIWrapper.git
+    id: bFullscreenIFlip
+    path: ../NVAPIWrapper/cs_generated/_NV_GET_SLEEP_STATUS_PARAMS.cs
+    startLine: 33
+  assemblies:
+  - NVAPIWrapper
+  namespace: NVAPIWrapper
+  example: []
+  syntax:
+    content: public byte bFullscreenIFlip
+    return:
+      type: System.Byte
+    content.vb: Public bFullscreenIFlip As Byte
+- uid: NVAPIWrapper._NV_GET_SLEEP_STATUS_PARAMS.fgMultiplier
+  commentId: F:NVAPIWrapper._NV_GET_SLEEP_STATUS_PARAMS.fgMultiplier
+  id: fgMultiplier
+  parent: NVAPIWrapper._NV_GET_SLEEP_STATUS_PARAMS
+  langs:
+  - csharp
+  - vb
+  name: fgMultiplier
+  nameWithType: _NV_GET_SLEEP_STATUS_PARAMS.fgMultiplier
+  fullName: NVAPIWrapper._NV_GET_SLEEP_STATUS_PARAMS.fgMultiplier
+  type: Field
+  source:
+    remote:
+      path: NVAPIWrapper/cs_generated/_NV_GET_SLEEP_STATUS_PARAMS.cs
+      branch: main
+      repo: https://github.com/terrymacdonald/NVAPIWrapper.git
+    id: fgMultiplier
+    path: ../NVAPIWrapper/cs_generated/_NV_GET_SLEEP_STATUS_PARAMS.cs
+    startLine: 37
+  assemblies:
+  - NVAPIWrapper
+  namespace: NVAPIWrapper
+  example: []
+  syntax:
+    content: public byte fgMultiplier
+    return:
+      type: System.Byte
+    content.vb: Public fgMultiplier As Byte
 - uid: NVAPIWrapper._NV_GET_SLEEP_STATUS_PARAMS.rsvd
   commentId: F:NVAPIWrapper._NV_GET_SLEEP_STATUS_PARAMS.rsvd
   id: rsvd
@@ -227,7 +285,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: rsvd
     path: ../NVAPIWrapper/cs_generated/_NV_GET_SLEEP_STATUS_PARAMS.cs
-    startLine: 33
+    startLine: 41
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper

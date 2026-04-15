@@ -20,7 +20,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: _gpuLayout_e__FixedBuffer
     path: ../NVAPIWrapper/NVAPIMosaicHelper.cs
-    startLine: 2338
+    startLine: 2339
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -54,7 +54,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: e0_0
     path: ../NVAPIWrapper/NVAPIMosaicHelper.cs
-    startLine: 2341
+    startLine: 2342
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper

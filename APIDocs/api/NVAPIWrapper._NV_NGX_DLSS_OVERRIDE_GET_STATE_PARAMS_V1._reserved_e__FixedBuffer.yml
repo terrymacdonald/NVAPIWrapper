@@ -20,7 +20,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: _reserved_e__FixedBuffer
     path: ../NVAPIWrapper/cs_generated/_NV_NGX_DLSS_OVERRIDE_GET_STATE_PARAMS_V1.cs
-    startLine: 52
+    startLine: 56
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -53,7 +53,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: e0
     path: ../NVAPIWrapper/cs_generated/_NV_NGX_DLSS_OVERRIDE_GET_STATE_PARAMS_V1.cs
-    startLine: 55
+    startLine: 59
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper

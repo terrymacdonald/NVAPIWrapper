@@ -97,11 +97,23 @@ items:
   - uid: NVAPIWrapper.EValues_NGX_DLAA_OVERRIDE
     name: EValues_NGX_DLAA_OVERRIDE
     type: Enum
+  - uid: NVAPIWrapper.EValues_NGX_DLSSG_DYNAMIC_MULTI_FRAME_COUNT_MAX
+    name: EValues_NGX_DLSSG_DYNAMIC_MULTI_FRAME_COUNT_MAX
+    type: Enum
+  - uid: NVAPIWrapper.EValues_NGX_DLSSG_DYNAMIC_TARGET_FRAME_RATE
+    name: EValues_NGX_DLSSG_DYNAMIC_TARGET_FRAME_RATE
+    type: Enum
+  - uid: NVAPIWrapper.EValues_NGX_DLSSG_MODE
+    name: EValues_NGX_DLSSG_MODE
+    type: Enum
   - uid: NVAPIWrapper.EValues_NGX_DLSSG_MULTI_FRAME_COUNT
     name: EValues_NGX_DLSSG_MULTI_FRAME_COUNT
     type: Enum
   - uid: NVAPIWrapper.EValues_NGX_DLSS_FG_OVERRIDE
     name: EValues_NGX_DLSS_FG_OVERRIDE
+    type: Enum
+  - uid: NVAPIWrapper.EValues_NGX_DLSS_FG_OVERRIDE_RENDER_PRESET_SELECTION
+    name: EValues_NGX_DLSS_FG_OVERRIDE_RENDER_PRESET_SELECTION
     type: Enum
   - uid: NVAPIWrapper.EValues_NGX_DLSS_FG_OVERRIDE_RESERVED_KEY1
     name: EValues_NGX_DLSS_FG_OVERRIDE_RESERVED_KEY1
@@ -589,6 +601,9 @@ items:
   - uid: NVAPIWrapper.NVAPIGpuWorkstationFeatureQueryDto
     name: NVAPIGpuWorkstationFeatureQueryDto
     type: Struct
+  - uid: NVAPIWrapper.NVAPIHardwareDetection
+    name: NVAPIHardwareDetection
+    type: Class
   - uid: NVAPIWrapper.NVAPIHdrCapabilitiesDto
     name: NVAPIHdrCapabilitiesDto
     type: Struct
@@ -805,6 +820,9 @@ items:
   - uid: NVAPIWrapper.NVAPIVrrInfoDto
     name: NVAPIVrrInfoDto
     type: Struct
+  - uid: NVAPIWrapper.NVAPI_FLIP_CONFIG_FEEDBACK_MASK
+    name: NVAPI_FLIP_CONFIG_FEEDBACK_MASK
+    type: Enum
   - uid: NVAPIWrapper.NVAPI_GPU_WORKSTATION_FEATURE_MASK
     name: NVAPI_GPU_WORKSTATION_FEATURE_MASK
     type: Enum
@@ -2419,6 +2437,12 @@ items:
   - uid: NVAPIWrapper._NV_GPU_TYPE
     name: _NV_GPU_TYPE
     type: Enum
+  - uid: NVAPIWrapper._NV_GPU_UUID_V1
+    name: _NV_GPU_UUID_V1
+    type: Struct
+  - uid: NVAPIWrapper._NV_GPU_UUID_V1._uuid_e__FixedBuffer
+    name: _NV_GPU_UUID_V1._uuid_e__FixedBuffer
+    type: Struct
   - uid: NVAPIWrapper._NV_GPU_VIRTUALIZATION_INFO
     name: _NV_GPU_VIRTUALIZATION_INFO
     type: Struct
@@ -2751,6 +2775,24 @@ items:
     type: Struct
   - uid: NVAPIWrapper._NV_NGX_DLSS_OVERRIDE_SET_STATE_PARAMS_V1._reserved_e__FixedBuffer
     name: _NV_NGX_DLSS_OVERRIDE_SET_STATE_PARAMS_V1._reserved_e__FixedBuffer
+    type: Struct
+  - uid: NVAPIWrapper._NV_NGX_DRIVER_FEATURE_ID
+    name: _NV_NGX_DRIVER_FEATURE_ID
+    type: Enum
+  - uid: NVAPIWrapper._NV_NGX_DRIVER_FEATURE_SUPPORT_INFO
+    name: _NV_NGX_DRIVER_FEATURE_SUPPORT_INFO
+    type: Struct
+  - uid: NVAPIWrapper._NV_NGX_DRIVER_FEATURE_SUPPORT_INFO._reserved2_e__FixedBuffer
+    name: _NV_NGX_DRIVER_FEATURE_SUPPORT_INFO._reserved2_e__FixedBuffer
+    type: Struct
+  - uid: NVAPIWrapper._NV_NGX_GET_DRIVER_FEATURE_SUPPORT_PARAMS_V1
+    name: _NV_NGX_GET_DRIVER_FEATURE_SUPPORT_PARAMS_V1
+    type: Struct
+  - uid: NVAPIWrapper._NV_NGX_GET_DRIVER_FEATURE_SUPPORT_PARAMS_V1._featureSupportInfo_e__FixedBuffer
+    name: _NV_NGX_GET_DRIVER_FEATURE_SUPPORT_PARAMS_V1._featureSupportInfo_e__FixedBuffer
+    type: Struct
+  - uid: NVAPIWrapper._NV_NGX_GET_DRIVER_FEATURE_SUPPORT_PARAMS_V1._reserved_e__FixedBuffer
+    name: _NV_NGX_GET_DRIVER_FEATURE_SUPPORT_PARAMS_V1._reserved_e__FixedBuffer
     type: Struct
   - uid: NVAPIWrapper._NV_PHYSICAL_GPUS
     name: _NV_PHYSICAL_GPUS

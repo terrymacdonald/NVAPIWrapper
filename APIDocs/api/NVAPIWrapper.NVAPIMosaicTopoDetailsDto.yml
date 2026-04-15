@@ -32,7 +32,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPIMosaicTopoDetailsDto
     path: ../NVAPIWrapper/NVAPIMosaicHelper.cs
-    startLine: 1152
+    startLine: 1153
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -66,7 +66,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: LogicalGpu
     path: ../NVAPIWrapper/NVAPIMosaicHelper.cs
-    startLine: 1155
+    startLine: 1156
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -95,7 +95,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: ValidityMask
     path: ../NVAPIWrapper/NVAPIMosaicHelper.cs
-    startLine: 1156
+    startLine: 1157
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -124,7 +124,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: RowCount
     path: ../NVAPIWrapper/NVAPIMosaicHelper.cs
-    startLine: 1157
+    startLine: 1158
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -153,7 +153,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: ColCount
     path: ../NVAPIWrapper/NVAPIMosaicHelper.cs
-    startLine: 1158
+    startLine: 1159
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -182,7 +182,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GpuLayout
     path: ../NVAPIWrapper/NVAPIMosaicHelper.cs
-    startLine: 1159
+    startLine: 1160
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -211,7 +211,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: .ctor
     path: ../NVAPIWrapper/NVAPIMosaicHelper.cs
-    startLine: 1169
+    startLine: 1170
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -258,7 +258,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: FromNative
     path: ../NVAPIWrapper/NVAPIMosaicHelper.cs
-    startLine: 1195
+    startLine: 1196
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -296,7 +296,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: ToNative
     path: ../NVAPIWrapper/NVAPIMosaicHelper.cs
-    startLine: 1214
+    startLine: 1215
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -327,7 +327,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Equals
     path: ../NVAPIWrapper/NVAPIMosaicHelper.cs
-    startLine: 1241
+    startLine: 1242
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -364,7 +364,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Equals
     path: ../NVAPIWrapper/NVAPIMosaicHelper.cs
-    startLine: 1255
+    startLine: 1256
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -403,7 +403,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetHashCode
     path: ../NVAPIWrapper/NVAPIMosaicHelper.cs
-    startLine: 1261
+    startLine: 1262
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -435,7 +435,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: op_Equality
     path: ../NVAPIWrapper/NVAPIMosaicHelper.cs
-    startLine: 1280
+    startLine: 1281
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -476,7 +476,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: op_Inequality
     path: ../NVAPIWrapper/NVAPIMosaicHelper.cs
-    startLine: 1288
+    startLine: 1289
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper

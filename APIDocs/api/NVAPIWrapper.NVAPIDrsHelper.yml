@@ -512,7 +512,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SetCurrentGlobalProfile
     path: ../NVAPIWrapper/NVAPIDrsHelper.cs
-    startLine: 321
+    startLine: 325
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -550,7 +550,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetBaseProfile
     path: ../NVAPIWrapper/NVAPIDrsHelper.cs
-    startLine: 353
+    startLine: 357
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -581,7 +581,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetProfileInfo
     path: ../NVAPIWrapper/NVAPIDrsHelper.cs
-    startLine: 377
+    startLine: 381
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -616,7 +616,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SetProfileInfo
     path: ../NVAPIWrapper/NVAPIDrsHelper.cs
-    startLine: 392
+    startLine: 396
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -651,7 +651,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: CreateProfile
     path: ../NVAPIWrapper/NVAPIDrsHelper.cs
-    startLine: 423
+    startLine: 427
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -686,7 +686,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: DeleteProfile
     path: ../NVAPIWrapper/NVAPIDrsHelper.cs
-    startLine: 454
+    startLine: 458
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -721,7 +721,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: EnumApplications
     path: ../NVAPIWrapper/NVAPIDrsHelper.cs
-    startLine: 480
+    startLine: 484
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -756,7 +756,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetApplicationInfo
     path: ../NVAPIWrapper/NVAPIDrsHelper.cs
-    startLine: 524
+    startLine: 528
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -797,7 +797,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: FindApplicationByName
     path: ../NVAPIWrapper/NVAPIDrsHelper.cs
-    startLine: 559
+    startLine: 563
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -835,7 +835,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: CreateApplication
     path: ../NVAPIWrapper/NVAPIDrsHelper.cs
-    startLine: 601
+    startLine: 605
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -873,7 +873,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: DeleteApplication
     path: ../NVAPIWrapper/NVAPIDrsHelper.cs
-    startLine: 629
+    startLine: 633
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -914,7 +914,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: DeleteApplicationEx
     path: ../NVAPIWrapper/NVAPIDrsHelper.cs
-    startLine: 664
+    startLine: 668
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -952,7 +952,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetSetting
     path: ../NVAPIWrapper/NVAPIDrsHelper.cs
-    startLine: 692
+    startLine: 696
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -993,7 +993,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SetSetting
     path: ../NVAPIWrapper/NVAPIDrsHelper.cs
-    startLine: 720
+    startLine: 724
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -1031,7 +1031,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: EnumSettings
     path: ../NVAPIWrapper/NVAPIDrsHelper.cs
-    startLine: 751
+    startLine: 755
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -1066,7 +1066,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: EnumAvailableSettingIds
     path: ../NVAPIWrapper/NVAPIDrsHelper.cs
-    startLine: 793
+    startLine: 797
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -1097,7 +1097,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: EnumAvailableSettingValues
     path: ../NVAPIWrapper/NVAPIDrsHelper.cs
-    startLine: 841
+    startLine: 845
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -1135,7 +1135,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetSettingIdFromName
     path: ../NVAPIWrapper/NVAPIDrsHelper.cs
-    startLine: 869
+    startLine: 873
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -1173,7 +1173,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetSettingNameFromId
     path: ../NVAPIWrapper/NVAPIDrsHelper.cs
-    startLine: 903
+    startLine: 907
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -1211,7 +1211,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: DeleteProfileSetting
     path: ../NVAPIWrapper/NVAPIDrsHelper.cs
-    startLine: 935
+    startLine: 939
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -1252,7 +1252,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: RestoreAllDefaults
     path: ../NVAPIWrapper/NVAPIDrsHelper.cs
-    startLine: 962
+    startLine: 966
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -1283,7 +1283,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: RestoreProfileDefault
     path: ../NVAPIWrapper/NVAPIDrsHelper.cs
-    startLine: 987
+    startLine: 991
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -1318,7 +1318,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: RestoreProfileDefaultSetting
     path: ../NVAPIWrapper/NVAPIDrsHelper.cs
-    startLine: 1016
+    startLine: 1020
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -1359,7 +1359,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Dispose
     path: ../NVAPIWrapper/NVAPIDrsHelper.cs
-    startLine: 1130
+    startLine: 1134
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper

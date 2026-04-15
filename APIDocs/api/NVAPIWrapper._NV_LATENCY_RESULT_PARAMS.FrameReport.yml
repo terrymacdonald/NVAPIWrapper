@@ -5,6 +5,9 @@ items:
   id: _NV_LATENCY_RESULT_PARAMS.FrameReport
   parent: NVAPIWrapper
   children:
+  - NVAPIWrapper._NV_LATENCY_RESULT_PARAMS.FrameReport.aiFrameTimeUs
+  - NVAPIWrapper._NV_LATENCY_RESULT_PARAMS.FrameReport.cameraConstructedTime
+  - NVAPIWrapper._NV_LATENCY_RESULT_PARAMS.FrameReport.crossAdapterCopyTimeUs
   - NVAPIWrapper._NV_LATENCY_RESULT_PARAMS.FrameReport.driverEndTime
   - NVAPIWrapper._NV_LATENCY_RESULT_PARAMS.FrameReport.driverStartTime
   - NVAPIWrapper._NV_LATENCY_RESULT_PARAMS.FrameReport.frameID
@@ -499,6 +502,90 @@ items:
     return:
       type: System.UInt32
     content.vb: Public gpuFrameTimeUs As UInteger
+- uid: NVAPIWrapper._NV_LATENCY_RESULT_PARAMS.FrameReport.cameraConstructedTime
+  commentId: F:NVAPIWrapper._NV_LATENCY_RESULT_PARAMS.FrameReport.cameraConstructedTime
+  id: cameraConstructedTime
+  parent: NVAPIWrapper._NV_LATENCY_RESULT_PARAMS.FrameReport
+  langs:
+  - csharp
+  - vb
+  name: cameraConstructedTime
+  nameWithType: _NV_LATENCY_RESULT_PARAMS.FrameReport.cameraConstructedTime
+  fullName: NVAPIWrapper._NV_LATENCY_RESULT_PARAMS.FrameReport.cameraConstructedTime
+  type: Field
+  source:
+    remote:
+      path: NVAPIWrapper/cs_generated/_NV_LATENCY_RESULT_PARAMS.cs
+      branch: main
+      repo: https://github.com/terrymacdonald/NVAPIWrapper.git
+    id: cameraConstructedTime
+    path: ../NVAPIWrapper/cs_generated/_NV_LATENCY_RESULT_PARAMS.cs
+    startLine: 88
+  assemblies:
+  - NVAPIWrapper
+  namespace: NVAPIWrapper
+  example: []
+  syntax:
+    content: public ulong cameraConstructedTime
+    return:
+      type: System.UInt64
+    content.vb: Public cameraConstructedTime As ULong
+- uid: NVAPIWrapper._NV_LATENCY_RESULT_PARAMS.FrameReport.crossAdapterCopyTimeUs
+  commentId: F:NVAPIWrapper._NV_LATENCY_RESULT_PARAMS.FrameReport.crossAdapterCopyTimeUs
+  id: crossAdapterCopyTimeUs
+  parent: NVAPIWrapper._NV_LATENCY_RESULT_PARAMS.FrameReport
+  langs:
+  - csharp
+  - vb
+  name: crossAdapterCopyTimeUs
+  nameWithType: _NV_LATENCY_RESULT_PARAMS.FrameReport.crossAdapterCopyTimeUs
+  fullName: NVAPIWrapper._NV_LATENCY_RESULT_PARAMS.FrameReport.crossAdapterCopyTimeUs
+  type: Field
+  source:
+    remote:
+      path: NVAPIWrapper/cs_generated/_NV_LATENCY_RESULT_PARAMS.cs
+      branch: main
+      repo: https://github.com/terrymacdonald/NVAPIWrapper.git
+    id: crossAdapterCopyTimeUs
+    path: ../NVAPIWrapper/cs_generated/_NV_LATENCY_RESULT_PARAMS.cs
+    startLine: 92
+  assemblies:
+  - NVAPIWrapper
+  namespace: NVAPIWrapper
+  example: []
+  syntax:
+    content: public uint crossAdapterCopyTimeUs
+    return:
+      type: System.UInt32
+    content.vb: Public crossAdapterCopyTimeUs As UInteger
+- uid: NVAPIWrapper._NV_LATENCY_RESULT_PARAMS.FrameReport.aiFrameTimeUs
+  commentId: F:NVAPIWrapper._NV_LATENCY_RESULT_PARAMS.FrameReport.aiFrameTimeUs
+  id: aiFrameTimeUs
+  parent: NVAPIWrapper._NV_LATENCY_RESULT_PARAMS.FrameReport
+  langs:
+  - csharp
+  - vb
+  name: aiFrameTimeUs
+  nameWithType: _NV_LATENCY_RESULT_PARAMS.FrameReport.aiFrameTimeUs
+  fullName: NVAPIWrapper._NV_LATENCY_RESULT_PARAMS.FrameReport.aiFrameTimeUs
+  type: Field
+  source:
+    remote:
+      path: NVAPIWrapper/cs_generated/_NV_LATENCY_RESULT_PARAMS.cs
+      branch: main
+      repo: https://github.com/terrymacdonald/NVAPIWrapper.git
+    id: aiFrameTimeUs
+    path: ../NVAPIWrapper/cs_generated/_NV_LATENCY_RESULT_PARAMS.cs
+    startLine: 96
+  assemblies:
+  - NVAPIWrapper
+  namespace: NVAPIWrapper
+  example: []
+  syntax:
+    content: public uint aiFrameTimeUs
+    return:
+      type: System.UInt32
+    content.vb: Public aiFrameTimeUs As UInteger
 - uid: NVAPIWrapper._NV_LATENCY_RESULT_PARAMS.FrameReport.rsvd
   commentId: F:NVAPIWrapper._NV_LATENCY_RESULT_PARAMS.FrameReport.rsvd
   id: rsvd
@@ -517,7 +604,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: rsvd
     path: ../NVAPIWrapper/cs_generated/_NV_LATENCY_RESULT_PARAMS.cs
-    startLine: 88
+    startLine: 100
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
