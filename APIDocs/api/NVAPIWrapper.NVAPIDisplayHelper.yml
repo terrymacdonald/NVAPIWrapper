@@ -63,6 +63,11 @@ items:
   - NVAPIWrapper.NVAPIDisplayHelper.GetPhysicalGpuFromDisplayId
   - NVAPIWrapper.NVAPIDisplayHelper.GetPhysicalGpusFromDisplay
   - NVAPIWrapper.NVAPIDisplayHelper.GetPreferredStereoDisplay
+  - NVAPIWrapper.NVAPIDisplayHelper.GetScanoutCompositionParameter(NVAPIWrapper.NV_GPU_SCANOUT_COMPOSITION_PARAMETER)
+  - NVAPIWrapper.NVAPIDisplayHelper.GetScanoutConfiguration
+  - NVAPIWrapper.NVAPIDisplayHelper.GetScanoutConfigurationEx
+  - NVAPIWrapper.NVAPIDisplayHelper.GetScanoutIntensityState
+  - NVAPIWrapper.NVAPIDisplayHelper.GetScanoutWarpingState
   - NVAPIWrapper.NVAPIDisplayHelper.GetSourceColorSpace(System.UInt64)
   - NVAPIWrapper.NVAPIDisplayHelper.GetSourceHdrMetadata(System.UInt64)
   - NVAPIWrapper.NVAPIDisplayHelper.GetSupportedViews
@@ -90,6 +95,9 @@ items:
   - NVAPIWrapper.NVAPIDisplayHelper.SetOutputMode(NVAPIWrapper._NV_DISPLAY_OUTPUT_MODE)
   - NVAPIWrapper.NVAPIDisplayHelper.SetPreferredStereoDisplay(NVAPIWrapper.NVAPIPreferredStereoDisplayDto)
   - NVAPIWrapper.NVAPIDisplayHelper.SetRefreshRateOverride(System.UInt32,System.Single,System.Boolean)
+  - NVAPIWrapper.NVAPIDisplayHelper.SetScanoutCompositionParameter(NVAPIWrapper.NVAPIGpuScanoutCompositionParameterDto)
+  - NVAPIWrapper.NVAPIDisplayHelper.SetScanoutIntensity(NVAPIWrapper.NVAPIGpuScanoutIntensityDataDto)
+  - NVAPIWrapper.NVAPIDisplayHelper.SetScanoutWarping(NVAPIWrapper.NVAPIGpuScanoutWarpingDataDto)
   - NVAPIWrapper.NVAPIDisplayHelper.SetSourceColorSpace(NVAPIWrapper._NV_COLORSPACE_TYPE)
   - NVAPIWrapper.NVAPIDisplayHelper.SetSourceHdrMetadata(NVAPIWrapper.NVAPIHdrMetadataDto)
   - NVAPIWrapper.NVAPIDisplayHelper.SetVirtualRefreshRateData(NVAPIWrapper.NVAPIVirtualRefreshRateDataDto)
@@ -146,7 +154,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: DisplayId
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 83
+    startLine: 91
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -177,7 +185,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: ConnectorType
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 88
+    startLine: 96
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -208,7 +216,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: IsDynamic
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 93
+    startLine: 101
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -239,7 +247,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: IsMultiStreamRootNode
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 98
+    startLine: 106
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -270,7 +278,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: IsActive
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 103
+    startLine: 111
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -301,7 +309,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: IsCluster
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 108
+    startLine: 116
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -332,7 +340,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: IsOSVisible
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 113
+    startLine: 121
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -363,7 +371,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: IsWfd
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 118
+    startLine: 126
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -394,7 +402,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: IsConnected
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 123
+    startLine: 131
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -425,7 +433,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: IsPhysicallyConnected
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 128
+    startLine: 136
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -456,7 +464,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: CreateEdidData
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 133
+    startLine: 141
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -486,7 +494,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: CreateTimingInput
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 146
+    startLine: 154
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -516,7 +524,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: CreateMonitorCapabilities
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 157
+    startLine: 165
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -546,7 +554,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: CreateDisplayPortInfo
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 168
+    startLine: 176
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -576,7 +584,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: CreateDisplayPortConfig
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 179
+    startLine: 187
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -606,7 +614,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: CreateHdmiSupportInfo
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 190
+    startLine: 198
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -636,7 +644,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: CreateVrrInfo
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 201
+    startLine: 209
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -666,7 +674,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: CreateAdaptiveSyncGetData
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 212
+    startLine: 220
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -696,7 +704,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: CreateAdaptiveSyncSetData
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 223
+    startLine: 231
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -726,7 +734,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: CreateVirtualRefreshRateGetData
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 234
+    startLine: 242
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -756,7 +764,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: CreateVirtualRefreshRateSetData
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 245
+    startLine: 253
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -786,7 +794,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: CreatePreferredStereoDisplayGet
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 256
+    startLine: 264
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -816,7 +824,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: CreatePreferredStereoDisplaySet
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 267
+    startLine: 275
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -846,7 +854,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: CreateInfoFrameData
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 278
+    startLine: 286
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -876,7 +884,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: CreateColorData
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 290
+    startLine: 298
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -906,7 +914,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: CreateHdrCapabilities
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 302
+    startLine: 310
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -936,7 +944,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: CreateHdrColorData
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 313
+    startLine: 321
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -966,7 +974,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: CreateHdrMetadata
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 324
+    startLine: 332
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -996,7 +1004,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: CreateDisplayColorimetry
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 335
+    startLine: 343
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -1026,7 +1034,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: CreateCustomDisplay
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 346
+    startLine: 354
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -1056,7 +1064,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: CreateManagedDedicatedDisplayInfo
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 357
+    startLine: 365
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -1086,7 +1094,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: CreateManagedDedicatedDisplayMetadata
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 368
+    startLine: 376
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -1116,7 +1124,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: CreateDisplayIdInfoData
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 379
+    startLine: 387
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -1146,7 +1154,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: CreateTargetInfoData
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 390
+    startLine: 398
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -1176,7 +1184,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetPhysicalGpusFromDisplay
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 402
+    startLine: 410
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -1207,7 +1215,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetLogicalGpuFromDisplay
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 437
+    startLine: 445
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -1238,7 +1246,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetAssociatedNvidiaDisplayName
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 460
+    startLine: 468
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -1269,7 +1277,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetAssociatedDisplayOutputId
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 487
+    startLine: 495
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -1300,7 +1308,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetGpuAndOutputIdFromDisplayId
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 509
+    startLine: 517
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -1331,7 +1339,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetPhysicalGpuFromDisplayId
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 537
+    startLine: 545
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -1362,7 +1370,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetVBlankCounter
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 564
+    startLine: 572
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -1393,7 +1401,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetDisplayIdByDisplayName
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 587
+    startLine: 595
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -1431,7 +1439,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetGdiPrimaryDisplayId
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 609
+    startLine: 617
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -1462,7 +1470,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetSupportedViews
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 631
+    startLine: 639
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -1493,7 +1501,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetEdidData
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 673
+    startLine: 681
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -1528,7 +1536,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetTiming
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 728
+    startLine: 736
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -1563,7 +1571,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetMonitorCapabilities
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 757
+    startLine: 765
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -1594,7 +1602,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetMonitorColorCapabilities
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 784
+    startLine: 792
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -1625,7 +1633,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetDisplayPortInfo
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 849
+    startLine: 857
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -1663,7 +1671,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SetDisplayPort
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 878
+    startLine: 886
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -1704,7 +1712,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetHdmiSupportInfo
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 905
+    startLine: 913
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -1742,7 +1750,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetVrrInfo
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 932
+    startLine: 940
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -1773,7 +1781,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetAdaptiveSyncData
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 959
+    startLine: 967
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -1804,7 +1812,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SetAdaptiveSyncData
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 987
+    startLine: 995
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -1839,7 +1847,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetVirtualRefreshRateData
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 1013
+    startLine: 1021
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -1870,7 +1878,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SetVirtualRefreshRateData
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 1041
+    startLine: 1049
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -1905,7 +1913,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetPreferredStereoDisplay
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 1068
+    startLine: 1076
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -1936,7 +1944,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SetPreferredStereoDisplay
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 1094
+    startLine: 1102
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -1971,7 +1979,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: EnableHWCursor
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 1118
+    startLine: 1126
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -2002,7 +2010,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: DisableHWCursor
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 1140
+    startLine: 1148
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -2033,7 +2041,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SetRefreshRateOverride
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 1165
+    startLine: 1173
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -2077,7 +2085,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: InfoFrameControl
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 1188
+    startLine: 1196
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -2112,7 +2120,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: ColorControl
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 1215
+    startLine: 1223
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -2147,7 +2155,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetHdrCapabilities
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 1241
+    startLine: 1249
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -2178,7 +2186,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: HdrColorControl
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 1268
+    startLine: 1276
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -2213,7 +2221,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SetSourceColorSpace
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 1295
+    startLine: 1303
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -2248,7 +2256,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetSourceColorSpace
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 1321
+    startLine: 1329
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -2286,7 +2294,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SetSourceHdrMetadata
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 1349
+    startLine: 1357
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -2321,7 +2329,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetSourceHdrMetadata
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 1376
+    startLine: 1384
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -2359,7 +2367,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SetOutputMode
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 1403
+    startLine: 1411
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -2394,7 +2402,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetOutputMode
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 1429
+    startLine: 1437
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -2425,7 +2433,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SetHdrToneMapping
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 1456
+    startLine: 1464
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -2460,7 +2468,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetHdrToneMapping
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 1481
+    startLine: 1489
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -2491,7 +2499,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetColorimetry
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 1507
+    startLine: 1515
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -2522,7 +2530,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetDisplayIdInfo
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 1534
+    startLine: 1542
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -2560,7 +2568,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetDisplayIdsFromTarget
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 1564
+    startLine: 1572
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -2591,7 +2599,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetDisplayIdsFromTarget
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 1579
+    startLine: 1587
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -2632,7 +2640,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: EnumCustomDisplay
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 1611
+    startLine: 1619
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -2673,7 +2681,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: TryCustomDisplay
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 1644
+    startLine: 1652
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -2714,7 +2722,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetAssociatedNvidiaDisplayHandle
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 1686
+    startLine: 1694
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -2752,7 +2760,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: DeleteCustomDisplay
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 1726
+    startLine: 1734
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -2793,7 +2801,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SaveCustomDisplay
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 1770
+    startLine: 1778
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -2837,7 +2845,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: RevertCustomDisplayTrial
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 1805
+    startLine: 1813
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -2875,7 +2883,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetNvManagedDedicatedDisplays
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 1834
+    startLine: 1842
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -2906,7 +2914,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: AcquireDedicatedDisplay
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 1886
+    startLine: 1894
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -2944,7 +2952,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: ReleaseDedicatedDisplay
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 1919
+    startLine: 1927
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -2982,7 +2990,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetNvManagedDedicatedDisplayMetadata
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 1951
+    startLine: 1959
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -3020,7 +3028,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SetNvManagedDedicatedDisplayMetadata
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 1977
+    startLine: 1985
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -3037,6 +3045,270 @@ items:
       description: True if applied, false if unavailable.
     content.vb: Public Function SetNvManagedDedicatedDisplayMetadata(metadata As NVAPINvManagedDedicatedDisplayMetadataDto) As Boolean
   overload: NVAPIWrapper.NVAPIDisplayHelper.SetNvManagedDedicatedDisplayMetadata*
+- uid: NVAPIWrapper.NVAPIDisplayHelper.GetScanoutCompositionParameter(NVAPIWrapper.NV_GPU_SCANOUT_COMPOSITION_PARAMETER)
+  commentId: M:NVAPIWrapper.NVAPIDisplayHelper.GetScanoutCompositionParameter(NVAPIWrapper.NV_GPU_SCANOUT_COMPOSITION_PARAMETER)
+  id: GetScanoutCompositionParameter(NVAPIWrapper.NV_GPU_SCANOUT_COMPOSITION_PARAMETER)
+  parent: NVAPIWrapper.NVAPIDisplayHelper
+  langs:
+  - csharp
+  - vb
+  name: GetScanoutCompositionParameter(NV_GPU_SCANOUT_COMPOSITION_PARAMETER)
+  nameWithType: NVAPIDisplayHelper.GetScanoutCompositionParameter(NV_GPU_SCANOUT_COMPOSITION_PARAMETER)
+  fullName: NVAPIWrapper.NVAPIDisplayHelper.GetScanoutCompositionParameter(NVAPIWrapper.NV_GPU_SCANOUT_COMPOSITION_PARAMETER)
+  type: Method
+  source:
+    remote:
+      path: NVAPIWrapper/NVAPIDisplayHelper.cs
+      branch: main
+      repo: https://github.com/terrymacdonald/NVAPIWrapper.git
+    id: GetScanoutCompositionParameter
+    path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
+    startLine: 2009
+  assemblies:
+  - NVAPIWrapper
+  namespace: NVAPIWrapper
+  summary: Get scanout composition parameter for this display.
+  example: []
+  syntax:
+    content: public NVAPIGpuScanoutCompositionParameterDto? GetScanoutCompositionParameter(NV_GPU_SCANOUT_COMPOSITION_PARAMETER parameter)
+    parameters:
+    - id: parameter
+      type: NVAPIWrapper.NV_GPU_SCANOUT_COMPOSITION_PARAMETER
+      description: Parameter to query.
+    return:
+      type: System.Nullable{NVAPIWrapper.NVAPIGpuScanoutCompositionParameterDto}
+      description: Scanout composition parameter DTO, or null if unavailable.
+    content.vb: Public Function GetScanoutCompositionParameter(parameter As NV_GPU_SCANOUT_COMPOSITION_PARAMETER) As NVAPIGpuScanoutCompositionParameterDto?
+  overload: NVAPIWrapper.NVAPIDisplayHelper.GetScanoutCompositionParameter*
+- uid: NVAPIWrapper.NVAPIDisplayHelper.SetScanoutCompositionParameter(NVAPIWrapper.NVAPIGpuScanoutCompositionParameterDto)
+  commentId: M:NVAPIWrapper.NVAPIDisplayHelper.SetScanoutCompositionParameter(NVAPIWrapper.NVAPIGpuScanoutCompositionParameterDto)
+  id: SetScanoutCompositionParameter(NVAPIWrapper.NVAPIGpuScanoutCompositionParameterDto)
+  parent: NVAPIWrapper.NVAPIDisplayHelper
+  langs:
+  - csharp
+  - vb
+  name: SetScanoutCompositionParameter(NVAPIGpuScanoutCompositionParameterDto)
+  nameWithType: NVAPIDisplayHelper.SetScanoutCompositionParameter(NVAPIGpuScanoutCompositionParameterDto)
+  fullName: NVAPIWrapper.NVAPIDisplayHelper.SetScanoutCompositionParameter(NVAPIWrapper.NVAPIGpuScanoutCompositionParameterDto)
+  type: Method
+  source:
+    remote:
+      path: NVAPIWrapper/NVAPIDisplayHelper.cs
+      branch: main
+      repo: https://github.com/terrymacdonald/NVAPIWrapper.git
+    id: SetScanoutCompositionParameter
+    path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
+    startLine: 2037
+  assemblies:
+  - NVAPIWrapper
+  namespace: NVAPIWrapper
+  summary: Set scanout composition parameter for this display.
+  example: []
+  syntax:
+    content: public bool SetScanoutCompositionParameter(NVAPIGpuScanoutCompositionParameterDto parameter)
+    parameters:
+    - id: parameter
+      type: NVAPIWrapper.NVAPIGpuScanoutCompositionParameterDto
+      description: Parameter settings.
+    return:
+      type: System.Boolean
+      description: True if applied or unchanged, false if unavailable.
+    content.vb: Public Function SetScanoutCompositionParameter(parameter As NVAPIGpuScanoutCompositionParameterDto) As Boolean
+  overload: NVAPIWrapper.NVAPIDisplayHelper.SetScanoutCompositionParameter*
+- uid: NVAPIWrapper.NVAPIDisplayHelper.GetScanoutConfiguration
+  commentId: M:NVAPIWrapper.NVAPIDisplayHelper.GetScanoutConfiguration
+  id: GetScanoutConfiguration
+  parent: NVAPIWrapper.NVAPIDisplayHelper
+  langs:
+  - csharp
+  - vb
+  name: GetScanoutConfiguration()
+  nameWithType: NVAPIDisplayHelper.GetScanoutConfiguration()
+  fullName: NVAPIWrapper.NVAPIDisplayHelper.GetScanoutConfiguration()
+  type: Method
+  source:
+    remote:
+      path: NVAPIWrapper/NVAPIDisplayHelper.cs
+      branch: main
+      repo: https://github.com/terrymacdonald/NVAPIWrapper.git
+    id: GetScanoutConfiguration
+    path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
+    startLine: 2070
+  assemblies:
+  - NVAPIWrapper
+  namespace: NVAPIWrapper
+  summary: Get scanout configuration for this display.
+  example: []
+  syntax:
+    content: public NVAPIGpuScanoutConfigurationDto? GetScanoutConfiguration()
+    return:
+      type: System.Nullable{NVAPIWrapper.NVAPIGpuScanoutConfigurationDto}
+      description: Scanout configuration DTO, or null if unavailable.
+    content.vb: Public Function GetScanoutConfiguration() As NVAPIGpuScanoutConfigurationDto?
+  overload: NVAPIWrapper.NVAPIDisplayHelper.GetScanoutConfiguration*
+- uid: NVAPIWrapper.NVAPIDisplayHelper.GetScanoutConfigurationEx
+  commentId: M:NVAPIWrapper.NVAPIDisplayHelper.GetScanoutConfigurationEx
+  id: GetScanoutConfigurationEx
+  parent: NVAPIWrapper.NVAPIDisplayHelper
+  langs:
+  - csharp
+  - vb
+  name: GetScanoutConfigurationEx()
+  nameWithType: NVAPIDisplayHelper.GetScanoutConfigurationEx()
+  fullName: NVAPIWrapper.NVAPIDisplayHelper.GetScanoutConfigurationEx()
+  type: Method
+  source:
+    remote:
+      path: NVAPIWrapper/NVAPIDisplayHelper.cs
+      branch: main
+      repo: https://github.com/terrymacdonald/NVAPIWrapper.git
+    id: GetScanoutConfigurationEx
+    path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
+    startLine: 2096
+  assemblies:
+  - NVAPIWrapper
+  namespace: NVAPIWrapper
+  summary: Get extended scanout configuration for this display.
+  example: []
+  syntax:
+    content: public NVAPIGpuScanoutConfigurationExDto? GetScanoutConfigurationEx()
+    return:
+      type: System.Nullable{NVAPIWrapper.NVAPIGpuScanoutConfigurationExDto}
+      description: Scanout configuration DTO, or null if unavailable.
+    content.vb: Public Function GetScanoutConfigurationEx() As NVAPIGpuScanoutConfigurationExDto?
+  overload: NVAPIWrapper.NVAPIDisplayHelper.GetScanoutConfigurationEx*
+- uid: NVAPIWrapper.NVAPIDisplayHelper.GetScanoutIntensityState
+  commentId: M:NVAPIWrapper.NVAPIDisplayHelper.GetScanoutIntensityState
+  id: GetScanoutIntensityState
+  parent: NVAPIWrapper.NVAPIDisplayHelper
+  langs:
+  - csharp
+  - vb
+  name: GetScanoutIntensityState()
+  nameWithType: NVAPIDisplayHelper.GetScanoutIntensityState()
+  fullName: NVAPIWrapper.NVAPIDisplayHelper.GetScanoutIntensityState()
+  type: Method
+  source:
+    remote:
+      path: NVAPIWrapper/NVAPIDisplayHelper.cs
+      branch: main
+      repo: https://github.com/terrymacdonald/NVAPIWrapper.git
+    id: GetScanoutIntensityState
+    path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
+    startLine: 2121
+  assemblies:
+  - NVAPIWrapper
+  namespace: NVAPIWrapper
+  summary: Get scanout intensity state for this display.
+  example: []
+  syntax:
+    content: public NVAPIGpuScanoutIntensityStateDto? GetScanoutIntensityState()
+    return:
+      type: System.Nullable{NVAPIWrapper.NVAPIGpuScanoutIntensityStateDto}
+      description: Scanout intensity state DTO, or null if unavailable.
+    content.vb: Public Function GetScanoutIntensityState() As NVAPIGpuScanoutIntensityStateDto?
+  overload: NVAPIWrapper.NVAPIDisplayHelper.GetScanoutIntensityState*
+- uid: NVAPIWrapper.NVAPIDisplayHelper.SetScanoutIntensity(NVAPIWrapper.NVAPIGpuScanoutIntensityDataDto)
+  commentId: M:NVAPIWrapper.NVAPIDisplayHelper.SetScanoutIntensity(NVAPIWrapper.NVAPIGpuScanoutIntensityDataDto)
+  id: SetScanoutIntensity(NVAPIWrapper.NVAPIGpuScanoutIntensityDataDto)
+  parent: NVAPIWrapper.NVAPIDisplayHelper
+  langs:
+  - csharp
+  - vb
+  name: SetScanoutIntensity(NVAPIGpuScanoutIntensityDataDto)
+  nameWithType: NVAPIDisplayHelper.SetScanoutIntensity(NVAPIGpuScanoutIntensityDataDto)
+  fullName: NVAPIWrapper.NVAPIDisplayHelper.SetScanoutIntensity(NVAPIWrapper.NVAPIGpuScanoutIntensityDataDto)
+  type: Method
+  source:
+    remote:
+      path: NVAPIWrapper/NVAPIDisplayHelper.cs
+      branch: main
+      repo: https://github.com/terrymacdonald/NVAPIWrapper.git
+    id: SetScanoutIntensity
+    path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
+    startLine: 2147
+  assemblies:
+  - NVAPIWrapper
+  namespace: NVAPIWrapper
+  summary: Set scanout intensity for this display.
+  example: []
+  syntax:
+    content: public NVAPIGpuScanoutIntensityResultDto? SetScanoutIntensity(NVAPIGpuScanoutIntensityDataDto data)
+    parameters:
+    - id: data
+      type: NVAPIWrapper.NVAPIGpuScanoutIntensityDataDto
+      description: Scanout intensity data.
+    return:
+      type: System.Nullable{NVAPIWrapper.NVAPIGpuScanoutIntensityResultDto}
+      description: Result DTO, or null if unavailable.
+    content.vb: Public Function SetScanoutIntensity(data As NVAPIGpuScanoutIntensityDataDto) As NVAPIGpuScanoutIntensityResultDto?
+  overload: NVAPIWrapper.NVAPIDisplayHelper.SetScanoutIntensity*
+- uid: NVAPIWrapper.NVAPIDisplayHelper.GetScanoutWarpingState
+  commentId: M:NVAPIWrapper.NVAPIDisplayHelper.GetScanoutWarpingState
+  id: GetScanoutWarpingState
+  parent: NVAPIWrapper.NVAPIDisplayHelper
+  langs:
+  - csharp
+  - vb
+  name: GetScanoutWarpingState()
+  nameWithType: NVAPIDisplayHelper.GetScanoutWarpingState()
+  fullName: NVAPIWrapper.NVAPIDisplayHelper.GetScanoutWarpingState()
+  type: Method
+  source:
+    remote:
+      path: NVAPIWrapper/NVAPIDisplayHelper.cs
+      branch: main
+      repo: https://github.com/terrymacdonald/NVAPIWrapper.git
+    id: GetScanoutWarpingState
+    path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
+    startLine: 2183
+  assemblies:
+  - NVAPIWrapper
+  namespace: NVAPIWrapper
+  summary: Get scanout warping state for this display.
+  example: []
+  syntax:
+    content: public NVAPIGpuScanoutWarpingStateDto? GetScanoutWarpingState()
+    return:
+      type: System.Nullable{NVAPIWrapper.NVAPIGpuScanoutWarpingStateDto}
+      description: Scanout warping state DTO, or null if unavailable.
+    content.vb: Public Function GetScanoutWarpingState() As NVAPIGpuScanoutWarpingStateDto?
+  overload: NVAPIWrapper.NVAPIDisplayHelper.GetScanoutWarpingState*
+- uid: NVAPIWrapper.NVAPIDisplayHelper.SetScanoutWarping(NVAPIWrapper.NVAPIGpuScanoutWarpingDataDto)
+  commentId: M:NVAPIWrapper.NVAPIDisplayHelper.SetScanoutWarping(NVAPIWrapper.NVAPIGpuScanoutWarpingDataDto)
+  id: SetScanoutWarping(NVAPIWrapper.NVAPIGpuScanoutWarpingDataDto)
+  parent: NVAPIWrapper.NVAPIDisplayHelper
+  langs:
+  - csharp
+  - vb
+  name: SetScanoutWarping(NVAPIGpuScanoutWarpingDataDto)
+  nameWithType: NVAPIDisplayHelper.SetScanoutWarping(NVAPIGpuScanoutWarpingDataDto)
+  fullName: NVAPIWrapper.NVAPIDisplayHelper.SetScanoutWarping(NVAPIWrapper.NVAPIGpuScanoutWarpingDataDto)
+  type: Method
+  source:
+    remote:
+      path: NVAPIWrapper/NVAPIDisplayHelper.cs
+      branch: main
+      repo: https://github.com/terrymacdonald/NVAPIWrapper.git
+    id: SetScanoutWarping
+    path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
+    startLine: 2209
+  assemblies:
+  - NVAPIWrapper
+  namespace: NVAPIWrapper
+  summary: Set scanout warping for this display.
+  example: []
+  syntax:
+    content: public NVAPIGpuScanoutWarpingResultDto? SetScanoutWarping(NVAPIGpuScanoutWarpingDataDto data)
+    parameters:
+    - id: data
+      type: NVAPIWrapper.NVAPIGpuScanoutWarpingDataDto
+      description: Scanout warping data.
+    return:
+      type: System.Nullable{NVAPIWrapper.NVAPIGpuScanoutWarpingResultDto}
+      description: Result DTO, or null if unavailable.
+    content.vb: Public Function SetScanoutWarping(data As NVAPIGpuScanoutWarpingDataDto) As NVAPIGpuScanoutWarpingResultDto?
+  overload: NVAPIWrapper.NVAPIDisplayHelper.SetScanoutWarping*
 - uid: NVAPIWrapper.NVAPIDisplayHelper.Dispose
   commentId: M:NVAPIWrapper.NVAPIDisplayHelper.Dispose
   id: Dispose
@@ -3055,7 +3327,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Dispose
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 2130
+    startLine: 2406
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -4787,6 +5059,208 @@ references:
   name: NVAPINvManagedDedicatedDisplayMetadataDto
   nameWithType: NVAPINvManagedDedicatedDisplayMetadataDto
   fullName: NVAPIWrapper.NVAPINvManagedDedicatedDisplayMetadataDto
+- uid: NVAPIWrapper.NVAPIDisplayHelper.GetScanoutCompositionParameter*
+  commentId: Overload:NVAPIWrapper.NVAPIDisplayHelper.GetScanoutCompositionParameter
+  href: NVAPIWrapper.NVAPIDisplayHelper.html#NVAPIWrapper_NVAPIDisplayHelper_GetScanoutCompositionParameter_NVAPIWrapper_NV_GPU_SCANOUT_COMPOSITION_PARAMETER_
+  name: GetScanoutCompositionParameter
+  nameWithType: NVAPIDisplayHelper.GetScanoutCompositionParameter
+  fullName: NVAPIWrapper.NVAPIDisplayHelper.GetScanoutCompositionParameter
+- uid: NVAPIWrapper.NV_GPU_SCANOUT_COMPOSITION_PARAMETER
+  commentId: T:NVAPIWrapper.NV_GPU_SCANOUT_COMPOSITION_PARAMETER
+  parent: NVAPIWrapper
+  href: NVAPIWrapper.NV_GPU_SCANOUT_COMPOSITION_PARAMETER.html
+  name: NV_GPU_SCANOUT_COMPOSITION_PARAMETER
+  nameWithType: NV_GPU_SCANOUT_COMPOSITION_PARAMETER
+  fullName: NVAPIWrapper.NV_GPU_SCANOUT_COMPOSITION_PARAMETER
+- uid: System.Nullable{NVAPIWrapper.NVAPIGpuScanoutCompositionParameterDto}
+  commentId: T:System.Nullable{NVAPIWrapper.NVAPIGpuScanoutCompositionParameterDto}
+  parent: System
+  definition: System.Nullable`1
+  href: NVAPIWrapper.NVAPIGpuScanoutCompositionParameterDto.html
+  name: NVAPIGpuScanoutCompositionParameterDto?
+  nameWithType: NVAPIGpuScanoutCompositionParameterDto?
+  fullName: NVAPIWrapper.NVAPIGpuScanoutCompositionParameterDto?
+  spec.csharp:
+  - uid: NVAPIWrapper.NVAPIGpuScanoutCompositionParameterDto
+    name: NVAPIGpuScanoutCompositionParameterDto
+    href: NVAPIWrapper.NVAPIGpuScanoutCompositionParameterDto.html
+  - name: '?'
+  spec.vb:
+  - uid: NVAPIWrapper.NVAPIGpuScanoutCompositionParameterDto
+    name: NVAPIGpuScanoutCompositionParameterDto
+    href: NVAPIWrapper.NVAPIGpuScanoutCompositionParameterDto.html
+  - name: '?'
+- uid: NVAPIWrapper.NVAPIDisplayHelper.SetScanoutCompositionParameter*
+  commentId: Overload:NVAPIWrapper.NVAPIDisplayHelper.SetScanoutCompositionParameter
+  href: NVAPIWrapper.NVAPIDisplayHelper.html#NVAPIWrapper_NVAPIDisplayHelper_SetScanoutCompositionParameter_NVAPIWrapper_NVAPIGpuScanoutCompositionParameterDto_
+  name: SetScanoutCompositionParameter
+  nameWithType: NVAPIDisplayHelper.SetScanoutCompositionParameter
+  fullName: NVAPIWrapper.NVAPIDisplayHelper.SetScanoutCompositionParameter
+- uid: NVAPIWrapper.NVAPIGpuScanoutCompositionParameterDto
+  commentId: T:NVAPIWrapper.NVAPIGpuScanoutCompositionParameterDto
+  parent: NVAPIWrapper
+  href: NVAPIWrapper.NVAPIGpuScanoutCompositionParameterDto.html
+  name: NVAPIGpuScanoutCompositionParameterDto
+  nameWithType: NVAPIGpuScanoutCompositionParameterDto
+  fullName: NVAPIWrapper.NVAPIGpuScanoutCompositionParameterDto
+- uid: NVAPIWrapper.NVAPIDisplayHelper.GetScanoutConfiguration*
+  commentId: Overload:NVAPIWrapper.NVAPIDisplayHelper.GetScanoutConfiguration
+  href: NVAPIWrapper.NVAPIDisplayHelper.html#NVAPIWrapper_NVAPIDisplayHelper_GetScanoutConfiguration
+  name: GetScanoutConfiguration
+  nameWithType: NVAPIDisplayHelper.GetScanoutConfiguration
+  fullName: NVAPIWrapper.NVAPIDisplayHelper.GetScanoutConfiguration
+- uid: System.Nullable{NVAPIWrapper.NVAPIGpuScanoutConfigurationDto}
+  commentId: T:System.Nullable{NVAPIWrapper.NVAPIGpuScanoutConfigurationDto}
+  parent: System
+  definition: System.Nullable`1
+  href: NVAPIWrapper.NVAPIGpuScanoutConfigurationDto.html
+  name: NVAPIGpuScanoutConfigurationDto?
+  nameWithType: NVAPIGpuScanoutConfigurationDto?
+  fullName: NVAPIWrapper.NVAPIGpuScanoutConfigurationDto?
+  spec.csharp:
+  - uid: NVAPIWrapper.NVAPIGpuScanoutConfigurationDto
+    name: NVAPIGpuScanoutConfigurationDto
+    href: NVAPIWrapper.NVAPIGpuScanoutConfigurationDto.html
+  - name: '?'
+  spec.vb:
+  - uid: NVAPIWrapper.NVAPIGpuScanoutConfigurationDto
+    name: NVAPIGpuScanoutConfigurationDto
+    href: NVAPIWrapper.NVAPIGpuScanoutConfigurationDto.html
+  - name: '?'
+- uid: NVAPIWrapper.NVAPIDisplayHelper.GetScanoutConfigurationEx*
+  commentId: Overload:NVAPIWrapper.NVAPIDisplayHelper.GetScanoutConfigurationEx
+  href: NVAPIWrapper.NVAPIDisplayHelper.html#NVAPIWrapper_NVAPIDisplayHelper_GetScanoutConfigurationEx
+  name: GetScanoutConfigurationEx
+  nameWithType: NVAPIDisplayHelper.GetScanoutConfigurationEx
+  fullName: NVAPIWrapper.NVAPIDisplayHelper.GetScanoutConfigurationEx
+- uid: System.Nullable{NVAPIWrapper.NVAPIGpuScanoutConfigurationExDto}
+  commentId: T:System.Nullable{NVAPIWrapper.NVAPIGpuScanoutConfigurationExDto}
+  parent: System
+  definition: System.Nullable`1
+  href: NVAPIWrapper.NVAPIGpuScanoutConfigurationExDto.html
+  name: NVAPIGpuScanoutConfigurationExDto?
+  nameWithType: NVAPIGpuScanoutConfigurationExDto?
+  fullName: NVAPIWrapper.NVAPIGpuScanoutConfigurationExDto?
+  spec.csharp:
+  - uid: NVAPIWrapper.NVAPIGpuScanoutConfigurationExDto
+    name: NVAPIGpuScanoutConfigurationExDto
+    href: NVAPIWrapper.NVAPIGpuScanoutConfigurationExDto.html
+  - name: '?'
+  spec.vb:
+  - uid: NVAPIWrapper.NVAPIGpuScanoutConfigurationExDto
+    name: NVAPIGpuScanoutConfigurationExDto
+    href: NVAPIWrapper.NVAPIGpuScanoutConfigurationExDto.html
+  - name: '?'
+- uid: NVAPIWrapper.NVAPIDisplayHelper.GetScanoutIntensityState*
+  commentId: Overload:NVAPIWrapper.NVAPIDisplayHelper.GetScanoutIntensityState
+  href: NVAPIWrapper.NVAPIDisplayHelper.html#NVAPIWrapper_NVAPIDisplayHelper_GetScanoutIntensityState
+  name: GetScanoutIntensityState
+  nameWithType: NVAPIDisplayHelper.GetScanoutIntensityState
+  fullName: NVAPIWrapper.NVAPIDisplayHelper.GetScanoutIntensityState
+- uid: System.Nullable{NVAPIWrapper.NVAPIGpuScanoutIntensityStateDto}
+  commentId: T:System.Nullable{NVAPIWrapper.NVAPIGpuScanoutIntensityStateDto}
+  parent: System
+  definition: System.Nullable`1
+  href: NVAPIWrapper.NVAPIGpuScanoutIntensityStateDto.html
+  name: NVAPIGpuScanoutIntensityStateDto?
+  nameWithType: NVAPIGpuScanoutIntensityStateDto?
+  fullName: NVAPIWrapper.NVAPIGpuScanoutIntensityStateDto?
+  spec.csharp:
+  - uid: NVAPIWrapper.NVAPIGpuScanoutIntensityStateDto
+    name: NVAPIGpuScanoutIntensityStateDto
+    href: NVAPIWrapper.NVAPIGpuScanoutIntensityStateDto.html
+  - name: '?'
+  spec.vb:
+  - uid: NVAPIWrapper.NVAPIGpuScanoutIntensityStateDto
+    name: NVAPIGpuScanoutIntensityStateDto
+    href: NVAPIWrapper.NVAPIGpuScanoutIntensityStateDto.html
+  - name: '?'
+- uid: NVAPIWrapper.NVAPIDisplayHelper.SetScanoutIntensity*
+  commentId: Overload:NVAPIWrapper.NVAPIDisplayHelper.SetScanoutIntensity
+  href: NVAPIWrapper.NVAPIDisplayHelper.html#NVAPIWrapper_NVAPIDisplayHelper_SetScanoutIntensity_NVAPIWrapper_NVAPIGpuScanoutIntensityDataDto_
+  name: SetScanoutIntensity
+  nameWithType: NVAPIDisplayHelper.SetScanoutIntensity
+  fullName: NVAPIWrapper.NVAPIDisplayHelper.SetScanoutIntensity
+- uid: NVAPIWrapper.NVAPIGpuScanoutIntensityDataDto
+  commentId: T:NVAPIWrapper.NVAPIGpuScanoutIntensityDataDto
+  parent: NVAPIWrapper
+  href: NVAPIWrapper.NVAPIGpuScanoutIntensityDataDto.html
+  name: NVAPIGpuScanoutIntensityDataDto
+  nameWithType: NVAPIGpuScanoutIntensityDataDto
+  fullName: NVAPIWrapper.NVAPIGpuScanoutIntensityDataDto
+- uid: System.Nullable{NVAPIWrapper.NVAPIGpuScanoutIntensityResultDto}
+  commentId: T:System.Nullable{NVAPIWrapper.NVAPIGpuScanoutIntensityResultDto}
+  parent: System
+  definition: System.Nullable`1
+  href: NVAPIWrapper.NVAPIGpuScanoutIntensityResultDto.html
+  name: NVAPIGpuScanoutIntensityResultDto?
+  nameWithType: NVAPIGpuScanoutIntensityResultDto?
+  fullName: NVAPIWrapper.NVAPIGpuScanoutIntensityResultDto?
+  spec.csharp:
+  - uid: NVAPIWrapper.NVAPIGpuScanoutIntensityResultDto
+    name: NVAPIGpuScanoutIntensityResultDto
+    href: NVAPIWrapper.NVAPIGpuScanoutIntensityResultDto.html
+  - name: '?'
+  spec.vb:
+  - uid: NVAPIWrapper.NVAPIGpuScanoutIntensityResultDto
+    name: NVAPIGpuScanoutIntensityResultDto
+    href: NVAPIWrapper.NVAPIGpuScanoutIntensityResultDto.html
+  - name: '?'
+- uid: NVAPIWrapper.NVAPIDisplayHelper.GetScanoutWarpingState*
+  commentId: Overload:NVAPIWrapper.NVAPIDisplayHelper.GetScanoutWarpingState
+  href: NVAPIWrapper.NVAPIDisplayHelper.html#NVAPIWrapper_NVAPIDisplayHelper_GetScanoutWarpingState
+  name: GetScanoutWarpingState
+  nameWithType: NVAPIDisplayHelper.GetScanoutWarpingState
+  fullName: NVAPIWrapper.NVAPIDisplayHelper.GetScanoutWarpingState
+- uid: System.Nullable{NVAPIWrapper.NVAPIGpuScanoutWarpingStateDto}
+  commentId: T:System.Nullable{NVAPIWrapper.NVAPIGpuScanoutWarpingStateDto}
+  parent: System
+  definition: System.Nullable`1
+  href: NVAPIWrapper.NVAPIGpuScanoutWarpingStateDto.html
+  name: NVAPIGpuScanoutWarpingStateDto?
+  nameWithType: NVAPIGpuScanoutWarpingStateDto?
+  fullName: NVAPIWrapper.NVAPIGpuScanoutWarpingStateDto?
+  spec.csharp:
+  - uid: NVAPIWrapper.NVAPIGpuScanoutWarpingStateDto
+    name: NVAPIGpuScanoutWarpingStateDto
+    href: NVAPIWrapper.NVAPIGpuScanoutWarpingStateDto.html
+  - name: '?'
+  spec.vb:
+  - uid: NVAPIWrapper.NVAPIGpuScanoutWarpingStateDto
+    name: NVAPIGpuScanoutWarpingStateDto
+    href: NVAPIWrapper.NVAPIGpuScanoutWarpingStateDto.html
+  - name: '?'
+- uid: NVAPIWrapper.NVAPIDisplayHelper.SetScanoutWarping*
+  commentId: Overload:NVAPIWrapper.NVAPIDisplayHelper.SetScanoutWarping
+  href: NVAPIWrapper.NVAPIDisplayHelper.html#NVAPIWrapper_NVAPIDisplayHelper_SetScanoutWarping_NVAPIWrapper_NVAPIGpuScanoutWarpingDataDto_
+  name: SetScanoutWarping
+  nameWithType: NVAPIDisplayHelper.SetScanoutWarping
+  fullName: NVAPIWrapper.NVAPIDisplayHelper.SetScanoutWarping
+- uid: NVAPIWrapper.NVAPIGpuScanoutWarpingDataDto
+  commentId: T:NVAPIWrapper.NVAPIGpuScanoutWarpingDataDto
+  parent: NVAPIWrapper
+  href: NVAPIWrapper.NVAPIGpuScanoutWarpingDataDto.html
+  name: NVAPIGpuScanoutWarpingDataDto
+  nameWithType: NVAPIGpuScanoutWarpingDataDto
+  fullName: NVAPIWrapper.NVAPIGpuScanoutWarpingDataDto
+- uid: System.Nullable{NVAPIWrapper.NVAPIGpuScanoutWarpingResultDto}
+  commentId: T:System.Nullable{NVAPIWrapper.NVAPIGpuScanoutWarpingResultDto}
+  parent: System
+  definition: System.Nullable`1
+  href: NVAPIWrapper.NVAPIGpuScanoutWarpingResultDto.html
+  name: NVAPIGpuScanoutWarpingResultDto?
+  nameWithType: NVAPIGpuScanoutWarpingResultDto?
+  fullName: NVAPIWrapper.NVAPIGpuScanoutWarpingResultDto?
+  spec.csharp:
+  - uid: NVAPIWrapper.NVAPIGpuScanoutWarpingResultDto
+    name: NVAPIGpuScanoutWarpingResultDto
+    href: NVAPIWrapper.NVAPIGpuScanoutWarpingResultDto.html
+  - name: '?'
+  spec.vb:
+  - uid: NVAPIWrapper.NVAPIGpuScanoutWarpingResultDto
+    name: NVAPIGpuScanoutWarpingResultDto
+    href: NVAPIWrapper.NVAPIGpuScanoutWarpingResultDto.html
+  - name: '?'
 - uid: NVAPIWrapper.NVAPIDisplayHelper.Dispose*
   commentId: Overload:NVAPIWrapper.NVAPIDisplayHelper.Dispose
   href: NVAPIWrapper.NVAPIDisplayHelper.html#NVAPIWrapper_NVAPIDisplayHelper_Dispose

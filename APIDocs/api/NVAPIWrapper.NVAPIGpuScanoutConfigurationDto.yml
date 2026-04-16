@@ -23,12 +23,12 @@ items:
   type: Struct
   source:
     remote:
-      path: NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
+      path: NVAPIWrapper/NVAPIDisplayHelper.cs
       branch: main
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPIGpuScanoutConfigurationDto
-    path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 4548
+    path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
+    startLine: 5688
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -57,12 +57,12 @@ items:
   type: Property
   source:
     remote:
-      path: NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
+      path: NVAPIWrapper/NVAPIDisplayHelper.cs
       branch: main
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: DesktopRect
-    path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 4550
+    path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
+    startLine: 5690
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -86,12 +86,12 @@ items:
   type: Property
   source:
     remote:
-      path: NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
+      path: NVAPIWrapper/NVAPIDisplayHelper.cs
       branch: main
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: ScanoutRect
-    path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 4551
+    path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
+    startLine: 5691
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -115,12 +115,12 @@ items:
   type: Constructor
   source:
     remote:
-      path: NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
+      path: NVAPIWrapper/NVAPIDisplayHelper.cs
       branch: main
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: .ctor
-    path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 4553
+    path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
+    startLine: 5693
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -149,12 +149,12 @@ items:
   type: Method
   source:
     remote:
-      path: NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
+      path: NVAPIWrapper/NVAPIDisplayHelper.cs
       branch: main
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: FromNative
-    path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 4559
+    path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
+    startLine: 5699
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -182,12 +182,12 @@ items:
   type: Method
   source:
     remote:
-      path: NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
+      path: NVAPIWrapper/NVAPIDisplayHelper.cs
       branch: main
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Equals
-    path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 4566
+    path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
+    startLine: 5706
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -219,12 +219,12 @@ items:
   type: Method
   source:
     remote:
-      path: NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
+      path: NVAPIWrapper/NVAPIDisplayHelper.cs
       branch: main
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Equals
-    path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 4571
+    path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
+    startLine: 5711
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -258,12 +258,12 @@ items:
   type: Method
   source:
     remote:
-      path: NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
+      path: NVAPIWrapper/NVAPIDisplayHelper.cs
       branch: main
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetHashCode
-    path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 4572
+    path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
+    startLine: 5712
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -290,12 +290,12 @@ items:
   type: Operator
   source:
     remote:
-      path: NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
+      path: NVAPIWrapper/NVAPIDisplayHelper.cs
       branch: main
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: op_Equality
-    path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 4573
+    path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
+    startLine: 5713
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -326,12 +326,12 @@ items:
   type: Operator
   source:
     remote:
-      path: NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
+      path: NVAPIWrapper/NVAPIDisplayHelper.cs
       branch: main
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: op_Inequality
-    path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 4574
+    path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
+    startLine: 5714
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper

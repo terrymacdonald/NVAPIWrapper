@@ -52,11 +52,6 @@ items:
   - NVAPIWrapper.NVAPIPhysicalGpuHelper.GetPhysicalFrameBufferSize
   - NVAPIWrapper.NVAPIPhysicalGpuHelper.GetPstates20Info
   - NVAPIWrapper.NVAPIPhysicalGpuHelper.GetRamBusWidth
-  - NVAPIWrapper.NVAPIPhysicalGpuHelper.GetScanoutCompositionParameter(System.UInt32,NVAPIWrapper.NV_GPU_SCANOUT_COMPOSITION_PARAMETER)
-  - NVAPIWrapper.NVAPIPhysicalGpuHelper.GetScanoutConfiguration(System.UInt32)
-  - NVAPIWrapper.NVAPIPhysicalGpuHelper.GetScanoutConfigurationEx(System.UInt32)
-  - NVAPIWrapper.NVAPIPhysicalGpuHelper.GetScanoutIntensityState(System.UInt32)
-  - NVAPIWrapper.NVAPIPhysicalGpuHelper.GetScanoutWarpingState(System.UInt32)
   - NVAPIWrapper.NVAPIPhysicalGpuHelper.GetShaderSubPipeCount
   - NVAPIWrapper.NVAPIPhysicalGpuHelper.GetSystemType
   - NVAPIWrapper.NVAPIPhysicalGpuHelper.GetTachReading
@@ -79,9 +74,6 @@ items:
   - NVAPIWrapper.NVAPIPhysicalGpuHelper.SetIllumination(NVAPIWrapper.NVAPIGpuIlluminationDto)
   - NVAPIWrapper.NVAPIPhysicalGpuHelper.SetIlluminationDevicesControl(NVAPIWrapper.NVAPIGpuIllumDeviceControlParamsDto)
   - NVAPIWrapper.NVAPIPhysicalGpuHelper.SetIlluminationZonesControl(NVAPIWrapper.NVAPIGpuIllumZoneControlParamsDto)
-  - NVAPIWrapper.NVAPIPhysicalGpuHelper.SetScanoutCompositionParameter(System.UInt32,NVAPIWrapper.NVAPIGpuScanoutCompositionParameterDto)
-  - NVAPIWrapper.NVAPIPhysicalGpuHelper.SetScanoutIntensity(System.UInt32,NVAPIWrapper.NVAPIGpuScanoutIntensityDataDto)
-  - NVAPIWrapper.NVAPIPhysicalGpuHelper.SetScanoutWarping(System.UInt32,NVAPIWrapper.NVAPIGpuScanoutWarpingDataDto)
   - NVAPIWrapper.NVAPIPhysicalGpuHelper.ValidateOutputCombination(System.UInt32)
   - NVAPIWrapper.NVAPIPhysicalGpuHelper.WorkstationFeatureQuery
   - NVAPIWrapper.NVAPIPhysicalGpuHelper.WorkstationFeatureSetup(System.UInt32,System.UInt32)
@@ -137,7 +129,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetFullName
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 106
+    startLine: 98
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -168,7 +160,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetBusId
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 131
+    startLine: 123
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -199,7 +191,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetBusType
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 151
+    startLine: 143
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -230,7 +222,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetGpuType
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 171
+    startLine: 163
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -261,7 +253,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetPCIIdentifiers
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 191
+    startLine: 183
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -292,7 +284,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetBusSlotId
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 215
+    startLine: 207
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -323,7 +315,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetVbiosVersionString
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 235
+    startLine: 227
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -354,7 +346,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetPhysicalFrameBufferSize
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 260
+    startLine: 252
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -385,7 +377,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetVirtualFrameBufferSize
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 282
+    startLine: 274
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -416,7 +408,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetTachReading
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 304
+    startLine: 296
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -447,7 +439,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetMemoryInfo
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 324
+    startLine: 316
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -478,7 +470,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetMemoryInfoEx
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 345
+    startLine: 337
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -509,7 +501,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetDisplayIdFromGpuAndOutputId
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 367
+    startLine: 359
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -547,7 +539,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: EnumAllDisplays
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 391
+    startLine: 383
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -578,7 +570,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: EnumConnectedDisplays
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 492
+    startLine: 484
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -609,7 +601,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: EnumActiveDisplays
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 521
+    startLine: 513
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -640,7 +632,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetDisplayConfig
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 550
+    startLine: 542
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -671,7 +663,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SetDisplayConfig
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 590
+    startLine: 582
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -712,7 +704,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetShaderSubPipeCount
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 624
+    startLine: 616
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -743,7 +735,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetGpuCoreCount
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 646
+    startLine: 638
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -774,7 +766,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetSystemType
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 668
+    startLine: 660
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -805,7 +797,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetActiveOutputs
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 690
+    startLine: 682
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -836,7 +828,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetConnectedDisplayIds
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 713
+    startLine: 705
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -874,7 +866,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetAllDisplayIds
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 744
+    startLine: 736
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -905,7 +897,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetPerfDecreaseInfo
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 775
+    startLine: 767
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -936,7 +928,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetCurrentPstate
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 797
+    startLine: 789
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -967,7 +959,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetPstates20Info
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 819
+    startLine: 811
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -998,7 +990,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetDynamicPstatesInfoEx
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 841
+    startLine: 833
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -1029,7 +1021,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetThermalSettings
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 864
+    startLine: 856
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -1067,7 +1059,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetAllClockFrequencies
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 887
+    startLine: 879
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -1102,7 +1094,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: QueryIlluminationSupport
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 910
+    startLine: 902
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -1137,7 +1129,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetIllumination
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 934
+    startLine: 926
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -1172,7 +1164,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SetIllumination
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 958
+    startLine: 950
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -1207,7 +1199,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetIlluminationDevicesInfo
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 989
+    startLine: 981
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -1238,7 +1230,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetIlluminationDevicesControl
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 1011
+    startLine: 1003
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -1269,7 +1261,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SetIlluminationDevicesControl
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 1034
+    startLine: 1026
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -1304,7 +1296,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetIlluminationZonesInfo
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 1064
+    startLine: 1056
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -1335,7 +1327,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetIlluminationZonesControl
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 1086
+    startLine: 1078
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -1366,7 +1358,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SetIlluminationZonesControl
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 1109
+    startLine: 1101
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -1401,7 +1393,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetVirtualizationInfo
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 1139
+    startLine: 1131
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -1432,7 +1424,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetLicensableFeatures
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 1161
+    startLine: 1153
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -1463,7 +1455,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetEncoderStatistics
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 1183
+    startLine: 1175
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -1494,7 +1486,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetEncoderSessionsInfo
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 1205
+    startLine: 1197
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -1525,7 +1517,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetVrReadyData
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 1227
+    startLine: 1219
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -1556,7 +1548,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetGspFeatures
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 1249
+    startLine: 1241
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -1587,7 +1579,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetNvlinkCaps
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 1271
+    startLine: 1263
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -1618,7 +1610,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetNvlinkStatus
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 1293
+    startLine: 1285
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -1649,7 +1641,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetGpuInfo
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 1315
+    startLine: 1307
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -1680,7 +1672,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: I2CRead
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 1338
+    startLine: 1330
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -1715,7 +1707,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: I2CWrite
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 1389
+    startLine: 1381
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -1750,7 +1742,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetArchInfo
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 1426
+    startLine: 1418
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -1781,7 +1773,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetBoardInfo
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 1446
+    startLine: 1438
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -1812,7 +1804,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetVbiosRevision
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 1466
+    startLine: 1458
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -1843,7 +1835,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetVbiosOemRevision
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 1486
+    startLine: 1478
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -1874,7 +1866,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetCurrentPcieDownstreamWidth
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 1506
+    startLine: 1498
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -1905,7 +1897,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetRamBusWidth
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 1528
+    startLine: 1520
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -1936,7 +1928,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetIrq
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 1548
+    startLine: 1540
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -1967,7 +1959,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetOutputType
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 1569
+    startLine: 1561
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -2005,7 +1997,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: ValidateOutputCombination
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 1590
+    startLine: 1582
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -2043,7 +2035,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetEccConfigurationInfo
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 1614
+    startLine: 1606
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -2074,7 +2066,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SetEccConfiguration
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 1638
+    startLine: 1630
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -2115,7 +2107,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetEccErrorInfo
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 1667
+    startLine: 1659
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -2146,7 +2138,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: ResetEccErrorInfo
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 1691
+    startLine: 1683
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -2187,7 +2179,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetHdcpSupportStatus
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 1713
+    startLine: 1705
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -2218,7 +2210,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetEdid
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 1736
+    startLine: 1728
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -2256,7 +2248,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SetEdid
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 1758
+    startLine: 1750
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -2297,7 +2289,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetLogicalGpuInfo
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 1786
+    startLine: 1778
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -2328,7 +2320,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: RegisterForUtilizationSampleUpdates
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 1822
+    startLine: 1814
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -2345,322 +2337,6 @@ items:
       description: True if registered, false if unavailable.
     content.vb: Public Function RegisterForUtilizationSampleUpdates(settings As NVAPIGpuUtilizationSampleCallbackSettingsDto) As Boolean
   overload: NVAPIWrapper.NVAPIPhysicalGpuHelper.RegisterForUtilizationSampleUpdates*
-- uid: NVAPIWrapper.NVAPIPhysicalGpuHelper.GetScanoutCompositionParameter(System.UInt32,NVAPIWrapper.NV_GPU_SCANOUT_COMPOSITION_PARAMETER)
-  commentId: M:NVAPIWrapper.NVAPIPhysicalGpuHelper.GetScanoutCompositionParameter(System.UInt32,NVAPIWrapper.NV_GPU_SCANOUT_COMPOSITION_PARAMETER)
-  id: GetScanoutCompositionParameter(System.UInt32,NVAPIWrapper.NV_GPU_SCANOUT_COMPOSITION_PARAMETER)
-  parent: NVAPIWrapper.NVAPIPhysicalGpuHelper
-  langs:
-  - csharp
-  - vb
-  name: GetScanoutCompositionParameter(uint, NV_GPU_SCANOUT_COMPOSITION_PARAMETER)
-  nameWithType: NVAPIPhysicalGpuHelper.GetScanoutCompositionParameter(uint, NV_GPU_SCANOUT_COMPOSITION_PARAMETER)
-  fullName: NVAPIWrapper.NVAPIPhysicalGpuHelper.GetScanoutCompositionParameter(uint, NVAPIWrapper.NV_GPU_SCANOUT_COMPOSITION_PARAMETER)
-  type: Method
-  source:
-    remote:
-      path: NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-      branch: main
-      repo: https://github.com/terrymacdonald/NVAPIWrapper.git
-    id: GetScanoutCompositionParameter
-    path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 1848
-  assemblies:
-  - NVAPIWrapper
-  namespace: NVAPIWrapper
-  summary: Get scanout composition parameter.
-  example: []
-  syntax:
-    content: public NVAPIGpuScanoutCompositionParameterDto? GetScanoutCompositionParameter(uint displayId, NV_GPU_SCANOUT_COMPOSITION_PARAMETER parameter)
-    parameters:
-    - id: displayId
-      type: System.UInt32
-      description: Display ID.
-    - id: parameter
-      type: NVAPIWrapper.NV_GPU_SCANOUT_COMPOSITION_PARAMETER
-      description: Parameter to query.
-    return:
-      type: System.Nullable{NVAPIWrapper.NVAPIGpuScanoutCompositionParameterDto}
-      description: Scanout composition parameter DTO, or null if unavailable.
-    content.vb: Public Function GetScanoutCompositionParameter(displayId As UInteger, parameter As NV_GPU_SCANOUT_COMPOSITION_PARAMETER) As NVAPIGpuScanoutCompositionParameterDto?
-  overload: NVAPIWrapper.NVAPIPhysicalGpuHelper.GetScanoutCompositionParameter*
-  nameWithType.vb: NVAPIPhysicalGpuHelper.GetScanoutCompositionParameter(UInteger, NV_GPU_SCANOUT_COMPOSITION_PARAMETER)
-  fullName.vb: NVAPIWrapper.NVAPIPhysicalGpuHelper.GetScanoutCompositionParameter(UInteger, NVAPIWrapper.NV_GPU_SCANOUT_COMPOSITION_PARAMETER)
-  name.vb: GetScanoutCompositionParameter(UInteger, NV_GPU_SCANOUT_COMPOSITION_PARAMETER)
-- uid: NVAPIWrapper.NVAPIPhysicalGpuHelper.SetScanoutCompositionParameter(System.UInt32,NVAPIWrapper.NVAPIGpuScanoutCompositionParameterDto)
-  commentId: M:NVAPIWrapper.NVAPIPhysicalGpuHelper.SetScanoutCompositionParameter(System.UInt32,NVAPIWrapper.NVAPIGpuScanoutCompositionParameterDto)
-  id: SetScanoutCompositionParameter(System.UInt32,NVAPIWrapper.NVAPIGpuScanoutCompositionParameterDto)
-  parent: NVAPIWrapper.NVAPIPhysicalGpuHelper
-  langs:
-  - csharp
-  - vb
-  name: SetScanoutCompositionParameter(uint, NVAPIGpuScanoutCompositionParameterDto)
-  nameWithType: NVAPIPhysicalGpuHelper.SetScanoutCompositionParameter(uint, NVAPIGpuScanoutCompositionParameterDto)
-  fullName: NVAPIWrapper.NVAPIPhysicalGpuHelper.SetScanoutCompositionParameter(uint, NVAPIWrapper.NVAPIGpuScanoutCompositionParameterDto)
-  type: Method
-  source:
-    remote:
-      path: NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-      branch: main
-      repo: https://github.com/terrymacdonald/NVAPIWrapper.git
-    id: SetScanoutCompositionParameter
-    path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 1875
-  assemblies:
-  - NVAPIWrapper
-  namespace: NVAPIWrapper
-  summary: Set scanout composition parameter.
-  example: []
-  syntax:
-    content: public bool SetScanoutCompositionParameter(uint displayId, NVAPIGpuScanoutCompositionParameterDto parameter)
-    parameters:
-    - id: displayId
-      type: System.UInt32
-      description: Display ID.
-    - id: parameter
-      type: NVAPIWrapper.NVAPIGpuScanoutCompositionParameterDto
-      description: Parameter settings.
-    return:
-      type: System.Boolean
-      description: True if applied or unchanged, false if unavailable.
-    content.vb: Public Function SetScanoutCompositionParameter(displayId As UInteger, parameter As NVAPIGpuScanoutCompositionParameterDto) As Boolean
-  overload: NVAPIWrapper.NVAPIPhysicalGpuHelper.SetScanoutCompositionParameter*
-  nameWithType.vb: NVAPIPhysicalGpuHelper.SetScanoutCompositionParameter(UInteger, NVAPIGpuScanoutCompositionParameterDto)
-  fullName.vb: NVAPIWrapper.NVAPIPhysicalGpuHelper.SetScanoutCompositionParameter(UInteger, NVAPIWrapper.NVAPIGpuScanoutCompositionParameterDto)
-  name.vb: SetScanoutCompositionParameter(UInteger, NVAPIGpuScanoutCompositionParameterDto)
-- uid: NVAPIWrapper.NVAPIPhysicalGpuHelper.GetScanoutConfiguration(System.UInt32)
-  commentId: M:NVAPIWrapper.NVAPIPhysicalGpuHelper.GetScanoutConfiguration(System.UInt32)
-  id: GetScanoutConfiguration(System.UInt32)
-  parent: NVAPIWrapper.NVAPIPhysicalGpuHelper
-  langs:
-  - csharp
-  - vb
-  name: GetScanoutConfiguration(uint)
-  nameWithType: NVAPIPhysicalGpuHelper.GetScanoutConfiguration(uint)
-  fullName: NVAPIWrapper.NVAPIPhysicalGpuHelper.GetScanoutConfiguration(uint)
-  type: Method
-  source:
-    remote:
-      path: NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-      branch: main
-      repo: https://github.com/terrymacdonald/NVAPIWrapper.git
-    id: GetScanoutConfiguration
-    path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 1906
-  assemblies:
-  - NVAPIWrapper
-  namespace: NVAPIWrapper
-  summary: Get scanout configuration.
-  example: []
-  syntax:
-    content: public NVAPIGpuScanoutConfigurationDto? GetScanoutConfiguration(uint displayId)
-    parameters:
-    - id: displayId
-      type: System.UInt32
-      description: Display ID.
-    return:
-      type: System.Nullable{NVAPIWrapper.NVAPIGpuScanoutConfigurationDto}
-      description: Scanout configuration DTO, or null if unavailable.
-    content.vb: Public Function GetScanoutConfiguration(displayId As UInteger) As NVAPIGpuScanoutConfigurationDto?
-  overload: NVAPIWrapper.NVAPIPhysicalGpuHelper.GetScanoutConfiguration*
-  nameWithType.vb: NVAPIPhysicalGpuHelper.GetScanoutConfiguration(UInteger)
-  fullName.vb: NVAPIWrapper.NVAPIPhysicalGpuHelper.GetScanoutConfiguration(UInteger)
-  name.vb: GetScanoutConfiguration(UInteger)
-- uid: NVAPIWrapper.NVAPIPhysicalGpuHelper.GetScanoutConfigurationEx(System.UInt32)
-  commentId: M:NVAPIWrapper.NVAPIPhysicalGpuHelper.GetScanoutConfigurationEx(System.UInt32)
-  id: GetScanoutConfigurationEx(System.UInt32)
-  parent: NVAPIWrapper.NVAPIPhysicalGpuHelper
-  langs:
-  - csharp
-  - vb
-  name: GetScanoutConfigurationEx(uint)
-  nameWithType: NVAPIPhysicalGpuHelper.GetScanoutConfigurationEx(uint)
-  fullName: NVAPIWrapper.NVAPIPhysicalGpuHelper.GetScanoutConfigurationEx(uint)
-  type: Method
-  source:
-    remote:
-      path: NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-      branch: main
-      repo: https://github.com/terrymacdonald/NVAPIWrapper.git
-    id: GetScanoutConfigurationEx
-    path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 1930
-  assemblies:
-  - NVAPIWrapper
-  namespace: NVAPIWrapper
-  summary: Get extended scanout configuration.
-  example: []
-  syntax:
-    content: public NVAPIGpuScanoutConfigurationExDto? GetScanoutConfigurationEx(uint displayId)
-    parameters:
-    - id: displayId
-      type: System.UInt32
-      description: Display ID.
-    return:
-      type: System.Nullable{NVAPIWrapper.NVAPIGpuScanoutConfigurationExDto}
-      description: Scanout configuration DTO, or null if unavailable.
-    content.vb: Public Function GetScanoutConfigurationEx(displayId As UInteger) As NVAPIGpuScanoutConfigurationExDto?
-  overload: NVAPIWrapper.NVAPIPhysicalGpuHelper.GetScanoutConfigurationEx*
-  nameWithType.vb: NVAPIPhysicalGpuHelper.GetScanoutConfigurationEx(UInteger)
-  fullName.vb: NVAPIWrapper.NVAPIPhysicalGpuHelper.GetScanoutConfigurationEx(UInteger)
-  name.vb: GetScanoutConfigurationEx(UInteger)
-- uid: NVAPIWrapper.NVAPIPhysicalGpuHelper.GetScanoutIntensityState(System.UInt32)
-  commentId: M:NVAPIWrapper.NVAPIPhysicalGpuHelper.GetScanoutIntensityState(System.UInt32)
-  id: GetScanoutIntensityState(System.UInt32)
-  parent: NVAPIWrapper.NVAPIPhysicalGpuHelper
-  langs:
-  - csharp
-  - vb
-  name: GetScanoutIntensityState(uint)
-  nameWithType: NVAPIPhysicalGpuHelper.GetScanoutIntensityState(uint)
-  fullName: NVAPIWrapper.NVAPIPhysicalGpuHelper.GetScanoutIntensityState(uint)
-  type: Method
-  source:
-    remote:
-      path: NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-      branch: main
-      repo: https://github.com/terrymacdonald/NVAPIWrapper.git
-    id: GetScanoutIntensityState
-    path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 1953
-  assemblies:
-  - NVAPIWrapper
-  namespace: NVAPIWrapper
-  summary: Get scanout intensity state.
-  example: []
-  syntax:
-    content: public NVAPIGpuScanoutIntensityStateDto? GetScanoutIntensityState(uint displayId)
-    parameters:
-    - id: displayId
-      type: System.UInt32
-      description: Display ID.
-    return:
-      type: System.Nullable{NVAPIWrapper.NVAPIGpuScanoutIntensityStateDto}
-      description: Scanout intensity state DTO, or null if unavailable.
-    content.vb: Public Function GetScanoutIntensityState(displayId As UInteger) As NVAPIGpuScanoutIntensityStateDto?
-  overload: NVAPIWrapper.NVAPIPhysicalGpuHelper.GetScanoutIntensityState*
-  nameWithType.vb: NVAPIPhysicalGpuHelper.GetScanoutIntensityState(UInteger)
-  fullName.vb: NVAPIWrapper.NVAPIPhysicalGpuHelper.GetScanoutIntensityState(UInteger)
-  name.vb: GetScanoutIntensityState(UInteger)
-- uid: NVAPIWrapper.NVAPIPhysicalGpuHelper.SetScanoutIntensity(System.UInt32,NVAPIWrapper.NVAPIGpuScanoutIntensityDataDto)
-  commentId: M:NVAPIWrapper.NVAPIPhysicalGpuHelper.SetScanoutIntensity(System.UInt32,NVAPIWrapper.NVAPIGpuScanoutIntensityDataDto)
-  id: SetScanoutIntensity(System.UInt32,NVAPIWrapper.NVAPIGpuScanoutIntensityDataDto)
-  parent: NVAPIWrapper.NVAPIPhysicalGpuHelper
-  langs:
-  - csharp
-  - vb
-  name: SetScanoutIntensity(uint, NVAPIGpuScanoutIntensityDataDto)
-  nameWithType: NVAPIPhysicalGpuHelper.SetScanoutIntensity(uint, NVAPIGpuScanoutIntensityDataDto)
-  fullName: NVAPIWrapper.NVAPIPhysicalGpuHelper.SetScanoutIntensity(uint, NVAPIWrapper.NVAPIGpuScanoutIntensityDataDto)
-  type: Method
-  source:
-    remote:
-      path: NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-      branch: main
-      repo: https://github.com/terrymacdonald/NVAPIWrapper.git
-    id: SetScanoutIntensity
-    path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 1977
-  assemblies:
-  - NVAPIWrapper
-  namespace: NVAPIWrapper
-  summary: Set scanout intensity.
-  example: []
-  syntax:
-    content: public NVAPIGpuScanoutIntensityResultDto? SetScanoutIntensity(uint displayId, NVAPIGpuScanoutIntensityDataDto data)
-    parameters:
-    - id: displayId
-      type: System.UInt32
-      description: Display ID.
-    - id: data
-      type: NVAPIWrapper.NVAPIGpuScanoutIntensityDataDto
-      description: Scanout intensity data.
-    return:
-      type: System.Nullable{NVAPIWrapper.NVAPIGpuScanoutIntensityResultDto}
-      description: Result DTO, or null if unavailable.
-    content.vb: Public Function SetScanoutIntensity(displayId As UInteger, data As NVAPIGpuScanoutIntensityDataDto) As NVAPIGpuScanoutIntensityResultDto?
-  overload: NVAPIWrapper.NVAPIPhysicalGpuHelper.SetScanoutIntensity*
-  nameWithType.vb: NVAPIPhysicalGpuHelper.SetScanoutIntensity(UInteger, NVAPIGpuScanoutIntensityDataDto)
-  fullName.vb: NVAPIWrapper.NVAPIPhysicalGpuHelper.SetScanoutIntensity(UInteger, NVAPIWrapper.NVAPIGpuScanoutIntensityDataDto)
-  name.vb: SetScanoutIntensity(UInteger, NVAPIGpuScanoutIntensityDataDto)
-- uid: NVAPIWrapper.NVAPIPhysicalGpuHelper.GetScanoutWarpingState(System.UInt32)
-  commentId: M:NVAPIWrapper.NVAPIPhysicalGpuHelper.GetScanoutWarpingState(System.UInt32)
-  id: GetScanoutWarpingState(System.UInt32)
-  parent: NVAPIWrapper.NVAPIPhysicalGpuHelper
-  langs:
-  - csharp
-  - vb
-  name: GetScanoutWarpingState(uint)
-  nameWithType: NVAPIPhysicalGpuHelper.GetScanoutWarpingState(uint)
-  fullName: NVAPIWrapper.NVAPIPhysicalGpuHelper.GetScanoutWarpingState(uint)
-  type: Method
-  source:
-    remote:
-      path: NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-      branch: main
-      repo: https://github.com/terrymacdonald/NVAPIWrapper.git
-    id: GetScanoutWarpingState
-    path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 2011
-  assemblies:
-  - NVAPIWrapper
-  namespace: NVAPIWrapper
-  summary: Get scanout warping state.
-  example: []
-  syntax:
-    content: public NVAPIGpuScanoutWarpingStateDto? GetScanoutWarpingState(uint displayId)
-    parameters:
-    - id: displayId
-      type: System.UInt32
-      description: Display ID.
-    return:
-      type: System.Nullable{NVAPIWrapper.NVAPIGpuScanoutWarpingStateDto}
-      description: Scanout warping state DTO, or null if unavailable.
-    content.vb: Public Function GetScanoutWarpingState(displayId As UInteger) As NVAPIGpuScanoutWarpingStateDto?
-  overload: NVAPIWrapper.NVAPIPhysicalGpuHelper.GetScanoutWarpingState*
-  nameWithType.vb: NVAPIPhysicalGpuHelper.GetScanoutWarpingState(UInteger)
-  fullName.vb: NVAPIWrapper.NVAPIPhysicalGpuHelper.GetScanoutWarpingState(UInteger)
-  name.vb: GetScanoutWarpingState(UInteger)
-- uid: NVAPIWrapper.NVAPIPhysicalGpuHelper.SetScanoutWarping(System.UInt32,NVAPIWrapper.NVAPIGpuScanoutWarpingDataDto)
-  commentId: M:NVAPIWrapper.NVAPIPhysicalGpuHelper.SetScanoutWarping(System.UInt32,NVAPIWrapper.NVAPIGpuScanoutWarpingDataDto)
-  id: SetScanoutWarping(System.UInt32,NVAPIWrapper.NVAPIGpuScanoutWarpingDataDto)
-  parent: NVAPIWrapper.NVAPIPhysicalGpuHelper
-  langs:
-  - csharp
-  - vb
-  name: SetScanoutWarping(uint, NVAPIGpuScanoutWarpingDataDto)
-  nameWithType: NVAPIPhysicalGpuHelper.SetScanoutWarping(uint, NVAPIGpuScanoutWarpingDataDto)
-  fullName: NVAPIWrapper.NVAPIPhysicalGpuHelper.SetScanoutWarping(uint, NVAPIWrapper.NVAPIGpuScanoutWarpingDataDto)
-  type: Method
-  source:
-    remote:
-      path: NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-      branch: main
-      repo: https://github.com/terrymacdonald/NVAPIWrapper.git
-    id: SetScanoutWarping
-    path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 2035
-  assemblies:
-  - NVAPIWrapper
-  namespace: NVAPIWrapper
-  summary: Set scanout warping.
-  example: []
-  syntax:
-    content: public NVAPIGpuScanoutWarpingResultDto? SetScanoutWarping(uint displayId, NVAPIGpuScanoutWarpingDataDto data)
-    parameters:
-    - id: displayId
-      type: System.UInt32
-      description: Display ID.
-    - id: data
-      type: NVAPIWrapper.NVAPIGpuScanoutWarpingDataDto
-      description: Scanout warping data.
-    return:
-      type: System.Nullable{NVAPIWrapper.NVAPIGpuScanoutWarpingResultDto}
-      description: Result DTO, or null if unavailable.
-    content.vb: Public Function SetScanoutWarping(displayId As UInteger, data As NVAPIGpuScanoutWarpingDataDto) As NVAPIGpuScanoutWarpingResultDto?
-  overload: NVAPIWrapper.NVAPIPhysicalGpuHelper.SetScanoutWarping*
-  nameWithType.vb: NVAPIPhysicalGpuHelper.SetScanoutWarping(UInteger, NVAPIGpuScanoutWarpingDataDto)
-  fullName.vb: NVAPIWrapper.NVAPIPhysicalGpuHelper.SetScanoutWarping(UInteger, NVAPIWrapper.NVAPIGpuScanoutWarpingDataDto)
-  name.vb: SetScanoutWarping(UInteger, NVAPIGpuScanoutWarpingDataDto)
 - uid: NVAPIWrapper.NVAPIPhysicalGpuHelper.QueryWorkstationFeatureSupport(NVAPIWrapper._NV_GPU_WORKSTATION_FEATURE_TYPE)
   commentId: M:NVAPIWrapper.NVAPIPhysicalGpuHelper.QueryWorkstationFeatureSupport(NVAPIWrapper._NV_GPU_WORKSTATION_FEATURE_TYPE)
   id: QueryWorkstationFeatureSupport(NVAPIWrapper._NV_GPU_WORKSTATION_FEATURE_TYPE)
@@ -2679,7 +2355,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: QueryWorkstationFeatureSupport
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 2085
+    startLine: 1839
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -2714,7 +2390,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: WorkstationFeatureQuery
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 2111
+    startLine: 1865
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -2745,7 +2421,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: WorkstationFeatureSetup
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 2139
+    startLine: 1893
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -2786,7 +2462,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Dispose
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 2413
+    startLine: 2152
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -4312,208 +3988,6 @@ references:
   name: NVAPIGpuUtilizationSampleCallbackSettingsDto
   nameWithType: NVAPIGpuUtilizationSampleCallbackSettingsDto
   fullName: NVAPIWrapper.NVAPIGpuUtilizationSampleCallbackSettingsDto
-- uid: NVAPIWrapper.NVAPIPhysicalGpuHelper.GetScanoutCompositionParameter*
-  commentId: Overload:NVAPIWrapper.NVAPIPhysicalGpuHelper.GetScanoutCompositionParameter
-  href: NVAPIWrapper.NVAPIPhysicalGpuHelper.html#NVAPIWrapper_NVAPIPhysicalGpuHelper_GetScanoutCompositionParameter_System_UInt32_NVAPIWrapper_NV_GPU_SCANOUT_COMPOSITION_PARAMETER_
-  name: GetScanoutCompositionParameter
-  nameWithType: NVAPIPhysicalGpuHelper.GetScanoutCompositionParameter
-  fullName: NVAPIWrapper.NVAPIPhysicalGpuHelper.GetScanoutCompositionParameter
-- uid: NVAPIWrapper.NV_GPU_SCANOUT_COMPOSITION_PARAMETER
-  commentId: T:NVAPIWrapper.NV_GPU_SCANOUT_COMPOSITION_PARAMETER
-  parent: NVAPIWrapper
-  href: NVAPIWrapper.NV_GPU_SCANOUT_COMPOSITION_PARAMETER.html
-  name: NV_GPU_SCANOUT_COMPOSITION_PARAMETER
-  nameWithType: NV_GPU_SCANOUT_COMPOSITION_PARAMETER
-  fullName: NVAPIWrapper.NV_GPU_SCANOUT_COMPOSITION_PARAMETER
-- uid: System.Nullable{NVAPIWrapper.NVAPIGpuScanoutCompositionParameterDto}
-  commentId: T:System.Nullable{NVAPIWrapper.NVAPIGpuScanoutCompositionParameterDto}
-  parent: System
-  definition: System.Nullable`1
-  href: NVAPIWrapper.NVAPIGpuScanoutCompositionParameterDto.html
-  name: NVAPIGpuScanoutCompositionParameterDto?
-  nameWithType: NVAPIGpuScanoutCompositionParameterDto?
-  fullName: NVAPIWrapper.NVAPIGpuScanoutCompositionParameterDto?
-  spec.csharp:
-  - uid: NVAPIWrapper.NVAPIGpuScanoutCompositionParameterDto
-    name: NVAPIGpuScanoutCompositionParameterDto
-    href: NVAPIWrapper.NVAPIGpuScanoutCompositionParameterDto.html
-  - name: '?'
-  spec.vb:
-  - uid: NVAPIWrapper.NVAPIGpuScanoutCompositionParameterDto
-    name: NVAPIGpuScanoutCompositionParameterDto
-    href: NVAPIWrapper.NVAPIGpuScanoutCompositionParameterDto.html
-  - name: '?'
-- uid: NVAPIWrapper.NVAPIPhysicalGpuHelper.SetScanoutCompositionParameter*
-  commentId: Overload:NVAPIWrapper.NVAPIPhysicalGpuHelper.SetScanoutCompositionParameter
-  href: NVAPIWrapper.NVAPIPhysicalGpuHelper.html#NVAPIWrapper_NVAPIPhysicalGpuHelper_SetScanoutCompositionParameter_System_UInt32_NVAPIWrapper_NVAPIGpuScanoutCompositionParameterDto_
-  name: SetScanoutCompositionParameter
-  nameWithType: NVAPIPhysicalGpuHelper.SetScanoutCompositionParameter
-  fullName: NVAPIWrapper.NVAPIPhysicalGpuHelper.SetScanoutCompositionParameter
-- uid: NVAPIWrapper.NVAPIGpuScanoutCompositionParameterDto
-  commentId: T:NVAPIWrapper.NVAPIGpuScanoutCompositionParameterDto
-  parent: NVAPIWrapper
-  href: NVAPIWrapper.NVAPIGpuScanoutCompositionParameterDto.html
-  name: NVAPIGpuScanoutCompositionParameterDto
-  nameWithType: NVAPIGpuScanoutCompositionParameterDto
-  fullName: NVAPIWrapper.NVAPIGpuScanoutCompositionParameterDto
-- uid: NVAPIWrapper.NVAPIPhysicalGpuHelper.GetScanoutConfiguration*
-  commentId: Overload:NVAPIWrapper.NVAPIPhysicalGpuHelper.GetScanoutConfiguration
-  href: NVAPIWrapper.NVAPIPhysicalGpuHelper.html#NVAPIWrapper_NVAPIPhysicalGpuHelper_GetScanoutConfiguration_System_UInt32_
-  name: GetScanoutConfiguration
-  nameWithType: NVAPIPhysicalGpuHelper.GetScanoutConfiguration
-  fullName: NVAPIWrapper.NVAPIPhysicalGpuHelper.GetScanoutConfiguration
-- uid: System.Nullable{NVAPIWrapper.NVAPIGpuScanoutConfigurationDto}
-  commentId: T:System.Nullable{NVAPIWrapper.NVAPIGpuScanoutConfigurationDto}
-  parent: System
-  definition: System.Nullable`1
-  href: NVAPIWrapper.NVAPIGpuScanoutConfigurationDto.html
-  name: NVAPIGpuScanoutConfigurationDto?
-  nameWithType: NVAPIGpuScanoutConfigurationDto?
-  fullName: NVAPIWrapper.NVAPIGpuScanoutConfigurationDto?
-  spec.csharp:
-  - uid: NVAPIWrapper.NVAPIGpuScanoutConfigurationDto
-    name: NVAPIGpuScanoutConfigurationDto
-    href: NVAPIWrapper.NVAPIGpuScanoutConfigurationDto.html
-  - name: '?'
-  spec.vb:
-  - uid: NVAPIWrapper.NVAPIGpuScanoutConfigurationDto
-    name: NVAPIGpuScanoutConfigurationDto
-    href: NVAPIWrapper.NVAPIGpuScanoutConfigurationDto.html
-  - name: '?'
-- uid: NVAPIWrapper.NVAPIPhysicalGpuHelper.GetScanoutConfigurationEx*
-  commentId: Overload:NVAPIWrapper.NVAPIPhysicalGpuHelper.GetScanoutConfigurationEx
-  href: NVAPIWrapper.NVAPIPhysicalGpuHelper.html#NVAPIWrapper_NVAPIPhysicalGpuHelper_GetScanoutConfigurationEx_System_UInt32_
-  name: GetScanoutConfigurationEx
-  nameWithType: NVAPIPhysicalGpuHelper.GetScanoutConfigurationEx
-  fullName: NVAPIWrapper.NVAPIPhysicalGpuHelper.GetScanoutConfigurationEx
-- uid: System.Nullable{NVAPIWrapper.NVAPIGpuScanoutConfigurationExDto}
-  commentId: T:System.Nullable{NVAPIWrapper.NVAPIGpuScanoutConfigurationExDto}
-  parent: System
-  definition: System.Nullable`1
-  href: NVAPIWrapper.NVAPIGpuScanoutConfigurationExDto.html
-  name: NVAPIGpuScanoutConfigurationExDto?
-  nameWithType: NVAPIGpuScanoutConfigurationExDto?
-  fullName: NVAPIWrapper.NVAPIGpuScanoutConfigurationExDto?
-  spec.csharp:
-  - uid: NVAPIWrapper.NVAPIGpuScanoutConfigurationExDto
-    name: NVAPIGpuScanoutConfigurationExDto
-    href: NVAPIWrapper.NVAPIGpuScanoutConfigurationExDto.html
-  - name: '?'
-  spec.vb:
-  - uid: NVAPIWrapper.NVAPIGpuScanoutConfigurationExDto
-    name: NVAPIGpuScanoutConfigurationExDto
-    href: NVAPIWrapper.NVAPIGpuScanoutConfigurationExDto.html
-  - name: '?'
-- uid: NVAPIWrapper.NVAPIPhysicalGpuHelper.GetScanoutIntensityState*
-  commentId: Overload:NVAPIWrapper.NVAPIPhysicalGpuHelper.GetScanoutIntensityState
-  href: NVAPIWrapper.NVAPIPhysicalGpuHelper.html#NVAPIWrapper_NVAPIPhysicalGpuHelper_GetScanoutIntensityState_System_UInt32_
-  name: GetScanoutIntensityState
-  nameWithType: NVAPIPhysicalGpuHelper.GetScanoutIntensityState
-  fullName: NVAPIWrapper.NVAPIPhysicalGpuHelper.GetScanoutIntensityState
-- uid: System.Nullable{NVAPIWrapper.NVAPIGpuScanoutIntensityStateDto}
-  commentId: T:System.Nullable{NVAPIWrapper.NVAPIGpuScanoutIntensityStateDto}
-  parent: System
-  definition: System.Nullable`1
-  href: NVAPIWrapper.NVAPIGpuScanoutIntensityStateDto.html
-  name: NVAPIGpuScanoutIntensityStateDto?
-  nameWithType: NVAPIGpuScanoutIntensityStateDto?
-  fullName: NVAPIWrapper.NVAPIGpuScanoutIntensityStateDto?
-  spec.csharp:
-  - uid: NVAPIWrapper.NVAPIGpuScanoutIntensityStateDto
-    name: NVAPIGpuScanoutIntensityStateDto
-    href: NVAPIWrapper.NVAPIGpuScanoutIntensityStateDto.html
-  - name: '?'
-  spec.vb:
-  - uid: NVAPIWrapper.NVAPIGpuScanoutIntensityStateDto
-    name: NVAPIGpuScanoutIntensityStateDto
-    href: NVAPIWrapper.NVAPIGpuScanoutIntensityStateDto.html
-  - name: '?'
-- uid: NVAPIWrapper.NVAPIPhysicalGpuHelper.SetScanoutIntensity*
-  commentId: Overload:NVAPIWrapper.NVAPIPhysicalGpuHelper.SetScanoutIntensity
-  href: NVAPIWrapper.NVAPIPhysicalGpuHelper.html#NVAPIWrapper_NVAPIPhysicalGpuHelper_SetScanoutIntensity_System_UInt32_NVAPIWrapper_NVAPIGpuScanoutIntensityDataDto_
-  name: SetScanoutIntensity
-  nameWithType: NVAPIPhysicalGpuHelper.SetScanoutIntensity
-  fullName: NVAPIWrapper.NVAPIPhysicalGpuHelper.SetScanoutIntensity
-- uid: NVAPIWrapper.NVAPIGpuScanoutIntensityDataDto
-  commentId: T:NVAPIWrapper.NVAPIGpuScanoutIntensityDataDto
-  parent: NVAPIWrapper
-  href: NVAPIWrapper.NVAPIGpuScanoutIntensityDataDto.html
-  name: NVAPIGpuScanoutIntensityDataDto
-  nameWithType: NVAPIGpuScanoutIntensityDataDto
-  fullName: NVAPIWrapper.NVAPIGpuScanoutIntensityDataDto
-- uid: System.Nullable{NVAPIWrapper.NVAPIGpuScanoutIntensityResultDto}
-  commentId: T:System.Nullable{NVAPIWrapper.NVAPIGpuScanoutIntensityResultDto}
-  parent: System
-  definition: System.Nullable`1
-  href: NVAPIWrapper.NVAPIGpuScanoutIntensityResultDto.html
-  name: NVAPIGpuScanoutIntensityResultDto?
-  nameWithType: NVAPIGpuScanoutIntensityResultDto?
-  fullName: NVAPIWrapper.NVAPIGpuScanoutIntensityResultDto?
-  spec.csharp:
-  - uid: NVAPIWrapper.NVAPIGpuScanoutIntensityResultDto
-    name: NVAPIGpuScanoutIntensityResultDto
-    href: NVAPIWrapper.NVAPIGpuScanoutIntensityResultDto.html
-  - name: '?'
-  spec.vb:
-  - uid: NVAPIWrapper.NVAPIGpuScanoutIntensityResultDto
-    name: NVAPIGpuScanoutIntensityResultDto
-    href: NVAPIWrapper.NVAPIGpuScanoutIntensityResultDto.html
-  - name: '?'
-- uid: NVAPIWrapper.NVAPIPhysicalGpuHelper.GetScanoutWarpingState*
-  commentId: Overload:NVAPIWrapper.NVAPIPhysicalGpuHelper.GetScanoutWarpingState
-  href: NVAPIWrapper.NVAPIPhysicalGpuHelper.html#NVAPIWrapper_NVAPIPhysicalGpuHelper_GetScanoutWarpingState_System_UInt32_
-  name: GetScanoutWarpingState
-  nameWithType: NVAPIPhysicalGpuHelper.GetScanoutWarpingState
-  fullName: NVAPIWrapper.NVAPIPhysicalGpuHelper.GetScanoutWarpingState
-- uid: System.Nullable{NVAPIWrapper.NVAPIGpuScanoutWarpingStateDto}
-  commentId: T:System.Nullable{NVAPIWrapper.NVAPIGpuScanoutWarpingStateDto}
-  parent: System
-  definition: System.Nullable`1
-  href: NVAPIWrapper.NVAPIGpuScanoutWarpingStateDto.html
-  name: NVAPIGpuScanoutWarpingStateDto?
-  nameWithType: NVAPIGpuScanoutWarpingStateDto?
-  fullName: NVAPIWrapper.NVAPIGpuScanoutWarpingStateDto?
-  spec.csharp:
-  - uid: NVAPIWrapper.NVAPIGpuScanoutWarpingStateDto
-    name: NVAPIGpuScanoutWarpingStateDto
-    href: NVAPIWrapper.NVAPIGpuScanoutWarpingStateDto.html
-  - name: '?'
-  spec.vb:
-  - uid: NVAPIWrapper.NVAPIGpuScanoutWarpingStateDto
-    name: NVAPIGpuScanoutWarpingStateDto
-    href: NVAPIWrapper.NVAPIGpuScanoutWarpingStateDto.html
-  - name: '?'
-- uid: NVAPIWrapper.NVAPIPhysicalGpuHelper.SetScanoutWarping*
-  commentId: Overload:NVAPIWrapper.NVAPIPhysicalGpuHelper.SetScanoutWarping
-  href: NVAPIWrapper.NVAPIPhysicalGpuHelper.html#NVAPIWrapper_NVAPIPhysicalGpuHelper_SetScanoutWarping_System_UInt32_NVAPIWrapper_NVAPIGpuScanoutWarpingDataDto_
-  name: SetScanoutWarping
-  nameWithType: NVAPIPhysicalGpuHelper.SetScanoutWarping
-  fullName: NVAPIWrapper.NVAPIPhysicalGpuHelper.SetScanoutWarping
-- uid: NVAPIWrapper.NVAPIGpuScanoutWarpingDataDto
-  commentId: T:NVAPIWrapper.NVAPIGpuScanoutWarpingDataDto
-  parent: NVAPIWrapper
-  href: NVAPIWrapper.NVAPIGpuScanoutWarpingDataDto.html
-  name: NVAPIGpuScanoutWarpingDataDto
-  nameWithType: NVAPIGpuScanoutWarpingDataDto
-  fullName: NVAPIWrapper.NVAPIGpuScanoutWarpingDataDto
-- uid: System.Nullable{NVAPIWrapper.NVAPIGpuScanoutWarpingResultDto}
-  commentId: T:System.Nullable{NVAPIWrapper.NVAPIGpuScanoutWarpingResultDto}
-  parent: System
-  definition: System.Nullable`1
-  href: NVAPIWrapper.NVAPIGpuScanoutWarpingResultDto.html
-  name: NVAPIGpuScanoutWarpingResultDto?
-  nameWithType: NVAPIGpuScanoutWarpingResultDto?
-  fullName: NVAPIWrapper.NVAPIGpuScanoutWarpingResultDto?
-  spec.csharp:
-  - uid: NVAPIWrapper.NVAPIGpuScanoutWarpingResultDto
-    name: NVAPIGpuScanoutWarpingResultDto
-    href: NVAPIWrapper.NVAPIGpuScanoutWarpingResultDto.html
-  - name: '?'
-  spec.vb:
-  - uid: NVAPIWrapper.NVAPIGpuScanoutWarpingResultDto
-    name: NVAPIGpuScanoutWarpingResultDto
-    href: NVAPIWrapper.NVAPIGpuScanoutWarpingResultDto.html
-  - name: '?'
 - uid: NVAPIWrapper.NVAPIPhysicalGpuHelper.QueryWorkstationFeatureSupport*
   commentId: Overload:NVAPIWrapper.NVAPIPhysicalGpuHelper.QueryWorkstationFeatureSupport
   href: NVAPIWrapper.NVAPIPhysicalGpuHelper.html#NVAPIWrapper_NVAPIPhysicalGpuHelper_QueryWorkstationFeatureSupport_NVAPIWrapper__NV_GPU_WORKSTATION_FEATURE_TYPE_
