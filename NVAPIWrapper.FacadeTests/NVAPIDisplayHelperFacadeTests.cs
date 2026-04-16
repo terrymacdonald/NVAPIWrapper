@@ -684,5 +684,117 @@ namespace NVAPIWrapper.FacadeTests
             Skip.If(metadata == null, "Managed dedicated display metadata not supported.");
             Assert.NotNull(metadata);
         }
+
+        [SkippableFact]
+        public void GetScanoutCompositionParameter_ShouldReturnDto()
+        {
+            Skip.If(_fixture.ApiHelper == null, _fixture.SkipReason);
+
+            var gpus = _fixture.ApiHelper.EnumeratePhysicalGpus();
+            Skip.If(gpus.Length == 0, "No NVIDIA physical GPUs found.");
+
+            var displays = gpus[0].EnumAllDisplays();
+            Skip.If(displays.Length == 0, "No NVIDIA displays found.");
+
+            var parameter = NV_GPU_SCANOUT_COMPOSITION_PARAMETER.NV_GPU_SCANOUT_COMPOSITION_PARAMETER_WARPING_RESAMPLING_METHOD;
+            var info = FacadeTestUtils.InvokeOrSkip(
+                () => displays[0].GetScanoutCompositionParameter(parameter),
+                "Scanout composition parameter unsupported");
+            Skip.If(info == null, "Scanout composition parameter not supported.");
+
+            var dto = info.Value;
+            Assert.True(dto.Equals(dto));
+            _ = dto.GetHashCode();
+        }
+
+        [SkippableFact]
+        public void GetScanoutConfiguration_ShouldReturnDto()
+        {
+            Skip.If(_fixture.ApiHelper == null, _fixture.SkipReason);
+
+            var gpus = _fixture.ApiHelper.EnumeratePhysicalGpus();
+            Skip.If(gpus.Length == 0, "No NVIDIA physical GPUs found.");
+
+            var displays = gpus[0].EnumAllDisplays();
+            Skip.If(displays.Length == 0, "No NVIDIA displays found.");
+
+            var info = FacadeTestUtils.InvokeOrSkip(
+                () => displays[0].GetScanoutConfiguration(),
+                "Scanout configuration unsupported");
+            Skip.If(info == null, "Scanout configuration not supported.");
+
+            var dto = info.Value;
+            Assert.True(dto.Equals(dto));
+            _ = dto.GetHashCode();
+        }
+
+        [SkippableFact]
+        public void GetScanoutConfigurationEx_ShouldReturnDto()
+        {
+            Skip.If(_fixture.ApiHelper == null, _fixture.SkipReason);
+
+            var gpus = _fixture.ApiHelper.EnumeratePhysicalGpus();
+            Skip.If(gpus.Length == 0, "No NVIDIA physical GPUs found.");
+
+            var displays = gpus[0].EnumAllDisplays();
+            Skip.If(displays.Length == 0, "No NVIDIA displays found.");
+
+            var info = FacadeTestUtils.InvokeOrSkip(
+                () => displays[0].GetScanoutConfigurationEx(),
+                "Scanout configuration ex unsupported");
+            Skip.If(info == null, "Scanout configuration ex not supported.");
+
+            var dto = info.Value;
+            var native = dto.ToNative();
+            Assert.Equal(NVAPI.NV_SCANOUT_INFORMATION_VER, native.version);
+            Assert.True(dto.Equals(dto));
+            _ = dto.GetHashCode();
+        }
+
+        [SkippableFact]
+        public void GetScanoutIntensityState_ShouldReturnDto()
+        {
+            Skip.If(_fixture.ApiHelper == null, _fixture.SkipReason);
+
+            var gpus = _fixture.ApiHelper.EnumeratePhysicalGpus();
+            Skip.If(gpus.Length == 0, "No NVIDIA physical GPUs found.");
+
+            var displays = gpus[0].EnumAllDisplays();
+            Skip.If(displays.Length == 0, "No NVIDIA displays found.");
+
+            var info = FacadeTestUtils.InvokeOrSkip(
+                () => displays[0].GetScanoutIntensityState(),
+                "Scanout intensity state unsupported");
+            Skip.If(info == null, "Scanout intensity state not supported.");
+
+            var dto = info.Value;
+            var native = dto.ToNative();
+            Assert.Equal(NVAPI.NV_SCANOUT_INTENSITY_STATE_VER, native.version);
+            Assert.True(dto.Equals(dto));
+            _ = dto.GetHashCode();
+        }
+
+        [SkippableFact]
+        public void GetScanoutWarpingState_ShouldReturnDto()
+        {
+            Skip.If(_fixture.ApiHelper == null, _fixture.SkipReason);
+
+            var gpus = _fixture.ApiHelper.EnumeratePhysicalGpus();
+            Skip.If(gpus.Length == 0, "No NVIDIA physical GPUs found.");
+
+            var displays = gpus[0].EnumAllDisplays();
+            Skip.If(displays.Length == 0, "No NVIDIA displays found.");
+
+            var info = FacadeTestUtils.InvokeOrSkip(
+                () => displays[0].GetScanoutWarpingState(),
+                "Scanout warping state unsupported");
+            Skip.If(info == null, "Scanout warping state not supported.");
+
+            var dto = info.Value;
+            var native = dto.ToNative();
+            Assert.Equal(NVAPI.NV_SCANOUT_WARPING_STATE_VER, native.version);
+            Assert.True(dto.Equals(dto));
+            _ = dto.GetHashCode();
+        }
     }
 }

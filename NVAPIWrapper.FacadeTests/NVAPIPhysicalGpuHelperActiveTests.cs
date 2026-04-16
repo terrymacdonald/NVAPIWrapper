@@ -68,69 +68,6 @@ namespace NVAPIWrapper.FacadeTests
         }
 
         [SkippableFact]
-        public void SetScanoutCompositionParameter_ShouldApplyAndRevert_WhenSupported()
-        {
-            RunActiveGpuTest(nameof(SetScanoutCompositionParameter_ShouldApplyAndRevert_WhenSupported), gpu =>
-            {
-                if (!TryGetDisplayId(gpu, out var displayId))
-                    return false;
-
-                var parameter = NV_GPU_SCANOUT_COMPOSITION_PARAMETER.NV_GPU_SCANOUT_COMPOSITION_PARAMETER_WARPING_RESAMPLING_METHOD;
-                var current = FacadeTestUtils.InvokeOrSkip(
-                    () => gpu.GetScanoutCompositionParameter(displayId, parameter),
-                    "Scanout composition parameter unsupported");
-                if (current == null)
-                    return false;
-
-                ApplyAndRevert(
-                    () =>
-                    {
-                        if (!gpu.SetScanoutCompositionParameter(displayId, current.Value))
-                            throw new SkipException("Scanout composition parameter unsupported.");
-                    },
-                    () => gpu.SetScanoutCompositionParameter(displayId, current.Value));
-
-                return true;
-            });
-        }
-
-        [SkippableFact]
-        public void SetScanoutIntensity_ShouldSkip_WhenNoSafeCurrentData()
-        {
-            RunActiveGpuTest(nameof(SetScanoutIntensity_ShouldSkip_WhenNoSafeCurrentData), gpu =>
-            {
-                if (!TryGetDisplayId(gpu, out var displayId))
-                    return false;
-
-                var state = FacadeTestUtils.InvokeOrSkip(
-                    () => gpu.GetScanoutIntensityState(displayId),
-                    "Scanout intensity state unsupported");
-                if (state == null)
-                    return false;
-
-                throw new SkipException("No safe set-to-current intensity data available.");
-            });
-        }
-
-        [SkippableFact]
-        public void SetScanoutWarping_ShouldSkip_WhenNoSafeCurrentData()
-        {
-            RunActiveGpuTest(nameof(SetScanoutWarping_ShouldSkip_WhenNoSafeCurrentData), gpu =>
-            {
-                if (!TryGetDisplayId(gpu, out var displayId))
-                    return false;
-
-                var state = FacadeTestUtils.InvokeOrSkip(
-                    () => gpu.GetScanoutWarpingState(displayId),
-                    "Scanout warping state unsupported");
-                if (state == null)
-                    return false;
-
-                throw new SkipException("No safe set-to-current warping data available.");
-            });
-        }
-
-        [SkippableFact]
         public void WorkstationFeatureSetup_ShouldApply_WhenSupported()
         {
             RunActiveGpuTest(nameof(WorkstationFeatureSetup_ShouldApply_WhenSupported), gpu =>

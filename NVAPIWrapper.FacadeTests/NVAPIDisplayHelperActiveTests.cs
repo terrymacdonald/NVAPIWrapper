@@ -362,6 +362,60 @@ namespace NVAPIWrapper.FacadeTests
             });
         }
 
+        [SkippableFact]
+        public void SetScanoutCompositionParameter_ShouldApplyAndRevert_WhenSupported()
+        {
+            RunActiveDisplayTest(nameof(SetScanoutCompositionParameter_ShouldApplyAndRevert_WhenSupported), display =>
+            {
+                var parameter = NV_GPU_SCANOUT_COMPOSITION_PARAMETER.NV_GPU_SCANOUT_COMPOSITION_PARAMETER_WARPING_RESAMPLING_METHOD;
+                var current = FacadeTestUtils.InvokeOrSkip(
+                    () => display.GetScanoutCompositionParameter(parameter),
+                    "Scanout composition parameter unsupported");
+                if (current == null)
+                    return false;
+
+                ApplyAndRevert(
+                    () =>
+                    {
+                        if (!display.SetScanoutCompositionParameter(current.Value))
+                            throw new SkipException("Scanout composition parameter unsupported.");
+                    },
+                    () => display.SetScanoutCompositionParameter(current.Value));
+
+                return true;
+            });
+        }
+
+        [SkippableFact]
+        public void SetScanoutIntensity_ShouldSkip_WhenNoSafeCurrentData()
+        {
+            RunActiveDisplayTest(nameof(SetScanoutIntensity_ShouldSkip_WhenNoSafeCurrentData), display =>
+            {
+                var state = FacadeTestUtils.InvokeOrSkip(
+                    () => display.GetScanoutIntensityState(),
+                    "Scanout intensity state unsupported");
+                if (state == null)
+                    return false;
+
+                throw new SkipException("No safe set-to-current intensity data available.");
+            });
+        }
+
+        [SkippableFact]
+        public void SetScanoutWarping_ShouldSkip_WhenNoSafeCurrentData()
+        {
+            RunActiveDisplayTest(nameof(SetScanoutWarping_ShouldSkip_WhenNoSafeCurrentData), display =>
+            {
+                var state = FacadeTestUtils.InvokeOrSkip(
+                    () => display.GetScanoutWarpingState(),
+                    "Scanout warping state unsupported");
+                if (state == null)
+                    return false;
+
+                throw new SkipException("No safe set-to-current warping data available.");
+            });
+        }
+
         private void RunActiveDisplayTest(string testName, Func<NVAPIDisplayHelper, bool> action)
         {
             Skip.If(_fixture.ApiHelper == null, _fixture.SkipReason);
