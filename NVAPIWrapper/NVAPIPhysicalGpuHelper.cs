@@ -3791,6 +3791,9 @@ namespace NVAPIWrapper
 
         public bool Equals(NVAPIGpuInfoDto other)
         {
+            if (RawData == null && other.RawData == null) return true;
+            if (RawData == null || other.RawData == null) return false;
+
             var a = ToNative();
             var b = other.ToNative();
             return a.version == b.version &&
@@ -3800,7 +3803,12 @@ namespace NVAPIWrapper
         }
 
         public override bool Equals(object? obj) => obj is NVAPIGpuInfoDto other && Equals(other);
-        public override int GetHashCode() => NVAPIGpuDtoHelpers.SequenceHashCode(RawData);
+        public override int GetHashCode()
+        {
+            if (RawData == null) return 0;
+            var n = ToNative();
+            return HashCode.Combine(n.version, n.bIsExternalGpu, n.rayTracingCores, n.tensorCores);
+        }
         public static bool operator ==(NVAPIGpuInfoDto left, NVAPIGpuInfoDto right) => left.Equals(right);
         public static bool operator !=(NVAPIGpuInfoDto left, NVAPIGpuInfoDto right) => !left.Equals(right);
     }
