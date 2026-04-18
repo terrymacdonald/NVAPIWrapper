@@ -3791,7 +3791,12 @@ namespace NVAPIWrapper
 
         public bool Equals(NVAPIGpuInfoDto other)
         {
-            return NVAPIGpuDtoHelpers.SequenceEquals(RawData, other.RawData);
+            var a = ToNative();
+            var b = other.ToNative();
+            return a.version == b.version &&
+                a.bIsExternalGpu == b.bIsExternalGpu &&
+                a.rayTracingCores == b.rayTracingCores &&
+                a.tensorCores == b.tensorCores;
         }
 
         public override bool Equals(object? obj) => obj is NVAPIGpuInfoDto other && Equals(other);
