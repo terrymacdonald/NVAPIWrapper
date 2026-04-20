@@ -555,6 +555,9 @@ namespace NVAPIWrapper.FacadeTests
             Skip.If(info == null, "GPU info not supported.");
 
             var dto = info.Value;
+            // Assert RawData is not null and not empty
+            Assert.NotNull(dto.RawData);
+            Assert.NotEmpty(dto.RawData);
             var native = dto.ToNative();
             Assert.Equal(NVAPI.NV_GPU_INFO_VER, native.version);
             Assert.True(dto.Equals(dto));
