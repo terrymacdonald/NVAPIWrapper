@@ -1,5 +1,6 @@
 using System;
 using System.Runtime.Versioning;
+using System.Text;
 using Xunit;
 
 namespace NVAPIWrapper.FacadeTests
@@ -555,9 +556,10 @@ namespace NVAPIWrapper.FacadeTests
             Skip.If(info == null, "GPU info not supported.");
 
             var dto = info.Value;
-            // Assert RawData is not null and not empty
-            Assert.NotNull(dto.RawData);
-            Assert.NotEmpty(dto.RawData);
+            // Assert new DTO fields are populated with valid values
+            Assert.True(dto.Version > 0);
+            Assert.True(dto.Reserved2 != null && dto.Reserved2.Length == 14);
+
             var native = dto.ToNative();
             Assert.Equal(NVAPI.NV_GPU_INFO_VER, native.version);
             Assert.True(dto.Equals(dto));

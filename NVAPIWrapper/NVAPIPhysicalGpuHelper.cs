@@ -3767,47 +3767,94 @@ namespace NVAPIWrapper
     /// </summary>
     public readonly struct NVAPIGpuInfoDto : IEquatable<NVAPIGpuInfoDto>
     {
-        public byte[] RawData { get; }
+        public uint Version { get; }
+        public bool IsExternalGpu { get; }
+        public ulong Reserved1 { get; }
+        public uint RayTracingCores { get; }
+        public uint TensorCores { get; }
+        public uint[] Reserved2 { get; }
 
-        private NVAPIGpuInfoDto(byte[] rawData)
+        public NVAPIGpuInfoDto(
+            uint version,
+            bool isExternalGpu,
+            ulong reserved1,
+            uint rayTracingCores,
+            uint tensorCores,
+            uint[] reserved2)
         {
-            RawData = rawData ?? Array.Empty<byte>();
+            Version = version;
+            IsExternalGpu = isExternalGpu;
+            Reserved1 = reserved1;
+            RayTracingCores = rayTracingCores;
+            TensorCores = tensorCores;
+            Reserved2 = reserved2 ?? new uint[14];
         }
 
         public static NVAPIGpuInfoDto FromNative(_NV_GPU_INFO_V2 native)
         {
-            return new NVAPIGpuInfoDto(NVAPIGpuDtoHelpers.ToByteArray(native));
+            var reserved2 = new uint[14];
+            for (int i = 0; i < 14; i++)
+                reserved2[i] = native.reserved2[i];
+            return new NVAPIGpuInfoDto(
+                native.version,
+                native.bIsExternalGpu != 0,
+                native.reserved1,
+                native.rayTracingCores,
+                native.tensorCores,
+                reserved2
+            );
         }
 
         public static NVAPIGpuInfoDto CreateDefault()
         {
-            return FromNative(new _NV_GPU_INFO_V2 { version = NVAPI.NV_GPU_INFO_VER });
+            return new NVAPIGpuInfoDto(
+                NVAPI.NV_GPU_INFO_VER,
+                false,
+                0,
+                0,
+                0,
+                new uint[14]
+            );
         }
 
         public _NV_GPU_INFO_V2 ToNative()
         {
-            return NVAPIGpuDtoHelpers.FromByteArray<_NV_GPU_INFO_V2>(RawData);
+            var native = new _NV_GPU_INFO_V2();
+            native.version = Version;
+            native.bIsExternalGpu = IsExternalGpu ? 1u : 0u;
+            native.reserved1 = Reserved1;
+            native.rayTracingCores = RayTracingCores;
+            native.tensorCores = TensorCores;
+            for (int i = 0; i < 14; i++)
+                native.reserved2[i] = Reserved2[i];
+            return native;
         }
 
         public bool Equals(NVAPIGpuInfoDto other)
         {
-            if (RawData == null && other.RawData == null) return true;
-            if (RawData == null || other.RawData == null) return false;
-
-            var a = ToNative();
-            var b = other.ToNative();
-            return a.version == b.version &&
-                a.bIsExternalGpu == b.bIsExternalGpu &&
-                a.rayTracingCores == b.rayTracingCores &&
-                a.tensorCores == b.tensorCores;
+            if (Version != other.Version) return false;
+            if (IsExternalGpu != other.IsExternalGpu) return false;
+            if (Reserved1 != other.Reserved1) return false;
+            if (RayTracingCores != other.RayTracingCores) return false;
+            if (TensorCores != other.TensorCores) return false;
+            if (Reserved2 == null && other.Reserved2 == null) return true;
+            if (Reserved2 == null || other.Reserved2 == null) return false;
+            if (Reserved2.Length != other.Reserved2.Length) return false;
+            for (int i = 0; i < Reserved2.Length; i++)
+                if (Reserved2[i] != other.Reserved2[i]) return false;
+            return true;
         }
 
         public override bool Equals(object? obj) => obj is NVAPIGpuInfoDto other && Equals(other);
         public override int GetHashCode()
         {
-            if (RawData == null) return 0;
-            var n = ToNative();
-            return HashCode.Combine(n.version, n.bIsExternalGpu, n.rayTracingCores, n.tensorCores);
+            var hash = HashCode.Combine(Version, IsExternalGpu, Reserved1, RayTracingCores, TensorCores);
+            if (Reserved2 != null)
+            {
+                foreach (var v in Reserved2)
+                    hash = (hash * 31) + v.GetHashCode();
+            }
+            return hash;
         }
         public static bool operator ==(NVAPIGpuInfoDto left, NVAPIGpuInfoDto right) => left.Equals(right);
         public static bool operator !=(NVAPIGpuInfoDto left, NVAPIGpuInfoDto right) => !left.Equals(right);
