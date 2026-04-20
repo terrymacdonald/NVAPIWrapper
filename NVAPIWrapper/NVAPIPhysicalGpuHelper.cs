@@ -3724,42 +3724,370 @@ namespace NVAPIWrapper
         public static bool operator !=(NVAPINvLinkCapsDto left, NVAPINvLinkCapsDto right) => !left.Equals(right);
     }
 
+
     /// <summary>
     /// NVLINK status DTO.
     /// </summary>
     public readonly struct NVAPINvLinkStatusDto : IEquatable<NVAPINvLinkStatusDto>
     {
-        public byte[] RawData { get; }
+        /// <summary>NVLINK_GET_STATUS_V2.version</summary>
+        public uint Version { get; }
+        /// <summary>NVLINK_GET_STATUS_V2.linkMask</summary>
+        public uint LinkMask { get; }
+        /// <summary>NVLINK_GET_STATUS_V2.linkInfo (array of 32)</summary>
+        public NVAPINvLinkStatusInfoDto[] LinkInfo { get; }
 
-        private NVAPINvLinkStatusDto(byte[] rawData)
+        public NVAPINvLinkStatusDto(uint version, uint linkMask, NVAPINvLinkStatusInfoDto[] linkInfo)
         {
-            RawData = rawData ?? Array.Empty<byte>();
+            Version = version;
+            LinkMask = linkMask;
+            LinkInfo = linkInfo ?? new NVAPINvLinkStatusInfoDto[32];
         }
 
         public static NVAPINvLinkStatusDto FromNative(NVLINK_GET_STATUS_V2 native)
         {
-            return new NVAPINvLinkStatusDto(NVAPIGpuDtoHelpers.ToByteArray(native));
+            var linkInfo = new NVAPINvLinkStatusInfoDto[32];
+            for (int i = 0; i < 32; i++)
+            {
+                linkInfo[i] = NVAPINvLinkStatusInfoDto.FromNative(native.linkInfo[i]);
+            }
+            return new NVAPINvLinkStatusDto(native.version, native.linkMask, linkInfo);
         }
 
         public static NVAPINvLinkStatusDto CreateDefault()
         {
-            return FromNative(new NVLINK_GET_STATUS_V2 { version = NVAPI.NVLINK_GET_STATUS_VER });
+            return new NVAPINvLinkStatusDto(NVAPI.NVLINK_GET_STATUS_VER, 0, new NVAPINvLinkStatusInfoDto[32]);
         }
 
         public NVLINK_GET_STATUS_V2 ToNative()
         {
-            return NVAPIGpuDtoHelpers.FromByteArray<NVLINK_GET_STATUS_V2>(RawData);
+            var native = new NVLINK_GET_STATUS_V2();
+            native.version = Version;
+            native.linkMask = LinkMask;
+            for (int i = 0; i < 32; i++)
+            {
+                native.linkInfo[i] = LinkInfo != null && i < LinkInfo.Length ? LinkInfo[i].ToNative() : default;
+            }
+            return native;
         }
 
         public bool Equals(NVAPINvLinkStatusDto other)
         {
-            return NVAPIGpuDtoHelpers.SequenceEquals(RawData, other.RawData);
+            if (Version != other.Version) return false;
+            if (LinkMask != other.LinkMask) return false;
+            if ((LinkInfo == null) != (other.LinkInfo == null)) return false;
+            if (LinkInfo != null && other.LinkInfo != null)
+            {
+                if (LinkInfo.Length != other.LinkInfo.Length) return false;
+                for (int i = 0; i < LinkInfo.Length; i++)
+                    if (!LinkInfo[i].Equals(other.LinkInfo[i])) return false;
+            }
+            return true;
         }
 
         public override bool Equals(object? obj) => obj is NVAPINvLinkStatusDto other && Equals(other);
-        public override int GetHashCode() => NVAPIGpuDtoHelpers.SequenceHashCode(RawData);
+        public override int GetHashCode()
+        {
+            var hash = HashCode.Combine(Version, LinkMask);
+            if (LinkInfo != null)
+            {
+                foreach (var v in LinkInfo)
+                    hash = (hash * 31) + v.GetHashCode();
+            }
+            return hash;
+        }
         public static bool operator ==(NVAPINvLinkStatusDto left, NVAPINvLinkStatusDto right) => left.Equals(right);
         public static bool operator !=(NVAPINvLinkStatusDto left, NVAPINvLinkStatusDto right) => !left.Equals(right);
+    }
+
+    /// <summary>
+    /// NVLINK_LINK_STATUS_INFO_V2 DTO.
+    /// </summary>
+    public readonly struct NVAPINvLinkStatusInfoDto : IEquatable<NVAPINvLinkStatusInfoDto>
+    {
+        public uint CapsTbl { get; }
+        public byte PhyType { get; }
+        public byte SubLinkWidth { get; }
+        public uint LinkState { get; }
+        public byte RxSublinkStatus { get; }
+        public byte TxSublinkStatus { get; }
+        public byte NvlinkVersion { get; }
+        public byte NciVersion { get; }
+        public byte PhyVersion { get; }
+        public uint NvlinkCommonClockSpeedMhz { get; }
+        public uint NvlinkRefClkSpeedMhz { get; }
+        public byte NvlinkRefClkType { get; }
+        public uint NvlinkLinkClockMhz { get; }
+        public bool Connected { get; }
+        public uint Reserved { get; }
+        public byte LoopProperty { get; }
+        public byte RemoteDeviceLinkNumber { get; }
+        public NVAPINvLinkDeviceInfoDto RemoteDeviceInfo { get; }
+        public byte LocalDeviceLinkNumber { get; }
+        public NVAPINvLinkDeviceInfoDto LocalDeviceInfo { get; }
+        public uint NvlinkLineRateMbps { get; }
+        public uint NvlinkMinL1Threshold { get; }
+        public uint NvlinkMaxL1Threshold { get; }
+        public uint NvlinkL1ThresholdUnits { get; }
+        public uint[] ReservedEx { get; }
+
+        public NVAPINvLinkStatusInfoDto(
+            uint capsTbl,
+            byte phyType,
+            byte subLinkWidth,
+            uint linkState,
+            byte rxSublinkStatus,
+            byte txSublinkStatus,
+            byte nvlinkVersion,
+            byte nciVersion,
+            byte phyVersion,
+            uint nvlinkCommonClockSpeedMhz,
+            uint nvlinkRefClkSpeedMhz,
+            byte nvlinkRefClkType,
+            uint nvlinkLinkClockMhz,
+            bool connected,
+            uint reserved,
+            byte loopProperty,
+            byte remoteDeviceLinkNumber,
+            NVAPINvLinkDeviceInfoDto remoteDeviceInfo,
+            byte localDeviceLinkNumber,
+            NVAPINvLinkDeviceInfoDto localDeviceInfo,
+            uint nvlinkLineRateMbps,
+            uint nvlinkMinL1Threshold,
+            uint nvlinkMaxL1Threshold,
+            uint nvlinkL1ThresholdUnits,
+            uint[] reservedEx)
+        {
+            CapsTbl = capsTbl;
+            PhyType = phyType;
+            SubLinkWidth = subLinkWidth;
+            LinkState = linkState;
+            RxSublinkStatus = rxSublinkStatus;
+            TxSublinkStatus = txSublinkStatus;
+            NvlinkVersion = nvlinkVersion;
+            NciVersion = nciVersion;
+            PhyVersion = phyVersion;
+            NvlinkCommonClockSpeedMhz = nvlinkCommonClockSpeedMhz;
+            NvlinkRefClkSpeedMhz = nvlinkRefClkSpeedMhz;
+            NvlinkRefClkType = nvlinkRefClkType;
+            NvlinkLinkClockMhz = nvlinkLinkClockMhz;
+            Connected = connected;
+            Reserved = reserved;
+            LoopProperty = loopProperty;
+            RemoteDeviceLinkNumber = remoteDeviceLinkNumber;
+            RemoteDeviceInfo = remoteDeviceInfo;
+            LocalDeviceLinkNumber = localDeviceLinkNumber;
+            LocalDeviceInfo = localDeviceInfo;
+            NvlinkLineRateMbps = nvlinkLineRateMbps;
+            NvlinkMinL1Threshold = nvlinkMinL1Threshold;
+            NvlinkMaxL1Threshold = nvlinkMaxL1Threshold;
+            NvlinkL1ThresholdUnits = nvlinkL1ThresholdUnits;
+            ReservedEx = reservedEx ?? new uint[5];
+        }
+
+        public static NVAPINvLinkStatusInfoDto FromNative(NVLINK_LINK_STATUS_INFO_V2 native)
+        {
+            var reservedEx = new uint[5];
+            for (int i = 0; i < 5; i++) reservedEx[i] = native.reservedEx[i];
+            return new NVAPINvLinkStatusInfoDto(
+                native.capsTbl,
+                native.phyType,
+                native.subLinkWidth,
+                native.linkState,
+                native.rxSublinkStatus,
+                native.txSublinkStatus,
+                native.nvlinkVersion,
+                native.nciVersion,
+                native.phyVersion,
+                native.nvlinkCommonClockSpeedMhz,
+                native.nvlinkRefClkSpeedMhz,
+                native.nvlinkRefClkType,
+                native.nvlinkLinkClockMhz,
+                native.connected != 0,
+                native.reserved,
+                native.loopProperty,
+                native.remoteDeviceLinkNumber,
+                NVAPINvLinkDeviceInfoDto.FromNative(native.remoteDeviceInfo),
+                native.localDeviceLinkNumber,
+                NVAPINvLinkDeviceInfoDto.FromNative(native.localDeviceInfo),
+                native.nvlinkLineRateMbps,
+                native.nvlinkMinL1Threshold,
+                native.nvlinkMaxL1Threshold,
+                native.nvlinkL1ThresholdUnits,
+                reservedEx
+            );
+        }
+
+        public NVLINK_LINK_STATUS_INFO_V2 ToNative()
+        {
+            var native = new NVLINK_LINK_STATUS_INFO_V2();
+            native.capsTbl = CapsTbl;
+            native.phyType = PhyType;
+            native.subLinkWidth = SubLinkWidth;
+            native.linkState = LinkState;
+            native.rxSublinkStatus = RxSublinkStatus;
+            native.txSublinkStatus = TxSublinkStatus;
+            native.nvlinkVersion = NvlinkVersion;
+            native.nciVersion = NciVersion;
+            native.phyVersion = PhyVersion;
+            native.nvlinkCommonClockSpeedMhz = NvlinkCommonClockSpeedMhz;
+            native.nvlinkRefClkSpeedMhz = NvlinkRefClkSpeedMhz;
+            native.nvlinkRefClkType = NvlinkRefClkType;
+            native.nvlinkLinkClockMhz = NvlinkLinkClockMhz;
+            native.connected = Connected ? 1u : 0u;
+            native.reserved = Reserved;
+            native.loopProperty = LoopProperty;
+            native.remoteDeviceLinkNumber = RemoteDeviceLinkNumber;
+            native.remoteDeviceInfo = RemoteDeviceInfo.ToNative();
+            native.localDeviceLinkNumber = LocalDeviceLinkNumber;
+            native.localDeviceInfo = LocalDeviceInfo.ToNative();
+            native.nvlinkLineRateMbps = NvlinkLineRateMbps;
+            native.nvlinkMinL1Threshold = NvlinkMinL1Threshold;
+            native.nvlinkMaxL1Threshold = NvlinkMaxL1Threshold;
+            native.nvlinkL1ThresholdUnits = NvlinkL1ThresholdUnits;
+            for (int i = 0; i < 5; i++) native.reservedEx[i] = ReservedEx[i];
+            return native;
+        }
+
+        public bool Equals(NVAPINvLinkStatusInfoDto other)
+        {
+            if (CapsTbl != other.CapsTbl) return false;
+            if (PhyType != other.PhyType) return false;
+            if (SubLinkWidth != other.SubLinkWidth) return false;
+            if (LinkState != other.LinkState) return false;
+            if (RxSublinkStatus != other.RxSublinkStatus) return false;
+            if (TxSublinkStatus != other.TxSublinkStatus) return false;
+            if (NvlinkVersion != other.NvlinkVersion) return false;
+            if (NciVersion != other.NciVersion) return false;
+            if (PhyVersion != other.PhyVersion) return false;
+            if (NvlinkCommonClockSpeedMhz != other.NvlinkCommonClockSpeedMhz) return false;
+            if (NvlinkRefClkSpeedMhz != other.NvlinkRefClkSpeedMhz) return false;
+            if (NvlinkRefClkType != other.NvlinkRefClkType) return false;
+            if (NvlinkLinkClockMhz != other.NvlinkLinkClockMhz) return false;
+            if (Connected != other.Connected) return false;
+            if (Reserved != other.Reserved) return false;
+            if (LoopProperty != other.LoopProperty) return false;
+            if (RemoteDeviceLinkNumber != other.RemoteDeviceLinkNumber) return false;
+            if (!RemoteDeviceInfo.Equals(other.RemoteDeviceInfo)) return false;
+            if (LocalDeviceLinkNumber != other.LocalDeviceLinkNumber) return false;
+            if (!LocalDeviceInfo.Equals(other.LocalDeviceInfo)) return false;
+            if (NvlinkLineRateMbps != other.NvlinkLineRateMbps) return false;
+            if (NvlinkMinL1Threshold != other.NvlinkMinL1Threshold) return false;
+            if (NvlinkMaxL1Threshold != other.NvlinkMaxL1Threshold) return false;
+            if (NvlinkL1ThresholdUnits != other.NvlinkL1ThresholdUnits) return false;
+            if ((ReservedEx == null) != (other.ReservedEx == null)) return false;
+            if (ReservedEx != null && other.ReservedEx != null)
+            {
+                if (ReservedEx.Length != other.ReservedEx.Length) return false;
+                for (int i = 0; i < ReservedEx.Length; i++)
+                    if (ReservedEx[i] != other.ReservedEx[i]) return false;
+            }
+            return true;
+        }
+
+        public override bool Equals(object? obj) => obj is NVAPINvLinkStatusInfoDto other && Equals(other);
+        public override int GetHashCode()
+        {
+            var hash = HashCode.Combine(CapsTbl, PhyType, SubLinkWidth, LinkState, RxSublinkStatus, TxSublinkStatus, NvlinkVersion, NciVersion); hash = HashCode.Combine(hash, PhyVersion, NvlinkCommonClockSpeedMhz, NvlinkRefClkSpeedMhz, NvlinkRefClkType, NvlinkLinkClockMhz, Connected, Reserved); hash = HashCode.Combine(hash, LoopProperty, RemoteDeviceLinkNumber, RemoteDeviceInfo, LocalDeviceLinkNumber, LocalDeviceInfo, NvlinkLineRateMbps, NvlinkMinL1Threshold); hash = HashCode.Combine(hash, NvlinkMaxL1Threshold, NvlinkL1ThresholdUnits);
+            if (ReservedEx != null)
+            {
+                foreach (var v in ReservedEx)
+                    hash = (hash * 31) + v.GetHashCode();
+            }
+            return hash;
+        }
+        public static bool operator ==(NVAPINvLinkStatusInfoDto left, NVAPINvLinkStatusInfoDto right) => left.Equals(right);
+        public static bool operator !=(NVAPINvLinkStatusInfoDto left, NVAPINvLinkStatusInfoDto right) => !left.Equals(right);
+    }
+
+    /// <summary>
+    /// NVLINK_DEVICE_INFO_V1 DTO.
+    /// </summary>
+    public readonly struct NVAPINvLinkDeviceInfoDto : IEquatable<NVAPINvLinkDeviceInfoDto>
+    {
+        public uint DeviceIdFlags { get; }
+        public ushort Domain { get; }
+        public ushort Bus { get; }
+        public ushort Device { get; }
+        public ushort Function { get; }
+        public uint PciDeviceId { get; }
+        public ulong DeviceType { get; }
+        public byte[] DeviceUUID { get; }
+
+        public NVAPINvLinkDeviceInfoDto(uint deviceIdFlags, ushort domain, ushort bus, ushort device, ushort function, uint pciDeviceId, ulong deviceType, byte[] deviceUUID)
+        {
+            DeviceIdFlags = deviceIdFlags;
+            Domain = domain;
+            Bus = bus;
+            Device = device;
+            Function = function;
+            PciDeviceId = pciDeviceId;
+            DeviceType = deviceType;
+            DeviceUUID = deviceUUID ?? new byte[16];
+        }
+
+        public static NVAPINvLinkDeviceInfoDto FromNative(NVLINK_DEVICE_INFO_V1 native)
+        {
+            var uuid = new byte[16];
+            for (int i = 0; i < 16; i++) uuid[i] = native.deviceUUID[i];
+            return new NVAPINvLinkDeviceInfoDto(
+                native.deviceIdFlags,
+                native.domain,
+                native.bus,
+                native.device,
+                native.function,
+                native.pciDeviceId,
+                native.deviceType,
+                uuid
+            );
+        }
+
+        public NVLINK_DEVICE_INFO_V1 ToNative()
+        {
+            var native = new NVLINK_DEVICE_INFO_V1();
+            native.deviceIdFlags = DeviceIdFlags;
+            native.domain = Domain;
+            native.bus = Bus;
+            native.device = Device;
+            native.function = Function;
+            native.pciDeviceId = PciDeviceId;
+            native.deviceType = DeviceType;
+            for (int i = 0; i < 16; i++) native.deviceUUID[i] = DeviceUUID != null && i < DeviceUUID.Length ? DeviceUUID[i] : (byte)0;
+            return native;
+        }
+
+        public bool Equals(NVAPINvLinkDeviceInfoDto other)
+        {
+            if (DeviceIdFlags != other.DeviceIdFlags) return false;
+            if (Domain != other.Domain) return false;
+            if (Bus != other.Bus) return false;
+            if (Device != other.Device) return false;
+            if (Function != other.Function) return false;
+            if (PciDeviceId != other.PciDeviceId) return false;
+            if (DeviceType != other.DeviceType) return false;
+            if ((DeviceUUID == null) != (other.DeviceUUID == null)) return false;
+            if (DeviceUUID != null && other.DeviceUUID != null)
+            {
+                if (DeviceUUID.Length != other.DeviceUUID.Length) return false;
+                for (int i = 0; i < DeviceUUID.Length; i++)
+                    if (DeviceUUID[i] != other.DeviceUUID[i]) return false;
+            }
+            return true;
+        }
+
+        public override bool Equals(object? obj) => obj is NVAPINvLinkDeviceInfoDto other && Equals(other);
+        public override int GetHashCode()
+        {
+            var hash = HashCode.Combine(DeviceIdFlags, Domain, Bus, Device, Function, PciDeviceId, DeviceType);
+            if (DeviceUUID != null)
+            {
+                foreach (var v in DeviceUUID)
+                    hash = (hash * 31) + v.GetHashCode();
+            }
+            return hash;
+        }
+        public static bool operator ==(NVAPINvLinkDeviceInfoDto left, NVAPINvLinkDeviceInfoDto right) => left.Equals(right);
+        public static bool operator !=(NVAPINvLinkDeviceInfoDto left, NVAPINvLinkDeviceInfoDto right) => !left.Equals(right);
     }
 
     /// <summary>

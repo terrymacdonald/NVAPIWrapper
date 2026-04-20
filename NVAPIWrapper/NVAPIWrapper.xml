@@ -6793,6 +6793,25 @@
             NVLINK status DTO.
             </summary>
         </member>
+        <member name="P:NVAPIWrapper.NVAPINvLinkStatusDto.Version">
+            <summary>NVLINK_GET_STATUS_V2.version</summary>
+        </member>
+        <member name="P:NVAPIWrapper.NVAPINvLinkStatusDto.LinkMask">
+            <summary>NVLINK_GET_STATUS_V2.linkMask</summary>
+        </member>
+        <member name="P:NVAPIWrapper.NVAPINvLinkStatusDto.LinkInfo">
+            <summary>NVLINK_GET_STATUS_V2.linkInfo (array of 32)</summary>
+        </member>
+        <member name="T:NVAPIWrapper.NVAPINvLinkStatusInfoDto">
+            <summary>
+            NVLINK_LINK_STATUS_INFO_V2 DTO.
+            </summary>
+        </member>
+        <member name="T:NVAPIWrapper.NVAPINvLinkDeviceInfoDto">
+            <summary>
+            NVLINK_DEVICE_INFO_V1 DTO.
+            </summary>
+        </member>
         <member name="T:NVAPIWrapper.NVAPIGpuInfoDto">
             <summary>
             GPU info DTO.

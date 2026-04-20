@@ -546,6 +546,25 @@ namespace NVAPIWrapper.FacadeTests
             Assert.Equal(NVAPI.NVLINK_GET_STATUS_VER, native.version);
             Assert.True(dto.Equals(dto));
             _ = dto.GetHashCode();
+
+            // Validate new DTO fields
+            Assert.True(dto.Version > 0);
+            Assert.True(dto.LinkInfo != null && dto.LinkInfo.Length == 32);
+            // At least one link info entry should be non-default if supported
+            bool anyPopulated = false;
+            foreach (var link in dto.LinkInfo)
+            {
+                // If any link is connected or has a nonzero capsTbl, consider it populated
+                if (link.Connected || link.CapsTbl != 0)
+                {
+                    anyPopulated = true;
+                    // Validate nested device info array length
+                    Assert.True(link.RemoteDeviceInfo.DeviceUUID != null && link.RemoteDeviceInfo.DeviceUUID.Length == 16);
+                    Assert.True(link.LocalDeviceInfo.DeviceUUID != null && link.LocalDeviceInfo.DeviceUUID.Length == 16);
+                    break;
+                }
+            }
+            Skip.If(!anyPopulated, "No NVLINK links detected on this hardware. Skipping test.");
         }
 
         [SkippableFact]
