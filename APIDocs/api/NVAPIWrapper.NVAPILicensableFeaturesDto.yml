@@ -5,12 +5,16 @@ items:
   id: NVAPILicensableFeaturesDto
   parent: NVAPIWrapper
   children:
+  - NVAPIWrapper.NVAPILicensableFeaturesDto.#ctor(System.Boolean,System.UInt32,System.String,NVAPIWrapper.NVAPILicenseFeatureDetailsDto[])
   - NVAPIWrapper.NVAPILicensableFeaturesDto.CreateDefault
   - NVAPIWrapper.NVAPILicensableFeaturesDto.Equals(NVAPIWrapper.NVAPILicensableFeaturesDto)
   - NVAPIWrapper.NVAPILicensableFeaturesDto.Equals(System.Object)
   - NVAPIWrapper.NVAPILicensableFeaturesDto.FromNative(NVAPIWrapper._NV_LICENSABLE_FEATURES_V4)
   - NVAPIWrapper.NVAPILicensableFeaturesDto.GetHashCode
-  - NVAPIWrapper.NVAPILicensableFeaturesDto.RawData
+  - NVAPIWrapper.NVAPILicensableFeaturesDto.IsLicenseSupported
+  - NVAPIWrapper.NVAPILicensableFeaturesDto.LicensableFeatureCount
+  - NVAPIWrapper.NVAPILicensableFeaturesDto.LicenseDetails
+  - NVAPIWrapper.NVAPILicensableFeaturesDto.Signature
   - NVAPIWrapper.NVAPILicensableFeaturesDto.ToNative
   - NVAPIWrapper.NVAPILicensableFeaturesDto.op_Equality(NVAPIWrapper.NVAPILicensableFeaturesDto,NVAPIWrapper.NVAPILicensableFeaturesDto)
   - NVAPIWrapper.NVAPILicensableFeaturesDto.op_Inequality(NVAPIWrapper.NVAPILicensableFeaturesDto,NVAPIWrapper.NVAPILicensableFeaturesDto)
@@ -28,7 +32,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPILicensableFeaturesDto
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 3501
+    startLine: 4352
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -44,35 +48,170 @@ items:
   - System.Object.Equals(System.Object,System.Object)
   - System.Object.GetType
   - System.Object.ReferenceEquals(System.Object,System.Object)
-- uid: NVAPIWrapper.NVAPILicensableFeaturesDto.RawData
-  commentId: P:NVAPIWrapper.NVAPILicensableFeaturesDto.RawData
-  id: RawData
+- uid: NVAPIWrapper.NVAPILicensableFeaturesDto.IsLicenseSupported
+  commentId: P:NVAPIWrapper.NVAPILicensableFeaturesDto.IsLicenseSupported
+  id: IsLicenseSupported
   parent: NVAPIWrapper.NVAPILicensableFeaturesDto
   langs:
   - csharp
   - vb
-  name: RawData
-  nameWithType: NVAPILicensableFeaturesDto.RawData
-  fullName: NVAPIWrapper.NVAPILicensableFeaturesDto.RawData
+  name: IsLicenseSupported
+  nameWithType: NVAPILicensableFeaturesDto.IsLicenseSupported
+  fullName: NVAPIWrapper.NVAPILicensableFeaturesDto.IsLicenseSupported
   type: Property
   source:
     remote:
       path: NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
       branch: main
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
-    id: RawData
+    id: IsLicenseSupported
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 3503
+    startLine: 4355
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
+  summary: True if GPU licensing is supported.
+  example: []
   syntax:
-    content: public byte[] RawData { get; }
+    content: public bool IsLicenseSupported { get; }
     parameters: []
     return:
-      type: System.Byte[]
-    content.vb: Public ReadOnly Property RawData As Byte()
-  overload: NVAPIWrapper.NVAPILicensableFeaturesDto.RawData*
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsLicenseSupported As Boolean
+  overload: NVAPIWrapper.NVAPILicensableFeaturesDto.IsLicenseSupported*
+- uid: NVAPIWrapper.NVAPILicensableFeaturesDto.LicensableFeatureCount
+  commentId: P:NVAPIWrapper.NVAPILicensableFeaturesDto.LicensableFeatureCount
+  id: LicensableFeatureCount
+  parent: NVAPIWrapper.NVAPILicensableFeaturesDto
+  langs:
+  - csharp
+  - vb
+  name: LicensableFeatureCount
+  nameWithType: NVAPILicensableFeaturesDto.LicensableFeatureCount
+  fullName: NVAPIWrapper.NVAPILicensableFeaturesDto.LicensableFeatureCount
+  type: Property
+  source:
+    remote:
+      path: NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
+      branch: main
+      repo: https://github.com/terrymacdonald/NVAPIWrapper.git
+    id: LicensableFeatureCount
+    path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
+    startLine: 4357
+  assemblies:
+  - NVAPIWrapper
+  namespace: NVAPIWrapper
+  summary: Number of licensable features reported.
+  example: []
+  syntax:
+    content: public uint LicensableFeatureCount { get; }
+    parameters: []
+    return:
+      type: System.UInt32
+    content.vb: Public ReadOnly Property LicensableFeatureCount As UInteger
+  overload: NVAPIWrapper.NVAPILicensableFeaturesDto.LicensableFeatureCount*
+- uid: NVAPIWrapper.NVAPILicensableFeaturesDto.Signature
+  commentId: P:NVAPIWrapper.NVAPILicensableFeaturesDto.Signature
+  id: Signature
+  parent: NVAPIWrapper.NVAPILicensableFeaturesDto
+  langs:
+  - csharp
+  - vb
+  name: Signature
+  nameWithType: NVAPILicensableFeaturesDto.Signature
+  fullName: NVAPIWrapper.NVAPILicensableFeaturesDto.Signature
+  type: Property
+  source:
+    remote:
+      path: NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
+      branch: main
+      repo: https://github.com/terrymacdonald/NVAPIWrapper.git
+    id: Signature
+    path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
+    startLine: 4359
+  assemblies:
+  - NVAPIWrapper
+  namespace: NVAPIWrapper
+  summary: License signature string (up to 128 characters).
+  example: []
+  syntax:
+    content: public string Signature { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property Signature As String
+  overload: NVAPIWrapper.NVAPILicensableFeaturesDto.Signature*
+- uid: NVAPIWrapper.NVAPILicensableFeaturesDto.LicenseDetails
+  commentId: P:NVAPIWrapper.NVAPILicensableFeaturesDto.LicenseDetails
+  id: LicenseDetails
+  parent: NVAPIWrapper.NVAPILicensableFeaturesDto
+  langs:
+  - csharp
+  - vb
+  name: LicenseDetails
+  nameWithType: NVAPILicensableFeaturesDto.LicenseDetails
+  fullName: NVAPIWrapper.NVAPILicensableFeaturesDto.LicenseDetails
+  type: Property
+  source:
+    remote:
+      path: NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
+      branch: main
+      repo: https://github.com/terrymacdonald/NVAPIWrapper.git
+    id: LicenseDetails
+    path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
+    startLine: 4361
+  assemblies:
+  - NVAPIWrapper
+  namespace: NVAPIWrapper
+  summary: Array of up to 3 per-feature license details.
+  example: []
+  syntax:
+    content: public NVAPILicenseFeatureDetailsDto[] LicenseDetails { get; }
+    parameters: []
+    return:
+      type: NVAPIWrapper.NVAPILicenseFeatureDetailsDto[]
+    content.vb: Public ReadOnly Property LicenseDetails As NVAPILicenseFeatureDetailsDto()
+  overload: NVAPIWrapper.NVAPILicensableFeaturesDto.LicenseDetails*
+- uid: NVAPIWrapper.NVAPILicensableFeaturesDto.#ctor(System.Boolean,System.UInt32,System.String,NVAPIWrapper.NVAPILicenseFeatureDetailsDto[])
+  commentId: M:NVAPIWrapper.NVAPILicensableFeaturesDto.#ctor(System.Boolean,System.UInt32,System.String,NVAPIWrapper.NVAPILicenseFeatureDetailsDto[])
+  id: '#ctor(System.Boolean,System.UInt32,System.String,NVAPIWrapper.NVAPILicenseFeatureDetailsDto[])'
+  parent: NVAPIWrapper.NVAPILicensableFeaturesDto
+  langs:
+  - csharp
+  - vb
+  name: NVAPILicensableFeaturesDto(bool, uint, string, NVAPILicenseFeatureDetailsDto[])
+  nameWithType: NVAPILicensableFeaturesDto.NVAPILicensableFeaturesDto(bool, uint, string, NVAPILicenseFeatureDetailsDto[])
+  fullName: NVAPIWrapper.NVAPILicensableFeaturesDto.NVAPILicensableFeaturesDto(bool, uint, string, NVAPIWrapper.NVAPILicenseFeatureDetailsDto[])
+  type: Constructor
+  source:
+    remote:
+      path: NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
+      branch: main
+      repo: https://github.com/terrymacdonald/NVAPIWrapper.git
+    id: .ctor
+    path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
+    startLine: 4364
+  assemblies:
+  - NVAPIWrapper
+  namespace: NVAPIWrapper
+  summary: Initializes a new instance of <xref href="NVAPIWrapper.NVAPILicensableFeaturesDto" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public NVAPILicensableFeaturesDto(bool isLicenseSupported, uint licensableFeatureCount, string signature, NVAPILicenseFeatureDetailsDto[] licenseDetails)
+    parameters:
+    - id: isLicenseSupported
+      type: System.Boolean
+    - id: licensableFeatureCount
+      type: System.UInt32
+    - id: signature
+      type: System.String
+    - id: licenseDetails
+      type: NVAPIWrapper.NVAPILicenseFeatureDetailsDto[]
+    content.vb: Public Sub New(isLicenseSupported As Boolean, licensableFeatureCount As UInteger, signature As String, licenseDetails As NVAPILicenseFeatureDetailsDto())
+  overload: NVAPIWrapper.NVAPILicensableFeaturesDto.#ctor*
+  nameWithType.vb: NVAPILicensableFeaturesDto.New(Boolean, UInteger, String, NVAPILicenseFeatureDetailsDto())
+  fullName.vb: NVAPIWrapper.NVAPILicensableFeaturesDto.New(Boolean, UInteger, String, NVAPIWrapper.NVAPILicenseFeatureDetailsDto())
+  name.vb: New(Boolean, UInteger, String, NVAPILicenseFeatureDetailsDto())
 - uid: NVAPIWrapper.NVAPILicensableFeaturesDto.FromNative(NVAPIWrapper._NV_LICENSABLE_FEATURES_V4)
   commentId: M:NVAPIWrapper.NVAPILicensableFeaturesDto.FromNative(NVAPIWrapper._NV_LICENSABLE_FEATURES_V4)
   id: FromNative(NVAPIWrapper._NV_LICENSABLE_FEATURES_V4)
@@ -91,10 +230,12 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: FromNative
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 3510
+    startLine: 4373
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
+  summary: Creates a DTO from the native <xref href="NVAPIWrapper._NV_LICENSABLE_FEATURES_V4" data-throw-if-not-resolved="false"></xref> struct.
+  example: []
   syntax:
     content: public static NVAPILicensableFeaturesDto FromNative(_NV_LICENSABLE_FEATURES_V4 native)
     parameters:
@@ -122,10 +263,12 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: CreateDefault
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 3515
+    startLine: 4388
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
+  summary: Creates a default (zeroed) DTO with the correct version field.
+  example: []
   syntax:
     content: public static NVAPILicensableFeaturesDto CreateDefault()
     return:
@@ -150,10 +293,12 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: ToNative
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 3520
+    startLine: 4394
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
+  summary: Converts this DTO back to the native <xref href="NVAPIWrapper._NV_LICENSABLE_FEATURES_V4" data-throw-if-not-resolved="false"></xref> struct.
+  example: []
   syntax:
     content: public _NV_LICENSABLE_FEATURES_V4 ToNative()
     return:
@@ -178,7 +323,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Equals
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 3525
+    startLine: 4415
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -215,7 +360,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Equals
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 3530
+    startLine: 4431
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -254,7 +399,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetHashCode
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 3531
+    startLine: 4433
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -286,10 +431,12 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: op_Equality
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 3532
+    startLine: 4442
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
+  summary: Equality operator.
+  example: []
   syntax:
     content: public static bool operator ==(NVAPILicensableFeaturesDto left, NVAPILicensableFeaturesDto right)
     parameters:
@@ -322,10 +469,12 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: op_Inequality
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 3533
+    startLine: 4444
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
+  summary: Inequality operator.
+  example: []
   syntax:
     content: public static bool operator !=(NVAPILicensableFeaturesDto left, NVAPILicensableFeaturesDto right)
     parameters:
@@ -570,48 +719,84 @@ references:
   nameWithType.vb: Object
   fullName.vb: Object
   name.vb: Object
-- uid: NVAPIWrapper.NVAPILicensableFeaturesDto.RawData*
-  commentId: Overload:NVAPIWrapper.NVAPILicensableFeaturesDto.RawData
-  href: NVAPIWrapper.NVAPILicensableFeaturesDto.html#NVAPIWrapper_NVAPILicensableFeaturesDto_RawData
-  name: RawData
-  nameWithType: NVAPILicensableFeaturesDto.RawData
-  fullName: NVAPIWrapper.NVAPILicensableFeaturesDto.RawData
-- uid: System.Byte[]
+- uid: NVAPIWrapper.NVAPILicensableFeaturesDto.IsLicenseSupported*
+  commentId: Overload:NVAPIWrapper.NVAPILicensableFeaturesDto.IsLicenseSupported
+  href: NVAPIWrapper.NVAPILicensableFeaturesDto.html#NVAPIWrapper_NVAPILicensableFeaturesDto_IsLicenseSupported
+  name: IsLicenseSupported
+  nameWithType: NVAPILicensableFeaturesDto.IsLicenseSupported
+  fullName: NVAPIWrapper.NVAPILicensableFeaturesDto.IsLicenseSupported
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.byte
-  name: byte[]
-  nameWithType: byte[]
-  fullName: byte[]
-  nameWithType.vb: Byte()
-  fullName.vb: Byte()
-  name.vb: Byte()
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: NVAPIWrapper.NVAPILicensableFeaturesDto.LicensableFeatureCount*
+  commentId: Overload:NVAPIWrapper.NVAPILicensableFeaturesDto.LicensableFeatureCount
+  href: NVAPIWrapper.NVAPILicensableFeaturesDto.html#NVAPIWrapper_NVAPILicensableFeaturesDto_LicensableFeatureCount
+  name: LicensableFeatureCount
+  nameWithType: NVAPILicensableFeaturesDto.LicensableFeatureCount
+  fullName: NVAPIWrapper.NVAPILicensableFeaturesDto.LicensableFeatureCount
+- uid: System.UInt32
+  commentId: T:System.UInt32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.uint32
+  name: uint
+  nameWithType: uint
+  fullName: uint
+  nameWithType.vb: UInteger
+  fullName.vb: UInteger
+  name.vb: UInteger
+- uid: NVAPIWrapper.NVAPILicensableFeaturesDto.Signature*
+  commentId: Overload:NVAPIWrapper.NVAPILicensableFeaturesDto.Signature
+  href: NVAPIWrapper.NVAPILicensableFeaturesDto.html#NVAPIWrapper_NVAPILicensableFeaturesDto_Signature
+  name: Signature
+  nameWithType: NVAPILicensableFeaturesDto.Signature
+  fullName: NVAPIWrapper.NVAPILicensableFeaturesDto.Signature
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: NVAPIWrapper.NVAPILicensableFeaturesDto.LicenseDetails*
+  commentId: Overload:NVAPIWrapper.NVAPILicensableFeaturesDto.LicenseDetails
+  href: NVAPIWrapper.NVAPILicensableFeaturesDto.html#NVAPIWrapper_NVAPILicensableFeaturesDto_LicenseDetails
+  name: LicenseDetails
+  nameWithType: NVAPILicensableFeaturesDto.LicenseDetails
+  fullName: NVAPIWrapper.NVAPILicensableFeaturesDto.LicenseDetails
+- uid: NVAPIWrapper.NVAPILicenseFeatureDetailsDto[]
+  isExternal: true
+  href: NVAPIWrapper.NVAPILicenseFeatureDetailsDto.html
+  name: NVAPILicenseFeatureDetailsDto[]
+  nameWithType: NVAPILicenseFeatureDetailsDto[]
+  fullName: NVAPIWrapper.NVAPILicenseFeatureDetailsDto[]
+  nameWithType.vb: NVAPILicenseFeatureDetailsDto()
+  fullName.vb: NVAPIWrapper.NVAPILicenseFeatureDetailsDto()
+  name.vb: NVAPILicenseFeatureDetailsDto()
   spec.csharp:
-  - uid: System.Byte
-    name: byte
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - uid: NVAPIWrapper.NVAPILicenseFeatureDetailsDto
+    name: NVAPILicenseFeatureDetailsDto
+    href: NVAPIWrapper.NVAPILicenseFeatureDetailsDto.html
   - name: '['
   - name: ']'
   spec.vb:
-  - uid: System.Byte
-    name: Byte
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - uid: NVAPIWrapper.NVAPILicenseFeatureDetailsDto
+    name: NVAPILicenseFeatureDetailsDto
+    href: NVAPIWrapper.NVAPILicenseFeatureDetailsDto.html
   - name: (
   - name: )
-- uid: NVAPIWrapper.NVAPILicensableFeaturesDto.FromNative*
-  commentId: Overload:NVAPIWrapper.NVAPILicensableFeaturesDto.FromNative
-  href: NVAPIWrapper.NVAPILicensableFeaturesDto.html#NVAPIWrapper_NVAPILicensableFeaturesDto_FromNative_NVAPIWrapper__NV_LICENSABLE_FEATURES_V4_
-  name: FromNative
-  nameWithType: NVAPILicensableFeaturesDto.FromNative
-  fullName: NVAPIWrapper.NVAPILicensableFeaturesDto.FromNative
-- uid: NVAPIWrapper._NV_LICENSABLE_FEATURES_V4
-  commentId: T:NVAPIWrapper._NV_LICENSABLE_FEATURES_V4
-  parent: NVAPIWrapper
-  href: NVAPIWrapper._NV_LICENSABLE_FEATURES_V4.html
-  name: _NV_LICENSABLE_FEATURES_V4
-  nameWithType: _NV_LICENSABLE_FEATURES_V4
-  fullName: NVAPIWrapper._NV_LICENSABLE_FEATURES_V4
 - uid: NVAPIWrapper.NVAPILicensableFeaturesDto
   commentId: T:NVAPIWrapper.NVAPILicensableFeaturesDto
   parent: NVAPIWrapper
@@ -619,6 +804,28 @@ references:
   name: NVAPILicensableFeaturesDto
   nameWithType: NVAPILicensableFeaturesDto
   fullName: NVAPIWrapper.NVAPILicensableFeaturesDto
+- uid: NVAPIWrapper.NVAPILicensableFeaturesDto.#ctor*
+  commentId: Overload:NVAPIWrapper.NVAPILicensableFeaturesDto.#ctor
+  href: NVAPIWrapper.NVAPILicensableFeaturesDto.html#NVAPIWrapper_NVAPILicensableFeaturesDto__ctor_System_Boolean_System_UInt32_System_String_NVAPIWrapper_NVAPILicenseFeatureDetailsDto___
+  name: NVAPILicensableFeaturesDto
+  nameWithType: NVAPILicensableFeaturesDto.NVAPILicensableFeaturesDto
+  fullName: NVAPIWrapper.NVAPILicensableFeaturesDto.NVAPILicensableFeaturesDto
+  nameWithType.vb: NVAPILicensableFeaturesDto.New
+  fullName.vb: NVAPIWrapper.NVAPILicensableFeaturesDto.New
+  name.vb: New
+- uid: NVAPIWrapper._NV_LICENSABLE_FEATURES_V4
+  commentId: T:NVAPIWrapper._NV_LICENSABLE_FEATURES_V4
+  parent: NVAPIWrapper
+  href: NVAPIWrapper._NV_LICENSABLE_FEATURES_V4.html
+  name: _NV_LICENSABLE_FEATURES_V4
+  nameWithType: _NV_LICENSABLE_FEATURES_V4
+  fullName: NVAPIWrapper._NV_LICENSABLE_FEATURES_V4
+- uid: NVAPIWrapper.NVAPILicensableFeaturesDto.FromNative*
+  commentId: Overload:NVAPIWrapper.NVAPILicensableFeaturesDto.FromNative
+  href: NVAPIWrapper.NVAPILicensableFeaturesDto.html#NVAPIWrapper_NVAPILicensableFeaturesDto_FromNative_NVAPIWrapper__NV_LICENSABLE_FEATURES_V4_
+  name: FromNative
+  nameWithType: NVAPILicensableFeaturesDto.FromNative
+  fullName: NVAPIWrapper.NVAPILicensableFeaturesDto.FromNative
 - uid: NVAPIWrapper.NVAPILicensableFeaturesDto.CreateDefault*
   commentId: Overload:NVAPIWrapper.NVAPILicensableFeaturesDto.CreateDefault
   href: NVAPIWrapper.NVAPILicensableFeaturesDto.html#NVAPIWrapper_NVAPILicensableFeaturesDto_CreateDefault
@@ -667,17 +874,6 @@ references:
     name: NVAPILicensableFeaturesDto
     href: NVAPIWrapper.NVAPILicensableFeaturesDto.html
   - name: )
-- uid: System.Boolean
-  commentId: T:System.Boolean
-  parent: System
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.boolean
-  name: bool
-  nameWithType: bool
-  fullName: bool
-  nameWithType.vb: Boolean
-  fullName.vb: Boolean
-  name.vb: Boolean
 - uid: System.IEquatable`1.Equals(`0)
   commentId: M:System.IEquatable`1.Equals(`0)
   isExternal: true

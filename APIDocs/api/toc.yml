@@ -442,6 +442,9 @@ items:
   - uid: NVAPIWrapper.NVAPIDrsSettingValuesDto
     name: NVAPIDrsSettingValuesDto
     type: Struct
+  - uid: NVAPIWrapper.NVAPIEncoderPerSessionInfoDto
+    name: NVAPIEncoderPerSessionInfoDto
+    type: Struct
   - uid: NVAPIWrapper.NVAPIEncoderSessionsInfoDto
     name: NVAPIEncoderSessionsInfoDto
     type: Struct
@@ -529,14 +532,26 @@ items:
   - uid: NVAPIWrapper.NVAPIGpuHdcpSupportStatusDto
     name: NVAPIGpuHdcpSupportStatusDto
     type: Struct
+  - uid: NVAPIWrapper.NVAPIGpuIllumDeviceControlDto
+    name: NVAPIGpuIllumDeviceControlDto
+    type: Struct
   - uid: NVAPIWrapper.NVAPIGpuIllumDeviceControlParamsDto
     name: NVAPIGpuIllumDeviceControlParamsDto
+    type: Struct
+  - uid: NVAPIWrapper.NVAPIGpuIllumDeviceInfoDto
+    name: NVAPIGpuIllumDeviceInfoDto
     type: Struct
   - uid: NVAPIWrapper.NVAPIGpuIllumDeviceInfoParamsDto
     name: NVAPIGpuIllumDeviceInfoParamsDto
     type: Struct
+  - uid: NVAPIWrapper.NVAPIGpuIllumZoneControlDto
+    name: NVAPIGpuIllumZoneControlDto
+    type: Struct
   - uid: NVAPIWrapper.NVAPIGpuIllumZoneControlParamsDto
     name: NVAPIGpuIllumZoneControlParamsDto
+    type: Struct
+  - uid: NVAPIWrapper.NVAPIGpuIllumZoneInfoDto
+    name: NVAPIGpuIllumZoneInfoDto
     type: Struct
   - uid: NVAPIWrapper.NVAPIGpuIllumZoneInfoParamsDto
     name: NVAPIGpuIllumZoneInfoParamsDto
@@ -628,6 +643,9 @@ items:
   - uid: NVAPIWrapper.NVAPILicensableFeaturesDto
     name: NVAPILicensableFeaturesDto
     type: Struct
+  - uid: NVAPIWrapper.NVAPILicenseFeatureDetailsDto
+    name: NVAPILicenseFeatureDetailsDto
+    type: Struct
   - uid: NVAPIWrapper.NVAPILidAndDockInfoDto
     name: NVAPILidAndDockInfoDto
     type: Struct
@@ -703,8 +721,14 @@ items:
   - uid: NVAPIWrapper.NVAPINvLinkCapsDto
     name: NVAPINvLinkCapsDto
     type: Struct
+  - uid: NVAPIWrapper.NVAPINvLinkDeviceInfoDto
+    name: NVAPINvLinkDeviceInfoDto
+    type: Struct
   - uid: NVAPIWrapper.NVAPINvLinkStatusDto
     name: NVAPINvLinkStatusDto
+    type: Struct
+  - uid: NVAPIWrapper.NVAPINvLinkStatusInfoDto
+    name: NVAPINvLinkStatusInfoDto
     type: Struct
   - uid: NVAPIWrapper.NVAPINvManagedDedicatedDisplayInfoDto
     name: NVAPINvManagedDedicatedDisplayInfoDto
@@ -738,6 +762,15 @@ items:
     type: Class
   - uid: NVAPIWrapper.NVAPIPreferredStereoDisplayDto
     name: NVAPIPreferredStereoDisplayDto
+    type: Struct
+  - uid: NVAPIWrapper.NVAPIPstateBaseVoltageEntryDto
+    name: NVAPIPstateBaseVoltageEntryDto
+    type: Struct
+  - uid: NVAPIWrapper.NVAPIPstateClockEntryDto
+    name: NVAPIPstateClockEntryDto
+    type: Struct
+  - uid: NVAPIWrapper.NVAPIPstateInfoDto
+    name: NVAPIPstateInfoDto
     type: Struct
   - uid: NVAPIWrapper.NVAPIQuadroGSyncHelper
     name: NVAPIQuadroGSyncHelper

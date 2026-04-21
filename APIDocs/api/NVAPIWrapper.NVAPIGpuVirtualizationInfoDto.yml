@@ -5,13 +5,14 @@ items:
   id: NVAPIGpuVirtualizationInfoDto
   parent: NVAPIWrapper
   children:
+  - NVAPIWrapper.NVAPIGpuVirtualizationInfoDto.#ctor(NVAPIWrapper._NV_VIRTUALIZATION_MODE)
   - NVAPIWrapper.NVAPIGpuVirtualizationInfoDto.CreateDefault
   - NVAPIWrapper.NVAPIGpuVirtualizationInfoDto.Equals(NVAPIWrapper.NVAPIGpuVirtualizationInfoDto)
   - NVAPIWrapper.NVAPIGpuVirtualizationInfoDto.Equals(System.Object)
   - NVAPIWrapper.NVAPIGpuVirtualizationInfoDto.FromNative(NVAPIWrapper._NV_GPU_VIRTUALIZATION_INFO)
   - NVAPIWrapper.NVAPIGpuVirtualizationInfoDto.GetHashCode
-  - NVAPIWrapper.NVAPIGpuVirtualizationInfoDto.RawData
   - NVAPIWrapper.NVAPIGpuVirtualizationInfoDto.ToNative
+  - NVAPIWrapper.NVAPIGpuVirtualizationInfoDto.VirtualizationMode
   - NVAPIWrapper.NVAPIGpuVirtualizationInfoDto.op_Equality(NVAPIWrapper.NVAPIGpuVirtualizationInfoDto,NVAPIWrapper.NVAPIGpuVirtualizationInfoDto)
   - NVAPIWrapper.NVAPIGpuVirtualizationInfoDto.op_Inequality(NVAPIWrapper.NVAPIGpuVirtualizationInfoDto,NVAPIWrapper.NVAPIGpuVirtualizationInfoDto)
   langs:
@@ -28,7 +29,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPIGpuVirtualizationInfoDto
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 3463
+    startLine: 4198
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -44,35 +45,71 @@ items:
   - System.Object.Equals(System.Object,System.Object)
   - System.Object.GetType
   - System.Object.ReferenceEquals(System.Object,System.Object)
-- uid: NVAPIWrapper.NVAPIGpuVirtualizationInfoDto.RawData
-  commentId: P:NVAPIWrapper.NVAPIGpuVirtualizationInfoDto.RawData
-  id: RawData
+- uid: NVAPIWrapper.NVAPIGpuVirtualizationInfoDto.VirtualizationMode
+  commentId: P:NVAPIWrapper.NVAPIGpuVirtualizationInfoDto.VirtualizationMode
+  id: VirtualizationMode
   parent: NVAPIWrapper.NVAPIGpuVirtualizationInfoDto
   langs:
   - csharp
   - vb
-  name: RawData
-  nameWithType: NVAPIGpuVirtualizationInfoDto.RawData
-  fullName: NVAPIWrapper.NVAPIGpuVirtualizationInfoDto.RawData
+  name: VirtualizationMode
+  nameWithType: NVAPIGpuVirtualizationInfoDto.VirtualizationMode
+  fullName: NVAPIWrapper.NVAPIGpuVirtualizationInfoDto.VirtualizationMode
   type: Property
   source:
     remote:
       path: NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
       branch: main
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
-    id: RawData
+    id: VirtualizationMode
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 3465
+    startLine: 4201
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
+  summary: The GPU virtualization mode.
+  example: []
   syntax:
-    content: public byte[] RawData { get; }
+    content: public _NV_VIRTUALIZATION_MODE VirtualizationMode { get; }
     parameters: []
     return:
-      type: System.Byte[]
-    content.vb: Public ReadOnly Property RawData As Byte()
-  overload: NVAPIWrapper.NVAPIGpuVirtualizationInfoDto.RawData*
+      type: NVAPIWrapper._NV_VIRTUALIZATION_MODE
+    content.vb: Public ReadOnly Property VirtualizationMode As _NV_VIRTUALIZATION_MODE
+  overload: NVAPIWrapper.NVAPIGpuVirtualizationInfoDto.VirtualizationMode*
+- uid: NVAPIWrapper.NVAPIGpuVirtualizationInfoDto.#ctor(NVAPIWrapper._NV_VIRTUALIZATION_MODE)
+  commentId: M:NVAPIWrapper.NVAPIGpuVirtualizationInfoDto.#ctor(NVAPIWrapper._NV_VIRTUALIZATION_MODE)
+  id: '#ctor(NVAPIWrapper._NV_VIRTUALIZATION_MODE)'
+  parent: NVAPIWrapper.NVAPIGpuVirtualizationInfoDto
+  langs:
+  - csharp
+  - vb
+  name: NVAPIGpuVirtualizationInfoDto(_NV_VIRTUALIZATION_MODE)
+  nameWithType: NVAPIGpuVirtualizationInfoDto.NVAPIGpuVirtualizationInfoDto(_NV_VIRTUALIZATION_MODE)
+  fullName: NVAPIWrapper.NVAPIGpuVirtualizationInfoDto.NVAPIGpuVirtualizationInfoDto(NVAPIWrapper._NV_VIRTUALIZATION_MODE)
+  type: Constructor
+  source:
+    remote:
+      path: NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
+      branch: main
+      repo: https://github.com/terrymacdonald/NVAPIWrapper.git
+    id: .ctor
+    path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
+    startLine: 4204
+  assemblies:
+  - NVAPIWrapper
+  namespace: NVAPIWrapper
+  summary: Initializes a new instance of <xref href="NVAPIWrapper.NVAPIGpuVirtualizationInfoDto" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public NVAPIGpuVirtualizationInfoDto(_NV_VIRTUALIZATION_MODE virtualizationMode)
+    parameters:
+    - id: virtualizationMode
+      type: NVAPIWrapper._NV_VIRTUALIZATION_MODE
+    content.vb: Public Sub New(virtualizationMode As _NV_VIRTUALIZATION_MODE)
+  overload: NVAPIWrapper.NVAPIGpuVirtualizationInfoDto.#ctor*
+  nameWithType.vb: NVAPIGpuVirtualizationInfoDto.New(_NV_VIRTUALIZATION_MODE)
+  fullName.vb: NVAPIWrapper.NVAPIGpuVirtualizationInfoDto.New(NVAPIWrapper._NV_VIRTUALIZATION_MODE)
+  name.vb: New(_NV_VIRTUALIZATION_MODE)
 - uid: NVAPIWrapper.NVAPIGpuVirtualizationInfoDto.FromNative(NVAPIWrapper._NV_GPU_VIRTUALIZATION_INFO)
   commentId: M:NVAPIWrapper.NVAPIGpuVirtualizationInfoDto.FromNative(NVAPIWrapper._NV_GPU_VIRTUALIZATION_INFO)
   id: FromNative(NVAPIWrapper._NV_GPU_VIRTUALIZATION_INFO)
@@ -91,10 +128,12 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: FromNative
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 3472
+    startLine: 4210
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
+  summary: Creates a DTO from the native <xref href="NVAPIWrapper._NV_GPU_VIRTUALIZATION_INFO" data-throw-if-not-resolved="false"></xref> struct.
+  example: []
   syntax:
     content: public static NVAPIGpuVirtualizationInfoDto FromNative(_NV_GPU_VIRTUALIZATION_INFO native)
     parameters:
@@ -122,10 +161,12 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: CreateDefault
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 3477
+    startLine: 4216
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
+  summary: Creates a default (zeroed) DTO with the correct version field.
+  example: []
   syntax:
     content: public static NVAPIGpuVirtualizationInfoDto CreateDefault()
     return:
@@ -150,10 +191,12 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: ToNative
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 3482
+    startLine: 4222
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
+  summary: Converts this DTO back to the native <xref href="NVAPIWrapper._NV_GPU_VIRTUALIZATION_INFO" data-throw-if-not-resolved="false"></xref> struct.
+  example: []
   syntax:
     content: public _NV_GPU_VIRTUALIZATION_INFO ToNative()
     return:
@@ -178,7 +221,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Equals
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 3487
+    startLine: 4232
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -215,7 +258,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Equals
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 3492
+    startLine: 4238
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -254,7 +297,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetHashCode
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 3493
+    startLine: 4240
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -286,10 +329,12 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: op_Equality
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 3494
+    startLine: 4242
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
+  summary: Equality operator.
+  example: []
   syntax:
     content: public static bool operator ==(NVAPIGpuVirtualizationInfoDto left, NVAPIGpuVirtualizationInfoDto right)
     parameters:
@@ -322,10 +367,12 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: op_Inequality
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 3495
+    startLine: 4244
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
+  summary: Inequality operator.
+  example: []
   syntax:
     content: public static bool operator !=(NVAPIGpuVirtualizationInfoDto left, NVAPIGpuVirtualizationInfoDto right)
     parameters:
@@ -570,48 +617,19 @@ references:
   nameWithType.vb: Object
   fullName.vb: Object
   name.vb: Object
-- uid: NVAPIWrapper.NVAPIGpuVirtualizationInfoDto.RawData*
-  commentId: Overload:NVAPIWrapper.NVAPIGpuVirtualizationInfoDto.RawData
-  href: NVAPIWrapper.NVAPIGpuVirtualizationInfoDto.html#NVAPIWrapper_NVAPIGpuVirtualizationInfoDto_RawData
-  name: RawData
-  nameWithType: NVAPIGpuVirtualizationInfoDto.RawData
-  fullName: NVAPIWrapper.NVAPIGpuVirtualizationInfoDto.RawData
-- uid: System.Byte[]
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.byte
-  name: byte[]
-  nameWithType: byte[]
-  fullName: byte[]
-  nameWithType.vb: Byte()
-  fullName.vb: Byte()
-  name.vb: Byte()
-  spec.csharp:
-  - uid: System.Byte
-    name: byte
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.byte
-  - name: '['
-  - name: ']'
-  spec.vb:
-  - uid: System.Byte
-    name: Byte
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.byte
-  - name: (
-  - name: )
-- uid: NVAPIWrapper.NVAPIGpuVirtualizationInfoDto.FromNative*
-  commentId: Overload:NVAPIWrapper.NVAPIGpuVirtualizationInfoDto.FromNative
-  href: NVAPIWrapper.NVAPIGpuVirtualizationInfoDto.html#NVAPIWrapper_NVAPIGpuVirtualizationInfoDto_FromNative_NVAPIWrapper__NV_GPU_VIRTUALIZATION_INFO_
-  name: FromNative
-  nameWithType: NVAPIGpuVirtualizationInfoDto.FromNative
-  fullName: NVAPIWrapper.NVAPIGpuVirtualizationInfoDto.FromNative
-- uid: NVAPIWrapper._NV_GPU_VIRTUALIZATION_INFO
-  commentId: T:NVAPIWrapper._NV_GPU_VIRTUALIZATION_INFO
+- uid: NVAPIWrapper.NVAPIGpuVirtualizationInfoDto.VirtualizationMode*
+  commentId: Overload:NVAPIWrapper.NVAPIGpuVirtualizationInfoDto.VirtualizationMode
+  href: NVAPIWrapper.NVAPIGpuVirtualizationInfoDto.html#NVAPIWrapper_NVAPIGpuVirtualizationInfoDto_VirtualizationMode
+  name: VirtualizationMode
+  nameWithType: NVAPIGpuVirtualizationInfoDto.VirtualizationMode
+  fullName: NVAPIWrapper.NVAPIGpuVirtualizationInfoDto.VirtualizationMode
+- uid: NVAPIWrapper._NV_VIRTUALIZATION_MODE
+  commentId: T:NVAPIWrapper._NV_VIRTUALIZATION_MODE
   parent: NVAPIWrapper
-  href: NVAPIWrapper._NV_GPU_VIRTUALIZATION_INFO.html
-  name: _NV_GPU_VIRTUALIZATION_INFO
-  nameWithType: _NV_GPU_VIRTUALIZATION_INFO
-  fullName: NVAPIWrapper._NV_GPU_VIRTUALIZATION_INFO
+  href: NVAPIWrapper._NV_VIRTUALIZATION_MODE.html
+  name: _NV_VIRTUALIZATION_MODE
+  nameWithType: _NV_VIRTUALIZATION_MODE
+  fullName: NVAPIWrapper._NV_VIRTUALIZATION_MODE
 - uid: NVAPIWrapper.NVAPIGpuVirtualizationInfoDto
   commentId: T:NVAPIWrapper.NVAPIGpuVirtualizationInfoDto
   parent: NVAPIWrapper
@@ -619,6 +637,28 @@ references:
   name: NVAPIGpuVirtualizationInfoDto
   nameWithType: NVAPIGpuVirtualizationInfoDto
   fullName: NVAPIWrapper.NVAPIGpuVirtualizationInfoDto
+- uid: NVAPIWrapper.NVAPIGpuVirtualizationInfoDto.#ctor*
+  commentId: Overload:NVAPIWrapper.NVAPIGpuVirtualizationInfoDto.#ctor
+  href: NVAPIWrapper.NVAPIGpuVirtualizationInfoDto.html#NVAPIWrapper_NVAPIGpuVirtualizationInfoDto__ctor_NVAPIWrapper__NV_VIRTUALIZATION_MODE_
+  name: NVAPIGpuVirtualizationInfoDto
+  nameWithType: NVAPIGpuVirtualizationInfoDto.NVAPIGpuVirtualizationInfoDto
+  fullName: NVAPIWrapper.NVAPIGpuVirtualizationInfoDto.NVAPIGpuVirtualizationInfoDto
+  nameWithType.vb: NVAPIGpuVirtualizationInfoDto.New
+  fullName.vb: NVAPIWrapper.NVAPIGpuVirtualizationInfoDto.New
+  name.vb: New
+- uid: NVAPIWrapper._NV_GPU_VIRTUALIZATION_INFO
+  commentId: T:NVAPIWrapper._NV_GPU_VIRTUALIZATION_INFO
+  parent: NVAPIWrapper
+  href: NVAPIWrapper._NV_GPU_VIRTUALIZATION_INFO.html
+  name: _NV_GPU_VIRTUALIZATION_INFO
+  nameWithType: _NV_GPU_VIRTUALIZATION_INFO
+  fullName: NVAPIWrapper._NV_GPU_VIRTUALIZATION_INFO
+- uid: NVAPIWrapper.NVAPIGpuVirtualizationInfoDto.FromNative*
+  commentId: Overload:NVAPIWrapper.NVAPIGpuVirtualizationInfoDto.FromNative
+  href: NVAPIWrapper.NVAPIGpuVirtualizationInfoDto.html#NVAPIWrapper_NVAPIGpuVirtualizationInfoDto_FromNative_NVAPIWrapper__NV_GPU_VIRTUALIZATION_INFO_
+  name: FromNative
+  nameWithType: NVAPIGpuVirtualizationInfoDto.FromNative
+  fullName: NVAPIWrapper.NVAPIGpuVirtualizationInfoDto.FromNative
 - uid: NVAPIWrapper.NVAPIGpuVirtualizationInfoDto.CreateDefault*
   commentId: Overload:NVAPIWrapper.NVAPIGpuVirtualizationInfoDto.CreateDefault
   href: NVAPIWrapper.NVAPIGpuVirtualizationInfoDto.html#NVAPIWrapper_NVAPIGpuVirtualizationInfoDto_CreateDefault

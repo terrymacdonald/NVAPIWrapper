@@ -5,13 +5,14 @@ items:
   id: NVAPIEncoderSessionsInfoDto
   parent: NVAPIWrapper
   children:
+  - NVAPIWrapper.NVAPIEncoderSessionsInfoDto.#ctor(System.UInt32,NVAPIWrapper.NVAPIEncoderPerSessionInfoDto[])
   - NVAPIWrapper.NVAPIEncoderSessionsInfoDto.CreateDefault
   - NVAPIWrapper.NVAPIEncoderSessionsInfoDto.Equals(NVAPIWrapper.NVAPIEncoderSessionsInfoDto)
   - NVAPIWrapper.NVAPIEncoderSessionsInfoDto.Equals(System.Object)
   - NVAPIWrapper.NVAPIEncoderSessionsInfoDto.FromNative(NVAPIWrapper._NV_ENCODER_SESSIONS_INFO_V1)
   - NVAPIWrapper.NVAPIEncoderSessionsInfoDto.GetHashCode
-  - NVAPIWrapper.NVAPIEncoderSessionsInfoDto.RawData
-  - NVAPIWrapper.NVAPIEncoderSessionsInfoDto.ToNative
+  - NVAPIWrapper.NVAPIEncoderSessionsInfoDto.Sessions
+  - NVAPIWrapper.NVAPIEncoderSessionsInfoDto.SessionsCount
   - NVAPIWrapper.NVAPIEncoderSessionsInfoDto.op_Equality(NVAPIWrapper.NVAPIEncoderSessionsInfoDto,NVAPIWrapper.NVAPIEncoderSessionsInfoDto)
   - NVAPIWrapper.NVAPIEncoderSessionsInfoDto.op_Inequality(NVAPIWrapper.NVAPIEncoderSessionsInfoDto,NVAPIWrapper.NVAPIEncoderSessionsInfoDto)
   langs:
@@ -28,7 +29,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPIEncoderSessionsInfoDto
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 3577
+    startLine: 4584
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -44,35 +45,104 @@ items:
   - System.Object.Equals(System.Object,System.Object)
   - System.Object.GetType
   - System.Object.ReferenceEquals(System.Object,System.Object)
-- uid: NVAPIWrapper.NVAPIEncoderSessionsInfoDto.RawData
-  commentId: P:NVAPIWrapper.NVAPIEncoderSessionsInfoDto.RawData
-  id: RawData
+- uid: NVAPIWrapper.NVAPIEncoderSessionsInfoDto.SessionsCount
+  commentId: P:NVAPIWrapper.NVAPIEncoderSessionsInfoDto.SessionsCount
+  id: SessionsCount
   parent: NVAPIWrapper.NVAPIEncoderSessionsInfoDto
   langs:
   - csharp
   - vb
-  name: RawData
-  nameWithType: NVAPIEncoderSessionsInfoDto.RawData
-  fullName: NVAPIWrapper.NVAPIEncoderSessionsInfoDto.RawData
+  name: SessionsCount
+  nameWithType: NVAPIEncoderSessionsInfoDto.SessionsCount
+  fullName: NVAPIWrapper.NVAPIEncoderSessionsInfoDto.SessionsCount
   type: Property
   source:
     remote:
       path: NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
       branch: main
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
-    id: RawData
+    id: SessionsCount
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 3579
+    startLine: 4587
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
+  summary: Number of active encoder sessions.
+  example: []
   syntax:
-    content: public byte[] RawData { get; }
+    content: public uint SessionsCount { get; }
     parameters: []
     return:
-      type: System.Byte[]
-    content.vb: Public ReadOnly Property RawData As Byte()
-  overload: NVAPIWrapper.NVAPIEncoderSessionsInfoDto.RawData*
+      type: System.UInt32
+    content.vb: Public ReadOnly Property SessionsCount As UInteger
+  overload: NVAPIWrapper.NVAPIEncoderSessionsInfoDto.SessionsCount*
+- uid: NVAPIWrapper.NVAPIEncoderSessionsInfoDto.Sessions
+  commentId: P:NVAPIWrapper.NVAPIEncoderSessionsInfoDto.Sessions
+  id: Sessions
+  parent: NVAPIWrapper.NVAPIEncoderSessionsInfoDto
+  langs:
+  - csharp
+  - vb
+  name: Sessions
+  nameWithType: NVAPIEncoderSessionsInfoDto.Sessions
+  fullName: NVAPIWrapper.NVAPIEncoderSessionsInfoDto.Sessions
+  type: Property
+  source:
+    remote:
+      path: NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
+      branch: main
+      repo: https://github.com/terrymacdonald/NVAPIWrapper.git
+    id: Sessions
+    path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
+    startLine: 4589
+  assemblies:
+  - NVAPIWrapper
+  namespace: NVAPIWrapper
+  summary: Per-session encoder info array; may be empty if no sessions are active.
+  example: []
+  syntax:
+    content: public NVAPIEncoderPerSessionInfoDto[] Sessions { get; }
+    parameters: []
+    return:
+      type: NVAPIWrapper.NVAPIEncoderPerSessionInfoDto[]
+    content.vb: Public ReadOnly Property Sessions As NVAPIEncoderPerSessionInfoDto()
+  overload: NVAPIWrapper.NVAPIEncoderSessionsInfoDto.Sessions*
+- uid: NVAPIWrapper.NVAPIEncoderSessionsInfoDto.#ctor(System.UInt32,NVAPIWrapper.NVAPIEncoderPerSessionInfoDto[])
+  commentId: M:NVAPIWrapper.NVAPIEncoderSessionsInfoDto.#ctor(System.UInt32,NVAPIWrapper.NVAPIEncoderPerSessionInfoDto[])
+  id: '#ctor(System.UInt32,NVAPIWrapper.NVAPIEncoderPerSessionInfoDto[])'
+  parent: NVAPIWrapper.NVAPIEncoderSessionsInfoDto
+  langs:
+  - csharp
+  - vb
+  name: NVAPIEncoderSessionsInfoDto(uint, NVAPIEncoderPerSessionInfoDto[])
+  nameWithType: NVAPIEncoderSessionsInfoDto.NVAPIEncoderSessionsInfoDto(uint, NVAPIEncoderPerSessionInfoDto[])
+  fullName: NVAPIWrapper.NVAPIEncoderSessionsInfoDto.NVAPIEncoderSessionsInfoDto(uint, NVAPIWrapper.NVAPIEncoderPerSessionInfoDto[])
+  type: Constructor
+  source:
+    remote:
+      path: NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
+      branch: main
+      repo: https://github.com/terrymacdonald/NVAPIWrapper.git
+    id: .ctor
+    path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
+    startLine: 4592
+  assemblies:
+  - NVAPIWrapper
+  namespace: NVAPIWrapper
+  summary: Initializes a new instance of <xref href="NVAPIWrapper.NVAPIEncoderSessionsInfoDto" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public NVAPIEncoderSessionsInfoDto(uint sessionsCount, NVAPIEncoderPerSessionInfoDto[] sessions)
+    parameters:
+    - id: sessionsCount
+      type: System.UInt32
+    - id: sessions
+      type: NVAPIWrapper.NVAPIEncoderPerSessionInfoDto[]
+    content.vb: Public Sub New(sessionsCount As UInteger, sessions As NVAPIEncoderPerSessionInfoDto())
+  overload: NVAPIWrapper.NVAPIEncoderSessionsInfoDto.#ctor*
+  nameWithType.vb: NVAPIEncoderSessionsInfoDto.New(UInteger, NVAPIEncoderPerSessionInfoDto())
+  fullName.vb: NVAPIWrapper.NVAPIEncoderSessionsInfoDto.New(UInteger, NVAPIWrapper.NVAPIEncoderPerSessionInfoDto())
+  name.vb: New(UInteger, NVAPIEncoderPerSessionInfoDto())
 - uid: NVAPIWrapper.NVAPIEncoderSessionsInfoDto.FromNative(NVAPIWrapper._NV_ENCODER_SESSIONS_INFO_V1)
   commentId: M:NVAPIWrapper.NVAPIEncoderSessionsInfoDto.FromNative(NVAPIWrapper._NV_ENCODER_SESSIONS_INFO_V1)
   id: FromNative(NVAPIWrapper._NV_ENCODER_SESSIONS_INFO_V1)
@@ -91,10 +161,15 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: FromNative
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 3586
+    startLine: 4602
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
+  summary: >-
+    Creates a DTO from the native <xref href="NVAPIWrapper._NV_ENCODER_SESSIONS_INFO_V1" data-throw-if-not-resolved="false"></xref> struct,
+
+    dereferencing the <code>pSessionInfo</code> pointer while the native struct is still valid.
+  example: []
   syntax:
     content: public static NVAPIEncoderSessionsInfoDto FromNative(_NV_ENCODER_SESSIONS_INFO_V1 native)
     parameters:
@@ -122,44 +197,18 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: CreateDefault
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 3591
+    startLine: 4615
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
+  summary: Creates a default (zeroed) DTO with the correct version field.
+  example: []
   syntax:
     content: public static NVAPIEncoderSessionsInfoDto CreateDefault()
     return:
       type: NVAPIWrapper.NVAPIEncoderSessionsInfoDto
     content.vb: Public Shared Function CreateDefault() As NVAPIEncoderSessionsInfoDto
   overload: NVAPIWrapper.NVAPIEncoderSessionsInfoDto.CreateDefault*
-- uid: NVAPIWrapper.NVAPIEncoderSessionsInfoDto.ToNative
-  commentId: M:NVAPIWrapper.NVAPIEncoderSessionsInfoDto.ToNative
-  id: ToNative
-  parent: NVAPIWrapper.NVAPIEncoderSessionsInfoDto
-  langs:
-  - csharp
-  - vb
-  name: ToNative()
-  nameWithType: NVAPIEncoderSessionsInfoDto.ToNative()
-  fullName: NVAPIWrapper.NVAPIEncoderSessionsInfoDto.ToNative()
-  type: Method
-  source:
-    remote:
-      path: NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-      branch: main
-      repo: https://github.com/terrymacdonald/NVAPIWrapper.git
-    id: ToNative
-    path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 3596
-  assemblies:
-  - NVAPIWrapper
-  namespace: NVAPIWrapper
-  syntax:
-    content: public _NV_ENCODER_SESSIONS_INFO_V1 ToNative()
-    return:
-      type: NVAPIWrapper._NV_ENCODER_SESSIONS_INFO_V1
-    content.vb: Public Function ToNative() As _NV_ENCODER_SESSIONS_INFO_V1
-  overload: NVAPIWrapper.NVAPIEncoderSessionsInfoDto.ToNative*
 - uid: NVAPIWrapper.NVAPIEncoderSessionsInfoDto.Equals(NVAPIWrapper.NVAPIEncoderSessionsInfoDto)
   commentId: M:NVAPIWrapper.NVAPIEncoderSessionsInfoDto.Equals(NVAPIWrapper.NVAPIEncoderSessionsInfoDto)
   id: Equals(NVAPIWrapper.NVAPIEncoderSessionsInfoDto)
@@ -178,7 +227,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Equals
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 3601
+    startLine: 4621
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -215,7 +264,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Equals
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 3606
+    startLine: 4635
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -254,7 +303,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetHashCode
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 3607
+    startLine: 4637
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -286,10 +335,12 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: op_Equality
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 3608
+    startLine: 4646
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
+  summary: Equality operator.
+  example: []
   syntax:
     content: public static bool operator ==(NVAPIEncoderSessionsInfoDto left, NVAPIEncoderSessionsInfoDto right)
     parameters:
@@ -322,10 +373,12 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: op_Inequality
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 3609
+    startLine: 4648
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
+  summary: Inequality operator.
+  example: []
   syntax:
     content: public static bool operator !=(NVAPIEncoderSessionsInfoDto left, NVAPIEncoderSessionsInfoDto right)
     parameters:
@@ -570,48 +623,50 @@ references:
   nameWithType.vb: Object
   fullName.vb: Object
   name.vb: Object
-- uid: NVAPIWrapper.NVAPIEncoderSessionsInfoDto.RawData*
-  commentId: Overload:NVAPIWrapper.NVAPIEncoderSessionsInfoDto.RawData
-  href: NVAPIWrapper.NVAPIEncoderSessionsInfoDto.html#NVAPIWrapper_NVAPIEncoderSessionsInfoDto_RawData
-  name: RawData
-  nameWithType: NVAPIEncoderSessionsInfoDto.RawData
-  fullName: NVAPIWrapper.NVAPIEncoderSessionsInfoDto.RawData
-- uid: System.Byte[]
+- uid: NVAPIWrapper.NVAPIEncoderSessionsInfoDto.SessionsCount*
+  commentId: Overload:NVAPIWrapper.NVAPIEncoderSessionsInfoDto.SessionsCount
+  href: NVAPIWrapper.NVAPIEncoderSessionsInfoDto.html#NVAPIWrapper_NVAPIEncoderSessionsInfoDto_SessionsCount
+  name: SessionsCount
+  nameWithType: NVAPIEncoderSessionsInfoDto.SessionsCount
+  fullName: NVAPIWrapper.NVAPIEncoderSessionsInfoDto.SessionsCount
+- uid: System.UInt32
+  commentId: T:System.UInt32
+  parent: System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.byte
-  name: byte[]
-  nameWithType: byte[]
-  fullName: byte[]
-  nameWithType.vb: Byte()
-  fullName.vb: Byte()
-  name.vb: Byte()
+  href: https://learn.microsoft.com/dotnet/api/system.uint32
+  name: uint
+  nameWithType: uint
+  fullName: uint
+  nameWithType.vb: UInteger
+  fullName.vb: UInteger
+  name.vb: UInteger
+- uid: NVAPIWrapper.NVAPIEncoderSessionsInfoDto.Sessions*
+  commentId: Overload:NVAPIWrapper.NVAPIEncoderSessionsInfoDto.Sessions
+  href: NVAPIWrapper.NVAPIEncoderSessionsInfoDto.html#NVAPIWrapper_NVAPIEncoderSessionsInfoDto_Sessions
+  name: Sessions
+  nameWithType: NVAPIEncoderSessionsInfoDto.Sessions
+  fullName: NVAPIWrapper.NVAPIEncoderSessionsInfoDto.Sessions
+- uid: NVAPIWrapper.NVAPIEncoderPerSessionInfoDto[]
+  isExternal: true
+  href: NVAPIWrapper.NVAPIEncoderPerSessionInfoDto.html
+  name: NVAPIEncoderPerSessionInfoDto[]
+  nameWithType: NVAPIEncoderPerSessionInfoDto[]
+  fullName: NVAPIWrapper.NVAPIEncoderPerSessionInfoDto[]
+  nameWithType.vb: NVAPIEncoderPerSessionInfoDto()
+  fullName.vb: NVAPIWrapper.NVAPIEncoderPerSessionInfoDto()
+  name.vb: NVAPIEncoderPerSessionInfoDto()
   spec.csharp:
-  - uid: System.Byte
-    name: byte
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - uid: NVAPIWrapper.NVAPIEncoderPerSessionInfoDto
+    name: NVAPIEncoderPerSessionInfoDto
+    href: NVAPIWrapper.NVAPIEncoderPerSessionInfoDto.html
   - name: '['
   - name: ']'
   spec.vb:
-  - uid: System.Byte
-    name: Byte
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - uid: NVAPIWrapper.NVAPIEncoderPerSessionInfoDto
+    name: NVAPIEncoderPerSessionInfoDto
+    href: NVAPIWrapper.NVAPIEncoderPerSessionInfoDto.html
   - name: (
   - name: )
-- uid: NVAPIWrapper.NVAPIEncoderSessionsInfoDto.FromNative*
-  commentId: Overload:NVAPIWrapper.NVAPIEncoderSessionsInfoDto.FromNative
-  href: NVAPIWrapper.NVAPIEncoderSessionsInfoDto.html#NVAPIWrapper_NVAPIEncoderSessionsInfoDto_FromNative_NVAPIWrapper__NV_ENCODER_SESSIONS_INFO_V1_
-  name: FromNative
-  nameWithType: NVAPIEncoderSessionsInfoDto.FromNative
-  fullName: NVAPIWrapper.NVAPIEncoderSessionsInfoDto.FromNative
-- uid: NVAPIWrapper._NV_ENCODER_SESSIONS_INFO_V1
-  commentId: T:NVAPIWrapper._NV_ENCODER_SESSIONS_INFO_V1
-  parent: NVAPIWrapper
-  href: NVAPIWrapper._NV_ENCODER_SESSIONS_INFO_V1.html
-  name: _NV_ENCODER_SESSIONS_INFO_V1
-  nameWithType: _NV_ENCODER_SESSIONS_INFO_V1
-  fullName: NVAPIWrapper._NV_ENCODER_SESSIONS_INFO_V1
 - uid: NVAPIWrapper.NVAPIEncoderSessionsInfoDto
   commentId: T:NVAPIWrapper.NVAPIEncoderSessionsInfoDto
   parent: NVAPIWrapper
@@ -619,18 +674,34 @@ references:
   name: NVAPIEncoderSessionsInfoDto
   nameWithType: NVAPIEncoderSessionsInfoDto
   fullName: NVAPIWrapper.NVAPIEncoderSessionsInfoDto
+- uid: NVAPIWrapper.NVAPIEncoderSessionsInfoDto.#ctor*
+  commentId: Overload:NVAPIWrapper.NVAPIEncoderSessionsInfoDto.#ctor
+  href: NVAPIWrapper.NVAPIEncoderSessionsInfoDto.html#NVAPIWrapper_NVAPIEncoderSessionsInfoDto__ctor_System_UInt32_NVAPIWrapper_NVAPIEncoderPerSessionInfoDto___
+  name: NVAPIEncoderSessionsInfoDto
+  nameWithType: NVAPIEncoderSessionsInfoDto.NVAPIEncoderSessionsInfoDto
+  fullName: NVAPIWrapper.NVAPIEncoderSessionsInfoDto.NVAPIEncoderSessionsInfoDto
+  nameWithType.vb: NVAPIEncoderSessionsInfoDto.New
+  fullName.vb: NVAPIWrapper.NVAPIEncoderSessionsInfoDto.New
+  name.vb: New
+- uid: NVAPIWrapper._NV_ENCODER_SESSIONS_INFO_V1
+  commentId: T:NVAPIWrapper._NV_ENCODER_SESSIONS_INFO_V1
+  parent: NVAPIWrapper
+  href: NVAPIWrapper._NV_ENCODER_SESSIONS_INFO_V1.html
+  name: _NV_ENCODER_SESSIONS_INFO_V1
+  nameWithType: _NV_ENCODER_SESSIONS_INFO_V1
+  fullName: NVAPIWrapper._NV_ENCODER_SESSIONS_INFO_V1
+- uid: NVAPIWrapper.NVAPIEncoderSessionsInfoDto.FromNative*
+  commentId: Overload:NVAPIWrapper.NVAPIEncoderSessionsInfoDto.FromNative
+  href: NVAPIWrapper.NVAPIEncoderSessionsInfoDto.html#NVAPIWrapper_NVAPIEncoderSessionsInfoDto_FromNative_NVAPIWrapper__NV_ENCODER_SESSIONS_INFO_V1_
+  name: FromNative
+  nameWithType: NVAPIEncoderSessionsInfoDto.FromNative
+  fullName: NVAPIWrapper.NVAPIEncoderSessionsInfoDto.FromNative
 - uid: NVAPIWrapper.NVAPIEncoderSessionsInfoDto.CreateDefault*
   commentId: Overload:NVAPIWrapper.NVAPIEncoderSessionsInfoDto.CreateDefault
   href: NVAPIWrapper.NVAPIEncoderSessionsInfoDto.html#NVAPIWrapper_NVAPIEncoderSessionsInfoDto_CreateDefault
   name: CreateDefault
   nameWithType: NVAPIEncoderSessionsInfoDto.CreateDefault
   fullName: NVAPIWrapper.NVAPIEncoderSessionsInfoDto.CreateDefault
-- uid: NVAPIWrapper.NVAPIEncoderSessionsInfoDto.ToNative*
-  commentId: Overload:NVAPIWrapper.NVAPIEncoderSessionsInfoDto.ToNative
-  href: NVAPIWrapper.NVAPIEncoderSessionsInfoDto.html#NVAPIWrapper_NVAPIEncoderSessionsInfoDto_ToNative
-  name: ToNative
-  nameWithType: NVAPIEncoderSessionsInfoDto.ToNative
-  fullName: NVAPIWrapper.NVAPIEncoderSessionsInfoDto.ToNative
 - uid: NVAPIWrapper.NVAPIEncoderSessionsInfoDto.Equals*
   commentId: Overload:NVAPIWrapper.NVAPIEncoderSessionsInfoDto.Equals
   href: NVAPIWrapper.NVAPIEncoderSessionsInfoDto.html#NVAPIWrapper_NVAPIEncoderSessionsInfoDto_Equals_NVAPIWrapper_NVAPIEncoderSessionsInfoDto_

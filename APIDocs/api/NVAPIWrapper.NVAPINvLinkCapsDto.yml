@@ -5,12 +5,18 @@ items:
   id: NVAPINvLinkCapsDto
   parent: NVAPIWrapper
   children:
+  - NVAPIWrapper.NVAPINvLinkCapsDto.#ctor(System.UInt32,System.Byte,System.Byte,System.Byte,System.Byte,System.UInt32)
+  - NVAPIWrapper.NVAPINvLinkCapsDto.CapsTbl
   - NVAPIWrapper.NVAPINvLinkCapsDto.CreateDefault
   - NVAPIWrapper.NVAPINvLinkCapsDto.Equals(NVAPIWrapper.NVAPINvLinkCapsDto)
   - NVAPIWrapper.NVAPINvLinkCapsDto.Equals(System.Object)
   - NVAPIWrapper.NVAPINvLinkCapsDto.FromNative(NVAPIWrapper.NVLINK_GET_CAPS_V1)
   - NVAPIWrapper.NVAPINvLinkCapsDto.GetHashCode
-  - NVAPIWrapper.NVAPINvLinkCapsDto.RawData
+  - NVAPIWrapper.NVAPINvLinkCapsDto.HighestNciVersion
+  - NVAPIWrapper.NVAPINvLinkCapsDto.HighestNvlinkVersion
+  - NVAPIWrapper.NVAPINvLinkCapsDto.LinkMask
+  - NVAPIWrapper.NVAPINvLinkCapsDto.LowestNciVersion
+  - NVAPIWrapper.NVAPINvLinkCapsDto.LowestNvlinkVersion
   - NVAPIWrapper.NVAPINvLinkCapsDto.ToNative
   - NVAPIWrapper.NVAPINvLinkCapsDto.op_Equality(NVAPIWrapper.NVAPINvLinkCapsDto,NVAPIWrapper.NVAPINvLinkCapsDto)
   - NVAPIWrapper.NVAPINvLinkCapsDto.op_Inequality(NVAPIWrapper.NVAPINvLinkCapsDto,NVAPIWrapper.NVAPINvLinkCapsDto)
@@ -28,7 +34,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPINvLinkCapsDto
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 3691
+    startLine: 4762
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -44,35 +50,236 @@ items:
   - System.Object.Equals(System.Object,System.Object)
   - System.Object.GetType
   - System.Object.ReferenceEquals(System.Object,System.Object)
-- uid: NVAPIWrapper.NVAPINvLinkCapsDto.RawData
-  commentId: P:NVAPIWrapper.NVAPINvLinkCapsDto.RawData
-  id: RawData
+- uid: NVAPIWrapper.NVAPINvLinkCapsDto.CapsTbl
+  commentId: P:NVAPIWrapper.NVAPINvLinkCapsDto.CapsTbl
+  id: CapsTbl
   parent: NVAPIWrapper.NVAPINvLinkCapsDto
   langs:
   - csharp
   - vb
-  name: RawData
-  nameWithType: NVAPINvLinkCapsDto.RawData
-  fullName: NVAPIWrapper.NVAPINvLinkCapsDto.RawData
+  name: CapsTbl
+  nameWithType: NVAPINvLinkCapsDto.CapsTbl
+  fullName: NVAPIWrapper.NVAPINvLinkCapsDto.CapsTbl
   type: Property
   source:
     remote:
       path: NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
       branch: main
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
-    id: RawData
+    id: CapsTbl
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 3693
+    startLine: 4765
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
+  summary: NVLINK capabilities bitmask table.
+  example: []
   syntax:
-    content: public byte[] RawData { get; }
+    content: public uint CapsTbl { get; }
     parameters: []
     return:
-      type: System.Byte[]
-    content.vb: Public ReadOnly Property RawData As Byte()
-  overload: NVAPIWrapper.NVAPINvLinkCapsDto.RawData*
+      type: System.UInt32
+    content.vb: Public ReadOnly Property CapsTbl As UInteger
+  overload: NVAPIWrapper.NVAPINvLinkCapsDto.CapsTbl*
+- uid: NVAPIWrapper.NVAPINvLinkCapsDto.LowestNvlinkVersion
+  commentId: P:NVAPIWrapper.NVAPINvLinkCapsDto.LowestNvlinkVersion
+  id: LowestNvlinkVersion
+  parent: NVAPIWrapper.NVAPINvLinkCapsDto
+  langs:
+  - csharp
+  - vb
+  name: LowestNvlinkVersion
+  nameWithType: NVAPINvLinkCapsDto.LowestNvlinkVersion
+  fullName: NVAPIWrapper.NVAPINvLinkCapsDto.LowestNvlinkVersion
+  type: Property
+  source:
+    remote:
+      path: NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
+      branch: main
+      repo: https://github.com/terrymacdonald/NVAPIWrapper.git
+    id: LowestNvlinkVersion
+    path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
+    startLine: 4767
+  assemblies:
+  - NVAPIWrapper
+  namespace: NVAPIWrapper
+  summary: Lowest supported NVLink version.
+  example: []
+  syntax:
+    content: public byte LowestNvlinkVersion { get; }
+    parameters: []
+    return:
+      type: System.Byte
+    content.vb: Public ReadOnly Property LowestNvlinkVersion As Byte
+  overload: NVAPIWrapper.NVAPINvLinkCapsDto.LowestNvlinkVersion*
+- uid: NVAPIWrapper.NVAPINvLinkCapsDto.HighestNvlinkVersion
+  commentId: P:NVAPIWrapper.NVAPINvLinkCapsDto.HighestNvlinkVersion
+  id: HighestNvlinkVersion
+  parent: NVAPIWrapper.NVAPINvLinkCapsDto
+  langs:
+  - csharp
+  - vb
+  name: HighestNvlinkVersion
+  nameWithType: NVAPINvLinkCapsDto.HighestNvlinkVersion
+  fullName: NVAPIWrapper.NVAPINvLinkCapsDto.HighestNvlinkVersion
+  type: Property
+  source:
+    remote:
+      path: NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
+      branch: main
+      repo: https://github.com/terrymacdonald/NVAPIWrapper.git
+    id: HighestNvlinkVersion
+    path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
+    startLine: 4769
+  assemblies:
+  - NVAPIWrapper
+  namespace: NVAPIWrapper
+  summary: Highest supported NVLink version.
+  example: []
+  syntax:
+    content: public byte HighestNvlinkVersion { get; }
+    parameters: []
+    return:
+      type: System.Byte
+    content.vb: Public ReadOnly Property HighestNvlinkVersion As Byte
+  overload: NVAPIWrapper.NVAPINvLinkCapsDto.HighestNvlinkVersion*
+- uid: NVAPIWrapper.NVAPINvLinkCapsDto.LowestNciVersion
+  commentId: P:NVAPIWrapper.NVAPINvLinkCapsDto.LowestNciVersion
+  id: LowestNciVersion
+  parent: NVAPIWrapper.NVAPINvLinkCapsDto
+  langs:
+  - csharp
+  - vb
+  name: LowestNciVersion
+  nameWithType: NVAPINvLinkCapsDto.LowestNciVersion
+  fullName: NVAPIWrapper.NVAPINvLinkCapsDto.LowestNciVersion
+  type: Property
+  source:
+    remote:
+      path: NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
+      branch: main
+      repo: https://github.com/terrymacdonald/NVAPIWrapper.git
+    id: LowestNciVersion
+    path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
+    startLine: 4771
+  assemblies:
+  - NVAPIWrapper
+  namespace: NVAPIWrapper
+  summary: Lowest supported NCI version.
+  example: []
+  syntax:
+    content: public byte LowestNciVersion { get; }
+    parameters: []
+    return:
+      type: System.Byte
+    content.vb: Public ReadOnly Property LowestNciVersion As Byte
+  overload: NVAPIWrapper.NVAPINvLinkCapsDto.LowestNciVersion*
+- uid: NVAPIWrapper.NVAPINvLinkCapsDto.HighestNciVersion
+  commentId: P:NVAPIWrapper.NVAPINvLinkCapsDto.HighestNciVersion
+  id: HighestNciVersion
+  parent: NVAPIWrapper.NVAPINvLinkCapsDto
+  langs:
+  - csharp
+  - vb
+  name: HighestNciVersion
+  nameWithType: NVAPINvLinkCapsDto.HighestNciVersion
+  fullName: NVAPIWrapper.NVAPINvLinkCapsDto.HighestNciVersion
+  type: Property
+  source:
+    remote:
+      path: NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
+      branch: main
+      repo: https://github.com/terrymacdonald/NVAPIWrapper.git
+    id: HighestNciVersion
+    path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
+    startLine: 4773
+  assemblies:
+  - NVAPIWrapper
+  namespace: NVAPIWrapper
+  summary: Highest supported NCI version.
+  example: []
+  syntax:
+    content: public byte HighestNciVersion { get; }
+    parameters: []
+    return:
+      type: System.Byte
+    content.vb: Public ReadOnly Property HighestNciVersion As Byte
+  overload: NVAPIWrapper.NVAPINvLinkCapsDto.HighestNciVersion*
+- uid: NVAPIWrapper.NVAPINvLinkCapsDto.LinkMask
+  commentId: P:NVAPIWrapper.NVAPINvLinkCapsDto.LinkMask
+  id: LinkMask
+  parent: NVAPIWrapper.NVAPINvLinkCapsDto
+  langs:
+  - csharp
+  - vb
+  name: LinkMask
+  nameWithType: NVAPINvLinkCapsDto.LinkMask
+  fullName: NVAPIWrapper.NVAPINvLinkCapsDto.LinkMask
+  type: Property
+  source:
+    remote:
+      path: NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
+      branch: main
+      repo: https://github.com/terrymacdonald/NVAPIWrapper.git
+    id: LinkMask
+    path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
+    startLine: 4775
+  assemblies:
+  - NVAPIWrapper
+  namespace: NVAPIWrapper
+  summary: Bitmask of active NVLink links.
+  example: []
+  syntax:
+    content: public uint LinkMask { get; }
+    parameters: []
+    return:
+      type: System.UInt32
+    content.vb: Public ReadOnly Property LinkMask As UInteger
+  overload: NVAPIWrapper.NVAPINvLinkCapsDto.LinkMask*
+- uid: NVAPIWrapper.NVAPINvLinkCapsDto.#ctor(System.UInt32,System.Byte,System.Byte,System.Byte,System.Byte,System.UInt32)
+  commentId: M:NVAPIWrapper.NVAPINvLinkCapsDto.#ctor(System.UInt32,System.Byte,System.Byte,System.Byte,System.Byte,System.UInt32)
+  id: '#ctor(System.UInt32,System.Byte,System.Byte,System.Byte,System.Byte,System.UInt32)'
+  parent: NVAPIWrapper.NVAPINvLinkCapsDto
+  langs:
+  - csharp
+  - vb
+  name: NVAPINvLinkCapsDto(uint, byte, byte, byte, byte, uint)
+  nameWithType: NVAPINvLinkCapsDto.NVAPINvLinkCapsDto(uint, byte, byte, byte, byte, uint)
+  fullName: NVAPIWrapper.NVAPINvLinkCapsDto.NVAPINvLinkCapsDto(uint, byte, byte, byte, byte, uint)
+  type: Constructor
+  source:
+    remote:
+      path: NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
+      branch: main
+      repo: https://github.com/terrymacdonald/NVAPIWrapper.git
+    id: .ctor
+    path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
+    startLine: 4778
+  assemblies:
+  - NVAPIWrapper
+  namespace: NVAPIWrapper
+  summary: Initializes a new instance of <xref href="NVAPIWrapper.NVAPINvLinkCapsDto" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public NVAPINvLinkCapsDto(uint capsTbl, byte lowestNvlinkVersion, byte highestNvlinkVersion, byte lowestNciVersion, byte highestNciVersion, uint linkMask)
+    parameters:
+    - id: capsTbl
+      type: System.UInt32
+    - id: lowestNvlinkVersion
+      type: System.Byte
+    - id: highestNvlinkVersion
+      type: System.Byte
+    - id: lowestNciVersion
+      type: System.Byte
+    - id: highestNciVersion
+      type: System.Byte
+    - id: linkMask
+      type: System.UInt32
+    content.vb: Public Sub New(capsTbl As UInteger, lowestNvlinkVersion As Byte, highestNvlinkVersion As Byte, lowestNciVersion As Byte, highestNciVersion As Byte, linkMask As UInteger)
+  overload: NVAPIWrapper.NVAPINvLinkCapsDto.#ctor*
+  nameWithType.vb: NVAPINvLinkCapsDto.New(UInteger, Byte, Byte, Byte, Byte, UInteger)
+  fullName.vb: NVAPIWrapper.NVAPINvLinkCapsDto.New(UInteger, Byte, Byte, Byte, Byte, UInteger)
+  name.vb: New(UInteger, Byte, Byte, Byte, Byte, UInteger)
 - uid: NVAPIWrapper.NVAPINvLinkCapsDto.FromNative(NVAPIWrapper.NVLINK_GET_CAPS_V1)
   commentId: M:NVAPIWrapper.NVAPINvLinkCapsDto.FromNative(NVAPIWrapper.NVLINK_GET_CAPS_V1)
   id: FromNative(NVAPIWrapper.NVLINK_GET_CAPS_V1)
@@ -91,10 +298,12 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: FromNative
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 3700
+    startLine: 4789
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
+  summary: Creates a DTO from the native <xref href="NVAPIWrapper.NVLINK_GET_CAPS_V1" data-throw-if-not-resolved="false"></xref> struct.
+  example: []
   syntax:
     content: public static NVAPINvLinkCapsDto FromNative(NVLINK_GET_CAPS_V1 native)
     parameters:
@@ -122,10 +331,12 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: CreateDefault
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 3705
+    startLine: 4801
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
+  summary: Creates a default (zeroed) DTO with the correct version field.
+  example: []
   syntax:
     content: public static NVAPINvLinkCapsDto CreateDefault()
     return:
@@ -150,10 +361,12 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: ToNative
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 3710
+    startLine: 4807
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
+  summary: Converts this DTO back to the native <xref href="NVAPIWrapper.NVLINK_GET_CAPS_V1" data-throw-if-not-resolved="false"></xref> struct.
+  example: []
   syntax:
     content: public NVLINK_GET_CAPS_V1 ToNative()
     return:
@@ -178,7 +391,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Equals
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 3715
+    startLine: 4822
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -215,7 +428,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Equals
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 3720
+    startLine: 4833
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -254,7 +467,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetHashCode
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 3721
+    startLine: 4835
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -286,10 +499,12 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: op_Equality
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 3722
+    startLine: 4837
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
+  summary: Equality operator.
+  example: []
   syntax:
     content: public static bool operator ==(NVAPINvLinkCapsDto left, NVAPINvLinkCapsDto right)
     parameters:
@@ -322,10 +537,12 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: op_Inequality
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 3723
+    startLine: 4839
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
+  summary: Inequality operator.
+  example: []
   syntax:
     content: public static bool operator !=(NVAPINvLinkCapsDto left, NVAPINvLinkCapsDto right)
     parameters:
@@ -570,48 +787,64 @@ references:
   nameWithType.vb: Object
   fullName.vb: Object
   name.vb: Object
-- uid: NVAPIWrapper.NVAPINvLinkCapsDto.RawData*
-  commentId: Overload:NVAPIWrapper.NVAPINvLinkCapsDto.RawData
-  href: NVAPIWrapper.NVAPINvLinkCapsDto.html#NVAPIWrapper_NVAPINvLinkCapsDto_RawData
-  name: RawData
-  nameWithType: NVAPINvLinkCapsDto.RawData
-  fullName: NVAPIWrapper.NVAPINvLinkCapsDto.RawData
-- uid: System.Byte[]
+- uid: NVAPIWrapper.NVAPINvLinkCapsDto.CapsTbl*
+  commentId: Overload:NVAPIWrapper.NVAPINvLinkCapsDto.CapsTbl
+  href: NVAPIWrapper.NVAPINvLinkCapsDto.html#NVAPIWrapper_NVAPINvLinkCapsDto_CapsTbl
+  name: CapsTbl
+  nameWithType: NVAPINvLinkCapsDto.CapsTbl
+  fullName: NVAPIWrapper.NVAPINvLinkCapsDto.CapsTbl
+- uid: System.UInt32
+  commentId: T:System.UInt32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.uint32
+  name: uint
+  nameWithType: uint
+  fullName: uint
+  nameWithType.vb: UInteger
+  fullName.vb: UInteger
+  name.vb: UInteger
+- uid: NVAPIWrapper.NVAPINvLinkCapsDto.LowestNvlinkVersion*
+  commentId: Overload:NVAPIWrapper.NVAPINvLinkCapsDto.LowestNvlinkVersion
+  href: NVAPIWrapper.NVAPINvLinkCapsDto.html#NVAPIWrapper_NVAPINvLinkCapsDto_LowestNvlinkVersion
+  name: LowestNvlinkVersion
+  nameWithType: NVAPINvLinkCapsDto.LowestNvlinkVersion
+  fullName: NVAPIWrapper.NVAPINvLinkCapsDto.LowestNvlinkVersion
+- uid: System.Byte
+  commentId: T:System.Byte
+  parent: System
   isExternal: true
   href: https://learn.microsoft.com/dotnet/api/system.byte
-  name: byte[]
-  nameWithType: byte[]
-  fullName: byte[]
-  nameWithType.vb: Byte()
-  fullName.vb: Byte()
-  name.vb: Byte()
-  spec.csharp:
-  - uid: System.Byte
-    name: byte
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.byte
-  - name: '['
-  - name: ']'
-  spec.vb:
-  - uid: System.Byte
-    name: Byte
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.byte
-  - name: (
-  - name: )
-- uid: NVAPIWrapper.NVAPINvLinkCapsDto.FromNative*
-  commentId: Overload:NVAPIWrapper.NVAPINvLinkCapsDto.FromNative
-  href: NVAPIWrapper.NVAPINvLinkCapsDto.html#NVAPIWrapper_NVAPINvLinkCapsDto_FromNative_NVAPIWrapper_NVLINK_GET_CAPS_V1_
-  name: FromNative
-  nameWithType: NVAPINvLinkCapsDto.FromNative
-  fullName: NVAPIWrapper.NVAPINvLinkCapsDto.FromNative
-- uid: NVAPIWrapper.NVLINK_GET_CAPS_V1
-  commentId: T:NVAPIWrapper.NVLINK_GET_CAPS_V1
-  parent: NVAPIWrapper
-  href: NVAPIWrapper.NVLINK_GET_CAPS_V1.html
-  name: NVLINK_GET_CAPS_V1
-  nameWithType: NVLINK_GET_CAPS_V1
-  fullName: NVAPIWrapper.NVLINK_GET_CAPS_V1
+  name: byte
+  nameWithType: byte
+  fullName: byte
+  nameWithType.vb: Byte
+  fullName.vb: Byte
+  name.vb: Byte
+- uid: NVAPIWrapper.NVAPINvLinkCapsDto.HighestNvlinkVersion*
+  commentId: Overload:NVAPIWrapper.NVAPINvLinkCapsDto.HighestNvlinkVersion
+  href: NVAPIWrapper.NVAPINvLinkCapsDto.html#NVAPIWrapper_NVAPINvLinkCapsDto_HighestNvlinkVersion
+  name: HighestNvlinkVersion
+  nameWithType: NVAPINvLinkCapsDto.HighestNvlinkVersion
+  fullName: NVAPIWrapper.NVAPINvLinkCapsDto.HighestNvlinkVersion
+- uid: NVAPIWrapper.NVAPINvLinkCapsDto.LowestNciVersion*
+  commentId: Overload:NVAPIWrapper.NVAPINvLinkCapsDto.LowestNciVersion
+  href: NVAPIWrapper.NVAPINvLinkCapsDto.html#NVAPIWrapper_NVAPINvLinkCapsDto_LowestNciVersion
+  name: LowestNciVersion
+  nameWithType: NVAPINvLinkCapsDto.LowestNciVersion
+  fullName: NVAPIWrapper.NVAPINvLinkCapsDto.LowestNciVersion
+- uid: NVAPIWrapper.NVAPINvLinkCapsDto.HighestNciVersion*
+  commentId: Overload:NVAPIWrapper.NVAPINvLinkCapsDto.HighestNciVersion
+  href: NVAPIWrapper.NVAPINvLinkCapsDto.html#NVAPIWrapper_NVAPINvLinkCapsDto_HighestNciVersion
+  name: HighestNciVersion
+  nameWithType: NVAPINvLinkCapsDto.HighestNciVersion
+  fullName: NVAPIWrapper.NVAPINvLinkCapsDto.HighestNciVersion
+- uid: NVAPIWrapper.NVAPINvLinkCapsDto.LinkMask*
+  commentId: Overload:NVAPIWrapper.NVAPINvLinkCapsDto.LinkMask
+  href: NVAPIWrapper.NVAPINvLinkCapsDto.html#NVAPIWrapper_NVAPINvLinkCapsDto_LinkMask
+  name: LinkMask
+  nameWithType: NVAPINvLinkCapsDto.LinkMask
+  fullName: NVAPIWrapper.NVAPINvLinkCapsDto.LinkMask
 - uid: NVAPIWrapper.NVAPINvLinkCapsDto
   commentId: T:NVAPIWrapper.NVAPINvLinkCapsDto
   parent: NVAPIWrapper
@@ -619,6 +852,28 @@ references:
   name: NVAPINvLinkCapsDto
   nameWithType: NVAPINvLinkCapsDto
   fullName: NVAPIWrapper.NVAPINvLinkCapsDto
+- uid: NVAPIWrapper.NVAPINvLinkCapsDto.#ctor*
+  commentId: Overload:NVAPIWrapper.NVAPINvLinkCapsDto.#ctor
+  href: NVAPIWrapper.NVAPINvLinkCapsDto.html#NVAPIWrapper_NVAPINvLinkCapsDto__ctor_System_UInt32_System_Byte_System_Byte_System_Byte_System_Byte_System_UInt32_
+  name: NVAPINvLinkCapsDto
+  nameWithType: NVAPINvLinkCapsDto.NVAPINvLinkCapsDto
+  fullName: NVAPIWrapper.NVAPINvLinkCapsDto.NVAPINvLinkCapsDto
+  nameWithType.vb: NVAPINvLinkCapsDto.New
+  fullName.vb: NVAPIWrapper.NVAPINvLinkCapsDto.New
+  name.vb: New
+- uid: NVAPIWrapper.NVLINK_GET_CAPS_V1
+  commentId: T:NVAPIWrapper.NVLINK_GET_CAPS_V1
+  parent: NVAPIWrapper
+  href: NVAPIWrapper.NVLINK_GET_CAPS_V1.html
+  name: NVLINK_GET_CAPS_V1
+  nameWithType: NVLINK_GET_CAPS_V1
+  fullName: NVAPIWrapper.NVLINK_GET_CAPS_V1
+- uid: NVAPIWrapper.NVAPINvLinkCapsDto.FromNative*
+  commentId: Overload:NVAPIWrapper.NVAPINvLinkCapsDto.FromNative
+  href: NVAPIWrapper.NVAPINvLinkCapsDto.html#NVAPIWrapper_NVAPINvLinkCapsDto_FromNative_NVAPIWrapper_NVLINK_GET_CAPS_V1_
+  name: FromNative
+  nameWithType: NVAPINvLinkCapsDto.FromNative
+  fullName: NVAPIWrapper.NVAPINvLinkCapsDto.FromNative
 - uid: NVAPIWrapper.NVAPINvLinkCapsDto.CreateDefault*
   commentId: Overload:NVAPIWrapper.NVAPINvLinkCapsDto.CreateDefault
   href: NVAPIWrapper.NVAPINvLinkCapsDto.html#NVAPIWrapper_NVAPINvLinkCapsDto_CreateDefault

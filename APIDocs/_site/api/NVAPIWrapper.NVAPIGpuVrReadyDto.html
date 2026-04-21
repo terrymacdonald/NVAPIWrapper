@@ -89,7 +89,7 @@
 
 
   <h1 id="NVAPIWrapper_NVAPIGpuVrReadyDto" data-uid="NVAPIWrapper.NVAPIGpuVrReadyDto" class="text-break">
-Struct NVAPIGpuVrReadyDto  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L3616"><i class="bi bi-code-slash"></i></a>
+Struct NVAPIGpuVrReadyDto  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L4655"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -139,22 +139,59 @@ Struct NVAPIGpuVrReadyDto  <a class="header-action link-secondary" title="View s
 
 
 
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="NVAPIWrapper_NVAPIGpuVrReadyDto__ctor_" data-uid="NVAPIWrapper.NVAPIGpuVrReadyDto.#ctor*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIGpuVrReadyDto__ctor_System_Boolean_" data-uid="NVAPIWrapper.NVAPIGpuVrReadyDto.#ctor(System.Boolean)">
+  NVAPIGpuVrReadyDto(bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L4661"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Initializes a new instance of <a class="xref" href="NVAPIWrapper.NVAPIGpuVrReadyDto.html">NVAPIGpuVrReadyDto</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NVAPIGpuVrReadyDto(bool isVRReady)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>isVRReady</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
   <h2 class="section" id="properties">Properties
 </h2>
 
 
-  <a id="NVAPIWrapper_NVAPIGpuVrReadyDto_RawData_" data-uid="NVAPIWrapper.NVAPIGpuVrReadyDto.RawData*"></a>
+  <a id="NVAPIWrapper_NVAPIGpuVrReadyDto_IsVRReady_" data-uid="NVAPIWrapper.NVAPIGpuVrReadyDto.IsVRReady*"></a>
 
-  <h3 id="NVAPIWrapper_NVAPIGpuVrReadyDto_RawData" data-uid="NVAPIWrapper.NVAPIGpuVrReadyDto.RawData">
-  RawData
-  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L3618"><i class="bi bi-code-slash"></i></a>
+  <h3 id="NVAPIWrapper_NVAPIGpuVrReadyDto_IsVRReady" data-uid="NVAPIWrapper.NVAPIGpuVrReadyDto.IsVRReady">
+  IsVRReady
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L4658"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>True if the GPU is VR-ready.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public byte[] RawData { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public bool IsVRReady { get; }</code></pre>
   </div>
 
 
@@ -163,7 +200,7 @@ Struct NVAPIGpuVrReadyDto  <a class="header-action link-secondary" title="View s
 
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]</dt>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
     <dd></dd>
   </dl>
 
@@ -182,10 +219,11 @@ Struct NVAPIGpuVrReadyDto  <a class="header-action link-secondary" title="View s
 
   <h3 id="NVAPIWrapper_NVAPIGpuVrReadyDto_CreateDefault" data-uid="NVAPIWrapper.NVAPIGpuVrReadyDto.CreateDefault">
   CreateDefault()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L3630"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L4673"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Creates a default (zeroed) DTO with the correct version field.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -213,7 +251,7 @@ Struct NVAPIGpuVrReadyDto  <a class="header-action link-secondary" title="View s
 
   <h3 id="NVAPIWrapper_NVAPIGpuVrReadyDto_Equals_NVAPIWrapper_NVAPIGpuVrReadyDto_" data-uid="NVAPIWrapper.NVAPIGpuVrReadyDto.Equals(NVAPIWrapper.NVAPIGpuVrReadyDto)">
   Equals(NVAPIGpuVrReadyDto)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L3640"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L4687"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Indicates whether the current object is equal to another object of the same type.</p>
@@ -252,7 +290,7 @@ Struct NVAPIGpuVrReadyDto  <a class="header-action link-secondary" title="View s
 
   <h3 id="NVAPIWrapper_NVAPIGpuVrReadyDto_Equals_System_Object_" data-uid="NVAPIWrapper.NVAPIGpuVrReadyDto.Equals(System.Object)">
   Equals(object?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L3645"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L4693"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Indicates whether this instance and a specified object are equal.</p>
@@ -291,10 +329,11 @@ Struct NVAPIGpuVrReadyDto  <a class="header-action link-secondary" title="View s
 
   <h3 id="NVAPIWrapper_NVAPIGpuVrReadyDto_FromNative_NVAPIWrapper__NV_GPU_VR_READY_V1_" data-uid="NVAPIWrapper.NVAPIGpuVrReadyDto.FromNative(NVAPIWrapper._NV_GPU_VR_READY_V1)">
   FromNative(_NV_GPU_VR_READY_V1)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L3625"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L4667"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Creates a DTO from the native <a class="xref" href="NVAPIWrapper._NV_GPU_VR_READY_V1.html">_NV_GPU_VR_READY_V1</a> struct.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -327,7 +366,7 @@ Struct NVAPIGpuVrReadyDto  <a class="header-action link-secondary" title="View s
 
   <h3 id="NVAPIWrapper_NVAPIGpuVrReadyDto_GetHashCode" data-uid="NVAPIWrapper.NVAPIGpuVrReadyDto.GetHashCode">
   GetHashCode()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L3646"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L4695"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Returns the hash code for this instance.</p>
@@ -360,10 +399,11 @@ Struct NVAPIGpuVrReadyDto  <a class="header-action link-secondary" title="View s
 
   <h3 id="NVAPIWrapper_NVAPIGpuVrReadyDto_ToNative" data-uid="NVAPIWrapper.NVAPIGpuVrReadyDto.ToNative">
   ToNative()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L3635"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L4679"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Converts this DTO back to the native <a class="xref" href="NVAPIWrapper._NV_GPU_VR_READY_V1.html">_NV_GPU_VR_READY_V1</a> struct.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -395,10 +435,11 @@ Struct NVAPIGpuVrReadyDto  <a class="header-action link-secondary" title="View s
 
   <h3 id="NVAPIWrapper_NVAPIGpuVrReadyDto_op_Equality_NVAPIWrapper_NVAPIGpuVrReadyDto_NVAPIWrapper_NVAPIGpuVrReadyDto_" data-uid="NVAPIWrapper.NVAPIGpuVrReadyDto.op_Equality(NVAPIWrapper.NVAPIGpuVrReadyDto,NVAPIWrapper.NVAPIGpuVrReadyDto)">
   operator ==(NVAPIGpuVrReadyDto, NVAPIGpuVrReadyDto)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L3647"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L4697"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Equality operator.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -433,10 +474,11 @@ Struct NVAPIGpuVrReadyDto  <a class="header-action link-secondary" title="View s
 
   <h3 id="NVAPIWrapper_NVAPIGpuVrReadyDto_op_Inequality_NVAPIWrapper_NVAPIGpuVrReadyDto_NVAPIWrapper_NVAPIGpuVrReadyDto_" data-uid="NVAPIWrapper.NVAPIGpuVrReadyDto.op_Inequality(NVAPIWrapper.NVAPIGpuVrReadyDto,NVAPIWrapper.NVAPIGpuVrReadyDto)">
   operator !=(NVAPIGpuVrReadyDto, NVAPIGpuVrReadyDto)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L3648"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L4699"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Inequality operator.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -471,7 +513,7 @@ Struct NVAPIGpuVrReadyDto  <a class="header-action link-secondary" title="View s
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L3616" class="edit-link">Edit this page</a>
+          <a href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L4655" class="edit-link">Edit this page</a>
         </div>
 
 

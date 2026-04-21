@@ -89,7 +89,7 @@
 
 
   <h1 id="NVAPIWrapper_NVAPIGpuGspInfoDto" data-uid="NVAPIWrapper.NVAPIGpuGspInfoDto" class="text-break">
-Struct NVAPIGpuGspInfoDto  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L3654"><i class="bi bi-code-slash"></i></a>
+Struct NVAPIGpuGspInfoDto  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L4705"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -139,22 +139,59 @@ Struct NVAPIGpuGspInfoDto  <a class="header-action link-secondary" title="View s
 
 
 
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="NVAPIWrapper_NVAPIGpuGspInfoDto__ctor_" data-uid="NVAPIWrapper.NVAPIGpuGspInfoDto.#ctor*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIGpuGspInfoDto__ctor_System_String_" data-uid="NVAPIWrapper.NVAPIGpuGspInfoDto.#ctor(System.String)">
+  NVAPIGpuGspInfoDto(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L4711"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Initializes a new instance of <a class="xref" href="NVAPIWrapper.NVAPIGpuGspInfoDto.html">NVAPIGpuGspInfoDto</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NVAPIGpuGspInfoDto(string firmwareVersion)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>firmwareVersion</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
   <h2 class="section" id="properties">Properties
 </h2>
 
 
-  <a id="NVAPIWrapper_NVAPIGpuGspInfoDto_RawData_" data-uid="NVAPIWrapper.NVAPIGpuGspInfoDto.RawData*"></a>
+  <a id="NVAPIWrapper_NVAPIGpuGspInfoDto_FirmwareVersion_" data-uid="NVAPIWrapper.NVAPIGpuGspInfoDto.FirmwareVersion*"></a>
 
-  <h3 id="NVAPIWrapper_NVAPIGpuGspInfoDto_RawData" data-uid="NVAPIWrapper.NVAPIGpuGspInfoDto.RawData">
-  RawData
-  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L3656"><i class="bi bi-code-slash"></i></a>
+  <h3 id="NVAPIWrapper_NVAPIGpuGspInfoDto_FirmwareVersion" data-uid="NVAPIWrapper.NVAPIGpuGspInfoDto.FirmwareVersion">
+  FirmwareVersion
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L4708"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>GSP firmware version string (null-terminated ASCII, up to 64 bytes).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public byte[] RawData { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public string FirmwareVersion { get; }</code></pre>
   </div>
 
 
@@ -163,7 +200,7 @@ Struct NVAPIGpuGspInfoDto  <a class="header-action link-secondary" title="View s
 
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]</dt>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
     <dd></dd>
   </dl>
 
@@ -182,10 +219,11 @@ Struct NVAPIGpuGspInfoDto  <a class="header-action link-secondary" title="View s
 
   <h3 id="NVAPIWrapper_NVAPIGpuGspInfoDto_CreateDefault" data-uid="NVAPIWrapper.NVAPIGpuGspInfoDto.CreateDefault">
   CreateDefault()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L3668"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L4725"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Creates a default (zeroed) DTO with the correct version field.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -213,7 +251,7 @@ Struct NVAPIGpuGspInfoDto  <a class="header-action link-secondary" title="View s
 
   <h3 id="NVAPIWrapper_NVAPIGpuGspInfoDto_Equals_NVAPIWrapper_NVAPIGpuGspInfoDto_" data-uid="NVAPIWrapper.NVAPIGpuGspInfoDto.Equals(NVAPIWrapper.NVAPIGpuGspInfoDto)">
   Equals(NVAPIGpuGspInfoDto)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L3678"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L4745"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Indicates whether the current object is equal to another object of the same type.</p>
@@ -252,7 +290,7 @@ Struct NVAPIGpuGspInfoDto  <a class="header-action link-secondary" title="View s
 
   <h3 id="NVAPIWrapper_NVAPIGpuGspInfoDto_Equals_System_Object_" data-uid="NVAPIWrapper.NVAPIGpuGspInfoDto.Equals(System.Object)">
   Equals(object?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L3683"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L4751"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Indicates whether this instance and a specified object are equal.</p>
@@ -291,10 +329,11 @@ Struct NVAPIGpuGspInfoDto  <a class="header-action link-secondary" title="View s
 
   <h3 id="NVAPIWrapper_NVAPIGpuGspInfoDto_FromNative_NVAPIWrapper__NV_GPU_GSP_INFO_V1_" data-uid="NVAPIWrapper.NVAPIGpuGspInfoDto.FromNative(NVAPIWrapper._NV_GPU_GSP_INFO_V1)">
   FromNative(_NV_GPU_GSP_INFO_V1)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L3663"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L4717"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Creates a DTO from the native <a class="xref" href="NVAPIWrapper._NV_GPU_GSP_INFO_V1.html">_NV_GPU_GSP_INFO_V1</a> struct.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -327,7 +366,7 @@ Struct NVAPIGpuGspInfoDto  <a class="header-action link-secondary" title="View s
 
   <h3 id="NVAPIWrapper_NVAPIGpuGspInfoDto_GetHashCode" data-uid="NVAPIWrapper.NVAPIGpuGspInfoDto.GetHashCode">
   GetHashCode()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L3684"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L4753"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Returns the hash code for this instance.</p>
@@ -360,10 +399,11 @@ Struct NVAPIGpuGspInfoDto  <a class="header-action link-secondary" title="View s
 
   <h3 id="NVAPIWrapper_NVAPIGpuGspInfoDto_ToNative" data-uid="NVAPIWrapper.NVAPIGpuGspInfoDto.ToNative">
   ToNative()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L3673"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L4731"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Converts this DTO back to the native <a class="xref" href="NVAPIWrapper._NV_GPU_GSP_INFO_V1.html">_NV_GPU_GSP_INFO_V1</a> struct.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -395,10 +435,11 @@ Struct NVAPIGpuGspInfoDto  <a class="header-action link-secondary" title="View s
 
   <h3 id="NVAPIWrapper_NVAPIGpuGspInfoDto_op_Equality_NVAPIWrapper_NVAPIGpuGspInfoDto_NVAPIWrapper_NVAPIGpuGspInfoDto_" data-uid="NVAPIWrapper.NVAPIGpuGspInfoDto.op_Equality(NVAPIWrapper.NVAPIGpuGspInfoDto,NVAPIWrapper.NVAPIGpuGspInfoDto)">
   operator ==(NVAPIGpuGspInfoDto, NVAPIGpuGspInfoDto)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L3685"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L4755"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Equality operator.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -433,10 +474,11 @@ Struct NVAPIGpuGspInfoDto  <a class="header-action link-secondary" title="View s
 
   <h3 id="NVAPIWrapper_NVAPIGpuGspInfoDto_op_Inequality_NVAPIWrapper_NVAPIGpuGspInfoDto_NVAPIWrapper_NVAPIGpuGspInfoDto_" data-uid="NVAPIWrapper.NVAPIGpuGspInfoDto.op_Inequality(NVAPIWrapper.NVAPIGpuGspInfoDto,NVAPIWrapper.NVAPIGpuGspInfoDto)">
   operator !=(NVAPIGpuGspInfoDto, NVAPIGpuGspInfoDto)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L3686"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L4757"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Inequality operator.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -471,7 +513,7 @@ Struct NVAPIGpuGspInfoDto  <a class="header-action link-secondary" title="View s
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L3654" class="edit-link">Edit this page</a>
+          <a href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L4705" class="edit-link">Edit this page</a>
         </div>
 
 

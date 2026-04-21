@@ -150,6 +150,7 @@ items:
   - NVAPIWrapper.NVAPIDrsProfileDto
   - NVAPIWrapper.NVAPIDrsSettingDto
   - NVAPIWrapper.NVAPIDrsSettingValuesDto
+  - NVAPIWrapper.NVAPIEncoderPerSessionInfoDto
   - NVAPIWrapper.NVAPIEncoderSessionsInfoDto
   - NVAPIWrapper.NVAPIEncoderStatisticsDto
   - NVAPIWrapper.NVAPIEventCallbackKind
@@ -179,9 +180,13 @@ items:
   - NVAPIWrapper.NVAPIGpuEdidDto
   - NVAPIWrapper.NVAPIGpuGspInfoDto
   - NVAPIWrapper.NVAPIGpuHdcpSupportStatusDto
+  - NVAPIWrapper.NVAPIGpuIllumDeviceControlDto
   - NVAPIWrapper.NVAPIGpuIllumDeviceControlParamsDto
+  - NVAPIWrapper.NVAPIGpuIllumDeviceInfoDto
   - NVAPIWrapper.NVAPIGpuIllumDeviceInfoParamsDto
+  - NVAPIWrapper.NVAPIGpuIllumZoneControlDto
   - NVAPIWrapper.NVAPIGpuIllumZoneControlParamsDto
+  - NVAPIWrapper.NVAPIGpuIllumZoneInfoDto
   - NVAPIWrapper.NVAPIGpuIllumZoneInfoParamsDto
   - NVAPIWrapper.NVAPIGpuIlluminationDto
   - NVAPIWrapper.NVAPIGpuIlluminationSupportDto
@@ -212,6 +217,7 @@ items:
   - NVAPIWrapper.NVAPIInterfaceTable
   - NVAPIWrapper.NVAPIInterfaceTable.Entry
   - NVAPIWrapper.NVAPILicensableFeaturesDto
+  - NVAPIWrapper.NVAPILicenseFeatureDetailsDto
   - NVAPIWrapper.NVAPILidAndDockInfoDto
   - NVAPIWrapper.NVAPILogicalGpuHelper
   - NVAPIWrapper.NVAPILogicalGpuInfoDto
@@ -237,7 +243,9 @@ items:
   - NVAPIWrapper.NVAPINGXOverrideSetDto
   - NVAPIWrapper.NVAPINGXOverrideStateDto
   - NVAPIWrapper.NVAPINvLinkCapsDto
+  - NVAPIWrapper.NVAPINvLinkDeviceInfoDto
   - NVAPIWrapper.NVAPINvLinkStatusDto
+  - NVAPIWrapper.NVAPINvLinkStatusInfoDto
   - NVAPIWrapper.NVAPINvManagedDedicatedDisplayInfoDto
   - NVAPIWrapper.NVAPINvManagedDedicatedDisplayMetadataDto
   - NVAPIWrapper.NVAPIOglExpertCallback
@@ -249,6 +257,9 @@ items:
   - NVAPIWrapper.NVAPIPciIdentifiers
   - NVAPIWrapper.NVAPIPhysicalGpuHelper
   - NVAPIWrapper.NVAPIPreferredStereoDisplayDto
+  - NVAPIWrapper.NVAPIPstateBaseVoltageEntryDto
+  - NVAPIWrapper.NVAPIPstateClockEntryDto
+  - NVAPIWrapper.NVAPIPstateInfoDto
   - NVAPIWrapper.NVAPIQuadroGSyncHelper
   - NVAPIWrapper.NVAPIRectDto
   - NVAPIWrapper.NVAPIRiseCallbackSettingsDto
@@ -1906,6 +1917,13 @@ references:
   name: NVAPIGpuIlluminationDto
   nameWithType: NVAPIGpuIlluminationDto
   fullName: NVAPIWrapper.NVAPIGpuIlluminationDto
+- uid: NVAPIWrapper.NVAPIGpuIllumDeviceInfoDto
+  commentId: T:NVAPIWrapper.NVAPIGpuIllumDeviceInfoDto
+  parent: NVAPIWrapper
+  href: NVAPIWrapper.NVAPIGpuIllumDeviceInfoDto.html
+  name: NVAPIGpuIllumDeviceInfoDto
+  nameWithType: NVAPIGpuIllumDeviceInfoDto
+  fullName: NVAPIWrapper.NVAPIGpuIllumDeviceInfoDto
 - uid: NVAPIWrapper.NVAPIGpuIllumDeviceInfoParamsDto
   commentId: T:NVAPIWrapper.NVAPIGpuIllumDeviceInfoParamsDto
   parent: NVAPIWrapper
@@ -1913,6 +1931,13 @@ references:
   name: NVAPIGpuIllumDeviceInfoParamsDto
   nameWithType: NVAPIGpuIllumDeviceInfoParamsDto
   fullName: NVAPIWrapper.NVAPIGpuIllumDeviceInfoParamsDto
+- uid: NVAPIWrapper.NVAPIGpuIllumDeviceControlDto
+  commentId: T:NVAPIWrapper.NVAPIGpuIllumDeviceControlDto
+  parent: NVAPIWrapper
+  href: NVAPIWrapper.NVAPIGpuIllumDeviceControlDto.html
+  name: NVAPIGpuIllumDeviceControlDto
+  nameWithType: NVAPIGpuIllumDeviceControlDto
+  fullName: NVAPIWrapper.NVAPIGpuIllumDeviceControlDto
 - uid: NVAPIWrapper.NVAPIGpuIllumDeviceControlParamsDto
   commentId: T:NVAPIWrapper.NVAPIGpuIllumDeviceControlParamsDto
   parent: NVAPIWrapper
@@ -1920,6 +1945,13 @@ references:
   name: NVAPIGpuIllumDeviceControlParamsDto
   nameWithType: NVAPIGpuIllumDeviceControlParamsDto
   fullName: NVAPIWrapper.NVAPIGpuIllumDeviceControlParamsDto
+- uid: NVAPIWrapper.NVAPIGpuIllumZoneInfoDto
+  commentId: T:NVAPIWrapper.NVAPIGpuIllumZoneInfoDto
+  parent: NVAPIWrapper
+  href: NVAPIWrapper.NVAPIGpuIllumZoneInfoDto.html
+  name: NVAPIGpuIllumZoneInfoDto
+  nameWithType: NVAPIGpuIllumZoneInfoDto
+  fullName: NVAPIWrapper.NVAPIGpuIllumZoneInfoDto
 - uid: NVAPIWrapper.NVAPIGpuIllumZoneInfoParamsDto
   commentId: T:NVAPIWrapper.NVAPIGpuIllumZoneInfoParamsDto
   parent: NVAPIWrapper
@@ -1927,6 +1959,13 @@ references:
   name: NVAPIGpuIllumZoneInfoParamsDto
   nameWithType: NVAPIGpuIllumZoneInfoParamsDto
   fullName: NVAPIWrapper.NVAPIGpuIllumZoneInfoParamsDto
+- uid: NVAPIWrapper.NVAPIGpuIllumZoneControlDto
+  commentId: T:NVAPIWrapper.NVAPIGpuIllumZoneControlDto
+  parent: NVAPIWrapper
+  href: NVAPIWrapper.NVAPIGpuIllumZoneControlDto.html
+  name: NVAPIGpuIllumZoneControlDto
+  nameWithType: NVAPIGpuIllumZoneControlDto
+  fullName: NVAPIWrapper.NVAPIGpuIllumZoneControlDto
 - uid: NVAPIWrapper.NVAPIGpuIllumZoneControlParamsDto
   commentId: T:NVAPIWrapper.NVAPIGpuIllumZoneControlParamsDto
   parent: NVAPIWrapper
@@ -1934,6 +1973,27 @@ references:
   name: NVAPIGpuIllumZoneControlParamsDto
   nameWithType: NVAPIGpuIllumZoneControlParamsDto
   fullName: NVAPIWrapper.NVAPIGpuIllumZoneControlParamsDto
+- uid: NVAPIWrapper.NVAPIPstateClockEntryDto
+  commentId: T:NVAPIWrapper.NVAPIPstateClockEntryDto
+  parent: NVAPIWrapper
+  href: NVAPIWrapper.NVAPIPstateClockEntryDto.html
+  name: NVAPIPstateClockEntryDto
+  nameWithType: NVAPIPstateClockEntryDto
+  fullName: NVAPIWrapper.NVAPIPstateClockEntryDto
+- uid: NVAPIWrapper.NVAPIPstateBaseVoltageEntryDto
+  commentId: T:NVAPIWrapper.NVAPIPstateBaseVoltageEntryDto
+  parent: NVAPIWrapper
+  href: NVAPIWrapper.NVAPIPstateBaseVoltageEntryDto.html
+  name: NVAPIPstateBaseVoltageEntryDto
+  nameWithType: NVAPIPstateBaseVoltageEntryDto
+  fullName: NVAPIWrapper.NVAPIPstateBaseVoltageEntryDto
+- uid: NVAPIWrapper.NVAPIPstateInfoDto
+  commentId: T:NVAPIWrapper.NVAPIPstateInfoDto
+  parent: NVAPIWrapper
+  href: NVAPIWrapper.NVAPIPstateInfoDto.html
+  name: NVAPIPstateInfoDto
+  nameWithType: NVAPIPstateInfoDto
+  fullName: NVAPIWrapper.NVAPIPstateInfoDto
 - uid: NVAPIWrapper.NVAPIGpuPerfPstates20InfoDto
   commentId: T:NVAPIWrapper.NVAPIGpuPerfPstates20InfoDto
   parent: NVAPIWrapper
@@ -1948,6 +2008,13 @@ references:
   name: NVAPIGpuVirtualizationInfoDto
   nameWithType: NVAPIGpuVirtualizationInfoDto
   fullName: NVAPIWrapper.NVAPIGpuVirtualizationInfoDto
+- uid: NVAPIWrapper.NVAPILicenseFeatureDetailsDto
+  commentId: T:NVAPIWrapper.NVAPILicenseFeatureDetailsDto
+  parent: NVAPIWrapper
+  href: NVAPIWrapper.NVAPILicenseFeatureDetailsDto.html
+  name: NVAPILicenseFeatureDetailsDto
+  nameWithType: NVAPILicenseFeatureDetailsDto
+  fullName: NVAPIWrapper.NVAPILicenseFeatureDetailsDto
 - uid: NVAPIWrapper.NVAPILicensableFeaturesDto
   commentId: T:NVAPIWrapper.NVAPILicensableFeaturesDto
   parent: NVAPIWrapper
@@ -1962,6 +2029,13 @@ references:
   name: NVAPIEncoderStatisticsDto
   nameWithType: NVAPIEncoderStatisticsDto
   fullName: NVAPIWrapper.NVAPIEncoderStatisticsDto
+- uid: NVAPIWrapper.NVAPIEncoderPerSessionInfoDto
+  commentId: T:NVAPIWrapper.NVAPIEncoderPerSessionInfoDto
+  parent: NVAPIWrapper
+  href: NVAPIWrapper.NVAPIEncoderPerSessionInfoDto.html
+  name: NVAPIEncoderPerSessionInfoDto
+  nameWithType: NVAPIEncoderPerSessionInfoDto
+  fullName: NVAPIWrapper.NVAPIEncoderPerSessionInfoDto
 - uid: NVAPIWrapper.NVAPIEncoderSessionsInfoDto
   commentId: T:NVAPIWrapper.NVAPIEncoderSessionsInfoDto
   parent: NVAPIWrapper
@@ -1997,6 +2071,20 @@ references:
   name: NVAPINvLinkStatusDto
   nameWithType: NVAPINvLinkStatusDto
   fullName: NVAPIWrapper.NVAPINvLinkStatusDto
+- uid: NVAPIWrapper.NVAPINvLinkStatusInfoDto
+  commentId: T:NVAPIWrapper.NVAPINvLinkStatusInfoDto
+  parent: NVAPIWrapper
+  href: NVAPIWrapper.NVAPINvLinkStatusInfoDto.html
+  name: NVAPINvLinkStatusInfoDto
+  nameWithType: NVAPINvLinkStatusInfoDto
+  fullName: NVAPIWrapper.NVAPINvLinkStatusInfoDto
+- uid: NVAPIWrapper.NVAPINvLinkDeviceInfoDto
+  commentId: T:NVAPIWrapper.NVAPINvLinkDeviceInfoDto
+  parent: NVAPIWrapper
+  href: NVAPIWrapper.NVAPINvLinkDeviceInfoDto.html
+  name: NVAPINvLinkDeviceInfoDto
+  nameWithType: NVAPINvLinkDeviceInfoDto
+  fullName: NVAPIWrapper.NVAPINvLinkDeviceInfoDto
 - uid: NVAPIWrapper.NVAPIGpuInfoDto
   commentId: T:NVAPIWrapper.NVAPIGpuInfoDto
   parent: NVAPIWrapper
@@ -8223,6 +8311,7 @@ references:
     href: NVAPIWrapper._NV_EDID_DATA_V2._reserved_e__FixedBuffer.html
 - uid: NVAPIWrapper._NV_ENCODER_PER_SESSION_INFO_V1
   commentId: T:NVAPIWrapper._NV_ENCODER_PER_SESSION_INFO_V1
+  parent: NVAPIWrapper
   href: NVAPIWrapper._NV_ENCODER_PER_SESSION_INFO_V1.html
   name: _NV_ENCODER_PER_SESSION_INFO_V1
   nameWithType: _NV_ENCODER_PER_SESSION_INFO_V1

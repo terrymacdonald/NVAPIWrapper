@@ -89,7 +89,7 @@
 
 
   <h1 id="NVAPIWrapper_NVAPIGpuPerfPstates20InfoDto" data-uid="NVAPIWrapper.NVAPIGpuPerfPstates20InfoDto" class="text-break">
-Struct NVAPIGpuPerfPstates20InfoDto  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L3426"><i class="bi bi-code-slash"></i></a>
+Struct NVAPIGpuPerfPstates20InfoDto  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L4086"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -139,22 +139,71 @@ Struct NVAPIGpuPerfPstates20InfoDto  <a class="header-action link-secondary" tit
 
 
 
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="NVAPIWrapper_NVAPIGpuPerfPstates20InfoDto__ctor_" data-uid="NVAPIWrapper.NVAPIGpuPerfPstates20InfoDto.#ctor*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIGpuPerfPstates20InfoDto__ctor_System_Boolean_System_UInt32_System_UInt32_System_UInt32_NVAPIWrapper_NVAPIPstateInfoDto___System_UInt32_NVAPIWrapper_NVAPIPstateBaseVoltageEntryDto___" data-uid="NVAPIWrapper.NVAPIGpuPerfPstates20InfoDto.#ctor(System.Boolean,System.UInt32,System.UInt32,System.UInt32,NVAPIWrapper.NVAPIPstateInfoDto[],System.UInt32,NVAPIWrapper.NVAPIPstateBaseVoltageEntryDto[])">
+  NVAPIGpuPerfPstates20InfoDto(bool, uint, uint, uint, NVAPIPstateInfoDto[], uint, NVAPIPstateBaseVoltageEntryDto[])
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L4104"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Initializes a new instance of <a class="xref" href="NVAPIWrapper.NVAPIGpuPerfPstates20InfoDto.html">NVAPIGpuPerfPstates20InfoDto</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NVAPIGpuPerfPstates20InfoDto(bool isEditable, uint numPstates, uint numClocks, uint numBaseVoltages, NVAPIPstateInfoDto[] pstates, uint ovNumVoltages, NVAPIPstateBaseVoltageEntryDto[] ovVoltages)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>isEditable</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+    <dt><code>numPstates</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd></dd>
+    <dt><code>numClocks</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd></dd>
+    <dt><code>numBaseVoltages</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd></dd>
+    <dt><code>pstates</code> <a class="xref" href="NVAPIWrapper.NVAPIPstateInfoDto.html">NVAPIPstateInfoDto</a>[]</dt>
+    <dd></dd>
+    <dt><code>ovNumVoltages</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd></dd>
+    <dt><code>ovVoltages</code> <a class="xref" href="NVAPIWrapper.NVAPIPstateBaseVoltageEntryDto.html">NVAPIPstateBaseVoltageEntryDto</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
   <h2 class="section" id="properties">Properties
 </h2>
 
 
-  <a id="NVAPIWrapper_NVAPIGpuPerfPstates20InfoDto_RawData_" data-uid="NVAPIWrapper.NVAPIGpuPerfPstates20InfoDto.RawData*"></a>
+  <a id="NVAPIWrapper_NVAPIGpuPerfPstates20InfoDto_IsEditable_" data-uid="NVAPIWrapper.NVAPIGpuPerfPstates20InfoDto.IsEditable*"></a>
 
-  <h3 id="NVAPIWrapper_NVAPIGpuPerfPstates20InfoDto_RawData" data-uid="NVAPIWrapper.NVAPIGpuPerfPstates20InfoDto.RawData">
-  RawData
-  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L3428"><i class="bi bi-code-slash"></i></a>
+  <h3 id="NVAPIWrapper_NVAPIGpuPerfPstates20InfoDto_IsEditable" data-uid="NVAPIWrapper.NVAPIGpuPerfPstates20InfoDto.IsEditable">
+  IsEditable
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L4089"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>True if the P-state configuration is editable.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public byte[] RawData { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public bool IsEditable { get; }</code></pre>
   </div>
 
 
@@ -163,7 +212,199 @@ Struct NVAPIGpuPerfPstates20InfoDto  <a class="header-action link-secondary" tit
 
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]</dt>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIGpuPerfPstates20InfoDto_NumBaseVoltages_" data-uid="NVAPIWrapper.NVAPIGpuPerfPstates20InfoDto.NumBaseVoltages*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIGpuPerfPstates20InfoDto_NumBaseVoltages" data-uid="NVAPIWrapper.NVAPIGpuPerfPstates20InfoDto.NumBaseVoltages">
+  NumBaseVoltages
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L4095"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Number of base voltages per P-state.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public uint NumBaseVoltages { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIGpuPerfPstates20InfoDto_NumClocks_" data-uid="NVAPIWrapper.NVAPIGpuPerfPstates20InfoDto.NumClocks*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIGpuPerfPstates20InfoDto_NumClocks" data-uid="NVAPIWrapper.NVAPIGpuPerfPstates20InfoDto.NumClocks">
+  NumClocks
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L4093"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Number of clocks per P-state.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public uint NumClocks { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIGpuPerfPstates20InfoDto_NumPstates_" data-uid="NVAPIWrapper.NVAPIGpuPerfPstates20InfoDto.NumPstates*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIGpuPerfPstates20InfoDto_NumPstates" data-uid="NVAPIWrapper.NVAPIGpuPerfPstates20InfoDto.NumPstates">
+  NumPstates
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L4091"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Number of P-states reported.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public uint NumPstates { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIGpuPerfPstates20InfoDto_OvNumVoltages_" data-uid="NVAPIWrapper.NVAPIGpuPerfPstates20InfoDto.OvNumVoltages*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIGpuPerfPstates20InfoDto_OvNumVoltages" data-uid="NVAPIWrapper.NVAPIGpuPerfPstates20InfoDto.OvNumVoltages">
+  OvNumVoltages
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L4099"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Number of over-voltage entries.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public uint OvNumVoltages { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIGpuPerfPstates20InfoDto_OvVoltages_" data-uid="NVAPIWrapper.NVAPIGpuPerfPstates20InfoDto.OvVoltages*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIGpuPerfPstates20InfoDto_OvVoltages" data-uid="NVAPIWrapper.NVAPIGpuPerfPstates20InfoDto.OvVoltages">
+  OvVoltages
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L4101"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Over-voltage entries (up to 4).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NVAPIPstateBaseVoltageEntryDto[] OvVoltages { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="NVAPIWrapper.NVAPIPstateBaseVoltageEntryDto.html">NVAPIPstateBaseVoltageEntryDto</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIGpuPerfPstates20InfoDto_Pstates_" data-uid="NVAPIWrapper.NVAPIGpuPerfPstates20InfoDto.Pstates*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIGpuPerfPstates20InfoDto_Pstates" data-uid="NVAPIWrapper.NVAPIGpuPerfPstates20InfoDto.Pstates">
+  Pstates
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L4097"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>P-state info array (up to 16 entries).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NVAPIPstateInfoDto[] Pstates { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="NVAPIWrapper.NVAPIPstateInfoDto.html">NVAPIPstateInfoDto</a>[]</dt>
     <dd></dd>
   </dl>
 
@@ -182,10 +423,11 @@ Struct NVAPIGpuPerfPstates20InfoDto  <a class="header-action link-secondary" tit
 
   <h3 id="NVAPIWrapper_NVAPIGpuPerfPstates20InfoDto_CreateDefault" data-uid="NVAPIWrapper.NVAPIGpuPerfPstates20InfoDto.CreateDefault">
   CreateDefault()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L3440"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L4135"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Creates a default (zeroed) DTO with the correct version field.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -213,7 +455,7 @@ Struct NVAPIGpuPerfPstates20InfoDto  <a class="header-action link-secondary" tit
 
   <h3 id="NVAPIWrapper_NVAPIGpuPerfPstates20InfoDto_Equals_NVAPIWrapper_NVAPIGpuPerfPstates20InfoDto_" data-uid="NVAPIWrapper.NVAPIGpuPerfPstates20InfoDto.Equals(NVAPIWrapper.NVAPIGpuPerfPstates20InfoDto)">
   Equals(NVAPIGpuPerfPstates20InfoDto)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L3450"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L4159"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Indicates whether the current object is equal to another object of the same type.</p>
@@ -252,7 +494,7 @@ Struct NVAPIGpuPerfPstates20InfoDto  <a class="header-action link-secondary" tit
 
   <h3 id="NVAPIWrapper_NVAPIGpuPerfPstates20InfoDto_Equals_System_Object_" data-uid="NVAPIWrapper.NVAPIGpuPerfPstates20InfoDto.Equals(System.Object)">
   Equals(object?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L3455"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L4180"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Indicates whether this instance and a specified object are equal.</p>
@@ -291,10 +533,11 @@ Struct NVAPIGpuPerfPstates20InfoDto  <a class="header-action link-secondary" tit
 
   <h3 id="NVAPIWrapper_NVAPIGpuPerfPstates20InfoDto_FromNative_NVAPIWrapper__NV_GPU_PERF_PSTATES20_INFO_V2_" data-uid="NVAPIWrapper.NVAPIGpuPerfPstates20InfoDto.FromNative(NVAPIWrapper._NV_GPU_PERF_PSTATES20_INFO_V2)">
   FromNative(_NV_GPU_PERF_PSTATES20_INFO_V2)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L3435"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L4116"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Creates a DTO from the native <a class="xref" href="NVAPIWrapper._NV_GPU_PERF_PSTATES20_INFO_V2.html">_NV_GPU_PERF_PSTATES20_INFO_V2</a> struct.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -327,7 +570,7 @@ Struct NVAPIGpuPerfPstates20InfoDto  <a class="header-action link-secondary" tit
 
   <h3 id="NVAPIWrapper_NVAPIGpuPerfPstates20InfoDto_GetHashCode" data-uid="NVAPIWrapper.NVAPIGpuPerfPstates20InfoDto.GetHashCode">
   GetHashCode()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L3456"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L4182"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Returns the hash code for this instance.</p>
@@ -360,10 +603,11 @@ Struct NVAPIGpuPerfPstates20InfoDto  <a class="header-action link-secondary" tit
 
   <h3 id="NVAPIWrapper_NVAPIGpuPerfPstates20InfoDto_ToNative" data-uid="NVAPIWrapper.NVAPIGpuPerfPstates20InfoDto.ToNative">
   ToNative()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L3445"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L4141"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Converts this DTO back to the native <a class="xref" href="NVAPIWrapper._NV_GPU_PERF_PSTATES20_INFO_V2.html">_NV_GPU_PERF_PSTATES20_INFO_V2</a> struct.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -395,10 +639,11 @@ Struct NVAPIGpuPerfPstates20InfoDto  <a class="header-action link-secondary" tit
 
   <h3 id="NVAPIWrapper_NVAPIGpuPerfPstates20InfoDto_op_Equality_NVAPIWrapper_NVAPIGpuPerfPstates20InfoDto_NVAPIWrapper_NVAPIGpuPerfPstates20InfoDto_" data-uid="NVAPIWrapper.NVAPIGpuPerfPstates20InfoDto.op_Equality(NVAPIWrapper.NVAPIGpuPerfPstates20InfoDto,NVAPIWrapper.NVAPIGpuPerfPstates20InfoDto)">
   operator ==(NVAPIGpuPerfPstates20InfoDto, NVAPIGpuPerfPstates20InfoDto)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L3457"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L4191"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Equality operator.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -433,10 +678,11 @@ Struct NVAPIGpuPerfPstates20InfoDto  <a class="header-action link-secondary" tit
 
   <h3 id="NVAPIWrapper_NVAPIGpuPerfPstates20InfoDto_op_Inequality_NVAPIWrapper_NVAPIGpuPerfPstates20InfoDto_NVAPIWrapper_NVAPIGpuPerfPstates20InfoDto_" data-uid="NVAPIWrapper.NVAPIGpuPerfPstates20InfoDto.op_Inequality(NVAPIWrapper.NVAPIGpuPerfPstates20InfoDto,NVAPIWrapper.NVAPIGpuPerfPstates20InfoDto)">
   operator !=(NVAPIGpuPerfPstates20InfoDto, NVAPIGpuPerfPstates20InfoDto)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L3458"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L4193"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Inequality operator.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -471,7 +717,7 @@ Struct NVAPIGpuPerfPstates20InfoDto  <a class="header-action link-secondary" tit
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L3426" class="edit-link">Edit this page</a>
+          <a href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L4086" class="edit-link">Edit this page</a>
         </div>
 
 

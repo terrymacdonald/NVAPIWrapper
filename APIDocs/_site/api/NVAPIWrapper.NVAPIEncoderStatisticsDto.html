@@ -89,7 +89,7 @@
 
 
   <h1 id="NVAPIWrapper_NVAPIEncoderStatisticsDto" data-uid="NVAPIWrapper.NVAPIEncoderStatisticsDto" class="text-break">
-Struct NVAPIEncoderStatisticsDto  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L3540"><i class="bi bi-code-slash"></i></a>
+Struct NVAPIEncoderStatisticsDto  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L4451"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -139,22 +139,63 @@ Struct NVAPIEncoderStatisticsDto  <a class="header-action link-secondary" title=
 
 
 
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="NVAPIWrapper_NVAPIEncoderStatisticsDto__ctor_" data-uid="NVAPIWrapper.NVAPIEncoderStatisticsDto.#ctor*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIEncoderStatisticsDto__ctor_System_UInt32_System_UInt32_System_UInt32_" data-uid="NVAPIWrapper.NVAPIEncoderStatisticsDto.#ctor(System.UInt32,System.UInt32,System.UInt32)">
+  NVAPIEncoderStatisticsDto(uint, uint, uint)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L4461"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Initializes a new instance of <a class="xref" href="NVAPIWrapper.NVAPIEncoderStatisticsDto.html">NVAPIEncoderStatisticsDto</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NVAPIEncoderStatisticsDto(uint sessionsCount, uint averageFps, uint averageLatency)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>sessionsCount</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd></dd>
+    <dt><code>averageFps</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd></dd>
+    <dt><code>averageLatency</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
   <h2 class="section" id="properties">Properties
 </h2>
 
 
-  <a id="NVAPIWrapper_NVAPIEncoderStatisticsDto_RawData_" data-uid="NVAPIWrapper.NVAPIEncoderStatisticsDto.RawData*"></a>
+  <a id="NVAPIWrapper_NVAPIEncoderStatisticsDto_AverageFps_" data-uid="NVAPIWrapper.NVAPIEncoderStatisticsDto.AverageFps*"></a>
 
-  <h3 id="NVAPIWrapper_NVAPIEncoderStatisticsDto_RawData" data-uid="NVAPIWrapper.NVAPIEncoderStatisticsDto.RawData">
-  RawData
-  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L3542"><i class="bi bi-code-slash"></i></a>
+  <h3 id="NVAPIWrapper_NVAPIEncoderStatisticsDto_AverageFps" data-uid="NVAPIWrapper.NVAPIEncoderStatisticsDto.AverageFps">
+  AverageFps
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L4456"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Average frames per second across all sessions.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public byte[] RawData { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public uint AverageFps { get; }</code></pre>
   </div>
 
 
@@ -163,7 +204,71 @@ Struct NVAPIEncoderStatisticsDto  <a class="header-action link-secondary" title=
 
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]</dt>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIEncoderStatisticsDto_AverageLatency_" data-uid="NVAPIWrapper.NVAPIEncoderStatisticsDto.AverageLatency*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIEncoderStatisticsDto_AverageLatency" data-uid="NVAPIWrapper.NVAPIEncoderStatisticsDto.AverageLatency">
+  AverageLatency
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L4458"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Average encode latency in microseconds across all sessions.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public uint AverageLatency { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIEncoderStatisticsDto_SessionsCount_" data-uid="NVAPIWrapper.NVAPIEncoderStatisticsDto.SessionsCount*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIEncoderStatisticsDto_SessionsCount" data-uid="NVAPIWrapper.NVAPIEncoderStatisticsDto.SessionsCount">
+  SessionsCount
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L4454"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Number of active encoder sessions.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public uint SessionsCount { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
     <dd></dd>
   </dl>
 
@@ -182,10 +287,11 @@ Struct NVAPIEncoderStatisticsDto  <a class="header-action link-secondary" title=
 
   <h3 id="NVAPIWrapper_NVAPIEncoderStatisticsDto_CreateDefault" data-uid="NVAPIWrapper.NVAPIEncoderStatisticsDto.CreateDefault">
   CreateDefault()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L3554"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L4475"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Creates a default (zeroed) DTO with the correct version field.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -213,7 +319,7 @@ Struct NVAPIEncoderStatisticsDto  <a class="header-action link-secondary" title=
 
   <h3 id="NVAPIWrapper_NVAPIEncoderStatisticsDto_Equals_NVAPIWrapper_NVAPIEncoderStatisticsDto_" data-uid="NVAPIWrapper.NVAPIEncoderStatisticsDto.Equals(NVAPIWrapper.NVAPIEncoderStatisticsDto)">
   Equals(NVAPIEncoderStatisticsDto)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L3564"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L4493"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Indicates whether the current object is equal to another object of the same type.</p>
@@ -252,7 +358,7 @@ Struct NVAPIEncoderStatisticsDto  <a class="header-action link-secondary" title=
 
   <h3 id="NVAPIWrapper_NVAPIEncoderStatisticsDto_Equals_System_Object_" data-uid="NVAPIWrapper.NVAPIEncoderStatisticsDto.Equals(System.Object)">
   Equals(object?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L3569"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L4501"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Indicates whether this instance and a specified object are equal.</p>
@@ -291,10 +397,11 @@ Struct NVAPIEncoderStatisticsDto  <a class="header-action link-secondary" title=
 
   <h3 id="NVAPIWrapper_NVAPIEncoderStatisticsDto_FromNative_NVAPIWrapper__NV_ENCODER_STATISTICS_V1_" data-uid="NVAPIWrapper.NVAPIEncoderStatisticsDto.FromNative(NVAPIWrapper._NV_ENCODER_STATISTICS_V1)">
   FromNative(_NV_ENCODER_STATISTICS_V1)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L3549"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L4469"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Creates a DTO from the native <a class="xref" href="NVAPIWrapper._NV_ENCODER_STATISTICS_V1.html">_NV_ENCODER_STATISTICS_V1</a> struct.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -327,7 +434,7 @@ Struct NVAPIEncoderStatisticsDto  <a class="header-action link-secondary" title=
 
   <h3 id="NVAPIWrapper_NVAPIEncoderStatisticsDto_GetHashCode" data-uid="NVAPIWrapper.NVAPIEncoderStatisticsDto.GetHashCode">
   GetHashCode()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L3570"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L4503"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Returns the hash code for this instance.</p>
@@ -360,10 +467,11 @@ Struct NVAPIEncoderStatisticsDto  <a class="header-action link-secondary" title=
 
   <h3 id="NVAPIWrapper_NVAPIEncoderStatisticsDto_ToNative" data-uid="NVAPIWrapper.NVAPIEncoderStatisticsDto.ToNative">
   ToNative()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L3559"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L4481"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Converts this DTO back to the native <a class="xref" href="NVAPIWrapper._NV_ENCODER_STATISTICS_V1.html">_NV_ENCODER_STATISTICS_V1</a> struct.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -395,10 +503,11 @@ Struct NVAPIEncoderStatisticsDto  <a class="header-action link-secondary" title=
 
   <h3 id="NVAPIWrapper_NVAPIEncoderStatisticsDto_op_Equality_NVAPIWrapper_NVAPIEncoderStatisticsDto_NVAPIWrapper_NVAPIEncoderStatisticsDto_" data-uid="NVAPIWrapper.NVAPIEncoderStatisticsDto.op_Equality(NVAPIWrapper.NVAPIEncoderStatisticsDto,NVAPIWrapper.NVAPIEncoderStatisticsDto)">
   operator ==(NVAPIEncoderStatisticsDto, NVAPIEncoderStatisticsDto)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L3571"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L4505"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Equality operator.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -433,10 +542,11 @@ Struct NVAPIEncoderStatisticsDto  <a class="header-action link-secondary" title=
 
   <h3 id="NVAPIWrapper_NVAPIEncoderStatisticsDto_op_Inequality_NVAPIWrapper_NVAPIEncoderStatisticsDto_NVAPIWrapper_NVAPIEncoderStatisticsDto_" data-uid="NVAPIWrapper.NVAPIEncoderStatisticsDto.op_Inequality(NVAPIWrapper.NVAPIEncoderStatisticsDto,NVAPIWrapper.NVAPIEncoderStatisticsDto)">
   operator !=(NVAPIEncoderStatisticsDto, NVAPIEncoderStatisticsDto)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L3572"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L4507"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Inequality operator.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -471,7 +581,7 @@ Struct NVAPIEncoderStatisticsDto  <a class="header-action link-secondary" title=
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L3540" class="edit-link">Edit this page</a>
+          <a href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L4451" class="edit-link">Edit this page</a>
         </div>
 
 

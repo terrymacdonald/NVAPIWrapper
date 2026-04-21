@@ -5,12 +5,14 @@ items:
   id: NVAPIGpuIllumDeviceInfoParamsDto
   parent: NVAPIWrapper
   children:
+  - NVAPIWrapper.NVAPIGpuIllumDeviceInfoParamsDto.#ctor(System.UInt32,NVAPIWrapper.NVAPIGpuIllumDeviceInfoDto[])
   - NVAPIWrapper.NVAPIGpuIllumDeviceInfoParamsDto.CreateDefault
+  - NVAPIWrapper.NVAPIGpuIllumDeviceInfoParamsDto.Devices
   - NVAPIWrapper.NVAPIGpuIllumDeviceInfoParamsDto.Equals(NVAPIWrapper.NVAPIGpuIllumDeviceInfoParamsDto)
   - NVAPIWrapper.NVAPIGpuIllumDeviceInfoParamsDto.Equals(System.Object)
   - NVAPIWrapper.NVAPIGpuIllumDeviceInfoParamsDto.FromNative(NVAPIWrapper._NV_GPU_CLIENT_ILLUM_DEVICE_INFO_PARAMS_V1)
   - NVAPIWrapper.NVAPIGpuIllumDeviceInfoParamsDto.GetHashCode
-  - NVAPIWrapper.NVAPIGpuIllumDeviceInfoParamsDto.RawData
+  - NVAPIWrapper.NVAPIGpuIllumDeviceInfoParamsDto.NumIllumDevices
   - NVAPIWrapper.NVAPIGpuIllumDeviceInfoParamsDto.ToNative
   - NVAPIWrapper.NVAPIGpuIllumDeviceInfoParamsDto.op_Equality(NVAPIWrapper.NVAPIGpuIllumDeviceInfoParamsDto,NVAPIWrapper.NVAPIGpuIllumDeviceInfoParamsDto)
   - NVAPIWrapper.NVAPIGpuIllumDeviceInfoParamsDto.op_Inequality(NVAPIWrapper.NVAPIGpuIllumDeviceInfoParamsDto,NVAPIWrapper.NVAPIGpuIllumDeviceInfoParamsDto)
@@ -28,7 +30,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPIGpuIllumDeviceInfoParamsDto
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 3273
+    startLine: 3333
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -44,35 +46,104 @@ items:
   - System.Object.Equals(System.Object,System.Object)
   - System.Object.GetType
   - System.Object.ReferenceEquals(System.Object,System.Object)
-- uid: NVAPIWrapper.NVAPIGpuIllumDeviceInfoParamsDto.RawData
-  commentId: P:NVAPIWrapper.NVAPIGpuIllumDeviceInfoParamsDto.RawData
-  id: RawData
+- uid: NVAPIWrapper.NVAPIGpuIllumDeviceInfoParamsDto.NumIllumDevices
+  commentId: P:NVAPIWrapper.NVAPIGpuIllumDeviceInfoParamsDto.NumIllumDevices
+  id: NumIllumDevices
   parent: NVAPIWrapper.NVAPIGpuIllumDeviceInfoParamsDto
   langs:
   - csharp
   - vb
-  name: RawData
-  nameWithType: NVAPIGpuIllumDeviceInfoParamsDto.RawData
-  fullName: NVAPIWrapper.NVAPIGpuIllumDeviceInfoParamsDto.RawData
+  name: NumIllumDevices
+  nameWithType: NVAPIGpuIllumDeviceInfoParamsDto.NumIllumDevices
+  fullName: NVAPIWrapper.NVAPIGpuIllumDeviceInfoParamsDto.NumIllumDevices
   type: Property
   source:
     remote:
       path: NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
       branch: main
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
-    id: RawData
+    id: NumIllumDevices
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 3275
+    startLine: 3336
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
+  summary: Number of illumination devices reported.
+  example: []
   syntax:
-    content: public byte[] RawData { get; }
+    content: public uint NumIllumDevices { get; }
     parameters: []
     return:
-      type: System.Byte[]
-    content.vb: Public ReadOnly Property RawData As Byte()
-  overload: NVAPIWrapper.NVAPIGpuIllumDeviceInfoParamsDto.RawData*
+      type: System.UInt32
+    content.vb: Public ReadOnly Property NumIllumDevices As UInteger
+  overload: NVAPIWrapper.NVAPIGpuIllumDeviceInfoParamsDto.NumIllumDevices*
+- uid: NVAPIWrapper.NVAPIGpuIllumDeviceInfoParamsDto.Devices
+  commentId: P:NVAPIWrapper.NVAPIGpuIllumDeviceInfoParamsDto.Devices
+  id: Devices
+  parent: NVAPIWrapper.NVAPIGpuIllumDeviceInfoParamsDto
+  langs:
+  - csharp
+  - vb
+  name: Devices
+  nameWithType: NVAPIGpuIllumDeviceInfoParamsDto.Devices
+  fullName: NVAPIWrapper.NVAPIGpuIllumDeviceInfoParamsDto.Devices
+  type: Property
+  source:
+    remote:
+      path: NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
+      branch: main
+      repo: https://github.com/terrymacdonald/NVAPIWrapper.git
+    id: Devices
+    path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
+    startLine: 3338
+  assemblies:
+  - NVAPIWrapper
+  namespace: NVAPIWrapper
+  summary: Per-device illumination info array (up to 32 entries).
+  example: []
+  syntax:
+    content: public NVAPIGpuIllumDeviceInfoDto[] Devices { get; }
+    parameters: []
+    return:
+      type: NVAPIWrapper.NVAPIGpuIllumDeviceInfoDto[]
+    content.vb: Public ReadOnly Property Devices As NVAPIGpuIllumDeviceInfoDto()
+  overload: NVAPIWrapper.NVAPIGpuIllumDeviceInfoParamsDto.Devices*
+- uid: NVAPIWrapper.NVAPIGpuIllumDeviceInfoParamsDto.#ctor(System.UInt32,NVAPIWrapper.NVAPIGpuIllumDeviceInfoDto[])
+  commentId: M:NVAPIWrapper.NVAPIGpuIllumDeviceInfoParamsDto.#ctor(System.UInt32,NVAPIWrapper.NVAPIGpuIllumDeviceInfoDto[])
+  id: '#ctor(System.UInt32,NVAPIWrapper.NVAPIGpuIllumDeviceInfoDto[])'
+  parent: NVAPIWrapper.NVAPIGpuIllumDeviceInfoParamsDto
+  langs:
+  - csharp
+  - vb
+  name: NVAPIGpuIllumDeviceInfoParamsDto(uint, NVAPIGpuIllumDeviceInfoDto[])
+  nameWithType: NVAPIGpuIllumDeviceInfoParamsDto.NVAPIGpuIllumDeviceInfoParamsDto(uint, NVAPIGpuIllumDeviceInfoDto[])
+  fullName: NVAPIWrapper.NVAPIGpuIllumDeviceInfoParamsDto.NVAPIGpuIllumDeviceInfoParamsDto(uint, NVAPIWrapper.NVAPIGpuIllumDeviceInfoDto[])
+  type: Constructor
+  source:
+    remote:
+      path: NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
+      branch: main
+      repo: https://github.com/terrymacdonald/NVAPIWrapper.git
+    id: .ctor
+    path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
+    startLine: 3341
+  assemblies:
+  - NVAPIWrapper
+  namespace: NVAPIWrapper
+  summary: Initializes a new instance of <xref href="NVAPIWrapper.NVAPIGpuIllumDeviceInfoParamsDto" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public NVAPIGpuIllumDeviceInfoParamsDto(uint numIllumDevices, NVAPIGpuIllumDeviceInfoDto[] devices)
+    parameters:
+    - id: numIllumDevices
+      type: System.UInt32
+    - id: devices
+      type: NVAPIWrapper.NVAPIGpuIllumDeviceInfoDto[]
+    content.vb: Public Sub New(numIllumDevices As UInteger, devices As NVAPIGpuIllumDeviceInfoDto())
+  overload: NVAPIWrapper.NVAPIGpuIllumDeviceInfoParamsDto.#ctor*
+  nameWithType.vb: NVAPIGpuIllumDeviceInfoParamsDto.New(UInteger, NVAPIGpuIllumDeviceInfoDto())
+  fullName.vb: NVAPIWrapper.NVAPIGpuIllumDeviceInfoParamsDto.New(UInteger, NVAPIWrapper.NVAPIGpuIllumDeviceInfoDto())
+  name.vb: New(UInteger, NVAPIGpuIllumDeviceInfoDto())
 - uid: NVAPIWrapper.NVAPIGpuIllumDeviceInfoParamsDto.FromNative(NVAPIWrapper._NV_GPU_CLIENT_ILLUM_DEVICE_INFO_PARAMS_V1)
   commentId: M:NVAPIWrapper.NVAPIGpuIllumDeviceInfoParamsDto.FromNative(NVAPIWrapper._NV_GPU_CLIENT_ILLUM_DEVICE_INFO_PARAMS_V1)
   id: FromNative(NVAPIWrapper._NV_GPU_CLIENT_ILLUM_DEVICE_INFO_PARAMS_V1)
@@ -91,10 +162,12 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: FromNative
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 3282
+    startLine: 3348
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
+  summary: Creates a DTO from the native <xref href="NVAPIWrapper._NV_GPU_CLIENT_ILLUM_DEVICE_INFO_PARAMS_V1" data-throw-if-not-resolved="false"></xref> struct.
+  example: []
   syntax:
     content: public static NVAPIGpuIllumDeviceInfoParamsDto FromNative(_NV_GPU_CLIENT_ILLUM_DEVICE_INFO_PARAMS_V1 native)
     parameters:
@@ -122,10 +195,12 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: CreateDefault
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 3287
+    startLine: 3357
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
+  summary: Creates a default (zeroed) DTO with the correct version field.
+  example: []
   syntax:
     content: public static NVAPIGpuIllumDeviceInfoParamsDto CreateDefault()
     return:
@@ -150,10 +225,12 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: ToNative
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 3292
+    startLine: 3363
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
+  summary: Converts this DTO back to the native <xref href="NVAPIWrapper._NV_GPU_CLIENT_ILLUM_DEVICE_INFO_PARAMS_V1" data-throw-if-not-resolved="false"></xref> struct.
+  example: []
   syntax:
     content: public _NV_GPU_CLIENT_ILLUM_DEVICE_INFO_PARAMS_V1 ToNative()
     return:
@@ -178,7 +255,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Equals
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 3297
+    startLine: 3376
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -215,7 +292,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Equals
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 3302
+    startLine: 3390
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -254,7 +331,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetHashCode
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 3303
+    startLine: 3392
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -286,10 +363,12 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: op_Equality
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 3304
+    startLine: 3401
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
+  summary: Equality operator.
+  example: []
   syntax:
     content: public static bool operator ==(NVAPIGpuIllumDeviceInfoParamsDto left, NVAPIGpuIllumDeviceInfoParamsDto right)
     parameters:
@@ -322,10 +401,12 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: op_Inequality
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 3305
+    startLine: 3403
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
+  summary: Inequality operator.
+  example: []
   syntax:
     content: public static bool operator !=(NVAPIGpuIllumDeviceInfoParamsDto left, NVAPIGpuIllumDeviceInfoParamsDto right)
     parameters:
@@ -570,48 +651,50 @@ references:
   nameWithType.vb: Object
   fullName.vb: Object
   name.vb: Object
-- uid: NVAPIWrapper.NVAPIGpuIllumDeviceInfoParamsDto.RawData*
-  commentId: Overload:NVAPIWrapper.NVAPIGpuIllumDeviceInfoParamsDto.RawData
-  href: NVAPIWrapper.NVAPIGpuIllumDeviceInfoParamsDto.html#NVAPIWrapper_NVAPIGpuIllumDeviceInfoParamsDto_RawData
-  name: RawData
-  nameWithType: NVAPIGpuIllumDeviceInfoParamsDto.RawData
-  fullName: NVAPIWrapper.NVAPIGpuIllumDeviceInfoParamsDto.RawData
-- uid: System.Byte[]
+- uid: NVAPIWrapper.NVAPIGpuIllumDeviceInfoParamsDto.NumIllumDevices*
+  commentId: Overload:NVAPIWrapper.NVAPIGpuIllumDeviceInfoParamsDto.NumIllumDevices
+  href: NVAPIWrapper.NVAPIGpuIllumDeviceInfoParamsDto.html#NVAPIWrapper_NVAPIGpuIllumDeviceInfoParamsDto_NumIllumDevices
+  name: NumIllumDevices
+  nameWithType: NVAPIGpuIllumDeviceInfoParamsDto.NumIllumDevices
+  fullName: NVAPIWrapper.NVAPIGpuIllumDeviceInfoParamsDto.NumIllumDevices
+- uid: System.UInt32
+  commentId: T:System.UInt32
+  parent: System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.byte
-  name: byte[]
-  nameWithType: byte[]
-  fullName: byte[]
-  nameWithType.vb: Byte()
-  fullName.vb: Byte()
-  name.vb: Byte()
+  href: https://learn.microsoft.com/dotnet/api/system.uint32
+  name: uint
+  nameWithType: uint
+  fullName: uint
+  nameWithType.vb: UInteger
+  fullName.vb: UInteger
+  name.vb: UInteger
+- uid: NVAPIWrapper.NVAPIGpuIllumDeviceInfoParamsDto.Devices*
+  commentId: Overload:NVAPIWrapper.NVAPIGpuIllumDeviceInfoParamsDto.Devices
+  href: NVAPIWrapper.NVAPIGpuIllumDeviceInfoParamsDto.html#NVAPIWrapper_NVAPIGpuIllumDeviceInfoParamsDto_Devices
+  name: Devices
+  nameWithType: NVAPIGpuIllumDeviceInfoParamsDto.Devices
+  fullName: NVAPIWrapper.NVAPIGpuIllumDeviceInfoParamsDto.Devices
+- uid: NVAPIWrapper.NVAPIGpuIllumDeviceInfoDto[]
+  isExternal: true
+  href: NVAPIWrapper.NVAPIGpuIllumDeviceInfoDto.html
+  name: NVAPIGpuIllumDeviceInfoDto[]
+  nameWithType: NVAPIGpuIllumDeviceInfoDto[]
+  fullName: NVAPIWrapper.NVAPIGpuIllumDeviceInfoDto[]
+  nameWithType.vb: NVAPIGpuIllumDeviceInfoDto()
+  fullName.vb: NVAPIWrapper.NVAPIGpuIllumDeviceInfoDto()
+  name.vb: NVAPIGpuIllumDeviceInfoDto()
   spec.csharp:
-  - uid: System.Byte
-    name: byte
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - uid: NVAPIWrapper.NVAPIGpuIllumDeviceInfoDto
+    name: NVAPIGpuIllumDeviceInfoDto
+    href: NVAPIWrapper.NVAPIGpuIllumDeviceInfoDto.html
   - name: '['
   - name: ']'
   spec.vb:
-  - uid: System.Byte
-    name: Byte
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - uid: NVAPIWrapper.NVAPIGpuIllumDeviceInfoDto
+    name: NVAPIGpuIllumDeviceInfoDto
+    href: NVAPIWrapper.NVAPIGpuIllumDeviceInfoDto.html
   - name: (
   - name: )
-- uid: NVAPIWrapper.NVAPIGpuIllumDeviceInfoParamsDto.FromNative*
-  commentId: Overload:NVAPIWrapper.NVAPIGpuIllumDeviceInfoParamsDto.FromNative
-  href: NVAPIWrapper.NVAPIGpuIllumDeviceInfoParamsDto.html#NVAPIWrapper_NVAPIGpuIllumDeviceInfoParamsDto_FromNative_NVAPIWrapper__NV_GPU_CLIENT_ILLUM_DEVICE_INFO_PARAMS_V1_
-  name: FromNative
-  nameWithType: NVAPIGpuIllumDeviceInfoParamsDto.FromNative
-  fullName: NVAPIWrapper.NVAPIGpuIllumDeviceInfoParamsDto.FromNative
-- uid: NVAPIWrapper._NV_GPU_CLIENT_ILLUM_DEVICE_INFO_PARAMS_V1
-  commentId: T:NVAPIWrapper._NV_GPU_CLIENT_ILLUM_DEVICE_INFO_PARAMS_V1
-  parent: NVAPIWrapper
-  href: NVAPIWrapper._NV_GPU_CLIENT_ILLUM_DEVICE_INFO_PARAMS_V1.html
-  name: _NV_GPU_CLIENT_ILLUM_DEVICE_INFO_PARAMS_V1
-  nameWithType: _NV_GPU_CLIENT_ILLUM_DEVICE_INFO_PARAMS_V1
-  fullName: NVAPIWrapper._NV_GPU_CLIENT_ILLUM_DEVICE_INFO_PARAMS_V1
 - uid: NVAPIWrapper.NVAPIGpuIllumDeviceInfoParamsDto
   commentId: T:NVAPIWrapper.NVAPIGpuIllumDeviceInfoParamsDto
   parent: NVAPIWrapper
@@ -619,6 +702,28 @@ references:
   name: NVAPIGpuIllumDeviceInfoParamsDto
   nameWithType: NVAPIGpuIllumDeviceInfoParamsDto
   fullName: NVAPIWrapper.NVAPIGpuIllumDeviceInfoParamsDto
+- uid: NVAPIWrapper.NVAPIGpuIllumDeviceInfoParamsDto.#ctor*
+  commentId: Overload:NVAPIWrapper.NVAPIGpuIllumDeviceInfoParamsDto.#ctor
+  href: NVAPIWrapper.NVAPIGpuIllumDeviceInfoParamsDto.html#NVAPIWrapper_NVAPIGpuIllumDeviceInfoParamsDto__ctor_System_UInt32_NVAPIWrapper_NVAPIGpuIllumDeviceInfoDto___
+  name: NVAPIGpuIllumDeviceInfoParamsDto
+  nameWithType: NVAPIGpuIllumDeviceInfoParamsDto.NVAPIGpuIllumDeviceInfoParamsDto
+  fullName: NVAPIWrapper.NVAPIGpuIllumDeviceInfoParamsDto.NVAPIGpuIllumDeviceInfoParamsDto
+  nameWithType.vb: NVAPIGpuIllumDeviceInfoParamsDto.New
+  fullName.vb: NVAPIWrapper.NVAPIGpuIllumDeviceInfoParamsDto.New
+  name.vb: New
+- uid: NVAPIWrapper._NV_GPU_CLIENT_ILLUM_DEVICE_INFO_PARAMS_V1
+  commentId: T:NVAPIWrapper._NV_GPU_CLIENT_ILLUM_DEVICE_INFO_PARAMS_V1
+  parent: NVAPIWrapper
+  href: NVAPIWrapper._NV_GPU_CLIENT_ILLUM_DEVICE_INFO_PARAMS_V1.html
+  name: _NV_GPU_CLIENT_ILLUM_DEVICE_INFO_PARAMS_V1
+  nameWithType: _NV_GPU_CLIENT_ILLUM_DEVICE_INFO_PARAMS_V1
+  fullName: NVAPIWrapper._NV_GPU_CLIENT_ILLUM_DEVICE_INFO_PARAMS_V1
+- uid: NVAPIWrapper.NVAPIGpuIllumDeviceInfoParamsDto.FromNative*
+  commentId: Overload:NVAPIWrapper.NVAPIGpuIllumDeviceInfoParamsDto.FromNative
+  href: NVAPIWrapper.NVAPIGpuIllumDeviceInfoParamsDto.html#NVAPIWrapper_NVAPIGpuIllumDeviceInfoParamsDto_FromNative_NVAPIWrapper__NV_GPU_CLIENT_ILLUM_DEVICE_INFO_PARAMS_V1_
+  name: FromNative
+  nameWithType: NVAPIGpuIllumDeviceInfoParamsDto.FromNative
+  fullName: NVAPIWrapper.NVAPIGpuIllumDeviceInfoParamsDto.FromNative
 - uid: NVAPIWrapper.NVAPIGpuIllumDeviceInfoParamsDto.CreateDefault*
   commentId: Overload:NVAPIWrapper.NVAPIGpuIllumDeviceInfoParamsDto.CreateDefault
   href: NVAPIWrapper.NVAPIGpuIllumDeviceInfoParamsDto.html#NVAPIWrapper_NVAPIGpuIllumDeviceInfoParamsDto_CreateDefault

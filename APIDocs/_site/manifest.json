@@ -7110,6 +7110,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/NVAPIWrapper.NVAPIEncoderPerSessionInfoDto.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NVAPIWrapper.NVAPIEncoderPerSessionInfoDto.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "NVAPIWrapper.NVAPIEncoderPerSessionInfoDto",
+      "Summary": "<p sourcefile=\"api/NVAPIWrapper.NVAPIEncoderPerSessionInfoDto.yml\" sourcestartlinenumber=\"1\">Per-session encoder info DTO, wrapping <xref href=\"NVAPIWrapper._NV_ENCODER_PER_SESSION_INFO_V1\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/NVAPIWrapper.NVAPIEncoderSessionsInfoDto.yml",
       "output": {
         ".html": {
@@ -7516,6 +7530,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/NVAPIWrapper.NVAPIGpuIllumDeviceControlDto.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NVAPIWrapper.NVAPIGpuIllumDeviceControlDto.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "NVAPIWrapper.NVAPIGpuIllumDeviceControlDto",
+      "Summary": "<p sourcefile=\"api/NVAPIWrapper.NVAPIGpuIllumDeviceControlDto.yml\" sourcestartlinenumber=\"1\">Per-device illumination control DTO, wrapping <xref href=\"NVAPIWrapper.NV_GPU_CLIENT_ILLUM_DEVICE_CONTROL_V1\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/NVAPIWrapper.NVAPIGpuIllumDeviceControlParamsDto.yml",
       "output": {
         ".html": {
@@ -7527,6 +7555,20 @@
       "IsMRef": true,
       "Title": "NVAPIWrapper.NVAPIGpuIllumDeviceControlParamsDto",
       "Summary": "<p sourcefile=\"api/NVAPIWrapper.NVAPIGpuIllumDeviceControlParamsDto.yml\" sourcestartlinenumber=\"1\">Illumination device control params DTO.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NVAPIWrapper.NVAPIGpuIllumDeviceInfoDto.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NVAPIWrapper.NVAPIGpuIllumDeviceInfoDto.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "NVAPIWrapper.NVAPIGpuIllumDeviceInfoDto",
+      "Summary": "<p sourcefile=\"api/NVAPIWrapper.NVAPIGpuIllumDeviceInfoDto.yml\" sourcestartlinenumber=\"1\">Per-device illumination info DTO, wrapping <xref href=\"NVAPIWrapper._NV_GPU_CLIENT_ILLUM_DEVICE_INFO_V1\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -7544,6 +7586,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/NVAPIWrapper.NVAPIGpuIllumZoneControlDto.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NVAPIWrapper.NVAPIGpuIllumZoneControlDto.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "NVAPIWrapper.NVAPIGpuIllumZoneControlDto",
+      "Summary": "<p sourcefile=\"api/NVAPIWrapper.NVAPIGpuIllumZoneControlDto.yml\" sourcestartlinenumber=\"1\">Per-zone illumination control DTO, wrapping <xref href=\"NVAPIWrapper._NV_GPU_CLIENT_ILLUM_ZONE_CONTROL_V1\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/NVAPIWrapper.NVAPIGpuIllumZoneControlParamsDto.yml",
       "output": {
         ".html": {
@@ -7555,6 +7611,20 @@
       "IsMRef": true,
       "Title": "NVAPIWrapper.NVAPIGpuIllumZoneControlParamsDto",
       "Summary": "<p sourcefile=\"api/NVAPIWrapper.NVAPIGpuIllumZoneControlParamsDto.yml\" sourcestartlinenumber=\"1\">Illumination zone control params DTO.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NVAPIWrapper.NVAPIGpuIllumZoneInfoDto.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NVAPIWrapper.NVAPIGpuIllumZoneInfoDto.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "NVAPIWrapper.NVAPIGpuIllumZoneInfoDto",
+      "Summary": "<p sourcefile=\"api/NVAPIWrapper.NVAPIGpuIllumZoneInfoDto.yml\" sourcestartlinenumber=\"1\">Per-zone illumination info DTO, wrapping <xref href=\"NVAPIWrapper._NV_GPU_CLIENT_ILLUM_ZONE_INFO_V1\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -7978,6 +8048,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/NVAPIWrapper.NVAPILicenseFeatureDetailsDto.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NVAPIWrapper.NVAPILicenseFeatureDetailsDto.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "NVAPIWrapper.NVAPILicenseFeatureDetailsDto",
+      "Summary": "<p sourcefile=\"api/NVAPIWrapper.NVAPILicenseFeatureDetailsDto.yml\" sourcestartlinenumber=\"1\">Per-feature license details DTO, wrapping <xref href=\"NVAPIWrapper._NV_LICENSE_FEATURE_DETAILS_V4\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/NVAPIWrapper.NVAPILidAndDockInfoDto.yml",
       "output": {
         ".html": {
@@ -8328,6 +8412,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/NVAPIWrapper.NVAPINvLinkDeviceInfoDto.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NVAPIWrapper.NVAPINvLinkDeviceInfoDto.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "NVAPIWrapper.NVAPINvLinkDeviceInfoDto",
+      "Summary": "<p sourcefile=\"api/NVAPIWrapper.NVAPINvLinkDeviceInfoDto.yml\" sourcestartlinenumber=\"1\">NVLINK_DEVICE_INFO_V1 DTO.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/NVAPIWrapper.NVAPINvLinkStatusDto.yml",
       "output": {
         ".html": {
@@ -8339,6 +8437,20 @@
       "IsMRef": true,
       "Title": "NVAPIWrapper.NVAPINvLinkStatusDto",
       "Summary": "<p sourcefile=\"api/NVAPIWrapper.NVAPINvLinkStatusDto.yml\" sourcestartlinenumber=\"1\">NVLINK status DTO.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NVAPIWrapper.NVAPINvLinkStatusInfoDto.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NVAPIWrapper.NVAPINvLinkStatusInfoDto.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "NVAPIWrapper.NVAPINvLinkStatusInfoDto",
+      "Summary": "<p sourcefile=\"api/NVAPIWrapper.NVAPINvLinkStatusInfoDto.yml\" sourcestartlinenumber=\"1\">NVLINK_LINK_STATUS_INFO_V2 DTO.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -8493,6 +8605,48 @@
       "IsMRef": true,
       "Title": "NVAPIWrapper.NVAPIPreferredStereoDisplayDto",
       "Summary": "<p sourcefile=\"api/NVAPIWrapper.NVAPIPreferredStereoDisplayDto.yml\" sourcestartlinenumber=\"1\">DTO for preferred stereo display.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NVAPIWrapper.NVAPIPstateBaseVoltageEntryDto.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NVAPIWrapper.NVAPIPstateBaseVoltageEntryDto.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "NVAPIWrapper.NVAPIPstateBaseVoltageEntryDto",
+      "Summary": "<p sourcefile=\"api/NVAPIWrapper.NVAPIPstateBaseVoltageEntryDto.yml\" sourcestartlinenumber=\"1\">Base voltage entry DTO for a P-state, wrapping <xref href=\"NVAPIWrapper.NV_GPU_PSTATE20_BASE_VOLTAGE_ENTRY_V1\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NVAPIWrapper.NVAPIPstateClockEntryDto.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NVAPIWrapper.NVAPIPstateClockEntryDto.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "NVAPIWrapper.NVAPIPstateClockEntryDto",
+      "Summary": "<p sourcefile=\"api/NVAPIWrapper.NVAPIPstateClockEntryDto.yml\" sourcestartlinenumber=\"1\">Per-clock entry DTO for a P-state, wrapping <xref href=\"NVAPIWrapper.NV_GPU_PSTATE20_CLOCK_ENTRY_V1\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NVAPIWrapper.NVAPIPstateInfoDto.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NVAPIWrapper.NVAPIPstateInfoDto.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "NVAPIWrapper.NVAPIPstateInfoDto",
+      "Summary": "<p sourcefile=\"api/NVAPIWrapper.NVAPIPstateInfoDto.yml\" sourcestartlinenumber=\"1\">Per-pstate info DTO, wrapping the anonymous pstate struct within <xref href=\"NVAPIWrapper._NV_GPU_PERF_PSTATES20_INFO_V2\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
     },
     {
       "type": "ManagedReference",

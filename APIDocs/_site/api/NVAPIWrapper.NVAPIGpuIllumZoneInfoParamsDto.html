@@ -89,7 +89,7 @@
 
 
   <h1 id="NVAPIWrapper_NVAPIGpuIllumZoneInfoParamsDto" data-uid="NVAPIWrapper.NVAPIGpuIllumZoneInfoParamsDto" class="text-break">
-Struct NVAPIGpuIllumZoneInfoParamsDto  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L3350"><i class="bi bi-code-slash"></i></a>
+Struct NVAPIGpuIllumZoneInfoParamsDto  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L3615"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -139,22 +139,61 @@ Struct NVAPIGpuIllumZoneInfoParamsDto  <a class="header-action link-secondary" t
 
 
 
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="NVAPIWrapper_NVAPIGpuIllumZoneInfoParamsDto__ctor_" data-uid="NVAPIWrapper.NVAPIGpuIllumZoneInfoParamsDto.#ctor*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIGpuIllumZoneInfoParamsDto__ctor_System_UInt32_NVAPIWrapper_NVAPIGpuIllumZoneInfoDto___" data-uid="NVAPIWrapper.NVAPIGpuIllumZoneInfoParamsDto.#ctor(System.UInt32,NVAPIWrapper.NVAPIGpuIllumZoneInfoDto[])">
+  NVAPIGpuIllumZoneInfoParamsDto(uint, NVAPIGpuIllumZoneInfoDto[])
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L3623"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Initializes a new instance of <a class="xref" href="NVAPIWrapper.NVAPIGpuIllumZoneInfoParamsDto.html">NVAPIGpuIllumZoneInfoParamsDto</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NVAPIGpuIllumZoneInfoParamsDto(uint numIllumZones, NVAPIGpuIllumZoneInfoDto[] zones)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>numIllumZones</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd></dd>
+    <dt><code>zones</code> <a class="xref" href="NVAPIWrapper.NVAPIGpuIllumZoneInfoDto.html">NVAPIGpuIllumZoneInfoDto</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
   <h2 class="section" id="properties">Properties
 </h2>
 
 
-  <a id="NVAPIWrapper_NVAPIGpuIllumZoneInfoParamsDto_RawData_" data-uid="NVAPIWrapper.NVAPIGpuIllumZoneInfoParamsDto.RawData*"></a>
+  <a id="NVAPIWrapper_NVAPIGpuIllumZoneInfoParamsDto_NumIllumZones_" data-uid="NVAPIWrapper.NVAPIGpuIllumZoneInfoParamsDto.NumIllumZones*"></a>
 
-  <h3 id="NVAPIWrapper_NVAPIGpuIllumZoneInfoParamsDto_RawData" data-uid="NVAPIWrapper.NVAPIGpuIllumZoneInfoParamsDto.RawData">
-  RawData
-  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L3352"><i class="bi bi-code-slash"></i></a>
+  <h3 id="NVAPIWrapper_NVAPIGpuIllumZoneInfoParamsDto_NumIllumZones" data-uid="NVAPIWrapper.NVAPIGpuIllumZoneInfoParamsDto.NumIllumZones">
+  NumIllumZones
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L3618"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Number of illumination zones reported.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public byte[] RawData { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public uint NumIllumZones { get; }</code></pre>
   </div>
 
 
@@ -163,7 +202,39 @@ Struct NVAPIGpuIllumZoneInfoParamsDto  <a class="header-action link-secondary" t
 
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]</dt>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIGpuIllumZoneInfoParamsDto_Zones_" data-uid="NVAPIWrapper.NVAPIGpuIllumZoneInfoParamsDto.Zones*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIGpuIllumZoneInfoParamsDto_Zones" data-uid="NVAPIWrapper.NVAPIGpuIllumZoneInfoParamsDto.Zones">
+  Zones
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L3620"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Per-zone illumination info array (up to 32 entries).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NVAPIGpuIllumZoneInfoDto[] Zones { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="NVAPIWrapper.NVAPIGpuIllumZoneInfoDto.html">NVAPIGpuIllumZoneInfoDto</a>[]</dt>
     <dd></dd>
   </dl>
 
@@ -182,10 +253,11 @@ Struct NVAPIGpuIllumZoneInfoParamsDto  <a class="header-action link-secondary" t
 
   <h3 id="NVAPIWrapper_NVAPIGpuIllumZoneInfoParamsDto_CreateDefault" data-uid="NVAPIWrapper.NVAPIGpuIllumZoneInfoParamsDto.CreateDefault">
   CreateDefault()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L3364"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L3639"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Creates a default (zeroed) DTO with the correct version field.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -213,7 +285,7 @@ Struct NVAPIGpuIllumZoneInfoParamsDto  <a class="header-action link-secondary" t
 
   <h3 id="NVAPIWrapper_NVAPIGpuIllumZoneInfoParamsDto_Equals_NVAPIWrapper_NVAPIGpuIllumZoneInfoParamsDto_" data-uid="NVAPIWrapper.NVAPIGpuIllumZoneInfoParamsDto.Equals(NVAPIWrapper.NVAPIGpuIllumZoneInfoParamsDto)">
   Equals(NVAPIGpuIllumZoneInfoParamsDto)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L3374"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L3658"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Indicates whether the current object is equal to another object of the same type.</p>
@@ -252,7 +324,7 @@ Struct NVAPIGpuIllumZoneInfoParamsDto  <a class="header-action link-secondary" t
 
   <h3 id="NVAPIWrapper_NVAPIGpuIllumZoneInfoParamsDto_Equals_System_Object_" data-uid="NVAPIWrapper.NVAPIGpuIllumZoneInfoParamsDto.Equals(System.Object)">
   Equals(object?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L3379"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L3672"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Indicates whether this instance and a specified object are equal.</p>
@@ -291,10 +363,11 @@ Struct NVAPIGpuIllumZoneInfoParamsDto  <a class="header-action link-secondary" t
 
   <h3 id="NVAPIWrapper_NVAPIGpuIllumZoneInfoParamsDto_FromNative_NVAPIWrapper__NV_GPU_CLIENT_ILLUM_ZONE_INFO_PARAMS_V1_" data-uid="NVAPIWrapper.NVAPIGpuIllumZoneInfoParamsDto.FromNative(NVAPIWrapper._NV_GPU_CLIENT_ILLUM_ZONE_INFO_PARAMS_V1)">
   FromNative(_NV_GPU_CLIENT_ILLUM_ZONE_INFO_PARAMS_V1)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L3359"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L3630"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Creates a DTO from the native <a class="xref" href="NVAPIWrapper._NV_GPU_CLIENT_ILLUM_ZONE_INFO_PARAMS_V1.html">_NV_GPU_CLIENT_ILLUM_ZONE_INFO_PARAMS_V1</a> struct.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -327,7 +400,7 @@ Struct NVAPIGpuIllumZoneInfoParamsDto  <a class="header-action link-secondary" t
 
   <h3 id="NVAPIWrapper_NVAPIGpuIllumZoneInfoParamsDto_GetHashCode" data-uid="NVAPIWrapper.NVAPIGpuIllumZoneInfoParamsDto.GetHashCode">
   GetHashCode()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L3380"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L3674"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Returns the hash code for this instance.</p>
@@ -360,10 +433,11 @@ Struct NVAPIGpuIllumZoneInfoParamsDto  <a class="header-action link-secondary" t
 
   <h3 id="NVAPIWrapper_NVAPIGpuIllumZoneInfoParamsDto_ToNative" data-uid="NVAPIWrapper.NVAPIGpuIllumZoneInfoParamsDto.ToNative">
   ToNative()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L3369"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L3645"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Converts this DTO back to the native <a class="xref" href="NVAPIWrapper._NV_GPU_CLIENT_ILLUM_ZONE_INFO_PARAMS_V1.html">_NV_GPU_CLIENT_ILLUM_ZONE_INFO_PARAMS_V1</a> struct.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -395,10 +469,11 @@ Struct NVAPIGpuIllumZoneInfoParamsDto  <a class="header-action link-secondary" t
 
   <h3 id="NVAPIWrapper_NVAPIGpuIllumZoneInfoParamsDto_op_Equality_NVAPIWrapper_NVAPIGpuIllumZoneInfoParamsDto_NVAPIWrapper_NVAPIGpuIllumZoneInfoParamsDto_" data-uid="NVAPIWrapper.NVAPIGpuIllumZoneInfoParamsDto.op_Equality(NVAPIWrapper.NVAPIGpuIllumZoneInfoParamsDto,NVAPIWrapper.NVAPIGpuIllumZoneInfoParamsDto)">
   operator ==(NVAPIGpuIllumZoneInfoParamsDto, NVAPIGpuIllumZoneInfoParamsDto)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L3381"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L3683"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Equality operator.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -433,10 +508,11 @@ Struct NVAPIGpuIllumZoneInfoParamsDto  <a class="header-action link-secondary" t
 
   <h3 id="NVAPIWrapper_NVAPIGpuIllumZoneInfoParamsDto_op_Inequality_NVAPIWrapper_NVAPIGpuIllumZoneInfoParamsDto_NVAPIWrapper_NVAPIGpuIllumZoneInfoParamsDto_" data-uid="NVAPIWrapper.NVAPIGpuIllumZoneInfoParamsDto.op_Inequality(NVAPIWrapper.NVAPIGpuIllumZoneInfoParamsDto,NVAPIWrapper.NVAPIGpuIllumZoneInfoParamsDto)">
   operator !=(NVAPIGpuIllumZoneInfoParamsDto, NVAPIGpuIllumZoneInfoParamsDto)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L3382"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L3685"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Inequality operator.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -471,7 +547,7 @@ Struct NVAPIGpuIllumZoneInfoParamsDto  <a class="header-action link-secondary" t
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L3350" class="edit-link">Edit this page</a>
+          <a href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L3615" class="edit-link">Edit this page</a>
         </div>
 
 

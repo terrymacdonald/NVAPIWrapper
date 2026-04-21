@@ -5,12 +5,15 @@ items:
   id: NVAPIEncoderStatisticsDto
   parent: NVAPIWrapper
   children:
+  - NVAPIWrapper.NVAPIEncoderStatisticsDto.#ctor(System.UInt32,System.UInt32,System.UInt32)
+  - NVAPIWrapper.NVAPIEncoderStatisticsDto.AverageFps
+  - NVAPIWrapper.NVAPIEncoderStatisticsDto.AverageLatency
   - NVAPIWrapper.NVAPIEncoderStatisticsDto.CreateDefault
   - NVAPIWrapper.NVAPIEncoderStatisticsDto.Equals(NVAPIWrapper.NVAPIEncoderStatisticsDto)
   - NVAPIWrapper.NVAPIEncoderStatisticsDto.Equals(System.Object)
   - NVAPIWrapper.NVAPIEncoderStatisticsDto.FromNative(NVAPIWrapper._NV_ENCODER_STATISTICS_V1)
   - NVAPIWrapper.NVAPIEncoderStatisticsDto.GetHashCode
-  - NVAPIWrapper.NVAPIEncoderStatisticsDto.RawData
+  - NVAPIWrapper.NVAPIEncoderStatisticsDto.SessionsCount
   - NVAPIWrapper.NVAPIEncoderStatisticsDto.ToNative
   - NVAPIWrapper.NVAPIEncoderStatisticsDto.op_Equality(NVAPIWrapper.NVAPIEncoderStatisticsDto,NVAPIWrapper.NVAPIEncoderStatisticsDto)
   - NVAPIWrapper.NVAPIEncoderStatisticsDto.op_Inequality(NVAPIWrapper.NVAPIEncoderStatisticsDto,NVAPIWrapper.NVAPIEncoderStatisticsDto)
@@ -28,7 +31,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPIEncoderStatisticsDto
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 3539
+    startLine: 4450
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -44,35 +47,137 @@ items:
   - System.Object.Equals(System.Object,System.Object)
   - System.Object.GetType
   - System.Object.ReferenceEquals(System.Object,System.Object)
-- uid: NVAPIWrapper.NVAPIEncoderStatisticsDto.RawData
-  commentId: P:NVAPIWrapper.NVAPIEncoderStatisticsDto.RawData
-  id: RawData
+- uid: NVAPIWrapper.NVAPIEncoderStatisticsDto.SessionsCount
+  commentId: P:NVAPIWrapper.NVAPIEncoderStatisticsDto.SessionsCount
+  id: SessionsCount
   parent: NVAPIWrapper.NVAPIEncoderStatisticsDto
   langs:
   - csharp
   - vb
-  name: RawData
-  nameWithType: NVAPIEncoderStatisticsDto.RawData
-  fullName: NVAPIWrapper.NVAPIEncoderStatisticsDto.RawData
+  name: SessionsCount
+  nameWithType: NVAPIEncoderStatisticsDto.SessionsCount
+  fullName: NVAPIWrapper.NVAPIEncoderStatisticsDto.SessionsCount
   type: Property
   source:
     remote:
       path: NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
       branch: main
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
-    id: RawData
+    id: SessionsCount
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 3541
+    startLine: 4453
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
+  summary: Number of active encoder sessions.
+  example: []
   syntax:
-    content: public byte[] RawData { get; }
+    content: public uint SessionsCount { get; }
     parameters: []
     return:
-      type: System.Byte[]
-    content.vb: Public ReadOnly Property RawData As Byte()
-  overload: NVAPIWrapper.NVAPIEncoderStatisticsDto.RawData*
+      type: System.UInt32
+    content.vb: Public ReadOnly Property SessionsCount As UInteger
+  overload: NVAPIWrapper.NVAPIEncoderStatisticsDto.SessionsCount*
+- uid: NVAPIWrapper.NVAPIEncoderStatisticsDto.AverageFps
+  commentId: P:NVAPIWrapper.NVAPIEncoderStatisticsDto.AverageFps
+  id: AverageFps
+  parent: NVAPIWrapper.NVAPIEncoderStatisticsDto
+  langs:
+  - csharp
+  - vb
+  name: AverageFps
+  nameWithType: NVAPIEncoderStatisticsDto.AverageFps
+  fullName: NVAPIWrapper.NVAPIEncoderStatisticsDto.AverageFps
+  type: Property
+  source:
+    remote:
+      path: NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
+      branch: main
+      repo: https://github.com/terrymacdonald/NVAPIWrapper.git
+    id: AverageFps
+    path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
+    startLine: 4455
+  assemblies:
+  - NVAPIWrapper
+  namespace: NVAPIWrapper
+  summary: Average frames per second across all sessions.
+  example: []
+  syntax:
+    content: public uint AverageFps { get; }
+    parameters: []
+    return:
+      type: System.UInt32
+    content.vb: Public ReadOnly Property AverageFps As UInteger
+  overload: NVAPIWrapper.NVAPIEncoderStatisticsDto.AverageFps*
+- uid: NVAPIWrapper.NVAPIEncoderStatisticsDto.AverageLatency
+  commentId: P:NVAPIWrapper.NVAPIEncoderStatisticsDto.AverageLatency
+  id: AverageLatency
+  parent: NVAPIWrapper.NVAPIEncoderStatisticsDto
+  langs:
+  - csharp
+  - vb
+  name: AverageLatency
+  nameWithType: NVAPIEncoderStatisticsDto.AverageLatency
+  fullName: NVAPIWrapper.NVAPIEncoderStatisticsDto.AverageLatency
+  type: Property
+  source:
+    remote:
+      path: NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
+      branch: main
+      repo: https://github.com/terrymacdonald/NVAPIWrapper.git
+    id: AverageLatency
+    path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
+    startLine: 4457
+  assemblies:
+  - NVAPIWrapper
+  namespace: NVAPIWrapper
+  summary: Average encode latency in microseconds across all sessions.
+  example: []
+  syntax:
+    content: public uint AverageLatency { get; }
+    parameters: []
+    return:
+      type: System.UInt32
+    content.vb: Public ReadOnly Property AverageLatency As UInteger
+  overload: NVAPIWrapper.NVAPIEncoderStatisticsDto.AverageLatency*
+- uid: NVAPIWrapper.NVAPIEncoderStatisticsDto.#ctor(System.UInt32,System.UInt32,System.UInt32)
+  commentId: M:NVAPIWrapper.NVAPIEncoderStatisticsDto.#ctor(System.UInt32,System.UInt32,System.UInt32)
+  id: '#ctor(System.UInt32,System.UInt32,System.UInt32)'
+  parent: NVAPIWrapper.NVAPIEncoderStatisticsDto
+  langs:
+  - csharp
+  - vb
+  name: NVAPIEncoderStatisticsDto(uint, uint, uint)
+  nameWithType: NVAPIEncoderStatisticsDto.NVAPIEncoderStatisticsDto(uint, uint, uint)
+  fullName: NVAPIWrapper.NVAPIEncoderStatisticsDto.NVAPIEncoderStatisticsDto(uint, uint, uint)
+  type: Constructor
+  source:
+    remote:
+      path: NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
+      branch: main
+      repo: https://github.com/terrymacdonald/NVAPIWrapper.git
+    id: .ctor
+    path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
+    startLine: 4460
+  assemblies:
+  - NVAPIWrapper
+  namespace: NVAPIWrapper
+  summary: Initializes a new instance of <xref href="NVAPIWrapper.NVAPIEncoderStatisticsDto" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public NVAPIEncoderStatisticsDto(uint sessionsCount, uint averageFps, uint averageLatency)
+    parameters:
+    - id: sessionsCount
+      type: System.UInt32
+    - id: averageFps
+      type: System.UInt32
+    - id: averageLatency
+      type: System.UInt32
+    content.vb: Public Sub New(sessionsCount As UInteger, averageFps As UInteger, averageLatency As UInteger)
+  overload: NVAPIWrapper.NVAPIEncoderStatisticsDto.#ctor*
+  nameWithType.vb: NVAPIEncoderStatisticsDto.New(UInteger, UInteger, UInteger)
+  fullName.vb: NVAPIWrapper.NVAPIEncoderStatisticsDto.New(UInteger, UInteger, UInteger)
+  name.vb: New(UInteger, UInteger, UInteger)
 - uid: NVAPIWrapper.NVAPIEncoderStatisticsDto.FromNative(NVAPIWrapper._NV_ENCODER_STATISTICS_V1)
   commentId: M:NVAPIWrapper.NVAPIEncoderStatisticsDto.FromNative(NVAPIWrapper._NV_ENCODER_STATISTICS_V1)
   id: FromNative(NVAPIWrapper._NV_ENCODER_STATISTICS_V1)
@@ -91,10 +196,12 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: FromNative
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 3548
+    startLine: 4468
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
+  summary: Creates a DTO from the native <xref href="NVAPIWrapper._NV_ENCODER_STATISTICS_V1" data-throw-if-not-resolved="false"></xref> struct.
+  example: []
   syntax:
     content: public static NVAPIEncoderStatisticsDto FromNative(_NV_ENCODER_STATISTICS_V1 native)
     parameters:
@@ -122,10 +229,12 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: CreateDefault
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 3553
+    startLine: 4474
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
+  summary: Creates a default (zeroed) DTO with the correct version field.
+  example: []
   syntax:
     content: public static NVAPIEncoderStatisticsDto CreateDefault()
     return:
@@ -150,10 +259,12 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: ToNative
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 3558
+    startLine: 4480
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
+  summary: Converts this DTO back to the native <xref href="NVAPIWrapper._NV_ENCODER_STATISTICS_V1" data-throw-if-not-resolved="false"></xref> struct.
+  example: []
   syntax:
     content: public _NV_ENCODER_STATISTICS_V1 ToNative()
     return:
@@ -178,7 +289,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Equals
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 3563
+    startLine: 4492
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -215,7 +326,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Equals
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 3568
+    startLine: 4500
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -254,7 +365,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetHashCode
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 3569
+    startLine: 4502
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -286,10 +397,12 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: op_Equality
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 3570
+    startLine: 4504
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
+  summary: Equality operator.
+  example: []
   syntax:
     content: public static bool operator ==(NVAPIEncoderStatisticsDto left, NVAPIEncoderStatisticsDto right)
     parameters:
@@ -322,10 +435,12 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: op_Inequality
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 3571
+    startLine: 4506
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
+  summary: Inequality operator.
+  example: []
   syntax:
     content: public static bool operator !=(NVAPIEncoderStatisticsDto left, NVAPIEncoderStatisticsDto right)
     parameters:
@@ -570,48 +685,35 @@ references:
   nameWithType.vb: Object
   fullName.vb: Object
   name.vb: Object
-- uid: NVAPIWrapper.NVAPIEncoderStatisticsDto.RawData*
-  commentId: Overload:NVAPIWrapper.NVAPIEncoderStatisticsDto.RawData
-  href: NVAPIWrapper.NVAPIEncoderStatisticsDto.html#NVAPIWrapper_NVAPIEncoderStatisticsDto_RawData
-  name: RawData
-  nameWithType: NVAPIEncoderStatisticsDto.RawData
-  fullName: NVAPIWrapper.NVAPIEncoderStatisticsDto.RawData
-- uid: System.Byte[]
+- uid: NVAPIWrapper.NVAPIEncoderStatisticsDto.SessionsCount*
+  commentId: Overload:NVAPIWrapper.NVAPIEncoderStatisticsDto.SessionsCount
+  href: NVAPIWrapper.NVAPIEncoderStatisticsDto.html#NVAPIWrapper_NVAPIEncoderStatisticsDto_SessionsCount
+  name: SessionsCount
+  nameWithType: NVAPIEncoderStatisticsDto.SessionsCount
+  fullName: NVAPIWrapper.NVAPIEncoderStatisticsDto.SessionsCount
+- uid: System.UInt32
+  commentId: T:System.UInt32
+  parent: System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.byte
-  name: byte[]
-  nameWithType: byte[]
-  fullName: byte[]
-  nameWithType.vb: Byte()
-  fullName.vb: Byte()
-  name.vb: Byte()
-  spec.csharp:
-  - uid: System.Byte
-    name: byte
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.byte
-  - name: '['
-  - name: ']'
-  spec.vb:
-  - uid: System.Byte
-    name: Byte
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.byte
-  - name: (
-  - name: )
-- uid: NVAPIWrapper.NVAPIEncoderStatisticsDto.FromNative*
-  commentId: Overload:NVAPIWrapper.NVAPIEncoderStatisticsDto.FromNative
-  href: NVAPIWrapper.NVAPIEncoderStatisticsDto.html#NVAPIWrapper_NVAPIEncoderStatisticsDto_FromNative_NVAPIWrapper__NV_ENCODER_STATISTICS_V1_
-  name: FromNative
-  nameWithType: NVAPIEncoderStatisticsDto.FromNative
-  fullName: NVAPIWrapper.NVAPIEncoderStatisticsDto.FromNative
-- uid: NVAPIWrapper._NV_ENCODER_STATISTICS_V1
-  commentId: T:NVAPIWrapper._NV_ENCODER_STATISTICS_V1
-  parent: NVAPIWrapper
-  href: NVAPIWrapper._NV_ENCODER_STATISTICS_V1.html
-  name: _NV_ENCODER_STATISTICS_V1
-  nameWithType: _NV_ENCODER_STATISTICS_V1
-  fullName: NVAPIWrapper._NV_ENCODER_STATISTICS_V1
+  href: https://learn.microsoft.com/dotnet/api/system.uint32
+  name: uint
+  nameWithType: uint
+  fullName: uint
+  nameWithType.vb: UInteger
+  fullName.vb: UInteger
+  name.vb: UInteger
+- uid: NVAPIWrapper.NVAPIEncoderStatisticsDto.AverageFps*
+  commentId: Overload:NVAPIWrapper.NVAPIEncoderStatisticsDto.AverageFps
+  href: NVAPIWrapper.NVAPIEncoderStatisticsDto.html#NVAPIWrapper_NVAPIEncoderStatisticsDto_AverageFps
+  name: AverageFps
+  nameWithType: NVAPIEncoderStatisticsDto.AverageFps
+  fullName: NVAPIWrapper.NVAPIEncoderStatisticsDto.AverageFps
+- uid: NVAPIWrapper.NVAPIEncoderStatisticsDto.AverageLatency*
+  commentId: Overload:NVAPIWrapper.NVAPIEncoderStatisticsDto.AverageLatency
+  href: NVAPIWrapper.NVAPIEncoderStatisticsDto.html#NVAPIWrapper_NVAPIEncoderStatisticsDto_AverageLatency
+  name: AverageLatency
+  nameWithType: NVAPIEncoderStatisticsDto.AverageLatency
+  fullName: NVAPIWrapper.NVAPIEncoderStatisticsDto.AverageLatency
 - uid: NVAPIWrapper.NVAPIEncoderStatisticsDto
   commentId: T:NVAPIWrapper.NVAPIEncoderStatisticsDto
   parent: NVAPIWrapper
@@ -619,6 +721,28 @@ references:
   name: NVAPIEncoderStatisticsDto
   nameWithType: NVAPIEncoderStatisticsDto
   fullName: NVAPIWrapper.NVAPIEncoderStatisticsDto
+- uid: NVAPIWrapper.NVAPIEncoderStatisticsDto.#ctor*
+  commentId: Overload:NVAPIWrapper.NVAPIEncoderStatisticsDto.#ctor
+  href: NVAPIWrapper.NVAPIEncoderStatisticsDto.html#NVAPIWrapper_NVAPIEncoderStatisticsDto__ctor_System_UInt32_System_UInt32_System_UInt32_
+  name: NVAPIEncoderStatisticsDto
+  nameWithType: NVAPIEncoderStatisticsDto.NVAPIEncoderStatisticsDto
+  fullName: NVAPIWrapper.NVAPIEncoderStatisticsDto.NVAPIEncoderStatisticsDto
+  nameWithType.vb: NVAPIEncoderStatisticsDto.New
+  fullName.vb: NVAPIWrapper.NVAPIEncoderStatisticsDto.New
+  name.vb: New
+- uid: NVAPIWrapper._NV_ENCODER_STATISTICS_V1
+  commentId: T:NVAPIWrapper._NV_ENCODER_STATISTICS_V1
+  parent: NVAPIWrapper
+  href: NVAPIWrapper._NV_ENCODER_STATISTICS_V1.html
+  name: _NV_ENCODER_STATISTICS_V1
+  nameWithType: _NV_ENCODER_STATISTICS_V1
+  fullName: NVAPIWrapper._NV_ENCODER_STATISTICS_V1
+- uid: NVAPIWrapper.NVAPIEncoderStatisticsDto.FromNative*
+  commentId: Overload:NVAPIWrapper.NVAPIEncoderStatisticsDto.FromNative
+  href: NVAPIWrapper.NVAPIEncoderStatisticsDto.html#NVAPIWrapper_NVAPIEncoderStatisticsDto_FromNative_NVAPIWrapper__NV_ENCODER_STATISTICS_V1_
+  name: FromNative
+  nameWithType: NVAPIEncoderStatisticsDto.FromNative
+  fullName: NVAPIWrapper.NVAPIEncoderStatisticsDto.FromNative
 - uid: NVAPIWrapper.NVAPIEncoderStatisticsDto.CreateDefault*
   commentId: Overload:NVAPIWrapper.NVAPIEncoderStatisticsDto.CreateDefault
   href: NVAPIWrapper.NVAPIEncoderStatisticsDto.html#NVAPIWrapper_NVAPIEncoderStatisticsDto_CreateDefault
