@@ -5353,10 +5353,10 @@ namespace NVAPIWrapper
     /// <summary>
     /// GPU board info DTO.
     /// </summary>
-    public readonly struct NVAPIGpuBoardInfoDto : IEquatable<NVAPIGpuBoardInfoDto>
+    public struct NVAPIGpuBoardInfoDto : IEquatable<NVAPIGpuBoardInfoDto>
     {
-        public string BoardNumber { get; }
-        public byte[] BoardNumberRaw { get; }
+        public string BoardNumber { get; set; }
+        public byte[] BoardNumberRaw { get; set; }
 
         public NVAPIGpuBoardInfoDto(byte[] boardNumberRaw, string boardNumber)
         {
