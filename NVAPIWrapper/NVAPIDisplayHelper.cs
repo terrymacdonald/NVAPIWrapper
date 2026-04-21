@@ -3024,12 +3024,12 @@ namespace NVAPIWrapper
     /// <summary>
     /// Snapshot of the display configuration returned by NVAPI.
     /// </summary>
-    public readonly struct NVAPIDisplayConfigDto : IEquatable<NVAPIDisplayConfigDto>
+    public struct NVAPIDisplayConfigDto : IEquatable<NVAPIDisplayConfigDto>
     {
         /// <summary>
         /// Display paths in the configuration.
         /// </summary>
-        public NVAPIDisplayConfigPathDto[] Paths { get; }
+        public NVAPIDisplayConfigPathDto[] Paths { get; set; }
 
         /// <summary>
         /// Create a display configuration snapshot.
@@ -3127,37 +3127,37 @@ namespace NVAPIWrapper
     /// <summary>
     /// Managed representation of an NVAPI display path configuration.
     /// </summary>
-    public readonly struct NVAPIDisplayConfigPathDto : IEquatable<NVAPIDisplayConfigPathDto>
+    public struct NVAPIDisplayConfigPathDto : IEquatable<NVAPIDisplayConfigPathDto>
     {
         /// <summary>
         /// NVAPI structure version used for this path.
         /// </summary>
-        public uint Version { get; }
+        public uint Version { get; set; }
 
         /// <summary>
         /// Windows source ID for the path.
         /// </summary>
-        public uint SourceId { get; }
+        public uint SourceId { get; set; }
 
         /// <summary>
         /// True when the path represents a non-NVIDIA adapter.
         /// </summary>
-        public bool IsNonNvidiaAdapter { get; }
+        public bool IsNonNvidiaAdapter { get; set; }
 
         /// <summary>
         /// OS adapter LUID value for non-NVIDIA adapters, or null if not present.
         /// </summary>
-        public long? OsAdapterLuid { get; }
+        public long? OsAdapterLuid { get; set; }
 
         /// <summary>
         /// Source mode info, or null if not present.
         /// </summary>
-        public NVAPIDisplayConfigSourceModeDto? SourceModeInfo { get; }
+        public NVAPIDisplayConfigSourceModeDto? SourceModeInfo { get; set; }
 
         /// <summary>
         /// Target configurations for this path.
         /// </summary>
-        public NVAPIDisplayConfigTargetDto[] Targets { get; }
+        public NVAPIDisplayConfigTargetDto[] Targets { get; set; }
 
         /// <summary>
         /// Create a display path configuration.
@@ -3307,25 +3307,25 @@ namespace NVAPIWrapper
     /// <summary>
     /// Managed representation of NVAPI display source mode info.
     /// </summary>
-    public readonly struct NVAPIDisplayConfigSourceModeDto : IEquatable<NVAPIDisplayConfigSourceModeDto>
+    public struct NVAPIDisplayConfigSourceModeDto : IEquatable<NVAPIDisplayConfigSourceModeDto>
     {
         /// <summary>Display resolution.</summary>
-        public _NV_RESOLUTION Resolution { get; }
+        public _NV_RESOLUTION Resolution { get; set; }
 
         /// <summary>Color format.</summary>
-        public _NV_FORMAT ColorFormat { get; }
+        public _NV_FORMAT ColorFormat { get; set; }
 
         /// <summary>Position for the display.</summary>
-        public _NV_POSITION Position { get; }
+        public _NV_POSITION Position { get; set; }
 
         /// <summary>Spanning orientation.</summary>
-        public _NV_DISPLAYCONFIG_SPANNING_ORIENTATION SpanningOrientation { get; }
+        public _NV_DISPLAYCONFIG_SPANNING_ORIENTATION SpanningOrientation { get; set; }
 
         /// <summary>True if this is the GDI primary display.</summary>
-        public bool IsGdiPrimary { get; }
+        public bool IsGdiPrimary { get; set; }
 
         /// <summary>True if this is the SLI focus display.</summary>
-        public bool IsSliFocus { get; }
+        public bool IsSliFocus { get; set; }
 
         /// <summary>Create source mode info.</summary>
         public NVAPIDisplayConfigSourceModeDto(
@@ -3432,16 +3432,16 @@ namespace NVAPIWrapper
     /// <summary>
     /// Managed representation of a display target configuration.
     /// </summary>
-    public readonly struct NVAPIDisplayConfigTargetDto : IEquatable<NVAPIDisplayConfigTargetDto>
+    public struct NVAPIDisplayConfigTargetDto : IEquatable<NVAPIDisplayConfigTargetDto>
     {
         /// <summary>Display ID.</summary>
-        public uint DisplayId { get; }
+        public uint DisplayId { get; set; }
 
         /// <summary>Windows CCD target ID (for non-NVIDIA adapters).</summary>
-        public uint TargetId { get; }
+        public uint TargetId { get; set; }
 
         /// <summary>Advanced target info, or null if not present.</summary>
-        public NVAPIDisplayConfigAdvancedTargetDto? Details { get; }
+        public NVAPIDisplayConfigAdvancedTargetDto? Details { get; set; }
 
         /// <summary>Create target info.</summary>
         public NVAPIDisplayConfigTargetDto(uint displayId, uint targetId, NVAPIDisplayConfigAdvancedTargetDto? details)
@@ -3524,40 +3524,40 @@ namespace NVAPIWrapper
     /// <summary>
     /// Managed representation of advanced target configuration.
     /// </summary>
-    public readonly struct NVAPIDisplayConfigAdvancedTargetDto : IEquatable<NVAPIDisplayConfigAdvancedTargetDto>
+    public struct NVAPIDisplayConfigAdvancedTargetDto : IEquatable<NVAPIDisplayConfigAdvancedTargetDto>
     {
         /// <summary>Rotation setting.</summary>
-        public _NV_ROTATE Rotation { get; }
+        public _NV_ROTATE Rotation { get; set; }
 
         /// <summary>Scaling setting.</summary>
-        public _NV_SCALING Scaling { get; }
+        public _NV_SCALING Scaling { get; set; }
 
         /// <summary>Refresh rate (in 1/1000 Hz).</summary>
-        public uint RefreshRate1K { get; }
+        public uint RefreshRate1K { get; set; }
 
         /// <summary>True if the target is interlaced.</summary>
-        public bool Interlaced { get; }
+        public bool Interlaced { get; set; }
 
         /// <summary>True if this is the primary target.</summary>
-        public bool Primary { get; }
+        public bool Primary { get; set; }
 
         /// <summary>True if virtual mode support is disabled.</summary>
-        public bool DisableVirtualModeSupport { get; }
+        public bool DisableVirtualModeSupport { get; set; }
 
         /// <summary>True if this is the preferred unscaled target.</summary>
-        public bool IsPreferredUnscaledTarget { get; }
+        public bool IsPreferredUnscaledTarget { get; set; }
 
         /// <summary>Connector type.</summary>
-        public _NV_GPU_CONNECTOR_TYPE Connector { get; }
+        public _NV_GPU_CONNECTOR_TYPE Connector { get; set; }
 
         /// <summary>TV format.</summary>
-        public _NV_DISPLAY_TV_FORMAT TvFormat { get; }
+        public _NV_DISPLAY_TV_FORMAT TvFormat { get; set; }
 
         /// <summary>Timing override mode.</summary>
-        public _NV_TIMING_OVERRIDE TimingOverride { get; }
+        public _NV_TIMING_OVERRIDE TimingOverride { get; set; }
 
         /// <summary>Detailed timing.</summary>
-        public _NV_TIMING Timing { get; }
+        public _NV_TIMING Timing { get; set; }
 
         /// <summary>Create advanced target info.</summary>
         public NVAPIDisplayConfigAdvancedTargetDto(
