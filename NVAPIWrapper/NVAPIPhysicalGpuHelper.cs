@@ -3269,41 +3269,196 @@ namespace NVAPIWrapper
     }
 
     /// <summary>
+    /// Per-device illumination info DTO, wrapping <see cref="_NV_GPU_CLIENT_ILLUM_DEVICE_INFO_V1"/>.
+    /// </summary>
+    public readonly struct NVAPIGpuIllumDeviceInfoDto : IEquatable<NVAPIGpuIllumDeviceInfoDto>
+    {
+        /// <summary>Type of illumination device.</summary>
+        public NV_GPU_CLIENT_ILLUM_DEVICE_TYPE Type { get; }
+        /// <summary>Bitmask of supported control modes.</summary>
+        public uint CtrlModeMask { get; }
+        /// <summary>
+        /// Raw bytes for the type-discriminated union <c>data</c> field (64 bytes).
+        /// Interpret using <see cref="Type"/> to select the appropriate union member.
+        /// </summary>
+        public byte[] DataRawBytes { get; }
+
+        /// <summary>Initializes a new instance of <see cref="NVAPIGpuIllumDeviceInfoDto"/>.</summary>
+        public NVAPIGpuIllumDeviceInfoDto(NV_GPU_CLIENT_ILLUM_DEVICE_TYPE type, uint ctrlModeMask, byte[] dataRawBytes)
+        {
+            Type = type;
+            CtrlModeMask = ctrlModeMask;
+            DataRawBytes = dataRawBytes ?? Array.Empty<byte>();
+        }
+
+        /// <summary>Creates a DTO from the native <see cref="_NV_GPU_CLIENT_ILLUM_DEVICE_INFO_V1"/> struct.</summary>
+        public static NVAPIGpuIllumDeviceInfoDto FromNative(_NV_GPU_CLIENT_ILLUM_DEVICE_INFO_V1 native)
+        {
+            Span<byte> dataSpan = native.data.rsvd;
+            return new NVAPIGpuIllumDeviceInfoDto(native.type, native.ctrlModeMask, dataSpan.ToArray());
+        }
+
+        /// <summary>Converts this DTO back to the native <see cref="_NV_GPU_CLIENT_ILLUM_DEVICE_INFO_V1"/> struct.</summary>
+        public _NV_GPU_CLIENT_ILLUM_DEVICE_INFO_V1 ToNative()
+        {
+            var native = new _NV_GPU_CLIENT_ILLUM_DEVICE_INFO_V1 { type = Type, ctrlModeMask = CtrlModeMask };
+            if (DataRawBytes != null && DataRawBytes.Length > 0)
+            {
+                Span<byte> dataSpan = native.data.rsvd;
+                int len = Math.Min(DataRawBytes.Length, dataSpan.Length);
+                DataRawBytes.AsSpan(0, len).CopyTo(dataSpan);
+            }
+            return native;
+        }
+
+        /// <inheritdoc/>
+        public bool Equals(NVAPIGpuIllumDeviceInfoDto other)
+        {
+            if (Type != other.Type || CtrlModeMask != other.CtrlModeMask) return false;
+            return NVAPIGpuDtoHelpers.SequenceEquals(DataRawBytes, other.DataRawBytes);
+        }
+
+        /// <inheritdoc/>
+        public override bool Equals(object? obj) => obj is NVAPIGpuIllumDeviceInfoDto other && Equals(other);
+        /// <inheritdoc/>
+        public override int GetHashCode() => HashCode.Combine(Type, CtrlModeMask, NVAPIGpuDtoHelpers.SequenceHashCode(DataRawBytes));
+        /// <summary>Equality operator.</summary>
+        public static bool operator ==(NVAPIGpuIllumDeviceInfoDto left, NVAPIGpuIllumDeviceInfoDto right) => left.Equals(right);
+        /// <summary>Inequality operator.</summary>
+        public static bool operator !=(NVAPIGpuIllumDeviceInfoDto left, NVAPIGpuIllumDeviceInfoDto right) => !left.Equals(right);
+    }
+
+    /// <summary>
     /// Illumination device info params DTO.
     /// </summary>
     public readonly struct NVAPIGpuIllumDeviceInfoParamsDto : IEquatable<NVAPIGpuIllumDeviceInfoParamsDto>
     {
-        public byte[] RawData { get; }
+        /// <summary>Number of illumination devices reported.</summary>
+        public uint NumIllumDevices { get; }
+        /// <summary>Per-device illumination info array (up to 32 entries).</summary>
+        public NVAPIGpuIllumDeviceInfoDto[] Devices { get; }
 
-        private NVAPIGpuIllumDeviceInfoParamsDto(byte[] rawData)
+        /// <summary>Initializes a new instance of <see cref="NVAPIGpuIllumDeviceInfoParamsDto"/>.</summary>
+        public NVAPIGpuIllumDeviceInfoParamsDto(uint numIllumDevices, NVAPIGpuIllumDeviceInfoDto[] devices)
         {
-            RawData = rawData ?? Array.Empty<byte>();
+            NumIllumDevices = numIllumDevices;
+            Devices = devices ?? Array.Empty<NVAPIGpuIllumDeviceInfoDto>();
         }
 
+        /// <summary>Creates a DTO from the native <see cref="_NV_GPU_CLIENT_ILLUM_DEVICE_INFO_PARAMS_V1"/> struct.</summary>
         public static NVAPIGpuIllumDeviceInfoParamsDto FromNative(_NV_GPU_CLIENT_ILLUM_DEVICE_INFO_PARAMS_V1 native)
         {
-            return new NVAPIGpuIllumDeviceInfoParamsDto(NVAPIGpuDtoHelpers.ToByteArray(native));
+            var devices = new NVAPIGpuIllumDeviceInfoDto[32];
+            for (int i = 0; i < 32; i++)
+                devices[i] = NVAPIGpuIllumDeviceInfoDto.FromNative(native.devices[i]);
+            return new NVAPIGpuIllumDeviceInfoParamsDto(native.numIllumDevices, devices);
         }
 
+        /// <summary>Creates a default (zeroed) DTO with the correct version field.</summary>
         public static NVAPIGpuIllumDeviceInfoParamsDto CreateDefault()
         {
             return FromNative(new _NV_GPU_CLIENT_ILLUM_DEVICE_INFO_PARAMS_V1 { version = NVAPI.NV_GPU_CLIENT_ILLUM_DEVICE_INFO_PARAMS_VER });
         }
 
+        /// <summary>Converts this DTO back to the native <see cref="_NV_GPU_CLIENT_ILLUM_DEVICE_INFO_PARAMS_V1"/> struct.</summary>
         public _NV_GPU_CLIENT_ILLUM_DEVICE_INFO_PARAMS_V1 ToNative()
         {
-            return NVAPIGpuDtoHelpers.FromByteArray<_NV_GPU_CLIENT_ILLUM_DEVICE_INFO_PARAMS_V1>(RawData);
+            var native = new _NV_GPU_CLIENT_ILLUM_DEVICE_INFO_PARAMS_V1 { version = NVAPI.NV_GPU_CLIENT_ILLUM_DEVICE_INFO_PARAMS_VER };
+            native.numIllumDevices = NumIllumDevices;
+            if (Devices != null)
+            {
+                for (int i = 0; i < Math.Min(Devices.Length, 32); i++)
+                    native.devices[i] = Devices[i].ToNative();
+            }
+            return native;
         }
 
+        /// <inheritdoc/>
         public bool Equals(NVAPIGpuIllumDeviceInfoParamsDto other)
         {
-            return NVAPIGpuDtoHelpers.SequenceEquals(RawData, other.RawData);
+            if (NumIllumDevices != other.NumIllumDevices) return false;
+            if ((Devices == null) != (other.Devices == null)) return false;
+            if (Devices != null && other.Devices != null)
+            {
+                if (Devices.Length != other.Devices.Length) return false;
+                for (int i = 0; i < Devices.Length; i++)
+                    if (!Devices[i].Equals(other.Devices[i])) return false;
+            }
+            return true;
         }
 
+        /// <inheritdoc/>
         public override bool Equals(object? obj) => obj is NVAPIGpuIllumDeviceInfoParamsDto other && Equals(other);
-        public override int GetHashCode() => NVAPIGpuDtoHelpers.SequenceHashCode(RawData);
+        /// <inheritdoc/>
+        public override int GetHashCode()
+        {
+            var hash = HashCode.Combine(NumIllumDevices);
+            if (Devices != null)
+                foreach (var d in Devices)
+                    hash = (hash * 31) + d.GetHashCode();
+            return hash;
+        }
+        /// <summary>Equality operator.</summary>
         public static bool operator ==(NVAPIGpuIllumDeviceInfoParamsDto left, NVAPIGpuIllumDeviceInfoParamsDto right) => left.Equals(right);
+        /// <summary>Inequality operator.</summary>
         public static bool operator !=(NVAPIGpuIllumDeviceInfoParamsDto left, NVAPIGpuIllumDeviceInfoParamsDto right) => !left.Equals(right);
+    }
+
+    /// <summary>
+    /// Per-device illumination control DTO, wrapping <see cref="NV_GPU_CLIENT_ILLUM_DEVICE_CONTROL_V1"/>.
+    /// </summary>
+    public readonly struct NVAPIGpuIllumDeviceControlDto : IEquatable<NVAPIGpuIllumDeviceControlDto>
+    {
+        /// <summary>Type of illumination device.</summary>
+        public NV_GPU_CLIENT_ILLUM_DEVICE_TYPE Type { get; }
+        /// <summary>True if device synchronization is enabled.</summary>
+        public bool SyncEnabled { get; }
+        /// <summary>Sync timestamp in milliseconds.</summary>
+        public ulong SyncTimestampMs { get; }
+
+        /// <summary>Initializes a new instance of <see cref="NVAPIGpuIllumDeviceControlDto"/>.</summary>
+        public NVAPIGpuIllumDeviceControlDto(NV_GPU_CLIENT_ILLUM_DEVICE_TYPE type, bool syncEnabled, ulong syncTimestampMs)
+        {
+            Type = type;
+            SyncEnabled = syncEnabled;
+            SyncTimestampMs = syncTimestampMs;
+        }
+
+        /// <summary>Creates a DTO from the native <see cref="NV_GPU_CLIENT_ILLUM_DEVICE_CONTROL_V1"/> struct.</summary>
+        public static NVAPIGpuIllumDeviceControlDto FromNative(NV_GPU_CLIENT_ILLUM_DEVICE_CONTROL_V1 native)
+        {
+            return new NVAPIGpuIllumDeviceControlDto(
+                native.type,
+                native.syncData.bSync != 0,
+                native.syncData.timeStampms);
+        }
+
+        /// <summary>Converts this DTO back to the native <see cref="NV_GPU_CLIENT_ILLUM_DEVICE_CONTROL_V1"/> struct.</summary>
+        public NV_GPU_CLIENT_ILLUM_DEVICE_CONTROL_V1 ToNative()
+        {
+            return new NV_GPU_CLIENT_ILLUM_DEVICE_CONTROL_V1
+            {
+                type = Type,
+                syncData = new NV_GPU_CLIENT_ILLUM_DEVICE_SYNC_V1
+                {
+                    bSync = SyncEnabled ? (byte)1 : (byte)0,
+                    timeStampms = SyncTimestampMs
+                }
+            };
+        }
+
+        /// <inheritdoc/>
+        public bool Equals(NVAPIGpuIllumDeviceControlDto other) =>
+            Type == other.Type && SyncEnabled == other.SyncEnabled && SyncTimestampMs == other.SyncTimestampMs;
+
+        /// <inheritdoc/>
+        public override bool Equals(object? obj) => obj is NVAPIGpuIllumDeviceControlDto other && Equals(other);
+        /// <inheritdoc/>
+        public override int GetHashCode() => HashCode.Combine(Type, SyncEnabled, SyncTimestampMs);
+        /// <summary>Equality operator.</summary>
+        public static bool operator ==(NVAPIGpuIllumDeviceControlDto left, NVAPIGpuIllumDeviceControlDto right) => left.Equals(right);
+        /// <summary>Inequality operator.</summary>
+        public static bool operator !=(NVAPIGpuIllumDeviceControlDto left, NVAPIGpuIllumDeviceControlDto right) => !left.Equals(right);
     }
 
     /// <summary>
@@ -3311,37 +3466,147 @@ namespace NVAPIWrapper
     /// </summary>
     public readonly struct NVAPIGpuIllumDeviceControlParamsDto : IEquatable<NVAPIGpuIllumDeviceControlParamsDto>
     {
-        public byte[] RawData { get; }
+        /// <summary>Number of illumination devices for control.</summary>
+        public uint NumIllumDevices { get; }
+        /// <summary>Per-device illumination control array (up to 32 entries).</summary>
+        public NVAPIGpuIllumDeviceControlDto[] Devices { get; }
 
-        private NVAPIGpuIllumDeviceControlParamsDto(byte[] rawData)
+        /// <summary>Initializes a new instance of <see cref="NVAPIGpuIllumDeviceControlParamsDto"/>.</summary>
+        public NVAPIGpuIllumDeviceControlParamsDto(uint numIllumDevices, NVAPIGpuIllumDeviceControlDto[] devices)
         {
-            RawData = rawData ?? Array.Empty<byte>();
+            NumIllumDevices = numIllumDevices;
+            Devices = devices ?? Array.Empty<NVAPIGpuIllumDeviceControlDto>();
         }
 
+        /// <summary>Creates a DTO from the native <see cref="NV_GPU_CLIENT_ILLUM_DEVICE_CONTROL_PARAMS_V1"/> struct.</summary>
         public static NVAPIGpuIllumDeviceControlParamsDto FromNative(NV_GPU_CLIENT_ILLUM_DEVICE_CONTROL_PARAMS_V1 native)
         {
-            return new NVAPIGpuIllumDeviceControlParamsDto(NVAPIGpuDtoHelpers.ToByteArray(native));
+            var devices = new NVAPIGpuIllumDeviceControlDto[32];
+            for (int i = 0; i < 32; i++)
+                devices[i] = NVAPIGpuIllumDeviceControlDto.FromNative(native.devices[i]);
+            return new NVAPIGpuIllumDeviceControlParamsDto(native.numIllumDevices, devices);
         }
 
+        /// <summary>Creates a default (zeroed) DTO with the correct version field.</summary>
         public static NVAPIGpuIllumDeviceControlParamsDto CreateDefault()
         {
             return FromNative(new NV_GPU_CLIENT_ILLUM_DEVICE_CONTROL_PARAMS_V1 { version = NVAPI.NV_GPU_CLIENT_ILLUM_DEVICE_CONTROL_PARAMS_VER });
         }
 
+        /// <summary>Converts this DTO back to the native <see cref="NV_GPU_CLIENT_ILLUM_DEVICE_CONTROL_PARAMS_V1"/> struct.</summary>
         public NV_GPU_CLIENT_ILLUM_DEVICE_CONTROL_PARAMS_V1 ToNative()
         {
-            return NVAPIGpuDtoHelpers.FromByteArray<NV_GPU_CLIENT_ILLUM_DEVICE_CONTROL_PARAMS_V1>(RawData);
+            var native = new NV_GPU_CLIENT_ILLUM_DEVICE_CONTROL_PARAMS_V1 { version = NVAPI.NV_GPU_CLIENT_ILLUM_DEVICE_CONTROL_PARAMS_VER };
+            native.numIllumDevices = NumIllumDevices;
+            if (Devices != null)
+            {
+                for (int i = 0; i < Math.Min(Devices.Length, 32); i++)
+                    native.devices[i] = Devices[i].ToNative();
+            }
+            return native;
         }
 
+        /// <inheritdoc/>
         public bool Equals(NVAPIGpuIllumDeviceControlParamsDto other)
         {
-            return NVAPIGpuDtoHelpers.SequenceEquals(RawData, other.RawData);
+            if (NumIllumDevices != other.NumIllumDevices) return false;
+            if ((Devices == null) != (other.Devices == null)) return false;
+            if (Devices != null && other.Devices != null)
+            {
+                if (Devices.Length != other.Devices.Length) return false;
+                for (int i = 0; i < Devices.Length; i++)
+                    if (!Devices[i].Equals(other.Devices[i])) return false;
+            }
+            return true;
         }
 
+        /// <inheritdoc/>
         public override bool Equals(object? obj) => obj is NVAPIGpuIllumDeviceControlParamsDto other && Equals(other);
-        public override int GetHashCode() => NVAPIGpuDtoHelpers.SequenceHashCode(RawData);
+        /// <inheritdoc/>
+        public override int GetHashCode()
+        {
+            var hash = HashCode.Combine(NumIllumDevices);
+            if (Devices != null)
+                foreach (var d in Devices)
+                    hash = (hash * 31) + d.GetHashCode();
+            return hash;
+        }
+        /// <summary>Equality operator.</summary>
         public static bool operator ==(NVAPIGpuIllumDeviceControlParamsDto left, NVAPIGpuIllumDeviceControlParamsDto right) => left.Equals(right);
+        /// <summary>Inequality operator.</summary>
         public static bool operator !=(NVAPIGpuIllumDeviceControlParamsDto left, NVAPIGpuIllumDeviceControlParamsDto right) => !left.Equals(right);
+    }
+
+    /// <summary>
+    /// Per-zone illumination info DTO, wrapping <see cref="_NV_GPU_CLIENT_ILLUM_ZONE_INFO_V1"/>.
+    /// </summary>
+    public readonly struct NVAPIGpuIllumZoneInfoDto : IEquatable<NVAPIGpuIllumZoneInfoDto>
+    {
+        /// <summary>Type of illumination zone.</summary>
+        public NV_GPU_CLIENT_ILLUM_ZONE_TYPE Type { get; }
+        /// <summary>Index of the illumination device this zone belongs to.</summary>
+        public byte IllumDeviceIdx { get; }
+        /// <summary>Index of the illumination provider for this zone.</summary>
+        public byte ProvIdx { get; }
+        /// <summary>Physical location of the zone on the GPU or card.</summary>
+        public NV_GPU_CLIENT_ILLUM_ZONE_LOCATION ZoneLocation { get; }
+        /// <summary>
+        /// Raw bytes for the type-discriminated union <c>data</c> field (64 bytes).
+        /// Interpret using <see cref="Type"/> to select the appropriate union member.
+        /// </summary>
+        public byte[] DataRawBytes { get; }
+
+        /// <summary>Initializes a new instance of <see cref="NVAPIGpuIllumZoneInfoDto"/>.</summary>
+        public NVAPIGpuIllumZoneInfoDto(NV_GPU_CLIENT_ILLUM_ZONE_TYPE type, byte illumDeviceIdx, byte provIdx, NV_GPU_CLIENT_ILLUM_ZONE_LOCATION zoneLocation, byte[] dataRawBytes)
+        {
+            Type = type;
+            IllumDeviceIdx = illumDeviceIdx;
+            ProvIdx = provIdx;
+            ZoneLocation = zoneLocation;
+            DataRawBytes = dataRawBytes ?? Array.Empty<byte>();
+        }
+
+        /// <summary>Creates a DTO from the native <see cref="_NV_GPU_CLIENT_ILLUM_ZONE_INFO_V1"/> struct.</summary>
+        public static NVAPIGpuIllumZoneInfoDto FromNative(_NV_GPU_CLIENT_ILLUM_ZONE_INFO_V1 native)
+        {
+            Span<byte> dataSpan = native.data.rsvd;
+            return new NVAPIGpuIllumZoneInfoDto(native.type, native.illumDeviceIdx, native.provIdx, native.zoneLocation, dataSpan.ToArray());
+        }
+
+        /// <summary>Converts this DTO back to the native <see cref="_NV_GPU_CLIENT_ILLUM_ZONE_INFO_V1"/> struct.</summary>
+        public _NV_GPU_CLIENT_ILLUM_ZONE_INFO_V1 ToNative()
+        {
+            var native = new _NV_GPU_CLIENT_ILLUM_ZONE_INFO_V1
+            {
+                type = Type,
+                illumDeviceIdx = IllumDeviceIdx,
+                provIdx = ProvIdx,
+                zoneLocation = ZoneLocation
+            };
+            if (DataRawBytes != null && DataRawBytes.Length > 0)
+            {
+                Span<byte> dataSpan = native.data.rsvd;
+                int len = Math.Min(DataRawBytes.Length, dataSpan.Length);
+                DataRawBytes.AsSpan(0, len).CopyTo(dataSpan);
+            }
+            return native;
+        }
+
+        /// <inheritdoc/>
+        public bool Equals(NVAPIGpuIllumZoneInfoDto other)
+        {
+            if (Type != other.Type || IllumDeviceIdx != other.IllumDeviceIdx || ProvIdx != other.ProvIdx || ZoneLocation != other.ZoneLocation) return false;
+            return NVAPIGpuDtoHelpers.SequenceEquals(DataRawBytes, other.DataRawBytes);
+        }
+
+        /// <inheritdoc/>
+        public override bool Equals(object? obj) => obj is NVAPIGpuIllumZoneInfoDto other && Equals(other);
+        /// <inheritdoc/>
+        public override int GetHashCode() => HashCode.Combine(Type, IllumDeviceIdx, ProvIdx, ZoneLocation, NVAPIGpuDtoHelpers.SequenceHashCode(DataRawBytes));
+        /// <summary>Equality operator.</summary>
+        public static bool operator ==(NVAPIGpuIllumZoneInfoDto left, NVAPIGpuIllumZoneInfoDto right) => left.Equals(right);
+        /// <summary>Inequality operator.</summary>
+        public static bool operator !=(NVAPIGpuIllumZoneInfoDto left, NVAPIGpuIllumZoneInfoDto right) => !left.Equals(right);
     }
 
     /// <summary>
@@ -3349,37 +3614,135 @@ namespace NVAPIWrapper
     /// </summary>
     public readonly struct NVAPIGpuIllumZoneInfoParamsDto : IEquatable<NVAPIGpuIllumZoneInfoParamsDto>
     {
-        public byte[] RawData { get; }
+        /// <summary>Number of illumination zones reported.</summary>
+        public uint NumIllumZones { get; }
+        /// <summary>Per-zone illumination info array (up to 32 entries).</summary>
+        public NVAPIGpuIllumZoneInfoDto[] Zones { get; }
 
-        private NVAPIGpuIllumZoneInfoParamsDto(byte[] rawData)
+        /// <summary>Initializes a new instance of <see cref="NVAPIGpuIllumZoneInfoParamsDto"/>.</summary>
+        public NVAPIGpuIllumZoneInfoParamsDto(uint numIllumZones, NVAPIGpuIllumZoneInfoDto[] zones)
         {
-            RawData = rawData ?? Array.Empty<byte>();
+            NumIllumZones = numIllumZones;
+            Zones = zones ?? Array.Empty<NVAPIGpuIllumZoneInfoDto>();
         }
 
+        /// <summary>Creates a DTO from the native <see cref="_NV_GPU_CLIENT_ILLUM_ZONE_INFO_PARAMS_V1"/> struct.</summary>
         public static NVAPIGpuIllumZoneInfoParamsDto FromNative(_NV_GPU_CLIENT_ILLUM_ZONE_INFO_PARAMS_V1 native)
         {
-            return new NVAPIGpuIllumZoneInfoParamsDto(NVAPIGpuDtoHelpers.ToByteArray(native));
+            var zones = new NVAPIGpuIllumZoneInfoDto[32];
+            for (int i = 0; i < 32; i++)
+                zones[i] = NVAPIGpuIllumZoneInfoDto.FromNative(native.zones[i]);
+            return new NVAPIGpuIllumZoneInfoParamsDto(native.numIllumZones, zones);
         }
 
+        /// <summary>Creates a default (zeroed) DTO with the correct version field.</summary>
         public static NVAPIGpuIllumZoneInfoParamsDto CreateDefault()
         {
             return FromNative(new _NV_GPU_CLIENT_ILLUM_ZONE_INFO_PARAMS_V1 { version = NVAPI.NV_GPU_CLIENT_ILLUM_ZONE_INFO_PARAMS_VER });
         }
 
+        /// <summary>Converts this DTO back to the native <see cref="_NV_GPU_CLIENT_ILLUM_ZONE_INFO_PARAMS_V1"/> struct.</summary>
         public _NV_GPU_CLIENT_ILLUM_ZONE_INFO_PARAMS_V1 ToNative()
         {
-            return NVAPIGpuDtoHelpers.FromByteArray<_NV_GPU_CLIENT_ILLUM_ZONE_INFO_PARAMS_V1>(RawData);
+            var native = new _NV_GPU_CLIENT_ILLUM_ZONE_INFO_PARAMS_V1 { version = NVAPI.NV_GPU_CLIENT_ILLUM_ZONE_INFO_PARAMS_VER };
+            native.numIllumZones = NumIllumZones;
+            if (Zones != null)
+            {
+                for (int i = 0; i < Math.Min(Zones.Length, 32); i++)
+                    native.zones[i] = Zones[i].ToNative();
+            }
+            return native;
         }
 
+        /// <inheritdoc/>
         public bool Equals(NVAPIGpuIllumZoneInfoParamsDto other)
         {
-            return NVAPIGpuDtoHelpers.SequenceEquals(RawData, other.RawData);
+            if (NumIllumZones != other.NumIllumZones) return false;
+            if ((Zones == null) != (other.Zones == null)) return false;
+            if (Zones != null && other.Zones != null)
+            {
+                if (Zones.Length != other.Zones.Length) return false;
+                for (int i = 0; i < Zones.Length; i++)
+                    if (!Zones[i].Equals(other.Zones[i])) return false;
+            }
+            return true;
         }
 
+        /// <inheritdoc/>
         public override bool Equals(object? obj) => obj is NVAPIGpuIllumZoneInfoParamsDto other && Equals(other);
-        public override int GetHashCode() => NVAPIGpuDtoHelpers.SequenceHashCode(RawData);
+        /// <inheritdoc/>
+        public override int GetHashCode()
+        {
+            var hash = HashCode.Combine(NumIllumZones);
+            if (Zones != null)
+                foreach (var z in Zones)
+                    hash = (hash * 31) + z.GetHashCode();
+            return hash;
+        }
+        /// <summary>Equality operator.</summary>
         public static bool operator ==(NVAPIGpuIllumZoneInfoParamsDto left, NVAPIGpuIllumZoneInfoParamsDto right) => left.Equals(right);
+        /// <summary>Inequality operator.</summary>
         public static bool operator !=(NVAPIGpuIllumZoneInfoParamsDto left, NVAPIGpuIllumZoneInfoParamsDto right) => !left.Equals(right);
+    }
+
+    /// <summary>
+    /// Per-zone illumination control DTO, wrapping <see cref="_NV_GPU_CLIENT_ILLUM_ZONE_CONTROL_V1"/>.
+    /// </summary>
+    public readonly struct NVAPIGpuIllumZoneControlDto : IEquatable<NVAPIGpuIllumZoneControlDto>
+    {
+        /// <summary>Type of illumination zone.</summary>
+        public NV_GPU_CLIENT_ILLUM_ZONE_TYPE Type { get; }
+        /// <summary>Control mode for this illumination zone.</summary>
+        public NV_GPU_CLIENT_ILLUM_CTRL_MODE CtrlMode { get; }
+        /// <summary>
+        /// Raw bytes for the type-discriminated union <c>data</c> field (64 bytes).
+        /// Interpret using <see cref="Type"/> to select the appropriate union member.
+        /// </summary>
+        public byte[] DataRawBytes { get; }
+
+        /// <summary>Initializes a new instance of <see cref="NVAPIGpuIllumZoneControlDto"/>.</summary>
+        public NVAPIGpuIllumZoneControlDto(NV_GPU_CLIENT_ILLUM_ZONE_TYPE type, NV_GPU_CLIENT_ILLUM_CTRL_MODE ctrlMode, byte[] dataRawBytes)
+        {
+            Type = type;
+            CtrlMode = ctrlMode;
+            DataRawBytes = dataRawBytes ?? Array.Empty<byte>();
+        }
+
+        /// <summary>Creates a DTO from the native <see cref="_NV_GPU_CLIENT_ILLUM_ZONE_CONTROL_V1"/> struct.</summary>
+        public static NVAPIGpuIllumZoneControlDto FromNative(_NV_GPU_CLIENT_ILLUM_ZONE_CONTROL_V1 native)
+        {
+            Span<byte> dataSpan = native.data.rsvd;
+            return new NVAPIGpuIllumZoneControlDto(native.type, native.ctrlMode, dataSpan.ToArray());
+        }
+
+        /// <summary>Converts this DTO back to the native <see cref="_NV_GPU_CLIENT_ILLUM_ZONE_CONTROL_V1"/> struct.</summary>
+        public _NV_GPU_CLIENT_ILLUM_ZONE_CONTROL_V1 ToNative()
+        {
+            var native = new _NV_GPU_CLIENT_ILLUM_ZONE_CONTROL_V1 { type = Type, ctrlMode = CtrlMode };
+            if (DataRawBytes != null && DataRawBytes.Length > 0)
+            {
+                Span<byte> dataSpan = native.data.rsvd;
+                int len = Math.Min(DataRawBytes.Length, dataSpan.Length);
+                DataRawBytes.AsSpan(0, len).CopyTo(dataSpan);
+            }
+            return native;
+        }
+
+        /// <inheritdoc/>
+        public bool Equals(NVAPIGpuIllumZoneControlDto other)
+        {
+            if (Type != other.Type || CtrlMode != other.CtrlMode) return false;
+            return NVAPIGpuDtoHelpers.SequenceEquals(DataRawBytes, other.DataRawBytes);
+        }
+
+        /// <inheritdoc/>
+        public override bool Equals(object? obj) => obj is NVAPIGpuIllumZoneControlDto other && Equals(other);
+        /// <inheritdoc/>
+        public override int GetHashCode() => HashCode.Combine(Type, CtrlMode, NVAPIGpuDtoHelpers.SequenceHashCode(DataRawBytes));
+        /// <summary>Equality operator.</summary>
+        public static bool operator ==(NVAPIGpuIllumZoneControlDto left, NVAPIGpuIllumZoneControlDto right) => left.Equals(right);
+        /// <summary>Inequality operator.</summary>
+        public static bool operator !=(NVAPIGpuIllumZoneControlDto left, NVAPIGpuIllumZoneControlDto right) => !left.Equals(right);
     }
 
     /// <summary>
@@ -3387,37 +3750,334 @@ namespace NVAPIWrapper
     /// </summary>
     public readonly struct NVAPIGpuIllumZoneControlParamsDto : IEquatable<NVAPIGpuIllumZoneControlParamsDto>
     {
-        public byte[] RawData { get; }
+        /// <summary>True if default lighting values should be applied.</summary>
+        public bool IsDefault { get; }
+        /// <summary>Number of illumination zones for control.</summary>
+        public uint NumIllumZonesControl { get; }
+        /// <summary>Per-zone illumination control array (up to 32 entries).</summary>
+        public NVAPIGpuIllumZoneControlDto[] Zones { get; }
 
-        private NVAPIGpuIllumZoneControlParamsDto(byte[] rawData)
+        /// <summary>Initializes a new instance of <see cref="NVAPIGpuIllumZoneControlParamsDto"/>.</summary>
+        public NVAPIGpuIllumZoneControlParamsDto(bool isDefault, uint numIllumZonesControl, NVAPIGpuIllumZoneControlDto[] zones)
         {
-            RawData = rawData ?? Array.Empty<byte>();
+            IsDefault = isDefault;
+            NumIllumZonesControl = numIllumZonesControl;
+            Zones = zones ?? Array.Empty<NVAPIGpuIllumZoneControlDto>();
         }
 
+        /// <summary>Creates a DTO from the native <see cref="_NV_GPU_CLIENT_ILLUM_ZONE_CONTROL_PARAMS_V1"/> struct.</summary>
         public static NVAPIGpuIllumZoneControlParamsDto FromNative(_NV_GPU_CLIENT_ILLUM_ZONE_CONTROL_PARAMS_V1 native)
         {
-            return new NVAPIGpuIllumZoneControlParamsDto(NVAPIGpuDtoHelpers.ToByteArray(native));
+            var zones = new NVAPIGpuIllumZoneControlDto[32];
+            for (int i = 0; i < 32; i++)
+                zones[i] = NVAPIGpuIllumZoneControlDto.FromNative(native.zones[i]);
+            return new NVAPIGpuIllumZoneControlParamsDto(native.bDefault != 0, native.numIllumZonesControl, zones);
         }
 
+        /// <summary>Creates a default (zeroed) DTO with the correct version field.</summary>
         public static NVAPIGpuIllumZoneControlParamsDto CreateDefault()
         {
             return FromNative(new _NV_GPU_CLIENT_ILLUM_ZONE_CONTROL_PARAMS_V1 { version = NVAPI.NV_GPU_CLIENT_ILLUM_ZONE_CONTROL_PARAMS_VER });
         }
 
+        /// <summary>Converts this DTO back to the native <see cref="_NV_GPU_CLIENT_ILLUM_ZONE_CONTROL_PARAMS_V1"/> struct.</summary>
         public _NV_GPU_CLIENT_ILLUM_ZONE_CONTROL_PARAMS_V1 ToNative()
         {
-            return NVAPIGpuDtoHelpers.FromByteArray<_NV_GPU_CLIENT_ILLUM_ZONE_CONTROL_PARAMS_V1>(RawData);
+            var native = new _NV_GPU_CLIENT_ILLUM_ZONE_CONTROL_PARAMS_V1 { version = NVAPI.NV_GPU_CLIENT_ILLUM_ZONE_CONTROL_PARAMS_VER };
+            native.bDefault = IsDefault ? 1u : 0u;
+            native.numIllumZonesControl = NumIllumZonesControl;
+            if (Zones != null)
+            {
+                for (int i = 0; i < Math.Min(Zones.Length, 32); i++)
+                    native.zones[i] = Zones[i].ToNative();
+            }
+            return native;
         }
 
+        /// <inheritdoc/>
         public bool Equals(NVAPIGpuIllumZoneControlParamsDto other)
         {
-            return NVAPIGpuDtoHelpers.SequenceEquals(RawData, other.RawData);
+            if (IsDefault != other.IsDefault || NumIllumZonesControl != other.NumIllumZonesControl) return false;
+            if ((Zones == null) != (other.Zones == null)) return false;
+            if (Zones != null && other.Zones != null)
+            {
+                if (Zones.Length != other.Zones.Length) return false;
+                for (int i = 0; i < Zones.Length; i++)
+                    if (!Zones[i].Equals(other.Zones[i])) return false;
+            }
+            return true;
         }
 
+        /// <inheritdoc/>
         public override bool Equals(object? obj) => obj is NVAPIGpuIllumZoneControlParamsDto other && Equals(other);
-        public override int GetHashCode() => NVAPIGpuDtoHelpers.SequenceHashCode(RawData);
+        /// <inheritdoc/>
+        public override int GetHashCode()
+        {
+            var hash = HashCode.Combine(IsDefault, NumIllumZonesControl);
+            if (Zones != null)
+                foreach (var z in Zones)
+                    hash = (hash * 31) + z.GetHashCode();
+            return hash;
+        }
+        /// <summary>Equality operator.</summary>
         public static bool operator ==(NVAPIGpuIllumZoneControlParamsDto left, NVAPIGpuIllumZoneControlParamsDto right) => left.Equals(right);
+        /// <summary>Inequality operator.</summary>
         public static bool operator !=(NVAPIGpuIllumZoneControlParamsDto left, NVAPIGpuIllumZoneControlParamsDto right) => !left.Equals(right);
+    }
+
+    /// <summary>
+    /// Per-clock entry DTO for a P-state, wrapping <see cref="NV_GPU_PSTATE20_CLOCK_ENTRY_V1"/>.
+    /// </summary>
+    public readonly struct NVAPIPstateClockEntryDto : IEquatable<NVAPIPstateClockEntryDto>
+    {
+        /// <summary>Clock domain identifier.</summary>
+        public _NV_GPU_PUBLIC_CLOCK_ID DomainId { get; }
+        /// <summary>Clock type (single frequency or frequency range).</summary>
+        public NV_GPU_PERF_PSTATE20_CLOCK_TYPE_ID TypeId { get; }
+        /// <summary>True if this clock entry is editable.</summary>
+        public bool IsEditable { get; }
+        /// <summary>Current frequency delta adjustment in kHz.</summary>
+        public int FreqDeltaValue { get; }
+        /// <summary>Minimum allowed frequency delta in kHz.</summary>
+        public int FreqDeltaMin { get; }
+        /// <summary>Maximum allowed frequency delta in kHz.</summary>
+        public int FreqDeltaMax { get; }
+        /// <summary>
+        /// Minimum frequency in kHz. For <c>SINGLE</c> type, this is the single frequency value
+        /// (overlaps <c>data.single.freq_kHz</c>). For <c>RANGE</c> type, this is the minimum.
+        /// </summary>
+        public uint MinFreqKHz { get; }
+        /// <summary>Maximum frequency in kHz; valid only for <c>RANGE</c> type.</summary>
+        public uint MaxFreqKHz { get; }
+        /// <summary>Voltage domain identifier; valid only for <c>RANGE</c> type.</summary>
+        public _NV_GPU_PERF_VOLTAGE_INFO_DOMAIN_ID RangeVoltageDomainId { get; }
+        /// <summary>Minimum voltage in microvolts; valid only for <c>RANGE</c> type.</summary>
+        public uint RangeMinVoltageUv { get; }
+        /// <summary>Maximum voltage in microvolts; valid only for <c>RANGE</c> type.</summary>
+        public uint RangeMaxVoltageUv { get; }
+
+        /// <summary>Initializes a new instance of <see cref="NVAPIPstateClockEntryDto"/>.</summary>
+        public NVAPIPstateClockEntryDto(_NV_GPU_PUBLIC_CLOCK_ID domainId, NV_GPU_PERF_PSTATE20_CLOCK_TYPE_ID typeId, bool isEditable, int freqDeltaValue, int freqDeltaMin, int freqDeltaMax, uint minFreqKHz, uint maxFreqKHz, _NV_GPU_PERF_VOLTAGE_INFO_DOMAIN_ID rangeVoltageDomainId, uint rangeMinVoltageUv, uint rangeMaxVoltageUv)
+        {
+            DomainId = domainId;
+            TypeId = typeId;
+            IsEditable = isEditable;
+            FreqDeltaValue = freqDeltaValue;
+            FreqDeltaMin = freqDeltaMin;
+            FreqDeltaMax = freqDeltaMax;
+            MinFreqKHz = minFreqKHz;
+            MaxFreqKHz = maxFreqKHz;
+            RangeVoltageDomainId = rangeVoltageDomainId;
+            RangeMinVoltageUv = rangeMinVoltageUv;
+            RangeMaxVoltageUv = rangeMaxVoltageUv;
+        }
+
+        /// <summary>Creates a DTO from the native <see cref="NV_GPU_PSTATE20_CLOCK_ENTRY_V1"/> struct.</summary>
+        public static NVAPIPstateClockEntryDto FromNative(NV_GPU_PSTATE20_CLOCK_ENTRY_V1 native)
+        {
+            return new NVAPIPstateClockEntryDto(
+                native.domainId,
+                native.typeId,
+                native.bIsEditable != 0,
+                native.freqDelta_kHz.value,
+                native.freqDelta_kHz.valueRange.min,
+                native.freqDelta_kHz.valueRange.max,
+                native.data.range.minFreq_kHz,
+                native.data.range.maxFreq_kHz,
+                native.data.range.domainId,
+                native.data.range.minVoltage_uV,
+                native.data.range.maxVoltage_uV);
+        }
+
+        /// <summary>Converts this DTO back to the native <see cref="NV_GPU_PSTATE20_CLOCK_ENTRY_V1"/> struct.</summary>
+        public NV_GPU_PSTATE20_CLOCK_ENTRY_V1 ToNative()
+        {
+            var native = new NV_GPU_PSTATE20_CLOCK_ENTRY_V1 { domainId = DomainId, typeId = TypeId };
+            native.bIsEditable = IsEditable ? 1u : 0u;
+            native.freqDelta_kHz.value = FreqDeltaValue;
+            native.freqDelta_kHz.valueRange.min = FreqDeltaMin;
+            native.freqDelta_kHz.valueRange.max = FreqDeltaMax;
+            native.data.range.minFreq_kHz = MinFreqKHz;
+            native.data.range.maxFreq_kHz = MaxFreqKHz;
+            native.data.range.domainId = RangeVoltageDomainId;
+            native.data.range.minVoltage_uV = RangeMinVoltageUv;
+            native.data.range.maxVoltage_uV = RangeMaxVoltageUv;
+            return native;
+        }
+
+        /// <inheritdoc/>
+        public bool Equals(NVAPIPstateClockEntryDto other) =>
+            DomainId == other.DomainId && TypeId == other.TypeId && IsEditable == other.IsEditable &&
+            FreqDeltaValue == other.FreqDeltaValue && FreqDeltaMin == other.FreqDeltaMin && FreqDeltaMax == other.FreqDeltaMax &&
+            MinFreqKHz == other.MinFreqKHz && MaxFreqKHz == other.MaxFreqKHz &&
+            RangeVoltageDomainId == other.RangeVoltageDomainId &&
+            RangeMinVoltageUv == other.RangeMinVoltageUv && RangeMaxVoltageUv == other.RangeMaxVoltageUv;
+
+        /// <inheritdoc/>
+        public override bool Equals(object? obj) => obj is NVAPIPstateClockEntryDto other && Equals(other);
+        /// <inheritdoc/>
+        public override int GetHashCode() => HashCode.Combine(DomainId, TypeId, IsEditable, FreqDeltaValue, MinFreqKHz, MaxFreqKHz, RangeVoltageDomainId, RangeMinVoltageUv);
+        /// <summary>Equality operator.</summary>
+        public static bool operator ==(NVAPIPstateClockEntryDto left, NVAPIPstateClockEntryDto right) => left.Equals(right);
+        /// <summary>Inequality operator.</summary>
+        public static bool operator !=(NVAPIPstateClockEntryDto left, NVAPIPstateClockEntryDto right) => !left.Equals(right);
+    }
+
+    /// <summary>
+    /// Base voltage entry DTO for a P-state, wrapping <see cref="NV_GPU_PSTATE20_BASE_VOLTAGE_ENTRY_V1"/>.
+    /// </summary>
+    public readonly struct NVAPIPstateBaseVoltageEntryDto : IEquatable<NVAPIPstateBaseVoltageEntryDto>
+    {
+        /// <summary>Voltage domain identifier.</summary>
+        public _NV_GPU_PERF_VOLTAGE_INFO_DOMAIN_ID DomainId { get; }
+        /// <summary>True if this voltage entry is editable.</summary>
+        public bool IsEditable { get; }
+        /// <summary>Base voltage in microvolts.</summary>
+        public uint VoltUv { get; }
+        /// <summary>Current voltage delta adjustment in microvolts.</summary>
+        public int VoltDeltaValue { get; }
+        /// <summary>Minimum allowed voltage delta in microvolts.</summary>
+        public int VoltDeltaMin { get; }
+        /// <summary>Maximum allowed voltage delta in microvolts.</summary>
+        public int VoltDeltaMax { get; }
+
+        /// <summary>Initializes a new instance of <see cref="NVAPIPstateBaseVoltageEntryDto"/>.</summary>
+        public NVAPIPstateBaseVoltageEntryDto(_NV_GPU_PERF_VOLTAGE_INFO_DOMAIN_ID domainId, bool isEditable, uint voltUv, int voltDeltaValue, int voltDeltaMin, int voltDeltaMax)
+        {
+            DomainId = domainId;
+            IsEditable = isEditable;
+            VoltUv = voltUv;
+            VoltDeltaValue = voltDeltaValue;
+            VoltDeltaMin = voltDeltaMin;
+            VoltDeltaMax = voltDeltaMax;
+        }
+
+        /// <summary>Creates a DTO from the native <see cref="NV_GPU_PSTATE20_BASE_VOLTAGE_ENTRY_V1"/> struct.</summary>
+        public static NVAPIPstateBaseVoltageEntryDto FromNative(NV_GPU_PSTATE20_BASE_VOLTAGE_ENTRY_V1 native)
+        {
+            return new NVAPIPstateBaseVoltageEntryDto(
+                native.domainId,
+                native.bIsEditable != 0,
+                native.volt_uV,
+                native.voltDelta_uV.value,
+                native.voltDelta_uV.valueRange.min,
+                native.voltDelta_uV.valueRange.max);
+        }
+
+        /// <summary>Converts this DTO back to the native <see cref="NV_GPU_PSTATE20_BASE_VOLTAGE_ENTRY_V1"/> struct.</summary>
+        public NV_GPU_PSTATE20_BASE_VOLTAGE_ENTRY_V1 ToNative()
+        {
+            var native = new NV_GPU_PSTATE20_BASE_VOLTAGE_ENTRY_V1 { domainId = DomainId, volt_uV = VoltUv };
+            native.bIsEditable = IsEditable ? 1u : 0u;
+            native.voltDelta_uV.value = VoltDeltaValue;
+            native.voltDelta_uV.valueRange.min = VoltDeltaMin;
+            native.voltDelta_uV.valueRange.max = VoltDeltaMax;
+            return native;
+        }
+
+        /// <inheritdoc/>
+        public bool Equals(NVAPIPstateBaseVoltageEntryDto other) =>
+            DomainId == other.DomainId && IsEditable == other.IsEditable &&
+            VoltUv == other.VoltUv && VoltDeltaValue == other.VoltDeltaValue &&
+            VoltDeltaMin == other.VoltDeltaMin && VoltDeltaMax == other.VoltDeltaMax;
+
+        /// <inheritdoc/>
+        public override bool Equals(object? obj) => obj is NVAPIPstateBaseVoltageEntryDto other && Equals(other);
+        /// <inheritdoc/>
+        public override int GetHashCode() => HashCode.Combine(DomainId, IsEditable, VoltUv, VoltDeltaValue, VoltDeltaMin, VoltDeltaMax);
+        /// <summary>Equality operator.</summary>
+        public static bool operator ==(NVAPIPstateBaseVoltageEntryDto left, NVAPIPstateBaseVoltageEntryDto right) => left.Equals(right);
+        /// <summary>Inequality operator.</summary>
+        public static bool operator !=(NVAPIPstateBaseVoltageEntryDto left, NVAPIPstateBaseVoltageEntryDto right) => !left.Equals(right);
+    }
+
+    /// <summary>
+    /// Per-pstate info DTO, wrapping the anonymous pstate struct within <see cref="_NV_GPU_PERF_PSTATES20_INFO_V2"/>.
+    /// </summary>
+    public readonly struct NVAPIPstateInfoDto : IEquatable<NVAPIPstateInfoDto>
+    {
+        /// <summary>P-state identifier.</summary>
+        public _NV_GPU_PERF_PSTATE_ID PstateId { get; }
+        /// <summary>True if this P-state is editable.</summary>
+        public bool IsEditable { get; }
+        /// <summary>Clock entries for this P-state (up to 8).</summary>
+        public NVAPIPstateClockEntryDto[] Clocks { get; }
+        /// <summary>Base voltage entries for this P-state (up to 4).</summary>
+        public NVAPIPstateBaseVoltageEntryDto[] BaseVoltages { get; }
+
+        /// <summary>Initializes a new instance of <see cref="NVAPIPstateInfoDto"/>.</summary>
+        public NVAPIPstateInfoDto(_NV_GPU_PERF_PSTATE_ID pstateId, bool isEditable, NVAPIPstateClockEntryDto[] clocks, NVAPIPstateBaseVoltageEntryDto[] baseVoltages)
+        {
+            PstateId = pstateId;
+            IsEditable = isEditable;
+            Clocks = clocks ?? Array.Empty<NVAPIPstateClockEntryDto>();
+            BaseVoltages = baseVoltages ?? Array.Empty<NVAPIPstateBaseVoltageEntryDto>();
+        }
+
+        /// <summary>Creates a DTO from the anonymous native pstate struct within <see cref="_NV_GPU_PERF_PSTATES20_INFO_V2"/>.</summary>
+        public static NVAPIPstateInfoDto FromNative(_NV_GPU_PERF_PSTATES20_INFO_V2._pstates_e__Struct native)
+        {
+            var clocks = new NVAPIPstateClockEntryDto[8];
+            for (int i = 0; i < 8; i++)
+                clocks[i] = NVAPIPstateClockEntryDto.FromNative(native.clocks[i]);
+            var voltages = new NVAPIPstateBaseVoltageEntryDto[4];
+            for (int i = 0; i < 4; i++)
+                voltages[i] = NVAPIPstateBaseVoltageEntryDto.FromNative(native.baseVoltages[i]);
+            return new NVAPIPstateInfoDto(native.pstateId, native.bIsEditable != 0, clocks, voltages);
+        }
+
+        /// <summary>Converts this DTO back to the anonymous native pstate struct.</summary>
+        public _NV_GPU_PERF_PSTATES20_INFO_V2._pstates_e__Struct ToNative()
+        {
+            var native = new _NV_GPU_PERF_PSTATES20_INFO_V2._pstates_e__Struct { pstateId = PstateId };
+            native.bIsEditable = IsEditable ? 1u : 0u;
+            if (Clocks != null)
+                for (int i = 0; i < Math.Min(Clocks.Length, 8); i++)
+                    native.clocks[i] = Clocks[i].ToNative();
+            if (BaseVoltages != null)
+                for (int i = 0; i < Math.Min(BaseVoltages.Length, 4); i++)
+                    native.baseVoltages[i] = BaseVoltages[i].ToNative();
+            return native;
+        }
+
+        /// <inheritdoc/>
+        public bool Equals(NVAPIPstateInfoDto other)
+        {
+            if (PstateId != other.PstateId || IsEditable != other.IsEditable) return false;
+            if ((Clocks == null) != (other.Clocks == null) || (BaseVoltages == null) != (other.BaseVoltages == null)) return false;
+            if (Clocks != null && other.Clocks != null)
+            {
+                if (Clocks.Length != other.Clocks.Length) return false;
+                for (int i = 0; i < Clocks.Length; i++)
+                    if (!Clocks[i].Equals(other.Clocks[i])) return false;
+            }
+            if (BaseVoltages != null && other.BaseVoltages != null)
+            {
+                if (BaseVoltages.Length != other.BaseVoltages.Length) return false;
+                for (int i = 0; i < BaseVoltages.Length; i++)
+                    if (!BaseVoltages[i].Equals(other.BaseVoltages[i])) return false;
+            }
+            return true;
+        }
+
+        /// <inheritdoc/>
+        public override bool Equals(object? obj) => obj is NVAPIPstateInfoDto other && Equals(other);
+        /// <inheritdoc/>
+        public override int GetHashCode()
+        {
+            var hash = HashCode.Combine(PstateId, IsEditable);
+            if (Clocks != null)
+                foreach (var c in Clocks)
+                    hash = (hash * 31) + c.GetHashCode();
+            if (BaseVoltages != null)
+                foreach (var v in BaseVoltages)
+                    hash = (hash * 31) + v.GetHashCode();
+            return hash;
+        }
+        /// <summary>Equality operator.</summary>
+        public static bool operator ==(NVAPIPstateInfoDto left, NVAPIPstateInfoDto right) => left.Equals(right);
+        /// <summary>Inequality operator.</summary>
+        public static bool operator !=(NVAPIPstateInfoDto left, NVAPIPstateInfoDto right) => !left.Equals(right);
     }
 
     /// <summary>
@@ -3425,36 +4085,111 @@ namespace NVAPIWrapper
     /// </summary>
     public readonly struct NVAPIGpuPerfPstates20InfoDto : IEquatable<NVAPIGpuPerfPstates20InfoDto>
     {
-        public byte[] RawData { get; }
+        /// <summary>True if the P-state configuration is editable.</summary>
+        public bool IsEditable { get; }
+        /// <summary>Number of P-states reported.</summary>
+        public uint NumPstates { get; }
+        /// <summary>Number of clocks per P-state.</summary>
+        public uint NumClocks { get; }
+        /// <summary>Number of base voltages per P-state.</summary>
+        public uint NumBaseVoltages { get; }
+        /// <summary>P-state info array (up to 16 entries).</summary>
+        public NVAPIPstateInfoDto[] Pstates { get; }
+        /// <summary>Number of over-voltage entries.</summary>
+        public uint OvNumVoltages { get; }
+        /// <summary>Over-voltage entries (up to 4).</summary>
+        public NVAPIPstateBaseVoltageEntryDto[] OvVoltages { get; }
 
-        private NVAPIGpuPerfPstates20InfoDto(byte[] rawData)
+        /// <summary>Initializes a new instance of <see cref="NVAPIGpuPerfPstates20InfoDto"/>.</summary>
+        public NVAPIGpuPerfPstates20InfoDto(bool isEditable, uint numPstates, uint numClocks, uint numBaseVoltages, NVAPIPstateInfoDto[] pstates, uint ovNumVoltages, NVAPIPstateBaseVoltageEntryDto[] ovVoltages)
         {
-            RawData = rawData ?? Array.Empty<byte>();
+            IsEditable = isEditable;
+            NumPstates = numPstates;
+            NumClocks = numClocks;
+            NumBaseVoltages = numBaseVoltages;
+            Pstates = pstates ?? Array.Empty<NVAPIPstateInfoDto>();
+            OvNumVoltages = ovNumVoltages;
+            OvVoltages = ovVoltages ?? Array.Empty<NVAPIPstateBaseVoltageEntryDto>();
         }
 
+        /// <summary>Creates a DTO from the native <see cref="_NV_GPU_PERF_PSTATES20_INFO_V2"/> struct.</summary>
         public static NVAPIGpuPerfPstates20InfoDto FromNative(_NV_GPU_PERF_PSTATES20_INFO_V2 native)
         {
-            return new NVAPIGpuPerfPstates20InfoDto(NVAPIGpuDtoHelpers.ToByteArray(native));
+            var pstates = new NVAPIPstateInfoDto[16];
+            for (int i = 0; i < 16; i++)
+                pstates[i] = NVAPIPstateInfoDto.FromNative(native.pstates[i]);
+            var ovVoltages = new NVAPIPstateBaseVoltageEntryDto[4];
+            for (int i = 0; i < 4; i++)
+                ovVoltages[i] = NVAPIPstateBaseVoltageEntryDto.FromNative(native.ov.voltages[i]);
+            return new NVAPIGpuPerfPstates20InfoDto(
+                native.bIsEditable != 0,
+                native.numPstates,
+                native.numClocks,
+                native.numBaseVoltages,
+                pstates,
+                native.ov.numVoltages,
+                ovVoltages);
         }
 
+        /// <summary>Creates a default (zeroed) DTO with the correct version field.</summary>
         public static NVAPIGpuPerfPstates20InfoDto CreateDefault()
         {
             return FromNative(new _NV_GPU_PERF_PSTATES20_INFO_V2 { version = NVAPI.NV_GPU_PERF_PSTATES20_INFO_VER });
         }
 
+        /// <summary>Converts this DTO back to the native <see cref="_NV_GPU_PERF_PSTATES20_INFO_V2"/> struct.</summary>
         public _NV_GPU_PERF_PSTATES20_INFO_V2 ToNative()
         {
-            return NVAPIGpuDtoHelpers.FromByteArray<_NV_GPU_PERF_PSTATES20_INFO_V2>(RawData);
+            var native = new _NV_GPU_PERF_PSTATES20_INFO_V2 { version = NVAPI.NV_GPU_PERF_PSTATES20_INFO_VER };
+            native.bIsEditable = IsEditable ? 1u : 0u;
+            native.numPstates = NumPstates;
+            native.numClocks = NumClocks;
+            native.numBaseVoltages = NumBaseVoltages;
+            if (Pstates != null)
+                for (int i = 0; i < Math.Min(Pstates.Length, 16); i++)
+                    native.pstates[i] = Pstates[i].ToNative();
+            native.ov.numVoltages = OvNumVoltages;
+            if (OvVoltages != null)
+                for (int i = 0; i < Math.Min(OvVoltages.Length, 4); i++)
+                    native.ov.voltages[i] = OvVoltages[i].ToNative();
+            return native;
         }
 
+        /// <inheritdoc/>
         public bool Equals(NVAPIGpuPerfPstates20InfoDto other)
         {
-            return NVAPIGpuDtoHelpers.SequenceEquals(RawData, other.RawData);
+            if (IsEditable != other.IsEditable || NumPstates != other.NumPstates || NumClocks != other.NumClocks || NumBaseVoltages != other.NumBaseVoltages) return false;
+            if (OvNumVoltages != other.OvNumVoltages) return false;
+            if ((Pstates == null) != (other.Pstates == null) || (OvVoltages == null) != (other.OvVoltages == null)) return false;
+            if (Pstates != null && other.Pstates != null)
+            {
+                if (Pstates.Length != other.Pstates.Length) return false;
+                for (int i = 0; i < Pstates.Length; i++)
+                    if (!Pstates[i].Equals(other.Pstates[i])) return false;
+            }
+            if (OvVoltages != null && other.OvVoltages != null)
+            {
+                if (OvVoltages.Length != other.OvVoltages.Length) return false;
+                for (int i = 0; i < OvVoltages.Length; i++)
+                    if (!OvVoltages[i].Equals(other.OvVoltages[i])) return false;
+            }
+            return true;
         }
 
+        /// <inheritdoc/>
         public override bool Equals(object? obj) => obj is NVAPIGpuPerfPstates20InfoDto other && Equals(other);
-        public override int GetHashCode() => NVAPIGpuDtoHelpers.SequenceHashCode(RawData);
+        /// <inheritdoc/>
+        public override int GetHashCode()
+        {
+            var hash = HashCode.Combine(IsEditable, NumPstates, NumClocks, NumBaseVoltages, OvNumVoltages);
+            if (Pstates != null)
+                foreach (var p in Pstates)
+                    hash = (hash * 31) + p.GetHashCode();
+            return hash;
+        }
+        /// <summary>Equality operator.</summary>
         public static bool operator ==(NVAPIGpuPerfPstates20InfoDto left, NVAPIGpuPerfPstates20InfoDto right) => left.Equals(right);
+        /// <summary>Inequality operator.</summary>
         public static bool operator !=(NVAPIGpuPerfPstates20InfoDto left, NVAPIGpuPerfPstates20InfoDto right) => !left.Equals(right);
     }
 
@@ -3463,37 +4198,153 @@ namespace NVAPIWrapper
     /// </summary>
     public readonly struct NVAPIGpuVirtualizationInfoDto : IEquatable<NVAPIGpuVirtualizationInfoDto>
     {
-        public byte[] RawData { get; }
+        /// <summary>The GPU virtualization mode.</summary>
+        public _NV_VIRTUALIZATION_MODE VirtualizationMode { get; }
 
-        private NVAPIGpuVirtualizationInfoDto(byte[] rawData)
+        /// <summary>Initializes a new instance of <see cref="NVAPIGpuVirtualizationInfoDto"/>.</summary>
+        public NVAPIGpuVirtualizationInfoDto(_NV_VIRTUALIZATION_MODE virtualizationMode)
         {
-            RawData = rawData ?? Array.Empty<byte>();
+            VirtualizationMode = virtualizationMode;
         }
 
+        /// <summary>Creates a DTO from the native <see cref="_NV_GPU_VIRTUALIZATION_INFO"/> struct.</summary>
         public static NVAPIGpuVirtualizationInfoDto FromNative(_NV_GPU_VIRTUALIZATION_INFO native)
         {
-            return new NVAPIGpuVirtualizationInfoDto(NVAPIGpuDtoHelpers.ToByteArray(native));
+            return new NVAPIGpuVirtualizationInfoDto(native.virtualizationMode);
         }
 
+        /// <summary>Creates a default (zeroed) DTO with the correct version field.</summary>
         public static NVAPIGpuVirtualizationInfoDto CreateDefault()
         {
             return FromNative(new _NV_GPU_VIRTUALIZATION_INFO { version = NVAPI.NV_GPU_VIRTUALIZATION_INFO_VER });
         }
 
+        /// <summary>Converts this DTO back to the native <see cref="_NV_GPU_VIRTUALIZATION_INFO"/> struct.</summary>
         public _NV_GPU_VIRTUALIZATION_INFO ToNative()
         {
-            return NVAPIGpuDtoHelpers.FromByteArray<_NV_GPU_VIRTUALIZATION_INFO>(RawData);
+            return new _NV_GPU_VIRTUALIZATION_INFO
+            {
+                version = NVAPI.NV_GPU_VIRTUALIZATION_INFO_VER,
+                virtualizationMode = VirtualizationMode
+            };
         }
 
+        /// <inheritdoc/>
         public bool Equals(NVAPIGpuVirtualizationInfoDto other)
         {
-            return NVAPIGpuDtoHelpers.SequenceEquals(RawData, other.RawData);
+            return VirtualizationMode == other.VirtualizationMode;
         }
 
+        /// <inheritdoc/>
         public override bool Equals(object? obj) => obj is NVAPIGpuVirtualizationInfoDto other && Equals(other);
-        public override int GetHashCode() => NVAPIGpuDtoHelpers.SequenceHashCode(RawData);
+        /// <inheritdoc/>
+        public override int GetHashCode() => HashCode.Combine(VirtualizationMode);
+        /// <summary>Equality operator.</summary>
         public static bool operator ==(NVAPIGpuVirtualizationInfoDto left, NVAPIGpuVirtualizationInfoDto right) => left.Equals(right);
+        /// <summary>Inequality operator.</summary>
         public static bool operator !=(NVAPIGpuVirtualizationInfoDto left, NVAPIGpuVirtualizationInfoDto right) => !left.Equals(right);
+    }
+
+    /// <summary>
+    /// Per-feature license details DTO, wrapping <see cref="_NV_LICENSE_FEATURE_DETAILS_V4"/>.
+    /// </summary>
+    public readonly struct NVAPILicenseFeatureDetailsDto : IEquatable<NVAPILicenseFeatureDetailsDto>
+    {
+        /// <summary>Version of the feature details struct as returned by NVAPI.</summary>
+        public uint Version { get; }
+        /// <summary>True if the license is currently enabled.</summary>
+        public bool IsEnabled { get; }
+        /// <summary>True if the feature is enabled.</summary>
+        public bool IsFeatureEnabled { get; }
+        /// <summary>Feature code identifying the licensable feature type.</summary>
+        public _NV_LICENSE_FEATURE_TYPE FeatureCode { get; }
+        /// <summary>License info string (up to 128 characters).</summary>
+        public string LicenseInfo { get; }
+        /// <summary>Product name string (up to 128 characters).</summary>
+        public string ProductName { get; }
+        /// <summary>License expiry date and time details.</summary>
+        public _NV_LICENSE_EXPIRY_DETAILS LicenseExpiry { get; }
+
+        /// <summary>Initializes a new instance of <see cref="NVAPILicenseFeatureDetailsDto"/>.</summary>
+        public NVAPILicenseFeatureDetailsDto(uint version, bool isEnabled, bool isFeatureEnabled, _NV_LICENSE_FEATURE_TYPE featureCode, string licenseInfo, string productName, _NV_LICENSE_EXPIRY_DETAILS licenseExpiry)
+        {
+            Version = version;
+            IsEnabled = isEnabled;
+            IsFeatureEnabled = isFeatureEnabled;
+            FeatureCode = featureCode;
+            LicenseInfo = licenseInfo ?? string.Empty;
+            ProductName = productName ?? string.Empty;
+            LicenseExpiry = licenseExpiry;
+        }
+
+        /// <summary>Creates a DTO from the native <see cref="_NV_LICENSE_FEATURE_DETAILS_V4"/> struct.</summary>
+        public static NVAPILicenseFeatureDetailsDto FromNative(_NV_LICENSE_FEATURE_DETAILS_V4 native)
+        {
+            Span<sbyte> liSpan = native.licenseInfo;
+            string licenseInfo = System.Text.Encoding.ASCII.GetString(System.Runtime.InteropServices.MemoryMarshal.Cast<sbyte, byte>(liSpan)).TrimEnd('\0');
+            Span<sbyte> pnSpan = native.productName;
+            string productName = System.Text.Encoding.ASCII.GetString(System.Runtime.InteropServices.MemoryMarshal.Cast<sbyte, byte>(pnSpan)).TrimEnd('\0');
+            return new NVAPILicenseFeatureDetailsDto(
+                native.version,
+                native.isEnabled != 0,
+                native.isFeatureEnabled != 0,
+                native.featureCode,
+                licenseInfo,
+                productName,
+                native.licenseExpiry);
+        }
+
+        /// <summary>Converts this DTO back to the native <see cref="_NV_LICENSE_FEATURE_DETAILS_V4"/> struct.</summary>
+        public _NV_LICENSE_FEATURE_DETAILS_V4 ToNative()
+        {
+            var native = new _NV_LICENSE_FEATURE_DETAILS_V4 { version = Version };
+            native.isEnabled = IsEnabled ? 1u : 0u;
+            native.isFeatureEnabled = IsFeatureEnabled ? 1u : 0u;
+            native.featureCode = FeatureCode;
+            native.licenseExpiry = LicenseExpiry;
+            if (!string.IsNullOrEmpty(LicenseInfo))
+            {
+                byte[] liBytes = System.Text.Encoding.ASCII.GetBytes(LicenseInfo);
+                Span<byte> liSpan = System.Runtime.InteropServices.MemoryMarshal.Cast<sbyte, byte>(native.licenseInfo);
+                int liLen = Math.Min(liBytes.Length, liSpan.Length - 1);
+                liBytes.AsSpan(0, liLen).CopyTo(liSpan);
+            }
+            if (!string.IsNullOrEmpty(ProductName))
+            {
+                byte[] pnBytes = System.Text.Encoding.ASCII.GetBytes(ProductName);
+                Span<byte> pnSpan = System.Runtime.InteropServices.MemoryMarshal.Cast<sbyte, byte>(native.productName);
+                int pnLen = Math.Min(pnBytes.Length, pnSpan.Length - 1);
+                pnBytes.AsSpan(0, pnLen).CopyTo(pnSpan);
+            }
+            return native;
+        }
+
+        /// <inheritdoc/>
+        public bool Equals(NVAPILicenseFeatureDetailsDto other)
+        {
+            return Version == other.Version &&
+                   IsEnabled == other.IsEnabled &&
+                   IsFeatureEnabled == other.IsFeatureEnabled &&
+                   FeatureCode == other.FeatureCode &&
+                   string.Equals(LicenseInfo, other.LicenseInfo, StringComparison.Ordinal) &&
+                   string.Equals(ProductName, other.ProductName, StringComparison.Ordinal) &&
+                   LicenseExpiry.year == other.LicenseExpiry.year &&
+                   LicenseExpiry.month == other.LicenseExpiry.month &&
+                   LicenseExpiry.day == other.LicenseExpiry.day &&
+                   LicenseExpiry.hour == other.LicenseExpiry.hour &&
+                   LicenseExpiry.min == other.LicenseExpiry.min &&
+                   LicenseExpiry.sec == other.LicenseExpiry.sec &&
+                   LicenseExpiry.status == other.LicenseExpiry.status;
+        }
+
+        /// <inheritdoc/>
+        public override bool Equals(object? obj) => obj is NVAPILicenseFeatureDetailsDto other && Equals(other);
+        /// <inheritdoc/>
+        public override int GetHashCode() => HashCode.Combine(Version, IsEnabled, IsFeatureEnabled, FeatureCode, LicenseInfo, ProductName);
+        /// <summary>Equality operator.</summary>
+        public static bool operator ==(NVAPILicenseFeatureDetailsDto left, NVAPILicenseFeatureDetailsDto right) => left.Equals(right);
+        /// <summary>Inequality operator.</summary>
+        public static bool operator !=(NVAPILicenseFeatureDetailsDto left, NVAPILicenseFeatureDetailsDto right) => !left.Equals(right);
     }
 
     /// <summary>
@@ -3501,36 +4352,96 @@ namespace NVAPIWrapper
     /// </summary>
     public readonly struct NVAPILicensableFeaturesDto : IEquatable<NVAPILicensableFeaturesDto>
     {
-        public byte[] RawData { get; }
+        /// <summary>True if GPU licensing is supported.</summary>
+        public bool IsLicenseSupported { get; }
+        /// <summary>Number of licensable features reported.</summary>
+        public uint LicensableFeatureCount { get; }
+        /// <summary>License signature string (up to 128 characters).</summary>
+        public string Signature { get; }
+        /// <summary>Array of up to 3 per-feature license details.</summary>
+        public NVAPILicenseFeatureDetailsDto[] LicenseDetails { get; }
 
-        private NVAPILicensableFeaturesDto(byte[] rawData)
+        /// <summary>Initializes a new instance of <see cref="NVAPILicensableFeaturesDto"/>.</summary>
+        public NVAPILicensableFeaturesDto(bool isLicenseSupported, uint licensableFeatureCount, string signature, NVAPILicenseFeatureDetailsDto[] licenseDetails)
         {
-            RawData = rawData ?? Array.Empty<byte>();
+            IsLicenseSupported = isLicenseSupported;
+            LicensableFeatureCount = licensableFeatureCount;
+            Signature = signature ?? string.Empty;
+            LicenseDetails = licenseDetails ?? Array.Empty<NVAPILicenseFeatureDetailsDto>();
         }
 
+        /// <summary>Creates a DTO from the native <see cref="_NV_LICENSABLE_FEATURES_V4"/> struct.</summary>
         public static NVAPILicensableFeaturesDto FromNative(_NV_LICENSABLE_FEATURES_V4 native)
         {
-            return new NVAPILicensableFeaturesDto(NVAPIGpuDtoHelpers.ToByteArray(native));
+            Span<byte> sigSpan = native.signature;
+            string signature = System.Text.Encoding.ASCII.GetString(sigSpan).TrimEnd('\0');
+            var details = new NVAPILicenseFeatureDetailsDto[3];
+            for (int i = 0; i < 3; i++)
+                details[i] = NVAPILicenseFeatureDetailsDto.FromNative(native.licenseDetails[i]);
+            return new NVAPILicensableFeaturesDto(
+                native.isLicenseSupported != 0,
+                native.licensableFeatureCount,
+                signature,
+                details);
         }
 
+        /// <summary>Creates a default (zeroed) DTO with the correct version field.</summary>
         public static NVAPILicensableFeaturesDto CreateDefault()
         {
             return FromNative(new _NV_LICENSABLE_FEATURES_V4 { version = NVAPI.NV_LICENSABLE_FEATURES_VER });
         }
 
+        /// <summary>Converts this DTO back to the native <see cref="_NV_LICENSABLE_FEATURES_V4"/> struct.</summary>
         public _NV_LICENSABLE_FEATURES_V4 ToNative()
         {
-            return NVAPIGpuDtoHelpers.FromByteArray<_NV_LICENSABLE_FEATURES_V4>(RawData);
+            var native = new _NV_LICENSABLE_FEATURES_V4 { version = NVAPI.NV_LICENSABLE_FEATURES_VER };
+            native.isLicenseSupported = IsLicenseSupported ? 1u : 0u;
+            native.licensableFeatureCount = LicensableFeatureCount;
+            if (!string.IsNullOrEmpty(Signature))
+            {
+                byte[] sigBytes = System.Text.Encoding.ASCII.GetBytes(Signature);
+                Span<byte> sigSpan = native.signature;
+                int sigLen = Math.Min(sigBytes.Length, sigSpan.Length - 1);
+                sigBytes.AsSpan(0, sigLen).CopyTo(sigSpan);
+            }
+            if (LicenseDetails != null)
+            {
+                for (int i = 0; i < Math.Min(LicenseDetails.Length, 3); i++)
+                    native.licenseDetails[i] = LicenseDetails[i].ToNative();
+            }
+            return native;
         }
 
+        /// <inheritdoc/>
         public bool Equals(NVAPILicensableFeaturesDto other)
         {
-            return NVAPIGpuDtoHelpers.SequenceEquals(RawData, other.RawData);
+            if (IsLicenseSupported != other.IsLicenseSupported) return false;
+            if (LicensableFeatureCount != other.LicensableFeatureCount) return false;
+            if (!string.Equals(Signature, other.Signature, StringComparison.Ordinal)) return false;
+            if ((LicenseDetails == null) != (other.LicenseDetails == null)) return false;
+            if (LicenseDetails != null && other.LicenseDetails != null)
+            {
+                if (LicenseDetails.Length != other.LicenseDetails.Length) return false;
+                for (int i = 0; i < LicenseDetails.Length; i++)
+                    if (!LicenseDetails[i].Equals(other.LicenseDetails[i])) return false;
+            }
+            return true;
         }
 
+        /// <inheritdoc/>
         public override bool Equals(object? obj) => obj is NVAPILicensableFeaturesDto other && Equals(other);
-        public override int GetHashCode() => NVAPIGpuDtoHelpers.SequenceHashCode(RawData);
+        /// <inheritdoc/>
+        public override int GetHashCode()
+        {
+            var hash = HashCode.Combine(IsLicenseSupported, LicensableFeatureCount, Signature);
+            if (LicenseDetails != null)
+                foreach (var d in LicenseDetails)
+                    hash = (hash * 31) + d.GetHashCode();
+            return hash;
+        }
+        /// <summary>Equality operator.</summary>
         public static bool operator ==(NVAPILicensableFeaturesDto left, NVAPILicensableFeaturesDto right) => left.Equals(right);
+        /// <summary>Inequality operator.</summary>
         public static bool operator !=(NVAPILicensableFeaturesDto left, NVAPILicensableFeaturesDto right) => !left.Equals(right);
     }
 
@@ -3539,37 +4450,133 @@ namespace NVAPIWrapper
     /// </summary>
     public readonly struct NVAPIEncoderStatisticsDto : IEquatable<NVAPIEncoderStatisticsDto>
     {
-        public byte[] RawData { get; }
+        /// <summary>Number of active encoder sessions.</summary>
+        public uint SessionsCount { get; }
+        /// <summary>Average frames per second across all sessions.</summary>
+        public uint AverageFps { get; }
+        /// <summary>Average encode latency in microseconds across all sessions.</summary>
+        public uint AverageLatency { get; }
 
-        private NVAPIEncoderStatisticsDto(byte[] rawData)
+        /// <summary>Initializes a new instance of <see cref="NVAPIEncoderStatisticsDto"/>.</summary>
+        public NVAPIEncoderStatisticsDto(uint sessionsCount, uint averageFps, uint averageLatency)
         {
-            RawData = rawData ?? Array.Empty<byte>();
+            SessionsCount = sessionsCount;
+            AverageFps = averageFps;
+            AverageLatency = averageLatency;
         }
 
+        /// <summary>Creates a DTO from the native <see cref="_NV_ENCODER_STATISTICS_V1"/> struct.</summary>
         public static NVAPIEncoderStatisticsDto FromNative(_NV_ENCODER_STATISTICS_V1 native)
         {
-            return new NVAPIEncoderStatisticsDto(NVAPIGpuDtoHelpers.ToByteArray(native));
+            return new NVAPIEncoderStatisticsDto(native.sessionsCount, native.averageFps, native.averageLatency);
         }
 
+        /// <summary>Creates a default (zeroed) DTO with the correct version field.</summary>
         public static NVAPIEncoderStatisticsDto CreateDefault()
         {
             return FromNative(new _NV_ENCODER_STATISTICS_V1 { version = NVAPI.NNV_ENCODER_STATISTICS_VER });
         }
 
+        /// <summary>Converts this DTO back to the native <see cref="_NV_ENCODER_STATISTICS_V1"/> struct.</summary>
         public _NV_ENCODER_STATISTICS_V1 ToNative()
         {
-            return NVAPIGpuDtoHelpers.FromByteArray<_NV_ENCODER_STATISTICS_V1>(RawData);
+            return new _NV_ENCODER_STATISTICS_V1
+            {
+                version = NVAPI.NNV_ENCODER_STATISTICS_VER,
+                sessionsCount = SessionsCount,
+                averageFps = AverageFps,
+                averageLatency = AverageLatency
+            };
         }
 
+        /// <inheritdoc/>
         public bool Equals(NVAPIEncoderStatisticsDto other)
         {
-            return NVAPIGpuDtoHelpers.SequenceEquals(RawData, other.RawData);
+            return SessionsCount == other.SessionsCount &&
+                   AverageFps == other.AverageFps &&
+                   AverageLatency == other.AverageLatency;
         }
 
+        /// <inheritdoc/>
         public override bool Equals(object? obj) => obj is NVAPIEncoderStatisticsDto other && Equals(other);
-        public override int GetHashCode() => NVAPIGpuDtoHelpers.SequenceHashCode(RawData);
+        /// <inheritdoc/>
+        public override int GetHashCode() => HashCode.Combine(SessionsCount, AverageFps, AverageLatency);
+        /// <summary>Equality operator.</summary>
         public static bool operator ==(NVAPIEncoderStatisticsDto left, NVAPIEncoderStatisticsDto right) => left.Equals(right);
+        /// <summary>Inequality operator.</summary>
         public static bool operator !=(NVAPIEncoderStatisticsDto left, NVAPIEncoderStatisticsDto right) => !left.Equals(right);
+    }
+
+    /// <summary>
+    /// Per-session encoder info DTO, wrapping <see cref="_NV_ENCODER_PER_SESSION_INFO_V1"/>.
+    /// </summary>
+    public readonly struct NVAPIEncoderPerSessionInfoDto : IEquatable<NVAPIEncoderPerSessionInfoDto>
+    {
+        /// <summary>Unique encoder session identifier.</summary>
+        public uint SessionId { get; }
+        /// <summary>OS process ID that owns this session.</summary>
+        public uint ProcessId { get; }
+        /// <summary>vGPU instance identifier (0 for non-vGPU).</summary>
+        public uint VgpuInstance { get; }
+        /// <summary>Codec type used by this session.</summary>
+        public _NV_ENCODER_TYPE CodecType { get; }
+        /// <summary>Horizontal resolution of the encoded stream.</summary>
+        public uint HResolution { get; }
+        /// <summary>Vertical resolution of the encoded stream.</summary>
+        public uint VResolution { get; }
+        /// <summary>Average encode frame rate for this session.</summary>
+        public uint AverageEncodeFps { get; }
+        /// <summary>Average encode latency in microseconds for this session.</summary>
+        public uint AverageEncodeLatency { get; }
+
+        /// <summary>Initializes a new instance of <see cref="NVAPIEncoderPerSessionInfoDto"/>.</summary>
+        public NVAPIEncoderPerSessionInfoDto(uint sessionId, uint processId, uint vgpuInstance, _NV_ENCODER_TYPE codecType, uint hResolution, uint vResolution, uint averageEncodeFps, uint averageEncodeLatency)
+        {
+            SessionId = sessionId;
+            ProcessId = processId;
+            VgpuInstance = vgpuInstance;
+            CodecType = codecType;
+            HResolution = hResolution;
+            VResolution = vResolution;
+            AverageEncodeFps = averageEncodeFps;
+            AverageEncodeLatency = averageEncodeLatency;
+        }
+
+        /// <summary>Creates a DTO from the native <see cref="_NV_ENCODER_PER_SESSION_INFO_V1"/> struct.</summary>
+        public static NVAPIEncoderPerSessionInfoDto FromNative(_NV_ENCODER_PER_SESSION_INFO_V1 native)
+        {
+            return new NVAPIEncoderPerSessionInfoDto(
+                native.sessionId,
+                native.processId,
+                native.vgpuInstance,
+                native.codecType,
+                native.hResolution,
+                native.vResolution,
+                native.averageEncodeFps,
+                native.averageEncodeLatency);
+        }
+
+        /// <inheritdoc/>
+        public bool Equals(NVAPIEncoderPerSessionInfoDto other)
+        {
+            return SessionId == other.SessionId &&
+                   ProcessId == other.ProcessId &&
+                   VgpuInstance == other.VgpuInstance &&
+                   CodecType == other.CodecType &&
+                   HResolution == other.HResolution &&
+                   VResolution == other.VResolution &&
+                   AverageEncodeFps == other.AverageEncodeFps &&
+                   AverageEncodeLatency == other.AverageEncodeLatency;
+        }
+
+        /// <inheritdoc/>
+        public override bool Equals(object? obj) => obj is NVAPIEncoderPerSessionInfoDto other && Equals(other);
+        /// <inheritdoc/>
+        public override int GetHashCode() => HashCode.Combine(SessionId, ProcessId, VgpuInstance, CodecType, HResolution, VResolution, AverageEncodeFps, AverageEncodeLatency);
+        /// <summary>Equality operator.</summary>
+        public static bool operator ==(NVAPIEncoderPerSessionInfoDto left, NVAPIEncoderPerSessionInfoDto right) => left.Equals(right);
+        /// <summary>Inequality operator.</summary>
+        public static bool operator !=(NVAPIEncoderPerSessionInfoDto left, NVAPIEncoderPerSessionInfoDto right) => !left.Equals(right);
     }
 
     /// <summary>
@@ -3577,36 +4584,68 @@ namespace NVAPIWrapper
     /// </summary>
     public readonly struct NVAPIEncoderSessionsInfoDto : IEquatable<NVAPIEncoderSessionsInfoDto>
     {
-        public byte[] RawData { get; }
+        /// <summary>Number of active encoder sessions.</summary>
+        public uint SessionsCount { get; }
+        /// <summary>Per-session encoder info array; may be empty if no sessions are active.</summary>
+        public NVAPIEncoderPerSessionInfoDto[] Sessions { get; }
 
-        private NVAPIEncoderSessionsInfoDto(byte[] rawData)
+        /// <summary>Initializes a new instance of <see cref="NVAPIEncoderSessionsInfoDto"/>.</summary>
+        public NVAPIEncoderSessionsInfoDto(uint sessionsCount, NVAPIEncoderPerSessionInfoDto[] sessions)
         {
-            RawData = rawData ?? Array.Empty<byte>();
+            SessionsCount = sessionsCount;
+            Sessions = sessions ?? Array.Empty<NVAPIEncoderPerSessionInfoDto>();
         }
 
-        public static NVAPIEncoderSessionsInfoDto FromNative(_NV_ENCODER_SESSIONS_INFO_V1 native)
+        /// <summary>
+        /// Creates a DTO from the native <see cref="_NV_ENCODER_SESSIONS_INFO_V1"/> struct,
+        /// dereferencing the <c>pSessionInfo</c> pointer while the native struct is still valid.
+        /// </summary>
+        public static unsafe NVAPIEncoderSessionsInfoDto FromNative(_NV_ENCODER_SESSIONS_INFO_V1 native)
         {
-            return new NVAPIEncoderSessionsInfoDto(NVAPIGpuDtoHelpers.ToByteArray(native));
+            var sessions = Array.Empty<NVAPIEncoderPerSessionInfoDto>();
+            if (native.pSessionInfo != null && native.sessionsCount > 0)
+            {
+                sessions = new NVAPIEncoderPerSessionInfoDto[native.sessionsCount];
+                for (int i = 0; i < (int)native.sessionsCount; i++)
+                    sessions[i] = NVAPIEncoderPerSessionInfoDto.FromNative(native.pSessionInfo[i]);
+            }
+            return new NVAPIEncoderSessionsInfoDto(native.sessionsCount, sessions);
         }
 
+        /// <summary>Creates a default (zeroed) DTO with the correct version field.</summary>
         public static NVAPIEncoderSessionsInfoDto CreateDefault()
         {
-            return FromNative(new _NV_ENCODER_SESSIONS_INFO_V1 { version = NVAPI.NV_ENCODER_SESSIONS_INFO_VER });
+            return new NVAPIEncoderSessionsInfoDto(0, Array.Empty<NVAPIEncoderPerSessionInfoDto>());
         }
 
-        public _NV_ENCODER_SESSIONS_INFO_V1 ToNative()
-        {
-            return NVAPIGpuDtoHelpers.FromByteArray<_NV_ENCODER_SESSIONS_INFO_V1>(RawData);
-        }
-
+        /// <inheritdoc/>
         public bool Equals(NVAPIEncoderSessionsInfoDto other)
         {
-            return NVAPIGpuDtoHelpers.SequenceEquals(RawData, other.RawData);
+            if (SessionsCount != other.SessionsCount) return false;
+            if ((Sessions == null) != (other.Sessions == null)) return false;
+            if (Sessions != null && other.Sessions != null)
+            {
+                if (Sessions.Length != other.Sessions.Length) return false;
+                for (int i = 0; i < Sessions.Length; i++)
+                    if (!Sessions[i].Equals(other.Sessions[i])) return false;
+            }
+            return true;
         }
 
+        /// <inheritdoc/>
         public override bool Equals(object? obj) => obj is NVAPIEncoderSessionsInfoDto other && Equals(other);
-        public override int GetHashCode() => NVAPIGpuDtoHelpers.SequenceHashCode(RawData);
+        /// <inheritdoc/>
+        public override int GetHashCode()
+        {
+            var hash = HashCode.Combine(SessionsCount);
+            if (Sessions != null)
+                foreach (var s in Sessions)
+                    hash = (hash * 31) + s.GetHashCode();
+            return hash;
+        }
+        /// <summary>Equality operator.</summary>
         public static bool operator ==(NVAPIEncoderSessionsInfoDto left, NVAPIEncoderSessionsInfoDto right) => left.Equals(right);
+        /// <summary>Inequality operator.</summary>
         public static bool operator !=(NVAPIEncoderSessionsInfoDto left, NVAPIEncoderSessionsInfoDto right) => !left.Equals(right);
     }
 
@@ -3615,36 +4654,48 @@ namespace NVAPIWrapper
     /// </summary>
     public readonly struct NVAPIGpuVrReadyDto : IEquatable<NVAPIGpuVrReadyDto>
     {
-        public byte[] RawData { get; }
+        /// <summary>True if the GPU is VR-ready.</summary>
+        public bool IsVRReady { get; }
 
-        private NVAPIGpuVrReadyDto(byte[] rawData)
+        /// <summary>Initializes a new instance of <see cref="NVAPIGpuVrReadyDto"/>.</summary>
+        public NVAPIGpuVrReadyDto(bool isVRReady)
         {
-            RawData = rawData ?? Array.Empty<byte>();
+            IsVRReady = isVRReady;
         }
 
+        /// <summary>Creates a DTO from the native <see cref="_NV_GPU_VR_READY_V1"/> struct.</summary>
         public static NVAPIGpuVrReadyDto FromNative(_NV_GPU_VR_READY_V1 native)
         {
-            return new NVAPIGpuVrReadyDto(NVAPIGpuDtoHelpers.ToByteArray(native));
+            return new NVAPIGpuVrReadyDto(native.isVRReady != 0);
         }
 
+        /// <summary>Creates a default (zeroed) DTO with the correct version field.</summary>
         public static NVAPIGpuVrReadyDto CreateDefault()
         {
             return FromNative(new _NV_GPU_VR_READY_V1 { version = NVAPI.NV_GPU_VR_READY_VER });
         }
 
+        /// <summary>Converts this DTO back to the native <see cref="_NV_GPU_VR_READY_V1"/> struct.</summary>
         public _NV_GPU_VR_READY_V1 ToNative()
         {
-            return NVAPIGpuDtoHelpers.FromByteArray<_NV_GPU_VR_READY_V1>(RawData);
+            var native = new _NV_GPU_VR_READY_V1 { version = NVAPI.NV_GPU_VR_READY_VER };
+            native.isVRReady = IsVRReady ? 1u : 0u;
+            return native;
         }
 
+        /// <inheritdoc/>
         public bool Equals(NVAPIGpuVrReadyDto other)
         {
-            return NVAPIGpuDtoHelpers.SequenceEquals(RawData, other.RawData);
+            return IsVRReady == other.IsVRReady;
         }
 
+        /// <inheritdoc/>
         public override bool Equals(object? obj) => obj is NVAPIGpuVrReadyDto other && Equals(other);
-        public override int GetHashCode() => NVAPIGpuDtoHelpers.SequenceHashCode(RawData);
+        /// <inheritdoc/>
+        public override int GetHashCode() => HashCode.Combine(IsVRReady);
+        /// <summary>Equality operator.</summary>
         public static bool operator ==(NVAPIGpuVrReadyDto left, NVAPIGpuVrReadyDto right) => left.Equals(right);
+        /// <summary>Inequality operator.</summary>
         public static bool operator !=(NVAPIGpuVrReadyDto left, NVAPIGpuVrReadyDto right) => !left.Equals(right);
     }
 
@@ -3653,36 +4704,56 @@ namespace NVAPIWrapper
     /// </summary>
     public readonly struct NVAPIGpuGspInfoDto : IEquatable<NVAPIGpuGspInfoDto>
     {
-        public byte[] RawData { get; }
+        /// <summary>GSP firmware version string (null-terminated ASCII, up to 64 bytes).</summary>
+        public string FirmwareVersion { get; }
 
-        private NVAPIGpuGspInfoDto(byte[] rawData)
+        /// <summary>Initializes a new instance of <see cref="NVAPIGpuGspInfoDto"/>.</summary>
+        public NVAPIGpuGspInfoDto(string firmwareVersion)
         {
-            RawData = rawData ?? Array.Empty<byte>();
+            FirmwareVersion = firmwareVersion ?? string.Empty;
         }
 
+        /// <summary>Creates a DTO from the native <see cref="_NV_GPU_GSP_INFO_V1"/> struct.</summary>
         public static NVAPIGpuGspInfoDto FromNative(_NV_GPU_GSP_INFO_V1 native)
         {
-            return new NVAPIGpuGspInfoDto(NVAPIGpuDtoHelpers.ToByteArray(native));
+            Span<byte> span = native.firmwareVersion;
+            string version = System.Text.Encoding.ASCII.GetString(span).TrimEnd('\0');
+            return new NVAPIGpuGspInfoDto(version);
         }
 
+        /// <summary>Creates a default (zeroed) DTO with the correct version field.</summary>
         public static NVAPIGpuGspInfoDto CreateDefault()
         {
             return FromNative(new _NV_GPU_GSP_INFO_V1 { version = NVAPI.NV_GPU_GSP_INFO_VER });
         }
 
+        /// <summary>Converts this DTO back to the native <see cref="_NV_GPU_GSP_INFO_V1"/> struct.</summary>
         public _NV_GPU_GSP_INFO_V1 ToNative()
         {
-            return NVAPIGpuDtoHelpers.FromByteArray<_NV_GPU_GSP_INFO_V1>(RawData);
+            var native = new _NV_GPU_GSP_INFO_V1 { version = NVAPI.NV_GPU_GSP_INFO_VER };
+            if (!string.IsNullOrEmpty(FirmwareVersion))
+            {
+                byte[] bytes = System.Text.Encoding.ASCII.GetBytes(FirmwareVersion);
+                Span<byte> span = native.firmwareVersion;
+                int len = Math.Min(bytes.Length, span.Length - 1);
+                bytes.AsSpan(0, len).CopyTo(span);
+            }
+            return native;
         }
 
+        /// <inheritdoc/>
         public bool Equals(NVAPIGpuGspInfoDto other)
         {
-            return NVAPIGpuDtoHelpers.SequenceEquals(RawData, other.RawData);
+            return string.Equals(FirmwareVersion, other.FirmwareVersion, StringComparison.Ordinal);
         }
 
+        /// <inheritdoc/>
         public override bool Equals(object? obj) => obj is NVAPIGpuGspInfoDto other && Equals(other);
-        public override int GetHashCode() => NVAPIGpuDtoHelpers.SequenceHashCode(RawData);
+        /// <inheritdoc/>
+        public override int GetHashCode() => HashCode.Combine(FirmwareVersion);
+        /// <summary>Equality operator.</summary>
         public static bool operator ==(NVAPIGpuGspInfoDto left, NVAPIGpuGspInfoDto right) => left.Equals(right);
+        /// <summary>Inequality operator.</summary>
         public static bool operator !=(NVAPIGpuGspInfoDto left, NVAPIGpuGspInfoDto right) => !left.Equals(right);
     }
 
@@ -3691,36 +4762,81 @@ namespace NVAPIWrapper
     /// </summary>
     public readonly struct NVAPINvLinkCapsDto : IEquatable<NVAPINvLinkCapsDto>
     {
-        public byte[] RawData { get; }
+        /// <summary>NVLINK capabilities bitmask table.</summary>
+        public uint CapsTbl { get; }
+        /// <summary>Lowest supported NVLink version.</summary>
+        public byte LowestNvlinkVersion { get; }
+        /// <summary>Highest supported NVLink version.</summary>
+        public byte HighestNvlinkVersion { get; }
+        /// <summary>Lowest supported NCI version.</summary>
+        public byte LowestNciVersion { get; }
+        /// <summary>Highest supported NCI version.</summary>
+        public byte HighestNciVersion { get; }
+        /// <summary>Bitmask of active NVLink links.</summary>
+        public uint LinkMask { get; }
 
-        private NVAPINvLinkCapsDto(byte[] rawData)
+        /// <summary>Initializes a new instance of <see cref="NVAPINvLinkCapsDto"/>.</summary>
+        public NVAPINvLinkCapsDto(uint capsTbl, byte lowestNvlinkVersion, byte highestNvlinkVersion, byte lowestNciVersion, byte highestNciVersion, uint linkMask)
         {
-            RawData = rawData ?? Array.Empty<byte>();
+            CapsTbl = capsTbl;
+            LowestNvlinkVersion = lowestNvlinkVersion;
+            HighestNvlinkVersion = highestNvlinkVersion;
+            LowestNciVersion = lowestNciVersion;
+            HighestNciVersion = highestNciVersion;
+            LinkMask = linkMask;
         }
 
+        /// <summary>Creates a DTO from the native <see cref="NVLINK_GET_CAPS_V1"/> struct.</summary>
         public static NVAPINvLinkCapsDto FromNative(NVLINK_GET_CAPS_V1 native)
         {
-            return new NVAPINvLinkCapsDto(NVAPIGpuDtoHelpers.ToByteArray(native));
+            return new NVAPINvLinkCapsDto(
+                native.capsTbl,
+                native.lowestNvlinkVersion,
+                native.highestNvlinkVersion,
+                native.lowestNciVersion,
+                native.highestNciVersion,
+                native.linkMask);
         }
 
+        /// <summary>Creates a default (zeroed) DTO with the correct version field.</summary>
         public static NVAPINvLinkCapsDto CreateDefault()
         {
             return FromNative(new NVLINK_GET_CAPS_V1 { version = NVAPI.NVLINK_GET_CAPS_VER });
         }
 
+        /// <summary>Converts this DTO back to the native <see cref="NVLINK_GET_CAPS_V1"/> struct.</summary>
         public NVLINK_GET_CAPS_V1 ToNative()
         {
-            return NVAPIGpuDtoHelpers.FromByteArray<NVLINK_GET_CAPS_V1>(RawData);
+            return new NVLINK_GET_CAPS_V1
+            {
+                version = NVAPI.NVLINK_GET_CAPS_VER,
+                capsTbl = CapsTbl,
+                lowestNvlinkVersion = LowestNvlinkVersion,
+                highestNvlinkVersion = HighestNvlinkVersion,
+                lowestNciVersion = LowestNciVersion,
+                highestNciVersion = HighestNciVersion,
+                linkMask = LinkMask
+            };
         }
 
+        /// <inheritdoc/>
         public bool Equals(NVAPINvLinkCapsDto other)
         {
-            return NVAPIGpuDtoHelpers.SequenceEquals(RawData, other.RawData);
+            return CapsTbl == other.CapsTbl &&
+                   LowestNvlinkVersion == other.LowestNvlinkVersion &&
+                   HighestNvlinkVersion == other.HighestNvlinkVersion &&
+                   LowestNciVersion == other.LowestNciVersion &&
+                   HighestNciVersion == other.HighestNciVersion &&
+                   LinkMask == other.LinkMask;
         }
 
+        /// <inheritdoc/>
         public override bool Equals(object? obj) => obj is NVAPINvLinkCapsDto other && Equals(other);
-        public override int GetHashCode() => NVAPIGpuDtoHelpers.SequenceHashCode(RawData);
+        /// <inheritdoc/>
+        public override int GetHashCode() => HashCode.Combine(CapsTbl, LowestNvlinkVersion, HighestNvlinkVersion, LowestNciVersion, HighestNciVersion, LinkMask);
+        /// <summary>Equality operator.</summary>
         public static bool operator ==(NVAPINvLinkCapsDto left, NVAPINvLinkCapsDto right) => left.Equals(right);
+        /// <summary>Inequality operator.</summary>
         public static bool operator !=(NVAPINvLinkCapsDto left, NVAPINvLinkCapsDto right) => !left.Equals(right);
     }
 

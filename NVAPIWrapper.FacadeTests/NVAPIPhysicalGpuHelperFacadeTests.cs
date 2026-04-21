@@ -486,8 +486,9 @@ namespace NVAPIWrapper.FacadeTests
             Skip.If(info == null, "Encoder sessions info not supported.");
 
             var dto = info.Value;
-            var native = dto.ToNative();
-            Assert.Equal(NVAPI.NV_ENCODER_SESSIONS_INFO_VER, native.version);
+            Assert.NotNull(dto.Sessions);
+            // Sessions array length matches SessionsCount when the native pointer was valid
+            Assert.True(dto.Sessions.Length == (int)dto.SessionsCount || dto.Sessions.Length == 0);
             Assert.True(dto.Equals(dto));
             _ = dto.GetHashCode();
         }
