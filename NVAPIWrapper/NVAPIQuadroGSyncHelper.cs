@@ -427,14 +427,14 @@ namespace NVAPIWrapper
     /// <summary>
     /// DTO for G-Sync capabilities.
     /// </summary>
-    public readonly struct NVAPIGSyncCapabilitiesDto : IEquatable<NVAPIGSyncCapabilitiesDto>
+    public struct NVAPIGSyncCapabilitiesDto : IEquatable<NVAPIGSyncCapabilitiesDto>
     {
-        public uint BoardId { get; }
-        public uint Revision { get; }
-        public uint CapFlags { get; }
-        public uint ExtendedRevision { get; }
-        public bool IsMulDivSupported { get; }
-        public uint MaxMulDivValue { get; }
+        public uint BoardId { get; set; }
+        public uint Revision { get; set; }
+        public uint CapFlags { get; set; }
+        public uint ExtendedRevision { get; set; }
+        public bool IsMulDivSupported { get; set; }
+        public uint MaxMulDivValue { get; set; }
 
         /// <summary>
         /// Create a G-Sync capabilities DTO.
@@ -556,14 +556,14 @@ namespace NVAPIWrapper
     /// <summary>
     /// DTO for a G-Sync GPU entry in topology.
     /// </summary>
-    public readonly struct NVAPIGSyncGpuDto : IEquatable<NVAPIGSyncGpuDto>
+    public struct NVAPIGSyncGpuDto : IEquatable<NVAPIGSyncGpuDto>
     {
-        internal IntPtr PhysicalGpuHandle { get; }
-        internal IntPtr ProxyPhysicalGpuHandle { get; }
-        public NVAPIPhysicalGpuHelper PhysicalGpu { get; }
-        public NVAPIPhysicalGpuHelper? ProxyPhysicalGpu { get; }
-        public _NVAPI_GSYNC_GPU_TOPOLOGY_CONNECTOR Connector { get; }
-        public bool IsSynced { get; }
+        internal IntPtr PhysicalGpuHandle { get; set; }
+        internal IntPtr ProxyPhysicalGpuHandle { get; set; }
+        public NVAPIPhysicalGpuHelper PhysicalGpu { get; set; }
+        public NVAPIPhysicalGpuHelper? ProxyPhysicalGpu { get; set; }
+        public _NVAPI_GSYNC_GPU_TOPOLOGY_CONNECTOR Connector { get; set; }
+        public bool IsSynced { get; set; }
 
         /// <summary>
         /// Create a G-Sync GPU DTO.
@@ -722,11 +722,11 @@ namespace NVAPIWrapper
     /// <summary>
     /// DTO for a G-Sync display entry in topology.
     /// </summary>
-    public readonly struct NVAPIGSyncDisplayDto : IEquatable<NVAPIGSyncDisplayDto>
+    public struct NVAPIGSyncDisplayDto : IEquatable<NVAPIGSyncDisplayDto>
     {
-        public uint DisplayId { get; }
-        public bool IsMasterable { get; }
-        public _NVAPI_GSYNC_DISPLAY_SYNC_STATE SyncState { get; }
+        public uint DisplayId { get; set; }
+        public bool IsMasterable { get; set; }
+        public _NVAPI_GSYNC_DISPLAY_SYNC_STATE SyncState { get; set; }
 
         /// <summary>
         /// Create a G-Sync display DTO.
@@ -844,10 +844,10 @@ namespace NVAPIWrapper
     /// <summary>
     /// DTO for G-Sync topology results.
     /// </summary>
-    public readonly struct NVAPIGSyncTopologyDto : IEquatable<NVAPIGSyncTopologyDto>
+    public struct NVAPIGSyncTopologyDto : IEquatable<NVAPIGSyncTopologyDto>
     {
-        public NVAPIGSyncGpuDto[] Gpus { get; }
-        public NVAPIGSyncDisplayDto[] Displays { get; }
+        public NVAPIGSyncGpuDto[] Gpus { get; set; }
+        public NVAPIGSyncDisplayDto[] Displays { get; set; }
 
         /// <summary>
         /// Create a G-Sync topology DTO.
@@ -912,12 +912,12 @@ namespace NVAPIWrapper
     /// <summary>
     /// DTO for G-Sync delay.
     /// </summary>
-    public readonly struct NVAPIGSyncDelayDto : IEquatable<NVAPIGSyncDelayDto>
+    public struct NVAPIGSyncDelayDto : IEquatable<NVAPIGSyncDelayDto>
     {
-        public uint NumLines { get; }
-        public uint NumPixels { get; }
-        public uint MaxLines { get; }
-        public uint MinPixels { get; }
+        public uint NumLines { get; set; }
+        public uint NumPixels { get; set; }
+        public uint MaxLines { get; set; }
+        public uint MinPixels { get; set; }
 
         /// <summary>
         /// Create a G-Sync delay DTO.
@@ -1016,10 +1016,10 @@ namespace NVAPIWrapper
     /// <summary>
     /// DTO for adjusted delay results.
     /// </summary>
-    public readonly struct NVAPIGSyncAdjustedDelayDto : IEquatable<NVAPIGSyncAdjustedDelayDto>
+    public struct NVAPIGSyncAdjustedDelayDto : IEquatable<NVAPIGSyncAdjustedDelayDto>
     {
-        public NVAPIGSyncDelayDto Delay { get; }
-        public uint SyncSteps { get; }
+        public NVAPIGSyncDelayDto Delay { get; set; }
+        public uint SyncSteps { get; set; }
 
         /// <summary>
         /// Create a G-Sync adjusted delay DTO.
@@ -1083,18 +1083,18 @@ namespace NVAPIWrapper
     /// <summary>
     /// DTO for G-Sync control parameters.
     /// </summary>
-    public readonly struct NVAPIGSyncControlParametersDto : IEquatable<NVAPIGSyncControlParametersDto>
+    public struct NVAPIGSyncControlParametersDto : IEquatable<NVAPIGSyncControlParametersDto>
     {
-        public _NVAPI_GSYNC_POLARITY Polarity { get; }
-        public _NVAPI_GSYNC_VIDEO_MODE VideoMode { get; }
-        public uint Interval { get; }
-        public _NVAPI_GSYNC_SYNC_SOURCE Source { get; }
-        public bool InterlaceMode { get; }
-        public bool SyncSourceIsOutput { get; }
-        public NVAPIGSyncDelayDto SyncSkew { get; }
-        public NVAPIGSyncDelayDto StartupDelay { get; }
-        public _NVAPI_GSYNC_MULTIPLY_DIVIDE_MODE MultiplyDivideMode { get; }
-        public byte MultiplyDivideValue { get; }
+        public _NVAPI_GSYNC_POLARITY Polarity { get; set; }
+        public _NVAPI_GSYNC_VIDEO_MODE VideoMode { get; set; }
+        public uint Interval { get; set; }
+        public _NVAPI_GSYNC_SYNC_SOURCE Source { get; set; }
+        public bool InterlaceMode { get; set; }
+        public bool SyncSourceIsOutput { get; set; }
+        public NVAPIGSyncDelayDto SyncSkew { get; set; }
+        public NVAPIGSyncDelayDto StartupDelay { get; set; }
+        public _NVAPI_GSYNC_MULTIPLY_DIVIDE_MODE MultiplyDivideMode { get; set; }
+        public byte MultiplyDivideValue { get; set; }
 
         /// <summary>
         /// Create a G-Sync control parameters DTO.
@@ -1246,11 +1246,11 @@ namespace NVAPIWrapper
     /// <summary>
     /// DTO for sync status.
     /// </summary>
-    public readonly struct NVAPIGSyncSyncStatusDto : IEquatable<NVAPIGSyncSyncStatusDto>
+    public struct NVAPIGSyncSyncStatusDto : IEquatable<NVAPIGSyncSyncStatusDto>
     {
-        public bool IsSynced { get; }
-        public bool IsStereoSynced { get; }
-        public bool IsSyncSignalAvailable { get; }
+        public bool IsSynced { get; set; }
+        public bool IsStereoSynced { get; set; }
+        public bool IsSyncSignalAvailable { get; set; }
 
         /// <summary>
         /// Create a G-Sync sync status DTO.
@@ -1347,14 +1347,14 @@ namespace NVAPIWrapper
     /// <summary>
     /// DTO for G-Sync status parameters.
     /// </summary>
-    public readonly struct NVAPIGSyncStatusParametersDto : IEquatable<NVAPIGSyncStatusParametersDto>
+    public struct NVAPIGSyncStatusParametersDto : IEquatable<NVAPIGSyncStatusParametersDto>
     {
-        public uint RefreshRate { get; }
-        public _NVAPI_GSYNC_RJ45_IO[] Rj45Io { get; }
-        public uint[] Rj45Ethernet { get; }
-        public uint HouseSyncIncoming { get; }
-        public bool IsHouseSyncConnected { get; }
-        public bool IsInternalSlave { get; }
+        public uint RefreshRate { get; set; }
+        public _NVAPI_GSYNC_RJ45_IO[] Rj45Io { get; set; }
+        public uint[] Rj45Ethernet { get; set; }
+        public uint HouseSyncIncoming { get; set; }
+        public bool IsHouseSyncConnected { get; set; }
+        public bool IsInternalSlave { get; set; }
 
         /// <summary>
         /// Create a G-Sync status parameters DTO.

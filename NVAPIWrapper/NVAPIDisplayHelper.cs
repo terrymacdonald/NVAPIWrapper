@@ -2624,12 +2624,12 @@ namespace NVAPIWrapper
             /// <summary>
             /// Gets the native path info pointer.
             /// </summary>
-            public unsafe _NV_DISPLAYCONFIG_PATH_INFO* PathInfo { get; }
+            public unsafe _NV_DISPLAYCONFIG_PATH_INFO* PathInfo { get; set; }
 
             /// <summary>
             /// Gets the number of paths allocated in the buffer.
             /// </summary>
-            public uint PathCount { get; }
+            public uint PathCount { get; set; }
 
             /// <summary>
             /// Initialize a new display configuration buffer for a given number of paths.
@@ -4012,16 +4012,16 @@ namespace NVAPIWrapper
     /// <summary>
     /// DTO for EDID data and flags.
     /// </summary>
-    public readonly struct NVAPIDisplayEdidDataDto : IEquatable<NVAPIDisplayEdidDataDto>
+    public struct NVAPIDisplayEdidDataDto : IEquatable<NVAPIDisplayEdidDataDto>
     {
         /// <summary>EDID data bytes.</summary>
-        public byte[] Data { get; }
+        public byte[] Data { get; set; }
 
         /// <summary>EDID flags used when retrieving the data.</summary>
-        public NV_EDID_FLAG Flags { get; }
+        public NV_EDID_FLAG Flags { get; set; }
 
         /// <summary>Reported EDID size.</summary>
-        public uint SizeOfEdid { get; }
+        public uint SizeOfEdid { get; set; }
 
         /// <summary>Create an EDID data DTO.</summary>
         public NVAPIDisplayEdidDataDto(byte[] data, NV_EDID_FLAG flags, uint sizeOfEdid)
@@ -4112,22 +4112,22 @@ namespace NVAPIWrapper
     /// <summary>
     /// DTO for timing input data.
     /// </summary>
-    public readonly struct NVAPITimingInputDto : IEquatable<NVAPITimingInputDto>
+    public struct NVAPITimingInputDto : IEquatable<NVAPITimingInputDto>
     {
         /// <summary>Visible width.</summary>
-        public uint Width { get; }
+        public uint Width { get; set; }
 
         /// <summary>Visible height.</summary>
-        public uint Height { get; }
+        public uint Height { get; set; }
 
         /// <summary>Refresh rate.</summary>
-        public float RefreshRate { get; }
+        public float RefreshRate { get; set; }
 
         /// <summary>Timing flags.</summary>
-        public NV_TIMING_FLAG Flag { get; }
+        public NV_TIMING_FLAG Flag { get; set; }
 
         /// <summary>Timing override type.</summary>
-        public _NV_TIMING_OVERRIDE OverrideType { get; }
+        public _NV_TIMING_OVERRIDE OverrideType { get; set; }
 
         /// <summary>Create a timing input DTO.</summary>
         public NVAPITimingInputDto(uint width, uint height, float refreshRate, NV_TIMING_FLAG flag, _NV_TIMING_OVERRIDE overrideType)
@@ -4207,10 +4207,10 @@ namespace NVAPIWrapper
     /// <summary>
     /// DTO for monitor capabilities.
     /// </summary>
-    public readonly struct NVAPIMonitorCapabilitiesDto : IEquatable<NVAPIMonitorCapabilitiesDto>
+    public struct NVAPIMonitorCapabilitiesDto : IEquatable<NVAPIMonitorCapabilitiesDto>
     {
         /// <summary>Native monitor capabilities.</summary>
-        public _NV_MONITOR_CAPABILITIES_V1 Capabilities { get; }
+        public _NV_MONITOR_CAPABILITIES_V1 Capabilities { get; set; }
 
         /// <summary>Create a monitor capabilities DTO.</summary>
         public NVAPIMonitorCapabilitiesDto(_NV_MONITOR_CAPABILITIES_V1 capabilities)
@@ -4262,7 +4262,7 @@ namespace NVAPIWrapper
     /// <summary>
     /// DTO for monitor color capabilities collection.
     /// </summary>
-    public readonly struct NVAPIMonitorColorCapabilitiesDto : IEquatable<NVAPIMonitorColorCapabilitiesDto>
+    public struct NVAPIMonitorColorCapabilitiesDto : IEquatable<NVAPIMonitorColorCapabilitiesDto>
     {
         private readonly _NV_MONITOR_COLOR_DATA[]? _capabilities;
         /// <summary>Color capability entries. Empty array when no capabilities are present.</summary>
@@ -4321,10 +4321,10 @@ namespace NVAPIWrapper
     /// <summary>
     /// DTO for display port info.
     /// </summary>
-    public readonly struct NVAPIDisplayPortInfoDto : IEquatable<NVAPIDisplayPortInfoDto>
+    public struct NVAPIDisplayPortInfoDto : IEquatable<NVAPIDisplayPortInfoDto>
     {
         /// <summary>Native display port info.</summary>
-        public _NV_DISPLAY_PORT_INFO_V1 Info { get; }
+        public _NV_DISPLAY_PORT_INFO_V1 Info { get; set; }
 
         /// <summary>Create a display port info DTO.</summary>
         public NVAPIDisplayPortInfoDto(_NV_DISPLAY_PORT_INFO_V1 info)
@@ -4376,10 +4376,10 @@ namespace NVAPIWrapper
     /// <summary>
     /// DTO for display port configuration.
     /// </summary>
-    public readonly struct NVAPIDisplayPortConfigDto : IEquatable<NVAPIDisplayPortConfigDto>
+    public struct NVAPIDisplayPortConfigDto : IEquatable<NVAPIDisplayPortConfigDto>
     {
         /// <summary>Native display port config.</summary>
-        public NV_DISPLAY_PORT_CONFIG Config { get; }
+        public NV_DISPLAY_PORT_CONFIG Config { get; set; }
 
         /// <summary>Create a display port config DTO.</summary>
         public NVAPIDisplayPortConfigDto(NV_DISPLAY_PORT_CONFIG config)
@@ -4431,10 +4431,10 @@ namespace NVAPIWrapper
     /// <summary>
     /// DTO for HDMI support info.
     /// </summary>
-    public readonly struct NVAPIDisplayHdmiSupportInfoDto : IEquatable<NVAPIDisplayHdmiSupportInfoDto>
+    public struct NVAPIDisplayHdmiSupportInfoDto : IEquatable<NVAPIDisplayHdmiSupportInfoDto>
     {
         /// <summary>Native HDMI support info.</summary>
-        public _NV_HDMI_SUPPORT_INFO_V2 Info { get; }
+        public _NV_HDMI_SUPPORT_INFO_V2 Info { get; set; }
 
         /// <summary>Create an HDMI support info DTO.</summary>
         public NVAPIDisplayHdmiSupportInfoDto(_NV_HDMI_SUPPORT_INFO_V2 info)
@@ -4486,10 +4486,10 @@ namespace NVAPIWrapper
     /// <summary>
     /// DTO for supported display view modes.
     /// </summary>
-    public readonly struct NVAPISupportedViewsDto : IEquatable<NVAPISupportedViewsDto>
+    public struct NVAPISupportedViewsDto : IEquatable<NVAPISupportedViewsDto>
     {
         /// <summary>Supported view modes.</summary>
-        public _NV_TARGET_VIEW_MODE[] Views { get; }
+        public _NV_TARGET_VIEW_MODE[] Views { get; set; }
 
         /// <summary>Create a supported views DTO.</summary>
         public NVAPISupportedViewsDto(_NV_TARGET_VIEW_MODE[] views)
@@ -4544,10 +4544,10 @@ namespace NVAPIWrapper
     /// <summary>
     /// DTO for VRR info.
     /// </summary>
-    public readonly struct NVAPIVrrInfoDto : IEquatable<NVAPIVrrInfoDto>
+    public struct NVAPIVrrInfoDto : IEquatable<NVAPIVrrInfoDto>
     {
         /// <summary>Native VRR info.</summary>
-        public _NV_GET_VRR_INFO_V1 Info { get; }
+        public _NV_GET_VRR_INFO_V1 Info { get; set; }
 
         /// <summary>Create a VRR info DTO.</summary>
         public NVAPIVrrInfoDto(_NV_GET_VRR_INFO_V1 info)
@@ -4599,10 +4599,10 @@ namespace NVAPIWrapper
     /// <summary>
     /// DTO for adaptive sync GET data.
     /// </summary>
-    public readonly struct NVAPIAdaptiveSyncGetDataDto : IEquatable<NVAPIAdaptiveSyncGetDataDto>
+    public struct NVAPIAdaptiveSyncGetDataDto : IEquatable<NVAPIAdaptiveSyncGetDataDto>
     {
         /// <summary>Native adaptive sync GET data.</summary>
-        public _NV_GET_ADAPTIVE_SYNC_DATA_V1 Data { get; }
+        public _NV_GET_ADAPTIVE_SYNC_DATA_V1 Data { get; set; }
 
         /// <summary>Create an adaptive sync GET DTO.</summary>
         public NVAPIAdaptiveSyncGetDataDto(_NV_GET_ADAPTIVE_SYNC_DATA_V1 data)
@@ -4654,10 +4654,10 @@ namespace NVAPIWrapper
     /// <summary>
     /// DTO for adaptive sync SET data.
     /// </summary>
-    public readonly struct NVAPIAdaptiveSyncSetDataDto : IEquatable<NVAPIAdaptiveSyncSetDataDto>
+    public struct NVAPIAdaptiveSyncSetDataDto : IEquatable<NVAPIAdaptiveSyncSetDataDto>
     {
         /// <summary>Native adaptive sync SET data.</summary>
-        public _NV_SET_ADAPTIVE_SYNC_DATA_V1 Data { get; }
+        public _NV_SET_ADAPTIVE_SYNC_DATA_V1 Data { get; set; }
 
         /// <summary>Create an adaptive sync SET DTO.</summary>
         public NVAPIAdaptiveSyncSetDataDto(_NV_SET_ADAPTIVE_SYNC_DATA_V1 data)
@@ -4709,19 +4709,19 @@ namespace NVAPIWrapper
     /// <summary>
     /// DTO for virtual refresh rate data.
     /// </summary>
-    public readonly struct NVAPIVirtualRefreshRateDataDto : IEquatable<NVAPIVirtualRefreshRateDataDto>
+    public struct NVAPIVirtualRefreshRateDataDto : IEquatable<NVAPIVirtualRefreshRateDataDto>
     {
         /// <summary>Frame interval (microseconds).</summary>
-        public uint FrameIntervalUs { get; }
+        public uint FrameIntervalUs { get; set; }
 
         /// <summary>Refresh rate in 1/1000 Hz.</summary>
-        public uint RefreshRate1K { get; }
+        public uint RefreshRate1K { get; set; }
 
         /// <summary>Gaming VRR flag.</summary>
-        public bool IsGamingVrr { get; }
+        public bool IsGamingVrr { get; set; }
 
         /// <summary>Frame interval (nanoseconds).</summary>
-        public ulong FrameIntervalNs { get; }
+        public ulong FrameIntervalNs { get; set; }
 
         /// <summary>Create a virtual refresh rate DTO.</summary>
         public NVAPIVirtualRefreshRateDataDto(uint frameIntervalUs, uint refreshRate1K, bool isGamingVrr, ulong frameIntervalNs)
@@ -4801,10 +4801,10 @@ namespace NVAPIWrapper
     /// <summary>
     /// DTO for infoframe data.
     /// </summary>
-    public readonly struct NVAPIInfoFrameDataDto : IEquatable<NVAPIInfoFrameDataDto>
+    public struct NVAPIInfoFrameDataDto : IEquatable<NVAPIInfoFrameDataDto>
     {
         /// <summary>Native infoframe data.</summary>
-        public NV_INFOFRAME_DATA Data { get; }
+        public NV_INFOFRAME_DATA Data { get; set; }
 
         /// <summary>Create an infoframe data DTO.</summary>
         public NVAPIInfoFrameDataDto(NV_INFOFRAME_DATA data)
@@ -4861,10 +4861,10 @@ namespace NVAPIWrapper
     /// <summary>
     /// DTO for display color data.
     /// </summary>
-    public readonly struct NVAPIDisplayColorDataDto : IEquatable<NVAPIDisplayColorDataDto>
+    public struct NVAPIDisplayColorDataDto : IEquatable<NVAPIDisplayColorDataDto>
     {
         /// <summary>Native color data.</summary>
-        public _NV_COLOR_DATA_V5 Data { get; }
+        public _NV_COLOR_DATA_V5 Data { get; set; }
 
         /// <summary>Create a display color data DTO.</summary>
         public NVAPIDisplayColorDataDto(_NV_COLOR_DATA_V5 data)
@@ -4921,10 +4921,10 @@ namespace NVAPIWrapper
     /// <summary>
     /// DTO for HDR capabilities.
     /// </summary>
-    public readonly struct NVAPIHdrCapabilitiesDto : IEquatable<NVAPIHdrCapabilitiesDto>
+    public struct NVAPIHdrCapabilitiesDto : IEquatable<NVAPIHdrCapabilitiesDto>
     {
         /// <summary>Native HDR capabilities.</summary>
-        public _NV_HDR_CAPABILITIES_V3 Capabilities { get; }
+        public _NV_HDR_CAPABILITIES_V3 Capabilities { get; set; }
 
         /// <summary>Create an HDR capabilities DTO.</summary>
         public NVAPIHdrCapabilitiesDto(_NV_HDR_CAPABILITIES_V3 capabilities)
@@ -4987,10 +4987,10 @@ namespace NVAPIWrapper
     /// <summary>
     /// DTO for HDR color data.
     /// </summary>
-    public readonly struct NVAPIHdrColorDataDto : IEquatable<NVAPIHdrColorDataDto>
+    public struct NVAPIHdrColorDataDto : IEquatable<NVAPIHdrColorDataDto>
     {
         /// <summary>Native HDR color data.</summary>
-        public _NV_HDR_COLOR_DATA_V2 Data { get; }
+        public _NV_HDR_COLOR_DATA_V2 Data { get; set; }
 
         /// <summary>Create an HDR color data DTO.</summary>
         public NVAPIHdrColorDataDto(_NV_HDR_COLOR_DATA_V2 data)
@@ -5042,10 +5042,10 @@ namespace NVAPIWrapper
     /// <summary>
     /// DTO for HDR metadata.
     /// </summary>
-    public readonly struct NVAPIHdrMetadataDto : IEquatable<NVAPIHdrMetadataDto>
+    public struct NVAPIHdrMetadataDto : IEquatable<NVAPIHdrMetadataDto>
     {
         /// <summary>Native HDR metadata.</summary>
-        public _NV_HDR_METADATA_V1 Metadata { get; }
+        public _NV_HDR_METADATA_V1 Metadata { get; set; }
 
         /// <summary>Create an HDR metadata DTO.</summary>
         public NVAPIHdrMetadataDto(_NV_HDR_METADATA_V1 metadata)
@@ -5097,10 +5097,10 @@ namespace NVAPIWrapper
     /// <summary>
     /// DTO for display colorimetry.
     /// </summary>
-    public readonly struct NVAPIDisplayColorimetryDto : IEquatable<NVAPIDisplayColorimetryDto>
+    public struct NVAPIDisplayColorimetryDto : IEquatable<NVAPIDisplayColorimetryDto>
     {
         /// <summary>Native display colorimetry.</summary>
-        public _NV_DISPLAY_COLORIMETRY_V1 Colorimetry { get; }
+        public _NV_DISPLAY_COLORIMETRY_V1 Colorimetry { get; set; }
 
         /// <summary>Create a display colorimetry DTO.</summary>
         public NVAPIDisplayColorimetryDto(_NV_DISPLAY_COLORIMETRY_V1 colorimetry)
@@ -5152,10 +5152,10 @@ namespace NVAPIWrapper
     /// <summary>
     /// DTO for custom display.
     /// </summary>
-    public readonly struct NVAPICustomDisplayDto : IEquatable<NVAPICustomDisplayDto>
+    public struct NVAPICustomDisplayDto : IEquatable<NVAPICustomDisplayDto>
     {
         /// <summary>Native custom display.</summary>
-        public NV_CUSTOM_DISPLAY CustomDisplay { get; }
+        public NV_CUSTOM_DISPLAY CustomDisplay { get; set; }
 
         /// <summary>Create a custom display DTO.</summary>
         public NVAPICustomDisplayDto(NV_CUSTOM_DISPLAY customDisplay)
@@ -5207,16 +5207,16 @@ namespace NVAPIWrapper
     /// <summary>
     /// DTO for NVIDIA managed dedicated display info.
     /// </summary>
-    public readonly struct NVAPINvManagedDedicatedDisplayInfoDto : IEquatable<NVAPINvManagedDedicatedDisplayInfoDto>
+    public struct NVAPINvManagedDedicatedDisplayInfoDto : IEquatable<NVAPINvManagedDedicatedDisplayInfoDto>
     {
         /// <summary>Display ID.</summary>
-        public uint DisplayId { get; }
+        public uint DisplayId { get; set; }
 
         /// <summary>True if acquired by another process.</summary>
-        public bool IsAcquired { get; }
+        public bool IsAcquired { get; set; }
 
         /// <summary>True if part of a Mosaic grid.</summary>
-        public bool IsMosaic { get; }
+        public bool IsMosaic { get; set; }
 
         /// <summary>Create a managed dedicated display info DTO.</summary>
         public NVAPINvManagedDedicatedDisplayInfoDto(uint displayId, bool isAcquired, bool isMosaic)
@@ -5291,19 +5291,19 @@ namespace NVAPIWrapper
     /// <summary>
     /// DTO for NVIDIA managed dedicated display metadata.
     /// </summary>
-    public readonly struct NVAPINvManagedDedicatedDisplayMetadataDto : IEquatable<NVAPINvManagedDedicatedDisplayMetadataDto>
+    public struct NVAPINvManagedDedicatedDisplayMetadataDto : IEquatable<NVAPINvManagedDedicatedDisplayMetadataDto>
     {
-        public uint DisplayId { get; }
-        public bool SetPosition { get; }
-        public bool RemovePosition { get; }
-        public bool PositionIsAvailable { get; }
-        public bool SetName { get; }
-        public bool RemoveName { get; }
-        public bool NameIsAvailable { get; }
-        public uint Reserved { get; }
-        public int PositionX { get; }
-        public int PositionY { get; }
-        public string Name { get; }
+        public uint DisplayId { get; set; }
+        public bool SetPosition { get; set; }
+        public bool RemovePosition { get; set; }
+        public bool PositionIsAvailable { get; set; }
+        public bool SetName { get; set; }
+        public bool RemoveName { get; set; }
+        public bool NameIsAvailable { get; set; }
+        public uint Reserved { get; set; }
+        public int PositionX { get; set; }
+        public int PositionY { get; set; }
+        public string Name { get; set; }
 
         /// <summary>
         /// Create a managed dedicated display metadata DTO.
@@ -5463,11 +5463,11 @@ namespace NVAPIWrapper
     /// <summary>
     /// DTO for display ID info data.
     /// </summary>
-    public readonly struct NVAPIDisplayIdInfoDto : IEquatable<NVAPIDisplayIdInfoDto>
+    public struct NVAPIDisplayIdInfoDto : IEquatable<NVAPIDisplayIdInfoDto>
     {
-        public long AdapterLuid { get; }
-        public uint TargetId { get; }
-        public uint[] Reserved { get; }
+        public long AdapterLuid { get; set;}
+        public uint TargetId { get; set;}
+        public uint[] Reserved { get; set; }
 
         /// <summary>
         /// Create a display ID info DTO.
@@ -5577,13 +5577,13 @@ namespace NVAPIWrapper
     /// <summary>
     /// DTO for target info data.
     /// </summary>
-    public readonly struct NVAPITargetInfoDto : IEquatable<NVAPITargetInfoDto>
+    public struct NVAPITargetInfoDto : IEquatable<NVAPITargetInfoDto>
     {
-        public long AdapterLuid { get; }
-        public uint TargetId { get; }
-        public uint[] DisplayIds { get; }
-        public uint DisplayIdCount { get; }
-        public uint[] Reserved { get; }
+        public long AdapterLuid { get; set; }
+        public uint TargetId { get; set; }
+        public uint[] DisplayIds { get; set; }
+        public uint DisplayIdCount { get; set; }
+        public uint[] Reserved { get; set; }
 
         /// <summary>
         /// Create a target info DTO.
@@ -5719,10 +5719,10 @@ namespace NVAPIWrapper
     /// <summary>
     /// DTO for preferred stereo display.
     /// </summary>
-    public readonly struct NVAPIPreferredStereoDisplayDto : IEquatable<NVAPIPreferredStereoDisplayDto>
+    public struct NVAPIPreferredStereoDisplayDto : IEquatable<NVAPIPreferredStereoDisplayDto>
     {
         /// <summary>Display ID.</summary>
-        public uint DisplayId { get; }
+        public uint DisplayId { get; set; }
 
         /// <summary>Create a preferred stereo display DTO.</summary>
         public NVAPIPreferredStereoDisplayDto(uint displayId)
@@ -5772,11 +5772,11 @@ namespace NVAPIWrapper
     /// <summary>
     /// DTO for GPU and output ID from a display ID.
     /// </summary>
-    public readonly struct NVAPIGpuAndOutputIdDto : IEquatable<NVAPIGpuAndOutputIdDto>
+    public struct NVAPIGpuAndOutputIdDto : IEquatable<NVAPIGpuAndOutputIdDto>
     {
-        internal IntPtr Handle { get; }
-        public NVAPIPhysicalGpuHelper PhysicalGpu { get; }
-        public uint OutputId { get; }
+        internal IntPtr Handle { get; set; }
+        public NVAPIPhysicalGpuHelper PhysicalGpu { get; set; }
+        public uint OutputId { get; set; }
 
         internal NVAPIGpuAndOutputIdDto(IntPtr handle, NVAPIPhysicalGpuHelper physicalGpu, uint outputId)
         {
@@ -5954,10 +5954,10 @@ namespace NVAPIWrapper
     /// <summary>
     /// Scanout configuration DTO.
     /// </summary>
-    public readonly struct NVAPIGpuScanoutConfigurationDto : IEquatable<NVAPIGpuScanoutConfigurationDto>
+    public struct NVAPIGpuScanoutConfigurationDto : IEquatable<NVAPIGpuScanoutConfigurationDto>
     {
-        public NVAPISBoxDto DesktopRect { get; }
-        public NVAPISBoxDto ScanoutRect { get; }
+        public NVAPISBoxDto DesktopRect { get; set; }
+        public NVAPISBoxDto ScanoutRect { get; set; }
 
         public NVAPIGpuScanoutConfigurationDto(NVAPISBoxDto desktopRect, NVAPISBoxDto scanoutRect)
         {
@@ -5986,15 +5986,15 @@ namespace NVAPIWrapper
     /// <summary>
     /// Extended scanout configuration DTO.
     /// </summary>
-    public readonly struct NVAPIGpuScanoutConfigurationExDto : IEquatable<NVAPIGpuScanoutConfigurationExDto>
+    public struct NVAPIGpuScanoutConfigurationExDto : IEquatable<NVAPIGpuScanoutConfigurationExDto>
     {
-        public NVAPISBoxDto SourceDesktopRect { get; }
-        public NVAPISBoxDto SourceViewportRect { get; }
-        public NVAPISBoxDto TargetViewportRect { get; }
-        public uint TargetDisplayWidth { get; }
-        public uint TargetDisplayHeight { get; }
-        public uint CloneImportance { get; }
-        public _NV_ROTATE SourceToTargetRotation { get; }
+        public NVAPISBoxDto SourceDesktopRect { get; set; }
+        public NVAPISBoxDto SourceViewportRect { get; set; }
+        public NVAPISBoxDto TargetViewportRect { get; set; }
+        public uint TargetDisplayWidth { get; set; }
+        public uint TargetDisplayHeight { get; set; }
+        public uint CloneImportance { get; set; }
+        public _NV_ROTATE SourceToTargetRotation { get; set; }
 
         public NVAPIGpuScanoutConfigurationExDto(
             NVAPISBoxDto sourceDesktopRect,
@@ -6061,11 +6061,11 @@ namespace NVAPIWrapper
     /// <summary>
     /// Scanout composition parameter DTO.
     /// </summary>
-    public readonly struct NVAPIGpuScanoutCompositionParameterDto : IEquatable<NVAPIGpuScanoutCompositionParameterDto>
+    public struct NVAPIGpuScanoutCompositionParameterDto : IEquatable<NVAPIGpuScanoutCompositionParameterDto>
     {
-        public NV_GPU_SCANOUT_COMPOSITION_PARAMETER Parameter { get; }
-        public NV_GPU_SCANOUT_COMPOSITION_PARAMETER_VALUE Value { get; }
-        public float Container { get; }
+        public NV_GPU_SCANOUT_COMPOSITION_PARAMETER Parameter { get; set; }
+        public NV_GPU_SCANOUT_COMPOSITION_PARAMETER_VALUE Value { get; set; }
+        public float Container { get; set; }
 
         public NVAPIGpuScanoutCompositionParameterDto(
             NV_GPU_SCANOUT_COMPOSITION_PARAMETER parameter,
@@ -6091,9 +6091,9 @@ namespace NVAPIWrapper
     /// <summary>
     /// Scanout intensity state DTO.
     /// </summary>
-    public readonly struct NVAPIGpuScanoutIntensityStateDto : IEquatable<NVAPIGpuScanoutIntensityStateDto>
+    public struct NVAPIGpuScanoutIntensityStateDto : IEquatable<NVAPIGpuScanoutIntensityStateDto>
     {
-        public bool IsEnabled { get; }
+        public bool IsEnabled { get; set; }
 
         public NVAPIGpuScanoutIntensityStateDto(bool isEnabled)
         {
@@ -6128,13 +6128,13 @@ namespace NVAPIWrapper
     /// <summary>
     /// Scanout intensity data DTO.
     /// </summary>
-    public readonly struct NVAPIGpuScanoutIntensityDataDto : IEquatable<NVAPIGpuScanoutIntensityDataDto>
+    public struct NVAPIGpuScanoutIntensityDataDto : IEquatable<NVAPIGpuScanoutIntensityDataDto>
     {
-        public uint Width { get; }
-        public uint Height { get; }
-        public float[] BlendingTexture { get; }
-        public float[] OffsetTexture { get; }
-        public uint OffsetTexChannels { get; }
+        public uint Width { get; set; }
+        public uint Height { get; set; }
+        public float[] BlendingTexture { get; set; }
+        public float[] OffsetTexture { get; set; }
+        public uint OffsetTexChannels { get; set; }
 
         public NVAPIGpuScanoutIntensityDataDto(
             uint width,
@@ -6193,9 +6193,9 @@ namespace NVAPIWrapper
     /// <summary>
     /// Scanout intensity result DTO.
     /// </summary>
-    public readonly struct NVAPIGpuScanoutIntensityResultDto : IEquatable<NVAPIGpuScanoutIntensityResultDto>
+    public struct NVAPIGpuScanoutIntensityResultDto : IEquatable<NVAPIGpuScanoutIntensityResultDto>
     {
-        public bool IsSticky { get; }
+        public bool IsSticky { get; set; }
 
         public NVAPIGpuScanoutIntensityResultDto(bool isSticky)
         {
@@ -6216,9 +6216,9 @@ namespace NVAPIWrapper
     /// <summary>
     /// Scanout warping state DTO.
     /// </summary>
-    public readonly struct NVAPIGpuScanoutWarpingStateDto : IEquatable<NVAPIGpuScanoutWarpingStateDto>
+    public struct NVAPIGpuScanoutWarpingStateDto : IEquatable<NVAPIGpuScanoutWarpingStateDto>
     {
-        public bool IsEnabled { get; }
+        public bool IsEnabled { get; set; }
 
         public NVAPIGpuScanoutWarpingStateDto(bool isEnabled)
         {
@@ -6253,12 +6253,12 @@ namespace NVAPIWrapper
     /// <summary>
     /// Scanout warping data DTO.
     /// </summary>
-    public readonly struct NVAPIGpuScanoutWarpingDataDto : IEquatable<NVAPIGpuScanoutWarpingDataDto>
+    public struct NVAPIGpuScanoutWarpingDataDto : IEquatable<NVAPIGpuScanoutWarpingDataDto>
     {
-        public float[] Vertices { get; }
-        public NV_GPU_WARPING_VERTICE_FORMAT VertexFormat { get; }
-        public int NumVertices { get; }
-        public NVAPISBoxDto? TextureRect { get; }
+        public float[] Vertices { get; set; }
+        public NV_GPU_WARPING_VERTICE_FORMAT VertexFormat { get; set; }
+        public int NumVertices { get; set; }
+        public NVAPISBoxDto? TextureRect { get; set; }
 
         public NVAPIGpuScanoutWarpingDataDto(
             float[] vertices,
@@ -6312,10 +6312,10 @@ namespace NVAPIWrapper
     /// <summary>
     /// Scanout warping result DTO.
     /// </summary>
-    public readonly struct NVAPIGpuScanoutWarpingResultDto : IEquatable<NVAPIGpuScanoutWarpingResultDto>
+    public struct NVAPIGpuScanoutWarpingResultDto : IEquatable<NVAPIGpuScanoutWarpingResultDto>
     {
-        public int MaxNumVertices { get; }
-        public bool IsSticky { get; }
+        public int MaxNumVertices { get; set; }
+        public bool IsSticky { get; set; }
 
         public NVAPIGpuScanoutWarpingResultDto(int maxNumVertices, bool isSticky)
         {

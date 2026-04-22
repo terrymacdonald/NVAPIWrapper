@@ -582,10 +582,10 @@ namespace NVAPIWrapper
     /// <summary>
     /// Snapshot of supported Mosaic topology data.
     /// </summary>
-    public readonly struct NVAPIMosaicSupportedTopoInfoDto : IEquatable<NVAPIMosaicSupportedTopoInfoDto>
+    public struct NVAPIMosaicSupportedTopoInfoDto : IEquatable<NVAPIMosaicSupportedTopoInfoDto>
     {
-        public NVAPIMosaicTopoBriefDto[] TopoBriefs { get; }
-        public NVAPIMosaicDisplaySettingDto[] DisplaySettings { get; }
+        public NVAPIMosaicTopoBriefDto[] TopoBriefs { get; set; }
+        public NVAPIMosaicDisplaySettingDto[] DisplaySettings { get; set; }
 
         /// <summary>
         /// Create a supported topology info DTO.
@@ -677,11 +677,11 @@ namespace NVAPIWrapper
     /// <summary>
     /// Mosaic topology brief DTO.
     /// </summary>
-    public readonly struct NVAPIMosaicTopoBriefDto : IEquatable<NVAPIMosaicTopoBriefDto>
+    public struct NVAPIMosaicTopoBriefDto : IEquatable<NVAPIMosaicTopoBriefDto>
     {
-        public NV_MOSAIC_TOPO Topo { get; }
-        public bool Enabled { get; }
-        public bool IsPossible { get; }
+        public NV_MOSAIC_TOPO Topo { get; set; }
+        public bool Enabled { get; set; }
+        public bool IsPossible { get; set; }
 
         /// <summary>
         /// Create a Mosaic topology brief DTO.
@@ -773,13 +773,13 @@ namespace NVAPIWrapper
     /// <summary>
     /// Mosaic display setting DTO (v2).
     /// </summary>
-    public readonly struct NVAPIMosaicDisplaySettingDto : IEquatable<NVAPIMosaicDisplaySettingDto>
+    public struct NVAPIMosaicDisplaySettingDto : IEquatable<NVAPIMosaicDisplaySettingDto>
     {
-        public uint Width { get; }
-        public uint Height { get; }
-        public uint BitsPerPixel { get; }
-        public uint Frequency { get; }
-        public uint RefreshRate1K { get; }
+        public uint Width { get; set; }
+        public uint Height { get; set; }
+        public uint BitsPerPixel { get; set; }
+        public uint Frequency { get; set; }
+        public uint RefreshRate1K { get; set; }
 
         /// <summary>
         /// Create a Mosaic display setting DTO.
@@ -909,12 +909,12 @@ namespace NVAPIWrapper
     /// <summary>
     /// Mosaic overlap limits DTO.
     /// </summary>
-    public readonly struct NVAPIMosaicOverlapLimitsDto : IEquatable<NVAPIMosaicOverlapLimitsDto>
+    public struct NVAPIMosaicOverlapLimitsDto : IEquatable<NVAPIMosaicOverlapLimitsDto>
     {
-        public int MinOverlapX { get; }
-        public int MaxOverlapX { get; }
-        public int MinOverlapY { get; }
-        public int MaxOverlapY { get; }
+        public int MinOverlapX { get; set; }
+        public int MaxOverlapX { get; set; }
+        public int MinOverlapY { get; set; }
+        public int MaxOverlapY { get; set; }
 
         /// <summary>
         /// Create a Mosaic overlap limits DTO.
@@ -987,12 +987,12 @@ namespace NVAPIWrapper
     /// <summary>
     /// Current Mosaic topology DTO.
     /// </summary>
-    public readonly struct NVAPIMosaicCurrentTopoDto : IEquatable<NVAPIMosaicCurrentTopoDto>
+    public struct NVAPIMosaicCurrentTopoDto : IEquatable<NVAPIMosaicCurrentTopoDto>
     {
-        public NVAPIMosaicTopoBriefDto TopoBrief { get; }
-        public NVAPIMosaicDisplaySettingDto DisplaySetting { get; }
-        public int OverlapX { get; }
-        public int OverlapY { get; }
+        public NVAPIMosaicTopoBriefDto TopoBrief { get; set; }
+        public NVAPIMosaicDisplaySettingDto DisplaySetting { get; set; }
+        public int OverlapX { get; set; }
+        public int OverlapY { get; set; }
 
         /// <summary>
         /// Create a current Mosaic topology DTO.
@@ -1065,10 +1065,10 @@ namespace NVAPIWrapper
     /// <summary>
     /// Mosaic topology group DTO.
     /// </summary>
-    public readonly struct NVAPIMosaicTopoGroupDto : IEquatable<NVAPIMosaicTopoGroupDto>
+    public struct NVAPIMosaicTopoGroupDto : IEquatable<NVAPIMosaicTopoGroupDto>
     {
-        public NVAPIMosaicTopoBriefDto Brief { get; }
-        public NVAPIMosaicTopoDetailsDto[] Topos { get; }
+        public NVAPIMosaicTopoBriefDto Brief { get; set; }
+        public NVAPIMosaicTopoDetailsDto[] Topos { get; set; }
 
         /// <summary>
         /// Create a Mosaic topology group DTO.
@@ -1151,14 +1151,14 @@ namespace NVAPIWrapper
     /// <summary>
     /// Mosaic topology details DTO.
     /// </summary>
-    public readonly struct NVAPIMosaicTopoDetailsDto : IEquatable<NVAPIMosaicTopoDetailsDto>
+    public struct NVAPIMosaicTopoDetailsDto : IEquatable<NVAPIMosaicTopoDetailsDto>
     {
-        internal IntPtr LogicalGpuHandle { get; }
-        public NVAPILogicalGpuHelper? LogicalGpu { get; }
-        public uint ValidityMask { get; }
-        public uint RowCount { get; }
-        public uint ColCount { get; }
-        public NVAPIMosaicGpuLayoutCellDto[] GpuLayout { get; }
+        internal IntPtr LogicalGpuHandle { get; set; }
+        public NVAPILogicalGpuHelper? LogicalGpu { get; set; }
+        public uint ValidityMask { get; set; }
+        public uint RowCount { get; set; }
+        public uint ColCount { get; set; }
+        public NVAPIMosaicGpuLayoutCellDto[] GpuLayout { get; set; }
 
         /// <summary>
         /// Create a Mosaic topology details DTO.
@@ -1293,13 +1293,13 @@ namespace NVAPIWrapper
     /// <summary>
     /// Mosaic GPU layout cell DTO.
     /// </summary>
-    public readonly struct NVAPIMosaicGpuLayoutCellDto : IEquatable<NVAPIMosaicGpuLayoutCellDto>
+    public struct NVAPIMosaicGpuLayoutCellDto : IEquatable<NVAPIMosaicGpuLayoutCellDto>
     {
-        internal IntPtr PhysicalGpuHandle { get; }
-        public NVAPIPhysicalGpuHelper? PhysicalGpu { get; }
-        public uint DisplayOutputId { get; }
-        public int OverlapX { get; }
-        public int OverlapY { get; }
+        internal IntPtr PhysicalGpuHandle { get; set; }
+        public NVAPIPhysicalGpuHelper? PhysicalGpu { get; set; }
+        public uint DisplayOutputId { get; set; }
+        public int OverlapX { get; set; }
+        public int OverlapY { get; set; }
 
         /// <summary>
         /// Create a Mosaic GPU layout cell DTO.
@@ -1410,14 +1410,14 @@ namespace NVAPIWrapper
     /// <summary>
     /// Mosaic grid display DTO.
     /// </summary>
-    public readonly struct NVAPIMosaicGridTopoDisplayDto : IEquatable<NVAPIMosaicGridTopoDisplayDto>
+    public struct NVAPIMosaicGridTopoDisplayDto : IEquatable<NVAPIMosaicGridTopoDisplayDto>
     {
-        public uint DisplayId { get; }
-        public int OverlapX { get; }
-        public int OverlapY { get; }
-        public _NV_ROTATE Rotation { get; }
-        public uint CloneGroup { get; }
-        public _NV_PIXEL_SHIFT_TYPE PixelShiftType { get; }
+        public uint DisplayId { get; set; }
+        public int OverlapX { get; set; }
+        public int OverlapY { get; set; }
+        public _NV_ROTATE Rotation { get; set; }
+        public uint CloneGroup { get; set; }
+        public _NV_PIXEL_SHIFT_TYPE PixelShiftType { get; set; }
 
         /// <summary>
         /// Create a Mosaic grid topology display DTO.
@@ -1537,18 +1537,18 @@ namespace NVAPIWrapper
     /// <summary>
     /// Mosaic grid topology DTO.
     /// </summary>
-    public readonly struct NVAPIMosaicGridTopoDto : IEquatable<NVAPIMosaicGridTopoDto>
+    public struct NVAPIMosaicGridTopoDto : IEquatable<NVAPIMosaicGridTopoDto>
     {
-        public uint Rows { get; }
-        public uint Columns { get; }
-        public bool ApplyWithBezelCorrect { get; }
-        public bool ImmersiveGaming { get; }
-        public bool BaseMosaic { get; }
-        public bool DriverReloadAllowed { get; }
-        public bool AcceleratePrimaryDisplay { get; }
-        public bool PixelShift { get; }
-        public NVAPIMosaicGridTopoDisplayDto[] Displays { get; }
-        public NVAPIMosaicDisplaySettingDto DisplaySettings { get; }
+        public uint Rows { get; set; }
+        public uint Columns { get; set; }
+        public bool ApplyWithBezelCorrect { get; set; }
+        public bool ImmersiveGaming { get; set; }
+        public bool BaseMosaic { get; set; }
+        public bool DriverReloadAllowed { get; set; }
+        public bool AcceleratePrimaryDisplay { get; set; }
+        public bool PixelShift { get; set; }
+        public NVAPIMosaicGridTopoDisplayDto[] Displays { get; set; }
+        public NVAPIMosaicDisplaySettingDto DisplaySettings { get; set; }
 
         /// <summary>
         /// Create a Mosaic grid topology DTO.
@@ -1717,9 +1717,9 @@ namespace NVAPIWrapper
     /// <summary>
     /// Mosaic grid topology collection DTO.
     /// </summary>
-    public readonly struct NVAPIMosaicGridTopologiesDto : IEquatable<NVAPIMosaicGridTopologiesDto>
+    public struct NVAPIMosaicGridTopologiesDto : IEquatable<NVAPIMosaicGridTopologiesDto>
     {
-        public NVAPIMosaicGridTopoDto[] Grids { get; }
+        public NVAPIMosaicGridTopoDto[] Grids { get; set; }
 
         /// <summary>
         /// Create a Mosaic grid topologies DTO.
@@ -1802,9 +1802,9 @@ namespace NVAPIWrapper
     /// <summary>
     /// Mosaic display modes DTO.
     /// </summary>
-    public readonly struct NVAPIMosaicDisplaySettingsDto : IEquatable<NVAPIMosaicDisplaySettingsDto>
+    public struct NVAPIMosaicDisplaySettingsDto : IEquatable<NVAPIMosaicDisplaySettingsDto>
     {
-        public NVAPIMosaicDisplaySettingDto[] Settings { get; }
+        public NVAPIMosaicDisplaySettingDto[] Settings { get; set; }
 
         /// <summary>
         /// Create a Mosaic display settings DTO.
@@ -1858,12 +1858,12 @@ namespace NVAPIWrapper
     /// <summary>
     /// Mosaic display topology status entry DTO.
     /// </summary>
-    public readonly struct NVAPIMosaicDisplayStatusEntryDto : IEquatable<NVAPIMosaicDisplayStatusEntryDto>
+    public struct NVAPIMosaicDisplayStatusEntryDto : IEquatable<NVAPIMosaicDisplayStatusEntryDto>
     {
-        public uint DisplayId { get; }
-        public uint ErrorFlags { get; }
-        public uint WarningFlags { get; }
-        public bool SupportsRotation { get; }
+        public uint DisplayId { get; set; }
+        public uint ErrorFlags { get; set; }
+        public uint WarningFlags { get; set; }
+        public bool SupportsRotation { get; set; }
 
         /// <summary>
         /// Create a Mosaic display status entry DTO.
@@ -1950,11 +1950,11 @@ namespace NVAPIWrapper
     /// <summary>
     /// Mosaic display topology status DTO.
     /// </summary>
-    public readonly struct NVAPIMosaicDisplayTopoStatusDto : IEquatable<NVAPIMosaicDisplayTopoStatusDto>
+    public struct NVAPIMosaicDisplayTopoStatusDto : IEquatable<NVAPIMosaicDisplayTopoStatusDto>
     {
-        public uint ErrorFlags { get; }
-        public uint WarningFlags { get; }
-        public NVAPIMosaicDisplayStatusEntryDto[] Displays { get; }
+        public uint ErrorFlags { get; set; }
+        public uint WarningFlags { get; set; }
+        public NVAPIMosaicDisplayStatusEntryDto[] Displays { get; set; }
 
         /// <summary>
         /// Create a Mosaic display topology status DTO.
@@ -2041,9 +2041,9 @@ namespace NVAPIWrapper
     /// <summary>
     /// Mosaic display topology status collection DTO.
     /// </summary>
-    public readonly struct NVAPIMosaicDisplayTopoStatusesDto : IEquatable<NVAPIMosaicDisplayTopoStatusesDto>
+    public struct NVAPIMosaicDisplayTopoStatusesDto : IEquatable<NVAPIMosaicDisplayTopoStatusesDto>
     {
-        public NVAPIMosaicDisplayTopoStatusDto[] Statuses { get; }
+        public NVAPIMosaicDisplayTopoStatusDto[] Statuses { get; set; }
 
         /// <summary>
         /// Create a Mosaic display topology status collection DTO.
@@ -2097,12 +2097,12 @@ namespace NVAPIWrapper
     /// <summary>
     /// Rectangle DTO for Mosaic viewports.
     /// </summary>
-    public readonly struct NVAPIRectDto : IEquatable<NVAPIRectDto>
+    public struct NVAPIRectDto : IEquatable<NVAPIRectDto>
     {
-        public uint Left { get; }
-        public uint Top { get; }
-        public uint Right { get; }
-        public uint Bottom { get; }
+        public uint Left { get; set; }
+        public uint Top { get; set; }
+        public uint Right { get; set; }
+        public uint Bottom { get; set; }
 
         /// <summary>
         /// Create a rectangle DTO.
@@ -2197,10 +2197,10 @@ namespace NVAPIWrapper
     /// <summary>
     /// Mosaic viewport list DTO.
     /// </summary>
-    public readonly struct NVAPIMosaicViewportsDto : IEquatable<NVAPIMosaicViewportsDto>
+    public struct NVAPIMosaicViewportsDto : IEquatable<NVAPIMosaicViewportsDto>
     {
-        public NVAPIRectDto[] Viewports { get; }
-        public bool BezelCorrected { get; }
+        public NVAPIRectDto[] Viewports { get; set; }
+        public bool BezelCorrected { get; set; }
 
         /// <summary>
         /// Create a Mosaic viewports DTO.

@@ -1260,14 +1260,14 @@ namespace NVAPIWrapper
     /// <summary>
     /// DRS profile info DTO.
     /// </summary>
-    public readonly struct NVAPIDrsProfileDto : IEquatable<NVAPIDrsProfileDto>
+    public struct NVAPIDrsProfileDto : IEquatable<NVAPIDrsProfileDto>
     {
-        internal IntPtr Handle { get; }
-        public string ProfileName { get; }
-        public _NVDRS_GPU_SUPPORT GpuSupport { get; }
-        public bool IsPredefined { get; }
-        public uint NumOfApps { get; }
-        public uint NumOfSettings { get; }
+        internal IntPtr Handle { get; set; }
+        public string ProfileName { get; set; }
+        public _NVDRS_GPU_SUPPORT GpuSupport { get; set; }
+        public bool IsPredefined { get; set; }
+        public uint NumOfApps { get; set; }
+        public uint NumOfSettings { get; set; }
 
         /// <summary>
         /// Create a DRS profile DTO.
@@ -1429,16 +1429,16 @@ namespace NVAPIWrapper
     /// <summary>
     /// DRS application info DTO.
     /// </summary>
-    public readonly struct NVAPIDrsApplicationDto : IEquatable<NVAPIDrsApplicationDto>
+    public struct NVAPIDrsApplicationDto : IEquatable<NVAPIDrsApplicationDto>
     {
-        public string AppName { get; }
-        public string UserFriendlyName { get; }
-        public string Launcher { get; }
-        public string FileInFolder { get; }
-        public string CommandLine { get; }
-        public bool IsMetro { get; }
-        public bool IsCommandLine { get; }
-        public bool IsPredefined { get; }
+        public string AppName { get; set; }
+        public string UserFriendlyName { get; set; }
+        public string Launcher { get; set; }
+        public string FileInFolder { get; set; }
+        public string CommandLine { get; set; }
+        public bool IsMetro { get; set; }
+        public bool IsCommandLine { get; set; }
+        public bool IsPredefined { get; set; }
 
         /// <summary>
         /// Create a DRS application DTO.
@@ -1603,10 +1603,10 @@ namespace NVAPIWrapper
     /// <summary>
     /// Result of an application search.
     /// </summary>
-    public readonly struct NVAPIDrsApplicationSearchDto : IEquatable<NVAPIDrsApplicationSearchDto>
+    public struct NVAPIDrsApplicationSearchDto : IEquatable<NVAPIDrsApplicationSearchDto>
     {
-        public NVAPIDrsProfileDto Profile { get; }
-        public NVAPIDrsApplicationDto Application { get; }
+        public NVAPIDrsProfileDto Profile { get; set; }
+        public NVAPIDrsApplicationDto Application { get; set; }
 
         /// <summary>
         /// Create a DRS application search result DTO.
@@ -1670,21 +1670,21 @@ namespace NVAPIWrapper
     /// <summary>
     /// DRS setting DTO.
     /// </summary>
-    public readonly struct NVAPIDrsSettingDto : IEquatable<NVAPIDrsSettingDto>
+    public struct NVAPIDrsSettingDto : IEquatable<NVAPIDrsSettingDto>
     {
-        public string SettingName { get; }
-        public uint SettingId { get; }
-        public _NVDRS_SETTING_TYPE SettingType { get; }
-        public _NVDRS_SETTING_LOCATION SettingLocation { get; }
-        public bool IsCurrentPredefined { get; }
-        public bool IsPredefinedValid { get; }
+        public string SettingName { get; set; }
+        public uint SettingId { get; set; }
+        public _NVDRS_SETTING_TYPE SettingType { get; set; }
+        public _NVDRS_SETTING_LOCATION SettingLocation { get; set; }
+        public bool IsCurrentPredefined { get; set; }
+        public bool IsPredefinedValid { get; set; }
 
-        public uint? PredefinedDwordValue { get; }
-        public uint? CurrentDwordValue { get; }
-        public string PredefinedStringValue { get; }
-        public string CurrentStringValue { get; }
-        public byte[] PredefinedBinaryValue { get; }
-        public byte[] CurrentBinaryValue { get; }
+        public uint? PredefinedDwordValue { get; set; }
+        public uint? CurrentDwordValue { get; set; }
+        public string PredefinedStringValue { get; set; }
+        public string CurrentStringValue { get; set; }
+        public byte[] PredefinedBinaryValue { get; set; }
+        public byte[] CurrentBinaryValue { get; set; }
 
         /// <summary>
         /// Create a DRS setting DTO.
@@ -2026,15 +2026,15 @@ namespace NVAPIWrapper
     /// <summary>
     /// DRS setting values DTO.
     /// </summary>
-    public readonly struct NVAPIDrsSettingValuesDto : IEquatable<NVAPIDrsSettingValuesDto>
+    public struct NVAPIDrsSettingValuesDto : IEquatable<NVAPIDrsSettingValuesDto>
     {
-        public _NVDRS_SETTING_TYPE SettingType { get; }
-        public uint? DefaultDwordValue { get; }
-        public string? DefaultStringValue { get; }
-        public byte[]? DefaultBinaryValue { get; }
-        public uint[]? DwordValues { get; }
-        public string[]? StringValues { get; }
-        public byte[][]? BinaryValues { get; }
+        public _NVDRS_SETTING_TYPE SettingType { get; set; }
+        public uint? DefaultDwordValue { get; set; }
+        public string? DefaultStringValue { get; set; }
+        public byte[]? DefaultBinaryValue { get; set; }
+        public uint[]? DwordValues { get; set; }
+        public string[]? StringValues { get; set; }
+        public byte[][]? BinaryValues { get; set; }
 
         /// <summary>
         /// Create a DRS setting values DTO.

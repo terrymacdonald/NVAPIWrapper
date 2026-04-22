@@ -927,7 +927,7 @@ namespace NVAPIWrapper
     /// <summary>
     /// Event callback settings DTO.
     /// </summary>
-    public readonly struct NVAPIEventCallbackSettingsDto : IEquatable<NVAPIEventCallbackSettingsDto>
+    public struct NVAPIEventCallbackSettingsDto : IEquatable<NVAPIEventCallbackSettingsDto>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="NVAPIEventCallbackSettingsDto"/> struct.
@@ -951,22 +951,22 @@ namespace NVAPIWrapper
         /// <summary>
         /// Event type.
         /// </summary>
-        public NV_EVENT_TYPE EventId { get; }
+        public NV_EVENT_TYPE EventId { get; set; }
 
         /// <summary>
         /// Callback kind to map the union field.
         /// </summary>
-        public NVAPIEventCallbackKind CallbackKind { get; }
+        public NVAPIEventCallbackKind CallbackKind { get; set; }
 
         /// <summary>
         /// Callback parameter pointer.
         /// </summary>
-        public IntPtr CallbackParam { get; }
+        public IntPtr CallbackParam { get; set; }
 
         /// <summary>
         /// Callback function pointer.
         /// </summary>
-        public IntPtr Callback { get; }
+        public IntPtr Callback { get; set; }
 
         internal unsafe NV_EVENT_REGISTER_CALLBACK ToNative()
         {
@@ -1039,7 +1039,7 @@ namespace NVAPIWrapper
     /// <summary>
     /// NGX override state DTO.
     /// </summary>
-    public readonly struct NVAPINGXOverrideStateDto : IEquatable<NVAPINGXOverrideStateDto>
+    public struct NVAPINGXOverrideStateDto : IEquatable<NVAPINGXOverrideStateDto>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="NVAPINGXOverrideStateDto"/> struct.
@@ -1069,47 +1069,47 @@ namespace NVAPIWrapper
         /// <summary>
         /// Process identifier.
         /// </summary>
-        public uint ProcessId { get; }
+        public uint ProcessId { get; set; }
 
         /// <summary>
         /// DLSS SR feedback mask.
         /// </summary>
-        public ulong FeedbackMaskSr { get; }
+        public ulong FeedbackMaskSr { get; set; }
 
         /// <summary>
         /// DLSS RR feedback mask.
         /// </summary>
-        public ulong FeedbackMaskRr { get; }
+        public ulong FeedbackMaskRr { get; set; }
 
         /// <summary>
         /// DLSS FG feedback mask.
         /// </summary>
-        public ulong FeedbackMaskFg { get; }
+        public ulong FeedbackMaskFg { get; set; }
 
         /// <summary>
         /// DLSS scaling ratio.
         /// </summary>
-        public float ScalingRatio { get; }
+        public float ScalingRatio { get; set; }
 
         /// <summary>
         /// DLSS performance mode.
         /// </summary>
-        public uint PerformanceMode { get; }
+        public uint PerformanceMode { get; set; }
 
         /// <summary>
         /// DLSS render preset.
         /// </summary>
-        public uint RenderPreset { get; }
+        public uint RenderPreset { get; set; }
 
         /// <summary>
         /// DLSS frame generation count target.
         /// </summary>
-        public uint FrameGenerationCount { get; }
+        public uint FrameGenerationCount { get; set; }
 
         /// <summary>
         /// DLSS frame generation preset.
         /// </summary>
-        public uint FrameGenerationPreset { get; }
+        public uint FrameGenerationPreset { get; set; }
 
         internal static NVAPINGXOverrideStateDto FromNative(_NV_NGX_DLSS_OVERRIDE_GET_STATE_PARAMS_V1 native)
         {
@@ -1189,7 +1189,7 @@ namespace NVAPIWrapper
     /// <summary>
     /// NGX override set DTO.
     /// </summary>
-    public readonly struct NVAPINGXOverrideSetDto : IEquatable<NVAPINGXOverrideSetDto>
+    public struct NVAPINGXOverrideSetDto : IEquatable<NVAPINGXOverrideSetDto>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="NVAPINGXOverrideSetDto"/> struct.
@@ -1204,17 +1204,17 @@ namespace NVAPIWrapper
         /// <summary>
         /// Process identifier.
         /// </summary>
-        public uint ProcessId { get; }
+        public uint ProcessId { get; set; }
 
         /// <summary>
         /// DLSS feature ID.
         /// </summary>
-        public uint Feature { get; }
+        public uint Feature { get; set; }
 
         /// <summary>
         /// Feedback mask.
         /// </summary>
-        public ulong FeedbackMask { get; }
+        public ulong FeedbackMask { get; set; }
 
         internal _NV_NGX_DLSS_OVERRIDE_SET_STATE_PARAMS_V1 ToNative()
         {
@@ -1266,7 +1266,7 @@ namespace NVAPIWrapper
     /// <summary>
     /// RISE callback settings DTO.
     /// </summary>
-    public readonly struct NVAPIRiseCallbackSettingsDto : IEquatable<NVAPIRiseCallbackSettingsDto>
+    public struct NVAPIRiseCallbackSettingsDto : IEquatable<NVAPIRiseCallbackSettingsDto>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="NVAPIRiseCallbackSettingsDto"/> struct.
@@ -1282,12 +1282,12 @@ namespace NVAPIWrapper
         /// <summary>
         /// Callback parameter pointer.
         /// </summary>
-        public IntPtr CallbackParam { get; }
+        public IntPtr CallbackParam { get; set; }
 
         /// <summary>
         /// Callback function pointer.
         /// </summary>
-        public IntPtr Callback { get; }
+        public IntPtr Callback { get; set; }
 
         internal unsafe _NV_RISE_CALLBACK_SETTINGS_V1 ToNative()
         {
@@ -1337,7 +1337,7 @@ namespace NVAPIWrapper
     /// <summary>
     /// RISE request DTO.
     /// </summary>
-    public readonly struct NVAPIRiseRequestDto : IEquatable<NVAPIRiseRequestDto>
+    public struct NVAPIRiseRequestDto : IEquatable<NVAPIRiseRequestDto>
     {
         /// <summary>
         /// Maximum content length for RISE requests.
@@ -1360,17 +1360,17 @@ namespace NVAPIWrapper
         /// <summary>
         /// Content type.
         /// </summary>
-        public _NV_RISE_CONTENT_TYPE ContentType { get; }
+        public _NV_RISE_CONTENT_TYPE ContentType { get; set; }
 
         /// <summary>
         /// Content string.
         /// </summary>
-        public string Content { get; }
+        public string Content { get; set; }
 
         /// <summary>
         /// True if request is completed.
         /// </summary>
-        public bool Completed { get; }
+        public bool Completed { get; set; }
 
         internal _NV_REQUEST_RISE_SETTINGS_V1 ToNative()
         {
@@ -1427,13 +1427,13 @@ namespace NVAPIWrapper
     /// <summary>
     /// Driver version and branch string.
     /// </summary>
-    public readonly struct NVAPIDriverAndBranchVersionDto : IEquatable<NVAPIDriverAndBranchVersionDto>
+    public struct NVAPIDriverAndBranchVersionDto : IEquatable<NVAPIDriverAndBranchVersionDto>
     {
         /// <summary>Driver version.</summary>
-        public uint DriverVersion { get; }
+        public uint DriverVersion { get; set; }
 
         /// <summary>Driver branch string.</summary>
-        public string Branch { get; }
+        public string Branch { get; set; }
 
         /// <summary>
         /// Initialize a new instance of the <see cref="NVAPIDriverAndBranchVersionDto"/> struct.
@@ -1499,20 +1499,20 @@ namespace NVAPIWrapper
     /// <summary>
     /// Chipset information DTO.
     /// </summary>
-    public readonly struct NVAPIChipSetInfoDto : IEquatable<NVAPIChipSetInfoDto>
+    public struct NVAPIChipSetInfoDto : IEquatable<NVAPIChipSetInfoDto>
     {
-        public uint VendorId { get; }
-        public uint DeviceId { get; }
-        public string VendorName { get; }
-        public string ChipsetName { get; }
-        public uint Flags { get; }
-        public uint SubSystemVendorId { get; }
-        public uint SubSystemDeviceId { get; }
-        public string SubSystemVendorName { get; }
-        public uint HbVendorId { get; }
-        public uint HbDeviceId { get; }
-        public uint HbSubSystemVendorId { get; }
-        public uint HbSubSystemDeviceId { get; }
+        public uint VendorId { get; set; }
+        public uint DeviceId { get; set; }
+        public string VendorName { get; set; }
+        public string ChipsetName { get; set; }
+        public uint Flags { get; set; }
+        public uint SubSystemVendorId { get; set; }
+        public uint SubSystemDeviceId { get; set; }
+        public string SubSystemVendorName { get; set; }
+        public uint HbVendorId { get; set; }
+        public uint HbDeviceId { get; set; }
+        public uint HbSubSystemVendorId { get; set; }
+        public uint HbSubSystemDeviceId { get; set; }
 
         /// <summary>
         /// Initialize a new instance of the <see cref="NVAPIChipSetInfoDto"/> struct.
@@ -1655,14 +1655,14 @@ namespace NVAPIWrapper
     /// <summary>
     /// Lid and dock information DTO.
     /// </summary>
-    public readonly struct NVAPILidAndDockInfoDto : IEquatable<NVAPILidAndDockInfoDto>
+    public struct NVAPILidAndDockInfoDto : IEquatable<NVAPILidAndDockInfoDto>
     {
-        public uint CurrentLidState { get; }
-        public uint CurrentDockState { get; }
-        public uint CurrentLidPolicy { get; }
-        public uint CurrentDockPolicy { get; }
-        public uint ForcedLidMechanismPresent { get; }
-        public uint ForcedDockMechanismPresent { get; }
+        public uint CurrentLidState { get; set; }
+        public uint CurrentDockState { get; set; }
+        public uint CurrentLidPolicy { get; set; }
+        public uint CurrentDockPolicy { get; set; }
+        public uint ForcedLidMechanismPresent { get; set; }
+        public uint ForcedDockMechanismPresent { get; set; }
 
         /// <summary>
         /// Initialize a new instance of the <see cref="NVAPILidAndDockInfoDto"/> struct.
@@ -1765,17 +1765,17 @@ namespace NVAPIWrapper
     /// <summary>
     /// Display driver information DTO.
     /// </summary>
-    public readonly struct NVAPIDisplayDriverInfoDto : IEquatable<NVAPIDisplayDriverInfoDto>
+    public struct NVAPIDisplayDriverInfoDto : IEquatable<NVAPIDisplayDriverInfoDto>
     {
-        public uint DriverVersion { get; }
-        public string BuildBranch { get; }
-        public bool IsDchDriver { get; }
-        public bool IsNvidiaStudioPackage { get; }
-        public bool IsNvidiaGameReadyPackage { get; }
-        public bool IsNvidiaRtxProductionBranchPackage { get; }
-        public bool IsNvidiaRtxNewFeatureBranchPackage { get; }
-        public string BuildBaseBranch { get; }
-        public uint ReservedEx { get; }
+        public uint DriverVersion { get; set; }
+        public string BuildBranch { get; set; }
+        public bool IsDchDriver { get; set; }
+        public bool IsNvidiaStudioPackage { get; set; }
+        public bool IsNvidiaGameReadyPackage { get; set; }
+        public bool IsNvidiaRtxProductionBranchPackage { get; set; }
+        public bool IsNvidiaRtxNewFeatureBranchPackage { get; set; }
+        public string BuildBaseBranch { get; set; }
+        public uint ReservedEx { get; set; }
 
         /// <summary>
         /// Initialize a new instance of the <see cref="NVAPIDisplayDriverInfoDto"/> struct.
@@ -1898,11 +1898,11 @@ namespace NVAPIWrapper
     /// <summary>
     /// Physical GPU handle data from NvAPI_SYS_GetPhysicalGPUs.
     /// </summary>
-    public readonly struct NVAPISystemPhysicalGpuHandleDto : IEquatable<NVAPISystemPhysicalGpuHandleDto>
+    public struct NVAPISystemPhysicalGpuHandleDto : IEquatable<NVAPISystemPhysicalGpuHandleDto>
     {
-        internal IntPtr Handle { get; }
-        public NVAPIPhysicalGpuHelper PhysicalGpu { get; }
-        public _NV_ADAPTER_TYPE AdapterType { get; }
+        internal IntPtr Handle { get; set; }
+        public NVAPIPhysicalGpuHelper PhysicalGpu { get; set; }
+        public _NV_ADAPTER_TYPE AdapterType { get; set; }
 
         internal NVAPISystemPhysicalGpuHandleDto(IntPtr handle, _NV_ADAPTER_TYPE adapterType, NVAPIApiHelper helper)
         {
@@ -1973,11 +1973,11 @@ namespace NVAPIWrapper
     /// <summary>
     /// Logical GPU handle data from NvAPI_SYS_GetLogicalGPUs.
     /// </summary>
-    public readonly struct NVAPISystemLogicalGpuHandleDto : IEquatable<NVAPISystemLogicalGpuHandleDto>
+    public struct NVAPISystemLogicalGpuHandleDto : IEquatable<NVAPISystemLogicalGpuHandleDto>
     {
-        internal IntPtr Handle { get; }
-        public NVAPILogicalGpuHelper LogicalGpu { get; }
-        public _NV_ADAPTER_TYPE AdapterType { get; }
+        internal IntPtr Handle { get; set; }
+        public NVAPILogicalGpuHelper LogicalGpu { get; set; }
+        public _NV_ADAPTER_TYPE AdapterType { get; set; }
 
         internal NVAPISystemLogicalGpuHandleDto(IntPtr handle, _NV_ADAPTER_TYPE adapterType, NVAPIApiHelper helper)
         {

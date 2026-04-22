@@ -2379,19 +2379,19 @@ namespace NVAPIWrapper
     /// <summary>
     /// PCI identifiers reported by NVAPI.
     /// </summary>
-    public readonly struct NVAPIPciIdentifiers : IEquatable<NVAPIPciIdentifiers>
+    public struct NVAPIPciIdentifiers : IEquatable<NVAPIPciIdentifiers>
     {
         /// <summary>PCI device ID.</summary>
-        public uint DeviceId { get; }
+        public uint DeviceId { get; set; }
 
         /// <summary>PCI subsystem ID.</summary>
-        public uint SubSystemId { get; }
+        public uint SubSystemId { get; set; }
 
         /// <summary>PCI revision ID.</summary>
-        public uint RevisionId { get; }
+        public uint RevisionId { get; set; }
 
         /// <summary>PCI extended device ID.</summary>
-        public uint ExtDeviceId { get; }
+        public uint ExtDeviceId { get; set; }
 
         /// <summary>Create a PCI identifier set.</summary>
         public NVAPIPciIdentifiers(uint deviceId, uint subSystemId, uint revisionId, uint extDeviceId)
@@ -2440,17 +2440,17 @@ namespace NVAPIWrapper
     /// <summary>
     /// I2C request/response DTO for NVAPI I2C operations.
     /// </summary>
-    public readonly struct NVAPII2CInfoDto : IEquatable<NVAPII2CInfoDto>
+    public struct NVAPII2CInfoDto : IEquatable<NVAPII2CInfoDto>
     {
-        public uint DisplayMask { get; }
-        public bool IsDDCPort { get; }
-        public byte I2cDevAddress { get; }
-        public byte[] RegisterAddress { get; }
-        public byte[] Data { get; }
-        public uint I2cSpeed { get; }
-        public NV_I2C_SPEED I2cSpeedKhz { get; }
-        public byte PortId { get; }
-        public bool IsPortIdSet { get; }
+        public uint DisplayMask { get; set; }
+        public bool IsDDCPort { get; set; }
+        public byte I2cDevAddress { get; set; }
+        public byte[] RegisterAddress { get; set; }
+        public byte[] Data { get; set; }
+        public uint I2cSpeed { get; set; }
+        public NV_I2C_SPEED I2cSpeedKhz { get; set; }
+        public byte PortId { get; set; }
+        public bool IsPortIdSet { get; set; }
 
         public NVAPII2CInfoDto(
             uint displayMask,
@@ -2549,15 +2549,15 @@ namespace NVAPIWrapper
     /// <summary>
     /// Legacy display driver memory info DTO.
     /// </summary>
-    public readonly struct NVAPIDisplayDriverMemoryInfoDto : IEquatable<NVAPIDisplayDriverMemoryInfoDto>
+    public struct NVAPIDisplayDriverMemoryInfoDto : IEquatable<NVAPIDisplayDriverMemoryInfoDto>
     {
-        public uint DedicatedVideoMemoryKb { get; }
-        public uint AvailableDedicatedVideoMemoryKb { get; }
-        public uint SystemVideoMemoryKb { get; }
-        public uint SharedSystemMemoryKb { get; }
-        public uint CurrentAvailableDedicatedVideoMemoryKb { get; }
-        public uint DedicatedVideoMemoryEvictionsSizeKb { get; }
-        public uint DedicatedVideoMemoryEvictionCount { get; }
+        public uint DedicatedVideoMemoryKb { get; set; }
+        public uint AvailableDedicatedVideoMemoryKb { get; set; }
+        public uint SystemVideoMemoryKb { get; set; }
+        public uint SharedSystemMemoryKb { get; set; }
+        public uint CurrentAvailableDedicatedVideoMemoryKb { get; set; }
+        public uint DedicatedVideoMemoryEvictionsSizeKb { get; set; }
+        public uint DedicatedVideoMemoryEvictionCount { get; set; }
 
         public NVAPIDisplayDriverMemoryInfoDto(
             uint dedicatedVideoMemoryKb,
@@ -2639,17 +2639,17 @@ namespace NVAPIWrapper
     /// <summary>
     /// Extended GPU memory info DTO.
     /// </summary>
-    public readonly struct NVAPIGpuMemoryInfoExDto : IEquatable<NVAPIGpuMemoryInfoExDto>
+    public struct NVAPIGpuMemoryInfoExDto : IEquatable<NVAPIGpuMemoryInfoExDto>
     {
-        public ulong DedicatedVideoMemoryBytes { get; }
-        public ulong AvailableDedicatedVideoMemoryBytes { get; }
-        public ulong SystemVideoMemoryBytes { get; }
-        public ulong SharedSystemMemoryBytes { get; }
-        public ulong CurrentAvailableDedicatedVideoMemoryBytes { get; }
-        public ulong DedicatedVideoMemoryEvictionsSizeBytes { get; }
-        public ulong DedicatedVideoMemoryEvictionCount { get; }
-        public ulong DedicatedVideoMemoryPromotionsSizeBytes { get; }
-        public ulong DedicatedVideoMemoryPromotionCount { get; }
+        public ulong DedicatedVideoMemoryBytes { get; set; }
+        public ulong AvailableDedicatedVideoMemoryBytes { get; set; }
+        public ulong SystemVideoMemoryBytes { get; set; }
+        public ulong SharedSystemMemoryBytes { get; set; }
+        public ulong CurrentAvailableDedicatedVideoMemoryBytes { get; set; }
+        public ulong DedicatedVideoMemoryEvictionsSizeBytes { get; set; }
+        public ulong DedicatedVideoMemoryEvictionCount { get; set; }
+        public ulong DedicatedVideoMemoryPromotionsSizeBytes { get; set; }
+        public ulong DedicatedVideoMemoryPromotionCount { get; set; }
 
         public NVAPIGpuMemoryInfoExDto(
             ulong dedicatedVideoMemoryBytes,
@@ -2743,18 +2743,18 @@ namespace NVAPIWrapper
     /// <summary>
     /// GPU display ID DTO.
     /// </summary>
-    public readonly struct NVAPIGpuDisplayIdDto : IEquatable<NVAPIGpuDisplayIdDto>
+    public struct NVAPIGpuDisplayIdDto : IEquatable<NVAPIGpuDisplayIdDto>
     {
-        public NV_MONITOR_CONN_TYPE ConnectorType { get; }
-        public uint DisplayId { get; }
-        public bool IsDynamic { get; }
-        public bool IsMultiStreamRootNode { get; }
-        public bool IsActive { get; }
-        public bool IsCluster { get; }
-        public bool IsOSVisible { get; }
-        public bool IsWfd { get; }
-        public bool IsConnected { get; }
-        public bool IsPhysicallyConnected { get; }
+        public NV_MONITOR_CONN_TYPE ConnectorType { get; set; }
+        public uint DisplayId { get; set; }
+        public bool IsDynamic { get; set; }
+        public bool IsMultiStreamRootNode { get; set; }
+        public bool IsActive { get; set; }
+        public bool IsCluster { get; set; }
+        public bool IsOSVisible { get; set; }
+        public bool IsWfd { get; set; }
+        public bool IsConnected { get; set; }
+        public bool IsPhysicallyConnected { get; set; }
 
         public NVAPIGpuDisplayIdDto(
             NV_MONITOR_CONN_TYPE connectorType,
@@ -2866,10 +2866,10 @@ namespace NVAPIWrapper
     /// <summary>
     /// Dynamic P-state utilization entry DTO.
     /// </summary>
-    public readonly struct NVAPIGpuDynamicPstateUtilizationDto : IEquatable<NVAPIGpuDynamicPstateUtilizationDto>
+    public struct NVAPIGpuDynamicPstateUtilizationDto : IEquatable<NVAPIGpuDynamicPstateUtilizationDto>
     {
-        public bool IsPresent { get; }
-        public uint Percentage { get; }
+        public bool IsPresent { get; set; }
+        public uint Percentage { get; set; }
 
         public NVAPIGpuDynamicPstateUtilizationDto(bool isPresent, uint percentage)
         {
@@ -2905,10 +2905,10 @@ namespace NVAPIWrapper
     /// <summary>
     /// Dynamic P-state info DTO.
     /// </summary>
-    public readonly struct NVAPIGpuDynamicPstatesInfoExDto : IEquatable<NVAPIGpuDynamicPstatesInfoExDto>
+    public struct NVAPIGpuDynamicPstatesInfoExDto : IEquatable<NVAPIGpuDynamicPstatesInfoExDto>
     {
-        public uint Flags { get; }
-        public NVAPIGpuDynamicPstateUtilizationDto[] Utilization { get; }
+        public uint Flags { get; set; }
+        public NVAPIGpuDynamicPstateUtilizationDto[] Utilization { get; set; }
 
         public NVAPIGpuDynamicPstatesInfoExDto(uint flags, NVAPIGpuDynamicPstateUtilizationDto[] utilization)
         {
@@ -2968,13 +2968,13 @@ namespace NVAPIWrapper
     /// <summary>
     /// Thermal sensor DTO.
     /// </summary>
-    public readonly struct NVAPIGpuThermalSensorDto : IEquatable<NVAPIGpuThermalSensorDto>
+    public struct NVAPIGpuThermalSensorDto : IEquatable<NVAPIGpuThermalSensorDto>
     {
-        public NV_THERMAL_CONTROLLER Controller { get; }
-        public int DefaultMinTemp { get; }
-        public int DefaultMaxTemp { get; }
-        public int CurrentTemp { get; }
-        public NV_THERMAL_TARGET Target { get; }
+        public NV_THERMAL_CONTROLLER Controller { get; set; }
+        public int DefaultMinTemp { get; set; }
+        public int DefaultMaxTemp { get; set; }
+        public int CurrentTemp { get; set; }
+        public NV_THERMAL_TARGET Target { get; set; }
 
         public NVAPIGpuThermalSensorDto(NV_THERMAL_CONTROLLER controller, int defaultMinTemp, int defaultMaxTemp, int currentTemp, NV_THERMAL_TARGET target)
         {
@@ -3025,10 +3025,10 @@ namespace NVAPIWrapper
     /// <summary>
     /// Thermal settings DTO.
     /// </summary>
-    public readonly struct NVAPIGpuThermalSettingsDto : IEquatable<NVAPIGpuThermalSettingsDto>
+    public struct NVAPIGpuThermalSettingsDto : IEquatable<NVAPIGpuThermalSettingsDto>
     {
-        public uint Count { get; }
-        public NVAPIGpuThermalSensorDto[] Sensors { get; }
+        public uint Count { get; set; }
+        public NVAPIGpuThermalSensorDto[] Sensors { get; set; }
 
         public NVAPIGpuThermalSettingsDto(uint count, NVAPIGpuThermalSensorDto[] sensors)
         {
@@ -3088,10 +3088,10 @@ namespace NVAPIWrapper
     /// <summary>
     /// Clock domain DTO.
     /// </summary>
-    public readonly struct NVAPIGpuClockDomainDto : IEquatable<NVAPIGpuClockDomainDto>
+    public struct NVAPIGpuClockDomainDto : IEquatable<NVAPIGpuClockDomainDto>
     {
-        public bool IsPresent { get; }
-        public uint FrequencyKHz { get; }
+        public bool IsPresent { get; set; }
+        public uint FrequencyKHz { get; set; }
 
         public NVAPIGpuClockDomainDto(bool isPresent, uint frequencyKHz)
         {
@@ -3127,10 +3127,10 @@ namespace NVAPIWrapper
     /// <summary>
     /// Clock frequencies DTO.
     /// </summary>
-    public readonly struct NVAPIGpuClockFrequenciesDto : IEquatable<NVAPIGpuClockFrequenciesDto>
+    public struct NVAPIGpuClockFrequenciesDto : IEquatable<NVAPIGpuClockFrequenciesDto>
     {
-        public NV_GPU_CLOCK_FREQUENCIES_CLOCK_TYPE ClockType { get; }
-        public NVAPIGpuClockDomainDto[] Domains { get; }
+        public NV_GPU_CLOCK_FREQUENCIES_CLOCK_TYPE ClockType { get; set; }
+        public NVAPIGpuClockDomainDto[] Domains { get; set; }
 
         public NVAPIGpuClockFrequenciesDto(NV_GPU_CLOCK_FREQUENCIES_CLOCK_TYPE clockType, NVAPIGpuClockDomainDto[] domains)
         {
@@ -3190,10 +3190,10 @@ namespace NVAPIWrapper
     /// <summary>
     /// Illumination support DTO.
     /// </summary>
-    public readonly struct NVAPIGpuIlluminationSupportDto : IEquatable<NVAPIGpuIlluminationSupportDto>
+    public struct NVAPIGpuIlluminationSupportDto : IEquatable<NVAPIGpuIlluminationSupportDto>
     {
-        public _NV_GPU_ILLUMINATION_ATTRIB Attribute { get; }
-        public bool IsSupported { get; }
+        public _NV_GPU_ILLUMINATION_ATTRIB Attribute { get; set; }
+        public bool IsSupported { get; set; }
 
         public NVAPIGpuIlluminationSupportDto(_NV_GPU_ILLUMINATION_ATTRIB attribute, bool isSupported)
         {
@@ -3231,10 +3231,10 @@ namespace NVAPIWrapper
     /// <summary>
     /// Illumination value DTO.
     /// </summary>
-    public readonly struct NVAPIGpuIlluminationDto : IEquatable<NVAPIGpuIlluminationDto>
+    public struct NVAPIGpuIlluminationDto : IEquatable<NVAPIGpuIlluminationDto>
     {
-        public _NV_GPU_ILLUMINATION_ATTRIB Attribute { get; }
-        public uint Value { get; }
+        public _NV_GPU_ILLUMINATION_ATTRIB Attribute { get; set; }
+        public uint Value { get; set; }
 
         public NVAPIGpuIlluminationDto(_NV_GPU_ILLUMINATION_ATTRIB attribute, uint value)
         {
@@ -3272,17 +3272,17 @@ namespace NVAPIWrapper
     /// <summary>
     /// Per-device illumination info DTO, wrapping <see cref="_NV_GPU_CLIENT_ILLUM_DEVICE_INFO_V1"/>.
     /// </summary>
-    public readonly struct NVAPIGpuIllumDeviceInfoDto : IEquatable<NVAPIGpuIllumDeviceInfoDto>
+    public struct NVAPIGpuIllumDeviceInfoDto : IEquatable<NVAPIGpuIllumDeviceInfoDto>
     {
         /// <summary>Type of illumination device.</summary>
-        public NV_GPU_CLIENT_ILLUM_DEVICE_TYPE Type { get; }
+        public NV_GPU_CLIENT_ILLUM_DEVICE_TYPE Type { get; set; }
         /// <summary>Bitmask of supported control modes.</summary>
-        public uint CtrlModeMask { get; }
+        public uint CtrlModeMask { get; set; }
         /// <summary>
         /// Raw bytes for the type-discriminated union <c>data</c> field (64 bytes).
         /// Interpret using <see cref="Type"/> to select the appropriate union member.
         /// </summary>
-        public byte[] DataRawBytes { get; }
+        public byte[] DataRawBytes { get; set; }
 
         /// <summary>Initializes a new instance of <see cref="NVAPIGpuIllumDeviceInfoDto"/>.</summary>
         public NVAPIGpuIllumDeviceInfoDto(NV_GPU_CLIENT_ILLUM_DEVICE_TYPE type, uint ctrlModeMask, byte[] dataRawBytes)
@@ -3332,12 +3332,12 @@ namespace NVAPIWrapper
     /// <summary>
     /// Illumination device info params DTO.
     /// </summary>
-    public readonly struct NVAPIGpuIllumDeviceInfoParamsDto : IEquatable<NVAPIGpuIllumDeviceInfoParamsDto>
+    public struct NVAPIGpuIllumDeviceInfoParamsDto : IEquatable<NVAPIGpuIllumDeviceInfoParamsDto>
     {
         /// <summary>Number of illumination devices reported.</summary>
-        public uint NumIllumDevices { get; }
+        public uint NumIllumDevices { get; set; }
         /// <summary>Per-device illumination info array (up to 32 entries).</summary>
-        public NVAPIGpuIllumDeviceInfoDto[] Devices { get; }
+        public NVAPIGpuIllumDeviceInfoDto[] Devices { get; set; }
 
         /// <summary>Initializes a new instance of <see cref="NVAPIGpuIllumDeviceInfoParamsDto"/>.</summary>
         public NVAPIGpuIllumDeviceInfoParamsDto(uint numIllumDevices, NVAPIGpuIllumDeviceInfoDto[] devices)
@@ -3408,14 +3408,14 @@ namespace NVAPIWrapper
     /// <summary>
     /// Per-device illumination control DTO, wrapping <see cref="NV_GPU_CLIENT_ILLUM_DEVICE_CONTROL_V1"/>.
     /// </summary>
-    public readonly struct NVAPIGpuIllumDeviceControlDto : IEquatable<NVAPIGpuIllumDeviceControlDto>
+    public struct NVAPIGpuIllumDeviceControlDto : IEquatable<NVAPIGpuIllumDeviceControlDto>
     {
         /// <summary>Type of illumination device.</summary>
-        public NV_GPU_CLIENT_ILLUM_DEVICE_TYPE Type { get; }
+        public NV_GPU_CLIENT_ILLUM_DEVICE_TYPE Type { get; set; }
         /// <summary>True if device synchronization is enabled.</summary>
-        public bool SyncEnabled { get; }
+        public bool SyncEnabled { get; set; }
         /// <summary>Sync timestamp in milliseconds.</summary>
-        public ulong SyncTimestampMs { get; }
+        public ulong SyncTimestampMs { get; set; }
 
         /// <summary>Initializes a new instance of <see cref="NVAPIGpuIllumDeviceControlDto"/>.</summary>
         public NVAPIGpuIllumDeviceControlDto(NV_GPU_CLIENT_ILLUM_DEVICE_TYPE type, bool syncEnabled, ulong syncTimestampMs)
@@ -3465,12 +3465,12 @@ namespace NVAPIWrapper
     /// <summary>
     /// Illumination device control params DTO.
     /// </summary>
-    public readonly struct NVAPIGpuIllumDeviceControlParamsDto : IEquatable<NVAPIGpuIllumDeviceControlParamsDto>
+    public struct NVAPIGpuIllumDeviceControlParamsDto : IEquatable<NVAPIGpuIllumDeviceControlParamsDto>
     {
         /// <summary>Number of illumination devices for control.</summary>
-        public uint NumIllumDevices { get; }
+        public uint NumIllumDevices { get; set; }
         /// <summary>Per-device illumination control array (up to 32 entries).</summary>
-        public NVAPIGpuIllumDeviceControlDto[] Devices { get; }
+        public NVAPIGpuIllumDeviceControlDto[] Devices { get; set; }
 
         /// <summary>Initializes a new instance of <see cref="NVAPIGpuIllumDeviceControlParamsDto"/>.</summary>
         public NVAPIGpuIllumDeviceControlParamsDto(uint numIllumDevices, NVAPIGpuIllumDeviceControlDto[] devices)
@@ -3541,21 +3541,21 @@ namespace NVAPIWrapper
     /// <summary>
     /// Per-zone illumination info DTO, wrapping <see cref="_NV_GPU_CLIENT_ILLUM_ZONE_INFO_V1"/>.
     /// </summary>
-    public readonly struct NVAPIGpuIllumZoneInfoDto : IEquatable<NVAPIGpuIllumZoneInfoDto>
+    public struct NVAPIGpuIllumZoneInfoDto : IEquatable<NVAPIGpuIllumZoneInfoDto>
     {
         /// <summary>Type of illumination zone.</summary>
-        public NV_GPU_CLIENT_ILLUM_ZONE_TYPE Type { get; }
+        public NV_GPU_CLIENT_ILLUM_ZONE_TYPE Type { get; set; }
         /// <summary>Index of the illumination device this zone belongs to.</summary>
-        public byte IllumDeviceIdx { get; }
+        public byte IllumDeviceIdx { get; set; }
         /// <summary>Index of the illumination provider for this zone.</summary>
-        public byte ProvIdx { get; }
+        public byte ProvIdx { get; set; }
         /// <summary>Physical location of the zone on the GPU or card.</summary>
-        public NV_GPU_CLIENT_ILLUM_ZONE_LOCATION ZoneLocation { get; }
+        public NV_GPU_CLIENT_ILLUM_ZONE_LOCATION ZoneLocation { get; set; }
         /// <summary>
         /// Raw bytes for the type-discriminated union <c>data</c> field (64 bytes).
         /// Interpret using <see cref="Type"/> to select the appropriate union member.
         /// </summary>
-        public byte[] DataRawBytes { get; }
+        public byte[] DataRawBytes { get; set; }
 
         /// <summary>Initializes a new instance of <see cref="NVAPIGpuIllumZoneInfoDto"/>.</summary>
         public NVAPIGpuIllumZoneInfoDto(NV_GPU_CLIENT_ILLUM_ZONE_TYPE type, byte illumDeviceIdx, byte provIdx, NV_GPU_CLIENT_ILLUM_ZONE_LOCATION zoneLocation, byte[] dataRawBytes)
@@ -3613,12 +3613,12 @@ namespace NVAPIWrapper
     /// <summary>
     /// Illumination zone info params DTO.
     /// </summary>
-    public readonly struct NVAPIGpuIllumZoneInfoParamsDto : IEquatable<NVAPIGpuIllumZoneInfoParamsDto>
+    public struct NVAPIGpuIllumZoneInfoParamsDto : IEquatable<NVAPIGpuIllumZoneInfoParamsDto>
     {
         /// <summary>Number of illumination zones reported.</summary>
-        public uint NumIllumZones { get; }
+        public uint NumIllumZones { get; set; }
         /// <summary>Per-zone illumination info array (up to 32 entries).</summary>
-        public NVAPIGpuIllumZoneInfoDto[] Zones { get; }
+        public NVAPIGpuIllumZoneInfoDto[] Zones { get; set; }
 
         /// <summary>Initializes a new instance of <see cref="NVAPIGpuIllumZoneInfoParamsDto"/>.</summary>
         public NVAPIGpuIllumZoneInfoParamsDto(uint numIllumZones, NVAPIGpuIllumZoneInfoDto[] zones)
@@ -3689,17 +3689,17 @@ namespace NVAPIWrapper
     /// <summary>
     /// Per-zone illumination control DTO, wrapping <see cref="_NV_GPU_CLIENT_ILLUM_ZONE_CONTROL_V1"/>.
     /// </summary>
-    public readonly struct NVAPIGpuIllumZoneControlDto : IEquatable<NVAPIGpuIllumZoneControlDto>
+    public struct NVAPIGpuIllumZoneControlDto : IEquatable<NVAPIGpuIllumZoneControlDto>
     {
         /// <summary>Type of illumination zone.</summary>
-        public NV_GPU_CLIENT_ILLUM_ZONE_TYPE Type { get; }
+        public NV_GPU_CLIENT_ILLUM_ZONE_TYPE Type { get; set; }
         /// <summary>Control mode for this illumination zone.</summary>
-        public NV_GPU_CLIENT_ILLUM_CTRL_MODE CtrlMode { get; }
+        public NV_GPU_CLIENT_ILLUM_CTRL_MODE CtrlMode { get; set; }
         /// <summary>
         /// Raw bytes for the type-discriminated union <c>data</c> field (64 bytes).
         /// Interpret using <see cref="Type"/> to select the appropriate union member.
         /// </summary>
-        public byte[] DataRawBytes { get; }
+        public byte[] DataRawBytes { get; set; }
 
         /// <summary>Initializes a new instance of <see cref="NVAPIGpuIllumZoneControlDto"/>.</summary>
         public NVAPIGpuIllumZoneControlDto(NV_GPU_CLIENT_ILLUM_ZONE_TYPE type, NV_GPU_CLIENT_ILLUM_CTRL_MODE ctrlMode, byte[] dataRawBytes)
@@ -3749,14 +3749,14 @@ namespace NVAPIWrapper
     /// <summary>
     /// Illumination zone control params DTO.
     /// </summary>
-    public readonly struct NVAPIGpuIllumZoneControlParamsDto : IEquatable<NVAPIGpuIllumZoneControlParamsDto>
+    public struct NVAPIGpuIllumZoneControlParamsDto : IEquatable<NVAPIGpuIllumZoneControlParamsDto>
     {
         /// <summary>True if default lighting values should be applied.</summary>
-        public bool IsDefault { get; }
+        public bool IsDefault { get; set; }
         /// <summary>Number of illumination zones for control.</summary>
-        public uint NumIllumZonesControl { get; }
+        public uint NumIllumZonesControl { get; set; }
         /// <summary>Per-zone illumination control array (up to 32 entries).</summary>
-        public NVAPIGpuIllumZoneControlDto[] Zones { get; }
+        public NVAPIGpuIllumZoneControlDto[] Zones { get; set; }
 
         /// <summary>Initializes a new instance of <see cref="NVAPIGpuIllumZoneControlParamsDto"/>.</summary>
         public NVAPIGpuIllumZoneControlParamsDto(bool isDefault, uint numIllumZonesControl, NVAPIGpuIllumZoneControlDto[] zones)
@@ -3829,33 +3829,33 @@ namespace NVAPIWrapper
     /// <summary>
     /// Per-clock entry DTO for a P-state, wrapping <see cref="NV_GPU_PSTATE20_CLOCK_ENTRY_V1"/>.
     /// </summary>
-    public readonly struct NVAPIPstateClockEntryDto : IEquatable<NVAPIPstateClockEntryDto>
+    public struct NVAPIPstateClockEntryDto : IEquatable<NVAPIPstateClockEntryDto>
     {
         /// <summary>Clock domain identifier.</summary>
-        public _NV_GPU_PUBLIC_CLOCK_ID DomainId { get; }
+        public _NV_GPU_PUBLIC_CLOCK_ID DomainId { get; set; }
         /// <summary>Clock type (single frequency or frequency range).</summary>
-        public NV_GPU_PERF_PSTATE20_CLOCK_TYPE_ID TypeId { get; }
+        public NV_GPU_PERF_PSTATE20_CLOCK_TYPE_ID TypeId { get; set; }
         /// <summary>True if this clock entry is editable.</summary>
-        public bool IsEditable { get; }
+        public bool IsEditable { get; set; }
         /// <summary>Current frequency delta adjustment in kHz.</summary>
-        public int FreqDeltaValue { get; }
+        public int FreqDeltaValue { get; set; }
         /// <summary>Minimum allowed frequency delta in kHz.</summary>
-        public int FreqDeltaMin { get; }
+        public int FreqDeltaMin { get; set; }
         /// <summary>Maximum allowed frequency delta in kHz.</summary>
-        public int FreqDeltaMax { get; }
+        public int FreqDeltaMax { get; set; }
         /// <summary>
         /// Minimum frequency in kHz. For <c>SINGLE</c> type, this is the single frequency value
         /// (overlaps <c>data.single.freq_kHz</c>). For <c>RANGE</c> type, this is the minimum.
         /// </summary>
-        public uint MinFreqKHz { get; }
+        public uint MinFreqKHz { get; set; }
         /// <summary>Maximum frequency in kHz; valid only for <c>RANGE</c> type.</summary>
-        public uint MaxFreqKHz { get; }
+        public uint MaxFreqKHz { get; set; }
         /// <summary>Voltage domain identifier; valid only for <c>RANGE</c> type.</summary>
-        public _NV_GPU_PERF_VOLTAGE_INFO_DOMAIN_ID RangeVoltageDomainId { get; }
+        public _NV_GPU_PERF_VOLTAGE_INFO_DOMAIN_ID RangeVoltageDomainId { get; set; }
         /// <summary>Minimum voltage in microvolts; valid only for <c>RANGE</c> type.</summary>
-        public uint RangeMinVoltageUv { get; }
+        public uint RangeMinVoltageUv { get; set; }
         /// <summary>Maximum voltage in microvolts; valid only for <c>RANGE</c> type.</summary>
-        public uint RangeMaxVoltageUv { get; }
+        public uint RangeMaxVoltageUv { get; set; }
 
         /// <summary>Initializes a new instance of <see cref="NVAPIPstateClockEntryDto"/>.</summary>
         public NVAPIPstateClockEntryDto(_NV_GPU_PUBLIC_CLOCK_ID domainId, NV_GPU_PERF_PSTATE20_CLOCK_TYPE_ID typeId, bool isEditable, int freqDeltaValue, int freqDeltaMin, int freqDeltaMax, uint minFreqKHz, uint maxFreqKHz, _NV_GPU_PERF_VOLTAGE_INFO_DOMAIN_ID rangeVoltageDomainId, uint rangeMinVoltageUv, uint rangeMaxVoltageUv)
@@ -3927,20 +3927,20 @@ namespace NVAPIWrapper
     /// <summary>
     /// Base voltage entry DTO for a P-state, wrapping <see cref="NV_GPU_PSTATE20_BASE_VOLTAGE_ENTRY_V1"/>.
     /// </summary>
-    public readonly struct NVAPIPstateBaseVoltageEntryDto : IEquatable<NVAPIPstateBaseVoltageEntryDto>
+    public struct NVAPIPstateBaseVoltageEntryDto : IEquatable<NVAPIPstateBaseVoltageEntryDto>
     {
         /// <summary>Voltage domain identifier.</summary>
-        public _NV_GPU_PERF_VOLTAGE_INFO_DOMAIN_ID DomainId { get; }
+        public _NV_GPU_PERF_VOLTAGE_INFO_DOMAIN_ID DomainId { get; set; }
         /// <summary>True if this voltage entry is editable.</summary>
-        public bool IsEditable { get; }
+        public bool IsEditable { get; set; }
         /// <summary>Base voltage in microvolts.</summary>
-        public uint VoltUv { get; }
+        public uint VoltUv { get; set; }
         /// <summary>Current voltage delta adjustment in microvolts.</summary>
-        public int VoltDeltaValue { get; }
+        public int VoltDeltaValue { get; set; }
         /// <summary>Minimum allowed voltage delta in microvolts.</summary>
-        public int VoltDeltaMin { get; }
+        public int VoltDeltaMin { get; set; }
         /// <summary>Maximum allowed voltage delta in microvolts.</summary>
-        public int VoltDeltaMax { get; }
+        public int VoltDeltaMax { get; set; }
 
         /// <summary>Initializes a new instance of <see cref="NVAPIPstateBaseVoltageEntryDto"/>.</summary>
         public NVAPIPstateBaseVoltageEntryDto(_NV_GPU_PERF_VOLTAGE_INFO_DOMAIN_ID domainId, bool isEditable, uint voltUv, int voltDeltaValue, int voltDeltaMin, int voltDeltaMax)
@@ -3995,16 +3995,16 @@ namespace NVAPIWrapper
     /// <summary>
     /// Per-pstate info DTO, wrapping the anonymous pstate struct within <see cref="_NV_GPU_PERF_PSTATES20_INFO_V2"/>.
     /// </summary>
-    public readonly struct NVAPIPstateInfoDto : IEquatable<NVAPIPstateInfoDto>
+    public struct NVAPIPstateInfoDto : IEquatable<NVAPIPstateInfoDto>
     {
         /// <summary>P-state identifier.</summary>
-        public _NV_GPU_PERF_PSTATE_ID PstateId { get; }
+        public _NV_GPU_PERF_PSTATE_ID PstateId { get; set; }
         /// <summary>True if this P-state is editable.</summary>
-        public bool IsEditable { get; }
+        public bool IsEditable { get; set; }
         /// <summary>Clock entries for this P-state (up to 8).</summary>
-        public NVAPIPstateClockEntryDto[] Clocks { get; }
+        public NVAPIPstateClockEntryDto[] Clocks { get; set; }
         /// <summary>Base voltage entries for this P-state (up to 4).</summary>
-        public NVAPIPstateBaseVoltageEntryDto[] BaseVoltages { get; }
+        public NVAPIPstateBaseVoltageEntryDto[] BaseVoltages { get; set; }
 
         /// <summary>Initializes a new instance of <see cref="NVAPIPstateInfoDto"/>.</summary>
         public NVAPIPstateInfoDto(_NV_GPU_PERF_PSTATE_ID pstateId, bool isEditable, NVAPIPstateClockEntryDto[] clocks, NVAPIPstateBaseVoltageEntryDto[] baseVoltages)
@@ -4084,22 +4084,22 @@ namespace NVAPIWrapper
     /// <summary>
     /// P-states (Pstates20) DTO.
     /// </summary>
-    public readonly struct NVAPIGpuPerfPstates20InfoDto : IEquatable<NVAPIGpuPerfPstates20InfoDto>
+    public struct NVAPIGpuPerfPstates20InfoDto : IEquatable<NVAPIGpuPerfPstates20InfoDto>
     {
         /// <summary>True if the P-state configuration is editable.</summary>
-        public bool IsEditable { get; }
+        public bool IsEditable { get; set; }
         /// <summary>Number of P-states reported.</summary>
-        public uint NumPstates { get; }
+        public uint NumPstates { get; set; }
         /// <summary>Number of clocks per P-state.</summary>
-        public uint NumClocks { get; }
+        public uint NumClocks { get; set; }
         /// <summary>Number of base voltages per P-state.</summary>
-        public uint NumBaseVoltages { get; }
+        public uint NumBaseVoltages { get; set; }
         /// <summary>P-state info array (up to 16 entries).</summary>
-        public NVAPIPstateInfoDto[] Pstates { get; }
+        public NVAPIPstateInfoDto[] Pstates { get; set; }
         /// <summary>Number of over-voltage entries.</summary>
-        public uint OvNumVoltages { get; }
+        public uint OvNumVoltages { get; set; }
         /// <summary>Over-voltage entries (up to 4).</summary>
-        public NVAPIPstateBaseVoltageEntryDto[] OvVoltages { get; }
+        public NVAPIPstateBaseVoltageEntryDto[] OvVoltages { get; set; }
 
         /// <summary>Initializes a new instance of <see cref="NVAPIGpuPerfPstates20InfoDto"/>.</summary>
         public NVAPIGpuPerfPstates20InfoDto(bool isEditable, uint numPstates, uint numClocks, uint numBaseVoltages, NVAPIPstateInfoDto[] pstates, uint ovNumVoltages, NVAPIPstateBaseVoltageEntryDto[] ovVoltages)
@@ -4197,10 +4197,10 @@ namespace NVAPIWrapper
     /// <summary>
     /// Virtualization info DTO.
     /// </summary>
-    public readonly struct NVAPIGpuVirtualizationInfoDto : IEquatable<NVAPIGpuVirtualizationInfoDto>
+    public struct NVAPIGpuVirtualizationInfoDto : IEquatable<NVAPIGpuVirtualizationInfoDto>
     {
         /// <summary>The GPU virtualization mode.</summary>
-        public _NV_VIRTUALIZATION_MODE VirtualizationMode { get; }
+        public _NV_VIRTUALIZATION_MODE VirtualizationMode { get; set; }
 
         /// <summary>Initializes a new instance of <see cref="NVAPIGpuVirtualizationInfoDto"/>.</summary>
         public NVAPIGpuVirtualizationInfoDto(_NV_VIRTUALIZATION_MODE virtualizationMode)
@@ -4249,22 +4249,22 @@ namespace NVAPIWrapper
     /// <summary>
     /// Per-feature license details DTO, wrapping <see cref="_NV_LICENSE_FEATURE_DETAILS_V4"/>.
     /// </summary>
-    public readonly struct NVAPILicenseFeatureDetailsDto : IEquatable<NVAPILicenseFeatureDetailsDto>
+    public struct NVAPILicenseFeatureDetailsDto : IEquatable<NVAPILicenseFeatureDetailsDto>
     {
         /// <summary>Version of the feature details struct as returned by NVAPI.</summary>
-        public uint Version { get; }
+        public uint Version { get; set; }
         /// <summary>True if the license is currently enabled.</summary>
-        public bool IsEnabled { get; }
+        public bool IsEnabled { get; set; }
         /// <summary>True if the feature is enabled.</summary>
-        public bool IsFeatureEnabled { get; }
+        public bool IsFeatureEnabled { get; set; }
         /// <summary>Feature code identifying the licensable feature type.</summary>
-        public _NV_LICENSE_FEATURE_TYPE FeatureCode { get; }
+        public _NV_LICENSE_FEATURE_TYPE FeatureCode { get; set; }
         /// <summary>License info string (up to 128 characters).</summary>
-        public string LicenseInfo { get; }
+        public string LicenseInfo { get; set; }
         /// <summary>Product name string (up to 128 characters).</summary>
-        public string ProductName { get; }
+        public string ProductName { get; set; }
         /// <summary>License expiry date and time details.</summary>
-        public _NV_LICENSE_EXPIRY_DETAILS LicenseExpiry { get; }
+        public _NV_LICENSE_EXPIRY_DETAILS LicenseExpiry { get; set; }
 
         /// <summary>Initializes a new instance of <see cref="NVAPILicenseFeatureDetailsDto"/>.</summary>
         public NVAPILicenseFeatureDetailsDto(uint version, bool isEnabled, bool isFeatureEnabled, _NV_LICENSE_FEATURE_TYPE featureCode, string licenseInfo, string productName, _NV_LICENSE_EXPIRY_DETAILS licenseExpiry)
@@ -4351,16 +4351,16 @@ namespace NVAPIWrapper
     /// <summary>
     /// Licensable features DTO.
     /// </summary>
-    public readonly struct NVAPILicensableFeaturesDto : IEquatable<NVAPILicensableFeaturesDto>
+    public struct NVAPILicensableFeaturesDto : IEquatable<NVAPILicensableFeaturesDto>
     {
         /// <summary>True if GPU licensing is supported.</summary>
-        public bool IsLicenseSupported { get; }
+        public bool IsLicenseSupported { get; set; }
         /// <summary>Number of licensable features reported.</summary>
-        public uint LicensableFeatureCount { get; }
+        public uint LicensableFeatureCount { get; set; }
         /// <summary>License signature string (up to 128 characters).</summary>
-        public string Signature { get; }
+        public string Signature { get; set; }
         /// <summary>Array of up to 3 per-feature license details.</summary>
-        public NVAPILicenseFeatureDetailsDto[] LicenseDetails { get; }
+        public NVAPILicenseFeatureDetailsDto[] LicenseDetails { get; set; }
 
         /// <summary>Initializes a new instance of <see cref="NVAPILicensableFeaturesDto"/>.</summary>
         public NVAPILicensableFeaturesDto(bool isLicenseSupported, uint licensableFeatureCount, string signature, NVAPILicenseFeatureDetailsDto[] licenseDetails)
@@ -4449,14 +4449,14 @@ namespace NVAPIWrapper
     /// <summary>
     /// Encoder statistics DTO.
     /// </summary>
-    public readonly struct NVAPIEncoderStatisticsDto : IEquatable<NVAPIEncoderStatisticsDto>
+    public struct NVAPIEncoderStatisticsDto : IEquatable<NVAPIEncoderStatisticsDto>
     {
         /// <summary>Number of active encoder sessions.</summary>
-        public uint SessionsCount { get; }
+        public uint SessionsCount { get; set; }
         /// <summary>Average frames per second across all sessions.</summary>
-        public uint AverageFps { get; }
+        public uint AverageFps { get; set; }
         /// <summary>Average encode latency in microseconds across all sessions.</summary>
-        public uint AverageLatency { get; }
+        public uint AverageLatency { get; set; }
 
         /// <summary>Initializes a new instance of <see cref="NVAPIEncoderStatisticsDto"/>.</summary>
         public NVAPIEncoderStatisticsDto(uint sessionsCount, uint averageFps, uint averageLatency)
@@ -4511,24 +4511,24 @@ namespace NVAPIWrapper
     /// <summary>
     /// Per-session encoder info DTO, wrapping <see cref="_NV_ENCODER_PER_SESSION_INFO_V1"/>.
     /// </summary>
-    public readonly struct NVAPIEncoderPerSessionInfoDto : IEquatable<NVAPIEncoderPerSessionInfoDto>
+    public struct NVAPIEncoderPerSessionInfoDto : IEquatable<NVAPIEncoderPerSessionInfoDto>
     {
         /// <summary>Unique encoder session identifier.</summary>
-        public uint SessionId { get; }
+        public uint SessionId { get; set; }
         /// <summary>OS process ID that owns this session.</summary>
-        public uint ProcessId { get; }
+        public uint ProcessId { get; set; }
         /// <summary>vGPU instance identifier (0 for non-vGPU).</summary>
-        public uint VgpuInstance { get; }
+        public uint VgpuInstance { get; set; }
         /// <summary>Codec type used by this session.</summary>
-        public _NV_ENCODER_TYPE CodecType { get; }
+        public _NV_ENCODER_TYPE CodecType { get; set; }
         /// <summary>Horizontal resolution of the encoded stream.</summary>
-        public uint HResolution { get; }
+        public uint HResolution { get; set; }
         /// <summary>Vertical resolution of the encoded stream.</summary>
-        public uint VResolution { get; }
+        public uint VResolution { get; set; }
         /// <summary>Average encode frame rate for this session.</summary>
-        public uint AverageEncodeFps { get; }
+        public uint AverageEncodeFps { get; set; }
         /// <summary>Average encode latency in microseconds for this session.</summary>
-        public uint AverageEncodeLatency { get; }
+        public uint AverageEncodeLatency { get; set; }
 
         /// <summary>Initializes a new instance of <see cref="NVAPIEncoderPerSessionInfoDto"/>.</summary>
         public NVAPIEncoderPerSessionInfoDto(uint sessionId, uint processId, uint vgpuInstance, _NV_ENCODER_TYPE codecType, uint hResolution, uint vResolution, uint averageEncodeFps, uint averageEncodeLatency)
@@ -4583,12 +4583,12 @@ namespace NVAPIWrapper
     /// <summary>
     /// Encoder sessions info DTO.
     /// </summary>
-    public readonly struct NVAPIEncoderSessionsInfoDto : IEquatable<NVAPIEncoderSessionsInfoDto>
+    public struct NVAPIEncoderSessionsInfoDto : IEquatable<NVAPIEncoderSessionsInfoDto>
     {
         /// <summary>Number of active encoder sessions.</summary>
-        public uint SessionsCount { get; }
+        public uint SessionsCount { get; set; }
         /// <summary>Per-session encoder info array; may be empty if no sessions are active.</summary>
-        public NVAPIEncoderPerSessionInfoDto[] Sessions { get; }
+        public NVAPIEncoderPerSessionInfoDto[] Sessions { get; set; }
 
         /// <summary>Initializes a new instance of <see cref="NVAPIEncoderSessionsInfoDto"/>.</summary>
         public NVAPIEncoderSessionsInfoDto(uint sessionsCount, NVAPIEncoderPerSessionInfoDto[] sessions)
@@ -4653,10 +4653,10 @@ namespace NVAPIWrapper
     /// <summary>
     /// VR Ready DTO.
     /// </summary>
-    public readonly struct NVAPIGpuVrReadyDto : IEquatable<NVAPIGpuVrReadyDto>
+    public struct NVAPIGpuVrReadyDto : IEquatable<NVAPIGpuVrReadyDto>
     {
         /// <summary>True if the GPU is VR-ready.</summary>
-        public bool IsVRReady { get; }
+        public bool IsVRReady { get; set; }
 
         /// <summary>Initializes a new instance of <see cref="NVAPIGpuVrReadyDto"/>.</summary>
         public NVAPIGpuVrReadyDto(bool isVRReady)
@@ -4703,10 +4703,10 @@ namespace NVAPIWrapper
     /// <summary>
     /// GSP info DTO.
     /// </summary>
-    public readonly struct NVAPIGpuGspInfoDto : IEquatable<NVAPIGpuGspInfoDto>
+    public struct NVAPIGpuGspInfoDto : IEquatable<NVAPIGpuGspInfoDto>
     {
         /// <summary>GSP firmware version string (null-terminated ASCII, up to 64 bytes).</summary>
-        public string FirmwareVersion { get; }
+        public string FirmwareVersion { get; set; }
 
         /// <summary>Initializes a new instance of <see cref="NVAPIGpuGspInfoDto"/>.</summary>
         public NVAPIGpuGspInfoDto(string firmwareVersion)
@@ -4761,20 +4761,20 @@ namespace NVAPIWrapper
     /// <summary>
     /// NVLINK caps DTO.
     /// </summary>
-    public readonly struct NVAPINvLinkCapsDto : IEquatable<NVAPINvLinkCapsDto>
+    public struct NVAPINvLinkCapsDto : IEquatable<NVAPINvLinkCapsDto>
     {
         /// <summary>NVLINK capabilities bitmask table.</summary>
-        public uint CapsTbl { get; }
+        public uint CapsTbl { get; set; }
         /// <summary>Lowest supported NVLink version.</summary>
-        public byte LowestNvlinkVersion { get; }
+        public byte LowestNvlinkVersion { get; set; }
         /// <summary>Highest supported NVLink version.</summary>
-        public byte HighestNvlinkVersion { get; }
+        public byte HighestNvlinkVersion { get; set; }
         /// <summary>Lowest supported NCI version.</summary>
-        public byte LowestNciVersion { get; }
+        public byte LowestNciVersion { get; set; }
         /// <summary>Highest supported NCI version.</summary>
-        public byte HighestNciVersion { get; }
+        public byte HighestNciVersion { get; set; }
         /// <summary>Bitmask of active NVLink links.</summary>
-        public uint LinkMask { get; }
+        public uint LinkMask { get; set; }
 
         /// <summary>Initializes a new instance of <see cref="NVAPINvLinkCapsDto"/>.</summary>
         public NVAPINvLinkCapsDto(uint capsTbl, byte lowestNvlinkVersion, byte highestNvlinkVersion, byte lowestNciVersion, byte highestNciVersion, uint linkMask)
@@ -4845,12 +4845,12 @@ namespace NVAPIWrapper
     /// <summary>
     /// NVLINK status DTO.
     /// </summary>
-    public readonly struct NVAPINvLinkStatusDto : IEquatable<NVAPINvLinkStatusDto>
+    public struct NVAPINvLinkStatusDto : IEquatable<NVAPINvLinkStatusDto>
     {
         /// <summary>NVLINK_GET_STATUS_V2.version</summary>
-        public uint Version { get; }
+        public uint Version { get; set; }
         /// <summary>NVLINK_GET_STATUS_V2.linkMask — bitmask of active links (bit i = link i is in use).</summary>
-        public uint LinkMask { get; }
+        public uint LinkMask { get; set; }
 
         private readonly List<NVAPINvLinkStatusInfoDto>? _linkInfo;
         /// <summary>
@@ -4944,33 +4944,33 @@ namespace NVAPIWrapper
     /// <summary>
     /// NVLINK_LINK_STATUS_INFO_V2 DTO.
     /// </summary>
-    public readonly struct NVAPINvLinkStatusInfoDto : IEquatable<NVAPINvLinkStatusInfoDto>
+    public struct NVAPINvLinkStatusInfoDto : IEquatable<NVAPINvLinkStatusInfoDto>
     {
-        public uint CapsTbl { get; }
-        public byte PhyType { get; }
-        public byte SubLinkWidth { get; }
-        public uint LinkState { get; }
-        public byte RxSublinkStatus { get; }
-        public byte TxSublinkStatus { get; }
-        public byte NvlinkVersion { get; }
-        public byte NciVersion { get; }
-        public byte PhyVersion { get; }
-        public uint NvlinkCommonClockSpeedMhz { get; }
-        public uint NvlinkRefClkSpeedMhz { get; }
-        public byte NvlinkRefClkType { get; }
-        public uint NvlinkLinkClockMhz { get; }
-        public bool Connected { get; }
-        public uint Reserved { get; }
-        public byte LoopProperty { get; }
-        public byte RemoteDeviceLinkNumber { get; }
-        public NVAPINvLinkDeviceInfoDto RemoteDeviceInfo { get; }
-        public byte LocalDeviceLinkNumber { get; }
-        public NVAPINvLinkDeviceInfoDto LocalDeviceInfo { get; }
-        public uint NvlinkLineRateMbps { get; }
-        public uint NvlinkMinL1Threshold { get; }
-        public uint NvlinkMaxL1Threshold { get; }
-        public uint NvlinkL1ThresholdUnits { get; }
-        public uint[] ReservedEx { get; }
+        public uint CapsTbl { get; set; }
+        public byte PhyType { get; set; }
+        public byte SubLinkWidth { get; set; }
+        public uint LinkState { get; set; }
+        public byte RxSublinkStatus { get; set; }
+        public byte TxSublinkStatus { get; set; }
+        public byte NvlinkVersion { get; set; }
+        public byte NciVersion { get; set; }
+        public byte PhyVersion { get; set; }
+        public uint NvlinkCommonClockSpeedMhz { get; set; }
+        public uint NvlinkRefClkSpeedMhz { get; set; }
+        public byte NvlinkRefClkType { get; set; }
+        public uint NvlinkLinkClockMhz { get; set; }
+        public bool Connected { get; set; }
+        public uint Reserved { get; set; }
+        public byte LoopProperty { get; set; }
+        public byte RemoteDeviceLinkNumber { get; set; }
+        public NVAPINvLinkDeviceInfoDto RemoteDeviceInfo { get; set; }
+        public byte LocalDeviceLinkNumber { get; set; }
+        public NVAPINvLinkDeviceInfoDto LocalDeviceInfo { get; set; }
+        public uint NvlinkLineRateMbps { get; set; }
+        public uint NvlinkMinL1Threshold { get; set; }
+        public uint NvlinkMaxL1Threshold { get; set; }
+        public uint NvlinkL1ThresholdUnits { get; set; }
+        public uint[] ReservedEx { get; set; }
 
         public NVAPINvLinkStatusInfoDto(
             uint capsTbl,
@@ -5144,16 +5144,16 @@ namespace NVAPIWrapper
     /// <summary>
     /// NVLINK_DEVICE_INFO_V1 DTO.
     /// </summary>
-    public readonly struct NVAPINvLinkDeviceInfoDto : IEquatable<NVAPINvLinkDeviceInfoDto>
+    public struct NVAPINvLinkDeviceInfoDto : IEquatable<NVAPINvLinkDeviceInfoDto>
     {
-        public uint DeviceIdFlags { get; }
-        public ushort Domain { get; }
-        public ushort Bus { get; }
-        public ushort Device { get; }
-        public ushort Function { get; }
-        public uint PciDeviceId { get; }
-        public ulong DeviceType { get; }
-        public byte[] DeviceUUID { get; }
+        public uint DeviceIdFlags { get; set; }
+        public ushort Domain { get; set; }
+        public ushort Bus { get; set; }
+        public ushort Device { get; set; }
+        public ushort Function { get; set; }
+        public uint PciDeviceId { get; set; }
+        public ulong DeviceType { get; set; }
+        public byte[] DeviceUUID { get; set; }
 
         public NVAPINvLinkDeviceInfoDto(uint deviceIdFlags, ushort domain, ushort bus, ushort device, ushort function, uint pciDeviceId, ulong deviceType, byte[] deviceUUID)
         {
@@ -5234,14 +5234,14 @@ namespace NVAPIWrapper
     /// <summary>
     /// GPU info DTO.
     /// </summary>
-    public readonly struct NVAPIGpuInfoDto : IEquatable<NVAPIGpuInfoDto>
+    public struct NVAPIGpuInfoDto : IEquatable<NVAPIGpuInfoDto>
     {
-        public uint Version { get; }
-        public bool IsExternalGpu { get; }
-        public ulong Reserved1 { get; }
-        public uint RayTracingCores { get; }
-        public uint TensorCores { get; }
-        public uint[] Reserved2 { get; }
+        public uint Version { get; set; }
+        public bool IsExternalGpu { get; set; }
+        public ulong Reserved1 { get; set; }
+        public uint RayTracingCores { get; set; }
+        public uint TensorCores { get; set; }
+        public uint[] Reserved2 { get; set; }
 
         public NVAPIGpuInfoDto(
             uint version,
@@ -5332,11 +5332,11 @@ namespace NVAPIWrapper
     /// <summary>
     /// GPU architecture info DTO.
     /// </summary>
-    public readonly struct NVAPIGpuArchInfoDto : IEquatable<NVAPIGpuArchInfoDto>
+    public struct NVAPIGpuArchInfoDto : IEquatable<NVAPIGpuArchInfoDto>
     {
-        public _NV_GPU_ARCHITECTURE_ID ArchitectureId { get; }
-        public _NV_GPU_ARCH_IMPLEMENTATION_ID ImplementationId { get; }
-        public _NV_GPU_CHIP_REVISION RevisionId { get; }
+        public _NV_GPU_ARCHITECTURE_ID ArchitectureId { get; set; }
+        public _NV_GPU_ARCH_IMPLEMENTATION_ID ImplementationId { get; set; }
+        public _NV_GPU_CHIP_REVISION RevisionId { get; set; }
 
         public NVAPIGpuArchInfoDto(
             _NV_GPU_ARCHITECTURE_ID architectureId,
@@ -5441,10 +5441,10 @@ namespace NVAPIWrapper
     /// <summary>
     /// ECC configuration info DTO.
     /// </summary>
-    public readonly struct NVAPIGpuEccConfigurationInfoDto : IEquatable<NVAPIGpuEccConfigurationInfoDto>
+    public struct NVAPIGpuEccConfigurationInfoDto : IEquatable<NVAPIGpuEccConfigurationInfoDto>
     {
-        public bool IsEnabled { get; }
-        public bool IsEnabledByDefault { get; }
+        public bool IsEnabled { get; set; }
+        public bool IsEnabledByDefault { get; set; }
 
         public NVAPIGpuEccConfigurationInfoDto(bool isEnabled, bool isEnabledByDefault)
         {
@@ -5481,12 +5481,12 @@ namespace NVAPIWrapper
     /// <summary>
     /// ECC error info DTO.
     /// </summary>
-    public readonly struct NVAPIGpuEccErrorInfoDto : IEquatable<NVAPIGpuEccErrorInfoDto>
+    public struct NVAPIGpuEccErrorInfoDto : IEquatable<NVAPIGpuEccErrorInfoDto>
     {
-        public ulong CurrentSingleBitErrors { get; }
-        public ulong CurrentDoubleBitErrors { get; }
-        public ulong AggregateSingleBitErrors { get; }
-        public ulong AggregateDoubleBitErrors { get; }
+        public ulong CurrentSingleBitErrors { get; set; }
+        public ulong CurrentDoubleBitErrors { get; set; }
+        public ulong AggregateSingleBitErrors { get; set; }
+        public ulong AggregateDoubleBitErrors { get; set; }
 
         public NVAPIGpuEccErrorInfoDto(
             ulong currentSingleBitErrors,
@@ -5544,11 +5544,11 @@ namespace NVAPIWrapper
     /// <summary>
     /// HDCP support status DTO.
     /// </summary>
-    public readonly struct NVAPIGpuHdcpSupportStatusDto : IEquatable<NVAPIGpuHdcpSupportStatusDto>
+    public struct NVAPIGpuHdcpSupportStatusDto : IEquatable<NVAPIGpuHdcpSupportStatusDto>
     {
-        public _NV_GPU_HDCP_FUSE_STATE HdcpFuseState { get; }
-        public _NV_GPU_HDCP_KEY_SOURCE HdcpKeySource { get; }
-        public _NV_GPU_HDCP_KEY_SOURCE_STATE HdcpKeySourceState { get; }
+        public _NV_GPU_HDCP_FUSE_STATE HdcpFuseState { get; set; }
+        public _NV_GPU_HDCP_KEY_SOURCE HdcpKeySource { get; set; }
+        public _NV_GPU_HDCP_KEY_SOURCE_STATE HdcpKeySourceState { get; set; }
 
         public NVAPIGpuHdcpSupportStatusDto(
             _NV_GPU_HDCP_FUSE_STATE hdcpFuseState,
@@ -5592,12 +5592,12 @@ namespace NVAPIWrapper
     /// <summary>
     /// GPU EDID data DTO.
     /// </summary>
-    public readonly struct NVAPIGpuEdidDto : IEquatable<NVAPIGpuEdidDto>
+    public struct NVAPIGpuEdidDto : IEquatable<NVAPIGpuEdidDto>
     {
-        public byte[] Data { get; }
-        public uint SizeOfEdid { get; }
-        public uint EdidId { get; }
-        public uint Offset { get; }
+        public byte[] Data { get; set; }
+        public uint SizeOfEdid { get; set; }
+        public uint EdidId { get; set; }
+        public uint Offset { get; set; }
 
         public NVAPIGpuEdidDto(byte[] data, uint sizeOfEdid, uint edidId, uint offset)
         {
@@ -5666,13 +5666,13 @@ namespace NVAPIWrapper
     /// <summary>
     /// Logical GPU info DTO.
     /// </summary>
-    public readonly struct NVAPILogicalGpuInfoDto : IEquatable<NVAPILogicalGpuInfoDto>
+    public struct NVAPILogicalGpuInfoDto : IEquatable<NVAPILogicalGpuInfoDto>
     {
-        internal IntPtr[] PhysicalGpuHandles { get; }
-        public NVAPIPhysicalGpuHelper[] PhysicalGpus { get; }
-        public uint PhysicalGpuCount { get; }
-        public _LUID? OsAdapterId { get; }
-        public uint[] Reserved { get; }
+        internal IntPtr[] PhysicalGpuHandles { get; set; }
+        public NVAPIPhysicalGpuHelper[] PhysicalGpus { get; set; }
+        public uint PhysicalGpuCount { get; set; }
+        public _LUID? OsAdapterId { get; set; }
+        public uint[] Reserved { get; set; }
 
         private NVAPILogicalGpuInfoDto(_LUID? osAdapterId, IntPtr[] handles, NVAPIPhysicalGpuHelper[] gpus, uint[] reserved)
         {
@@ -5742,12 +5742,12 @@ namespace NVAPIWrapper
     /// <summary>
     /// DTO for NvSBox values.
     /// </summary>
-    public readonly struct NVAPISBoxDto : IEquatable<NVAPISBoxDto>
+    public struct NVAPISBoxDto : IEquatable<NVAPISBoxDto>
     {
-        public int X { get; }
-        public int Y { get; }
-        public int Width { get; }
-        public int Height { get; }
+        public int X { get; set; }
+        public int Y { get; set; }
+        public int Width { get; set; }
+        public int Height { get; set; }
 
         public NVAPISBoxDto(int x, int y, int width, int height)
         {
@@ -5787,10 +5787,10 @@ namespace NVAPIWrapper
     /// <summary>
     /// Workstation feature query DTO.
     /// </summary>
-    public readonly struct NVAPIGpuWorkstationFeatureQueryDto : IEquatable<NVAPIGpuWorkstationFeatureQueryDto>
+    public struct NVAPIGpuWorkstationFeatureQueryDto : IEquatable<NVAPIGpuWorkstationFeatureQueryDto>
     {
-        public uint ConfiguredFeatureMask { get; }
-        public uint ConsistentFeatureMask { get; }
+        public uint ConfiguredFeatureMask { get; set; }
+        public uint ConsistentFeatureMask { get; set; }
 
         public NVAPIGpuWorkstationFeatureQueryDto(uint configuredFeatureMask, uint consistentFeatureMask)
         {
@@ -5813,14 +5813,14 @@ namespace NVAPIWrapper
     /// <summary>
     /// Utilization sample callback settings DTO.
     /// </summary>
-    public readonly struct NVAPIGpuUtilizationSampleCallbackSettingsDto : IEquatable<NVAPIGpuUtilizationSampleCallbackSettingsDto>
+    public struct NVAPIGpuUtilizationSampleCallbackSettingsDto : IEquatable<NVAPIGpuUtilizationSampleCallbackSettingsDto>
     {
-        public IntPtr CallbackParam { get; }
-        public uint CallbackPeriodMs { get; }
-        public IntPtr Callback { get; }
-        public byte[] SuperReserved { get; }
-        public byte[] PeriodicReserved { get; }
-        public byte[] Reserved { get; }
+        public IntPtr CallbackParam { get; set; }
+        public uint CallbackPeriodMs { get; set; }
+        public IntPtr Callback { get; set; }
+        public byte[] SuperReserved { get; set; }
+        public byte[] PeriodicReserved { get; set; }
+        public byte[] Reserved { get; set; }
 
         public NVAPIGpuUtilizationSampleCallbackSettingsDto(
             IntPtr callbackParam,

@@ -969,20 +969,20 @@ namespace NVAPIWrapper
     /// <summary>
     /// VIO capabilities DTO.
     /// </summary>
-    public readonly struct NVAPIVioCapsDto : IEquatable<NVAPIVioCapsDto>
+    public struct NVAPIVioCapsDto : IEquatable<NVAPIVioCapsDto>
     {
-        public string AdapterName { get; }
-        public uint AdapterClass { get; }
-        public uint AdapterCaps { get; }
-        public uint DipSwitch { get; }
-        public uint DipSwitchReserved { get; }
-        public uint BoardId { get; }
-        public uint DriverMajorVersion { get; }
-        public uint DriverMinorVersion { get; }
-        public uint FirmwareMajorVersion { get; }
-        public uint FirmwareMinorVersion { get; }
-        public uint OwnerId { get; }
-        public _NVVIOOWNERTYPE OwnerType { get; }
+        public string AdapterName { get; set; }
+        public uint AdapterClass { get; set; }
+        public uint AdapterCaps { get; set; }
+        public uint DipSwitch { get; set; }
+        public uint DipSwitchReserved { get; set; }
+        public uint BoardId { get; set; }
+        public uint DriverMajorVersion { get; set; }
+        public uint DriverMinorVersion { get; set; }
+        public uint FirmwareMajorVersion { get; set; }
+        public uint FirmwareMinorVersion { get; set; }
+        public uint OwnerId { get; set; }
+        public _NVVIOOWNERTYPE OwnerType { get; set; }
 
         /// <summary>
         /// Create a VIO capabilities DTO.
@@ -1150,16 +1150,16 @@ namespace NVAPIWrapper
     /// <summary>
     /// VIO PCI info DTO.
     /// </summary>
-    public readonly struct NVAPIVioPciInfoDto : IEquatable<NVAPIVioPciInfoDto>
+    public struct NVAPIVioPciInfoDto : IEquatable<NVAPIVioPciInfoDto>
     {
-        public uint PciDeviceId { get; }
-        public uint PciSubSystemId { get; }
-        public uint PciRevisionId { get; }
-        public uint PciDomain { get; }
-        public uint PciBus { get; }
-        public uint PciSlot { get; }
-        public _NVVIOPCILINKWIDTH PciLinkWidth { get; }
-        public _NVVIOPCILINKRATE PciLinkRate { get; }
+        public uint PciDeviceId { get; set; }
+        public uint PciSubSystemId { get; set; }
+        public uint PciRevisionId { get; set; }
+        public uint PciDomain { get; set; }
+        public uint PciBus { get; set; }
+        public uint PciSlot { get; set; }
+        public _NVVIOPCILINKWIDTH PciLinkWidth { get; set; }
+        public _NVVIOPCILINKRATE PciLinkRate { get; set; }
 
         public NVAPIVioPciInfoDto(
             uint pciDeviceId,
@@ -1247,10 +1247,10 @@ namespace NVAPIWrapper
     /// <summary>
     /// VIO signal format detail DTO.
     /// </summary>
-    public readonly struct NVAPIVioSignalFormatDetailDto : IEquatable<NVAPIVioSignalFormatDetailDto>
+    public struct NVAPIVioSignalFormatDetailDto : IEquatable<NVAPIVioSignalFormatDetailDto>
     {
-        public _NVVIOSIGNALFORMAT SignalFormat { get; }
-        public _NVVIOVIDEOMODE VideoMode { get; }
+        public _NVVIOSIGNALFORMAT SignalFormat { get; set; }
+        public _NVVIOVIDEOMODE VideoMode { get; set; }
 
         public NVAPIVioSignalFormatDetailDto(_NVVIOSIGNALFORMAT signalFormat, _NVVIOVIDEOMODE videoMode)
         {
@@ -1296,10 +1296,10 @@ namespace NVAPIWrapper
     /// <summary>
     /// VIO data format detail DTO.
     /// </summary>
-    public readonly struct NVAPIVioDataFormatDetailDto : IEquatable<NVAPIVioDataFormatDetailDto>
+    public struct NVAPIVioDataFormatDetailDto : IEquatable<NVAPIVioDataFormatDetailDto>
     {
-        public _NVVIODATAFORMAT DataFormat { get; }
-        public uint VioCaps { get; }
+        public _NVVIODATAFORMAT DataFormat { get; set; }
+        public uint VioCaps { get; set; }
 
         public NVAPIVioDataFormatDetailDto(_NVVIODATAFORMAT dataFormat, uint vioCaps)
         {
@@ -1345,10 +1345,10 @@ namespace NVAPIWrapper
     /// <summary>
     /// VIO sync delay DTO.
     /// </summary>
-    public readonly struct NVAPIVioSyncDelayDto : IEquatable<NVAPIVioSyncDelayDto>
+    public struct NVAPIVioSyncDelayDto : IEquatable<NVAPIVioSyncDelayDto>
     {
-        public uint HorizontalDelay { get; }
-        public uint VerticalDelay { get; }
+        public uint HorizontalDelay { get; set; }
+        public uint VerticalDelay { get; set; }
 
         public NVAPIVioSyncDelayDto(uint horizontalDelay, uint verticalDelay)
         {
@@ -1395,12 +1395,12 @@ namespace NVAPIWrapper
     /// <summary>
     /// VIO color conversion DTO.
     /// </summary>
-    public readonly struct NVAPIVioColorConversionDto : IEquatable<NVAPIVioColorConversionDto>
+    public struct NVAPIVioColorConversionDto : IEquatable<NVAPIVioColorConversionDto>
     {
-        public float[] ColorMatrix { get; }
-        public float[] ColorOffset { get; }
-        public float[] ColorScale { get; }
-        public bool CompositeSafe { get; }
+        public float[] ColorMatrix { get; set; }
+        public float[] ColorOffset { get; set; }
+        public float[] ColorScale { get; set; }
+        public bool CompositeSafe { get; set; }
 
         public NVAPIVioColorConversionDto(float[] colorMatrix, float[] colorOffset, float[] colorScale, bool compositeSafe)
         {
@@ -1481,9 +1481,9 @@ namespace NVAPIWrapper
     /// <summary>
     /// VIO configuration DTO (raw bytes due to union layout).
     /// </summary>
-    public readonly struct NVAPIVioConfigDto : IEquatable<NVAPIVioConfigDto>
+    public struct NVAPIVioConfigDto : IEquatable<NVAPIVioConfigDto>
     {
-        public byte[] RawBytes { get; }
+        public byte[] RawBytes { get; set; }
 
         public NVAPIVioConfigDto(byte[] rawBytes)
         {
@@ -1528,9 +1528,9 @@ namespace NVAPIWrapper
     /// <summary>
     /// VIO status DTO (raw bytes due to union layout).
     /// </summary>
-    public readonly struct NVAPIVioStatusDto : IEquatable<NVAPIVioStatusDto>
+    public struct NVAPIVioStatusDto : IEquatable<NVAPIVioStatusDto>
     {
-        public byte[] RawBytes { get; }
+        public byte[] RawBytes { get; set; }
 
         public NVAPIVioStatusDto(byte[] rawBytes)
         {
@@ -1575,9 +1575,9 @@ namespace NVAPIWrapper
     /// <summary>
     /// VIO gamma correction DTO (raw bytes due to union layout).
     /// </summary>
-    public readonly struct NVAPIVioGammaDto : IEquatable<NVAPIVioGammaDto>
+    public struct NVAPIVioGammaDto : IEquatable<NVAPIVioGammaDto>
     {
-        public byte[] RawBytes { get; }
+        public byte[] RawBytes { get; set; }
 
         public NVAPIVioGammaDto(byte[] rawBytes)
         {
@@ -1622,10 +1622,10 @@ namespace NVAPIWrapper
     /// <summary>
     /// VIO topology DTO.
     /// </summary>
-    public readonly struct NVAPIVioTopologyDto : IEquatable<NVAPIVioTopologyDto>
+    public struct NVAPIVioTopologyDto : IEquatable<NVAPIVioTopologyDto>
     {
-        public uint TotalDeviceCount { get; }
-        public NVAPIVioTopologyTargetDto[] Targets { get; }
+        public uint TotalDeviceCount { get; set; }
+        public NVAPIVioTopologyTargetDto[] Targets { get; set; }
 
         public NVAPIVioTopologyDto(uint totalDeviceCount, NVAPIVioTopologyTargetDto[] targets)
         {
@@ -1690,12 +1690,12 @@ namespace NVAPIWrapper
     /// <summary>
     /// VIO topology target DTO.
     /// </summary>
-    public readonly struct NVAPIVioTopologyTargetDto : IEquatable<NVAPIVioTopologyTargetDto>
+    public struct NVAPIVioTopologyTargetDto : IEquatable<NVAPIVioTopologyTargetDto>
     {
-        public IntPtr PhysicalGpuHandle { get; }
-        public IntPtr VioHandle { get; }
-        public uint VioId { get; }
-        public uint OutputId { get; }
+        public IntPtr PhysicalGpuHandle { get; set; }
+        public IntPtr VioHandle { get; set; }
+        public uint VioId { get; set; }
+        public uint OutputId { get; set; }
 
         public NVAPIVioTopologyTargetDto(IntPtr physicalGpuHandle, IntPtr vioHandle, uint vioId, uint outputId)
         {

@@ -212,12 +212,12 @@ namespace NVAPIWrapper
     /// <summary>
     /// OpenGL expert mode state DTO.
     /// </summary>
-    public readonly struct NVAPIOglExpertModeDto : IEquatable<NVAPIOglExpertModeDto>
+    public struct NVAPIOglExpertModeDto : IEquatable<NVAPIOglExpertModeDto>
     {
-        public uint DetailMask { get; }
-        public uint ReportMask { get; }
-        public uint OutputMask { get; }
-        public IntPtr Callback { get; }
+        public uint DetailMask { get; set; }
+        public uint ReportMask { get; set; }
+        public uint OutputMask { get; set; }
+        public IntPtr Callback { get; set; }
 
         public NVAPIOglExpertModeDto(uint detailMask, uint reportMask, uint outputMask, IntPtr callback)
         {
@@ -262,11 +262,11 @@ namespace NVAPIWrapper
     /// <summary>
     /// OpenGL expert mode defaults DTO.
     /// </summary>
-    public readonly struct NVAPIOglExpertDefaultsDto : IEquatable<NVAPIOglExpertDefaultsDto>
+    public struct NVAPIOglExpertDefaultsDto : IEquatable<NVAPIOglExpertDefaultsDto>
     {
-        public uint DetailMask { get; }
-        public uint ReportMask { get; }
-        public uint OutputMask { get; }
+        public uint DetailMask { get; set; }
+        public uint ReportMask { get; set; }
+        public uint OutputMask { get; set; }
 
         public NVAPIOglExpertDefaultsDto(uint detailMask, uint reportMask, uint outputMask)
         {
