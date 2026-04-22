@@ -2796,7 +2796,7 @@ namespace NVAPIWrapper
                 details.connector,
                 details.tvFormat,
                 details.timingOverride,
-                details.timing);
+                NVAPITimingDto.FromNative(details.timing));
         }
 
         internal static unsafe long? ReadOsAdapterLuid(void* osAdapterId)
@@ -2901,7 +2901,7 @@ namespace NVAPIWrapper
             details->connector = info.Connector;
             details->tvFormat = info.TvFormat;
             details->timingOverride = info.TimingOverride;
-            details->timing = info.Timing;
+            details->timing = info.Timing.ToNative();
             details->reserved = 0;
         }
     }
@@ -3522,6 +3522,315 @@ namespace NVAPIWrapper
     }
 
     /// <summary>
+    /// Managed representation of the NV_TIMINGEXT extended timing information.
+    /// </summary>
+    public struct NVAPITimingExtDto : IEquatable<NVAPITimingExtDto>
+    {
+        /// <summary>Timing flags.</summary>
+        public uint Flag { get; set; }
+
+        /// <summary>Refresh rate in Hz.</summary>
+        public ushort Rr { get; set; }
+
+        /// <summary>Refresh rate in 1/1000 Hz.</summary>
+        public uint Rrx1k { get; set; }
+
+        /// <summary>Aspect ratio.</summary>
+        public uint Aspect { get; set; }
+
+        /// <summary>Repetition factor.</summary>
+        public ushort Rep { get; set; }
+
+        /// <summary>Timing status.</summary>
+        public uint Status { get; set; }
+
+        /// <summary>Timing name (null-terminated ASCII, up to 40 bytes).</summary>
+        public string? Name { get; set; }
+
+        /// <summary>Create timing ext info.</summary>
+        public NVAPITimingExtDto(uint flag, ushort rr, uint rrx1k, uint aspect, ushort rep, uint status, string? name)
+        {
+            Flag = flag;
+            Rr = rr;
+            Rrx1k = rrx1k;
+            Aspect = aspect;
+            Rep = rep;
+            Status = status;
+            Name = name;
+        }
+
+        /// <summary>
+        /// Create a DTO from a native timing ext struct.
+        /// </summary>
+        /// <param name="native">Native timing ext struct.</param>
+        /// <returns>Timing ext DTO.</returns>
+        public static NVAPITimingExtDto FromNative(tagNV_TIMINGEXT native)
+        {
+            // Read the 40-byte fixed buffer as null-terminated ASCII
+            string? name = null;
+            unsafe
+            {
+                var span = new System.ReadOnlySpan<byte>((byte*)System.Runtime.CompilerServices.Unsafe.AsPointer(ref native.name[0]), 40);
+                int nullPos = span.IndexOf((byte)0);
+                var nameBytes = nullPos >= 0 ? span.Slice(0, nullPos) : span;
+                if (nameBytes.Length > 0)
+                    name = System.Text.Encoding.ASCII.GetString(nameBytes);
+            }
+            return new NVAPITimingExtDto(native.flag, native.rr, native.rrx1k, native.aspect, native.rep, native.status, name);
+        }
+
+        /// <summary>
+        /// Convert this DTO to a native timing ext struct.
+        /// </summary>
+        /// <returns>Native timing ext struct.</returns>
+        public tagNV_TIMINGEXT ToNative()
+        {
+            var native = new tagNV_TIMINGEXT
+            {
+                flag = Flag,
+                rr = Rr,
+                rrx1k = Rrx1k,
+                aspect = Aspect,
+                rep = Rep,
+                status = Status,
+            };
+            // Write name as null-terminated ASCII into the 40-byte fixed buffer
+            if (!string.IsNullOrEmpty(Name))
+            {
+                var bytes = System.Text.Encoding.ASCII.GetBytes(Name!);
+                int count = Math.Min(bytes.Length, 39); // leave room for null terminator
+                for (int i = 0; i < count; i++)
+                    native.name[i] = bytes[i];
+                native.name[count] = 0;
+            }
+            return native;
+        }
+
+        /// <inheritdoc />
+        public bool Equals(NVAPITimingExtDto other)
+        {
+            return Flag == other.Flag
+                && Rr == other.Rr
+                && Rrx1k == other.Rrx1k
+                && Aspect == other.Aspect
+                && Rep == other.Rep
+                && Status == other.Status
+                && string.Equals(Name, other.Name, System.StringComparison.Ordinal);
+        }
+
+        /// <inheritdoc />
+        public override bool Equals(object? obj)
+        {
+            return obj is NVAPITimingExtDto other && Equals(other);
+        }
+
+        /// <inheritdoc />
+        public override int GetHashCode()
+        {
+            unchecked
+            {
+                var hash = 17;
+                hash = (hash * 31) + Flag.GetHashCode();
+                hash = (hash * 31) + Rr.GetHashCode();
+                hash = (hash * 31) + Rrx1k.GetHashCode();
+                hash = (hash * 31) + Aspect.GetHashCode();
+                hash = (hash * 31) + Rep.GetHashCode();
+                hash = (hash * 31) + Status.GetHashCode();
+                hash = (hash * 31) + (Name?.GetHashCode() ?? 0);
+                return hash;
+            }
+        }
+
+        /// <summary>Compare timing ext values.</summary>
+        public static bool operator ==(NVAPITimingExtDto left, NVAPITimingExtDto right) => left.Equals(right);
+
+        /// <summary>Compare timing ext values.</summary>
+        public static bool operator !=(NVAPITimingExtDto left, NVAPITimingExtDto right) => !left.Equals(right);
+    }
+
+    /// <summary>
+    /// Managed representation of NV_TIMING display timing parameters.
+    /// </summary>
+    public struct NVAPITimingDto : IEquatable<NVAPITimingDto>
+    {
+        /// <summary>Horizontal visible pixels.</summary>
+        public ushort HVisible { get; set; }
+
+        /// <summary>Horizontal border pixels.</summary>
+        public ushort HBorder { get; set; }
+
+        /// <summary>Horizontal front porch pixels.</summary>
+        public ushort HFrontPorch { get; set; }
+
+        /// <summary>Horizontal sync width pixels.</summary>
+        public ushort HSyncWidth { get; set; }
+
+        /// <summary>Horizontal total pixels.</summary>
+        public ushort HTotal { get; set; }
+
+        /// <summary>Horizontal sync polarity.</summary>
+        public byte HSyncPol { get; set; }
+
+        /// <summary>Vertical visible lines.</summary>
+        public ushort VVisible { get; set; }
+
+        /// <summary>Vertical border lines.</summary>
+        public ushort VBorder { get; set; }
+
+        /// <summary>Vertical front porch lines.</summary>
+        public ushort VFrontPorch { get; set; }
+
+        /// <summary>Vertical sync width lines.</summary>
+        public ushort VSyncWidth { get; set; }
+
+        /// <summary>Vertical total lines.</summary>
+        public ushort VTotal { get; set; }
+
+        /// <summary>Vertical sync polarity.</summary>
+        public byte VSyncPol { get; set; }
+
+        /// <summary>Non-zero if interlaced.</summary>
+        public ushort Interlaced { get; set; }
+
+        /// <summary>Pixel clock in 10 kHz units.</summary>
+        public uint Pclk { get; set; }
+
+        /// <summary>Extended timing information.</summary>
+        public NVAPITimingExtDto Etc { get; set; }
+
+        /// <summary>Create timing info.</summary>
+        public NVAPITimingDto(
+            ushort hVisible, ushort hBorder, ushort hFrontPorch, ushort hSyncWidth, ushort hTotal, byte hSyncPol,
+            ushort vVisible, ushort vBorder, ushort vFrontPorch, ushort vSyncWidth, ushort vTotal, byte vSyncPol,
+            ushort interlaced, uint pclk, NVAPITimingExtDto etc)
+        {
+            HVisible = hVisible;
+            HBorder = hBorder;
+            HFrontPorch = hFrontPorch;
+            HSyncWidth = hSyncWidth;
+            HTotal = hTotal;
+            HSyncPol = hSyncPol;
+            VVisible = vVisible;
+            VBorder = vBorder;
+            VFrontPorch = vFrontPorch;
+            VSyncWidth = vSyncWidth;
+            VTotal = vTotal;
+            VSyncPol = vSyncPol;
+            Interlaced = interlaced;
+            Pclk = pclk;
+            Etc = etc;
+        }
+
+        /// <summary>
+        /// Create a DTO from a native timing struct.
+        /// </summary>
+        /// <param name="native">Native timing struct.</param>
+        /// <returns>Timing DTO.</returns>
+        public static NVAPITimingDto FromNative(_NV_TIMING native)
+        {
+            return new NVAPITimingDto(
+                native.HVisible,
+                native.HBorder,
+                native.HFrontPorch,
+                native.HSyncWidth,
+                native.HTotal,
+                native.HSyncPol,
+                native.VVisible,
+                native.VBorder,
+                native.VFrontPorch,
+                native.VSyncWidth,
+                native.VTotal,
+                native.VSyncPol,
+                native.interlaced,
+                native.pclk,
+                NVAPITimingExtDto.FromNative(native.etc));
+        }
+
+        /// <summary>
+        /// Convert this DTO to a native timing struct.
+        /// </summary>
+        /// <returns>Native timing struct.</returns>
+        public _NV_TIMING ToNative()
+        {
+            return new _NV_TIMING
+            {
+                HVisible = HVisible,
+                HBorder = HBorder,
+                HFrontPorch = HFrontPorch,
+                HSyncWidth = HSyncWidth,
+                HTotal = HTotal,
+                HSyncPol = HSyncPol,
+                VVisible = VVisible,
+                VBorder = VBorder,
+                VFrontPorch = VFrontPorch,
+                VSyncWidth = VSyncWidth,
+                VTotal = VTotal,
+                VSyncPol = VSyncPol,
+                interlaced = Interlaced,
+                pclk = Pclk,
+                etc = Etc.ToNative(),
+            };
+        }
+
+        /// <inheritdoc />
+        public bool Equals(NVAPITimingDto other)
+        {
+            return HVisible == other.HVisible
+                && HBorder == other.HBorder
+                && HFrontPorch == other.HFrontPorch
+                && HSyncWidth == other.HSyncWidth
+                && HTotal == other.HTotal
+                && HSyncPol == other.HSyncPol
+                && VVisible == other.VVisible
+                && VBorder == other.VBorder
+                && VFrontPorch == other.VFrontPorch
+                && VSyncWidth == other.VSyncWidth
+                && VTotal == other.VTotal
+                && VSyncPol == other.VSyncPol
+                && Interlaced == other.Interlaced
+                && Pclk == other.Pclk
+                && Etc.Equals(other.Etc);
+        }
+
+        /// <inheritdoc />
+        public override bool Equals(object? obj)
+        {
+            return obj is NVAPITimingDto other && Equals(other);
+        }
+
+        /// <inheritdoc />
+        public override int GetHashCode()
+        {
+            unchecked
+            {
+                var hash = 17;
+                hash = (hash * 31) + HVisible.GetHashCode();
+                hash = (hash * 31) + HBorder.GetHashCode();
+                hash = (hash * 31) + HFrontPorch.GetHashCode();
+                hash = (hash * 31) + HSyncWidth.GetHashCode();
+                hash = (hash * 31) + HTotal.GetHashCode();
+                hash = (hash * 31) + HSyncPol.GetHashCode();
+                hash = (hash * 31) + VVisible.GetHashCode();
+                hash = (hash * 31) + VBorder.GetHashCode();
+                hash = (hash * 31) + VFrontPorch.GetHashCode();
+                hash = (hash * 31) + VSyncWidth.GetHashCode();
+                hash = (hash * 31) + VTotal.GetHashCode();
+                hash = (hash * 31) + VSyncPol.GetHashCode();
+                hash = (hash * 31) + Interlaced.GetHashCode();
+                hash = (hash * 31) + Pclk.GetHashCode();
+                hash = (hash * 31) + Etc.GetHashCode();
+                return hash;
+            }
+        }
+
+        /// <summary>Compare timing values.</summary>
+        public static bool operator ==(NVAPITimingDto left, NVAPITimingDto right) => left.Equals(right);
+
+        /// <summary>Compare timing values.</summary>
+        public static bool operator !=(NVAPITimingDto left, NVAPITimingDto right) => !left.Equals(right);
+    }
+
+    /// <summary>
     /// Managed representation of advanced target configuration.
     /// </summary>
     public struct NVAPIDisplayConfigAdvancedTargetDto : IEquatable<NVAPIDisplayConfigAdvancedTargetDto>
@@ -3557,7 +3866,7 @@ namespace NVAPIWrapper
         public _NV_TIMING_OVERRIDE TimingOverride { get; set; }
 
         /// <summary>Detailed timing.</summary>
-        public _NV_TIMING Timing { get; set; }
+        public NVAPITimingDto Timing { get; set; }
 
         /// <summary>Create advanced target info.</summary>
         public NVAPIDisplayConfigAdvancedTargetDto(
@@ -3571,7 +3880,7 @@ namespace NVAPIWrapper
             _NV_GPU_CONNECTOR_TYPE connector,
             _NV_DISPLAY_TV_FORMAT tvFormat,
             _NV_TIMING_OVERRIDE timingOverride,
-            _NV_TIMING timing)
+            NVAPITimingDto timing)
         {
             Rotation = rotation;
             Scaling = scaling;
@@ -3604,7 +3913,7 @@ namespace NVAPIWrapper
                 native.connector,
                 native.tvFormat,
                 native.timingOverride,
-                native.timing);
+                NVAPITimingDto.FromNative(native.timing));
         }
 
         /// <summary>
@@ -3622,7 +3931,7 @@ namespace NVAPIWrapper
                 connector = Connector,
                 tvFormat = TvFormat,
                 timingOverride = TimingOverride,
-                timing = Timing,
+                timing = Timing.ToNative(),
             };
             native.interlaced = Interlaced ? 1u : 0u;
             native.primary = Primary ? 1u : 0u;
@@ -3886,55 +4195,6 @@ namespace NVAPIWrapper
 
         /// <summary>Compare timing input DTOs.</summary>
         public static bool operator !=(NVAPITimingInputDto left, NVAPITimingInputDto right) => !left.Equals(right);
-    }
-
-    /// <summary>
-    /// DTO for timing output data.
-    /// </summary>
-    public readonly struct NVAPITimingDto : IEquatable<NVAPITimingDto>
-    {
-        /// <summary>Timing data.</summary>
-        public _NV_TIMING Timing { get; }
-
-        /// <summary>Create a timing DTO.</summary>
-        public NVAPITimingDto(_NV_TIMING timing)
-        {
-            Timing = timing;
-        }
-
-        /// <summary>
-        /// Create a DTO from a native timing struct.
-        /// </summary>
-        /// <param name="native">Native timing.</param>
-        /// <returns>Timing DTO.</returns>
-        public static NVAPITimingDto FromNative(_NV_TIMING native)
-        {
-            return new NVAPITimingDto(native);
-        }
-
-        /// <summary>
-        /// Convert this DTO to a native timing struct.
-        /// </summary>
-        /// <returns>Native timing.</returns>
-        public _NV_TIMING ToNative()
-        {
-            return Timing;
-        }
-
-        /// <inheritdoc />
-        public bool Equals(NVAPITimingDto other) => Timing.Equals(other.Timing);
-
-        /// <inheritdoc />
-        public override bool Equals(object? obj) => obj is NVAPITimingDto other && Equals(other);
-
-        /// <inheritdoc />
-        public override int GetHashCode() => Timing.GetHashCode();
-
-        /// <summary>Compare timing DTOs.</summary>
-        public static bool operator ==(NVAPITimingDto left, NVAPITimingDto right) => left.Equals(right);
-
-        /// <summary>Compare timing DTOs.</summary>
-        public static bool operator !=(NVAPITimingDto left, NVAPITimingDto right) => !left.Equals(right);
     }
 
     /// <summary>
