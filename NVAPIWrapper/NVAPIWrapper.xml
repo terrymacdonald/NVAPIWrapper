@@ -4734,10 +4734,10 @@
             <param name="isPredefinedValid">Whether the predefined value is valid.</param>
             <param name="predefinedDwordValue">Predefined DWORD value.</param>
             <param name="currentDwordValue">Current DWORD value.</param>
-            <param name="predefinedStringValue">Predefined string value.</param>
-            <param name="currentStringValue">Current string value.</param>
-            <param name="predefinedBinaryValue">Predefined binary value.</param>
-            <param name="currentBinaryValue">Current binary value.</param>
+            <param name="predefinedStringValue">Predefined string value. Null is treated as empty string.</param>
+            <param name="currentStringValue">Current string value. Null is treated as empty string.</param>
+            <param name="predefinedBinaryValue">Predefined binary value. Null is treated as an empty array.</param>
+            <param name="currentBinaryValue">Current binary value. Null is treated as an empty array.</param>
         </member>
         <member name="M:NVAPIWrapper.NVAPIDrsSettingDto.CreateDword(System.UInt32,System.UInt32,System.Nullable{System.UInt32},System.String,NVAPIWrapper._NVDRS_SETTING_LOCATION,System.Boolean,System.Boolean)">
             <summary>

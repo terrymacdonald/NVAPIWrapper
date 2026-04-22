@@ -1681,10 +1681,10 @@ namespace NVAPIWrapper
 
         public uint? PredefinedDwordValue { get; }
         public uint? CurrentDwordValue { get; }
-        public string? PredefinedStringValue { get; }
-        public string? CurrentStringValue { get; }
-        public byte[]? PredefinedBinaryValue { get; }
-        public byte[]? CurrentBinaryValue { get; }
+        public string PredefinedStringValue { get; }
+        public string CurrentStringValue { get; }
+        public byte[] PredefinedBinaryValue { get; }
+        public byte[] CurrentBinaryValue { get; }
 
         /// <summary>
         /// Create a DRS setting DTO.
@@ -1697,10 +1697,10 @@ namespace NVAPIWrapper
         /// <param name="isPredefinedValid">Whether the predefined value is valid.</param>
         /// <param name="predefinedDwordValue">Predefined DWORD value.</param>
         /// <param name="currentDwordValue">Current DWORD value.</param>
-        /// <param name="predefinedStringValue">Predefined string value.</param>
-        /// <param name="currentStringValue">Current string value.</param>
-        /// <param name="predefinedBinaryValue">Predefined binary value.</param>
-        /// <param name="currentBinaryValue">Current binary value.</param>
+        /// <param name="predefinedStringValue">Predefined string value. Null is treated as empty string.</param>
+        /// <param name="currentStringValue">Current string value. Null is treated as empty string.</param>
+        /// <param name="predefinedBinaryValue">Predefined binary value. Null is treated as an empty array.</param>
+        /// <param name="currentBinaryValue">Current binary value. Null is treated as an empty array.</param>
         public NVAPIDrsSettingDto(
             string settingName,
             uint settingId,
@@ -1723,10 +1723,10 @@ namespace NVAPIWrapper
             IsPredefinedValid = isPredefinedValid;
             PredefinedDwordValue = predefinedDwordValue;
             CurrentDwordValue = currentDwordValue;
-            PredefinedStringValue = predefinedStringValue;
-            CurrentStringValue = currentStringValue;
-            PredefinedBinaryValue = predefinedBinaryValue;
-            CurrentBinaryValue = currentBinaryValue;
+            PredefinedStringValue = predefinedStringValue ?? string.Empty;
+            CurrentStringValue = currentStringValue ?? string.Empty;
+            PredefinedBinaryValue = predefinedBinaryValue ?? Array.Empty<byte>();
+            CurrentBinaryValue = currentBinaryValue ?? Array.Empty<byte>();
         }
 
         /// <summary>
@@ -1942,8 +1942,8 @@ namespace NVAPIWrapper
                     break;
                 case _NVDRS_SETTING_TYPE.NVDRS_STRING_TYPE:
                 case _NVDRS_SETTING_TYPE.NVDRS_WSTRING_TYPE:
-                    NVAPIDrsHelper.WriteUnicodeString(native.wszPredefinedValue, PredefinedStringValue ?? string.Empty);
-                    NVAPIDrsHelper.WriteUnicodeString(native.wszCurrentValue, CurrentStringValue ?? string.Empty);
+                    NVAPIDrsHelper.WriteUnicodeString(native.wszPredefinedValue, PredefinedStringValue);
+                    NVAPIDrsHelper.WriteUnicodeString(native.wszCurrentValue, CurrentStringValue);
                     break;
                 case _NVDRS_SETTING_TYPE.NVDRS_BINARY_TYPE:
                     NVAPIDrsHelper.WriteBinaryValue(ref native.binaryPredefinedValue, PredefinedBinaryValue);
@@ -1998,8 +1998,8 @@ namespace NVAPIWrapper
                 hash = (hash * 31) + IsPredefinedValid.GetHashCode();
                 hash = (hash * 31) + (PredefinedDwordValue?.GetHashCode() ?? 0);
                 hash = (hash * 31) + (CurrentDwordValue?.GetHashCode() ?? 0);
-                hash = (hash * 31) + (PredefinedStringValue == null ? 0 : StringComparer.Ordinal.GetHashCode(PredefinedStringValue));
-                hash = (hash * 31) + (CurrentStringValue == null ? 0 : StringComparer.Ordinal.GetHashCode(CurrentStringValue));
+                hash = (hash * 31) + StringComparer.Ordinal.GetHashCode(PredefinedStringValue);
+                hash = (hash * 31) + StringComparer.Ordinal.GetHashCode(CurrentStringValue);
                 hash = (hash * 31) + NVAPIDrsDtoHelpers.SequenceHashCode(PredefinedBinaryValue);
                 hash = (hash * 31) + NVAPIDrsDtoHelpers.SequenceHashCode(CurrentBinaryValue);
                 return hash;
