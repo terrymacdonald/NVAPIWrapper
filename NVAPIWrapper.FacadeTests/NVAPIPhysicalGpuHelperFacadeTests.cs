@@ -759,24 +759,65 @@ namespace NVAPIWrapper.FacadeTests
             _ = dto.GetHashCode();
         }
 
+        // Shared counter incremented by the unmanaged callback below.
+        private static volatile int _utilizationCallbackCount = 0;
+
+        [System.Runtime.InteropServices.UnmanagedCallersOnly(
+            CallConvs = new[] { typeof(System.Runtime.CompilerServices.CallConvCdecl) })]
+        private static unsafe void OnUtilizationSample(
+            NvPhysicalGpuHandle__* hGpu,
+            _NV_GPU_CLIENT_CALLBACK_UTILIZATION_DATA_V1* pData)
+        {
+            System.Threading.Interlocked.Increment(ref _utilizationCallbackCount);
+        }
+
         [SkippableFact]
-        public void RegisterForUtilizationSampleUpdates_ShouldReturnValue()
+        public unsafe void RegisterForUtilizationSampleUpdates_ShouldReturnValue()
         {
             var gpu = GetFirstGpuOrSkip();
-            var settings = new NVAPIGpuUtilizationSampleCallbackSettingsDto(
+
+            _utilizationCallbackCount = 0;
+
+            // Register with a real callback and a 500 ms period.
+            var callbackPtr = (IntPtr)(delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, _NV_GPU_CLIENT_CALLBACK_UTILIZATION_DATA_V1*, void>)
+                &OnUtilizationSample;
+
+            var registerSettings = new NVAPIGpuUtilizationSampleCallbackSettingsDto(
                 IntPtr.Zero,
-                0,
-                IntPtr.Zero,
+                500,
+                callbackPtr,
                 Array.Empty<byte>(),
                 Array.Empty<byte>(),
                 Array.Empty<byte>());
 
-            var result = FacadeTestUtils.InvokeOrSkip(
-                () => gpu.RegisterForUtilizationSampleUpdates(settings),
+            var registered = FacadeTestUtils.InvokeOrSkip(
+                () => gpu.RegisterForUtilizationSampleUpdates(registerSettings),
                 "Utilization sample updates unsupported");
 
-            Skip.If(!result, "Utilization sample updates not supported.");
-            Assert.True(result);
+            Skip.If(!registered, "Utilization sample updates not supported on this hardware.");
+
+            try
+            {
+                // Wait up to 3 seconds for at least one callback to fire.
+                var deadline = System.DateTime.UtcNow.AddSeconds(3);
+                while (_utilizationCallbackCount == 0 && System.DateTime.UtcNow < deadline)
+                    System.Threading.Thread.Sleep(100);
+
+                Assert.True(_utilizationCallbackCount > 0,
+                    "Utilization callback was not invoked within 3 seconds.");
+            }
+            finally
+            {
+                // Unregister by passing null callback.
+                var unregisterSettings = new NVAPIGpuUtilizationSampleCallbackSettingsDto(
+                    IntPtr.Zero,
+                    0,
+                    IntPtr.Zero,
+                    Array.Empty<byte>(),
+                    Array.Empty<byte>(),
+                    Array.Empty<byte>());
+                gpu.RegisterForUtilizationSampleUpdates(unregisterSettings);
+            }
         }
 
         [SkippableFact]

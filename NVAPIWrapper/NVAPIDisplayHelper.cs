@@ -1850,7 +1850,9 @@ namespace NVAPIWrapper
 
             uint count = 0;
             var status = getDisplays(&count, null);
-            if (status == _NvAPI_Status.NVAPI_NOT_SUPPORTED || status == _NvAPI_Status.NVAPI_NVIDIA_DEVICE_NOT_FOUND)
+            if (status == _NvAPI_Status.NVAPI_NOT_SUPPORTED
+                || status == _NvAPI_Status.NVAPI_NVIDIA_DEVICE_NOT_FOUND
+                || status == _NvAPI_Status.NVAPI_DEVICE_BUSY)
                 return Array.Empty<NVAPINvManagedDedicatedDisplayInfoDto>();
 
             if (status != _NvAPI_Status.NVAPI_OK)
@@ -1880,7 +1882,9 @@ namespace NVAPIWrapper
                     return NVAPINvManagedDedicatedDisplayInfoDto.FromNative(infos);
                 }
 
-                if (status == _NvAPI_Status.NVAPI_NOT_SUPPORTED || status == _NvAPI_Status.NVAPI_NVIDIA_DEVICE_NOT_FOUND)
+                if (status == _NvAPI_Status.NVAPI_NOT_SUPPORTED
+                    || status == _NvAPI_Status.NVAPI_NVIDIA_DEVICE_NOT_FOUND
+                    || status == _NvAPI_Status.NVAPI_DEVICE_BUSY)
                     return Array.Empty<NVAPINvManagedDedicatedDisplayInfoDto>();
 
                 throw new NVAPIException(status);
@@ -1972,7 +1976,9 @@ namespace NVAPIWrapper
             if (status == _NvAPI_Status.NVAPI_OK)
                 return NVAPINvManagedDedicatedDisplayMetadataDto.FromNative(metadata);
 
-            if (status == _NvAPI_Status.NVAPI_NOT_SUPPORTED || status == _NvAPI_Status.NVAPI_NVIDIA_DEVICE_NOT_FOUND)
+            if (status == _NvAPI_Status.NVAPI_NOT_SUPPORTED
+                || status == _NvAPI_Status.NVAPI_NVIDIA_DEVICE_NOT_FOUND
+                || status == _NvAPI_Status.NVAPI_DEVICE_BUSY)
                 return null;
 
             throw new NVAPIException(status);

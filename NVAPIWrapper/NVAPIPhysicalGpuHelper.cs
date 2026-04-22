@@ -1826,7 +1826,8 @@ namespace NVAPIWrapper
 
             if (status == _NvAPI_Status.NVAPI_NOT_SUPPORTED
                 || status == _NvAPI_Status.NVAPI_NO_IMPLEMENTATION
-                || status == _NvAPI_Status.NVAPI_NVIDIA_DEVICE_NOT_FOUND)
+                || status == _NvAPI_Status.NVAPI_NVIDIA_DEVICE_NOT_FOUND
+                || status == _NvAPI_Status.NVAPI_INVALID_CONFIGURATION)
                 return false;
 
             throw new NVAPIException(status);
