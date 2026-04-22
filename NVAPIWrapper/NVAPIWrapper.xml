@@ -7742,10 +7742,49 @@
             <summary>NVLINK_GET_STATUS_V2.version</summary>
         </member>
         <member name="P:NVAPIWrapper.NVAPINvLinkStatusDto.LinkMask">
-            <summary>NVLINK_GET_STATUS_V2.linkMask</summary>
+            <summary>NVLINK_GET_STATUS_V2.linkMask — bitmask of active links (bit i = link i is in use).</summary>
         </member>
         <member name="P:NVAPIWrapper.NVAPINvLinkStatusDto.LinkInfo">
-            <summary>NVLINK_GET_STATUS_V2.linkInfo (array of 32)</summary>
+            <summary>
+            Active link info entries, one per set bit in <see cref="P:NVAPIWrapper.NVAPINvLinkStatusDto.LinkMask"/> (ordered by ascending link index).
+            Only links that are active per the bitmask are stored, keeping the list compact.
+            </summary>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPINvLinkStatusDto.#ctor(System.UInt32,System.UInt32,System.Collections.Generic.List{NVAPIWrapper.NVAPINvLinkStatusInfoDto})">
+            <summary>Create an NVLINK status DTO.</summary>
+            <param name="version">Structure version.</param>
+            <param name="linkMask">Bitmask of active links.</param>
+            <param name="linkInfo">Active link info entries (one per set bit in linkMask, ascending).</param>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPINvLinkStatusDto.FromNative(NVAPIWrapper.NVLINK_GET_STATUS_V2)">
+            <summary>
+            Create a DTO from a native NVLINK status struct. Only entries for bits set in
+            <paramref name="native"/>.linkMask are included in <see cref="P:NVAPIWrapper.NVAPINvLinkStatusDto.LinkInfo"/>.
+            </summary>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPINvLinkStatusDto.CreateDefault">
+            <summary>Create a default (no active links) NVLINK status DTO.</summary>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPINvLinkStatusDto.ToNative">
+            <summary>
+            Convert this DTO back to a native struct. List entries are placed at the native indices
+            corresponding to set bits in <see cref="P:NVAPIWrapper.NVAPINvLinkStatusDto.LinkMask"/> (ascending order); all other slots are default.
+            </summary>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPINvLinkStatusDto.Equals(NVAPIWrapper.NVAPINvLinkStatusDto)">
+            <inheritdoc />
+        </member>
+        <member name="M:NVAPIWrapper.NVAPINvLinkStatusDto.Equals(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:NVAPIWrapper.NVAPINvLinkStatusDto.GetHashCode">
+            <inheritdoc />
+        </member>
+        <member name="M:NVAPIWrapper.NVAPINvLinkStatusDto.op_Equality(NVAPIWrapper.NVAPINvLinkStatusDto,NVAPIWrapper.NVAPINvLinkStatusDto)">
+            <summary>Compare NVLINK status DTOs.</summary>
+        </member>
+        <member name="M:NVAPIWrapper.NVAPINvLinkStatusDto.op_Inequality(NVAPIWrapper.NVAPINvLinkStatusDto,NVAPIWrapper.NVAPINvLinkStatusDto)">
+            <summary>Compare NVLINK status DTOs.</summary>
         </member>
         <member name="T:NVAPIWrapper.NVAPINvLinkStatusInfoDto">
             <summary>

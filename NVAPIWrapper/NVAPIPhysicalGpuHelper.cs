@@ -4848,71 +4848,95 @@ namespace NVAPIWrapper
     {
         /// <summary>NVLINK_GET_STATUS_V2.version</summary>
         public uint Version { get; }
-        /// <summary>NVLINK_GET_STATUS_V2.linkMask</summary>
+        /// <summary>NVLINK_GET_STATUS_V2.linkMask — bitmask of active links (bit i = link i is in use).</summary>
         public uint LinkMask { get; }
-        /// <summary>NVLINK_GET_STATUS_V2.linkInfo (array of 32)</summary>
-        public NVAPINvLinkStatusInfoDto[] LinkInfo { get; }
 
-        public NVAPINvLinkStatusDto(uint version, uint linkMask, NVAPINvLinkStatusInfoDto[] linkInfo)
+        private readonly List<NVAPINvLinkStatusInfoDto>? _linkInfo;
+        /// <summary>
+        /// Active link info entries, one per set bit in <see cref="LinkMask"/> (ordered by ascending link index).
+        /// Only links that are active per the bitmask are stored, keeping the list compact.
+        /// </summary>
+        public List<NVAPINvLinkStatusInfoDto> LinkInfo => _linkInfo ?? new List<NVAPINvLinkStatusInfoDto>();
+
+        /// <summary>Create an NVLINK status DTO.</summary>
+        /// <param name="version">Structure version.</param>
+        /// <param name="linkMask">Bitmask of active links.</param>
+        /// <param name="linkInfo">Active link info entries (one per set bit in linkMask, ascending).</param>
+        public NVAPINvLinkStatusDto(uint version, uint linkMask, List<NVAPINvLinkStatusInfoDto> linkInfo)
         {
             Version = version;
             LinkMask = linkMask;
-            LinkInfo = linkInfo ?? new NVAPINvLinkStatusInfoDto[32];
+            _linkInfo = linkInfo ?? new List<NVAPINvLinkStatusInfoDto>();
         }
 
+        /// <summary>
+        /// Create a DTO from a native NVLINK status struct. Only entries for bits set in
+        /// <paramref name="native"/>.linkMask are included in <see cref="LinkInfo"/>.
+        /// </summary>
         public static NVAPINvLinkStatusDto FromNative(NVLINK_GET_STATUS_V2 native)
         {
-            var linkInfo = new NVAPINvLinkStatusInfoDto[32];
+            var linkInfo = new List<NVAPINvLinkStatusInfoDto>();
             for (int i = 0; i < 32; i++)
             {
-                linkInfo[i] = NVAPINvLinkStatusInfoDto.FromNative(native.linkInfo[i]);
+                if ((native.linkMask & (1u << i)) != 0)
+                    linkInfo.Add(NVAPINvLinkStatusInfoDto.FromNative(native.linkInfo[i]));
             }
             return new NVAPINvLinkStatusDto(native.version, native.linkMask, linkInfo);
         }
 
+        /// <summary>Create a default (no active links) NVLINK status DTO.</summary>
         public static NVAPINvLinkStatusDto CreateDefault()
         {
-            return new NVAPINvLinkStatusDto(NVAPI.NVLINK_GET_STATUS_VER, 0, new NVAPINvLinkStatusInfoDto[32]);
+            return new NVAPINvLinkStatusDto(NVAPI.NVLINK_GET_STATUS_VER, 0, new List<NVAPINvLinkStatusInfoDto>());
         }
 
+        /// <summary>
+        /// Convert this DTO back to a native struct. List entries are placed at the native indices
+        /// corresponding to set bits in <see cref="LinkMask"/> (ascending order); all other slots are default.
+        /// </summary>
         public NVLINK_GET_STATUS_V2 ToNative()
         {
             var native = new NVLINK_GET_STATUS_V2();
             native.version = Version;
             native.linkMask = LinkMask;
-            for (int i = 0; i < 32; i++)
+            var list = LinkInfo;
+            int listIndex = 0;
+            for (int i = 0; i < 32 && listIndex < list.Count; i++)
             {
-                native.linkInfo[i] = LinkInfo != null && i < LinkInfo.Length ? LinkInfo[i].ToNative() : default;
+                if ((LinkMask & (1u << i)) != 0)
+                    native.linkInfo[i] = list[listIndex++].ToNative();
             }
             return native;
         }
 
+        /// <inheritdoc />
         public bool Equals(NVAPINvLinkStatusDto other)
         {
             if (Version != other.Version) return false;
             if (LinkMask != other.LinkMask) return false;
-            if ((LinkInfo == null) != (other.LinkInfo == null)) return false;
-            if (LinkInfo != null && other.LinkInfo != null)
-            {
-                if (LinkInfo.Length != other.LinkInfo.Length) return false;
-                for (int i = 0; i < LinkInfo.Length; i++)
-                    if (!LinkInfo[i].Equals(other.LinkInfo[i])) return false;
-            }
+            var a = LinkInfo;
+            var b = other.LinkInfo;
+            if (a.Count != b.Count) return false;
+            for (int i = 0; i < a.Count; i++)
+                if (!a[i].Equals(b[i])) return false;
             return true;
         }
 
+        /// <inheritdoc />
         public override bool Equals(object? obj) => obj is NVAPINvLinkStatusDto other && Equals(other);
+
+        /// <inheritdoc />
         public override int GetHashCode()
         {
             var hash = HashCode.Combine(Version, LinkMask);
-            if (LinkInfo != null)
-            {
-                foreach (var v in LinkInfo)
-                    hash = (hash * 31) + v.GetHashCode();
-            }
+            foreach (var v in LinkInfo)
+                hash = (hash * 31) + v.GetHashCode();
             return hash;
         }
+
+        /// <summary>Compare NVLINK status DTOs.</summary>
         public static bool operator ==(NVAPINvLinkStatusDto left, NVAPINvLinkStatusDto right) => left.Equals(right);
+        /// <summary>Compare NVLINK status DTOs.</summary>
         public static bool operator !=(NVAPINvLinkStatusDto left, NVAPINvLinkStatusDto right) => !left.Equals(right);
     }
 

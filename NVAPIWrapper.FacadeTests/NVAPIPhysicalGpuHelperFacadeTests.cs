@@ -550,22 +550,19 @@ namespace NVAPIWrapper.FacadeTests
 
             // Validate new DTO fields
             Assert.True(dto.Version > 0);
-            Assert.True(dto.LinkInfo != null && dto.LinkInfo.Length == 32);
-            // At least one link info entry should be non-default if supported
-            bool anyPopulated = false;
+            // LinkInfo should contain exactly one entry per set bit in LinkMask
+            int expectedLinkCount = System.Numerics.BitOperations.PopCount(dto.LinkMask);
+            Assert.Equal(expectedLinkCount, dto.LinkInfo.Count);
+
+            // If any links are active, validate their nested device info
+            Skip.If(dto.LinkInfo.Count == 0, "No NVLINK links detected on this hardware. Skipping test.");
             foreach (var link in dto.LinkInfo)
             {
-                // If any link is connected or has a nonzero capsTbl, consider it populated
-                if (link.Connected || link.CapsTbl != 0)
-                {
-                    anyPopulated = true;
-                    // Validate nested device info array length
-                    Assert.True(link.RemoteDeviceInfo.DeviceUUID != null && link.RemoteDeviceInfo.DeviceUUID.Length == 16);
-                    Assert.True(link.LocalDeviceInfo.DeviceUUID != null && link.LocalDeviceInfo.DeviceUUID.Length == 16);
-                    break;
-                }
+                Assert.NotNull(link.RemoteDeviceInfo.DeviceUUID);
+                Assert.Equal(16, link.RemoteDeviceInfo.DeviceUUID.Length);
+                Assert.NotNull(link.LocalDeviceInfo.DeviceUUID);
+                Assert.Equal(16, link.LocalDeviceInfo.DeviceUUID.Length);
             }
-            Skip.If(!anyPopulated, "No NVLINK links detected on this hardware. Skipping test.");
         }
 
         [SkippableFact]
