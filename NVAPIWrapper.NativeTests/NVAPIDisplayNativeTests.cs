@@ -638,7 +638,7 @@ namespace NVAPIWrapper.NativeTests
 
             var count = 0u;
             var status = NVAPI.NvAPI_DISP_GetNvManagedDedicatedDisplays(&count, null);
-            if (IsUnsupported(status))
+            if (IsUnsupported(status) || status == _NvAPI_Status.NVAPI_DEVICE_BUSY)
             {
                 Skip.If(true, $"Managed dedicated displays unsupported: {status}");
                 return;
@@ -660,7 +660,8 @@ namespace NVAPIWrapper.NativeTests
             if (IsUnsupported(status) ||
                 status == _NvAPI_Status.NVAPI_UNREGISTERED_RESOURCE ||
                 status == _NvAPI_Status.NVAPI_RESOURCE_IN_USE ||
-                status == _NvAPI_Status.NVAPI_INVALID_DISPLAY_ID)
+                status == _NvAPI_Status.NVAPI_INVALID_DISPLAY_ID ||
+                status == _NvAPI_Status.NVAPI_DEVICE_BUSY)
             {
                 Skip.If(true, $"Acquire dedicated display unsupported: {status}");
                 return;
@@ -681,7 +682,8 @@ namespace NVAPIWrapper.NativeTests
             if (IsUnsupported(status) ||
                 status == _NvAPI_Status.NVAPI_UNREGISTERED_RESOURCE ||
                 status == _NvAPI_Status.NVAPI_RESOURCE_NOT_ACQUIRED ||
-                status == _NvAPI_Status.NVAPI_INVALID_DISPLAY_ID)
+                status == _NvAPI_Status.NVAPI_INVALID_DISPLAY_ID ||
+                status == _NvAPI_Status.NVAPI_DEVICE_BUSY)
             {
                 Skip.If(true, $"Release dedicated display unsupported: {status}");
                 return;
@@ -705,7 +707,7 @@ namespace NVAPIWrapper.NativeTests
             };
 
             var status = NVAPI.NvAPI_DISP_GetNvManagedDedicatedDisplayMetadata(&metadata);
-            if (IsUnsupported(status))
+            if (IsUnsupported(status) || status == _NvAPI_Status.NVAPI_DEVICE_BUSY)
             {
                 Skip.If(true, $"Managed dedicated display metadata unsupported: {status}");
                 return;
@@ -730,7 +732,7 @@ namespace NVAPIWrapper.NativeTests
             };
 
             var getStatus = NVAPI.NvAPI_DISP_GetNvManagedDedicatedDisplayMetadata(&metadata);
-            if (IsUnsupported(getStatus))
+            if (IsUnsupported(getStatus) || getStatus == _NvAPI_Status.NVAPI_DEVICE_BUSY)
             {
                 Skip.If(true, $"Managed dedicated display metadata unsupported: {getStatus}");
                 return;

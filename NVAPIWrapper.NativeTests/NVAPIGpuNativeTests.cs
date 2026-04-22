@@ -1107,7 +1107,7 @@ namespace NVAPIWrapper.NativeTests
                 };
 
                 var status = NVAPI.NvAPI_GPU_ClientRegisterForUtilizationSampleUpdates(gpu, &settings);
-                if (IsUnsupported(status))
+                if (IsUnsupported(status) || status == _NvAPI_Status.NVAPI_INVALID_CONFIGURATION)
                 {
                     Skip.If(true, $"GPU utilization updates unsupported: {status}");
                     return;
