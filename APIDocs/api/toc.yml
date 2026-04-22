@@ -802,6 +802,9 @@ items:
   - uid: NVAPIWrapper.NVAPITimingDto
     name: NVAPITimingDto
     type: Struct
+  - uid: NVAPIWrapper.NVAPITimingExtDto
+    name: NVAPITimingExtDto
+    type: Struct
   - uid: NVAPIWrapper.NVAPITimingInputDto
     name: NVAPITimingInputDto
     type: Struct

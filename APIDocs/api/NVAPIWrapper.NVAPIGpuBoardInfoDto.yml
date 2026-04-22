@@ -29,14 +29,14 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPIGpuBoardInfoDto
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 5355
+    startLine: 5380
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   summary: GPU board info DTO.
   example: []
   syntax:
-    content: 'public readonly struct NVAPIGpuBoardInfoDto : IEquatable<NVAPIGpuBoardInfoDto>'
+    content: 'public struct NVAPIGpuBoardInfoDto : IEquatable<NVAPIGpuBoardInfoDto>'
     content.vb: Public Structure NVAPIGpuBoardInfoDto Implements IEquatable(Of NVAPIGpuBoardInfoDto)
   implements:
   - System.IEquatable{NVAPIWrapper.NVAPIGpuBoardInfoDto}
@@ -63,16 +63,18 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: BoardNumber
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 5357
+    startLine: 5386
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
+  summary: Board number as a string. Empty string when not present.
+  example: []
   syntax:
-    content: public string BoardNumber { get; }
+    content: public string BoardNumber { get; set; }
     parameters: []
     return:
       type: System.String
-    content.vb: Public ReadOnly Property BoardNumber As String
+    content.vb: Public Property BoardNumber As String
   overload: NVAPIWrapper.NVAPIGpuBoardInfoDto.BoardNumber*
 - uid: NVAPIWrapper.NVAPIGpuBoardInfoDto.BoardNumberRaw
   commentId: P:NVAPIWrapper.NVAPIGpuBoardInfoDto.BoardNumberRaw
@@ -92,16 +94,18 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: BoardNumberRaw
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 5358
+    startLine: 5388
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
+  summary: Raw board number bytes. Empty array when not present.
+  example: []
   syntax:
-    content: public byte[] BoardNumberRaw { get; }
+    content: public byte[] BoardNumberRaw { get; set; }
     parameters: []
     return:
       type: System.Byte[]
-    content.vb: Public ReadOnly Property BoardNumberRaw As Byte()
+    content.vb: Public Property BoardNumberRaw As Byte()
   overload: NVAPIWrapper.NVAPIGpuBoardInfoDto.BoardNumberRaw*
 - uid: NVAPIWrapper.NVAPIGpuBoardInfoDto.#ctor(System.Byte[],System.String)
   commentId: M:NVAPIWrapper.NVAPIGpuBoardInfoDto.#ctor(System.Byte[],System.String)
@@ -121,7 +125,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: .ctor
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 5360
+    startLine: 5390
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -155,7 +159,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: FromNative
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 5366
+    startLine: 5396
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -186,7 +190,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: ToNative
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 5378
+    startLine: 5408
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -214,7 +218,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Equals
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 5389
+    startLine: 5419
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -251,7 +255,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Equals
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 5395
+    startLine: 5425
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -290,7 +294,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetHashCode
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 5396
+    startLine: 5426
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -322,7 +326,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: op_Equality
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 5406
+    startLine: 5436
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -358,7 +362,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: op_Inequality
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 5407
+    startLine: 5437
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper

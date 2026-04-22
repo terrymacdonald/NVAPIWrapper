@@ -27,14 +27,14 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPIDisplayConfigDto
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 3026
+    startLine: 3032
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   summary: Snapshot of the display configuration returned by NVAPI.
   example: []
   syntax:
-    content: 'public readonly struct NVAPIDisplayConfigDto : IEquatable<NVAPIDisplayConfigDto>'
+    content: 'public struct NVAPIDisplayConfigDto : IEquatable<NVAPIDisplayConfigDto>'
     content.vb: Public Structure NVAPIDisplayConfigDto Implements IEquatable(Of NVAPIDisplayConfigDto)
   implements:
   - System.IEquatable{NVAPIWrapper.NVAPIDisplayConfigDto}
@@ -61,18 +61,18 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Paths
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 3031
+    startLine: 3037
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   summary: Display paths in the configuration.
   example: []
   syntax:
-    content: public NVAPIDisplayConfigPathDto[] Paths { get; }
+    content: public NVAPIDisplayConfigPathDto[] Paths { readonly get; set; }
     parameters: []
     return:
       type: NVAPIWrapper.NVAPIDisplayConfigPathDto[]
-    content.vb: Public ReadOnly Property Paths As NVAPIDisplayConfigPathDto()
+    content.vb: Public Property Paths As NVAPIDisplayConfigPathDto()
   overload: NVAPIWrapper.NVAPIDisplayConfigDto.Paths*
 - uid: NVAPIWrapper.NVAPIDisplayConfigDto.#ctor(NVAPIWrapper.NVAPIDisplayConfigPathDto[])
   commentId: M:NVAPIWrapper.NVAPIDisplayConfigDto.#ctor(NVAPIWrapper.NVAPIDisplayConfigPathDto[])
@@ -92,7 +92,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: .ctor
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 3036
+    startLine: 3042
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -126,7 +126,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: FromNative
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 3047
+    startLine: 3053
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -167,7 +167,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Equals
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 3063
+    startLine: 3069
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -204,7 +204,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Equals
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 3069
+    startLine: 3075
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -243,7 +243,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetHashCode
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 3075
+    startLine: 3081
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -275,7 +275,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: op_Equality
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 3092
+    startLine: 3098
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -313,7 +313,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: op_Inequality
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 3100
+    startLine: 3106
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper

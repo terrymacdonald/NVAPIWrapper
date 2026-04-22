@@ -5,7 +5,7 @@ items:
   id: NVAPINvLinkStatusDto
   parent: NVAPIWrapper
   children:
-  - NVAPIWrapper.NVAPINvLinkStatusDto.#ctor(System.UInt32,System.UInt32,NVAPIWrapper.NVAPINvLinkStatusInfoDto[])
+  - NVAPIWrapper.NVAPINvLinkStatusDto.#ctor(System.UInt32,System.UInt32,System.Collections.Generic.List{NVAPIWrapper.NVAPINvLinkStatusInfoDto})
   - NVAPIWrapper.NVAPINvLinkStatusDto.CreateDefault
   - NVAPIWrapper.NVAPINvLinkStatusDto.Equals(NVAPIWrapper.NVAPINvLinkStatusDto)
   - NVAPIWrapper.NVAPINvLinkStatusDto.Equals(System.Object)
@@ -31,7 +31,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPINvLinkStatusDto
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 4846
+    startLine: 4847
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -65,7 +65,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Version
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 4849
+    startLine: 4850
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -96,11 +96,11 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: LinkMask
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 4851
+    startLine: 4852
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
-  summary: NVLINK_GET_STATUS_V2.linkMask
+  summary: NVLINK_GET_STATUS_V2.linkMask — bitmask of active links (bit i = link i is in use).
   example: []
   syntax:
     content: public uint LinkMask { get; }
@@ -127,29 +127,32 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: LinkInfo
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 4853
+    startLine: 4859
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
-  summary: NVLINK_GET_STATUS_V2.linkInfo (array of 32)
+  summary: >-
+    Active link info entries, one per set bit in <xref href="NVAPIWrapper.NVAPINvLinkStatusDto.LinkMask" data-throw-if-not-resolved="false"></xref> (ordered by ascending link index).
+
+    Only links that are active per the bitmask are stored, keeping the list compact.
   example: []
   syntax:
-    content: public NVAPINvLinkStatusInfoDto[] LinkInfo { get; }
+    content: public List<NVAPINvLinkStatusInfoDto> LinkInfo { get; }
     parameters: []
     return:
-      type: NVAPIWrapper.NVAPINvLinkStatusInfoDto[]
-    content.vb: Public ReadOnly Property LinkInfo As NVAPINvLinkStatusInfoDto()
+      type: System.Collections.Generic.List{NVAPIWrapper.NVAPINvLinkStatusInfoDto}
+    content.vb: Public ReadOnly Property LinkInfo As List(Of NVAPINvLinkStatusInfoDto)
   overload: NVAPIWrapper.NVAPINvLinkStatusDto.LinkInfo*
-- uid: NVAPIWrapper.NVAPINvLinkStatusDto.#ctor(System.UInt32,System.UInt32,NVAPIWrapper.NVAPINvLinkStatusInfoDto[])
-  commentId: M:NVAPIWrapper.NVAPINvLinkStatusDto.#ctor(System.UInt32,System.UInt32,NVAPIWrapper.NVAPINvLinkStatusInfoDto[])
-  id: '#ctor(System.UInt32,System.UInt32,NVAPIWrapper.NVAPINvLinkStatusInfoDto[])'
+- uid: NVAPIWrapper.NVAPINvLinkStatusDto.#ctor(System.UInt32,System.UInt32,System.Collections.Generic.List{NVAPIWrapper.NVAPINvLinkStatusInfoDto})
+  commentId: M:NVAPIWrapper.NVAPINvLinkStatusDto.#ctor(System.UInt32,System.UInt32,System.Collections.Generic.List{NVAPIWrapper.NVAPINvLinkStatusInfoDto})
+  id: '#ctor(System.UInt32,System.UInt32,System.Collections.Generic.List{NVAPIWrapper.NVAPINvLinkStatusInfoDto})'
   parent: NVAPIWrapper.NVAPINvLinkStatusDto
   langs:
   - csharp
   - vb
-  name: NVAPINvLinkStatusDto(uint, uint, NVAPINvLinkStatusInfoDto[])
-  nameWithType: NVAPINvLinkStatusDto.NVAPINvLinkStatusDto(uint, uint, NVAPINvLinkStatusInfoDto[])
-  fullName: NVAPIWrapper.NVAPINvLinkStatusDto.NVAPINvLinkStatusDto(uint, uint, NVAPIWrapper.NVAPINvLinkStatusInfoDto[])
+  name: NVAPINvLinkStatusDto(uint, uint, List<NVAPINvLinkStatusInfoDto>)
+  nameWithType: NVAPINvLinkStatusDto.NVAPINvLinkStatusDto(uint, uint, List<NVAPINvLinkStatusInfoDto>)
+  fullName: NVAPIWrapper.NVAPINvLinkStatusDto.NVAPINvLinkStatusDto(uint, uint, System.Collections.Generic.List<NVAPIWrapper.NVAPINvLinkStatusInfoDto>)
   type: Constructor
   source:
     remote:
@@ -158,24 +161,29 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: .ctor
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 4855
+    startLine: 4865
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
+  summary: Create an NVLINK status DTO.
+  example: []
   syntax:
-    content: public NVAPINvLinkStatusDto(uint version, uint linkMask, NVAPINvLinkStatusInfoDto[] linkInfo)
+    content: public NVAPINvLinkStatusDto(uint version, uint linkMask, List<NVAPINvLinkStatusInfoDto> linkInfo)
     parameters:
     - id: version
       type: System.UInt32
+      description: Structure version.
     - id: linkMask
       type: System.UInt32
+      description: Bitmask of active links.
     - id: linkInfo
-      type: NVAPIWrapper.NVAPINvLinkStatusInfoDto[]
-    content.vb: Public Sub New(version As UInteger, linkMask As UInteger, linkInfo As NVAPINvLinkStatusInfoDto())
+      type: System.Collections.Generic.List{NVAPIWrapper.NVAPINvLinkStatusInfoDto}
+      description: Active link info entries (one per set bit in linkMask, ascending).
+    content.vb: Public Sub New(version As UInteger, linkMask As UInteger, linkInfo As List(Of NVAPINvLinkStatusInfoDto))
   overload: NVAPIWrapper.NVAPINvLinkStatusDto.#ctor*
-  nameWithType.vb: NVAPINvLinkStatusDto.New(UInteger, UInteger, NVAPINvLinkStatusInfoDto())
-  fullName.vb: NVAPIWrapper.NVAPINvLinkStatusDto.New(UInteger, UInteger, NVAPIWrapper.NVAPINvLinkStatusInfoDto())
-  name.vb: New(UInteger, UInteger, NVAPINvLinkStatusInfoDto())
+  nameWithType.vb: NVAPINvLinkStatusDto.New(UInteger, UInteger, List(Of NVAPINvLinkStatusInfoDto))
+  fullName.vb: NVAPIWrapper.NVAPINvLinkStatusDto.New(UInteger, UInteger, System.Collections.Generic.List(Of NVAPIWrapper.NVAPINvLinkStatusInfoDto))
+  name.vb: New(UInteger, UInteger, List(Of NVAPINvLinkStatusInfoDto))
 - uid: NVAPIWrapper.NVAPINvLinkStatusDto.FromNative(NVAPIWrapper.NVLINK_GET_STATUS_V2)
   commentId: M:NVAPIWrapper.NVAPINvLinkStatusDto.FromNative(NVAPIWrapper.NVLINK_GET_STATUS_V2)
   id: FromNative(NVAPIWrapper.NVLINK_GET_STATUS_V2)
@@ -194,10 +202,15 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: FromNative
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 4862
+    startLine: 4876
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
+  summary: >-
+    Create a DTO from a native NVLINK status struct. Only entries for bits set in
+
+    <code class="paramref">native</code>.linkMask are included in <xref href="NVAPIWrapper.NVAPINvLinkStatusDto.LinkInfo" data-throw-if-not-resolved="false"></xref>.
+  example: []
   syntax:
     content: public static NVAPINvLinkStatusDto FromNative(NVLINK_GET_STATUS_V2 native)
     parameters:
@@ -225,10 +238,12 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: CreateDefault
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 4872
+    startLine: 4888
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
+  summary: Create a default (no active links) NVLINK status DTO.
+  example: []
   syntax:
     content: public static NVAPINvLinkStatusDto CreateDefault()
     return:
@@ -253,10 +268,15 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: ToNative
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 4877
+    startLine: 4897
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
+  summary: >-
+    Convert this DTO back to a native struct. List entries are placed at the native indices
+
+    corresponding to set bits in <xref href="NVAPIWrapper.NVAPINvLinkStatusDto.LinkMask" data-throw-if-not-resolved="false"></xref> (ascending order); all other slots are default.
+  example: []
   syntax:
     content: public NVLINK_GET_STATUS_V2 ToNative()
     return:
@@ -281,7 +301,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Equals
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 4889
+    startLine: 4913
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -318,7 +338,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Equals
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 4903
+    startLine: 4926
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -357,7 +377,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetHashCode
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 4904
+    startLine: 4929
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -389,10 +409,12 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: op_Equality
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 4914
+    startLine: 4938
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
+  summary: Compare NVLINK status DTOs.
+  example: []
   syntax:
     content: public static bool operator ==(NVAPINvLinkStatusDto left, NVAPINvLinkStatusDto right)
     parameters:
@@ -425,10 +447,12 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: op_Inequality
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 4915
+    startLine: 4940
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
+  summary: Compare NVLINK status DTOs.
+  example: []
   syntax:
     content: public static bool operator !=(NVAPINvLinkStatusDto left, NVAPINvLinkStatusDto right)
     parameters:
@@ -696,42 +720,131 @@ references:
   name: LinkMask
   nameWithType: NVAPINvLinkStatusDto.LinkMask
   fullName: NVAPIWrapper.NVAPINvLinkStatusDto.LinkMask
+- uid: NVAPIWrapper.NVAPINvLinkStatusDto.LinkMask
+  commentId: P:NVAPIWrapper.NVAPINvLinkStatusDto.LinkMask
+  href: NVAPIWrapper.NVAPINvLinkStatusDto.html#NVAPIWrapper_NVAPINvLinkStatusDto_LinkMask
+  name: LinkMask
+  nameWithType: NVAPINvLinkStatusDto.LinkMask
+  fullName: NVAPIWrapper.NVAPINvLinkStatusDto.LinkMask
 - uid: NVAPIWrapper.NVAPINvLinkStatusDto.LinkInfo*
   commentId: Overload:NVAPIWrapper.NVAPINvLinkStatusDto.LinkInfo
   href: NVAPIWrapper.NVAPINvLinkStatusDto.html#NVAPIWrapper_NVAPINvLinkStatusDto_LinkInfo
   name: LinkInfo
   nameWithType: NVAPINvLinkStatusDto.LinkInfo
   fullName: NVAPIWrapper.NVAPINvLinkStatusDto.LinkInfo
-- uid: NVAPIWrapper.NVAPINvLinkStatusInfoDto[]
-  isExternal: true
-  href: NVAPIWrapper.NVAPINvLinkStatusInfoDto.html
-  name: NVAPINvLinkStatusInfoDto[]
-  nameWithType: NVAPINvLinkStatusInfoDto[]
-  fullName: NVAPIWrapper.NVAPINvLinkStatusInfoDto[]
-  nameWithType.vb: NVAPINvLinkStatusInfoDto()
-  fullName.vb: NVAPIWrapper.NVAPINvLinkStatusInfoDto()
-  name.vb: NVAPINvLinkStatusInfoDto()
+- uid: System.Collections.Generic.List{NVAPIWrapper.NVAPINvLinkStatusInfoDto}
+  commentId: T:System.Collections.Generic.List{NVAPIWrapper.NVAPINvLinkStatusInfoDto}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<NVAPINvLinkStatusInfoDto>
+  nameWithType: List<NVAPINvLinkStatusInfoDto>
+  fullName: System.Collections.Generic.List<NVAPIWrapper.NVAPINvLinkStatusInfoDto>
+  nameWithType.vb: List(Of NVAPINvLinkStatusInfoDto)
+  fullName.vb: System.Collections.Generic.List(Of NVAPIWrapper.NVAPINvLinkStatusInfoDto)
+  name.vb: List(Of NVAPINvLinkStatusInfoDto)
   spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
   - uid: NVAPIWrapper.NVAPINvLinkStatusInfoDto
     name: NVAPINvLinkStatusInfoDto
     href: NVAPIWrapper.NVAPINvLinkStatusInfoDto.html
-  - name: '['
-  - name: ']'
+  - name: '>'
   spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
   - uid: NVAPIWrapper.NVAPINvLinkStatusInfoDto
     name: NVAPINvLinkStatusInfoDto
     href: NVAPIWrapper.NVAPINvLinkStatusInfoDto.html
-  - name: (
   - name: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
 - uid: NVAPIWrapper.NVAPINvLinkStatusDto.#ctor*
   commentId: Overload:NVAPIWrapper.NVAPINvLinkStatusDto.#ctor
-  href: NVAPIWrapper.NVAPINvLinkStatusDto.html#NVAPIWrapper_NVAPINvLinkStatusDto__ctor_System_UInt32_System_UInt32_NVAPIWrapper_NVAPINvLinkStatusInfoDto___
+  href: NVAPIWrapper.NVAPINvLinkStatusDto.html#NVAPIWrapper_NVAPINvLinkStatusDto__ctor_System_UInt32_System_UInt32_System_Collections_Generic_List_NVAPIWrapper_NVAPINvLinkStatusInfoDto__
   name: NVAPINvLinkStatusDto
   nameWithType: NVAPINvLinkStatusDto.NVAPINvLinkStatusDto
   fullName: NVAPIWrapper.NVAPINvLinkStatusDto.NVAPINvLinkStatusDto
   nameWithType.vb: NVAPINvLinkStatusDto.New
   fullName.vb: NVAPIWrapper.NVAPINvLinkStatusDto.New
   name.vb: New
+- uid: NVAPIWrapper.NVAPINvLinkStatusDto.LinkInfo
+  commentId: P:NVAPIWrapper.NVAPINvLinkStatusDto.LinkInfo
+  href: NVAPIWrapper.NVAPINvLinkStatusDto.html#NVAPIWrapper_NVAPINvLinkStatusDto_LinkInfo
+  name: LinkInfo
+  nameWithType: NVAPINvLinkStatusDto.LinkInfo
+  fullName: NVAPIWrapper.NVAPINvLinkStatusDto.LinkInfo
 - uid: NVAPIWrapper.NVAPINvLinkStatusDto.FromNative*
   commentId: Overload:NVAPIWrapper.NVAPINvLinkStatusDto.FromNative
   href: NVAPIWrapper.NVAPINvLinkStatusDto.html#NVAPIWrapper_NVAPINvLinkStatusDto_FromNative_NVAPIWrapper_NVLINK_GET_STATUS_V2_

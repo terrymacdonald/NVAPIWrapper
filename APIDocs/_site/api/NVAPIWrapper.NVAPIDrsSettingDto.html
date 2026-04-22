@@ -185,16 +185,16 @@ Struct NVAPIDrsSettingDto  <a class="header-action link-secondary" title="View s
     <dd><p>Current DWORD value.</p>
 </dd>
     <dt><code>predefinedStringValue</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>Predefined string value.</p>
+    <dd><p>Predefined string value. Null is treated as empty string.</p>
 </dd>
     <dt><code>currentStringValue</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>Current string value.</p>
+    <dd><p>Current string value. Null is treated as empty string.</p>
 </dd>
     <dt><code>predefinedBinaryValue</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]</dt>
-    <dd><p>Predefined binary value.</p>
+    <dd><p>Predefined binary value. Null is treated as an empty array.</p>
 </dd>
     <dt><code>currentBinaryValue</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]</dt>
-    <dd><p>Current binary value.</p>
+    <dd><p>Current binary value. Null is treated as an empty array.</p>
 </dd>
   </dl>
 
@@ -224,7 +224,7 @@ Struct NVAPIDrsSettingDto  <a class="header-action link-secondary" title="View s
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public byte[]? CurrentBinaryValue { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public byte[] CurrentBinaryValue { get; }</code></pre>
   </div>
 
 
@@ -286,7 +286,7 @@ Struct NVAPIDrsSettingDto  <a class="header-action link-secondary" title="View s
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string? CurrentStringValue { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public string CurrentStringValue { get; }</code></pre>
   </div>
 
 
@@ -379,7 +379,7 @@ Struct NVAPIDrsSettingDto  <a class="header-action link-secondary" title="View s
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public byte[]? PredefinedBinaryValue { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public byte[] PredefinedBinaryValue { get; }</code></pre>
   </div>
 
 
@@ -441,7 +441,7 @@ Struct NVAPIDrsSettingDto  <a class="header-action link-secondary" title="View s
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string? PredefinedStringValue { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public string PredefinedStringValue { get; }</code></pre>
   </div>
 
 

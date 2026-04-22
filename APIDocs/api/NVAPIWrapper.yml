@@ -270,6 +270,7 @@ items:
   - NVAPIWrapper.NVAPISystemPhysicalGpuHandleDto
   - NVAPIWrapper.NVAPITargetInfoDto
   - NVAPIWrapper.NVAPITimingDto
+  - NVAPIWrapper.NVAPITimingExtDto
   - NVAPIWrapper.NVAPITimingInputDto
   - NVAPIWrapper.NVAPIUnAttachedDisplayHelper
   - NVAPIWrapper.NVAPIVideoHelper
@@ -1223,6 +1224,20 @@ references:
   name: NVAPIDisplayConfigTargetDto
   nameWithType: NVAPIDisplayConfigTargetDto
   fullName: NVAPIWrapper.NVAPIDisplayConfigTargetDto
+- uid: NVAPIWrapper.NVAPITimingExtDto
+  commentId: T:NVAPIWrapper.NVAPITimingExtDto
+  parent: NVAPIWrapper
+  href: NVAPIWrapper.NVAPITimingExtDto.html
+  name: NVAPITimingExtDto
+  nameWithType: NVAPITimingExtDto
+  fullName: NVAPIWrapper.NVAPITimingExtDto
+- uid: NVAPIWrapper.NVAPITimingDto
+  commentId: T:NVAPIWrapper.NVAPITimingDto
+  parent: NVAPIWrapper
+  href: NVAPIWrapper.NVAPITimingDto.html
+  name: NVAPITimingDto
+  nameWithType: NVAPITimingDto
+  fullName: NVAPIWrapper.NVAPITimingDto
 - uid: NVAPIWrapper.NVAPIDisplayConfigAdvancedTargetDto
   commentId: T:NVAPIWrapper.NVAPIDisplayConfigAdvancedTargetDto
   parent: NVAPIWrapper
@@ -1244,13 +1259,6 @@ references:
   name: NVAPITimingInputDto
   nameWithType: NVAPITimingInputDto
   fullName: NVAPIWrapper.NVAPITimingInputDto
-- uid: NVAPIWrapper.NVAPITimingDto
-  commentId: T:NVAPIWrapper.NVAPITimingDto
-  parent: NVAPIWrapper
-  href: NVAPIWrapper.NVAPITimingDto.html
-  name: NVAPITimingDto
-  nameWithType: NVAPITimingDto
-  fullName: NVAPIWrapper.NVAPITimingDto
 - uid: NVAPIWrapper.NVAPIMonitorCapabilitiesDto
   commentId: T:NVAPIWrapper.NVAPIMonitorCapabilitiesDto
   parent: NVAPIWrapper

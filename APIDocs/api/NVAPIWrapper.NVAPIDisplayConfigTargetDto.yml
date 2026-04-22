@@ -30,14 +30,14 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPIDisplayConfigTargetDto
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 3434
+    startLine: 3440
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   summary: Managed representation of a display target configuration.
   example: []
   syntax:
-    content: 'public readonly struct NVAPIDisplayConfigTargetDto : IEquatable<NVAPIDisplayConfigTargetDto>'
+    content: 'public struct NVAPIDisplayConfigTargetDto : IEquatable<NVAPIDisplayConfigTargetDto>'
     content.vb: Public Structure NVAPIDisplayConfigTargetDto Implements IEquatable(Of NVAPIDisplayConfigTargetDto)
   implements:
   - System.IEquatable{NVAPIWrapper.NVAPIDisplayConfigTargetDto}
@@ -64,18 +64,18 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: DisplayId
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 3437
+    startLine: 3443
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   summary: Display ID.
   example: []
   syntax:
-    content: public uint DisplayId { get; }
+    content: public uint DisplayId { readonly get; set; }
     parameters: []
     return:
       type: System.UInt32
-    content.vb: Public ReadOnly Property DisplayId As UInteger
+    content.vb: Public Property DisplayId As UInteger
   overload: NVAPIWrapper.NVAPIDisplayConfigTargetDto.DisplayId*
 - uid: NVAPIWrapper.NVAPIDisplayConfigTargetDto.TargetId
   commentId: P:NVAPIWrapper.NVAPIDisplayConfigTargetDto.TargetId
@@ -95,18 +95,18 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: TargetId
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 3440
+    startLine: 3446
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   summary: Windows CCD target ID (for non-NVIDIA adapters).
   example: []
   syntax:
-    content: public uint TargetId { get; }
+    content: public uint TargetId { readonly get; set; }
     parameters: []
     return:
       type: System.UInt32
-    content.vb: Public ReadOnly Property TargetId As UInteger
+    content.vb: Public Property TargetId As UInteger
   overload: NVAPIWrapper.NVAPIDisplayConfigTargetDto.TargetId*
 - uid: NVAPIWrapper.NVAPIDisplayConfigTargetDto.Details
   commentId: P:NVAPIWrapper.NVAPIDisplayConfigTargetDto.Details
@@ -126,18 +126,18 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Details
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 3443
+    startLine: 3449
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   summary: Advanced target info, or null if not present.
   example: []
   syntax:
-    content: public NVAPIDisplayConfigAdvancedTargetDto? Details { get; }
+    content: public NVAPIDisplayConfigAdvancedTargetDto? Details { readonly get; set; }
     parameters: []
     return:
       type: System.Nullable{NVAPIWrapper.NVAPIDisplayConfigAdvancedTargetDto}
-    content.vb: Public ReadOnly Property Details As NVAPIDisplayConfigAdvancedTargetDto?
+    content.vb: Public Property Details As NVAPIDisplayConfigAdvancedTargetDto?
   overload: NVAPIWrapper.NVAPIDisplayConfigTargetDto.Details*
 - uid: NVAPIWrapper.NVAPIDisplayConfigTargetDto.#ctor(System.UInt32,System.UInt32,System.Nullable{NVAPIWrapper.NVAPIDisplayConfigAdvancedTargetDto})
   commentId: M:NVAPIWrapper.NVAPIDisplayConfigTargetDto.#ctor(System.UInt32,System.UInt32,System.Nullable{NVAPIWrapper.NVAPIDisplayConfigAdvancedTargetDto})
@@ -157,7 +157,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: .ctor
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 3446
+    startLine: 3452
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -195,7 +195,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: FromNative
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 3458
+    startLine: 3464
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -230,7 +230,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: ToNative
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 3469
+    startLine: 3475
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -265,7 +265,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Equals
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 3480
+    startLine: 3486
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -302,7 +302,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Equals
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 3488
+    startLine: 3494
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -341,7 +341,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetHashCode
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 3494
+    startLine: 3500
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -373,7 +373,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: op_Equality
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 3509
+    startLine: 3515
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -411,7 +411,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: op_Inequality
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 3517
+    startLine: 3523
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper

@@ -2355,7 +2355,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: QueryWorkstationFeatureSupport
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 1839
+    startLine: 1840
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -2390,7 +2390,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: WorkstationFeatureQuery
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 1865
+    startLine: 1866
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -2421,7 +2421,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: WorkstationFeatureSetup
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 1893
+    startLine: 1894
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -2462,7 +2462,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Dispose
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 2152
+    startLine: 2153
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper

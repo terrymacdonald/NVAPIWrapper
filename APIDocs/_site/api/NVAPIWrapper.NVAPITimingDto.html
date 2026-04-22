@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Struct NVAPITimingDto | NVAPIWrapper ">
       
-      <meta name="description" content="DTO for timing output data.">
+      <meta name="description" content="Managed representation of NV_TIMING display timing parameters.">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -89,7 +89,7 @@
 
 
   <h1 id="NVAPIWrapper_NVAPITimingDto" data-uid="NVAPIWrapper.NVAPITimingDto" class="text-break">
-Struct NVAPITimingDto  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L3894"><i class="bi bi-code-slash"></i></a>
+Struct NVAPITimingDto  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L3661"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -97,12 +97,12 @@ Struct NVAPITimingDto  <a class="header-action link-secondary" title="View sourc
   <dl><dt>Assembly</dt><dd>NVAPIWrapper.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>DTO for timing output data.</p>
+  <div class="markdown summary"><p>Managed representation of NV_TIMING display timing parameters.</p>
 </div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly struct NVAPITimingDto : IEquatable&lt;NVAPITimingDto&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public struct NVAPITimingDto : IEquatable&lt;NVAPITimingDto&gt;</code></pre>
   </div>
 
 
@@ -145,22 +145,50 @@ Struct NVAPITimingDto  <a class="header-action link-secondary" title="View sourc
 
   <a id="NVAPIWrapper_NVAPITimingDto__ctor_" data-uid="NVAPIWrapper.NVAPITimingDto.#ctor*"></a>
 
-  <h3 id="NVAPIWrapper_NVAPITimingDto__ctor_NVAPIWrapper__NV_TIMING_" data-uid="NVAPIWrapper.NVAPITimingDto.#ctor(NVAPIWrapper._NV_TIMING)">
-  NVAPITimingDto(_NV_TIMING)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L3900"><i class="bi bi-code-slash"></i></a>
+  <h3 id="NVAPIWrapper_NVAPITimingDto__ctor_System_UInt16_System_UInt16_System_UInt16_System_UInt16_System_UInt16_System_Byte_System_UInt16_System_UInt16_System_UInt16_System_UInt16_System_UInt16_System_Byte_System_UInt16_System_UInt32_NVAPIWrapper_NVAPITimingExtDto_" data-uid="NVAPIWrapper.NVAPITimingDto.#ctor(System.UInt16,System.UInt16,System.UInt16,System.UInt16,System.UInt16,System.Byte,System.UInt16,System.UInt16,System.UInt16,System.UInt16,System.UInt16,System.Byte,System.UInt16,System.UInt32,NVAPIWrapper.NVAPITimingExtDto)">
+  NVAPITimingDto(ushort, ushort, ushort, ushort, ushort, byte, ushort, ushort, ushort, ushort, ushort, byte, ushort, uint, NVAPITimingExtDto)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L3709"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Create a timing DTO.</p>
+  <div class="markdown level1 summary"><p>Create timing info.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public NVAPITimingDto(_NV_TIMING timing)</code></pre>
+    <pre><code class="lang-csharp hljs">public NVAPITimingDto(ushort hVisible, ushort hBorder, ushort hFrontPorch, ushort hSyncWidth, ushort hTotal, byte hSyncPol, ushort vVisible, ushort vBorder, ushort vFrontPorch, ushort vSyncWidth, ushort vTotal, byte vSyncPol, ushort interlaced, uint pclk, NVAPITimingExtDto etc)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>timing</code> <a class="xref" href="NVAPIWrapper._NV_TIMING.html">_NV_TIMING</a></dt>
+    <dt><code>hVisible</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint16">ushort</a></dt>
+    <dd></dd>
+    <dt><code>hBorder</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint16">ushort</a></dt>
+    <dd></dd>
+    <dt><code>hFrontPorch</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint16">ushort</a></dt>
+    <dd></dd>
+    <dt><code>hSyncWidth</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint16">ushort</a></dt>
+    <dd></dd>
+    <dt><code>hTotal</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint16">ushort</a></dt>
+    <dd></dd>
+    <dt><code>hSyncPol</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a></dt>
+    <dd></dd>
+    <dt><code>vVisible</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint16">ushort</a></dt>
+    <dd></dd>
+    <dt><code>vBorder</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint16">ushort</a></dt>
+    <dd></dd>
+    <dt><code>vFrontPorch</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint16">ushort</a></dt>
+    <dd></dd>
+    <dt><code>vSyncWidth</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint16">ushort</a></dt>
+    <dd></dd>
+    <dt><code>vTotal</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint16">ushort</a></dt>
+    <dd></dd>
+    <dt><code>vSyncPol</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a></dt>
+    <dd></dd>
+    <dt><code>interlaced</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint16">ushort</a></dt>
+    <dd></dd>
+    <dt><code>pclk</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd></dd>
+    <dt><code>etc</code> <a class="xref" href="NVAPIWrapper.NVAPITimingExtDto.html">NVAPITimingExtDto</a></dt>
     <dd></dd>
   </dl>
 
@@ -179,19 +207,19 @@ Struct NVAPITimingDto  <a class="header-action link-secondary" title="View sourc
 </h2>
 
 
-  <a id="NVAPIWrapper_NVAPITimingDto_Timing_" data-uid="NVAPIWrapper.NVAPITimingDto.Timing*"></a>
+  <a id="NVAPIWrapper_NVAPITimingDto_Etc_" data-uid="NVAPIWrapper.NVAPITimingDto.Etc*"></a>
 
-  <h3 id="NVAPIWrapper_NVAPITimingDto_Timing" data-uid="NVAPIWrapper.NVAPITimingDto.Timing">
-  Timing
-  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L3897"><i class="bi bi-code-slash"></i></a>
+  <h3 id="NVAPIWrapper_NVAPITimingDto_Etc" data-uid="NVAPIWrapper.NVAPITimingDto.Etc">
+  Etc
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L3706"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Timing data.</p>
+  <div class="markdown level1 summary"><p>Extended timing information.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public _NV_TIMING Timing { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public NVAPITimingExtDto Etc { readonly get; set; }</code></pre>
   </div>
 
 
@@ -200,7 +228,455 @@ Struct NVAPITimingDto  <a class="header-action link-secondary" title="View sourc
 
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="NVAPIWrapper._NV_TIMING.html">_NV_TIMING</a></dt>
+    <dt><a class="xref" href="NVAPIWrapper.NVAPITimingExtDto.html">NVAPITimingExtDto</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPITimingDto_HBorder_" data-uid="NVAPIWrapper.NVAPITimingDto.HBorder*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPITimingDto_HBorder" data-uid="NVAPIWrapper.NVAPITimingDto.HBorder">
+  HBorder
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L3667"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Horizontal border pixels.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ushort HBorder { readonly get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint16">ushort</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPITimingDto_HFrontPorch_" data-uid="NVAPIWrapper.NVAPITimingDto.HFrontPorch*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPITimingDto_HFrontPorch" data-uid="NVAPIWrapper.NVAPITimingDto.HFrontPorch">
+  HFrontPorch
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L3670"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Horizontal front porch pixels.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ushort HFrontPorch { readonly get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint16">ushort</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPITimingDto_HSyncPol_" data-uid="NVAPIWrapper.NVAPITimingDto.HSyncPol*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPITimingDto_HSyncPol" data-uid="NVAPIWrapper.NVAPITimingDto.HSyncPol">
+  HSyncPol
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L3679"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Horizontal sync polarity.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public byte HSyncPol { readonly get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPITimingDto_HSyncWidth_" data-uid="NVAPIWrapper.NVAPITimingDto.HSyncWidth*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPITimingDto_HSyncWidth" data-uid="NVAPIWrapper.NVAPITimingDto.HSyncWidth">
+  HSyncWidth
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L3673"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Horizontal sync width pixels.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ushort HSyncWidth { readonly get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint16">ushort</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPITimingDto_HTotal_" data-uid="NVAPIWrapper.NVAPITimingDto.HTotal*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPITimingDto_HTotal" data-uid="NVAPIWrapper.NVAPITimingDto.HTotal">
+  HTotal
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L3676"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Horizontal total pixels.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ushort HTotal { readonly get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint16">ushort</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPITimingDto_HVisible_" data-uid="NVAPIWrapper.NVAPITimingDto.HVisible*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPITimingDto_HVisible" data-uid="NVAPIWrapper.NVAPITimingDto.HVisible">
+  HVisible
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L3664"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Horizontal visible pixels.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ushort HVisible { readonly get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint16">ushort</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPITimingDto_Interlaced_" data-uid="NVAPIWrapper.NVAPITimingDto.Interlaced*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPITimingDto_Interlaced" data-uid="NVAPIWrapper.NVAPITimingDto.Interlaced">
+  Interlaced
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L3700"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Non-zero if interlaced.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ushort Interlaced { readonly get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint16">ushort</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPITimingDto_Pclk_" data-uid="NVAPIWrapper.NVAPITimingDto.Pclk*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPITimingDto_Pclk" data-uid="NVAPIWrapper.NVAPITimingDto.Pclk">
+  Pclk
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L3703"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Pixel clock in 10 kHz units.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public uint Pclk { readonly get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPITimingDto_VBorder_" data-uid="NVAPIWrapper.NVAPITimingDto.VBorder*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPITimingDto_VBorder" data-uid="NVAPIWrapper.NVAPITimingDto.VBorder">
+  VBorder
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L3685"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Vertical border lines.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ushort VBorder { readonly get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint16">ushort</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPITimingDto_VFrontPorch_" data-uid="NVAPIWrapper.NVAPITimingDto.VFrontPorch*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPITimingDto_VFrontPorch" data-uid="NVAPIWrapper.NVAPITimingDto.VFrontPorch">
+  VFrontPorch
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L3688"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Vertical front porch lines.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ushort VFrontPorch { readonly get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint16">ushort</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPITimingDto_VSyncPol_" data-uid="NVAPIWrapper.NVAPITimingDto.VSyncPol*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPITimingDto_VSyncPol" data-uid="NVAPIWrapper.NVAPITimingDto.VSyncPol">
+  VSyncPol
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L3697"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Vertical sync polarity.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public byte VSyncPol { readonly get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPITimingDto_VSyncWidth_" data-uid="NVAPIWrapper.NVAPITimingDto.VSyncWidth*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPITimingDto_VSyncWidth" data-uid="NVAPIWrapper.NVAPITimingDto.VSyncWidth">
+  VSyncWidth
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L3691"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Vertical sync width lines.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ushort VSyncWidth { readonly get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint16">ushort</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPITimingDto_VTotal_" data-uid="NVAPIWrapper.NVAPITimingDto.VTotal*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPITimingDto_VTotal" data-uid="NVAPIWrapper.NVAPITimingDto.VTotal">
+  VTotal
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L3694"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Vertical total lines.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ushort VTotal { readonly get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint16">ushort</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPITimingDto_VVisible_" data-uid="NVAPIWrapper.NVAPITimingDto.VVisible*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPITimingDto_VVisible" data-uid="NVAPIWrapper.NVAPITimingDto.VVisible">
+  VVisible
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L3682"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Vertical visible lines.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ushort VVisible { readonly get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint16">ushort</a></dt>
     <dd></dd>
   </dl>
 
@@ -219,7 +695,7 @@ Struct NVAPITimingDto  <a class="header-action link-secondary" title="View sourc
 
   <h3 id="NVAPIWrapper_NVAPITimingDto_Equals_NVAPIWrapper_NVAPITimingDto_" data-uid="NVAPIWrapper.NVAPITimingDto.Equals(NVAPIWrapper.NVAPITimingDto)">
   Equals(NVAPITimingDto)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L3925"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L3783"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Indicates whether the current object is equal to another object of the same type.</p>
@@ -258,7 +734,7 @@ Struct NVAPITimingDto  <a class="header-action link-secondary" title="View sourc
 
   <h3 id="NVAPIWrapper_NVAPITimingDto_Equals_System_Object_" data-uid="NVAPIWrapper.NVAPITimingDto.Equals(System.Object)">
   Equals(object?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L3928"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L3803"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Indicates whether this instance and a specified object are equal.</p>
@@ -297,7 +773,7 @@ Struct NVAPITimingDto  <a class="header-action link-secondary" title="View sourc
 
   <h3 id="NVAPIWrapper_NVAPITimingDto_FromNative_NVAPIWrapper__NV_TIMING_" data-uid="NVAPIWrapper.NVAPITimingDto.FromNative(NVAPIWrapper._NV_TIMING)">
   FromNative(_NV_TIMING)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L3910"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L3736"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Create a DTO from a native timing struct.</p>
@@ -311,7 +787,7 @@ Struct NVAPITimingDto  <a class="header-action link-secondary" title="View sourc
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>native</code> <a class="xref" href="NVAPIWrapper._NV_TIMING.html">_NV_TIMING</a></dt>
-    <dd><p>Native timing.</p>
+    <dd><p>Native timing struct.</p>
 </dd>
   </dl>
 
@@ -336,7 +812,7 @@ Struct NVAPITimingDto  <a class="header-action link-secondary" title="View sourc
 
   <h3 id="NVAPIWrapper_NVAPITimingDto_GetHashCode" data-uid="NVAPIWrapper.NVAPITimingDto.GetHashCode">
   GetHashCode()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L3931"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L3809"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Returns the hash code for this instance.</p>
@@ -369,7 +845,7 @@ Struct NVAPITimingDto  <a class="header-action link-secondary" title="View sourc
 
   <h3 id="NVAPIWrapper_NVAPITimingDto_ToNative" data-uid="NVAPIWrapper.NVAPITimingDto.ToNative">
   ToNative()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L3919"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L3760"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Convert this DTO to a native timing struct.</p>
@@ -384,7 +860,7 @@ Struct NVAPITimingDto  <a class="header-action link-secondary" title="View sourc
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="NVAPIWrapper._NV_TIMING.html">_NV_TIMING</a></dt>
-    <dd><p>Native timing.</p>
+    <dd><p>Native timing struct.</p>
 </dd>
   </dl>
 
@@ -406,10 +882,10 @@ Struct NVAPITimingDto  <a class="header-action link-secondary" title="View sourc
 
   <h3 id="NVAPIWrapper_NVAPITimingDto_op_Equality_NVAPIWrapper_NVAPITimingDto_NVAPIWrapper_NVAPITimingDto_" data-uid="NVAPIWrapper.NVAPITimingDto.op_Equality(NVAPIWrapper.NVAPITimingDto,NVAPIWrapper.NVAPITimingDto)">
   operator ==(NVAPITimingDto, NVAPITimingDto)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L3934"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L3834"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Compare timing DTOs.</p>
+  <div class="markdown level1 summary"><p>Compare timing values.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -445,10 +921,10 @@ Struct NVAPITimingDto  <a class="header-action link-secondary" title="View sourc
 
   <h3 id="NVAPIWrapper_NVAPITimingDto_op_Inequality_NVAPIWrapper_NVAPITimingDto_NVAPIWrapper_NVAPITimingDto_" data-uid="NVAPIWrapper.NVAPITimingDto.op_Inequality(NVAPIWrapper.NVAPITimingDto,NVAPIWrapper.NVAPITimingDto)">
   operator !=(NVAPITimingDto, NVAPITimingDto)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L3937"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L3837"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Compare timing DTOs.</p>
+  <div class="markdown level1 summary"><p>Compare timing values.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -484,7 +960,7 @@ Struct NVAPITimingDto  <a class="header-action link-secondary" title="View sourc
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L3894" class="edit-link">Edit this page</a>
+          <a href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L3661" class="edit-link">Edit this page</a>
         </div>
 
 

@@ -5,13 +5,27 @@ items:
   id: NVAPITimingDto
   parent: NVAPIWrapper
   children:
-  - NVAPIWrapper.NVAPITimingDto.#ctor(NVAPIWrapper._NV_TIMING)
+  - NVAPIWrapper.NVAPITimingDto.#ctor(System.UInt16,System.UInt16,System.UInt16,System.UInt16,System.UInt16,System.Byte,System.UInt16,System.UInt16,System.UInt16,System.UInt16,System.UInt16,System.Byte,System.UInt16,System.UInt32,NVAPIWrapper.NVAPITimingExtDto)
   - NVAPIWrapper.NVAPITimingDto.Equals(NVAPIWrapper.NVAPITimingDto)
   - NVAPIWrapper.NVAPITimingDto.Equals(System.Object)
+  - NVAPIWrapper.NVAPITimingDto.Etc
   - NVAPIWrapper.NVAPITimingDto.FromNative(NVAPIWrapper._NV_TIMING)
   - NVAPIWrapper.NVAPITimingDto.GetHashCode
-  - NVAPIWrapper.NVAPITimingDto.Timing
+  - NVAPIWrapper.NVAPITimingDto.HBorder
+  - NVAPIWrapper.NVAPITimingDto.HFrontPorch
+  - NVAPIWrapper.NVAPITimingDto.HSyncPol
+  - NVAPIWrapper.NVAPITimingDto.HSyncWidth
+  - NVAPIWrapper.NVAPITimingDto.HTotal
+  - NVAPIWrapper.NVAPITimingDto.HVisible
+  - NVAPIWrapper.NVAPITimingDto.Interlaced
+  - NVAPIWrapper.NVAPITimingDto.Pclk
   - NVAPIWrapper.NVAPITimingDto.ToNative
+  - NVAPIWrapper.NVAPITimingDto.VBorder
+  - NVAPIWrapper.NVAPITimingDto.VFrontPorch
+  - NVAPIWrapper.NVAPITimingDto.VSyncPol
+  - NVAPIWrapper.NVAPITimingDto.VSyncWidth
+  - NVAPIWrapper.NVAPITimingDto.VTotal
+  - NVAPIWrapper.NVAPITimingDto.VVisible
   - NVAPIWrapper.NVAPITimingDto.op_Equality(NVAPIWrapper.NVAPITimingDto,NVAPIWrapper.NVAPITimingDto)
   - NVAPIWrapper.NVAPITimingDto.op_Inequality(NVAPIWrapper.NVAPITimingDto,NVAPIWrapper.NVAPITimingDto)
   langs:
@@ -28,14 +42,14 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPITimingDto
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 3893
+    startLine: 3660
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
-  summary: DTO for timing output data.
+  summary: Managed representation of NV_TIMING display timing parameters.
   example: []
   syntax:
-    content: 'public readonly struct NVAPITimingDto : IEquatable<NVAPITimingDto>'
+    content: 'public struct NVAPITimingDto : IEquatable<NVAPITimingDto>'
     content.vb: Public Structure NVAPITimingDto Implements IEquatable(Of NVAPITimingDto)
   implements:
   - System.IEquatable{NVAPIWrapper.NVAPITimingDto}
@@ -44,47 +58,481 @@ items:
   - System.Object.Equals(System.Object,System.Object)
   - System.Object.GetType
   - System.Object.ReferenceEquals(System.Object,System.Object)
-- uid: NVAPIWrapper.NVAPITimingDto.Timing
-  commentId: P:NVAPIWrapper.NVAPITimingDto.Timing
-  id: Timing
+- uid: NVAPIWrapper.NVAPITimingDto.HVisible
+  commentId: P:NVAPIWrapper.NVAPITimingDto.HVisible
+  id: HVisible
   parent: NVAPIWrapper.NVAPITimingDto
   langs:
   - csharp
   - vb
-  name: Timing
-  nameWithType: NVAPITimingDto.Timing
-  fullName: NVAPIWrapper.NVAPITimingDto.Timing
+  name: HVisible
+  nameWithType: NVAPITimingDto.HVisible
+  fullName: NVAPIWrapper.NVAPITimingDto.HVisible
   type: Property
   source:
     remote:
       path: NVAPIWrapper/NVAPIDisplayHelper.cs
       branch: main
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
-    id: Timing
+    id: HVisible
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 3896
+    startLine: 3663
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
-  summary: Timing data.
+  summary: Horizontal visible pixels.
   example: []
   syntax:
-    content: public _NV_TIMING Timing { get; }
+    content: public ushort HVisible { readonly get; set; }
     parameters: []
     return:
-      type: NVAPIWrapper._NV_TIMING
-    content.vb: Public ReadOnly Property Timing As _NV_TIMING
-  overload: NVAPIWrapper.NVAPITimingDto.Timing*
-- uid: NVAPIWrapper.NVAPITimingDto.#ctor(NVAPIWrapper._NV_TIMING)
-  commentId: M:NVAPIWrapper.NVAPITimingDto.#ctor(NVAPIWrapper._NV_TIMING)
-  id: '#ctor(NVAPIWrapper._NV_TIMING)'
+      type: System.UInt16
+    content.vb: Public Property HVisible As UShort
+  overload: NVAPIWrapper.NVAPITimingDto.HVisible*
+- uid: NVAPIWrapper.NVAPITimingDto.HBorder
+  commentId: P:NVAPIWrapper.NVAPITimingDto.HBorder
+  id: HBorder
   parent: NVAPIWrapper.NVAPITimingDto
   langs:
   - csharp
   - vb
-  name: NVAPITimingDto(_NV_TIMING)
-  nameWithType: NVAPITimingDto.NVAPITimingDto(_NV_TIMING)
-  fullName: NVAPIWrapper.NVAPITimingDto.NVAPITimingDto(NVAPIWrapper._NV_TIMING)
+  name: HBorder
+  nameWithType: NVAPITimingDto.HBorder
+  fullName: NVAPIWrapper.NVAPITimingDto.HBorder
+  type: Property
+  source:
+    remote:
+      path: NVAPIWrapper/NVAPIDisplayHelper.cs
+      branch: main
+      repo: https://github.com/terrymacdonald/NVAPIWrapper.git
+    id: HBorder
+    path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
+    startLine: 3666
+  assemblies:
+  - NVAPIWrapper
+  namespace: NVAPIWrapper
+  summary: Horizontal border pixels.
+  example: []
+  syntax:
+    content: public ushort HBorder { readonly get; set; }
+    parameters: []
+    return:
+      type: System.UInt16
+    content.vb: Public Property HBorder As UShort
+  overload: NVAPIWrapper.NVAPITimingDto.HBorder*
+- uid: NVAPIWrapper.NVAPITimingDto.HFrontPorch
+  commentId: P:NVAPIWrapper.NVAPITimingDto.HFrontPorch
+  id: HFrontPorch
+  parent: NVAPIWrapper.NVAPITimingDto
+  langs:
+  - csharp
+  - vb
+  name: HFrontPorch
+  nameWithType: NVAPITimingDto.HFrontPorch
+  fullName: NVAPIWrapper.NVAPITimingDto.HFrontPorch
+  type: Property
+  source:
+    remote:
+      path: NVAPIWrapper/NVAPIDisplayHelper.cs
+      branch: main
+      repo: https://github.com/terrymacdonald/NVAPIWrapper.git
+    id: HFrontPorch
+    path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
+    startLine: 3669
+  assemblies:
+  - NVAPIWrapper
+  namespace: NVAPIWrapper
+  summary: Horizontal front porch pixels.
+  example: []
+  syntax:
+    content: public ushort HFrontPorch { readonly get; set; }
+    parameters: []
+    return:
+      type: System.UInt16
+    content.vb: Public Property HFrontPorch As UShort
+  overload: NVAPIWrapper.NVAPITimingDto.HFrontPorch*
+- uid: NVAPIWrapper.NVAPITimingDto.HSyncWidth
+  commentId: P:NVAPIWrapper.NVAPITimingDto.HSyncWidth
+  id: HSyncWidth
+  parent: NVAPIWrapper.NVAPITimingDto
+  langs:
+  - csharp
+  - vb
+  name: HSyncWidth
+  nameWithType: NVAPITimingDto.HSyncWidth
+  fullName: NVAPIWrapper.NVAPITimingDto.HSyncWidth
+  type: Property
+  source:
+    remote:
+      path: NVAPIWrapper/NVAPIDisplayHelper.cs
+      branch: main
+      repo: https://github.com/terrymacdonald/NVAPIWrapper.git
+    id: HSyncWidth
+    path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
+    startLine: 3672
+  assemblies:
+  - NVAPIWrapper
+  namespace: NVAPIWrapper
+  summary: Horizontal sync width pixels.
+  example: []
+  syntax:
+    content: public ushort HSyncWidth { readonly get; set; }
+    parameters: []
+    return:
+      type: System.UInt16
+    content.vb: Public Property HSyncWidth As UShort
+  overload: NVAPIWrapper.NVAPITimingDto.HSyncWidth*
+- uid: NVAPIWrapper.NVAPITimingDto.HTotal
+  commentId: P:NVAPIWrapper.NVAPITimingDto.HTotal
+  id: HTotal
+  parent: NVAPIWrapper.NVAPITimingDto
+  langs:
+  - csharp
+  - vb
+  name: HTotal
+  nameWithType: NVAPITimingDto.HTotal
+  fullName: NVAPIWrapper.NVAPITimingDto.HTotal
+  type: Property
+  source:
+    remote:
+      path: NVAPIWrapper/NVAPIDisplayHelper.cs
+      branch: main
+      repo: https://github.com/terrymacdonald/NVAPIWrapper.git
+    id: HTotal
+    path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
+    startLine: 3675
+  assemblies:
+  - NVAPIWrapper
+  namespace: NVAPIWrapper
+  summary: Horizontal total pixels.
+  example: []
+  syntax:
+    content: public ushort HTotal { readonly get; set; }
+    parameters: []
+    return:
+      type: System.UInt16
+    content.vb: Public Property HTotal As UShort
+  overload: NVAPIWrapper.NVAPITimingDto.HTotal*
+- uid: NVAPIWrapper.NVAPITimingDto.HSyncPol
+  commentId: P:NVAPIWrapper.NVAPITimingDto.HSyncPol
+  id: HSyncPol
+  parent: NVAPIWrapper.NVAPITimingDto
+  langs:
+  - csharp
+  - vb
+  name: HSyncPol
+  nameWithType: NVAPITimingDto.HSyncPol
+  fullName: NVAPIWrapper.NVAPITimingDto.HSyncPol
+  type: Property
+  source:
+    remote:
+      path: NVAPIWrapper/NVAPIDisplayHelper.cs
+      branch: main
+      repo: https://github.com/terrymacdonald/NVAPIWrapper.git
+    id: HSyncPol
+    path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
+    startLine: 3678
+  assemblies:
+  - NVAPIWrapper
+  namespace: NVAPIWrapper
+  summary: Horizontal sync polarity.
+  example: []
+  syntax:
+    content: public byte HSyncPol { readonly get; set; }
+    parameters: []
+    return:
+      type: System.Byte
+    content.vb: Public Property HSyncPol As Byte
+  overload: NVAPIWrapper.NVAPITimingDto.HSyncPol*
+- uid: NVAPIWrapper.NVAPITimingDto.VVisible
+  commentId: P:NVAPIWrapper.NVAPITimingDto.VVisible
+  id: VVisible
+  parent: NVAPIWrapper.NVAPITimingDto
+  langs:
+  - csharp
+  - vb
+  name: VVisible
+  nameWithType: NVAPITimingDto.VVisible
+  fullName: NVAPIWrapper.NVAPITimingDto.VVisible
+  type: Property
+  source:
+    remote:
+      path: NVAPIWrapper/NVAPIDisplayHelper.cs
+      branch: main
+      repo: https://github.com/terrymacdonald/NVAPIWrapper.git
+    id: VVisible
+    path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
+    startLine: 3681
+  assemblies:
+  - NVAPIWrapper
+  namespace: NVAPIWrapper
+  summary: Vertical visible lines.
+  example: []
+  syntax:
+    content: public ushort VVisible { readonly get; set; }
+    parameters: []
+    return:
+      type: System.UInt16
+    content.vb: Public Property VVisible As UShort
+  overload: NVAPIWrapper.NVAPITimingDto.VVisible*
+- uid: NVAPIWrapper.NVAPITimingDto.VBorder
+  commentId: P:NVAPIWrapper.NVAPITimingDto.VBorder
+  id: VBorder
+  parent: NVAPIWrapper.NVAPITimingDto
+  langs:
+  - csharp
+  - vb
+  name: VBorder
+  nameWithType: NVAPITimingDto.VBorder
+  fullName: NVAPIWrapper.NVAPITimingDto.VBorder
+  type: Property
+  source:
+    remote:
+      path: NVAPIWrapper/NVAPIDisplayHelper.cs
+      branch: main
+      repo: https://github.com/terrymacdonald/NVAPIWrapper.git
+    id: VBorder
+    path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
+    startLine: 3684
+  assemblies:
+  - NVAPIWrapper
+  namespace: NVAPIWrapper
+  summary: Vertical border lines.
+  example: []
+  syntax:
+    content: public ushort VBorder { readonly get; set; }
+    parameters: []
+    return:
+      type: System.UInt16
+    content.vb: Public Property VBorder As UShort
+  overload: NVAPIWrapper.NVAPITimingDto.VBorder*
+- uid: NVAPIWrapper.NVAPITimingDto.VFrontPorch
+  commentId: P:NVAPIWrapper.NVAPITimingDto.VFrontPorch
+  id: VFrontPorch
+  parent: NVAPIWrapper.NVAPITimingDto
+  langs:
+  - csharp
+  - vb
+  name: VFrontPorch
+  nameWithType: NVAPITimingDto.VFrontPorch
+  fullName: NVAPIWrapper.NVAPITimingDto.VFrontPorch
+  type: Property
+  source:
+    remote:
+      path: NVAPIWrapper/NVAPIDisplayHelper.cs
+      branch: main
+      repo: https://github.com/terrymacdonald/NVAPIWrapper.git
+    id: VFrontPorch
+    path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
+    startLine: 3687
+  assemblies:
+  - NVAPIWrapper
+  namespace: NVAPIWrapper
+  summary: Vertical front porch lines.
+  example: []
+  syntax:
+    content: public ushort VFrontPorch { readonly get; set; }
+    parameters: []
+    return:
+      type: System.UInt16
+    content.vb: Public Property VFrontPorch As UShort
+  overload: NVAPIWrapper.NVAPITimingDto.VFrontPorch*
+- uid: NVAPIWrapper.NVAPITimingDto.VSyncWidth
+  commentId: P:NVAPIWrapper.NVAPITimingDto.VSyncWidth
+  id: VSyncWidth
+  parent: NVAPIWrapper.NVAPITimingDto
+  langs:
+  - csharp
+  - vb
+  name: VSyncWidth
+  nameWithType: NVAPITimingDto.VSyncWidth
+  fullName: NVAPIWrapper.NVAPITimingDto.VSyncWidth
+  type: Property
+  source:
+    remote:
+      path: NVAPIWrapper/NVAPIDisplayHelper.cs
+      branch: main
+      repo: https://github.com/terrymacdonald/NVAPIWrapper.git
+    id: VSyncWidth
+    path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
+    startLine: 3690
+  assemblies:
+  - NVAPIWrapper
+  namespace: NVAPIWrapper
+  summary: Vertical sync width lines.
+  example: []
+  syntax:
+    content: public ushort VSyncWidth { readonly get; set; }
+    parameters: []
+    return:
+      type: System.UInt16
+    content.vb: Public Property VSyncWidth As UShort
+  overload: NVAPIWrapper.NVAPITimingDto.VSyncWidth*
+- uid: NVAPIWrapper.NVAPITimingDto.VTotal
+  commentId: P:NVAPIWrapper.NVAPITimingDto.VTotal
+  id: VTotal
+  parent: NVAPIWrapper.NVAPITimingDto
+  langs:
+  - csharp
+  - vb
+  name: VTotal
+  nameWithType: NVAPITimingDto.VTotal
+  fullName: NVAPIWrapper.NVAPITimingDto.VTotal
+  type: Property
+  source:
+    remote:
+      path: NVAPIWrapper/NVAPIDisplayHelper.cs
+      branch: main
+      repo: https://github.com/terrymacdonald/NVAPIWrapper.git
+    id: VTotal
+    path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
+    startLine: 3693
+  assemblies:
+  - NVAPIWrapper
+  namespace: NVAPIWrapper
+  summary: Vertical total lines.
+  example: []
+  syntax:
+    content: public ushort VTotal { readonly get; set; }
+    parameters: []
+    return:
+      type: System.UInt16
+    content.vb: Public Property VTotal As UShort
+  overload: NVAPIWrapper.NVAPITimingDto.VTotal*
+- uid: NVAPIWrapper.NVAPITimingDto.VSyncPol
+  commentId: P:NVAPIWrapper.NVAPITimingDto.VSyncPol
+  id: VSyncPol
+  parent: NVAPIWrapper.NVAPITimingDto
+  langs:
+  - csharp
+  - vb
+  name: VSyncPol
+  nameWithType: NVAPITimingDto.VSyncPol
+  fullName: NVAPIWrapper.NVAPITimingDto.VSyncPol
+  type: Property
+  source:
+    remote:
+      path: NVAPIWrapper/NVAPIDisplayHelper.cs
+      branch: main
+      repo: https://github.com/terrymacdonald/NVAPIWrapper.git
+    id: VSyncPol
+    path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
+    startLine: 3696
+  assemblies:
+  - NVAPIWrapper
+  namespace: NVAPIWrapper
+  summary: Vertical sync polarity.
+  example: []
+  syntax:
+    content: public byte VSyncPol { readonly get; set; }
+    parameters: []
+    return:
+      type: System.Byte
+    content.vb: Public Property VSyncPol As Byte
+  overload: NVAPIWrapper.NVAPITimingDto.VSyncPol*
+- uid: NVAPIWrapper.NVAPITimingDto.Interlaced
+  commentId: P:NVAPIWrapper.NVAPITimingDto.Interlaced
+  id: Interlaced
+  parent: NVAPIWrapper.NVAPITimingDto
+  langs:
+  - csharp
+  - vb
+  name: Interlaced
+  nameWithType: NVAPITimingDto.Interlaced
+  fullName: NVAPIWrapper.NVAPITimingDto.Interlaced
+  type: Property
+  source:
+    remote:
+      path: NVAPIWrapper/NVAPIDisplayHelper.cs
+      branch: main
+      repo: https://github.com/terrymacdonald/NVAPIWrapper.git
+    id: Interlaced
+    path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
+    startLine: 3699
+  assemblies:
+  - NVAPIWrapper
+  namespace: NVAPIWrapper
+  summary: Non-zero if interlaced.
+  example: []
+  syntax:
+    content: public ushort Interlaced { readonly get; set; }
+    parameters: []
+    return:
+      type: System.UInt16
+    content.vb: Public Property Interlaced As UShort
+  overload: NVAPIWrapper.NVAPITimingDto.Interlaced*
+- uid: NVAPIWrapper.NVAPITimingDto.Pclk
+  commentId: P:NVAPIWrapper.NVAPITimingDto.Pclk
+  id: Pclk
+  parent: NVAPIWrapper.NVAPITimingDto
+  langs:
+  - csharp
+  - vb
+  name: Pclk
+  nameWithType: NVAPITimingDto.Pclk
+  fullName: NVAPIWrapper.NVAPITimingDto.Pclk
+  type: Property
+  source:
+    remote:
+      path: NVAPIWrapper/NVAPIDisplayHelper.cs
+      branch: main
+      repo: https://github.com/terrymacdonald/NVAPIWrapper.git
+    id: Pclk
+    path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
+    startLine: 3702
+  assemblies:
+  - NVAPIWrapper
+  namespace: NVAPIWrapper
+  summary: Pixel clock in 10 kHz units.
+  example: []
+  syntax:
+    content: public uint Pclk { readonly get; set; }
+    parameters: []
+    return:
+      type: System.UInt32
+    content.vb: Public Property Pclk As UInteger
+  overload: NVAPIWrapper.NVAPITimingDto.Pclk*
+- uid: NVAPIWrapper.NVAPITimingDto.Etc
+  commentId: P:NVAPIWrapper.NVAPITimingDto.Etc
+  id: Etc
+  parent: NVAPIWrapper.NVAPITimingDto
+  langs:
+  - csharp
+  - vb
+  name: Etc
+  nameWithType: NVAPITimingDto.Etc
+  fullName: NVAPIWrapper.NVAPITimingDto.Etc
+  type: Property
+  source:
+    remote:
+      path: NVAPIWrapper/NVAPIDisplayHelper.cs
+      branch: main
+      repo: https://github.com/terrymacdonald/NVAPIWrapper.git
+    id: Etc
+    path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
+    startLine: 3705
+  assemblies:
+  - NVAPIWrapper
+  namespace: NVAPIWrapper
+  summary: Extended timing information.
+  example: []
+  syntax:
+    content: public NVAPITimingExtDto Etc { readonly get; set; }
+    parameters: []
+    return:
+      type: NVAPIWrapper.NVAPITimingExtDto
+    content.vb: Public Property Etc As NVAPITimingExtDto
+  overload: NVAPIWrapper.NVAPITimingDto.Etc*
+- uid: NVAPIWrapper.NVAPITimingDto.#ctor(System.UInt16,System.UInt16,System.UInt16,System.UInt16,System.UInt16,System.Byte,System.UInt16,System.UInt16,System.UInt16,System.UInt16,System.UInt16,System.Byte,System.UInt16,System.UInt32,NVAPIWrapper.NVAPITimingExtDto)
+  commentId: M:NVAPIWrapper.NVAPITimingDto.#ctor(System.UInt16,System.UInt16,System.UInt16,System.UInt16,System.UInt16,System.Byte,System.UInt16,System.UInt16,System.UInt16,System.UInt16,System.UInt16,System.Byte,System.UInt16,System.UInt32,NVAPIWrapper.NVAPITimingExtDto)
+  id: '#ctor(System.UInt16,System.UInt16,System.UInt16,System.UInt16,System.UInt16,System.Byte,System.UInt16,System.UInt16,System.UInt16,System.UInt16,System.UInt16,System.Byte,System.UInt16,System.UInt32,NVAPIWrapper.NVAPITimingExtDto)'
+  parent: NVAPIWrapper.NVAPITimingDto
+  langs:
+  - csharp
+  - vb
+  name: NVAPITimingDto(ushort, ushort, ushort, ushort, ushort, byte, ushort, ushort, ushort, ushort, ushort, byte, ushort, uint, NVAPITimingExtDto)
+  nameWithType: NVAPITimingDto.NVAPITimingDto(ushort, ushort, ushort, ushort, ushort, byte, ushort, ushort, ushort, ushort, ushort, byte, ushort, uint, NVAPITimingExtDto)
+  fullName: NVAPIWrapper.NVAPITimingDto.NVAPITimingDto(ushort, ushort, ushort, ushort, ushort, byte, ushort, ushort, ushort, ushort, ushort, byte, ushort, uint, NVAPIWrapper.NVAPITimingExtDto)
   type: Constructor
   source:
     remote:
@@ -93,22 +541,50 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: .ctor
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 3899
+    startLine: 3708
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
-  summary: Create a timing DTO.
+  summary: Create timing info.
   example: []
   syntax:
-    content: public NVAPITimingDto(_NV_TIMING timing)
+    content: public NVAPITimingDto(ushort hVisible, ushort hBorder, ushort hFrontPorch, ushort hSyncWidth, ushort hTotal, byte hSyncPol, ushort vVisible, ushort vBorder, ushort vFrontPorch, ushort vSyncWidth, ushort vTotal, byte vSyncPol, ushort interlaced, uint pclk, NVAPITimingExtDto etc)
     parameters:
-    - id: timing
-      type: NVAPIWrapper._NV_TIMING
-    content.vb: Public Sub New(timing As _NV_TIMING)
+    - id: hVisible
+      type: System.UInt16
+    - id: hBorder
+      type: System.UInt16
+    - id: hFrontPorch
+      type: System.UInt16
+    - id: hSyncWidth
+      type: System.UInt16
+    - id: hTotal
+      type: System.UInt16
+    - id: hSyncPol
+      type: System.Byte
+    - id: vVisible
+      type: System.UInt16
+    - id: vBorder
+      type: System.UInt16
+    - id: vFrontPorch
+      type: System.UInt16
+    - id: vSyncWidth
+      type: System.UInt16
+    - id: vTotal
+      type: System.UInt16
+    - id: vSyncPol
+      type: System.Byte
+    - id: interlaced
+      type: System.UInt16
+    - id: pclk
+      type: System.UInt32
+    - id: etc
+      type: NVAPIWrapper.NVAPITimingExtDto
+    content.vb: Public Sub New(hVisible As UShort, hBorder As UShort, hFrontPorch As UShort, hSyncWidth As UShort, hTotal As UShort, hSyncPol As Byte, vVisible As UShort, vBorder As UShort, vFrontPorch As UShort, vSyncWidth As UShort, vTotal As UShort, vSyncPol As Byte, interlaced As UShort, pclk As UInteger, etc As NVAPITimingExtDto)
   overload: NVAPIWrapper.NVAPITimingDto.#ctor*
-  nameWithType.vb: NVAPITimingDto.New(_NV_TIMING)
-  fullName.vb: NVAPIWrapper.NVAPITimingDto.New(NVAPIWrapper._NV_TIMING)
-  name.vb: New(_NV_TIMING)
+  nameWithType.vb: NVAPITimingDto.New(UShort, UShort, UShort, UShort, UShort, Byte, UShort, UShort, UShort, UShort, UShort, Byte, UShort, UInteger, NVAPITimingExtDto)
+  fullName.vb: NVAPIWrapper.NVAPITimingDto.New(UShort, UShort, UShort, UShort, UShort, Byte, UShort, UShort, UShort, UShort, UShort, Byte, UShort, UInteger, NVAPIWrapper.NVAPITimingExtDto)
+  name.vb: New(UShort, UShort, UShort, UShort, UShort, Byte, UShort, UShort, UShort, UShort, UShort, Byte, UShort, UInteger, NVAPITimingExtDto)
 - uid: NVAPIWrapper.NVAPITimingDto.FromNative(NVAPIWrapper._NV_TIMING)
   commentId: M:NVAPIWrapper.NVAPITimingDto.FromNative(NVAPIWrapper._NV_TIMING)
   id: FromNative(NVAPIWrapper._NV_TIMING)
@@ -127,7 +603,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: FromNative
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 3909
+    startLine: 3735
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -138,7 +614,7 @@ items:
     parameters:
     - id: native
       type: NVAPIWrapper._NV_TIMING
-      description: Native timing.
+      description: Native timing struct.
     return:
       type: NVAPIWrapper.NVAPITimingDto
       description: Timing DTO.
@@ -162,7 +638,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: ToNative
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 3918
+    startLine: 3759
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -172,7 +648,7 @@ items:
     content: public _NV_TIMING ToNative()
     return:
       type: NVAPIWrapper._NV_TIMING
-      description: Native timing.
+      description: Native timing struct.
     content.vb: Public Function ToNative() As _NV_TIMING
   overload: NVAPIWrapper.NVAPITimingDto.ToNative*
 - uid: NVAPIWrapper.NVAPITimingDto.Equals(NVAPIWrapper.NVAPITimingDto)
@@ -193,7 +669,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Equals
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 3924
+    startLine: 3782
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -230,7 +706,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Equals
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 3927
+    startLine: 3802
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -269,7 +745,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetHashCode
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 3930
+    startLine: 3808
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -301,11 +777,11 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: op_Equality
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 3933
+    startLine: 3833
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
-  summary: Compare timing DTOs.
+  summary: Compare timing values.
   example: []
   syntax:
     content: public static bool operator ==(NVAPITimingDto left, NVAPITimingDto right)
@@ -339,11 +815,11 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: op_Inequality
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 3936
+    startLine: 3836
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
-  summary: Compare timing DTOs.
+  summary: Compare timing values.
   example: []
   syntax:
     content: public static bool operator !=(NVAPITimingDto left, NVAPITimingDto right)
@@ -589,22 +1065,139 @@ references:
   nameWithType.vb: Object
   fullName.vb: Object
   name.vb: Object
-- uid: NVAPIWrapper.NVAPITimingDto.Timing*
-  commentId: Overload:NVAPIWrapper.NVAPITimingDto.Timing
-  href: NVAPIWrapper.NVAPITimingDto.html#NVAPIWrapper_NVAPITimingDto_Timing
-  name: Timing
-  nameWithType: NVAPITimingDto.Timing
-  fullName: NVAPIWrapper.NVAPITimingDto.Timing
-- uid: NVAPIWrapper._NV_TIMING
-  commentId: T:NVAPIWrapper._NV_TIMING
+- uid: NVAPIWrapper.NVAPITimingDto.HVisible*
+  commentId: Overload:NVAPIWrapper.NVAPITimingDto.HVisible
+  href: NVAPIWrapper.NVAPITimingDto.html#NVAPIWrapper_NVAPITimingDto_HVisible
+  name: HVisible
+  nameWithType: NVAPITimingDto.HVisible
+  fullName: NVAPIWrapper.NVAPITimingDto.HVisible
+- uid: System.UInt16
+  commentId: T:System.UInt16
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.uint16
+  name: ushort
+  nameWithType: ushort
+  fullName: ushort
+  nameWithType.vb: UShort
+  fullName.vb: UShort
+  name.vb: UShort
+- uid: NVAPIWrapper.NVAPITimingDto.HBorder*
+  commentId: Overload:NVAPIWrapper.NVAPITimingDto.HBorder
+  href: NVAPIWrapper.NVAPITimingDto.html#NVAPIWrapper_NVAPITimingDto_HBorder
+  name: HBorder
+  nameWithType: NVAPITimingDto.HBorder
+  fullName: NVAPIWrapper.NVAPITimingDto.HBorder
+- uid: NVAPIWrapper.NVAPITimingDto.HFrontPorch*
+  commentId: Overload:NVAPIWrapper.NVAPITimingDto.HFrontPorch
+  href: NVAPIWrapper.NVAPITimingDto.html#NVAPIWrapper_NVAPITimingDto_HFrontPorch
+  name: HFrontPorch
+  nameWithType: NVAPITimingDto.HFrontPorch
+  fullName: NVAPIWrapper.NVAPITimingDto.HFrontPorch
+- uid: NVAPIWrapper.NVAPITimingDto.HSyncWidth*
+  commentId: Overload:NVAPIWrapper.NVAPITimingDto.HSyncWidth
+  href: NVAPIWrapper.NVAPITimingDto.html#NVAPIWrapper_NVAPITimingDto_HSyncWidth
+  name: HSyncWidth
+  nameWithType: NVAPITimingDto.HSyncWidth
+  fullName: NVAPIWrapper.NVAPITimingDto.HSyncWidth
+- uid: NVAPIWrapper.NVAPITimingDto.HTotal*
+  commentId: Overload:NVAPIWrapper.NVAPITimingDto.HTotal
+  href: NVAPIWrapper.NVAPITimingDto.html#NVAPIWrapper_NVAPITimingDto_HTotal
+  name: HTotal
+  nameWithType: NVAPITimingDto.HTotal
+  fullName: NVAPIWrapper.NVAPITimingDto.HTotal
+- uid: NVAPIWrapper.NVAPITimingDto.HSyncPol*
+  commentId: Overload:NVAPIWrapper.NVAPITimingDto.HSyncPol
+  href: NVAPIWrapper.NVAPITimingDto.html#NVAPIWrapper_NVAPITimingDto_HSyncPol
+  name: HSyncPol
+  nameWithType: NVAPITimingDto.HSyncPol
+  fullName: NVAPIWrapper.NVAPITimingDto.HSyncPol
+- uid: System.Byte
+  commentId: T:System.Byte
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.byte
+  name: byte
+  nameWithType: byte
+  fullName: byte
+  nameWithType.vb: Byte
+  fullName.vb: Byte
+  name.vb: Byte
+- uid: NVAPIWrapper.NVAPITimingDto.VVisible*
+  commentId: Overload:NVAPIWrapper.NVAPITimingDto.VVisible
+  href: NVAPIWrapper.NVAPITimingDto.html#NVAPIWrapper_NVAPITimingDto_VVisible
+  name: VVisible
+  nameWithType: NVAPITimingDto.VVisible
+  fullName: NVAPIWrapper.NVAPITimingDto.VVisible
+- uid: NVAPIWrapper.NVAPITimingDto.VBorder*
+  commentId: Overload:NVAPIWrapper.NVAPITimingDto.VBorder
+  href: NVAPIWrapper.NVAPITimingDto.html#NVAPIWrapper_NVAPITimingDto_VBorder
+  name: VBorder
+  nameWithType: NVAPITimingDto.VBorder
+  fullName: NVAPIWrapper.NVAPITimingDto.VBorder
+- uid: NVAPIWrapper.NVAPITimingDto.VFrontPorch*
+  commentId: Overload:NVAPIWrapper.NVAPITimingDto.VFrontPorch
+  href: NVAPIWrapper.NVAPITimingDto.html#NVAPIWrapper_NVAPITimingDto_VFrontPorch
+  name: VFrontPorch
+  nameWithType: NVAPITimingDto.VFrontPorch
+  fullName: NVAPIWrapper.NVAPITimingDto.VFrontPorch
+- uid: NVAPIWrapper.NVAPITimingDto.VSyncWidth*
+  commentId: Overload:NVAPIWrapper.NVAPITimingDto.VSyncWidth
+  href: NVAPIWrapper.NVAPITimingDto.html#NVAPIWrapper_NVAPITimingDto_VSyncWidth
+  name: VSyncWidth
+  nameWithType: NVAPITimingDto.VSyncWidth
+  fullName: NVAPIWrapper.NVAPITimingDto.VSyncWidth
+- uid: NVAPIWrapper.NVAPITimingDto.VTotal*
+  commentId: Overload:NVAPIWrapper.NVAPITimingDto.VTotal
+  href: NVAPIWrapper.NVAPITimingDto.html#NVAPIWrapper_NVAPITimingDto_VTotal
+  name: VTotal
+  nameWithType: NVAPITimingDto.VTotal
+  fullName: NVAPIWrapper.NVAPITimingDto.VTotal
+- uid: NVAPIWrapper.NVAPITimingDto.VSyncPol*
+  commentId: Overload:NVAPIWrapper.NVAPITimingDto.VSyncPol
+  href: NVAPIWrapper.NVAPITimingDto.html#NVAPIWrapper_NVAPITimingDto_VSyncPol
+  name: VSyncPol
+  nameWithType: NVAPITimingDto.VSyncPol
+  fullName: NVAPIWrapper.NVAPITimingDto.VSyncPol
+- uid: NVAPIWrapper.NVAPITimingDto.Interlaced*
+  commentId: Overload:NVAPIWrapper.NVAPITimingDto.Interlaced
+  href: NVAPIWrapper.NVAPITimingDto.html#NVAPIWrapper_NVAPITimingDto_Interlaced
+  name: Interlaced
+  nameWithType: NVAPITimingDto.Interlaced
+  fullName: NVAPIWrapper.NVAPITimingDto.Interlaced
+- uid: NVAPIWrapper.NVAPITimingDto.Pclk*
+  commentId: Overload:NVAPIWrapper.NVAPITimingDto.Pclk
+  href: NVAPIWrapper.NVAPITimingDto.html#NVAPIWrapper_NVAPITimingDto_Pclk
+  name: Pclk
+  nameWithType: NVAPITimingDto.Pclk
+  fullName: NVAPIWrapper.NVAPITimingDto.Pclk
+- uid: System.UInt32
+  commentId: T:System.UInt32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.uint32
+  name: uint
+  nameWithType: uint
+  fullName: uint
+  nameWithType.vb: UInteger
+  fullName.vb: UInteger
+  name.vb: UInteger
+- uid: NVAPIWrapper.NVAPITimingDto.Etc*
+  commentId: Overload:NVAPIWrapper.NVAPITimingDto.Etc
+  href: NVAPIWrapper.NVAPITimingDto.html#NVAPIWrapper_NVAPITimingDto_Etc
+  name: Etc
+  nameWithType: NVAPITimingDto.Etc
+  fullName: NVAPIWrapper.NVAPITimingDto.Etc
+- uid: NVAPIWrapper.NVAPITimingExtDto
+  commentId: T:NVAPIWrapper.NVAPITimingExtDto
   parent: NVAPIWrapper
-  href: NVAPIWrapper._NV_TIMING.html
-  name: _NV_TIMING
-  nameWithType: _NV_TIMING
-  fullName: NVAPIWrapper._NV_TIMING
+  href: NVAPIWrapper.NVAPITimingExtDto.html
+  name: NVAPITimingExtDto
+  nameWithType: NVAPITimingExtDto
+  fullName: NVAPIWrapper.NVAPITimingExtDto
 - uid: NVAPIWrapper.NVAPITimingDto.#ctor*
   commentId: Overload:NVAPIWrapper.NVAPITimingDto.#ctor
-  href: NVAPIWrapper.NVAPITimingDto.html#NVAPIWrapper_NVAPITimingDto__ctor_NVAPIWrapper__NV_TIMING_
+  href: NVAPIWrapper.NVAPITimingDto.html#NVAPIWrapper_NVAPITimingDto__ctor_System_UInt16_System_UInt16_System_UInt16_System_UInt16_System_UInt16_System_Byte_System_UInt16_System_UInt16_System_UInt16_System_UInt16_System_UInt16_System_Byte_System_UInt16_System_UInt32_NVAPIWrapper_NVAPITimingExtDto_
   name: NVAPITimingDto
   nameWithType: NVAPITimingDto.NVAPITimingDto
   fullName: NVAPIWrapper.NVAPITimingDto.NVAPITimingDto
@@ -617,6 +1210,13 @@ references:
   name: FromNative
   nameWithType: NVAPITimingDto.FromNative
   fullName: NVAPIWrapper.NVAPITimingDto.FromNative
+- uid: NVAPIWrapper._NV_TIMING
+  commentId: T:NVAPIWrapper._NV_TIMING
+  parent: NVAPIWrapper
+  href: NVAPIWrapper._NV_TIMING.html
+  name: _NV_TIMING
+  nameWithType: _NV_TIMING
+  fullName: NVAPIWrapper._NV_TIMING
 - uid: NVAPIWrapper.NVAPITimingDto
   commentId: T:NVAPIWrapper.NVAPITimingDto
   parent: NVAPIWrapper

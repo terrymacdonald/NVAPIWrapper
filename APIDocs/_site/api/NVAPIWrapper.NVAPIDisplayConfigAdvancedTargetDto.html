@@ -89,7 +89,7 @@
 
 
   <h1 id="NVAPIWrapper_NVAPIDisplayConfigAdvancedTargetDto" data-uid="NVAPIWrapper.NVAPIDisplayConfigAdvancedTargetDto" class="text-break">
-Struct NVAPIDisplayConfigAdvancedTargetDto  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L3527"><i class="bi bi-code-slash"></i></a>
+Struct NVAPIDisplayConfigAdvancedTargetDto  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L3843"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -102,7 +102,7 @@ Struct NVAPIDisplayConfigAdvancedTargetDto  <a class="header-action link-seconda
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly struct NVAPIDisplayConfigAdvancedTargetDto : IEquatable&lt;NVAPIDisplayConfigAdvancedTargetDto&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public struct NVAPIDisplayConfigAdvancedTargetDto : IEquatable&lt;NVAPIDisplayConfigAdvancedTargetDto&gt;</code></pre>
   </div>
 
 
@@ -145,9 +145,9 @@ Struct NVAPIDisplayConfigAdvancedTargetDto  <a class="header-action link-seconda
 
   <a id="NVAPIWrapper_NVAPIDisplayConfigAdvancedTargetDto__ctor_" data-uid="NVAPIWrapper.NVAPIDisplayConfigAdvancedTargetDto.#ctor*"></a>
 
-  <h3 id="NVAPIWrapper_NVAPIDisplayConfigAdvancedTargetDto__ctor_NVAPIWrapper__NV_ROTATE_NVAPIWrapper__NV_SCALING_System_UInt32_System_Boolean_System_Boolean_System_Boolean_System_Boolean_NVAPIWrapper__NV_GPU_CONNECTOR_TYPE_NVAPIWrapper__NV_DISPLAY_TV_FORMAT_NVAPIWrapper__NV_TIMING_OVERRIDE_NVAPIWrapper__NV_TIMING_" data-uid="NVAPIWrapper.NVAPIDisplayConfigAdvancedTargetDto.#ctor(NVAPIWrapper._NV_ROTATE,NVAPIWrapper._NV_SCALING,System.UInt32,System.Boolean,System.Boolean,System.Boolean,System.Boolean,NVAPIWrapper._NV_GPU_CONNECTOR_TYPE,NVAPIWrapper._NV_DISPLAY_TV_FORMAT,NVAPIWrapper._NV_TIMING_OVERRIDE,NVAPIWrapper._NV_TIMING)">
-  NVAPIDisplayConfigAdvancedTargetDto(_NV_ROTATE, _NV_SCALING, uint, bool, bool, bool, bool, _NV_GPU_CONNECTOR_TYPE, _NV_DISPLAY_TV_FORMAT, _NV_TIMING_OVERRIDE, _NV_TIMING)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L3563"><i class="bi bi-code-slash"></i></a>
+  <h3 id="NVAPIWrapper_NVAPIDisplayConfigAdvancedTargetDto__ctor_NVAPIWrapper__NV_ROTATE_NVAPIWrapper__NV_SCALING_System_UInt32_System_Boolean_System_Boolean_System_Boolean_System_Boolean_NVAPIWrapper__NV_GPU_CONNECTOR_TYPE_NVAPIWrapper__NV_DISPLAY_TV_FORMAT_NVAPIWrapper__NV_TIMING_OVERRIDE_NVAPIWrapper_NVAPITimingDto_" data-uid="NVAPIWrapper.NVAPIDisplayConfigAdvancedTargetDto.#ctor(NVAPIWrapper._NV_ROTATE,NVAPIWrapper._NV_SCALING,System.UInt32,System.Boolean,System.Boolean,System.Boolean,System.Boolean,NVAPIWrapper._NV_GPU_CONNECTOR_TYPE,NVAPIWrapper._NV_DISPLAY_TV_FORMAT,NVAPIWrapper._NV_TIMING_OVERRIDE,NVAPIWrapper.NVAPITimingDto)">
+  NVAPIDisplayConfigAdvancedTargetDto(_NV_ROTATE, _NV_SCALING, uint, bool, bool, bool, bool, _NV_GPU_CONNECTOR_TYPE, _NV_DISPLAY_TV_FORMAT, _NV_TIMING_OVERRIDE, NVAPITimingDto)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L3879"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Create advanced target info.</p>
@@ -155,7 +155,7 @@ Struct NVAPIDisplayConfigAdvancedTargetDto  <a class="header-action link-seconda
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public NVAPIDisplayConfigAdvancedTargetDto(_NV_ROTATE rotation, _NV_SCALING scaling, uint refreshRate1K, bool interlaced, bool primary, bool disableVirtualModeSupport, bool isPreferredUnscaledTarget, _NV_GPU_CONNECTOR_TYPE connector, _NV_DISPLAY_TV_FORMAT tvFormat, _NV_TIMING_OVERRIDE timingOverride, _NV_TIMING timing)</code></pre>
+    <pre><code class="lang-csharp hljs">public NVAPIDisplayConfigAdvancedTargetDto(_NV_ROTATE rotation, _NV_SCALING scaling, uint refreshRate1K, bool interlaced, bool primary, bool disableVirtualModeSupport, bool isPreferredUnscaledTarget, _NV_GPU_CONNECTOR_TYPE connector, _NV_DISPLAY_TV_FORMAT tvFormat, _NV_TIMING_OVERRIDE timingOverride, NVAPITimingDto timing)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -180,7 +180,7 @@ Struct NVAPIDisplayConfigAdvancedTargetDto  <a class="header-action link-seconda
     <dd></dd>
     <dt><code>timingOverride</code> <a class="xref" href="NVAPIWrapper._NV_TIMING_OVERRIDE.html">_NV_TIMING_OVERRIDE</a></dt>
     <dd></dd>
-    <dt><code>timing</code> <a class="xref" href="NVAPIWrapper._NV_TIMING.html">_NV_TIMING</a></dt>
+    <dt><code>timing</code> <a class="xref" href="NVAPIWrapper.NVAPITimingDto.html">NVAPITimingDto</a></dt>
     <dd></dd>
   </dl>
 
@@ -203,7 +203,7 @@ Struct NVAPIDisplayConfigAdvancedTargetDto  <a class="header-action link-seconda
 
   <h3 id="NVAPIWrapper_NVAPIDisplayConfigAdvancedTargetDto_Connector" data-uid="NVAPIWrapper.NVAPIDisplayConfigAdvancedTargetDto.Connector">
   Connector
-  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L3551"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L3867"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Connector type.</p>
@@ -211,7 +211,7 @@ Struct NVAPIDisplayConfigAdvancedTargetDto  <a class="header-action link-seconda
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public _NV_GPU_CONNECTOR_TYPE Connector { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public _NV_GPU_CONNECTOR_TYPE Connector { readonly get; set; }</code></pre>
   </div>
 
 
@@ -235,7 +235,7 @@ Struct NVAPIDisplayConfigAdvancedTargetDto  <a class="header-action link-seconda
 
   <h3 id="NVAPIWrapper_NVAPIDisplayConfigAdvancedTargetDto_DisableVirtualModeSupport" data-uid="NVAPIWrapper.NVAPIDisplayConfigAdvancedTargetDto.DisableVirtualModeSupport">
   DisableVirtualModeSupport
-  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L3545"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L3861"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>True if virtual mode support is disabled.</p>
@@ -243,7 +243,7 @@ Struct NVAPIDisplayConfigAdvancedTargetDto  <a class="header-action link-seconda
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool DisableVirtualModeSupport { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public bool DisableVirtualModeSupport { readonly get; set; }</code></pre>
   </div>
 
 
@@ -267,7 +267,7 @@ Struct NVAPIDisplayConfigAdvancedTargetDto  <a class="header-action link-seconda
 
   <h3 id="NVAPIWrapper_NVAPIDisplayConfigAdvancedTargetDto_Interlaced" data-uid="NVAPIWrapper.NVAPIDisplayConfigAdvancedTargetDto.Interlaced">
   Interlaced
-  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L3539"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L3855"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>True if the target is interlaced.</p>
@@ -275,7 +275,7 @@ Struct NVAPIDisplayConfigAdvancedTargetDto  <a class="header-action link-seconda
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool Interlaced { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public bool Interlaced { readonly get; set; }</code></pre>
   </div>
 
 
@@ -299,7 +299,7 @@ Struct NVAPIDisplayConfigAdvancedTargetDto  <a class="header-action link-seconda
 
   <h3 id="NVAPIWrapper_NVAPIDisplayConfigAdvancedTargetDto_IsPreferredUnscaledTarget" data-uid="NVAPIWrapper.NVAPIDisplayConfigAdvancedTargetDto.IsPreferredUnscaledTarget">
   IsPreferredUnscaledTarget
-  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L3548"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L3864"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>True if this is the preferred unscaled target.</p>
@@ -307,7 +307,7 @@ Struct NVAPIDisplayConfigAdvancedTargetDto  <a class="header-action link-seconda
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool IsPreferredUnscaledTarget { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public bool IsPreferredUnscaledTarget { readonly get; set; }</code></pre>
   </div>
 
 
@@ -331,7 +331,7 @@ Struct NVAPIDisplayConfigAdvancedTargetDto  <a class="header-action link-seconda
 
   <h3 id="NVAPIWrapper_NVAPIDisplayConfigAdvancedTargetDto_Primary" data-uid="NVAPIWrapper.NVAPIDisplayConfigAdvancedTargetDto.Primary">
   Primary
-  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L3542"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L3858"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>True if this is the primary target.</p>
@@ -339,7 +339,7 @@ Struct NVAPIDisplayConfigAdvancedTargetDto  <a class="header-action link-seconda
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool Primary { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public bool Primary { readonly get; set; }</code></pre>
   </div>
 
 
@@ -363,7 +363,7 @@ Struct NVAPIDisplayConfigAdvancedTargetDto  <a class="header-action link-seconda
 
   <h3 id="NVAPIWrapper_NVAPIDisplayConfigAdvancedTargetDto_RefreshRate1K" data-uid="NVAPIWrapper.NVAPIDisplayConfigAdvancedTargetDto.RefreshRate1K">
   RefreshRate1K
-  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L3536"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L3852"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Refresh rate (in 1/1000 Hz).</p>
@@ -371,7 +371,7 @@ Struct NVAPIDisplayConfigAdvancedTargetDto  <a class="header-action link-seconda
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public uint RefreshRate1K { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public uint RefreshRate1K { readonly get; set; }</code></pre>
   </div>
 
 
@@ -395,7 +395,7 @@ Struct NVAPIDisplayConfigAdvancedTargetDto  <a class="header-action link-seconda
 
   <h3 id="NVAPIWrapper_NVAPIDisplayConfigAdvancedTargetDto_Rotation" data-uid="NVAPIWrapper.NVAPIDisplayConfigAdvancedTargetDto.Rotation">
   Rotation
-  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L3530"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L3846"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Rotation setting.</p>
@@ -403,7 +403,7 @@ Struct NVAPIDisplayConfigAdvancedTargetDto  <a class="header-action link-seconda
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public _NV_ROTATE Rotation { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public _NV_ROTATE Rotation { readonly get; set; }</code></pre>
   </div>
 
 
@@ -427,7 +427,7 @@ Struct NVAPIDisplayConfigAdvancedTargetDto  <a class="header-action link-seconda
 
   <h3 id="NVAPIWrapper_NVAPIDisplayConfigAdvancedTargetDto_Scaling" data-uid="NVAPIWrapper.NVAPIDisplayConfigAdvancedTargetDto.Scaling">
   Scaling
-  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L3533"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L3849"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Scaling setting.</p>
@@ -435,7 +435,7 @@ Struct NVAPIDisplayConfigAdvancedTargetDto  <a class="header-action link-seconda
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public _NV_SCALING Scaling { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public _NV_SCALING Scaling { readonly get; set; }</code></pre>
   </div>
 
 
@@ -459,7 +459,7 @@ Struct NVAPIDisplayConfigAdvancedTargetDto  <a class="header-action link-seconda
 
   <h3 id="NVAPIWrapper_NVAPIDisplayConfigAdvancedTargetDto_Timing" data-uid="NVAPIWrapper.NVAPIDisplayConfigAdvancedTargetDto.Timing">
   Timing
-  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L3560"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L3876"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Detailed timing.</p>
@@ -467,7 +467,7 @@ Struct NVAPIDisplayConfigAdvancedTargetDto  <a class="header-action link-seconda
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public _NV_TIMING Timing { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public NVAPITimingDto Timing { readonly get; set; }</code></pre>
   </div>
 
 
@@ -476,7 +476,7 @@ Struct NVAPIDisplayConfigAdvancedTargetDto  <a class="header-action link-seconda
 
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="NVAPIWrapper._NV_TIMING.html">_NV_TIMING</a></dt>
+    <dt><a class="xref" href="NVAPIWrapper.NVAPITimingDto.html">NVAPITimingDto</a></dt>
     <dd></dd>
   </dl>
 
@@ -491,7 +491,7 @@ Struct NVAPIDisplayConfigAdvancedTargetDto  <a class="header-action link-seconda
 
   <h3 id="NVAPIWrapper_NVAPIDisplayConfigAdvancedTargetDto_TimingOverride" data-uid="NVAPIWrapper.NVAPIDisplayConfigAdvancedTargetDto.TimingOverride">
   TimingOverride
-  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L3557"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L3873"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Timing override mode.</p>
@@ -499,7 +499,7 @@ Struct NVAPIDisplayConfigAdvancedTargetDto  <a class="header-action link-seconda
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public _NV_TIMING_OVERRIDE TimingOverride { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public _NV_TIMING_OVERRIDE TimingOverride { readonly get; set; }</code></pre>
   </div>
 
 
@@ -523,7 +523,7 @@ Struct NVAPIDisplayConfigAdvancedTargetDto  <a class="header-action link-seconda
 
   <h3 id="NVAPIWrapper_NVAPIDisplayConfigAdvancedTargetDto_TvFormat" data-uid="NVAPIWrapper.NVAPIDisplayConfigAdvancedTargetDto.TvFormat">
   TvFormat
-  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L3554"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L3870"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>TV format.</p>
@@ -531,7 +531,7 @@ Struct NVAPIDisplayConfigAdvancedTargetDto  <a class="header-action link-seconda
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public _NV_DISPLAY_TV_FORMAT TvFormat { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public _NV_DISPLAY_TV_FORMAT TvFormat { readonly get; set; }</code></pre>
   </div>
 
 
@@ -559,7 +559,7 @@ Struct NVAPIDisplayConfigAdvancedTargetDto  <a class="header-action link-seconda
 
   <h3 id="NVAPIWrapper_NVAPIDisplayConfigAdvancedTargetDto_Equals_NVAPIWrapper_NVAPIDisplayConfigAdvancedTargetDto_" data-uid="NVAPIWrapper.NVAPIDisplayConfigAdvancedTargetDto.Equals(NVAPIWrapper.NVAPIDisplayConfigAdvancedTargetDto)">
   Equals(NVAPIDisplayConfigAdvancedTargetDto)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L3637"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L3953"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Indicates whether the current object is equal to another object of the same type.</p>
@@ -598,7 +598,7 @@ Struct NVAPIDisplayConfigAdvancedTargetDto  <a class="header-action link-seconda
 
   <h3 id="NVAPIWrapper_NVAPIDisplayConfigAdvancedTargetDto_Equals_System_Object_" data-uid="NVAPIWrapper.NVAPIDisplayConfigAdvancedTargetDto.Equals(System.Object)">
   Equals(object?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L3653"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L3969"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Indicates whether this instance and a specified object are equal.</p>
@@ -637,7 +637,7 @@ Struct NVAPIDisplayConfigAdvancedTargetDto  <a class="header-action link-seconda
 
   <h3 id="NVAPIWrapper_NVAPIDisplayConfigAdvancedTargetDto_FromNative_NVAPIWrapper__NV_DISPLAYCONFIG_PATH_ADVANCED_TARGET_INFO_V1_" data-uid="NVAPIWrapper.NVAPIDisplayConfigAdvancedTargetDto.FromNative(NVAPIWrapper._NV_DISPLAYCONFIG_PATH_ADVANCED_TARGET_INFO_V1)">
   FromNative(_NV_DISPLAYCONFIG_PATH_ADVANCED_TARGET_INFO_V1)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L3594"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L3910"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Create a DTO from a native advanced target info struct.</p>
@@ -676,7 +676,7 @@ Struct NVAPIDisplayConfigAdvancedTargetDto  <a class="header-action link-seconda
 
   <h3 id="NVAPIWrapper_NVAPIDisplayConfigAdvancedTargetDto_GetHashCode" data-uid="NVAPIWrapper.NVAPIDisplayConfigAdvancedTargetDto.GetHashCode">
   GetHashCode()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L3659"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L3975"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Returns the hash code for this instance.</p>
@@ -709,7 +709,7 @@ Struct NVAPIDisplayConfigAdvancedTargetDto  <a class="header-action link-seconda
 
   <h3 id="NVAPIWrapper_NVAPIDisplayConfigAdvancedTargetDto_ToNative" data-uid="NVAPIWrapper.NVAPIDisplayConfigAdvancedTargetDto.ToNative">
   ToNative()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L3614"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L3930"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Convert this DTO to a native advanced target info struct.</p>
@@ -746,7 +746,7 @@ Struct NVAPIDisplayConfigAdvancedTargetDto  <a class="header-action link-seconda
 
   <h3 id="NVAPIWrapper_NVAPIDisplayConfigAdvancedTargetDto_op_Equality_NVAPIWrapper_NVAPIDisplayConfigAdvancedTargetDto_NVAPIWrapper_NVAPIDisplayConfigAdvancedTargetDto_" data-uid="NVAPIWrapper.NVAPIDisplayConfigAdvancedTargetDto.op_Equality(NVAPIWrapper.NVAPIDisplayConfigAdvancedTargetDto,NVAPIWrapper.NVAPIDisplayConfigAdvancedTargetDto)">
   operator ==(NVAPIDisplayConfigAdvancedTargetDto, NVAPIDisplayConfigAdvancedTargetDto)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L3682"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L3998"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Compare advanced target info values.</p>
@@ -785,7 +785,7 @@ Struct NVAPIDisplayConfigAdvancedTargetDto  <a class="header-action link-seconda
 
   <h3 id="NVAPIWrapper_NVAPIDisplayConfigAdvancedTargetDto_op_Inequality_NVAPIWrapper_NVAPIDisplayConfigAdvancedTargetDto_NVAPIWrapper_NVAPIDisplayConfigAdvancedTargetDto_" data-uid="NVAPIWrapper.NVAPIDisplayConfigAdvancedTargetDto.op_Inequality(NVAPIWrapper.NVAPIDisplayConfigAdvancedTargetDto,NVAPIWrapper.NVAPIDisplayConfigAdvancedTargetDto)">
   operator !=(NVAPIDisplayConfigAdvancedTargetDto, NVAPIDisplayConfigAdvancedTargetDto)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L3690"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L4006"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Compare advanced target info values.</p>
@@ -824,7 +824,7 @@ Struct NVAPIDisplayConfigAdvancedTargetDto  <a class="header-action link-seconda
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L3527" class="edit-link">Edit this page</a>
+          <a href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L3843" class="edit-link">Edit this page</a>
         </div>
 
 

@@ -5,7 +5,7 @@ items:
   id: NVAPIDisplayConfigAdvancedTargetDto
   parent: NVAPIWrapper
   children:
-  - NVAPIWrapper.NVAPIDisplayConfigAdvancedTargetDto.#ctor(NVAPIWrapper._NV_ROTATE,NVAPIWrapper._NV_SCALING,System.UInt32,System.Boolean,System.Boolean,System.Boolean,System.Boolean,NVAPIWrapper._NV_GPU_CONNECTOR_TYPE,NVAPIWrapper._NV_DISPLAY_TV_FORMAT,NVAPIWrapper._NV_TIMING_OVERRIDE,NVAPIWrapper._NV_TIMING)
+  - NVAPIWrapper.NVAPIDisplayConfigAdvancedTargetDto.#ctor(NVAPIWrapper._NV_ROTATE,NVAPIWrapper._NV_SCALING,System.UInt32,System.Boolean,System.Boolean,System.Boolean,System.Boolean,NVAPIWrapper._NV_GPU_CONNECTOR_TYPE,NVAPIWrapper._NV_DISPLAY_TV_FORMAT,NVAPIWrapper._NV_TIMING_OVERRIDE,NVAPIWrapper.NVAPITimingDto)
   - NVAPIWrapper.NVAPIDisplayConfigAdvancedTargetDto.Connector
   - NVAPIWrapper.NVAPIDisplayConfigAdvancedTargetDto.DisableVirtualModeSupport
   - NVAPIWrapper.NVAPIDisplayConfigAdvancedTargetDto.Equals(NVAPIWrapper.NVAPIDisplayConfigAdvancedTargetDto)
@@ -38,14 +38,14 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPIDisplayConfigAdvancedTargetDto
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 3526
+    startLine: 3842
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   summary: Managed representation of advanced target configuration.
   example: []
   syntax:
-    content: 'public readonly struct NVAPIDisplayConfigAdvancedTargetDto : IEquatable<NVAPIDisplayConfigAdvancedTargetDto>'
+    content: 'public struct NVAPIDisplayConfigAdvancedTargetDto : IEquatable<NVAPIDisplayConfigAdvancedTargetDto>'
     content.vb: Public Structure NVAPIDisplayConfigAdvancedTargetDto Implements IEquatable(Of NVAPIDisplayConfigAdvancedTargetDto)
   implements:
   - System.IEquatable{NVAPIWrapper.NVAPIDisplayConfigAdvancedTargetDto}
@@ -72,18 +72,18 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Rotation
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 3529
+    startLine: 3845
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   summary: Rotation setting.
   example: []
   syntax:
-    content: public _NV_ROTATE Rotation { get; }
+    content: public _NV_ROTATE Rotation { readonly get; set; }
     parameters: []
     return:
       type: NVAPIWrapper._NV_ROTATE
-    content.vb: Public ReadOnly Property Rotation As _NV_ROTATE
+    content.vb: Public Property Rotation As _NV_ROTATE
   overload: NVAPIWrapper.NVAPIDisplayConfigAdvancedTargetDto.Rotation*
 - uid: NVAPIWrapper.NVAPIDisplayConfigAdvancedTargetDto.Scaling
   commentId: P:NVAPIWrapper.NVAPIDisplayConfigAdvancedTargetDto.Scaling
@@ -103,18 +103,18 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Scaling
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 3532
+    startLine: 3848
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   summary: Scaling setting.
   example: []
   syntax:
-    content: public _NV_SCALING Scaling { get; }
+    content: public _NV_SCALING Scaling { readonly get; set; }
     parameters: []
     return:
       type: NVAPIWrapper._NV_SCALING
-    content.vb: Public ReadOnly Property Scaling As _NV_SCALING
+    content.vb: Public Property Scaling As _NV_SCALING
   overload: NVAPIWrapper.NVAPIDisplayConfigAdvancedTargetDto.Scaling*
 - uid: NVAPIWrapper.NVAPIDisplayConfigAdvancedTargetDto.RefreshRate1K
   commentId: P:NVAPIWrapper.NVAPIDisplayConfigAdvancedTargetDto.RefreshRate1K
@@ -134,18 +134,18 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: RefreshRate1K
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 3535
+    startLine: 3851
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   summary: Refresh rate (in 1/1000 Hz).
   example: []
   syntax:
-    content: public uint RefreshRate1K { get; }
+    content: public uint RefreshRate1K { readonly get; set; }
     parameters: []
     return:
       type: System.UInt32
-    content.vb: Public ReadOnly Property RefreshRate1K As UInteger
+    content.vb: Public Property RefreshRate1K As UInteger
   overload: NVAPIWrapper.NVAPIDisplayConfigAdvancedTargetDto.RefreshRate1K*
 - uid: NVAPIWrapper.NVAPIDisplayConfigAdvancedTargetDto.Interlaced
   commentId: P:NVAPIWrapper.NVAPIDisplayConfigAdvancedTargetDto.Interlaced
@@ -165,18 +165,18 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Interlaced
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 3538
+    startLine: 3854
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   summary: True if the target is interlaced.
   example: []
   syntax:
-    content: public bool Interlaced { get; }
+    content: public bool Interlaced { readonly get; set; }
     parameters: []
     return:
       type: System.Boolean
-    content.vb: Public ReadOnly Property Interlaced As Boolean
+    content.vb: Public Property Interlaced As Boolean
   overload: NVAPIWrapper.NVAPIDisplayConfigAdvancedTargetDto.Interlaced*
 - uid: NVAPIWrapper.NVAPIDisplayConfigAdvancedTargetDto.Primary
   commentId: P:NVAPIWrapper.NVAPIDisplayConfigAdvancedTargetDto.Primary
@@ -196,18 +196,18 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Primary
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 3541
+    startLine: 3857
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   summary: True if this is the primary target.
   example: []
   syntax:
-    content: public bool Primary { get; }
+    content: public bool Primary { readonly get; set; }
     parameters: []
     return:
       type: System.Boolean
-    content.vb: Public ReadOnly Property Primary As Boolean
+    content.vb: Public Property Primary As Boolean
   overload: NVAPIWrapper.NVAPIDisplayConfigAdvancedTargetDto.Primary*
 - uid: NVAPIWrapper.NVAPIDisplayConfigAdvancedTargetDto.DisableVirtualModeSupport
   commentId: P:NVAPIWrapper.NVAPIDisplayConfigAdvancedTargetDto.DisableVirtualModeSupport
@@ -227,18 +227,18 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: DisableVirtualModeSupport
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 3544
+    startLine: 3860
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   summary: True if virtual mode support is disabled.
   example: []
   syntax:
-    content: public bool DisableVirtualModeSupport { get; }
+    content: public bool DisableVirtualModeSupport { readonly get; set; }
     parameters: []
     return:
       type: System.Boolean
-    content.vb: Public ReadOnly Property DisableVirtualModeSupport As Boolean
+    content.vb: Public Property DisableVirtualModeSupport As Boolean
   overload: NVAPIWrapper.NVAPIDisplayConfigAdvancedTargetDto.DisableVirtualModeSupport*
 - uid: NVAPIWrapper.NVAPIDisplayConfigAdvancedTargetDto.IsPreferredUnscaledTarget
   commentId: P:NVAPIWrapper.NVAPIDisplayConfigAdvancedTargetDto.IsPreferredUnscaledTarget
@@ -258,18 +258,18 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: IsPreferredUnscaledTarget
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 3547
+    startLine: 3863
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   summary: True if this is the preferred unscaled target.
   example: []
   syntax:
-    content: public bool IsPreferredUnscaledTarget { get; }
+    content: public bool IsPreferredUnscaledTarget { readonly get; set; }
     parameters: []
     return:
       type: System.Boolean
-    content.vb: Public ReadOnly Property IsPreferredUnscaledTarget As Boolean
+    content.vb: Public Property IsPreferredUnscaledTarget As Boolean
   overload: NVAPIWrapper.NVAPIDisplayConfigAdvancedTargetDto.IsPreferredUnscaledTarget*
 - uid: NVAPIWrapper.NVAPIDisplayConfigAdvancedTargetDto.Connector
   commentId: P:NVAPIWrapper.NVAPIDisplayConfigAdvancedTargetDto.Connector
@@ -289,18 +289,18 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Connector
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 3550
+    startLine: 3866
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   summary: Connector type.
   example: []
   syntax:
-    content: public _NV_GPU_CONNECTOR_TYPE Connector { get; }
+    content: public _NV_GPU_CONNECTOR_TYPE Connector { readonly get; set; }
     parameters: []
     return:
       type: NVAPIWrapper._NV_GPU_CONNECTOR_TYPE
-    content.vb: Public ReadOnly Property Connector As _NV_GPU_CONNECTOR_TYPE
+    content.vb: Public Property Connector As _NV_GPU_CONNECTOR_TYPE
   overload: NVAPIWrapper.NVAPIDisplayConfigAdvancedTargetDto.Connector*
 - uid: NVAPIWrapper.NVAPIDisplayConfigAdvancedTargetDto.TvFormat
   commentId: P:NVAPIWrapper.NVAPIDisplayConfigAdvancedTargetDto.TvFormat
@@ -320,18 +320,18 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: TvFormat
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 3553
+    startLine: 3869
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   summary: TV format.
   example: []
   syntax:
-    content: public _NV_DISPLAY_TV_FORMAT TvFormat { get; }
+    content: public _NV_DISPLAY_TV_FORMAT TvFormat { readonly get; set; }
     parameters: []
     return:
       type: NVAPIWrapper._NV_DISPLAY_TV_FORMAT
-    content.vb: Public ReadOnly Property TvFormat As _NV_DISPLAY_TV_FORMAT
+    content.vb: Public Property TvFormat As _NV_DISPLAY_TV_FORMAT
   overload: NVAPIWrapper.NVAPIDisplayConfigAdvancedTargetDto.TvFormat*
 - uid: NVAPIWrapper.NVAPIDisplayConfigAdvancedTargetDto.TimingOverride
   commentId: P:NVAPIWrapper.NVAPIDisplayConfigAdvancedTargetDto.TimingOverride
@@ -351,18 +351,18 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: TimingOverride
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 3556
+    startLine: 3872
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   summary: Timing override mode.
   example: []
   syntax:
-    content: public _NV_TIMING_OVERRIDE TimingOverride { get; }
+    content: public _NV_TIMING_OVERRIDE TimingOverride { readonly get; set; }
     parameters: []
     return:
       type: NVAPIWrapper._NV_TIMING_OVERRIDE
-    content.vb: Public ReadOnly Property TimingOverride As _NV_TIMING_OVERRIDE
+    content.vb: Public Property TimingOverride As _NV_TIMING_OVERRIDE
   overload: NVAPIWrapper.NVAPIDisplayConfigAdvancedTargetDto.TimingOverride*
 - uid: NVAPIWrapper.NVAPIDisplayConfigAdvancedTargetDto.Timing
   commentId: P:NVAPIWrapper.NVAPIDisplayConfigAdvancedTargetDto.Timing
@@ -382,29 +382,29 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Timing
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 3559
+    startLine: 3875
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   summary: Detailed timing.
   example: []
   syntax:
-    content: public _NV_TIMING Timing { get; }
+    content: public NVAPITimingDto Timing { readonly get; set; }
     parameters: []
     return:
-      type: NVAPIWrapper._NV_TIMING
-    content.vb: Public ReadOnly Property Timing As _NV_TIMING
+      type: NVAPIWrapper.NVAPITimingDto
+    content.vb: Public Property Timing As NVAPITimingDto
   overload: NVAPIWrapper.NVAPIDisplayConfigAdvancedTargetDto.Timing*
-- uid: NVAPIWrapper.NVAPIDisplayConfigAdvancedTargetDto.#ctor(NVAPIWrapper._NV_ROTATE,NVAPIWrapper._NV_SCALING,System.UInt32,System.Boolean,System.Boolean,System.Boolean,System.Boolean,NVAPIWrapper._NV_GPU_CONNECTOR_TYPE,NVAPIWrapper._NV_DISPLAY_TV_FORMAT,NVAPIWrapper._NV_TIMING_OVERRIDE,NVAPIWrapper._NV_TIMING)
-  commentId: M:NVAPIWrapper.NVAPIDisplayConfigAdvancedTargetDto.#ctor(NVAPIWrapper._NV_ROTATE,NVAPIWrapper._NV_SCALING,System.UInt32,System.Boolean,System.Boolean,System.Boolean,System.Boolean,NVAPIWrapper._NV_GPU_CONNECTOR_TYPE,NVAPIWrapper._NV_DISPLAY_TV_FORMAT,NVAPIWrapper._NV_TIMING_OVERRIDE,NVAPIWrapper._NV_TIMING)
-  id: '#ctor(NVAPIWrapper._NV_ROTATE,NVAPIWrapper._NV_SCALING,System.UInt32,System.Boolean,System.Boolean,System.Boolean,System.Boolean,NVAPIWrapper._NV_GPU_CONNECTOR_TYPE,NVAPIWrapper._NV_DISPLAY_TV_FORMAT,NVAPIWrapper._NV_TIMING_OVERRIDE,NVAPIWrapper._NV_TIMING)'
+- uid: NVAPIWrapper.NVAPIDisplayConfigAdvancedTargetDto.#ctor(NVAPIWrapper._NV_ROTATE,NVAPIWrapper._NV_SCALING,System.UInt32,System.Boolean,System.Boolean,System.Boolean,System.Boolean,NVAPIWrapper._NV_GPU_CONNECTOR_TYPE,NVAPIWrapper._NV_DISPLAY_TV_FORMAT,NVAPIWrapper._NV_TIMING_OVERRIDE,NVAPIWrapper.NVAPITimingDto)
+  commentId: M:NVAPIWrapper.NVAPIDisplayConfigAdvancedTargetDto.#ctor(NVAPIWrapper._NV_ROTATE,NVAPIWrapper._NV_SCALING,System.UInt32,System.Boolean,System.Boolean,System.Boolean,System.Boolean,NVAPIWrapper._NV_GPU_CONNECTOR_TYPE,NVAPIWrapper._NV_DISPLAY_TV_FORMAT,NVAPIWrapper._NV_TIMING_OVERRIDE,NVAPIWrapper.NVAPITimingDto)
+  id: '#ctor(NVAPIWrapper._NV_ROTATE,NVAPIWrapper._NV_SCALING,System.UInt32,System.Boolean,System.Boolean,System.Boolean,System.Boolean,NVAPIWrapper._NV_GPU_CONNECTOR_TYPE,NVAPIWrapper._NV_DISPLAY_TV_FORMAT,NVAPIWrapper._NV_TIMING_OVERRIDE,NVAPIWrapper.NVAPITimingDto)'
   parent: NVAPIWrapper.NVAPIDisplayConfigAdvancedTargetDto
   langs:
   - csharp
   - vb
-  name: NVAPIDisplayConfigAdvancedTargetDto(_NV_ROTATE, _NV_SCALING, uint, bool, bool, bool, bool, _NV_GPU_CONNECTOR_TYPE, _NV_DISPLAY_TV_FORMAT, _NV_TIMING_OVERRIDE, _NV_TIMING)
-  nameWithType: NVAPIDisplayConfigAdvancedTargetDto.NVAPIDisplayConfigAdvancedTargetDto(_NV_ROTATE, _NV_SCALING, uint, bool, bool, bool, bool, _NV_GPU_CONNECTOR_TYPE, _NV_DISPLAY_TV_FORMAT, _NV_TIMING_OVERRIDE, _NV_TIMING)
-  fullName: NVAPIWrapper.NVAPIDisplayConfigAdvancedTargetDto.NVAPIDisplayConfigAdvancedTargetDto(NVAPIWrapper._NV_ROTATE, NVAPIWrapper._NV_SCALING, uint, bool, bool, bool, bool, NVAPIWrapper._NV_GPU_CONNECTOR_TYPE, NVAPIWrapper._NV_DISPLAY_TV_FORMAT, NVAPIWrapper._NV_TIMING_OVERRIDE, NVAPIWrapper._NV_TIMING)
+  name: NVAPIDisplayConfigAdvancedTargetDto(_NV_ROTATE, _NV_SCALING, uint, bool, bool, bool, bool, _NV_GPU_CONNECTOR_TYPE, _NV_DISPLAY_TV_FORMAT, _NV_TIMING_OVERRIDE, NVAPITimingDto)
+  nameWithType: NVAPIDisplayConfigAdvancedTargetDto.NVAPIDisplayConfigAdvancedTargetDto(_NV_ROTATE, _NV_SCALING, uint, bool, bool, bool, bool, _NV_GPU_CONNECTOR_TYPE, _NV_DISPLAY_TV_FORMAT, _NV_TIMING_OVERRIDE, NVAPITimingDto)
+  fullName: NVAPIWrapper.NVAPIDisplayConfigAdvancedTargetDto.NVAPIDisplayConfigAdvancedTargetDto(NVAPIWrapper._NV_ROTATE, NVAPIWrapper._NV_SCALING, uint, bool, bool, bool, bool, NVAPIWrapper._NV_GPU_CONNECTOR_TYPE, NVAPIWrapper._NV_DISPLAY_TV_FORMAT, NVAPIWrapper._NV_TIMING_OVERRIDE, NVAPIWrapper.NVAPITimingDto)
   type: Constructor
   source:
     remote:
@@ -413,14 +413,14 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: .ctor
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 3562
+    startLine: 3878
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   summary: Create advanced target info.
   example: []
   syntax:
-    content: public NVAPIDisplayConfigAdvancedTargetDto(_NV_ROTATE rotation, _NV_SCALING scaling, uint refreshRate1K, bool interlaced, bool primary, bool disableVirtualModeSupport, bool isPreferredUnscaledTarget, _NV_GPU_CONNECTOR_TYPE connector, _NV_DISPLAY_TV_FORMAT tvFormat, _NV_TIMING_OVERRIDE timingOverride, _NV_TIMING timing)
+    content: public NVAPIDisplayConfigAdvancedTargetDto(_NV_ROTATE rotation, _NV_SCALING scaling, uint refreshRate1K, bool interlaced, bool primary, bool disableVirtualModeSupport, bool isPreferredUnscaledTarget, _NV_GPU_CONNECTOR_TYPE connector, _NV_DISPLAY_TV_FORMAT tvFormat, _NV_TIMING_OVERRIDE timingOverride, NVAPITimingDto timing)
     parameters:
     - id: rotation
       type: NVAPIWrapper._NV_ROTATE
@@ -443,12 +443,12 @@ items:
     - id: timingOverride
       type: NVAPIWrapper._NV_TIMING_OVERRIDE
     - id: timing
-      type: NVAPIWrapper._NV_TIMING
-    content.vb: Public Sub New(rotation As _NV_ROTATE, scaling As _NV_SCALING, refreshRate1K As UInteger, interlaced As Boolean, primary As Boolean, disableVirtualModeSupport As Boolean, isPreferredUnscaledTarget As Boolean, connector As _NV_GPU_CONNECTOR_TYPE, tvFormat As _NV_DISPLAY_TV_FORMAT, timingOverride As _NV_TIMING_OVERRIDE, timing As _NV_TIMING)
+      type: NVAPIWrapper.NVAPITimingDto
+    content.vb: Public Sub New(rotation As _NV_ROTATE, scaling As _NV_SCALING, refreshRate1K As UInteger, interlaced As Boolean, primary As Boolean, disableVirtualModeSupport As Boolean, isPreferredUnscaledTarget As Boolean, connector As _NV_GPU_CONNECTOR_TYPE, tvFormat As _NV_DISPLAY_TV_FORMAT, timingOverride As _NV_TIMING_OVERRIDE, timing As NVAPITimingDto)
   overload: NVAPIWrapper.NVAPIDisplayConfigAdvancedTargetDto.#ctor*
-  nameWithType.vb: NVAPIDisplayConfigAdvancedTargetDto.New(_NV_ROTATE, _NV_SCALING, UInteger, Boolean, Boolean, Boolean, Boolean, _NV_GPU_CONNECTOR_TYPE, _NV_DISPLAY_TV_FORMAT, _NV_TIMING_OVERRIDE, _NV_TIMING)
-  fullName.vb: NVAPIWrapper.NVAPIDisplayConfigAdvancedTargetDto.New(NVAPIWrapper._NV_ROTATE, NVAPIWrapper._NV_SCALING, UInteger, Boolean, Boolean, Boolean, Boolean, NVAPIWrapper._NV_GPU_CONNECTOR_TYPE, NVAPIWrapper._NV_DISPLAY_TV_FORMAT, NVAPIWrapper._NV_TIMING_OVERRIDE, NVAPIWrapper._NV_TIMING)
-  name.vb: New(_NV_ROTATE, _NV_SCALING, UInteger, Boolean, Boolean, Boolean, Boolean, _NV_GPU_CONNECTOR_TYPE, _NV_DISPLAY_TV_FORMAT, _NV_TIMING_OVERRIDE, _NV_TIMING)
+  nameWithType.vb: NVAPIDisplayConfigAdvancedTargetDto.New(_NV_ROTATE, _NV_SCALING, UInteger, Boolean, Boolean, Boolean, Boolean, _NV_GPU_CONNECTOR_TYPE, _NV_DISPLAY_TV_FORMAT, _NV_TIMING_OVERRIDE, NVAPITimingDto)
+  fullName.vb: NVAPIWrapper.NVAPIDisplayConfigAdvancedTargetDto.New(NVAPIWrapper._NV_ROTATE, NVAPIWrapper._NV_SCALING, UInteger, Boolean, Boolean, Boolean, Boolean, NVAPIWrapper._NV_GPU_CONNECTOR_TYPE, NVAPIWrapper._NV_DISPLAY_TV_FORMAT, NVAPIWrapper._NV_TIMING_OVERRIDE, NVAPIWrapper.NVAPITimingDto)
+  name.vb: New(_NV_ROTATE, _NV_SCALING, UInteger, Boolean, Boolean, Boolean, Boolean, _NV_GPU_CONNECTOR_TYPE, _NV_DISPLAY_TV_FORMAT, _NV_TIMING_OVERRIDE, NVAPITimingDto)
 - uid: NVAPIWrapper.NVAPIDisplayConfigAdvancedTargetDto.FromNative(NVAPIWrapper._NV_DISPLAYCONFIG_PATH_ADVANCED_TARGET_INFO_V1)
   commentId: M:NVAPIWrapper.NVAPIDisplayConfigAdvancedTargetDto.FromNative(NVAPIWrapper._NV_DISPLAYCONFIG_PATH_ADVANCED_TARGET_INFO_V1)
   id: FromNative(NVAPIWrapper._NV_DISPLAYCONFIG_PATH_ADVANCED_TARGET_INFO_V1)
@@ -467,7 +467,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: FromNative
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 3593
+    startLine: 3909
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -502,7 +502,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: ToNative
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 3613
+    startLine: 3929
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -533,7 +533,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Equals
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 3636
+    startLine: 3952
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -570,7 +570,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Equals
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 3652
+    startLine: 3968
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -609,7 +609,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetHashCode
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 3658
+    startLine: 3974
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -641,7 +641,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: op_Equality
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 3681
+    startLine: 3997
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -679,7 +679,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: op_Inequality
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 3689
+    startLine: 4005
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -1052,16 +1052,16 @@ references:
   name: Timing
   nameWithType: NVAPIDisplayConfigAdvancedTargetDto.Timing
   fullName: NVAPIWrapper.NVAPIDisplayConfigAdvancedTargetDto.Timing
-- uid: NVAPIWrapper._NV_TIMING
-  commentId: T:NVAPIWrapper._NV_TIMING
+- uid: NVAPIWrapper.NVAPITimingDto
+  commentId: T:NVAPIWrapper.NVAPITimingDto
   parent: NVAPIWrapper
-  href: NVAPIWrapper._NV_TIMING.html
-  name: _NV_TIMING
-  nameWithType: _NV_TIMING
-  fullName: NVAPIWrapper._NV_TIMING
+  href: NVAPIWrapper.NVAPITimingDto.html
+  name: NVAPITimingDto
+  nameWithType: NVAPITimingDto
+  fullName: NVAPIWrapper.NVAPITimingDto
 - uid: NVAPIWrapper.NVAPIDisplayConfigAdvancedTargetDto.#ctor*
   commentId: Overload:NVAPIWrapper.NVAPIDisplayConfigAdvancedTargetDto.#ctor
-  href: NVAPIWrapper.NVAPIDisplayConfigAdvancedTargetDto.html#NVAPIWrapper_NVAPIDisplayConfigAdvancedTargetDto__ctor_NVAPIWrapper__NV_ROTATE_NVAPIWrapper__NV_SCALING_System_UInt32_System_Boolean_System_Boolean_System_Boolean_System_Boolean_NVAPIWrapper__NV_GPU_CONNECTOR_TYPE_NVAPIWrapper__NV_DISPLAY_TV_FORMAT_NVAPIWrapper__NV_TIMING_OVERRIDE_NVAPIWrapper__NV_TIMING_
+  href: NVAPIWrapper.NVAPIDisplayConfigAdvancedTargetDto.html#NVAPIWrapper_NVAPIDisplayConfigAdvancedTargetDto__ctor_NVAPIWrapper__NV_ROTATE_NVAPIWrapper__NV_SCALING_System_UInt32_System_Boolean_System_Boolean_System_Boolean_System_Boolean_NVAPIWrapper__NV_GPU_CONNECTOR_TYPE_NVAPIWrapper__NV_DISPLAY_TV_FORMAT_NVAPIWrapper__NV_TIMING_OVERRIDE_NVAPIWrapper_NVAPITimingDto_
   name: NVAPIDisplayConfigAdvancedTargetDto
   nameWithType: NVAPIDisplayConfigAdvancedTargetDto.NVAPIDisplayConfigAdvancedTargetDto
   fullName: NVAPIWrapper.NVAPIDisplayConfigAdvancedTargetDto.NVAPIDisplayConfigAdvancedTargetDto

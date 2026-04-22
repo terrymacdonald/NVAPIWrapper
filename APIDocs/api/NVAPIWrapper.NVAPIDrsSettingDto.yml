@@ -314,7 +314,7 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public string? PredefinedStringValue { get; }
+    content: public string PredefinedStringValue { get; }
     parameters: []
     return:
       type: System.String
@@ -343,7 +343,7 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public string? CurrentStringValue { get; }
+    content: public string CurrentStringValue { get; }
     parameters: []
     return:
       type: System.String
@@ -372,7 +372,7 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public byte[]? PredefinedBinaryValue { get; }
+    content: public byte[] PredefinedBinaryValue { get; }
     parameters: []
     return:
       type: System.Byte[]
@@ -401,7 +401,7 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public byte[]? CurrentBinaryValue { get; }
+    content: public byte[] CurrentBinaryValue { get; }
     parameters: []
     return:
       type: System.Byte[]
@@ -460,16 +460,16 @@ items:
       description: Current DWORD value.
     - id: predefinedStringValue
       type: System.String
-      description: Predefined string value.
+      description: Predefined string value. Null is treated as empty string.
     - id: currentStringValue
       type: System.String
-      description: Current string value.
+      description: Current string value. Null is treated as empty string.
     - id: predefinedBinaryValue
       type: System.Byte[]
-      description: Predefined binary value.
+      description: Predefined binary value. Null is treated as an empty array.
     - id: currentBinaryValue
       type: System.Byte[]
-      description: Current binary value.
+      description: Current binary value. Null is treated as an empty array.
     content.vb: Public Sub New(settingName As String, settingId As UInteger, settingType As _NVDRS_SETTING_TYPE, settingLocation As _NVDRS_SETTING_LOCATION, isCurrentPredefined As Boolean, isPredefinedValid As Boolean, predefinedDwordValue As UInteger?, currentDwordValue As UInteger?, predefinedStringValue As String, currentStringValue As String, predefinedBinaryValue As Byte(), currentBinaryValue As Byte())
   overload: NVAPIWrapper.NVAPIDrsSettingDto.#ctor*
   nameWithType.vb: NVAPIDrsSettingDto.New(String, UInteger, _NVDRS_SETTING_TYPE, _NVDRS_SETTING_LOCATION, Boolean, Boolean, UInteger?, UInteger?, String, String, Byte(), Byte())

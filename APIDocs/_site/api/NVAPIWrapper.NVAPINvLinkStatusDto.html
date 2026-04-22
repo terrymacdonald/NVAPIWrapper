@@ -89,7 +89,7 @@
 
 
   <h1 id="NVAPIWrapper_NVAPINvLinkStatusDto" data-uid="NVAPIWrapper.NVAPINvLinkStatusDto" class="text-break">
-Struct NVAPINvLinkStatusDto  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L4847"><i class="bi bi-code-slash"></i></a>
+Struct NVAPINvLinkStatusDto  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L4848"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -145,26 +145,30 @@ Struct NVAPINvLinkStatusDto  <a class="header-action link-secondary" title="View
 
   <a id="NVAPIWrapper_NVAPINvLinkStatusDto__ctor_" data-uid="NVAPIWrapper.NVAPINvLinkStatusDto.#ctor*"></a>
 
-  <h3 id="NVAPIWrapper_NVAPINvLinkStatusDto__ctor_System_UInt32_System_UInt32_NVAPIWrapper_NVAPINvLinkStatusInfoDto___" data-uid="NVAPIWrapper.NVAPINvLinkStatusDto.#ctor(System.UInt32,System.UInt32,NVAPIWrapper.NVAPINvLinkStatusInfoDto[])">
-  NVAPINvLinkStatusDto(uint, uint, NVAPINvLinkStatusInfoDto[])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L4856"><i class="bi bi-code-slash"></i></a>
+  <h3 id="NVAPIWrapper_NVAPINvLinkStatusDto__ctor_System_UInt32_System_UInt32_System_Collections_Generic_List_NVAPIWrapper_NVAPINvLinkStatusInfoDto__" data-uid="NVAPIWrapper.NVAPINvLinkStatusDto.#ctor(System.UInt32,System.UInt32,System.Collections.Generic.List{NVAPIWrapper.NVAPINvLinkStatusInfoDto})">
+  NVAPINvLinkStatusDto(uint, uint, List&lt;NVAPINvLinkStatusInfoDto&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L4866"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Create an NVLINK status DTO.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public NVAPINvLinkStatusDto(uint version, uint linkMask, NVAPINvLinkStatusInfoDto[] linkInfo)</code></pre>
+    <pre><code class="lang-csharp hljs">public NVAPINvLinkStatusDto(uint version, uint linkMask, List&lt;NVAPINvLinkStatusInfoDto&gt; linkInfo)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>version</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
-    <dd></dd>
+    <dd><p>Structure version.</p>
+</dd>
     <dt><code>linkMask</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
-    <dd></dd>
-    <dt><code>linkInfo</code> <a class="xref" href="NVAPIWrapper.NVAPINvLinkStatusInfoDto.html">NVAPINvLinkStatusInfoDto</a>[]</dt>
-    <dd></dd>
+    <dd><p>Bitmask of active links.</p>
+</dd>
+    <dt><code>linkInfo</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="NVAPIWrapper.NVAPINvLinkStatusInfoDto.html">NVAPINvLinkStatusInfoDto</a>&gt;</dt>
+    <dd><p>Active link info entries (one per set bit in linkMask, ascending).</p>
+</dd>
   </dl>
 
 
@@ -186,15 +190,16 @@ Struct NVAPINvLinkStatusDto  <a class="header-action link-secondary" title="View
 
   <h3 id="NVAPIWrapper_NVAPINvLinkStatusDto_LinkInfo" data-uid="NVAPIWrapper.NVAPINvLinkStatusDto.LinkInfo">
   LinkInfo
-  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L4854"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L4860"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>NVLINK_GET_STATUS_V2.linkInfo (array of 32)</p>
+  <div class="markdown level1 summary"><p>Active link info entries, one per set bit in <a class="xref" href="NVAPIWrapper.NVAPINvLinkStatusDto.html#NVAPIWrapper_NVAPINvLinkStatusDto_LinkMask">LinkMask</a> (ordered by ascending link index).
+Only links that are active per the bitmask are stored, keeping the list compact.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public NVAPINvLinkStatusInfoDto[] LinkInfo { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public List&lt;NVAPINvLinkStatusInfoDto&gt; LinkInfo { get; }</code></pre>
   </div>
 
 
@@ -203,7 +208,7 @@ Struct NVAPINvLinkStatusDto  <a class="header-action link-secondary" title="View
 
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="NVAPIWrapper.NVAPINvLinkStatusInfoDto.html">NVAPINvLinkStatusInfoDto</a>[]</dt>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="NVAPIWrapper.NVAPINvLinkStatusInfoDto.html">NVAPINvLinkStatusInfoDto</a>&gt;</dt>
     <dd></dd>
   </dl>
 
@@ -218,10 +223,10 @@ Struct NVAPINvLinkStatusDto  <a class="header-action link-secondary" title="View
 
   <h3 id="NVAPIWrapper_NVAPINvLinkStatusDto_LinkMask" data-uid="NVAPIWrapper.NVAPINvLinkStatusDto.LinkMask">
   LinkMask
-  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L4852"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L4853"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>NVLINK_GET_STATUS_V2.linkMask</p>
+  <div class="markdown level1 summary"><p>NVLINK_GET_STATUS_V2.linkMask — bitmask of active links (bit i = link i is in use).</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -250,7 +255,7 @@ Struct NVAPINvLinkStatusDto  <a class="header-action link-secondary" title="View
 
   <h3 id="NVAPIWrapper_NVAPINvLinkStatusDto_Version" data-uid="NVAPIWrapper.NVAPINvLinkStatusDto.Version">
   Version
-  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L4850"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L4851"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>NVLINK_GET_STATUS_V2.version</p>
@@ -286,10 +291,11 @@ Struct NVAPINvLinkStatusDto  <a class="header-action link-secondary" title="View
 
   <h3 id="NVAPIWrapper_NVAPINvLinkStatusDto_CreateDefault" data-uid="NVAPIWrapper.NVAPINvLinkStatusDto.CreateDefault">
   CreateDefault()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L4873"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L4889"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Create a default (no active links) NVLINK status DTO.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -317,7 +323,7 @@ Struct NVAPINvLinkStatusDto  <a class="header-action link-secondary" title="View
 
   <h3 id="NVAPIWrapper_NVAPINvLinkStatusDto_Equals_NVAPIWrapper_NVAPINvLinkStatusDto_" data-uid="NVAPIWrapper.NVAPINvLinkStatusDto.Equals(NVAPIWrapper.NVAPINvLinkStatusDto)">
   Equals(NVAPINvLinkStatusDto)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L4890"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L4914"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Indicates whether the current object is equal to another object of the same type.</p>
@@ -356,7 +362,7 @@ Struct NVAPINvLinkStatusDto  <a class="header-action link-secondary" title="View
 
   <h3 id="NVAPIWrapper_NVAPINvLinkStatusDto_Equals_System_Object_" data-uid="NVAPIWrapper.NVAPINvLinkStatusDto.Equals(System.Object)">
   Equals(object?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L4904"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L4927"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Indicates whether this instance and a specified object are equal.</p>
@@ -395,10 +401,12 @@ Struct NVAPINvLinkStatusDto  <a class="header-action link-secondary" title="View
 
   <h3 id="NVAPIWrapper_NVAPINvLinkStatusDto_FromNative_NVAPIWrapper_NVLINK_GET_STATUS_V2_" data-uid="NVAPIWrapper.NVAPINvLinkStatusDto.FromNative(NVAPIWrapper.NVLINK_GET_STATUS_V2)">
   FromNative(NVLINK_GET_STATUS_V2)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L4863"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L4877"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Create a DTO from a native NVLINK status struct. Only entries for bits set in
+<code class="paramref">native</code>.linkMask are included in <a class="xref" href="NVAPIWrapper.NVAPINvLinkStatusDto.html#NVAPIWrapper_NVAPINvLinkStatusDto_LinkInfo">LinkInfo</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -431,7 +439,7 @@ Struct NVAPINvLinkStatusDto  <a class="header-action link-secondary" title="View
 
   <h3 id="NVAPIWrapper_NVAPINvLinkStatusDto_GetHashCode" data-uid="NVAPIWrapper.NVAPINvLinkStatusDto.GetHashCode">
   GetHashCode()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L4905"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L4930"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Returns the hash code for this instance.</p>
@@ -464,10 +472,12 @@ Struct NVAPINvLinkStatusDto  <a class="header-action link-secondary" title="View
 
   <h3 id="NVAPIWrapper_NVAPINvLinkStatusDto_ToNative" data-uid="NVAPIWrapper.NVAPINvLinkStatusDto.ToNative">
   ToNative()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L4878"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L4898"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Convert this DTO back to a native struct. List entries are placed at the native indices
+corresponding to set bits in <a class="xref" href="NVAPIWrapper.NVAPINvLinkStatusDto.html#NVAPIWrapper_NVAPINvLinkStatusDto_LinkMask">LinkMask</a> (ascending order); all other slots are default.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -499,10 +509,11 @@ Struct NVAPINvLinkStatusDto  <a class="header-action link-secondary" title="View
 
   <h3 id="NVAPIWrapper_NVAPINvLinkStatusDto_op_Equality_NVAPIWrapper_NVAPINvLinkStatusDto_NVAPIWrapper_NVAPINvLinkStatusDto_" data-uid="NVAPIWrapper.NVAPINvLinkStatusDto.op_Equality(NVAPIWrapper.NVAPINvLinkStatusDto,NVAPIWrapper.NVAPINvLinkStatusDto)">
   operator ==(NVAPINvLinkStatusDto, NVAPINvLinkStatusDto)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L4915"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L4939"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Compare NVLINK status DTOs.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -537,10 +548,11 @@ Struct NVAPINvLinkStatusDto  <a class="header-action link-secondary" title="View
 
   <h3 id="NVAPIWrapper_NVAPINvLinkStatusDto_op_Inequality_NVAPIWrapper_NVAPINvLinkStatusDto_NVAPIWrapper_NVAPINvLinkStatusDto_" data-uid="NVAPIWrapper.NVAPINvLinkStatusDto.op_Inequality(NVAPIWrapper.NVAPINvLinkStatusDto,NVAPIWrapper.NVAPINvLinkStatusDto)">
   operator !=(NVAPINvLinkStatusDto, NVAPINvLinkStatusDto)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L4916"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L4941"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Compare NVLINK status DTOs.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -575,7 +587,7 @@ Struct NVAPINvLinkStatusDto  <a class="header-action link-secondary" title="View
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L4847" class="edit-link">Edit this page</a>
+          <a href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L4848" class="edit-link">Edit this page</a>
         </div>
 
 
