@@ -102,7 +102,7 @@ Struct NVAPITimingInputDto  <a class="header-action link-secondary" title="View 
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly struct NVAPITimingInputDto : IEquatable&lt;NVAPITimingInputDto&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public struct NVAPITimingInputDto : IEquatable&lt;NVAPITimingInputDto&gt;</code></pre>
   </div>
 
 
@@ -199,7 +199,7 @@ Struct NVAPITimingInputDto  <a class="header-action link-secondary" title="View 
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public NV_TIMING_FLAG Flag { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public NV_TIMING_FLAG Flag { readonly get; set; }</code></pre>
   </div>
 
 
@@ -231,7 +231,7 @@ Struct NVAPITimingInputDto  <a class="header-action link-secondary" title="View 
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public uint Height { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public uint Height { readonly get; set; }</code></pre>
   </div>
 
 
@@ -263,7 +263,7 @@ Struct NVAPITimingInputDto  <a class="header-action link-secondary" title="View 
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public _NV_TIMING_OVERRIDE OverrideType { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public _NV_TIMING_OVERRIDE OverrideType { readonly get; set; }</code></pre>
   </div>
 
 
@@ -295,7 +295,7 @@ Struct NVAPITimingInputDto  <a class="header-action link-secondary" title="View 
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public float RefreshRate { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public float RefreshRate { readonly get; set; }</code></pre>
   </div>
 
 
@@ -327,7 +327,7 @@ Struct NVAPITimingInputDto  <a class="header-action link-secondary" title="View 
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public uint Width { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public uint Width { readonly get; set; }</code></pre>
   </div>
 
 

@@ -102,7 +102,7 @@ Struct NVAPIGpuEccConfigurationInfoDto  <a class="header-action link-secondary" 
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly struct NVAPIGpuEccConfigurationInfoDto : IEquatable&lt;NVAPIGpuEccConfigurationInfoDto&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public struct NVAPIGpuEccConfigurationInfoDto : IEquatable&lt;NVAPIGpuEccConfigurationInfoDto&gt;</code></pre>
   </div>
 
 
@@ -191,7 +191,7 @@ Struct NVAPIGpuEccConfigurationInfoDto  <a class="header-action link-secondary" 
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool IsEnabled { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public bool IsEnabled { readonly get; set; }</code></pre>
   </div>
 
 
@@ -222,7 +222,7 @@ Struct NVAPIGpuEccConfigurationInfoDto  <a class="header-action link-secondary" 
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool IsEnabledByDefault { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public bool IsEnabledByDefault { readonly get; set; }</code></pre>
   </div>
 
 

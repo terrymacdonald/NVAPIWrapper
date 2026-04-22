@@ -35,7 +35,7 @@ items:
   summary: DTO for display port info.
   example: []
   syntax:
-    content: 'public readonly struct NVAPIDisplayPortInfoDto : IEquatable<NVAPIDisplayPortInfoDto>'
+    content: 'public struct NVAPIDisplayPortInfoDto : IEquatable<NVAPIDisplayPortInfoDto>'
     content.vb: Public Structure NVAPIDisplayPortInfoDto Implements IEquatable(Of NVAPIDisplayPortInfoDto)
   implements:
   - System.IEquatable{NVAPIWrapper.NVAPIDisplayPortInfoDto}
@@ -69,11 +69,11 @@ items:
   summary: Native display port info.
   example: []
   syntax:
-    content: public _NV_DISPLAY_PORT_INFO_V1 Info { get; }
+    content: public _NV_DISPLAY_PORT_INFO_V1 Info { readonly get; set; }
     parameters: []
     return:
       type: NVAPIWrapper._NV_DISPLAY_PORT_INFO_V1
-    content.vb: Public ReadOnly Property Info As _NV_DISPLAY_PORT_INFO_V1
+    content.vb: Public Property Info As _NV_DISPLAY_PORT_INFO_V1
   overload: NVAPIWrapper.NVAPIDisplayPortInfoDto.Info*
 - uid: NVAPIWrapper.NVAPIDisplayPortInfoDto.#ctor(NVAPIWrapper._NV_DISPLAY_PORT_INFO_V1)
   commentId: M:NVAPIWrapper.NVAPIDisplayPortInfoDto.#ctor(NVAPIWrapper._NV_DISPLAY_PORT_INFO_V1)

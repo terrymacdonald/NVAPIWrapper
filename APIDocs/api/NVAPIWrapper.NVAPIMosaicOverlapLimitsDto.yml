@@ -36,7 +36,7 @@ items:
   summary: Mosaic overlap limits DTO.
   example: []
   syntax:
-    content: 'public readonly struct NVAPIMosaicOverlapLimitsDto : IEquatable<NVAPIMosaicOverlapLimitsDto>'
+    content: 'public struct NVAPIMosaicOverlapLimitsDto : IEquatable<NVAPIMosaicOverlapLimitsDto>'
     content.vb: Public Structure NVAPIMosaicOverlapLimitsDto Implements IEquatable(Of NVAPIMosaicOverlapLimitsDto)
   implements:
   - System.IEquatable{NVAPIWrapper.NVAPIMosaicOverlapLimitsDto}
@@ -68,11 +68,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public int MinOverlapX { get; }
+    content: public int MinOverlapX { readonly get; set; }
     parameters: []
     return:
       type: System.Int32
-    content.vb: Public ReadOnly Property MinOverlapX As Integer
+    content.vb: Public Property MinOverlapX As Integer
   overload: NVAPIWrapper.NVAPIMosaicOverlapLimitsDto.MinOverlapX*
 - uid: NVAPIWrapper.NVAPIMosaicOverlapLimitsDto.MaxOverlapX
   commentId: P:NVAPIWrapper.NVAPIMosaicOverlapLimitsDto.MaxOverlapX
@@ -97,11 +97,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public int MaxOverlapX { get; }
+    content: public int MaxOverlapX { readonly get; set; }
     parameters: []
     return:
       type: System.Int32
-    content.vb: Public ReadOnly Property MaxOverlapX As Integer
+    content.vb: Public Property MaxOverlapX As Integer
   overload: NVAPIWrapper.NVAPIMosaicOverlapLimitsDto.MaxOverlapX*
 - uid: NVAPIWrapper.NVAPIMosaicOverlapLimitsDto.MinOverlapY
   commentId: P:NVAPIWrapper.NVAPIMosaicOverlapLimitsDto.MinOverlapY
@@ -126,11 +126,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public int MinOverlapY { get; }
+    content: public int MinOverlapY { readonly get; set; }
     parameters: []
     return:
       type: System.Int32
-    content.vb: Public ReadOnly Property MinOverlapY As Integer
+    content.vb: Public Property MinOverlapY As Integer
   overload: NVAPIWrapper.NVAPIMosaicOverlapLimitsDto.MinOverlapY*
 - uid: NVAPIWrapper.NVAPIMosaicOverlapLimitsDto.MaxOverlapY
   commentId: P:NVAPIWrapper.NVAPIMosaicOverlapLimitsDto.MaxOverlapY
@@ -155,11 +155,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public int MaxOverlapY { get; }
+    content: public int MaxOverlapY { readonly get; set; }
     parameters: []
     return:
       type: System.Int32
-    content.vb: Public ReadOnly Property MaxOverlapY As Integer
+    content.vb: Public Property MaxOverlapY As Integer
   overload: NVAPIWrapper.NVAPIMosaicOverlapLimitsDto.MaxOverlapY*
 - uid: NVAPIWrapper.NVAPIMosaicOverlapLimitsDto.#ctor(System.Int32,System.Int32,System.Int32,System.Int32)
   commentId: M:NVAPIWrapper.NVAPIMosaicOverlapLimitsDto.#ctor(System.Int32,System.Int32,System.Int32,System.Int32)

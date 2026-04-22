@@ -102,7 +102,7 @@ Struct NVAPIRiseCallbackSettingsDto  <a class="header-action link-secondary" tit
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly struct NVAPIRiseCallbackSettingsDto : IEquatable&lt;NVAPIRiseCallbackSettingsDto&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public struct NVAPIRiseCallbackSettingsDto : IEquatable&lt;NVAPIRiseCallbackSettingsDto&gt;</code></pre>
   </div>
 
 
@@ -195,7 +195,7 @@ Struct NVAPIRiseCallbackSettingsDto  <a class="header-action link-secondary" tit
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public nint Callback { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public nint Callback { readonly get; set; }</code></pre>
   </div>
 
 
@@ -227,7 +227,7 @@ Struct NVAPIRiseCallbackSettingsDto  <a class="header-action link-secondary" tit
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public nint CallbackParam { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public nint CallbackParam { readonly get; set; }</code></pre>
   </div>
 
 

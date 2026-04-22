@@ -102,7 +102,7 @@ Struct NVAPIMosaicOverlapLimitsDto  <a class="header-action link-secondary" titl
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly struct NVAPIMosaicOverlapLimitsDto : IEquatable&lt;NVAPIMosaicOverlapLimitsDto&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public struct NVAPIMosaicOverlapLimitsDto : IEquatable&lt;NVAPIMosaicOverlapLimitsDto&gt;</code></pre>
   </div>
 
 
@@ -200,7 +200,7 @@ Struct NVAPIMosaicOverlapLimitsDto  <a class="header-action link-secondary" titl
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int MaxOverlapX { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public int MaxOverlapX { readonly get; set; }</code></pre>
   </div>
 
 
@@ -231,7 +231,7 @@ Struct NVAPIMosaicOverlapLimitsDto  <a class="header-action link-secondary" titl
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int MaxOverlapY { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public int MaxOverlapY { readonly get; set; }</code></pre>
   </div>
 
 
@@ -262,7 +262,7 @@ Struct NVAPIMosaicOverlapLimitsDto  <a class="header-action link-secondary" titl
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int MinOverlapX { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public int MinOverlapX { readonly get; set; }</code></pre>
   </div>
 
 
@@ -293,7 +293,7 @@ Struct NVAPIMosaicOverlapLimitsDto  <a class="header-action link-secondary" titl
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int MinOverlapY { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public int MinOverlapY { readonly get; set; }</code></pre>
   </div>
 
 

@@ -37,7 +37,7 @@ items:
   summary: DTO for NVIDIA managed dedicated display info.
   example: []
   syntax:
-    content: 'public readonly struct NVAPINvManagedDedicatedDisplayInfoDto : IEquatable<NVAPINvManagedDedicatedDisplayInfoDto>'
+    content: 'public struct NVAPINvManagedDedicatedDisplayInfoDto : IEquatable<NVAPINvManagedDedicatedDisplayInfoDto>'
     content.vb: Public Structure NVAPINvManagedDedicatedDisplayInfoDto Implements IEquatable(Of NVAPINvManagedDedicatedDisplayInfoDto)
   implements:
   - System.IEquatable{NVAPIWrapper.NVAPINvManagedDedicatedDisplayInfoDto}
@@ -71,11 +71,11 @@ items:
   summary: Display ID.
   example: []
   syntax:
-    content: public uint DisplayId { get; }
+    content: public uint DisplayId { readonly get; set; }
     parameters: []
     return:
       type: System.UInt32
-    content.vb: Public ReadOnly Property DisplayId As UInteger
+    content.vb: Public Property DisplayId As UInteger
   overload: NVAPIWrapper.NVAPINvManagedDedicatedDisplayInfoDto.DisplayId*
 - uid: NVAPIWrapper.NVAPINvManagedDedicatedDisplayInfoDto.IsAcquired
   commentId: P:NVAPIWrapper.NVAPINvManagedDedicatedDisplayInfoDto.IsAcquired
@@ -102,11 +102,11 @@ items:
   summary: True if acquired by another process.
   example: []
   syntax:
-    content: public bool IsAcquired { get; }
+    content: public bool IsAcquired { readonly get; set; }
     parameters: []
     return:
       type: System.Boolean
-    content.vb: Public ReadOnly Property IsAcquired As Boolean
+    content.vb: Public Property IsAcquired As Boolean
   overload: NVAPIWrapper.NVAPINvManagedDedicatedDisplayInfoDto.IsAcquired*
 - uid: NVAPIWrapper.NVAPINvManagedDedicatedDisplayInfoDto.IsMosaic
   commentId: P:NVAPIWrapper.NVAPINvManagedDedicatedDisplayInfoDto.IsMosaic
@@ -133,11 +133,11 @@ items:
   summary: True if part of a Mosaic grid.
   example: []
   syntax:
-    content: public bool IsMosaic { get; }
+    content: public bool IsMosaic { readonly get; set; }
     parameters: []
     return:
       type: System.Boolean
-    content.vb: Public ReadOnly Property IsMosaic As Boolean
+    content.vb: Public Property IsMosaic As Boolean
   overload: NVAPIWrapper.NVAPINvManagedDedicatedDisplayInfoDto.IsMosaic*
 - uid: NVAPIWrapper.NVAPINvManagedDedicatedDisplayInfoDto.#ctor(System.UInt32,System.Boolean,System.Boolean)
   commentId: M:NVAPIWrapper.NVAPINvManagedDedicatedDisplayInfoDto.#ctor(System.UInt32,System.Boolean,System.Boolean)

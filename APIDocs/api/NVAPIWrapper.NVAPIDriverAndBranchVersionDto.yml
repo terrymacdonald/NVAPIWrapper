@@ -34,7 +34,7 @@ items:
   summary: Driver version and branch string.
   example: []
   syntax:
-    content: 'public readonly struct NVAPIDriverAndBranchVersionDto : IEquatable<NVAPIDriverAndBranchVersionDto>'
+    content: 'public struct NVAPIDriverAndBranchVersionDto : IEquatable<NVAPIDriverAndBranchVersionDto>'
     content.vb: Public Structure NVAPIDriverAndBranchVersionDto Implements IEquatable(Of NVAPIDriverAndBranchVersionDto)
   implements:
   - System.IEquatable{NVAPIWrapper.NVAPIDriverAndBranchVersionDto}
@@ -68,11 +68,11 @@ items:
   summary: Driver version.
   example: []
   syntax:
-    content: public uint DriverVersion { get; }
+    content: public uint DriverVersion { readonly get; set; }
     parameters: []
     return:
       type: System.UInt32
-    content.vb: Public ReadOnly Property DriverVersion As UInteger
+    content.vb: Public Property DriverVersion As UInteger
   overload: NVAPIWrapper.NVAPIDriverAndBranchVersionDto.DriverVersion*
 - uid: NVAPIWrapper.NVAPIDriverAndBranchVersionDto.Branch
   commentId: P:NVAPIWrapper.NVAPIDriverAndBranchVersionDto.Branch
@@ -99,11 +99,11 @@ items:
   summary: Driver branch string.
   example: []
   syntax:
-    content: public string Branch { get; }
+    content: public string Branch { readonly get; set; }
     parameters: []
     return:
       type: System.String
-    content.vb: Public ReadOnly Property Branch As String
+    content.vb: Public Property Branch As String
   overload: NVAPIWrapper.NVAPIDriverAndBranchVersionDto.Branch*
 - uid: NVAPIWrapper.NVAPIDriverAndBranchVersionDto.#ctor(System.UInt32,System.String)
   commentId: M:NVAPIWrapper.NVAPIDriverAndBranchVersionDto.#ctor(System.UInt32,System.String)

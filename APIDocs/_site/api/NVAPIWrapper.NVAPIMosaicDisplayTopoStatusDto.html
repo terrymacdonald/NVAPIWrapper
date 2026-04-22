@@ -102,7 +102,7 @@ Struct NVAPIMosaicDisplayTopoStatusDto  <a class="header-action link-secondary" 
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly struct NVAPIMosaicDisplayTopoStatusDto : IEquatable&lt;NVAPIMosaicDisplayTopoStatusDto&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public struct NVAPIMosaicDisplayTopoStatusDto : IEquatable&lt;NVAPIMosaicDisplayTopoStatusDto&gt;</code></pre>
   </div>
 
 
@@ -197,7 +197,7 @@ Struct NVAPIMosaicDisplayTopoStatusDto  <a class="header-action link-secondary" 
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public NVAPIMosaicDisplayStatusEntryDto[] Displays { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public NVAPIMosaicDisplayStatusEntryDto[] Displays { readonly get; set; }</code></pre>
   </div>
 
 
@@ -228,7 +228,7 @@ Struct NVAPIMosaicDisplayTopoStatusDto  <a class="header-action link-secondary" 
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public uint ErrorFlags { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public uint ErrorFlags { readonly get; set; }</code></pre>
   </div>
 
 
@@ -259,7 +259,7 @@ Struct NVAPIMosaicDisplayTopoStatusDto  <a class="header-action link-secondary" 
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public uint WarningFlags { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public uint WarningFlags { readonly get; set; }</code></pre>
   </div>
 
 

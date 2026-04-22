@@ -37,7 +37,7 @@ items:
   summary: Mosaic topology brief DTO.
   example: []
   syntax:
-    content: 'public readonly struct NVAPIMosaicTopoBriefDto : IEquatable<NVAPIMosaicTopoBriefDto>'
+    content: 'public struct NVAPIMosaicTopoBriefDto : IEquatable<NVAPIMosaicTopoBriefDto>'
     content.vb: Public Structure NVAPIMosaicTopoBriefDto Implements IEquatable(Of NVAPIMosaicTopoBriefDto)
   implements:
   - System.IEquatable{NVAPIWrapper.NVAPIMosaicTopoBriefDto}
@@ -69,11 +69,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public NV_MOSAIC_TOPO Topo { get; }
+    content: public NV_MOSAIC_TOPO Topo { readonly get; set; }
     parameters: []
     return:
       type: NVAPIWrapper.NV_MOSAIC_TOPO
-    content.vb: Public ReadOnly Property Topo As NV_MOSAIC_TOPO
+    content.vb: Public Property Topo As NV_MOSAIC_TOPO
   overload: NVAPIWrapper.NVAPIMosaicTopoBriefDto.Topo*
 - uid: NVAPIWrapper.NVAPIMosaicTopoBriefDto.Enabled
   commentId: P:NVAPIWrapper.NVAPIMosaicTopoBriefDto.Enabled
@@ -98,11 +98,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public bool Enabled { get; }
+    content: public bool Enabled { readonly get; set; }
     parameters: []
     return:
       type: System.Boolean
-    content.vb: Public ReadOnly Property Enabled As Boolean
+    content.vb: Public Property Enabled As Boolean
   overload: NVAPIWrapper.NVAPIMosaicTopoBriefDto.Enabled*
 - uid: NVAPIWrapper.NVAPIMosaicTopoBriefDto.IsPossible
   commentId: P:NVAPIWrapper.NVAPIMosaicTopoBriefDto.IsPossible
@@ -127,11 +127,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public bool IsPossible { get; }
+    content: public bool IsPossible { readonly get; set; }
     parameters: []
     return:
       type: System.Boolean
-    content.vb: Public ReadOnly Property IsPossible As Boolean
+    content.vb: Public Property IsPossible As Boolean
   overload: NVAPIWrapper.NVAPIMosaicTopoBriefDto.IsPossible*
 - uid: NVAPIWrapper.NVAPIMosaicTopoBriefDto.#ctor(NVAPIWrapper.NV_MOSAIC_TOPO,System.Boolean,System.Boolean)
   commentId: M:NVAPIWrapper.NVAPIMosaicTopoBriefDto.#ctor(NVAPIWrapper.NV_MOSAIC_TOPO,System.Boolean,System.Boolean)

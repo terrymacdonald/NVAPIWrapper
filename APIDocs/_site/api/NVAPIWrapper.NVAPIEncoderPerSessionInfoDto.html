@@ -102,7 +102,7 @@ Struct NVAPIEncoderPerSessionInfoDto  <a class="header-action link-secondary" ti
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly struct NVAPIEncoderPerSessionInfoDto : IEquatable&lt;NVAPIEncoderPerSessionInfoDto&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public struct NVAPIEncoderPerSessionInfoDto : IEquatable&lt;NVAPIEncoderPerSessionInfoDto&gt;</code></pre>
   </div>
 
 
@@ -205,7 +205,7 @@ Struct NVAPIEncoderPerSessionInfoDto  <a class="header-action link-secondary" ti
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public uint AverageEncodeFps { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public uint AverageEncodeFps { readonly get; set; }</code></pre>
   </div>
 
 
@@ -237,7 +237,7 @@ Struct NVAPIEncoderPerSessionInfoDto  <a class="header-action link-secondary" ti
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public uint AverageEncodeLatency { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public uint AverageEncodeLatency { readonly get; set; }</code></pre>
   </div>
 
 
@@ -269,7 +269,7 @@ Struct NVAPIEncoderPerSessionInfoDto  <a class="header-action link-secondary" ti
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public _NV_ENCODER_TYPE CodecType { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public _NV_ENCODER_TYPE CodecType { readonly get; set; }</code></pre>
   </div>
 
 
@@ -301,7 +301,7 @@ Struct NVAPIEncoderPerSessionInfoDto  <a class="header-action link-secondary" ti
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public uint HResolution { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public uint HResolution { readonly get; set; }</code></pre>
   </div>
 
 
@@ -333,7 +333,7 @@ Struct NVAPIEncoderPerSessionInfoDto  <a class="header-action link-secondary" ti
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public uint ProcessId { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public uint ProcessId { readonly get; set; }</code></pre>
   </div>
 
 
@@ -365,7 +365,7 @@ Struct NVAPIEncoderPerSessionInfoDto  <a class="header-action link-secondary" ti
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public uint SessionId { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public uint SessionId { readonly get; set; }</code></pre>
   </div>
 
 
@@ -397,7 +397,7 @@ Struct NVAPIEncoderPerSessionInfoDto  <a class="header-action link-secondary" ti
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public uint VResolution { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public uint VResolution { readonly get; set; }</code></pre>
   </div>
 
 
@@ -429,7 +429,7 @@ Struct NVAPIEncoderPerSessionInfoDto  <a class="header-action link-secondary" ti
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public uint VgpuInstance { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public uint VgpuInstance { readonly get; set; }</code></pre>
   </div>
 
 

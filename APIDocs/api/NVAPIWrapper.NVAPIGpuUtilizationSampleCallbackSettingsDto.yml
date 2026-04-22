@@ -39,7 +39,7 @@ items:
   summary: Utilization sample callback settings DTO.
   example: []
   syntax:
-    content: 'public readonly struct NVAPIGpuUtilizationSampleCallbackSettingsDto : IEquatable<NVAPIGpuUtilizationSampleCallbackSettingsDto>'
+    content: 'public struct NVAPIGpuUtilizationSampleCallbackSettingsDto : IEquatable<NVAPIGpuUtilizationSampleCallbackSettingsDto>'
     content.vb: Public Structure NVAPIGpuUtilizationSampleCallbackSettingsDto Implements IEquatable(Of NVAPIGpuUtilizationSampleCallbackSettingsDto)
   implements:
   - System.IEquatable{NVAPIWrapper.NVAPIGpuUtilizationSampleCallbackSettingsDto}
@@ -71,11 +71,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public nint CallbackParam { get; }
+    content: public nint CallbackParam { readonly get; set; }
     parameters: []
     return:
       type: System.IntPtr
-    content.vb: Public ReadOnly Property CallbackParam As IntPtr
+    content.vb: Public Property CallbackParam As IntPtr
   overload: NVAPIWrapper.NVAPIGpuUtilizationSampleCallbackSettingsDto.CallbackParam*
 - uid: NVAPIWrapper.NVAPIGpuUtilizationSampleCallbackSettingsDto.CallbackPeriodMs
   commentId: P:NVAPIWrapper.NVAPIGpuUtilizationSampleCallbackSettingsDto.CallbackPeriodMs
@@ -100,11 +100,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public uint CallbackPeriodMs { get; }
+    content: public uint CallbackPeriodMs { readonly get; set; }
     parameters: []
     return:
       type: System.UInt32
-    content.vb: Public ReadOnly Property CallbackPeriodMs As UInteger
+    content.vb: Public Property CallbackPeriodMs As UInteger
   overload: NVAPIWrapper.NVAPIGpuUtilizationSampleCallbackSettingsDto.CallbackPeriodMs*
 - uid: NVAPIWrapper.NVAPIGpuUtilizationSampleCallbackSettingsDto.Callback
   commentId: P:NVAPIWrapper.NVAPIGpuUtilizationSampleCallbackSettingsDto.Callback
@@ -129,11 +129,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public nint Callback { get; }
+    content: public nint Callback { readonly get; set; }
     parameters: []
     return:
       type: System.IntPtr
-    content.vb: Public ReadOnly Property Callback As IntPtr
+    content.vb: Public Property Callback As IntPtr
   overload: NVAPIWrapper.NVAPIGpuUtilizationSampleCallbackSettingsDto.Callback*
 - uid: NVAPIWrapper.NVAPIGpuUtilizationSampleCallbackSettingsDto.SuperReserved
   commentId: P:NVAPIWrapper.NVAPIGpuUtilizationSampleCallbackSettingsDto.SuperReserved
@@ -158,11 +158,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public byte[] SuperReserved { get; }
+    content: public byte[] SuperReserved { readonly get; set; }
     parameters: []
     return:
       type: System.Byte[]
-    content.vb: Public ReadOnly Property SuperReserved As Byte()
+    content.vb: Public Property SuperReserved As Byte()
   overload: NVAPIWrapper.NVAPIGpuUtilizationSampleCallbackSettingsDto.SuperReserved*
 - uid: NVAPIWrapper.NVAPIGpuUtilizationSampleCallbackSettingsDto.PeriodicReserved
   commentId: P:NVAPIWrapper.NVAPIGpuUtilizationSampleCallbackSettingsDto.PeriodicReserved
@@ -187,11 +187,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public byte[] PeriodicReserved { get; }
+    content: public byte[] PeriodicReserved { readonly get; set; }
     parameters: []
     return:
       type: System.Byte[]
-    content.vb: Public ReadOnly Property PeriodicReserved As Byte()
+    content.vb: Public Property PeriodicReserved As Byte()
   overload: NVAPIWrapper.NVAPIGpuUtilizationSampleCallbackSettingsDto.PeriodicReserved*
 - uid: NVAPIWrapper.NVAPIGpuUtilizationSampleCallbackSettingsDto.Reserved
   commentId: P:NVAPIWrapper.NVAPIGpuUtilizationSampleCallbackSettingsDto.Reserved
@@ -216,11 +216,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public byte[] Reserved { get; }
+    content: public byte[] Reserved { readonly get; set; }
     parameters: []
     return:
       type: System.Byte[]
-    content.vb: Public ReadOnly Property Reserved As Byte()
+    content.vb: Public Property Reserved As Byte()
   overload: NVAPIWrapper.NVAPIGpuUtilizationSampleCallbackSettingsDto.Reserved*
 - uid: NVAPIWrapper.NVAPIGpuUtilizationSampleCallbackSettingsDto.#ctor(System.IntPtr,System.UInt32,System.IntPtr,System.Byte[],System.Byte[],System.Byte[])
   commentId: M:NVAPIWrapper.NVAPIGpuUtilizationSampleCallbackSettingsDto.#ctor(System.IntPtr,System.UInt32,System.IntPtr,System.Byte[],System.Byte[],System.Byte[])

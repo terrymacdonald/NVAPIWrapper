@@ -37,7 +37,7 @@ items:
   summary: Mosaic display topology status entry DTO.
   example: []
   syntax:
-    content: 'public readonly struct NVAPIMosaicDisplayStatusEntryDto : IEquatable<NVAPIMosaicDisplayStatusEntryDto>'
+    content: 'public struct NVAPIMosaicDisplayStatusEntryDto : IEquatable<NVAPIMosaicDisplayStatusEntryDto>'
     content.vb: Public Structure NVAPIMosaicDisplayStatusEntryDto Implements IEquatable(Of NVAPIMosaicDisplayStatusEntryDto)
   implements:
   - System.IEquatable{NVAPIWrapper.NVAPIMosaicDisplayStatusEntryDto}
@@ -69,11 +69,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public uint DisplayId { get; }
+    content: public uint DisplayId { readonly get; set; }
     parameters: []
     return:
       type: System.UInt32
-    content.vb: Public ReadOnly Property DisplayId As UInteger
+    content.vb: Public Property DisplayId As UInteger
   overload: NVAPIWrapper.NVAPIMosaicDisplayStatusEntryDto.DisplayId*
 - uid: NVAPIWrapper.NVAPIMosaicDisplayStatusEntryDto.ErrorFlags
   commentId: P:NVAPIWrapper.NVAPIMosaicDisplayStatusEntryDto.ErrorFlags
@@ -98,11 +98,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public uint ErrorFlags { get; }
+    content: public uint ErrorFlags { readonly get; set; }
     parameters: []
     return:
       type: System.UInt32
-    content.vb: Public ReadOnly Property ErrorFlags As UInteger
+    content.vb: Public Property ErrorFlags As UInteger
   overload: NVAPIWrapper.NVAPIMosaicDisplayStatusEntryDto.ErrorFlags*
 - uid: NVAPIWrapper.NVAPIMosaicDisplayStatusEntryDto.WarningFlags
   commentId: P:NVAPIWrapper.NVAPIMosaicDisplayStatusEntryDto.WarningFlags
@@ -127,11 +127,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public uint WarningFlags { get; }
+    content: public uint WarningFlags { readonly get; set; }
     parameters: []
     return:
       type: System.UInt32
-    content.vb: Public ReadOnly Property WarningFlags As UInteger
+    content.vb: Public Property WarningFlags As UInteger
   overload: NVAPIWrapper.NVAPIMosaicDisplayStatusEntryDto.WarningFlags*
 - uid: NVAPIWrapper.NVAPIMosaicDisplayStatusEntryDto.SupportsRotation
   commentId: P:NVAPIWrapper.NVAPIMosaicDisplayStatusEntryDto.SupportsRotation
@@ -156,11 +156,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public bool SupportsRotation { get; }
+    content: public bool SupportsRotation { readonly get; set; }
     parameters: []
     return:
       type: System.Boolean
-    content.vb: Public ReadOnly Property SupportsRotation As Boolean
+    content.vb: Public Property SupportsRotation As Boolean
   overload: NVAPIWrapper.NVAPIMosaicDisplayStatusEntryDto.SupportsRotation*
 - uid: NVAPIWrapper.NVAPIMosaicDisplayStatusEntryDto.#ctor(System.UInt32,System.UInt32,System.UInt32,System.Boolean)
   commentId: M:NVAPIWrapper.NVAPIMosaicDisplayStatusEntryDto.#ctor(System.UInt32,System.UInt32,System.UInt32,System.Boolean)

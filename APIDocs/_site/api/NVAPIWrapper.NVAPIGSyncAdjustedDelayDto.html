@@ -102,7 +102,7 @@ Struct NVAPIGSyncAdjustedDelayDto  <a class="header-action link-secondary" title
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly struct NVAPIGSyncAdjustedDelayDto : IEquatable&lt;NVAPIGSyncAdjustedDelayDto&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public struct NVAPIGSyncAdjustedDelayDto : IEquatable&lt;NVAPIGSyncAdjustedDelayDto&gt;</code></pre>
   </div>
 
 
@@ -194,7 +194,7 @@ Struct NVAPIGSyncAdjustedDelayDto  <a class="header-action link-secondary" title
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public NVAPIGSyncDelayDto Delay { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public NVAPIGSyncDelayDto Delay { readonly get; set; }</code></pre>
   </div>
 
 
@@ -225,7 +225,7 @@ Struct NVAPIGSyncAdjustedDelayDto  <a class="header-action link-secondary" title
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public uint SyncSteps { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public uint SyncSteps { readonly get; set; }</code></pre>
   </div>
 
 

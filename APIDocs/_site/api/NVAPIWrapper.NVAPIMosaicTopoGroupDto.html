@@ -102,7 +102,7 @@ Struct NVAPIMosaicTopoGroupDto  <a class="header-action link-secondary" title="V
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly struct NVAPIMosaicTopoGroupDto : IEquatable&lt;NVAPIMosaicTopoGroupDto&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public struct NVAPIMosaicTopoGroupDto : IEquatable&lt;NVAPIMosaicTopoGroupDto&gt;</code></pre>
   </div>
 
 
@@ -194,7 +194,7 @@ Struct NVAPIMosaicTopoGroupDto  <a class="header-action link-secondary" title="V
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public NVAPIMosaicTopoBriefDto Brief { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public NVAPIMosaicTopoBriefDto Brief { readonly get; set; }</code></pre>
   </div>
 
 
@@ -225,7 +225,7 @@ Struct NVAPIMosaicTopoGroupDto  <a class="header-action link-secondary" title="V
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public NVAPIMosaicTopoDetailsDto[] Topos { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public NVAPIMosaicTopoDetailsDto[] Topos { readonly get; set; }</code></pre>
   </div>
 
 

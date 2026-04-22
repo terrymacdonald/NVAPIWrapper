@@ -102,7 +102,7 @@ Struct NVAPIGSyncControlParametersDto  <a class="header-action link-secondary" t
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly struct NVAPIGSyncControlParametersDto : IEquatable&lt;NVAPIGSyncControlParametersDto&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public struct NVAPIGSyncControlParametersDto : IEquatable&lt;NVAPIGSyncControlParametersDto&gt;</code></pre>
   </div>
 
 
@@ -218,7 +218,7 @@ Struct NVAPIGSyncControlParametersDto  <a class="header-action link-secondary" t
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool InterlaceMode { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public bool InterlaceMode { readonly get; set; }</code></pre>
   </div>
 
 
@@ -249,7 +249,7 @@ Struct NVAPIGSyncControlParametersDto  <a class="header-action link-secondary" t
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public uint Interval { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public uint Interval { readonly get; set; }</code></pre>
   </div>
 
 
@@ -280,7 +280,7 @@ Struct NVAPIGSyncControlParametersDto  <a class="header-action link-secondary" t
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public _NVAPI_GSYNC_MULTIPLY_DIVIDE_MODE MultiplyDivideMode { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public _NVAPI_GSYNC_MULTIPLY_DIVIDE_MODE MultiplyDivideMode { readonly get; set; }</code></pre>
   </div>
 
 
@@ -311,7 +311,7 @@ Struct NVAPIGSyncControlParametersDto  <a class="header-action link-secondary" t
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public byte MultiplyDivideValue { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public byte MultiplyDivideValue { readonly get; set; }</code></pre>
   </div>
 
 
@@ -342,7 +342,7 @@ Struct NVAPIGSyncControlParametersDto  <a class="header-action link-secondary" t
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public _NVAPI_GSYNC_POLARITY Polarity { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public _NVAPI_GSYNC_POLARITY Polarity { readonly get; set; }</code></pre>
   </div>
 
 
@@ -373,7 +373,7 @@ Struct NVAPIGSyncControlParametersDto  <a class="header-action link-secondary" t
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public _NVAPI_GSYNC_SYNC_SOURCE Source { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public _NVAPI_GSYNC_SYNC_SOURCE Source { readonly get; set; }</code></pre>
   </div>
 
 
@@ -404,7 +404,7 @@ Struct NVAPIGSyncControlParametersDto  <a class="header-action link-secondary" t
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public NVAPIGSyncDelayDto StartupDelay { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public NVAPIGSyncDelayDto StartupDelay { readonly get; set; }</code></pre>
   </div>
 
 
@@ -435,7 +435,7 @@ Struct NVAPIGSyncControlParametersDto  <a class="header-action link-secondary" t
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public NVAPIGSyncDelayDto SyncSkew { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public NVAPIGSyncDelayDto SyncSkew { readonly get; set; }</code></pre>
   </div>
 
 
@@ -466,7 +466,7 @@ Struct NVAPIGSyncControlParametersDto  <a class="header-action link-secondary" t
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool SyncSourceIsOutput { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public bool SyncSourceIsOutput { readonly get; set; }</code></pre>
   </div>
 
 
@@ -497,7 +497,7 @@ Struct NVAPIGSyncControlParametersDto  <a class="header-action link-secondary" t
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public _NVAPI_GSYNC_VIDEO_MODE VideoMode { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public _NVAPI_GSYNC_VIDEO_MODE VideoMode { readonly get; set; }</code></pre>
   </div>
 
 

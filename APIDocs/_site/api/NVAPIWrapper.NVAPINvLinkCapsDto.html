@@ -102,7 +102,7 @@ Struct NVAPINvLinkCapsDto  <a class="header-action link-secondary" title="View s
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly struct NVAPINvLinkCapsDto : IEquatable&lt;NVAPINvLinkCapsDto&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public struct NVAPINvLinkCapsDto : IEquatable&lt;NVAPINvLinkCapsDto&gt;</code></pre>
   </div>
 
 
@@ -201,7 +201,7 @@ Struct NVAPINvLinkCapsDto  <a class="header-action link-secondary" title="View s
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public uint CapsTbl { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public uint CapsTbl { readonly get; set; }</code></pre>
   </div>
 
 
@@ -233,7 +233,7 @@ Struct NVAPINvLinkCapsDto  <a class="header-action link-secondary" title="View s
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public byte HighestNciVersion { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public byte HighestNciVersion { readonly get; set; }</code></pre>
   </div>
 
 
@@ -265,7 +265,7 @@ Struct NVAPINvLinkCapsDto  <a class="header-action link-secondary" title="View s
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public byte HighestNvlinkVersion { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public byte HighestNvlinkVersion { readonly get; set; }</code></pre>
   </div>
 
 
@@ -297,7 +297,7 @@ Struct NVAPINvLinkCapsDto  <a class="header-action link-secondary" title="View s
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public uint LinkMask { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public uint LinkMask { readonly get; set; }</code></pre>
   </div>
 
 
@@ -329,7 +329,7 @@ Struct NVAPINvLinkCapsDto  <a class="header-action link-secondary" title="View s
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public byte LowestNciVersion { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public byte LowestNciVersion { readonly get; set; }</code></pre>
   </div>
 
 
@@ -361,7 +361,7 @@ Struct NVAPINvLinkCapsDto  <a class="header-action link-secondary" title="View s
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public byte LowestNvlinkVersion { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public byte LowestNvlinkVersion { readonly get; set; }</code></pre>
   </div>
 
 

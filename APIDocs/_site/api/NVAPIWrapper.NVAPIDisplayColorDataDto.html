@@ -102,7 +102,7 @@ Struct NVAPIDisplayColorDataDto  <a class="header-action link-secondary" title="
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly struct NVAPIDisplayColorDataDto : IEquatable&lt;NVAPIDisplayColorDataDto&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public struct NVAPIDisplayColorDataDto : IEquatable&lt;NVAPIDisplayColorDataDto&gt;</code></pre>
   </div>
 
 
@@ -191,7 +191,7 @@ Struct NVAPIDisplayColorDataDto  <a class="header-action link-secondary" title="
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public _NV_COLOR_DATA_V5 Data { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public _NV_COLOR_DATA_V5 Data { readonly get; set; }</code></pre>
   </div>
 
 

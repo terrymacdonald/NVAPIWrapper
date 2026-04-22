@@ -37,7 +37,7 @@ items:
   summary: GPU architecture info DTO.
   example: []
   syntax:
-    content: 'public readonly struct NVAPIGpuArchInfoDto : IEquatable<NVAPIGpuArchInfoDto>'
+    content: 'public struct NVAPIGpuArchInfoDto : IEquatable<NVAPIGpuArchInfoDto>'
     content.vb: Public Structure NVAPIGpuArchInfoDto Implements IEquatable(Of NVAPIGpuArchInfoDto)
   implements:
   - System.IEquatable{NVAPIWrapper.NVAPIGpuArchInfoDto}
@@ -69,11 +69,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public _NV_GPU_ARCHITECTURE_ID ArchitectureId { get; }
+    content: public _NV_GPU_ARCHITECTURE_ID ArchitectureId { readonly get; set; }
     parameters: []
     return:
       type: NVAPIWrapper._NV_GPU_ARCHITECTURE_ID
-    content.vb: Public ReadOnly Property ArchitectureId As _NV_GPU_ARCHITECTURE_ID
+    content.vb: Public Property ArchitectureId As _NV_GPU_ARCHITECTURE_ID
   overload: NVAPIWrapper.NVAPIGpuArchInfoDto.ArchitectureId*
 - uid: NVAPIWrapper.NVAPIGpuArchInfoDto.ImplementationId
   commentId: P:NVAPIWrapper.NVAPIGpuArchInfoDto.ImplementationId
@@ -98,11 +98,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public _NV_GPU_ARCH_IMPLEMENTATION_ID ImplementationId { get; }
+    content: public _NV_GPU_ARCH_IMPLEMENTATION_ID ImplementationId { readonly get; set; }
     parameters: []
     return:
       type: NVAPIWrapper._NV_GPU_ARCH_IMPLEMENTATION_ID
-    content.vb: Public ReadOnly Property ImplementationId As _NV_GPU_ARCH_IMPLEMENTATION_ID
+    content.vb: Public Property ImplementationId As _NV_GPU_ARCH_IMPLEMENTATION_ID
   overload: NVAPIWrapper.NVAPIGpuArchInfoDto.ImplementationId*
 - uid: NVAPIWrapper.NVAPIGpuArchInfoDto.RevisionId
   commentId: P:NVAPIWrapper.NVAPIGpuArchInfoDto.RevisionId
@@ -127,11 +127,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public _NV_GPU_CHIP_REVISION RevisionId { get; }
+    content: public _NV_GPU_CHIP_REVISION RevisionId { readonly get; set; }
     parameters: []
     return:
       type: NVAPIWrapper._NV_GPU_CHIP_REVISION
-    content.vb: Public ReadOnly Property RevisionId As _NV_GPU_CHIP_REVISION
+    content.vb: Public Property RevisionId As _NV_GPU_CHIP_REVISION
   overload: NVAPIWrapper.NVAPIGpuArchInfoDto.RevisionId*
 - uid: NVAPIWrapper.NVAPIGpuArchInfoDto.#ctor(NVAPIWrapper._NV_GPU_ARCHITECTURE_ID,NVAPIWrapper._NV_GPU_ARCH_IMPLEMENTATION_ID,NVAPIWrapper._NV_GPU_CHIP_REVISION)
   commentId: M:NVAPIWrapper.NVAPIGpuArchInfoDto.#ctor(NVAPIWrapper._NV_GPU_ARCHITECTURE_ID,NVAPIWrapper._NV_GPU_ARCH_IMPLEMENTATION_ID,NVAPIWrapper._NV_GPU_CHIP_REVISION)

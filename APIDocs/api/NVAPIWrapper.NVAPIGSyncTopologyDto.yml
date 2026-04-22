@@ -34,7 +34,7 @@ items:
   summary: DTO for G-Sync topology results.
   example: []
   syntax:
-    content: 'public readonly struct NVAPIGSyncTopologyDto : IEquatable<NVAPIGSyncTopologyDto>'
+    content: 'public struct NVAPIGSyncTopologyDto : IEquatable<NVAPIGSyncTopologyDto>'
     content.vb: Public Structure NVAPIGSyncTopologyDto Implements IEquatable(Of NVAPIGSyncTopologyDto)
   implements:
   - System.IEquatable{NVAPIWrapper.NVAPIGSyncTopologyDto}
@@ -66,11 +66,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public NVAPIGSyncGpuDto[] Gpus { get; }
+    content: public NVAPIGSyncGpuDto[] Gpus { readonly get; set; }
     parameters: []
     return:
       type: NVAPIWrapper.NVAPIGSyncGpuDto[]
-    content.vb: Public ReadOnly Property Gpus As NVAPIGSyncGpuDto()
+    content.vb: Public Property Gpus As NVAPIGSyncGpuDto()
   overload: NVAPIWrapper.NVAPIGSyncTopologyDto.Gpus*
 - uid: NVAPIWrapper.NVAPIGSyncTopologyDto.Displays
   commentId: P:NVAPIWrapper.NVAPIGSyncTopologyDto.Displays
@@ -95,11 +95,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public NVAPIGSyncDisplayDto[] Displays { get; }
+    content: public NVAPIGSyncDisplayDto[] Displays { readonly get; set; }
     parameters: []
     return:
       type: NVAPIWrapper.NVAPIGSyncDisplayDto[]
-    content.vb: Public ReadOnly Property Displays As NVAPIGSyncDisplayDto()
+    content.vb: Public Property Displays As NVAPIGSyncDisplayDto()
   overload: NVAPIWrapper.NVAPIGSyncTopologyDto.Displays*
 - uid: NVAPIWrapper.NVAPIGSyncTopologyDto.#ctor(NVAPIWrapper.NVAPIGSyncGpuDto[],NVAPIWrapper.NVAPIGSyncDisplayDto[])
   commentId: M:NVAPIWrapper.NVAPIGSyncTopologyDto.#ctor(NVAPIWrapper.NVAPIGSyncGpuDto[],NVAPIWrapper.NVAPIGSyncDisplayDto[])

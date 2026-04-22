@@ -35,7 +35,7 @@ items:
   summary: Mosaic topology group DTO.
   example: []
   syntax:
-    content: 'public readonly struct NVAPIMosaicTopoGroupDto : IEquatable<NVAPIMosaicTopoGroupDto>'
+    content: 'public struct NVAPIMosaicTopoGroupDto : IEquatable<NVAPIMosaicTopoGroupDto>'
     content.vb: Public Structure NVAPIMosaicTopoGroupDto Implements IEquatable(Of NVAPIMosaicTopoGroupDto)
   implements:
   - System.IEquatable{NVAPIWrapper.NVAPIMosaicTopoGroupDto}
@@ -67,11 +67,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public NVAPIMosaicTopoBriefDto Brief { get; }
+    content: public NVAPIMosaicTopoBriefDto Brief { readonly get; set; }
     parameters: []
     return:
       type: NVAPIWrapper.NVAPIMosaicTopoBriefDto
-    content.vb: Public ReadOnly Property Brief As NVAPIMosaicTopoBriefDto
+    content.vb: Public Property Brief As NVAPIMosaicTopoBriefDto
   overload: NVAPIWrapper.NVAPIMosaicTopoGroupDto.Brief*
 - uid: NVAPIWrapper.NVAPIMosaicTopoGroupDto.Topos
   commentId: P:NVAPIWrapper.NVAPIMosaicTopoGroupDto.Topos
@@ -96,11 +96,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public NVAPIMosaicTopoDetailsDto[] Topos { get; }
+    content: public NVAPIMosaicTopoDetailsDto[] Topos { readonly get; set; }
     parameters: []
     return:
       type: NVAPIWrapper.NVAPIMosaicTopoDetailsDto[]
-    content.vb: Public ReadOnly Property Topos As NVAPIMosaicTopoDetailsDto()
+    content.vb: Public Property Topos As NVAPIMosaicTopoDetailsDto()
   overload: NVAPIWrapper.NVAPIMosaicTopoGroupDto.Topos*
 - uid: NVAPIWrapper.NVAPIMosaicTopoGroupDto.#ctor(NVAPIWrapper.NVAPIMosaicTopoBriefDto,NVAPIWrapper.NVAPIMosaicTopoDetailsDto[])
   commentId: M:NVAPIWrapper.NVAPIMosaicTopoGroupDto.#ctor(NVAPIWrapper.NVAPIMosaicTopoBriefDto,NVAPIWrapper.NVAPIMosaicTopoDetailsDto[])

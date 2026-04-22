@@ -43,7 +43,7 @@ items:
   summary: I2C request/response DTO for NVAPI I2C operations.
   example: []
   syntax:
-    content: 'public readonly struct NVAPII2CInfoDto : IEquatable<NVAPII2CInfoDto>'
+    content: 'public struct NVAPII2CInfoDto : IEquatable<NVAPII2CInfoDto>'
     content.vb: Public Structure NVAPII2CInfoDto Implements IEquatable(Of NVAPII2CInfoDto)
   implements:
   - System.IEquatable{NVAPIWrapper.NVAPII2CInfoDto}
@@ -75,11 +75,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public uint DisplayMask { get; }
+    content: public uint DisplayMask { readonly get; set; }
     parameters: []
     return:
       type: System.UInt32
-    content.vb: Public ReadOnly Property DisplayMask As UInteger
+    content.vb: Public Property DisplayMask As UInteger
   overload: NVAPIWrapper.NVAPII2CInfoDto.DisplayMask*
 - uid: NVAPIWrapper.NVAPII2CInfoDto.IsDDCPort
   commentId: P:NVAPIWrapper.NVAPII2CInfoDto.IsDDCPort
@@ -104,11 +104,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public bool IsDDCPort { get; }
+    content: public bool IsDDCPort { readonly get; set; }
     parameters: []
     return:
       type: System.Boolean
-    content.vb: Public ReadOnly Property IsDDCPort As Boolean
+    content.vb: Public Property IsDDCPort As Boolean
   overload: NVAPIWrapper.NVAPII2CInfoDto.IsDDCPort*
 - uid: NVAPIWrapper.NVAPII2CInfoDto.I2cDevAddress
   commentId: P:NVAPIWrapper.NVAPII2CInfoDto.I2cDevAddress
@@ -133,11 +133,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public byte I2cDevAddress { get; }
+    content: public byte I2cDevAddress { readonly get; set; }
     parameters: []
     return:
       type: System.Byte
-    content.vb: Public ReadOnly Property I2cDevAddress As Byte
+    content.vb: Public Property I2cDevAddress As Byte
   overload: NVAPIWrapper.NVAPII2CInfoDto.I2cDevAddress*
 - uid: NVAPIWrapper.NVAPII2CInfoDto.RegisterAddress
   commentId: P:NVAPIWrapper.NVAPII2CInfoDto.RegisterAddress
@@ -162,11 +162,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public byte[] RegisterAddress { get; }
+    content: public byte[] RegisterAddress { readonly get; set; }
     parameters: []
     return:
       type: System.Byte[]
-    content.vb: Public ReadOnly Property RegisterAddress As Byte()
+    content.vb: Public Property RegisterAddress As Byte()
   overload: NVAPIWrapper.NVAPII2CInfoDto.RegisterAddress*
 - uid: NVAPIWrapper.NVAPII2CInfoDto.Data
   commentId: P:NVAPIWrapper.NVAPII2CInfoDto.Data
@@ -191,11 +191,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public byte[] Data { get; }
+    content: public byte[] Data { readonly get; set; }
     parameters: []
     return:
       type: System.Byte[]
-    content.vb: Public ReadOnly Property Data As Byte()
+    content.vb: Public Property Data As Byte()
   overload: NVAPIWrapper.NVAPII2CInfoDto.Data*
 - uid: NVAPIWrapper.NVAPII2CInfoDto.I2cSpeed
   commentId: P:NVAPIWrapper.NVAPII2CInfoDto.I2cSpeed
@@ -220,11 +220,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public uint I2cSpeed { get; }
+    content: public uint I2cSpeed { readonly get; set; }
     parameters: []
     return:
       type: System.UInt32
-    content.vb: Public ReadOnly Property I2cSpeed As UInteger
+    content.vb: Public Property I2cSpeed As UInteger
   overload: NVAPIWrapper.NVAPII2CInfoDto.I2cSpeed*
 - uid: NVAPIWrapper.NVAPII2CInfoDto.I2cSpeedKhz
   commentId: P:NVAPIWrapper.NVAPII2CInfoDto.I2cSpeedKhz
@@ -249,11 +249,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public NV_I2C_SPEED I2cSpeedKhz { get; }
+    content: public NV_I2C_SPEED I2cSpeedKhz { readonly get; set; }
     parameters: []
     return:
       type: NVAPIWrapper.NV_I2C_SPEED
-    content.vb: Public ReadOnly Property I2cSpeedKhz As NV_I2C_SPEED
+    content.vb: Public Property I2cSpeedKhz As NV_I2C_SPEED
   overload: NVAPIWrapper.NVAPII2CInfoDto.I2cSpeedKhz*
 - uid: NVAPIWrapper.NVAPII2CInfoDto.PortId
   commentId: P:NVAPIWrapper.NVAPII2CInfoDto.PortId
@@ -278,11 +278,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public byte PortId { get; }
+    content: public byte PortId { readonly get; set; }
     parameters: []
     return:
       type: System.Byte
-    content.vb: Public ReadOnly Property PortId As Byte
+    content.vb: Public Property PortId As Byte
   overload: NVAPIWrapper.NVAPII2CInfoDto.PortId*
 - uid: NVAPIWrapper.NVAPII2CInfoDto.IsPortIdSet
   commentId: P:NVAPIWrapper.NVAPII2CInfoDto.IsPortIdSet
@@ -307,11 +307,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public bool IsPortIdSet { get; }
+    content: public bool IsPortIdSet { readonly get; set; }
     parameters: []
     return:
       type: System.Boolean
-    content.vb: Public ReadOnly Property IsPortIdSet As Boolean
+    content.vb: Public Property IsPortIdSet As Boolean
   overload: NVAPIWrapper.NVAPII2CInfoDto.IsPortIdSet*
 - uid: NVAPIWrapper.NVAPII2CInfoDto.#ctor(System.UInt32,System.Boolean,System.Byte,System.Byte[],System.Byte[],System.UInt32,NVAPIWrapper.NV_I2C_SPEED,System.Byte,System.Boolean)
   commentId: M:NVAPIWrapper.NVAPII2CInfoDto.#ctor(System.UInt32,System.Boolean,System.Byte,System.Byte[],System.Byte[],System.UInt32,NVAPIWrapper.NV_I2C_SPEED,System.Byte,System.Boolean)

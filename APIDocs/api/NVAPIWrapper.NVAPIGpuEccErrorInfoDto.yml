@@ -38,7 +38,7 @@ items:
   summary: ECC error info DTO.
   example: []
   syntax:
-    content: 'public readonly struct NVAPIGpuEccErrorInfoDto : IEquatable<NVAPIGpuEccErrorInfoDto>'
+    content: 'public struct NVAPIGpuEccErrorInfoDto : IEquatable<NVAPIGpuEccErrorInfoDto>'
     content.vb: Public Structure NVAPIGpuEccErrorInfoDto Implements IEquatable(Of NVAPIGpuEccErrorInfoDto)
   implements:
   - System.IEquatable{NVAPIWrapper.NVAPIGpuEccErrorInfoDto}
@@ -70,11 +70,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public ulong CurrentSingleBitErrors { get; }
+    content: public ulong CurrentSingleBitErrors { readonly get; set; }
     parameters: []
     return:
       type: System.UInt64
-    content.vb: Public ReadOnly Property CurrentSingleBitErrors As ULong
+    content.vb: Public Property CurrentSingleBitErrors As ULong
   overload: NVAPIWrapper.NVAPIGpuEccErrorInfoDto.CurrentSingleBitErrors*
 - uid: NVAPIWrapper.NVAPIGpuEccErrorInfoDto.CurrentDoubleBitErrors
   commentId: P:NVAPIWrapper.NVAPIGpuEccErrorInfoDto.CurrentDoubleBitErrors
@@ -99,11 +99,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public ulong CurrentDoubleBitErrors { get; }
+    content: public ulong CurrentDoubleBitErrors { readonly get; set; }
     parameters: []
     return:
       type: System.UInt64
-    content.vb: Public ReadOnly Property CurrentDoubleBitErrors As ULong
+    content.vb: Public Property CurrentDoubleBitErrors As ULong
   overload: NVAPIWrapper.NVAPIGpuEccErrorInfoDto.CurrentDoubleBitErrors*
 - uid: NVAPIWrapper.NVAPIGpuEccErrorInfoDto.AggregateSingleBitErrors
   commentId: P:NVAPIWrapper.NVAPIGpuEccErrorInfoDto.AggregateSingleBitErrors
@@ -128,11 +128,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public ulong AggregateSingleBitErrors { get; }
+    content: public ulong AggregateSingleBitErrors { readonly get; set; }
     parameters: []
     return:
       type: System.UInt64
-    content.vb: Public ReadOnly Property AggregateSingleBitErrors As ULong
+    content.vb: Public Property AggregateSingleBitErrors As ULong
   overload: NVAPIWrapper.NVAPIGpuEccErrorInfoDto.AggregateSingleBitErrors*
 - uid: NVAPIWrapper.NVAPIGpuEccErrorInfoDto.AggregateDoubleBitErrors
   commentId: P:NVAPIWrapper.NVAPIGpuEccErrorInfoDto.AggregateDoubleBitErrors
@@ -157,11 +157,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public ulong AggregateDoubleBitErrors { get; }
+    content: public ulong AggregateDoubleBitErrors { readonly get; set; }
     parameters: []
     return:
       type: System.UInt64
-    content.vb: Public ReadOnly Property AggregateDoubleBitErrors As ULong
+    content.vb: Public Property AggregateDoubleBitErrors As ULong
   overload: NVAPIWrapper.NVAPIGpuEccErrorInfoDto.AggregateDoubleBitErrors*
 - uid: NVAPIWrapper.NVAPIGpuEccErrorInfoDto.#ctor(System.UInt64,System.UInt64,System.UInt64,System.UInt64)
   commentId: M:NVAPIWrapper.NVAPIGpuEccErrorInfoDto.#ctor(System.UInt64,System.UInt64,System.UInt64,System.UInt64)

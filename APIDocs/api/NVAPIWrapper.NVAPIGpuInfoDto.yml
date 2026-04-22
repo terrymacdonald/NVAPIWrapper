@@ -41,7 +41,7 @@ items:
   summary: GPU info DTO.
   example: []
   syntax:
-    content: 'public readonly struct NVAPIGpuInfoDto : IEquatable<NVAPIGpuInfoDto>'
+    content: 'public struct NVAPIGpuInfoDto : IEquatable<NVAPIGpuInfoDto>'
     content.vb: Public Structure NVAPIGpuInfoDto Implements IEquatable(Of NVAPIGpuInfoDto)
   implements:
   - System.IEquatable{NVAPIWrapper.NVAPIGpuInfoDto}
@@ -73,11 +73,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public uint Version { get; }
+    content: public uint Version { readonly get; set; }
     parameters: []
     return:
       type: System.UInt32
-    content.vb: Public ReadOnly Property Version As UInteger
+    content.vb: Public Property Version As UInteger
   overload: NVAPIWrapper.NVAPIGpuInfoDto.Version*
 - uid: NVAPIWrapper.NVAPIGpuInfoDto.IsExternalGpu
   commentId: P:NVAPIWrapper.NVAPIGpuInfoDto.IsExternalGpu
@@ -102,11 +102,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public bool IsExternalGpu { get; }
+    content: public bool IsExternalGpu { readonly get; set; }
     parameters: []
     return:
       type: System.Boolean
-    content.vb: Public ReadOnly Property IsExternalGpu As Boolean
+    content.vb: Public Property IsExternalGpu As Boolean
   overload: NVAPIWrapper.NVAPIGpuInfoDto.IsExternalGpu*
 - uid: NVAPIWrapper.NVAPIGpuInfoDto.Reserved1
   commentId: P:NVAPIWrapper.NVAPIGpuInfoDto.Reserved1
@@ -131,11 +131,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public ulong Reserved1 { get; }
+    content: public ulong Reserved1 { readonly get; set; }
     parameters: []
     return:
       type: System.UInt64
-    content.vb: Public ReadOnly Property Reserved1 As ULong
+    content.vb: Public Property Reserved1 As ULong
   overload: NVAPIWrapper.NVAPIGpuInfoDto.Reserved1*
 - uid: NVAPIWrapper.NVAPIGpuInfoDto.RayTracingCores
   commentId: P:NVAPIWrapper.NVAPIGpuInfoDto.RayTracingCores
@@ -160,11 +160,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public uint RayTracingCores { get; }
+    content: public uint RayTracingCores { readonly get; set; }
     parameters: []
     return:
       type: System.UInt32
-    content.vb: Public ReadOnly Property RayTracingCores As UInteger
+    content.vb: Public Property RayTracingCores As UInteger
   overload: NVAPIWrapper.NVAPIGpuInfoDto.RayTracingCores*
 - uid: NVAPIWrapper.NVAPIGpuInfoDto.TensorCores
   commentId: P:NVAPIWrapper.NVAPIGpuInfoDto.TensorCores
@@ -189,11 +189,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public uint TensorCores { get; }
+    content: public uint TensorCores { readonly get; set; }
     parameters: []
     return:
       type: System.UInt32
-    content.vb: Public ReadOnly Property TensorCores As UInteger
+    content.vb: Public Property TensorCores As UInteger
   overload: NVAPIWrapper.NVAPIGpuInfoDto.TensorCores*
 - uid: NVAPIWrapper.NVAPIGpuInfoDto.Reserved2
   commentId: P:NVAPIWrapper.NVAPIGpuInfoDto.Reserved2
@@ -218,11 +218,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public uint[] Reserved2 { get; }
+    content: public uint[] Reserved2 { readonly get; set; }
     parameters: []
     return:
       type: System.UInt32[]
-    content.vb: Public ReadOnly Property Reserved2 As UInteger()
+    content.vb: Public Property Reserved2 As UInteger()
   overload: NVAPIWrapper.NVAPIGpuInfoDto.Reserved2*
 - uid: NVAPIWrapper.NVAPIGpuInfoDto.#ctor(System.UInt32,System.Boolean,System.UInt64,System.UInt32,System.UInt32,System.UInt32[])
   commentId: M:NVAPIWrapper.NVAPIGpuInfoDto.#ctor(System.UInt32,System.Boolean,System.UInt64,System.UInt32,System.UInt32,System.UInt32[])

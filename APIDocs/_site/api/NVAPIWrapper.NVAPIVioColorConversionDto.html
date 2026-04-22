@@ -102,7 +102,7 @@ Struct NVAPIVioColorConversionDto  <a class="header-action link-secondary" title
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly struct NVAPIVioColorConversionDto : IEquatable&lt;NVAPIVioColorConversionDto&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public struct NVAPIVioColorConversionDto : IEquatable&lt;NVAPIVioColorConversionDto&gt;</code></pre>
   </div>
 
 
@@ -195,7 +195,7 @@ Struct NVAPIVioColorConversionDto  <a class="header-action link-secondary" title
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public float[] ColorMatrix { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public float[] ColorMatrix { readonly get; set; }</code></pre>
   </div>
 
 
@@ -226,7 +226,7 @@ Struct NVAPIVioColorConversionDto  <a class="header-action link-secondary" title
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public float[] ColorOffset { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public float[] ColorOffset { readonly get; set; }</code></pre>
   </div>
 
 
@@ -257,7 +257,7 @@ Struct NVAPIVioColorConversionDto  <a class="header-action link-secondary" title
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public float[] ColorScale { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public float[] ColorScale { readonly get; set; }</code></pre>
   </div>
 
 
@@ -288,7 +288,7 @@ Struct NVAPIVioColorConversionDto  <a class="header-action link-secondary" title
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool CompositeSafe { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public bool CompositeSafe { readonly get; set; }</code></pre>
   </div>
 
 

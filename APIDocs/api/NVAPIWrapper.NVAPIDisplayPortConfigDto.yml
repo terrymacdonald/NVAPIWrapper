@@ -35,7 +35,7 @@ items:
   summary: DTO for display port configuration.
   example: []
   syntax:
-    content: 'public readonly struct NVAPIDisplayPortConfigDto : IEquatable<NVAPIDisplayPortConfigDto>'
+    content: 'public struct NVAPIDisplayPortConfigDto : IEquatable<NVAPIDisplayPortConfigDto>'
     content.vb: Public Structure NVAPIDisplayPortConfigDto Implements IEquatable(Of NVAPIDisplayPortConfigDto)
   implements:
   - System.IEquatable{NVAPIWrapper.NVAPIDisplayPortConfigDto}
@@ -69,11 +69,11 @@ items:
   summary: Native display port config.
   example: []
   syntax:
-    content: public NV_DISPLAY_PORT_CONFIG Config { get; }
+    content: public NV_DISPLAY_PORT_CONFIG Config { readonly get; set; }
     parameters: []
     return:
       type: NVAPIWrapper.NV_DISPLAY_PORT_CONFIG
-    content.vb: Public ReadOnly Property Config As NV_DISPLAY_PORT_CONFIG
+    content.vb: Public Property Config As NV_DISPLAY_PORT_CONFIG
   overload: NVAPIWrapper.NVAPIDisplayPortConfigDto.Config*
 - uid: NVAPIWrapper.NVAPIDisplayPortConfigDto.#ctor(NVAPIWrapper.NV_DISPLAY_PORT_CONFIG)
   commentId: M:NVAPIWrapper.NVAPIDisplayPortConfigDto.#ctor(NVAPIWrapper.NV_DISPLAY_PORT_CONFIG)

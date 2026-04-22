@@ -36,7 +36,7 @@ items:
   summary: Encoder sessions info DTO.
   example: []
   syntax:
-    content: 'public readonly struct NVAPIEncoderSessionsInfoDto : IEquatable<NVAPIEncoderSessionsInfoDto>'
+    content: 'public struct NVAPIEncoderSessionsInfoDto : IEquatable<NVAPIEncoderSessionsInfoDto>'
     content.vb: Public Structure NVAPIEncoderSessionsInfoDto Implements IEquatable(Of NVAPIEncoderSessionsInfoDto)
   implements:
   - System.IEquatable{NVAPIWrapper.NVAPIEncoderSessionsInfoDto}
@@ -70,11 +70,11 @@ items:
   summary: Number of active encoder sessions.
   example: []
   syntax:
-    content: public uint SessionsCount { get; }
+    content: public uint SessionsCount { readonly get; set; }
     parameters: []
     return:
       type: System.UInt32
-    content.vb: Public ReadOnly Property SessionsCount As UInteger
+    content.vb: Public Property SessionsCount As UInteger
   overload: NVAPIWrapper.NVAPIEncoderSessionsInfoDto.SessionsCount*
 - uid: NVAPIWrapper.NVAPIEncoderSessionsInfoDto.Sessions
   commentId: P:NVAPIWrapper.NVAPIEncoderSessionsInfoDto.Sessions
@@ -101,11 +101,11 @@ items:
   summary: Per-session encoder info array; may be empty if no sessions are active.
   example: []
   syntax:
-    content: public NVAPIEncoderPerSessionInfoDto[] Sessions { get; }
+    content: public NVAPIEncoderPerSessionInfoDto[] Sessions { readonly get; set; }
     parameters: []
     return:
       type: NVAPIWrapper.NVAPIEncoderPerSessionInfoDto[]
-    content.vb: Public ReadOnly Property Sessions As NVAPIEncoderPerSessionInfoDto()
+    content.vb: Public Property Sessions As NVAPIEncoderPerSessionInfoDto()
   overload: NVAPIWrapper.NVAPIEncoderSessionsInfoDto.Sessions*
 - uid: NVAPIWrapper.NVAPIEncoderSessionsInfoDto.#ctor(System.UInt32,NVAPIWrapper.NVAPIEncoderPerSessionInfoDto[])
   commentId: M:NVAPIWrapper.NVAPIEncoderSessionsInfoDto.#ctor(System.UInt32,NVAPIWrapper.NVAPIEncoderPerSessionInfoDto[])

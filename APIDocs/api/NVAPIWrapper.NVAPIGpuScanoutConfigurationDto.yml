@@ -35,7 +35,7 @@ items:
   summary: Scanout configuration DTO.
   example: []
   syntax:
-    content: 'public readonly struct NVAPIGpuScanoutConfigurationDto : IEquatable<NVAPIGpuScanoutConfigurationDto>'
+    content: 'public struct NVAPIGpuScanoutConfigurationDto : IEquatable<NVAPIGpuScanoutConfigurationDto>'
     content.vb: Public Structure NVAPIGpuScanoutConfigurationDto Implements IEquatable(Of NVAPIGpuScanoutConfigurationDto)
   implements:
   - System.IEquatable{NVAPIWrapper.NVAPIGpuScanoutConfigurationDto}
@@ -67,11 +67,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public NVAPISBoxDto DesktopRect { get; }
+    content: public NVAPISBoxDto DesktopRect { readonly get; set; }
     parameters: []
     return:
       type: NVAPIWrapper.NVAPISBoxDto
-    content.vb: Public ReadOnly Property DesktopRect As NVAPISBoxDto
+    content.vb: Public Property DesktopRect As NVAPISBoxDto
   overload: NVAPIWrapper.NVAPIGpuScanoutConfigurationDto.DesktopRect*
 - uid: NVAPIWrapper.NVAPIGpuScanoutConfigurationDto.ScanoutRect
   commentId: P:NVAPIWrapper.NVAPIGpuScanoutConfigurationDto.ScanoutRect
@@ -96,11 +96,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public NVAPISBoxDto ScanoutRect { get; }
+    content: public NVAPISBoxDto ScanoutRect { readonly get; set; }
     parameters: []
     return:
       type: NVAPIWrapper.NVAPISBoxDto
-    content.vb: Public ReadOnly Property ScanoutRect As NVAPISBoxDto
+    content.vb: Public Property ScanoutRect As NVAPISBoxDto
   overload: NVAPIWrapper.NVAPIGpuScanoutConfigurationDto.ScanoutRect*
 - uid: NVAPIWrapper.NVAPIGpuScanoutConfigurationDto.#ctor(NVAPIWrapper.NVAPISBoxDto,NVAPIWrapper.NVAPISBoxDto)
   commentId: M:NVAPIWrapper.NVAPIGpuScanoutConfigurationDto.#ctor(NVAPIWrapper.NVAPISBoxDto,NVAPIWrapper.NVAPISBoxDto)

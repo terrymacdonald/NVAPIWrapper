@@ -102,7 +102,7 @@ Struct NVAPIPciIdentifiers  <a class="header-action link-secondary" title="View 
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly struct NVAPIPciIdentifiers : IEquatable&lt;NVAPIPciIdentifiers&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public struct NVAPIPciIdentifiers : IEquatable&lt;NVAPIPciIdentifiers&gt;</code></pre>
   </div>
 
 
@@ -197,7 +197,7 @@ Struct NVAPIPciIdentifiers  <a class="header-action link-secondary" title="View 
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public uint DeviceId { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public uint DeviceId { readonly get; set; }</code></pre>
   </div>
 
 
@@ -229,7 +229,7 @@ Struct NVAPIPciIdentifiers  <a class="header-action link-secondary" title="View 
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public uint ExtDeviceId { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public uint ExtDeviceId { readonly get; set; }</code></pre>
   </div>
 
 
@@ -261,7 +261,7 @@ Struct NVAPIPciIdentifiers  <a class="header-action link-secondary" title="View 
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public uint RevisionId { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public uint RevisionId { readonly get; set; }</code></pre>
   </div>
 
 
@@ -293,7 +293,7 @@ Struct NVAPIPciIdentifiers  <a class="header-action link-secondary" title="View 
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public uint SubSystemId { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public uint SubSystemId { readonly get; set; }</code></pre>
   </div>
 
 

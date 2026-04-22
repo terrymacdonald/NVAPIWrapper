@@ -102,7 +102,7 @@ Struct NVAPIGpuWorkstationFeatureQueryDto  <a class="header-action link-secondar
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly struct NVAPIGpuWorkstationFeatureQueryDto : IEquatable&lt;NVAPIGpuWorkstationFeatureQueryDto&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public struct NVAPIGpuWorkstationFeatureQueryDto : IEquatable&lt;NVAPIGpuWorkstationFeatureQueryDto&gt;</code></pre>
   </div>
 
 
@@ -191,7 +191,7 @@ Struct NVAPIGpuWorkstationFeatureQueryDto  <a class="header-action link-secondar
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public uint ConfiguredFeatureMask { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public uint ConfiguredFeatureMask { readonly get; set; }</code></pre>
   </div>
 
 
@@ -222,7 +222,7 @@ Struct NVAPIGpuWorkstationFeatureQueryDto  <a class="header-action link-secondar
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public uint ConsistentFeatureMask { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public uint ConsistentFeatureMask { readonly get; set; }</code></pre>
   </div>
 
 

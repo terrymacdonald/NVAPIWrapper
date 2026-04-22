@@ -102,7 +102,7 @@ Struct NVAPIDisplayIdInfoDto  <a class="header-action link-secondary" title="Vie
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly struct NVAPIDisplayIdInfoDto : IEquatable&lt;NVAPIDisplayIdInfoDto&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public struct NVAPIDisplayIdInfoDto : IEquatable&lt;NVAPIDisplayIdInfoDto&gt;</code></pre>
   </div>
 
 
@@ -197,7 +197,7 @@ Struct NVAPIDisplayIdInfoDto  <a class="header-action link-secondary" title="Vie
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public long AdapterLuid { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public long AdapterLuid { readonly get; set; }</code></pre>
   </div>
 
 
@@ -228,7 +228,7 @@ Struct NVAPIDisplayIdInfoDto  <a class="header-action link-secondary" title="Vie
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public uint[] Reserved { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public uint[] Reserved { readonly get; set; }</code></pre>
   </div>
 
 
@@ -259,7 +259,7 @@ Struct NVAPIDisplayIdInfoDto  <a class="header-action link-secondary" title="Vie
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public uint TargetId { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public uint TargetId { readonly get; set; }</code></pre>
   </div>
 
 

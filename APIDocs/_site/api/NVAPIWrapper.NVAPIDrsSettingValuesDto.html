@@ -102,7 +102,7 @@ Struct NVAPIDrsSettingValuesDto  <a class="header-action link-secondary" title="
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly struct NVAPIDrsSettingValuesDto : IEquatable&lt;NVAPIDrsSettingValuesDto&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public struct NVAPIDrsSettingValuesDto : IEquatable&lt;NVAPIDrsSettingValuesDto&gt;</code></pre>
   </div>
 
 
@@ -209,7 +209,7 @@ Struct NVAPIDrsSettingValuesDto  <a class="header-action link-secondary" title="
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public byte[][]? BinaryValues { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public byte[][]? BinaryValues { readonly get; set; }</code></pre>
   </div>
 
 
@@ -240,7 +240,7 @@ Struct NVAPIDrsSettingValuesDto  <a class="header-action link-secondary" title="
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public byte[]? DefaultBinaryValue { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public byte[]? DefaultBinaryValue { readonly get; set; }</code></pre>
   </div>
 
 
@@ -271,7 +271,7 @@ Struct NVAPIDrsSettingValuesDto  <a class="header-action link-secondary" title="
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public uint? DefaultDwordValue { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public uint? DefaultDwordValue { readonly get; set; }</code></pre>
   </div>
 
 
@@ -302,7 +302,7 @@ Struct NVAPIDrsSettingValuesDto  <a class="header-action link-secondary" title="
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string? DefaultStringValue { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public string? DefaultStringValue { readonly get; set; }</code></pre>
   </div>
 
 
@@ -333,7 +333,7 @@ Struct NVAPIDrsSettingValuesDto  <a class="header-action link-secondary" title="
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public uint[]? DwordValues { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public uint[]? DwordValues { readonly get; set; }</code></pre>
   </div>
 
 
@@ -364,7 +364,7 @@ Struct NVAPIDrsSettingValuesDto  <a class="header-action link-secondary" title="
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public _NVDRS_SETTING_TYPE SettingType { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public _NVDRS_SETTING_TYPE SettingType { readonly get; set; }</code></pre>
   </div>
 
 
@@ -395,7 +395,7 @@ Struct NVAPIDrsSettingValuesDto  <a class="header-action link-secondary" title="
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string[]? StringValues { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public string[]? StringValues { readonly get; set; }</code></pre>
   </div>
 
 

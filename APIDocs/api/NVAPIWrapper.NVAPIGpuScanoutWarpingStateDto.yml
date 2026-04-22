@@ -35,7 +35,7 @@ items:
   summary: Scanout warping state DTO.
   example: []
   syntax:
-    content: 'public readonly struct NVAPIGpuScanoutWarpingStateDto : IEquatable<NVAPIGpuScanoutWarpingStateDto>'
+    content: 'public struct NVAPIGpuScanoutWarpingStateDto : IEquatable<NVAPIGpuScanoutWarpingStateDto>'
     content.vb: Public Structure NVAPIGpuScanoutWarpingStateDto Implements IEquatable(Of NVAPIGpuScanoutWarpingStateDto)
   implements:
   - System.IEquatable{NVAPIWrapper.NVAPIGpuScanoutWarpingStateDto}
@@ -67,11 +67,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public bool IsEnabled { get; }
+    content: public bool IsEnabled { readonly get; set; }
     parameters: []
     return:
       type: System.Boolean
-    content.vb: Public ReadOnly Property IsEnabled As Boolean
+    content.vb: Public Property IsEnabled As Boolean
   overload: NVAPIWrapper.NVAPIGpuScanoutWarpingStateDto.IsEnabled*
 - uid: NVAPIWrapper.NVAPIGpuScanoutWarpingStateDto.#ctor(System.Boolean)
   commentId: M:NVAPIWrapper.NVAPIGpuScanoutWarpingStateDto.#ctor(System.Boolean)

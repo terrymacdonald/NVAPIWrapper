@@ -102,7 +102,7 @@ Struct NVAPIGpuIllumZoneControlDto  <a class="header-action link-secondary" titl
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly struct NVAPIGpuIllumZoneControlDto : IEquatable&lt;NVAPIGpuIllumZoneControlDto&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public struct NVAPIGpuIllumZoneControlDto : IEquatable&lt;NVAPIGpuIllumZoneControlDto&gt;</code></pre>
   </div>
 
 
@@ -195,7 +195,7 @@ Struct NVAPIGpuIllumZoneControlDto  <a class="header-action link-secondary" titl
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public NV_GPU_CLIENT_ILLUM_CTRL_MODE CtrlMode { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public NV_GPU_CLIENT_ILLUM_CTRL_MODE CtrlMode { readonly get; set; }</code></pre>
   </div>
 
 
@@ -228,7 +228,7 @@ Interpret using <a class="xref" href="NVAPIWrapper.NVAPIGpuIllumZoneControlDto.h
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public byte[] DataRawBytes { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public byte[] DataRawBytes { readonly get; set; }</code></pre>
   </div>
 
 
@@ -260,7 +260,7 @@ Interpret using <a class="xref" href="NVAPIWrapper.NVAPIGpuIllumZoneControlDto.h
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public NV_GPU_CLIENT_ILLUM_ZONE_TYPE Type { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public NV_GPU_CLIENT_ILLUM_ZONE_TYPE Type { readonly get; set; }</code></pre>
   </div>
 
 

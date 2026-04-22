@@ -38,7 +38,7 @@ items:
   summary: Scanout intensity data DTO.
   example: []
   syntax:
-    content: 'public readonly struct NVAPIGpuScanoutIntensityDataDto : IEquatable<NVAPIGpuScanoutIntensityDataDto>'
+    content: 'public struct NVAPIGpuScanoutIntensityDataDto : IEquatable<NVAPIGpuScanoutIntensityDataDto>'
     content.vb: Public Structure NVAPIGpuScanoutIntensityDataDto Implements IEquatable(Of NVAPIGpuScanoutIntensityDataDto)
   implements:
   - System.IEquatable{NVAPIWrapper.NVAPIGpuScanoutIntensityDataDto}
@@ -70,11 +70,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public uint Width { get; }
+    content: public uint Width { readonly get; set; }
     parameters: []
     return:
       type: System.UInt32
-    content.vb: Public ReadOnly Property Width As UInteger
+    content.vb: Public Property Width As UInteger
   overload: NVAPIWrapper.NVAPIGpuScanoutIntensityDataDto.Width*
 - uid: NVAPIWrapper.NVAPIGpuScanoutIntensityDataDto.Height
   commentId: P:NVAPIWrapper.NVAPIGpuScanoutIntensityDataDto.Height
@@ -99,11 +99,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public uint Height { get; }
+    content: public uint Height { readonly get; set; }
     parameters: []
     return:
       type: System.UInt32
-    content.vb: Public ReadOnly Property Height As UInteger
+    content.vb: Public Property Height As UInteger
   overload: NVAPIWrapper.NVAPIGpuScanoutIntensityDataDto.Height*
 - uid: NVAPIWrapper.NVAPIGpuScanoutIntensityDataDto.BlendingTexture
   commentId: P:NVAPIWrapper.NVAPIGpuScanoutIntensityDataDto.BlendingTexture
@@ -128,11 +128,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public float[] BlendingTexture { get; }
+    content: public float[] BlendingTexture { readonly get; set; }
     parameters: []
     return:
       type: System.Single[]
-    content.vb: Public ReadOnly Property BlendingTexture As Single()
+    content.vb: Public Property BlendingTexture As Single()
   overload: NVAPIWrapper.NVAPIGpuScanoutIntensityDataDto.BlendingTexture*
 - uid: NVAPIWrapper.NVAPIGpuScanoutIntensityDataDto.OffsetTexture
   commentId: P:NVAPIWrapper.NVAPIGpuScanoutIntensityDataDto.OffsetTexture
@@ -157,11 +157,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public float[] OffsetTexture { get; }
+    content: public float[] OffsetTexture { readonly get; set; }
     parameters: []
     return:
       type: System.Single[]
-    content.vb: Public ReadOnly Property OffsetTexture As Single()
+    content.vb: Public Property OffsetTexture As Single()
   overload: NVAPIWrapper.NVAPIGpuScanoutIntensityDataDto.OffsetTexture*
 - uid: NVAPIWrapper.NVAPIGpuScanoutIntensityDataDto.OffsetTexChannels
   commentId: P:NVAPIWrapper.NVAPIGpuScanoutIntensityDataDto.OffsetTexChannels
@@ -186,11 +186,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public uint OffsetTexChannels { get; }
+    content: public uint OffsetTexChannels { readonly get; set; }
     parameters: []
     return:
       type: System.UInt32
-    content.vb: Public ReadOnly Property OffsetTexChannels As UInteger
+    content.vb: Public Property OffsetTexChannels As UInteger
   overload: NVAPIWrapper.NVAPIGpuScanoutIntensityDataDto.OffsetTexChannels*
 - uid: NVAPIWrapper.NVAPIGpuScanoutIntensityDataDto.#ctor(System.UInt32,System.UInt32,System.Single[],System.Single[],System.UInt32)
   commentId: M:NVAPIWrapper.NVAPIGpuScanoutIntensityDataDto.#ctor(System.UInt32,System.UInt32,System.Single[],System.Single[],System.UInt32)

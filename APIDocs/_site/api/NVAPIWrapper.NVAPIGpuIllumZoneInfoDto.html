@@ -102,7 +102,7 @@ Struct NVAPIGpuIllumZoneInfoDto  <a class="header-action link-secondary" title="
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly struct NVAPIGpuIllumZoneInfoDto : IEquatable&lt;NVAPIGpuIllumZoneInfoDto&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public struct NVAPIGpuIllumZoneInfoDto : IEquatable&lt;NVAPIGpuIllumZoneInfoDto&gt;</code></pre>
   </div>
 
 
@@ -200,7 +200,7 @@ Interpret using <a class="xref" href="NVAPIWrapper.NVAPIGpuIllumZoneInfoDto.html
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public byte[] DataRawBytes { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public byte[] DataRawBytes { readonly get; set; }</code></pre>
   </div>
 
 
@@ -232,7 +232,7 @@ Interpret using <a class="xref" href="NVAPIWrapper.NVAPIGpuIllumZoneInfoDto.html
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public byte IllumDeviceIdx { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public byte IllumDeviceIdx { readonly get; set; }</code></pre>
   </div>
 
 
@@ -264,7 +264,7 @@ Interpret using <a class="xref" href="NVAPIWrapper.NVAPIGpuIllumZoneInfoDto.html
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public byte ProvIdx { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public byte ProvIdx { readonly get; set; }</code></pre>
   </div>
 
 
@@ -296,7 +296,7 @@ Interpret using <a class="xref" href="NVAPIWrapper.NVAPIGpuIllumZoneInfoDto.html
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public NV_GPU_CLIENT_ILLUM_ZONE_TYPE Type { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public NV_GPU_CLIENT_ILLUM_ZONE_TYPE Type { readonly get; set; }</code></pre>
   </div>
 
 
@@ -328,7 +328,7 @@ Interpret using <a class="xref" href="NVAPIWrapper.NVAPIGpuIllumZoneInfoDto.html
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public NV_GPU_CLIENT_ILLUM_ZONE_LOCATION ZoneLocation { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public NV_GPU_CLIENT_ILLUM_ZONE_LOCATION ZoneLocation { readonly get; set; }</code></pre>
   </div>
 
 

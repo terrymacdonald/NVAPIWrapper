@@ -45,7 +45,7 @@ items:
   summary: Per-clock entry DTO for a P-state, wrapping <xref href="NVAPIWrapper.NV_GPU_PSTATE20_CLOCK_ENTRY_V1" data-throw-if-not-resolved="false"></xref>.
   example: []
   syntax:
-    content: 'public readonly struct NVAPIPstateClockEntryDto : IEquatable<NVAPIPstateClockEntryDto>'
+    content: 'public struct NVAPIPstateClockEntryDto : IEquatable<NVAPIPstateClockEntryDto>'
     content.vb: Public Structure NVAPIPstateClockEntryDto Implements IEquatable(Of NVAPIPstateClockEntryDto)
   implements:
   - System.IEquatable{NVAPIWrapper.NVAPIPstateClockEntryDto}
@@ -79,11 +79,11 @@ items:
   summary: Clock domain identifier.
   example: []
   syntax:
-    content: public _NV_GPU_PUBLIC_CLOCK_ID DomainId { get; }
+    content: public _NV_GPU_PUBLIC_CLOCK_ID DomainId { readonly get; set; }
     parameters: []
     return:
       type: NVAPIWrapper._NV_GPU_PUBLIC_CLOCK_ID
-    content.vb: Public ReadOnly Property DomainId As _NV_GPU_PUBLIC_CLOCK_ID
+    content.vb: Public Property DomainId As _NV_GPU_PUBLIC_CLOCK_ID
   overload: NVAPIWrapper.NVAPIPstateClockEntryDto.DomainId*
 - uid: NVAPIWrapper.NVAPIPstateClockEntryDto.TypeId
   commentId: P:NVAPIWrapper.NVAPIPstateClockEntryDto.TypeId
@@ -110,11 +110,11 @@ items:
   summary: Clock type (single frequency or frequency range).
   example: []
   syntax:
-    content: public NV_GPU_PERF_PSTATE20_CLOCK_TYPE_ID TypeId { get; }
+    content: public NV_GPU_PERF_PSTATE20_CLOCK_TYPE_ID TypeId { readonly get; set; }
     parameters: []
     return:
       type: NVAPIWrapper.NV_GPU_PERF_PSTATE20_CLOCK_TYPE_ID
-    content.vb: Public ReadOnly Property TypeId As NV_GPU_PERF_PSTATE20_CLOCK_TYPE_ID
+    content.vb: Public Property TypeId As NV_GPU_PERF_PSTATE20_CLOCK_TYPE_ID
   overload: NVAPIWrapper.NVAPIPstateClockEntryDto.TypeId*
 - uid: NVAPIWrapper.NVAPIPstateClockEntryDto.IsEditable
   commentId: P:NVAPIWrapper.NVAPIPstateClockEntryDto.IsEditable
@@ -141,11 +141,11 @@ items:
   summary: True if this clock entry is editable.
   example: []
   syntax:
-    content: public bool IsEditable { get; }
+    content: public bool IsEditable { readonly get; set; }
     parameters: []
     return:
       type: System.Boolean
-    content.vb: Public ReadOnly Property IsEditable As Boolean
+    content.vb: Public Property IsEditable As Boolean
   overload: NVAPIWrapper.NVAPIPstateClockEntryDto.IsEditable*
 - uid: NVAPIWrapper.NVAPIPstateClockEntryDto.FreqDeltaValue
   commentId: P:NVAPIWrapper.NVAPIPstateClockEntryDto.FreqDeltaValue
@@ -172,11 +172,11 @@ items:
   summary: Current frequency delta adjustment in kHz.
   example: []
   syntax:
-    content: public int FreqDeltaValue { get; }
+    content: public int FreqDeltaValue { readonly get; set; }
     parameters: []
     return:
       type: System.Int32
-    content.vb: Public ReadOnly Property FreqDeltaValue As Integer
+    content.vb: Public Property FreqDeltaValue As Integer
   overload: NVAPIWrapper.NVAPIPstateClockEntryDto.FreqDeltaValue*
 - uid: NVAPIWrapper.NVAPIPstateClockEntryDto.FreqDeltaMin
   commentId: P:NVAPIWrapper.NVAPIPstateClockEntryDto.FreqDeltaMin
@@ -203,11 +203,11 @@ items:
   summary: Minimum allowed frequency delta in kHz.
   example: []
   syntax:
-    content: public int FreqDeltaMin { get; }
+    content: public int FreqDeltaMin { readonly get; set; }
     parameters: []
     return:
       type: System.Int32
-    content.vb: Public ReadOnly Property FreqDeltaMin As Integer
+    content.vb: Public Property FreqDeltaMin As Integer
   overload: NVAPIWrapper.NVAPIPstateClockEntryDto.FreqDeltaMin*
 - uid: NVAPIWrapper.NVAPIPstateClockEntryDto.FreqDeltaMax
   commentId: P:NVAPIWrapper.NVAPIPstateClockEntryDto.FreqDeltaMax
@@ -234,11 +234,11 @@ items:
   summary: Maximum allowed frequency delta in kHz.
   example: []
   syntax:
-    content: public int FreqDeltaMax { get; }
+    content: public int FreqDeltaMax { readonly get; set; }
     parameters: []
     return:
       type: System.Int32
-    content.vb: Public ReadOnly Property FreqDeltaMax As Integer
+    content.vb: Public Property FreqDeltaMax As Integer
   overload: NVAPIWrapper.NVAPIPstateClockEntryDto.FreqDeltaMax*
 - uid: NVAPIWrapper.NVAPIPstateClockEntryDto.MinFreqKHz
   commentId: P:NVAPIWrapper.NVAPIPstateClockEntryDto.MinFreqKHz
@@ -268,11 +268,11 @@ items:
     (overlaps <code>data.single.freq_kHz</code>). For <code>RANGE</code> type, this is the minimum.
   example: []
   syntax:
-    content: public uint MinFreqKHz { get; }
+    content: public uint MinFreqKHz { readonly get; set; }
     parameters: []
     return:
       type: System.UInt32
-    content.vb: Public ReadOnly Property MinFreqKHz As UInteger
+    content.vb: Public Property MinFreqKHz As UInteger
   overload: NVAPIWrapper.NVAPIPstateClockEntryDto.MinFreqKHz*
 - uid: NVAPIWrapper.NVAPIPstateClockEntryDto.MaxFreqKHz
   commentId: P:NVAPIWrapper.NVAPIPstateClockEntryDto.MaxFreqKHz
@@ -299,11 +299,11 @@ items:
   summary: Maximum frequency in kHz; valid only for <code>RANGE</code> type.
   example: []
   syntax:
-    content: public uint MaxFreqKHz { get; }
+    content: public uint MaxFreqKHz { readonly get; set; }
     parameters: []
     return:
       type: System.UInt32
-    content.vb: Public ReadOnly Property MaxFreqKHz As UInteger
+    content.vb: Public Property MaxFreqKHz As UInteger
   overload: NVAPIWrapper.NVAPIPstateClockEntryDto.MaxFreqKHz*
 - uid: NVAPIWrapper.NVAPIPstateClockEntryDto.RangeVoltageDomainId
   commentId: P:NVAPIWrapper.NVAPIPstateClockEntryDto.RangeVoltageDomainId
@@ -330,11 +330,11 @@ items:
   summary: Voltage domain identifier; valid only for <code>RANGE</code> type.
   example: []
   syntax:
-    content: public _NV_GPU_PERF_VOLTAGE_INFO_DOMAIN_ID RangeVoltageDomainId { get; }
+    content: public _NV_GPU_PERF_VOLTAGE_INFO_DOMAIN_ID RangeVoltageDomainId { readonly get; set; }
     parameters: []
     return:
       type: NVAPIWrapper._NV_GPU_PERF_VOLTAGE_INFO_DOMAIN_ID
-    content.vb: Public ReadOnly Property RangeVoltageDomainId As _NV_GPU_PERF_VOLTAGE_INFO_DOMAIN_ID
+    content.vb: Public Property RangeVoltageDomainId As _NV_GPU_PERF_VOLTAGE_INFO_DOMAIN_ID
   overload: NVAPIWrapper.NVAPIPstateClockEntryDto.RangeVoltageDomainId*
 - uid: NVAPIWrapper.NVAPIPstateClockEntryDto.RangeMinVoltageUv
   commentId: P:NVAPIWrapper.NVAPIPstateClockEntryDto.RangeMinVoltageUv
@@ -361,11 +361,11 @@ items:
   summary: Minimum voltage in microvolts; valid only for <code>RANGE</code> type.
   example: []
   syntax:
-    content: public uint RangeMinVoltageUv { get; }
+    content: public uint RangeMinVoltageUv { readonly get; set; }
     parameters: []
     return:
       type: System.UInt32
-    content.vb: Public ReadOnly Property RangeMinVoltageUv As UInteger
+    content.vb: Public Property RangeMinVoltageUv As UInteger
   overload: NVAPIWrapper.NVAPIPstateClockEntryDto.RangeMinVoltageUv*
 - uid: NVAPIWrapper.NVAPIPstateClockEntryDto.RangeMaxVoltageUv
   commentId: P:NVAPIWrapper.NVAPIPstateClockEntryDto.RangeMaxVoltageUv
@@ -392,11 +392,11 @@ items:
   summary: Maximum voltage in microvolts; valid only for <code>RANGE</code> type.
   example: []
   syntax:
-    content: public uint RangeMaxVoltageUv { get; }
+    content: public uint RangeMaxVoltageUv { readonly get; set; }
     parameters: []
     return:
       type: System.UInt32
-    content.vb: Public ReadOnly Property RangeMaxVoltageUv As UInteger
+    content.vb: Public Property RangeMaxVoltageUv As UInteger
   overload: NVAPIWrapper.NVAPIPstateClockEntryDto.RangeMaxVoltageUv*
 - uid: NVAPIWrapper.NVAPIPstateClockEntryDto.#ctor(NVAPIWrapper._NV_GPU_PUBLIC_CLOCK_ID,NVAPIWrapper.NV_GPU_PERF_PSTATE20_CLOCK_TYPE_ID,System.Boolean,System.Int32,System.Int32,System.Int32,System.UInt32,System.UInt32,NVAPIWrapper._NV_GPU_PERF_VOLTAGE_INFO_DOMAIN_ID,System.UInt32,System.UInt32)
   commentId: M:NVAPIWrapper.NVAPIPstateClockEntryDto.#ctor(NVAPIWrapper._NV_GPU_PUBLIC_CLOCK_ID,NVAPIWrapper.NV_GPU_PERF_PSTATE20_CLOCK_TYPE_ID,System.Boolean,System.Int32,System.Int32,System.Int32,System.UInt32,System.UInt32,NVAPIWrapper._NV_GPU_PERF_VOLTAGE_INFO_DOMAIN_ID,System.UInt32,System.UInt32)

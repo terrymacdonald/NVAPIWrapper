@@ -37,7 +37,7 @@ items:
   summary: Per-device illumination info DTO, wrapping <xref href="NVAPIWrapper._NV_GPU_CLIENT_ILLUM_DEVICE_INFO_V1" data-throw-if-not-resolved="false"></xref>.
   example: []
   syntax:
-    content: 'public readonly struct NVAPIGpuIllumDeviceInfoDto : IEquatable<NVAPIGpuIllumDeviceInfoDto>'
+    content: 'public struct NVAPIGpuIllumDeviceInfoDto : IEquatable<NVAPIGpuIllumDeviceInfoDto>'
     content.vb: Public Structure NVAPIGpuIllumDeviceInfoDto Implements IEquatable(Of NVAPIGpuIllumDeviceInfoDto)
   implements:
   - System.IEquatable{NVAPIWrapper.NVAPIGpuIllumDeviceInfoDto}
@@ -71,11 +71,11 @@ items:
   summary: Type of illumination device.
   example: []
   syntax:
-    content: public NV_GPU_CLIENT_ILLUM_DEVICE_TYPE Type { get; }
+    content: public NV_GPU_CLIENT_ILLUM_DEVICE_TYPE Type { readonly get; set; }
     parameters: []
     return:
       type: NVAPIWrapper.NV_GPU_CLIENT_ILLUM_DEVICE_TYPE
-    content.vb: Public ReadOnly Property Type As NV_GPU_CLIENT_ILLUM_DEVICE_TYPE
+    content.vb: Public Property Type As NV_GPU_CLIENT_ILLUM_DEVICE_TYPE
   overload: NVAPIWrapper.NVAPIGpuIllumDeviceInfoDto.Type*
 - uid: NVAPIWrapper.NVAPIGpuIllumDeviceInfoDto.CtrlModeMask
   commentId: P:NVAPIWrapper.NVAPIGpuIllumDeviceInfoDto.CtrlModeMask
@@ -102,11 +102,11 @@ items:
   summary: Bitmask of supported control modes.
   example: []
   syntax:
-    content: public uint CtrlModeMask { get; }
+    content: public uint CtrlModeMask { readonly get; set; }
     parameters: []
     return:
       type: System.UInt32
-    content.vb: Public ReadOnly Property CtrlModeMask As UInteger
+    content.vb: Public Property CtrlModeMask As UInteger
   overload: NVAPIWrapper.NVAPIGpuIllumDeviceInfoDto.CtrlModeMask*
 - uid: NVAPIWrapper.NVAPIGpuIllumDeviceInfoDto.DataRawBytes
   commentId: P:NVAPIWrapper.NVAPIGpuIllumDeviceInfoDto.DataRawBytes
@@ -136,11 +136,11 @@ items:
     Interpret using <xref href="NVAPIWrapper.NVAPIGpuIllumDeviceInfoDto.Type" data-throw-if-not-resolved="false"></xref> to select the appropriate union member.
   example: []
   syntax:
-    content: public byte[] DataRawBytes { get; }
+    content: public byte[] DataRawBytes { readonly get; set; }
     parameters: []
     return:
       type: System.Byte[]
-    content.vb: Public ReadOnly Property DataRawBytes As Byte()
+    content.vb: Public Property DataRawBytes As Byte()
   overload: NVAPIWrapper.NVAPIGpuIllumDeviceInfoDto.DataRawBytes*
 - uid: NVAPIWrapper.NVAPIGpuIllumDeviceInfoDto.#ctor(NVAPIWrapper.NV_GPU_CLIENT_ILLUM_DEVICE_TYPE,System.UInt32,System.Byte[])
   commentId: M:NVAPIWrapper.NVAPIGpuIllumDeviceInfoDto.#ctor(NVAPIWrapper.NV_GPU_CLIENT_ILLUM_DEVICE_TYPE,System.UInt32,System.Byte[])

@@ -34,7 +34,7 @@ items:
   summary: DTO for adjusted delay results.
   example: []
   syntax:
-    content: 'public readonly struct NVAPIGSyncAdjustedDelayDto : IEquatable<NVAPIGSyncAdjustedDelayDto>'
+    content: 'public struct NVAPIGSyncAdjustedDelayDto : IEquatable<NVAPIGSyncAdjustedDelayDto>'
     content.vb: Public Structure NVAPIGSyncAdjustedDelayDto Implements IEquatable(Of NVAPIGSyncAdjustedDelayDto)
   implements:
   - System.IEquatable{NVAPIWrapper.NVAPIGSyncAdjustedDelayDto}
@@ -66,11 +66,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public NVAPIGSyncDelayDto Delay { get; }
+    content: public NVAPIGSyncDelayDto Delay { readonly get; set; }
     parameters: []
     return:
       type: NVAPIWrapper.NVAPIGSyncDelayDto
-    content.vb: Public ReadOnly Property Delay As NVAPIGSyncDelayDto
+    content.vb: Public Property Delay As NVAPIGSyncDelayDto
   overload: NVAPIWrapper.NVAPIGSyncAdjustedDelayDto.Delay*
 - uid: NVAPIWrapper.NVAPIGSyncAdjustedDelayDto.SyncSteps
   commentId: P:NVAPIWrapper.NVAPIGSyncAdjustedDelayDto.SyncSteps
@@ -95,11 +95,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public uint SyncSteps { get; }
+    content: public uint SyncSteps { readonly get; set; }
     parameters: []
     return:
       type: System.UInt32
-    content.vb: Public ReadOnly Property SyncSteps As UInteger
+    content.vb: Public Property SyncSteps As UInteger
   overload: NVAPIWrapper.NVAPIGSyncAdjustedDelayDto.SyncSteps*
 - uid: NVAPIWrapper.NVAPIGSyncAdjustedDelayDto.#ctor(NVAPIWrapper.NVAPIGSyncDelayDto,System.UInt32)
   commentId: M:NVAPIWrapper.NVAPIGSyncAdjustedDelayDto.#ctor(NVAPIWrapper.NVAPIGSyncDelayDto,System.UInt32)

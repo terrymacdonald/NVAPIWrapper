@@ -40,7 +40,7 @@ items:
   summary: DTO for G-Sync status parameters.
   example: []
   syntax:
-    content: 'public readonly struct NVAPIGSyncStatusParametersDto : IEquatable<NVAPIGSyncStatusParametersDto>'
+    content: 'public struct NVAPIGSyncStatusParametersDto : IEquatable<NVAPIGSyncStatusParametersDto>'
     content.vb: Public Structure NVAPIGSyncStatusParametersDto Implements IEquatable(Of NVAPIGSyncStatusParametersDto)
   implements:
   - System.IEquatable{NVAPIWrapper.NVAPIGSyncStatusParametersDto}
@@ -72,11 +72,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public uint RefreshRate { get; }
+    content: public uint RefreshRate { readonly get; set; }
     parameters: []
     return:
       type: System.UInt32
-    content.vb: Public ReadOnly Property RefreshRate As UInteger
+    content.vb: Public Property RefreshRate As UInteger
   overload: NVAPIWrapper.NVAPIGSyncStatusParametersDto.RefreshRate*
 - uid: NVAPIWrapper.NVAPIGSyncStatusParametersDto.Rj45Io
   commentId: P:NVAPIWrapper.NVAPIGSyncStatusParametersDto.Rj45Io
@@ -101,11 +101,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public _NVAPI_GSYNC_RJ45_IO[] Rj45Io { get; }
+    content: public _NVAPI_GSYNC_RJ45_IO[] Rj45Io { readonly get; set; }
     parameters: []
     return:
       type: NVAPIWrapper._NVAPI_GSYNC_RJ45_IO[]
-    content.vb: Public ReadOnly Property Rj45Io As _NVAPI_GSYNC_RJ45_IO()
+    content.vb: Public Property Rj45Io As _NVAPI_GSYNC_RJ45_IO()
   overload: NVAPIWrapper.NVAPIGSyncStatusParametersDto.Rj45Io*
 - uid: NVAPIWrapper.NVAPIGSyncStatusParametersDto.Rj45Ethernet
   commentId: P:NVAPIWrapper.NVAPIGSyncStatusParametersDto.Rj45Ethernet
@@ -130,11 +130,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public uint[] Rj45Ethernet { get; }
+    content: public uint[] Rj45Ethernet { readonly get; set; }
     parameters: []
     return:
       type: System.UInt32[]
-    content.vb: Public ReadOnly Property Rj45Ethernet As UInteger()
+    content.vb: Public Property Rj45Ethernet As UInteger()
   overload: NVAPIWrapper.NVAPIGSyncStatusParametersDto.Rj45Ethernet*
 - uid: NVAPIWrapper.NVAPIGSyncStatusParametersDto.HouseSyncIncoming
   commentId: P:NVAPIWrapper.NVAPIGSyncStatusParametersDto.HouseSyncIncoming
@@ -159,11 +159,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public uint HouseSyncIncoming { get; }
+    content: public uint HouseSyncIncoming { readonly get; set; }
     parameters: []
     return:
       type: System.UInt32
-    content.vb: Public ReadOnly Property HouseSyncIncoming As UInteger
+    content.vb: Public Property HouseSyncIncoming As UInteger
   overload: NVAPIWrapper.NVAPIGSyncStatusParametersDto.HouseSyncIncoming*
 - uid: NVAPIWrapper.NVAPIGSyncStatusParametersDto.IsHouseSyncConnected
   commentId: P:NVAPIWrapper.NVAPIGSyncStatusParametersDto.IsHouseSyncConnected
@@ -188,11 +188,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public bool IsHouseSyncConnected { get; }
+    content: public bool IsHouseSyncConnected { readonly get; set; }
     parameters: []
     return:
       type: System.Boolean
-    content.vb: Public ReadOnly Property IsHouseSyncConnected As Boolean
+    content.vb: Public Property IsHouseSyncConnected As Boolean
   overload: NVAPIWrapper.NVAPIGSyncStatusParametersDto.IsHouseSyncConnected*
 - uid: NVAPIWrapper.NVAPIGSyncStatusParametersDto.IsInternalSlave
   commentId: P:NVAPIWrapper.NVAPIGSyncStatusParametersDto.IsInternalSlave
@@ -217,11 +217,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public bool IsInternalSlave { get; }
+    content: public bool IsInternalSlave { readonly get; set; }
     parameters: []
     return:
       type: System.Boolean
-    content.vb: Public ReadOnly Property IsInternalSlave As Boolean
+    content.vb: Public Property IsInternalSlave As Boolean
   overload: NVAPIWrapper.NVAPIGSyncStatusParametersDto.IsInternalSlave*
 - uid: NVAPIWrapper.NVAPIGSyncStatusParametersDto.#ctor(System.UInt32,NVAPIWrapper._NVAPI_GSYNC_RJ45_IO[],System.UInt32[],System.UInt32,System.Boolean,System.Boolean)
   commentId: M:NVAPIWrapper.NVAPIGSyncStatusParametersDto.#ctor(System.UInt32,NVAPIWrapper._NVAPI_GSYNC_RJ45_IO[],System.UInt32[],System.UInt32,System.Boolean,System.Boolean)

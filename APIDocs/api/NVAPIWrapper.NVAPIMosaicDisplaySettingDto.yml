@@ -41,7 +41,7 @@ items:
   summary: Mosaic display setting DTO (v2).
   example: []
   syntax:
-    content: 'public readonly struct NVAPIMosaicDisplaySettingDto : IEquatable<NVAPIMosaicDisplaySettingDto>'
+    content: 'public struct NVAPIMosaicDisplaySettingDto : IEquatable<NVAPIMosaicDisplaySettingDto>'
     content.vb: Public Structure NVAPIMosaicDisplaySettingDto Implements IEquatable(Of NVAPIMosaicDisplaySettingDto)
   implements:
   - System.IEquatable{NVAPIWrapper.NVAPIMosaicDisplaySettingDto}
@@ -73,11 +73,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public uint Width { get; }
+    content: public uint Width { readonly get; set; }
     parameters: []
     return:
       type: System.UInt32
-    content.vb: Public ReadOnly Property Width As UInteger
+    content.vb: Public Property Width As UInteger
   overload: NVAPIWrapper.NVAPIMosaicDisplaySettingDto.Width*
 - uid: NVAPIWrapper.NVAPIMosaicDisplaySettingDto.Height
   commentId: P:NVAPIWrapper.NVAPIMosaicDisplaySettingDto.Height
@@ -102,11 +102,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public uint Height { get; }
+    content: public uint Height { readonly get; set; }
     parameters: []
     return:
       type: System.UInt32
-    content.vb: Public ReadOnly Property Height As UInteger
+    content.vb: Public Property Height As UInteger
   overload: NVAPIWrapper.NVAPIMosaicDisplaySettingDto.Height*
 - uid: NVAPIWrapper.NVAPIMosaicDisplaySettingDto.BitsPerPixel
   commentId: P:NVAPIWrapper.NVAPIMosaicDisplaySettingDto.BitsPerPixel
@@ -131,11 +131,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public uint BitsPerPixel { get; }
+    content: public uint BitsPerPixel { readonly get; set; }
     parameters: []
     return:
       type: System.UInt32
-    content.vb: Public ReadOnly Property BitsPerPixel As UInteger
+    content.vb: Public Property BitsPerPixel As UInteger
   overload: NVAPIWrapper.NVAPIMosaicDisplaySettingDto.BitsPerPixel*
 - uid: NVAPIWrapper.NVAPIMosaicDisplaySettingDto.Frequency
   commentId: P:NVAPIWrapper.NVAPIMosaicDisplaySettingDto.Frequency
@@ -160,11 +160,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public uint Frequency { get; }
+    content: public uint Frequency { readonly get; set; }
     parameters: []
     return:
       type: System.UInt32
-    content.vb: Public ReadOnly Property Frequency As UInteger
+    content.vb: Public Property Frequency As UInteger
   overload: NVAPIWrapper.NVAPIMosaicDisplaySettingDto.Frequency*
 - uid: NVAPIWrapper.NVAPIMosaicDisplaySettingDto.RefreshRate1K
   commentId: P:NVAPIWrapper.NVAPIMosaicDisplaySettingDto.RefreshRate1K
@@ -189,11 +189,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public uint RefreshRate1K { get; }
+    content: public uint RefreshRate1K { readonly get; set; }
     parameters: []
     return:
       type: System.UInt32
-    content.vb: Public ReadOnly Property RefreshRate1K As UInteger
+    content.vb: Public Property RefreshRate1K As UInteger
   overload: NVAPIWrapper.NVAPIMosaicDisplaySettingDto.RefreshRate1K*
 - uid: NVAPIWrapper.NVAPIMosaicDisplaySettingDto.#ctor(System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32)
   commentId: M:NVAPIWrapper.NVAPIMosaicDisplaySettingDto.#ctor(System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32)

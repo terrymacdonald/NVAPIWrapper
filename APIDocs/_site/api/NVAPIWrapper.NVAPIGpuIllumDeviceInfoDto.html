@@ -102,7 +102,7 @@ Struct NVAPIGpuIllumDeviceInfoDto  <a class="header-action link-secondary" title
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly struct NVAPIGpuIllumDeviceInfoDto : IEquatable&lt;NVAPIGpuIllumDeviceInfoDto&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public struct NVAPIGpuIllumDeviceInfoDto : IEquatable&lt;NVAPIGpuIllumDeviceInfoDto&gt;</code></pre>
   </div>
 
 
@@ -195,7 +195,7 @@ Struct NVAPIGpuIllumDeviceInfoDto  <a class="header-action link-secondary" title
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public uint CtrlModeMask { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public uint CtrlModeMask { readonly get; set; }</code></pre>
   </div>
 
 
@@ -228,7 +228,7 @@ Interpret using <a class="xref" href="NVAPIWrapper.NVAPIGpuIllumDeviceInfoDto.ht
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public byte[] DataRawBytes { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public byte[] DataRawBytes { readonly get; set; }</code></pre>
   </div>
 
 
@@ -260,7 +260,7 @@ Interpret using <a class="xref" href="NVAPIWrapper.NVAPIGpuIllumDeviceInfoDto.ht
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public NV_GPU_CLIENT_ILLUM_DEVICE_TYPE Type { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public NV_GPU_CLIENT_ILLUM_DEVICE_TYPE Type { readonly get; set; }</code></pre>
   </div>
 
 

@@ -102,7 +102,7 @@ Struct NVAPIVioTopologyTargetDto  <a class="header-action link-secondary" title=
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly struct NVAPIVioTopologyTargetDto : IEquatable&lt;NVAPIVioTopologyTargetDto&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public struct NVAPIVioTopologyTargetDto : IEquatable&lt;NVAPIVioTopologyTargetDto&gt;</code></pre>
   </div>
 
 
@@ -195,7 +195,7 @@ Struct NVAPIVioTopologyTargetDto  <a class="header-action link-secondary" title=
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public uint OutputId { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public uint OutputId { readonly get; set; }</code></pre>
   </div>
 
 
@@ -226,7 +226,7 @@ Struct NVAPIVioTopologyTargetDto  <a class="header-action link-secondary" title=
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public nint PhysicalGpuHandle { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public nint PhysicalGpuHandle { readonly get; set; }</code></pre>
   </div>
 
 
@@ -257,7 +257,7 @@ Struct NVAPIVioTopologyTargetDto  <a class="header-action link-secondary" title=
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public nint VioHandle { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public nint VioHandle { readonly get; set; }</code></pre>
   </div>
 
 
@@ -288,7 +288,7 @@ Struct NVAPIVioTopologyTargetDto  <a class="header-action link-secondary" title=
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public uint VioId { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public uint VioId { readonly get; set; }</code></pre>
   </div>
 
 

@@ -36,7 +36,7 @@ items:
   summary: VIO gamma correction DTO (raw bytes due to union layout).
   example: []
   syntax:
-    content: 'public readonly struct NVAPIVioGammaDto : IEquatable<NVAPIVioGammaDto>'
+    content: 'public struct NVAPIVioGammaDto : IEquatable<NVAPIVioGammaDto>'
     content.vb: Public Structure NVAPIVioGammaDto Implements IEquatable(Of NVAPIVioGammaDto)
   implements:
   - System.IEquatable{NVAPIWrapper.NVAPIVioGammaDto}
@@ -68,11 +68,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public byte[] RawBytes { get; }
+    content: public byte[] RawBytes { readonly get; set; }
     parameters: []
     return:
       type: System.Byte[]
-    content.vb: Public ReadOnly Property RawBytes As Byte()
+    content.vb: Public Property RawBytes As Byte()
   overload: NVAPIWrapper.NVAPIVioGammaDto.RawBytes*
 - uid: NVAPIWrapper.NVAPIVioGammaDto.#ctor(System.Byte[])
   commentId: M:NVAPIWrapper.NVAPIVioGammaDto.#ctor(System.Byte[])

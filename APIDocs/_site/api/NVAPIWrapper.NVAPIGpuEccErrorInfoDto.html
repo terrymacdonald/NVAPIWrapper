@@ -102,7 +102,7 @@ Struct NVAPIGpuEccErrorInfoDto  <a class="header-action link-secondary" title="V
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly struct NVAPIGpuEccErrorInfoDto : IEquatable&lt;NVAPIGpuEccErrorInfoDto&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public struct NVAPIGpuEccErrorInfoDto : IEquatable&lt;NVAPIGpuEccErrorInfoDto&gt;</code></pre>
   </div>
 
 
@@ -195,7 +195,7 @@ Struct NVAPIGpuEccErrorInfoDto  <a class="header-action link-secondary" title="V
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ulong AggregateDoubleBitErrors { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public ulong AggregateDoubleBitErrors { readonly get; set; }</code></pre>
   </div>
 
 
@@ -226,7 +226,7 @@ Struct NVAPIGpuEccErrorInfoDto  <a class="header-action link-secondary" title="V
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ulong AggregateSingleBitErrors { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public ulong AggregateSingleBitErrors { readonly get; set; }</code></pre>
   </div>
 
 
@@ -257,7 +257,7 @@ Struct NVAPIGpuEccErrorInfoDto  <a class="header-action link-secondary" title="V
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ulong CurrentDoubleBitErrors { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public ulong CurrentDoubleBitErrors { readonly get; set; }</code></pre>
   </div>
 
 
@@ -288,7 +288,7 @@ Struct NVAPIGpuEccErrorInfoDto  <a class="header-action link-secondary" title="V
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ulong CurrentSingleBitErrors { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public ulong CurrentSingleBitErrors { readonly get; set; }</code></pre>
   </div>
 
 

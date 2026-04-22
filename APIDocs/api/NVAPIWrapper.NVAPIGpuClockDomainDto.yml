@@ -34,7 +34,7 @@ items:
   summary: Clock domain DTO.
   example: []
   syntax:
-    content: 'public readonly struct NVAPIGpuClockDomainDto : IEquatable<NVAPIGpuClockDomainDto>'
+    content: 'public struct NVAPIGpuClockDomainDto : IEquatable<NVAPIGpuClockDomainDto>'
     content.vb: Public Structure NVAPIGpuClockDomainDto Implements IEquatable(Of NVAPIGpuClockDomainDto)
   implements:
   - System.IEquatable{NVAPIWrapper.NVAPIGpuClockDomainDto}
@@ -66,11 +66,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public bool IsPresent { get; }
+    content: public bool IsPresent { readonly get; set; }
     parameters: []
     return:
       type: System.Boolean
-    content.vb: Public ReadOnly Property IsPresent As Boolean
+    content.vb: Public Property IsPresent As Boolean
   overload: NVAPIWrapper.NVAPIGpuClockDomainDto.IsPresent*
 - uid: NVAPIWrapper.NVAPIGpuClockDomainDto.FrequencyKHz
   commentId: P:NVAPIWrapper.NVAPIGpuClockDomainDto.FrequencyKHz
@@ -95,11 +95,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public uint FrequencyKHz { get; }
+    content: public uint FrequencyKHz { readonly get; set; }
     parameters: []
     return:
       type: System.UInt32
-    content.vb: Public ReadOnly Property FrequencyKHz As UInteger
+    content.vb: Public Property FrequencyKHz As UInteger
   overload: NVAPIWrapper.NVAPIGpuClockDomainDto.FrequencyKHz*
 - uid: NVAPIWrapper.NVAPIGpuClockDomainDto.#ctor(System.Boolean,System.UInt32)
   commentId: M:NVAPIWrapper.NVAPIGpuClockDomainDto.#ctor(System.Boolean,System.UInt32)

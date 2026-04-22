@@ -37,7 +37,7 @@ items:
   summary: HDCP support status DTO.
   example: []
   syntax:
-    content: 'public readonly struct NVAPIGpuHdcpSupportStatusDto : IEquatable<NVAPIGpuHdcpSupportStatusDto>'
+    content: 'public struct NVAPIGpuHdcpSupportStatusDto : IEquatable<NVAPIGpuHdcpSupportStatusDto>'
     content.vb: Public Structure NVAPIGpuHdcpSupportStatusDto Implements IEquatable(Of NVAPIGpuHdcpSupportStatusDto)
   implements:
   - System.IEquatable{NVAPIWrapper.NVAPIGpuHdcpSupportStatusDto}
@@ -69,11 +69,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public _NV_GPU_HDCP_FUSE_STATE HdcpFuseState { get; }
+    content: public _NV_GPU_HDCP_FUSE_STATE HdcpFuseState { readonly get; set; }
     parameters: []
     return:
       type: NVAPIWrapper._NV_GPU_HDCP_FUSE_STATE
-    content.vb: Public ReadOnly Property HdcpFuseState As _NV_GPU_HDCP_FUSE_STATE
+    content.vb: Public Property HdcpFuseState As _NV_GPU_HDCP_FUSE_STATE
   overload: NVAPIWrapper.NVAPIGpuHdcpSupportStatusDto.HdcpFuseState*
 - uid: NVAPIWrapper.NVAPIGpuHdcpSupportStatusDto.HdcpKeySource
   commentId: P:NVAPIWrapper.NVAPIGpuHdcpSupportStatusDto.HdcpKeySource
@@ -98,11 +98,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public _NV_GPU_HDCP_KEY_SOURCE HdcpKeySource { get; }
+    content: public _NV_GPU_HDCP_KEY_SOURCE HdcpKeySource { readonly get; set; }
     parameters: []
     return:
       type: NVAPIWrapper._NV_GPU_HDCP_KEY_SOURCE
-    content.vb: Public ReadOnly Property HdcpKeySource As _NV_GPU_HDCP_KEY_SOURCE
+    content.vb: Public Property HdcpKeySource As _NV_GPU_HDCP_KEY_SOURCE
   overload: NVAPIWrapper.NVAPIGpuHdcpSupportStatusDto.HdcpKeySource*
 - uid: NVAPIWrapper.NVAPIGpuHdcpSupportStatusDto.HdcpKeySourceState
   commentId: P:NVAPIWrapper.NVAPIGpuHdcpSupportStatusDto.HdcpKeySourceState
@@ -127,11 +127,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public _NV_GPU_HDCP_KEY_SOURCE_STATE HdcpKeySourceState { get; }
+    content: public _NV_GPU_HDCP_KEY_SOURCE_STATE HdcpKeySourceState { readonly get; set; }
     parameters: []
     return:
       type: NVAPIWrapper._NV_GPU_HDCP_KEY_SOURCE_STATE
-    content.vb: Public ReadOnly Property HdcpKeySourceState As _NV_GPU_HDCP_KEY_SOURCE_STATE
+    content.vb: Public Property HdcpKeySourceState As _NV_GPU_HDCP_KEY_SOURCE_STATE
   overload: NVAPIWrapper.NVAPIGpuHdcpSupportStatusDto.HdcpKeySourceState*
 - uid: NVAPIWrapper.NVAPIGpuHdcpSupportStatusDto.#ctor(NVAPIWrapper._NV_GPU_HDCP_FUSE_STATE,NVAPIWrapper._NV_GPU_HDCP_KEY_SOURCE,NVAPIWrapper._NV_GPU_HDCP_KEY_SOURCE_STATE)
   commentId: M:NVAPIWrapper.NVAPIGpuHdcpSupportStatusDto.#ctor(NVAPIWrapper._NV_GPU_HDCP_FUSE_STATE,NVAPIWrapper._NV_GPU_HDCP_KEY_SOURCE,NVAPIWrapper._NV_GPU_HDCP_KEY_SOURCE_STATE)

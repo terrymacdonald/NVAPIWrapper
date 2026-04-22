@@ -102,7 +102,7 @@ Struct NVAPIVioSyncDelayDto  <a class="header-action link-secondary" title="View
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly struct NVAPIVioSyncDelayDto : IEquatable&lt;NVAPIVioSyncDelayDto&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public struct NVAPIVioSyncDelayDto : IEquatable&lt;NVAPIVioSyncDelayDto&gt;</code></pre>
   </div>
 
 
@@ -191,7 +191,7 @@ Struct NVAPIVioSyncDelayDto  <a class="header-action link-secondary" title="View
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public uint HorizontalDelay { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public uint HorizontalDelay { readonly get; set; }</code></pre>
   </div>
 
 
@@ -222,7 +222,7 @@ Struct NVAPIVioSyncDelayDto  <a class="header-action link-secondary" title="View
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public uint VerticalDelay { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public uint VerticalDelay { readonly get; set; }</code></pre>
   </div>
 
 

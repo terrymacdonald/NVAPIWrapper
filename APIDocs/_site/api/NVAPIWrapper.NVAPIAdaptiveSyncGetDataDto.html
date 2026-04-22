@@ -102,7 +102,7 @@ Struct NVAPIAdaptiveSyncGetDataDto  <a class="header-action link-secondary" titl
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly struct NVAPIAdaptiveSyncGetDataDto : IEquatable&lt;NVAPIAdaptiveSyncGetDataDto&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public struct NVAPIAdaptiveSyncGetDataDto : IEquatable&lt;NVAPIAdaptiveSyncGetDataDto&gt;</code></pre>
   </div>
 
 
@@ -191,7 +191,7 @@ Struct NVAPIAdaptiveSyncGetDataDto  <a class="header-action link-secondary" titl
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public _NV_GET_ADAPTIVE_SYNC_DATA_V1 Data { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public _NV_GET_ADAPTIVE_SYNC_DATA_V1 Data { readonly get; set; }</code></pre>
   </div>
 
 

@@ -102,7 +102,7 @@ Struct NVAPIGSyncDisplayDto  <a class="header-action link-secondary" title="View
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly struct NVAPIGSyncDisplayDto : IEquatable&lt;NVAPIGSyncDisplayDto&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public struct NVAPIGSyncDisplayDto : IEquatable&lt;NVAPIGSyncDisplayDto&gt;</code></pre>
   </div>
 
 
@@ -197,7 +197,7 @@ Struct NVAPIGSyncDisplayDto  <a class="header-action link-secondary" title="View
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public uint DisplayId { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public uint DisplayId { readonly get; set; }</code></pre>
   </div>
 
 
@@ -228,7 +228,7 @@ Struct NVAPIGSyncDisplayDto  <a class="header-action link-secondary" title="View
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool IsMasterable { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public bool IsMasterable { readonly get; set; }</code></pre>
   </div>
 
 
@@ -259,7 +259,7 @@ Struct NVAPIGSyncDisplayDto  <a class="header-action link-secondary" title="View
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public _NVAPI_GSYNC_DISPLAY_SYNC_STATE SyncState { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public _NVAPI_GSYNC_DISPLAY_SYNC_STATE SyncState { readonly get; set; }</code></pre>
   </div>
 
 

@@ -102,7 +102,7 @@ Struct NVAPIPstateClockEntryDto  <a class="header-action link-secondary" title="
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly struct NVAPIPstateClockEntryDto : IEquatable&lt;NVAPIPstateClockEntryDto&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public struct NVAPIPstateClockEntryDto : IEquatable&lt;NVAPIPstateClockEntryDto&gt;</code></pre>
   </div>
 
 
@@ -211,7 +211,7 @@ Struct NVAPIPstateClockEntryDto  <a class="header-action link-secondary" title="
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public _NV_GPU_PUBLIC_CLOCK_ID DomainId { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public _NV_GPU_PUBLIC_CLOCK_ID DomainId { readonly get; set; }</code></pre>
   </div>
 
 
@@ -243,7 +243,7 @@ Struct NVAPIPstateClockEntryDto  <a class="header-action link-secondary" title="
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int FreqDeltaMax { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public int FreqDeltaMax { readonly get; set; }</code></pre>
   </div>
 
 
@@ -275,7 +275,7 @@ Struct NVAPIPstateClockEntryDto  <a class="header-action link-secondary" title="
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int FreqDeltaMin { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public int FreqDeltaMin { readonly get; set; }</code></pre>
   </div>
 
 
@@ -307,7 +307,7 @@ Struct NVAPIPstateClockEntryDto  <a class="header-action link-secondary" title="
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int FreqDeltaValue { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public int FreqDeltaValue { readonly get; set; }</code></pre>
   </div>
 
 
@@ -339,7 +339,7 @@ Struct NVAPIPstateClockEntryDto  <a class="header-action link-secondary" title="
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool IsEditable { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public bool IsEditable { readonly get; set; }</code></pre>
   </div>
 
 
@@ -371,7 +371,7 @@ Struct NVAPIPstateClockEntryDto  <a class="header-action link-secondary" title="
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public uint MaxFreqKHz { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public uint MaxFreqKHz { readonly get; set; }</code></pre>
   </div>
 
 
@@ -404,7 +404,7 @@ Struct NVAPIPstateClockEntryDto  <a class="header-action link-secondary" title="
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public uint MinFreqKHz { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public uint MinFreqKHz { readonly get; set; }</code></pre>
   </div>
 
 
@@ -436,7 +436,7 @@ Struct NVAPIPstateClockEntryDto  <a class="header-action link-secondary" title="
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public uint RangeMaxVoltageUv { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public uint RangeMaxVoltageUv { readonly get; set; }</code></pre>
   </div>
 
 
@@ -468,7 +468,7 @@ Struct NVAPIPstateClockEntryDto  <a class="header-action link-secondary" title="
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public uint RangeMinVoltageUv { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public uint RangeMinVoltageUv { readonly get; set; }</code></pre>
   </div>
 
 
@@ -500,7 +500,7 @@ Struct NVAPIPstateClockEntryDto  <a class="header-action link-secondary" title="
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public _NV_GPU_PERF_VOLTAGE_INFO_DOMAIN_ID RangeVoltageDomainId { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public _NV_GPU_PERF_VOLTAGE_INFO_DOMAIN_ID RangeVoltageDomainId { readonly get; set; }</code></pre>
   </div>
 
 
@@ -532,7 +532,7 @@ Struct NVAPIPstateClockEntryDto  <a class="header-action link-secondary" title="
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public NV_GPU_PERF_PSTATE20_CLOCK_TYPE_ID TypeId { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public NV_GPU_PERF_PSTATE20_CLOCK_TYPE_ID TypeId { readonly get; set; }</code></pre>
   </div>
 
 

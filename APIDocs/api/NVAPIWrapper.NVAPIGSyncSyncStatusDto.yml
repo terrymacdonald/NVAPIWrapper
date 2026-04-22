@@ -37,7 +37,7 @@ items:
   summary: DTO for sync status.
   example: []
   syntax:
-    content: 'public readonly struct NVAPIGSyncSyncStatusDto : IEquatable<NVAPIGSyncSyncStatusDto>'
+    content: 'public struct NVAPIGSyncSyncStatusDto : IEquatable<NVAPIGSyncSyncStatusDto>'
     content.vb: Public Structure NVAPIGSyncSyncStatusDto Implements IEquatable(Of NVAPIGSyncSyncStatusDto)
   implements:
   - System.IEquatable{NVAPIWrapper.NVAPIGSyncSyncStatusDto}
@@ -69,11 +69,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public bool IsSynced { get; }
+    content: public bool IsSynced { readonly get; set; }
     parameters: []
     return:
       type: System.Boolean
-    content.vb: Public ReadOnly Property IsSynced As Boolean
+    content.vb: Public Property IsSynced As Boolean
   overload: NVAPIWrapper.NVAPIGSyncSyncStatusDto.IsSynced*
 - uid: NVAPIWrapper.NVAPIGSyncSyncStatusDto.IsStereoSynced
   commentId: P:NVAPIWrapper.NVAPIGSyncSyncStatusDto.IsStereoSynced
@@ -98,11 +98,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public bool IsStereoSynced { get; }
+    content: public bool IsStereoSynced { readonly get; set; }
     parameters: []
     return:
       type: System.Boolean
-    content.vb: Public ReadOnly Property IsStereoSynced As Boolean
+    content.vb: Public Property IsStereoSynced As Boolean
   overload: NVAPIWrapper.NVAPIGSyncSyncStatusDto.IsStereoSynced*
 - uid: NVAPIWrapper.NVAPIGSyncSyncStatusDto.IsSyncSignalAvailable
   commentId: P:NVAPIWrapper.NVAPIGSyncSyncStatusDto.IsSyncSignalAvailable
@@ -127,11 +127,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public bool IsSyncSignalAvailable { get; }
+    content: public bool IsSyncSignalAvailable { readonly get; set; }
     parameters: []
     return:
       type: System.Boolean
-    content.vb: Public ReadOnly Property IsSyncSignalAvailable As Boolean
+    content.vb: Public Property IsSyncSignalAvailable As Boolean
   overload: NVAPIWrapper.NVAPIGSyncSyncStatusDto.IsSyncSignalAvailable*
 - uid: NVAPIWrapper.NVAPIGSyncSyncStatusDto.#ctor(System.Boolean,System.Boolean,System.Boolean)
   commentId: M:NVAPIWrapper.NVAPIGSyncSyncStatusDto.#ctor(System.Boolean,System.Boolean,System.Boolean)

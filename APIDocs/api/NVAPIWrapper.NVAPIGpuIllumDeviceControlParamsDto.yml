@@ -37,7 +37,7 @@ items:
   summary: Illumination device control params DTO.
   example: []
   syntax:
-    content: 'public readonly struct NVAPIGpuIllumDeviceControlParamsDto : IEquatable<NVAPIGpuIllumDeviceControlParamsDto>'
+    content: 'public struct NVAPIGpuIllumDeviceControlParamsDto : IEquatable<NVAPIGpuIllumDeviceControlParamsDto>'
     content.vb: Public Structure NVAPIGpuIllumDeviceControlParamsDto Implements IEquatable(Of NVAPIGpuIllumDeviceControlParamsDto)
   implements:
   - System.IEquatable{NVAPIWrapper.NVAPIGpuIllumDeviceControlParamsDto}
@@ -71,11 +71,11 @@ items:
   summary: Number of illumination devices for control.
   example: []
   syntax:
-    content: public uint NumIllumDevices { get; }
+    content: public uint NumIllumDevices { readonly get; set; }
     parameters: []
     return:
       type: System.UInt32
-    content.vb: Public ReadOnly Property NumIllumDevices As UInteger
+    content.vb: Public Property NumIllumDevices As UInteger
   overload: NVAPIWrapper.NVAPIGpuIllumDeviceControlParamsDto.NumIllumDevices*
 - uid: NVAPIWrapper.NVAPIGpuIllumDeviceControlParamsDto.Devices
   commentId: P:NVAPIWrapper.NVAPIGpuIllumDeviceControlParamsDto.Devices
@@ -102,11 +102,11 @@ items:
   summary: Per-device illumination control array (up to 32 entries).
   example: []
   syntax:
-    content: public NVAPIGpuIllumDeviceControlDto[] Devices { get; }
+    content: public NVAPIGpuIllumDeviceControlDto[] Devices { readonly get; set; }
     parameters: []
     return:
       type: NVAPIWrapper.NVAPIGpuIllumDeviceControlDto[]
-    content.vb: Public ReadOnly Property Devices As NVAPIGpuIllumDeviceControlDto()
+    content.vb: Public Property Devices As NVAPIGpuIllumDeviceControlDto()
   overload: NVAPIWrapper.NVAPIGpuIllumDeviceControlParamsDto.Devices*
 - uid: NVAPIWrapper.NVAPIGpuIllumDeviceControlParamsDto.#ctor(System.UInt32,NVAPIWrapper.NVAPIGpuIllumDeviceControlDto[])
   commentId: M:NVAPIWrapper.NVAPIGpuIllumDeviceControlParamsDto.#ctor(System.UInt32,NVAPIWrapper.NVAPIGpuIllumDeviceControlDto[])

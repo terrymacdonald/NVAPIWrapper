@@ -33,7 +33,7 @@ items:
   summary: Mosaic display topology status collection DTO.
   example: []
   syntax:
-    content: 'public readonly struct NVAPIMosaicDisplayTopoStatusesDto : IEquatable<NVAPIMosaicDisplayTopoStatusesDto>'
+    content: 'public struct NVAPIMosaicDisplayTopoStatusesDto : IEquatable<NVAPIMosaicDisplayTopoStatusesDto>'
     content.vb: Public Structure NVAPIMosaicDisplayTopoStatusesDto Implements IEquatable(Of NVAPIMosaicDisplayTopoStatusesDto)
   implements:
   - System.IEquatable{NVAPIWrapper.NVAPIMosaicDisplayTopoStatusesDto}
@@ -65,11 +65,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public NVAPIMosaicDisplayTopoStatusDto[] Statuses { get; }
+    content: public NVAPIMosaicDisplayTopoStatusDto[] Statuses { readonly get; set; }
     parameters: []
     return:
       type: NVAPIWrapper.NVAPIMosaicDisplayTopoStatusDto[]
-    content.vb: Public ReadOnly Property Statuses As NVAPIMosaicDisplayTopoStatusDto()
+    content.vb: Public Property Statuses As NVAPIMosaicDisplayTopoStatusDto()
   overload: NVAPIWrapper.NVAPIMosaicDisplayTopoStatusesDto.Statuses*
 - uid: NVAPIWrapper.NVAPIMosaicDisplayTopoStatusesDto.#ctor(NVAPIWrapper.NVAPIMosaicDisplayTopoStatusDto[])
   commentId: M:NVAPIWrapper.NVAPIMosaicDisplayTopoStatusesDto.#ctor(NVAPIWrapper.NVAPIMosaicDisplayTopoStatusDto[])

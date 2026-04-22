@@ -38,7 +38,7 @@ items:
   summary: Illumination zone control params DTO.
   example: []
   syntax:
-    content: 'public readonly struct NVAPIGpuIllumZoneControlParamsDto : IEquatable<NVAPIGpuIllumZoneControlParamsDto>'
+    content: 'public struct NVAPIGpuIllumZoneControlParamsDto : IEquatable<NVAPIGpuIllumZoneControlParamsDto>'
     content.vb: Public Structure NVAPIGpuIllumZoneControlParamsDto Implements IEquatable(Of NVAPIGpuIllumZoneControlParamsDto)
   implements:
   - System.IEquatable{NVAPIWrapper.NVAPIGpuIllumZoneControlParamsDto}
@@ -72,11 +72,11 @@ items:
   summary: True if default lighting values should be applied.
   example: []
   syntax:
-    content: public bool IsDefault { get; }
+    content: public bool IsDefault { readonly get; set; }
     parameters: []
     return:
       type: System.Boolean
-    content.vb: Public ReadOnly Property IsDefault As Boolean
+    content.vb: Public Property IsDefault As Boolean
   overload: NVAPIWrapper.NVAPIGpuIllumZoneControlParamsDto.IsDefault*
 - uid: NVAPIWrapper.NVAPIGpuIllumZoneControlParamsDto.NumIllumZonesControl
   commentId: P:NVAPIWrapper.NVAPIGpuIllumZoneControlParamsDto.NumIllumZonesControl
@@ -103,11 +103,11 @@ items:
   summary: Number of illumination zones for control.
   example: []
   syntax:
-    content: public uint NumIllumZonesControl { get; }
+    content: public uint NumIllumZonesControl { readonly get; set; }
     parameters: []
     return:
       type: System.UInt32
-    content.vb: Public ReadOnly Property NumIllumZonesControl As UInteger
+    content.vb: Public Property NumIllumZonesControl As UInteger
   overload: NVAPIWrapper.NVAPIGpuIllumZoneControlParamsDto.NumIllumZonesControl*
 - uid: NVAPIWrapper.NVAPIGpuIllumZoneControlParamsDto.Zones
   commentId: P:NVAPIWrapper.NVAPIGpuIllumZoneControlParamsDto.Zones
@@ -134,11 +134,11 @@ items:
   summary: Per-zone illumination control array (up to 32 entries).
   example: []
   syntax:
-    content: public NVAPIGpuIllumZoneControlDto[] Zones { get; }
+    content: public NVAPIGpuIllumZoneControlDto[] Zones { readonly get; set; }
     parameters: []
     return:
       type: NVAPIWrapper.NVAPIGpuIllumZoneControlDto[]
-    content.vb: Public ReadOnly Property Zones As NVAPIGpuIllumZoneControlDto()
+    content.vb: Public Property Zones As NVAPIGpuIllumZoneControlDto()
   overload: NVAPIWrapper.NVAPIGpuIllumZoneControlParamsDto.Zones*
 - uid: NVAPIWrapper.NVAPIGpuIllumZoneControlParamsDto.#ctor(System.Boolean,System.UInt32,NVAPIWrapper.NVAPIGpuIllumZoneControlDto[])
   commentId: M:NVAPIWrapper.NVAPIGpuIllumZoneControlParamsDto.#ctor(System.Boolean,System.UInt32,NVAPIWrapper.NVAPIGpuIllumZoneControlDto[])

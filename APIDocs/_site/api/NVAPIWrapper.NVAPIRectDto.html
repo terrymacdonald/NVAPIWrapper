@@ -102,7 +102,7 @@ Struct NVAPIRectDto  <a class="header-action link-secondary" title="View source"
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly struct NVAPIRectDto : IEquatable&lt;NVAPIRectDto&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public struct NVAPIRectDto : IEquatable&lt;NVAPIRectDto&gt;</code></pre>
   </div>
 
 
@@ -200,7 +200,7 @@ Struct NVAPIRectDto  <a class="header-action link-secondary" title="View source"
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public uint Bottom { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public uint Bottom { readonly get; set; }</code></pre>
   </div>
 
 
@@ -231,7 +231,7 @@ Struct NVAPIRectDto  <a class="header-action link-secondary" title="View source"
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public uint Left { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public uint Left { readonly get; set; }</code></pre>
   </div>
 
 
@@ -262,7 +262,7 @@ Struct NVAPIRectDto  <a class="header-action link-secondary" title="View source"
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public uint Right { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public uint Right { readonly get; set; }</code></pre>
   </div>
 
 
@@ -293,7 +293,7 @@ Struct NVAPIRectDto  <a class="header-action link-secondary" title="View source"
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public uint Top { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public uint Top { readonly get; set; }</code></pre>
   </div>
 
 

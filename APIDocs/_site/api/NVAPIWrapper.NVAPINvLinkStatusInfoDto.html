@@ -102,7 +102,7 @@ Struct NVAPINvLinkStatusInfoDto  <a class="header-action link-secondary" title="
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly struct NVAPINvLinkStatusInfoDto : IEquatable&lt;NVAPINvLinkStatusInfoDto&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public struct NVAPINvLinkStatusInfoDto : IEquatable&lt;NVAPINvLinkStatusInfoDto&gt;</code></pre>
   </div>
 
 
@@ -237,7 +237,7 @@ Struct NVAPINvLinkStatusInfoDto  <a class="header-action link-secondary" title="
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public uint CapsTbl { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public uint CapsTbl { readonly get; set; }</code></pre>
   </div>
 
 
@@ -268,7 +268,7 @@ Struct NVAPINvLinkStatusInfoDto  <a class="header-action link-secondary" title="
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool Connected { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public bool Connected { readonly get; set; }</code></pre>
   </div>
 
 
@@ -299,7 +299,7 @@ Struct NVAPINvLinkStatusInfoDto  <a class="header-action link-secondary" title="
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public uint LinkState { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public uint LinkState { readonly get; set; }</code></pre>
   </div>
 
 
@@ -330,7 +330,7 @@ Struct NVAPINvLinkStatusInfoDto  <a class="header-action link-secondary" title="
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public NVAPINvLinkDeviceInfoDto LocalDeviceInfo { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public NVAPINvLinkDeviceInfoDto LocalDeviceInfo { readonly get; set; }</code></pre>
   </div>
 
 
@@ -361,7 +361,7 @@ Struct NVAPINvLinkStatusInfoDto  <a class="header-action link-secondary" title="
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public byte LocalDeviceLinkNumber { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public byte LocalDeviceLinkNumber { readonly get; set; }</code></pre>
   </div>
 
 
@@ -392,7 +392,7 @@ Struct NVAPINvLinkStatusInfoDto  <a class="header-action link-secondary" title="
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public byte LoopProperty { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public byte LoopProperty { readonly get; set; }</code></pre>
   </div>
 
 
@@ -423,7 +423,7 @@ Struct NVAPINvLinkStatusInfoDto  <a class="header-action link-secondary" title="
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public byte NciVersion { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public byte NciVersion { readonly get; set; }</code></pre>
   </div>
 
 
@@ -454,7 +454,7 @@ Struct NVAPINvLinkStatusInfoDto  <a class="header-action link-secondary" title="
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public uint NvlinkCommonClockSpeedMhz { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public uint NvlinkCommonClockSpeedMhz { readonly get; set; }</code></pre>
   </div>
 
 
@@ -485,7 +485,7 @@ Struct NVAPINvLinkStatusInfoDto  <a class="header-action link-secondary" title="
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public uint NvlinkL1ThresholdUnits { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public uint NvlinkL1ThresholdUnits { readonly get; set; }</code></pre>
   </div>
 
 
@@ -516,7 +516,7 @@ Struct NVAPINvLinkStatusInfoDto  <a class="header-action link-secondary" title="
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public uint NvlinkLineRateMbps { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public uint NvlinkLineRateMbps { readonly get; set; }</code></pre>
   </div>
 
 
@@ -547,7 +547,7 @@ Struct NVAPINvLinkStatusInfoDto  <a class="header-action link-secondary" title="
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public uint NvlinkLinkClockMhz { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public uint NvlinkLinkClockMhz { readonly get; set; }</code></pre>
   </div>
 
 
@@ -578,7 +578,7 @@ Struct NVAPINvLinkStatusInfoDto  <a class="header-action link-secondary" title="
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public uint NvlinkMaxL1Threshold { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public uint NvlinkMaxL1Threshold { readonly get; set; }</code></pre>
   </div>
 
 
@@ -609,7 +609,7 @@ Struct NVAPINvLinkStatusInfoDto  <a class="header-action link-secondary" title="
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public uint NvlinkMinL1Threshold { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public uint NvlinkMinL1Threshold { readonly get; set; }</code></pre>
   </div>
 
 
@@ -640,7 +640,7 @@ Struct NVAPINvLinkStatusInfoDto  <a class="header-action link-secondary" title="
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public uint NvlinkRefClkSpeedMhz { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public uint NvlinkRefClkSpeedMhz { readonly get; set; }</code></pre>
   </div>
 
 
@@ -671,7 +671,7 @@ Struct NVAPINvLinkStatusInfoDto  <a class="header-action link-secondary" title="
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public byte NvlinkRefClkType { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public byte NvlinkRefClkType { readonly get; set; }</code></pre>
   </div>
 
 
@@ -702,7 +702,7 @@ Struct NVAPINvLinkStatusInfoDto  <a class="header-action link-secondary" title="
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public byte NvlinkVersion { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public byte NvlinkVersion { readonly get; set; }</code></pre>
   </div>
 
 
@@ -733,7 +733,7 @@ Struct NVAPINvLinkStatusInfoDto  <a class="header-action link-secondary" title="
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public byte PhyType { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public byte PhyType { readonly get; set; }</code></pre>
   </div>
 
 
@@ -764,7 +764,7 @@ Struct NVAPINvLinkStatusInfoDto  <a class="header-action link-secondary" title="
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public byte PhyVersion { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public byte PhyVersion { readonly get; set; }</code></pre>
   </div>
 
 
@@ -795,7 +795,7 @@ Struct NVAPINvLinkStatusInfoDto  <a class="header-action link-secondary" title="
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public NVAPINvLinkDeviceInfoDto RemoteDeviceInfo { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public NVAPINvLinkDeviceInfoDto RemoteDeviceInfo { readonly get; set; }</code></pre>
   </div>
 
 
@@ -826,7 +826,7 @@ Struct NVAPINvLinkStatusInfoDto  <a class="header-action link-secondary" title="
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public byte RemoteDeviceLinkNumber { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public byte RemoteDeviceLinkNumber { readonly get; set; }</code></pre>
   </div>
 
 
@@ -857,7 +857,7 @@ Struct NVAPINvLinkStatusInfoDto  <a class="header-action link-secondary" title="
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public uint Reserved { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public uint Reserved { readonly get; set; }</code></pre>
   </div>
 
 
@@ -888,7 +888,7 @@ Struct NVAPINvLinkStatusInfoDto  <a class="header-action link-secondary" title="
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public uint[] ReservedEx { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public uint[] ReservedEx { readonly get; set; }</code></pre>
   </div>
 
 
@@ -919,7 +919,7 @@ Struct NVAPINvLinkStatusInfoDto  <a class="header-action link-secondary" title="
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public byte RxSublinkStatus { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public byte RxSublinkStatus { readonly get; set; }</code></pre>
   </div>
 
 
@@ -950,7 +950,7 @@ Struct NVAPINvLinkStatusInfoDto  <a class="header-action link-secondary" title="
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public byte SubLinkWidth { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public byte SubLinkWidth { readonly get; set; }</code></pre>
   </div>
 
 
@@ -981,7 +981,7 @@ Struct NVAPINvLinkStatusInfoDto  <a class="header-action link-secondary" title="
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public byte TxSublinkStatus { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public byte TxSublinkStatus { readonly get; set; }</code></pre>
   </div>
 
 

@@ -44,7 +44,7 @@ items:
   summary: Mosaic grid topology DTO.
   example: []
   syntax:
-    content: 'public readonly struct NVAPIMosaicGridTopoDto : IEquatable<NVAPIMosaicGridTopoDto>'
+    content: 'public struct NVAPIMosaicGridTopoDto : IEquatable<NVAPIMosaicGridTopoDto>'
     content.vb: Public Structure NVAPIMosaicGridTopoDto Implements IEquatable(Of NVAPIMosaicGridTopoDto)
   implements:
   - System.IEquatable{NVAPIWrapper.NVAPIMosaicGridTopoDto}
@@ -76,11 +76,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public uint Rows { get; }
+    content: public uint Rows { readonly get; set; }
     parameters: []
     return:
       type: System.UInt32
-    content.vb: Public ReadOnly Property Rows As UInteger
+    content.vb: Public Property Rows As UInteger
   overload: NVAPIWrapper.NVAPIMosaicGridTopoDto.Rows*
 - uid: NVAPIWrapper.NVAPIMosaicGridTopoDto.Columns
   commentId: P:NVAPIWrapper.NVAPIMosaicGridTopoDto.Columns
@@ -105,11 +105,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public uint Columns { get; }
+    content: public uint Columns { readonly get; set; }
     parameters: []
     return:
       type: System.UInt32
-    content.vb: Public ReadOnly Property Columns As UInteger
+    content.vb: Public Property Columns As UInteger
   overload: NVAPIWrapper.NVAPIMosaicGridTopoDto.Columns*
 - uid: NVAPIWrapper.NVAPIMosaicGridTopoDto.ApplyWithBezelCorrect
   commentId: P:NVAPIWrapper.NVAPIMosaicGridTopoDto.ApplyWithBezelCorrect
@@ -134,11 +134,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public bool ApplyWithBezelCorrect { get; }
+    content: public bool ApplyWithBezelCorrect { readonly get; set; }
     parameters: []
     return:
       type: System.Boolean
-    content.vb: Public ReadOnly Property ApplyWithBezelCorrect As Boolean
+    content.vb: Public Property ApplyWithBezelCorrect As Boolean
   overload: NVAPIWrapper.NVAPIMosaicGridTopoDto.ApplyWithBezelCorrect*
 - uid: NVAPIWrapper.NVAPIMosaicGridTopoDto.ImmersiveGaming
   commentId: P:NVAPIWrapper.NVAPIMosaicGridTopoDto.ImmersiveGaming
@@ -163,11 +163,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public bool ImmersiveGaming { get; }
+    content: public bool ImmersiveGaming { readonly get; set; }
     parameters: []
     return:
       type: System.Boolean
-    content.vb: Public ReadOnly Property ImmersiveGaming As Boolean
+    content.vb: Public Property ImmersiveGaming As Boolean
   overload: NVAPIWrapper.NVAPIMosaicGridTopoDto.ImmersiveGaming*
 - uid: NVAPIWrapper.NVAPIMosaicGridTopoDto.BaseMosaic
   commentId: P:NVAPIWrapper.NVAPIMosaicGridTopoDto.BaseMosaic
@@ -192,11 +192,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public bool BaseMosaic { get; }
+    content: public bool BaseMosaic { readonly get; set; }
     parameters: []
     return:
       type: System.Boolean
-    content.vb: Public ReadOnly Property BaseMosaic As Boolean
+    content.vb: Public Property BaseMosaic As Boolean
   overload: NVAPIWrapper.NVAPIMosaicGridTopoDto.BaseMosaic*
 - uid: NVAPIWrapper.NVAPIMosaicGridTopoDto.DriverReloadAllowed
   commentId: P:NVAPIWrapper.NVAPIMosaicGridTopoDto.DriverReloadAllowed
@@ -221,11 +221,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public bool DriverReloadAllowed { get; }
+    content: public bool DriverReloadAllowed { readonly get; set; }
     parameters: []
     return:
       type: System.Boolean
-    content.vb: Public ReadOnly Property DriverReloadAllowed As Boolean
+    content.vb: Public Property DriverReloadAllowed As Boolean
   overload: NVAPIWrapper.NVAPIMosaicGridTopoDto.DriverReloadAllowed*
 - uid: NVAPIWrapper.NVAPIMosaicGridTopoDto.AcceleratePrimaryDisplay
   commentId: P:NVAPIWrapper.NVAPIMosaicGridTopoDto.AcceleratePrimaryDisplay
@@ -250,11 +250,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public bool AcceleratePrimaryDisplay { get; }
+    content: public bool AcceleratePrimaryDisplay { readonly get; set; }
     parameters: []
     return:
       type: System.Boolean
-    content.vb: Public ReadOnly Property AcceleratePrimaryDisplay As Boolean
+    content.vb: Public Property AcceleratePrimaryDisplay As Boolean
   overload: NVAPIWrapper.NVAPIMosaicGridTopoDto.AcceleratePrimaryDisplay*
 - uid: NVAPIWrapper.NVAPIMosaicGridTopoDto.PixelShift
   commentId: P:NVAPIWrapper.NVAPIMosaicGridTopoDto.PixelShift
@@ -279,11 +279,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public bool PixelShift { get; }
+    content: public bool PixelShift { readonly get; set; }
     parameters: []
     return:
       type: System.Boolean
-    content.vb: Public ReadOnly Property PixelShift As Boolean
+    content.vb: Public Property PixelShift As Boolean
   overload: NVAPIWrapper.NVAPIMosaicGridTopoDto.PixelShift*
 - uid: NVAPIWrapper.NVAPIMosaicGridTopoDto.Displays
   commentId: P:NVAPIWrapper.NVAPIMosaicGridTopoDto.Displays
@@ -308,11 +308,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public NVAPIMosaicGridTopoDisplayDto[] Displays { get; }
+    content: public NVAPIMosaicGridTopoDisplayDto[] Displays { readonly get; set; }
     parameters: []
     return:
       type: NVAPIWrapper.NVAPIMosaicGridTopoDisplayDto[]
-    content.vb: Public ReadOnly Property Displays As NVAPIMosaicGridTopoDisplayDto()
+    content.vb: Public Property Displays As NVAPIMosaicGridTopoDisplayDto()
   overload: NVAPIWrapper.NVAPIMosaicGridTopoDto.Displays*
 - uid: NVAPIWrapper.NVAPIMosaicGridTopoDto.DisplaySettings
   commentId: P:NVAPIWrapper.NVAPIMosaicGridTopoDto.DisplaySettings
@@ -337,11 +337,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public NVAPIMosaicDisplaySettingDto DisplaySettings { get; }
+    content: public NVAPIMosaicDisplaySettingDto DisplaySettings { readonly get; set; }
     parameters: []
     return:
       type: NVAPIWrapper.NVAPIMosaicDisplaySettingDto
-    content.vb: Public ReadOnly Property DisplaySettings As NVAPIMosaicDisplaySettingDto
+    content.vb: Public Property DisplaySettings As NVAPIMosaicDisplaySettingDto
   overload: NVAPIWrapper.NVAPIMosaicGridTopoDto.DisplaySettings*
 - uid: NVAPIWrapper.NVAPIMosaicGridTopoDto.#ctor(System.UInt32,System.UInt32,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,NVAPIWrapper.NVAPIMosaicGridTopoDisplayDto[],NVAPIWrapper.NVAPIMosaicDisplaySettingDto)
   commentId: M:NVAPIWrapper.NVAPIMosaicGridTopoDto.#ctor(System.UInt32,System.UInt32,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,NVAPIWrapper.NVAPIMosaicGridTopoDisplayDto[],NVAPIWrapper.NVAPIMosaicDisplaySettingDto)

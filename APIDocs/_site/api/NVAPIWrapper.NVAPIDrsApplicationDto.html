@@ -102,7 +102,7 @@ Struct NVAPIDrsApplicationDto  <a class="header-action link-secondary" title="Vi
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly struct NVAPIDrsApplicationDto : IEquatable&lt;NVAPIDrsApplicationDto&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public struct NVAPIDrsApplicationDto : IEquatable&lt;NVAPIDrsApplicationDto&gt;</code></pre>
   </div>
 
 
@@ -212,7 +212,7 @@ Struct NVAPIDrsApplicationDto  <a class="header-action link-secondary" title="Vi
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string AppName { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public string AppName { readonly get; set; }</code></pre>
   </div>
 
 
@@ -243,7 +243,7 @@ Struct NVAPIDrsApplicationDto  <a class="header-action link-secondary" title="Vi
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string CommandLine { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public string CommandLine { readonly get; set; }</code></pre>
   </div>
 
 
@@ -274,7 +274,7 @@ Struct NVAPIDrsApplicationDto  <a class="header-action link-secondary" title="Vi
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string FileInFolder { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public string FileInFolder { readonly get; set; }</code></pre>
   </div>
 
 
@@ -305,7 +305,7 @@ Struct NVAPIDrsApplicationDto  <a class="header-action link-secondary" title="Vi
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool IsCommandLine { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public bool IsCommandLine { readonly get; set; }</code></pre>
   </div>
 
 
@@ -336,7 +336,7 @@ Struct NVAPIDrsApplicationDto  <a class="header-action link-secondary" title="Vi
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool IsMetro { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public bool IsMetro { readonly get; set; }</code></pre>
   </div>
 
 
@@ -367,7 +367,7 @@ Struct NVAPIDrsApplicationDto  <a class="header-action link-secondary" title="Vi
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool IsPredefined { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public bool IsPredefined { readonly get; set; }</code></pre>
   </div>
 
 
@@ -398,7 +398,7 @@ Struct NVAPIDrsApplicationDto  <a class="header-action link-secondary" title="Vi
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string Launcher { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public string Launcher { readonly get; set; }</code></pre>
   </div>
 
 
@@ -429,7 +429,7 @@ Struct NVAPIDrsApplicationDto  <a class="header-action link-secondary" title="Vi
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string UserFriendlyName { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public string UserFriendlyName { readonly get; set; }</code></pre>
   </div>
 
 

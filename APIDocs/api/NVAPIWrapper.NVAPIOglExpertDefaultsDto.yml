@@ -37,7 +37,7 @@ items:
   summary: OpenGL expert mode defaults DTO.
   example: []
   syntax:
-    content: 'public readonly struct NVAPIOglExpertDefaultsDto : IEquatable<NVAPIOglExpertDefaultsDto>'
+    content: 'public struct NVAPIOglExpertDefaultsDto : IEquatable<NVAPIOglExpertDefaultsDto>'
     content.vb: Public Structure NVAPIOglExpertDefaultsDto Implements IEquatable(Of NVAPIOglExpertDefaultsDto)
   implements:
   - System.IEquatable{NVAPIWrapper.NVAPIOglExpertDefaultsDto}
@@ -69,11 +69,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public uint DetailMask { get; }
+    content: public uint DetailMask { readonly get; set; }
     parameters: []
     return:
       type: System.UInt32
-    content.vb: Public ReadOnly Property DetailMask As UInteger
+    content.vb: Public Property DetailMask As UInteger
   overload: NVAPIWrapper.NVAPIOglExpertDefaultsDto.DetailMask*
 - uid: NVAPIWrapper.NVAPIOglExpertDefaultsDto.ReportMask
   commentId: P:NVAPIWrapper.NVAPIOglExpertDefaultsDto.ReportMask
@@ -98,11 +98,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public uint ReportMask { get; }
+    content: public uint ReportMask { readonly get; set; }
     parameters: []
     return:
       type: System.UInt32
-    content.vb: Public ReadOnly Property ReportMask As UInteger
+    content.vb: Public Property ReportMask As UInteger
   overload: NVAPIWrapper.NVAPIOglExpertDefaultsDto.ReportMask*
 - uid: NVAPIWrapper.NVAPIOglExpertDefaultsDto.OutputMask
   commentId: P:NVAPIWrapper.NVAPIOglExpertDefaultsDto.OutputMask
@@ -127,11 +127,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public uint OutputMask { get; }
+    content: public uint OutputMask { readonly get; set; }
     parameters: []
     return:
       type: System.UInt32
-    content.vb: Public ReadOnly Property OutputMask As UInteger
+    content.vb: Public Property OutputMask As UInteger
   overload: NVAPIWrapper.NVAPIOglExpertDefaultsDto.OutputMask*
 - uid: NVAPIWrapper.NVAPIOglExpertDefaultsDto.#ctor(System.UInt32,System.UInt32,System.UInt32)
   commentId: M:NVAPIWrapper.NVAPIOglExpertDefaultsDto.#ctor(System.UInt32,System.UInt32,System.UInt32)

@@ -39,7 +39,7 @@ items:
   summary: DTO for a G-Sync GPU entry in topology.
   example: []
   syntax:
-    content: 'public readonly struct NVAPIGSyncGpuDto : IEquatable<NVAPIGSyncGpuDto>'
+    content: 'public struct NVAPIGSyncGpuDto : IEquatable<NVAPIGSyncGpuDto>'
     content.vb: Public Structure NVAPIGSyncGpuDto Implements IEquatable(Of NVAPIGSyncGpuDto)
   implements:
   - System.IEquatable{NVAPIWrapper.NVAPIGSyncGpuDto}
@@ -71,11 +71,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public NVAPIPhysicalGpuHelper PhysicalGpu { get; }
+    content: public NVAPIPhysicalGpuHelper PhysicalGpu { readonly get; set; }
     parameters: []
     return:
       type: NVAPIWrapper.NVAPIPhysicalGpuHelper
-    content.vb: Public ReadOnly Property PhysicalGpu As NVAPIPhysicalGpuHelper
+    content.vb: Public Property PhysicalGpu As NVAPIPhysicalGpuHelper
   overload: NVAPIWrapper.NVAPIGSyncGpuDto.PhysicalGpu*
 - uid: NVAPIWrapper.NVAPIGSyncGpuDto.ProxyPhysicalGpu
   commentId: P:NVAPIWrapper.NVAPIGSyncGpuDto.ProxyPhysicalGpu
@@ -100,11 +100,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public NVAPIPhysicalGpuHelper? ProxyPhysicalGpu { get; }
+    content: public NVAPIPhysicalGpuHelper? ProxyPhysicalGpu { readonly get; set; }
     parameters: []
     return:
       type: NVAPIWrapper.NVAPIPhysicalGpuHelper
-    content.vb: Public ReadOnly Property ProxyPhysicalGpu As NVAPIPhysicalGpuHelper
+    content.vb: Public Property ProxyPhysicalGpu As NVAPIPhysicalGpuHelper
   overload: NVAPIWrapper.NVAPIGSyncGpuDto.ProxyPhysicalGpu*
 - uid: NVAPIWrapper.NVAPIGSyncGpuDto.Connector
   commentId: P:NVAPIWrapper.NVAPIGSyncGpuDto.Connector
@@ -129,11 +129,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public _NVAPI_GSYNC_GPU_TOPOLOGY_CONNECTOR Connector { get; }
+    content: public _NVAPI_GSYNC_GPU_TOPOLOGY_CONNECTOR Connector { readonly get; set; }
     parameters: []
     return:
       type: NVAPIWrapper._NVAPI_GSYNC_GPU_TOPOLOGY_CONNECTOR
-    content.vb: Public ReadOnly Property Connector As _NVAPI_GSYNC_GPU_TOPOLOGY_CONNECTOR
+    content.vb: Public Property Connector As _NVAPI_GSYNC_GPU_TOPOLOGY_CONNECTOR
   overload: NVAPIWrapper.NVAPIGSyncGpuDto.Connector*
 - uid: NVAPIWrapper.NVAPIGSyncGpuDto.IsSynced
   commentId: P:NVAPIWrapper.NVAPIGSyncGpuDto.IsSynced
@@ -158,11 +158,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public bool IsSynced { get; }
+    content: public bool IsSynced { readonly get; set; }
     parameters: []
     return:
       type: System.Boolean
-    content.vb: Public ReadOnly Property IsSynced As Boolean
+    content.vb: Public Property IsSynced As Boolean
   overload: NVAPIWrapper.NVAPIGSyncGpuDto.IsSynced*
 - uid: NVAPIWrapper.NVAPIGSyncGpuDto.#ctor(NVAPIWrapper.NVAPIPhysicalGpuHelper,NVAPIWrapper._NVAPI_GSYNC_GPU_TOPOLOGY_CONNECTOR,NVAPIWrapper.NVAPIPhysicalGpuHelper,System.Boolean)
   commentId: M:NVAPIWrapper.NVAPIGSyncGpuDto.#ctor(NVAPIWrapper.NVAPIPhysicalGpuHelper,NVAPIWrapper._NVAPI_GSYNC_GPU_TOPOLOGY_CONNECTOR,NVAPIWrapper.NVAPIPhysicalGpuHelper,System.Boolean)

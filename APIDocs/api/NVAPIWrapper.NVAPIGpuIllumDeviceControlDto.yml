@@ -37,7 +37,7 @@ items:
   summary: Per-device illumination control DTO, wrapping <xref href="NVAPIWrapper.NV_GPU_CLIENT_ILLUM_DEVICE_CONTROL_V1" data-throw-if-not-resolved="false"></xref>.
   example: []
   syntax:
-    content: 'public readonly struct NVAPIGpuIllumDeviceControlDto : IEquatable<NVAPIGpuIllumDeviceControlDto>'
+    content: 'public struct NVAPIGpuIllumDeviceControlDto : IEquatable<NVAPIGpuIllumDeviceControlDto>'
     content.vb: Public Structure NVAPIGpuIllumDeviceControlDto Implements IEquatable(Of NVAPIGpuIllumDeviceControlDto)
   implements:
   - System.IEquatable{NVAPIWrapper.NVAPIGpuIllumDeviceControlDto}
@@ -71,11 +71,11 @@ items:
   summary: Type of illumination device.
   example: []
   syntax:
-    content: public NV_GPU_CLIENT_ILLUM_DEVICE_TYPE Type { get; }
+    content: public NV_GPU_CLIENT_ILLUM_DEVICE_TYPE Type { readonly get; set; }
     parameters: []
     return:
       type: NVAPIWrapper.NV_GPU_CLIENT_ILLUM_DEVICE_TYPE
-    content.vb: Public ReadOnly Property Type As NV_GPU_CLIENT_ILLUM_DEVICE_TYPE
+    content.vb: Public Property Type As NV_GPU_CLIENT_ILLUM_DEVICE_TYPE
   overload: NVAPIWrapper.NVAPIGpuIllumDeviceControlDto.Type*
 - uid: NVAPIWrapper.NVAPIGpuIllumDeviceControlDto.SyncEnabled
   commentId: P:NVAPIWrapper.NVAPIGpuIllumDeviceControlDto.SyncEnabled
@@ -102,11 +102,11 @@ items:
   summary: True if device synchronization is enabled.
   example: []
   syntax:
-    content: public bool SyncEnabled { get; }
+    content: public bool SyncEnabled { readonly get; set; }
     parameters: []
     return:
       type: System.Boolean
-    content.vb: Public ReadOnly Property SyncEnabled As Boolean
+    content.vb: Public Property SyncEnabled As Boolean
   overload: NVAPIWrapper.NVAPIGpuIllumDeviceControlDto.SyncEnabled*
 - uid: NVAPIWrapper.NVAPIGpuIllumDeviceControlDto.SyncTimestampMs
   commentId: P:NVAPIWrapper.NVAPIGpuIllumDeviceControlDto.SyncTimestampMs
@@ -133,11 +133,11 @@ items:
   summary: Sync timestamp in milliseconds.
   example: []
   syntax:
-    content: public ulong SyncTimestampMs { get; }
+    content: public ulong SyncTimestampMs { readonly get; set; }
     parameters: []
     return:
       type: System.UInt64
-    content.vb: Public ReadOnly Property SyncTimestampMs As ULong
+    content.vb: Public Property SyncTimestampMs As ULong
   overload: NVAPIWrapper.NVAPIGpuIllumDeviceControlDto.SyncTimestampMs*
 - uid: NVAPIWrapper.NVAPIGpuIllumDeviceControlDto.#ctor(NVAPIWrapper.NV_GPU_CLIENT_ILLUM_DEVICE_TYPE,System.Boolean,System.UInt64)
   commentId: M:NVAPIWrapper.NVAPIGpuIllumDeviceControlDto.#ctor(NVAPIWrapper.NV_GPU_CLIENT_ILLUM_DEVICE_TYPE,System.Boolean,System.UInt64)

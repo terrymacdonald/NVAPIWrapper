@@ -42,7 +42,7 @@ items:
   summary: VIO PCI info DTO.
   example: []
   syntax:
-    content: 'public readonly struct NVAPIVioPciInfoDto : IEquatable<NVAPIVioPciInfoDto>'
+    content: 'public struct NVAPIVioPciInfoDto : IEquatable<NVAPIVioPciInfoDto>'
     content.vb: Public Structure NVAPIVioPciInfoDto Implements IEquatable(Of NVAPIVioPciInfoDto)
   implements:
   - System.IEquatable{NVAPIWrapper.NVAPIVioPciInfoDto}
@@ -74,11 +74,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public uint PciDeviceId { get; }
+    content: public uint PciDeviceId { readonly get; set; }
     parameters: []
     return:
       type: System.UInt32
-    content.vb: Public ReadOnly Property PciDeviceId As UInteger
+    content.vb: Public Property PciDeviceId As UInteger
   overload: NVAPIWrapper.NVAPIVioPciInfoDto.PciDeviceId*
 - uid: NVAPIWrapper.NVAPIVioPciInfoDto.PciSubSystemId
   commentId: P:NVAPIWrapper.NVAPIVioPciInfoDto.PciSubSystemId
@@ -103,11 +103,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public uint PciSubSystemId { get; }
+    content: public uint PciSubSystemId { readonly get; set; }
     parameters: []
     return:
       type: System.UInt32
-    content.vb: Public ReadOnly Property PciSubSystemId As UInteger
+    content.vb: Public Property PciSubSystemId As UInteger
   overload: NVAPIWrapper.NVAPIVioPciInfoDto.PciSubSystemId*
 - uid: NVAPIWrapper.NVAPIVioPciInfoDto.PciRevisionId
   commentId: P:NVAPIWrapper.NVAPIVioPciInfoDto.PciRevisionId
@@ -132,11 +132,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public uint PciRevisionId { get; }
+    content: public uint PciRevisionId { readonly get; set; }
     parameters: []
     return:
       type: System.UInt32
-    content.vb: Public ReadOnly Property PciRevisionId As UInteger
+    content.vb: Public Property PciRevisionId As UInteger
   overload: NVAPIWrapper.NVAPIVioPciInfoDto.PciRevisionId*
 - uid: NVAPIWrapper.NVAPIVioPciInfoDto.PciDomain
   commentId: P:NVAPIWrapper.NVAPIVioPciInfoDto.PciDomain
@@ -161,11 +161,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public uint PciDomain { get; }
+    content: public uint PciDomain { readonly get; set; }
     parameters: []
     return:
       type: System.UInt32
-    content.vb: Public ReadOnly Property PciDomain As UInteger
+    content.vb: Public Property PciDomain As UInteger
   overload: NVAPIWrapper.NVAPIVioPciInfoDto.PciDomain*
 - uid: NVAPIWrapper.NVAPIVioPciInfoDto.PciBus
   commentId: P:NVAPIWrapper.NVAPIVioPciInfoDto.PciBus
@@ -190,11 +190,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public uint PciBus { get; }
+    content: public uint PciBus { readonly get; set; }
     parameters: []
     return:
       type: System.UInt32
-    content.vb: Public ReadOnly Property PciBus As UInteger
+    content.vb: Public Property PciBus As UInteger
   overload: NVAPIWrapper.NVAPIVioPciInfoDto.PciBus*
 - uid: NVAPIWrapper.NVAPIVioPciInfoDto.PciSlot
   commentId: P:NVAPIWrapper.NVAPIVioPciInfoDto.PciSlot
@@ -219,11 +219,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public uint PciSlot { get; }
+    content: public uint PciSlot { readonly get; set; }
     parameters: []
     return:
       type: System.UInt32
-    content.vb: Public ReadOnly Property PciSlot As UInteger
+    content.vb: Public Property PciSlot As UInteger
   overload: NVAPIWrapper.NVAPIVioPciInfoDto.PciSlot*
 - uid: NVAPIWrapper.NVAPIVioPciInfoDto.PciLinkWidth
   commentId: P:NVAPIWrapper.NVAPIVioPciInfoDto.PciLinkWidth
@@ -248,11 +248,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public _NVVIOPCILINKWIDTH PciLinkWidth { get; }
+    content: public _NVVIOPCILINKWIDTH PciLinkWidth { readonly get; set; }
     parameters: []
     return:
       type: NVAPIWrapper._NVVIOPCILINKWIDTH
-    content.vb: Public ReadOnly Property PciLinkWidth As _NVVIOPCILINKWIDTH
+    content.vb: Public Property PciLinkWidth As _NVVIOPCILINKWIDTH
   overload: NVAPIWrapper.NVAPIVioPciInfoDto.PciLinkWidth*
 - uid: NVAPIWrapper.NVAPIVioPciInfoDto.PciLinkRate
   commentId: P:NVAPIWrapper.NVAPIVioPciInfoDto.PciLinkRate
@@ -277,11 +277,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public _NVVIOPCILINKRATE PciLinkRate { get; }
+    content: public _NVVIOPCILINKRATE PciLinkRate { readonly get; set; }
     parameters: []
     return:
       type: NVAPIWrapper._NVVIOPCILINKRATE
-    content.vb: Public ReadOnly Property PciLinkRate As _NVVIOPCILINKRATE
+    content.vb: Public Property PciLinkRate As _NVVIOPCILINKRATE
   overload: NVAPIWrapper.NVAPIVioPciInfoDto.PciLinkRate*
 - uid: NVAPIWrapper.NVAPIVioPciInfoDto.#ctor(System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32,NVAPIWrapper._NVVIOPCILINKWIDTH,NVAPIWrapper._NVVIOPCILINKRATE)
   commentId: M:NVAPIWrapper.NVAPIVioPciInfoDto.#ctor(System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32,NVAPIWrapper._NVVIOPCILINKWIDTH,NVAPIWrapper._NVVIOPCILINKRATE)

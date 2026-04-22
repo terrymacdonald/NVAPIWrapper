@@ -42,7 +42,7 @@ items:
   summary: Display driver information DTO.
   example: []
   syntax:
-    content: 'public readonly struct NVAPIDisplayDriverInfoDto : IEquatable<NVAPIDisplayDriverInfoDto>'
+    content: 'public struct NVAPIDisplayDriverInfoDto : IEquatable<NVAPIDisplayDriverInfoDto>'
     content.vb: Public Structure NVAPIDisplayDriverInfoDto Implements IEquatable(Of NVAPIDisplayDriverInfoDto)
   implements:
   - System.IEquatable{NVAPIWrapper.NVAPIDisplayDriverInfoDto}
@@ -74,11 +74,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public uint DriverVersion { get; }
+    content: public uint DriverVersion { readonly get; set; }
     parameters: []
     return:
       type: System.UInt32
-    content.vb: Public ReadOnly Property DriverVersion As UInteger
+    content.vb: Public Property DriverVersion As UInteger
   overload: NVAPIWrapper.NVAPIDisplayDriverInfoDto.DriverVersion*
 - uid: NVAPIWrapper.NVAPIDisplayDriverInfoDto.BuildBranch
   commentId: P:NVAPIWrapper.NVAPIDisplayDriverInfoDto.BuildBranch
@@ -103,11 +103,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public string BuildBranch { get; }
+    content: public string BuildBranch { readonly get; set; }
     parameters: []
     return:
       type: System.String
-    content.vb: Public ReadOnly Property BuildBranch As String
+    content.vb: Public Property BuildBranch As String
   overload: NVAPIWrapper.NVAPIDisplayDriverInfoDto.BuildBranch*
 - uid: NVAPIWrapper.NVAPIDisplayDriverInfoDto.IsDchDriver
   commentId: P:NVAPIWrapper.NVAPIDisplayDriverInfoDto.IsDchDriver
@@ -132,11 +132,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public bool IsDchDriver { get; }
+    content: public bool IsDchDriver { readonly get; set; }
     parameters: []
     return:
       type: System.Boolean
-    content.vb: Public ReadOnly Property IsDchDriver As Boolean
+    content.vb: Public Property IsDchDriver As Boolean
   overload: NVAPIWrapper.NVAPIDisplayDriverInfoDto.IsDchDriver*
 - uid: NVAPIWrapper.NVAPIDisplayDriverInfoDto.IsNvidiaStudioPackage
   commentId: P:NVAPIWrapper.NVAPIDisplayDriverInfoDto.IsNvidiaStudioPackage
@@ -161,11 +161,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public bool IsNvidiaStudioPackage { get; }
+    content: public bool IsNvidiaStudioPackage { readonly get; set; }
     parameters: []
     return:
       type: System.Boolean
-    content.vb: Public ReadOnly Property IsNvidiaStudioPackage As Boolean
+    content.vb: Public Property IsNvidiaStudioPackage As Boolean
   overload: NVAPIWrapper.NVAPIDisplayDriverInfoDto.IsNvidiaStudioPackage*
 - uid: NVAPIWrapper.NVAPIDisplayDriverInfoDto.IsNvidiaGameReadyPackage
   commentId: P:NVAPIWrapper.NVAPIDisplayDriverInfoDto.IsNvidiaGameReadyPackage
@@ -190,11 +190,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public bool IsNvidiaGameReadyPackage { get; }
+    content: public bool IsNvidiaGameReadyPackage { readonly get; set; }
     parameters: []
     return:
       type: System.Boolean
-    content.vb: Public ReadOnly Property IsNvidiaGameReadyPackage As Boolean
+    content.vb: Public Property IsNvidiaGameReadyPackage As Boolean
   overload: NVAPIWrapper.NVAPIDisplayDriverInfoDto.IsNvidiaGameReadyPackage*
 - uid: NVAPIWrapper.NVAPIDisplayDriverInfoDto.IsNvidiaRtxProductionBranchPackage
   commentId: P:NVAPIWrapper.NVAPIDisplayDriverInfoDto.IsNvidiaRtxProductionBranchPackage
@@ -219,11 +219,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public bool IsNvidiaRtxProductionBranchPackage { get; }
+    content: public bool IsNvidiaRtxProductionBranchPackage { readonly get; set; }
     parameters: []
     return:
       type: System.Boolean
-    content.vb: Public ReadOnly Property IsNvidiaRtxProductionBranchPackage As Boolean
+    content.vb: Public Property IsNvidiaRtxProductionBranchPackage As Boolean
   overload: NVAPIWrapper.NVAPIDisplayDriverInfoDto.IsNvidiaRtxProductionBranchPackage*
 - uid: NVAPIWrapper.NVAPIDisplayDriverInfoDto.IsNvidiaRtxNewFeatureBranchPackage
   commentId: P:NVAPIWrapper.NVAPIDisplayDriverInfoDto.IsNvidiaRtxNewFeatureBranchPackage
@@ -248,11 +248,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public bool IsNvidiaRtxNewFeatureBranchPackage { get; }
+    content: public bool IsNvidiaRtxNewFeatureBranchPackage { readonly get; set; }
     parameters: []
     return:
       type: System.Boolean
-    content.vb: Public ReadOnly Property IsNvidiaRtxNewFeatureBranchPackage As Boolean
+    content.vb: Public Property IsNvidiaRtxNewFeatureBranchPackage As Boolean
   overload: NVAPIWrapper.NVAPIDisplayDriverInfoDto.IsNvidiaRtxNewFeatureBranchPackage*
 - uid: NVAPIWrapper.NVAPIDisplayDriverInfoDto.BuildBaseBranch
   commentId: P:NVAPIWrapper.NVAPIDisplayDriverInfoDto.BuildBaseBranch
@@ -277,11 +277,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public string BuildBaseBranch { get; }
+    content: public string BuildBaseBranch { readonly get; set; }
     parameters: []
     return:
       type: System.String
-    content.vb: Public ReadOnly Property BuildBaseBranch As String
+    content.vb: Public Property BuildBaseBranch As String
   overload: NVAPIWrapper.NVAPIDisplayDriverInfoDto.BuildBaseBranch*
 - uid: NVAPIWrapper.NVAPIDisplayDriverInfoDto.ReservedEx
   commentId: P:NVAPIWrapper.NVAPIDisplayDriverInfoDto.ReservedEx
@@ -306,11 +306,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public uint ReservedEx { get; }
+    content: public uint ReservedEx { readonly get; set; }
     parameters: []
     return:
       type: System.UInt32
-    content.vb: Public ReadOnly Property ReservedEx As UInteger
+    content.vb: Public Property ReservedEx As UInteger
   overload: NVAPIWrapper.NVAPIDisplayDriverInfoDto.ReservedEx*
 - uid: NVAPIWrapper.NVAPIDisplayDriverInfoDto.#ctor(System.UInt32,System.String,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.String,System.UInt32)
   commentId: M:NVAPIWrapper.NVAPIDisplayDriverInfoDto.#ctor(System.UInt32,System.String,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.String,System.UInt32)

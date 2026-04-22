@@ -41,7 +41,7 @@ items:
   summary: NGX override state DTO.
   example: []
   syntax:
-    content: 'public readonly struct NVAPINGXOverrideStateDto : IEquatable<NVAPINGXOverrideStateDto>'
+    content: 'public struct NVAPINGXOverrideStateDto : IEquatable<NVAPINGXOverrideStateDto>'
     content.vb: Public Structure NVAPINGXOverrideStateDto Implements IEquatable(Of NVAPINGXOverrideStateDto)
   implements:
   - System.IEquatable{NVAPIWrapper.NVAPINGXOverrideStateDto}
@@ -125,11 +125,11 @@ items:
   summary: Process identifier.
   example: []
   syntax:
-    content: public uint ProcessId { get; }
+    content: public uint ProcessId { readonly get; set; }
     parameters: []
     return:
       type: System.UInt32
-    content.vb: Public ReadOnly Property ProcessId As UInteger
+    content.vb: Public Property ProcessId As UInteger
   overload: NVAPIWrapper.NVAPINGXOverrideStateDto.ProcessId*
 - uid: NVAPIWrapper.NVAPINGXOverrideStateDto.FeedbackMaskSr
   commentId: P:NVAPIWrapper.NVAPINGXOverrideStateDto.FeedbackMaskSr
@@ -156,11 +156,11 @@ items:
   summary: DLSS SR feedback mask.
   example: []
   syntax:
-    content: public ulong FeedbackMaskSr { get; }
+    content: public ulong FeedbackMaskSr { readonly get; set; }
     parameters: []
     return:
       type: System.UInt64
-    content.vb: Public ReadOnly Property FeedbackMaskSr As ULong
+    content.vb: Public Property FeedbackMaskSr As ULong
   overload: NVAPIWrapper.NVAPINGXOverrideStateDto.FeedbackMaskSr*
 - uid: NVAPIWrapper.NVAPINGXOverrideStateDto.FeedbackMaskRr
   commentId: P:NVAPIWrapper.NVAPINGXOverrideStateDto.FeedbackMaskRr
@@ -187,11 +187,11 @@ items:
   summary: DLSS RR feedback mask.
   example: []
   syntax:
-    content: public ulong FeedbackMaskRr { get; }
+    content: public ulong FeedbackMaskRr { readonly get; set; }
     parameters: []
     return:
       type: System.UInt64
-    content.vb: Public ReadOnly Property FeedbackMaskRr As ULong
+    content.vb: Public Property FeedbackMaskRr As ULong
   overload: NVAPIWrapper.NVAPINGXOverrideStateDto.FeedbackMaskRr*
 - uid: NVAPIWrapper.NVAPINGXOverrideStateDto.FeedbackMaskFg
   commentId: P:NVAPIWrapper.NVAPINGXOverrideStateDto.FeedbackMaskFg
@@ -218,11 +218,11 @@ items:
   summary: DLSS FG feedback mask.
   example: []
   syntax:
-    content: public ulong FeedbackMaskFg { get; }
+    content: public ulong FeedbackMaskFg { readonly get; set; }
     parameters: []
     return:
       type: System.UInt64
-    content.vb: Public ReadOnly Property FeedbackMaskFg As ULong
+    content.vb: Public Property FeedbackMaskFg As ULong
   overload: NVAPIWrapper.NVAPINGXOverrideStateDto.FeedbackMaskFg*
 - uid: NVAPIWrapper.NVAPINGXOverrideStateDto.ScalingRatio
   commentId: P:NVAPIWrapper.NVAPINGXOverrideStateDto.ScalingRatio
@@ -249,11 +249,11 @@ items:
   summary: DLSS scaling ratio.
   example: []
   syntax:
-    content: public float ScalingRatio { get; }
+    content: public float ScalingRatio { readonly get; set; }
     parameters: []
     return:
       type: System.Single
-    content.vb: Public ReadOnly Property ScalingRatio As Single
+    content.vb: Public Property ScalingRatio As Single
   overload: NVAPIWrapper.NVAPINGXOverrideStateDto.ScalingRatio*
 - uid: NVAPIWrapper.NVAPINGXOverrideStateDto.PerformanceMode
   commentId: P:NVAPIWrapper.NVAPINGXOverrideStateDto.PerformanceMode
@@ -280,11 +280,11 @@ items:
   summary: DLSS performance mode.
   example: []
   syntax:
-    content: public uint PerformanceMode { get; }
+    content: public uint PerformanceMode { readonly get; set; }
     parameters: []
     return:
       type: System.UInt32
-    content.vb: Public ReadOnly Property PerformanceMode As UInteger
+    content.vb: Public Property PerformanceMode As UInteger
   overload: NVAPIWrapper.NVAPINGXOverrideStateDto.PerformanceMode*
 - uid: NVAPIWrapper.NVAPINGXOverrideStateDto.RenderPreset
   commentId: P:NVAPIWrapper.NVAPINGXOverrideStateDto.RenderPreset
@@ -311,11 +311,11 @@ items:
   summary: DLSS render preset.
   example: []
   syntax:
-    content: public uint RenderPreset { get; }
+    content: public uint RenderPreset { readonly get; set; }
     parameters: []
     return:
       type: System.UInt32
-    content.vb: Public ReadOnly Property RenderPreset As UInteger
+    content.vb: Public Property RenderPreset As UInteger
   overload: NVAPIWrapper.NVAPINGXOverrideStateDto.RenderPreset*
 - uid: NVAPIWrapper.NVAPINGXOverrideStateDto.FrameGenerationCount
   commentId: P:NVAPIWrapper.NVAPINGXOverrideStateDto.FrameGenerationCount
@@ -342,11 +342,11 @@ items:
   summary: DLSS frame generation count target.
   example: []
   syntax:
-    content: public uint FrameGenerationCount { get; }
+    content: public uint FrameGenerationCount { readonly get; set; }
     parameters: []
     return:
       type: System.UInt32
-    content.vb: Public ReadOnly Property FrameGenerationCount As UInteger
+    content.vb: Public Property FrameGenerationCount As UInteger
   overload: NVAPIWrapper.NVAPINGXOverrideStateDto.FrameGenerationCount*
 - uid: NVAPIWrapper.NVAPINGXOverrideStateDto.FrameGenerationPreset
   commentId: P:NVAPIWrapper.NVAPINGXOverrideStateDto.FrameGenerationPreset
@@ -373,11 +373,11 @@ items:
   summary: DLSS frame generation preset.
   example: []
   syntax:
-    content: public uint FrameGenerationPreset { get; }
+    content: public uint FrameGenerationPreset { readonly get; set; }
     parameters: []
     return:
       type: System.UInt32
-    content.vb: Public ReadOnly Property FrameGenerationPreset As UInteger
+    content.vb: Public Property FrameGenerationPreset As UInteger
   overload: NVAPIWrapper.NVAPINGXOverrideStateDto.FrameGenerationPreset*
 - uid: NVAPIWrapper.NVAPINGXOverrideStateDto.Equals(NVAPIWrapper.NVAPINGXOverrideStateDto)
   commentId: M:NVAPIWrapper.NVAPINGXOverrideStateDto.Equals(NVAPIWrapper.NVAPINGXOverrideStateDto)

@@ -34,7 +34,7 @@ items:
   summary: Mosaic grid topology collection DTO.
   example: []
   syntax:
-    content: 'public readonly struct NVAPIMosaicGridTopologiesDto : IEquatable<NVAPIMosaicGridTopologiesDto>'
+    content: 'public struct NVAPIMosaicGridTopologiesDto : IEquatable<NVAPIMosaicGridTopologiesDto>'
     content.vb: Public Structure NVAPIMosaicGridTopologiesDto Implements IEquatable(Of NVAPIMosaicGridTopologiesDto)
   implements:
   - System.IEquatable{NVAPIWrapper.NVAPIMosaicGridTopologiesDto}
@@ -66,11 +66,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public NVAPIMosaicGridTopoDto[] Grids { get; }
+    content: public NVAPIMosaicGridTopoDto[] Grids { readonly get; set; }
     parameters: []
     return:
       type: NVAPIWrapper.NVAPIMosaicGridTopoDto[]
-    content.vb: Public ReadOnly Property Grids As NVAPIMosaicGridTopoDto()
+    content.vb: Public Property Grids As NVAPIMosaicGridTopoDto()
   overload: NVAPIWrapper.NVAPIMosaicGridTopologiesDto.Grids*
 - uid: NVAPIWrapper.NVAPIMosaicGridTopologiesDto.#ctor(NVAPIWrapper.NVAPIMosaicGridTopoDto[])
   commentId: M:NVAPIWrapper.NVAPIMosaicGridTopologiesDto.#ctor(NVAPIWrapper.NVAPIMosaicGridTopoDto[])

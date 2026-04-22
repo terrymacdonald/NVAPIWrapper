@@ -102,7 +102,7 @@ Struct NVAPINvLinkStatusDto  <a class="header-action link-secondary" title="View
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly struct NVAPINvLinkStatusDto : IEquatable&lt;NVAPINvLinkStatusDto&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public struct NVAPINvLinkStatusDto : IEquatable&lt;NVAPINvLinkStatusDto&gt;</code></pre>
   </div>
 
 
@@ -231,7 +231,7 @@ Only links that are active per the bitmask are stored, keeping the list compact.
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public uint LinkMask { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public uint LinkMask { readonly get; set; }</code></pre>
   </div>
 
 
@@ -263,7 +263,7 @@ Only links that are active per the bitmask are stored, keeping the list compact.
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public uint Version { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public uint Version { readonly get; set; }</code></pre>
   </div>
 
 

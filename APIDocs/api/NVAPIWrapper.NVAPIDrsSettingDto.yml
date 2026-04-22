@@ -50,7 +50,7 @@ items:
   summary: DRS setting DTO.
   example: []
   syntax:
-    content: 'public readonly struct NVAPIDrsSettingDto : IEquatable<NVAPIDrsSettingDto>'
+    content: 'public struct NVAPIDrsSettingDto : IEquatable<NVAPIDrsSettingDto>'
     content.vb: Public Structure NVAPIDrsSettingDto Implements IEquatable(Of NVAPIDrsSettingDto)
   implements:
   - System.IEquatable{NVAPIWrapper.NVAPIDrsSettingDto}
@@ -82,11 +82,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public string SettingName { get; }
+    content: public string SettingName { readonly get; set; }
     parameters: []
     return:
       type: System.String
-    content.vb: Public ReadOnly Property SettingName As String
+    content.vb: Public Property SettingName As String
   overload: NVAPIWrapper.NVAPIDrsSettingDto.SettingName*
 - uid: NVAPIWrapper.NVAPIDrsSettingDto.SettingId
   commentId: P:NVAPIWrapper.NVAPIDrsSettingDto.SettingId
@@ -111,11 +111,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public uint SettingId { get; }
+    content: public uint SettingId { readonly get; set; }
     parameters: []
     return:
       type: System.UInt32
-    content.vb: Public ReadOnly Property SettingId As UInteger
+    content.vb: Public Property SettingId As UInteger
   overload: NVAPIWrapper.NVAPIDrsSettingDto.SettingId*
 - uid: NVAPIWrapper.NVAPIDrsSettingDto.SettingType
   commentId: P:NVAPIWrapper.NVAPIDrsSettingDto.SettingType
@@ -140,11 +140,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public _NVDRS_SETTING_TYPE SettingType { get; }
+    content: public _NVDRS_SETTING_TYPE SettingType { readonly get; set; }
     parameters: []
     return:
       type: NVAPIWrapper._NVDRS_SETTING_TYPE
-    content.vb: Public ReadOnly Property SettingType As _NVDRS_SETTING_TYPE
+    content.vb: Public Property SettingType As _NVDRS_SETTING_TYPE
   overload: NVAPIWrapper.NVAPIDrsSettingDto.SettingType*
 - uid: NVAPIWrapper.NVAPIDrsSettingDto.SettingLocation
   commentId: P:NVAPIWrapper.NVAPIDrsSettingDto.SettingLocation
@@ -169,11 +169,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public _NVDRS_SETTING_LOCATION SettingLocation { get; }
+    content: public _NVDRS_SETTING_LOCATION SettingLocation { readonly get; set; }
     parameters: []
     return:
       type: NVAPIWrapper._NVDRS_SETTING_LOCATION
-    content.vb: Public ReadOnly Property SettingLocation As _NVDRS_SETTING_LOCATION
+    content.vb: Public Property SettingLocation As _NVDRS_SETTING_LOCATION
   overload: NVAPIWrapper.NVAPIDrsSettingDto.SettingLocation*
 - uid: NVAPIWrapper.NVAPIDrsSettingDto.IsCurrentPredefined
   commentId: P:NVAPIWrapper.NVAPIDrsSettingDto.IsCurrentPredefined
@@ -198,11 +198,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public bool IsCurrentPredefined { get; }
+    content: public bool IsCurrentPredefined { readonly get; set; }
     parameters: []
     return:
       type: System.Boolean
-    content.vb: Public ReadOnly Property IsCurrentPredefined As Boolean
+    content.vb: Public Property IsCurrentPredefined As Boolean
   overload: NVAPIWrapper.NVAPIDrsSettingDto.IsCurrentPredefined*
 - uid: NVAPIWrapper.NVAPIDrsSettingDto.IsPredefinedValid
   commentId: P:NVAPIWrapper.NVAPIDrsSettingDto.IsPredefinedValid
@@ -227,11 +227,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public bool IsPredefinedValid { get; }
+    content: public bool IsPredefinedValid { readonly get; set; }
     parameters: []
     return:
       type: System.Boolean
-    content.vb: Public ReadOnly Property IsPredefinedValid As Boolean
+    content.vb: Public Property IsPredefinedValid As Boolean
   overload: NVAPIWrapper.NVAPIDrsSettingDto.IsPredefinedValid*
 - uid: NVAPIWrapper.NVAPIDrsSettingDto.PredefinedDwordValue
   commentId: P:NVAPIWrapper.NVAPIDrsSettingDto.PredefinedDwordValue
@@ -256,11 +256,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public uint? PredefinedDwordValue { get; }
+    content: public uint? PredefinedDwordValue { readonly get; set; }
     parameters: []
     return:
       type: System.Nullable{System.UInt32}
-    content.vb: Public ReadOnly Property PredefinedDwordValue As UInteger?
+    content.vb: Public Property PredefinedDwordValue As UInteger?
   overload: NVAPIWrapper.NVAPIDrsSettingDto.PredefinedDwordValue*
 - uid: NVAPIWrapper.NVAPIDrsSettingDto.CurrentDwordValue
   commentId: P:NVAPIWrapper.NVAPIDrsSettingDto.CurrentDwordValue
@@ -285,11 +285,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public uint? CurrentDwordValue { get; }
+    content: public uint? CurrentDwordValue { readonly get; set; }
     parameters: []
     return:
       type: System.Nullable{System.UInt32}
-    content.vb: Public ReadOnly Property CurrentDwordValue As UInteger?
+    content.vb: Public Property CurrentDwordValue As UInteger?
   overload: NVAPIWrapper.NVAPIDrsSettingDto.CurrentDwordValue*
 - uid: NVAPIWrapper.NVAPIDrsSettingDto.PredefinedStringValue
   commentId: P:NVAPIWrapper.NVAPIDrsSettingDto.PredefinedStringValue
@@ -314,11 +314,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public string PredefinedStringValue { get; }
+    content: public string PredefinedStringValue { readonly get; set; }
     parameters: []
     return:
       type: System.String
-    content.vb: Public ReadOnly Property PredefinedStringValue As String
+    content.vb: Public Property PredefinedStringValue As String
   overload: NVAPIWrapper.NVAPIDrsSettingDto.PredefinedStringValue*
 - uid: NVAPIWrapper.NVAPIDrsSettingDto.CurrentStringValue
   commentId: P:NVAPIWrapper.NVAPIDrsSettingDto.CurrentStringValue
@@ -343,11 +343,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public string CurrentStringValue { get; }
+    content: public string CurrentStringValue { readonly get; set; }
     parameters: []
     return:
       type: System.String
-    content.vb: Public ReadOnly Property CurrentStringValue As String
+    content.vb: Public Property CurrentStringValue As String
   overload: NVAPIWrapper.NVAPIDrsSettingDto.CurrentStringValue*
 - uid: NVAPIWrapper.NVAPIDrsSettingDto.PredefinedBinaryValue
   commentId: P:NVAPIWrapper.NVAPIDrsSettingDto.PredefinedBinaryValue
@@ -372,11 +372,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public byte[] PredefinedBinaryValue { get; }
+    content: public byte[] PredefinedBinaryValue { readonly get; set; }
     parameters: []
     return:
       type: System.Byte[]
-    content.vb: Public ReadOnly Property PredefinedBinaryValue As Byte()
+    content.vb: Public Property PredefinedBinaryValue As Byte()
   overload: NVAPIWrapper.NVAPIDrsSettingDto.PredefinedBinaryValue*
 - uid: NVAPIWrapper.NVAPIDrsSettingDto.CurrentBinaryValue
   commentId: P:NVAPIWrapper.NVAPIDrsSettingDto.CurrentBinaryValue
@@ -401,11 +401,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public byte[] CurrentBinaryValue { get; }
+    content: public byte[] CurrentBinaryValue { readonly get; set; }
     parameters: []
     return:
       type: System.Byte[]
-    content.vb: Public ReadOnly Property CurrentBinaryValue As Byte()
+    content.vb: Public Property CurrentBinaryValue As Byte()
   overload: NVAPIWrapper.NVAPIDrsSettingDto.CurrentBinaryValue*
 - uid: NVAPIWrapper.NVAPIDrsSettingDto.#ctor(System.String,System.UInt32,NVAPIWrapper._NVDRS_SETTING_TYPE,NVAPIWrapper._NVDRS_SETTING_LOCATION,System.Boolean,System.Boolean,System.Nullable{System.UInt32},System.Nullable{System.UInt32},System.String,System.String,System.Byte[],System.Byte[])
   commentId: M:NVAPIWrapper.NVAPIDrsSettingDto.#ctor(System.String,System.UInt32,NVAPIWrapper._NVDRS_SETTING_TYPE,NVAPIWrapper._NVDRS_SETTING_LOCATION,System.Boolean,System.Boolean,System.Nullable{System.UInt32},System.Nullable{System.UInt32},System.String,System.String,System.Byte[],System.Byte[])

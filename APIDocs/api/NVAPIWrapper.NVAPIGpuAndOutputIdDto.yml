@@ -34,7 +34,7 @@ items:
   summary: DTO for GPU and output ID from a display ID.
   example: []
   syntax:
-    content: 'public readonly struct NVAPIGpuAndOutputIdDto : IEquatable<NVAPIGpuAndOutputIdDto>'
+    content: 'public struct NVAPIGpuAndOutputIdDto : IEquatable<NVAPIGpuAndOutputIdDto>'
     content.vb: Public Structure NVAPIGpuAndOutputIdDto Implements IEquatable(Of NVAPIGpuAndOutputIdDto)
   implements:
   - System.IEquatable{NVAPIWrapper.NVAPIGpuAndOutputIdDto}
@@ -66,11 +66,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public NVAPIPhysicalGpuHelper PhysicalGpu { get; }
+    content: public NVAPIPhysicalGpuHelper PhysicalGpu { readonly get; set; }
     parameters: []
     return:
       type: NVAPIWrapper.NVAPIPhysicalGpuHelper
-    content.vb: Public ReadOnly Property PhysicalGpu As NVAPIPhysicalGpuHelper
+    content.vb: Public Property PhysicalGpu As NVAPIPhysicalGpuHelper
   overload: NVAPIWrapper.NVAPIGpuAndOutputIdDto.PhysicalGpu*
 - uid: NVAPIWrapper.NVAPIGpuAndOutputIdDto.OutputId
   commentId: P:NVAPIWrapper.NVAPIGpuAndOutputIdDto.OutputId
@@ -95,11 +95,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public uint OutputId { get; }
+    content: public uint OutputId { readonly get; set; }
     parameters: []
     return:
       type: System.UInt32
-    content.vb: Public ReadOnly Property OutputId As UInteger
+    content.vb: Public Property OutputId As UInteger
   overload: NVAPIWrapper.NVAPIGpuAndOutputIdDto.OutputId*
 - uid: NVAPIWrapper.NVAPIGpuAndOutputIdDto.FromNative(NVAPIWrapper.NVAPIApiHelper,NVAPIWrapper.NvPhysicalGpuHandle__*,System.UInt32)
   commentId: M:NVAPIWrapper.NVAPIGpuAndOutputIdDto.FromNative(NVAPIWrapper.NVAPIApiHelper,NVAPIWrapper.NvPhysicalGpuHandle__*,System.UInt32)

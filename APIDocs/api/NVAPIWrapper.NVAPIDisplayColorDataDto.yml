@@ -35,7 +35,7 @@ items:
   summary: DTO for display color data.
   example: []
   syntax:
-    content: 'public readonly struct NVAPIDisplayColorDataDto : IEquatable<NVAPIDisplayColorDataDto>'
+    content: 'public struct NVAPIDisplayColorDataDto : IEquatable<NVAPIDisplayColorDataDto>'
     content.vb: Public Structure NVAPIDisplayColorDataDto Implements IEquatable(Of NVAPIDisplayColorDataDto)
   implements:
   - System.IEquatable{NVAPIWrapper.NVAPIDisplayColorDataDto}
@@ -69,11 +69,11 @@ items:
   summary: Native color data.
   example: []
   syntax:
-    content: public _NV_COLOR_DATA_V5 Data { get; }
+    content: public _NV_COLOR_DATA_V5 Data { readonly get; set; }
     parameters: []
     return:
       type: NVAPIWrapper._NV_COLOR_DATA_V5
-    content.vb: Public ReadOnly Property Data As _NV_COLOR_DATA_V5
+    content.vb: Public Property Data As _NV_COLOR_DATA_V5
   overload: NVAPIWrapper.NVAPIDisplayColorDataDto.Data*
 - uid: NVAPIWrapper.NVAPIDisplayColorDataDto.#ctor(NVAPIWrapper._NV_COLOR_DATA_V5)
   commentId: M:NVAPIWrapper.NVAPIDisplayColorDataDto.#ctor(NVAPIWrapper._NV_COLOR_DATA_V5)

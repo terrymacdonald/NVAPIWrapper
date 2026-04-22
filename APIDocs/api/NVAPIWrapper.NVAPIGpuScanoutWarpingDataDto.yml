@@ -37,7 +37,7 @@ items:
   summary: Scanout warping data DTO.
   example: []
   syntax:
-    content: 'public readonly struct NVAPIGpuScanoutWarpingDataDto : IEquatable<NVAPIGpuScanoutWarpingDataDto>'
+    content: 'public struct NVAPIGpuScanoutWarpingDataDto : IEquatable<NVAPIGpuScanoutWarpingDataDto>'
     content.vb: Public Structure NVAPIGpuScanoutWarpingDataDto Implements IEquatable(Of NVAPIGpuScanoutWarpingDataDto)
   implements:
   - System.IEquatable{NVAPIWrapper.NVAPIGpuScanoutWarpingDataDto}
@@ -69,11 +69,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public float[] Vertices { get; }
+    content: public float[] Vertices { readonly get; set; }
     parameters: []
     return:
       type: System.Single[]
-    content.vb: Public ReadOnly Property Vertices As Single()
+    content.vb: Public Property Vertices As Single()
   overload: NVAPIWrapper.NVAPIGpuScanoutWarpingDataDto.Vertices*
 - uid: NVAPIWrapper.NVAPIGpuScanoutWarpingDataDto.VertexFormat
   commentId: P:NVAPIWrapper.NVAPIGpuScanoutWarpingDataDto.VertexFormat
@@ -98,11 +98,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public NV_GPU_WARPING_VERTICE_FORMAT VertexFormat { get; }
+    content: public NV_GPU_WARPING_VERTICE_FORMAT VertexFormat { readonly get; set; }
     parameters: []
     return:
       type: NVAPIWrapper.NV_GPU_WARPING_VERTICE_FORMAT
-    content.vb: Public ReadOnly Property VertexFormat As NV_GPU_WARPING_VERTICE_FORMAT
+    content.vb: Public Property VertexFormat As NV_GPU_WARPING_VERTICE_FORMAT
   overload: NVAPIWrapper.NVAPIGpuScanoutWarpingDataDto.VertexFormat*
 - uid: NVAPIWrapper.NVAPIGpuScanoutWarpingDataDto.NumVertices
   commentId: P:NVAPIWrapper.NVAPIGpuScanoutWarpingDataDto.NumVertices
@@ -127,11 +127,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public int NumVertices { get; }
+    content: public int NumVertices { readonly get; set; }
     parameters: []
     return:
       type: System.Int32
-    content.vb: Public ReadOnly Property NumVertices As Integer
+    content.vb: Public Property NumVertices As Integer
   overload: NVAPIWrapper.NVAPIGpuScanoutWarpingDataDto.NumVertices*
 - uid: NVAPIWrapper.NVAPIGpuScanoutWarpingDataDto.TextureRect
   commentId: P:NVAPIWrapper.NVAPIGpuScanoutWarpingDataDto.TextureRect
@@ -156,11 +156,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public NVAPISBoxDto? TextureRect { get; }
+    content: public NVAPISBoxDto? TextureRect { readonly get; set; }
     parameters: []
     return:
       type: System.Nullable{NVAPIWrapper.NVAPISBoxDto}
-    content.vb: Public ReadOnly Property TextureRect As NVAPISBoxDto?
+    content.vb: Public Property TextureRect As NVAPISBoxDto?
   overload: NVAPIWrapper.NVAPIGpuScanoutWarpingDataDto.TextureRect*
 - uid: NVAPIWrapper.NVAPIGpuScanoutWarpingDataDto.#ctor(System.Single[],NVAPIWrapper.NV_GPU_WARPING_VERTICE_FORMAT,System.Int32,System.Nullable{NVAPIWrapper.NVAPISBoxDto})
   commentId: M:NVAPIWrapper.NVAPIGpuScanoutWarpingDataDto.#ctor(System.Single[],NVAPIWrapper.NV_GPU_WARPING_VERTICE_FORMAT,System.Int32,System.Nullable{NVAPIWrapper.NVAPISBoxDto})

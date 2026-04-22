@@ -37,7 +37,7 @@ items:
   summary: Illumination device info params DTO.
   example: []
   syntax:
-    content: 'public readonly struct NVAPIGpuIllumDeviceInfoParamsDto : IEquatable<NVAPIGpuIllumDeviceInfoParamsDto>'
+    content: 'public struct NVAPIGpuIllumDeviceInfoParamsDto : IEquatable<NVAPIGpuIllumDeviceInfoParamsDto>'
     content.vb: Public Structure NVAPIGpuIllumDeviceInfoParamsDto Implements IEquatable(Of NVAPIGpuIllumDeviceInfoParamsDto)
   implements:
   - System.IEquatable{NVAPIWrapper.NVAPIGpuIllumDeviceInfoParamsDto}
@@ -71,11 +71,11 @@ items:
   summary: Number of illumination devices reported.
   example: []
   syntax:
-    content: public uint NumIllumDevices { get; }
+    content: public uint NumIllumDevices { readonly get; set; }
     parameters: []
     return:
       type: System.UInt32
-    content.vb: Public ReadOnly Property NumIllumDevices As UInteger
+    content.vb: Public Property NumIllumDevices As UInteger
   overload: NVAPIWrapper.NVAPIGpuIllumDeviceInfoParamsDto.NumIllumDevices*
 - uid: NVAPIWrapper.NVAPIGpuIllumDeviceInfoParamsDto.Devices
   commentId: P:NVAPIWrapper.NVAPIGpuIllumDeviceInfoParamsDto.Devices
@@ -102,11 +102,11 @@ items:
   summary: Per-device illumination info array (up to 32 entries).
   example: []
   syntax:
-    content: public NVAPIGpuIllumDeviceInfoDto[] Devices { get; }
+    content: public NVAPIGpuIllumDeviceInfoDto[] Devices { readonly get; set; }
     parameters: []
     return:
       type: NVAPIWrapper.NVAPIGpuIllumDeviceInfoDto[]
-    content.vb: Public ReadOnly Property Devices As NVAPIGpuIllumDeviceInfoDto()
+    content.vb: Public Property Devices As NVAPIGpuIllumDeviceInfoDto()
   overload: NVAPIWrapper.NVAPIGpuIllumDeviceInfoParamsDto.Devices*
 - uid: NVAPIWrapper.NVAPIGpuIllumDeviceInfoParamsDto.#ctor(System.UInt32,NVAPIWrapper.NVAPIGpuIllumDeviceInfoDto[])
   commentId: M:NVAPIWrapper.NVAPIGpuIllumDeviceInfoParamsDto.#ctor(System.UInt32,NVAPIWrapper.NVAPIGpuIllumDeviceInfoDto[])

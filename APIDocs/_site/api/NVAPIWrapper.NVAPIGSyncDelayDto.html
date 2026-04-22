@@ -102,7 +102,7 @@ Struct NVAPIGSyncDelayDto  <a class="header-action link-secondary" title="View s
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly struct NVAPIGSyncDelayDto : IEquatable&lt;NVAPIGSyncDelayDto&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public struct NVAPIGSyncDelayDto : IEquatable&lt;NVAPIGSyncDelayDto&gt;</code></pre>
   </div>
 
 
@@ -200,7 +200,7 @@ Struct NVAPIGSyncDelayDto  <a class="header-action link-secondary" title="View s
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public uint MaxLines { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public uint MaxLines { readonly get; set; }</code></pre>
   </div>
 
 
@@ -231,7 +231,7 @@ Struct NVAPIGSyncDelayDto  <a class="header-action link-secondary" title="View s
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public uint MinPixels { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public uint MinPixels { readonly get; set; }</code></pre>
   </div>
 
 
@@ -262,7 +262,7 @@ Struct NVAPIGSyncDelayDto  <a class="header-action link-secondary" title="View s
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public uint NumLines { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public uint NumLines { readonly get; set; }</code></pre>
   </div>
 
 
@@ -293,7 +293,7 @@ Struct NVAPIGSyncDelayDto  <a class="header-action link-secondary" title="View s
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public uint NumPixels { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public uint NumPixels { readonly get; set; }</code></pre>
   </div>
 
 

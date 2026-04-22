@@ -34,7 +34,7 @@ items:
   summary: Logical GPU handle data from NvAPI_SYS_GetLogicalGPUs.
   example: []
   syntax:
-    content: 'public readonly struct NVAPISystemLogicalGpuHandleDto : IEquatable<NVAPISystemLogicalGpuHandleDto>'
+    content: 'public struct NVAPISystemLogicalGpuHandleDto : IEquatable<NVAPISystemLogicalGpuHandleDto>'
     content.vb: Public Structure NVAPISystemLogicalGpuHandleDto Implements IEquatable(Of NVAPISystemLogicalGpuHandleDto)
   implements:
   - System.IEquatable{NVAPIWrapper.NVAPISystemLogicalGpuHandleDto}
@@ -66,11 +66,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public NVAPILogicalGpuHelper LogicalGpu { get; }
+    content: public NVAPILogicalGpuHelper LogicalGpu { readonly get; set; }
     parameters: []
     return:
       type: NVAPIWrapper.NVAPILogicalGpuHelper
-    content.vb: Public ReadOnly Property LogicalGpu As NVAPILogicalGpuHelper
+    content.vb: Public Property LogicalGpu As NVAPILogicalGpuHelper
   overload: NVAPIWrapper.NVAPISystemLogicalGpuHandleDto.LogicalGpu*
 - uid: NVAPIWrapper.NVAPISystemLogicalGpuHandleDto.AdapterType
   commentId: P:NVAPIWrapper.NVAPISystemLogicalGpuHandleDto.AdapterType
@@ -95,11 +95,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public _NV_ADAPTER_TYPE AdapterType { get; }
+    content: public _NV_ADAPTER_TYPE AdapterType { readonly get; set; }
     parameters: []
     return:
       type: NVAPIWrapper._NV_ADAPTER_TYPE
-    content.vb: Public ReadOnly Property AdapterType As _NV_ADAPTER_TYPE
+    content.vb: Public Property AdapterType As _NV_ADAPTER_TYPE
   overload: NVAPIWrapper.NVAPISystemLogicalGpuHandleDto.AdapterType*
 - uid: NVAPIWrapper.NVAPISystemLogicalGpuHandleDto.FromNative(NVAPIWrapper.NVAPIApiHelper,NVAPIWrapper._NV_LOGICAL_GPU_HANDLE_DATA)
   commentId: M:NVAPIWrapper.NVAPISystemLogicalGpuHandleDto.FromNative(NVAPIWrapper.NVAPIApiHelper,NVAPIWrapper._NV_LOGICAL_GPU_HANDLE_DATA)

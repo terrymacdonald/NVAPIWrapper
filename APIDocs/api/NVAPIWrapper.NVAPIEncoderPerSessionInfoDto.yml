@@ -41,7 +41,7 @@ items:
   summary: Per-session encoder info DTO, wrapping <xref href="NVAPIWrapper._NV_ENCODER_PER_SESSION_INFO_V1" data-throw-if-not-resolved="false"></xref>.
   example: []
   syntax:
-    content: 'public readonly struct NVAPIEncoderPerSessionInfoDto : IEquatable<NVAPIEncoderPerSessionInfoDto>'
+    content: 'public struct NVAPIEncoderPerSessionInfoDto : IEquatable<NVAPIEncoderPerSessionInfoDto>'
     content.vb: Public Structure NVAPIEncoderPerSessionInfoDto Implements IEquatable(Of NVAPIEncoderPerSessionInfoDto)
   implements:
   - System.IEquatable{NVAPIWrapper.NVAPIEncoderPerSessionInfoDto}
@@ -75,11 +75,11 @@ items:
   summary: Unique encoder session identifier.
   example: []
   syntax:
-    content: public uint SessionId { get; }
+    content: public uint SessionId { readonly get; set; }
     parameters: []
     return:
       type: System.UInt32
-    content.vb: Public ReadOnly Property SessionId As UInteger
+    content.vb: Public Property SessionId As UInteger
   overload: NVAPIWrapper.NVAPIEncoderPerSessionInfoDto.SessionId*
 - uid: NVAPIWrapper.NVAPIEncoderPerSessionInfoDto.ProcessId
   commentId: P:NVAPIWrapper.NVAPIEncoderPerSessionInfoDto.ProcessId
@@ -106,11 +106,11 @@ items:
   summary: OS process ID that owns this session.
   example: []
   syntax:
-    content: public uint ProcessId { get; }
+    content: public uint ProcessId { readonly get; set; }
     parameters: []
     return:
       type: System.UInt32
-    content.vb: Public ReadOnly Property ProcessId As UInteger
+    content.vb: Public Property ProcessId As UInteger
   overload: NVAPIWrapper.NVAPIEncoderPerSessionInfoDto.ProcessId*
 - uid: NVAPIWrapper.NVAPIEncoderPerSessionInfoDto.VgpuInstance
   commentId: P:NVAPIWrapper.NVAPIEncoderPerSessionInfoDto.VgpuInstance
@@ -137,11 +137,11 @@ items:
   summary: vGPU instance identifier (0 for non-vGPU).
   example: []
   syntax:
-    content: public uint VgpuInstance { get; }
+    content: public uint VgpuInstance { readonly get; set; }
     parameters: []
     return:
       type: System.UInt32
-    content.vb: Public ReadOnly Property VgpuInstance As UInteger
+    content.vb: Public Property VgpuInstance As UInteger
   overload: NVAPIWrapper.NVAPIEncoderPerSessionInfoDto.VgpuInstance*
 - uid: NVAPIWrapper.NVAPIEncoderPerSessionInfoDto.CodecType
   commentId: P:NVAPIWrapper.NVAPIEncoderPerSessionInfoDto.CodecType
@@ -168,11 +168,11 @@ items:
   summary: Codec type used by this session.
   example: []
   syntax:
-    content: public _NV_ENCODER_TYPE CodecType { get; }
+    content: public _NV_ENCODER_TYPE CodecType { readonly get; set; }
     parameters: []
     return:
       type: NVAPIWrapper._NV_ENCODER_TYPE
-    content.vb: Public ReadOnly Property CodecType As _NV_ENCODER_TYPE
+    content.vb: Public Property CodecType As _NV_ENCODER_TYPE
   overload: NVAPIWrapper.NVAPIEncoderPerSessionInfoDto.CodecType*
 - uid: NVAPIWrapper.NVAPIEncoderPerSessionInfoDto.HResolution
   commentId: P:NVAPIWrapper.NVAPIEncoderPerSessionInfoDto.HResolution
@@ -199,11 +199,11 @@ items:
   summary: Horizontal resolution of the encoded stream.
   example: []
   syntax:
-    content: public uint HResolution { get; }
+    content: public uint HResolution { readonly get; set; }
     parameters: []
     return:
       type: System.UInt32
-    content.vb: Public ReadOnly Property HResolution As UInteger
+    content.vb: Public Property HResolution As UInteger
   overload: NVAPIWrapper.NVAPIEncoderPerSessionInfoDto.HResolution*
 - uid: NVAPIWrapper.NVAPIEncoderPerSessionInfoDto.VResolution
   commentId: P:NVAPIWrapper.NVAPIEncoderPerSessionInfoDto.VResolution
@@ -230,11 +230,11 @@ items:
   summary: Vertical resolution of the encoded stream.
   example: []
   syntax:
-    content: public uint VResolution { get; }
+    content: public uint VResolution { readonly get; set; }
     parameters: []
     return:
       type: System.UInt32
-    content.vb: Public ReadOnly Property VResolution As UInteger
+    content.vb: Public Property VResolution As UInteger
   overload: NVAPIWrapper.NVAPIEncoderPerSessionInfoDto.VResolution*
 - uid: NVAPIWrapper.NVAPIEncoderPerSessionInfoDto.AverageEncodeFps
   commentId: P:NVAPIWrapper.NVAPIEncoderPerSessionInfoDto.AverageEncodeFps
@@ -261,11 +261,11 @@ items:
   summary: Average encode frame rate for this session.
   example: []
   syntax:
-    content: public uint AverageEncodeFps { get; }
+    content: public uint AverageEncodeFps { readonly get; set; }
     parameters: []
     return:
       type: System.UInt32
-    content.vb: Public ReadOnly Property AverageEncodeFps As UInteger
+    content.vb: Public Property AverageEncodeFps As UInteger
   overload: NVAPIWrapper.NVAPIEncoderPerSessionInfoDto.AverageEncodeFps*
 - uid: NVAPIWrapper.NVAPIEncoderPerSessionInfoDto.AverageEncodeLatency
   commentId: P:NVAPIWrapper.NVAPIEncoderPerSessionInfoDto.AverageEncodeLatency
@@ -292,11 +292,11 @@ items:
   summary: Average encode latency in microseconds for this session.
   example: []
   syntax:
-    content: public uint AverageEncodeLatency { get; }
+    content: public uint AverageEncodeLatency { readonly get; set; }
     parameters: []
     return:
       type: System.UInt32
-    content.vb: Public ReadOnly Property AverageEncodeLatency As UInteger
+    content.vb: Public Property AverageEncodeLatency As UInteger
   overload: NVAPIWrapper.NVAPIEncoderPerSessionInfoDto.AverageEncodeLatency*
 - uid: NVAPIWrapper.NVAPIEncoderPerSessionInfoDto.#ctor(System.UInt32,System.UInt32,System.UInt32,NVAPIWrapper._NV_ENCODER_TYPE,System.UInt32,System.UInt32,System.UInt32,System.UInt32)
   commentId: M:NVAPIWrapper.NVAPIEncoderPerSessionInfoDto.#ctor(System.UInt32,System.UInt32,System.UInt32,NVAPIWrapper._NV_ENCODER_TYPE,System.UInt32,System.UInt32,System.UInt32,System.UInt32)

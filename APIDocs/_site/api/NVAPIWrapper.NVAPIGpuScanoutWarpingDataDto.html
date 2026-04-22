@@ -102,7 +102,7 @@ Struct NVAPIGpuScanoutWarpingDataDto  <a class="header-action link-secondary" ti
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly struct NVAPIGpuScanoutWarpingDataDto : IEquatable&lt;NVAPIGpuScanoutWarpingDataDto&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public struct NVAPIGpuScanoutWarpingDataDto : IEquatable&lt;NVAPIGpuScanoutWarpingDataDto&gt;</code></pre>
   </div>
 
 
@@ -195,7 +195,7 @@ Struct NVAPIGpuScanoutWarpingDataDto  <a class="header-action link-secondary" ti
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int NumVertices { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public int NumVertices { readonly get; set; }</code></pre>
   </div>
 
 
@@ -226,7 +226,7 @@ Struct NVAPIGpuScanoutWarpingDataDto  <a class="header-action link-secondary" ti
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public NVAPISBoxDto? TextureRect { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public NVAPISBoxDto? TextureRect { readonly get; set; }</code></pre>
   </div>
 
 
@@ -257,7 +257,7 @@ Struct NVAPIGpuScanoutWarpingDataDto  <a class="header-action link-secondary" ti
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public NV_GPU_WARPING_VERTICE_FORMAT VertexFormat { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public NV_GPU_WARPING_VERTICE_FORMAT VertexFormat { readonly get; set; }</code></pre>
   </div>
 
 
@@ -288,7 +288,7 @@ Struct NVAPIGpuScanoutWarpingDataDto  <a class="header-action link-secondary" ti
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public float[] Vertices { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public float[] Vertices { readonly get; set; }</code></pre>
   </div>
 
 

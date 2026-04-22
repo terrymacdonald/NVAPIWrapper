@@ -102,7 +102,7 @@ Struct NVAPIMosaicGridTopologiesDto  <a class="header-action link-secondary" tit
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly struct NVAPIMosaicGridTopologiesDto : IEquatable&lt;NVAPIMosaicGridTopologiesDto&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public struct NVAPIMosaicGridTopologiesDto : IEquatable&lt;NVAPIMosaicGridTopologiesDto&gt;</code></pre>
   </div>
 
 
@@ -191,7 +191,7 @@ Struct NVAPIMosaicGridTopologiesDto  <a class="header-action link-secondary" tit
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public NVAPIMosaicGridTopoDto[] Grids { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public NVAPIMosaicGridTopoDto[] Grids { readonly get; set; }</code></pre>
   </div>
 
 

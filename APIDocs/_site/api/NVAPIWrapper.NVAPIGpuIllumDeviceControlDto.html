@@ -102,7 +102,7 @@ Struct NVAPIGpuIllumDeviceControlDto  <a class="header-action link-secondary" ti
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly struct NVAPIGpuIllumDeviceControlDto : IEquatable&lt;NVAPIGpuIllumDeviceControlDto&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public struct NVAPIGpuIllumDeviceControlDto : IEquatable&lt;NVAPIGpuIllumDeviceControlDto&gt;</code></pre>
   </div>
 
 
@@ -195,7 +195,7 @@ Struct NVAPIGpuIllumDeviceControlDto  <a class="header-action link-secondary" ti
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool SyncEnabled { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public bool SyncEnabled { readonly get; set; }</code></pre>
   </div>
 
 
@@ -227,7 +227,7 @@ Struct NVAPIGpuIllumDeviceControlDto  <a class="header-action link-secondary" ti
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ulong SyncTimestampMs { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public ulong SyncTimestampMs { readonly get; set; }</code></pre>
   </div>
 
 
@@ -259,7 +259,7 @@ Struct NVAPIGpuIllumDeviceControlDto  <a class="header-action link-secondary" ti
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public NV_GPU_CLIENT_ILLUM_DEVICE_TYPE Type { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public NV_GPU_CLIENT_ILLUM_DEVICE_TYPE Type { readonly get; set; }</code></pre>
   </div>
 
 

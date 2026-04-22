@@ -33,7 +33,7 @@ items:
   summary: Scanout intensity result DTO.
   example: []
   syntax:
-    content: 'public readonly struct NVAPIGpuScanoutIntensityResultDto : IEquatable<NVAPIGpuScanoutIntensityResultDto>'
+    content: 'public struct NVAPIGpuScanoutIntensityResultDto : IEquatable<NVAPIGpuScanoutIntensityResultDto>'
     content.vb: Public Structure NVAPIGpuScanoutIntensityResultDto Implements IEquatable(Of NVAPIGpuScanoutIntensityResultDto)
   implements:
   - System.IEquatable{NVAPIWrapper.NVAPIGpuScanoutIntensityResultDto}
@@ -65,11 +65,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public bool IsSticky { get; }
+    content: public bool IsSticky { readonly get; set; }
     parameters: []
     return:
       type: System.Boolean
-    content.vb: Public ReadOnly Property IsSticky As Boolean
+    content.vb: Public Property IsSticky As Boolean
   overload: NVAPIWrapper.NVAPIGpuScanoutIntensityResultDto.IsSticky*
 - uid: NVAPIWrapper.NVAPIGpuScanoutIntensityResultDto.#ctor(System.Boolean)
   commentId: M:NVAPIWrapper.NVAPIGpuScanoutIntensityResultDto.#ctor(System.Boolean)

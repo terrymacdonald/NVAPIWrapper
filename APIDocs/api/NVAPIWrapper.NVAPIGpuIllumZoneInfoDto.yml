@@ -39,7 +39,7 @@ items:
   summary: Per-zone illumination info DTO, wrapping <xref href="NVAPIWrapper._NV_GPU_CLIENT_ILLUM_ZONE_INFO_V1" data-throw-if-not-resolved="false"></xref>.
   example: []
   syntax:
-    content: 'public readonly struct NVAPIGpuIllumZoneInfoDto : IEquatable<NVAPIGpuIllumZoneInfoDto>'
+    content: 'public struct NVAPIGpuIllumZoneInfoDto : IEquatable<NVAPIGpuIllumZoneInfoDto>'
     content.vb: Public Structure NVAPIGpuIllumZoneInfoDto Implements IEquatable(Of NVAPIGpuIllumZoneInfoDto)
   implements:
   - System.IEquatable{NVAPIWrapper.NVAPIGpuIllumZoneInfoDto}
@@ -73,11 +73,11 @@ items:
   summary: Type of illumination zone.
   example: []
   syntax:
-    content: public NV_GPU_CLIENT_ILLUM_ZONE_TYPE Type { get; }
+    content: public NV_GPU_CLIENT_ILLUM_ZONE_TYPE Type { readonly get; set; }
     parameters: []
     return:
       type: NVAPIWrapper.NV_GPU_CLIENT_ILLUM_ZONE_TYPE
-    content.vb: Public ReadOnly Property Type As NV_GPU_CLIENT_ILLUM_ZONE_TYPE
+    content.vb: Public Property Type As NV_GPU_CLIENT_ILLUM_ZONE_TYPE
   overload: NVAPIWrapper.NVAPIGpuIllumZoneInfoDto.Type*
 - uid: NVAPIWrapper.NVAPIGpuIllumZoneInfoDto.IllumDeviceIdx
   commentId: P:NVAPIWrapper.NVAPIGpuIllumZoneInfoDto.IllumDeviceIdx
@@ -104,11 +104,11 @@ items:
   summary: Index of the illumination device this zone belongs to.
   example: []
   syntax:
-    content: public byte IllumDeviceIdx { get; }
+    content: public byte IllumDeviceIdx { readonly get; set; }
     parameters: []
     return:
       type: System.Byte
-    content.vb: Public ReadOnly Property IllumDeviceIdx As Byte
+    content.vb: Public Property IllumDeviceIdx As Byte
   overload: NVAPIWrapper.NVAPIGpuIllumZoneInfoDto.IllumDeviceIdx*
 - uid: NVAPIWrapper.NVAPIGpuIllumZoneInfoDto.ProvIdx
   commentId: P:NVAPIWrapper.NVAPIGpuIllumZoneInfoDto.ProvIdx
@@ -135,11 +135,11 @@ items:
   summary: Index of the illumination provider for this zone.
   example: []
   syntax:
-    content: public byte ProvIdx { get; }
+    content: public byte ProvIdx { readonly get; set; }
     parameters: []
     return:
       type: System.Byte
-    content.vb: Public ReadOnly Property ProvIdx As Byte
+    content.vb: Public Property ProvIdx As Byte
   overload: NVAPIWrapper.NVAPIGpuIllumZoneInfoDto.ProvIdx*
 - uid: NVAPIWrapper.NVAPIGpuIllumZoneInfoDto.ZoneLocation
   commentId: P:NVAPIWrapper.NVAPIGpuIllumZoneInfoDto.ZoneLocation
@@ -166,11 +166,11 @@ items:
   summary: Physical location of the zone on the GPU or card.
   example: []
   syntax:
-    content: public NV_GPU_CLIENT_ILLUM_ZONE_LOCATION ZoneLocation { get; }
+    content: public NV_GPU_CLIENT_ILLUM_ZONE_LOCATION ZoneLocation { readonly get; set; }
     parameters: []
     return:
       type: NVAPIWrapper.NV_GPU_CLIENT_ILLUM_ZONE_LOCATION
-    content.vb: Public ReadOnly Property ZoneLocation As NV_GPU_CLIENT_ILLUM_ZONE_LOCATION
+    content.vb: Public Property ZoneLocation As NV_GPU_CLIENT_ILLUM_ZONE_LOCATION
   overload: NVAPIWrapper.NVAPIGpuIllumZoneInfoDto.ZoneLocation*
 - uid: NVAPIWrapper.NVAPIGpuIllumZoneInfoDto.DataRawBytes
   commentId: P:NVAPIWrapper.NVAPIGpuIllumZoneInfoDto.DataRawBytes
@@ -200,11 +200,11 @@ items:
     Interpret using <xref href="NVAPIWrapper.NVAPIGpuIllumZoneInfoDto.Type" data-throw-if-not-resolved="false"></xref> to select the appropriate union member.
   example: []
   syntax:
-    content: public byte[] DataRawBytes { get; }
+    content: public byte[] DataRawBytes { readonly get; set; }
     parameters: []
     return:
       type: System.Byte[]
-    content.vb: Public ReadOnly Property DataRawBytes As Byte()
+    content.vb: Public Property DataRawBytes As Byte()
   overload: NVAPIWrapper.NVAPIGpuIllumZoneInfoDto.DataRawBytes*
 - uid: NVAPIWrapper.NVAPIGpuIllumZoneInfoDto.#ctor(NVAPIWrapper.NV_GPU_CLIENT_ILLUM_ZONE_TYPE,System.Byte,System.Byte,NVAPIWrapper.NV_GPU_CLIENT_ILLUM_ZONE_LOCATION,System.Byte[])
   commentId: M:NVAPIWrapper.NVAPIGpuIllumZoneInfoDto.#ctor(NVAPIWrapper.NV_GPU_CLIENT_ILLUM_ZONE_TYPE,System.Byte,System.Byte,NVAPIWrapper.NV_GPU_CLIENT_ILLUM_ZONE_LOCATION,System.Byte[])

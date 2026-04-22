@@ -102,7 +102,7 @@ Struct NVAPILicensableFeaturesDto  <a class="header-action link-secondary" title
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly struct NVAPILicensableFeaturesDto : IEquatable&lt;NVAPILicensableFeaturesDto&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public struct NVAPILicensableFeaturesDto : IEquatable&lt;NVAPILicensableFeaturesDto&gt;</code></pre>
   </div>
 
 
@@ -197,7 +197,7 @@ Struct NVAPILicensableFeaturesDto  <a class="header-action link-secondary" title
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool IsLicenseSupported { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public bool IsLicenseSupported { readonly get; set; }</code></pre>
   </div>
 
 
@@ -229,7 +229,7 @@ Struct NVAPILicensableFeaturesDto  <a class="header-action link-secondary" title
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public uint LicensableFeatureCount { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public uint LicensableFeatureCount { readonly get; set; }</code></pre>
   </div>
 
 
@@ -261,7 +261,7 @@ Struct NVAPILicensableFeaturesDto  <a class="header-action link-secondary" title
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public NVAPILicenseFeatureDetailsDto[] LicenseDetails { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public NVAPILicenseFeatureDetailsDto[] LicenseDetails { readonly get; set; }</code></pre>
   </div>
 
 
@@ -293,7 +293,7 @@ Struct NVAPILicensableFeaturesDto  <a class="header-action link-secondary" title
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string Signature { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public string Signature { readonly get; set; }</code></pre>
   </div>
 
 

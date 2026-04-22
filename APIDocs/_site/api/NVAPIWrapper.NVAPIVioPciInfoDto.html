@@ -102,7 +102,7 @@ Struct NVAPIVioPciInfoDto  <a class="header-action link-secondary" title="View s
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly struct NVAPIVioPciInfoDto : IEquatable&lt;NVAPIVioPciInfoDto&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public struct NVAPIVioPciInfoDto : IEquatable&lt;NVAPIVioPciInfoDto&gt;</code></pre>
   </div>
 
 
@@ -203,7 +203,7 @@ Struct NVAPIVioPciInfoDto  <a class="header-action link-secondary" title="View s
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public uint PciBus { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public uint PciBus { readonly get; set; }</code></pre>
   </div>
 
 
@@ -234,7 +234,7 @@ Struct NVAPIVioPciInfoDto  <a class="header-action link-secondary" title="View s
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public uint PciDeviceId { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public uint PciDeviceId { readonly get; set; }</code></pre>
   </div>
 
 
@@ -265,7 +265,7 @@ Struct NVAPIVioPciInfoDto  <a class="header-action link-secondary" title="View s
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public uint PciDomain { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public uint PciDomain { readonly get; set; }</code></pre>
   </div>
 
 
@@ -296,7 +296,7 @@ Struct NVAPIVioPciInfoDto  <a class="header-action link-secondary" title="View s
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public _NVVIOPCILINKRATE PciLinkRate { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public _NVVIOPCILINKRATE PciLinkRate { readonly get; set; }</code></pre>
   </div>
 
 
@@ -327,7 +327,7 @@ Struct NVAPIVioPciInfoDto  <a class="header-action link-secondary" title="View s
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public _NVVIOPCILINKWIDTH PciLinkWidth { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public _NVVIOPCILINKWIDTH PciLinkWidth { readonly get; set; }</code></pre>
   </div>
 
 
@@ -358,7 +358,7 @@ Struct NVAPIVioPciInfoDto  <a class="header-action link-secondary" title="View s
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public uint PciRevisionId { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public uint PciRevisionId { readonly get; set; }</code></pre>
   </div>
 
 
@@ -389,7 +389,7 @@ Struct NVAPIVioPciInfoDto  <a class="header-action link-secondary" title="View s
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public uint PciSlot { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public uint PciSlot { readonly get; set; }</code></pre>
   </div>
 
 
@@ -420,7 +420,7 @@ Struct NVAPIVioPciInfoDto  <a class="header-action link-secondary" title="View s
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public uint PciSubSystemId { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public uint PciSubSystemId { readonly get; set; }</code></pre>
   </div>
 
 

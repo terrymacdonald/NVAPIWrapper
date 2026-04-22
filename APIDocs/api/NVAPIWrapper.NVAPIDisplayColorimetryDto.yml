@@ -35,7 +35,7 @@ items:
   summary: DTO for display colorimetry.
   example: []
   syntax:
-    content: 'public readonly struct NVAPIDisplayColorimetryDto : IEquatable<NVAPIDisplayColorimetryDto>'
+    content: 'public struct NVAPIDisplayColorimetryDto : IEquatable<NVAPIDisplayColorimetryDto>'
     content.vb: Public Structure NVAPIDisplayColorimetryDto Implements IEquatable(Of NVAPIDisplayColorimetryDto)
   implements:
   - System.IEquatable{NVAPIWrapper.NVAPIDisplayColorimetryDto}
@@ -69,11 +69,11 @@ items:
   summary: Native display colorimetry.
   example: []
   syntax:
-    content: public _NV_DISPLAY_COLORIMETRY_V1 Colorimetry { get; }
+    content: public _NV_DISPLAY_COLORIMETRY_V1 Colorimetry { readonly get; set; }
     parameters: []
     return:
       type: NVAPIWrapper._NV_DISPLAY_COLORIMETRY_V1
-    content.vb: Public ReadOnly Property Colorimetry As _NV_DISPLAY_COLORIMETRY_V1
+    content.vb: Public Property Colorimetry As _NV_DISPLAY_COLORIMETRY_V1
   overload: NVAPIWrapper.NVAPIDisplayColorimetryDto.Colorimetry*
 - uid: NVAPIWrapper.NVAPIDisplayColorimetryDto.#ctor(NVAPIWrapper._NV_DISPLAY_COLORIMETRY_V1)
   commentId: M:NVAPIWrapper.NVAPIDisplayColorimetryDto.#ctor(NVAPIWrapper._NV_DISPLAY_COLORIMETRY_V1)

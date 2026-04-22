@@ -42,7 +42,7 @@ items:
   summary: P-states (Pstates20) DTO.
   example: []
   syntax:
-    content: 'public readonly struct NVAPIGpuPerfPstates20InfoDto : IEquatable<NVAPIGpuPerfPstates20InfoDto>'
+    content: 'public struct NVAPIGpuPerfPstates20InfoDto : IEquatable<NVAPIGpuPerfPstates20InfoDto>'
     content.vb: Public Structure NVAPIGpuPerfPstates20InfoDto Implements IEquatable(Of NVAPIGpuPerfPstates20InfoDto)
   implements:
   - System.IEquatable{NVAPIWrapper.NVAPIGpuPerfPstates20InfoDto}
@@ -76,11 +76,11 @@ items:
   summary: True if the P-state configuration is editable.
   example: []
   syntax:
-    content: public bool IsEditable { get; }
+    content: public bool IsEditable { readonly get; set; }
     parameters: []
     return:
       type: System.Boolean
-    content.vb: Public ReadOnly Property IsEditable As Boolean
+    content.vb: Public Property IsEditable As Boolean
   overload: NVAPIWrapper.NVAPIGpuPerfPstates20InfoDto.IsEditable*
 - uid: NVAPIWrapper.NVAPIGpuPerfPstates20InfoDto.NumPstates
   commentId: P:NVAPIWrapper.NVAPIGpuPerfPstates20InfoDto.NumPstates
@@ -107,11 +107,11 @@ items:
   summary: Number of P-states reported.
   example: []
   syntax:
-    content: public uint NumPstates { get; }
+    content: public uint NumPstates { readonly get; set; }
     parameters: []
     return:
       type: System.UInt32
-    content.vb: Public ReadOnly Property NumPstates As UInteger
+    content.vb: Public Property NumPstates As UInteger
   overload: NVAPIWrapper.NVAPIGpuPerfPstates20InfoDto.NumPstates*
 - uid: NVAPIWrapper.NVAPIGpuPerfPstates20InfoDto.NumClocks
   commentId: P:NVAPIWrapper.NVAPIGpuPerfPstates20InfoDto.NumClocks
@@ -138,11 +138,11 @@ items:
   summary: Number of clocks per P-state.
   example: []
   syntax:
-    content: public uint NumClocks { get; }
+    content: public uint NumClocks { readonly get; set; }
     parameters: []
     return:
       type: System.UInt32
-    content.vb: Public ReadOnly Property NumClocks As UInteger
+    content.vb: Public Property NumClocks As UInteger
   overload: NVAPIWrapper.NVAPIGpuPerfPstates20InfoDto.NumClocks*
 - uid: NVAPIWrapper.NVAPIGpuPerfPstates20InfoDto.NumBaseVoltages
   commentId: P:NVAPIWrapper.NVAPIGpuPerfPstates20InfoDto.NumBaseVoltages
@@ -169,11 +169,11 @@ items:
   summary: Number of base voltages per P-state.
   example: []
   syntax:
-    content: public uint NumBaseVoltages { get; }
+    content: public uint NumBaseVoltages { readonly get; set; }
     parameters: []
     return:
       type: System.UInt32
-    content.vb: Public ReadOnly Property NumBaseVoltages As UInteger
+    content.vb: Public Property NumBaseVoltages As UInteger
   overload: NVAPIWrapper.NVAPIGpuPerfPstates20InfoDto.NumBaseVoltages*
 - uid: NVAPIWrapper.NVAPIGpuPerfPstates20InfoDto.Pstates
   commentId: P:NVAPIWrapper.NVAPIGpuPerfPstates20InfoDto.Pstates
@@ -200,11 +200,11 @@ items:
   summary: P-state info array (up to 16 entries).
   example: []
   syntax:
-    content: public NVAPIPstateInfoDto[] Pstates { get; }
+    content: public NVAPIPstateInfoDto[] Pstates { readonly get; set; }
     parameters: []
     return:
       type: NVAPIWrapper.NVAPIPstateInfoDto[]
-    content.vb: Public ReadOnly Property Pstates As NVAPIPstateInfoDto()
+    content.vb: Public Property Pstates As NVAPIPstateInfoDto()
   overload: NVAPIWrapper.NVAPIGpuPerfPstates20InfoDto.Pstates*
 - uid: NVAPIWrapper.NVAPIGpuPerfPstates20InfoDto.OvNumVoltages
   commentId: P:NVAPIWrapper.NVAPIGpuPerfPstates20InfoDto.OvNumVoltages
@@ -231,11 +231,11 @@ items:
   summary: Number of over-voltage entries.
   example: []
   syntax:
-    content: public uint OvNumVoltages { get; }
+    content: public uint OvNumVoltages { readonly get; set; }
     parameters: []
     return:
       type: System.UInt32
-    content.vb: Public ReadOnly Property OvNumVoltages As UInteger
+    content.vb: Public Property OvNumVoltages As UInteger
   overload: NVAPIWrapper.NVAPIGpuPerfPstates20InfoDto.OvNumVoltages*
 - uid: NVAPIWrapper.NVAPIGpuPerfPstates20InfoDto.OvVoltages
   commentId: P:NVAPIWrapper.NVAPIGpuPerfPstates20InfoDto.OvVoltages
@@ -262,11 +262,11 @@ items:
   summary: Over-voltage entries (up to 4).
   example: []
   syntax:
-    content: public NVAPIPstateBaseVoltageEntryDto[] OvVoltages { get; }
+    content: public NVAPIPstateBaseVoltageEntryDto[] OvVoltages { readonly get; set; }
     parameters: []
     return:
       type: NVAPIWrapper.NVAPIPstateBaseVoltageEntryDto[]
-    content.vb: Public ReadOnly Property OvVoltages As NVAPIPstateBaseVoltageEntryDto()
+    content.vb: Public Property OvVoltages As NVAPIPstateBaseVoltageEntryDto()
   overload: NVAPIWrapper.NVAPIGpuPerfPstates20InfoDto.OvVoltages*
 - uid: NVAPIWrapper.NVAPIGpuPerfPstates20InfoDto.#ctor(System.Boolean,System.UInt32,System.UInt32,System.UInt32,NVAPIWrapper.NVAPIPstateInfoDto[],System.UInt32,NVAPIWrapper.NVAPIPstateBaseVoltageEntryDto[])
   commentId: M:NVAPIWrapper.NVAPIGpuPerfPstates20InfoDto.#ctor(System.Boolean,System.UInt32,System.UInt32,System.UInt32,NVAPIWrapper.NVAPIPstateInfoDto[],System.UInt32,NVAPIWrapper.NVAPIPstateBaseVoltageEntryDto[])

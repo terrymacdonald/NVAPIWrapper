@@ -41,7 +41,7 @@ items:
   summary: Extended scanout configuration DTO.
   example: []
   syntax:
-    content: 'public readonly struct NVAPIGpuScanoutConfigurationExDto : IEquatable<NVAPIGpuScanoutConfigurationExDto>'
+    content: 'public struct NVAPIGpuScanoutConfigurationExDto : IEquatable<NVAPIGpuScanoutConfigurationExDto>'
     content.vb: Public Structure NVAPIGpuScanoutConfigurationExDto Implements IEquatable(Of NVAPIGpuScanoutConfigurationExDto)
   implements:
   - System.IEquatable{NVAPIWrapper.NVAPIGpuScanoutConfigurationExDto}
@@ -73,11 +73,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public NVAPISBoxDto SourceDesktopRect { get; }
+    content: public NVAPISBoxDto SourceDesktopRect { readonly get; set; }
     parameters: []
     return:
       type: NVAPIWrapper.NVAPISBoxDto
-    content.vb: Public ReadOnly Property SourceDesktopRect As NVAPISBoxDto
+    content.vb: Public Property SourceDesktopRect As NVAPISBoxDto
   overload: NVAPIWrapper.NVAPIGpuScanoutConfigurationExDto.SourceDesktopRect*
 - uid: NVAPIWrapper.NVAPIGpuScanoutConfigurationExDto.SourceViewportRect
   commentId: P:NVAPIWrapper.NVAPIGpuScanoutConfigurationExDto.SourceViewportRect
@@ -102,11 +102,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public NVAPISBoxDto SourceViewportRect { get; }
+    content: public NVAPISBoxDto SourceViewportRect { readonly get; set; }
     parameters: []
     return:
       type: NVAPIWrapper.NVAPISBoxDto
-    content.vb: Public ReadOnly Property SourceViewportRect As NVAPISBoxDto
+    content.vb: Public Property SourceViewportRect As NVAPISBoxDto
   overload: NVAPIWrapper.NVAPIGpuScanoutConfigurationExDto.SourceViewportRect*
 - uid: NVAPIWrapper.NVAPIGpuScanoutConfigurationExDto.TargetViewportRect
   commentId: P:NVAPIWrapper.NVAPIGpuScanoutConfigurationExDto.TargetViewportRect
@@ -131,11 +131,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public NVAPISBoxDto TargetViewportRect { get; }
+    content: public NVAPISBoxDto TargetViewportRect { readonly get; set; }
     parameters: []
     return:
       type: NVAPIWrapper.NVAPISBoxDto
-    content.vb: Public ReadOnly Property TargetViewportRect As NVAPISBoxDto
+    content.vb: Public Property TargetViewportRect As NVAPISBoxDto
   overload: NVAPIWrapper.NVAPIGpuScanoutConfigurationExDto.TargetViewportRect*
 - uid: NVAPIWrapper.NVAPIGpuScanoutConfigurationExDto.TargetDisplayWidth
   commentId: P:NVAPIWrapper.NVAPIGpuScanoutConfigurationExDto.TargetDisplayWidth
@@ -160,11 +160,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public uint TargetDisplayWidth { get; }
+    content: public uint TargetDisplayWidth { readonly get; set; }
     parameters: []
     return:
       type: System.UInt32
-    content.vb: Public ReadOnly Property TargetDisplayWidth As UInteger
+    content.vb: Public Property TargetDisplayWidth As UInteger
   overload: NVAPIWrapper.NVAPIGpuScanoutConfigurationExDto.TargetDisplayWidth*
 - uid: NVAPIWrapper.NVAPIGpuScanoutConfigurationExDto.TargetDisplayHeight
   commentId: P:NVAPIWrapper.NVAPIGpuScanoutConfigurationExDto.TargetDisplayHeight
@@ -189,11 +189,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public uint TargetDisplayHeight { get; }
+    content: public uint TargetDisplayHeight { readonly get; set; }
     parameters: []
     return:
       type: System.UInt32
-    content.vb: Public ReadOnly Property TargetDisplayHeight As UInteger
+    content.vb: Public Property TargetDisplayHeight As UInteger
   overload: NVAPIWrapper.NVAPIGpuScanoutConfigurationExDto.TargetDisplayHeight*
 - uid: NVAPIWrapper.NVAPIGpuScanoutConfigurationExDto.CloneImportance
   commentId: P:NVAPIWrapper.NVAPIGpuScanoutConfigurationExDto.CloneImportance
@@ -218,11 +218,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public uint CloneImportance { get; }
+    content: public uint CloneImportance { readonly get; set; }
     parameters: []
     return:
       type: System.UInt32
-    content.vb: Public ReadOnly Property CloneImportance As UInteger
+    content.vb: Public Property CloneImportance As UInteger
   overload: NVAPIWrapper.NVAPIGpuScanoutConfigurationExDto.CloneImportance*
 - uid: NVAPIWrapper.NVAPIGpuScanoutConfigurationExDto.SourceToTargetRotation
   commentId: P:NVAPIWrapper.NVAPIGpuScanoutConfigurationExDto.SourceToTargetRotation
@@ -247,11 +247,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public _NV_ROTATE SourceToTargetRotation { get; }
+    content: public _NV_ROTATE SourceToTargetRotation { readonly get; set; }
     parameters: []
     return:
       type: NVAPIWrapper._NV_ROTATE
-    content.vb: Public ReadOnly Property SourceToTargetRotation As _NV_ROTATE
+    content.vb: Public Property SourceToTargetRotation As _NV_ROTATE
   overload: NVAPIWrapper.NVAPIGpuScanoutConfigurationExDto.SourceToTargetRotation*
 - uid: NVAPIWrapper.NVAPIGpuScanoutConfigurationExDto.#ctor(NVAPIWrapper.NVAPISBoxDto,NVAPIWrapper.NVAPISBoxDto,NVAPIWrapper.NVAPISBoxDto,System.UInt32,System.UInt32,System.UInt32,NVAPIWrapper._NV_ROTATE)
   commentId: M:NVAPIWrapper.NVAPIGpuScanoutConfigurationExDto.#ctor(NVAPIWrapper.NVAPISBoxDto,NVAPIWrapper.NVAPISBoxDto,NVAPIWrapper.NVAPISBoxDto,System.UInt32,System.UInt32,System.UInt32,NVAPIWrapper._NV_ROTATE)

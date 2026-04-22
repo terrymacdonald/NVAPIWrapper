@@ -36,7 +36,7 @@ items:
   summary: Clock frequencies DTO.
   example: []
   syntax:
-    content: 'public readonly struct NVAPIGpuClockFrequenciesDto : IEquatable<NVAPIGpuClockFrequenciesDto>'
+    content: 'public struct NVAPIGpuClockFrequenciesDto : IEquatable<NVAPIGpuClockFrequenciesDto>'
     content.vb: Public Structure NVAPIGpuClockFrequenciesDto Implements IEquatable(Of NVAPIGpuClockFrequenciesDto)
   implements:
   - System.IEquatable{NVAPIWrapper.NVAPIGpuClockFrequenciesDto}
@@ -68,11 +68,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public NV_GPU_CLOCK_FREQUENCIES_CLOCK_TYPE ClockType { get; }
+    content: public NV_GPU_CLOCK_FREQUENCIES_CLOCK_TYPE ClockType { readonly get; set; }
     parameters: []
     return:
       type: NVAPIWrapper.NV_GPU_CLOCK_FREQUENCIES_CLOCK_TYPE
-    content.vb: Public ReadOnly Property ClockType As NV_GPU_CLOCK_FREQUENCIES_CLOCK_TYPE
+    content.vb: Public Property ClockType As NV_GPU_CLOCK_FREQUENCIES_CLOCK_TYPE
   overload: NVAPIWrapper.NVAPIGpuClockFrequenciesDto.ClockType*
 - uid: NVAPIWrapper.NVAPIGpuClockFrequenciesDto.Domains
   commentId: P:NVAPIWrapper.NVAPIGpuClockFrequenciesDto.Domains
@@ -97,11 +97,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public NVAPIGpuClockDomainDto[] Domains { get; }
+    content: public NVAPIGpuClockDomainDto[] Domains { readonly get; set; }
     parameters: []
     return:
       type: NVAPIWrapper.NVAPIGpuClockDomainDto[]
-    content.vb: Public ReadOnly Property Domains As NVAPIGpuClockDomainDto()
+    content.vb: Public Property Domains As NVAPIGpuClockDomainDto()
   overload: NVAPIWrapper.NVAPIGpuClockFrequenciesDto.Domains*
 - uid: NVAPIWrapper.NVAPIGpuClockFrequenciesDto.#ctor(NVAPIWrapper.NV_GPU_CLOCK_FREQUENCIES_CLOCK_TYPE,NVAPIWrapper.NVAPIGpuClockDomainDto[])
   commentId: M:NVAPIWrapper.NVAPIGpuClockFrequenciesDto.#ctor(NVAPIWrapper.NV_GPU_CLOCK_FREQUENCIES_CLOCK_TYPE,NVAPIWrapper.NVAPIGpuClockDomainDto[])

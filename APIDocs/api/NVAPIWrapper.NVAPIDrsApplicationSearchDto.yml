@@ -34,7 +34,7 @@ items:
   summary: Result of an application search.
   example: []
   syntax:
-    content: 'public readonly struct NVAPIDrsApplicationSearchDto : IEquatable<NVAPIDrsApplicationSearchDto>'
+    content: 'public struct NVAPIDrsApplicationSearchDto : IEquatable<NVAPIDrsApplicationSearchDto>'
     content.vb: Public Structure NVAPIDrsApplicationSearchDto Implements IEquatable(Of NVAPIDrsApplicationSearchDto)
   implements:
   - System.IEquatable{NVAPIWrapper.NVAPIDrsApplicationSearchDto}
@@ -66,11 +66,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public NVAPIDrsProfileDto Profile { get; }
+    content: public NVAPIDrsProfileDto Profile { readonly get; set; }
     parameters: []
     return:
       type: NVAPIWrapper.NVAPIDrsProfileDto
-    content.vb: Public ReadOnly Property Profile As NVAPIDrsProfileDto
+    content.vb: Public Property Profile As NVAPIDrsProfileDto
   overload: NVAPIWrapper.NVAPIDrsApplicationSearchDto.Profile*
 - uid: NVAPIWrapper.NVAPIDrsApplicationSearchDto.Application
   commentId: P:NVAPIWrapper.NVAPIDrsApplicationSearchDto.Application
@@ -95,11 +95,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public NVAPIDrsApplicationDto Application { get; }
+    content: public NVAPIDrsApplicationDto Application { readonly get; set; }
     parameters: []
     return:
       type: NVAPIWrapper.NVAPIDrsApplicationDto
-    content.vb: Public ReadOnly Property Application As NVAPIDrsApplicationDto
+    content.vb: Public Property Application As NVAPIDrsApplicationDto
   overload: NVAPIWrapper.NVAPIDrsApplicationSearchDto.Application*
 - uid: NVAPIWrapper.NVAPIDrsApplicationSearchDto.#ctor(NVAPIWrapper.NVAPIDrsProfileDto,NVAPIWrapper.NVAPIDrsApplicationDto)
   commentId: M:NVAPIWrapper.NVAPIDrsApplicationSearchDto.#ctor(NVAPIWrapper.NVAPIDrsProfileDto,NVAPIWrapper.NVAPIDrsApplicationDto)

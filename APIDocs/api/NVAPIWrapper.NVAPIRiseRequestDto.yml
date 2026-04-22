@@ -36,7 +36,7 @@ items:
   summary: RISE request DTO.
   example: []
   syntax:
-    content: 'public readonly struct NVAPIRiseRequestDto : IEquatable<NVAPIRiseRequestDto>'
+    content: 'public struct NVAPIRiseRequestDto : IEquatable<NVAPIRiseRequestDto>'
     content.vb: Public Structure NVAPIRiseRequestDto Implements IEquatable(Of NVAPIRiseRequestDto)
   implements:
   - System.IEquatable{NVAPIWrapper.NVAPIRiseRequestDto}
@@ -140,11 +140,11 @@ items:
   summary: Content type.
   example: []
   syntax:
-    content: public _NV_RISE_CONTENT_TYPE ContentType { get; }
+    content: public _NV_RISE_CONTENT_TYPE ContentType { readonly get; set; }
     parameters: []
     return:
       type: NVAPIWrapper._NV_RISE_CONTENT_TYPE
-    content.vb: Public ReadOnly Property ContentType As _NV_RISE_CONTENT_TYPE
+    content.vb: Public Property ContentType As _NV_RISE_CONTENT_TYPE
   overload: NVAPIWrapper.NVAPIRiseRequestDto.ContentType*
 - uid: NVAPIWrapper.NVAPIRiseRequestDto.Content
   commentId: P:NVAPIWrapper.NVAPIRiseRequestDto.Content
@@ -171,11 +171,11 @@ items:
   summary: Content string.
   example: []
   syntax:
-    content: public string Content { get; }
+    content: public string Content { readonly get; set; }
     parameters: []
     return:
       type: System.String
-    content.vb: Public ReadOnly Property Content As String
+    content.vb: Public Property Content As String
   overload: NVAPIWrapper.NVAPIRiseRequestDto.Content*
 - uid: NVAPIWrapper.NVAPIRiseRequestDto.Completed
   commentId: P:NVAPIWrapper.NVAPIRiseRequestDto.Completed
@@ -202,11 +202,11 @@ items:
   summary: True if request is completed.
   example: []
   syntax:
-    content: public bool Completed { get; }
+    content: public bool Completed { readonly get; set; }
     parameters: []
     return:
       type: System.Boolean
-    content.vb: Public ReadOnly Property Completed As Boolean
+    content.vb: Public Property Completed As Boolean
   overload: NVAPIWrapper.NVAPIRiseRequestDto.Completed*
 - uid: NVAPIWrapper.NVAPIRiseRequestDto.Equals(NVAPIWrapper.NVAPIRiseRequestDto)
   commentId: M:NVAPIWrapper.NVAPIRiseRequestDto.Equals(NVAPIWrapper.NVAPIRiseRequestDto)

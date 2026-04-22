@@ -102,7 +102,7 @@ Struct NVAPIGpuClockFrequenciesDto  <a class="header-action link-secondary" titl
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly struct NVAPIGpuClockFrequenciesDto : IEquatable&lt;NVAPIGpuClockFrequenciesDto&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public struct NVAPIGpuClockFrequenciesDto : IEquatable&lt;NVAPIGpuClockFrequenciesDto&gt;</code></pre>
   </div>
 
 
@@ -191,7 +191,7 @@ Struct NVAPIGpuClockFrequenciesDto  <a class="header-action link-secondary" titl
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public NV_GPU_CLOCK_FREQUENCIES_CLOCK_TYPE ClockType { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public NV_GPU_CLOCK_FREQUENCIES_CLOCK_TYPE ClockType { readonly get; set; }</code></pre>
   </div>
 
 
@@ -222,7 +222,7 @@ Struct NVAPIGpuClockFrequenciesDto  <a class="header-action link-secondary" titl
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public NVAPIGpuClockDomainDto[] Domains { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public NVAPIGpuClockDomainDto[] Domains { readonly get; set; }</code></pre>
   </div>
 
 

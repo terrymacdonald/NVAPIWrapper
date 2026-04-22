@@ -39,7 +39,7 @@ items:
   summary: Licensable features DTO.
   example: []
   syntax:
-    content: 'public readonly struct NVAPILicensableFeaturesDto : IEquatable<NVAPILicensableFeaturesDto>'
+    content: 'public struct NVAPILicensableFeaturesDto : IEquatable<NVAPILicensableFeaturesDto>'
     content.vb: Public Structure NVAPILicensableFeaturesDto Implements IEquatable(Of NVAPILicensableFeaturesDto)
   implements:
   - System.IEquatable{NVAPIWrapper.NVAPILicensableFeaturesDto}
@@ -73,11 +73,11 @@ items:
   summary: True if GPU licensing is supported.
   example: []
   syntax:
-    content: public bool IsLicenseSupported { get; }
+    content: public bool IsLicenseSupported { readonly get; set; }
     parameters: []
     return:
       type: System.Boolean
-    content.vb: Public ReadOnly Property IsLicenseSupported As Boolean
+    content.vb: Public Property IsLicenseSupported As Boolean
   overload: NVAPIWrapper.NVAPILicensableFeaturesDto.IsLicenseSupported*
 - uid: NVAPIWrapper.NVAPILicensableFeaturesDto.LicensableFeatureCount
   commentId: P:NVAPIWrapper.NVAPILicensableFeaturesDto.LicensableFeatureCount
@@ -104,11 +104,11 @@ items:
   summary: Number of licensable features reported.
   example: []
   syntax:
-    content: public uint LicensableFeatureCount { get; }
+    content: public uint LicensableFeatureCount { readonly get; set; }
     parameters: []
     return:
       type: System.UInt32
-    content.vb: Public ReadOnly Property LicensableFeatureCount As UInteger
+    content.vb: Public Property LicensableFeatureCount As UInteger
   overload: NVAPIWrapper.NVAPILicensableFeaturesDto.LicensableFeatureCount*
 - uid: NVAPIWrapper.NVAPILicensableFeaturesDto.Signature
   commentId: P:NVAPIWrapper.NVAPILicensableFeaturesDto.Signature
@@ -135,11 +135,11 @@ items:
   summary: License signature string (up to 128 characters).
   example: []
   syntax:
-    content: public string Signature { get; }
+    content: public string Signature { readonly get; set; }
     parameters: []
     return:
       type: System.String
-    content.vb: Public ReadOnly Property Signature As String
+    content.vb: Public Property Signature As String
   overload: NVAPIWrapper.NVAPILicensableFeaturesDto.Signature*
 - uid: NVAPIWrapper.NVAPILicensableFeaturesDto.LicenseDetails
   commentId: P:NVAPIWrapper.NVAPILicensableFeaturesDto.LicenseDetails
@@ -166,11 +166,11 @@ items:
   summary: Array of up to 3 per-feature license details.
   example: []
   syntax:
-    content: public NVAPILicenseFeatureDetailsDto[] LicenseDetails { get; }
+    content: public NVAPILicenseFeatureDetailsDto[] LicenseDetails { readonly get; set; }
     parameters: []
     return:
       type: NVAPIWrapper.NVAPILicenseFeatureDetailsDto[]
-    content.vb: Public ReadOnly Property LicenseDetails As NVAPILicenseFeatureDetailsDto()
+    content.vb: Public Property LicenseDetails As NVAPILicenseFeatureDetailsDto()
   overload: NVAPIWrapper.NVAPILicensableFeaturesDto.LicenseDetails*
 - uid: NVAPIWrapper.NVAPILicensableFeaturesDto.#ctor(System.Boolean,System.UInt32,System.String,NVAPIWrapper.NVAPILicenseFeatureDetailsDto[])
   commentId: M:NVAPIWrapper.NVAPILicensableFeaturesDto.#ctor(System.Boolean,System.UInt32,System.String,NVAPIWrapper.NVAPILicenseFeatureDetailsDto[])

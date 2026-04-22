@@ -36,7 +36,7 @@ items:
   summary: VIO signal format detail DTO.
   example: []
   syntax:
-    content: 'public readonly struct NVAPIVioSignalFormatDetailDto : IEquatable<NVAPIVioSignalFormatDetailDto>'
+    content: 'public struct NVAPIVioSignalFormatDetailDto : IEquatable<NVAPIVioSignalFormatDetailDto>'
     content.vb: Public Structure NVAPIVioSignalFormatDetailDto Implements IEquatable(Of NVAPIVioSignalFormatDetailDto)
   implements:
   - System.IEquatable{NVAPIWrapper.NVAPIVioSignalFormatDetailDto}
@@ -68,11 +68,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public _NVVIOSIGNALFORMAT SignalFormat { get; }
+    content: public _NVVIOSIGNALFORMAT SignalFormat { readonly get; set; }
     parameters: []
     return:
       type: NVAPIWrapper._NVVIOSIGNALFORMAT
-    content.vb: Public ReadOnly Property SignalFormat As _NVVIOSIGNALFORMAT
+    content.vb: Public Property SignalFormat As _NVVIOSIGNALFORMAT
   overload: NVAPIWrapper.NVAPIVioSignalFormatDetailDto.SignalFormat*
 - uid: NVAPIWrapper.NVAPIVioSignalFormatDetailDto.VideoMode
   commentId: P:NVAPIWrapper.NVAPIVioSignalFormatDetailDto.VideoMode
@@ -97,11 +97,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public _NVVIOVIDEOMODE VideoMode { get; }
+    content: public _NVVIOVIDEOMODE VideoMode { readonly get; set; }
     parameters: []
     return:
       type: NVAPIWrapper._NVVIOVIDEOMODE
-    content.vb: Public ReadOnly Property VideoMode As _NVVIOVIDEOMODE
+    content.vb: Public Property VideoMode As _NVVIOVIDEOMODE
   overload: NVAPIWrapper.NVAPIVioSignalFormatDetailDto.VideoMode*
 - uid: NVAPIWrapper.NVAPIVioSignalFormatDetailDto.#ctor(NVAPIWrapper._NVVIOSIGNALFORMAT,NVAPIWrapper._NVVIOVIDEOMODE)
   commentId: M:NVAPIWrapper.NVAPIVioSignalFormatDetailDto.#ctor(NVAPIWrapper._NVVIOSIGNALFORMAT,NVAPIWrapper._NVVIOVIDEOMODE)

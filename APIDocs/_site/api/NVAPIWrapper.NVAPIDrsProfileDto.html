@@ -102,7 +102,7 @@ Struct NVAPIDrsProfileDto  <a class="header-action link-secondary" title="View s
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly struct NVAPIDrsProfileDto : IEquatable&lt;NVAPIDrsProfileDto&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public struct NVAPIDrsProfileDto : IEquatable&lt;NVAPIDrsProfileDto&gt;</code></pre>
   </div>
 
 
@@ -203,7 +203,7 @@ Struct NVAPIDrsProfileDto  <a class="header-action link-secondary" title="View s
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public _NVDRS_GPU_SUPPORT GpuSupport { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public _NVDRS_GPU_SUPPORT GpuSupport { readonly get; set; }</code></pre>
   </div>
 
 
@@ -234,7 +234,7 @@ Struct NVAPIDrsProfileDto  <a class="header-action link-secondary" title="View s
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool IsPredefined { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public bool IsPredefined { readonly get; set; }</code></pre>
   </div>
 
 
@@ -265,7 +265,7 @@ Struct NVAPIDrsProfileDto  <a class="header-action link-secondary" title="View s
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public uint NumOfApps { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public uint NumOfApps { readonly get; set; }</code></pre>
   </div>
 
 
@@ -296,7 +296,7 @@ Struct NVAPIDrsProfileDto  <a class="header-action link-secondary" title="View s
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public uint NumOfSettings { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public uint NumOfSettings { readonly get; set; }</code></pre>
   </div>
 
 
@@ -327,7 +327,7 @@ Struct NVAPIDrsProfileDto  <a class="header-action link-secondary" title="View s
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string ProfileName { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public string ProfileName { readonly get; set; }</code></pre>
   </div>
 
 

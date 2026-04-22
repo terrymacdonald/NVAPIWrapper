@@ -38,7 +38,7 @@ items:
   summary: NVLINK status DTO.
   example: []
   syntax:
-    content: 'public readonly struct NVAPINvLinkStatusDto : IEquatable<NVAPINvLinkStatusDto>'
+    content: 'public struct NVAPINvLinkStatusDto : IEquatable<NVAPINvLinkStatusDto>'
     content.vb: Public Structure NVAPINvLinkStatusDto Implements IEquatable(Of NVAPINvLinkStatusDto)
   implements:
   - System.IEquatable{NVAPIWrapper.NVAPINvLinkStatusDto}
@@ -72,11 +72,11 @@ items:
   summary: NVLINK_GET_STATUS_V2.version
   example: []
   syntax:
-    content: public uint Version { get; }
+    content: public uint Version { readonly get; set; }
     parameters: []
     return:
       type: System.UInt32
-    content.vb: Public ReadOnly Property Version As UInteger
+    content.vb: Public Property Version As UInteger
   overload: NVAPIWrapper.NVAPINvLinkStatusDto.Version*
 - uid: NVAPIWrapper.NVAPINvLinkStatusDto.LinkMask
   commentId: P:NVAPIWrapper.NVAPINvLinkStatusDto.LinkMask
@@ -103,11 +103,11 @@ items:
   summary: NVLINK_GET_STATUS_V2.linkMask — bitmask of active links (bit i = link i is in use).
   example: []
   syntax:
-    content: public uint LinkMask { get; }
+    content: public uint LinkMask { readonly get; set; }
     parameters: []
     return:
       type: System.UInt32
-    content.vb: Public ReadOnly Property LinkMask As UInteger
+    content.vb: Public Property LinkMask As UInteger
   overload: NVAPIWrapper.NVAPINvLinkStatusDto.LinkMask*
 - uid: NVAPIWrapper.NVAPINvLinkStatusDto.LinkInfo
   commentId: P:NVAPIWrapper.NVAPINvLinkStatusDto.LinkInfo

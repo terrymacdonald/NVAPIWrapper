@@ -37,7 +37,7 @@ items:
   summary: DTO for EDID data and flags.
   example: []
   syntax:
-    content: 'public readonly struct NVAPIDisplayEdidDataDto : IEquatable<NVAPIDisplayEdidDataDto>'
+    content: 'public struct NVAPIDisplayEdidDataDto : IEquatable<NVAPIDisplayEdidDataDto>'
     content.vb: Public Structure NVAPIDisplayEdidDataDto Implements IEquatable(Of NVAPIDisplayEdidDataDto)
   implements:
   - System.IEquatable{NVAPIWrapper.NVAPIDisplayEdidDataDto}
@@ -71,11 +71,11 @@ items:
   summary: EDID data bytes.
   example: []
   syntax:
-    content: public byte[] Data { get; }
+    content: public byte[] Data { readonly get; set; }
     parameters: []
     return:
       type: System.Byte[]
-    content.vb: Public ReadOnly Property Data As Byte()
+    content.vb: Public Property Data As Byte()
   overload: NVAPIWrapper.NVAPIDisplayEdidDataDto.Data*
 - uid: NVAPIWrapper.NVAPIDisplayEdidDataDto.Flags
   commentId: P:NVAPIWrapper.NVAPIDisplayEdidDataDto.Flags
@@ -102,11 +102,11 @@ items:
   summary: EDID flags used when retrieving the data.
   example: []
   syntax:
-    content: public NV_EDID_FLAG Flags { get; }
+    content: public NV_EDID_FLAG Flags { readonly get; set; }
     parameters: []
     return:
       type: NVAPIWrapper.NV_EDID_FLAG
-    content.vb: Public ReadOnly Property Flags As NV_EDID_FLAG
+    content.vb: Public Property Flags As NV_EDID_FLAG
   overload: NVAPIWrapper.NVAPIDisplayEdidDataDto.Flags*
 - uid: NVAPIWrapper.NVAPIDisplayEdidDataDto.SizeOfEdid
   commentId: P:NVAPIWrapper.NVAPIDisplayEdidDataDto.SizeOfEdid
@@ -133,11 +133,11 @@ items:
   summary: Reported EDID size.
   example: []
   syntax:
-    content: public uint SizeOfEdid { get; }
+    content: public uint SizeOfEdid { readonly get; set; }
     parameters: []
     return:
       type: System.UInt32
-    content.vb: Public ReadOnly Property SizeOfEdid As UInteger
+    content.vb: Public Property SizeOfEdid As UInteger
   overload: NVAPIWrapper.NVAPIDisplayEdidDataDto.SizeOfEdid*
 - uid: NVAPIWrapper.NVAPIDisplayEdidDataDto.#ctor(System.Byte[],NVAPIWrapper.NV_EDID_FLAG,System.UInt32)
   commentId: M:NVAPIWrapper.NVAPIDisplayEdidDataDto.#ctor(System.Byte[],NVAPIWrapper.NV_EDID_FLAG,System.UInt32)

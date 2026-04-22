@@ -36,7 +36,7 @@ items:
   summary: VIO configuration DTO (raw bytes due to union layout).
   example: []
   syntax:
-    content: 'public readonly struct NVAPIVioConfigDto : IEquatable<NVAPIVioConfigDto>'
+    content: 'public struct NVAPIVioConfigDto : IEquatable<NVAPIVioConfigDto>'
     content.vb: Public Structure NVAPIVioConfigDto Implements IEquatable(Of NVAPIVioConfigDto)
   implements:
   - System.IEquatable{NVAPIWrapper.NVAPIVioConfigDto}
@@ -68,11 +68,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public byte[] RawBytes { get; }
+    content: public byte[] RawBytes { readonly get; set; }
     parameters: []
     return:
       type: System.Byte[]
-    content.vb: Public ReadOnly Property RawBytes As Byte()
+    content.vb: Public Property RawBytes As Byte()
   overload: NVAPIWrapper.NVAPIVioConfigDto.RawBytes*
 - uid: NVAPIWrapper.NVAPIVioConfigDto.#ctor(System.Byte[])
   commentId: M:NVAPIWrapper.NVAPIVioConfigDto.#ctor(System.Byte[])

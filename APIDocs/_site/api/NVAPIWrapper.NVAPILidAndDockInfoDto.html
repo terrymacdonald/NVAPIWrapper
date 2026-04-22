@@ -102,7 +102,7 @@ Struct NVAPILidAndDockInfoDto  <a class="header-action link-secondary" title="Vi
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly struct NVAPILidAndDockInfoDto : IEquatable&lt;NVAPILidAndDockInfoDto&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public struct NVAPILidAndDockInfoDto : IEquatable&lt;NVAPILidAndDockInfoDto&gt;</code></pre>
   </div>
 
 
@@ -206,7 +206,7 @@ Struct NVAPILidAndDockInfoDto  <a class="header-action link-secondary" title="Vi
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public uint CurrentDockPolicy { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public uint CurrentDockPolicy { readonly get; set; }</code></pre>
   </div>
 
 
@@ -237,7 +237,7 @@ Struct NVAPILidAndDockInfoDto  <a class="header-action link-secondary" title="Vi
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public uint CurrentDockState { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public uint CurrentDockState { readonly get; set; }</code></pre>
   </div>
 
 
@@ -268,7 +268,7 @@ Struct NVAPILidAndDockInfoDto  <a class="header-action link-secondary" title="Vi
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public uint CurrentLidPolicy { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public uint CurrentLidPolicy { readonly get; set; }</code></pre>
   </div>
 
 
@@ -299,7 +299,7 @@ Struct NVAPILidAndDockInfoDto  <a class="header-action link-secondary" title="Vi
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public uint CurrentLidState { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public uint CurrentLidState { readonly get; set; }</code></pre>
   </div>
 
 
@@ -330,7 +330,7 @@ Struct NVAPILidAndDockInfoDto  <a class="header-action link-secondary" title="Vi
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public uint ForcedDockMechanismPresent { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public uint ForcedDockMechanismPresent { readonly get; set; }</code></pre>
   </div>
 
 
@@ -361,7 +361,7 @@ Struct NVAPILidAndDockInfoDto  <a class="header-action link-secondary" title="Vi
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public uint ForcedLidMechanismPresent { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public uint ForcedLidMechanismPresent { readonly get; set; }</code></pre>
   </div>
 
 

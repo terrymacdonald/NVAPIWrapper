@@ -36,7 +36,7 @@ items:
   summary: VIO topology DTO.
   example: []
   syntax:
-    content: 'public readonly struct NVAPIVioTopologyDto : IEquatable<NVAPIVioTopologyDto>'
+    content: 'public struct NVAPIVioTopologyDto : IEquatable<NVAPIVioTopologyDto>'
     content.vb: Public Structure NVAPIVioTopologyDto Implements IEquatable(Of NVAPIVioTopologyDto)
   implements:
   - System.IEquatable{NVAPIWrapper.NVAPIVioTopologyDto}
@@ -68,11 +68,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public uint TotalDeviceCount { get; }
+    content: public uint TotalDeviceCount { readonly get; set; }
     parameters: []
     return:
       type: System.UInt32
-    content.vb: Public ReadOnly Property TotalDeviceCount As UInteger
+    content.vb: Public Property TotalDeviceCount As UInteger
   overload: NVAPIWrapper.NVAPIVioTopologyDto.TotalDeviceCount*
 - uid: NVAPIWrapper.NVAPIVioTopologyDto.Targets
   commentId: P:NVAPIWrapper.NVAPIVioTopologyDto.Targets
@@ -97,11 +97,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public NVAPIVioTopologyTargetDto[] Targets { get; }
+    content: public NVAPIVioTopologyTargetDto[] Targets { readonly get; set; }
     parameters: []
     return:
       type: NVAPIWrapper.NVAPIVioTopologyTargetDto[]
-    content.vb: Public ReadOnly Property Targets As NVAPIVioTopologyTargetDto()
+    content.vb: Public Property Targets As NVAPIVioTopologyTargetDto()
   overload: NVAPIWrapper.NVAPIVioTopologyDto.Targets*
 - uid: NVAPIWrapper.NVAPIVioTopologyDto.#ctor(System.UInt32,NVAPIWrapper.NVAPIVioTopologyTargetDto[])
   commentId: M:NVAPIWrapper.NVAPIVioTopologyDto.#ctor(System.UInt32,NVAPIWrapper.NVAPIVioTopologyTargetDto[])

@@ -102,7 +102,7 @@ Struct NVAPIGpuGspInfoDto  <a class="header-action link-secondary" title="View s
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly struct NVAPIGpuGspInfoDto : IEquatable&lt;NVAPIGpuGspInfoDto&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public struct NVAPIGpuGspInfoDto : IEquatable&lt;NVAPIGpuGspInfoDto&gt;</code></pre>
   </div>
 
 
@@ -191,7 +191,7 @@ Struct NVAPIGpuGspInfoDto  <a class="header-action link-secondary" title="View s
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string FirmwareVersion { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public string FirmwareVersion { readonly get; set; }</code></pre>
   </div>
 
 

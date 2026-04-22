@@ -34,7 +34,7 @@ items:
   summary: Scanout warping result DTO.
   example: []
   syntax:
-    content: 'public readonly struct NVAPIGpuScanoutWarpingResultDto : IEquatable<NVAPIGpuScanoutWarpingResultDto>'
+    content: 'public struct NVAPIGpuScanoutWarpingResultDto : IEquatable<NVAPIGpuScanoutWarpingResultDto>'
     content.vb: Public Structure NVAPIGpuScanoutWarpingResultDto Implements IEquatable(Of NVAPIGpuScanoutWarpingResultDto)
   implements:
   - System.IEquatable{NVAPIWrapper.NVAPIGpuScanoutWarpingResultDto}
@@ -66,11 +66,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public int MaxNumVertices { get; }
+    content: public int MaxNumVertices { readonly get; set; }
     parameters: []
     return:
       type: System.Int32
-    content.vb: Public ReadOnly Property MaxNumVertices As Integer
+    content.vb: Public Property MaxNumVertices As Integer
   overload: NVAPIWrapper.NVAPIGpuScanoutWarpingResultDto.MaxNumVertices*
 - uid: NVAPIWrapper.NVAPIGpuScanoutWarpingResultDto.IsSticky
   commentId: P:NVAPIWrapper.NVAPIGpuScanoutWarpingResultDto.IsSticky
@@ -95,11 +95,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public bool IsSticky { get; }
+    content: public bool IsSticky { readonly get; set; }
     parameters: []
     return:
       type: System.Boolean
-    content.vb: Public ReadOnly Property IsSticky As Boolean
+    content.vb: Public Property IsSticky As Boolean
   overload: NVAPIWrapper.NVAPIGpuScanoutWarpingResultDto.IsSticky*
 - uid: NVAPIWrapper.NVAPIGpuScanoutWarpingResultDto.#ctor(System.Int32,System.Boolean)
   commentId: M:NVAPIWrapper.NVAPIGpuScanoutWarpingResultDto.#ctor(System.Int32,System.Boolean)

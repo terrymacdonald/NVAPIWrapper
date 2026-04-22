@@ -102,7 +102,7 @@ Struct NVAPIGpuThermalSensorDto  <a class="header-action link-secondary" title="
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly struct NVAPIGpuThermalSensorDto : IEquatable&lt;NVAPIGpuThermalSensorDto&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public struct NVAPIGpuThermalSensorDto : IEquatable&lt;NVAPIGpuThermalSensorDto&gt;</code></pre>
   </div>
 
 
@@ -197,7 +197,7 @@ Struct NVAPIGpuThermalSensorDto  <a class="header-action link-secondary" title="
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public NV_THERMAL_CONTROLLER Controller { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public NV_THERMAL_CONTROLLER Controller { readonly get; set; }</code></pre>
   </div>
 
 
@@ -228,7 +228,7 @@ Struct NVAPIGpuThermalSensorDto  <a class="header-action link-secondary" title="
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int CurrentTemp { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public int CurrentTemp { readonly get; set; }</code></pre>
   </div>
 
 
@@ -259,7 +259,7 @@ Struct NVAPIGpuThermalSensorDto  <a class="header-action link-secondary" title="
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int DefaultMaxTemp { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public int DefaultMaxTemp { readonly get; set; }</code></pre>
   </div>
 
 
@@ -290,7 +290,7 @@ Struct NVAPIGpuThermalSensorDto  <a class="header-action link-secondary" title="
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int DefaultMinTemp { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public int DefaultMinTemp { readonly get; set; }</code></pre>
   </div>
 
 
@@ -321,7 +321,7 @@ Struct NVAPIGpuThermalSensorDto  <a class="header-action link-secondary" title="
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public NV_THERMAL_TARGET Target { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public NV_THERMAL_TARGET Target { readonly get; set; }</code></pre>
   </div>
 
 

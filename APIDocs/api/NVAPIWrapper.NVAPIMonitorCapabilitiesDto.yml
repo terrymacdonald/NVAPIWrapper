@@ -35,7 +35,7 @@ items:
   summary: DTO for monitor capabilities.
   example: []
   syntax:
-    content: 'public readonly struct NVAPIMonitorCapabilitiesDto : IEquatable<NVAPIMonitorCapabilitiesDto>'
+    content: 'public struct NVAPIMonitorCapabilitiesDto : IEquatable<NVAPIMonitorCapabilitiesDto>'
     content.vb: Public Structure NVAPIMonitorCapabilitiesDto Implements IEquatable(Of NVAPIMonitorCapabilitiesDto)
   implements:
   - System.IEquatable{NVAPIWrapper.NVAPIMonitorCapabilitiesDto}
@@ -69,11 +69,11 @@ items:
   summary: Native monitor capabilities.
   example: []
   syntax:
-    content: public _NV_MONITOR_CAPABILITIES_V1 Capabilities { get; }
+    content: public _NV_MONITOR_CAPABILITIES_V1 Capabilities { readonly get; set; }
     parameters: []
     return:
       type: NVAPIWrapper._NV_MONITOR_CAPABILITIES_V1
-    content.vb: Public ReadOnly Property Capabilities As _NV_MONITOR_CAPABILITIES_V1
+    content.vb: Public Property Capabilities As _NV_MONITOR_CAPABILITIES_V1
   overload: NVAPIWrapper.NVAPIMonitorCapabilitiesDto.Capabilities*
 - uid: NVAPIWrapper.NVAPIMonitorCapabilitiesDto.#ctor(NVAPIWrapper._NV_MONITOR_CAPABILITIES_V1)
   commentId: M:NVAPIWrapper.NVAPIMonitorCapabilitiesDto.#ctor(NVAPIWrapper._NV_MONITOR_CAPABILITIES_V1)

@@ -102,7 +102,7 @@ Struct NVAPICustomDisplayDto  <a class="header-action link-secondary" title="Vie
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly struct NVAPICustomDisplayDto : IEquatable&lt;NVAPICustomDisplayDto&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public struct NVAPICustomDisplayDto : IEquatable&lt;NVAPICustomDisplayDto&gt;</code></pre>
   </div>
 
 
@@ -191,7 +191,7 @@ Struct NVAPICustomDisplayDto  <a class="header-action link-secondary" title="Vie
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public NV_CUSTOM_DISPLAY CustomDisplay { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public NV_CUSTOM_DISPLAY CustomDisplay { readonly get; set; }</code></pre>
   </div>
 
 

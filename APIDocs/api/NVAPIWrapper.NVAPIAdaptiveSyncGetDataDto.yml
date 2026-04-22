@@ -35,7 +35,7 @@ items:
   summary: DTO for adaptive sync GET data.
   example: []
   syntax:
-    content: 'public readonly struct NVAPIAdaptiveSyncGetDataDto : IEquatable<NVAPIAdaptiveSyncGetDataDto>'
+    content: 'public struct NVAPIAdaptiveSyncGetDataDto : IEquatable<NVAPIAdaptiveSyncGetDataDto>'
     content.vb: Public Structure NVAPIAdaptiveSyncGetDataDto Implements IEquatable(Of NVAPIAdaptiveSyncGetDataDto)
   implements:
   - System.IEquatable{NVAPIWrapper.NVAPIAdaptiveSyncGetDataDto}
@@ -69,11 +69,11 @@ items:
   summary: Native adaptive sync GET data.
   example: []
   syntax:
-    content: public _NV_GET_ADAPTIVE_SYNC_DATA_V1 Data { get; }
+    content: public _NV_GET_ADAPTIVE_SYNC_DATA_V1 Data { readonly get; set; }
     parameters: []
     return:
       type: NVAPIWrapper._NV_GET_ADAPTIVE_SYNC_DATA_V1
-    content.vb: Public ReadOnly Property Data As _NV_GET_ADAPTIVE_SYNC_DATA_V1
+    content.vb: Public Property Data As _NV_GET_ADAPTIVE_SYNC_DATA_V1
   overload: NVAPIWrapper.NVAPIAdaptiveSyncGetDataDto.Data*
 - uid: NVAPIWrapper.NVAPIAdaptiveSyncGetDataDto.#ctor(NVAPIWrapper._NV_GET_ADAPTIVE_SYNC_DATA_V1)
   commentId: M:NVAPIWrapper.NVAPIAdaptiveSyncGetDataDto.#ctor(NVAPIWrapper._NV_GET_ADAPTIVE_SYNC_DATA_V1)

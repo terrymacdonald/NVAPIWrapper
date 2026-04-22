@@ -43,7 +43,7 @@ items:
   summary: DRS application info DTO.
   example: []
   syntax:
-    content: 'public readonly struct NVAPIDrsApplicationDto : IEquatable<NVAPIDrsApplicationDto>'
+    content: 'public struct NVAPIDrsApplicationDto : IEquatable<NVAPIDrsApplicationDto>'
     content.vb: Public Structure NVAPIDrsApplicationDto Implements IEquatable(Of NVAPIDrsApplicationDto)
   implements:
   - System.IEquatable{NVAPIWrapper.NVAPIDrsApplicationDto}
@@ -75,11 +75,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public string AppName { get; }
+    content: public string AppName { readonly get; set; }
     parameters: []
     return:
       type: System.String
-    content.vb: Public ReadOnly Property AppName As String
+    content.vb: Public Property AppName As String
   overload: NVAPIWrapper.NVAPIDrsApplicationDto.AppName*
 - uid: NVAPIWrapper.NVAPIDrsApplicationDto.UserFriendlyName
   commentId: P:NVAPIWrapper.NVAPIDrsApplicationDto.UserFriendlyName
@@ -104,11 +104,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public string UserFriendlyName { get; }
+    content: public string UserFriendlyName { readonly get; set; }
     parameters: []
     return:
       type: System.String
-    content.vb: Public ReadOnly Property UserFriendlyName As String
+    content.vb: Public Property UserFriendlyName As String
   overload: NVAPIWrapper.NVAPIDrsApplicationDto.UserFriendlyName*
 - uid: NVAPIWrapper.NVAPIDrsApplicationDto.Launcher
   commentId: P:NVAPIWrapper.NVAPIDrsApplicationDto.Launcher
@@ -133,11 +133,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public string Launcher { get; }
+    content: public string Launcher { readonly get; set; }
     parameters: []
     return:
       type: System.String
-    content.vb: Public ReadOnly Property Launcher As String
+    content.vb: Public Property Launcher As String
   overload: NVAPIWrapper.NVAPIDrsApplicationDto.Launcher*
 - uid: NVAPIWrapper.NVAPIDrsApplicationDto.FileInFolder
   commentId: P:NVAPIWrapper.NVAPIDrsApplicationDto.FileInFolder
@@ -162,11 +162,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public string FileInFolder { get; }
+    content: public string FileInFolder { readonly get; set; }
     parameters: []
     return:
       type: System.String
-    content.vb: Public ReadOnly Property FileInFolder As String
+    content.vb: Public Property FileInFolder As String
   overload: NVAPIWrapper.NVAPIDrsApplicationDto.FileInFolder*
 - uid: NVAPIWrapper.NVAPIDrsApplicationDto.CommandLine
   commentId: P:NVAPIWrapper.NVAPIDrsApplicationDto.CommandLine
@@ -191,11 +191,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public string CommandLine { get; }
+    content: public string CommandLine { readonly get; set; }
     parameters: []
     return:
       type: System.String
-    content.vb: Public ReadOnly Property CommandLine As String
+    content.vb: Public Property CommandLine As String
   overload: NVAPIWrapper.NVAPIDrsApplicationDto.CommandLine*
 - uid: NVAPIWrapper.NVAPIDrsApplicationDto.IsMetro
   commentId: P:NVAPIWrapper.NVAPIDrsApplicationDto.IsMetro
@@ -220,11 +220,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public bool IsMetro { get; }
+    content: public bool IsMetro { readonly get; set; }
     parameters: []
     return:
       type: System.Boolean
-    content.vb: Public ReadOnly Property IsMetro As Boolean
+    content.vb: Public Property IsMetro As Boolean
   overload: NVAPIWrapper.NVAPIDrsApplicationDto.IsMetro*
 - uid: NVAPIWrapper.NVAPIDrsApplicationDto.IsCommandLine
   commentId: P:NVAPIWrapper.NVAPIDrsApplicationDto.IsCommandLine
@@ -249,11 +249,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public bool IsCommandLine { get; }
+    content: public bool IsCommandLine { readonly get; set; }
     parameters: []
     return:
       type: System.Boolean
-    content.vb: Public ReadOnly Property IsCommandLine As Boolean
+    content.vb: Public Property IsCommandLine As Boolean
   overload: NVAPIWrapper.NVAPIDrsApplicationDto.IsCommandLine*
 - uid: NVAPIWrapper.NVAPIDrsApplicationDto.IsPredefined
   commentId: P:NVAPIWrapper.NVAPIDrsApplicationDto.IsPredefined
@@ -278,11 +278,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public bool IsPredefined { get; }
+    content: public bool IsPredefined { readonly get; set; }
     parameters: []
     return:
       type: System.Boolean
-    content.vb: Public ReadOnly Property IsPredefined As Boolean
+    content.vb: Public Property IsPredefined As Boolean
   overload: NVAPIWrapper.NVAPIDrsApplicationDto.IsPredefined*
 - uid: NVAPIWrapper.NVAPIDrsApplicationDto.#ctor(System.String,System.String,System.String,System.String,System.String,System.Boolean,System.Boolean,System.Boolean)
   commentId: M:NVAPIWrapper.NVAPIDrsApplicationDto.#ctor(System.String,System.String,System.String,System.String,System.String,System.Boolean,System.Boolean,System.Boolean)

@@ -102,7 +102,7 @@ Struct NVAPIPstateBaseVoltageEntryDto  <a class="header-action link-secondary" t
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly struct NVAPIPstateBaseVoltageEntryDto : IEquatable&lt;NVAPIPstateBaseVoltageEntryDto&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public struct NVAPIPstateBaseVoltageEntryDto : IEquatable&lt;NVAPIPstateBaseVoltageEntryDto&gt;</code></pre>
   </div>
 
 
@@ -201,7 +201,7 @@ Struct NVAPIPstateBaseVoltageEntryDto  <a class="header-action link-secondary" t
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public _NV_GPU_PERF_VOLTAGE_INFO_DOMAIN_ID DomainId { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public _NV_GPU_PERF_VOLTAGE_INFO_DOMAIN_ID DomainId { readonly get; set; }</code></pre>
   </div>
 
 
@@ -233,7 +233,7 @@ Struct NVAPIPstateBaseVoltageEntryDto  <a class="header-action link-secondary" t
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool IsEditable { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public bool IsEditable { readonly get; set; }</code></pre>
   </div>
 
 
@@ -265,7 +265,7 @@ Struct NVAPIPstateBaseVoltageEntryDto  <a class="header-action link-secondary" t
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int VoltDeltaMax { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public int VoltDeltaMax { readonly get; set; }</code></pre>
   </div>
 
 
@@ -297,7 +297,7 @@ Struct NVAPIPstateBaseVoltageEntryDto  <a class="header-action link-secondary" t
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int VoltDeltaMin { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public int VoltDeltaMin { readonly get; set; }</code></pre>
   </div>
 
 
@@ -329,7 +329,7 @@ Struct NVAPIPstateBaseVoltageEntryDto  <a class="header-action link-secondary" t
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int VoltDeltaValue { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public int VoltDeltaValue { readonly get; set; }</code></pre>
   </div>
 
 
@@ -361,7 +361,7 @@ Struct NVAPIPstateBaseVoltageEntryDto  <a class="header-action link-secondary" t
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public uint VoltUv { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public uint VoltUv { readonly get; set; }</code></pre>
   </div>
 
 

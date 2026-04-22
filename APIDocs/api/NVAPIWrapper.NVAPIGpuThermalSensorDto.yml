@@ -37,7 +37,7 @@ items:
   summary: Thermal sensor DTO.
   example: []
   syntax:
-    content: 'public readonly struct NVAPIGpuThermalSensorDto : IEquatable<NVAPIGpuThermalSensorDto>'
+    content: 'public struct NVAPIGpuThermalSensorDto : IEquatable<NVAPIGpuThermalSensorDto>'
     content.vb: Public Structure NVAPIGpuThermalSensorDto Implements IEquatable(Of NVAPIGpuThermalSensorDto)
   implements:
   - System.IEquatable{NVAPIWrapper.NVAPIGpuThermalSensorDto}
@@ -69,11 +69,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public NV_THERMAL_CONTROLLER Controller { get; }
+    content: public NV_THERMAL_CONTROLLER Controller { readonly get; set; }
     parameters: []
     return:
       type: NVAPIWrapper.NV_THERMAL_CONTROLLER
-    content.vb: Public ReadOnly Property Controller As NV_THERMAL_CONTROLLER
+    content.vb: Public Property Controller As NV_THERMAL_CONTROLLER
   overload: NVAPIWrapper.NVAPIGpuThermalSensorDto.Controller*
 - uid: NVAPIWrapper.NVAPIGpuThermalSensorDto.DefaultMinTemp
   commentId: P:NVAPIWrapper.NVAPIGpuThermalSensorDto.DefaultMinTemp
@@ -98,11 +98,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public int DefaultMinTemp { get; }
+    content: public int DefaultMinTemp { readonly get; set; }
     parameters: []
     return:
       type: System.Int32
-    content.vb: Public ReadOnly Property DefaultMinTemp As Integer
+    content.vb: Public Property DefaultMinTemp As Integer
   overload: NVAPIWrapper.NVAPIGpuThermalSensorDto.DefaultMinTemp*
 - uid: NVAPIWrapper.NVAPIGpuThermalSensorDto.DefaultMaxTemp
   commentId: P:NVAPIWrapper.NVAPIGpuThermalSensorDto.DefaultMaxTemp
@@ -127,11 +127,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public int DefaultMaxTemp { get; }
+    content: public int DefaultMaxTemp { readonly get; set; }
     parameters: []
     return:
       type: System.Int32
-    content.vb: Public ReadOnly Property DefaultMaxTemp As Integer
+    content.vb: Public Property DefaultMaxTemp As Integer
   overload: NVAPIWrapper.NVAPIGpuThermalSensorDto.DefaultMaxTemp*
 - uid: NVAPIWrapper.NVAPIGpuThermalSensorDto.CurrentTemp
   commentId: P:NVAPIWrapper.NVAPIGpuThermalSensorDto.CurrentTemp
@@ -156,11 +156,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public int CurrentTemp { get; }
+    content: public int CurrentTemp { readonly get; set; }
     parameters: []
     return:
       type: System.Int32
-    content.vb: Public ReadOnly Property CurrentTemp As Integer
+    content.vb: Public Property CurrentTemp As Integer
   overload: NVAPIWrapper.NVAPIGpuThermalSensorDto.CurrentTemp*
 - uid: NVAPIWrapper.NVAPIGpuThermalSensorDto.Target
   commentId: P:NVAPIWrapper.NVAPIGpuThermalSensorDto.Target
@@ -185,11 +185,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public NV_THERMAL_TARGET Target { get; }
+    content: public NV_THERMAL_TARGET Target { readonly get; set; }
     parameters: []
     return:
       type: NVAPIWrapper.NV_THERMAL_TARGET
-    content.vb: Public ReadOnly Property Target As NV_THERMAL_TARGET
+    content.vb: Public Property Target As NV_THERMAL_TARGET
   overload: NVAPIWrapper.NVAPIGpuThermalSensorDto.Target*
 - uid: NVAPIWrapper.NVAPIGpuThermalSensorDto.#ctor(NVAPIWrapper.NV_THERMAL_CONTROLLER,System.Int32,System.Int32,System.Int32,NVAPIWrapper.NV_THERMAL_TARGET)
   commentId: M:NVAPIWrapper.NVAPIGpuThermalSensorDto.#ctor(NVAPIWrapper.NV_THERMAL_CONTROLLER,System.Int32,System.Int32,System.Int32,NVAPIWrapper.NV_THERMAL_TARGET)

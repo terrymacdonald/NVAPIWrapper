@@ -102,7 +102,7 @@ Struct NVAPIGpuClockDomainDto  <a class="header-action link-secondary" title="Vi
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly struct NVAPIGpuClockDomainDto : IEquatable&lt;NVAPIGpuClockDomainDto&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public struct NVAPIGpuClockDomainDto : IEquatable&lt;NVAPIGpuClockDomainDto&gt;</code></pre>
   </div>
 
 
@@ -191,7 +191,7 @@ Struct NVAPIGpuClockDomainDto  <a class="header-action link-secondary" title="Vi
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public uint FrequencyKHz { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public uint FrequencyKHz { readonly get; set; }</code></pre>
   </div>
 
 
@@ -222,7 +222,7 @@ Struct NVAPIGpuClockDomainDto  <a class="header-action link-secondary" title="Vi
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool IsPresent { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public bool IsPresent { readonly get; set; }</code></pre>
   </div>
 
 

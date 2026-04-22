@@ -102,7 +102,7 @@ Struct NVAPIRiseRequestDto  <a class="header-action link-secondary" title="View 
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly struct NVAPIRiseRequestDto : IEquatable&lt;NVAPIRiseRequestDto&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public struct NVAPIRiseRequestDto : IEquatable&lt;NVAPIRiseRequestDto&gt;</code></pre>
   </div>
 
 
@@ -233,7 +233,7 @@ Struct NVAPIRiseRequestDto  <a class="header-action link-secondary" title="View 
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool Completed { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public bool Completed { readonly get; set; }</code></pre>
   </div>
 
 
@@ -265,7 +265,7 @@ Struct NVAPIRiseRequestDto  <a class="header-action link-secondary" title="View 
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string Content { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public string Content { readonly get; set; }</code></pre>
   </div>
 
 
@@ -297,7 +297,7 @@ Struct NVAPIRiseRequestDto  <a class="header-action link-secondary" title="View 
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public _NV_RISE_CONTENT_TYPE ContentType { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public _NV_RISE_CONTENT_TYPE ContentType { readonly get; set; }</code></pre>
   </div>
 
 

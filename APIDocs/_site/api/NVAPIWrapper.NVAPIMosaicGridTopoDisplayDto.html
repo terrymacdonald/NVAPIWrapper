@@ -102,7 +102,7 @@ Struct NVAPIMosaicGridTopoDisplayDto  <a class="header-action link-secondary" ti
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly struct NVAPIMosaicGridTopoDisplayDto : IEquatable&lt;NVAPIMosaicGridTopoDisplayDto&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public struct NVAPIMosaicGridTopoDisplayDto : IEquatable&lt;NVAPIMosaicGridTopoDisplayDto&gt;</code></pre>
   </div>
 
 
@@ -206,7 +206,7 @@ Struct NVAPIMosaicGridTopoDisplayDto  <a class="header-action link-secondary" ti
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public uint CloneGroup { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public uint CloneGroup { readonly get; set; }</code></pre>
   </div>
 
 
@@ -237,7 +237,7 @@ Struct NVAPIMosaicGridTopoDisplayDto  <a class="header-action link-secondary" ti
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public uint DisplayId { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public uint DisplayId { readonly get; set; }</code></pre>
   </div>
 
 
@@ -268,7 +268,7 @@ Struct NVAPIMosaicGridTopoDisplayDto  <a class="header-action link-secondary" ti
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int OverlapX { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public int OverlapX { readonly get; set; }</code></pre>
   </div>
 
 
@@ -299,7 +299,7 @@ Struct NVAPIMosaicGridTopoDisplayDto  <a class="header-action link-secondary" ti
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int OverlapY { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public int OverlapY { readonly get; set; }</code></pre>
   </div>
 
 
@@ -330,7 +330,7 @@ Struct NVAPIMosaicGridTopoDisplayDto  <a class="header-action link-secondary" ti
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public _NV_PIXEL_SHIFT_TYPE PixelShiftType { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public _NV_PIXEL_SHIFT_TYPE PixelShiftType { readonly get; set; }</code></pre>
   </div>
 
 
@@ -361,7 +361,7 @@ Struct NVAPIMosaicGridTopoDisplayDto  <a class="header-action link-secondary" ti
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public _NV_ROTATE Rotation { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public _NV_ROTATE Rotation { readonly get; set; }</code></pre>
   </div>
 
 

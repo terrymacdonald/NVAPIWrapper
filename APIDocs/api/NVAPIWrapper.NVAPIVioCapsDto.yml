@@ -46,7 +46,7 @@ items:
   summary: VIO capabilities DTO.
   example: []
   syntax:
-    content: 'public readonly struct NVAPIVioCapsDto : IEquatable<NVAPIVioCapsDto>'
+    content: 'public struct NVAPIVioCapsDto : IEquatable<NVAPIVioCapsDto>'
     content.vb: Public Structure NVAPIVioCapsDto Implements IEquatable(Of NVAPIVioCapsDto)
   implements:
   - System.IEquatable{NVAPIWrapper.NVAPIVioCapsDto}
@@ -78,11 +78,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public string AdapterName { get; }
+    content: public string AdapterName { readonly get; set; }
     parameters: []
     return:
       type: System.String
-    content.vb: Public ReadOnly Property AdapterName As String
+    content.vb: Public Property AdapterName As String
   overload: NVAPIWrapper.NVAPIVioCapsDto.AdapterName*
 - uid: NVAPIWrapper.NVAPIVioCapsDto.AdapterClass
   commentId: P:NVAPIWrapper.NVAPIVioCapsDto.AdapterClass
@@ -107,11 +107,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public uint AdapterClass { get; }
+    content: public uint AdapterClass { readonly get; set; }
     parameters: []
     return:
       type: System.UInt32
-    content.vb: Public ReadOnly Property AdapterClass As UInteger
+    content.vb: Public Property AdapterClass As UInteger
   overload: NVAPIWrapper.NVAPIVioCapsDto.AdapterClass*
 - uid: NVAPIWrapper.NVAPIVioCapsDto.AdapterCaps
   commentId: P:NVAPIWrapper.NVAPIVioCapsDto.AdapterCaps
@@ -136,11 +136,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public uint AdapterCaps { get; }
+    content: public uint AdapterCaps { readonly get; set; }
     parameters: []
     return:
       type: System.UInt32
-    content.vb: Public ReadOnly Property AdapterCaps As UInteger
+    content.vb: Public Property AdapterCaps As UInteger
   overload: NVAPIWrapper.NVAPIVioCapsDto.AdapterCaps*
 - uid: NVAPIWrapper.NVAPIVioCapsDto.DipSwitch
   commentId: P:NVAPIWrapper.NVAPIVioCapsDto.DipSwitch
@@ -165,11 +165,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public uint DipSwitch { get; }
+    content: public uint DipSwitch { readonly get; set; }
     parameters: []
     return:
       type: System.UInt32
-    content.vb: Public ReadOnly Property DipSwitch As UInteger
+    content.vb: Public Property DipSwitch As UInteger
   overload: NVAPIWrapper.NVAPIVioCapsDto.DipSwitch*
 - uid: NVAPIWrapper.NVAPIVioCapsDto.DipSwitchReserved
   commentId: P:NVAPIWrapper.NVAPIVioCapsDto.DipSwitchReserved
@@ -194,11 +194,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public uint DipSwitchReserved { get; }
+    content: public uint DipSwitchReserved { readonly get; set; }
     parameters: []
     return:
       type: System.UInt32
-    content.vb: Public ReadOnly Property DipSwitchReserved As UInteger
+    content.vb: Public Property DipSwitchReserved As UInteger
   overload: NVAPIWrapper.NVAPIVioCapsDto.DipSwitchReserved*
 - uid: NVAPIWrapper.NVAPIVioCapsDto.BoardId
   commentId: P:NVAPIWrapper.NVAPIVioCapsDto.BoardId
@@ -223,11 +223,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public uint BoardId { get; }
+    content: public uint BoardId { readonly get; set; }
     parameters: []
     return:
       type: System.UInt32
-    content.vb: Public ReadOnly Property BoardId As UInteger
+    content.vb: Public Property BoardId As UInteger
   overload: NVAPIWrapper.NVAPIVioCapsDto.BoardId*
 - uid: NVAPIWrapper.NVAPIVioCapsDto.DriverMajorVersion
   commentId: P:NVAPIWrapper.NVAPIVioCapsDto.DriverMajorVersion
@@ -252,11 +252,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public uint DriverMajorVersion { get; }
+    content: public uint DriverMajorVersion { readonly get; set; }
     parameters: []
     return:
       type: System.UInt32
-    content.vb: Public ReadOnly Property DriverMajorVersion As UInteger
+    content.vb: Public Property DriverMajorVersion As UInteger
   overload: NVAPIWrapper.NVAPIVioCapsDto.DriverMajorVersion*
 - uid: NVAPIWrapper.NVAPIVioCapsDto.DriverMinorVersion
   commentId: P:NVAPIWrapper.NVAPIVioCapsDto.DriverMinorVersion
@@ -281,11 +281,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public uint DriverMinorVersion { get; }
+    content: public uint DriverMinorVersion { readonly get; set; }
     parameters: []
     return:
       type: System.UInt32
-    content.vb: Public ReadOnly Property DriverMinorVersion As UInteger
+    content.vb: Public Property DriverMinorVersion As UInteger
   overload: NVAPIWrapper.NVAPIVioCapsDto.DriverMinorVersion*
 - uid: NVAPIWrapper.NVAPIVioCapsDto.FirmwareMajorVersion
   commentId: P:NVAPIWrapper.NVAPIVioCapsDto.FirmwareMajorVersion
@@ -310,11 +310,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public uint FirmwareMajorVersion { get; }
+    content: public uint FirmwareMajorVersion { readonly get; set; }
     parameters: []
     return:
       type: System.UInt32
-    content.vb: Public ReadOnly Property FirmwareMajorVersion As UInteger
+    content.vb: Public Property FirmwareMajorVersion As UInteger
   overload: NVAPIWrapper.NVAPIVioCapsDto.FirmwareMajorVersion*
 - uid: NVAPIWrapper.NVAPIVioCapsDto.FirmwareMinorVersion
   commentId: P:NVAPIWrapper.NVAPIVioCapsDto.FirmwareMinorVersion
@@ -339,11 +339,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public uint FirmwareMinorVersion { get; }
+    content: public uint FirmwareMinorVersion { readonly get; set; }
     parameters: []
     return:
       type: System.UInt32
-    content.vb: Public ReadOnly Property FirmwareMinorVersion As UInteger
+    content.vb: Public Property FirmwareMinorVersion As UInteger
   overload: NVAPIWrapper.NVAPIVioCapsDto.FirmwareMinorVersion*
 - uid: NVAPIWrapper.NVAPIVioCapsDto.OwnerId
   commentId: P:NVAPIWrapper.NVAPIVioCapsDto.OwnerId
@@ -368,11 +368,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public uint OwnerId { get; }
+    content: public uint OwnerId { readonly get; set; }
     parameters: []
     return:
       type: System.UInt32
-    content.vb: Public ReadOnly Property OwnerId As UInteger
+    content.vb: Public Property OwnerId As UInteger
   overload: NVAPIWrapper.NVAPIVioCapsDto.OwnerId*
 - uid: NVAPIWrapper.NVAPIVioCapsDto.OwnerType
   commentId: P:NVAPIWrapper.NVAPIVioCapsDto.OwnerType
@@ -397,11 +397,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public _NVVIOOWNERTYPE OwnerType { get; }
+    content: public _NVVIOOWNERTYPE OwnerType { readonly get; set; }
     parameters: []
     return:
       type: NVAPIWrapper._NVVIOOWNERTYPE
-    content.vb: Public ReadOnly Property OwnerType As _NVVIOOWNERTYPE
+    content.vb: Public Property OwnerType As _NVVIOOWNERTYPE
   overload: NVAPIWrapper.NVAPIVioCapsDto.OwnerType*
 - uid: NVAPIWrapper.NVAPIVioCapsDto.#ctor(System.String,System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32,NVAPIWrapper._NVVIOOWNERTYPE)
   commentId: M:NVAPIWrapper.NVAPIVioCapsDto.#ctor(System.String,System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32,NVAPIWrapper._NVVIOOWNERTYPE)

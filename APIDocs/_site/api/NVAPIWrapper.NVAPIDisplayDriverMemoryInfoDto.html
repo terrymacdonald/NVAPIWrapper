@@ -102,7 +102,7 @@ Struct NVAPIDisplayDriverMemoryInfoDto  <a class="header-action link-secondary" 
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly struct NVAPIDisplayDriverMemoryInfoDto : IEquatable&lt;NVAPIDisplayDriverMemoryInfoDto&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public struct NVAPIDisplayDriverMemoryInfoDto : IEquatable&lt;NVAPIDisplayDriverMemoryInfoDto&gt;</code></pre>
   </div>
 
 
@@ -201,7 +201,7 @@ Struct NVAPIDisplayDriverMemoryInfoDto  <a class="header-action link-secondary" 
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public uint AvailableDedicatedVideoMemoryKb { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public uint AvailableDedicatedVideoMemoryKb { readonly get; set; }</code></pre>
   </div>
 
 
@@ -232,7 +232,7 @@ Struct NVAPIDisplayDriverMemoryInfoDto  <a class="header-action link-secondary" 
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public uint CurrentAvailableDedicatedVideoMemoryKb { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public uint CurrentAvailableDedicatedVideoMemoryKb { readonly get; set; }</code></pre>
   </div>
 
 
@@ -263,7 +263,7 @@ Struct NVAPIDisplayDriverMemoryInfoDto  <a class="header-action link-secondary" 
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public uint DedicatedVideoMemoryEvictionCount { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public uint DedicatedVideoMemoryEvictionCount { readonly get; set; }</code></pre>
   </div>
 
 
@@ -294,7 +294,7 @@ Struct NVAPIDisplayDriverMemoryInfoDto  <a class="header-action link-secondary" 
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public uint DedicatedVideoMemoryEvictionsSizeKb { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public uint DedicatedVideoMemoryEvictionsSizeKb { readonly get; set; }</code></pre>
   </div>
 
 
@@ -325,7 +325,7 @@ Struct NVAPIDisplayDriverMemoryInfoDto  <a class="header-action link-secondary" 
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public uint DedicatedVideoMemoryKb { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public uint DedicatedVideoMemoryKb { readonly get; set; }</code></pre>
   </div>
 
 
@@ -356,7 +356,7 @@ Struct NVAPIDisplayDriverMemoryInfoDto  <a class="header-action link-secondary" 
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public uint SharedSystemMemoryKb { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public uint SharedSystemMemoryKb { readonly get; set; }</code></pre>
   </div>
 
 
@@ -387,7 +387,7 @@ Struct NVAPIDisplayDriverMemoryInfoDto  <a class="header-action link-secondary" 
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public uint SystemVideoMemoryKb { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public uint SystemVideoMemoryKb { readonly get; set; }</code></pre>
   </div>
 
 

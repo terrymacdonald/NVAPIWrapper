@@ -36,7 +36,7 @@ items:
   summary: GSP info DTO.
   example: []
   syntax:
-    content: 'public readonly struct NVAPIGpuGspInfoDto : IEquatable<NVAPIGpuGspInfoDto>'
+    content: 'public struct NVAPIGpuGspInfoDto : IEquatable<NVAPIGpuGspInfoDto>'
     content.vb: Public Structure NVAPIGpuGspInfoDto Implements IEquatable(Of NVAPIGpuGspInfoDto)
   implements:
   - System.IEquatable{NVAPIWrapper.NVAPIGpuGspInfoDto}
@@ -70,11 +70,11 @@ items:
   summary: GSP firmware version string (null-terminated ASCII, up to 64 bytes).
   example: []
   syntax:
-    content: public string FirmwareVersion { get; }
+    content: public string FirmwareVersion { readonly get; set; }
     parameters: []
     return:
       type: System.String
-    content.vb: Public ReadOnly Property FirmwareVersion As String
+    content.vb: Public Property FirmwareVersion As String
   overload: NVAPIWrapper.NVAPIGpuGspInfoDto.FirmwareVersion*
 - uid: NVAPIWrapper.NVAPIGpuGspInfoDto.#ctor(System.String)
   commentId: M:NVAPIWrapper.NVAPIGpuGspInfoDto.#ctor(System.String)

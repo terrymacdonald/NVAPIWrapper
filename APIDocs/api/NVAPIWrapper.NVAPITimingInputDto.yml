@@ -39,7 +39,7 @@ items:
   summary: DTO for timing input data.
   example: []
   syntax:
-    content: 'public readonly struct NVAPITimingInputDto : IEquatable<NVAPITimingInputDto>'
+    content: 'public struct NVAPITimingInputDto : IEquatable<NVAPITimingInputDto>'
     content.vb: Public Structure NVAPITimingInputDto Implements IEquatable(Of NVAPITimingInputDto)
   implements:
   - System.IEquatable{NVAPIWrapper.NVAPITimingInputDto}
@@ -73,11 +73,11 @@ items:
   summary: Visible width.
   example: []
   syntax:
-    content: public uint Width { get; }
+    content: public uint Width { readonly get; set; }
     parameters: []
     return:
       type: System.UInt32
-    content.vb: Public ReadOnly Property Width As UInteger
+    content.vb: Public Property Width As UInteger
   overload: NVAPIWrapper.NVAPITimingInputDto.Width*
 - uid: NVAPIWrapper.NVAPITimingInputDto.Height
   commentId: P:NVAPIWrapper.NVAPITimingInputDto.Height
@@ -104,11 +104,11 @@ items:
   summary: Visible height.
   example: []
   syntax:
-    content: public uint Height { get; }
+    content: public uint Height { readonly get; set; }
     parameters: []
     return:
       type: System.UInt32
-    content.vb: Public ReadOnly Property Height As UInteger
+    content.vb: Public Property Height As UInteger
   overload: NVAPIWrapper.NVAPITimingInputDto.Height*
 - uid: NVAPIWrapper.NVAPITimingInputDto.RefreshRate
   commentId: P:NVAPIWrapper.NVAPITimingInputDto.RefreshRate
@@ -135,11 +135,11 @@ items:
   summary: Refresh rate.
   example: []
   syntax:
-    content: public float RefreshRate { get; }
+    content: public float RefreshRate { readonly get; set; }
     parameters: []
     return:
       type: System.Single
-    content.vb: Public ReadOnly Property RefreshRate As Single
+    content.vb: Public Property RefreshRate As Single
   overload: NVAPIWrapper.NVAPITimingInputDto.RefreshRate*
 - uid: NVAPIWrapper.NVAPITimingInputDto.Flag
   commentId: P:NVAPIWrapper.NVAPITimingInputDto.Flag
@@ -166,11 +166,11 @@ items:
   summary: Timing flags.
   example: []
   syntax:
-    content: public NV_TIMING_FLAG Flag { get; }
+    content: public NV_TIMING_FLAG Flag { readonly get; set; }
     parameters: []
     return:
       type: NVAPIWrapper.NV_TIMING_FLAG
-    content.vb: Public ReadOnly Property Flag As NV_TIMING_FLAG
+    content.vb: Public Property Flag As NV_TIMING_FLAG
   overload: NVAPIWrapper.NVAPITimingInputDto.Flag*
 - uid: NVAPIWrapper.NVAPITimingInputDto.OverrideType
   commentId: P:NVAPIWrapper.NVAPITimingInputDto.OverrideType
@@ -197,11 +197,11 @@ items:
   summary: Timing override type.
   example: []
   syntax:
-    content: public _NV_TIMING_OVERRIDE OverrideType { get; }
+    content: public _NV_TIMING_OVERRIDE OverrideType { readonly get; set; }
     parameters: []
     return:
       type: NVAPIWrapper._NV_TIMING_OVERRIDE
-    content.vb: Public ReadOnly Property OverrideType As _NV_TIMING_OVERRIDE
+    content.vb: Public Property OverrideType As _NV_TIMING_OVERRIDE
   overload: NVAPIWrapper.NVAPITimingInputDto.OverrideType*
 - uid: NVAPIWrapper.NVAPITimingInputDto.#ctor(System.UInt32,System.UInt32,System.Single,NVAPIWrapper.NV_TIMING_FLAG,NVAPIWrapper._NV_TIMING_OVERRIDE)
   commentId: M:NVAPIWrapper.NVAPITimingInputDto.#ctor(System.UInt32,System.UInt32,System.Single,NVAPIWrapper.NV_TIMING_FLAG,NVAPIWrapper._NV_TIMING_OVERRIDE)

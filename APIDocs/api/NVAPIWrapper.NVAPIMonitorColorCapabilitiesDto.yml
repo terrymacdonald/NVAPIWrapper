@@ -35,7 +35,7 @@ items:
   summary: DTO for monitor color capabilities collection.
   example: []
   syntax:
-    content: 'public readonly struct NVAPIMonitorColorCapabilitiesDto : IEquatable<NVAPIMonitorColorCapabilitiesDto>'
+    content: 'public struct NVAPIMonitorColorCapabilitiesDto : IEquatable<NVAPIMonitorColorCapabilitiesDto>'
     content.vb: Public Structure NVAPIMonitorColorCapabilitiesDto Implements IEquatable(Of NVAPIMonitorColorCapabilitiesDto)
   implements:
   - System.IEquatable{NVAPIWrapper.NVAPIMonitorColorCapabilitiesDto}

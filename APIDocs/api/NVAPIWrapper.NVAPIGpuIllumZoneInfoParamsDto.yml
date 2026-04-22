@@ -37,7 +37,7 @@ items:
   summary: Illumination zone info params DTO.
   example: []
   syntax:
-    content: 'public readonly struct NVAPIGpuIllumZoneInfoParamsDto : IEquatable<NVAPIGpuIllumZoneInfoParamsDto>'
+    content: 'public struct NVAPIGpuIllumZoneInfoParamsDto : IEquatable<NVAPIGpuIllumZoneInfoParamsDto>'
     content.vb: Public Structure NVAPIGpuIllumZoneInfoParamsDto Implements IEquatable(Of NVAPIGpuIllumZoneInfoParamsDto)
   implements:
   - System.IEquatable{NVAPIWrapper.NVAPIGpuIllumZoneInfoParamsDto}
@@ -71,11 +71,11 @@ items:
   summary: Number of illumination zones reported.
   example: []
   syntax:
-    content: public uint NumIllumZones { get; }
+    content: public uint NumIllumZones { readonly get; set; }
     parameters: []
     return:
       type: System.UInt32
-    content.vb: Public ReadOnly Property NumIllumZones As UInteger
+    content.vb: Public Property NumIllumZones As UInteger
   overload: NVAPIWrapper.NVAPIGpuIllumZoneInfoParamsDto.NumIllumZones*
 - uid: NVAPIWrapper.NVAPIGpuIllumZoneInfoParamsDto.Zones
   commentId: P:NVAPIWrapper.NVAPIGpuIllumZoneInfoParamsDto.Zones
@@ -102,11 +102,11 @@ items:
   summary: Per-zone illumination info array (up to 32 entries).
   example: []
   syntax:
-    content: public NVAPIGpuIllumZoneInfoDto[] Zones { get; }
+    content: public NVAPIGpuIllumZoneInfoDto[] Zones { readonly get; set; }
     parameters: []
     return:
       type: NVAPIWrapper.NVAPIGpuIllumZoneInfoDto[]
-    content.vb: Public ReadOnly Property Zones As NVAPIGpuIllumZoneInfoDto()
+    content.vb: Public Property Zones As NVAPIGpuIllumZoneInfoDto()
   overload: NVAPIWrapper.NVAPIGpuIllumZoneInfoParamsDto.Zones*
 - uid: NVAPIWrapper.NVAPIGpuIllumZoneInfoParamsDto.#ctor(System.UInt32,NVAPIWrapper.NVAPIGpuIllumZoneInfoDto[])
   commentId: M:NVAPIWrapper.NVAPIGpuIllumZoneInfoParamsDto.#ctor(System.UInt32,NVAPIWrapper.NVAPIGpuIllumZoneInfoDto[])

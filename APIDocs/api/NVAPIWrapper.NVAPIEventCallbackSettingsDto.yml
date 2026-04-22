@@ -36,7 +36,7 @@ items:
   summary: Event callback settings DTO.
   example: []
   syntax:
-    content: 'public readonly struct NVAPIEventCallbackSettingsDto : IEquatable<NVAPIEventCallbackSettingsDto>'
+    content: 'public struct NVAPIEventCallbackSettingsDto : IEquatable<NVAPIEventCallbackSettingsDto>'
     content.vb: Public Structure NVAPIEventCallbackSettingsDto Implements IEquatable(Of NVAPIEventCallbackSettingsDto)
   implements:
   - System.IEquatable{NVAPIWrapper.NVAPIEventCallbackSettingsDto}
@@ -114,11 +114,11 @@ items:
   summary: Event type.
   example: []
   syntax:
-    content: public NV_EVENT_TYPE EventId { get; }
+    content: public NV_EVENT_TYPE EventId { readonly get; set; }
     parameters: []
     return:
       type: NVAPIWrapper.NV_EVENT_TYPE
-    content.vb: Public ReadOnly Property EventId As NV_EVENT_TYPE
+    content.vb: Public Property EventId As NV_EVENT_TYPE
   overload: NVAPIWrapper.NVAPIEventCallbackSettingsDto.EventId*
 - uid: NVAPIWrapper.NVAPIEventCallbackSettingsDto.CallbackKind
   commentId: P:NVAPIWrapper.NVAPIEventCallbackSettingsDto.CallbackKind
@@ -145,11 +145,11 @@ items:
   summary: Callback kind to map the union field.
   example: []
   syntax:
-    content: public NVAPIEventCallbackKind CallbackKind { get; }
+    content: public NVAPIEventCallbackKind CallbackKind { readonly get; set; }
     parameters: []
     return:
       type: NVAPIWrapper.NVAPIEventCallbackKind
-    content.vb: Public ReadOnly Property CallbackKind As NVAPIEventCallbackKind
+    content.vb: Public Property CallbackKind As NVAPIEventCallbackKind
   overload: NVAPIWrapper.NVAPIEventCallbackSettingsDto.CallbackKind*
 - uid: NVAPIWrapper.NVAPIEventCallbackSettingsDto.CallbackParam
   commentId: P:NVAPIWrapper.NVAPIEventCallbackSettingsDto.CallbackParam
@@ -176,11 +176,11 @@ items:
   summary: Callback parameter pointer.
   example: []
   syntax:
-    content: public nint CallbackParam { get; }
+    content: public nint CallbackParam { readonly get; set; }
     parameters: []
     return:
       type: System.IntPtr
-    content.vb: Public ReadOnly Property CallbackParam As IntPtr
+    content.vb: Public Property CallbackParam As IntPtr
   overload: NVAPIWrapper.NVAPIEventCallbackSettingsDto.CallbackParam*
 - uid: NVAPIWrapper.NVAPIEventCallbackSettingsDto.Callback
   commentId: P:NVAPIWrapper.NVAPIEventCallbackSettingsDto.Callback
@@ -207,11 +207,11 @@ items:
   summary: Callback function pointer.
   example: []
   syntax:
-    content: public nint Callback { get; }
+    content: public nint Callback { readonly get; set; }
     parameters: []
     return:
       type: System.IntPtr
-    content.vb: Public ReadOnly Property Callback As IntPtr
+    content.vb: Public Property Callback As IntPtr
   overload: NVAPIWrapper.NVAPIEventCallbackSettingsDto.Callback*
 - uid: NVAPIWrapper.NVAPIEventCallbackSettingsDto.Equals(NVAPIWrapper.NVAPIEventCallbackSettingsDto)
   commentId: M:NVAPIWrapper.NVAPIEventCallbackSettingsDto.Equals(NVAPIWrapper.NVAPIEventCallbackSettingsDto)

@@ -35,7 +35,7 @@ items:
   summary: DTO for VRR info.
   example: []
   syntax:
-    content: 'public readonly struct NVAPIVrrInfoDto : IEquatable<NVAPIVrrInfoDto>'
+    content: 'public struct NVAPIVrrInfoDto : IEquatable<NVAPIVrrInfoDto>'
     content.vb: Public Structure NVAPIVrrInfoDto Implements IEquatable(Of NVAPIVrrInfoDto)
   implements:
   - System.IEquatable{NVAPIWrapper.NVAPIVrrInfoDto}
@@ -69,11 +69,11 @@ items:
   summary: Native VRR info.
   example: []
   syntax:
-    content: public _NV_GET_VRR_INFO_V1 Info { get; }
+    content: public _NV_GET_VRR_INFO_V1 Info { readonly get; set; }
     parameters: []
     return:
       type: NVAPIWrapper._NV_GET_VRR_INFO_V1
-    content.vb: Public ReadOnly Property Info As _NV_GET_VRR_INFO_V1
+    content.vb: Public Property Info As _NV_GET_VRR_INFO_V1
   overload: NVAPIWrapper.NVAPIVrrInfoDto.Info*
 - uid: NVAPIWrapper.NVAPIVrrInfoDto.#ctor(NVAPIWrapper._NV_GET_VRR_INFO_V1)
   commentId: M:NVAPIWrapper.NVAPIVrrInfoDto.#ctor(NVAPIWrapper._NV_GET_VRR_INFO_V1)

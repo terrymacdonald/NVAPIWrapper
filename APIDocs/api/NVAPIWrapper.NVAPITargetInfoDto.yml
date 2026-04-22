@@ -39,7 +39,7 @@ items:
   summary: DTO for target info data.
   example: []
   syntax:
-    content: 'public readonly struct NVAPITargetInfoDto : IEquatable<NVAPITargetInfoDto>'
+    content: 'public struct NVAPITargetInfoDto : IEquatable<NVAPITargetInfoDto>'
     content.vb: Public Structure NVAPITargetInfoDto Implements IEquatable(Of NVAPITargetInfoDto)
   implements:
   - System.IEquatable{NVAPIWrapper.NVAPITargetInfoDto}
@@ -71,11 +71,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public long AdapterLuid { get; }
+    content: public long AdapterLuid { readonly get; set; }
     parameters: []
     return:
       type: System.Int64
-    content.vb: Public ReadOnly Property AdapterLuid As Long
+    content.vb: Public Property AdapterLuid As Long
   overload: NVAPIWrapper.NVAPITargetInfoDto.AdapterLuid*
 - uid: NVAPIWrapper.NVAPITargetInfoDto.TargetId
   commentId: P:NVAPIWrapper.NVAPITargetInfoDto.TargetId
@@ -100,11 +100,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public uint TargetId { get; }
+    content: public uint TargetId { readonly get; set; }
     parameters: []
     return:
       type: System.UInt32
-    content.vb: Public ReadOnly Property TargetId As UInteger
+    content.vb: Public Property TargetId As UInteger
   overload: NVAPIWrapper.NVAPITargetInfoDto.TargetId*
 - uid: NVAPIWrapper.NVAPITargetInfoDto.DisplayIds
   commentId: P:NVAPIWrapper.NVAPITargetInfoDto.DisplayIds
@@ -129,11 +129,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public uint[] DisplayIds { get; }
+    content: public uint[] DisplayIds { readonly get; set; }
     parameters: []
     return:
       type: System.UInt32[]
-    content.vb: Public ReadOnly Property DisplayIds As UInteger()
+    content.vb: Public Property DisplayIds As UInteger()
   overload: NVAPIWrapper.NVAPITargetInfoDto.DisplayIds*
 - uid: NVAPIWrapper.NVAPITargetInfoDto.DisplayIdCount
   commentId: P:NVAPIWrapper.NVAPITargetInfoDto.DisplayIdCount
@@ -158,11 +158,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public uint DisplayIdCount { get; }
+    content: public uint DisplayIdCount { readonly get; set; }
     parameters: []
     return:
       type: System.UInt32
-    content.vb: Public ReadOnly Property DisplayIdCount As UInteger
+    content.vb: Public Property DisplayIdCount As UInteger
   overload: NVAPIWrapper.NVAPITargetInfoDto.DisplayIdCount*
 - uid: NVAPIWrapper.NVAPITargetInfoDto.Reserved
   commentId: P:NVAPIWrapper.NVAPITargetInfoDto.Reserved
@@ -187,11 +187,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public uint[] Reserved { get; }
+    content: public uint[] Reserved { readonly get; set; }
     parameters: []
     return:
       type: System.UInt32[]
-    content.vb: Public ReadOnly Property Reserved As UInteger()
+    content.vb: Public Property Reserved As UInteger()
   overload: NVAPIWrapper.NVAPITargetInfoDto.Reserved*
 - uid: NVAPIWrapper.NVAPITargetInfoDto.#ctor(System.Int64,System.UInt32,System.UInt32[],System.UInt32,System.UInt32[])
   commentId: M:NVAPIWrapper.NVAPITargetInfoDto.#ctor(System.Int64,System.UInt32,System.UInt32[],System.UInt32,System.UInt32[])

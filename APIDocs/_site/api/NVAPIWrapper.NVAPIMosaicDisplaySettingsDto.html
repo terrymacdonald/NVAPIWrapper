@@ -102,7 +102,7 @@ Struct NVAPIMosaicDisplaySettingsDto  <a class="header-action link-secondary" ti
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly struct NVAPIMosaicDisplaySettingsDto : IEquatable&lt;NVAPIMosaicDisplaySettingsDto&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public struct NVAPIMosaicDisplaySettingsDto : IEquatable&lt;NVAPIMosaicDisplaySettingsDto&gt;</code></pre>
   </div>
 
 
@@ -191,7 +191,7 @@ Struct NVAPIMosaicDisplaySettingsDto  <a class="header-action link-secondary" ti
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public NVAPIMosaicDisplaySettingDto[] Settings { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public NVAPIMosaicDisplaySettingDto[] Settings { readonly get; set; }</code></pre>
   </div>
 
 

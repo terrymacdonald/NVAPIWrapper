@@ -37,7 +37,7 @@ items:
   summary: PCI identifiers reported by NVAPI.
   example: []
   syntax:
-    content: 'public readonly struct NVAPIPciIdentifiers : IEquatable<NVAPIPciIdentifiers>'
+    content: 'public struct NVAPIPciIdentifiers : IEquatable<NVAPIPciIdentifiers>'
     content.vb: Public Structure NVAPIPciIdentifiers Implements IEquatable(Of NVAPIPciIdentifiers)
   implements:
   - System.IEquatable{NVAPIWrapper.NVAPIPciIdentifiers}
@@ -71,11 +71,11 @@ items:
   summary: PCI device ID.
   example: []
   syntax:
-    content: public uint DeviceId { get; }
+    content: public uint DeviceId { readonly get; set; }
     parameters: []
     return:
       type: System.UInt32
-    content.vb: Public ReadOnly Property DeviceId As UInteger
+    content.vb: Public Property DeviceId As UInteger
   overload: NVAPIWrapper.NVAPIPciIdentifiers.DeviceId*
 - uid: NVAPIWrapper.NVAPIPciIdentifiers.SubSystemId
   commentId: P:NVAPIWrapper.NVAPIPciIdentifiers.SubSystemId
@@ -102,11 +102,11 @@ items:
   summary: PCI subsystem ID.
   example: []
   syntax:
-    content: public uint SubSystemId { get; }
+    content: public uint SubSystemId { readonly get; set; }
     parameters: []
     return:
       type: System.UInt32
-    content.vb: Public ReadOnly Property SubSystemId As UInteger
+    content.vb: Public Property SubSystemId As UInteger
   overload: NVAPIWrapper.NVAPIPciIdentifiers.SubSystemId*
 - uid: NVAPIWrapper.NVAPIPciIdentifiers.RevisionId
   commentId: P:NVAPIWrapper.NVAPIPciIdentifiers.RevisionId
@@ -133,11 +133,11 @@ items:
   summary: PCI revision ID.
   example: []
   syntax:
-    content: public uint RevisionId { get; }
+    content: public uint RevisionId { readonly get; set; }
     parameters: []
     return:
       type: System.UInt32
-    content.vb: Public ReadOnly Property RevisionId As UInteger
+    content.vb: Public Property RevisionId As UInteger
   overload: NVAPIWrapper.NVAPIPciIdentifiers.RevisionId*
 - uid: NVAPIWrapper.NVAPIPciIdentifiers.ExtDeviceId
   commentId: P:NVAPIWrapper.NVAPIPciIdentifiers.ExtDeviceId
@@ -164,11 +164,11 @@ items:
   summary: PCI extended device ID.
   example: []
   syntax:
-    content: public uint ExtDeviceId { get; }
+    content: public uint ExtDeviceId { readonly get; set; }
     parameters: []
     return:
       type: System.UInt32
-    content.vb: Public ReadOnly Property ExtDeviceId As UInteger
+    content.vb: Public Property ExtDeviceId As UInteger
   overload: NVAPIWrapper.NVAPIPciIdentifiers.ExtDeviceId*
 - uid: NVAPIWrapper.NVAPIPciIdentifiers.#ctor(System.UInt32,System.UInt32,System.UInt32,System.UInt32)
   commentId: M:NVAPIWrapper.NVAPIPciIdentifiers.#ctor(System.UInt32,System.UInt32,System.UInt32,System.UInt32)

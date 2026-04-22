@@ -36,7 +36,7 @@ items:
   summary: DTO for HDR capabilities.
   example: []
   syntax:
-    content: 'public readonly struct NVAPIHdrCapabilitiesDto : IEquatable<NVAPIHdrCapabilitiesDto>'
+    content: 'public struct NVAPIHdrCapabilitiesDto : IEquatable<NVAPIHdrCapabilitiesDto>'
     content.vb: Public Structure NVAPIHdrCapabilitiesDto Implements IEquatable(Of NVAPIHdrCapabilitiesDto)
   implements:
   - System.IEquatable{NVAPIWrapper.NVAPIHdrCapabilitiesDto}
@@ -70,11 +70,11 @@ items:
   summary: Native HDR capabilities.
   example: []
   syntax:
-    content: public _NV_HDR_CAPABILITIES_V3 Capabilities { get; }
+    content: public _NV_HDR_CAPABILITIES_V3 Capabilities { readonly get; set; }
     parameters: []
     return:
       type: NVAPIWrapper._NV_HDR_CAPABILITIES_V3
-    content.vb: Public ReadOnly Property Capabilities As _NV_HDR_CAPABILITIES_V3
+    content.vb: Public Property Capabilities As _NV_HDR_CAPABILITIES_V3
   overload: NVAPIWrapper.NVAPIHdrCapabilitiesDto.Capabilities*
 - uid: NVAPIWrapper.NVAPIHdrCapabilitiesDto.#ctor(NVAPIWrapper._NV_HDR_CAPABILITIES_V3)
   commentId: M:NVAPIWrapper.NVAPIHdrCapabilitiesDto.#ctor(NVAPIWrapper._NV_HDR_CAPABILITIES_V3)

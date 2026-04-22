@@ -36,7 +36,7 @@ items:
   summary: ECC configuration info DTO.
   example: []
   syntax:
-    content: 'public readonly struct NVAPIGpuEccConfigurationInfoDto : IEquatable<NVAPIGpuEccConfigurationInfoDto>'
+    content: 'public struct NVAPIGpuEccConfigurationInfoDto : IEquatable<NVAPIGpuEccConfigurationInfoDto>'
     content.vb: Public Structure NVAPIGpuEccConfigurationInfoDto Implements IEquatable(Of NVAPIGpuEccConfigurationInfoDto)
   implements:
   - System.IEquatable{NVAPIWrapper.NVAPIGpuEccConfigurationInfoDto}
@@ -68,11 +68,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public bool IsEnabled { get; }
+    content: public bool IsEnabled { readonly get; set; }
     parameters: []
     return:
       type: System.Boolean
-    content.vb: Public ReadOnly Property IsEnabled As Boolean
+    content.vb: Public Property IsEnabled As Boolean
   overload: NVAPIWrapper.NVAPIGpuEccConfigurationInfoDto.IsEnabled*
 - uid: NVAPIWrapper.NVAPIGpuEccConfigurationInfoDto.IsEnabledByDefault
   commentId: P:NVAPIWrapper.NVAPIGpuEccConfigurationInfoDto.IsEnabledByDefault
@@ -97,11 +97,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public bool IsEnabledByDefault { get; }
+    content: public bool IsEnabledByDefault { readonly get; set; }
     parameters: []
     return:
       type: System.Boolean
-    content.vb: Public ReadOnly Property IsEnabledByDefault As Boolean
+    content.vb: Public Property IsEnabledByDefault As Boolean
   overload: NVAPIWrapper.NVAPIGpuEccConfigurationInfoDto.IsEnabledByDefault*
 - uid: NVAPIWrapper.NVAPIGpuEccConfigurationInfoDto.#ctor(System.Boolean,System.Boolean)
   commentId: M:NVAPIWrapper.NVAPIGpuEccConfigurationInfoDto.#ctor(System.Boolean,System.Boolean)

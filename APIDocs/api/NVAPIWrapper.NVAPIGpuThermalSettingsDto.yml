@@ -36,7 +36,7 @@ items:
   summary: Thermal settings DTO.
   example: []
   syntax:
-    content: 'public readonly struct NVAPIGpuThermalSettingsDto : IEquatable<NVAPIGpuThermalSettingsDto>'
+    content: 'public struct NVAPIGpuThermalSettingsDto : IEquatable<NVAPIGpuThermalSettingsDto>'
     content.vb: Public Structure NVAPIGpuThermalSettingsDto Implements IEquatable(Of NVAPIGpuThermalSettingsDto)
   implements:
   - System.IEquatable{NVAPIWrapper.NVAPIGpuThermalSettingsDto}
@@ -68,11 +68,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public uint Count { get; }
+    content: public uint Count { readonly get; set; }
     parameters: []
     return:
       type: System.UInt32
-    content.vb: Public ReadOnly Property Count As UInteger
+    content.vb: Public Property Count As UInteger
   overload: NVAPIWrapper.NVAPIGpuThermalSettingsDto.Count*
 - uid: NVAPIWrapper.NVAPIGpuThermalSettingsDto.Sensors
   commentId: P:NVAPIWrapper.NVAPIGpuThermalSettingsDto.Sensors
@@ -97,11 +97,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public NVAPIGpuThermalSensorDto[] Sensors { get; }
+    content: public NVAPIGpuThermalSensorDto[] Sensors { readonly get; set; }
     parameters: []
     return:
       type: NVAPIWrapper.NVAPIGpuThermalSensorDto[]
-    content.vb: Public ReadOnly Property Sensors As NVAPIGpuThermalSensorDto()
+    content.vb: Public Property Sensors As NVAPIGpuThermalSensorDto()
   overload: NVAPIWrapper.NVAPIGpuThermalSettingsDto.Sensors*
 - uid: NVAPIWrapper.NVAPIGpuThermalSettingsDto.#ctor(System.UInt32,NVAPIWrapper.NVAPIGpuThermalSensorDto[])
   commentId: M:NVAPIWrapper.NVAPIGpuThermalSettingsDto.#ctor(System.UInt32,NVAPIWrapper.NVAPIGpuThermalSensorDto[])

@@ -102,7 +102,7 @@ Struct NVAPIGSyncSyncStatusDto  <a class="header-action link-secondary" title="V
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly struct NVAPIGSyncSyncStatusDto : IEquatable&lt;NVAPIGSyncSyncStatusDto&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public struct NVAPIGSyncSyncStatusDto : IEquatable&lt;NVAPIGSyncSyncStatusDto&gt;</code></pre>
   </div>
 
 
@@ -197,7 +197,7 @@ Struct NVAPIGSyncSyncStatusDto  <a class="header-action link-secondary" title="V
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool IsStereoSynced { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public bool IsStereoSynced { readonly get; set; }</code></pre>
   </div>
 
 
@@ -228,7 +228,7 @@ Struct NVAPIGSyncSyncStatusDto  <a class="header-action link-secondary" title="V
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool IsSyncSignalAvailable { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public bool IsSyncSignalAvailable { readonly get; set; }</code></pre>
   </div>
 
 
@@ -259,7 +259,7 @@ Struct NVAPIGSyncSyncStatusDto  <a class="header-action link-secondary" title="V
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool IsSynced { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public bool IsSynced { readonly get; set; }</code></pre>
   </div>
 
 

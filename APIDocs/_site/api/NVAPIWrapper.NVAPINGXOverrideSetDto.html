@@ -102,7 +102,7 @@ Struct NVAPINGXOverrideSetDto  <a class="header-action link-secondary" title="Vi
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly struct NVAPINGXOverrideSetDto : IEquatable&lt;NVAPINGXOverrideSetDto&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public struct NVAPINGXOverrideSetDto : IEquatable&lt;NVAPINGXOverrideSetDto&gt;</code></pre>
   </div>
 
 
@@ -195,7 +195,7 @@ Struct NVAPINGXOverrideSetDto  <a class="header-action link-secondary" title="Vi
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public uint Feature { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public uint Feature { readonly get; set; }</code></pre>
   </div>
 
 
@@ -227,7 +227,7 @@ Struct NVAPINGXOverrideSetDto  <a class="header-action link-secondary" title="Vi
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ulong FeedbackMask { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public ulong FeedbackMask { readonly get; set; }</code></pre>
   </div>
 
 
@@ -259,7 +259,7 @@ Struct NVAPINGXOverrideSetDto  <a class="header-action link-secondary" title="Vi
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public uint ProcessId { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public uint ProcessId { readonly get; set; }</code></pre>
   </div>
 
 

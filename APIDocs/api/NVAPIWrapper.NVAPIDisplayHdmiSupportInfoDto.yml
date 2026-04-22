@@ -35,7 +35,7 @@ items:
   summary: DTO for HDMI support info.
   example: []
   syntax:
-    content: 'public readonly struct NVAPIDisplayHdmiSupportInfoDto : IEquatable<NVAPIDisplayHdmiSupportInfoDto>'
+    content: 'public struct NVAPIDisplayHdmiSupportInfoDto : IEquatable<NVAPIDisplayHdmiSupportInfoDto>'
     content.vb: Public Structure NVAPIDisplayHdmiSupportInfoDto Implements IEquatable(Of NVAPIDisplayHdmiSupportInfoDto)
   implements:
   - System.IEquatable{NVAPIWrapper.NVAPIDisplayHdmiSupportInfoDto}
@@ -69,11 +69,11 @@ items:
   summary: Native HDMI support info.
   example: []
   syntax:
-    content: public _NV_HDMI_SUPPORT_INFO_V2 Info { get; }
+    content: public _NV_HDMI_SUPPORT_INFO_V2 Info { readonly get; set; }
     parameters: []
     return:
       type: NVAPIWrapper._NV_HDMI_SUPPORT_INFO_V2
-    content.vb: Public ReadOnly Property Info As _NV_HDMI_SUPPORT_INFO_V2
+    content.vb: Public Property Info As _NV_HDMI_SUPPORT_INFO_V2
   overload: NVAPIWrapper.NVAPIDisplayHdmiSupportInfoDto.Info*
 - uid: NVAPIWrapper.NVAPIDisplayHdmiSupportInfoDto.#ctor(NVAPIWrapper._NV_HDMI_SUPPORT_INFO_V2)
   commentId: M:NVAPIWrapper.NVAPIDisplayHdmiSupportInfoDto.#ctor(NVAPIWrapper._NV_HDMI_SUPPORT_INFO_V2)

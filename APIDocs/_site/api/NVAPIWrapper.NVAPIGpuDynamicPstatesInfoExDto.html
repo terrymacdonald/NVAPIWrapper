@@ -102,7 +102,7 @@ Struct NVAPIGpuDynamicPstatesInfoExDto  <a class="header-action link-secondary" 
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly struct NVAPIGpuDynamicPstatesInfoExDto : IEquatable&lt;NVAPIGpuDynamicPstatesInfoExDto&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public struct NVAPIGpuDynamicPstatesInfoExDto : IEquatable&lt;NVAPIGpuDynamicPstatesInfoExDto&gt;</code></pre>
   </div>
 
 
@@ -191,7 +191,7 @@ Struct NVAPIGpuDynamicPstatesInfoExDto  <a class="header-action link-secondary" 
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public uint Flags { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public uint Flags { readonly get; set; }</code></pre>
   </div>
 
 
@@ -222,7 +222,7 @@ Struct NVAPIGpuDynamicPstatesInfoExDto  <a class="header-action link-secondary" 
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public NVAPIGpuDynamicPstateUtilizationDto[] Utilization { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public NVAPIGpuDynamicPstateUtilizationDto[] Utilization { readonly get; set; }</code></pre>
   </div>
 
 

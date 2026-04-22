@@ -43,7 +43,7 @@ items:
   summary: Extended GPU memory info DTO.
   example: []
   syntax:
-    content: 'public readonly struct NVAPIGpuMemoryInfoExDto : IEquatable<NVAPIGpuMemoryInfoExDto>'
+    content: 'public struct NVAPIGpuMemoryInfoExDto : IEquatable<NVAPIGpuMemoryInfoExDto>'
     content.vb: Public Structure NVAPIGpuMemoryInfoExDto Implements IEquatable(Of NVAPIGpuMemoryInfoExDto)
   implements:
   - System.IEquatable{NVAPIWrapper.NVAPIGpuMemoryInfoExDto}
@@ -75,11 +75,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public ulong DedicatedVideoMemoryBytes { get; }
+    content: public ulong DedicatedVideoMemoryBytes { readonly get; set; }
     parameters: []
     return:
       type: System.UInt64
-    content.vb: Public ReadOnly Property DedicatedVideoMemoryBytes As ULong
+    content.vb: Public Property DedicatedVideoMemoryBytes As ULong
   overload: NVAPIWrapper.NVAPIGpuMemoryInfoExDto.DedicatedVideoMemoryBytes*
 - uid: NVAPIWrapper.NVAPIGpuMemoryInfoExDto.AvailableDedicatedVideoMemoryBytes
   commentId: P:NVAPIWrapper.NVAPIGpuMemoryInfoExDto.AvailableDedicatedVideoMemoryBytes
@@ -104,11 +104,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public ulong AvailableDedicatedVideoMemoryBytes { get; }
+    content: public ulong AvailableDedicatedVideoMemoryBytes { readonly get; set; }
     parameters: []
     return:
       type: System.UInt64
-    content.vb: Public ReadOnly Property AvailableDedicatedVideoMemoryBytes As ULong
+    content.vb: Public Property AvailableDedicatedVideoMemoryBytes As ULong
   overload: NVAPIWrapper.NVAPIGpuMemoryInfoExDto.AvailableDedicatedVideoMemoryBytes*
 - uid: NVAPIWrapper.NVAPIGpuMemoryInfoExDto.SystemVideoMemoryBytes
   commentId: P:NVAPIWrapper.NVAPIGpuMemoryInfoExDto.SystemVideoMemoryBytes
@@ -133,11 +133,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public ulong SystemVideoMemoryBytes { get; }
+    content: public ulong SystemVideoMemoryBytes { readonly get; set; }
     parameters: []
     return:
       type: System.UInt64
-    content.vb: Public ReadOnly Property SystemVideoMemoryBytes As ULong
+    content.vb: Public Property SystemVideoMemoryBytes As ULong
   overload: NVAPIWrapper.NVAPIGpuMemoryInfoExDto.SystemVideoMemoryBytes*
 - uid: NVAPIWrapper.NVAPIGpuMemoryInfoExDto.SharedSystemMemoryBytes
   commentId: P:NVAPIWrapper.NVAPIGpuMemoryInfoExDto.SharedSystemMemoryBytes
@@ -162,11 +162,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public ulong SharedSystemMemoryBytes { get; }
+    content: public ulong SharedSystemMemoryBytes { readonly get; set; }
     parameters: []
     return:
       type: System.UInt64
-    content.vb: Public ReadOnly Property SharedSystemMemoryBytes As ULong
+    content.vb: Public Property SharedSystemMemoryBytes As ULong
   overload: NVAPIWrapper.NVAPIGpuMemoryInfoExDto.SharedSystemMemoryBytes*
 - uid: NVAPIWrapper.NVAPIGpuMemoryInfoExDto.CurrentAvailableDedicatedVideoMemoryBytes
   commentId: P:NVAPIWrapper.NVAPIGpuMemoryInfoExDto.CurrentAvailableDedicatedVideoMemoryBytes
@@ -191,11 +191,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public ulong CurrentAvailableDedicatedVideoMemoryBytes { get; }
+    content: public ulong CurrentAvailableDedicatedVideoMemoryBytes { readonly get; set; }
     parameters: []
     return:
       type: System.UInt64
-    content.vb: Public ReadOnly Property CurrentAvailableDedicatedVideoMemoryBytes As ULong
+    content.vb: Public Property CurrentAvailableDedicatedVideoMemoryBytes As ULong
   overload: NVAPIWrapper.NVAPIGpuMemoryInfoExDto.CurrentAvailableDedicatedVideoMemoryBytes*
 - uid: NVAPIWrapper.NVAPIGpuMemoryInfoExDto.DedicatedVideoMemoryEvictionsSizeBytes
   commentId: P:NVAPIWrapper.NVAPIGpuMemoryInfoExDto.DedicatedVideoMemoryEvictionsSizeBytes
@@ -220,11 +220,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public ulong DedicatedVideoMemoryEvictionsSizeBytes { get; }
+    content: public ulong DedicatedVideoMemoryEvictionsSizeBytes { readonly get; set; }
     parameters: []
     return:
       type: System.UInt64
-    content.vb: Public ReadOnly Property DedicatedVideoMemoryEvictionsSizeBytes As ULong
+    content.vb: Public Property DedicatedVideoMemoryEvictionsSizeBytes As ULong
   overload: NVAPIWrapper.NVAPIGpuMemoryInfoExDto.DedicatedVideoMemoryEvictionsSizeBytes*
 - uid: NVAPIWrapper.NVAPIGpuMemoryInfoExDto.DedicatedVideoMemoryEvictionCount
   commentId: P:NVAPIWrapper.NVAPIGpuMemoryInfoExDto.DedicatedVideoMemoryEvictionCount
@@ -249,11 +249,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public ulong DedicatedVideoMemoryEvictionCount { get; }
+    content: public ulong DedicatedVideoMemoryEvictionCount { readonly get; set; }
     parameters: []
     return:
       type: System.UInt64
-    content.vb: Public ReadOnly Property DedicatedVideoMemoryEvictionCount As ULong
+    content.vb: Public Property DedicatedVideoMemoryEvictionCount As ULong
   overload: NVAPIWrapper.NVAPIGpuMemoryInfoExDto.DedicatedVideoMemoryEvictionCount*
 - uid: NVAPIWrapper.NVAPIGpuMemoryInfoExDto.DedicatedVideoMemoryPromotionsSizeBytes
   commentId: P:NVAPIWrapper.NVAPIGpuMemoryInfoExDto.DedicatedVideoMemoryPromotionsSizeBytes
@@ -278,11 +278,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public ulong DedicatedVideoMemoryPromotionsSizeBytes { get; }
+    content: public ulong DedicatedVideoMemoryPromotionsSizeBytes { readonly get; set; }
     parameters: []
     return:
       type: System.UInt64
-    content.vb: Public ReadOnly Property DedicatedVideoMemoryPromotionsSizeBytes As ULong
+    content.vb: Public Property DedicatedVideoMemoryPromotionsSizeBytes As ULong
   overload: NVAPIWrapper.NVAPIGpuMemoryInfoExDto.DedicatedVideoMemoryPromotionsSizeBytes*
 - uid: NVAPIWrapper.NVAPIGpuMemoryInfoExDto.DedicatedVideoMemoryPromotionCount
   commentId: P:NVAPIWrapper.NVAPIGpuMemoryInfoExDto.DedicatedVideoMemoryPromotionCount
@@ -307,11 +307,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public ulong DedicatedVideoMemoryPromotionCount { get; }
+    content: public ulong DedicatedVideoMemoryPromotionCount { readonly get; set; }
     parameters: []
     return:
       type: System.UInt64
-    content.vb: Public ReadOnly Property DedicatedVideoMemoryPromotionCount As ULong
+    content.vb: Public Property DedicatedVideoMemoryPromotionCount As ULong
   overload: NVAPIWrapper.NVAPIGpuMemoryInfoExDto.DedicatedVideoMemoryPromotionCount*
 - uid: NVAPIWrapper.NVAPIGpuMemoryInfoExDto.#ctor(System.UInt64,System.UInt64,System.UInt64,System.UInt64,System.UInt64,System.UInt64,System.UInt64,System.UInt64,System.UInt64)
   commentId: M:NVAPIWrapper.NVAPIGpuMemoryInfoExDto.#ctor(System.UInt64,System.UInt64,System.UInt64,System.UInt64,System.UInt64,System.UInt64,System.UInt64,System.UInt64,System.UInt64)

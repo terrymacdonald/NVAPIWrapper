@@ -40,7 +40,7 @@ items:
   summary: Base voltage entry DTO for a P-state, wrapping <xref href="NVAPIWrapper.NV_GPU_PSTATE20_BASE_VOLTAGE_ENTRY_V1" data-throw-if-not-resolved="false"></xref>.
   example: []
   syntax:
-    content: 'public readonly struct NVAPIPstateBaseVoltageEntryDto : IEquatable<NVAPIPstateBaseVoltageEntryDto>'
+    content: 'public struct NVAPIPstateBaseVoltageEntryDto : IEquatable<NVAPIPstateBaseVoltageEntryDto>'
     content.vb: Public Structure NVAPIPstateBaseVoltageEntryDto Implements IEquatable(Of NVAPIPstateBaseVoltageEntryDto)
   implements:
   - System.IEquatable{NVAPIWrapper.NVAPIPstateBaseVoltageEntryDto}
@@ -74,11 +74,11 @@ items:
   summary: Voltage domain identifier.
   example: []
   syntax:
-    content: public _NV_GPU_PERF_VOLTAGE_INFO_DOMAIN_ID DomainId { get; }
+    content: public _NV_GPU_PERF_VOLTAGE_INFO_DOMAIN_ID DomainId { readonly get; set; }
     parameters: []
     return:
       type: NVAPIWrapper._NV_GPU_PERF_VOLTAGE_INFO_DOMAIN_ID
-    content.vb: Public ReadOnly Property DomainId As _NV_GPU_PERF_VOLTAGE_INFO_DOMAIN_ID
+    content.vb: Public Property DomainId As _NV_GPU_PERF_VOLTAGE_INFO_DOMAIN_ID
   overload: NVAPIWrapper.NVAPIPstateBaseVoltageEntryDto.DomainId*
 - uid: NVAPIWrapper.NVAPIPstateBaseVoltageEntryDto.IsEditable
   commentId: P:NVAPIWrapper.NVAPIPstateBaseVoltageEntryDto.IsEditable
@@ -105,11 +105,11 @@ items:
   summary: True if this voltage entry is editable.
   example: []
   syntax:
-    content: public bool IsEditable { get; }
+    content: public bool IsEditable { readonly get; set; }
     parameters: []
     return:
       type: System.Boolean
-    content.vb: Public ReadOnly Property IsEditable As Boolean
+    content.vb: Public Property IsEditable As Boolean
   overload: NVAPIWrapper.NVAPIPstateBaseVoltageEntryDto.IsEditable*
 - uid: NVAPIWrapper.NVAPIPstateBaseVoltageEntryDto.VoltUv
   commentId: P:NVAPIWrapper.NVAPIPstateBaseVoltageEntryDto.VoltUv
@@ -136,11 +136,11 @@ items:
   summary: Base voltage in microvolts.
   example: []
   syntax:
-    content: public uint VoltUv { get; }
+    content: public uint VoltUv { readonly get; set; }
     parameters: []
     return:
       type: System.UInt32
-    content.vb: Public ReadOnly Property VoltUv As UInteger
+    content.vb: Public Property VoltUv As UInteger
   overload: NVAPIWrapper.NVAPIPstateBaseVoltageEntryDto.VoltUv*
 - uid: NVAPIWrapper.NVAPIPstateBaseVoltageEntryDto.VoltDeltaValue
   commentId: P:NVAPIWrapper.NVAPIPstateBaseVoltageEntryDto.VoltDeltaValue
@@ -167,11 +167,11 @@ items:
   summary: Current voltage delta adjustment in microvolts.
   example: []
   syntax:
-    content: public int VoltDeltaValue { get; }
+    content: public int VoltDeltaValue { readonly get; set; }
     parameters: []
     return:
       type: System.Int32
-    content.vb: Public ReadOnly Property VoltDeltaValue As Integer
+    content.vb: Public Property VoltDeltaValue As Integer
   overload: NVAPIWrapper.NVAPIPstateBaseVoltageEntryDto.VoltDeltaValue*
 - uid: NVAPIWrapper.NVAPIPstateBaseVoltageEntryDto.VoltDeltaMin
   commentId: P:NVAPIWrapper.NVAPIPstateBaseVoltageEntryDto.VoltDeltaMin
@@ -198,11 +198,11 @@ items:
   summary: Minimum allowed voltage delta in microvolts.
   example: []
   syntax:
-    content: public int VoltDeltaMin { get; }
+    content: public int VoltDeltaMin { readonly get; set; }
     parameters: []
     return:
       type: System.Int32
-    content.vb: Public ReadOnly Property VoltDeltaMin As Integer
+    content.vb: Public Property VoltDeltaMin As Integer
   overload: NVAPIWrapper.NVAPIPstateBaseVoltageEntryDto.VoltDeltaMin*
 - uid: NVAPIWrapper.NVAPIPstateBaseVoltageEntryDto.VoltDeltaMax
   commentId: P:NVAPIWrapper.NVAPIPstateBaseVoltageEntryDto.VoltDeltaMax
@@ -229,11 +229,11 @@ items:
   summary: Maximum allowed voltage delta in microvolts.
   example: []
   syntax:
-    content: public int VoltDeltaMax { get; }
+    content: public int VoltDeltaMax { readonly get; set; }
     parameters: []
     return:
       type: System.Int32
-    content.vb: Public ReadOnly Property VoltDeltaMax As Integer
+    content.vb: Public Property VoltDeltaMax As Integer
   overload: NVAPIWrapper.NVAPIPstateBaseVoltageEntryDto.VoltDeltaMax*
 - uid: NVAPIWrapper.NVAPIPstateBaseVoltageEntryDto.#ctor(NVAPIWrapper._NV_GPU_PERF_VOLTAGE_INFO_DOMAIN_ID,System.Boolean,System.UInt32,System.Int32,System.Int32,System.Int32)
   commentId: M:NVAPIWrapper.NVAPIPstateBaseVoltageEntryDto.#ctor(NVAPIWrapper._NV_GPU_PERF_VOLTAGE_INFO_DOMAIN_ID,System.Boolean,System.UInt32,System.Int32,System.Int32,System.Int32)

@@ -102,7 +102,7 @@ Struct NVAPIGpuMemoryInfoExDto  <a class="header-action link-secondary" title="V
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly struct NVAPIGpuMemoryInfoExDto : IEquatable&lt;NVAPIGpuMemoryInfoExDto&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public struct NVAPIGpuMemoryInfoExDto : IEquatable&lt;NVAPIGpuMemoryInfoExDto&gt;</code></pre>
   </div>
 
 
@@ -205,7 +205,7 @@ Struct NVAPIGpuMemoryInfoExDto  <a class="header-action link-secondary" title="V
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ulong AvailableDedicatedVideoMemoryBytes { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public ulong AvailableDedicatedVideoMemoryBytes { readonly get; set; }</code></pre>
   </div>
 
 
@@ -236,7 +236,7 @@ Struct NVAPIGpuMemoryInfoExDto  <a class="header-action link-secondary" title="V
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ulong CurrentAvailableDedicatedVideoMemoryBytes { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public ulong CurrentAvailableDedicatedVideoMemoryBytes { readonly get; set; }</code></pre>
   </div>
 
 
@@ -267,7 +267,7 @@ Struct NVAPIGpuMemoryInfoExDto  <a class="header-action link-secondary" title="V
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ulong DedicatedVideoMemoryBytes { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public ulong DedicatedVideoMemoryBytes { readonly get; set; }</code></pre>
   </div>
 
 
@@ -298,7 +298,7 @@ Struct NVAPIGpuMemoryInfoExDto  <a class="header-action link-secondary" title="V
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ulong DedicatedVideoMemoryEvictionCount { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public ulong DedicatedVideoMemoryEvictionCount { readonly get; set; }</code></pre>
   </div>
 
 
@@ -329,7 +329,7 @@ Struct NVAPIGpuMemoryInfoExDto  <a class="header-action link-secondary" title="V
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ulong DedicatedVideoMemoryEvictionsSizeBytes { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public ulong DedicatedVideoMemoryEvictionsSizeBytes { readonly get; set; }</code></pre>
   </div>
 
 
@@ -360,7 +360,7 @@ Struct NVAPIGpuMemoryInfoExDto  <a class="header-action link-secondary" title="V
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ulong DedicatedVideoMemoryPromotionCount { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public ulong DedicatedVideoMemoryPromotionCount { readonly get; set; }</code></pre>
   </div>
 
 
@@ -391,7 +391,7 @@ Struct NVAPIGpuMemoryInfoExDto  <a class="header-action link-secondary" title="V
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ulong DedicatedVideoMemoryPromotionsSizeBytes { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public ulong DedicatedVideoMemoryPromotionsSizeBytes { readonly get; set; }</code></pre>
   </div>
 
 
@@ -422,7 +422,7 @@ Struct NVAPIGpuMemoryInfoExDto  <a class="header-action link-secondary" title="V
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ulong SharedSystemMemoryBytes { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public ulong SharedSystemMemoryBytes { readonly get; set; }</code></pre>
   </div>
 
 
@@ -453,7 +453,7 @@ Struct NVAPIGpuMemoryInfoExDto  <a class="header-action link-secondary" title="V
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ulong SystemVideoMemoryBytes { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public ulong SystemVideoMemoryBytes { readonly get; set; }</code></pre>
   </div>
 
 

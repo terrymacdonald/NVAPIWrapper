@@ -36,7 +36,7 @@ items:
   summary: Mosaic display topology status DTO.
   example: []
   syntax:
-    content: 'public readonly struct NVAPIMosaicDisplayTopoStatusDto : IEquatable<NVAPIMosaicDisplayTopoStatusDto>'
+    content: 'public struct NVAPIMosaicDisplayTopoStatusDto : IEquatable<NVAPIMosaicDisplayTopoStatusDto>'
     content.vb: Public Structure NVAPIMosaicDisplayTopoStatusDto Implements IEquatable(Of NVAPIMosaicDisplayTopoStatusDto)
   implements:
   - System.IEquatable{NVAPIWrapper.NVAPIMosaicDisplayTopoStatusDto}
@@ -68,11 +68,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public uint ErrorFlags { get; }
+    content: public uint ErrorFlags { readonly get; set; }
     parameters: []
     return:
       type: System.UInt32
-    content.vb: Public ReadOnly Property ErrorFlags As UInteger
+    content.vb: Public Property ErrorFlags As UInteger
   overload: NVAPIWrapper.NVAPIMosaicDisplayTopoStatusDto.ErrorFlags*
 - uid: NVAPIWrapper.NVAPIMosaicDisplayTopoStatusDto.WarningFlags
   commentId: P:NVAPIWrapper.NVAPIMosaicDisplayTopoStatusDto.WarningFlags
@@ -97,11 +97,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public uint WarningFlags { get; }
+    content: public uint WarningFlags { readonly get; set; }
     parameters: []
     return:
       type: System.UInt32
-    content.vb: Public ReadOnly Property WarningFlags As UInteger
+    content.vb: Public Property WarningFlags As UInteger
   overload: NVAPIWrapper.NVAPIMosaicDisplayTopoStatusDto.WarningFlags*
 - uid: NVAPIWrapper.NVAPIMosaicDisplayTopoStatusDto.Displays
   commentId: P:NVAPIWrapper.NVAPIMosaicDisplayTopoStatusDto.Displays
@@ -126,11 +126,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public NVAPIMosaicDisplayStatusEntryDto[] Displays { get; }
+    content: public NVAPIMosaicDisplayStatusEntryDto[] Displays { readonly get; set; }
     parameters: []
     return:
       type: NVAPIWrapper.NVAPIMosaicDisplayStatusEntryDto[]
-    content.vb: Public ReadOnly Property Displays As NVAPIMosaicDisplayStatusEntryDto()
+    content.vb: Public Property Displays As NVAPIMosaicDisplayStatusEntryDto()
   overload: NVAPIWrapper.NVAPIMosaicDisplayTopoStatusDto.Displays*
 - uid: NVAPIWrapper.NVAPIMosaicDisplayTopoStatusDto.#ctor(System.UInt32,System.UInt32,NVAPIWrapper.NVAPIMosaicDisplayStatusEntryDto[])
   commentId: M:NVAPIWrapper.NVAPIMosaicDisplayTopoStatusDto.#ctor(System.UInt32,System.UInt32,NVAPIWrapper.NVAPIMosaicDisplayStatusEntryDto[])

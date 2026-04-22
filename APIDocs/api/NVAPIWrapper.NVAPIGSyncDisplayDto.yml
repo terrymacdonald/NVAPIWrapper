@@ -38,7 +38,7 @@ items:
   summary: DTO for a G-Sync display entry in topology.
   example: []
   syntax:
-    content: 'public readonly struct NVAPIGSyncDisplayDto : IEquatable<NVAPIGSyncDisplayDto>'
+    content: 'public struct NVAPIGSyncDisplayDto : IEquatable<NVAPIGSyncDisplayDto>'
     content.vb: Public Structure NVAPIGSyncDisplayDto Implements IEquatable(Of NVAPIGSyncDisplayDto)
   implements:
   - System.IEquatable{NVAPIWrapper.NVAPIGSyncDisplayDto}
@@ -70,11 +70,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public uint DisplayId { get; }
+    content: public uint DisplayId { readonly get; set; }
     parameters: []
     return:
       type: System.UInt32
-    content.vb: Public ReadOnly Property DisplayId As UInteger
+    content.vb: Public Property DisplayId As UInteger
   overload: NVAPIWrapper.NVAPIGSyncDisplayDto.DisplayId*
 - uid: NVAPIWrapper.NVAPIGSyncDisplayDto.IsMasterable
   commentId: P:NVAPIWrapper.NVAPIGSyncDisplayDto.IsMasterable
@@ -99,11 +99,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public bool IsMasterable { get; }
+    content: public bool IsMasterable { readonly get; set; }
     parameters: []
     return:
       type: System.Boolean
-    content.vb: Public ReadOnly Property IsMasterable As Boolean
+    content.vb: Public Property IsMasterable As Boolean
   overload: NVAPIWrapper.NVAPIGSyncDisplayDto.IsMasterable*
 - uid: NVAPIWrapper.NVAPIGSyncDisplayDto.SyncState
   commentId: P:NVAPIWrapper.NVAPIGSyncDisplayDto.SyncState
@@ -128,11 +128,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public _NVAPI_GSYNC_DISPLAY_SYNC_STATE SyncState { get; }
+    content: public _NVAPI_GSYNC_DISPLAY_SYNC_STATE SyncState { readonly get; set; }
     parameters: []
     return:
       type: NVAPIWrapper._NVAPI_GSYNC_DISPLAY_SYNC_STATE
-    content.vb: Public ReadOnly Property SyncState As _NVAPI_GSYNC_DISPLAY_SYNC_STATE
+    content.vb: Public Property SyncState As _NVAPI_GSYNC_DISPLAY_SYNC_STATE
   overload: NVAPIWrapper.NVAPIGSyncDisplayDto.SyncState*
 - uid: NVAPIWrapper.NVAPIGSyncDisplayDto.#ctor(System.UInt32,System.Boolean,NVAPIWrapper._NVAPI_GSYNC_DISPLAY_SYNC_STATE)
   commentId: M:NVAPIWrapper.NVAPIGSyncDisplayDto.#ctor(System.UInt32,System.Boolean,NVAPIWrapper._NVAPI_GSYNC_DISPLAY_SYNC_STATE)

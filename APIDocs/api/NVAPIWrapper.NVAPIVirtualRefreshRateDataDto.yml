@@ -38,7 +38,7 @@ items:
   summary: DTO for virtual refresh rate data.
   example: []
   syntax:
-    content: 'public readonly struct NVAPIVirtualRefreshRateDataDto : IEquatable<NVAPIVirtualRefreshRateDataDto>'
+    content: 'public struct NVAPIVirtualRefreshRateDataDto : IEquatable<NVAPIVirtualRefreshRateDataDto>'
     content.vb: Public Structure NVAPIVirtualRefreshRateDataDto Implements IEquatable(Of NVAPIVirtualRefreshRateDataDto)
   implements:
   - System.IEquatable{NVAPIWrapper.NVAPIVirtualRefreshRateDataDto}
@@ -72,11 +72,11 @@ items:
   summary: Frame interval (microseconds).
   example: []
   syntax:
-    content: public uint FrameIntervalUs { get; }
+    content: public uint FrameIntervalUs { readonly get; set; }
     parameters: []
     return:
       type: System.UInt32
-    content.vb: Public ReadOnly Property FrameIntervalUs As UInteger
+    content.vb: Public Property FrameIntervalUs As UInteger
   overload: NVAPIWrapper.NVAPIVirtualRefreshRateDataDto.FrameIntervalUs*
 - uid: NVAPIWrapper.NVAPIVirtualRefreshRateDataDto.RefreshRate1K
   commentId: P:NVAPIWrapper.NVAPIVirtualRefreshRateDataDto.RefreshRate1K
@@ -103,11 +103,11 @@ items:
   summary: Refresh rate in 1/1000 Hz.
   example: []
   syntax:
-    content: public uint RefreshRate1K { get; }
+    content: public uint RefreshRate1K { readonly get; set; }
     parameters: []
     return:
       type: System.UInt32
-    content.vb: Public ReadOnly Property RefreshRate1K As UInteger
+    content.vb: Public Property RefreshRate1K As UInteger
   overload: NVAPIWrapper.NVAPIVirtualRefreshRateDataDto.RefreshRate1K*
 - uid: NVAPIWrapper.NVAPIVirtualRefreshRateDataDto.IsGamingVrr
   commentId: P:NVAPIWrapper.NVAPIVirtualRefreshRateDataDto.IsGamingVrr
@@ -134,11 +134,11 @@ items:
   summary: Gaming VRR flag.
   example: []
   syntax:
-    content: public bool IsGamingVrr { get; }
+    content: public bool IsGamingVrr { readonly get; set; }
     parameters: []
     return:
       type: System.Boolean
-    content.vb: Public ReadOnly Property IsGamingVrr As Boolean
+    content.vb: Public Property IsGamingVrr As Boolean
   overload: NVAPIWrapper.NVAPIVirtualRefreshRateDataDto.IsGamingVrr*
 - uid: NVAPIWrapper.NVAPIVirtualRefreshRateDataDto.FrameIntervalNs
   commentId: P:NVAPIWrapper.NVAPIVirtualRefreshRateDataDto.FrameIntervalNs
@@ -165,11 +165,11 @@ items:
   summary: Frame interval (nanoseconds).
   example: []
   syntax:
-    content: public ulong FrameIntervalNs { get; }
+    content: public ulong FrameIntervalNs { readonly get; set; }
     parameters: []
     return:
       type: System.UInt64
-    content.vb: Public ReadOnly Property FrameIntervalNs As ULong
+    content.vb: Public Property FrameIntervalNs As ULong
   overload: NVAPIWrapper.NVAPIVirtualRefreshRateDataDto.FrameIntervalNs*
 - uid: NVAPIWrapper.NVAPIVirtualRefreshRateDataDto.#ctor(System.UInt32,System.UInt32,System.Boolean,System.UInt64)
   commentId: M:NVAPIWrapper.NVAPIVirtualRefreshRateDataDto.#ctor(System.UInt32,System.UInt32,System.Boolean,System.UInt64)

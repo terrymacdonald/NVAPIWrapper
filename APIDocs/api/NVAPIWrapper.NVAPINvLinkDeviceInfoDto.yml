@@ -42,7 +42,7 @@ items:
   summary: NVLINK_DEVICE_INFO_V1 DTO.
   example: []
   syntax:
-    content: 'public readonly struct NVAPINvLinkDeviceInfoDto : IEquatable<NVAPINvLinkDeviceInfoDto>'
+    content: 'public struct NVAPINvLinkDeviceInfoDto : IEquatable<NVAPINvLinkDeviceInfoDto>'
     content.vb: Public Structure NVAPINvLinkDeviceInfoDto Implements IEquatable(Of NVAPINvLinkDeviceInfoDto)
   implements:
   - System.IEquatable{NVAPIWrapper.NVAPINvLinkDeviceInfoDto}
@@ -74,11 +74,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public uint DeviceIdFlags { get; }
+    content: public uint DeviceIdFlags { readonly get; set; }
     parameters: []
     return:
       type: System.UInt32
-    content.vb: Public ReadOnly Property DeviceIdFlags As UInteger
+    content.vb: Public Property DeviceIdFlags As UInteger
   overload: NVAPIWrapper.NVAPINvLinkDeviceInfoDto.DeviceIdFlags*
 - uid: NVAPIWrapper.NVAPINvLinkDeviceInfoDto.Domain
   commentId: P:NVAPIWrapper.NVAPINvLinkDeviceInfoDto.Domain
@@ -103,11 +103,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public ushort Domain { get; }
+    content: public ushort Domain { readonly get; set; }
     parameters: []
     return:
       type: System.UInt16
-    content.vb: Public ReadOnly Property Domain As UShort
+    content.vb: Public Property Domain As UShort
   overload: NVAPIWrapper.NVAPINvLinkDeviceInfoDto.Domain*
 - uid: NVAPIWrapper.NVAPINvLinkDeviceInfoDto.Bus
   commentId: P:NVAPIWrapper.NVAPINvLinkDeviceInfoDto.Bus
@@ -132,11 +132,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public ushort Bus { get; }
+    content: public ushort Bus { readonly get; set; }
     parameters: []
     return:
       type: System.UInt16
-    content.vb: Public ReadOnly Property Bus As UShort
+    content.vb: Public Property Bus As UShort
   overload: NVAPIWrapper.NVAPINvLinkDeviceInfoDto.Bus*
 - uid: NVAPIWrapper.NVAPINvLinkDeviceInfoDto.Device
   commentId: P:NVAPIWrapper.NVAPINvLinkDeviceInfoDto.Device
@@ -161,11 +161,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public ushort Device { get; }
+    content: public ushort Device { readonly get; set; }
     parameters: []
     return:
       type: System.UInt16
-    content.vb: Public ReadOnly Property Device As UShort
+    content.vb: Public Property Device As UShort
   overload: NVAPIWrapper.NVAPINvLinkDeviceInfoDto.Device*
 - uid: NVAPIWrapper.NVAPINvLinkDeviceInfoDto.Function
   commentId: P:NVAPIWrapper.NVAPINvLinkDeviceInfoDto.Function
@@ -190,11 +190,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public ushort Function { get; }
+    content: public ushort Function { readonly get; set; }
     parameters: []
     return:
       type: System.UInt16
-    content.vb: Public ReadOnly Property [Function] As UShort
+    content.vb: Public Property [Function] As UShort
   overload: NVAPIWrapper.NVAPINvLinkDeviceInfoDto.Function*
 - uid: NVAPIWrapper.NVAPINvLinkDeviceInfoDto.PciDeviceId
   commentId: P:NVAPIWrapper.NVAPINvLinkDeviceInfoDto.PciDeviceId
@@ -219,11 +219,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public uint PciDeviceId { get; }
+    content: public uint PciDeviceId { readonly get; set; }
     parameters: []
     return:
       type: System.UInt32
-    content.vb: Public ReadOnly Property PciDeviceId As UInteger
+    content.vb: Public Property PciDeviceId As UInteger
   overload: NVAPIWrapper.NVAPINvLinkDeviceInfoDto.PciDeviceId*
 - uid: NVAPIWrapper.NVAPINvLinkDeviceInfoDto.DeviceType
   commentId: P:NVAPIWrapper.NVAPINvLinkDeviceInfoDto.DeviceType
@@ -248,11 +248,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public ulong DeviceType { get; }
+    content: public ulong DeviceType { readonly get; set; }
     parameters: []
     return:
       type: System.UInt64
-    content.vb: Public ReadOnly Property DeviceType As ULong
+    content.vb: Public Property DeviceType As ULong
   overload: NVAPIWrapper.NVAPINvLinkDeviceInfoDto.DeviceType*
 - uid: NVAPIWrapper.NVAPINvLinkDeviceInfoDto.DeviceUUID
   commentId: P:NVAPIWrapper.NVAPINvLinkDeviceInfoDto.DeviceUUID
@@ -277,11 +277,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public byte[] DeviceUUID { get; }
+    content: public byte[] DeviceUUID { readonly get; set; }
     parameters: []
     return:
       type: System.Byte[]
-    content.vb: Public ReadOnly Property DeviceUUID As Byte()
+    content.vb: Public Property DeviceUUID As Byte()
   overload: NVAPIWrapper.NVAPINvLinkDeviceInfoDto.DeviceUUID*
 - uid: NVAPIWrapper.NVAPINvLinkDeviceInfoDto.#ctor(System.UInt32,System.UInt16,System.UInt16,System.UInt16,System.UInt16,System.UInt32,System.UInt64,System.Byte[])
   commentId: M:NVAPIWrapper.NVAPINvLinkDeviceInfoDto.#ctor(System.UInt32,System.UInt16,System.UInt16,System.UInt16,System.UInt16,System.UInt32,System.UInt64,System.Byte[])

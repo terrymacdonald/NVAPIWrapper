@@ -34,7 +34,7 @@ items:
   summary: Mosaic viewport list DTO.
   example: []
   syntax:
-    content: 'public readonly struct NVAPIMosaicViewportsDto : IEquatable<NVAPIMosaicViewportsDto>'
+    content: 'public struct NVAPIMosaicViewportsDto : IEquatable<NVAPIMosaicViewportsDto>'
     content.vb: Public Structure NVAPIMosaicViewportsDto Implements IEquatable(Of NVAPIMosaicViewportsDto)
   implements:
   - System.IEquatable{NVAPIWrapper.NVAPIMosaicViewportsDto}
@@ -66,11 +66,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public NVAPIRectDto[] Viewports { get; }
+    content: public NVAPIRectDto[] Viewports { readonly get; set; }
     parameters: []
     return:
       type: NVAPIWrapper.NVAPIRectDto[]
-    content.vb: Public ReadOnly Property Viewports As NVAPIRectDto()
+    content.vb: Public Property Viewports As NVAPIRectDto()
   overload: NVAPIWrapper.NVAPIMosaicViewportsDto.Viewports*
 - uid: NVAPIWrapper.NVAPIMosaicViewportsDto.BezelCorrected
   commentId: P:NVAPIWrapper.NVAPIMosaicViewportsDto.BezelCorrected
@@ -95,11 +95,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public bool BezelCorrected { get; }
+    content: public bool BezelCorrected { readonly get; set; }
     parameters: []
     return:
       type: System.Boolean
-    content.vb: Public ReadOnly Property BezelCorrected As Boolean
+    content.vb: Public Property BezelCorrected As Boolean
   overload: NVAPIWrapper.NVAPIMosaicViewportsDto.BezelCorrected*
 - uid: NVAPIWrapper.NVAPIMosaicViewportsDto.#ctor(NVAPIWrapper.NVAPIRectDto[],System.Boolean)
   commentId: M:NVAPIWrapper.NVAPIMosaicViewportsDto.#ctor(NVAPIWrapper.NVAPIRectDto[],System.Boolean)

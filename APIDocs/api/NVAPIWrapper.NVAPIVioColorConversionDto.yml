@@ -38,7 +38,7 @@ items:
   summary: VIO color conversion DTO.
   example: []
   syntax:
-    content: 'public readonly struct NVAPIVioColorConversionDto : IEquatable<NVAPIVioColorConversionDto>'
+    content: 'public struct NVAPIVioColorConversionDto : IEquatable<NVAPIVioColorConversionDto>'
     content.vb: Public Structure NVAPIVioColorConversionDto Implements IEquatable(Of NVAPIVioColorConversionDto)
   implements:
   - System.IEquatable{NVAPIWrapper.NVAPIVioColorConversionDto}
@@ -70,11 +70,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public float[] ColorMatrix { get; }
+    content: public float[] ColorMatrix { readonly get; set; }
     parameters: []
     return:
       type: System.Single[]
-    content.vb: Public ReadOnly Property ColorMatrix As Single()
+    content.vb: Public Property ColorMatrix As Single()
   overload: NVAPIWrapper.NVAPIVioColorConversionDto.ColorMatrix*
 - uid: NVAPIWrapper.NVAPIVioColorConversionDto.ColorOffset
   commentId: P:NVAPIWrapper.NVAPIVioColorConversionDto.ColorOffset
@@ -99,11 +99,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public float[] ColorOffset { get; }
+    content: public float[] ColorOffset { readonly get; set; }
     parameters: []
     return:
       type: System.Single[]
-    content.vb: Public ReadOnly Property ColorOffset As Single()
+    content.vb: Public Property ColorOffset As Single()
   overload: NVAPIWrapper.NVAPIVioColorConversionDto.ColorOffset*
 - uid: NVAPIWrapper.NVAPIVioColorConversionDto.ColorScale
   commentId: P:NVAPIWrapper.NVAPIVioColorConversionDto.ColorScale
@@ -128,11 +128,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public float[] ColorScale { get; }
+    content: public float[] ColorScale { readonly get; set; }
     parameters: []
     return:
       type: System.Single[]
-    content.vb: Public ReadOnly Property ColorScale As Single()
+    content.vb: Public Property ColorScale As Single()
   overload: NVAPIWrapper.NVAPIVioColorConversionDto.ColorScale*
 - uid: NVAPIWrapper.NVAPIVioColorConversionDto.CompositeSafe
   commentId: P:NVAPIWrapper.NVAPIVioColorConversionDto.CompositeSafe
@@ -157,11 +157,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public bool CompositeSafe { get; }
+    content: public bool CompositeSafe { readonly get; set; }
     parameters: []
     return:
       type: System.Boolean
-    content.vb: Public ReadOnly Property CompositeSafe As Boolean
+    content.vb: Public Property CompositeSafe As Boolean
   overload: NVAPIWrapper.NVAPIVioColorConversionDto.CompositeSafe*
 - uid: NVAPIWrapper.NVAPIVioColorConversionDto.#ctor(System.Single[],System.Single[],System.Single[],System.Boolean)
   commentId: M:NVAPIWrapper.NVAPIVioColorConversionDto.#ctor(System.Single[],System.Single[],System.Single[],System.Boolean)

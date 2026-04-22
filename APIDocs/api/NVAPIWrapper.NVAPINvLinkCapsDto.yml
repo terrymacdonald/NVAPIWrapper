@@ -41,7 +41,7 @@ items:
   summary: NVLINK caps DTO.
   example: []
   syntax:
-    content: 'public readonly struct NVAPINvLinkCapsDto : IEquatable<NVAPINvLinkCapsDto>'
+    content: 'public struct NVAPINvLinkCapsDto : IEquatable<NVAPINvLinkCapsDto>'
     content.vb: Public Structure NVAPINvLinkCapsDto Implements IEquatable(Of NVAPINvLinkCapsDto)
   implements:
   - System.IEquatable{NVAPIWrapper.NVAPINvLinkCapsDto}
@@ -75,11 +75,11 @@ items:
   summary: NVLINK capabilities bitmask table.
   example: []
   syntax:
-    content: public uint CapsTbl { get; }
+    content: public uint CapsTbl { readonly get; set; }
     parameters: []
     return:
       type: System.UInt32
-    content.vb: Public ReadOnly Property CapsTbl As UInteger
+    content.vb: Public Property CapsTbl As UInteger
   overload: NVAPIWrapper.NVAPINvLinkCapsDto.CapsTbl*
 - uid: NVAPIWrapper.NVAPINvLinkCapsDto.LowestNvlinkVersion
   commentId: P:NVAPIWrapper.NVAPINvLinkCapsDto.LowestNvlinkVersion
@@ -106,11 +106,11 @@ items:
   summary: Lowest supported NVLink version.
   example: []
   syntax:
-    content: public byte LowestNvlinkVersion { get; }
+    content: public byte LowestNvlinkVersion { readonly get; set; }
     parameters: []
     return:
       type: System.Byte
-    content.vb: Public ReadOnly Property LowestNvlinkVersion As Byte
+    content.vb: Public Property LowestNvlinkVersion As Byte
   overload: NVAPIWrapper.NVAPINvLinkCapsDto.LowestNvlinkVersion*
 - uid: NVAPIWrapper.NVAPINvLinkCapsDto.HighestNvlinkVersion
   commentId: P:NVAPIWrapper.NVAPINvLinkCapsDto.HighestNvlinkVersion
@@ -137,11 +137,11 @@ items:
   summary: Highest supported NVLink version.
   example: []
   syntax:
-    content: public byte HighestNvlinkVersion { get; }
+    content: public byte HighestNvlinkVersion { readonly get; set; }
     parameters: []
     return:
       type: System.Byte
-    content.vb: Public ReadOnly Property HighestNvlinkVersion As Byte
+    content.vb: Public Property HighestNvlinkVersion As Byte
   overload: NVAPIWrapper.NVAPINvLinkCapsDto.HighestNvlinkVersion*
 - uid: NVAPIWrapper.NVAPINvLinkCapsDto.LowestNciVersion
   commentId: P:NVAPIWrapper.NVAPINvLinkCapsDto.LowestNciVersion
@@ -168,11 +168,11 @@ items:
   summary: Lowest supported NCI version.
   example: []
   syntax:
-    content: public byte LowestNciVersion { get; }
+    content: public byte LowestNciVersion { readonly get; set; }
     parameters: []
     return:
       type: System.Byte
-    content.vb: Public ReadOnly Property LowestNciVersion As Byte
+    content.vb: Public Property LowestNciVersion As Byte
   overload: NVAPIWrapper.NVAPINvLinkCapsDto.LowestNciVersion*
 - uid: NVAPIWrapper.NVAPINvLinkCapsDto.HighestNciVersion
   commentId: P:NVAPIWrapper.NVAPINvLinkCapsDto.HighestNciVersion
@@ -199,11 +199,11 @@ items:
   summary: Highest supported NCI version.
   example: []
   syntax:
-    content: public byte HighestNciVersion { get; }
+    content: public byte HighestNciVersion { readonly get; set; }
     parameters: []
     return:
       type: System.Byte
-    content.vb: Public ReadOnly Property HighestNciVersion As Byte
+    content.vb: Public Property HighestNciVersion As Byte
   overload: NVAPIWrapper.NVAPINvLinkCapsDto.HighestNciVersion*
 - uid: NVAPIWrapper.NVAPINvLinkCapsDto.LinkMask
   commentId: P:NVAPIWrapper.NVAPINvLinkCapsDto.LinkMask
@@ -230,11 +230,11 @@ items:
   summary: Bitmask of active NVLink links.
   example: []
   syntax:
-    content: public uint LinkMask { get; }
+    content: public uint LinkMask { readonly get; set; }
     parameters: []
     return:
       type: System.UInt32
-    content.vb: Public ReadOnly Property LinkMask As UInteger
+    content.vb: Public Property LinkMask As UInteger
   overload: NVAPIWrapper.NVAPINvLinkCapsDto.LinkMask*
 - uid: NVAPIWrapper.NVAPINvLinkCapsDto.#ctor(System.UInt32,System.Byte,System.Byte,System.Byte,System.Byte,System.UInt32)
   commentId: M:NVAPIWrapper.NVAPINvLinkCapsDto.#ctor(System.UInt32,System.Byte,System.Byte,System.Byte,System.Byte,System.UInt32)

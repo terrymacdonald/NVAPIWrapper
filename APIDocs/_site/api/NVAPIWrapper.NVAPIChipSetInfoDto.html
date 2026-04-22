@@ -102,7 +102,7 @@ Struct NVAPIChipSetInfoDto  <a class="header-action link-secondary" title="View 
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly struct NVAPIChipSetInfoDto : IEquatable&lt;NVAPIChipSetInfoDto&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public struct NVAPIChipSetInfoDto : IEquatable&lt;NVAPIChipSetInfoDto&gt;</code></pre>
   </div>
 
 
@@ -224,7 +224,7 @@ Struct NVAPIChipSetInfoDto  <a class="header-action link-secondary" title="View 
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string ChipsetName { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public string ChipsetName { readonly get; set; }</code></pre>
   </div>
 
 
@@ -255,7 +255,7 @@ Struct NVAPIChipSetInfoDto  <a class="header-action link-secondary" title="View 
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public uint DeviceId { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public uint DeviceId { readonly get; set; }</code></pre>
   </div>
 
 
@@ -286,7 +286,7 @@ Struct NVAPIChipSetInfoDto  <a class="header-action link-secondary" title="View 
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public uint Flags { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public uint Flags { readonly get; set; }</code></pre>
   </div>
 
 
@@ -317,7 +317,7 @@ Struct NVAPIChipSetInfoDto  <a class="header-action link-secondary" title="View 
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public uint HbDeviceId { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public uint HbDeviceId { readonly get; set; }</code></pre>
   </div>
 
 
@@ -348,7 +348,7 @@ Struct NVAPIChipSetInfoDto  <a class="header-action link-secondary" title="View 
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public uint HbSubSystemDeviceId { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public uint HbSubSystemDeviceId { readonly get; set; }</code></pre>
   </div>
 
 
@@ -379,7 +379,7 @@ Struct NVAPIChipSetInfoDto  <a class="header-action link-secondary" title="View 
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public uint HbSubSystemVendorId { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public uint HbSubSystemVendorId { readonly get; set; }</code></pre>
   </div>
 
 
@@ -410,7 +410,7 @@ Struct NVAPIChipSetInfoDto  <a class="header-action link-secondary" title="View 
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public uint HbVendorId { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public uint HbVendorId { readonly get; set; }</code></pre>
   </div>
 
 
@@ -441,7 +441,7 @@ Struct NVAPIChipSetInfoDto  <a class="header-action link-secondary" title="View 
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public uint SubSystemDeviceId { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public uint SubSystemDeviceId { readonly get; set; }</code></pre>
   </div>
 
 
@@ -472,7 +472,7 @@ Struct NVAPIChipSetInfoDto  <a class="header-action link-secondary" title="View 
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public uint SubSystemVendorId { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public uint SubSystemVendorId { readonly get; set; }</code></pre>
   </div>
 
 
@@ -503,7 +503,7 @@ Struct NVAPIChipSetInfoDto  <a class="header-action link-secondary" title="View 
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string SubSystemVendorName { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public string SubSystemVendorName { readonly get; set; }</code></pre>
   </div>
 
 
@@ -534,7 +534,7 @@ Struct NVAPIChipSetInfoDto  <a class="header-action link-secondary" title="View 
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public uint VendorId { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public uint VendorId { readonly get; set; }</code></pre>
   </div>
 
 
@@ -565,7 +565,7 @@ Struct NVAPIChipSetInfoDto  <a class="header-action link-secondary" title="View 
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string VendorName { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public string VendorName { readonly get; set; }</code></pre>
   </div>
 
 

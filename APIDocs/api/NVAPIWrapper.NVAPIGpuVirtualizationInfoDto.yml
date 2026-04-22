@@ -36,7 +36,7 @@ items:
   summary: Virtualization info DTO.
   example: []
   syntax:
-    content: 'public readonly struct NVAPIGpuVirtualizationInfoDto : IEquatable<NVAPIGpuVirtualizationInfoDto>'
+    content: 'public struct NVAPIGpuVirtualizationInfoDto : IEquatable<NVAPIGpuVirtualizationInfoDto>'
     content.vb: Public Structure NVAPIGpuVirtualizationInfoDto Implements IEquatable(Of NVAPIGpuVirtualizationInfoDto)
   implements:
   - System.IEquatable{NVAPIWrapper.NVAPIGpuVirtualizationInfoDto}
@@ -70,11 +70,11 @@ items:
   summary: The GPU virtualization mode.
   example: []
   syntax:
-    content: public _NV_VIRTUALIZATION_MODE VirtualizationMode { get; }
+    content: public _NV_VIRTUALIZATION_MODE VirtualizationMode { readonly get; set; }
     parameters: []
     return:
       type: NVAPIWrapper._NV_VIRTUALIZATION_MODE
-    content.vb: Public ReadOnly Property VirtualizationMode As _NV_VIRTUALIZATION_MODE
+    content.vb: Public Property VirtualizationMode As _NV_VIRTUALIZATION_MODE
   overload: NVAPIWrapper.NVAPIGpuVirtualizationInfoDto.VirtualizationMode*
 - uid: NVAPIWrapper.NVAPIGpuVirtualizationInfoDto.#ctor(NVAPIWrapper._NV_VIRTUALIZATION_MODE)
   commentId: M:NVAPIWrapper.NVAPIGpuVirtualizationInfoDto.#ctor(NVAPIWrapper._NV_VIRTUALIZATION_MODE)

@@ -102,7 +102,7 @@ Struct NVAPIEncoderSessionsInfoDto  <a class="header-action link-secondary" titl
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly struct NVAPIEncoderSessionsInfoDto : IEquatable&lt;NVAPIEncoderSessionsInfoDto&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public struct NVAPIEncoderSessionsInfoDto : IEquatable&lt;NVAPIEncoderSessionsInfoDto&gt;</code></pre>
   </div>
 
 
@@ -193,7 +193,7 @@ Struct NVAPIEncoderSessionsInfoDto  <a class="header-action link-secondary" titl
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public NVAPIEncoderPerSessionInfoDto[] Sessions { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public NVAPIEncoderPerSessionInfoDto[] Sessions { readonly get; set; }</code></pre>
   </div>
 
 
@@ -225,7 +225,7 @@ Struct NVAPIEncoderSessionsInfoDto  <a class="header-action link-secondary" titl
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public uint SessionsCount { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public uint SessionsCount { readonly get; set; }</code></pre>
   </div>
 
 

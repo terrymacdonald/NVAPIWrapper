@@ -102,7 +102,7 @@ Struct NVAPIGpuScanoutIntensityDataDto  <a class="header-action link-secondary" 
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly struct NVAPIGpuScanoutIntensityDataDto : IEquatable&lt;NVAPIGpuScanoutIntensityDataDto&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public struct NVAPIGpuScanoutIntensityDataDto : IEquatable&lt;NVAPIGpuScanoutIntensityDataDto&gt;</code></pre>
   </div>
 
 
@@ -197,7 +197,7 @@ Struct NVAPIGpuScanoutIntensityDataDto  <a class="header-action link-secondary" 
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public float[] BlendingTexture { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public float[] BlendingTexture { readonly get; set; }</code></pre>
   </div>
 
 
@@ -228,7 +228,7 @@ Struct NVAPIGpuScanoutIntensityDataDto  <a class="header-action link-secondary" 
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public uint Height { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public uint Height { readonly get; set; }</code></pre>
   </div>
 
 
@@ -259,7 +259,7 @@ Struct NVAPIGpuScanoutIntensityDataDto  <a class="header-action link-secondary" 
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public uint OffsetTexChannels { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public uint OffsetTexChannels { readonly get; set; }</code></pre>
   </div>
 
 
@@ -290,7 +290,7 @@ Struct NVAPIGpuScanoutIntensityDataDto  <a class="header-action link-secondary" 
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public float[] OffsetTexture { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public float[] OffsetTexture { readonly get; set; }</code></pre>
   </div>
 
 
@@ -321,7 +321,7 @@ Struct NVAPIGpuScanoutIntensityDataDto  <a class="header-action link-secondary" 
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public uint Width { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public uint Width { readonly get; set; }</code></pre>
   </div>
 
 

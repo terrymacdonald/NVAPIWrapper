@@ -39,7 +39,7 @@ items:
   summary: Mosaic topology details DTO.
   example: []
   syntax:
-    content: 'public readonly struct NVAPIMosaicTopoDetailsDto : IEquatable<NVAPIMosaicTopoDetailsDto>'
+    content: 'public struct NVAPIMosaicTopoDetailsDto : IEquatable<NVAPIMosaicTopoDetailsDto>'
     content.vb: Public Structure NVAPIMosaicTopoDetailsDto Implements IEquatable(Of NVAPIMosaicTopoDetailsDto)
   implements:
   - System.IEquatable{NVAPIWrapper.NVAPIMosaicTopoDetailsDto}
@@ -71,11 +71,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public NVAPILogicalGpuHelper? LogicalGpu { get; }
+    content: public NVAPILogicalGpuHelper? LogicalGpu { readonly get; set; }
     parameters: []
     return:
       type: NVAPIWrapper.NVAPILogicalGpuHelper
-    content.vb: Public ReadOnly Property LogicalGpu As NVAPILogicalGpuHelper
+    content.vb: Public Property LogicalGpu As NVAPILogicalGpuHelper
   overload: NVAPIWrapper.NVAPIMosaicTopoDetailsDto.LogicalGpu*
 - uid: NVAPIWrapper.NVAPIMosaicTopoDetailsDto.ValidityMask
   commentId: P:NVAPIWrapper.NVAPIMosaicTopoDetailsDto.ValidityMask
@@ -100,11 +100,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public uint ValidityMask { get; }
+    content: public uint ValidityMask { readonly get; set; }
     parameters: []
     return:
       type: System.UInt32
-    content.vb: Public ReadOnly Property ValidityMask As UInteger
+    content.vb: Public Property ValidityMask As UInteger
   overload: NVAPIWrapper.NVAPIMosaicTopoDetailsDto.ValidityMask*
 - uid: NVAPIWrapper.NVAPIMosaicTopoDetailsDto.RowCount
   commentId: P:NVAPIWrapper.NVAPIMosaicTopoDetailsDto.RowCount
@@ -129,11 +129,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public uint RowCount { get; }
+    content: public uint RowCount { readonly get; set; }
     parameters: []
     return:
       type: System.UInt32
-    content.vb: Public ReadOnly Property RowCount As UInteger
+    content.vb: Public Property RowCount As UInteger
   overload: NVAPIWrapper.NVAPIMosaicTopoDetailsDto.RowCount*
 - uid: NVAPIWrapper.NVAPIMosaicTopoDetailsDto.ColCount
   commentId: P:NVAPIWrapper.NVAPIMosaicTopoDetailsDto.ColCount
@@ -158,11 +158,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public uint ColCount { get; }
+    content: public uint ColCount { readonly get; set; }
     parameters: []
     return:
       type: System.UInt32
-    content.vb: Public ReadOnly Property ColCount As UInteger
+    content.vb: Public Property ColCount As UInteger
   overload: NVAPIWrapper.NVAPIMosaicTopoDetailsDto.ColCount*
 - uid: NVAPIWrapper.NVAPIMosaicTopoDetailsDto.GpuLayout
   commentId: P:NVAPIWrapper.NVAPIMosaicTopoDetailsDto.GpuLayout
@@ -187,11 +187,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public NVAPIMosaicGpuLayoutCellDto[] GpuLayout { get; }
+    content: public NVAPIMosaicGpuLayoutCellDto[] GpuLayout { readonly get; set; }
     parameters: []
     return:
       type: NVAPIWrapper.NVAPIMosaicGpuLayoutCellDto[]
-    content.vb: Public ReadOnly Property GpuLayout As NVAPIMosaicGpuLayoutCellDto()
+    content.vb: Public Property GpuLayout As NVAPIMosaicGpuLayoutCellDto()
   overload: NVAPIWrapper.NVAPIMosaicTopoDetailsDto.GpuLayout*
 - uid: NVAPIWrapper.NVAPIMosaicTopoDetailsDto.#ctor(System.IntPtr,System.UInt32,System.UInt32,System.UInt32,NVAPIWrapper.NVAPIMosaicGpuLayoutCellDto[])
   commentId: M:NVAPIWrapper.NVAPIMosaicTopoDetailsDto.#ctor(System.IntPtr,System.UInt32,System.UInt32,System.UInt32,NVAPIWrapper.NVAPIMosaicGpuLayoutCellDto[])

@@ -102,7 +102,7 @@ Struct NVAPINvManagedDedicatedDisplayMetadataDto  <a class="header-action link-s
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly struct NVAPINvManagedDedicatedDisplayMetadataDto : IEquatable&lt;NVAPINvManagedDedicatedDisplayMetadataDto&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public struct NVAPINvManagedDedicatedDisplayMetadataDto : IEquatable&lt;NVAPINvManagedDedicatedDisplayMetadataDto&gt;</code></pre>
   </div>
 
 
@@ -221,7 +221,7 @@ Struct NVAPINvManagedDedicatedDisplayMetadataDto  <a class="header-action link-s
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public uint DisplayId { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public uint DisplayId { readonly get; set; }</code></pre>
   </div>
 
 
@@ -252,7 +252,7 @@ Struct NVAPINvManagedDedicatedDisplayMetadataDto  <a class="header-action link-s
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string Name { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public string Name { readonly get; set; }</code></pre>
   </div>
 
 
@@ -283,7 +283,7 @@ Struct NVAPINvManagedDedicatedDisplayMetadataDto  <a class="header-action link-s
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool NameIsAvailable { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public bool NameIsAvailable { readonly get; set; }</code></pre>
   </div>
 
 
@@ -314,7 +314,7 @@ Struct NVAPINvManagedDedicatedDisplayMetadataDto  <a class="header-action link-s
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool PositionIsAvailable { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public bool PositionIsAvailable { readonly get; set; }</code></pre>
   </div>
 
 
@@ -345,7 +345,7 @@ Struct NVAPINvManagedDedicatedDisplayMetadataDto  <a class="header-action link-s
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int PositionX { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public int PositionX { readonly get; set; }</code></pre>
   </div>
 
 
@@ -376,7 +376,7 @@ Struct NVAPINvManagedDedicatedDisplayMetadataDto  <a class="header-action link-s
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int PositionY { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public int PositionY { readonly get; set; }</code></pre>
   </div>
 
 
@@ -407,7 +407,7 @@ Struct NVAPINvManagedDedicatedDisplayMetadataDto  <a class="header-action link-s
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool RemoveName { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public bool RemoveName { readonly get; set; }</code></pre>
   </div>
 
 
@@ -438,7 +438,7 @@ Struct NVAPINvManagedDedicatedDisplayMetadataDto  <a class="header-action link-s
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool RemovePosition { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public bool RemovePosition { readonly get; set; }</code></pre>
   </div>
 
 
@@ -469,7 +469,7 @@ Struct NVAPINvManagedDedicatedDisplayMetadataDto  <a class="header-action link-s
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public uint Reserved { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public uint Reserved { readonly get; set; }</code></pre>
   </div>
 
 
@@ -500,7 +500,7 @@ Struct NVAPINvManagedDedicatedDisplayMetadataDto  <a class="header-action link-s
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool SetName { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public bool SetName { readonly get; set; }</code></pre>
   </div>
 
 
@@ -531,7 +531,7 @@ Struct NVAPINvManagedDedicatedDisplayMetadataDto  <a class="header-action link-s
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool SetPosition { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public bool SetPosition { readonly get; set; }</code></pre>
   </div>
 
 

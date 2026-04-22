@@ -34,7 +34,7 @@ items:
   summary: RISE callback settings DTO.
   example: []
   syntax:
-    content: 'public readonly struct NVAPIRiseCallbackSettingsDto : IEquatable<NVAPIRiseCallbackSettingsDto>'
+    content: 'public struct NVAPIRiseCallbackSettingsDto : IEquatable<NVAPIRiseCallbackSettingsDto>'
     content.vb: Public Structure NVAPIRiseCallbackSettingsDto Implements IEquatable(Of NVAPIRiseCallbackSettingsDto)
   implements:
   - System.IEquatable{NVAPIWrapper.NVAPIRiseCallbackSettingsDto}
@@ -106,11 +106,11 @@ items:
   summary: Callback parameter pointer.
   example: []
   syntax:
-    content: public nint CallbackParam { get; }
+    content: public nint CallbackParam { readonly get; set; }
     parameters: []
     return:
       type: System.IntPtr
-    content.vb: Public ReadOnly Property CallbackParam As IntPtr
+    content.vb: Public Property CallbackParam As IntPtr
   overload: NVAPIWrapper.NVAPIRiseCallbackSettingsDto.CallbackParam*
 - uid: NVAPIWrapper.NVAPIRiseCallbackSettingsDto.Callback
   commentId: P:NVAPIWrapper.NVAPIRiseCallbackSettingsDto.Callback
@@ -137,11 +137,11 @@ items:
   summary: Callback function pointer.
   example: []
   syntax:
-    content: public nint Callback { get; }
+    content: public nint Callback { readonly get; set; }
     parameters: []
     return:
       type: System.IntPtr
-    content.vb: Public ReadOnly Property Callback As IntPtr
+    content.vb: Public Property Callback As IntPtr
   overload: NVAPIWrapper.NVAPIRiseCallbackSettingsDto.Callback*
 - uid: NVAPIWrapper.NVAPIRiseCallbackSettingsDto.Equals(NVAPIWrapper.NVAPIRiseCallbackSettingsDto)
   commentId: M:NVAPIWrapper.NVAPIRiseCallbackSettingsDto.Equals(NVAPIWrapper.NVAPIRiseCallbackSettingsDto)

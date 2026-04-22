@@ -37,7 +37,7 @@ items:
   summary: DTO for display ID info data.
   example: []
   syntax:
-    content: 'public readonly struct NVAPIDisplayIdInfoDto : IEquatable<NVAPIDisplayIdInfoDto>'
+    content: 'public struct NVAPIDisplayIdInfoDto : IEquatable<NVAPIDisplayIdInfoDto>'
     content.vb: Public Structure NVAPIDisplayIdInfoDto Implements IEquatable(Of NVAPIDisplayIdInfoDto)
   implements:
   - System.IEquatable{NVAPIWrapper.NVAPIDisplayIdInfoDto}
@@ -69,11 +69,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public long AdapterLuid { get; }
+    content: public long AdapterLuid { readonly get; set; }
     parameters: []
     return:
       type: System.Int64
-    content.vb: Public ReadOnly Property AdapterLuid As Long
+    content.vb: Public Property AdapterLuid As Long
   overload: NVAPIWrapper.NVAPIDisplayIdInfoDto.AdapterLuid*
 - uid: NVAPIWrapper.NVAPIDisplayIdInfoDto.TargetId
   commentId: P:NVAPIWrapper.NVAPIDisplayIdInfoDto.TargetId
@@ -98,11 +98,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public uint TargetId { get; }
+    content: public uint TargetId { readonly get; set; }
     parameters: []
     return:
       type: System.UInt32
-    content.vb: Public ReadOnly Property TargetId As UInteger
+    content.vb: Public Property TargetId As UInteger
   overload: NVAPIWrapper.NVAPIDisplayIdInfoDto.TargetId*
 - uid: NVAPIWrapper.NVAPIDisplayIdInfoDto.Reserved
   commentId: P:NVAPIWrapper.NVAPIDisplayIdInfoDto.Reserved
@@ -127,11 +127,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public uint[] Reserved { get; }
+    content: public uint[] Reserved { readonly get; set; }
     parameters: []
     return:
       type: System.UInt32[]
-    content.vb: Public ReadOnly Property Reserved As UInteger()
+    content.vb: Public Property Reserved As UInteger()
   overload: NVAPIWrapper.NVAPIDisplayIdInfoDto.Reserved*
 - uid: NVAPIWrapper.NVAPIDisplayIdInfoDto.#ctor(System.Int64,System.UInt32,System.UInt32[])
   commentId: M:NVAPIWrapper.NVAPIDisplayIdInfoDto.#ctor(System.Int64,System.UInt32,System.UInt32[])

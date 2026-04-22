@@ -102,7 +102,7 @@ Struct NVAPIGpuIllumZoneInfoParamsDto  <a class="header-action link-secondary" t
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly struct NVAPIGpuIllumZoneInfoParamsDto : IEquatable&lt;NVAPIGpuIllumZoneInfoParamsDto&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public struct NVAPIGpuIllumZoneInfoParamsDto : IEquatable&lt;NVAPIGpuIllumZoneInfoParamsDto&gt;</code></pre>
   </div>
 
 
@@ -193,7 +193,7 @@ Struct NVAPIGpuIllumZoneInfoParamsDto  <a class="header-action link-secondary" t
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public uint NumIllumZones { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public uint NumIllumZones { readonly get; set; }</code></pre>
   </div>
 
 
@@ -225,7 +225,7 @@ Struct NVAPIGpuIllumZoneInfoParamsDto  <a class="header-action link-secondary" t
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public NVAPIGpuIllumZoneInfoDto[] Zones { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public NVAPIGpuIllumZoneInfoDto[] Zones { readonly get; set; }</code></pre>
   </div>
 
 

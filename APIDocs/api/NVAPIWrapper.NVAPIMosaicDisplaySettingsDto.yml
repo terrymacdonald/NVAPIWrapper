@@ -33,7 +33,7 @@ items:
   summary: Mosaic display modes DTO.
   example: []
   syntax:
-    content: 'public readonly struct NVAPIMosaicDisplaySettingsDto : IEquatable<NVAPIMosaicDisplaySettingsDto>'
+    content: 'public struct NVAPIMosaicDisplaySettingsDto : IEquatable<NVAPIMosaicDisplaySettingsDto>'
     content.vb: Public Structure NVAPIMosaicDisplaySettingsDto Implements IEquatable(Of NVAPIMosaicDisplaySettingsDto)
   implements:
   - System.IEquatable{NVAPIWrapper.NVAPIMosaicDisplaySettingsDto}
@@ -65,11 +65,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public NVAPIMosaicDisplaySettingDto[] Settings { get; }
+    content: public NVAPIMosaicDisplaySettingDto[] Settings { readonly get; set; }
     parameters: []
     return:
       type: NVAPIWrapper.NVAPIMosaicDisplaySettingDto[]
-    content.vb: Public ReadOnly Property Settings As NVAPIMosaicDisplaySettingDto()
+    content.vb: Public Property Settings As NVAPIMosaicDisplaySettingDto()
   overload: NVAPIWrapper.NVAPIMosaicDisplaySettingsDto.Settings*
 - uid: NVAPIWrapper.NVAPIMosaicDisplaySettingsDto.#ctor(NVAPIWrapper.NVAPIMosaicDisplaySettingDto[])
   commentId: M:NVAPIWrapper.NVAPIMosaicDisplaySettingsDto.#ctor(NVAPIWrapper.NVAPIMosaicDisplaySettingDto[])

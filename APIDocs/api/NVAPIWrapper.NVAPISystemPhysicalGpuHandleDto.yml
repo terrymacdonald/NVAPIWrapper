@@ -34,7 +34,7 @@ items:
   summary: Physical GPU handle data from NvAPI_SYS_GetPhysicalGPUs.
   example: []
   syntax:
-    content: 'public readonly struct NVAPISystemPhysicalGpuHandleDto : IEquatable<NVAPISystemPhysicalGpuHandleDto>'
+    content: 'public struct NVAPISystemPhysicalGpuHandleDto : IEquatable<NVAPISystemPhysicalGpuHandleDto>'
     content.vb: Public Structure NVAPISystemPhysicalGpuHandleDto Implements IEquatable(Of NVAPISystemPhysicalGpuHandleDto)
   implements:
   - System.IEquatable{NVAPIWrapper.NVAPISystemPhysicalGpuHandleDto}
@@ -66,11 +66,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public NVAPIPhysicalGpuHelper PhysicalGpu { get; }
+    content: public NVAPIPhysicalGpuHelper PhysicalGpu { readonly get; set; }
     parameters: []
     return:
       type: NVAPIWrapper.NVAPIPhysicalGpuHelper
-    content.vb: Public ReadOnly Property PhysicalGpu As NVAPIPhysicalGpuHelper
+    content.vb: Public Property PhysicalGpu As NVAPIPhysicalGpuHelper
   overload: NVAPIWrapper.NVAPISystemPhysicalGpuHandleDto.PhysicalGpu*
 - uid: NVAPIWrapper.NVAPISystemPhysicalGpuHandleDto.AdapterType
   commentId: P:NVAPIWrapper.NVAPISystemPhysicalGpuHandleDto.AdapterType
@@ -95,11 +95,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public _NV_ADAPTER_TYPE AdapterType { get; }
+    content: public _NV_ADAPTER_TYPE AdapterType { readonly get; set; }
     parameters: []
     return:
       type: NVAPIWrapper._NV_ADAPTER_TYPE
-    content.vb: Public ReadOnly Property AdapterType As _NV_ADAPTER_TYPE
+    content.vb: Public Property AdapterType As _NV_ADAPTER_TYPE
   overload: NVAPIWrapper.NVAPISystemPhysicalGpuHandleDto.AdapterType*
 - uid: NVAPIWrapper.NVAPISystemPhysicalGpuHandleDto.FromNative(NVAPIWrapper.NVAPIApiHelper,NVAPIWrapper._NV_PHYSICAL_GPU_HANDLE_DATA)
   commentId: M:NVAPIWrapper.NVAPISystemPhysicalGpuHandleDto.FromNative(NVAPIWrapper.NVAPIApiHelper,NVAPIWrapper._NV_PHYSICAL_GPU_HANDLE_DATA)

@@ -102,7 +102,7 @@ Struct NVAPIGpuScanoutIntensityStateDto  <a class="header-action link-secondary"
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly struct NVAPIGpuScanoutIntensityStateDto : IEquatable&lt;NVAPIGpuScanoutIntensityStateDto&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public struct NVAPIGpuScanoutIntensityStateDto : IEquatable&lt;NVAPIGpuScanoutIntensityStateDto&gt;</code></pre>
   </div>
 
 
@@ -189,7 +189,7 @@ Struct NVAPIGpuScanoutIntensityStateDto  <a class="header-action link-secondary"
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool IsEnabled { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public bool IsEnabled { readonly get; set; }</code></pre>
   </div>
 
 

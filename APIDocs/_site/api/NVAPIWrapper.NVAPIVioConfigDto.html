@@ -102,7 +102,7 @@ Struct NVAPIVioConfigDto  <a class="header-action link-secondary" title="View so
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly struct NVAPIVioConfigDto : IEquatable&lt;NVAPIVioConfigDto&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public struct NVAPIVioConfigDto : IEquatable&lt;NVAPIVioConfigDto&gt;</code></pre>
   </div>
 
 
@@ -189,7 +189,7 @@ Struct NVAPIVioConfigDto  <a class="header-action link-secondary" title="View so
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public byte[] RawBytes { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public byte[] RawBytes { readonly get; set; }</code></pre>
   </div>
 
 

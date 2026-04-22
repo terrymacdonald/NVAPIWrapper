@@ -35,7 +35,7 @@ items:
   summary: DTO for HDR metadata.
   example: []
   syntax:
-    content: 'public readonly struct NVAPIHdrMetadataDto : IEquatable<NVAPIHdrMetadataDto>'
+    content: 'public struct NVAPIHdrMetadataDto : IEquatable<NVAPIHdrMetadataDto>'
     content.vb: Public Structure NVAPIHdrMetadataDto Implements IEquatable(Of NVAPIHdrMetadataDto)
   implements:
   - System.IEquatable{NVAPIWrapper.NVAPIHdrMetadataDto}
@@ -69,11 +69,11 @@ items:
   summary: Native HDR metadata.
   example: []
   syntax:
-    content: public _NV_HDR_METADATA_V1 Metadata { get; }
+    content: public _NV_HDR_METADATA_V1 Metadata { readonly get; set; }
     parameters: []
     return:
       type: NVAPIWrapper._NV_HDR_METADATA_V1
-    content.vb: Public ReadOnly Property Metadata As _NV_HDR_METADATA_V1
+    content.vb: Public Property Metadata As _NV_HDR_METADATA_V1
   overload: NVAPIWrapper.NVAPIHdrMetadataDto.Metadata*
 - uid: NVAPIWrapper.NVAPIHdrMetadataDto.#ctor(NVAPIWrapper._NV_HDR_METADATA_V1)
   commentId: M:NVAPIWrapper.NVAPIHdrMetadataDto.#ctor(NVAPIWrapper._NV_HDR_METADATA_V1)

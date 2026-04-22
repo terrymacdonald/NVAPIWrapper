@@ -102,7 +102,7 @@ Struct NVAPINvLinkDeviceInfoDto  <a class="header-action link-secondary" title="
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly struct NVAPINvLinkDeviceInfoDto : IEquatable&lt;NVAPINvLinkDeviceInfoDto&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public struct NVAPINvLinkDeviceInfoDto : IEquatable&lt;NVAPINvLinkDeviceInfoDto&gt;</code></pre>
   </div>
 
 
@@ -203,7 +203,7 @@ Struct NVAPINvLinkDeviceInfoDto  <a class="header-action link-secondary" title="
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ushort Bus { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public ushort Bus { readonly get; set; }</code></pre>
   </div>
 
 
@@ -234,7 +234,7 @@ Struct NVAPINvLinkDeviceInfoDto  <a class="header-action link-secondary" title="
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ushort Device { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public ushort Device { readonly get; set; }</code></pre>
   </div>
 
 
@@ -265,7 +265,7 @@ Struct NVAPINvLinkDeviceInfoDto  <a class="header-action link-secondary" title="
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public uint DeviceIdFlags { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public uint DeviceIdFlags { readonly get; set; }</code></pre>
   </div>
 
 
@@ -296,7 +296,7 @@ Struct NVAPINvLinkDeviceInfoDto  <a class="header-action link-secondary" title="
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ulong DeviceType { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public ulong DeviceType { readonly get; set; }</code></pre>
   </div>
 
 
@@ -327,7 +327,7 @@ Struct NVAPINvLinkDeviceInfoDto  <a class="header-action link-secondary" title="
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public byte[] DeviceUUID { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public byte[] DeviceUUID { readonly get; set; }</code></pre>
   </div>
 
 
@@ -358,7 +358,7 @@ Struct NVAPINvLinkDeviceInfoDto  <a class="header-action link-secondary" title="
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ushort Domain { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public ushort Domain { readonly get; set; }</code></pre>
   </div>
 
 
@@ -389,7 +389,7 @@ Struct NVAPINvLinkDeviceInfoDto  <a class="header-action link-secondary" title="
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ushort Function { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public ushort Function { readonly get; set; }</code></pre>
   </div>
 
 
@@ -420,7 +420,7 @@ Struct NVAPINvLinkDeviceInfoDto  <a class="header-action link-secondary" title="
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public uint PciDeviceId { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public uint PciDeviceId { readonly get; set; }</code></pre>
   </div>
 
 

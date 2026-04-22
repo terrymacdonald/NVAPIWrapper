@@ -102,7 +102,7 @@ Struct NVAPIGSyncTopologyDto  <a class="header-action link-secondary" title="Vie
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly struct NVAPIGSyncTopologyDto : IEquatable&lt;NVAPIGSyncTopologyDto&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public struct NVAPIGSyncTopologyDto : IEquatable&lt;NVAPIGSyncTopologyDto&gt;</code></pre>
   </div>
 
 
@@ -194,7 +194,7 @@ Struct NVAPIGSyncTopologyDto  <a class="header-action link-secondary" title="Vie
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public NVAPIGSyncDisplayDto[] Displays { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public NVAPIGSyncDisplayDto[] Displays { readonly get; set; }</code></pre>
   </div>
 
 
@@ -225,7 +225,7 @@ Struct NVAPIGSyncTopologyDto  <a class="header-action link-secondary" title="Vie
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public NVAPIGSyncGpuDto[] Gpus { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public NVAPIGSyncGpuDto[] Gpus { readonly get; set; }</code></pre>
   </div>
 
 

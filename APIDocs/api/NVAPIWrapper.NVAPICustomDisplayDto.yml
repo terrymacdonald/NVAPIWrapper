@@ -35,7 +35,7 @@ items:
   summary: DTO for custom display.
   example: []
   syntax:
-    content: 'public readonly struct NVAPICustomDisplayDto : IEquatable<NVAPICustomDisplayDto>'
+    content: 'public struct NVAPICustomDisplayDto : IEquatable<NVAPICustomDisplayDto>'
     content.vb: Public Structure NVAPICustomDisplayDto Implements IEquatable(Of NVAPICustomDisplayDto)
   implements:
   - System.IEquatable{NVAPIWrapper.NVAPICustomDisplayDto}
@@ -69,11 +69,11 @@ items:
   summary: Native custom display.
   example: []
   syntax:
-    content: public NV_CUSTOM_DISPLAY CustomDisplay { get; }
+    content: public NV_CUSTOM_DISPLAY CustomDisplay { readonly get; set; }
     parameters: []
     return:
       type: NVAPIWrapper.NV_CUSTOM_DISPLAY
-    content.vb: Public ReadOnly Property CustomDisplay As NV_CUSTOM_DISPLAY
+    content.vb: Public Property CustomDisplay As NV_CUSTOM_DISPLAY
   overload: NVAPIWrapper.NVAPICustomDisplayDto.CustomDisplay*
 - uid: NVAPIWrapper.NVAPICustomDisplayDto.#ctor(NVAPIWrapper.NV_CUSTOM_DISPLAY)
   commentId: M:NVAPIWrapper.NVAPICustomDisplayDto.#ctor(NVAPIWrapper.NV_CUSTOM_DISPLAY)

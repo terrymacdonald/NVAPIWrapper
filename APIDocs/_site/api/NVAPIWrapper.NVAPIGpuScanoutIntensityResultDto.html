@@ -102,7 +102,7 @@ Struct NVAPIGpuScanoutIntensityResultDto  <a class="header-action link-secondary
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly struct NVAPIGpuScanoutIntensityResultDto : IEquatable&lt;NVAPIGpuScanoutIntensityResultDto&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public struct NVAPIGpuScanoutIntensityResultDto : IEquatable&lt;NVAPIGpuScanoutIntensityResultDto&gt;</code></pre>
   </div>
 
 
@@ -189,7 +189,7 @@ Struct NVAPIGpuScanoutIntensityResultDto  <a class="header-action link-secondary
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool IsSticky { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public bool IsSticky { readonly get; set; }</code></pre>
   </div>
 
 

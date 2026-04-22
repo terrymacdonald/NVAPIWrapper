@@ -36,7 +36,7 @@ items:
   summary: Illumination support DTO.
   example: []
   syntax:
-    content: 'public readonly struct NVAPIGpuIlluminationSupportDto : IEquatable<NVAPIGpuIlluminationSupportDto>'
+    content: 'public struct NVAPIGpuIlluminationSupportDto : IEquatable<NVAPIGpuIlluminationSupportDto>'
     content.vb: Public Structure NVAPIGpuIlluminationSupportDto Implements IEquatable(Of NVAPIGpuIlluminationSupportDto)
   implements:
   - System.IEquatable{NVAPIWrapper.NVAPIGpuIlluminationSupportDto}
@@ -68,11 +68,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public _NV_GPU_ILLUMINATION_ATTRIB Attribute { get; }
+    content: public _NV_GPU_ILLUMINATION_ATTRIB Attribute { readonly get; set; }
     parameters: []
     return:
       type: NVAPIWrapper._NV_GPU_ILLUMINATION_ATTRIB
-    content.vb: Public ReadOnly Property Attribute As _NV_GPU_ILLUMINATION_ATTRIB
+    content.vb: Public Property Attribute As _NV_GPU_ILLUMINATION_ATTRIB
   overload: NVAPIWrapper.NVAPIGpuIlluminationSupportDto.Attribute*
 - uid: NVAPIWrapper.NVAPIGpuIlluminationSupportDto.IsSupported
   commentId: P:NVAPIWrapper.NVAPIGpuIlluminationSupportDto.IsSupported
@@ -97,11 +97,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public bool IsSupported { get; }
+    content: public bool IsSupported { readonly get; set; }
     parameters: []
     return:
       type: System.Boolean
-    content.vb: Public ReadOnly Property IsSupported As Boolean
+    content.vb: Public Property IsSupported As Boolean
   overload: NVAPIWrapper.NVAPIGpuIlluminationSupportDto.IsSupported*
 - uid: NVAPIWrapper.NVAPIGpuIlluminationSupportDto.#ctor(NVAPIWrapper._NV_GPU_ILLUMINATION_ATTRIB,System.Boolean)
   commentId: M:NVAPIWrapper.NVAPIGpuIlluminationSupportDto.#ctor(NVAPIWrapper._NV_GPU_ILLUMINATION_ATTRIB,System.Boolean)

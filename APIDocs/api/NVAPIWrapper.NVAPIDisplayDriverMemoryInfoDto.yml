@@ -41,7 +41,7 @@ items:
   summary: Legacy display driver memory info DTO.
   example: []
   syntax:
-    content: 'public readonly struct NVAPIDisplayDriverMemoryInfoDto : IEquatable<NVAPIDisplayDriverMemoryInfoDto>'
+    content: 'public struct NVAPIDisplayDriverMemoryInfoDto : IEquatable<NVAPIDisplayDriverMemoryInfoDto>'
     content.vb: Public Structure NVAPIDisplayDriverMemoryInfoDto Implements IEquatable(Of NVAPIDisplayDriverMemoryInfoDto)
   implements:
   - System.IEquatable{NVAPIWrapper.NVAPIDisplayDriverMemoryInfoDto}
@@ -73,11 +73,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public uint DedicatedVideoMemoryKb { get; }
+    content: public uint DedicatedVideoMemoryKb { readonly get; set; }
     parameters: []
     return:
       type: System.UInt32
-    content.vb: Public ReadOnly Property DedicatedVideoMemoryKb As UInteger
+    content.vb: Public Property DedicatedVideoMemoryKb As UInteger
   overload: NVAPIWrapper.NVAPIDisplayDriverMemoryInfoDto.DedicatedVideoMemoryKb*
 - uid: NVAPIWrapper.NVAPIDisplayDriverMemoryInfoDto.AvailableDedicatedVideoMemoryKb
   commentId: P:NVAPIWrapper.NVAPIDisplayDriverMemoryInfoDto.AvailableDedicatedVideoMemoryKb
@@ -102,11 +102,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public uint AvailableDedicatedVideoMemoryKb { get; }
+    content: public uint AvailableDedicatedVideoMemoryKb { readonly get; set; }
     parameters: []
     return:
       type: System.UInt32
-    content.vb: Public ReadOnly Property AvailableDedicatedVideoMemoryKb As UInteger
+    content.vb: Public Property AvailableDedicatedVideoMemoryKb As UInteger
   overload: NVAPIWrapper.NVAPIDisplayDriverMemoryInfoDto.AvailableDedicatedVideoMemoryKb*
 - uid: NVAPIWrapper.NVAPIDisplayDriverMemoryInfoDto.SystemVideoMemoryKb
   commentId: P:NVAPIWrapper.NVAPIDisplayDriverMemoryInfoDto.SystemVideoMemoryKb
@@ -131,11 +131,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public uint SystemVideoMemoryKb { get; }
+    content: public uint SystemVideoMemoryKb { readonly get; set; }
     parameters: []
     return:
       type: System.UInt32
-    content.vb: Public ReadOnly Property SystemVideoMemoryKb As UInteger
+    content.vb: Public Property SystemVideoMemoryKb As UInteger
   overload: NVAPIWrapper.NVAPIDisplayDriverMemoryInfoDto.SystemVideoMemoryKb*
 - uid: NVAPIWrapper.NVAPIDisplayDriverMemoryInfoDto.SharedSystemMemoryKb
   commentId: P:NVAPIWrapper.NVAPIDisplayDriverMemoryInfoDto.SharedSystemMemoryKb
@@ -160,11 +160,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public uint SharedSystemMemoryKb { get; }
+    content: public uint SharedSystemMemoryKb { readonly get; set; }
     parameters: []
     return:
       type: System.UInt32
-    content.vb: Public ReadOnly Property SharedSystemMemoryKb As UInteger
+    content.vb: Public Property SharedSystemMemoryKb As UInteger
   overload: NVAPIWrapper.NVAPIDisplayDriverMemoryInfoDto.SharedSystemMemoryKb*
 - uid: NVAPIWrapper.NVAPIDisplayDriverMemoryInfoDto.CurrentAvailableDedicatedVideoMemoryKb
   commentId: P:NVAPIWrapper.NVAPIDisplayDriverMemoryInfoDto.CurrentAvailableDedicatedVideoMemoryKb
@@ -189,11 +189,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public uint CurrentAvailableDedicatedVideoMemoryKb { get; }
+    content: public uint CurrentAvailableDedicatedVideoMemoryKb { readonly get; set; }
     parameters: []
     return:
       type: System.UInt32
-    content.vb: Public ReadOnly Property CurrentAvailableDedicatedVideoMemoryKb As UInteger
+    content.vb: Public Property CurrentAvailableDedicatedVideoMemoryKb As UInteger
   overload: NVAPIWrapper.NVAPIDisplayDriverMemoryInfoDto.CurrentAvailableDedicatedVideoMemoryKb*
 - uid: NVAPIWrapper.NVAPIDisplayDriverMemoryInfoDto.DedicatedVideoMemoryEvictionsSizeKb
   commentId: P:NVAPIWrapper.NVAPIDisplayDriverMemoryInfoDto.DedicatedVideoMemoryEvictionsSizeKb
@@ -218,11 +218,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public uint DedicatedVideoMemoryEvictionsSizeKb { get; }
+    content: public uint DedicatedVideoMemoryEvictionsSizeKb { readonly get; set; }
     parameters: []
     return:
       type: System.UInt32
-    content.vb: Public ReadOnly Property DedicatedVideoMemoryEvictionsSizeKb As UInteger
+    content.vb: Public Property DedicatedVideoMemoryEvictionsSizeKb As UInteger
   overload: NVAPIWrapper.NVAPIDisplayDriverMemoryInfoDto.DedicatedVideoMemoryEvictionsSizeKb*
 - uid: NVAPIWrapper.NVAPIDisplayDriverMemoryInfoDto.DedicatedVideoMemoryEvictionCount
   commentId: P:NVAPIWrapper.NVAPIDisplayDriverMemoryInfoDto.DedicatedVideoMemoryEvictionCount
@@ -247,11 +247,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public uint DedicatedVideoMemoryEvictionCount { get; }
+    content: public uint DedicatedVideoMemoryEvictionCount { readonly get; set; }
     parameters: []
     return:
       type: System.UInt32
-    content.vb: Public ReadOnly Property DedicatedVideoMemoryEvictionCount As UInteger
+    content.vb: Public Property DedicatedVideoMemoryEvictionCount As UInteger
   overload: NVAPIWrapper.NVAPIDisplayDriverMemoryInfoDto.DedicatedVideoMemoryEvictionCount*
 - uid: NVAPIWrapper.NVAPIDisplayDriverMemoryInfoDto.#ctor(System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32)
   commentId: M:NVAPIWrapper.NVAPIDisplayDriverMemoryInfoDto.#ctor(System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32)

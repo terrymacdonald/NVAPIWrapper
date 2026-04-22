@@ -102,7 +102,7 @@ Struct NVAPIMosaicViewportsDto  <a class="header-action link-secondary" title="V
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly struct NVAPIMosaicViewportsDto : IEquatable&lt;NVAPIMosaicViewportsDto&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public struct NVAPIMosaicViewportsDto : IEquatable&lt;NVAPIMosaicViewportsDto&gt;</code></pre>
   </div>
 
 
@@ -194,7 +194,7 @@ Struct NVAPIMosaicViewportsDto  <a class="header-action link-secondary" title="V
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool BezelCorrected { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public bool BezelCorrected { readonly get; set; }</code></pre>
   </div>
 
 
@@ -225,7 +225,7 @@ Struct NVAPIMosaicViewportsDto  <a class="header-action link-secondary" title="V
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public NVAPIRectDto[] Viewports { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public NVAPIRectDto[] Viewports { readonly get; set; }</code></pre>
   </div>
 
 

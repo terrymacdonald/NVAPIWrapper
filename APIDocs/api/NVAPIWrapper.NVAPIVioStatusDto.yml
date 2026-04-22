@@ -36,7 +36,7 @@ items:
   summary: VIO status DTO (raw bytes due to union layout).
   example: []
   syntax:
-    content: 'public readonly struct NVAPIVioStatusDto : IEquatable<NVAPIVioStatusDto>'
+    content: 'public struct NVAPIVioStatusDto : IEquatable<NVAPIVioStatusDto>'
     content.vb: Public Structure NVAPIVioStatusDto Implements IEquatable(Of NVAPIVioStatusDto)
   implements:
   - System.IEquatable{NVAPIWrapper.NVAPIVioStatusDto}
@@ -68,11 +68,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public byte[] RawBytes { get; }
+    content: public byte[] RawBytes { readonly get; set; }
     parameters: []
     return:
       type: System.Byte[]
-    content.vb: Public ReadOnly Property RawBytes As Byte()
+    content.vb: Public Property RawBytes As Byte()
   overload: NVAPIWrapper.NVAPIVioStatusDto.RawBytes*
 - uid: NVAPIWrapper.NVAPIVioStatusDto.#ctor(System.Byte[])
   commentId: M:NVAPIWrapper.NVAPIVioStatusDto.#ctor(System.Byte[])

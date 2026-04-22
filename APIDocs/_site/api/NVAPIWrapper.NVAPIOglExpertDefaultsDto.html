@@ -102,7 +102,7 @@ Struct NVAPIOglExpertDefaultsDto  <a class="header-action link-secondary" title=
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly struct NVAPIOglExpertDefaultsDto : IEquatable&lt;NVAPIOglExpertDefaultsDto&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public struct NVAPIOglExpertDefaultsDto : IEquatable&lt;NVAPIOglExpertDefaultsDto&gt;</code></pre>
   </div>
 
 
@@ -193,7 +193,7 @@ Struct NVAPIOglExpertDefaultsDto  <a class="header-action link-secondary" title=
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public uint DetailMask { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public uint DetailMask { readonly get; set; }</code></pre>
   </div>
 
 
@@ -224,7 +224,7 @@ Struct NVAPIOglExpertDefaultsDto  <a class="header-action link-secondary" title=
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public uint OutputMask { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public uint OutputMask { readonly get; set; }</code></pre>
   </div>
 
 
@@ -255,7 +255,7 @@ Struct NVAPIOglExpertDefaultsDto  <a class="header-action link-secondary" title=
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public uint ReportMask { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public uint ReportMask { readonly get; set; }</code></pre>
   </div>
 
 

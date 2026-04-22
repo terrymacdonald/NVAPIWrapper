@@ -35,7 +35,7 @@ items:
   summary: DTO for preferred stereo display.
   example: []
   syntax:
-    content: 'public readonly struct NVAPIPreferredStereoDisplayDto : IEquatable<NVAPIPreferredStereoDisplayDto>'
+    content: 'public struct NVAPIPreferredStereoDisplayDto : IEquatable<NVAPIPreferredStereoDisplayDto>'
     content.vb: Public Structure NVAPIPreferredStereoDisplayDto Implements IEquatable(Of NVAPIPreferredStereoDisplayDto)
   implements:
   - System.IEquatable{NVAPIWrapper.NVAPIPreferredStereoDisplayDto}
@@ -69,11 +69,11 @@ items:
   summary: Display ID.
   example: []
   syntax:
-    content: public uint DisplayId { get; }
+    content: public uint DisplayId { readonly get; set; }
     parameters: []
     return:
       type: System.UInt32
-    content.vb: Public ReadOnly Property DisplayId As UInteger
+    content.vb: Public Property DisplayId As UInteger
   overload: NVAPIWrapper.NVAPIPreferredStereoDisplayDto.DisplayId*
 - uid: NVAPIWrapper.NVAPIPreferredStereoDisplayDto.#ctor(System.UInt32)
   commentId: M:NVAPIWrapper.NVAPIPreferredStereoDisplayDto.#ctor(System.UInt32)

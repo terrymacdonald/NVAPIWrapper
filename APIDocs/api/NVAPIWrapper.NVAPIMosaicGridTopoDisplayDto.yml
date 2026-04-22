@@ -40,7 +40,7 @@ items:
   summary: Mosaic grid display DTO.
   example: []
   syntax:
-    content: 'public readonly struct NVAPIMosaicGridTopoDisplayDto : IEquatable<NVAPIMosaicGridTopoDisplayDto>'
+    content: 'public struct NVAPIMosaicGridTopoDisplayDto : IEquatable<NVAPIMosaicGridTopoDisplayDto>'
     content.vb: Public Structure NVAPIMosaicGridTopoDisplayDto Implements IEquatable(Of NVAPIMosaicGridTopoDisplayDto)
   implements:
   - System.IEquatable{NVAPIWrapper.NVAPIMosaicGridTopoDisplayDto}
@@ -72,11 +72,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public uint DisplayId { get; }
+    content: public uint DisplayId { readonly get; set; }
     parameters: []
     return:
       type: System.UInt32
-    content.vb: Public ReadOnly Property DisplayId As UInteger
+    content.vb: Public Property DisplayId As UInteger
   overload: NVAPIWrapper.NVAPIMosaicGridTopoDisplayDto.DisplayId*
 - uid: NVAPIWrapper.NVAPIMosaicGridTopoDisplayDto.OverlapX
   commentId: P:NVAPIWrapper.NVAPIMosaicGridTopoDisplayDto.OverlapX
@@ -101,11 +101,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public int OverlapX { get; }
+    content: public int OverlapX { readonly get; set; }
     parameters: []
     return:
       type: System.Int32
-    content.vb: Public ReadOnly Property OverlapX As Integer
+    content.vb: Public Property OverlapX As Integer
   overload: NVAPIWrapper.NVAPIMosaicGridTopoDisplayDto.OverlapX*
 - uid: NVAPIWrapper.NVAPIMosaicGridTopoDisplayDto.OverlapY
   commentId: P:NVAPIWrapper.NVAPIMosaicGridTopoDisplayDto.OverlapY
@@ -130,11 +130,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public int OverlapY { get; }
+    content: public int OverlapY { readonly get; set; }
     parameters: []
     return:
       type: System.Int32
-    content.vb: Public ReadOnly Property OverlapY As Integer
+    content.vb: Public Property OverlapY As Integer
   overload: NVAPIWrapper.NVAPIMosaicGridTopoDisplayDto.OverlapY*
 - uid: NVAPIWrapper.NVAPIMosaicGridTopoDisplayDto.Rotation
   commentId: P:NVAPIWrapper.NVAPIMosaicGridTopoDisplayDto.Rotation
@@ -159,11 +159,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public _NV_ROTATE Rotation { get; }
+    content: public _NV_ROTATE Rotation { readonly get; set; }
     parameters: []
     return:
       type: NVAPIWrapper._NV_ROTATE
-    content.vb: Public ReadOnly Property Rotation As _NV_ROTATE
+    content.vb: Public Property Rotation As _NV_ROTATE
   overload: NVAPIWrapper.NVAPIMosaicGridTopoDisplayDto.Rotation*
 - uid: NVAPIWrapper.NVAPIMosaicGridTopoDisplayDto.CloneGroup
   commentId: P:NVAPIWrapper.NVAPIMosaicGridTopoDisplayDto.CloneGroup
@@ -188,11 +188,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public uint CloneGroup { get; }
+    content: public uint CloneGroup { readonly get; set; }
     parameters: []
     return:
       type: System.UInt32
-    content.vb: Public ReadOnly Property CloneGroup As UInteger
+    content.vb: Public Property CloneGroup As UInteger
   overload: NVAPIWrapper.NVAPIMosaicGridTopoDisplayDto.CloneGroup*
 - uid: NVAPIWrapper.NVAPIMosaicGridTopoDisplayDto.PixelShiftType
   commentId: P:NVAPIWrapper.NVAPIMosaicGridTopoDisplayDto.PixelShiftType
@@ -217,11 +217,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public _NV_PIXEL_SHIFT_TYPE PixelShiftType { get; }
+    content: public _NV_PIXEL_SHIFT_TYPE PixelShiftType { readonly get; set; }
     parameters: []
     return:
       type: NVAPIWrapper._NV_PIXEL_SHIFT_TYPE
-    content.vb: Public ReadOnly Property PixelShiftType As _NV_PIXEL_SHIFT_TYPE
+    content.vb: Public Property PixelShiftType As _NV_PIXEL_SHIFT_TYPE
   overload: NVAPIWrapper.NVAPIMosaicGridTopoDisplayDto.PixelShiftType*
 - uid: NVAPIWrapper.NVAPIMosaicGridTopoDisplayDto.#ctor(System.UInt32,System.Int32,System.Int32,NVAPIWrapper._NV_ROTATE,System.UInt32,NVAPIWrapper._NV_PIXEL_SHIFT_TYPE)
   commentId: M:NVAPIWrapper.NVAPIMosaicGridTopoDisplayDto.#ctor(System.UInt32,System.Int32,System.Int32,NVAPIWrapper._NV_ROTATE,System.UInt32,NVAPIWrapper._NV_PIXEL_SHIFT_TYPE)

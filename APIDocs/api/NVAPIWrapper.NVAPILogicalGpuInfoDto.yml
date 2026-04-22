@@ -36,7 +36,7 @@ items:
   summary: Logical GPU info DTO.
   example: []
   syntax:
-    content: 'public readonly struct NVAPILogicalGpuInfoDto : IEquatable<NVAPILogicalGpuInfoDto>'
+    content: 'public struct NVAPILogicalGpuInfoDto : IEquatable<NVAPILogicalGpuInfoDto>'
     content.vb: Public Structure NVAPILogicalGpuInfoDto Implements IEquatable(Of NVAPILogicalGpuInfoDto)
   implements:
   - System.IEquatable{NVAPIWrapper.NVAPILogicalGpuInfoDto}
@@ -68,11 +68,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public NVAPIPhysicalGpuHelper[] PhysicalGpus { get; }
+    content: public NVAPIPhysicalGpuHelper[] PhysicalGpus { readonly get; set; }
     parameters: []
     return:
       type: NVAPIWrapper.NVAPIPhysicalGpuHelper[]
-    content.vb: Public ReadOnly Property PhysicalGpus As NVAPIPhysicalGpuHelper()
+    content.vb: Public Property PhysicalGpus As NVAPIPhysicalGpuHelper()
   overload: NVAPIWrapper.NVAPILogicalGpuInfoDto.PhysicalGpus*
 - uid: NVAPIWrapper.NVAPILogicalGpuInfoDto.PhysicalGpuCount
   commentId: P:NVAPIWrapper.NVAPILogicalGpuInfoDto.PhysicalGpuCount
@@ -97,11 +97,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public uint PhysicalGpuCount { get; }
+    content: public uint PhysicalGpuCount { readonly get; set; }
     parameters: []
     return:
       type: System.UInt32
-    content.vb: Public ReadOnly Property PhysicalGpuCount As UInteger
+    content.vb: Public Property PhysicalGpuCount As UInteger
   overload: NVAPIWrapper.NVAPILogicalGpuInfoDto.PhysicalGpuCount*
 - uid: NVAPIWrapper.NVAPILogicalGpuInfoDto.OsAdapterId
   commentId: P:NVAPIWrapper.NVAPILogicalGpuInfoDto.OsAdapterId
@@ -126,11 +126,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public _LUID? OsAdapterId { get; }
+    content: public _LUID? OsAdapterId { readonly get; set; }
     parameters: []
     return:
       type: System.Nullable{NVAPIWrapper._LUID}
-    content.vb: Public ReadOnly Property OsAdapterId As _LUID?
+    content.vb: Public Property OsAdapterId As _LUID?
   overload: NVAPIWrapper.NVAPILogicalGpuInfoDto.OsAdapterId*
 - uid: NVAPIWrapper.NVAPILogicalGpuInfoDto.Reserved
   commentId: P:NVAPIWrapper.NVAPILogicalGpuInfoDto.Reserved
@@ -155,11 +155,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public uint[] Reserved { get; }
+    content: public uint[] Reserved { readonly get; set; }
     parameters: []
     return:
       type: System.UInt32[]
-    content.vb: Public ReadOnly Property Reserved As UInteger()
+    content.vb: Public Property Reserved As UInteger()
   overload: NVAPIWrapper.NVAPILogicalGpuInfoDto.Reserved*
 - uid: NVAPIWrapper.NVAPILogicalGpuInfoDto.FromNative(NVAPIWrapper.NVAPIApiHelper,NVAPIWrapper._NV_LOGICAL_GPU_DATA_V1)
   commentId: M:NVAPIWrapper.NVAPILogicalGpuInfoDto.FromNative(NVAPIWrapper.NVAPIApiHelper,NVAPIWrapper._NV_LOGICAL_GPU_DATA_V1)

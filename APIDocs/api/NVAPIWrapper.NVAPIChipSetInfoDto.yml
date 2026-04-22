@@ -45,7 +45,7 @@ items:
   summary: Chipset information DTO.
   example: []
   syntax:
-    content: 'public readonly struct NVAPIChipSetInfoDto : IEquatable<NVAPIChipSetInfoDto>'
+    content: 'public struct NVAPIChipSetInfoDto : IEquatable<NVAPIChipSetInfoDto>'
     content.vb: Public Structure NVAPIChipSetInfoDto Implements IEquatable(Of NVAPIChipSetInfoDto)
   implements:
   - System.IEquatable{NVAPIWrapper.NVAPIChipSetInfoDto}
@@ -77,11 +77,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public uint VendorId { get; }
+    content: public uint VendorId { readonly get; set; }
     parameters: []
     return:
       type: System.UInt32
-    content.vb: Public ReadOnly Property VendorId As UInteger
+    content.vb: Public Property VendorId As UInteger
   overload: NVAPIWrapper.NVAPIChipSetInfoDto.VendorId*
 - uid: NVAPIWrapper.NVAPIChipSetInfoDto.DeviceId
   commentId: P:NVAPIWrapper.NVAPIChipSetInfoDto.DeviceId
@@ -106,11 +106,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public uint DeviceId { get; }
+    content: public uint DeviceId { readonly get; set; }
     parameters: []
     return:
       type: System.UInt32
-    content.vb: Public ReadOnly Property DeviceId As UInteger
+    content.vb: Public Property DeviceId As UInteger
   overload: NVAPIWrapper.NVAPIChipSetInfoDto.DeviceId*
 - uid: NVAPIWrapper.NVAPIChipSetInfoDto.VendorName
   commentId: P:NVAPIWrapper.NVAPIChipSetInfoDto.VendorName
@@ -135,11 +135,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public string VendorName { get; }
+    content: public string VendorName { readonly get; set; }
     parameters: []
     return:
       type: System.String
-    content.vb: Public ReadOnly Property VendorName As String
+    content.vb: Public Property VendorName As String
   overload: NVAPIWrapper.NVAPIChipSetInfoDto.VendorName*
 - uid: NVAPIWrapper.NVAPIChipSetInfoDto.ChipsetName
   commentId: P:NVAPIWrapper.NVAPIChipSetInfoDto.ChipsetName
@@ -164,11 +164,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public string ChipsetName { get; }
+    content: public string ChipsetName { readonly get; set; }
     parameters: []
     return:
       type: System.String
-    content.vb: Public ReadOnly Property ChipsetName As String
+    content.vb: Public Property ChipsetName As String
   overload: NVAPIWrapper.NVAPIChipSetInfoDto.ChipsetName*
 - uid: NVAPIWrapper.NVAPIChipSetInfoDto.Flags
   commentId: P:NVAPIWrapper.NVAPIChipSetInfoDto.Flags
@@ -193,11 +193,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public uint Flags { get; }
+    content: public uint Flags { readonly get; set; }
     parameters: []
     return:
       type: System.UInt32
-    content.vb: Public ReadOnly Property Flags As UInteger
+    content.vb: Public Property Flags As UInteger
   overload: NVAPIWrapper.NVAPIChipSetInfoDto.Flags*
 - uid: NVAPIWrapper.NVAPIChipSetInfoDto.SubSystemVendorId
   commentId: P:NVAPIWrapper.NVAPIChipSetInfoDto.SubSystemVendorId
@@ -222,11 +222,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public uint SubSystemVendorId { get; }
+    content: public uint SubSystemVendorId { readonly get; set; }
     parameters: []
     return:
       type: System.UInt32
-    content.vb: Public ReadOnly Property SubSystemVendorId As UInteger
+    content.vb: Public Property SubSystemVendorId As UInteger
   overload: NVAPIWrapper.NVAPIChipSetInfoDto.SubSystemVendorId*
 - uid: NVAPIWrapper.NVAPIChipSetInfoDto.SubSystemDeviceId
   commentId: P:NVAPIWrapper.NVAPIChipSetInfoDto.SubSystemDeviceId
@@ -251,11 +251,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public uint SubSystemDeviceId { get; }
+    content: public uint SubSystemDeviceId { readonly get; set; }
     parameters: []
     return:
       type: System.UInt32
-    content.vb: Public ReadOnly Property SubSystemDeviceId As UInteger
+    content.vb: Public Property SubSystemDeviceId As UInteger
   overload: NVAPIWrapper.NVAPIChipSetInfoDto.SubSystemDeviceId*
 - uid: NVAPIWrapper.NVAPIChipSetInfoDto.SubSystemVendorName
   commentId: P:NVAPIWrapper.NVAPIChipSetInfoDto.SubSystemVendorName
@@ -280,11 +280,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public string SubSystemVendorName { get; }
+    content: public string SubSystemVendorName { readonly get; set; }
     parameters: []
     return:
       type: System.String
-    content.vb: Public ReadOnly Property SubSystemVendorName As String
+    content.vb: Public Property SubSystemVendorName As String
   overload: NVAPIWrapper.NVAPIChipSetInfoDto.SubSystemVendorName*
 - uid: NVAPIWrapper.NVAPIChipSetInfoDto.HbVendorId
   commentId: P:NVAPIWrapper.NVAPIChipSetInfoDto.HbVendorId
@@ -309,11 +309,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public uint HbVendorId { get; }
+    content: public uint HbVendorId { readonly get; set; }
     parameters: []
     return:
       type: System.UInt32
-    content.vb: Public ReadOnly Property HbVendorId As UInteger
+    content.vb: Public Property HbVendorId As UInteger
   overload: NVAPIWrapper.NVAPIChipSetInfoDto.HbVendorId*
 - uid: NVAPIWrapper.NVAPIChipSetInfoDto.HbDeviceId
   commentId: P:NVAPIWrapper.NVAPIChipSetInfoDto.HbDeviceId
@@ -338,11 +338,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public uint HbDeviceId { get; }
+    content: public uint HbDeviceId { readonly get; set; }
     parameters: []
     return:
       type: System.UInt32
-    content.vb: Public ReadOnly Property HbDeviceId As UInteger
+    content.vb: Public Property HbDeviceId As UInteger
   overload: NVAPIWrapper.NVAPIChipSetInfoDto.HbDeviceId*
 - uid: NVAPIWrapper.NVAPIChipSetInfoDto.HbSubSystemVendorId
   commentId: P:NVAPIWrapper.NVAPIChipSetInfoDto.HbSubSystemVendorId
@@ -367,11 +367,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public uint HbSubSystemVendorId { get; }
+    content: public uint HbSubSystemVendorId { readonly get; set; }
     parameters: []
     return:
       type: System.UInt32
-    content.vb: Public ReadOnly Property HbSubSystemVendorId As UInteger
+    content.vb: Public Property HbSubSystemVendorId As UInteger
   overload: NVAPIWrapper.NVAPIChipSetInfoDto.HbSubSystemVendorId*
 - uid: NVAPIWrapper.NVAPIChipSetInfoDto.HbSubSystemDeviceId
   commentId: P:NVAPIWrapper.NVAPIChipSetInfoDto.HbSubSystemDeviceId
@@ -396,11 +396,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public uint HbSubSystemDeviceId { get; }
+    content: public uint HbSubSystemDeviceId { readonly get; set; }
     parameters: []
     return:
       type: System.UInt32
-    content.vb: Public ReadOnly Property HbSubSystemDeviceId As UInteger
+    content.vb: Public Property HbSubSystemDeviceId As UInteger
   overload: NVAPIWrapper.NVAPIChipSetInfoDto.HbSubSystemDeviceId*
 - uid: NVAPIWrapper.NVAPIChipSetInfoDto.#ctor(System.UInt32,System.UInt32,System.String,System.String,System.UInt32,System.UInt32,System.UInt32,System.String,System.UInt32,System.UInt32,System.UInt32,System.UInt32)
   commentId: M:NVAPIWrapper.NVAPIChipSetInfoDto.#ctor(System.UInt32,System.UInt32,System.String,System.String,System.UInt32,System.UInt32,System.UInt32,System.String,System.UInt32,System.UInt32,System.UInt32,System.UInt32)

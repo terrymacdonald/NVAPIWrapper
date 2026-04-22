@@ -36,7 +36,7 @@ items:
   summary: Illumination value DTO.
   example: []
   syntax:
-    content: 'public readonly struct NVAPIGpuIlluminationDto : IEquatable<NVAPIGpuIlluminationDto>'
+    content: 'public struct NVAPIGpuIlluminationDto : IEquatable<NVAPIGpuIlluminationDto>'
     content.vb: Public Structure NVAPIGpuIlluminationDto Implements IEquatable(Of NVAPIGpuIlluminationDto)
   implements:
   - System.IEquatable{NVAPIWrapper.NVAPIGpuIlluminationDto}
@@ -68,11 +68,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public _NV_GPU_ILLUMINATION_ATTRIB Attribute { get; }
+    content: public _NV_GPU_ILLUMINATION_ATTRIB Attribute { readonly get; set; }
     parameters: []
     return:
       type: NVAPIWrapper._NV_GPU_ILLUMINATION_ATTRIB
-    content.vb: Public ReadOnly Property Attribute As _NV_GPU_ILLUMINATION_ATTRIB
+    content.vb: Public Property Attribute As _NV_GPU_ILLUMINATION_ATTRIB
   overload: NVAPIWrapper.NVAPIGpuIlluminationDto.Attribute*
 - uid: NVAPIWrapper.NVAPIGpuIlluminationDto.Value
   commentId: P:NVAPIWrapper.NVAPIGpuIlluminationDto.Value
@@ -97,11 +97,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public uint Value { get; }
+    content: public uint Value { readonly get; set; }
     parameters: []
     return:
       type: System.UInt32
-    content.vb: Public ReadOnly Property Value As UInteger
+    content.vb: Public Property Value As UInteger
   overload: NVAPIWrapper.NVAPIGpuIlluminationDto.Value*
 - uid: NVAPIWrapper.NVAPIGpuIlluminationDto.#ctor(NVAPIWrapper._NV_GPU_ILLUMINATION_ATTRIB,System.UInt32)
   commentId: M:NVAPIWrapper.NVAPIGpuIlluminationDto.#ctor(NVAPIWrapper._NV_GPU_ILLUMINATION_ATTRIB,System.UInt32)

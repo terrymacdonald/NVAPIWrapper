@@ -35,7 +35,7 @@ items:
   summary: Scanout composition parameter DTO.
   example: []
   syntax:
-    content: 'public readonly struct NVAPIGpuScanoutCompositionParameterDto : IEquatable<NVAPIGpuScanoutCompositionParameterDto>'
+    content: 'public struct NVAPIGpuScanoutCompositionParameterDto : IEquatable<NVAPIGpuScanoutCompositionParameterDto>'
     content.vb: Public Structure NVAPIGpuScanoutCompositionParameterDto Implements IEquatable(Of NVAPIGpuScanoutCompositionParameterDto)
   implements:
   - System.IEquatable{NVAPIWrapper.NVAPIGpuScanoutCompositionParameterDto}
@@ -67,11 +67,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public NV_GPU_SCANOUT_COMPOSITION_PARAMETER Parameter { get; }
+    content: public NV_GPU_SCANOUT_COMPOSITION_PARAMETER Parameter { readonly get; set; }
     parameters: []
     return:
       type: NVAPIWrapper.NV_GPU_SCANOUT_COMPOSITION_PARAMETER
-    content.vb: Public ReadOnly Property Parameter As NV_GPU_SCANOUT_COMPOSITION_PARAMETER
+    content.vb: Public Property Parameter As NV_GPU_SCANOUT_COMPOSITION_PARAMETER
   overload: NVAPIWrapper.NVAPIGpuScanoutCompositionParameterDto.Parameter*
 - uid: NVAPIWrapper.NVAPIGpuScanoutCompositionParameterDto.Value
   commentId: P:NVAPIWrapper.NVAPIGpuScanoutCompositionParameterDto.Value
@@ -96,11 +96,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public NV_GPU_SCANOUT_COMPOSITION_PARAMETER_VALUE Value { get; }
+    content: public NV_GPU_SCANOUT_COMPOSITION_PARAMETER_VALUE Value { readonly get; set; }
     parameters: []
     return:
       type: NVAPIWrapper.NV_GPU_SCANOUT_COMPOSITION_PARAMETER_VALUE
-    content.vb: Public ReadOnly Property Value As NV_GPU_SCANOUT_COMPOSITION_PARAMETER_VALUE
+    content.vb: Public Property Value As NV_GPU_SCANOUT_COMPOSITION_PARAMETER_VALUE
   overload: NVAPIWrapper.NVAPIGpuScanoutCompositionParameterDto.Value*
 - uid: NVAPIWrapper.NVAPIGpuScanoutCompositionParameterDto.Container
   commentId: P:NVAPIWrapper.NVAPIGpuScanoutCompositionParameterDto.Container
@@ -125,11 +125,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public float Container { get; }
+    content: public float Container { readonly get; set; }
     parameters: []
     return:
       type: System.Single
-    content.vb: Public ReadOnly Property Container As Single
+    content.vb: Public Property Container As Single
   overload: NVAPIWrapper.NVAPIGpuScanoutCompositionParameterDto.Container*
 - uid: NVAPIWrapper.NVAPIGpuScanoutCompositionParameterDto.#ctor(NVAPIWrapper.NV_GPU_SCANOUT_COMPOSITION_PARAMETER,NVAPIWrapper.NV_GPU_SCANOUT_COMPOSITION_PARAMETER_VALUE,System.Single)
   commentId: M:NVAPIWrapper.NVAPIGpuScanoutCompositionParameterDto.#ctor(NVAPIWrapper.NV_GPU_SCANOUT_COMPOSITION_PARAMETER,NVAPIWrapper.NV_GPU_SCANOUT_COMPOSITION_PARAMETER_VALUE,System.Single)

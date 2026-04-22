@@ -35,7 +35,7 @@ items:
   summary: DTO for HDR color data.
   example: []
   syntax:
-    content: 'public readonly struct NVAPIHdrColorDataDto : IEquatable<NVAPIHdrColorDataDto>'
+    content: 'public struct NVAPIHdrColorDataDto : IEquatable<NVAPIHdrColorDataDto>'
     content.vb: Public Structure NVAPIHdrColorDataDto Implements IEquatable(Of NVAPIHdrColorDataDto)
   implements:
   - System.IEquatable{NVAPIWrapper.NVAPIHdrColorDataDto}
@@ -69,11 +69,11 @@ items:
   summary: Native HDR color data.
   example: []
   syntax:
-    content: public _NV_HDR_COLOR_DATA_V2 Data { get; }
+    content: public _NV_HDR_COLOR_DATA_V2 Data { readonly get; set; }
     parameters: []
     return:
       type: NVAPIWrapper._NV_HDR_COLOR_DATA_V2
-    content.vb: Public ReadOnly Property Data As _NV_HDR_COLOR_DATA_V2
+    content.vb: Public Property Data As _NV_HDR_COLOR_DATA_V2
   overload: NVAPIWrapper.NVAPIHdrColorDataDto.Data*
 - uid: NVAPIWrapper.NVAPIHdrColorDataDto.#ctor(NVAPIWrapper._NV_HDR_COLOR_DATA_V2)
   commentId: M:NVAPIWrapper.NVAPIHdrColorDataDto.#ctor(NVAPIWrapper._NV_HDR_COLOR_DATA_V2)

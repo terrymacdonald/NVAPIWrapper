@@ -102,7 +102,7 @@ Struct NVAPII2CInfoDto  <a class="header-action link-secondary" title="View sour
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly struct NVAPII2CInfoDto : IEquatable&lt;NVAPII2CInfoDto&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public struct NVAPII2CInfoDto : IEquatable&lt;NVAPII2CInfoDto&gt;</code></pre>
   </div>
 
 
@@ -205,7 +205,7 @@ Struct NVAPII2CInfoDto  <a class="header-action link-secondary" title="View sour
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public byte[] Data { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public byte[] Data { readonly get; set; }</code></pre>
   </div>
 
 
@@ -236,7 +236,7 @@ Struct NVAPII2CInfoDto  <a class="header-action link-secondary" title="View sour
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public uint DisplayMask { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public uint DisplayMask { readonly get; set; }</code></pre>
   </div>
 
 
@@ -267,7 +267,7 @@ Struct NVAPII2CInfoDto  <a class="header-action link-secondary" title="View sour
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public byte I2cDevAddress { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public byte I2cDevAddress { readonly get; set; }</code></pre>
   </div>
 
 
@@ -298,7 +298,7 @@ Struct NVAPII2CInfoDto  <a class="header-action link-secondary" title="View sour
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public uint I2cSpeed { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public uint I2cSpeed { readonly get; set; }</code></pre>
   </div>
 
 
@@ -329,7 +329,7 @@ Struct NVAPII2CInfoDto  <a class="header-action link-secondary" title="View sour
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public NV_I2C_SPEED I2cSpeedKhz { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public NV_I2C_SPEED I2cSpeedKhz { readonly get; set; }</code></pre>
   </div>
 
 
@@ -360,7 +360,7 @@ Struct NVAPII2CInfoDto  <a class="header-action link-secondary" title="View sour
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool IsDDCPort { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public bool IsDDCPort { readonly get; set; }</code></pre>
   </div>
 
 
@@ -391,7 +391,7 @@ Struct NVAPII2CInfoDto  <a class="header-action link-secondary" title="View sour
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool IsPortIdSet { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public bool IsPortIdSet { readonly get; set; }</code></pre>
   </div>
 
 
@@ -422,7 +422,7 @@ Struct NVAPII2CInfoDto  <a class="header-action link-secondary" title="View sour
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public byte PortId { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public byte PortId { readonly get; set; }</code></pre>
   </div>
 
 
@@ -453,7 +453,7 @@ Struct NVAPII2CInfoDto  <a class="header-action link-secondary" title="View sour
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public byte[] RegisterAddress { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public byte[] RegisterAddress { readonly get; set; }</code></pre>
   </div>
 
 

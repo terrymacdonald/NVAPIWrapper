@@ -102,7 +102,7 @@ Struct NVAPIGpuAndOutputIdDto  <a class="header-action link-secondary" title="Vi
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly struct NVAPIGpuAndOutputIdDto : IEquatable&lt;NVAPIGpuAndOutputIdDto&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public struct NVAPIGpuAndOutputIdDto : IEquatable&lt;NVAPIGpuAndOutputIdDto&gt;</code></pre>
   </div>
 
 
@@ -154,7 +154,7 @@ Struct NVAPIGpuAndOutputIdDto  <a class="header-action link-secondary" title="Vi
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public uint OutputId { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public uint OutputId { readonly get; set; }</code></pre>
   </div>
 
 
@@ -185,7 +185,7 @@ Struct NVAPIGpuAndOutputIdDto  <a class="header-action link-secondary" title="Vi
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public NVAPIPhysicalGpuHelper PhysicalGpu { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public NVAPIPhysicalGpuHelper PhysicalGpu { readonly get; set; }</code></pre>
   </div>
 
 

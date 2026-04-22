@@ -38,7 +38,7 @@ items:
   summary: Per-pstate info DTO, wrapping the anonymous pstate struct within <xref href="NVAPIWrapper._NV_GPU_PERF_PSTATES20_INFO_V2" data-throw-if-not-resolved="false"></xref>.
   example: []
   syntax:
-    content: 'public readonly struct NVAPIPstateInfoDto : IEquatable<NVAPIPstateInfoDto>'
+    content: 'public struct NVAPIPstateInfoDto : IEquatable<NVAPIPstateInfoDto>'
     content.vb: Public Structure NVAPIPstateInfoDto Implements IEquatable(Of NVAPIPstateInfoDto)
   implements:
   - System.IEquatable{NVAPIWrapper.NVAPIPstateInfoDto}
@@ -72,11 +72,11 @@ items:
   summary: P-state identifier.
   example: []
   syntax:
-    content: public _NV_GPU_PERF_PSTATE_ID PstateId { get; }
+    content: public _NV_GPU_PERF_PSTATE_ID PstateId { readonly get; set; }
     parameters: []
     return:
       type: NVAPIWrapper._NV_GPU_PERF_PSTATE_ID
-    content.vb: Public ReadOnly Property PstateId As _NV_GPU_PERF_PSTATE_ID
+    content.vb: Public Property PstateId As _NV_GPU_PERF_PSTATE_ID
   overload: NVAPIWrapper.NVAPIPstateInfoDto.PstateId*
 - uid: NVAPIWrapper.NVAPIPstateInfoDto.IsEditable
   commentId: P:NVAPIWrapper.NVAPIPstateInfoDto.IsEditable
@@ -103,11 +103,11 @@ items:
   summary: True if this P-state is editable.
   example: []
   syntax:
-    content: public bool IsEditable { get; }
+    content: public bool IsEditable { readonly get; set; }
     parameters: []
     return:
       type: System.Boolean
-    content.vb: Public ReadOnly Property IsEditable As Boolean
+    content.vb: Public Property IsEditable As Boolean
   overload: NVAPIWrapper.NVAPIPstateInfoDto.IsEditable*
 - uid: NVAPIWrapper.NVAPIPstateInfoDto.Clocks
   commentId: P:NVAPIWrapper.NVAPIPstateInfoDto.Clocks
@@ -134,11 +134,11 @@ items:
   summary: Clock entries for this P-state (up to 8).
   example: []
   syntax:
-    content: public NVAPIPstateClockEntryDto[] Clocks { get; }
+    content: public NVAPIPstateClockEntryDto[] Clocks { readonly get; set; }
     parameters: []
     return:
       type: NVAPIWrapper.NVAPIPstateClockEntryDto[]
-    content.vb: Public ReadOnly Property Clocks As NVAPIPstateClockEntryDto()
+    content.vb: Public Property Clocks As NVAPIPstateClockEntryDto()
   overload: NVAPIWrapper.NVAPIPstateInfoDto.Clocks*
 - uid: NVAPIWrapper.NVAPIPstateInfoDto.BaseVoltages
   commentId: P:NVAPIWrapper.NVAPIPstateInfoDto.BaseVoltages
@@ -165,11 +165,11 @@ items:
   summary: Base voltage entries for this P-state (up to 4).
   example: []
   syntax:
-    content: public NVAPIPstateBaseVoltageEntryDto[] BaseVoltages { get; }
+    content: public NVAPIPstateBaseVoltageEntryDto[] BaseVoltages { readonly get; set; }
     parameters: []
     return:
       type: NVAPIWrapper.NVAPIPstateBaseVoltageEntryDto[]
-    content.vb: Public ReadOnly Property BaseVoltages As NVAPIPstateBaseVoltageEntryDto()
+    content.vb: Public Property BaseVoltages As NVAPIPstateBaseVoltageEntryDto()
   overload: NVAPIWrapper.NVAPIPstateInfoDto.BaseVoltages*
 - uid: NVAPIWrapper.NVAPIPstateInfoDto.#ctor(NVAPIWrapper._NV_GPU_PERF_PSTATE_ID,System.Boolean,NVAPIWrapper.NVAPIPstateClockEntryDto[],NVAPIWrapper.NVAPIPstateBaseVoltageEntryDto[])
   commentId: M:NVAPIWrapper.NVAPIPstateInfoDto.#ctor(NVAPIWrapper._NV_GPU_PERF_PSTATE_ID,System.Boolean,NVAPIWrapper.NVAPIPstateClockEntryDto[],NVAPIWrapper.NVAPIPstateBaseVoltageEntryDto[])

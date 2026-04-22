@@ -39,7 +39,7 @@ items:
   summary: Lid and dock information DTO.
   example: []
   syntax:
-    content: 'public readonly struct NVAPILidAndDockInfoDto : IEquatable<NVAPILidAndDockInfoDto>'
+    content: 'public struct NVAPILidAndDockInfoDto : IEquatable<NVAPILidAndDockInfoDto>'
     content.vb: Public Structure NVAPILidAndDockInfoDto Implements IEquatable(Of NVAPILidAndDockInfoDto)
   implements:
   - System.IEquatable{NVAPIWrapper.NVAPILidAndDockInfoDto}
@@ -71,11 +71,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public uint CurrentLidState { get; }
+    content: public uint CurrentLidState { readonly get; set; }
     parameters: []
     return:
       type: System.UInt32
-    content.vb: Public ReadOnly Property CurrentLidState As UInteger
+    content.vb: Public Property CurrentLidState As UInteger
   overload: NVAPIWrapper.NVAPILidAndDockInfoDto.CurrentLidState*
 - uid: NVAPIWrapper.NVAPILidAndDockInfoDto.CurrentDockState
   commentId: P:NVAPIWrapper.NVAPILidAndDockInfoDto.CurrentDockState
@@ -100,11 +100,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public uint CurrentDockState { get; }
+    content: public uint CurrentDockState { readonly get; set; }
     parameters: []
     return:
       type: System.UInt32
-    content.vb: Public ReadOnly Property CurrentDockState As UInteger
+    content.vb: Public Property CurrentDockState As UInteger
   overload: NVAPIWrapper.NVAPILidAndDockInfoDto.CurrentDockState*
 - uid: NVAPIWrapper.NVAPILidAndDockInfoDto.CurrentLidPolicy
   commentId: P:NVAPIWrapper.NVAPILidAndDockInfoDto.CurrentLidPolicy
@@ -129,11 +129,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public uint CurrentLidPolicy { get; }
+    content: public uint CurrentLidPolicy { readonly get; set; }
     parameters: []
     return:
       type: System.UInt32
-    content.vb: Public ReadOnly Property CurrentLidPolicy As UInteger
+    content.vb: Public Property CurrentLidPolicy As UInteger
   overload: NVAPIWrapper.NVAPILidAndDockInfoDto.CurrentLidPolicy*
 - uid: NVAPIWrapper.NVAPILidAndDockInfoDto.CurrentDockPolicy
   commentId: P:NVAPIWrapper.NVAPILidAndDockInfoDto.CurrentDockPolicy
@@ -158,11 +158,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public uint CurrentDockPolicy { get; }
+    content: public uint CurrentDockPolicy { readonly get; set; }
     parameters: []
     return:
       type: System.UInt32
-    content.vb: Public ReadOnly Property CurrentDockPolicy As UInteger
+    content.vb: Public Property CurrentDockPolicy As UInteger
   overload: NVAPIWrapper.NVAPILidAndDockInfoDto.CurrentDockPolicy*
 - uid: NVAPIWrapper.NVAPILidAndDockInfoDto.ForcedLidMechanismPresent
   commentId: P:NVAPIWrapper.NVAPILidAndDockInfoDto.ForcedLidMechanismPresent
@@ -187,11 +187,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public uint ForcedLidMechanismPresent { get; }
+    content: public uint ForcedLidMechanismPresent { readonly get; set; }
     parameters: []
     return:
       type: System.UInt32
-    content.vb: Public ReadOnly Property ForcedLidMechanismPresent As UInteger
+    content.vb: Public Property ForcedLidMechanismPresent As UInteger
   overload: NVAPIWrapper.NVAPILidAndDockInfoDto.ForcedLidMechanismPresent*
 - uid: NVAPIWrapper.NVAPILidAndDockInfoDto.ForcedDockMechanismPresent
   commentId: P:NVAPIWrapper.NVAPILidAndDockInfoDto.ForcedDockMechanismPresent
@@ -216,11 +216,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public uint ForcedDockMechanismPresent { get; }
+    content: public uint ForcedDockMechanismPresent { readonly get; set; }
     parameters: []
     return:
       type: System.UInt32
-    content.vb: Public ReadOnly Property ForcedDockMechanismPresent As UInteger
+    content.vb: Public Property ForcedDockMechanismPresent As UInteger
   overload: NVAPIWrapper.NVAPILidAndDockInfoDto.ForcedDockMechanismPresent*
 - uid: NVAPIWrapper.NVAPILidAndDockInfoDto.#ctor(System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32)
   commentId: M:NVAPIWrapper.NVAPILidAndDockInfoDto.#ctor(System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32)

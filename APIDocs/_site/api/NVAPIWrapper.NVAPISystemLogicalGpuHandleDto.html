@@ -102,7 +102,7 @@ Struct NVAPISystemLogicalGpuHandleDto  <a class="header-action link-secondary" t
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly struct NVAPISystemLogicalGpuHandleDto : IEquatable&lt;NVAPISystemLogicalGpuHandleDto&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public struct NVAPISystemLogicalGpuHandleDto : IEquatable&lt;NVAPISystemLogicalGpuHandleDto&gt;</code></pre>
   </div>
 
 
@@ -154,7 +154,7 @@ Struct NVAPISystemLogicalGpuHandleDto  <a class="header-action link-secondary" t
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public _NV_ADAPTER_TYPE AdapterType { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public _NV_ADAPTER_TYPE AdapterType { readonly get; set; }</code></pre>
   </div>
 
 
@@ -185,7 +185,7 @@ Struct NVAPISystemLogicalGpuHandleDto  <a class="header-action link-secondary" t
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public NVAPILogicalGpuHelper LogicalGpu { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public NVAPILogicalGpuHelper LogicalGpu { readonly get; set; }</code></pre>
   </div>
 
 

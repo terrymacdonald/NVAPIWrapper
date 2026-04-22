@@ -45,7 +45,7 @@ items:
   summary: GPU display ID DTO.
   example: []
   syntax:
-    content: 'public readonly struct NVAPIGpuDisplayIdDto : IEquatable<NVAPIGpuDisplayIdDto>'
+    content: 'public struct NVAPIGpuDisplayIdDto : IEquatable<NVAPIGpuDisplayIdDto>'
     content.vb: Public Structure NVAPIGpuDisplayIdDto Implements IEquatable(Of NVAPIGpuDisplayIdDto)
   implements:
   - System.IEquatable{NVAPIWrapper.NVAPIGpuDisplayIdDto}
@@ -77,11 +77,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public NV_MONITOR_CONN_TYPE ConnectorType { get; }
+    content: public NV_MONITOR_CONN_TYPE ConnectorType { readonly get; set; }
     parameters: []
     return:
       type: NVAPIWrapper.NV_MONITOR_CONN_TYPE
-    content.vb: Public ReadOnly Property ConnectorType As NV_MONITOR_CONN_TYPE
+    content.vb: Public Property ConnectorType As NV_MONITOR_CONN_TYPE
   overload: NVAPIWrapper.NVAPIGpuDisplayIdDto.ConnectorType*
 - uid: NVAPIWrapper.NVAPIGpuDisplayIdDto.DisplayId
   commentId: P:NVAPIWrapper.NVAPIGpuDisplayIdDto.DisplayId
@@ -106,11 +106,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public uint DisplayId { get; }
+    content: public uint DisplayId { readonly get; set; }
     parameters: []
     return:
       type: System.UInt32
-    content.vb: Public ReadOnly Property DisplayId As UInteger
+    content.vb: Public Property DisplayId As UInteger
   overload: NVAPIWrapper.NVAPIGpuDisplayIdDto.DisplayId*
 - uid: NVAPIWrapper.NVAPIGpuDisplayIdDto.IsDynamic
   commentId: P:NVAPIWrapper.NVAPIGpuDisplayIdDto.IsDynamic
@@ -135,11 +135,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public bool IsDynamic { get; }
+    content: public bool IsDynamic { readonly get; set; }
     parameters: []
     return:
       type: System.Boolean
-    content.vb: Public ReadOnly Property IsDynamic As Boolean
+    content.vb: Public Property IsDynamic As Boolean
   overload: NVAPIWrapper.NVAPIGpuDisplayIdDto.IsDynamic*
 - uid: NVAPIWrapper.NVAPIGpuDisplayIdDto.IsMultiStreamRootNode
   commentId: P:NVAPIWrapper.NVAPIGpuDisplayIdDto.IsMultiStreamRootNode
@@ -164,11 +164,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public bool IsMultiStreamRootNode { get; }
+    content: public bool IsMultiStreamRootNode { readonly get; set; }
     parameters: []
     return:
       type: System.Boolean
-    content.vb: Public ReadOnly Property IsMultiStreamRootNode As Boolean
+    content.vb: Public Property IsMultiStreamRootNode As Boolean
   overload: NVAPIWrapper.NVAPIGpuDisplayIdDto.IsMultiStreamRootNode*
 - uid: NVAPIWrapper.NVAPIGpuDisplayIdDto.IsActive
   commentId: P:NVAPIWrapper.NVAPIGpuDisplayIdDto.IsActive
@@ -193,11 +193,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public bool IsActive { get; }
+    content: public bool IsActive { readonly get; set; }
     parameters: []
     return:
       type: System.Boolean
-    content.vb: Public ReadOnly Property IsActive As Boolean
+    content.vb: Public Property IsActive As Boolean
   overload: NVAPIWrapper.NVAPIGpuDisplayIdDto.IsActive*
 - uid: NVAPIWrapper.NVAPIGpuDisplayIdDto.IsCluster
   commentId: P:NVAPIWrapper.NVAPIGpuDisplayIdDto.IsCluster
@@ -222,11 +222,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public bool IsCluster { get; }
+    content: public bool IsCluster { readonly get; set; }
     parameters: []
     return:
       type: System.Boolean
-    content.vb: Public ReadOnly Property IsCluster As Boolean
+    content.vb: Public Property IsCluster As Boolean
   overload: NVAPIWrapper.NVAPIGpuDisplayIdDto.IsCluster*
 - uid: NVAPIWrapper.NVAPIGpuDisplayIdDto.IsOSVisible
   commentId: P:NVAPIWrapper.NVAPIGpuDisplayIdDto.IsOSVisible
@@ -251,11 +251,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public bool IsOSVisible { get; }
+    content: public bool IsOSVisible { readonly get; set; }
     parameters: []
     return:
       type: System.Boolean
-    content.vb: Public ReadOnly Property IsOSVisible As Boolean
+    content.vb: Public Property IsOSVisible As Boolean
   overload: NVAPIWrapper.NVAPIGpuDisplayIdDto.IsOSVisible*
 - uid: NVAPIWrapper.NVAPIGpuDisplayIdDto.IsWfd
   commentId: P:NVAPIWrapper.NVAPIGpuDisplayIdDto.IsWfd
@@ -280,11 +280,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public bool IsWfd { get; }
+    content: public bool IsWfd { readonly get; set; }
     parameters: []
     return:
       type: System.Boolean
-    content.vb: Public ReadOnly Property IsWfd As Boolean
+    content.vb: Public Property IsWfd As Boolean
   overload: NVAPIWrapper.NVAPIGpuDisplayIdDto.IsWfd*
 - uid: NVAPIWrapper.NVAPIGpuDisplayIdDto.IsConnected
   commentId: P:NVAPIWrapper.NVAPIGpuDisplayIdDto.IsConnected
@@ -309,11 +309,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public bool IsConnected { get; }
+    content: public bool IsConnected { readonly get; set; }
     parameters: []
     return:
       type: System.Boolean
-    content.vb: Public ReadOnly Property IsConnected As Boolean
+    content.vb: Public Property IsConnected As Boolean
   overload: NVAPIWrapper.NVAPIGpuDisplayIdDto.IsConnected*
 - uid: NVAPIWrapper.NVAPIGpuDisplayIdDto.IsPhysicallyConnected
   commentId: P:NVAPIWrapper.NVAPIGpuDisplayIdDto.IsPhysicallyConnected
@@ -338,11 +338,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public bool IsPhysicallyConnected { get; }
+    content: public bool IsPhysicallyConnected { readonly get; set; }
     parameters: []
     return:
       type: System.Boolean
-    content.vb: Public ReadOnly Property IsPhysicallyConnected As Boolean
+    content.vb: Public Property IsPhysicallyConnected As Boolean
   overload: NVAPIWrapper.NVAPIGpuDisplayIdDto.IsPhysicallyConnected*
 - uid: NVAPIWrapper.NVAPIGpuDisplayIdDto.#ctor(NVAPIWrapper.NV_MONITOR_CONN_TYPE,System.UInt32,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean)
   commentId: M:NVAPIWrapper.NVAPIGpuDisplayIdDto.#ctor(NVAPIWrapper.NV_MONITOR_CONN_TYPE,System.UInt32,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean)

@@ -35,7 +35,7 @@ items:
   summary: NGX override set DTO.
   example: []
   syntax:
-    content: 'public readonly struct NVAPINGXOverrideSetDto : IEquatable<NVAPINGXOverrideSetDto>'
+    content: 'public struct NVAPINGXOverrideSetDto : IEquatable<NVAPINGXOverrideSetDto>'
     content.vb: Public Structure NVAPINGXOverrideSetDto Implements IEquatable(Of NVAPINGXOverrideSetDto)
   implements:
   - System.IEquatable{NVAPIWrapper.NVAPINGXOverrideSetDto}
@@ -107,11 +107,11 @@ items:
   summary: Process identifier.
   example: []
   syntax:
-    content: public uint ProcessId { get; }
+    content: public uint ProcessId { readonly get; set; }
     parameters: []
     return:
       type: System.UInt32
-    content.vb: Public ReadOnly Property ProcessId As UInteger
+    content.vb: Public Property ProcessId As UInteger
   overload: NVAPIWrapper.NVAPINGXOverrideSetDto.ProcessId*
 - uid: NVAPIWrapper.NVAPINGXOverrideSetDto.Feature
   commentId: P:NVAPIWrapper.NVAPINGXOverrideSetDto.Feature
@@ -138,11 +138,11 @@ items:
   summary: DLSS feature ID.
   example: []
   syntax:
-    content: public uint Feature { get; }
+    content: public uint Feature { readonly get; set; }
     parameters: []
     return:
       type: System.UInt32
-    content.vb: Public ReadOnly Property Feature As UInteger
+    content.vb: Public Property Feature As UInteger
   overload: NVAPIWrapper.NVAPINGXOverrideSetDto.Feature*
 - uid: NVAPIWrapper.NVAPINGXOverrideSetDto.FeedbackMask
   commentId: P:NVAPIWrapper.NVAPINGXOverrideSetDto.FeedbackMask
@@ -169,11 +169,11 @@ items:
   summary: Feedback mask.
   example: []
   syntax:
-    content: public ulong FeedbackMask { get; }
+    content: public ulong FeedbackMask { readonly get; set; }
     parameters: []
     return:
       type: System.UInt64
-    content.vb: Public ReadOnly Property FeedbackMask As ULong
+    content.vb: Public Property FeedbackMask As ULong
   overload: NVAPIWrapper.NVAPINGXOverrideSetDto.FeedbackMask*
 - uid: NVAPIWrapper.NVAPINGXOverrideSetDto.Equals(NVAPIWrapper.NVAPINGXOverrideSetDto)
   commentId: M:NVAPIWrapper.NVAPINGXOverrideSetDto.Equals(NVAPIWrapper.NVAPINGXOverrideSetDto)

@@ -44,7 +44,7 @@ items:
   summary: DTO for G-Sync control parameters.
   example: []
   syntax:
-    content: 'public readonly struct NVAPIGSyncControlParametersDto : IEquatable<NVAPIGSyncControlParametersDto>'
+    content: 'public struct NVAPIGSyncControlParametersDto : IEquatable<NVAPIGSyncControlParametersDto>'
     content.vb: Public Structure NVAPIGSyncControlParametersDto Implements IEquatable(Of NVAPIGSyncControlParametersDto)
   implements:
   - System.IEquatable{NVAPIWrapper.NVAPIGSyncControlParametersDto}
@@ -76,11 +76,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public _NVAPI_GSYNC_POLARITY Polarity { get; }
+    content: public _NVAPI_GSYNC_POLARITY Polarity { readonly get; set; }
     parameters: []
     return:
       type: NVAPIWrapper._NVAPI_GSYNC_POLARITY
-    content.vb: Public ReadOnly Property Polarity As _NVAPI_GSYNC_POLARITY
+    content.vb: Public Property Polarity As _NVAPI_GSYNC_POLARITY
   overload: NVAPIWrapper.NVAPIGSyncControlParametersDto.Polarity*
 - uid: NVAPIWrapper.NVAPIGSyncControlParametersDto.VideoMode
   commentId: P:NVAPIWrapper.NVAPIGSyncControlParametersDto.VideoMode
@@ -105,11 +105,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public _NVAPI_GSYNC_VIDEO_MODE VideoMode { get; }
+    content: public _NVAPI_GSYNC_VIDEO_MODE VideoMode { readonly get; set; }
     parameters: []
     return:
       type: NVAPIWrapper._NVAPI_GSYNC_VIDEO_MODE
-    content.vb: Public ReadOnly Property VideoMode As _NVAPI_GSYNC_VIDEO_MODE
+    content.vb: Public Property VideoMode As _NVAPI_GSYNC_VIDEO_MODE
   overload: NVAPIWrapper.NVAPIGSyncControlParametersDto.VideoMode*
 - uid: NVAPIWrapper.NVAPIGSyncControlParametersDto.Interval
   commentId: P:NVAPIWrapper.NVAPIGSyncControlParametersDto.Interval
@@ -134,11 +134,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public uint Interval { get; }
+    content: public uint Interval { readonly get; set; }
     parameters: []
     return:
       type: System.UInt32
-    content.vb: Public ReadOnly Property Interval As UInteger
+    content.vb: Public Property Interval As UInteger
   overload: NVAPIWrapper.NVAPIGSyncControlParametersDto.Interval*
 - uid: NVAPIWrapper.NVAPIGSyncControlParametersDto.Source
   commentId: P:NVAPIWrapper.NVAPIGSyncControlParametersDto.Source
@@ -163,11 +163,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public _NVAPI_GSYNC_SYNC_SOURCE Source { get; }
+    content: public _NVAPI_GSYNC_SYNC_SOURCE Source { readonly get; set; }
     parameters: []
     return:
       type: NVAPIWrapper._NVAPI_GSYNC_SYNC_SOURCE
-    content.vb: Public ReadOnly Property Source As _NVAPI_GSYNC_SYNC_SOURCE
+    content.vb: Public Property Source As _NVAPI_GSYNC_SYNC_SOURCE
   overload: NVAPIWrapper.NVAPIGSyncControlParametersDto.Source*
 - uid: NVAPIWrapper.NVAPIGSyncControlParametersDto.InterlaceMode
   commentId: P:NVAPIWrapper.NVAPIGSyncControlParametersDto.InterlaceMode
@@ -192,11 +192,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public bool InterlaceMode { get; }
+    content: public bool InterlaceMode { readonly get; set; }
     parameters: []
     return:
       type: System.Boolean
-    content.vb: Public ReadOnly Property InterlaceMode As Boolean
+    content.vb: Public Property InterlaceMode As Boolean
   overload: NVAPIWrapper.NVAPIGSyncControlParametersDto.InterlaceMode*
 - uid: NVAPIWrapper.NVAPIGSyncControlParametersDto.SyncSourceIsOutput
   commentId: P:NVAPIWrapper.NVAPIGSyncControlParametersDto.SyncSourceIsOutput
@@ -221,11 +221,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public bool SyncSourceIsOutput { get; }
+    content: public bool SyncSourceIsOutput { readonly get; set; }
     parameters: []
     return:
       type: System.Boolean
-    content.vb: Public ReadOnly Property SyncSourceIsOutput As Boolean
+    content.vb: Public Property SyncSourceIsOutput As Boolean
   overload: NVAPIWrapper.NVAPIGSyncControlParametersDto.SyncSourceIsOutput*
 - uid: NVAPIWrapper.NVAPIGSyncControlParametersDto.SyncSkew
   commentId: P:NVAPIWrapper.NVAPIGSyncControlParametersDto.SyncSkew
@@ -250,11 +250,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public NVAPIGSyncDelayDto SyncSkew { get; }
+    content: public NVAPIGSyncDelayDto SyncSkew { readonly get; set; }
     parameters: []
     return:
       type: NVAPIWrapper.NVAPIGSyncDelayDto
-    content.vb: Public ReadOnly Property SyncSkew As NVAPIGSyncDelayDto
+    content.vb: Public Property SyncSkew As NVAPIGSyncDelayDto
   overload: NVAPIWrapper.NVAPIGSyncControlParametersDto.SyncSkew*
 - uid: NVAPIWrapper.NVAPIGSyncControlParametersDto.StartupDelay
   commentId: P:NVAPIWrapper.NVAPIGSyncControlParametersDto.StartupDelay
@@ -279,11 +279,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public NVAPIGSyncDelayDto StartupDelay { get; }
+    content: public NVAPIGSyncDelayDto StartupDelay { readonly get; set; }
     parameters: []
     return:
       type: NVAPIWrapper.NVAPIGSyncDelayDto
-    content.vb: Public ReadOnly Property StartupDelay As NVAPIGSyncDelayDto
+    content.vb: Public Property StartupDelay As NVAPIGSyncDelayDto
   overload: NVAPIWrapper.NVAPIGSyncControlParametersDto.StartupDelay*
 - uid: NVAPIWrapper.NVAPIGSyncControlParametersDto.MultiplyDivideMode
   commentId: P:NVAPIWrapper.NVAPIGSyncControlParametersDto.MultiplyDivideMode
@@ -308,11 +308,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public _NVAPI_GSYNC_MULTIPLY_DIVIDE_MODE MultiplyDivideMode { get; }
+    content: public _NVAPI_GSYNC_MULTIPLY_DIVIDE_MODE MultiplyDivideMode { readonly get; set; }
     parameters: []
     return:
       type: NVAPIWrapper._NVAPI_GSYNC_MULTIPLY_DIVIDE_MODE
-    content.vb: Public ReadOnly Property MultiplyDivideMode As _NVAPI_GSYNC_MULTIPLY_DIVIDE_MODE
+    content.vb: Public Property MultiplyDivideMode As _NVAPI_GSYNC_MULTIPLY_DIVIDE_MODE
   overload: NVAPIWrapper.NVAPIGSyncControlParametersDto.MultiplyDivideMode*
 - uid: NVAPIWrapper.NVAPIGSyncControlParametersDto.MultiplyDivideValue
   commentId: P:NVAPIWrapper.NVAPIGSyncControlParametersDto.MultiplyDivideValue
@@ -337,11 +337,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public byte MultiplyDivideValue { get; }
+    content: public byte MultiplyDivideValue { readonly get; set; }
     parameters: []
     return:
       type: System.Byte
-    content.vb: Public ReadOnly Property MultiplyDivideValue As Byte
+    content.vb: Public Property MultiplyDivideValue As Byte
   overload: NVAPIWrapper.NVAPIGSyncControlParametersDto.MultiplyDivideValue*
 - uid: NVAPIWrapper.NVAPIGSyncControlParametersDto.#ctor(NVAPIWrapper._NVAPI_GSYNC_POLARITY,NVAPIWrapper._NVAPI_GSYNC_VIDEO_MODE,System.UInt32,NVAPIWrapper._NVAPI_GSYNC_SYNC_SOURCE,System.Boolean,System.Boolean,NVAPIWrapper.NVAPIGSyncDelayDto,NVAPIWrapper.NVAPIGSyncDelayDto,NVAPIWrapper._NVAPI_GSYNC_MULTIPLY_DIVIDE_MODE,System.Byte)
   commentId: M:NVAPIWrapper.NVAPIGSyncControlParametersDto.#ctor(NVAPIWrapper._NVAPI_GSYNC_POLARITY,NVAPIWrapper._NVAPI_GSYNC_VIDEO_MODE,System.UInt32,NVAPIWrapper._NVAPI_GSYNC_SYNC_SOURCE,System.Boolean,System.Boolean,NVAPIWrapper.NVAPIGSyncDelayDto,NVAPIWrapper.NVAPIGSyncDelayDto,NVAPIWrapper._NVAPI_GSYNC_MULTIPLY_DIVIDE_MODE,System.Byte)

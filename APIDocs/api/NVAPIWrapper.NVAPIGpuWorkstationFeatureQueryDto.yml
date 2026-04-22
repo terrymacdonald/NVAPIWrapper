@@ -34,7 +34,7 @@ items:
   summary: Workstation feature query DTO.
   example: []
   syntax:
-    content: 'public readonly struct NVAPIGpuWorkstationFeatureQueryDto : IEquatable<NVAPIGpuWorkstationFeatureQueryDto>'
+    content: 'public struct NVAPIGpuWorkstationFeatureQueryDto : IEquatable<NVAPIGpuWorkstationFeatureQueryDto>'
     content.vb: Public Structure NVAPIGpuWorkstationFeatureQueryDto Implements IEquatable(Of NVAPIGpuWorkstationFeatureQueryDto)
   implements:
   - System.IEquatable{NVAPIWrapper.NVAPIGpuWorkstationFeatureQueryDto}
@@ -66,11 +66,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public uint ConfiguredFeatureMask { get; }
+    content: public uint ConfiguredFeatureMask { readonly get; set; }
     parameters: []
     return:
       type: System.UInt32
-    content.vb: Public ReadOnly Property ConfiguredFeatureMask As UInteger
+    content.vb: Public Property ConfiguredFeatureMask As UInteger
   overload: NVAPIWrapper.NVAPIGpuWorkstationFeatureQueryDto.ConfiguredFeatureMask*
 - uid: NVAPIWrapper.NVAPIGpuWorkstationFeatureQueryDto.ConsistentFeatureMask
   commentId: P:NVAPIWrapper.NVAPIGpuWorkstationFeatureQueryDto.ConsistentFeatureMask
@@ -95,11 +95,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public uint ConsistentFeatureMask { get; }
+    content: public uint ConsistentFeatureMask { readonly get; set; }
     parameters: []
     return:
       type: System.UInt32
-    content.vb: Public ReadOnly Property ConsistentFeatureMask As UInteger
+    content.vb: Public Property ConsistentFeatureMask As UInteger
   overload: NVAPIWrapper.NVAPIGpuWorkstationFeatureQueryDto.ConsistentFeatureMask*
 - uid: NVAPIWrapper.NVAPIGpuWorkstationFeatureQueryDto.#ctor(System.UInt32,System.UInt32)
   commentId: M:NVAPIWrapper.NVAPIGpuWorkstationFeatureQueryDto.#ctor(System.UInt32,System.UInt32)

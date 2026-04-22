@@ -102,7 +102,7 @@ Struct NVAPIDisplayPortConfigDto  <a class="header-action link-secondary" title=
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly struct NVAPIDisplayPortConfigDto : IEquatable&lt;NVAPIDisplayPortConfigDto&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public struct NVAPIDisplayPortConfigDto : IEquatable&lt;NVAPIDisplayPortConfigDto&gt;</code></pre>
   </div>
 
 
@@ -191,7 +191,7 @@ Struct NVAPIDisplayPortConfigDto  <a class="header-action link-secondary" title=
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public NV_DISPLAY_PORT_CONFIG Config { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public NV_DISPLAY_PORT_CONFIG Config { readonly get; set; }</code></pre>
   </div>
 
 

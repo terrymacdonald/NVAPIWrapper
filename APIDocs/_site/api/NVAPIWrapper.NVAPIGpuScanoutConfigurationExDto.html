@@ -102,7 +102,7 @@ Struct NVAPIGpuScanoutConfigurationExDto  <a class="header-action link-secondary
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly struct NVAPIGpuScanoutConfigurationExDto : IEquatable&lt;NVAPIGpuScanoutConfigurationExDto&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public struct NVAPIGpuScanoutConfigurationExDto : IEquatable&lt;NVAPIGpuScanoutConfigurationExDto&gt;</code></pre>
   </div>
 
 
@@ -201,7 +201,7 @@ Struct NVAPIGpuScanoutConfigurationExDto  <a class="header-action link-secondary
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public uint CloneImportance { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public uint CloneImportance { readonly get; set; }</code></pre>
   </div>
 
 
@@ -232,7 +232,7 @@ Struct NVAPIGpuScanoutConfigurationExDto  <a class="header-action link-secondary
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public NVAPISBoxDto SourceDesktopRect { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public NVAPISBoxDto SourceDesktopRect { readonly get; set; }</code></pre>
   </div>
 
 
@@ -263,7 +263,7 @@ Struct NVAPIGpuScanoutConfigurationExDto  <a class="header-action link-secondary
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public _NV_ROTATE SourceToTargetRotation { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public _NV_ROTATE SourceToTargetRotation { readonly get; set; }</code></pre>
   </div>
 
 
@@ -294,7 +294,7 @@ Struct NVAPIGpuScanoutConfigurationExDto  <a class="header-action link-secondary
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public NVAPISBoxDto SourceViewportRect { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public NVAPISBoxDto SourceViewportRect { readonly get; set; }</code></pre>
   </div>
 
 
@@ -325,7 +325,7 @@ Struct NVAPIGpuScanoutConfigurationExDto  <a class="header-action link-secondary
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public uint TargetDisplayHeight { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public uint TargetDisplayHeight { readonly get; set; }</code></pre>
   </div>
 
 
@@ -356,7 +356,7 @@ Struct NVAPIGpuScanoutConfigurationExDto  <a class="header-action link-secondary
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public uint TargetDisplayWidth { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public uint TargetDisplayWidth { readonly get; set; }</code></pre>
   </div>
 
 
@@ -387,7 +387,7 @@ Struct NVAPIGpuScanoutConfigurationExDto  <a class="header-action link-secondary
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public NVAPISBoxDto TargetViewportRect { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public NVAPISBoxDto TargetViewportRect { readonly get; set; }</code></pre>
   </div>
 
 

@@ -35,7 +35,7 @@ items:
   summary: Snapshot of supported Mosaic topology data.
   example: []
   syntax:
-    content: 'public readonly struct NVAPIMosaicSupportedTopoInfoDto : IEquatable<NVAPIMosaicSupportedTopoInfoDto>'
+    content: 'public struct NVAPIMosaicSupportedTopoInfoDto : IEquatable<NVAPIMosaicSupportedTopoInfoDto>'
     content.vb: Public Structure NVAPIMosaicSupportedTopoInfoDto Implements IEquatable(Of NVAPIMosaicSupportedTopoInfoDto)
   implements:
   - System.IEquatable{NVAPIWrapper.NVAPIMosaicSupportedTopoInfoDto}
@@ -67,11 +67,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public NVAPIMosaicTopoBriefDto[] TopoBriefs { get; }
+    content: public NVAPIMosaicTopoBriefDto[] TopoBriefs { readonly get; set; }
     parameters: []
     return:
       type: NVAPIWrapper.NVAPIMosaicTopoBriefDto[]
-    content.vb: Public ReadOnly Property TopoBriefs As NVAPIMosaicTopoBriefDto()
+    content.vb: Public Property TopoBriefs As NVAPIMosaicTopoBriefDto()
   overload: NVAPIWrapper.NVAPIMosaicSupportedTopoInfoDto.TopoBriefs*
 - uid: NVAPIWrapper.NVAPIMosaicSupportedTopoInfoDto.DisplaySettings
   commentId: P:NVAPIWrapper.NVAPIMosaicSupportedTopoInfoDto.DisplaySettings
@@ -96,11 +96,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public NVAPIMosaicDisplaySettingDto[] DisplaySettings { get; }
+    content: public NVAPIMosaicDisplaySettingDto[] DisplaySettings { readonly get; set; }
     parameters: []
     return:
       type: NVAPIWrapper.NVAPIMosaicDisplaySettingDto[]
-    content.vb: Public ReadOnly Property DisplaySettings As NVAPIMosaicDisplaySettingDto()
+    content.vb: Public Property DisplaySettings As NVAPIMosaicDisplaySettingDto()
   overload: NVAPIWrapper.NVAPIMosaicSupportedTopoInfoDto.DisplaySettings*
 - uid: NVAPIWrapper.NVAPIMosaicSupportedTopoInfoDto.#ctor(NVAPIWrapper.NVAPIMosaicTopoBriefDto[],NVAPIWrapper.NVAPIMosaicDisplaySettingDto[])
   commentId: M:NVAPIWrapper.NVAPIMosaicSupportedTopoInfoDto.#ctor(NVAPIWrapper.NVAPIMosaicTopoBriefDto[],NVAPIWrapper.NVAPIMosaicDisplaySettingDto[])

@@ -36,7 +36,7 @@ items:
   summary: VR Ready DTO.
   example: []
   syntax:
-    content: 'public readonly struct NVAPIGpuVrReadyDto : IEquatable<NVAPIGpuVrReadyDto>'
+    content: 'public struct NVAPIGpuVrReadyDto : IEquatable<NVAPIGpuVrReadyDto>'
     content.vb: Public Structure NVAPIGpuVrReadyDto Implements IEquatable(Of NVAPIGpuVrReadyDto)
   implements:
   - System.IEquatable{NVAPIWrapper.NVAPIGpuVrReadyDto}
@@ -70,11 +70,11 @@ items:
   summary: True if the GPU is VR-ready.
   example: []
   syntax:
-    content: public bool IsVRReady { get; }
+    content: public bool IsVRReady { readonly get; set; }
     parameters: []
     return:
       type: System.Boolean
-    content.vb: Public ReadOnly Property IsVRReady As Boolean
+    content.vb: Public Property IsVRReady As Boolean
   overload: NVAPIWrapper.NVAPIGpuVrReadyDto.IsVRReady*
 - uid: NVAPIWrapper.NVAPIGpuVrReadyDto.#ctor(System.Boolean)
   commentId: M:NVAPIWrapper.NVAPIGpuVrReadyDto.#ctor(System.Boolean)

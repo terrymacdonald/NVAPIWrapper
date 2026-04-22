@@ -36,7 +36,7 @@ items:
   summary: Dynamic P-state info DTO.
   example: []
   syntax:
-    content: 'public readonly struct NVAPIGpuDynamicPstatesInfoExDto : IEquatable<NVAPIGpuDynamicPstatesInfoExDto>'
+    content: 'public struct NVAPIGpuDynamicPstatesInfoExDto : IEquatable<NVAPIGpuDynamicPstatesInfoExDto>'
     content.vb: Public Structure NVAPIGpuDynamicPstatesInfoExDto Implements IEquatable(Of NVAPIGpuDynamicPstatesInfoExDto)
   implements:
   - System.IEquatable{NVAPIWrapper.NVAPIGpuDynamicPstatesInfoExDto}
@@ -68,11 +68,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public uint Flags { get; }
+    content: public uint Flags { readonly get; set; }
     parameters: []
     return:
       type: System.UInt32
-    content.vb: Public ReadOnly Property Flags As UInteger
+    content.vb: Public Property Flags As UInteger
   overload: NVAPIWrapper.NVAPIGpuDynamicPstatesInfoExDto.Flags*
 - uid: NVAPIWrapper.NVAPIGpuDynamicPstatesInfoExDto.Utilization
   commentId: P:NVAPIWrapper.NVAPIGpuDynamicPstatesInfoExDto.Utilization
@@ -97,11 +97,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public NVAPIGpuDynamicPstateUtilizationDto[] Utilization { get; }
+    content: public NVAPIGpuDynamicPstateUtilizationDto[] Utilization { readonly get; set; }
     parameters: []
     return:
       type: NVAPIWrapper.NVAPIGpuDynamicPstateUtilizationDto[]
-    content.vb: Public ReadOnly Property Utilization As NVAPIGpuDynamicPstateUtilizationDto()
+    content.vb: Public Property Utilization As NVAPIGpuDynamicPstateUtilizationDto()
   overload: NVAPIWrapper.NVAPIGpuDynamicPstatesInfoExDto.Utilization*
 - uid: NVAPIWrapper.NVAPIGpuDynamicPstatesInfoExDto.#ctor(System.UInt32,NVAPIWrapper.NVAPIGpuDynamicPstateUtilizationDto[])
   commentId: M:NVAPIWrapper.NVAPIGpuDynamicPstatesInfoExDto.#ctor(System.UInt32,NVAPIWrapper.NVAPIGpuDynamicPstateUtilizationDto[])

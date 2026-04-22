@@ -102,7 +102,7 @@ Struct NVAPIVioGammaDto  <a class="header-action link-secondary" title="View sou
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly struct NVAPIVioGammaDto : IEquatable&lt;NVAPIVioGammaDto&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public struct NVAPIVioGammaDto : IEquatable&lt;NVAPIVioGammaDto&gt;</code></pre>
   </div>
 
 
@@ -189,7 +189,7 @@ Struct NVAPIVioGammaDto  <a class="header-action link-secondary" title="View sou
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public byte[] RawBytes { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public byte[] RawBytes { readonly get; set; }</code></pre>
   </div>
 
 

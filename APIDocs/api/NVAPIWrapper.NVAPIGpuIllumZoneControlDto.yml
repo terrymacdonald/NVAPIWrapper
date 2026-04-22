@@ -37,7 +37,7 @@ items:
   summary: Per-zone illumination control DTO, wrapping <xref href="NVAPIWrapper._NV_GPU_CLIENT_ILLUM_ZONE_CONTROL_V1" data-throw-if-not-resolved="false"></xref>.
   example: []
   syntax:
-    content: 'public readonly struct NVAPIGpuIllumZoneControlDto : IEquatable<NVAPIGpuIllumZoneControlDto>'
+    content: 'public struct NVAPIGpuIllumZoneControlDto : IEquatable<NVAPIGpuIllumZoneControlDto>'
     content.vb: Public Structure NVAPIGpuIllumZoneControlDto Implements IEquatable(Of NVAPIGpuIllumZoneControlDto)
   implements:
   - System.IEquatable{NVAPIWrapper.NVAPIGpuIllumZoneControlDto}
@@ -71,11 +71,11 @@ items:
   summary: Type of illumination zone.
   example: []
   syntax:
-    content: public NV_GPU_CLIENT_ILLUM_ZONE_TYPE Type { get; }
+    content: public NV_GPU_CLIENT_ILLUM_ZONE_TYPE Type { readonly get; set; }
     parameters: []
     return:
       type: NVAPIWrapper.NV_GPU_CLIENT_ILLUM_ZONE_TYPE
-    content.vb: Public ReadOnly Property Type As NV_GPU_CLIENT_ILLUM_ZONE_TYPE
+    content.vb: Public Property Type As NV_GPU_CLIENT_ILLUM_ZONE_TYPE
   overload: NVAPIWrapper.NVAPIGpuIllumZoneControlDto.Type*
 - uid: NVAPIWrapper.NVAPIGpuIllumZoneControlDto.CtrlMode
   commentId: P:NVAPIWrapper.NVAPIGpuIllumZoneControlDto.CtrlMode
@@ -102,11 +102,11 @@ items:
   summary: Control mode for this illumination zone.
   example: []
   syntax:
-    content: public NV_GPU_CLIENT_ILLUM_CTRL_MODE CtrlMode { get; }
+    content: public NV_GPU_CLIENT_ILLUM_CTRL_MODE CtrlMode { readonly get; set; }
     parameters: []
     return:
       type: NVAPIWrapper.NV_GPU_CLIENT_ILLUM_CTRL_MODE
-    content.vb: Public ReadOnly Property CtrlMode As NV_GPU_CLIENT_ILLUM_CTRL_MODE
+    content.vb: Public Property CtrlMode As NV_GPU_CLIENT_ILLUM_CTRL_MODE
   overload: NVAPIWrapper.NVAPIGpuIllumZoneControlDto.CtrlMode*
 - uid: NVAPIWrapper.NVAPIGpuIllumZoneControlDto.DataRawBytes
   commentId: P:NVAPIWrapper.NVAPIGpuIllumZoneControlDto.DataRawBytes
@@ -136,11 +136,11 @@ items:
     Interpret using <xref href="NVAPIWrapper.NVAPIGpuIllumZoneControlDto.Type" data-throw-if-not-resolved="false"></xref> to select the appropriate union member.
   example: []
   syntax:
-    content: public byte[] DataRawBytes { get; }
+    content: public byte[] DataRawBytes { readonly get; set; }
     parameters: []
     return:
       type: System.Byte[]
-    content.vb: Public ReadOnly Property DataRawBytes As Byte()
+    content.vb: Public Property DataRawBytes As Byte()
   overload: NVAPIWrapper.NVAPIGpuIllumZoneControlDto.DataRawBytes*
 - uid: NVAPIWrapper.NVAPIGpuIllumZoneControlDto.#ctor(NVAPIWrapper.NV_GPU_CLIENT_ILLUM_ZONE_TYPE,NVAPIWrapper.NV_GPU_CLIENT_ILLUM_CTRL_MODE,System.Byte[])
   commentId: M:NVAPIWrapper.NVAPIGpuIllumZoneControlDto.#ctor(NVAPIWrapper.NV_GPU_CLIENT_ILLUM_ZONE_TYPE,NVAPIWrapper.NV_GPU_CLIENT_ILLUM_CTRL_MODE,System.Byte[])

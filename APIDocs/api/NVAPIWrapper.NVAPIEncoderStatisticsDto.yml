@@ -38,7 +38,7 @@ items:
   summary: Encoder statistics DTO.
   example: []
   syntax:
-    content: 'public readonly struct NVAPIEncoderStatisticsDto : IEquatable<NVAPIEncoderStatisticsDto>'
+    content: 'public struct NVAPIEncoderStatisticsDto : IEquatable<NVAPIEncoderStatisticsDto>'
     content.vb: Public Structure NVAPIEncoderStatisticsDto Implements IEquatable(Of NVAPIEncoderStatisticsDto)
   implements:
   - System.IEquatable{NVAPIWrapper.NVAPIEncoderStatisticsDto}
@@ -72,11 +72,11 @@ items:
   summary: Number of active encoder sessions.
   example: []
   syntax:
-    content: public uint SessionsCount { get; }
+    content: public uint SessionsCount { readonly get; set; }
     parameters: []
     return:
       type: System.UInt32
-    content.vb: Public ReadOnly Property SessionsCount As UInteger
+    content.vb: Public Property SessionsCount As UInteger
   overload: NVAPIWrapper.NVAPIEncoderStatisticsDto.SessionsCount*
 - uid: NVAPIWrapper.NVAPIEncoderStatisticsDto.AverageFps
   commentId: P:NVAPIWrapper.NVAPIEncoderStatisticsDto.AverageFps
@@ -103,11 +103,11 @@ items:
   summary: Average frames per second across all sessions.
   example: []
   syntax:
-    content: public uint AverageFps { get; }
+    content: public uint AverageFps { readonly get; set; }
     parameters: []
     return:
       type: System.UInt32
-    content.vb: Public ReadOnly Property AverageFps As UInteger
+    content.vb: Public Property AverageFps As UInteger
   overload: NVAPIWrapper.NVAPIEncoderStatisticsDto.AverageFps*
 - uid: NVAPIWrapper.NVAPIEncoderStatisticsDto.AverageLatency
   commentId: P:NVAPIWrapper.NVAPIEncoderStatisticsDto.AverageLatency
@@ -134,11 +134,11 @@ items:
   summary: Average encode latency in microseconds across all sessions.
   example: []
   syntax:
-    content: public uint AverageLatency { get; }
+    content: public uint AverageLatency { readonly get; set; }
     parameters: []
     return:
       type: System.UInt32
-    content.vb: Public ReadOnly Property AverageLatency As UInteger
+    content.vb: Public Property AverageLatency As UInteger
   overload: NVAPIWrapper.NVAPIEncoderStatisticsDto.AverageLatency*
 - uid: NVAPIWrapper.NVAPIEncoderStatisticsDto.#ctor(System.UInt32,System.UInt32,System.UInt32)
   commentId: M:NVAPIWrapper.NVAPIEncoderStatisticsDto.#ctor(System.UInt32,System.UInt32,System.UInt32)

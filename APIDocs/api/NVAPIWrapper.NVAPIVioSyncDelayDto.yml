@@ -36,7 +36,7 @@ items:
   summary: VIO sync delay DTO.
   example: []
   syntax:
-    content: 'public readonly struct NVAPIVioSyncDelayDto : IEquatable<NVAPIVioSyncDelayDto>'
+    content: 'public struct NVAPIVioSyncDelayDto : IEquatable<NVAPIVioSyncDelayDto>'
     content.vb: Public Structure NVAPIVioSyncDelayDto Implements IEquatable(Of NVAPIVioSyncDelayDto)
   implements:
   - System.IEquatable{NVAPIWrapper.NVAPIVioSyncDelayDto}
@@ -68,11 +68,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public uint HorizontalDelay { get; }
+    content: public uint HorizontalDelay { readonly get; set; }
     parameters: []
     return:
       type: System.UInt32
-    content.vb: Public ReadOnly Property HorizontalDelay As UInteger
+    content.vb: Public Property HorizontalDelay As UInteger
   overload: NVAPIWrapper.NVAPIVioSyncDelayDto.HorizontalDelay*
 - uid: NVAPIWrapper.NVAPIVioSyncDelayDto.VerticalDelay
   commentId: P:NVAPIWrapper.NVAPIVioSyncDelayDto.VerticalDelay
@@ -97,11 +97,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public uint VerticalDelay { get; }
+    content: public uint VerticalDelay { readonly get; set; }
     parameters: []
     return:
       type: System.UInt32
-    content.vb: Public ReadOnly Property VerticalDelay As UInteger
+    content.vb: Public Property VerticalDelay As UInteger
   overload: NVAPIWrapper.NVAPIVioSyncDelayDto.VerticalDelay*
 - uid: NVAPIWrapper.NVAPIVioSyncDelayDto.#ctor(System.UInt32,System.UInt32)
   commentId: M:NVAPIWrapper.NVAPIVioSyncDelayDto.#ctor(System.UInt32,System.UInt32)

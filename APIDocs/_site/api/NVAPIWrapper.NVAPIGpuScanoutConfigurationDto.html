@@ -102,7 +102,7 @@ Struct NVAPIGpuScanoutConfigurationDto  <a class="header-action link-secondary" 
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly struct NVAPIGpuScanoutConfigurationDto : IEquatable&lt;NVAPIGpuScanoutConfigurationDto&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public struct NVAPIGpuScanoutConfigurationDto : IEquatable&lt;NVAPIGpuScanoutConfigurationDto&gt;</code></pre>
   </div>
 
 
@@ -191,7 +191,7 @@ Struct NVAPIGpuScanoutConfigurationDto  <a class="header-action link-secondary" 
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public NVAPISBoxDto DesktopRect { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public NVAPISBoxDto DesktopRect { readonly get; set; }</code></pre>
   </div>
 
 
@@ -222,7 +222,7 @@ Struct NVAPIGpuScanoutConfigurationDto  <a class="header-action link-secondary" 
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public NVAPISBoxDto ScanoutRect { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public NVAPISBoxDto ScanoutRect { readonly get; set; }</code></pre>
   </div>
 
 

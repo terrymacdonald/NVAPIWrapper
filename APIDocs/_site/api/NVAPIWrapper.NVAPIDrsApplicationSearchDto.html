@@ -102,7 +102,7 @@ Struct NVAPIDrsApplicationSearchDto  <a class="header-action link-secondary" tit
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly struct NVAPIDrsApplicationSearchDto : IEquatable&lt;NVAPIDrsApplicationSearchDto&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public struct NVAPIDrsApplicationSearchDto : IEquatable&lt;NVAPIDrsApplicationSearchDto&gt;</code></pre>
   </div>
 
 
@@ -194,7 +194,7 @@ Struct NVAPIDrsApplicationSearchDto  <a class="header-action link-secondary" tit
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public NVAPIDrsApplicationDto Application { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public NVAPIDrsApplicationDto Application { readonly get; set; }</code></pre>
   </div>
 
 
@@ -225,7 +225,7 @@ Struct NVAPIDrsApplicationSearchDto  <a class="header-action link-secondary" tit
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public NVAPIDrsProfileDto Profile { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public NVAPIDrsProfileDto Profile { readonly get; set; }</code></pre>
   </div>
 
 

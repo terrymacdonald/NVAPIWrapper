@@ -36,7 +36,7 @@ items:
   summary: Current Mosaic topology DTO.
   example: []
   syntax:
-    content: 'public readonly struct NVAPIMosaicCurrentTopoDto : IEquatable<NVAPIMosaicCurrentTopoDto>'
+    content: 'public struct NVAPIMosaicCurrentTopoDto : IEquatable<NVAPIMosaicCurrentTopoDto>'
     content.vb: Public Structure NVAPIMosaicCurrentTopoDto Implements IEquatable(Of NVAPIMosaicCurrentTopoDto)
   implements:
   - System.IEquatable{NVAPIWrapper.NVAPIMosaicCurrentTopoDto}
@@ -68,11 +68,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public NVAPIMosaicTopoBriefDto TopoBrief { get; }
+    content: public NVAPIMosaicTopoBriefDto TopoBrief { readonly get; set; }
     parameters: []
     return:
       type: NVAPIWrapper.NVAPIMosaicTopoBriefDto
-    content.vb: Public ReadOnly Property TopoBrief As NVAPIMosaicTopoBriefDto
+    content.vb: Public Property TopoBrief As NVAPIMosaicTopoBriefDto
   overload: NVAPIWrapper.NVAPIMosaicCurrentTopoDto.TopoBrief*
 - uid: NVAPIWrapper.NVAPIMosaicCurrentTopoDto.DisplaySetting
   commentId: P:NVAPIWrapper.NVAPIMosaicCurrentTopoDto.DisplaySetting
@@ -97,11 +97,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public NVAPIMosaicDisplaySettingDto DisplaySetting { get; }
+    content: public NVAPIMosaicDisplaySettingDto DisplaySetting { readonly get; set; }
     parameters: []
     return:
       type: NVAPIWrapper.NVAPIMosaicDisplaySettingDto
-    content.vb: Public ReadOnly Property DisplaySetting As NVAPIMosaicDisplaySettingDto
+    content.vb: Public Property DisplaySetting As NVAPIMosaicDisplaySettingDto
   overload: NVAPIWrapper.NVAPIMosaicCurrentTopoDto.DisplaySetting*
 - uid: NVAPIWrapper.NVAPIMosaicCurrentTopoDto.OverlapX
   commentId: P:NVAPIWrapper.NVAPIMosaicCurrentTopoDto.OverlapX
@@ -126,11 +126,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public int OverlapX { get; }
+    content: public int OverlapX { readonly get; set; }
     parameters: []
     return:
       type: System.Int32
-    content.vb: Public ReadOnly Property OverlapX As Integer
+    content.vb: Public Property OverlapX As Integer
   overload: NVAPIWrapper.NVAPIMosaicCurrentTopoDto.OverlapX*
 - uid: NVAPIWrapper.NVAPIMosaicCurrentTopoDto.OverlapY
   commentId: P:NVAPIWrapper.NVAPIMosaicCurrentTopoDto.OverlapY
@@ -155,11 +155,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public int OverlapY { get; }
+    content: public int OverlapY { readonly get; set; }
     parameters: []
     return:
       type: System.Int32
-    content.vb: Public ReadOnly Property OverlapY As Integer
+    content.vb: Public Property OverlapY As Integer
   overload: NVAPIWrapper.NVAPIMosaicCurrentTopoDto.OverlapY*
 - uid: NVAPIWrapper.NVAPIMosaicCurrentTopoDto.#ctor(NVAPIWrapper.NVAPIMosaicTopoBriefDto,NVAPIWrapper.NVAPIMosaicDisplaySettingDto,System.Int32,System.Int32)
   commentId: M:NVAPIWrapper.NVAPIMosaicCurrentTopoDto.#ctor(NVAPIWrapper.NVAPIMosaicTopoBriefDto,NVAPIWrapper.NVAPIMosaicDisplaySettingDto,System.Int32,System.Int32)

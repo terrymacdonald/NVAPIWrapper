@@ -59,7 +59,7 @@ items:
   summary: NVLINK_LINK_STATUS_INFO_V2 DTO.
   example: []
   syntax:
-    content: 'public readonly struct NVAPINvLinkStatusInfoDto : IEquatable<NVAPINvLinkStatusInfoDto>'
+    content: 'public struct NVAPINvLinkStatusInfoDto : IEquatable<NVAPINvLinkStatusInfoDto>'
     content.vb: Public Structure NVAPINvLinkStatusInfoDto Implements IEquatable(Of NVAPINvLinkStatusInfoDto)
   implements:
   - System.IEquatable{NVAPIWrapper.NVAPINvLinkStatusInfoDto}
@@ -91,11 +91,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public uint CapsTbl { get; }
+    content: public uint CapsTbl { readonly get; set; }
     parameters: []
     return:
       type: System.UInt32
-    content.vb: Public ReadOnly Property CapsTbl As UInteger
+    content.vb: Public Property CapsTbl As UInteger
   overload: NVAPIWrapper.NVAPINvLinkStatusInfoDto.CapsTbl*
 - uid: NVAPIWrapper.NVAPINvLinkStatusInfoDto.PhyType
   commentId: P:NVAPIWrapper.NVAPINvLinkStatusInfoDto.PhyType
@@ -120,11 +120,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public byte PhyType { get; }
+    content: public byte PhyType { readonly get; set; }
     parameters: []
     return:
       type: System.Byte
-    content.vb: Public ReadOnly Property PhyType As Byte
+    content.vb: Public Property PhyType As Byte
   overload: NVAPIWrapper.NVAPINvLinkStatusInfoDto.PhyType*
 - uid: NVAPIWrapper.NVAPINvLinkStatusInfoDto.SubLinkWidth
   commentId: P:NVAPIWrapper.NVAPINvLinkStatusInfoDto.SubLinkWidth
@@ -149,11 +149,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public byte SubLinkWidth { get; }
+    content: public byte SubLinkWidth { readonly get; set; }
     parameters: []
     return:
       type: System.Byte
-    content.vb: Public ReadOnly Property SubLinkWidth As Byte
+    content.vb: Public Property SubLinkWidth As Byte
   overload: NVAPIWrapper.NVAPINvLinkStatusInfoDto.SubLinkWidth*
 - uid: NVAPIWrapper.NVAPINvLinkStatusInfoDto.LinkState
   commentId: P:NVAPIWrapper.NVAPINvLinkStatusInfoDto.LinkState
@@ -178,11 +178,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public uint LinkState { get; }
+    content: public uint LinkState { readonly get; set; }
     parameters: []
     return:
       type: System.UInt32
-    content.vb: Public ReadOnly Property LinkState As UInteger
+    content.vb: Public Property LinkState As UInteger
   overload: NVAPIWrapper.NVAPINvLinkStatusInfoDto.LinkState*
 - uid: NVAPIWrapper.NVAPINvLinkStatusInfoDto.RxSublinkStatus
   commentId: P:NVAPIWrapper.NVAPINvLinkStatusInfoDto.RxSublinkStatus
@@ -207,11 +207,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public byte RxSublinkStatus { get; }
+    content: public byte RxSublinkStatus { readonly get; set; }
     parameters: []
     return:
       type: System.Byte
-    content.vb: Public ReadOnly Property RxSublinkStatus As Byte
+    content.vb: Public Property RxSublinkStatus As Byte
   overload: NVAPIWrapper.NVAPINvLinkStatusInfoDto.RxSublinkStatus*
 - uid: NVAPIWrapper.NVAPINvLinkStatusInfoDto.TxSublinkStatus
   commentId: P:NVAPIWrapper.NVAPINvLinkStatusInfoDto.TxSublinkStatus
@@ -236,11 +236,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public byte TxSublinkStatus { get; }
+    content: public byte TxSublinkStatus { readonly get; set; }
     parameters: []
     return:
       type: System.Byte
-    content.vb: Public ReadOnly Property TxSublinkStatus As Byte
+    content.vb: Public Property TxSublinkStatus As Byte
   overload: NVAPIWrapper.NVAPINvLinkStatusInfoDto.TxSublinkStatus*
 - uid: NVAPIWrapper.NVAPINvLinkStatusInfoDto.NvlinkVersion
   commentId: P:NVAPIWrapper.NVAPINvLinkStatusInfoDto.NvlinkVersion
@@ -265,11 +265,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public byte NvlinkVersion { get; }
+    content: public byte NvlinkVersion { readonly get; set; }
     parameters: []
     return:
       type: System.Byte
-    content.vb: Public ReadOnly Property NvlinkVersion As Byte
+    content.vb: Public Property NvlinkVersion As Byte
   overload: NVAPIWrapper.NVAPINvLinkStatusInfoDto.NvlinkVersion*
 - uid: NVAPIWrapper.NVAPINvLinkStatusInfoDto.NciVersion
   commentId: P:NVAPIWrapper.NVAPINvLinkStatusInfoDto.NciVersion
@@ -294,11 +294,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public byte NciVersion { get; }
+    content: public byte NciVersion { readonly get; set; }
     parameters: []
     return:
       type: System.Byte
-    content.vb: Public ReadOnly Property NciVersion As Byte
+    content.vb: Public Property NciVersion As Byte
   overload: NVAPIWrapper.NVAPINvLinkStatusInfoDto.NciVersion*
 - uid: NVAPIWrapper.NVAPINvLinkStatusInfoDto.PhyVersion
   commentId: P:NVAPIWrapper.NVAPINvLinkStatusInfoDto.PhyVersion
@@ -323,11 +323,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public byte PhyVersion { get; }
+    content: public byte PhyVersion { readonly get; set; }
     parameters: []
     return:
       type: System.Byte
-    content.vb: Public ReadOnly Property PhyVersion As Byte
+    content.vb: Public Property PhyVersion As Byte
   overload: NVAPIWrapper.NVAPINvLinkStatusInfoDto.PhyVersion*
 - uid: NVAPIWrapper.NVAPINvLinkStatusInfoDto.NvlinkCommonClockSpeedMhz
   commentId: P:NVAPIWrapper.NVAPINvLinkStatusInfoDto.NvlinkCommonClockSpeedMhz
@@ -352,11 +352,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public uint NvlinkCommonClockSpeedMhz { get; }
+    content: public uint NvlinkCommonClockSpeedMhz { readonly get; set; }
     parameters: []
     return:
       type: System.UInt32
-    content.vb: Public ReadOnly Property NvlinkCommonClockSpeedMhz As UInteger
+    content.vb: Public Property NvlinkCommonClockSpeedMhz As UInteger
   overload: NVAPIWrapper.NVAPINvLinkStatusInfoDto.NvlinkCommonClockSpeedMhz*
 - uid: NVAPIWrapper.NVAPINvLinkStatusInfoDto.NvlinkRefClkSpeedMhz
   commentId: P:NVAPIWrapper.NVAPINvLinkStatusInfoDto.NvlinkRefClkSpeedMhz
@@ -381,11 +381,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public uint NvlinkRefClkSpeedMhz { get; }
+    content: public uint NvlinkRefClkSpeedMhz { readonly get; set; }
     parameters: []
     return:
       type: System.UInt32
-    content.vb: Public ReadOnly Property NvlinkRefClkSpeedMhz As UInteger
+    content.vb: Public Property NvlinkRefClkSpeedMhz As UInteger
   overload: NVAPIWrapper.NVAPINvLinkStatusInfoDto.NvlinkRefClkSpeedMhz*
 - uid: NVAPIWrapper.NVAPINvLinkStatusInfoDto.NvlinkRefClkType
   commentId: P:NVAPIWrapper.NVAPINvLinkStatusInfoDto.NvlinkRefClkType
@@ -410,11 +410,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public byte NvlinkRefClkType { get; }
+    content: public byte NvlinkRefClkType { readonly get; set; }
     parameters: []
     return:
       type: System.Byte
-    content.vb: Public ReadOnly Property NvlinkRefClkType As Byte
+    content.vb: Public Property NvlinkRefClkType As Byte
   overload: NVAPIWrapper.NVAPINvLinkStatusInfoDto.NvlinkRefClkType*
 - uid: NVAPIWrapper.NVAPINvLinkStatusInfoDto.NvlinkLinkClockMhz
   commentId: P:NVAPIWrapper.NVAPINvLinkStatusInfoDto.NvlinkLinkClockMhz
@@ -439,11 +439,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public uint NvlinkLinkClockMhz { get; }
+    content: public uint NvlinkLinkClockMhz { readonly get; set; }
     parameters: []
     return:
       type: System.UInt32
-    content.vb: Public ReadOnly Property NvlinkLinkClockMhz As UInteger
+    content.vb: Public Property NvlinkLinkClockMhz As UInteger
   overload: NVAPIWrapper.NVAPINvLinkStatusInfoDto.NvlinkLinkClockMhz*
 - uid: NVAPIWrapper.NVAPINvLinkStatusInfoDto.Connected
   commentId: P:NVAPIWrapper.NVAPINvLinkStatusInfoDto.Connected
@@ -468,11 +468,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public bool Connected { get; }
+    content: public bool Connected { readonly get; set; }
     parameters: []
     return:
       type: System.Boolean
-    content.vb: Public ReadOnly Property Connected As Boolean
+    content.vb: Public Property Connected As Boolean
   overload: NVAPIWrapper.NVAPINvLinkStatusInfoDto.Connected*
 - uid: NVAPIWrapper.NVAPINvLinkStatusInfoDto.Reserved
   commentId: P:NVAPIWrapper.NVAPINvLinkStatusInfoDto.Reserved
@@ -497,11 +497,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public uint Reserved { get; }
+    content: public uint Reserved { readonly get; set; }
     parameters: []
     return:
       type: System.UInt32
-    content.vb: Public ReadOnly Property Reserved As UInteger
+    content.vb: Public Property Reserved As UInteger
   overload: NVAPIWrapper.NVAPINvLinkStatusInfoDto.Reserved*
 - uid: NVAPIWrapper.NVAPINvLinkStatusInfoDto.LoopProperty
   commentId: P:NVAPIWrapper.NVAPINvLinkStatusInfoDto.LoopProperty
@@ -526,11 +526,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public byte LoopProperty { get; }
+    content: public byte LoopProperty { readonly get; set; }
     parameters: []
     return:
       type: System.Byte
-    content.vb: Public ReadOnly Property LoopProperty As Byte
+    content.vb: Public Property LoopProperty As Byte
   overload: NVAPIWrapper.NVAPINvLinkStatusInfoDto.LoopProperty*
 - uid: NVAPIWrapper.NVAPINvLinkStatusInfoDto.RemoteDeviceLinkNumber
   commentId: P:NVAPIWrapper.NVAPINvLinkStatusInfoDto.RemoteDeviceLinkNumber
@@ -555,11 +555,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public byte RemoteDeviceLinkNumber { get; }
+    content: public byte RemoteDeviceLinkNumber { readonly get; set; }
     parameters: []
     return:
       type: System.Byte
-    content.vb: Public ReadOnly Property RemoteDeviceLinkNumber As Byte
+    content.vb: Public Property RemoteDeviceLinkNumber As Byte
   overload: NVAPIWrapper.NVAPINvLinkStatusInfoDto.RemoteDeviceLinkNumber*
 - uid: NVAPIWrapper.NVAPINvLinkStatusInfoDto.RemoteDeviceInfo
   commentId: P:NVAPIWrapper.NVAPINvLinkStatusInfoDto.RemoteDeviceInfo
@@ -584,11 +584,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public NVAPINvLinkDeviceInfoDto RemoteDeviceInfo { get; }
+    content: public NVAPINvLinkDeviceInfoDto RemoteDeviceInfo { readonly get; set; }
     parameters: []
     return:
       type: NVAPIWrapper.NVAPINvLinkDeviceInfoDto
-    content.vb: Public ReadOnly Property RemoteDeviceInfo As NVAPINvLinkDeviceInfoDto
+    content.vb: Public Property RemoteDeviceInfo As NVAPINvLinkDeviceInfoDto
   overload: NVAPIWrapper.NVAPINvLinkStatusInfoDto.RemoteDeviceInfo*
 - uid: NVAPIWrapper.NVAPINvLinkStatusInfoDto.LocalDeviceLinkNumber
   commentId: P:NVAPIWrapper.NVAPINvLinkStatusInfoDto.LocalDeviceLinkNumber
@@ -613,11 +613,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public byte LocalDeviceLinkNumber { get; }
+    content: public byte LocalDeviceLinkNumber { readonly get; set; }
     parameters: []
     return:
       type: System.Byte
-    content.vb: Public ReadOnly Property LocalDeviceLinkNumber As Byte
+    content.vb: Public Property LocalDeviceLinkNumber As Byte
   overload: NVAPIWrapper.NVAPINvLinkStatusInfoDto.LocalDeviceLinkNumber*
 - uid: NVAPIWrapper.NVAPINvLinkStatusInfoDto.LocalDeviceInfo
   commentId: P:NVAPIWrapper.NVAPINvLinkStatusInfoDto.LocalDeviceInfo
@@ -642,11 +642,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public NVAPINvLinkDeviceInfoDto LocalDeviceInfo { get; }
+    content: public NVAPINvLinkDeviceInfoDto LocalDeviceInfo { readonly get; set; }
     parameters: []
     return:
       type: NVAPIWrapper.NVAPINvLinkDeviceInfoDto
-    content.vb: Public ReadOnly Property LocalDeviceInfo As NVAPINvLinkDeviceInfoDto
+    content.vb: Public Property LocalDeviceInfo As NVAPINvLinkDeviceInfoDto
   overload: NVAPIWrapper.NVAPINvLinkStatusInfoDto.LocalDeviceInfo*
 - uid: NVAPIWrapper.NVAPINvLinkStatusInfoDto.NvlinkLineRateMbps
   commentId: P:NVAPIWrapper.NVAPINvLinkStatusInfoDto.NvlinkLineRateMbps
@@ -671,11 +671,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public uint NvlinkLineRateMbps { get; }
+    content: public uint NvlinkLineRateMbps { readonly get; set; }
     parameters: []
     return:
       type: System.UInt32
-    content.vb: Public ReadOnly Property NvlinkLineRateMbps As UInteger
+    content.vb: Public Property NvlinkLineRateMbps As UInteger
   overload: NVAPIWrapper.NVAPINvLinkStatusInfoDto.NvlinkLineRateMbps*
 - uid: NVAPIWrapper.NVAPINvLinkStatusInfoDto.NvlinkMinL1Threshold
   commentId: P:NVAPIWrapper.NVAPINvLinkStatusInfoDto.NvlinkMinL1Threshold
@@ -700,11 +700,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public uint NvlinkMinL1Threshold { get; }
+    content: public uint NvlinkMinL1Threshold { readonly get; set; }
     parameters: []
     return:
       type: System.UInt32
-    content.vb: Public ReadOnly Property NvlinkMinL1Threshold As UInteger
+    content.vb: Public Property NvlinkMinL1Threshold As UInteger
   overload: NVAPIWrapper.NVAPINvLinkStatusInfoDto.NvlinkMinL1Threshold*
 - uid: NVAPIWrapper.NVAPINvLinkStatusInfoDto.NvlinkMaxL1Threshold
   commentId: P:NVAPIWrapper.NVAPINvLinkStatusInfoDto.NvlinkMaxL1Threshold
@@ -729,11 +729,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public uint NvlinkMaxL1Threshold { get; }
+    content: public uint NvlinkMaxL1Threshold { readonly get; set; }
     parameters: []
     return:
       type: System.UInt32
-    content.vb: Public ReadOnly Property NvlinkMaxL1Threshold As UInteger
+    content.vb: Public Property NvlinkMaxL1Threshold As UInteger
   overload: NVAPIWrapper.NVAPINvLinkStatusInfoDto.NvlinkMaxL1Threshold*
 - uid: NVAPIWrapper.NVAPINvLinkStatusInfoDto.NvlinkL1ThresholdUnits
   commentId: P:NVAPIWrapper.NVAPINvLinkStatusInfoDto.NvlinkL1ThresholdUnits
@@ -758,11 +758,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public uint NvlinkL1ThresholdUnits { get; }
+    content: public uint NvlinkL1ThresholdUnits { readonly get; set; }
     parameters: []
     return:
       type: System.UInt32
-    content.vb: Public ReadOnly Property NvlinkL1ThresholdUnits As UInteger
+    content.vb: Public Property NvlinkL1ThresholdUnits As UInteger
   overload: NVAPIWrapper.NVAPINvLinkStatusInfoDto.NvlinkL1ThresholdUnits*
 - uid: NVAPIWrapper.NVAPINvLinkStatusInfoDto.ReservedEx
   commentId: P:NVAPIWrapper.NVAPINvLinkStatusInfoDto.ReservedEx
@@ -787,11 +787,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public uint[] ReservedEx { get; }
+    content: public uint[] ReservedEx { readonly get; set; }
     parameters: []
     return:
       type: System.UInt32[]
-    content.vb: Public ReadOnly Property ReservedEx As UInteger()
+    content.vb: Public Property ReservedEx As UInteger()
   overload: NVAPIWrapper.NVAPINvLinkStatusInfoDto.ReservedEx*
 - uid: NVAPIWrapper.NVAPINvLinkStatusInfoDto.#ctor(System.UInt32,System.Byte,System.Byte,System.UInt32,System.Byte,System.Byte,System.Byte,System.Byte,System.Byte,System.UInt32,System.UInt32,System.Byte,System.UInt32,System.Boolean,System.UInt32,System.Byte,System.Byte,NVAPIWrapper.NVAPINvLinkDeviceInfoDto,System.Byte,NVAPIWrapper.NVAPINvLinkDeviceInfoDto,System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32[])
   commentId: M:NVAPIWrapper.NVAPINvLinkStatusInfoDto.#ctor(System.UInt32,System.Byte,System.Byte,System.UInt32,System.Byte,System.Byte,System.Byte,System.Byte,System.Byte,System.UInt32,System.UInt32,System.Byte,System.UInt32,System.Boolean,System.UInt32,System.Byte,System.Byte,NVAPIWrapper.NVAPINvLinkDeviceInfoDto,System.Byte,NVAPIWrapper.NVAPINvLinkDeviceInfoDto,System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32[])

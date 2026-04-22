@@ -40,7 +40,7 @@ items:
   summary: DRS setting values DTO.
   example: []
   syntax:
-    content: 'public readonly struct NVAPIDrsSettingValuesDto : IEquatable<NVAPIDrsSettingValuesDto>'
+    content: 'public struct NVAPIDrsSettingValuesDto : IEquatable<NVAPIDrsSettingValuesDto>'
     content.vb: Public Structure NVAPIDrsSettingValuesDto Implements IEquatable(Of NVAPIDrsSettingValuesDto)
   implements:
   - System.IEquatable{NVAPIWrapper.NVAPIDrsSettingValuesDto}
@@ -72,11 +72,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public _NVDRS_SETTING_TYPE SettingType { get; }
+    content: public _NVDRS_SETTING_TYPE SettingType { readonly get; set; }
     parameters: []
     return:
       type: NVAPIWrapper._NVDRS_SETTING_TYPE
-    content.vb: Public ReadOnly Property SettingType As _NVDRS_SETTING_TYPE
+    content.vb: Public Property SettingType As _NVDRS_SETTING_TYPE
   overload: NVAPIWrapper.NVAPIDrsSettingValuesDto.SettingType*
 - uid: NVAPIWrapper.NVAPIDrsSettingValuesDto.DefaultDwordValue
   commentId: P:NVAPIWrapper.NVAPIDrsSettingValuesDto.DefaultDwordValue
@@ -101,11 +101,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public uint? DefaultDwordValue { get; }
+    content: public uint? DefaultDwordValue { readonly get; set; }
     parameters: []
     return:
       type: System.Nullable{System.UInt32}
-    content.vb: Public ReadOnly Property DefaultDwordValue As UInteger?
+    content.vb: Public Property DefaultDwordValue As UInteger?
   overload: NVAPIWrapper.NVAPIDrsSettingValuesDto.DefaultDwordValue*
 - uid: NVAPIWrapper.NVAPIDrsSettingValuesDto.DefaultStringValue
   commentId: P:NVAPIWrapper.NVAPIDrsSettingValuesDto.DefaultStringValue
@@ -130,11 +130,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public string? DefaultStringValue { get; }
+    content: public string? DefaultStringValue { readonly get; set; }
     parameters: []
     return:
       type: System.String
-    content.vb: Public ReadOnly Property DefaultStringValue As String
+    content.vb: Public Property DefaultStringValue As String
   overload: NVAPIWrapper.NVAPIDrsSettingValuesDto.DefaultStringValue*
 - uid: NVAPIWrapper.NVAPIDrsSettingValuesDto.DefaultBinaryValue
   commentId: P:NVAPIWrapper.NVAPIDrsSettingValuesDto.DefaultBinaryValue
@@ -159,11 +159,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public byte[]? DefaultBinaryValue { get; }
+    content: public byte[]? DefaultBinaryValue { readonly get; set; }
     parameters: []
     return:
       type: System.Byte[]
-    content.vb: Public ReadOnly Property DefaultBinaryValue As Byte()
+    content.vb: Public Property DefaultBinaryValue As Byte()
   overload: NVAPIWrapper.NVAPIDrsSettingValuesDto.DefaultBinaryValue*
 - uid: NVAPIWrapper.NVAPIDrsSettingValuesDto.DwordValues
   commentId: P:NVAPIWrapper.NVAPIDrsSettingValuesDto.DwordValues
@@ -188,11 +188,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public uint[]? DwordValues { get; }
+    content: public uint[]? DwordValues { readonly get; set; }
     parameters: []
     return:
       type: System.UInt32[]
-    content.vb: Public ReadOnly Property DwordValues As UInteger()
+    content.vb: Public Property DwordValues As UInteger()
   overload: NVAPIWrapper.NVAPIDrsSettingValuesDto.DwordValues*
 - uid: NVAPIWrapper.NVAPIDrsSettingValuesDto.StringValues
   commentId: P:NVAPIWrapper.NVAPIDrsSettingValuesDto.StringValues
@@ -217,11 +217,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public string[]? StringValues { get; }
+    content: public string[]? StringValues { readonly get; set; }
     parameters: []
     return:
       type: System.String[]
-    content.vb: Public ReadOnly Property StringValues As String()
+    content.vb: Public Property StringValues As String()
   overload: NVAPIWrapper.NVAPIDrsSettingValuesDto.StringValues*
 - uid: NVAPIWrapper.NVAPIDrsSettingValuesDto.BinaryValues
   commentId: P:NVAPIWrapper.NVAPIDrsSettingValuesDto.BinaryValues
@@ -246,11 +246,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public byte[][]? BinaryValues { get; }
+    content: public byte[][]? BinaryValues { readonly get; set; }
     parameters: []
     return:
       type: System.Byte[][]
-    content.vb: Public ReadOnly Property BinaryValues As Byte()()
+    content.vb: Public Property BinaryValues As Byte()()
   overload: NVAPIWrapper.NVAPIDrsSettingValuesDto.BinaryValues*
 - uid: NVAPIWrapper.NVAPIDrsSettingValuesDto.#ctor(NVAPIWrapper._NVDRS_SETTING_TYPE,System.Nullable{System.UInt32},System.String,System.Byte[],System.UInt32[],System.String[],System.Byte[][])
   commentId: M:NVAPIWrapper.NVAPIDrsSettingValuesDto.#ctor(NVAPIWrapper._NVDRS_SETTING_TYPE,System.Nullable{System.UInt32},System.String,System.Byte[],System.UInt32[],System.String[],System.Byte[][])

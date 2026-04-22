@@ -102,7 +102,7 @@ Struct NVAPIGpuIllumDeviceInfoParamsDto  <a class="header-action link-secondary"
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly struct NVAPIGpuIllumDeviceInfoParamsDto : IEquatable&lt;NVAPIGpuIllumDeviceInfoParamsDto&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public struct NVAPIGpuIllumDeviceInfoParamsDto : IEquatable&lt;NVAPIGpuIllumDeviceInfoParamsDto&gt;</code></pre>
   </div>
 
 
@@ -193,7 +193,7 @@ Struct NVAPIGpuIllumDeviceInfoParamsDto  <a class="header-action link-secondary"
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public NVAPIGpuIllumDeviceInfoDto[] Devices { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public NVAPIGpuIllumDeviceInfoDto[] Devices { readonly get; set; }</code></pre>
   </div>
 
 
@@ -225,7 +225,7 @@ Struct NVAPIGpuIllumDeviceInfoParamsDto  <a class="header-action link-secondary"
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public uint NumIllumDevices { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public uint NumIllumDevices { readonly get; set; }</code></pre>
   </div>
 
 

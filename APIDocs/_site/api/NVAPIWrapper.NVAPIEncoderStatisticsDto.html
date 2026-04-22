@@ -102,7 +102,7 @@ Struct NVAPIEncoderStatisticsDto  <a class="header-action link-secondary" title=
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly struct NVAPIEncoderStatisticsDto : IEquatable&lt;NVAPIEncoderStatisticsDto&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public struct NVAPIEncoderStatisticsDto : IEquatable&lt;NVAPIEncoderStatisticsDto&gt;</code></pre>
   </div>
 
 
@@ -195,7 +195,7 @@ Struct NVAPIEncoderStatisticsDto  <a class="header-action link-secondary" title=
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public uint AverageFps { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public uint AverageFps { readonly get; set; }</code></pre>
   </div>
 
 
@@ -227,7 +227,7 @@ Struct NVAPIEncoderStatisticsDto  <a class="header-action link-secondary" title=
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public uint AverageLatency { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public uint AverageLatency { readonly get; set; }</code></pre>
   </div>
 
 
@@ -259,7 +259,7 @@ Struct NVAPIEncoderStatisticsDto  <a class="header-action link-secondary" title=
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public uint SessionsCount { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public uint SessionsCount { readonly get; set; }</code></pre>
   </div>
 
 

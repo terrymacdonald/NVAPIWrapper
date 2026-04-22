@@ -102,7 +102,7 @@ Struct NVAPIGpuArchInfoDto  <a class="header-action link-secondary" title="View 
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly struct NVAPIGpuArchInfoDto : IEquatable&lt;NVAPIGpuArchInfoDto&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public struct NVAPIGpuArchInfoDto : IEquatable&lt;NVAPIGpuArchInfoDto&gt;</code></pre>
   </div>
 
 
@@ -193,7 +193,7 @@ Struct NVAPIGpuArchInfoDto  <a class="header-action link-secondary" title="View 
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public _NV_GPU_ARCHITECTURE_ID ArchitectureId { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public _NV_GPU_ARCHITECTURE_ID ArchitectureId { readonly get; set; }</code></pre>
   </div>
 
 
@@ -224,7 +224,7 @@ Struct NVAPIGpuArchInfoDto  <a class="header-action link-secondary" title="View 
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public _NV_GPU_ARCH_IMPLEMENTATION_ID ImplementationId { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public _NV_GPU_ARCH_IMPLEMENTATION_ID ImplementationId { readonly get; set; }</code></pre>
   </div>
 
 
@@ -255,7 +255,7 @@ Struct NVAPIGpuArchInfoDto  <a class="header-action link-secondary" title="View 
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public _NV_GPU_CHIP_REVISION RevisionId { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public _NV_GPU_CHIP_REVISION RevisionId { readonly get; set; }</code></pre>
   </div>
 
 

@@ -36,7 +36,7 @@ items:
   summary: VIO data format detail DTO.
   example: []
   syntax:
-    content: 'public readonly struct NVAPIVioDataFormatDetailDto : IEquatable<NVAPIVioDataFormatDetailDto>'
+    content: 'public struct NVAPIVioDataFormatDetailDto : IEquatable<NVAPIVioDataFormatDetailDto>'
     content.vb: Public Structure NVAPIVioDataFormatDetailDto Implements IEquatable(Of NVAPIVioDataFormatDetailDto)
   implements:
   - System.IEquatable{NVAPIWrapper.NVAPIVioDataFormatDetailDto}
@@ -68,11 +68,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public _NVVIODATAFORMAT DataFormat { get; }
+    content: public _NVVIODATAFORMAT DataFormat { readonly get; set; }
     parameters: []
     return:
       type: NVAPIWrapper._NVVIODATAFORMAT
-    content.vb: Public ReadOnly Property DataFormat As _NVVIODATAFORMAT
+    content.vb: Public Property DataFormat As _NVVIODATAFORMAT
   overload: NVAPIWrapper.NVAPIVioDataFormatDetailDto.DataFormat*
 - uid: NVAPIWrapper.NVAPIVioDataFormatDetailDto.VioCaps
   commentId: P:NVAPIWrapper.NVAPIVioDataFormatDetailDto.VioCaps
@@ -97,11 +97,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public uint VioCaps { get; }
+    content: public uint VioCaps { readonly get; set; }
     parameters: []
     return:
       type: System.UInt32
-    content.vb: Public ReadOnly Property VioCaps As UInteger
+    content.vb: Public Property VioCaps As UInteger
   overload: NVAPIWrapper.NVAPIVioDataFormatDetailDto.VioCaps*
 - uid: NVAPIWrapper.NVAPIVioDataFormatDetailDto.#ctor(NVAPIWrapper._NVVIODATAFORMAT,System.UInt32)
   commentId: M:NVAPIWrapper.NVAPIVioDataFormatDetailDto.#ctor(NVAPIWrapper._NVVIODATAFORMAT,System.UInt32)

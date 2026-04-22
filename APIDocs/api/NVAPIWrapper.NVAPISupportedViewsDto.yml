@@ -35,7 +35,7 @@ items:
   summary: DTO for supported display view modes.
   example: []
   syntax:
-    content: 'public readonly struct NVAPISupportedViewsDto : IEquatable<NVAPISupportedViewsDto>'
+    content: 'public struct NVAPISupportedViewsDto : IEquatable<NVAPISupportedViewsDto>'
     content.vb: Public Structure NVAPISupportedViewsDto Implements IEquatable(Of NVAPISupportedViewsDto)
   implements:
   - System.IEquatable{NVAPIWrapper.NVAPISupportedViewsDto}
@@ -69,11 +69,11 @@ items:
   summary: Supported view modes.
   example: []
   syntax:
-    content: public _NV_TARGET_VIEW_MODE[] Views { get; }
+    content: public _NV_TARGET_VIEW_MODE[] Views { readonly get; set; }
     parameters: []
     return:
       type: NVAPIWrapper._NV_TARGET_VIEW_MODE[]
-    content.vb: Public ReadOnly Property Views As _NV_TARGET_VIEW_MODE()
+    content.vb: Public Property Views As _NV_TARGET_VIEW_MODE()
   overload: NVAPIWrapper.NVAPISupportedViewsDto.Views*
 - uid: NVAPIWrapper.NVAPISupportedViewsDto.#ctor(NVAPIWrapper._NV_TARGET_VIEW_MODE[])
   commentId: M:NVAPIWrapper.NVAPISupportedViewsDto.#ctor(NVAPIWrapper._NV_TARGET_VIEW_MODE[])

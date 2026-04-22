@@ -45,7 +45,7 @@ items:
   summary: DTO for NVIDIA managed dedicated display metadata.
   example: []
   syntax:
-    content: 'public readonly struct NVAPINvManagedDedicatedDisplayMetadataDto : IEquatable<NVAPINvManagedDedicatedDisplayMetadataDto>'
+    content: 'public struct NVAPINvManagedDedicatedDisplayMetadataDto : IEquatable<NVAPINvManagedDedicatedDisplayMetadataDto>'
     content.vb: Public Structure NVAPINvManagedDedicatedDisplayMetadataDto Implements IEquatable(Of NVAPINvManagedDedicatedDisplayMetadataDto)
   implements:
   - System.IEquatable{NVAPIWrapper.NVAPINvManagedDedicatedDisplayMetadataDto}
@@ -77,11 +77,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public uint DisplayId { get; }
+    content: public uint DisplayId { readonly get; set; }
     parameters: []
     return:
       type: System.UInt32
-    content.vb: Public ReadOnly Property DisplayId As UInteger
+    content.vb: Public Property DisplayId As UInteger
   overload: NVAPIWrapper.NVAPINvManagedDedicatedDisplayMetadataDto.DisplayId*
 - uid: NVAPIWrapper.NVAPINvManagedDedicatedDisplayMetadataDto.SetPosition
   commentId: P:NVAPIWrapper.NVAPINvManagedDedicatedDisplayMetadataDto.SetPosition
@@ -106,11 +106,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public bool SetPosition { get; }
+    content: public bool SetPosition { readonly get; set; }
     parameters: []
     return:
       type: System.Boolean
-    content.vb: Public ReadOnly Property SetPosition As Boolean
+    content.vb: Public Property SetPosition As Boolean
   overload: NVAPIWrapper.NVAPINvManagedDedicatedDisplayMetadataDto.SetPosition*
 - uid: NVAPIWrapper.NVAPINvManagedDedicatedDisplayMetadataDto.RemovePosition
   commentId: P:NVAPIWrapper.NVAPINvManagedDedicatedDisplayMetadataDto.RemovePosition
@@ -135,11 +135,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public bool RemovePosition { get; }
+    content: public bool RemovePosition { readonly get; set; }
     parameters: []
     return:
       type: System.Boolean
-    content.vb: Public ReadOnly Property RemovePosition As Boolean
+    content.vb: Public Property RemovePosition As Boolean
   overload: NVAPIWrapper.NVAPINvManagedDedicatedDisplayMetadataDto.RemovePosition*
 - uid: NVAPIWrapper.NVAPINvManagedDedicatedDisplayMetadataDto.PositionIsAvailable
   commentId: P:NVAPIWrapper.NVAPINvManagedDedicatedDisplayMetadataDto.PositionIsAvailable
@@ -164,11 +164,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public bool PositionIsAvailable { get; }
+    content: public bool PositionIsAvailable { readonly get; set; }
     parameters: []
     return:
       type: System.Boolean
-    content.vb: Public ReadOnly Property PositionIsAvailable As Boolean
+    content.vb: Public Property PositionIsAvailable As Boolean
   overload: NVAPIWrapper.NVAPINvManagedDedicatedDisplayMetadataDto.PositionIsAvailable*
 - uid: NVAPIWrapper.NVAPINvManagedDedicatedDisplayMetadataDto.SetName
   commentId: P:NVAPIWrapper.NVAPINvManagedDedicatedDisplayMetadataDto.SetName
@@ -193,11 +193,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public bool SetName { get; }
+    content: public bool SetName { readonly get; set; }
     parameters: []
     return:
       type: System.Boolean
-    content.vb: Public ReadOnly Property SetName As Boolean
+    content.vb: Public Property SetName As Boolean
   overload: NVAPIWrapper.NVAPINvManagedDedicatedDisplayMetadataDto.SetName*
 - uid: NVAPIWrapper.NVAPINvManagedDedicatedDisplayMetadataDto.RemoveName
   commentId: P:NVAPIWrapper.NVAPINvManagedDedicatedDisplayMetadataDto.RemoveName
@@ -222,11 +222,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public bool RemoveName { get; }
+    content: public bool RemoveName { readonly get; set; }
     parameters: []
     return:
       type: System.Boolean
-    content.vb: Public ReadOnly Property RemoveName As Boolean
+    content.vb: Public Property RemoveName As Boolean
   overload: NVAPIWrapper.NVAPINvManagedDedicatedDisplayMetadataDto.RemoveName*
 - uid: NVAPIWrapper.NVAPINvManagedDedicatedDisplayMetadataDto.NameIsAvailable
   commentId: P:NVAPIWrapper.NVAPINvManagedDedicatedDisplayMetadataDto.NameIsAvailable
@@ -251,11 +251,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public bool NameIsAvailable { get; }
+    content: public bool NameIsAvailable { readonly get; set; }
     parameters: []
     return:
       type: System.Boolean
-    content.vb: Public ReadOnly Property NameIsAvailable As Boolean
+    content.vb: Public Property NameIsAvailable As Boolean
   overload: NVAPIWrapper.NVAPINvManagedDedicatedDisplayMetadataDto.NameIsAvailable*
 - uid: NVAPIWrapper.NVAPINvManagedDedicatedDisplayMetadataDto.Reserved
   commentId: P:NVAPIWrapper.NVAPINvManagedDedicatedDisplayMetadataDto.Reserved
@@ -280,11 +280,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public uint Reserved { get; }
+    content: public uint Reserved { readonly get; set; }
     parameters: []
     return:
       type: System.UInt32
-    content.vb: Public ReadOnly Property Reserved As UInteger
+    content.vb: Public Property Reserved As UInteger
   overload: NVAPIWrapper.NVAPINvManagedDedicatedDisplayMetadataDto.Reserved*
 - uid: NVAPIWrapper.NVAPINvManagedDedicatedDisplayMetadataDto.PositionX
   commentId: P:NVAPIWrapper.NVAPINvManagedDedicatedDisplayMetadataDto.PositionX
@@ -309,11 +309,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public int PositionX { get; }
+    content: public int PositionX { readonly get; set; }
     parameters: []
     return:
       type: System.Int32
-    content.vb: Public ReadOnly Property PositionX As Integer
+    content.vb: Public Property PositionX As Integer
   overload: NVAPIWrapper.NVAPINvManagedDedicatedDisplayMetadataDto.PositionX*
 - uid: NVAPIWrapper.NVAPINvManagedDedicatedDisplayMetadataDto.PositionY
   commentId: P:NVAPIWrapper.NVAPINvManagedDedicatedDisplayMetadataDto.PositionY
@@ -338,11 +338,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public int PositionY { get; }
+    content: public int PositionY { readonly get; set; }
     parameters: []
     return:
       type: System.Int32
-    content.vb: Public ReadOnly Property PositionY As Integer
+    content.vb: Public Property PositionY As Integer
   overload: NVAPIWrapper.NVAPINvManagedDedicatedDisplayMetadataDto.PositionY*
 - uid: NVAPIWrapper.NVAPINvManagedDedicatedDisplayMetadataDto.Name
   commentId: P:NVAPIWrapper.NVAPINvManagedDedicatedDisplayMetadataDto.Name
@@ -367,11 +367,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public string Name { get; }
+    content: public string Name { readonly get; set; }
     parameters: []
     return:
       type: System.String
-    content.vb: Public ReadOnly Property Name As String
+    content.vb: Public Property Name As String
   overload: NVAPIWrapper.NVAPINvManagedDedicatedDisplayMetadataDto.Name*
 - uid: NVAPIWrapper.NVAPINvManagedDedicatedDisplayMetadataDto.#ctor(System.UInt32,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.UInt32,System.Int32,System.Int32,System.String)
   commentId: M:NVAPIWrapper.NVAPINvManagedDedicatedDisplayMetadataDto.#ctor(System.UInt32,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.UInt32,System.Int32,System.Int32,System.String)

@@ -40,7 +40,7 @@ items:
   summary: DRS profile info DTO.
   example: []
   syntax:
-    content: 'public readonly struct NVAPIDrsProfileDto : IEquatable<NVAPIDrsProfileDto>'
+    content: 'public struct NVAPIDrsProfileDto : IEquatable<NVAPIDrsProfileDto>'
     content.vb: Public Structure NVAPIDrsProfileDto Implements IEquatable(Of NVAPIDrsProfileDto)
   implements:
   - System.IEquatable{NVAPIWrapper.NVAPIDrsProfileDto}
@@ -72,11 +72,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public string ProfileName { get; }
+    content: public string ProfileName { readonly get; set; }
     parameters: []
     return:
       type: System.String
-    content.vb: Public ReadOnly Property ProfileName As String
+    content.vb: Public Property ProfileName As String
   overload: NVAPIWrapper.NVAPIDrsProfileDto.ProfileName*
 - uid: NVAPIWrapper.NVAPIDrsProfileDto.GpuSupport
   commentId: P:NVAPIWrapper.NVAPIDrsProfileDto.GpuSupport
@@ -101,11 +101,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public _NVDRS_GPU_SUPPORT GpuSupport { get; }
+    content: public _NVDRS_GPU_SUPPORT GpuSupport { readonly get; set; }
     parameters: []
     return:
       type: NVAPIWrapper._NVDRS_GPU_SUPPORT
-    content.vb: Public ReadOnly Property GpuSupport As _NVDRS_GPU_SUPPORT
+    content.vb: Public Property GpuSupport As _NVDRS_GPU_SUPPORT
   overload: NVAPIWrapper.NVAPIDrsProfileDto.GpuSupport*
 - uid: NVAPIWrapper.NVAPIDrsProfileDto.IsPredefined
   commentId: P:NVAPIWrapper.NVAPIDrsProfileDto.IsPredefined
@@ -130,11 +130,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public bool IsPredefined { get; }
+    content: public bool IsPredefined { readonly get; set; }
     parameters: []
     return:
       type: System.Boolean
-    content.vb: Public ReadOnly Property IsPredefined As Boolean
+    content.vb: Public Property IsPredefined As Boolean
   overload: NVAPIWrapper.NVAPIDrsProfileDto.IsPredefined*
 - uid: NVAPIWrapper.NVAPIDrsProfileDto.NumOfApps
   commentId: P:NVAPIWrapper.NVAPIDrsProfileDto.NumOfApps
@@ -159,11 +159,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public uint NumOfApps { get; }
+    content: public uint NumOfApps { readonly get; set; }
     parameters: []
     return:
       type: System.UInt32
-    content.vb: Public ReadOnly Property NumOfApps As UInteger
+    content.vb: Public Property NumOfApps As UInteger
   overload: NVAPIWrapper.NVAPIDrsProfileDto.NumOfApps*
 - uid: NVAPIWrapper.NVAPIDrsProfileDto.NumOfSettings
   commentId: P:NVAPIWrapper.NVAPIDrsProfileDto.NumOfSettings
@@ -188,11 +188,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public uint NumOfSettings { get; }
+    content: public uint NumOfSettings { readonly get; set; }
     parameters: []
     return:
       type: System.UInt32
-    content.vb: Public ReadOnly Property NumOfSettings As UInteger
+    content.vb: Public Property NumOfSettings As UInteger
   overload: NVAPIWrapper.NVAPIDrsProfileDto.NumOfSettings*
 - uid: NVAPIWrapper.NVAPIDrsProfileDto.#ctor(System.String,NVAPIWrapper._NVDRS_GPU_SUPPORT,System.Boolean,System.UInt32,System.UInt32)
   commentId: M:NVAPIWrapper.NVAPIDrsProfileDto.#ctor(System.String,NVAPIWrapper._NVDRS_GPU_SUPPORT,System.Boolean,System.UInt32,System.UInt32)

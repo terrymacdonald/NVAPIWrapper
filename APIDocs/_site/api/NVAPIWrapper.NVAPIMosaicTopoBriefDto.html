@@ -102,7 +102,7 @@ Struct NVAPIMosaicTopoBriefDto  <a class="header-action link-secondary" title="V
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly struct NVAPIMosaicTopoBriefDto : IEquatable&lt;NVAPIMosaicTopoBriefDto&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public struct NVAPIMosaicTopoBriefDto : IEquatable&lt;NVAPIMosaicTopoBriefDto&gt;</code></pre>
   </div>
 
 
@@ -197,7 +197,7 @@ Struct NVAPIMosaicTopoBriefDto  <a class="header-action link-secondary" title="V
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool Enabled { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public bool Enabled { readonly get; set; }</code></pre>
   </div>
 
 
@@ -228,7 +228,7 @@ Struct NVAPIMosaicTopoBriefDto  <a class="header-action link-secondary" title="V
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool IsPossible { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public bool IsPossible { readonly get; set; }</code></pre>
   </div>
 
 
@@ -259,7 +259,7 @@ Struct NVAPIMosaicTopoBriefDto  <a class="header-action link-secondary" title="V
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public NV_MOSAIC_TOPO Topo { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public NV_MOSAIC_TOPO Topo { readonly get; set; }</code></pre>
   </div>
 
 

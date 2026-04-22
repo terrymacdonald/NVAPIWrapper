@@ -38,7 +38,7 @@ items:
   summary: Rectangle DTO for Mosaic viewports.
   example: []
   syntax:
-    content: 'public readonly struct NVAPIRectDto : IEquatable<NVAPIRectDto>'
+    content: 'public struct NVAPIRectDto : IEquatable<NVAPIRectDto>'
     content.vb: Public Structure NVAPIRectDto Implements IEquatable(Of NVAPIRectDto)
   implements:
   - System.IEquatable{NVAPIWrapper.NVAPIRectDto}
@@ -70,11 +70,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public uint Left { get; }
+    content: public uint Left { readonly get; set; }
     parameters: []
     return:
       type: System.UInt32
-    content.vb: Public ReadOnly Property Left As UInteger
+    content.vb: Public Property Left As UInteger
   overload: NVAPIWrapper.NVAPIRectDto.Left*
 - uid: NVAPIWrapper.NVAPIRectDto.Top
   commentId: P:NVAPIWrapper.NVAPIRectDto.Top
@@ -99,11 +99,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public uint Top { get; }
+    content: public uint Top { readonly get; set; }
     parameters: []
     return:
       type: System.UInt32
-    content.vb: Public ReadOnly Property Top As UInteger
+    content.vb: Public Property Top As UInteger
   overload: NVAPIWrapper.NVAPIRectDto.Top*
 - uid: NVAPIWrapper.NVAPIRectDto.Right
   commentId: P:NVAPIWrapper.NVAPIRectDto.Right
@@ -128,11 +128,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public uint Right { get; }
+    content: public uint Right { readonly get; set; }
     parameters: []
     return:
       type: System.UInt32
-    content.vb: Public ReadOnly Property Right As UInteger
+    content.vb: Public Property Right As UInteger
   overload: NVAPIWrapper.NVAPIRectDto.Right*
 - uid: NVAPIWrapper.NVAPIRectDto.Bottom
   commentId: P:NVAPIWrapper.NVAPIRectDto.Bottom
@@ -157,11 +157,11 @@ items:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public uint Bottom { get; }
+    content: public uint Bottom { readonly get; set; }
     parameters: []
     return:
       type: System.UInt32
-    content.vb: Public ReadOnly Property Bottom As UInteger
+    content.vb: Public Property Bottom As UInteger
   overload: NVAPIWrapper.NVAPIRectDto.Bottom*
 - uid: NVAPIWrapper.NVAPIRectDto.#ctor(System.UInt32,System.UInt32,System.UInt32,System.UInt32)
   commentId: M:NVAPIWrapper.NVAPIRectDto.#ctor(System.UInt32,System.UInt32,System.UInt32,System.UInt32)

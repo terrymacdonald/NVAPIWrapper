@@ -102,7 +102,7 @@ Struct NVAPIHdrMetadataDto  <a class="header-action link-secondary" title="View 
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly struct NVAPIHdrMetadataDto : IEquatable&lt;NVAPIHdrMetadataDto&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public struct NVAPIHdrMetadataDto : IEquatable&lt;NVAPIHdrMetadataDto&gt;</code></pre>
   </div>
 
 
@@ -191,7 +191,7 @@ Struct NVAPIHdrMetadataDto  <a class="header-action link-secondary" title="View 
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public _NV_HDR_METADATA_V1 Metadata { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public _NV_HDR_METADATA_V1 Metadata { readonly get; set; }</code></pre>
   </div>
 
 

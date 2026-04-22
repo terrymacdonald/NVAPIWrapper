@@ -102,7 +102,7 @@ Struct NVAPIMosaicDisplayTopoStatusesDto  <a class="header-action link-secondary
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly struct NVAPIMosaicDisplayTopoStatusesDto : IEquatable&lt;NVAPIMosaicDisplayTopoStatusesDto&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public struct NVAPIMosaicDisplayTopoStatusesDto : IEquatable&lt;NVAPIMosaicDisplayTopoStatusesDto&gt;</code></pre>
   </div>
 
 
@@ -191,7 +191,7 @@ Struct NVAPIMosaicDisplayTopoStatusesDto  <a class="header-action link-secondary
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public NVAPIMosaicDisplayTopoStatusDto[] Statuses { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public NVAPIMosaicDisplayTopoStatusDto[] Statuses { readonly get; set; }</code></pre>
   </div>
 
 

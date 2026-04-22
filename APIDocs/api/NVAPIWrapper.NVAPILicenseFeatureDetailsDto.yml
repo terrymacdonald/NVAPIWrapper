@@ -41,7 +41,7 @@ items:
   summary: Per-feature license details DTO, wrapping <xref href="NVAPIWrapper._NV_LICENSE_FEATURE_DETAILS_V4" data-throw-if-not-resolved="false"></xref>.
   example: []
   syntax:
-    content: 'public readonly struct NVAPILicenseFeatureDetailsDto : IEquatable<NVAPILicenseFeatureDetailsDto>'
+    content: 'public struct NVAPILicenseFeatureDetailsDto : IEquatable<NVAPILicenseFeatureDetailsDto>'
     content.vb: Public Structure NVAPILicenseFeatureDetailsDto Implements IEquatable(Of NVAPILicenseFeatureDetailsDto)
   implements:
   - System.IEquatable{NVAPIWrapper.NVAPILicenseFeatureDetailsDto}
@@ -75,11 +75,11 @@ items:
   summary: Version of the feature details struct as returned by NVAPI.
   example: []
   syntax:
-    content: public uint Version { get; }
+    content: public uint Version { readonly get; set; }
     parameters: []
     return:
       type: System.UInt32
-    content.vb: Public ReadOnly Property Version As UInteger
+    content.vb: Public Property Version As UInteger
   overload: NVAPIWrapper.NVAPILicenseFeatureDetailsDto.Version*
 - uid: NVAPIWrapper.NVAPILicenseFeatureDetailsDto.IsEnabled
   commentId: P:NVAPIWrapper.NVAPILicenseFeatureDetailsDto.IsEnabled
@@ -106,11 +106,11 @@ items:
   summary: True if the license is currently enabled.
   example: []
   syntax:
-    content: public bool IsEnabled { get; }
+    content: public bool IsEnabled { readonly get; set; }
     parameters: []
     return:
       type: System.Boolean
-    content.vb: Public ReadOnly Property IsEnabled As Boolean
+    content.vb: Public Property IsEnabled As Boolean
   overload: NVAPIWrapper.NVAPILicenseFeatureDetailsDto.IsEnabled*
 - uid: NVAPIWrapper.NVAPILicenseFeatureDetailsDto.IsFeatureEnabled
   commentId: P:NVAPIWrapper.NVAPILicenseFeatureDetailsDto.IsFeatureEnabled
@@ -137,11 +137,11 @@ items:
   summary: True if the feature is enabled.
   example: []
   syntax:
-    content: public bool IsFeatureEnabled { get; }
+    content: public bool IsFeatureEnabled { readonly get; set; }
     parameters: []
     return:
       type: System.Boolean
-    content.vb: Public ReadOnly Property IsFeatureEnabled As Boolean
+    content.vb: Public Property IsFeatureEnabled As Boolean
   overload: NVAPIWrapper.NVAPILicenseFeatureDetailsDto.IsFeatureEnabled*
 - uid: NVAPIWrapper.NVAPILicenseFeatureDetailsDto.FeatureCode
   commentId: P:NVAPIWrapper.NVAPILicenseFeatureDetailsDto.FeatureCode
@@ -168,11 +168,11 @@ items:
   summary: Feature code identifying the licensable feature type.
   example: []
   syntax:
-    content: public _NV_LICENSE_FEATURE_TYPE FeatureCode { get; }
+    content: public _NV_LICENSE_FEATURE_TYPE FeatureCode { readonly get; set; }
     parameters: []
     return:
       type: NVAPIWrapper._NV_LICENSE_FEATURE_TYPE
-    content.vb: Public ReadOnly Property FeatureCode As _NV_LICENSE_FEATURE_TYPE
+    content.vb: Public Property FeatureCode As _NV_LICENSE_FEATURE_TYPE
   overload: NVAPIWrapper.NVAPILicenseFeatureDetailsDto.FeatureCode*
 - uid: NVAPIWrapper.NVAPILicenseFeatureDetailsDto.LicenseInfo
   commentId: P:NVAPIWrapper.NVAPILicenseFeatureDetailsDto.LicenseInfo
@@ -199,11 +199,11 @@ items:
   summary: License info string (up to 128 characters).
   example: []
   syntax:
-    content: public string LicenseInfo { get; }
+    content: public string LicenseInfo { readonly get; set; }
     parameters: []
     return:
       type: System.String
-    content.vb: Public ReadOnly Property LicenseInfo As String
+    content.vb: Public Property LicenseInfo As String
   overload: NVAPIWrapper.NVAPILicenseFeatureDetailsDto.LicenseInfo*
 - uid: NVAPIWrapper.NVAPILicenseFeatureDetailsDto.ProductName
   commentId: P:NVAPIWrapper.NVAPILicenseFeatureDetailsDto.ProductName
@@ -230,11 +230,11 @@ items:
   summary: Product name string (up to 128 characters).
   example: []
   syntax:
-    content: public string ProductName { get; }
+    content: public string ProductName { readonly get; set; }
     parameters: []
     return:
       type: System.String
-    content.vb: Public ReadOnly Property ProductName As String
+    content.vb: Public Property ProductName As String
   overload: NVAPIWrapper.NVAPILicenseFeatureDetailsDto.ProductName*
 - uid: NVAPIWrapper.NVAPILicenseFeatureDetailsDto.LicenseExpiry
   commentId: P:NVAPIWrapper.NVAPILicenseFeatureDetailsDto.LicenseExpiry
@@ -261,11 +261,11 @@ items:
   summary: License expiry date and time details.
   example: []
   syntax:
-    content: public _NV_LICENSE_EXPIRY_DETAILS LicenseExpiry { get; }
+    content: public _NV_LICENSE_EXPIRY_DETAILS LicenseExpiry { readonly get; set; }
     parameters: []
     return:
       type: NVAPIWrapper._NV_LICENSE_EXPIRY_DETAILS
-    content.vb: Public ReadOnly Property LicenseExpiry As _NV_LICENSE_EXPIRY_DETAILS
+    content.vb: Public Property LicenseExpiry As _NV_LICENSE_EXPIRY_DETAILS
   overload: NVAPIWrapper.NVAPILicenseFeatureDetailsDto.LicenseExpiry*
 - uid: NVAPIWrapper.NVAPILicenseFeatureDetailsDto.#ctor(System.UInt32,System.Boolean,System.Boolean,NVAPIWrapper._NV_LICENSE_FEATURE_TYPE,System.String,System.String,NVAPIWrapper._NV_LICENSE_EXPIRY_DETAILS)
   commentId: M:NVAPIWrapper.NVAPILicenseFeatureDetailsDto.#ctor(System.UInt32,System.Boolean,System.Boolean,NVAPIWrapper._NV_LICENSE_FEATURE_TYPE,System.String,System.String,NVAPIWrapper._NV_LICENSE_EXPIRY_DETAILS)

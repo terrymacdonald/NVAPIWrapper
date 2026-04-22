@@ -35,7 +35,7 @@ items:
   summary: DTO for infoframe data.
   example: []
   syntax:
-    content: 'public readonly struct NVAPIInfoFrameDataDto : IEquatable<NVAPIInfoFrameDataDto>'
+    content: 'public struct NVAPIInfoFrameDataDto : IEquatable<NVAPIInfoFrameDataDto>'
     content.vb: Public Structure NVAPIInfoFrameDataDto Implements IEquatable(Of NVAPIInfoFrameDataDto)
   implements:
   - System.IEquatable{NVAPIWrapper.NVAPIInfoFrameDataDto}
@@ -69,11 +69,11 @@ items:
   summary: Native infoframe data.
   example: []
   syntax:
-    content: public NV_INFOFRAME_DATA Data { get; }
+    content: public NV_INFOFRAME_DATA Data { readonly get; set; }
     parameters: []
     return:
       type: NVAPIWrapper.NV_INFOFRAME_DATA
-    content.vb: Public ReadOnly Property Data As NV_INFOFRAME_DATA
+    content.vb: Public Property Data As NV_INFOFRAME_DATA
   overload: NVAPIWrapper.NVAPIInfoFrameDataDto.Data*
 - uid: NVAPIWrapper.NVAPIInfoFrameDataDto.#ctor(NVAPIWrapper.NV_INFOFRAME_DATA)
   commentId: M:NVAPIWrapper.NVAPIInfoFrameDataDto.#ctor(NVAPIWrapper.NV_INFOFRAME_DATA)
