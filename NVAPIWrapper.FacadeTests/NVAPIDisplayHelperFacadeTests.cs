@@ -796,5 +796,136 @@ namespace NVAPIWrapper.FacadeTests
             Assert.True(dto.Equals(dto));
             _ = dto.GetHashCode();
         }
+
+        [Fact]
+        public void NVAPITimingExtDto_RoundTrip_ShouldPreserveValues()
+        {
+            var dto = new NVAPITimingExtDto(0xABCD, 60, 60000, 0x100, 1, 0x200, "TestMode");
+            var native = dto.ToNative();
+            var roundTripped = NVAPITimingExtDto.FromNative(native);
+
+            Assert.Equal(dto.Flag, roundTripped.Flag);
+            Assert.Equal(dto.Rr, roundTripped.Rr);
+            Assert.Equal(dto.Rrx1k, roundTripped.Rrx1k);
+            Assert.Equal(dto.Aspect, roundTripped.Aspect);
+            Assert.Equal(dto.Rep, roundTripped.Rep);
+            Assert.Equal(dto.Status, roundTripped.Status);
+            Assert.Equal(dto.Name, roundTripped.Name);
+        }
+
+        [Fact]
+        public void NVAPITimingExtDto_Equality_ShouldWork()
+        {
+            var a = new NVAPITimingExtDto(1, 60, 60000, 0, 0, 0, "Mode");
+            var b = new NVAPITimingExtDto(1, 60, 60000, 0, 0, 0, "Mode");
+            var c = new NVAPITimingExtDto(2, 60, 60000, 0, 0, 0, "Mode");
+
+            Assert.True(a.Equals(b));
+            Assert.True(a == b);
+            Assert.False(a == c);
+            Assert.True(a != c);
+            _ = a.GetHashCode();
+        }
+
+        [Fact]
+        public void NVAPITimingDto_RoundTrip_ShouldPreserveValues()
+        {
+            var etc = new NVAPITimingExtDto(0, 60, 60000, 0, 0, 0, null);
+            var dto = new NVAPITimingDto(1920, 0, 88, 44, 2200, 0, 1080, 0, 4, 5, 1125, 0, 0, 148500, etc);
+            var native = dto.ToNative();
+            var roundTripped = NVAPITimingDto.FromNative(native);
+
+            Assert.Equal(dto.HVisible, roundTripped.HVisible);
+            Assert.Equal(dto.HBorder, roundTripped.HBorder);
+            Assert.Equal(dto.HFrontPorch, roundTripped.HFrontPorch);
+            Assert.Equal(dto.HSyncWidth, roundTripped.HSyncWidth);
+            Assert.Equal(dto.HTotal, roundTripped.HTotal);
+            Assert.Equal(dto.HSyncPol, roundTripped.HSyncPol);
+            Assert.Equal(dto.VVisible, roundTripped.VVisible);
+            Assert.Equal(dto.VBorder, roundTripped.VBorder);
+            Assert.Equal(dto.VFrontPorch, roundTripped.VFrontPorch);
+            Assert.Equal(dto.VSyncWidth, roundTripped.VSyncWidth);
+            Assert.Equal(dto.VTotal, roundTripped.VTotal);
+            Assert.Equal(dto.VSyncPol, roundTripped.VSyncPol);
+            Assert.Equal(dto.Interlaced, roundTripped.Interlaced);
+            Assert.Equal(dto.Pclk, roundTripped.Pclk);
+            Assert.Equal(dto.Etc, roundTripped.Etc);
+        }
+
+        [Fact]
+        public void NVAPITimingDto_Equality_ShouldWork()
+        {
+            var etc = new NVAPITimingExtDto(0, 60, 60000, 0, 0, 0, null);
+            var a = new NVAPITimingDto(1920, 0, 88, 44, 2200, 0, 1080, 0, 4, 5, 1125, 0, 0, 148500, etc);
+            var b = new NVAPITimingDto(1920, 0, 88, 44, 2200, 0, 1080, 0, 4, 5, 1125, 0, 0, 148500, etc);
+            var c = new NVAPITimingDto(1280, 0, 88, 44, 1650, 0, 720, 0, 5, 5, 750, 0, 0, 74250, etc);
+
+            Assert.True(a.Equals(b));
+            Assert.True(a == b);
+            Assert.False(a == c);
+            Assert.True(a != c);
+            _ = a.GetHashCode();
+        }
+
+        [SkippableFact]
+        public void GetTiming_ShouldReturnPopulatedTimingDtoFields()
+        {
+            Skip.If(_fixture.ApiHelper == null, _fixture.SkipReason);
+
+            var gpus = _fixture.ApiHelper.EnumeratePhysicalGpus();
+            Skip.If(gpus.Length == 0, "No NVIDIA physical GPUs found.");
+
+            var displays = gpus[0].EnumAllDisplays();
+            Skip.If(displays.Length == 0, "No NVIDIA displays found.");
+
+            var config = gpus[0].GetDisplayConfig();
+            Skip.If(config == null || config.Value.Paths.Length == 0, "Display config not available.");
+
+            var path = config.Value.Paths[0];
+            Skip.If(!path.SourceModeInfo.HasValue, "Source mode info not available.");
+            Skip.If(path.Targets.Length == 0 || !path.Targets[0].Details.HasValue, "Target details not available.");
+
+            var source = path.SourceModeInfo.Value;
+            var details = path.Targets[0].Details.GetValueOrDefault();
+            Skip.If(details.RefreshRate1K == 0, "Refresh rate not available.");
+
+            var input = new NVAPITimingInputDto(
+                source.Resolution.width,
+                source.Resolution.height,
+                details.RefreshRate1K / 1000.0f,
+                default,
+                details.TimingOverride);
+
+            var timing = displays[0].GetTiming(input);
+            Skip.If(timing == null, "Timing not supported.");
+
+            Assert.True(timing.Value.HVisible > 0, "HVisible should be non-zero.");
+            Assert.True(timing.Value.VVisible > 0, "VVisible should be non-zero.");
+            Assert.True(timing.Value.Pclk > 0, "Pixel clock should be non-zero.");
+            Assert.True(timing.Value.Equals(timing.Value));
+            _ = timing.Value.GetHashCode();
+        }
+
+        [SkippableFact]
+        public void DisplayConfig_AdvancedTarget_Timing_ShouldRoundTrip()
+        {
+            Skip.If(_fixture.ApiHelper == null, _fixture.SkipReason);
+
+            var gpus = _fixture.ApiHelper.EnumeratePhysicalGpus();
+            Skip.If(gpus.Length == 0, "No NVIDIA physical GPUs found.");
+
+            var config = gpus[0].GetDisplayConfig();
+            Skip.If(config == null || config.Value.Paths.Length == 0, "Display config not available.");
+
+            var path = config.Value.Paths[0];
+            Skip.If(path.Targets.Length == 0 || !path.Targets[0].Details.HasValue, "Target details not available.");
+
+            var timing = path.Targets[0].Details.GetValueOrDefault().Timing;
+
+            Assert.True(timing.Equals(timing));
+            _ = timing.GetHashCode();
+            var roundTripped = NVAPITimingDto.FromNative(timing.ToNative());
+            Assert.Equal(timing, roundTripped);
+        }
     }
 }
