@@ -5530,8 +5530,8 @@ namespace NVAPIWrapper
         /// <returns>True if the DTOs are equal; otherwise false.</returns>
         public bool Equals(NVAPIDisplayIdInfoDto other)
         {
-            return AdapterLuid == other.AdapterLuid
-                && TargetId == other.TargetId
+            return //AdapterLuid == other.AdapterLuid && // Disabling adapter LUID comparison as Windows changes this after a reboot whhichh breaks equality matching
+                TargetId == other.TargetId
                 && DtoHelpers.SequenceEquals(Reserved, other.Reserved);
         }
 
