@@ -2710,7 +2710,7 @@
         </member>
         <member name="P:NVAPIWrapper.NVAPIDisplayConfigPathDto.OsAdapterLuid">
             <summary>
-            OS adapter LUID value for non-NVIDIA adapters, or null if not present.
+            OS adapter LUID value for non-NVIDIA adapters, or 0 if not present.
             </summary>
         </member>
         <member name="P:NVAPIWrapper.NVAPIDisplayConfigPathDto.SourceModeInfo">
@@ -2723,7 +2723,7 @@
             Target configurations for this path.
             </summary>
         </member>
-        <member name="M:NVAPIWrapper.NVAPIDisplayConfigPathDto.#ctor(System.UInt32,System.UInt32,System.Boolean,System.Nullable{System.Int64},System.Nullable{NVAPIWrapper.NVAPIDisplayConfigSourceModeDto},NVAPIWrapper.NVAPIDisplayConfigTargetDto[])">
+        <member name="M:NVAPIWrapper.NVAPIDisplayConfigPathDto.#ctor(System.UInt32,System.UInt32,System.Boolean,System.Int64,System.Nullable{NVAPIWrapper.NVAPIDisplayConfigSourceModeDto},NVAPIWrapper.NVAPIDisplayConfigTargetDto[])">
             <summary>
             Create a display path configuration.
             </summary>
@@ -2896,7 +2896,7 @@
             <summary>Timing status.</summary>
         </member>
         <member name="P:NVAPIWrapper.NVAPITimingExtDto.Name">
-            <summary>Timing name (null-terminated ASCII, up to 40 bytes).</summary>
+            <summary>Timing name (null-terminated ASCII, up to 40 bytes). Empty string when no name is present.</summary>
         </member>
         <member name="M:NVAPIWrapper.NVAPITimingExtDto.#ctor(System.UInt32,System.UInt16,System.UInt32,System.UInt32,System.UInt16,System.UInt32,System.String)">
             <summary>Create timing ext info.</summary>
@@ -3226,7 +3226,7 @@
             </summary>
         </member>
         <member name="P:NVAPIWrapper.NVAPIMonitorColorCapabilitiesDto.Capabilities">
-            <summary>Color capability entries.</summary>
+            <summary>Color capability entries. Empty array when no capabilities are present.</summary>
         </member>
         <member name="M:NVAPIWrapper.NVAPIMonitorColorCapabilitiesDto.#ctor(NVAPIWrapper._NV_MONITOR_COLOR_DATA[])">
             <summary>Create a monitor color capabilities DTO.</summary>

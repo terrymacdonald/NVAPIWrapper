@@ -2799,10 +2799,10 @@ namespace NVAPIWrapper
                 NVAPITimingDto.FromNative(details.timing));
         }
 
-        internal static unsafe long? ReadOsAdapterLuid(void* osAdapterId)
+        internal static unsafe long ReadOsAdapterLuid(void* osAdapterId)
         {
             if (osAdapterId == null)
-                return null;
+                return 0;
 
             var luid = (Luid*)osAdapterId;
             var value = ((long)luid->HighPart << 32) | luid->LowPart;
@@ -2823,12 +2823,12 @@ namespace NVAPIWrapper
                 nativePath->IsNonNVIDIAAdapter = path.IsNonNvidiaAdapter ? 1u : 0u;
                 nativePath->reserved = 0;
 
-                if (path.OsAdapterLuid.HasValue)
+                if (path.OsAdapterLuid != 0)
                 {
                     var luidPtr = Marshal.AllocHGlobal(sizeof(Luid));
                     buffer.TrackAllocation(luidPtr);
                     var luid = (Luid*)luidPtr;
-                    var value = path.OsAdapterLuid.Value;
+                    var value = path.OsAdapterLuid;
                     luid->LowPart = unchecked((uint)value);
                     luid->HighPart = unchecked((int)(value >> 32));
                     nativePath->pOSAdapterID = luid;
@@ -3145,9 +3145,9 @@ namespace NVAPIWrapper
         public bool IsNonNvidiaAdapter { get; set; }
 
         /// <summary>
-        /// OS adapter LUID value for non-NVIDIA adapters, or null if not present.
+        /// OS adapter LUID value for non-NVIDIA adapters, or 0 if not present.
         /// </summary>
-        public long? OsAdapterLuid { get; set; }
+        public long OsAdapterLuid { get; set; }
 
         /// <summary>
         /// Source mode info, or null if not present.
@@ -3166,7 +3166,7 @@ namespace NVAPIWrapper
             uint version,
             uint sourceId,
             bool isNonNvidiaAdapter,
-            long? osAdapterLuid,
+            long osAdapterLuid,
             NVAPIDisplayConfigSourceModeDto? sourceModeInfo,
             NVAPIDisplayConfigTargetDto[] targets)
         {
@@ -3232,7 +3232,7 @@ namespace NVAPIWrapper
             if (Version != other.Version ||
                 SourceId != other.SourceId ||
                 IsNonNvidiaAdapter != other.IsNonNvidiaAdapter ||
-                !Nullable.Equals(OsAdapterLuid, other.OsAdapterLuid) ||
+                OsAdapterLuid != other.OsAdapterLuid ||
                 !Nullable.Equals(SourceModeInfo, other.SourceModeInfo))
             {
                 return false;
@@ -3256,7 +3256,7 @@ namespace NVAPIWrapper
                 hash = (hash * 31) + Version.GetHashCode();
                 hash = (hash * 31) + SourceId.GetHashCode();
                 hash = (hash * 31) + IsNonNvidiaAdapter.GetHashCode();
-                hash = (hash * 31) + (OsAdapterLuid?.GetHashCode() ?? 0);
+                hash = (hash * 31) + OsAdapterLuid.GetHashCode();
                 hash = (hash * 31) + (SourceModeInfo?.GetHashCode() ?? 0);
                 for (var i = 0; i < Targets.Length; i++)
                 {
@@ -3544,8 +3544,9 @@ namespace NVAPIWrapper
         /// <summary>Timing status.</summary>
         public uint Status { get; set; }
 
-        /// <summary>Timing name (null-terminated ASCII, up to 40 bytes).</summary>
-        public string? Name { get; set; }
+        private string? _name;
+        /// <summary>Timing name (null-terminated ASCII, up to 40 bytes). Empty string when no name is present.</summary>
+        public string Name { get => _name ?? string.Empty; set => _name = value; }
 
         /// <summary>Create timing ext info.</summary>
         public NVAPITimingExtDto(uint flag, ushort rr, uint rrx1k, uint aspect, ushort rep, uint status, string? name)
@@ -3556,7 +3557,7 @@ namespace NVAPIWrapper
             Aspect = aspect;
             Rep = rep;
             Status = status;
-            Name = name;
+            _name = name ?? string.Empty;
         }
 
         /// <summary>
@@ -3636,7 +3637,7 @@ namespace NVAPIWrapper
                 hash = (hash * 31) + Aspect.GetHashCode();
                 hash = (hash * 31) + Rep.GetHashCode();
                 hash = (hash * 31) + Status.GetHashCode();
-                hash = (hash * 31) + (Name?.GetHashCode() ?? 0);
+                hash = (hash * 31) + Name.GetHashCode();
                 return hash;
             }
         }
@@ -4257,13 +4258,14 @@ namespace NVAPIWrapper
     /// </summary>
     public readonly struct NVAPIMonitorColorCapabilitiesDto : IEquatable<NVAPIMonitorColorCapabilitiesDto>
     {
-        /// <summary>Color capability entries.</summary>
-        public _NV_MONITOR_COLOR_DATA[] Capabilities { get; }
+        private readonly _NV_MONITOR_COLOR_DATA[]? _capabilities;
+        /// <summary>Color capability entries. Empty array when no capabilities are present.</summary>
+        public _NV_MONITOR_COLOR_DATA[] Capabilities => _capabilities ?? Array.Empty<_NV_MONITOR_COLOR_DATA>();
 
         /// <summary>Create a monitor color capabilities DTO.</summary>
         public NVAPIMonitorColorCapabilitiesDto(_NV_MONITOR_COLOR_DATA[] capabilities)
         {
-            Capabilities = capabilities ?? Array.Empty<_NV_MONITOR_COLOR_DATA>();
+            _capabilities = capabilities ?? Array.Empty<_NV_MONITOR_COLOR_DATA>();
         }
 
         /// <summary>
@@ -4282,7 +4284,7 @@ namespace NVAPIWrapper
         /// <returns>Native color capabilities array.</returns>
         public _NV_MONITOR_COLOR_DATA[] ToNative()
         {
-            return Capabilities ?? Array.Empty<_NV_MONITOR_COLOR_DATA>();
+            return Capabilities;
         }
 
         /// <inheritdoc />
