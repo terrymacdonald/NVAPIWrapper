@@ -7772,6 +7772,12 @@
             GPU board info DTO.
             </summary>
         </member>
+        <member name="P:NVAPIWrapper.NVAPIGpuBoardInfoDto.BoardNumber">
+            <summary>Board number as a string. Empty string when not present.</summary>
+        </member>
+        <member name="P:NVAPIWrapper.NVAPIGpuBoardInfoDto.BoardNumberRaw">
+            <summary>Raw board number bytes. Empty array when not present.</summary>
+        </member>
         <member name="T:NVAPIWrapper.NVAPIGpuEccConfigurationInfoDto">
             <summary>
             ECC configuration info DTO.

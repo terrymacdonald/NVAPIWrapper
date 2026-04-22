@@ -5355,13 +5355,18 @@ namespace NVAPIWrapper
     /// </summary>
     public struct NVAPIGpuBoardInfoDto : IEquatable<NVAPIGpuBoardInfoDto>
     {
-        public string BoardNumber { get; set; }
-        public byte[] BoardNumberRaw { get; set; }
+        private string? _boardNumber;
+        private byte[]? _boardNumberRaw;
+
+        /// <summary>Board number as a string. Empty string when not present.</summary>
+        public string BoardNumber { get => _boardNumber ?? string.Empty; set => _boardNumber = value; }
+        /// <summary>Raw board number bytes. Empty array when not present.</summary>
+        public byte[] BoardNumberRaw { get => _boardNumberRaw ?? Array.Empty<byte>(); set => _boardNumberRaw = value; }
 
         public NVAPIGpuBoardInfoDto(byte[] boardNumberRaw, string boardNumber)
         {
-            BoardNumberRaw = boardNumberRaw ?? Array.Empty<byte>();
-            BoardNumber = boardNumber ?? string.Empty;
+            _boardNumberRaw = boardNumberRaw ?? Array.Empty<byte>();
+            _boardNumber = boardNumber ?? string.Empty;
         }
 
         public static NVAPIGpuBoardInfoDto FromNative(_NV_BOARD_INFO native)
@@ -5382,7 +5387,7 @@ namespace NVAPIWrapper
             var span = MemoryMarshal.CreateSpan(ref native.BoardNum.e0, 16);
             span.Clear();
 
-            var data = BoardNumberRaw ?? Array.Empty<byte>();
+            var data = BoardNumberRaw;
             data.AsSpan(0, Math.Min(data.Length, span.Length)).CopyTo(span);
             return native;
         }
