@@ -48,7 +48,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Connector
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 2995
+    startLine: 2997
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -85,7 +85,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Vga15Pin
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 2997
+    startLine: 2999
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -112,7 +112,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: TvComposite
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 2998
+    startLine: 3000
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -139,7 +139,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: TvSVideo
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 2999
+    startLine: 3001
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -166,7 +166,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: TvHdtvComponent
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 3000
+    startLine: 3002
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -193,7 +193,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: TvScart
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 3001
+    startLine: 3003
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -220,7 +220,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: TvCompositeScartOnEiaj4120
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 3002
+    startLine: 3004
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -247,7 +247,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: TvHdtvEiaj4120
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 3003
+    startLine: 3005
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -274,7 +274,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: PcPodHdtvYprpb
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 3004
+    startLine: 3006
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -301,7 +301,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: PcPodSVideo
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 3005
+    startLine: 3007
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -328,7 +328,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: PcPodComposite
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 3006
+    startLine: 3008
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -355,7 +355,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: DviITvSVideo
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 3007
+    startLine: 3009
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -382,7 +382,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: DviITvComposite
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 3008
+    startLine: 3010
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -409,7 +409,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: DviI
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 3009
+    startLine: 3011
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -436,7 +436,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: DviD
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 3010
+    startLine: 3012
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -463,7 +463,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Adc
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 3011
+    startLine: 3013
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -490,7 +490,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: LfhDviI1
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 3012
+    startLine: 3014
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -517,7 +517,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: LfhDviI2
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 3013
+    startLine: 3015
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -544,7 +544,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Spwg
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 3014
+    startLine: 3016
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -571,7 +571,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Oem
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 3015
+    startLine: 3017
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -598,7 +598,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: DisplayPortExternal
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 3016
+    startLine: 3018
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -625,7 +625,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: DisplayPortInternal
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 3017
+    startLine: 3019
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -652,7 +652,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: DisplayPortMiniExt
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 3018
+    startLine: 3020
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -679,7 +679,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: HdmiA
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 3019
+    startLine: 3021
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -706,7 +706,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: HdmiCMini
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 3020
+    startLine: 3022
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -733,7 +733,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: LfhDisplayPort1
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 3021
+    startLine: 3023
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -760,7 +760,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: LfhDisplayPort2
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 3022
+    startLine: 3024
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -787,7 +787,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: VirtualWfd
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 3023
+    startLine: 3025
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -814,7 +814,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: UsbC
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 3024
+    startLine: 3026
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -841,7 +841,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Unknown
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 3025
+    startLine: 3027
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper

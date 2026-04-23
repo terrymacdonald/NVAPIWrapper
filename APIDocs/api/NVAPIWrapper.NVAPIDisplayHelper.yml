@@ -1633,7 +1633,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetDisplayPortInfo
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 857
+    startLine: 858
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -1671,7 +1671,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SetDisplayPort
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 886
+    startLine: 887
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -1712,7 +1712,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetHdmiSupportInfo
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 913
+    startLine: 914
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -1750,7 +1750,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetVrrInfo
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 940
+    startLine: 941
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -1781,7 +1781,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetAdaptiveSyncData
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 967
+    startLine: 969
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -1812,7 +1812,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SetAdaptiveSyncData
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 995
+    startLine: 997
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -1847,7 +1847,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetVirtualRefreshRateData
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 1021
+    startLine: 1023
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -1878,7 +1878,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SetVirtualRefreshRateData
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 1049
+    startLine: 1051
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -1913,7 +1913,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetPreferredStereoDisplay
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 1076
+    startLine: 1078
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -1944,7 +1944,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SetPreferredStereoDisplay
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 1102
+    startLine: 1104
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -1979,7 +1979,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: EnableHWCursor
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 1126
+    startLine: 1128
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -2010,7 +2010,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: DisableHWCursor
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 1148
+    startLine: 1150
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -2041,7 +2041,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SetRefreshRateOverride
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 1173
+    startLine: 1175
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -2085,7 +2085,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: InfoFrameControl
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 1196
+    startLine: 1198
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -2120,7 +2120,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: ColorControl
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 1223
+    startLine: 1225
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -2155,7 +2155,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetHdrCapabilities
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 1249
+    startLine: 1251
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -2186,7 +2186,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: HdrColorControl
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 1276
+    startLine: 1278
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -2221,7 +2221,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SetSourceColorSpace
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 1303
+    startLine: 1305
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -2256,7 +2256,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetSourceColorSpace
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 1329
+    startLine: 1331
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -2294,7 +2294,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SetSourceHdrMetadata
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 1357
+    startLine: 1359
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -2329,7 +2329,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetSourceHdrMetadata
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 1384
+    startLine: 1386
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -2367,7 +2367,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SetOutputMode
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 1411
+    startLine: 1413
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -2402,7 +2402,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetOutputMode
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 1437
+    startLine: 1439
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -2433,7 +2433,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SetHdrToneMapping
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 1464
+    startLine: 1466
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -2468,7 +2468,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetHdrToneMapping
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 1489
+    startLine: 1491
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -2499,7 +2499,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetColorimetry
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 1515
+    startLine: 1517
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -2530,7 +2530,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetDisplayIdInfo
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 1542
+    startLine: 1544
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -2568,7 +2568,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetDisplayIdsFromTarget
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 1572
+    startLine: 1574
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -2599,7 +2599,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetDisplayIdsFromTarget
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 1587
+    startLine: 1589
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -2640,7 +2640,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: EnumCustomDisplay
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 1619
+    startLine: 1621
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -2681,7 +2681,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: TryCustomDisplay
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 1652
+    startLine: 1654
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -2722,7 +2722,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetAssociatedNvidiaDisplayHandle
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 1694
+    startLine: 1696
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -2760,7 +2760,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: DeleteCustomDisplay
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 1734
+    startLine: 1736
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -2801,7 +2801,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SaveCustomDisplay
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 1778
+    startLine: 1780
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -2845,7 +2845,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: RevertCustomDisplayTrial
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 1813
+    startLine: 1815
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -2883,7 +2883,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetNvManagedDedicatedDisplays
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 1842
+    startLine: 1844
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -2914,7 +2914,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: AcquireDedicatedDisplay
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 1898
+    startLine: 1900
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -2952,7 +2952,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: ReleaseDedicatedDisplay
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 1931
+    startLine: 1933
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -2990,7 +2990,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetNvManagedDedicatedDisplayMetadata
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 1963
+    startLine: 1965
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -3028,7 +3028,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SetNvManagedDedicatedDisplayMetadata
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 1991
+    startLine: 1993
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -3063,7 +3063,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetScanoutCompositionParameter
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 2015
+    startLine: 2017
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -3098,7 +3098,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SetScanoutCompositionParameter
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 2043
+    startLine: 2045
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -3133,7 +3133,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetScanoutConfiguration
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 2076
+    startLine: 2078
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -3164,7 +3164,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetScanoutConfigurationEx
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 2102
+    startLine: 2104
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -3195,7 +3195,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetScanoutIntensityState
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 2127
+    startLine: 2129
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -3226,7 +3226,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SetScanoutIntensity
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 2153
+    startLine: 2155
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -3261,7 +3261,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetScanoutWarpingState
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 2189
+    startLine: 2191
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -3292,7 +3292,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SetScanoutWarping
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 2215
+    startLine: 2217
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -3327,7 +3327,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Dispose
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 2412
+    startLine: 2414
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper

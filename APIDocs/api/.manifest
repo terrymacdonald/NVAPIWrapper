@@ -3899,6 +3899,7 @@
   "NVAPIWrapper.NVAPIPhysicalGpuHelper.GetMemoryInfoEx": "NVAPIWrapper.NVAPIPhysicalGpuHelper.yml",
   "NVAPIWrapper.NVAPIPhysicalGpuHelper.GetNvlinkCaps": "NVAPIWrapper.NVAPIPhysicalGpuHelper.yml",
   "NVAPIWrapper.NVAPIPhysicalGpuHelper.GetNvlinkStatus": "NVAPIWrapper.NVAPIPhysicalGpuHelper.yml",
+  "NVAPIWrapper.NVAPIPhysicalGpuHelper.GetOutputIdFromDisplayId(System.UInt32)": "NVAPIWrapper.NVAPIPhysicalGpuHelper.yml",
   "NVAPIWrapper.NVAPIPhysicalGpuHelper.GetOutputType(System.UInt32)": "NVAPIWrapper.NVAPIPhysicalGpuHelper.yml",
   "NVAPIWrapper.NVAPIPhysicalGpuHelper.GetPCIIdentifiers": "NVAPIWrapper.NVAPIPhysicalGpuHelper.yml",
   "NVAPIWrapper.NVAPIPhysicalGpuHelper.GetPerfDecreaseInfo": "NVAPIWrapper.NVAPIPhysicalGpuHelper.yml",

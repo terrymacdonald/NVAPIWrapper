@@ -46,6 +46,7 @@ items:
   - NVAPIWrapper.NVAPIPhysicalGpuHelper.GetMemoryInfoEx
   - NVAPIWrapper.NVAPIPhysicalGpuHelper.GetNvlinkCaps
   - NVAPIWrapper.NVAPIPhysicalGpuHelper.GetNvlinkStatus
+  - NVAPIWrapper.NVAPIPhysicalGpuHelper.GetOutputIdFromDisplayId(System.UInt32)
   - NVAPIWrapper.NVAPIPhysicalGpuHelper.GetOutputType(System.UInt32)
   - NVAPIWrapper.NVAPIPhysicalGpuHelper.GetPCIIdentifiers
   - NVAPIWrapper.NVAPIPhysicalGpuHelper.GetPerfDecreaseInfo
@@ -129,7 +130,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetFullName
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 98
+    startLine: 99
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -160,7 +161,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetBusId
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 123
+    startLine: 124
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -191,7 +192,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetBusType
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 143
+    startLine: 144
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -222,7 +223,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetGpuType
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 163
+    startLine: 164
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -253,7 +254,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetPCIIdentifiers
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 183
+    startLine: 184
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -284,7 +285,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetBusSlotId
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 207
+    startLine: 208
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -315,7 +316,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetVbiosVersionString
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 227
+    startLine: 228
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -346,7 +347,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetPhysicalFrameBufferSize
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 252
+    startLine: 253
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -377,7 +378,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetVirtualFrameBufferSize
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 274
+    startLine: 275
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -408,7 +409,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetTachReading
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 296
+    startLine: 297
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -439,7 +440,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetMemoryInfo
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 316
+    startLine: 317
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -470,7 +471,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetMemoryInfoEx
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 337
+    startLine: 338
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -501,7 +502,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetDisplayIdFromGpuAndOutputId
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 359
+    startLine: 360
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -539,7 +540,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: EnumAllDisplays
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 383
+    startLine: 384
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -570,7 +571,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: EnumConnectedDisplays
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 484
+    startLine: 485
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -601,7 +602,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: EnumActiveDisplays
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 513
+    startLine: 514
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -632,7 +633,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetDisplayConfig
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 542
+    startLine: 543
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -663,7 +664,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SetDisplayConfig
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 582
+    startLine: 583
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -704,7 +705,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetShaderSubPipeCount
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 616
+    startLine: 617
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -735,7 +736,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetGpuCoreCount
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 638
+    startLine: 639
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -766,7 +767,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetSystemType
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 660
+    startLine: 661
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -797,7 +798,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetActiveOutputs
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 682
+    startLine: 683
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -828,7 +829,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetConnectedDisplayIds
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 705
+    startLine: 706
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -866,7 +867,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetAllDisplayIds
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 736
+    startLine: 737
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -897,7 +898,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetPerfDecreaseInfo
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 767
+    startLine: 768
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -928,7 +929,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetCurrentPstate
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 789
+    startLine: 790
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -959,7 +960,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetPstates20Info
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 811
+    startLine: 812
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -990,7 +991,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetDynamicPstatesInfoEx
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 833
+    startLine: 834
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -1021,7 +1022,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetThermalSettings
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 856
+    startLine: 857
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -1059,7 +1060,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetAllClockFrequencies
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 879
+    startLine: 880
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -1094,7 +1095,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: QueryIlluminationSupport
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 902
+    startLine: 903
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -1129,7 +1130,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetIllumination
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 926
+    startLine: 927
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -1164,7 +1165,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SetIllumination
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 950
+    startLine: 951
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -1199,7 +1200,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetIlluminationDevicesInfo
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 981
+    startLine: 982
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -1230,7 +1231,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetIlluminationDevicesControl
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 1003
+    startLine: 1004
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -1261,7 +1262,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SetIlluminationDevicesControl
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 1026
+    startLine: 1027
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -1296,7 +1297,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetIlluminationZonesInfo
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 1056
+    startLine: 1057
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -1327,7 +1328,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetIlluminationZonesControl
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 1078
+    startLine: 1079
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -1358,7 +1359,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SetIlluminationZonesControl
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 1101
+    startLine: 1102
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -1393,7 +1394,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetVirtualizationInfo
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 1131
+    startLine: 1132
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -1424,7 +1425,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetLicensableFeatures
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 1153
+    startLine: 1154
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -1455,7 +1456,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetEncoderStatistics
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 1175
+    startLine: 1176
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -1486,7 +1487,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetEncoderSessionsInfo
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 1197
+    startLine: 1198
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -1517,7 +1518,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetVrReadyData
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 1219
+    startLine: 1220
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -1548,7 +1549,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetGspFeatures
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 1241
+    startLine: 1242
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -1579,7 +1580,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetNvlinkCaps
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 1263
+    startLine: 1264
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -1610,7 +1611,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetNvlinkStatus
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 1285
+    startLine: 1286
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -1641,7 +1642,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetGpuInfo
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 1307
+    startLine: 1308
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -1672,7 +1673,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: I2CRead
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 1330
+    startLine: 1331
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -1707,7 +1708,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: I2CWrite
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 1381
+    startLine: 1382
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -1742,7 +1743,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetArchInfo
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 1418
+    startLine: 1419
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -1773,7 +1774,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetBoardInfo
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 1438
+    startLine: 1439
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -1804,7 +1805,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetVbiosRevision
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 1458
+    startLine: 1459
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -1835,7 +1836,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetVbiosOemRevision
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 1478
+    startLine: 1479
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -1866,7 +1867,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetCurrentPcieDownstreamWidth
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 1498
+    startLine: 1499
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -1897,7 +1898,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetRamBusWidth
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 1520
+    startLine: 1521
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -1928,7 +1929,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetIrq
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 1540
+    startLine: 1541
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -1959,7 +1960,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetOutputType
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 1561
+    startLine: 1562
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -1997,7 +1998,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: ValidateOutputCombination
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 1582
+    startLine: 1583
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -2035,7 +2036,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetEccConfigurationInfo
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 1606
+    startLine: 1607
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -2066,7 +2067,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SetEccConfiguration
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 1630
+    startLine: 1631
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -2107,7 +2108,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetEccErrorInfo
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 1659
+    startLine: 1660
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -2138,7 +2139,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: ResetEccErrorInfo
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 1683
+    startLine: 1684
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -2179,7 +2180,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetHdcpSupportStatus
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 1705
+    startLine: 1706
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -2192,6 +2193,49 @@ items:
       description: HDCP support status DTO, or null if unavailable.
     content.vb: Public Function GetHdcpSupportStatus() As NVAPIGpuHdcpSupportStatusDto?
   overload: NVAPIWrapper.NVAPIPhysicalGpuHelper.GetHdcpSupportStatus*
+- uid: NVAPIWrapper.NVAPIPhysicalGpuHelper.GetOutputIdFromDisplayId(System.UInt32)
+  commentId: M:NVAPIWrapper.NVAPIPhysicalGpuHelper.GetOutputIdFromDisplayId(System.UInt32)
+  id: GetOutputIdFromDisplayId(System.UInt32)
+  parent: NVAPIWrapper.NVAPIPhysicalGpuHelper
+  langs:
+  - csharp
+  - vb
+  name: GetOutputIdFromDisplayId(uint)
+  nameWithType: NVAPIPhysicalGpuHelper.GetOutputIdFromDisplayId(uint)
+  fullName: NVAPIWrapper.NVAPIPhysicalGpuHelper.GetOutputIdFromDisplayId(uint)
+  type: Method
+  source:
+    remote:
+      path: NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
+      branch: main
+      repo: https://github.com/terrymacdonald/NVAPIWrapper.git
+    id: GetOutputIdFromDisplayId
+    path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
+    startLine: 1731
+  assemblies:
+  - NVAPIWrapper
+  namespace: NVAPIWrapper
+  summary: >-
+    Get the GPU output ID corresponding to a display ID.
+
+    This uses NvAPI_SYS_GetGpuAndOutputIdFromDisplayId, which works even in
+
+    surround/mosaic mode and returns the physical output ID needed for EDID retrieval.
+  example: []
+  syntax:
+    content: public uint? GetOutputIdFromDisplayId(uint displayId)
+    parameters:
+    - id: displayId
+      type: System.UInt32
+      description: Display ID to resolve.
+    return:
+      type: System.Nullable{System.UInt32}
+      description: Output ID (single-bit mask), or null if unavailable.
+    content.vb: Public Function GetOutputIdFromDisplayId(displayId As UInteger) As UInteger?
+  overload: NVAPIWrapper.NVAPIPhysicalGpuHelper.GetOutputIdFromDisplayId*
+  nameWithType.vb: NVAPIPhysicalGpuHelper.GetOutputIdFromDisplayId(UInteger)
+  fullName.vb: NVAPIWrapper.NVAPIPhysicalGpuHelper.GetOutputIdFromDisplayId(UInteger)
+  name.vb: GetOutputIdFromDisplayId(UInteger)
 - uid: NVAPIWrapper.NVAPIPhysicalGpuHelper.GetEdid(System.UInt32)
   commentId: M:NVAPIWrapper.NVAPIPhysicalGpuHelper.GetEdid(System.UInt32)
   id: GetEdid(System.UInt32)
@@ -2210,7 +2254,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetEdid
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 1728
+    startLine: 1757
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -2248,7 +2292,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SetEdid
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 1750
+    startLine: 1779
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -2289,7 +2333,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetLogicalGpuInfo
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 1778
+    startLine: 1807
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -2320,7 +2364,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: RegisterForUtilizationSampleUpdates
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 1814
+    startLine: 1843
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -2355,7 +2399,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: QueryWorkstationFeatureSupport
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 1840
+    startLine: 1869
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -2390,7 +2434,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: WorkstationFeatureQuery
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 1866
+    startLine: 1895
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -2421,7 +2465,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: WorkstationFeatureSetup
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 1894
+    startLine: 1923
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -2462,7 +2506,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Dispose
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 2153
+    startLine: 2182
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -3914,6 +3958,12 @@ references:
     name: NVAPIGpuHdcpSupportStatusDto
     href: NVAPIWrapper.NVAPIGpuHdcpSupportStatusDto.html
   - name: '?'
+- uid: NVAPIWrapper.NVAPIPhysicalGpuHelper.GetOutputIdFromDisplayId*
+  commentId: Overload:NVAPIWrapper.NVAPIPhysicalGpuHelper.GetOutputIdFromDisplayId
+  href: NVAPIWrapper.NVAPIPhysicalGpuHelper.html#NVAPIWrapper_NVAPIPhysicalGpuHelper_GetOutputIdFromDisplayId_System_UInt32_
+  name: GetOutputIdFromDisplayId
+  nameWithType: NVAPIPhysicalGpuHelper.GetOutputIdFromDisplayId
+  fullName: NVAPIWrapper.NVAPIPhysicalGpuHelper.GetOutputIdFromDisplayId
 - uid: NVAPIWrapper.NVAPIPhysicalGpuHelper.GetEdid*
   commentId: Overload:NVAPIWrapper.NVAPIPhysicalGpuHelper.GetEdid
   href: NVAPIWrapper.NVAPIPhysicalGpuHelper.html#NVAPIWrapper_NVAPIPhysicalGpuHelper_GetEdid_System_UInt32_
