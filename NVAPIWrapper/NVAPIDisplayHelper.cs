@@ -803,7 +803,8 @@ namespace NVAPIWrapper
 
             uint count = 0;
             var status = getCaps(displayId, null, &count);
-            if (status == _NvAPI_Status.NVAPI_NOT_SUPPORTED || status == _NvAPI_Status.NVAPI_NVIDIA_DEVICE_NOT_FOUND)
+            if (status == _NvAPI_Status.NVAPI_NOT_SUPPORTED || status == _NvAPI_Status.NVAPI_NVIDIA_DEVICE_NOT_FOUND
+                || status == _NvAPI_Status.NVAPI_INVALID_DISPLAY_ID)
                 return null;
 
             if (status != _NvAPI_Status.NVAPI_OK && status != _NvAPI_Status.NVAPI_INSUFFICIENT_BUFFER)
@@ -952,7 +953,8 @@ namespace NVAPIWrapper
             var info = CreateVrrInfo();
 
             var status = getVrr(displayId, &info);
-            if (status == _NvAPI_Status.NVAPI_NOT_SUPPORTED || status == _NvAPI_Status.NVAPI_NVIDIA_DEVICE_NOT_FOUND)
+            if (status == _NvAPI_Status.NVAPI_NOT_SUPPORTED || status == _NvAPI_Status.NVAPI_NVIDIA_DEVICE_NOT_FOUND
+                || status == _NvAPI_Status.NVAPI_INVALID_DISPLAY_ID)
                 return null;
 
             if (status != _NvAPI_Status.NVAPI_OK)
