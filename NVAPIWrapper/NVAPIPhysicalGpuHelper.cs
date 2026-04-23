@@ -81,6 +81,7 @@ namespace NVAPIWrapper
         private const uint NvApiIdI2CWrite = 0xE812EB07;
         private const uint NvApiIdDispGetDisplayConfig = 0x11ABCCF8;
         private const uint NvApiIdDispSetDisplayConfig = 0x5D8CF8DE;
+        private const uint NvApiIdSysGetGpuAndOutputIdFromDisplayId = 0x112BA1A5;
 
         private readonly NVAPIApiHelper _apiHelper;
         private readonly IntPtr _handle;
@@ -1722,6 +1723,34 @@ namespace NVAPIWrapper
         }
 
         /// <summary>
+        /// Get the GPU output ID corresponding to a display ID.
+        /// This uses NvAPI_SYS_GetGpuAndOutputIdFromDisplayId, which works even in
+        /// surround/mosaic mode and returns the physical output ID needed for EDID retrieval.
+        /// </summary>
+        /// <param name="displayId">Display ID to resolve.</param>
+        /// <returns>Output ID (single-bit mask), or null if unavailable.</returns>
+        public unsafe uint? GetOutputIdFromDisplayId(uint displayId)
+        {
+            ThrowIfDisposed();
+
+            var getInfo = GetDelegate<NvApiSysGetGpuAndOutputIdFromDisplayIdDelegate>(
+                NvApiIdSysGetGpuAndOutputIdFromDisplayId,
+                "NvAPI_SYS_GetGpuAndOutputIdFromDisplayId");
+
+            NvPhysicalGpuHandle__* physicalGpu = null;
+            uint outputId = 0;
+            var status = getInfo(displayId, &physicalGpu, &outputId);
+
+            if (status == _NvAPI_Status.NVAPI_OK)
+                return outputId;
+
+            if (status == _NvAPI_Status.NVAPI_NOT_SUPPORTED || status == _NvAPI_Status.NVAPI_NVIDIA_DEVICE_NOT_FOUND)
+                return null;
+
+            throw new NVAPIException(status);
+        }
+
+        /// <summary>
         /// Get EDID data for a GPU output.
         /// </summary>
         /// <param name="displayOutputId">Display output ID.</param>
@@ -2350,6 +2379,9 @@ namespace NVAPIWrapper
 
         [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
         private unsafe delegate _NvAPI_Status NvApiGpuGetHdcpSupportStatusDelegate(NvPhysicalGpuHandle__* hPhysicalGpu, NV_GPU_GET_HDCP_SUPPORT_STATUS* pGetHdcpSupportStatus);
+
+        [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
+        private unsafe delegate _NvAPI_Status NvApiSysGetGpuAndOutputIdFromDisplayIdDelegate(uint displayId, NvPhysicalGpuHandle__** hPhysicalGpu, uint* outputId);
 
         [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
         private unsafe delegate _NvAPI_Status NvApiGpuGetEdidDelegate(NvPhysicalGpuHandle__* hPhysicalGpu, uint displayOutputId, NV_EDID_V3* pEdid);
