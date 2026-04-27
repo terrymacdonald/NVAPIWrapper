@@ -4901,6 +4901,11 @@ namespace NVAPIWrapper
                 native.size = (ushort)Marshal.SizeOf<_NV_COLOR_DATA_V5>();
             }
 
+            if (native.cmd == 0)
+            {
+                native.cmd = (byte)NV_COLOR_CMD.NV_COLOR_CMD_GET;
+            }
+
             return native;
         }
 
