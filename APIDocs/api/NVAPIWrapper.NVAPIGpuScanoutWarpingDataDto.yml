@@ -30,7 +30,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPIGpuScanoutWarpingDataDto
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 6257
+    startLine: 6262
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -64,7 +64,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Vertices
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 6259
+    startLine: 6264
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -93,7 +93,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: VertexFormat
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 6260
+    startLine: 6265
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -122,7 +122,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NumVertices
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 6261
+    startLine: 6266
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -151,7 +151,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: TextureRect
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 6262
+    startLine: 6267
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -180,7 +180,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: .ctor
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 6264
+    startLine: 6269
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -218,7 +218,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: ToNative
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 6276
+    startLine: 6281
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -246,7 +246,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Equals
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 6288
+    startLine: 6293
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -283,7 +283,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Equals
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 6296
+    startLine: 6301
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -322,7 +322,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetHashCode
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 6297
+    startLine: 6302
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -354,7 +354,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: op_Equality
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 6309
+    startLine: 6314
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -390,7 +390,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: op_Inequality
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 6310
+    startLine: 6315
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
