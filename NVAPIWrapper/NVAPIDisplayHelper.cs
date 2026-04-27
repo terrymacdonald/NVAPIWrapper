@@ -1212,7 +1212,7 @@ namespace NVAPIWrapper
             if (status == _NvAPI_Status.NVAPI_OK)
                 return NVAPIInfoFrameDataDto.FromNative(native);
 
-            if (status == _NvAPI_Status.NVAPI_NOT_SUPPORTED || status == _NvAPI_Status.NVAPI_NVIDIA_DEVICE_NOT_FOUND)
+            if (status == _NvAPI_Status.NVAPI_NOT_SUPPORTED || status == _NvAPI_Status.NVAPI_NVIDIA_DEVICE_NOT_FOUND || status == _NvAPI_Status.NVAPI_INVALID_ARGUMENT)
                 return null;
 
             throw new NVAPIException(status);
