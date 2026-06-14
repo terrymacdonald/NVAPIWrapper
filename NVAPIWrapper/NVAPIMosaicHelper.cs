@@ -522,6 +522,36 @@ namespace NVAPIWrapper
             }
         }
 
+        /// <summary>
+        /// Resolve the logical GPU referenced by a Mosaic topology details DTO.
+        /// </summary>
+        /// <param name="topoDetails">Mosaic topology details DTO.</param>
+        /// <returns>A single logical GPU helper when the DTO references a valid logical GPU; otherwise an empty array.</returns>
+        public NVAPILogicalGpuHelper[] GetLogicalGpus(NVAPIMosaicTopoDetailsDto topoDetails)
+        {
+            ThrowIfDisposed();
+
+            if (!topoDetails.HasLogicalGpu || topoDetails.LogicalGpuHandle == IntPtr.Zero)
+                return Array.Empty<NVAPILogicalGpuHelper>();
+
+            return new[] { new NVAPILogicalGpuHelper(_apiHelper, topoDetails.LogicalGpuHandle) };
+        }
+
+        /// <summary>
+        /// Resolve the physical GPU referenced by a Mosaic GPU layout cell DTO.
+        /// </summary>
+        /// <param name="layoutCell">Mosaic GPU layout cell DTO.</param>
+        /// <returns>A single physical GPU helper when the DTO references a valid physical GPU; otherwise an empty array.</returns>
+        public NVAPIPhysicalGpuHelper[] GetPhysicalGpus(NVAPIMosaicGpuLayoutCellDto layoutCell)
+        {
+            ThrowIfDisposed();
+
+            if (!layoutCell.HasPhysicalGpu || layoutCell.PhysicalGpuHandle == IntPtr.Zero)
+                return Array.Empty<NVAPIPhysicalGpuHelper>();
+
+            return new[] { new NVAPIPhysicalGpuHelper(_apiHelper, layoutCell.PhysicalGpuHandle) };
+        }
+
         private T GetDelegate<T>(uint id, string name) where T : Delegate
         {
             var functionPtr = _apiHelper.Api.TryGetFunctionPointer(id);
@@ -586,8 +616,26 @@ namespace NVAPIWrapper
     /// </summary>
     public struct NVAPIMosaicSupportedTopoInfoDto : IEquatable<NVAPIMosaicSupportedTopoInfoDto>
     {
-        public NVAPIMosaicTopoBriefDto[] TopoBriefs { get; set; }
-        public NVAPIMosaicDisplaySettingDto[] DisplaySettings { get; set; }
+        private NVAPIMosaicTopoBriefDto[]? _topoBriefs;
+
+        /// <summary>
+        /// Gets or sets TopoBriefs. Empty when no values are present.
+        /// </summary>
+        public NVAPIMosaicTopoBriefDto[] TopoBriefs
+        {
+            get => _topoBriefs ?? Array.Empty<NVAPIMosaicTopoBriefDto>();
+            set => _topoBriefs = value ?? Array.Empty<NVAPIMosaicTopoBriefDto>();
+        }
+        private NVAPIMosaicDisplaySettingDto[]? _displaySettings;
+
+        /// <summary>
+        /// Gets or sets DisplaySettings. Empty when no values are present.
+        /// </summary>
+        public NVAPIMosaicDisplaySettingDto[] DisplaySettings
+        {
+            get => _displaySettings ?? Array.Empty<NVAPIMosaicDisplaySettingDto>();
+            set => _displaySettings = value ?? Array.Empty<NVAPIMosaicDisplaySettingDto>();
+        }
 
         /// <summary>
         /// Create a supported topology info DTO.
@@ -1070,7 +1118,16 @@ namespace NVAPIWrapper
     public struct NVAPIMosaicTopoGroupDto : IEquatable<NVAPIMosaicTopoGroupDto>
     {
         public NVAPIMosaicTopoBriefDto Brief { get; set; }
-        public NVAPIMosaicTopoDetailsDto[] Topos { get; set; }
+        private NVAPIMosaicTopoDetailsDto[]? _topos;
+
+        /// <summary>
+        /// Gets or sets Topos. Empty when no values are present.
+        /// </summary>
+        public NVAPIMosaicTopoDetailsDto[] Topos
+        {
+            get => _topos ?? Array.Empty<NVAPIMosaicTopoDetailsDto>();
+            set => _topos = value ?? Array.Empty<NVAPIMosaicTopoDetailsDto>();
+        }
 
         /// <summary>
         /// Create a Mosaic topology group DTO.
@@ -1156,11 +1213,30 @@ namespace NVAPIWrapper
     public struct NVAPIMosaicTopoDetailsDto : IEquatable<NVAPIMosaicTopoDetailsDto>
     {
         internal IntPtr LogicalGpuHandle { get; set; }
-        public NVAPILogicalGpuHelper? LogicalGpu { get; set; }
+
+        /// <summary>
+        /// Gets whether this DTO references a logical GPU handle.
+        /// </summary>
+        public bool HasLogicalGpu { get; set; }
+
+        /// <summary>
+        /// Gets the logical GPU handle value, or 0 when no logical GPU handle is present.
+        /// </summary>
+        public long LogicalGpuHandleValue => LogicalGpuHandle.ToInt64();
+
         public uint ValidityMask { get; set; }
         public uint RowCount { get; set; }
         public uint ColCount { get; set; }
-        public NVAPIMosaicGpuLayoutCellDto[] GpuLayout { get; set; }
+        private NVAPIMosaicGpuLayoutCellDto[]? _gpuLayout;
+
+        /// <summary>
+        /// Gets or sets GpuLayout. Empty when no values are present.
+        /// </summary>
+        public NVAPIMosaicGpuLayoutCellDto[] GpuLayout
+        {
+            get => _gpuLayout ?? Array.Empty<NVAPIMosaicGpuLayoutCellDto>();
+            set => _gpuLayout = value ?? Array.Empty<NVAPIMosaicGpuLayoutCellDto>();
+        }
 
         /// <summary>
         /// Create a Mosaic topology details DTO.
@@ -1173,7 +1249,7 @@ namespace NVAPIWrapper
         public NVAPIMosaicTopoDetailsDto(IntPtr logicalGpuHandle, uint validityMask, uint rowCount, uint colCount, NVAPIMosaicGpuLayoutCellDto[] gpuLayout)
         {
             LogicalGpuHandle = logicalGpuHandle;
-            LogicalGpu = null;
+            HasLogicalGpu = logicalGpuHandle != IntPtr.Zero;
             ValidityMask = validityMask;
             RowCount = rowCount;
             ColCount = colCount;
@@ -1183,7 +1259,7 @@ namespace NVAPIWrapper
         internal NVAPIMosaicTopoDetailsDto(IntPtr logicalGpuHandle, NVAPILogicalGpuHelper logicalGpu, uint validityMask, uint rowCount, uint colCount, NVAPIMosaicGpuLayoutCellDto[] gpuLayout)
         {
             LogicalGpuHandle = logicalGpuHandle;
-            LogicalGpu = logicalGpu;
+            HasLogicalGpu = logicalGpuHandle != IntPtr.Zero;
             ValidityMask = validityMask;
             RowCount = rowCount;
             ColCount = colCount;
@@ -1207,8 +1283,7 @@ namespace NVAPIWrapper
             }
 
             var handle = (IntPtr)native.hLogicalGPU;
-            var helper = new NVAPILogicalGpuHelper(apiHelper, handle);
-            return new NVAPIMosaicTopoDetailsDto(handle, helper, native.validityMask, native.rowCount, native.colCount, layout);
+            return new NVAPIMosaicTopoDetailsDto(handle, native.validityMask, native.rowCount, native.colCount, layout);
         }
 
         /// <summary>
@@ -1245,6 +1320,7 @@ namespace NVAPIWrapper
         public bool Equals(NVAPIMosaicTopoDetailsDto other)
         {
             return LogicalGpuHandle == other.LogicalGpuHandle
+                && HasLogicalGpu == other.HasLogicalGpu
                 && ValidityMask == other.ValidityMask
                 && RowCount == other.RowCount
                 && ColCount == other.ColCount
@@ -1267,6 +1343,7 @@ namespace NVAPIWrapper
             unchecked
             {
                 var hash = LogicalGpuHandle.GetHashCode();
+                hash = (hash * 31) + HasLogicalGpu.GetHashCode();
                 hash = (hash * 31) + ValidityMask.GetHashCode();
                 hash = (hash * 31) + RowCount.GetHashCode();
                 hash = (hash * 31) + ColCount.GetHashCode();
@@ -1298,7 +1375,17 @@ namespace NVAPIWrapper
     public struct NVAPIMosaicGpuLayoutCellDto : IEquatable<NVAPIMosaicGpuLayoutCellDto>
     {
         internal IntPtr PhysicalGpuHandle { get; set; }
-        public NVAPIPhysicalGpuHelper? PhysicalGpu { get; set; }
+
+        /// <summary>
+        /// Gets whether this DTO references a physical GPU handle.
+        /// </summary>
+        public bool HasPhysicalGpu { get; set; }
+
+        /// <summary>
+        /// Gets the physical GPU handle value, or 0 when no physical GPU handle is present.
+        /// </summary>
+        public long PhysicalGpuHandleValue => PhysicalGpuHandle.ToInt64();
+
         public uint DisplayOutputId { get; set; }
         public int OverlapX { get; set; }
         public int OverlapY { get; set; }
@@ -1313,7 +1400,7 @@ namespace NVAPIWrapper
         public NVAPIMosaicGpuLayoutCellDto(IntPtr physicalGpuHandle, uint displayOutputId, int overlapX, int overlapY)
         {
             PhysicalGpuHandle = physicalGpuHandle;
-            PhysicalGpu = null;
+            HasPhysicalGpu = physicalGpuHandle != IntPtr.Zero;
             DisplayOutputId = displayOutputId;
             OverlapX = overlapX;
             OverlapY = overlapY;
@@ -1322,7 +1409,7 @@ namespace NVAPIWrapper
         internal NVAPIMosaicGpuLayoutCellDto(IntPtr physicalGpuHandle, NVAPIPhysicalGpuHelper physicalGpu, uint displayOutputId, int overlapX, int overlapY)
         {
             PhysicalGpuHandle = physicalGpuHandle;
-            PhysicalGpu = physicalGpu;
+            HasPhysicalGpu = physicalGpuHandle != IntPtr.Zero;
             DisplayOutputId = displayOutputId;
             OverlapX = overlapX;
             OverlapY = overlapY;
@@ -1337,8 +1424,7 @@ namespace NVAPIWrapper
         public static unsafe NVAPIMosaicGpuLayoutCellDto FromNative(NVAPIApiHelper apiHelper, NV_MOSAIC_GPU_LAYOUT_CELL native)
         {
             var handle = (IntPtr)native.hPhysicalGPU;
-            var helper = new NVAPIPhysicalGpuHelper(apiHelper, handle);
-            return new NVAPIMosaicGpuLayoutCellDto(handle, helper, native.displayOutputId, native.overlapX, native.overlapY);
+            return new NVAPIMosaicGpuLayoutCellDto(handle, native.displayOutputId, native.overlapX, native.overlapY);
         }
 
         /// <summary>
@@ -1364,6 +1450,7 @@ namespace NVAPIWrapper
         public bool Equals(NVAPIMosaicGpuLayoutCellDto other)
         {
             return PhysicalGpuHandle == other.PhysicalGpuHandle
+                && HasPhysicalGpu == other.HasPhysicalGpu
                 && DisplayOutputId == other.DisplayOutputId
                 && OverlapX == other.OverlapX
                 && OverlapY == other.OverlapY;
@@ -1385,6 +1472,7 @@ namespace NVAPIWrapper
             unchecked
             {
                 var hash = PhysicalGpuHandle.GetHashCode();
+                hash = (hash * 31) + HasPhysicalGpu.GetHashCode();
                 hash = (hash * 31) + DisplayOutputId.GetHashCode();
                 hash = (hash * 31) + OverlapX.GetHashCode();
                 hash = (hash * 31) + OverlapY.GetHashCode();
@@ -1549,7 +1637,16 @@ namespace NVAPIWrapper
         public bool DriverReloadAllowed { get; set; }
         public bool AcceleratePrimaryDisplay { get; set; }
         public bool PixelShift { get; set; }
-        public NVAPIMosaicGridTopoDisplayDto[] Displays { get; set; }
+        private NVAPIMosaicGridTopoDisplayDto[]? _displays;
+
+        /// <summary>
+        /// Gets or sets Displays. Empty when no values are present.
+        /// </summary>
+        public NVAPIMosaicGridTopoDisplayDto[] Displays
+        {
+            get => _displays ?? Array.Empty<NVAPIMosaicGridTopoDisplayDto>();
+            set => _displays = value ?? Array.Empty<NVAPIMosaicGridTopoDisplayDto>();
+        }
         public NVAPIMosaicDisplaySettingDto DisplaySettings { get; set; }
 
         /// <summary>
@@ -1779,7 +1876,16 @@ namespace NVAPIWrapper
     /// </summary>
     public struct NVAPIMosaicDisplaySettingsDto : IEquatable<NVAPIMosaicDisplaySettingsDto>
     {
-        public NVAPIMosaicDisplaySettingDto[] Settings { get; set; }
+        private NVAPIMosaicDisplaySettingDto[]? _settings;
+
+        /// <summary>
+        /// Gets or sets Settings. Empty when no values are present.
+        /// </summary>
+        public NVAPIMosaicDisplaySettingDto[] Settings
+        {
+            get => _settings ?? Array.Empty<NVAPIMosaicDisplaySettingDto>();
+            set => _settings = value ?? Array.Empty<NVAPIMosaicDisplaySettingDto>();
+        }
 
         /// <summary>
         /// Create a Mosaic display settings DTO.
@@ -1929,7 +2035,16 @@ namespace NVAPIWrapper
     {
         public uint ErrorFlags { get; set; }
         public uint WarningFlags { get; set; }
-        public NVAPIMosaicDisplayStatusEntryDto[] Displays { get; set; }
+        private NVAPIMosaicDisplayStatusEntryDto[]? _displays;
+
+        /// <summary>
+        /// Gets or sets Displays. Empty when no values are present.
+        /// </summary>
+        public NVAPIMosaicDisplayStatusEntryDto[] Displays
+        {
+            get => _displays ?? Array.Empty<NVAPIMosaicDisplayStatusEntryDto>();
+            set => _displays = value ?? Array.Empty<NVAPIMosaicDisplayStatusEntryDto>();
+        }
 
         /// <summary>
         /// Create a Mosaic display topology status DTO.
@@ -2018,7 +2133,16 @@ namespace NVAPIWrapper
     /// </summary>
     public struct NVAPIMosaicDisplayTopoStatusesDto : IEquatable<NVAPIMosaicDisplayTopoStatusesDto>
     {
-        public NVAPIMosaicDisplayTopoStatusDto[] Statuses { get; set; }
+        private NVAPIMosaicDisplayTopoStatusDto[]? _statuses;
+
+        /// <summary>
+        /// Gets or sets Statuses. Empty when no values are present.
+        /// </summary>
+        public NVAPIMosaicDisplayTopoStatusDto[] Statuses
+        {
+            get => _statuses ?? Array.Empty<NVAPIMosaicDisplayTopoStatusDto>();
+            set => _statuses = value ?? Array.Empty<NVAPIMosaicDisplayTopoStatusDto>();
+        }
 
         /// <summary>
         /// Create a Mosaic display topology status collection DTO.
@@ -2174,7 +2298,16 @@ namespace NVAPIWrapper
     /// </summary>
     public struct NVAPIMosaicViewportsDto : IEquatable<NVAPIMosaicViewportsDto>
     {
-        public NVAPIRectDto[] Viewports { get; set; }
+        private NVAPIRectDto[]? _viewports;
+
+        /// <summary>
+        /// Gets or sets Viewports. Empty when no values are present.
+        /// </summary>
+        public NVAPIRectDto[] Viewports
+        {
+            get => _viewports ?? Array.Empty<NVAPIRectDto>();
+            set => _viewports = value ?? Array.Empty<NVAPIRectDto>();
+        }
         public bool BezelCorrected { get; set; }
 
         /// <summary>

@@ -2477,8 +2477,26 @@ namespace NVAPIWrapper
         public uint DisplayMask { get; set; }
         public bool IsDDCPort { get; set; }
         public byte I2cDevAddress { get; set; }
-        public byte[] RegisterAddress { get; set; }
-        public byte[] Data { get; set; }
+        private byte[]? _registerAddress;
+
+        /// <summary>
+        /// Gets or sets RegisterAddress. Empty when no values are present.
+        /// </summary>
+        public byte[] RegisterAddress
+        {
+            get => _registerAddress ?? Array.Empty<byte>();
+            set => _registerAddress = value ?? Array.Empty<byte>();
+        }
+        private byte[]? _data;
+
+        /// <summary>
+        /// Gets or sets Data. Empty when no values are present.
+        /// </summary>
+        public byte[] Data
+        {
+            get => _data ?? Array.Empty<byte>();
+            set => _data = value ?? Array.Empty<byte>();
+        }
         public uint I2cSpeed { get; set; }
         public NV_I2C_SPEED I2cSpeedKhz { get; set; }
         public byte PortId { get; set; }
@@ -2940,7 +2958,16 @@ namespace NVAPIWrapper
     public struct NVAPIGpuDynamicPstatesInfoExDto : IEquatable<NVAPIGpuDynamicPstatesInfoExDto>
     {
         public uint Flags { get; set; }
-        public NVAPIGpuDynamicPstateUtilizationDto[] Utilization { get; set; }
+        private NVAPIGpuDynamicPstateUtilizationDto[]? _utilization;
+
+        /// <summary>
+        /// Gets or sets Utilization. Empty when no values are present.
+        /// </summary>
+        public NVAPIGpuDynamicPstateUtilizationDto[] Utilization
+        {
+            get => _utilization ?? Array.Empty<NVAPIGpuDynamicPstateUtilizationDto>();
+            set => _utilization = value ?? Array.Empty<NVAPIGpuDynamicPstateUtilizationDto>();
+        }
 
         public NVAPIGpuDynamicPstatesInfoExDto(uint flags, NVAPIGpuDynamicPstateUtilizationDto[] utilization)
         {
@@ -3060,7 +3087,16 @@ namespace NVAPIWrapper
     public struct NVAPIGpuThermalSettingsDto : IEquatable<NVAPIGpuThermalSettingsDto>
     {
         public uint Count { get; set; }
-        public NVAPIGpuThermalSensorDto[] Sensors { get; set; }
+        private NVAPIGpuThermalSensorDto[]? _sensors;
+
+        /// <summary>
+        /// Gets or sets Sensors. Empty when no values are present.
+        /// </summary>
+        public NVAPIGpuThermalSensorDto[] Sensors
+        {
+            get => _sensors ?? Array.Empty<NVAPIGpuThermalSensorDto>();
+            set => _sensors = value ?? Array.Empty<NVAPIGpuThermalSensorDto>();
+        }
 
         public NVAPIGpuThermalSettingsDto(uint count, NVAPIGpuThermalSensorDto[] sensors)
         {
@@ -3162,7 +3198,16 @@ namespace NVAPIWrapper
     public struct NVAPIGpuClockFrequenciesDto : IEquatable<NVAPIGpuClockFrequenciesDto>
     {
         public NV_GPU_CLOCK_FREQUENCIES_CLOCK_TYPE ClockType { get; set; }
-        public NVAPIGpuClockDomainDto[] Domains { get; set; }
+        private NVAPIGpuClockDomainDto[]? _domains;
+
+        /// <summary>
+        /// Gets or sets Domains. Empty when no values are present.
+        /// </summary>
+        public NVAPIGpuClockDomainDto[] Domains
+        {
+            get => _domains ?? Array.Empty<NVAPIGpuClockDomainDto>();
+            set => _domains = value ?? Array.Empty<NVAPIGpuClockDomainDto>();
+        }
 
         public NVAPIGpuClockFrequenciesDto(NV_GPU_CLOCK_FREQUENCIES_CLOCK_TYPE clockType, NVAPIGpuClockDomainDto[] domains)
         {
@@ -3314,7 +3359,16 @@ namespace NVAPIWrapper
         /// Raw bytes for the type-discriminated union <c>data</c> field (64 bytes).
         /// Interpret using <see cref="Type"/> to select the appropriate union member.
         /// </summary>
-        public byte[] DataRawBytes { get; set; }
+        private byte[]? _dataRawBytes;
+
+        /// <summary>
+        /// Gets or sets DataRawBytes. Empty when no values are present.
+        /// </summary>
+        public byte[] DataRawBytes
+        {
+            get => _dataRawBytes ?? Array.Empty<byte>();
+            set => _dataRawBytes = value ?? Array.Empty<byte>();
+        }
 
         /// <summary>Initializes a new instance of <see cref="NVAPIGpuIllumDeviceInfoDto"/>.</summary>
         public NVAPIGpuIllumDeviceInfoDto(NV_GPU_CLIENT_ILLUM_DEVICE_TYPE type, uint ctrlModeMask, byte[] dataRawBytes)
@@ -3369,7 +3423,16 @@ namespace NVAPIWrapper
         /// <summary>Number of illumination devices reported.</summary>
         public uint NumIllumDevices { get; set; }
         /// <summary>Per-device illumination info array (up to 32 entries).</summary>
-        public NVAPIGpuIllumDeviceInfoDto[] Devices { get; set; }
+        private NVAPIGpuIllumDeviceInfoDto[]? _devices;
+
+        /// <summary>
+        /// Gets or sets Devices. Empty when no values are present.
+        /// </summary>
+        public NVAPIGpuIllumDeviceInfoDto[] Devices
+        {
+            get => _devices ?? Array.Empty<NVAPIGpuIllumDeviceInfoDto>();
+            set => _devices = value ?? Array.Empty<NVAPIGpuIllumDeviceInfoDto>();
+        }
 
         /// <summary>Initializes a new instance of <see cref="NVAPIGpuIllumDeviceInfoParamsDto"/>.</summary>
         public NVAPIGpuIllumDeviceInfoParamsDto(uint numIllumDevices, NVAPIGpuIllumDeviceInfoDto[] devices)
@@ -3502,7 +3565,16 @@ namespace NVAPIWrapper
         /// <summary>Number of illumination devices for control.</summary>
         public uint NumIllumDevices { get; set; }
         /// <summary>Per-device illumination control array (up to 32 entries).</summary>
-        public NVAPIGpuIllumDeviceControlDto[] Devices { get; set; }
+        private NVAPIGpuIllumDeviceControlDto[]? _devices;
+
+        /// <summary>
+        /// Gets or sets Devices. Empty when no values are present.
+        /// </summary>
+        public NVAPIGpuIllumDeviceControlDto[] Devices
+        {
+            get => _devices ?? Array.Empty<NVAPIGpuIllumDeviceControlDto>();
+            set => _devices = value ?? Array.Empty<NVAPIGpuIllumDeviceControlDto>();
+        }
 
         /// <summary>Initializes a new instance of <see cref="NVAPIGpuIllumDeviceControlParamsDto"/>.</summary>
         public NVAPIGpuIllumDeviceControlParamsDto(uint numIllumDevices, NVAPIGpuIllumDeviceControlDto[] devices)
@@ -3587,7 +3659,16 @@ namespace NVAPIWrapper
         /// Raw bytes for the type-discriminated union <c>data</c> field (64 bytes).
         /// Interpret using <see cref="Type"/> to select the appropriate union member.
         /// </summary>
-        public byte[] DataRawBytes { get; set; }
+        private byte[]? _dataRawBytes;
+
+        /// <summary>
+        /// Gets or sets DataRawBytes. Empty when no values are present.
+        /// </summary>
+        public byte[] DataRawBytes
+        {
+            get => _dataRawBytes ?? Array.Empty<byte>();
+            set => _dataRawBytes = value ?? Array.Empty<byte>();
+        }
 
         /// <summary>Initializes a new instance of <see cref="NVAPIGpuIllumZoneInfoDto"/>.</summary>
         public NVAPIGpuIllumZoneInfoDto(NV_GPU_CLIENT_ILLUM_ZONE_TYPE type, byte illumDeviceIdx, byte provIdx, NV_GPU_CLIENT_ILLUM_ZONE_LOCATION zoneLocation, byte[] dataRawBytes)
@@ -3650,7 +3731,16 @@ namespace NVAPIWrapper
         /// <summary>Number of illumination zones reported.</summary>
         public uint NumIllumZones { get; set; }
         /// <summary>Per-zone illumination info array (up to 32 entries).</summary>
-        public NVAPIGpuIllumZoneInfoDto[] Zones { get; set; }
+        private NVAPIGpuIllumZoneInfoDto[]? _zones;
+
+        /// <summary>
+        /// Gets or sets Zones. Empty when no values are present.
+        /// </summary>
+        public NVAPIGpuIllumZoneInfoDto[] Zones
+        {
+            get => _zones ?? Array.Empty<NVAPIGpuIllumZoneInfoDto>();
+            set => _zones = value ?? Array.Empty<NVAPIGpuIllumZoneInfoDto>();
+        }
 
         /// <summary>Initializes a new instance of <see cref="NVAPIGpuIllumZoneInfoParamsDto"/>.</summary>
         public NVAPIGpuIllumZoneInfoParamsDto(uint numIllumZones, NVAPIGpuIllumZoneInfoDto[] zones)
@@ -3731,7 +3821,16 @@ namespace NVAPIWrapper
         /// Raw bytes for the type-discriminated union <c>data</c> field (64 bytes).
         /// Interpret using <see cref="Type"/> to select the appropriate union member.
         /// </summary>
-        public byte[] DataRawBytes { get; set; }
+        private byte[]? _dataRawBytes;
+
+        /// <summary>
+        /// Gets or sets DataRawBytes. Empty when no values are present.
+        /// </summary>
+        public byte[] DataRawBytes
+        {
+            get => _dataRawBytes ?? Array.Empty<byte>();
+            set => _dataRawBytes = value ?? Array.Empty<byte>();
+        }
 
         /// <summary>Initializes a new instance of <see cref="NVAPIGpuIllumZoneControlDto"/>.</summary>
         public NVAPIGpuIllumZoneControlDto(NV_GPU_CLIENT_ILLUM_ZONE_TYPE type, NV_GPU_CLIENT_ILLUM_CTRL_MODE ctrlMode, byte[] dataRawBytes)
@@ -3788,7 +3887,16 @@ namespace NVAPIWrapper
         /// <summary>Number of illumination zones for control.</summary>
         public uint NumIllumZonesControl { get; set; }
         /// <summary>Per-zone illumination control array (up to 32 entries).</summary>
-        public NVAPIGpuIllumZoneControlDto[] Zones { get; set; }
+        private NVAPIGpuIllumZoneControlDto[]? _zones;
+
+        /// <summary>
+        /// Gets or sets Zones. Empty when no values are present.
+        /// </summary>
+        public NVAPIGpuIllumZoneControlDto[] Zones
+        {
+            get => _zones ?? Array.Empty<NVAPIGpuIllumZoneControlDto>();
+            set => _zones = value ?? Array.Empty<NVAPIGpuIllumZoneControlDto>();
+        }
 
         /// <summary>Initializes a new instance of <see cref="NVAPIGpuIllumZoneControlParamsDto"/>.</summary>
         public NVAPIGpuIllumZoneControlParamsDto(bool isDefault, uint numIllumZonesControl, NVAPIGpuIllumZoneControlDto[] zones)
@@ -4034,9 +4142,27 @@ namespace NVAPIWrapper
         /// <summary>True if this P-state is editable.</summary>
         public bool IsEditable { get; set; }
         /// <summary>Clock entries for this P-state (up to 8).</summary>
-        public NVAPIPstateClockEntryDto[] Clocks { get; set; }
+        private NVAPIPstateClockEntryDto[]? _clocks;
+
+        /// <summary>
+        /// Gets or sets Clocks. Empty when no values are present.
+        /// </summary>
+        public NVAPIPstateClockEntryDto[] Clocks
+        {
+            get => _clocks ?? Array.Empty<NVAPIPstateClockEntryDto>();
+            set => _clocks = value ?? Array.Empty<NVAPIPstateClockEntryDto>();
+        }
         /// <summary>Base voltage entries for this P-state (up to 4).</summary>
-        public NVAPIPstateBaseVoltageEntryDto[] BaseVoltages { get; set; }
+        private NVAPIPstateBaseVoltageEntryDto[]? _baseVoltages;
+
+        /// <summary>
+        /// Gets or sets BaseVoltages. Empty when no values are present.
+        /// </summary>
+        public NVAPIPstateBaseVoltageEntryDto[] BaseVoltages
+        {
+            get => _baseVoltages ?? Array.Empty<NVAPIPstateBaseVoltageEntryDto>();
+            set => _baseVoltages = value ?? Array.Empty<NVAPIPstateBaseVoltageEntryDto>();
+        }
 
         /// <summary>Initializes a new instance of <see cref="NVAPIPstateInfoDto"/>.</summary>
         public NVAPIPstateInfoDto(_NV_GPU_PERF_PSTATE_ID pstateId, bool isEditable, NVAPIPstateClockEntryDto[] clocks, NVAPIPstateBaseVoltageEntryDto[] baseVoltages)
@@ -4127,11 +4253,29 @@ namespace NVAPIWrapper
         /// <summary>Number of base voltages per P-state.</summary>
         public uint NumBaseVoltages { get; set; }
         /// <summary>P-state info array (up to 16 entries).</summary>
-        public NVAPIPstateInfoDto[] Pstates { get; set; }
+        private NVAPIPstateInfoDto[]? _pstates;
+
+        /// <summary>
+        /// Gets or sets Pstates. Empty when no values are present.
+        /// </summary>
+        public NVAPIPstateInfoDto[] Pstates
+        {
+            get => _pstates ?? Array.Empty<NVAPIPstateInfoDto>();
+            set => _pstates = value ?? Array.Empty<NVAPIPstateInfoDto>();
+        }
         /// <summary>Number of over-voltage entries.</summary>
         public uint OvNumVoltages { get; set; }
         /// <summary>Over-voltage entries (up to 4).</summary>
-        public NVAPIPstateBaseVoltageEntryDto[] OvVoltages { get; set; }
+        private NVAPIPstateBaseVoltageEntryDto[]? _ovVoltages;
+
+        /// <summary>
+        /// Gets or sets OvVoltages. Empty when no values are present.
+        /// </summary>
+        public NVAPIPstateBaseVoltageEntryDto[] OvVoltages
+        {
+            get => _ovVoltages ?? Array.Empty<NVAPIPstateBaseVoltageEntryDto>();
+            set => _ovVoltages = value ?? Array.Empty<NVAPIPstateBaseVoltageEntryDto>();
+        }
 
         /// <summary>Initializes a new instance of <see cref="NVAPIGpuPerfPstates20InfoDto"/>.</summary>
         public NVAPIGpuPerfPstates20InfoDto(bool isEditable, uint numPstates, uint numClocks, uint numBaseVoltages, NVAPIPstateInfoDto[] pstates, uint ovNumVoltages, NVAPIPstateBaseVoltageEntryDto[] ovVoltages)
@@ -4392,7 +4536,16 @@ namespace NVAPIWrapper
         /// <summary>License signature string (up to 128 characters).</summary>
         public string Signature { get; set; }
         /// <summary>Array of up to 3 per-feature license details.</summary>
-        public NVAPILicenseFeatureDetailsDto[] LicenseDetails { get; set; }
+        private NVAPILicenseFeatureDetailsDto[]? _licenseDetails;
+
+        /// <summary>
+        /// Gets or sets LicenseDetails. Empty when no values are present.
+        /// </summary>
+        public NVAPILicenseFeatureDetailsDto[] LicenseDetails
+        {
+            get => _licenseDetails ?? Array.Empty<NVAPILicenseFeatureDetailsDto>();
+            set => _licenseDetails = value ?? Array.Empty<NVAPILicenseFeatureDetailsDto>();
+        }
 
         /// <summary>Initializes a new instance of <see cref="NVAPILicensableFeaturesDto"/>.</summary>
         public NVAPILicensableFeaturesDto(bool isLicenseSupported, uint licensableFeatureCount, string signature, NVAPILicenseFeatureDetailsDto[] licenseDetails)
@@ -4620,7 +4773,16 @@ namespace NVAPIWrapper
         /// <summary>Number of active encoder sessions.</summary>
         public uint SessionsCount { get; set; }
         /// <summary>Per-session encoder info array; may be empty if no sessions are active.</summary>
-        public NVAPIEncoderPerSessionInfoDto[] Sessions { get; set; }
+        private NVAPIEncoderPerSessionInfoDto[]? _sessions;
+
+        /// <summary>
+        /// Gets or sets Sessions. Empty when no values are present.
+        /// </summary>
+        public NVAPIEncoderPerSessionInfoDto[] Sessions
+        {
+            get => _sessions ?? Array.Empty<NVAPIEncoderPerSessionInfoDto>();
+            set => _sessions = value ?? Array.Empty<NVAPIEncoderPerSessionInfoDto>();
+        }
 
         /// <summary>Initializes a new instance of <see cref="NVAPIEncoderSessionsInfoDto"/>.</summary>
         public NVAPIEncoderSessionsInfoDto(uint sessionsCount, NVAPIEncoderPerSessionInfoDto[] sessions)
@@ -5002,7 +5164,16 @@ namespace NVAPIWrapper
         public uint NvlinkMinL1Threshold { get; set; }
         public uint NvlinkMaxL1Threshold { get; set; }
         public uint NvlinkL1ThresholdUnits { get; set; }
-        public uint[] ReservedEx { get; set; }
+        private uint[]? _reservedEx;
+
+        /// <summary>
+        /// Gets or sets ReservedEx. Empty when no values are present.
+        /// </summary>
+        public uint[] ReservedEx
+        {
+            get => _reservedEx ?? Array.Empty<uint>();
+            set => _reservedEx = value ?? Array.Empty<uint>();
+        }
 
         public NVAPINvLinkStatusInfoDto(
             uint capsTbl,
@@ -5185,7 +5356,16 @@ namespace NVAPIWrapper
         public ushort Function { get; set; }
         public uint PciDeviceId { get; set; }
         public ulong DeviceType { get; set; }
-        public byte[] DeviceUUID { get; set; }
+        private byte[]? _deviceUUID;
+
+        /// <summary>
+        /// Gets or sets DeviceUUID. Empty when no values are present.
+        /// </summary>
+        public byte[] DeviceUUID
+        {
+            get => _deviceUUID ?? Array.Empty<byte>();
+            set => _deviceUUID = value ?? Array.Empty<byte>();
+        }
 
         public NVAPINvLinkDeviceInfoDto(uint deviceIdFlags, ushort domain, ushort bus, ushort device, ushort function, uint pciDeviceId, ulong deviceType, byte[] deviceUUID)
         {
@@ -5273,7 +5453,16 @@ namespace NVAPIWrapper
         public ulong Reserved1 { get; set; }
         public uint RayTracingCores { get; set; }
         public uint TensorCores { get; set; }
-        public uint[] Reserved2 { get; set; }
+        private uint[]? _reserved2;
+
+        /// <summary>
+        /// Gets or sets Reserved2. Empty when no values are present.
+        /// </summary>
+        public uint[] Reserved2
+        {
+            get => _reserved2 ?? Array.Empty<uint>();
+            set => _reserved2 = value ?? Array.Empty<uint>();
+        }
 
         public NVAPIGpuInfoDto(
             uint version,
@@ -5626,7 +5815,16 @@ namespace NVAPIWrapper
     /// </summary>
     public struct NVAPIGpuEdidDto : IEquatable<NVAPIGpuEdidDto>
     {
-        public byte[] Data { get; set; }
+        private byte[]? _data;
+
+        /// <summary>
+        /// Gets or sets Data. Empty when no values are present.
+        /// </summary>
+        public byte[] Data
+        {
+            get => _data ?? Array.Empty<byte>();
+            set => _data = value ?? Array.Empty<byte>();
+        }
         public uint SizeOfEdid { get; set; }
         public uint EdidId { get; set; }
         public uint Offset { get; set; }
@@ -5923,9 +6121,36 @@ namespace NVAPIWrapper
         public IntPtr CallbackParam { get; set; }
         public uint CallbackPeriodMs { get; set; }
         public IntPtr Callback { get; set; }
-        public byte[] SuperReserved { get; set; }
-        public byte[] PeriodicReserved { get; set; }
-        public byte[] Reserved { get; set; }
+        private byte[]? _superReserved;
+
+        /// <summary>
+        /// Gets or sets SuperReserved. Empty when no values are present.
+        /// </summary>
+        public byte[] SuperReserved
+        {
+            get => _superReserved ?? Array.Empty<byte>();
+            set => _superReserved = value ?? Array.Empty<byte>();
+        }
+        private byte[]? _periodicReserved;
+
+        /// <summary>
+        /// Gets or sets PeriodicReserved. Empty when no values are present.
+        /// </summary>
+        public byte[] PeriodicReserved
+        {
+            get => _periodicReserved ?? Array.Empty<byte>();
+            set => _periodicReserved = value ?? Array.Empty<byte>();
+        }
+        private byte[]? _reserved;
+
+        /// <summary>
+        /// Gets or sets Reserved. Empty when no values are present.
+        /// </summary>
+        public byte[] Reserved
+        {
+            get => _reserved ?? Array.Empty<byte>();
+            set => _reserved = value ?? Array.Empty<byte>();
+        }
 
         public NVAPIGpuUtilizationSampleCallbackSettingsDto(
             IntPtr callbackParam,
