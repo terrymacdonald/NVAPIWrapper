@@ -89,7 +89,7 @@
 
 
   <h1 id="NVAPIWrapper_NVAPIDisplayConfigTargetDto" data-uid="NVAPIWrapper.NVAPIDisplayConfigTargetDto" class="text-break">
-Struct NVAPIDisplayConfigTargetDto  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L3443"><i class="bi bi-code-slash"></i></a>
+Struct NVAPIDisplayConfigTargetDto  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L3477"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -145,9 +145,9 @@ Struct NVAPIDisplayConfigTargetDto  <a class="header-action link-secondary" titl
 
   <a id="NVAPIWrapper_NVAPIDisplayConfigTargetDto__ctor_" data-uid="NVAPIWrapper.NVAPIDisplayConfigTargetDto.#ctor*"></a>
 
-  <h3 id="NVAPIWrapper_NVAPIDisplayConfigTargetDto__ctor_System_UInt32_System_UInt32_System_Nullable_NVAPIWrapper_NVAPIDisplayConfigAdvancedTargetDto__" data-uid="NVAPIWrapper.NVAPIDisplayConfigTargetDto.#ctor(System.UInt32,System.UInt32,System.Nullable{NVAPIWrapper.NVAPIDisplayConfigAdvancedTargetDto})">
-  NVAPIDisplayConfigTargetDto(uint, uint, NVAPIDisplayConfigAdvancedTargetDto?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L3455"><i class="bi bi-code-slash"></i></a>
+  <h3 id="NVAPIWrapper_NVAPIDisplayConfigTargetDto__ctor_System_UInt32_System_UInt32_System_Boolean_NVAPIWrapper_NVAPIDisplayConfigAdvancedTargetDto_" data-uid="NVAPIWrapper.NVAPIDisplayConfigTargetDto.#ctor(System.UInt32,System.UInt32,System.Boolean,NVAPIWrapper.NVAPIDisplayConfigAdvancedTargetDto)">
+  NVAPIDisplayConfigTargetDto(uint, uint, bool, NVAPIDisplayConfigAdvancedTargetDto)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L3506"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Create target info.</p>
@@ -155,17 +155,23 @@ Struct NVAPIDisplayConfigTargetDto  <a class="header-action link-secondary" titl
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public NVAPIDisplayConfigTargetDto(uint displayId, uint targetId, NVAPIDisplayConfigAdvancedTargetDto? details)</code></pre>
+    <pre><code class="lang-csharp hljs">public NVAPIDisplayConfigTargetDto(uint displayId, uint targetId, bool hasDetails, NVAPIDisplayConfigAdvancedTargetDto details)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>displayId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
-    <dd></dd>
+    <dd><p>Display ID.</p>
+</dd>
     <dt><code>targetId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
-    <dd></dd>
-    <dt><code>details</code> <a class="xref" href="NVAPIWrapper.NVAPIDisplayConfigAdvancedTargetDto.html">NVAPIDisplayConfigAdvancedTargetDto</a>?</dt>
-    <dd></dd>
+    <dd><p>Windows CCD target ID.</p>
+</dd>
+    <dt><code>hasDetails</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True when advanced target details are present.</p>
+</dd>
+    <dt><code>details</code> <a class="xref" href="NVAPIWrapper.NVAPIDisplayConfigAdvancedTargetDto.html">NVAPIDisplayConfigAdvancedTargetDto</a></dt>
+    <dd><p>Advanced target details, or a default value when not present.</p>
+</dd>
   </dl>
 
 
@@ -187,15 +193,15 @@ Struct NVAPIDisplayConfigTargetDto  <a class="header-action link-secondary" titl
 
   <h3 id="NVAPIWrapper_NVAPIDisplayConfigTargetDto_Details" data-uid="NVAPIWrapper.NVAPIDisplayConfigTargetDto.Details">
   Details
-  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L3452"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L3497"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Advanced target info, or null if not present.</p>
+  <div class="markdown level1 summary"><p>Advanced target information. When <a class="xref" href="NVAPIWrapper.NVAPIDisplayConfigTargetDto.html#NVAPIWrapper_NVAPIDisplayConfigTargetDto_HasDetails">HasDetails</a> is false, this contains a default value.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public NVAPIDisplayConfigAdvancedTargetDto? Details { readonly get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public NVAPIDisplayConfigAdvancedTargetDto Details { readonly get; set; }</code></pre>
   </div>
 
 
@@ -204,7 +210,7 @@ Struct NVAPIDisplayConfigTargetDto  <a class="header-action link-secondary" titl
 
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="NVAPIWrapper.NVAPIDisplayConfigAdvancedTargetDto.html">NVAPIDisplayConfigAdvancedTargetDto</a>?</dt>
+    <dt><a class="xref" href="NVAPIWrapper.NVAPIDisplayConfigAdvancedTargetDto.html">NVAPIDisplayConfigAdvancedTargetDto</a></dt>
     <dd></dd>
   </dl>
 
@@ -219,7 +225,7 @@ Struct NVAPIDisplayConfigTargetDto  <a class="header-action link-secondary" titl
 
   <h3 id="NVAPIWrapper_NVAPIDisplayConfigTargetDto_DisplayId" data-uid="NVAPIWrapper.NVAPIDisplayConfigTargetDto.DisplayId">
   DisplayId
-  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L3446"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L3482"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Display ID.</p>
@@ -247,14 +253,46 @@ Struct NVAPIDisplayConfigTargetDto  <a class="header-action link-secondary" titl
 
 
 
+  <a id="NVAPIWrapper_NVAPIDisplayConfigTargetDto_HasDetails_" data-uid="NVAPIWrapper.NVAPIDisplayConfigTargetDto.HasDetails*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIDisplayConfigTargetDto_HasDetails" data-uid="NVAPIWrapper.NVAPIDisplayConfigTargetDto.HasDetails">
+  HasDetails
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L3492"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>True when <a class="xref" href="NVAPIWrapper.NVAPIDisplayConfigTargetDto.html#NVAPIWrapper_NVAPIDisplayConfigTargetDto_Details">Details</a> contains advanced target information from NVAPI.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool HasDetails { readonly get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="NVAPIWrapper_NVAPIDisplayConfigTargetDto_TargetId_" data-uid="NVAPIWrapper.NVAPIDisplayConfigTargetDto.TargetId*"></a>
 
   <h3 id="NVAPIWrapper_NVAPIDisplayConfigTargetDto_TargetId" data-uid="NVAPIWrapper.NVAPIDisplayConfigTargetDto.TargetId">
   TargetId
-  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L3449"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L3487"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Windows CCD target ID (for non-NVIDIA adapters).</p>
+  <div class="markdown level1 summary"><p>Windows CCD target ID for non-NVIDIA adapters.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -287,7 +325,7 @@ Struct NVAPIDisplayConfigTargetDto  <a class="header-action link-secondary" titl
 
   <h3 id="NVAPIWrapper_NVAPIDisplayConfigTargetDto_Equals_NVAPIWrapper_NVAPIDisplayConfigTargetDto_" data-uid="NVAPIWrapper.NVAPIDisplayConfigTargetDto.Equals(NVAPIWrapper.NVAPIDisplayConfigTargetDto)">
   Equals(NVAPIDisplayConfigTargetDto)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L3489"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L3541"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Indicates whether the current object is equal to another object of the same type.</p>
@@ -326,7 +364,7 @@ Struct NVAPIDisplayConfigTargetDto  <a class="header-action link-secondary" titl
 
   <h3 id="NVAPIWrapper_NVAPIDisplayConfigTargetDto_Equals_System_Object_" data-uid="NVAPIWrapper.NVAPIDisplayConfigTargetDto.Equals(System.Object)">
   Equals(object?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L3497"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L3550"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Indicates whether this instance and a specified object are equal.</p>
@@ -365,7 +403,7 @@ Struct NVAPIDisplayConfigTargetDto  <a class="header-action link-secondary" titl
 
   <h3 id="NVAPIWrapper_NVAPIDisplayConfigTargetDto_FromNative_NVAPIWrapper__NV_DISPLAYCONFIG_PATH_TARGET_INFO_V2_" data-uid="NVAPIWrapper.NVAPIDisplayConfigTargetDto.FromNative(NVAPIWrapper._NV_DISPLAYCONFIG_PATH_TARGET_INFO_V2)">
   FromNative(_NV_DISPLAYCONFIG_PATH_TARGET_INFO_V2)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L3467"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L3519"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Create a DTO from a native target info struct.</p>
@@ -404,7 +442,7 @@ Struct NVAPIDisplayConfigTargetDto  <a class="header-action link-secondary" titl
 
   <h3 id="NVAPIWrapper_NVAPIDisplayConfigTargetDto_GetHashCode" data-uid="NVAPIWrapper.NVAPIDisplayConfigTargetDto.GetHashCode">
   GetHashCode()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L3503"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L3556"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Returns the hash code for this instance.</p>
@@ -437,7 +475,7 @@ Struct NVAPIDisplayConfigTargetDto  <a class="header-action link-secondary" titl
 
   <h3 id="NVAPIWrapper_NVAPIDisplayConfigTargetDto_ToNative_NVAPIWrapper__NV_DISPLAYCONFIG_PATH_ADVANCED_TARGET_INFO_V1__" data-uid="NVAPIWrapper.NVAPIDisplayConfigTargetDto.ToNative(NVAPIWrapper._NV_DISPLAYCONFIG_PATH_ADVANCED_TARGET_INFO_V1*)">
   ToNative(_NV_DISPLAYCONFIG_PATH_ADVANCED_TARGET_INFO_V1*)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L3478"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L3530"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Convert this DTO to a native target info struct.</p>
@@ -480,7 +518,7 @@ Struct NVAPIDisplayConfigTargetDto  <a class="header-action link-secondary" titl
 
   <h3 id="NVAPIWrapper_NVAPIDisplayConfigTargetDto_op_Equality_NVAPIWrapper_NVAPIDisplayConfigTargetDto_NVAPIWrapper_NVAPIDisplayConfigTargetDto_" data-uid="NVAPIWrapper.NVAPIDisplayConfigTargetDto.op_Equality(NVAPIWrapper.NVAPIDisplayConfigTargetDto,NVAPIWrapper.NVAPIDisplayConfigTargetDto)">
   operator ==(NVAPIDisplayConfigTargetDto, NVAPIDisplayConfigTargetDto)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L3518"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L3572"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Compare target info values.</p>
@@ -519,7 +557,7 @@ Struct NVAPIDisplayConfigTargetDto  <a class="header-action link-secondary" titl
 
   <h3 id="NVAPIWrapper_NVAPIDisplayConfigTargetDto_op_Inequality_NVAPIWrapper_NVAPIDisplayConfigTargetDto_NVAPIWrapper_NVAPIDisplayConfigTargetDto_" data-uid="NVAPIWrapper.NVAPIDisplayConfigTargetDto.op_Inequality(NVAPIWrapper.NVAPIDisplayConfigTargetDto,NVAPIWrapper.NVAPIDisplayConfigTargetDto)">
   operator !=(NVAPIDisplayConfigTargetDto, NVAPIDisplayConfigTargetDto)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L3526"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L3580"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Compare target info values.</p>
@@ -558,7 +596,7 @@ Struct NVAPIDisplayConfigTargetDto  <a class="header-action link-secondary" titl
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L3443" class="edit-link">Edit this page</a>
+          <a href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L3477" class="edit-link">Edit this page</a>
         </div>
 
 

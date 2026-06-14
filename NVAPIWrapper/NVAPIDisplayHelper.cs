@@ -2226,7 +2226,7 @@ namespace NVAPIWrapper
                 NvApiIdGpuSetScanoutWarping,
                 "NvAPI_GPU_SetScanoutWarping");
             var native = data.ToNative();
-            var vertices = data.Vertices ?? Array.Empty<float>();
+            var vertices = data.Vertices;
             int maxNumVertices = 0;
             int sticky = 0;
 
@@ -2235,9 +2235,9 @@ namespace NVAPIWrapper
                 native.vertices = vertices.Length > 0 ? pVertices : null;
                 native.numVertices = data.NumVertices;
 
-                if (data.TextureRect.HasValue)
+                if (data.HasTextureRect)
                 {
-                    var rect = data.TextureRect.Value.ToNative();
+                    var rect = data.TextureRect.ToNative();
                     native.textureRect = &rect;
                     var status = setWarping(displayId, &native, &maxNumVertices, &sticky);
                     if (status == _NvAPI_Status.NVAPI_OK)
@@ -2736,11 +2736,14 @@ namespace NVAPIWrapper
 
         internal static unsafe NVAPIDisplayConfigDto CreateDisplayConfigInfo(uint pathCount, _NV_DISPLAYCONFIG_PATH_INFO* pathInfo)
         {
+            if (pathCount == 0 || pathInfo == null)
+                return new NVAPIDisplayConfigDto(Array.Empty<NVAPIDisplayConfigPathDto>());
+
             var paths = new NVAPIDisplayConfigPathDto[pathCount];
             for (var i = 0; i < pathCount; i++)
             {
                 var path = &pathInfo[i];
-                var source = CreateSourceModeInfo(path->sourceModeInfo);
+                var hasSource = TryCreateSourceModeInfo(path->sourceModeInfo, out var source);
                 var targets = CreateTargets(path->targetInfoCount, path->targetInfo);
                 var osAdapterLuid = ReadOsAdapterLuid(path->pOSAdapterID);
 
@@ -2749,6 +2752,7 @@ namespace NVAPIWrapper
                     path->sourceId,
                     path->IsNonNVIDIAAdapter != 0,
                     osAdapterLuid,
+                    hasSource,
                     source,
                     targets);
             }
@@ -2756,19 +2760,23 @@ namespace NVAPIWrapper
             return new NVAPIDisplayConfigDto(paths);
         }
 
-        internal static unsafe NVAPIDisplayConfigSourceModeDto? CreateSourceModeInfo(_NV_DISPLAYCONFIG_SOURCE_MODE_INFO_V1* sourcePtr)
+        internal static unsafe bool TryCreateSourceModeInfo(_NV_DISPLAYCONFIG_SOURCE_MODE_INFO_V1* sourcePtr, out NVAPIDisplayConfigSourceModeDto sourceModeInfo)
         {
             if (sourcePtr == null)
-                return null;
+            {
+                sourceModeInfo = default;
+                return false;
+            }
 
             var source = *sourcePtr;
-            return new NVAPIDisplayConfigSourceModeDto(
+            sourceModeInfo = new NVAPIDisplayConfigSourceModeDto(
                 source.resolution,
                 source.colorFormat,
                 source.position,
                 source.spanningOrientation,
                 source.bGDIPrimary != 0,
                 source.bSLIFocus != 0);
+            return true;
         }
 
         internal static unsafe NVAPIDisplayConfigTargetDto[] CreateTargets(uint targetCount, _NV_DISPLAYCONFIG_PATH_TARGET_INFO_V2* targetPtr)
@@ -2780,20 +2788,23 @@ namespace NVAPIWrapper
             for (var i = 0; i < targetCount; i++)
             {
                 var target = targetPtr[i];
-                var details = CreateAdvancedTargetInfo(target.details);
-                targets[i] = new NVAPIDisplayConfigTargetDto(target.displayId, target.targetId, details);
+                var hasDetails = TryCreateAdvancedTargetInfo(target.details, out var details);
+                targets[i] = new NVAPIDisplayConfigTargetDto(target.displayId, target.targetId, hasDetails, details);
             }
 
             return targets;
         }
 
-        internal static unsafe NVAPIDisplayConfigAdvancedTargetDto? CreateAdvancedTargetInfo(_NV_DISPLAYCONFIG_PATH_ADVANCED_TARGET_INFO_V1* detailsPtr)
+        internal static unsafe bool TryCreateAdvancedTargetInfo(_NV_DISPLAYCONFIG_PATH_ADVANCED_TARGET_INFO_V1* detailsPtr, out NVAPIDisplayConfigAdvancedTargetDto advancedTargetInfo)
         {
             if (detailsPtr == null)
-                return null;
+            {
+                advancedTargetInfo = default;
+                return false;
+            }
 
             var details = *detailsPtr;
-            return new NVAPIDisplayConfigAdvancedTargetDto(
+            advancedTargetInfo = new NVAPIDisplayConfigAdvancedTargetDto(
                 details.rotation,
                 details.scaling,
                 details.refreshRate1K,
@@ -2805,6 +2816,7 @@ namespace NVAPIWrapper
                 details.tvFormat,
                 details.timingOverride,
                 NVAPITimingDto.FromNative(details.timing));
+            return true;
         }
 
         internal static unsafe long ReadOsAdapterLuid(void* osAdapterId)
@@ -2819,14 +2831,15 @@ namespace NVAPIWrapper
 
         internal static unsafe DisplayConfigBuffer CreateDisplayConfigBuffer(NVAPIDisplayConfigPathDto[] paths)
         {
-            var buffer = new DisplayConfigBuffer((uint)paths.Length);
+            var safePaths = paths ?? Array.Empty<NVAPIDisplayConfigPathDto>();
+            var buffer = new DisplayConfigBuffer((uint)safePaths.Length);
             var pathInfo = buffer.PathInfo;
 
-            for (var i = 0; i < paths.Length; i++)
+            for (var i = 0; i < safePaths.Length; i++)
             {
-                var path = paths[i];
+                var path = safePaths[i];
                 var nativePath = &pathInfo[i];
-                nativePath->version = NVAPI.NV_DISPLAYCONFIG_PATH_INFO_VER;
+                nativePath->version = path.Version != 0 ? path.Version : NVAPI.NV_DISPLAYCONFIG_PATH_INFO_VER;
                 nativePath->sourceId = path.SourceId;
                 nativePath->IsNonNVIDIAAdapter = path.IsNonNvidiaAdapter ? 1u : 0u;
                 nativePath->reserved = 0;
@@ -2842,17 +2855,17 @@ namespace NVAPIWrapper
                     nativePath->pOSAdapterID = luid;
                 }
 
-                if (path.SourceModeInfo.HasValue)
+                if (path.HasSourceModeInfo)
                 {
                     var sourcePtr = Marshal.AllocHGlobal(sizeof(_NV_DISPLAYCONFIG_SOURCE_MODE_INFO_V1));
                     buffer.TrackAllocation(sourcePtr);
                     var source = (_NV_DISPLAYCONFIG_SOURCE_MODE_INFO_V1*)sourcePtr;
                     new Span<byte>((void*)sourcePtr, sizeof(_NV_DISPLAYCONFIG_SOURCE_MODE_INFO_V1)).Clear();
-                    FillSourceModeInfo(source, path.SourceModeInfo.Value);
+                    FillSourceModeInfo(source, path.SourceModeInfo);
                     nativePath->sourceModeInfo = source;
                 }
 
-                var targets = path.Targets ?? Array.Empty<NVAPIDisplayConfigTargetDto>();
+                var targets = path.Targets;
                 nativePath->targetInfoCount = (uint)targets.Length;
 
                 if (targets.Length > 0)
@@ -2869,13 +2882,13 @@ namespace NVAPIWrapper
                         target->displayId = targets[t].DisplayId;
                         target->targetId = targets[t].TargetId;
 
-                        if (targets[t].Details.HasValue)
+                        if (targets[t].HasDetails)
                         {
                             var detailsPtr = Marshal.AllocHGlobal(sizeof(_NV_DISPLAYCONFIG_PATH_ADVANCED_TARGET_INFO_V1));
                             buffer.TrackAllocation(detailsPtr);
                             var details = (_NV_DISPLAYCONFIG_PATH_ADVANCED_TARGET_INFO_V1*)detailsPtr;
                             new Span<byte>((void*)detailsPtr, sizeof(_NV_DISPLAYCONFIG_PATH_ADVANCED_TARGET_INFO_V1)).Clear();
-                            FillAdvancedTargetInfo(details, targets[t].Details.GetValueOrDefault());
+                            FillAdvancedTargetInfo(details, targets[t].Details);
                             target->details = details;
                         }
                     }
@@ -3034,17 +3047,24 @@ namespace NVAPIWrapper
     /// </summary>
     public struct NVAPIDisplayConfigDto : IEquatable<NVAPIDisplayConfigDto>
     {
+        private NVAPIDisplayConfigPathDto[]? _paths;
+
         /// <summary>
-        /// Display paths in the configuration.
+        /// Display paths in the configuration. Empty when no paths are present.
         /// </summary>
-        public NVAPIDisplayConfigPathDto[] Paths { get; set; }
+        public NVAPIDisplayConfigPathDto[] Paths
+        {
+            get => _paths ?? Array.Empty<NVAPIDisplayConfigPathDto>();
+            set => _paths = value ?? Array.Empty<NVAPIDisplayConfigPathDto>();
+        }
 
         /// <summary>
         /// Create a display configuration snapshot.
         /// </summary>
+        /// <param name="paths">Display paths in the configuration.</param>
         public NVAPIDisplayConfigDto(NVAPIDisplayConfigPathDto[] paths)
         {
-            Paths = paths ?? Array.Empty<NVAPIDisplayConfigPathDto>();
+            _paths = paths ?? Array.Empty<NVAPIDisplayConfigPathDto>();
         }
 
         /// <summary>
@@ -3064,8 +3084,7 @@ namespace NVAPIWrapper
         /// <returns>Native buffer that must be disposed.</returns>
         internal unsafe NVAPIDisplayHelper.DisplayConfigBuffer ToNativeBuffer()
         {
-            var paths = Paths ?? Array.Empty<NVAPIDisplayConfigPathDto>();
-            return NVAPIDisplayHelper.CreateDisplayConfigBuffer(paths);
+            return NVAPIDisplayHelper.CreateDisplayConfigBuffer(Paths);
         }
 
         /// <inheritdoc />
@@ -3086,9 +3105,10 @@ namespace NVAPIWrapper
             unchecked
             {
                 var hash = 17;
-                for (var i = 0; i < Paths.Length; i++)
+                var paths = Paths;
+                for (var i = 0; i < paths.Length; i++)
                 {
-                    hash = (hash * 31) + Paths[i].GetHashCode();
+                    hash = (hash * 31) + paths[i].GetHashCode();
                 }
 
                 return hash;
@@ -3096,7 +3116,7 @@ namespace NVAPIWrapper
         }
 
         /// <summary>
-        /// Compare two display configuration snapshots.
+        /// Compare display configuration snapshots.
         /// </summary>
         public static bool operator ==(NVAPIDisplayConfigDto left, NVAPIDisplayConfigDto right)
         {
@@ -3104,7 +3124,7 @@ namespace NVAPIWrapper
         }
 
         /// <summary>
-        /// Compare two display configuration snapshots.
+        /// Compare display configuration snapshots.
         /// </summary>
         public static bool operator !=(NVAPIDisplayConfigDto left, NVAPIDisplayConfigDto right)
         {
@@ -3115,9 +3135,6 @@ namespace NVAPIWrapper
         {
             if (ReferenceEquals(left, right))
                 return true;
-
-            if (left == null || right == null)
-                return false;
 
             if (left.Length != right.Length)
                 return false;
@@ -3137,6 +3154,8 @@ namespace NVAPIWrapper
     /// </summary>
     public struct NVAPIDisplayConfigPathDto : IEquatable<NVAPIDisplayConfigPathDto>
     {
+        private NVAPIDisplayConfigTargetDto[]? _targets;
+
         /// <summary>
         /// NVAPI structure version used for this path.
         /// </summary>
@@ -3158,32 +3177,50 @@ namespace NVAPIWrapper
         public long OsAdapterLuid { get; set; }
 
         /// <summary>
-        /// Source mode info, or null if not present.
+        /// True when <see cref="SourceModeInfo"/> contains source mode information from NVAPI.
         /// </summary>
-        public NVAPIDisplayConfigSourceModeDto? SourceModeInfo { get; set; }
+        public bool HasSourceModeInfo { get; set; }
 
         /// <summary>
-        /// Target configurations for this path.
+        /// Source mode information. When <see cref="HasSourceModeInfo"/> is false, this contains a default value.
         /// </summary>
-        public NVAPIDisplayConfigTargetDto[] Targets { get; set; }
+        public NVAPIDisplayConfigSourceModeDto SourceModeInfo { get; set; }
+
+        /// <summary>
+        /// Target configurations for this path. Empty when no targets are present.
+        /// </summary>
+        public NVAPIDisplayConfigTargetDto[] Targets
+        {
+            get => _targets ?? Array.Empty<NVAPIDisplayConfigTargetDto>();
+            set => _targets = value ?? Array.Empty<NVAPIDisplayConfigTargetDto>();
+        }
 
         /// <summary>
         /// Create a display path configuration.
         /// </summary>
+        /// <param name="version">NVAPI structure version.</param>
+        /// <param name="sourceId">Windows source ID.</param>
+        /// <param name="isNonNvidiaAdapter">True when the path represents a non-NVIDIA adapter.</param>
+        /// <param name="osAdapterLuid">OS adapter LUID, or 0 if not present.</param>
+        /// <param name="hasSourceModeInfo">True when source mode information is present.</param>
+        /// <param name="sourceModeInfo">Source mode information, or a default value when not present.</param>
+        /// <param name="targets">Target configurations.</param>
         public NVAPIDisplayConfigPathDto(
             uint version,
             uint sourceId,
             bool isNonNvidiaAdapter,
             long osAdapterLuid,
-            NVAPIDisplayConfigSourceModeDto? sourceModeInfo,
+            bool hasSourceModeInfo,
+            NVAPIDisplayConfigSourceModeDto sourceModeInfo,
             NVAPIDisplayConfigTargetDto[] targets)
         {
             Version = version;
             SourceId = sourceId;
             IsNonNvidiaAdapter = isNonNvidiaAdapter;
             OsAdapterLuid = osAdapterLuid;
+            HasSourceModeInfo = hasSourceModeInfo;
             SourceModeInfo = sourceModeInfo;
-            Targets = targets ?? Array.Empty<NVAPIDisplayConfigTargetDto>();
+            _targets = targets ?? Array.Empty<NVAPIDisplayConfigTargetDto>();
         }
 
         /// <summary>
@@ -3193,7 +3230,7 @@ namespace NVAPIWrapper
         /// <returns>Display config path DTO.</returns>
         public static unsafe NVAPIDisplayConfigPathDto FromNative(_NV_DISPLAYCONFIG_PATH_INFO pathInfo)
         {
-            var source = NVAPIDisplayHelper.CreateSourceModeInfo(pathInfo.sourceModeInfo);
+            var hasSource = NVAPIDisplayHelper.TryCreateSourceModeInfo(pathInfo.sourceModeInfo, out var source);
             var targets = NVAPIDisplayHelper.CreateTargets(pathInfo.targetInfoCount, pathInfo.targetInfo);
             var osAdapterLuid = NVAPIDisplayHelper.ReadOsAdapterLuid(pathInfo.pOSAdapterID);
 
@@ -3202,6 +3239,7 @@ namespace NVAPIWrapper
                 pathInfo.sourceId,
                 pathInfo.IsNonNVIDIAAdapter != 0,
                 osAdapterLuid,
+                hasSource,
                 source,
                 targets);
         }
@@ -3220,10 +3258,9 @@ namespace NVAPIWrapper
             _NV_DISPLAYCONFIG_SOURCE_MODE_INFO_V1* sourceModeInfo,
             void* osAdapterId)
         {
-            var version = Version != 0 ? Version : NVAPI.NV_DISPLAYCONFIG_PATH_INFO_VER;
             return new _NV_DISPLAYCONFIG_PATH_INFO
             {
-                version = version,
+                version = Version != 0 ? Version : NVAPI.NV_DISPLAYCONFIG_PATH_INFO_VER,
                 sourceId = SourceId,
                 targetInfoCount = targetInfoCount,
                 targetInfo = targetInfo,
@@ -3237,16 +3274,13 @@ namespace NVAPIWrapper
         /// <inheritdoc />
         public bool Equals(NVAPIDisplayConfigPathDto other)
         {
-            if (Version != other.Version ||
-                SourceId != other.SourceId ||
-                IsNonNvidiaAdapter != other.IsNonNvidiaAdapter ||
-                OsAdapterLuid != other.OsAdapterLuid ||
-                !Nullable.Equals(SourceModeInfo, other.SourceModeInfo))
-            {
-                return false;
-            }
-
-            return SequenceEquals(Targets, other.Targets);
+            return Version == other.Version
+                && SourceId == other.SourceId
+                && IsNonNvidiaAdapter == other.IsNonNvidiaAdapter
+                && OsAdapterLuid == other.OsAdapterLuid
+                && HasSourceModeInfo == other.HasSourceModeInfo
+                && SourceModeInfo.Equals(other.SourceModeInfo)
+                && SequenceEquals(Targets, other.Targets);
         }
 
         /// <inheritdoc />
@@ -3265,10 +3299,13 @@ namespace NVAPIWrapper
                 hash = (hash * 31) + SourceId.GetHashCode();
                 hash = (hash * 31) + IsNonNvidiaAdapter.GetHashCode();
                 hash = (hash * 31) + OsAdapterLuid.GetHashCode();
-                hash = (hash * 31) + (SourceModeInfo?.GetHashCode() ?? 0);
-                for (var i = 0; i < Targets.Length; i++)
+                hash = (hash * 31) + HasSourceModeInfo.GetHashCode();
+                hash = (hash * 31) + SourceModeInfo.GetHashCode();
+
+                var targets = Targets;
+                for (var i = 0; i < targets.Length; i++)
                 {
-                    hash = (hash * 31) + Targets[i].GetHashCode();
+                    hash = (hash * 31) + targets[i].GetHashCode();
                 }
 
                 return hash;
@@ -3295,9 +3332,6 @@ namespace NVAPIWrapper
         {
             if (ReferenceEquals(left, right))
                 return true;
-
-            if (left == null || right == null)
-                return false;
 
             if (left.Length != right.Length)
                 return false;
@@ -3442,20 +3476,38 @@ namespace NVAPIWrapper
     /// </summary>
     public struct NVAPIDisplayConfigTargetDto : IEquatable<NVAPIDisplayConfigTargetDto>
     {
-        /// <summary>Display ID.</summary>
+        /// <summary>
+        /// Display ID.
+        /// </summary>
         public uint DisplayId { get; set; }
 
-        /// <summary>Windows CCD target ID (for non-NVIDIA adapters).</summary>
+        /// <summary>
+        /// Windows CCD target ID for non-NVIDIA adapters.
+        /// </summary>
         public uint TargetId { get; set; }
 
-        /// <summary>Advanced target info, or null if not present.</summary>
-        public NVAPIDisplayConfigAdvancedTargetDto? Details { get; set; }
+        /// <summary>
+        /// True when <see cref="Details"/> contains advanced target information from NVAPI.
+        /// </summary>
+        public bool HasDetails { get; set; }
 
-        /// <summary>Create target info.</summary>
-        public NVAPIDisplayConfigTargetDto(uint displayId, uint targetId, NVAPIDisplayConfigAdvancedTargetDto? details)
+        /// <summary>
+        /// Advanced target information. When <see cref="HasDetails"/> is false, this contains a default value.
+        /// </summary>
+        public NVAPIDisplayConfigAdvancedTargetDto Details { get; set; }
+
+        /// <summary>
+        /// Create target info.
+        /// </summary>
+        /// <param name="displayId">Display ID.</param>
+        /// <param name="targetId">Windows CCD target ID.</param>
+        /// <param name="hasDetails">True when advanced target details are present.</param>
+        /// <param name="details">Advanced target details, or a default value when not present.</param>
+        public NVAPIDisplayConfigTargetDto(uint displayId, uint targetId, bool hasDetails, NVAPIDisplayConfigAdvancedTargetDto details)
         {
             DisplayId = displayId;
             TargetId = targetId;
+            HasDetails = hasDetails;
             Details = details;
         }
 
@@ -3466,8 +3518,8 @@ namespace NVAPIWrapper
         /// <returns>Target DTO.</returns>
         public static unsafe NVAPIDisplayConfigTargetDto FromNative(_NV_DISPLAYCONFIG_PATH_TARGET_INFO_V2 native)
         {
-            var details = NVAPIDisplayHelper.CreateAdvancedTargetInfo(native.details);
-            return new NVAPIDisplayConfigTargetDto(native.displayId, native.targetId, details);
+            var hasDetails = NVAPIDisplayHelper.TryCreateAdvancedTargetInfo(native.details, out var details);
+            return new NVAPIDisplayConfigTargetDto(native.displayId, native.targetId, hasDetails, details);
         }
 
         /// <summary>
@@ -3490,7 +3542,8 @@ namespace NVAPIWrapper
         {
             return DisplayId == other.DisplayId
                 && TargetId == other.TargetId
-                && Nullable.Equals(Details, other.Details);
+                && HasDetails == other.HasDetails
+                && Details.Equals(other.Details);
         }
 
         /// <inheritdoc />
@@ -3507,7 +3560,8 @@ namespace NVAPIWrapper
                 var hash = 17;
                 hash = (hash * 31) + DisplayId.GetHashCode();
                 hash = (hash * 31) + TargetId.GetHashCode();
-                hash = (hash * 31) + (Details?.GetHashCode() ?? 0);
+                hash = (hash * 31) + HasDetails.GetHashCode();
+                hash = (hash * 31) + Details.GetHashCode();
                 return hash;
             }
         }
@@ -6262,23 +6316,63 @@ namespace NVAPIWrapper
     /// </summary>
     public struct NVAPIGpuScanoutWarpingDataDto : IEquatable<NVAPIGpuScanoutWarpingDataDto>
     {
-        public float[] Vertices { get; set; }
-        public NV_GPU_WARPING_VERTICE_FORMAT VertexFormat { get; set; }
-        public int NumVertices { get; set; }
-        public NVAPISBoxDto? TextureRect { get; set; }
+        private float[]? _vertices;
 
+        /// <summary>
+        /// Warping vertices. Empty when no vertices are present.
+        /// </summary>
+        public float[] Vertices
+        {
+            get => _vertices ?? Array.Empty<float>();
+            set => _vertices = value ?? Array.Empty<float>();
+        }
+
+        /// <summary>
+        /// Vertex format for the warping data.
+        /// </summary>
+        public NV_GPU_WARPING_VERTICE_FORMAT VertexFormat { get; set; }
+
+        /// <summary>
+        /// Number of vertices to pass to NVAPI.
+        /// </summary>
+        public int NumVertices { get; set; }
+
+        /// <summary>
+        /// True when <see cref="TextureRect"/> contains a texture rectangle.
+        /// </summary>
+        public bool HasTextureRect { get; set; }
+
+        /// <summary>
+        /// Texture rectangle. When <see cref="HasTextureRect"/> is false, this contains a default value.
+        /// </summary>
+        public NVAPISBoxDto TextureRect { get; set; }
+
+        /// <summary>
+        /// Create scanout warping data.
+        /// </summary>
+        /// <param name="vertices">Warping vertices.</param>
+        /// <param name="vertexFormat">Vertex format.</param>
+        /// <param name="numVertices">Number of vertices.</param>
+        /// <param name="hasTextureRect">True when texture rectangle data is present.</param>
+        /// <param name="textureRect">Texture rectangle, or default when not present.</param>
         public NVAPIGpuScanoutWarpingDataDto(
             float[] vertices,
             NV_GPU_WARPING_VERTICE_FORMAT vertexFormat,
             int numVertices,
-            NVAPISBoxDto? textureRect)
+            bool hasTextureRect,
+            NVAPISBoxDto textureRect)
         {
-            Vertices = vertices ?? Array.Empty<float>();
+            _vertices = vertices ?? Array.Empty<float>();
             VertexFormat = vertexFormat;
             NumVertices = numVertices;
+            HasTextureRect = hasTextureRect;
             TextureRect = textureRect;
         }
 
+        /// <summary>
+        /// Convert this DTO to a native scanout warping data struct.
+        /// </summary>
+        /// <returns>Native scanout warping data.</returns>
         public NV_SCANOUT_WARPING_DATA ToNative()
         {
             return new NV_SCANOUT_WARPING_DATA
@@ -6291,28 +6385,41 @@ namespace NVAPIWrapper
             };
         }
 
+        /// <inheritdoc />
         public bool Equals(NVAPIGpuScanoutWarpingDataDto other)
         {
             return VertexFormat == other.VertexFormat
                 && NumVertices == other.NumVertices
-                && Nullable.Equals(TextureRect, other.TextureRect)
+                && HasTextureRect == other.HasTextureRect
+                && TextureRect.Equals(other.TextureRect)
                 && NVAPIGpuDtoHelpers.SequenceEquals(Vertices, other.Vertices);
         }
 
+        /// <inheritdoc />
         public override bool Equals(object? obj) => obj is NVAPIGpuScanoutWarpingDataDto other && Equals(other);
+
+        /// <inheritdoc />
         public override int GetHashCode()
         {
             unchecked
             {
                 var hash = VertexFormat.GetHashCode();
                 hash = (hash * 31) + NumVertices.GetHashCode();
-                hash = (hash * 31) + (TextureRect?.GetHashCode() ?? 0);
+                hash = (hash * 31) + HasTextureRect.GetHashCode();
+                hash = (hash * 31) + TextureRect.GetHashCode();
                 hash = (hash * 31) + NVAPIGpuDtoHelpers.SequenceHashCode(Vertices);
                 return hash;
             }
         }
 
+        /// <summary>
+        /// Determine whether two scanout warping DTOs are equal.
+        /// </summary>
         public static bool operator ==(NVAPIGpuScanoutWarpingDataDto left, NVAPIGpuScanoutWarpingDataDto right) => left.Equals(right);
+
+        /// <summary>
+        /// Determine whether two scanout warping DTOs are not equal.
+        /// </summary>
         public static bool operator !=(NVAPIGpuScanoutWarpingDataDto left, NVAPIGpuScanoutWarpingDataDto right) => !left.Equals(right);
     }
 

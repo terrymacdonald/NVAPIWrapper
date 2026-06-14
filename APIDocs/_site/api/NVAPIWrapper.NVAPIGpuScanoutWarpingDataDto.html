@@ -89,7 +89,7 @@
 
 
   <h1 id="NVAPIWrapper_NVAPIGpuScanoutWarpingDataDto" data-uid="NVAPIWrapper.NVAPIGpuScanoutWarpingDataDto" class="text-break">
-Struct NVAPIGpuScanoutWarpingDataDto  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L6263"><i class="bi bi-code-slash"></i></a>
+Struct NVAPIGpuScanoutWarpingDataDto  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L6317"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -145,28 +145,36 @@ Struct NVAPIGpuScanoutWarpingDataDto  <a class="header-action link-secondary" ti
 
   <a id="NVAPIWrapper_NVAPIGpuScanoutWarpingDataDto__ctor_" data-uid="NVAPIWrapper.NVAPIGpuScanoutWarpingDataDto.#ctor*"></a>
 
-  <h3 id="NVAPIWrapper_NVAPIGpuScanoutWarpingDataDto__ctor_System_Single___NVAPIWrapper_NV_GPU_WARPING_VERTICE_FORMAT_System_Int32_System_Nullable_NVAPIWrapper_NVAPISBoxDto__" data-uid="NVAPIWrapper.NVAPIGpuScanoutWarpingDataDto.#ctor(System.Single[],NVAPIWrapper.NV_GPU_WARPING_VERTICE_FORMAT,System.Int32,System.Nullable{NVAPIWrapper.NVAPISBoxDto})">
-  NVAPIGpuScanoutWarpingDataDto(float[], NV_GPU_WARPING_VERTICE_FORMAT, int, NVAPISBoxDto?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L6270"><i class="bi bi-code-slash"></i></a>
+  <h3 id="NVAPIWrapper_NVAPIGpuScanoutWarpingDataDto__ctor_System_Single___NVAPIWrapper_NV_GPU_WARPING_VERTICE_FORMAT_System_Int32_System_Boolean_NVAPIWrapper_NVAPISBoxDto_" data-uid="NVAPIWrapper.NVAPIGpuScanoutWarpingDataDto.#ctor(System.Single[],NVAPIWrapper.NV_GPU_WARPING_VERTICE_FORMAT,System.Int32,System.Boolean,NVAPIWrapper.NVAPISBoxDto)">
+  NVAPIGpuScanoutWarpingDataDto(float[], NV_GPU_WARPING_VERTICE_FORMAT, int, bool, NVAPISBoxDto)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L6358"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Create scanout warping data.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public NVAPIGpuScanoutWarpingDataDto(float[] vertices, NV_GPU_WARPING_VERTICE_FORMAT vertexFormat, int numVertices, NVAPISBoxDto? textureRect)</code></pre>
+    <pre><code class="lang-csharp hljs">public NVAPIGpuScanoutWarpingDataDto(float[] vertices, NV_GPU_WARPING_VERTICE_FORMAT vertexFormat, int numVertices, bool hasTextureRect, NVAPISBoxDto textureRect)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>vertices</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a>[]</dt>
-    <dd></dd>
+    <dd><p>Warping vertices.</p>
+</dd>
     <dt><code>vertexFormat</code> <a class="xref" href="NVAPIWrapper.NV_GPU_WARPING_VERTICE_FORMAT.html">NV_GPU_WARPING_VERTICE_FORMAT</a></dt>
-    <dd></dd>
+    <dd><p>Vertex format.</p>
+</dd>
     <dt><code>numVertices</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
-    <dt><code>textureRect</code> <a class="xref" href="NVAPIWrapper.NVAPISBoxDto.html">NVAPISBoxDto</a>?</dt>
-    <dd></dd>
+    <dd><p>Number of vertices.</p>
+</dd>
+    <dt><code>hasTextureRect</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True when texture rectangle data is present.</p>
+</dd>
+    <dt><code>textureRect</code> <a class="xref" href="NVAPIWrapper.NVAPISBoxDto.html">NVAPISBoxDto</a></dt>
+    <dd><p>Texture rectangle, or default when not present.</p>
+</dd>
   </dl>
 
 
@@ -184,14 +192,47 @@ Struct NVAPIGpuScanoutWarpingDataDto  <a class="header-action link-secondary" ti
 </h2>
 
 
+  <a id="NVAPIWrapper_NVAPIGpuScanoutWarpingDataDto_HasTextureRect_" data-uid="NVAPIWrapper.NVAPIGpuScanoutWarpingDataDto.HasTextureRect*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIGpuScanoutWarpingDataDto_HasTextureRect" data-uid="NVAPIWrapper.NVAPIGpuScanoutWarpingDataDto.HasTextureRect">
+  HasTextureRect
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L6343"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>True when <a class="xref" href="NVAPIWrapper.NVAPIGpuScanoutWarpingDataDto.html#NVAPIWrapper_NVAPIGpuScanoutWarpingDataDto_TextureRect">TextureRect</a> contains a texture rectangle.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool HasTextureRect { readonly get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="NVAPIWrapper_NVAPIGpuScanoutWarpingDataDto_NumVertices_" data-uid="NVAPIWrapper.NVAPIGpuScanoutWarpingDataDto.NumVertices*"></a>
 
   <h3 id="NVAPIWrapper_NVAPIGpuScanoutWarpingDataDto_NumVertices" data-uid="NVAPIWrapper.NVAPIGpuScanoutWarpingDataDto.NumVertices">
   NumVertices
-  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L6267"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L6338"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Number of vertices to pass to NVAPI.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -219,14 +260,15 @@ Struct NVAPIGpuScanoutWarpingDataDto  <a class="header-action link-secondary" ti
 
   <h3 id="NVAPIWrapper_NVAPIGpuScanoutWarpingDataDto_TextureRect" data-uid="NVAPIWrapper.NVAPIGpuScanoutWarpingDataDto.TextureRect">
   TextureRect
-  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L6268"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L6348"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Texture rectangle. When <a class="xref" href="NVAPIWrapper.NVAPIGpuScanoutWarpingDataDto.html#NVAPIWrapper_NVAPIGpuScanoutWarpingDataDto_HasTextureRect">HasTextureRect</a> is false, this contains a default value.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public NVAPISBoxDto? TextureRect { readonly get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public NVAPISBoxDto TextureRect { readonly get; set; }</code></pre>
   </div>
 
 
@@ -235,7 +277,7 @@ Struct NVAPIGpuScanoutWarpingDataDto  <a class="header-action link-secondary" ti
 
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="NVAPIWrapper.NVAPISBoxDto.html">NVAPISBoxDto</a>?</dt>
+    <dt><a class="xref" href="NVAPIWrapper.NVAPISBoxDto.html">NVAPISBoxDto</a></dt>
     <dd></dd>
   </dl>
 
@@ -250,10 +292,11 @@ Struct NVAPIGpuScanoutWarpingDataDto  <a class="header-action link-secondary" ti
 
   <h3 id="NVAPIWrapper_NVAPIGpuScanoutWarpingDataDto_VertexFormat" data-uid="NVAPIWrapper.NVAPIGpuScanoutWarpingDataDto.VertexFormat">
   VertexFormat
-  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L6266"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L6333"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Vertex format for the warping data.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -281,14 +324,15 @@ Struct NVAPIGpuScanoutWarpingDataDto  <a class="header-action link-secondary" ti
 
   <h3 id="NVAPIWrapper_NVAPIGpuScanoutWarpingDataDto_Vertices" data-uid="NVAPIWrapper.NVAPIGpuScanoutWarpingDataDto.Vertices">
   Vertices
-  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L6265"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L6324"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Warping vertices. Empty when no vertices are present.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public float[] Vertices { readonly get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public float[] Vertices { get; set; }</code></pre>
   </div>
 
 
@@ -316,7 +360,7 @@ Struct NVAPIGpuScanoutWarpingDataDto  <a class="header-action link-secondary" ti
 
   <h3 id="NVAPIWrapper_NVAPIGpuScanoutWarpingDataDto_Equals_NVAPIWrapper_NVAPIGpuScanoutWarpingDataDto_" data-uid="NVAPIWrapper.NVAPIGpuScanoutWarpingDataDto.Equals(NVAPIWrapper.NVAPIGpuScanoutWarpingDataDto)">
   Equals(NVAPIGpuScanoutWarpingDataDto)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L6294"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L6389"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Indicates whether the current object is equal to another object of the same type.</p>
@@ -355,7 +399,7 @@ Struct NVAPIGpuScanoutWarpingDataDto  <a class="header-action link-secondary" ti
 
   <h3 id="NVAPIWrapper_NVAPIGpuScanoutWarpingDataDto_Equals_System_Object_" data-uid="NVAPIWrapper.NVAPIGpuScanoutWarpingDataDto.Equals(System.Object)">
   Equals(object?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L6302"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L6399"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Indicates whether this instance and a specified object are equal.</p>
@@ -394,7 +438,7 @@ Struct NVAPIGpuScanoutWarpingDataDto  <a class="header-action link-secondary" ti
 
   <h3 id="NVAPIWrapper_NVAPIGpuScanoutWarpingDataDto_GetHashCode" data-uid="NVAPIWrapper.NVAPIGpuScanoutWarpingDataDto.GetHashCode">
   GetHashCode()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L6303"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L6402"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Returns the hash code for this instance.</p>
@@ -427,10 +471,11 @@ Struct NVAPIGpuScanoutWarpingDataDto  <a class="header-action link-secondary" ti
 
   <h3 id="NVAPIWrapper_NVAPIGpuScanoutWarpingDataDto_ToNative" data-uid="NVAPIWrapper.NVAPIGpuScanoutWarpingDataDto.ToNative">
   ToNative()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L6282"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L6376"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Convert this DTO to a native scanout warping data struct.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -441,7 +486,8 @@ Struct NVAPIGpuScanoutWarpingDataDto  <a class="header-action link-secondary" ti
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="NVAPIWrapper.NV_SCANOUT_WARPING_DATA.html">NV_SCANOUT_WARPING_DATA</a></dt>
-    <dd></dd>
+    <dd><p>Native scanout warping data.</p>
+</dd>
   </dl>
 
 
@@ -462,10 +508,11 @@ Struct NVAPIGpuScanoutWarpingDataDto  <a class="header-action link-secondary" ti
 
   <h3 id="NVAPIWrapper_NVAPIGpuScanoutWarpingDataDto_op_Equality_NVAPIWrapper_NVAPIGpuScanoutWarpingDataDto_NVAPIWrapper_NVAPIGpuScanoutWarpingDataDto_" data-uid="NVAPIWrapper.NVAPIGpuScanoutWarpingDataDto.op_Equality(NVAPIWrapper.NVAPIGpuScanoutWarpingDataDto,NVAPIWrapper.NVAPIGpuScanoutWarpingDataDto)">
   operator ==(NVAPIGpuScanoutWarpingDataDto, NVAPIGpuScanoutWarpingDataDto)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L6315"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L6418"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Determine whether two scanout warping DTOs are equal.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -500,10 +547,11 @@ Struct NVAPIGpuScanoutWarpingDataDto  <a class="header-action link-secondary" ti
 
   <h3 id="NVAPIWrapper_NVAPIGpuScanoutWarpingDataDto_op_Inequality_NVAPIWrapper_NVAPIGpuScanoutWarpingDataDto_NVAPIWrapper_NVAPIGpuScanoutWarpingDataDto_" data-uid="NVAPIWrapper.NVAPIGpuScanoutWarpingDataDto.op_Inequality(NVAPIWrapper.NVAPIGpuScanoutWarpingDataDto,NVAPIWrapper.NVAPIGpuScanoutWarpingDataDto)">
   operator !=(NVAPIGpuScanoutWarpingDataDto, NVAPIGpuScanoutWarpingDataDto)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L6316"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L6423"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Determine whether two scanout warping DTOs are not equal.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -538,7 +586,7 @@ Struct NVAPIGpuScanoutWarpingDataDto  <a class="header-action link-secondary" ti
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L6263" class="edit-link">Edit this page</a>
+          <a href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIDisplayHelper.cs/#L6317" class="edit-link">Edit this page</a>
         </div>
 
 

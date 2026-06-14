@@ -136,6 +136,7 @@ namespace NVAPIWrapper.FacadeTests
         private static bool TryGetDisplayId(NVAPIPhysicalGpuHelper gpu, out uint displayId)
         {
             displayId = 0;
+
             try
             {
                 var displays = gpu.EnumAllDisplays();
@@ -149,7 +150,11 @@ namespace NVAPIWrapper.FacadeTests
                 displayId = id.Value;
                 return true;
             }
-            catch
+            catch (NVAPIException ex) when (IsDisplayDiscoveryUnavailableResult(ex.Status))
+            {
+                return false;
+            }
+            catch (EntryPointNotFoundException)
             {
                 return false;
             }
@@ -158,6 +163,7 @@ namespace NVAPIWrapper.FacadeTests
         private static bool TryGetOutputId(NVAPIPhysicalGpuHelper gpu, out uint outputId)
         {
             outputId = 0;
+
             try
             {
                 var displays = gpu.EnumAllDisplays();
@@ -171,7 +177,11 @@ namespace NVAPIWrapper.FacadeTests
                 outputId = id.Value;
                 return true;
             }
-            catch
+            catch (NVAPIException ex) when (IsDisplayDiscoveryUnavailableResult(ex.Status))
+            {
+                return false;
+            }
+            catch (EntryPointNotFoundException)
             {
                 return false;
             }
@@ -225,6 +235,14 @@ namespace NVAPIWrapper.FacadeTests
                 || status == _NvAPI_Status.NVAPI_NVIDIA_DEVICE_NOT_FOUND
                 || status == _NvAPI_Status.NVAPI_INVALID_ARGUMENT
                 || status == _NvAPI_Status.NVAPI_INVALID_USER_PRIVILEGE;
+        }
+
+        private static bool IsDisplayDiscoveryUnavailableResult(_NvAPI_Status status)
+        {
+            return status == _NvAPI_Status.NVAPI_ERROR
+                || status == _NvAPI_Status.NVAPI_NOT_SUPPORTED
+                || status == _NvAPI_Status.NVAPI_NO_IMPLEMENTATION
+                || status == _NvAPI_Status.NVAPI_NVIDIA_DEVICE_NOT_FOUND;
         }
     }
 }

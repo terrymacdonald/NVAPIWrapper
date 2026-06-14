@@ -5700,28 +5700,85 @@ namespace NVAPIWrapper
     /// </summary>
     public struct NVAPILogicalGpuInfoDto : IEquatable<NVAPILogicalGpuInfoDto>
     {
-        internal IntPtr[] PhysicalGpuHandles { get; set; }
-        public NVAPIPhysicalGpuHelper[] PhysicalGpus { get; set; }
-        public uint PhysicalGpuCount { get; set; }
-        public _LUID? OsAdapterId { get; set; }
-        public uint[] Reserved { get; set; }
+        private IntPtr[]? _physicalGpuHandles;
+        private NVAPIPhysicalGpuHelper[]? _physicalGpus;
+        private uint[]? _reserved;
 
-        private NVAPILogicalGpuInfoDto(_LUID? osAdapterId, IntPtr[] handles, NVAPIPhysicalGpuHelper[] gpus, uint[] reserved)
+        /// <summary>
+        /// Native physical GPU handles included in this logical GPU.
+        /// </summary>
+        internal IntPtr[] PhysicalGpuHandles
         {
-            OsAdapterId = osAdapterId;
-            PhysicalGpuHandles = handles ?? Array.Empty<IntPtr>();
-            PhysicalGpus = gpus ?? Array.Empty<NVAPIPhysicalGpuHelper>();
-            PhysicalGpuCount = (uint)PhysicalGpuHandles.Length;
-            Reserved = reserved ?? Array.Empty<uint>();
+            get => _physicalGpuHandles ?? Array.Empty<IntPtr>();
+            set => _physicalGpuHandles = value ?? Array.Empty<IntPtr>();
         }
 
+        /// <summary>
+        /// Physical GPU helpers included in this logical GPU.
+        /// </summary>
+        public NVAPIPhysicalGpuHelper[] PhysicalGpus
+        {
+            get => _physicalGpus ?? Array.Empty<NVAPIPhysicalGpuHelper>();
+            set => _physicalGpus = value ?? Array.Empty<NVAPIPhysicalGpuHelper>();
+        }
+
+        /// <summary>
+        /// Number of physical GPUs included in this logical GPU.
+        /// </summary>
+        public uint PhysicalGpuCount { get; set; }
+
+        /// <summary>
+        /// True when <see cref="OsAdapterId"/> contains an OS adapter LUID.
+        /// </summary>
+        public bool HasOsAdapterId { get; set; }
+
+        /// <summary>
+        /// OS adapter LUID. When <see cref="HasOsAdapterId"/> is false, this contains a default value.
+        /// </summary>
+        public _LUID OsAdapterId { get; set; }
+
+        /// <summary>
+        /// Reserved native fields.
+        /// </summary>
+        public uint[] Reserved
+        {
+            get => _reserved ?? Array.Empty<uint>();
+            set => _reserved = value ?? Array.Empty<uint>();
+        }
+
+        /// <summary>
+        /// Create logical GPU information.
+        /// </summary>
+        /// <param name="hasOsAdapterId">True when OS adapter LUID is present.</param>
+        /// <param name="osAdapterId">OS adapter LUID, or default when not present.</param>
+        /// <param name="handles">Physical GPU handles.</param>
+        /// <param name="gpus">Physical GPU helpers.</param>
+        /// <param name="reserved">Reserved native fields.</param>
+        private NVAPILogicalGpuInfoDto(
+            bool hasOsAdapterId,
+            _LUID osAdapterId,
+            IntPtr[] handles,
+            NVAPIPhysicalGpuHelper[] gpus,
+            uint[] reserved)
+        {
+            HasOsAdapterId = hasOsAdapterId;
+            OsAdapterId = osAdapterId;
+            _physicalGpuHandles = handles ?? Array.Empty<IntPtr>();
+            _physicalGpus = gpus ?? Array.Empty<NVAPIPhysicalGpuHelper>();
+            PhysicalGpuCount = (uint)_physicalGpuHandles.Length;
+            _reserved = reserved ?? Array.Empty<uint>();
+        }
+
+        /// <summary>
+        /// Create logical GPU information from native data.
+        /// </summary>
+        /// <param name="apiHelper">API helper used to create physical GPU helpers.</param>
+        /// <param name="native">Native logical GPU data.</param>
+        /// <returns>Logical GPU information DTO.</returns>
         public static unsafe NVAPILogicalGpuInfoDto FromNative(NVAPIApiHelper apiHelper, _NV_LOGICAL_GPU_DATA_V1 native)
         {
-            _LUID? luid = null;
-            if (native.pOSAdapterId != null)
-            {
-                luid = *(_LUID*)native.pOSAdapterId;
-            }
+            var hasOsAdapterId = native.pOSAdapterId != null;
+            var luid = hasOsAdapterId ? *(_LUID*)native.pOSAdapterId : default;
 
             var count = (int)Math.Min(native.physicalGpuCount, NVAPI.NVAPI_MAX_PHYSICAL_GPUS);
             var handles = new IntPtr[count];
@@ -5737,17 +5794,17 @@ namespace NVAPIWrapper
             var reservedSpan = MemoryMarshal.CreateSpan(ref native.reserved.e0, reserved.Length);
             reservedSpan.CopyTo(reserved);
 
-            return new NVAPILogicalGpuInfoDto(luid, handles, gpus, reserved);
+            return new NVAPILogicalGpuInfoDto(hasOsAdapterId, luid, handles, gpus, reserved);
         }
 
+        /// <inheritdoc />
         public bool Equals(NVAPILogicalGpuInfoDto other)
         {
-            var luidEquals = OsAdapterId.HasValue == other.OsAdapterId.HasValue;
-            if (luidEquals && OsAdapterId.HasValue && other.OsAdapterId.HasValue)
+            var luidEquals = HasOsAdapterId == other.HasOsAdapterId;
+            if (luidEquals && HasOsAdapterId)
             {
-                var left = OsAdapterId.Value;
-                var right = other.OsAdapterId.Value;
-                luidEquals = left.LowPart == right.LowPart && left.HighPart == right.HighPart;
+                luidEquals = OsAdapterId.LowPart == other.OsAdapterId.LowPart &&
+                             OsAdapterId.HighPart == other.OsAdapterId.HighPart;
             }
 
             return luidEquals
@@ -5755,19 +5812,35 @@ namespace NVAPIWrapper
                 && NVAPIGpuDtoHelpers.SequenceEquals(Reserved, other.Reserved);
         }
 
+        /// <inheritdoc />
         public override bool Equals(object? obj) => obj is NVAPILogicalGpuInfoDto other && Equals(other);
+
+        /// <inheritdoc />
         public override int GetHashCode()
         {
             unchecked
             {
-                var hash = OsAdapterId?.GetHashCode() ?? 0;
+                var hash = HasOsAdapterId.GetHashCode();
+                if (HasOsAdapterId)
+                {
+                    hash = (hash * 31) + OsAdapterId.LowPart.GetHashCode();
+                    hash = (hash * 31) + OsAdapterId.HighPart.GetHashCode();
+                }
+
                 hash = (hash * 31) + NVAPIGpuDtoHelpers.SequenceHashCode(PhysicalGpuHandles);
                 hash = (hash * 31) + NVAPIGpuDtoHelpers.SequenceHashCode(Reserved);
                 return hash;
             }
         }
 
+        /// <summary>
+        /// Determine whether two logical GPU information DTOs are equal.
+        /// </summary>
         public static bool operator ==(NVAPILogicalGpuInfoDto left, NVAPILogicalGpuInfoDto right) => left.Equals(right);
+
+        /// <summary>
+        /// Determine whether two logical GPU information DTOs are not equal.
+        /// </summary>
         public static bool operator !=(NVAPILogicalGpuInfoDto left, NVAPILogicalGpuInfoDto right) => !left.Equals(right);
     }
 

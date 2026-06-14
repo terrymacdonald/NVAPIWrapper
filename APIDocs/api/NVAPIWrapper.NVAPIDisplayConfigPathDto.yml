@@ -5,11 +5,12 @@ items:
   id: NVAPIDisplayConfigPathDto
   parent: NVAPIWrapper
   children:
-  - NVAPIWrapper.NVAPIDisplayConfigPathDto.#ctor(System.UInt32,System.UInt32,System.Boolean,System.Int64,System.Nullable{NVAPIWrapper.NVAPIDisplayConfigSourceModeDto},NVAPIWrapper.NVAPIDisplayConfigTargetDto[])
+  - NVAPIWrapper.NVAPIDisplayConfigPathDto.#ctor(System.UInt32,System.UInt32,System.Boolean,System.Int64,System.Boolean,NVAPIWrapper.NVAPIDisplayConfigSourceModeDto,NVAPIWrapper.NVAPIDisplayConfigTargetDto[])
   - NVAPIWrapper.NVAPIDisplayConfigPathDto.Equals(NVAPIWrapper.NVAPIDisplayConfigPathDto)
   - NVAPIWrapper.NVAPIDisplayConfigPathDto.Equals(System.Object)
   - NVAPIWrapper.NVAPIDisplayConfigPathDto.FromNative(NVAPIWrapper._NV_DISPLAYCONFIG_PATH_INFO)
   - NVAPIWrapper.NVAPIDisplayConfigPathDto.GetHashCode
+  - NVAPIWrapper.NVAPIDisplayConfigPathDto.HasSourceModeInfo
   - NVAPIWrapper.NVAPIDisplayConfigPathDto.IsNonNvidiaAdapter
   - NVAPIWrapper.NVAPIDisplayConfigPathDto.OsAdapterLuid
   - NVAPIWrapper.NVAPIDisplayConfigPathDto.SourceId
@@ -33,7 +34,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPIDisplayConfigPathDto
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 3137
+    startLine: 3154
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -67,7 +68,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Version
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 3142
+    startLine: 3161
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -98,7 +99,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SourceId
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 3147
+    startLine: 3166
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -129,7 +130,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: IsNonNvidiaAdapter
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 3152
+    startLine: 3171
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -160,7 +161,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: OsAdapterLuid
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 3157
+    startLine: 3176
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -173,6 +174,37 @@ items:
       type: System.Int64
     content.vb: Public Property OsAdapterLuid As Long
   overload: NVAPIWrapper.NVAPIDisplayConfigPathDto.OsAdapterLuid*
+- uid: NVAPIWrapper.NVAPIDisplayConfigPathDto.HasSourceModeInfo
+  commentId: P:NVAPIWrapper.NVAPIDisplayConfigPathDto.HasSourceModeInfo
+  id: HasSourceModeInfo
+  parent: NVAPIWrapper.NVAPIDisplayConfigPathDto
+  langs:
+  - csharp
+  - vb
+  name: HasSourceModeInfo
+  nameWithType: NVAPIDisplayConfigPathDto.HasSourceModeInfo
+  fullName: NVAPIWrapper.NVAPIDisplayConfigPathDto.HasSourceModeInfo
+  type: Property
+  source:
+    remote:
+      path: NVAPIWrapper/NVAPIDisplayHelper.cs
+      branch: main
+      repo: https://github.com/terrymacdonald/NVAPIWrapper.git
+    id: HasSourceModeInfo
+    path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
+    startLine: 3181
+  assemblies:
+  - NVAPIWrapper
+  namespace: NVAPIWrapper
+  summary: True when <xref href="NVAPIWrapper.NVAPIDisplayConfigPathDto.SourceModeInfo" data-throw-if-not-resolved="false"></xref> contains source mode information from NVAPI.
+  example: []
+  syntax:
+    content: public bool HasSourceModeInfo { readonly get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property HasSourceModeInfo As Boolean
+  overload: NVAPIWrapper.NVAPIDisplayConfigPathDto.HasSourceModeInfo*
 - uid: NVAPIWrapper.NVAPIDisplayConfigPathDto.SourceModeInfo
   commentId: P:NVAPIWrapper.NVAPIDisplayConfigPathDto.SourceModeInfo
   id: SourceModeInfo
@@ -191,18 +223,18 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SourceModeInfo
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 3162
+    startLine: 3186
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
-  summary: Source mode info, or null if not present.
+  summary: Source mode information. When <xref href="NVAPIWrapper.NVAPIDisplayConfigPathDto.HasSourceModeInfo" data-throw-if-not-resolved="false"></xref> is false, this contains a default value.
   example: []
   syntax:
-    content: public NVAPIDisplayConfigSourceModeDto? SourceModeInfo { readonly get; set; }
+    content: public NVAPIDisplayConfigSourceModeDto SourceModeInfo { readonly get; set; }
     parameters: []
     return:
-      type: System.Nullable{NVAPIWrapper.NVAPIDisplayConfigSourceModeDto}
-    content.vb: Public Property SourceModeInfo As NVAPIDisplayConfigSourceModeDto?
+      type: NVAPIWrapper.NVAPIDisplayConfigSourceModeDto
+    content.vb: Public Property SourceModeInfo As NVAPIDisplayConfigSourceModeDto
   overload: NVAPIWrapper.NVAPIDisplayConfigPathDto.SourceModeInfo*
 - uid: NVAPIWrapper.NVAPIDisplayConfigPathDto.Targets
   commentId: P:NVAPIWrapper.NVAPIDisplayConfigPathDto.Targets
@@ -222,29 +254,29 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Targets
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 3167
+    startLine: 3191
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
-  summary: Target configurations for this path.
+  summary: Target configurations for this path. Empty when no targets are present.
   example: []
   syntax:
-    content: public NVAPIDisplayConfigTargetDto[] Targets { readonly get; set; }
+    content: public NVAPIDisplayConfigTargetDto[] Targets { get; set; }
     parameters: []
     return:
       type: NVAPIWrapper.NVAPIDisplayConfigTargetDto[]
     content.vb: Public Property Targets As NVAPIDisplayConfigTargetDto()
   overload: NVAPIWrapper.NVAPIDisplayConfigPathDto.Targets*
-- uid: NVAPIWrapper.NVAPIDisplayConfigPathDto.#ctor(System.UInt32,System.UInt32,System.Boolean,System.Int64,System.Nullable{NVAPIWrapper.NVAPIDisplayConfigSourceModeDto},NVAPIWrapper.NVAPIDisplayConfigTargetDto[])
-  commentId: M:NVAPIWrapper.NVAPIDisplayConfigPathDto.#ctor(System.UInt32,System.UInt32,System.Boolean,System.Int64,System.Nullable{NVAPIWrapper.NVAPIDisplayConfigSourceModeDto},NVAPIWrapper.NVAPIDisplayConfigTargetDto[])
-  id: '#ctor(System.UInt32,System.UInt32,System.Boolean,System.Int64,System.Nullable{NVAPIWrapper.NVAPIDisplayConfigSourceModeDto},NVAPIWrapper.NVAPIDisplayConfigTargetDto[])'
+- uid: NVAPIWrapper.NVAPIDisplayConfigPathDto.#ctor(System.UInt32,System.UInt32,System.Boolean,System.Int64,System.Boolean,NVAPIWrapper.NVAPIDisplayConfigSourceModeDto,NVAPIWrapper.NVAPIDisplayConfigTargetDto[])
+  commentId: M:NVAPIWrapper.NVAPIDisplayConfigPathDto.#ctor(System.UInt32,System.UInt32,System.Boolean,System.Int64,System.Boolean,NVAPIWrapper.NVAPIDisplayConfigSourceModeDto,NVAPIWrapper.NVAPIDisplayConfigTargetDto[])
+  id: '#ctor(System.UInt32,System.UInt32,System.Boolean,System.Int64,System.Boolean,NVAPIWrapper.NVAPIDisplayConfigSourceModeDto,NVAPIWrapper.NVAPIDisplayConfigTargetDto[])'
   parent: NVAPIWrapper.NVAPIDisplayConfigPathDto
   langs:
   - csharp
   - vb
-  name: NVAPIDisplayConfigPathDto(uint, uint, bool, long, NVAPIDisplayConfigSourceModeDto?, NVAPIDisplayConfigTargetDto[])
-  nameWithType: NVAPIDisplayConfigPathDto.NVAPIDisplayConfigPathDto(uint, uint, bool, long, NVAPIDisplayConfigSourceModeDto?, NVAPIDisplayConfigTargetDto[])
-  fullName: NVAPIWrapper.NVAPIDisplayConfigPathDto.NVAPIDisplayConfigPathDto(uint, uint, bool, long, NVAPIWrapper.NVAPIDisplayConfigSourceModeDto?, NVAPIWrapper.NVAPIDisplayConfigTargetDto[])
+  name: NVAPIDisplayConfigPathDto(uint, uint, bool, long, bool, NVAPIDisplayConfigSourceModeDto, NVAPIDisplayConfigTargetDto[])
+  nameWithType: NVAPIDisplayConfigPathDto.NVAPIDisplayConfigPathDto(uint, uint, bool, long, bool, NVAPIDisplayConfigSourceModeDto, NVAPIDisplayConfigTargetDto[])
+  fullName: NVAPIWrapper.NVAPIDisplayConfigPathDto.NVAPIDisplayConfigPathDto(uint, uint, bool, long, bool, NVAPIWrapper.NVAPIDisplayConfigSourceModeDto, NVAPIWrapper.NVAPIDisplayConfigTargetDto[])
   type: Constructor
   source:
     remote:
@@ -253,32 +285,41 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: .ctor
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 3172
+    startLine: 3207
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   summary: Create a display path configuration.
   example: []
   syntax:
-    content: public NVAPIDisplayConfigPathDto(uint version, uint sourceId, bool isNonNvidiaAdapter, long osAdapterLuid, NVAPIDisplayConfigSourceModeDto? sourceModeInfo, NVAPIDisplayConfigTargetDto[] targets)
+    content: public NVAPIDisplayConfigPathDto(uint version, uint sourceId, bool isNonNvidiaAdapter, long osAdapterLuid, bool hasSourceModeInfo, NVAPIDisplayConfigSourceModeDto sourceModeInfo, NVAPIDisplayConfigTargetDto[] targets)
     parameters:
     - id: version
       type: System.UInt32
+      description: NVAPI structure version.
     - id: sourceId
       type: System.UInt32
+      description: Windows source ID.
     - id: isNonNvidiaAdapter
       type: System.Boolean
+      description: True when the path represents a non-NVIDIA adapter.
     - id: osAdapterLuid
       type: System.Int64
+      description: OS adapter LUID, or 0 if not present.
+    - id: hasSourceModeInfo
+      type: System.Boolean
+      description: True when source mode information is present.
     - id: sourceModeInfo
-      type: System.Nullable{NVAPIWrapper.NVAPIDisplayConfigSourceModeDto}
+      type: NVAPIWrapper.NVAPIDisplayConfigSourceModeDto
+      description: Source mode information, or a default value when not present.
     - id: targets
       type: NVAPIWrapper.NVAPIDisplayConfigTargetDto[]
-    content.vb: Public Sub New(version As UInteger, sourceId As UInteger, isNonNvidiaAdapter As Boolean, osAdapterLuid As Long, sourceModeInfo As NVAPIDisplayConfigSourceModeDto?, targets As NVAPIDisplayConfigTargetDto())
+      description: Target configurations.
+    content.vb: Public Sub New(version As UInteger, sourceId As UInteger, isNonNvidiaAdapter As Boolean, osAdapterLuid As Long, hasSourceModeInfo As Boolean, sourceModeInfo As NVAPIDisplayConfigSourceModeDto, targets As NVAPIDisplayConfigTargetDto())
   overload: NVAPIWrapper.NVAPIDisplayConfigPathDto.#ctor*
-  nameWithType.vb: NVAPIDisplayConfigPathDto.New(UInteger, UInteger, Boolean, Long, NVAPIDisplayConfigSourceModeDto?, NVAPIDisplayConfigTargetDto())
-  fullName.vb: NVAPIWrapper.NVAPIDisplayConfigPathDto.New(UInteger, UInteger, Boolean, Long, NVAPIWrapper.NVAPIDisplayConfigSourceModeDto?, NVAPIWrapper.NVAPIDisplayConfigTargetDto())
-  name.vb: New(UInteger, UInteger, Boolean, Long, NVAPIDisplayConfigSourceModeDto?, NVAPIDisplayConfigTargetDto())
+  nameWithType.vb: NVAPIDisplayConfigPathDto.New(UInteger, UInteger, Boolean, Long, Boolean, NVAPIDisplayConfigSourceModeDto, NVAPIDisplayConfigTargetDto())
+  fullName.vb: NVAPIWrapper.NVAPIDisplayConfigPathDto.New(UInteger, UInteger, Boolean, Long, Boolean, NVAPIWrapper.NVAPIDisplayConfigSourceModeDto, NVAPIWrapper.NVAPIDisplayConfigTargetDto())
+  name.vb: New(UInteger, UInteger, Boolean, Long, Boolean, NVAPIDisplayConfigSourceModeDto, NVAPIDisplayConfigTargetDto())
 - uid: NVAPIWrapper.NVAPIDisplayConfigPathDto.FromNative(NVAPIWrapper._NV_DISPLAYCONFIG_PATH_INFO)
   commentId: M:NVAPIWrapper.NVAPIDisplayConfigPathDto.FromNative(NVAPIWrapper._NV_DISPLAYCONFIG_PATH_INFO)
   id: FromNative(NVAPIWrapper._NV_DISPLAYCONFIG_PATH_INFO)
@@ -297,7 +338,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: FromNative
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 3193
+    startLine: 3230
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -332,7 +373,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: ToNative
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 3216
+    startLine: 3254
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -379,7 +420,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Equals
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 3237
+    startLine: 3274
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -416,7 +457,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Equals
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 3252
+    startLine: 3286
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -455,7 +496,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetHashCode
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 3258
+    startLine: 3292
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -487,7 +528,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: op_Equality
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 3280
+    startLine: 3317
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -525,7 +566,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: op_Inequality
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 3288
+    startLine: 3325
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -832,58 +873,37 @@ references:
   nameWithType.vb: Long
   fullName.vb: Long
   name.vb: Long
+- uid: NVAPIWrapper.NVAPIDisplayConfigPathDto.SourceModeInfo
+  commentId: P:NVAPIWrapper.NVAPIDisplayConfigPathDto.SourceModeInfo
+  href: NVAPIWrapper.NVAPIDisplayConfigPathDto.html#NVAPIWrapper_NVAPIDisplayConfigPathDto_SourceModeInfo
+  name: SourceModeInfo
+  nameWithType: NVAPIDisplayConfigPathDto.SourceModeInfo
+  fullName: NVAPIWrapper.NVAPIDisplayConfigPathDto.SourceModeInfo
+- uid: NVAPIWrapper.NVAPIDisplayConfigPathDto.HasSourceModeInfo*
+  commentId: Overload:NVAPIWrapper.NVAPIDisplayConfigPathDto.HasSourceModeInfo
+  href: NVAPIWrapper.NVAPIDisplayConfigPathDto.html#NVAPIWrapper_NVAPIDisplayConfigPathDto_HasSourceModeInfo
+  name: HasSourceModeInfo
+  nameWithType: NVAPIDisplayConfigPathDto.HasSourceModeInfo
+  fullName: NVAPIWrapper.NVAPIDisplayConfigPathDto.HasSourceModeInfo
+- uid: NVAPIWrapper.NVAPIDisplayConfigPathDto.HasSourceModeInfo
+  commentId: P:NVAPIWrapper.NVAPIDisplayConfigPathDto.HasSourceModeInfo
+  href: NVAPIWrapper.NVAPIDisplayConfigPathDto.html#NVAPIWrapper_NVAPIDisplayConfigPathDto_HasSourceModeInfo
+  name: HasSourceModeInfo
+  nameWithType: NVAPIDisplayConfigPathDto.HasSourceModeInfo
+  fullName: NVAPIWrapper.NVAPIDisplayConfigPathDto.HasSourceModeInfo
 - uid: NVAPIWrapper.NVAPIDisplayConfigPathDto.SourceModeInfo*
   commentId: Overload:NVAPIWrapper.NVAPIDisplayConfigPathDto.SourceModeInfo
   href: NVAPIWrapper.NVAPIDisplayConfigPathDto.html#NVAPIWrapper_NVAPIDisplayConfigPathDto_SourceModeInfo
   name: SourceModeInfo
   nameWithType: NVAPIDisplayConfigPathDto.SourceModeInfo
   fullName: NVAPIWrapper.NVAPIDisplayConfigPathDto.SourceModeInfo
-- uid: System.Nullable{NVAPIWrapper.NVAPIDisplayConfigSourceModeDto}
-  commentId: T:System.Nullable{NVAPIWrapper.NVAPIDisplayConfigSourceModeDto}
-  parent: System
-  definition: System.Nullable`1
+- uid: NVAPIWrapper.NVAPIDisplayConfigSourceModeDto
+  commentId: T:NVAPIWrapper.NVAPIDisplayConfigSourceModeDto
+  parent: NVAPIWrapper
   href: NVAPIWrapper.NVAPIDisplayConfigSourceModeDto.html
-  name: NVAPIDisplayConfigSourceModeDto?
-  nameWithType: NVAPIDisplayConfigSourceModeDto?
-  fullName: NVAPIWrapper.NVAPIDisplayConfigSourceModeDto?
-  spec.csharp:
-  - uid: NVAPIWrapper.NVAPIDisplayConfigSourceModeDto
-    name: NVAPIDisplayConfigSourceModeDto
-    href: NVAPIWrapper.NVAPIDisplayConfigSourceModeDto.html
-  - name: '?'
-  spec.vb:
-  - uid: NVAPIWrapper.NVAPIDisplayConfigSourceModeDto
-    name: NVAPIDisplayConfigSourceModeDto
-    href: NVAPIWrapper.NVAPIDisplayConfigSourceModeDto.html
-  - name: '?'
-- uid: System.Nullable`1
-  commentId: T:System.Nullable`1
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.nullable-1
-  name: Nullable<T>
-  nameWithType: Nullable<T>
-  fullName: System.Nullable<T>
-  nameWithType.vb: Nullable(Of T)
-  fullName.vb: System.Nullable(Of T)
-  name.vb: Nullable(Of T)
-  spec.csharp:
-  - uid: System.Nullable`1
-    name: Nullable
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
-  - name: <
-  - name: T
-  - name: '>'
-  spec.vb:
-  - uid: System.Nullable`1
-    name: Nullable
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
-  - name: (
-  - name: Of
-  - name: " "
-  - name: T
-  - name: )
+  name: NVAPIDisplayConfigSourceModeDto
+  nameWithType: NVAPIDisplayConfigSourceModeDto
+  fullName: NVAPIWrapper.NVAPIDisplayConfigSourceModeDto
 - uid: NVAPIWrapper.NVAPIDisplayConfigPathDto.Targets*
   commentId: Overload:NVAPIWrapper.NVAPIDisplayConfigPathDto.Targets
   href: NVAPIWrapper.NVAPIDisplayConfigPathDto.html#NVAPIWrapper_NVAPIDisplayConfigPathDto_Targets
@@ -913,7 +933,7 @@ references:
   - name: )
 - uid: NVAPIWrapper.NVAPIDisplayConfigPathDto.#ctor*
   commentId: Overload:NVAPIWrapper.NVAPIDisplayConfigPathDto.#ctor
-  href: NVAPIWrapper.NVAPIDisplayConfigPathDto.html#NVAPIWrapper_NVAPIDisplayConfigPathDto__ctor_System_UInt32_System_UInt32_System_Boolean_System_Int64_System_Nullable_NVAPIWrapper_NVAPIDisplayConfigSourceModeDto__NVAPIWrapper_NVAPIDisplayConfigTargetDto___
+  href: NVAPIWrapper.NVAPIDisplayConfigPathDto.html#NVAPIWrapper_NVAPIDisplayConfigPathDto__ctor_System_UInt32_System_UInt32_System_Boolean_System_Int64_System_Boolean_NVAPIWrapper_NVAPIDisplayConfigSourceModeDto_NVAPIWrapper_NVAPIDisplayConfigTargetDto___
   name: NVAPIDisplayConfigPathDto
   nameWithType: NVAPIDisplayConfigPathDto.NVAPIDisplayConfigPathDto
   fullName: NVAPIWrapper.NVAPIDisplayConfigPathDto.NVAPIDisplayConfigPathDto

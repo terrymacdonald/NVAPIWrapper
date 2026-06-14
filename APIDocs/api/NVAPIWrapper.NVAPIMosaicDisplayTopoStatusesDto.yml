@@ -26,7 +26,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPIMosaicDisplayTopoStatusesDto
     path: ../NVAPIWrapper/NVAPIMosaicHelper.cs
-    startLine: 2043
+    startLine: 2018
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -60,7 +60,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Statuses
     path: ../NVAPIWrapper/NVAPIMosaicHelper.cs
-    startLine: 2045
+    startLine: 2020
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -89,7 +89,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: .ctor
     path: ../NVAPIWrapper/NVAPIMosaicHelper.cs
-    startLine: 2051
+    startLine: 2026
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -124,7 +124,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Equals
     path: ../NVAPIWrapper/NVAPIMosaicHelper.cs
-    startLine: 2061
+    startLine: 2036
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -161,7 +161,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Equals
     path: ../NVAPIWrapper/NVAPIMosaicHelper.cs
-    startLine: 2071
+    startLine: 2046
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -200,7 +200,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetHashCode
     path: ../NVAPIWrapper/NVAPIMosaicHelper.cs
-    startLine: 2077
+    startLine: 2052
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -232,7 +232,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: op_Equality
     path: ../NVAPIWrapper/NVAPIMosaicHelper.cs
-    startLine: 2085
+    startLine: 2060
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -273,7 +273,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: op_Inequality
     path: ../NVAPIWrapper/NVAPIMosaicHelper.cs
-    startLine: 2093
+    startLine: 2068
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper

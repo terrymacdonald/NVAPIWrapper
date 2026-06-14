@@ -334,7 +334,7 @@ namespace NVAPIWrapper
         {
             ThrowIfDisposed();
 
-            var gridArray = grids.Grids ?? Array.Empty<NVAPIMosaicGridTopoDto>();
+            var gridArray = grids.Grids;
             if (gridArray.Length == 0)
                 return false;
 
@@ -368,7 +368,7 @@ namespace NVAPIWrapper
         {
             ThrowIfDisposed();
 
-            var gridArray = grids.Grids ?? Array.Empty<NVAPIMosaicGridTopoDto>();
+            var gridArray = grids.Grids;
             if (gridArray.Length == 0)
                 return new NVAPIMosaicDisplayTopoStatusesDto(Array.Empty<NVAPIMosaicDisplayTopoStatusDto>());
 
@@ -489,7 +489,8 @@ namespace NVAPIWrapper
             {
                 if (status == _NvAPI_Status.NVAPI_NOT_SUPPORTED
                     || status == _NvAPI_Status.NVAPI_NO_IMPLEMENTATION
-                    || status == _NvAPI_Status.NVAPI_NVIDIA_DEVICE_NOT_FOUND)
+                    || status == _NvAPI_Status.NVAPI_NVIDIA_DEVICE_NOT_FOUND
+                    || status == _NvAPI_Status.NVAPI_ERROR)
                     return null;
 
                 throw new NVAPIException(status);
@@ -513,7 +514,8 @@ namespace NVAPIWrapper
 
                 if (status == _NvAPI_Status.NVAPI_NOT_SUPPORTED
                     || status == _NvAPI_Status.NVAPI_NO_IMPLEMENTATION
-                    || status == _NvAPI_Status.NVAPI_NVIDIA_DEVICE_NOT_FOUND)
+                    || status == _NvAPI_Status.NVAPI_NVIDIA_DEVICE_NOT_FOUND
+                    || status == _NvAPI_Status.NVAPI_ERROR)
                     return null;
 
                 throw new NVAPIException(status);
@@ -1714,32 +1716,29 @@ namespace NVAPIWrapper
         public static bool operator !=(NVAPIMosaicGridTopoDto left, NVAPIMosaicGridTopoDto right) => !left.Equals(right);
     }
 
-    /// <summary>
-    /// Mosaic grid topology collection DTO.
-    /// </summary>
     public struct NVAPIMosaicGridTopologiesDto : IEquatable<NVAPIMosaicGridTopologiesDto>
     {
-        public NVAPIMosaicGridTopoDto[] Grids { get; set; }
+        private NVAPIMosaicGridTopoDto[]? _grids;
 
-        /// <summary>
-        /// Create a Mosaic grid topologies DTO.
-        /// </summary>
-        /// <param name="grids">Grid topologies.</param>
-        public NVAPIMosaicGridTopologiesDto(NVAPIMosaicGridTopoDto[] grids)
+        public NVAPIMosaicGridTopoDto[] Grids
         {
-            Grids = grids ?? Array.Empty<NVAPIMosaicGridTopoDto>();
+            get => _grids ?? Array.Empty<NVAPIMosaicGridTopoDto>();
+            set => _grids = value ?? Array.Empty<NVAPIMosaicGridTopoDto>();
         }
 
-        /// <summary>
-        /// Create a Mosaic grid topologies DTO from native data.
-        /// </summary>
-        /// <param name="count">Number of grids.</param>
-        /// <param name="native">Native grid topology data.</param>
-        /// <returns>Mosaic grid topologies DTO.</returns>
+        public NVAPIMosaicGridTopologiesDto(NVAPIMosaicGridTopoDto[] grids)
+        {
+            _grids = grids ?? Array.Empty<NVAPIMosaicGridTopoDto>();
+        }
+
         public static NVAPIMosaicGridTopologiesDto FromNative(uint count, _NV_MOSAIC_GRID_TOPO_V2[] native)
         {
+            if (native == null || native.Length == 0 || count == 0)
+                return new NVAPIMosaicGridTopologiesDto(Array.Empty<NVAPIMosaicGridTopoDto>());
+
             var gridCount = (int)Math.Min(count, (uint)native.Length);
             var grids = new NVAPIMosaicGridTopoDto[gridCount];
+
             for (var i = 0; i < gridCount; i++)
             {
                 grids[i] = NVAPIMosaicGridTopoDto.FromNative(native[i]);
@@ -1750,52 +1749,28 @@ namespace NVAPIWrapper
 
         internal static _NV_MOSAIC_GRID_TOPO_V2[] ToNativeArray(NVAPIMosaicGridTopoDto[] grids)
         {
-            var native = new _NV_MOSAIC_GRID_TOPO_V2[grids.Length];
-            for (var i = 0; i < grids.Length; i++)
+            var gridArray = grids ?? Array.Empty<NVAPIMosaicGridTopoDto>();
+            var native = new _NV_MOSAIC_GRID_TOPO_V2[gridArray.Length];
+
+            for (var i = 0; i < gridArray.Length; i++)
             {
-                native[i] = grids[i].ToNative();
+                native[i] = gridArray[i].ToNative();
             }
 
             return native;
         }
 
-        /// <summary>
-        /// Determine whether this instance equals another Mosaic grid topologies DTO.
-        /// </summary>
-        /// <param name="other">The other DTO to compare.</param>
-        /// <returns>True if the DTOs are equal; otherwise false.</returns>
         public bool Equals(NVAPIMosaicGridTopologiesDto other)
         {
             return DtoHelpers.SequenceEquals(Grids, other.Grids);
         }
 
-        /// <summary>
-        /// Determine whether this instance equals another object.
-        /// </summary>
-        /// <param name="obj">The object to compare.</param>
-        /// <returns>True if the object is an equivalent DTO; otherwise false.</returns>
         public override bool Equals(object? obj) => obj is NVAPIMosaicGridTopologiesDto other && Equals(other);
 
-        /// <summary>
-        /// Get a hash code for this instance.
-        /// </summary>
-        /// <returns>Hash code for this instance.</returns>
         public override int GetHashCode() => DtoHelpers.SequenceHashCode(Grids);
 
-        /// <summary>
-        /// Determine whether two Mosaic grid topologies DTOs are equal.
-        /// </summary>
-        /// <param name="left">Left DTO.</param>
-        /// <param name="right">Right DTO.</param>
-        /// <returns>True if the DTOs are equal; otherwise false.</returns>
         public static bool operator ==(NVAPIMosaicGridTopologiesDto left, NVAPIMosaicGridTopologiesDto right) => left.Equals(right);
 
-        /// <summary>
-        /// Determine whether two Mosaic grid topologies DTOs are not equal.
-        /// </summary>
-        /// <param name="left">Left DTO.</param>
-        /// <param name="right">Right DTO.</param>
-        /// <returns>True if the DTOs are not equal; otherwise false.</returns>
         public static bool operator !=(NVAPIMosaicGridTopologiesDto left, NVAPIMosaicGridTopologiesDto right) => !left.Equals(right);
     }
 

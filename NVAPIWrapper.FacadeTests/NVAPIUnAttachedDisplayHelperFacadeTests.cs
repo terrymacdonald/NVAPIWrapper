@@ -79,7 +79,9 @@ namespace NVAPIWrapper.FacadeTests
             var gpus = _fixture.ApiHelper.EnumeratePhysicalGpus();
             Skip.If(gpus.Length == 0, "No NVIDIA physical GPUs found.");
 
-            var displays = gpus[0].EnumAllDisplays();
+            var displays = FacadeTestUtils.InvokeOrSkipDisplayDiscoveryUnavailable(
+                () => gpus[0].EnumAllDisplays(),
+                "Display enumeration not available on this machine/driver");
             Skip.If(displays.Length == 0, "No NVIDIA displays found.");
 
             var name = displays[0].GetAssociatedNvidiaDisplayName();

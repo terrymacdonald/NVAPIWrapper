@@ -5,10 +5,11 @@ items:
   id: NVAPIGpuScanoutWarpingDataDto
   parent: NVAPIWrapper
   children:
-  - NVAPIWrapper.NVAPIGpuScanoutWarpingDataDto.#ctor(System.Single[],NVAPIWrapper.NV_GPU_WARPING_VERTICE_FORMAT,System.Int32,System.Nullable{NVAPIWrapper.NVAPISBoxDto})
+  - NVAPIWrapper.NVAPIGpuScanoutWarpingDataDto.#ctor(System.Single[],NVAPIWrapper.NV_GPU_WARPING_VERTICE_FORMAT,System.Int32,System.Boolean,NVAPIWrapper.NVAPISBoxDto)
   - NVAPIWrapper.NVAPIGpuScanoutWarpingDataDto.Equals(NVAPIWrapper.NVAPIGpuScanoutWarpingDataDto)
   - NVAPIWrapper.NVAPIGpuScanoutWarpingDataDto.Equals(System.Object)
   - NVAPIWrapper.NVAPIGpuScanoutWarpingDataDto.GetHashCode
+  - NVAPIWrapper.NVAPIGpuScanoutWarpingDataDto.HasTextureRect
   - NVAPIWrapper.NVAPIGpuScanoutWarpingDataDto.NumVertices
   - NVAPIWrapper.NVAPIGpuScanoutWarpingDataDto.TextureRect
   - NVAPIWrapper.NVAPIGpuScanoutWarpingDataDto.ToNative
@@ -30,7 +31,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPIGpuScanoutWarpingDataDto
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 6262
+    startLine: 6316
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -64,12 +65,14 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Vertices
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 6264
+    startLine: 6323
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
+  summary: Warping vertices. Empty when no vertices are present.
+  example: []
   syntax:
-    content: public float[] Vertices { readonly get; set; }
+    content: public float[] Vertices { get; set; }
     parameters: []
     return:
       type: System.Single[]
@@ -93,10 +96,12 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: VertexFormat
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 6265
+    startLine: 6332
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
+  summary: Vertex format for the warping data.
+  example: []
   syntax:
     content: public NV_GPU_WARPING_VERTICE_FORMAT VertexFormat { readonly get; set; }
     parameters: []
@@ -122,10 +127,12 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NumVertices
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 6266
+    startLine: 6337
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
+  summary: Number of vertices to pass to NVAPI.
+  example: []
   syntax:
     content: public int NumVertices { readonly get; set; }
     parameters: []
@@ -133,6 +140,37 @@ items:
       type: System.Int32
     content.vb: Public Property NumVertices As Integer
   overload: NVAPIWrapper.NVAPIGpuScanoutWarpingDataDto.NumVertices*
+- uid: NVAPIWrapper.NVAPIGpuScanoutWarpingDataDto.HasTextureRect
+  commentId: P:NVAPIWrapper.NVAPIGpuScanoutWarpingDataDto.HasTextureRect
+  id: HasTextureRect
+  parent: NVAPIWrapper.NVAPIGpuScanoutWarpingDataDto
+  langs:
+  - csharp
+  - vb
+  name: HasTextureRect
+  nameWithType: NVAPIGpuScanoutWarpingDataDto.HasTextureRect
+  fullName: NVAPIWrapper.NVAPIGpuScanoutWarpingDataDto.HasTextureRect
+  type: Property
+  source:
+    remote:
+      path: NVAPIWrapper/NVAPIDisplayHelper.cs
+      branch: main
+      repo: https://github.com/terrymacdonald/NVAPIWrapper.git
+    id: HasTextureRect
+    path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
+    startLine: 6342
+  assemblies:
+  - NVAPIWrapper
+  namespace: NVAPIWrapper
+  summary: True when <xref href="NVAPIWrapper.NVAPIGpuScanoutWarpingDataDto.TextureRect" data-throw-if-not-resolved="false"></xref> contains a texture rectangle.
+  example: []
+  syntax:
+    content: public bool HasTextureRect { readonly get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property HasTextureRect As Boolean
+  overload: NVAPIWrapper.NVAPIGpuScanoutWarpingDataDto.HasTextureRect*
 - uid: NVAPIWrapper.NVAPIGpuScanoutWarpingDataDto.TextureRect
   commentId: P:NVAPIWrapper.NVAPIGpuScanoutWarpingDataDto.TextureRect
   id: TextureRect
@@ -151,27 +189,29 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: TextureRect
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 6267
+    startLine: 6347
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
+  summary: Texture rectangle. When <xref href="NVAPIWrapper.NVAPIGpuScanoutWarpingDataDto.HasTextureRect" data-throw-if-not-resolved="false"></xref> is false, this contains a default value.
+  example: []
   syntax:
-    content: public NVAPISBoxDto? TextureRect { readonly get; set; }
+    content: public NVAPISBoxDto TextureRect { readonly get; set; }
     parameters: []
     return:
-      type: System.Nullable{NVAPIWrapper.NVAPISBoxDto}
-    content.vb: Public Property TextureRect As NVAPISBoxDto?
+      type: NVAPIWrapper.NVAPISBoxDto
+    content.vb: Public Property TextureRect As NVAPISBoxDto
   overload: NVAPIWrapper.NVAPIGpuScanoutWarpingDataDto.TextureRect*
-- uid: NVAPIWrapper.NVAPIGpuScanoutWarpingDataDto.#ctor(System.Single[],NVAPIWrapper.NV_GPU_WARPING_VERTICE_FORMAT,System.Int32,System.Nullable{NVAPIWrapper.NVAPISBoxDto})
-  commentId: M:NVAPIWrapper.NVAPIGpuScanoutWarpingDataDto.#ctor(System.Single[],NVAPIWrapper.NV_GPU_WARPING_VERTICE_FORMAT,System.Int32,System.Nullable{NVAPIWrapper.NVAPISBoxDto})
-  id: '#ctor(System.Single[],NVAPIWrapper.NV_GPU_WARPING_VERTICE_FORMAT,System.Int32,System.Nullable{NVAPIWrapper.NVAPISBoxDto})'
+- uid: NVAPIWrapper.NVAPIGpuScanoutWarpingDataDto.#ctor(System.Single[],NVAPIWrapper.NV_GPU_WARPING_VERTICE_FORMAT,System.Int32,System.Boolean,NVAPIWrapper.NVAPISBoxDto)
+  commentId: M:NVAPIWrapper.NVAPIGpuScanoutWarpingDataDto.#ctor(System.Single[],NVAPIWrapper.NV_GPU_WARPING_VERTICE_FORMAT,System.Int32,System.Boolean,NVAPIWrapper.NVAPISBoxDto)
+  id: '#ctor(System.Single[],NVAPIWrapper.NV_GPU_WARPING_VERTICE_FORMAT,System.Int32,System.Boolean,NVAPIWrapper.NVAPISBoxDto)'
   parent: NVAPIWrapper.NVAPIGpuScanoutWarpingDataDto
   langs:
   - csharp
   - vb
-  name: NVAPIGpuScanoutWarpingDataDto(float[], NV_GPU_WARPING_VERTICE_FORMAT, int, NVAPISBoxDto?)
-  nameWithType: NVAPIGpuScanoutWarpingDataDto.NVAPIGpuScanoutWarpingDataDto(float[], NV_GPU_WARPING_VERTICE_FORMAT, int, NVAPISBoxDto?)
-  fullName: NVAPIWrapper.NVAPIGpuScanoutWarpingDataDto.NVAPIGpuScanoutWarpingDataDto(float[], NVAPIWrapper.NV_GPU_WARPING_VERTICE_FORMAT, int, NVAPIWrapper.NVAPISBoxDto?)
+  name: NVAPIGpuScanoutWarpingDataDto(float[], NV_GPU_WARPING_VERTICE_FORMAT, int, bool, NVAPISBoxDto)
+  nameWithType: NVAPIGpuScanoutWarpingDataDto.NVAPIGpuScanoutWarpingDataDto(float[], NV_GPU_WARPING_VERTICE_FORMAT, int, bool, NVAPISBoxDto)
+  fullName: NVAPIWrapper.NVAPIGpuScanoutWarpingDataDto.NVAPIGpuScanoutWarpingDataDto(float[], NVAPIWrapper.NV_GPU_WARPING_VERTICE_FORMAT, int, bool, NVAPIWrapper.NVAPISBoxDto)
   type: Constructor
   source:
     remote:
@@ -180,26 +220,35 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: .ctor
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 6269
+    startLine: 6357
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
+  summary: Create scanout warping data.
+  example: []
   syntax:
-    content: public NVAPIGpuScanoutWarpingDataDto(float[] vertices, NV_GPU_WARPING_VERTICE_FORMAT vertexFormat, int numVertices, NVAPISBoxDto? textureRect)
+    content: public NVAPIGpuScanoutWarpingDataDto(float[] vertices, NV_GPU_WARPING_VERTICE_FORMAT vertexFormat, int numVertices, bool hasTextureRect, NVAPISBoxDto textureRect)
     parameters:
     - id: vertices
       type: System.Single[]
+      description: Warping vertices.
     - id: vertexFormat
       type: NVAPIWrapper.NV_GPU_WARPING_VERTICE_FORMAT
+      description: Vertex format.
     - id: numVertices
       type: System.Int32
+      description: Number of vertices.
+    - id: hasTextureRect
+      type: System.Boolean
+      description: True when texture rectangle data is present.
     - id: textureRect
-      type: System.Nullable{NVAPIWrapper.NVAPISBoxDto}
-    content.vb: Public Sub New(vertices As Single(), vertexFormat As NV_GPU_WARPING_VERTICE_FORMAT, numVertices As Integer, textureRect As NVAPISBoxDto?)
+      type: NVAPIWrapper.NVAPISBoxDto
+      description: Texture rectangle, or default when not present.
+    content.vb: Public Sub New(vertices As Single(), vertexFormat As NV_GPU_WARPING_VERTICE_FORMAT, numVertices As Integer, hasTextureRect As Boolean, textureRect As NVAPISBoxDto)
   overload: NVAPIWrapper.NVAPIGpuScanoutWarpingDataDto.#ctor*
-  nameWithType.vb: NVAPIGpuScanoutWarpingDataDto.New(Single(), NV_GPU_WARPING_VERTICE_FORMAT, Integer, NVAPISBoxDto?)
-  fullName.vb: NVAPIWrapper.NVAPIGpuScanoutWarpingDataDto.New(Single(), NVAPIWrapper.NV_GPU_WARPING_VERTICE_FORMAT, Integer, NVAPIWrapper.NVAPISBoxDto?)
-  name.vb: New(Single(), NV_GPU_WARPING_VERTICE_FORMAT, Integer, NVAPISBoxDto?)
+  nameWithType.vb: NVAPIGpuScanoutWarpingDataDto.New(Single(), NV_GPU_WARPING_VERTICE_FORMAT, Integer, Boolean, NVAPISBoxDto)
+  fullName.vb: NVAPIWrapper.NVAPIGpuScanoutWarpingDataDto.New(Single(), NVAPIWrapper.NV_GPU_WARPING_VERTICE_FORMAT, Integer, Boolean, NVAPIWrapper.NVAPISBoxDto)
+  name.vb: New(Single(), NV_GPU_WARPING_VERTICE_FORMAT, Integer, Boolean, NVAPISBoxDto)
 - uid: NVAPIWrapper.NVAPIGpuScanoutWarpingDataDto.ToNative
   commentId: M:NVAPIWrapper.NVAPIGpuScanoutWarpingDataDto.ToNative
   id: ToNative
@@ -218,14 +267,17 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: ToNative
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 6281
+    startLine: 6375
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
+  summary: Convert this DTO to a native scanout warping data struct.
+  example: []
   syntax:
     content: public NV_SCANOUT_WARPING_DATA ToNative()
     return:
       type: NVAPIWrapper.NV_SCANOUT_WARPING_DATA
+      description: Native scanout warping data.
     content.vb: Public Function ToNative() As NV_SCANOUT_WARPING_DATA
   overload: NVAPIWrapper.NVAPIGpuScanoutWarpingDataDto.ToNative*
 - uid: NVAPIWrapper.NVAPIGpuScanoutWarpingDataDto.Equals(NVAPIWrapper.NVAPIGpuScanoutWarpingDataDto)
@@ -246,7 +298,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Equals
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 6293
+    startLine: 6388
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -283,7 +335,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Equals
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 6301
+    startLine: 6398
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -322,7 +374,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetHashCode
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 6302
+    startLine: 6401
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -354,10 +406,12 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: op_Equality
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 6314
+    startLine: 6417
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
+  summary: Determine whether two scanout warping DTOs are equal.
+  example: []
   syntax:
     content: public static bool operator ==(NVAPIGpuScanoutWarpingDataDto left, NVAPIGpuScanoutWarpingDataDto right)
     parameters:
@@ -390,10 +444,12 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: op_Inequality
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 6315
+    startLine: 6422
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
+  summary: Determine whether two scanout warping DTOs are not equal.
+  example: []
   syntax:
     content: public static bool operator !=(NVAPIGpuScanoutWarpingDataDto left, NVAPIGpuScanoutWarpingDataDto right)
     parameters:
@@ -697,61 +753,51 @@ references:
   nameWithType.vb: Integer
   fullName.vb: Integer
   name.vb: Integer
+- uid: NVAPIWrapper.NVAPIGpuScanoutWarpingDataDto.TextureRect
+  commentId: P:NVAPIWrapper.NVAPIGpuScanoutWarpingDataDto.TextureRect
+  href: NVAPIWrapper.NVAPIGpuScanoutWarpingDataDto.html#NVAPIWrapper_NVAPIGpuScanoutWarpingDataDto_TextureRect
+  name: TextureRect
+  nameWithType: NVAPIGpuScanoutWarpingDataDto.TextureRect
+  fullName: NVAPIWrapper.NVAPIGpuScanoutWarpingDataDto.TextureRect
+- uid: NVAPIWrapper.NVAPIGpuScanoutWarpingDataDto.HasTextureRect*
+  commentId: Overload:NVAPIWrapper.NVAPIGpuScanoutWarpingDataDto.HasTextureRect
+  href: NVAPIWrapper.NVAPIGpuScanoutWarpingDataDto.html#NVAPIWrapper_NVAPIGpuScanoutWarpingDataDto_HasTextureRect
+  name: HasTextureRect
+  nameWithType: NVAPIGpuScanoutWarpingDataDto.HasTextureRect
+  fullName: NVAPIWrapper.NVAPIGpuScanoutWarpingDataDto.HasTextureRect
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: NVAPIWrapper.NVAPIGpuScanoutWarpingDataDto.HasTextureRect
+  commentId: P:NVAPIWrapper.NVAPIGpuScanoutWarpingDataDto.HasTextureRect
+  href: NVAPIWrapper.NVAPIGpuScanoutWarpingDataDto.html#NVAPIWrapper_NVAPIGpuScanoutWarpingDataDto_HasTextureRect
+  name: HasTextureRect
+  nameWithType: NVAPIGpuScanoutWarpingDataDto.HasTextureRect
+  fullName: NVAPIWrapper.NVAPIGpuScanoutWarpingDataDto.HasTextureRect
 - uid: NVAPIWrapper.NVAPIGpuScanoutWarpingDataDto.TextureRect*
   commentId: Overload:NVAPIWrapper.NVAPIGpuScanoutWarpingDataDto.TextureRect
   href: NVAPIWrapper.NVAPIGpuScanoutWarpingDataDto.html#NVAPIWrapper_NVAPIGpuScanoutWarpingDataDto_TextureRect
   name: TextureRect
   nameWithType: NVAPIGpuScanoutWarpingDataDto.TextureRect
   fullName: NVAPIWrapper.NVAPIGpuScanoutWarpingDataDto.TextureRect
-- uid: System.Nullable{NVAPIWrapper.NVAPISBoxDto}
-  commentId: T:System.Nullable{NVAPIWrapper.NVAPISBoxDto}
-  parent: System
-  definition: System.Nullable`1
+- uid: NVAPIWrapper.NVAPISBoxDto
+  commentId: T:NVAPIWrapper.NVAPISBoxDto
+  parent: NVAPIWrapper
   href: NVAPIWrapper.NVAPISBoxDto.html
-  name: NVAPISBoxDto?
-  nameWithType: NVAPISBoxDto?
-  fullName: NVAPIWrapper.NVAPISBoxDto?
-  spec.csharp:
-  - uid: NVAPIWrapper.NVAPISBoxDto
-    name: NVAPISBoxDto
-    href: NVAPIWrapper.NVAPISBoxDto.html
-  - name: '?'
-  spec.vb:
-  - uid: NVAPIWrapper.NVAPISBoxDto
-    name: NVAPISBoxDto
-    href: NVAPIWrapper.NVAPISBoxDto.html
-  - name: '?'
-- uid: System.Nullable`1
-  commentId: T:System.Nullable`1
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.nullable-1
-  name: Nullable<T>
-  nameWithType: Nullable<T>
-  fullName: System.Nullable<T>
-  nameWithType.vb: Nullable(Of T)
-  fullName.vb: System.Nullable(Of T)
-  name.vb: Nullable(Of T)
-  spec.csharp:
-  - uid: System.Nullable`1
-    name: Nullable
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
-  - name: <
-  - name: T
-  - name: '>'
-  spec.vb:
-  - uid: System.Nullable`1
-    name: Nullable
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
-  - name: (
-  - name: Of
-  - name: " "
-  - name: T
-  - name: )
+  name: NVAPISBoxDto
+  nameWithType: NVAPISBoxDto
+  fullName: NVAPIWrapper.NVAPISBoxDto
 - uid: NVAPIWrapper.NVAPIGpuScanoutWarpingDataDto.#ctor*
   commentId: Overload:NVAPIWrapper.NVAPIGpuScanoutWarpingDataDto.#ctor
-  href: NVAPIWrapper.NVAPIGpuScanoutWarpingDataDto.html#NVAPIWrapper_NVAPIGpuScanoutWarpingDataDto__ctor_System_Single___NVAPIWrapper_NV_GPU_WARPING_VERTICE_FORMAT_System_Int32_System_Nullable_NVAPIWrapper_NVAPISBoxDto__
+  href: NVAPIWrapper.NVAPIGpuScanoutWarpingDataDto.html#NVAPIWrapper_NVAPIGpuScanoutWarpingDataDto__ctor_System_Single___NVAPIWrapper_NV_GPU_WARPING_VERTICE_FORMAT_System_Int32_System_Boolean_NVAPIWrapper_NVAPISBoxDto_
   name: NVAPIGpuScanoutWarpingDataDto
   nameWithType: NVAPIGpuScanoutWarpingDataDto.NVAPIGpuScanoutWarpingDataDto
   fullName: NVAPIWrapper.NVAPIGpuScanoutWarpingDataDto.NVAPIGpuScanoutWarpingDataDto
@@ -814,17 +860,6 @@ references:
   name: NVAPIGpuScanoutWarpingDataDto
   nameWithType: NVAPIGpuScanoutWarpingDataDto
   fullName: NVAPIWrapper.NVAPIGpuScanoutWarpingDataDto
-- uid: System.Boolean
-  commentId: T:System.Boolean
-  parent: System
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.boolean
-  name: bool
-  nameWithType: bool
-  fullName: bool
-  nameWithType.vb: Boolean
-  fullName.vb: Boolean
-  name.vb: Boolean
 - uid: System.IEquatable`1.Equals(`0)
   commentId: M:System.IEquatable`1.Equals(`0)
   isExternal: true
