@@ -47,7 +47,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_SHIM_RENDERING_OPTIONS.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: EValues_SHIM_RENDERING_OPTIONS
     path: ../NVAPIWrapper/cs_generated/EValues_SHIM_RENDERING_OPTIONS.cs
@@ -73,7 +73,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_SHIM_RENDERING_OPTIONS.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SHIM_RENDERING_OPTIONS_DEFAULT_RENDERING_MODE
     path: ../NVAPIWrapper/cs_generated/EValues_SHIM_RENDERING_OPTIONS.cs
@@ -100,7 +100,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_SHIM_RENDERING_OPTIONS.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SHIM_RENDERING_OPTIONS_DISABLE_ASYNC_PRESENT
     path: ../NVAPIWrapper/cs_generated/EValues_SHIM_RENDERING_OPTIONS.cs
@@ -127,7 +127,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_SHIM_RENDERING_OPTIONS.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SHIM_RENDERING_OPTIONS_EHSHELL_DETECT
     path: ../NVAPIWrapper/cs_generated/EValues_SHIM_RENDERING_OPTIONS.cs
@@ -154,7 +154,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_SHIM_RENDERING_OPTIONS.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SHIM_RENDERING_OPTIONS_FLASHPLAYER_HOST_DETECT
     path: ../NVAPIWrapper/cs_generated/EValues_SHIM_RENDERING_OPTIONS.cs
@@ -181,7 +181,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_SHIM_RENDERING_OPTIONS.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SHIM_RENDERING_OPTIONS_VIDEO_DRM_APP_DETECT
     path: ../NVAPIWrapper/cs_generated/EValues_SHIM_RENDERING_OPTIONS.cs
@@ -208,7 +208,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_SHIM_RENDERING_OPTIONS.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SHIM_RENDERING_OPTIONS_IGNORE_OVERRIDES
     path: ../NVAPIWrapper/cs_generated/EValues_SHIM_RENDERING_OPTIONS.cs
@@ -235,7 +235,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_SHIM_RENDERING_OPTIONS.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SHIM_RENDERING_OPTIONS_RESERVED1
     path: ../NVAPIWrapper/cs_generated/EValues_SHIM_RENDERING_OPTIONS.cs
@@ -262,7 +262,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_SHIM_RENDERING_OPTIONS.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SHIM_RENDERING_OPTIONS_ENABLE_DWM_ASYNC_PRESENT
     path: ../NVAPIWrapper/cs_generated/EValues_SHIM_RENDERING_OPTIONS.cs
@@ -289,7 +289,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_SHIM_RENDERING_OPTIONS.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SHIM_RENDERING_OPTIONS_RESERVED2
     path: ../NVAPIWrapper/cs_generated/EValues_SHIM_RENDERING_OPTIONS.cs
@@ -316,7 +316,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_SHIM_RENDERING_OPTIONS.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SHIM_RENDERING_OPTIONS_ALLOW_INHERITANCE
     path: ../NVAPIWrapper/cs_generated/EValues_SHIM_RENDERING_OPTIONS.cs
@@ -343,7 +343,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_SHIM_RENDERING_OPTIONS.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SHIM_RENDERING_OPTIONS_DISABLE_WRAPPERS
     path: ../NVAPIWrapper/cs_generated/EValues_SHIM_RENDERING_OPTIONS.cs
@@ -370,7 +370,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_SHIM_RENDERING_OPTIONS.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SHIM_RENDERING_OPTIONS_DISABLE_DXGI_WRAPPERS
     path: ../NVAPIWrapper/cs_generated/EValues_SHIM_RENDERING_OPTIONS.cs
@@ -397,7 +397,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_SHIM_RENDERING_OPTIONS.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SHIM_RENDERING_OPTIONS_PRUNE_UNSUPPORTED_FORMATS
     path: ../NVAPIWrapper/cs_generated/EValues_SHIM_RENDERING_OPTIONS.cs
@@ -424,7 +424,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_SHIM_RENDERING_OPTIONS.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SHIM_RENDERING_OPTIONS_ENABLE_ALPHA_FORMAT
     path: ../NVAPIWrapper/cs_generated/EValues_SHIM_RENDERING_OPTIONS.cs
@@ -451,7 +451,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_SHIM_RENDERING_OPTIONS.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SHIM_RENDERING_OPTIONS_IGPU_TRANSCODING
     path: ../NVAPIWrapper/cs_generated/EValues_SHIM_RENDERING_OPTIONS.cs
@@ -478,7 +478,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_SHIM_RENDERING_OPTIONS.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SHIM_RENDERING_OPTIONS_DISABLE_CUDA
     path: ../NVAPIWrapper/cs_generated/EValues_SHIM_RENDERING_OPTIONS.cs
@@ -505,7 +505,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_SHIM_RENDERING_OPTIONS.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SHIM_RENDERING_OPTIONS_ALLOW_CP_CAPS_FOR_VIDEO
     path: ../NVAPIWrapper/cs_generated/EValues_SHIM_RENDERING_OPTIONS.cs
@@ -532,7 +532,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_SHIM_RENDERING_OPTIONS.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SHIM_RENDERING_OPTIONS_IGPU_TRANSCODING_FWD_OPTIMUS
     path: ../NVAPIWrapper/cs_generated/EValues_SHIM_RENDERING_OPTIONS.cs
@@ -559,7 +559,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_SHIM_RENDERING_OPTIONS.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SHIM_RENDERING_OPTIONS_DISABLE_DURING_SECURE_BOOT
     path: ../NVAPIWrapper/cs_generated/EValues_SHIM_RENDERING_OPTIONS.cs
@@ -586,7 +586,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_SHIM_RENDERING_OPTIONS.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SHIM_RENDERING_OPTIONS_INVERT_FOR_QUADRO
     path: ../NVAPIWrapper/cs_generated/EValues_SHIM_RENDERING_OPTIONS.cs
@@ -613,7 +613,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_SHIM_RENDERING_OPTIONS.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SHIM_RENDERING_OPTIONS_INVERT_FOR_MSHYBRID
     path: ../NVAPIWrapper/cs_generated/EValues_SHIM_RENDERING_OPTIONS.cs
@@ -640,7 +640,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_SHIM_RENDERING_OPTIONS.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SHIM_RENDERING_OPTIONS_REGISTER_PROCESS_ENABLE_GOLD
     path: ../NVAPIWrapper/cs_generated/EValues_SHIM_RENDERING_OPTIONS.cs
@@ -667,7 +667,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_SHIM_RENDERING_OPTIONS.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SHIM_RENDERING_OPTIONS_HANDLE_WINDOWED_MODE_PERF_OPT
     path: ../NVAPIWrapper/cs_generated/EValues_SHIM_RENDERING_OPTIONS.cs
@@ -694,7 +694,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_SHIM_RENDERING_OPTIONS.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SHIM_RENDERING_OPTIONS_HANDLE_WIN7_ASYNC_RUNTIME_BUG
     path: ../NVAPIWrapper/cs_generated/EValues_SHIM_RENDERING_OPTIONS.cs
@@ -721,7 +721,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_SHIM_RENDERING_OPTIONS.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SHIM_RENDERING_OPTIONS_EXPLICIT_ADAPTER_OPTED_BY_APP
     path: ../NVAPIWrapper/cs_generated/EValues_SHIM_RENDERING_OPTIONS.cs
@@ -748,7 +748,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_SHIM_RENDERING_OPTIONS.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SHIM_RENDERING_OPTIONS_ALLOW_DYNAMIC_DISPLAY_MUX_SWITCH
     path: ../NVAPIWrapper/cs_generated/EValues_SHIM_RENDERING_OPTIONS.cs
@@ -775,7 +775,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_SHIM_RENDERING_OPTIONS.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SHIM_RENDERING_OPTIONS_DISALLOW_DYNAMIC_DISPLAY_MUX_SWITCH
     path: ../NVAPIWrapper/cs_generated/EValues_SHIM_RENDERING_OPTIONS.cs
@@ -802,7 +802,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_SHIM_RENDERING_OPTIONS.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SHIM_RENDERING_OPTIONS_DISABLE_TURING_POWER_POLICY
     path: ../NVAPIWrapper/cs_generated/EValues_SHIM_RENDERING_OPTIONS.cs
@@ -829,7 +829,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_SHIM_RENDERING_OPTIONS.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SHIM_RENDERING_OPTIONS_ALLOW_DYNAMIC_DISPLAY_MUX_SWITCH_MDM
     path: ../NVAPIWrapper/cs_generated/EValues_SHIM_RENDERING_OPTIONS.cs
@@ -856,7 +856,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_SHIM_RENDERING_OPTIONS.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SHIM_RENDERING_OPTIONS_DISALLOW_DYNAMIC_DISPLAY_MUX_SWITCH_MDM
     path: ../NVAPIWrapper/cs_generated/EValues_SHIM_RENDERING_OPTIONS.cs
@@ -883,7 +883,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_SHIM_RENDERING_OPTIONS.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SHIM_RENDERING_OPTIONS_NUM_VALUES
     path: ../NVAPIWrapper/cs_generated/EValues_SHIM_RENDERING_OPTIONS.cs
@@ -910,7 +910,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_SHIM_RENDERING_OPTIONS.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SHIM_RENDERING_OPTIONS_DEFAULT
     path: ../NVAPIWrapper/cs_generated/EValues_SHIM_RENDERING_OPTIONS.cs

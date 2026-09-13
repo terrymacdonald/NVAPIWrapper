@@ -20,7 +20,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_SCANOUT_WARPING_DATA.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_SCANOUT_WARPING_DATA
     path: ../NVAPIWrapper/cs_generated/NV_SCANOUT_WARPING_DATA.cs
@@ -53,7 +53,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_SCANOUT_WARPING_DATA.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: version
     path: ../NVAPIWrapper/cs_generated/NV_SCANOUT_WARPING_DATA.cs
@@ -81,7 +81,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_SCANOUT_WARPING_DATA.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: vertices
     path: ../NVAPIWrapper/cs_generated/NV_SCANOUT_WARPING_DATA.cs
@@ -109,7 +109,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_SCANOUT_WARPING_DATA.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: vertexFormat
     path: ../NVAPIWrapper/cs_generated/NV_SCANOUT_WARPING_DATA.cs
@@ -137,7 +137,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_SCANOUT_WARPING_DATA.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: numVertices
     path: ../NVAPIWrapper/cs_generated/NV_SCANOUT_WARPING_DATA.cs
@@ -165,7 +165,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_SCANOUT_WARPING_DATA.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: textureRect
     path: ../NVAPIWrapper/cs_generated/NV_SCANOUT_WARPING_DATA.cs

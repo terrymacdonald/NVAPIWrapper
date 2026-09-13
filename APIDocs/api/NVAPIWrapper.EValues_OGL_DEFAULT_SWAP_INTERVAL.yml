@@ -26,7 +26,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_OGL_DEFAULT_SWAP_INTERVAL.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: EValues_OGL_DEFAULT_SWAP_INTERVAL
     path: ../NVAPIWrapper/cs_generated/EValues_OGL_DEFAULT_SWAP_INTERVAL.cs
@@ -52,7 +52,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_OGL_DEFAULT_SWAP_INTERVAL.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: OGL_DEFAULT_SWAP_INTERVAL_TEAR
     path: ../NVAPIWrapper/cs_generated/EValues_OGL_DEFAULT_SWAP_INTERVAL.cs
@@ -79,7 +79,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_OGL_DEFAULT_SWAP_INTERVAL.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: OGL_DEFAULT_SWAP_INTERVAL_VSYNC_ONE
     path: ../NVAPIWrapper/cs_generated/EValues_OGL_DEFAULT_SWAP_INTERVAL.cs
@@ -106,7 +106,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_OGL_DEFAULT_SWAP_INTERVAL.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: OGL_DEFAULT_SWAP_INTERVAL_VSYNC
     path: ../NVAPIWrapper/cs_generated/EValues_OGL_DEFAULT_SWAP_INTERVAL.cs
@@ -133,7 +133,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_OGL_DEFAULT_SWAP_INTERVAL.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: OGL_DEFAULT_SWAP_INTERVAL_VALUE_MASK
     path: ../NVAPIWrapper/cs_generated/EValues_OGL_DEFAULT_SWAP_INTERVAL.cs
@@ -160,7 +160,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_OGL_DEFAULT_SWAP_INTERVAL.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: OGL_DEFAULT_SWAP_INTERVAL_FORCE_MASK
     path: ../NVAPIWrapper/cs_generated/EValues_OGL_DEFAULT_SWAP_INTERVAL.cs
@@ -187,7 +187,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_OGL_DEFAULT_SWAP_INTERVAL.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: OGL_DEFAULT_SWAP_INTERVAL_FORCE_OFF
     path: ../NVAPIWrapper/cs_generated/EValues_OGL_DEFAULT_SWAP_INTERVAL.cs
@@ -214,7 +214,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_OGL_DEFAULT_SWAP_INTERVAL.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: OGL_DEFAULT_SWAP_INTERVAL_FORCE_ON
     path: ../NVAPIWrapper/cs_generated/EValues_OGL_DEFAULT_SWAP_INTERVAL.cs
@@ -241,7 +241,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_OGL_DEFAULT_SWAP_INTERVAL.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: OGL_DEFAULT_SWAP_INTERVAL_APP_CONTROLLED
     path: ../NVAPIWrapper/cs_generated/EValues_OGL_DEFAULT_SWAP_INTERVAL.cs
@@ -268,7 +268,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_OGL_DEFAULT_SWAP_INTERVAL.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: OGL_DEFAULT_SWAP_INTERVAL_DISABLE
     path: ../NVAPIWrapper/cs_generated/EValues_OGL_DEFAULT_SWAP_INTERVAL.cs
@@ -295,7 +295,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_OGL_DEFAULT_SWAP_INTERVAL.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: OGL_DEFAULT_SWAP_INTERVAL_NUM_VALUES
     path: ../NVAPIWrapper/cs_generated/EValues_OGL_DEFAULT_SWAP_INTERVAL.cs
@@ -322,7 +322,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_OGL_DEFAULT_SWAP_INTERVAL.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: OGL_DEFAULT_SWAP_INTERVAL_DEFAULT
     path: ../NVAPIWrapper/cs_generated/EValues_OGL_DEFAULT_SWAP_INTERVAL.cs

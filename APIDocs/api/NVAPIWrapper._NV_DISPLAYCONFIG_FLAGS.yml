@@ -20,7 +20,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_DISPLAYCONFIG_FLAGS.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: _NV_DISPLAYCONFIG_FLAGS
     path: ../NVAPIWrapper/cs_generated/_NV_DISPLAYCONFIG_FLAGS.cs
@@ -46,7 +46,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_DISPLAYCONFIG_FLAGS.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_DISPLAYCONFIG_VALIDATE_ONLY
     path: ../NVAPIWrapper/cs_generated/_NV_DISPLAYCONFIG_FLAGS.cs
@@ -73,7 +73,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_DISPLAYCONFIG_FLAGS.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_DISPLAYCONFIG_SAVE_TO_PERSISTENCE
     path: ../NVAPIWrapper/cs_generated/_NV_DISPLAYCONFIG_FLAGS.cs
@@ -100,7 +100,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_DISPLAYCONFIG_FLAGS.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_DISPLAYCONFIG_DRIVER_RELOAD_ALLOWED
     path: ../NVAPIWrapper/cs_generated/_NV_DISPLAYCONFIG_FLAGS.cs
@@ -127,7 +127,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_DISPLAYCONFIG_FLAGS.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_DISPLAYCONFIG_FORCE_MODE_ENUMERATION
     path: ../NVAPIWrapper/cs_generated/_NV_DISPLAYCONFIG_FLAGS.cs
@@ -154,7 +154,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_DISPLAYCONFIG_FLAGS.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_FORCE_COMMIT_VIDPN
     path: ../NVAPIWrapper/cs_generated/_NV_DISPLAYCONFIG_FLAGS.cs

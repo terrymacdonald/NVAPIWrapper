@@ -16,7 +16,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIMosaicHelper.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: _gpuLayout_e__FixedBuffer
     path: ../NVAPIWrapper/NVAPIMosaicHelper.cs
@@ -50,7 +50,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIMosaicHelper.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: e0_0
     path: ../NVAPIWrapper/NVAPIMosaicHelper.cs

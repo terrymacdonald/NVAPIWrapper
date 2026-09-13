@@ -28,7 +28,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_THERMAL_CONTROLLER.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_THERMAL_CONTROLLER
     path: ../NVAPIWrapper/cs_generated/NV_THERMAL_CONTROLLER.cs
@@ -54,7 +54,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_THERMAL_CONTROLLER.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_THERMAL_CONTROLLER_NONE
     path: ../NVAPIWrapper/cs_generated/NV_THERMAL_CONTROLLER.cs
@@ -81,7 +81,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_THERMAL_CONTROLLER.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_THERMAL_CONTROLLER_GPU_INTERNAL
     path: ../NVAPIWrapper/cs_generated/NV_THERMAL_CONTROLLER.cs
@@ -108,7 +108,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_THERMAL_CONTROLLER.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_THERMAL_CONTROLLER_ADM1032
     path: ../NVAPIWrapper/cs_generated/NV_THERMAL_CONTROLLER.cs
@@ -135,7 +135,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_THERMAL_CONTROLLER.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_THERMAL_CONTROLLER_MAX6649
     path: ../NVAPIWrapper/cs_generated/NV_THERMAL_CONTROLLER.cs
@@ -162,7 +162,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_THERMAL_CONTROLLER.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_THERMAL_CONTROLLER_MAX1617
     path: ../NVAPIWrapper/cs_generated/NV_THERMAL_CONTROLLER.cs
@@ -189,7 +189,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_THERMAL_CONTROLLER.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_THERMAL_CONTROLLER_LM99
     path: ../NVAPIWrapper/cs_generated/NV_THERMAL_CONTROLLER.cs
@@ -216,7 +216,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_THERMAL_CONTROLLER.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_THERMAL_CONTROLLER_LM89
     path: ../NVAPIWrapper/cs_generated/NV_THERMAL_CONTROLLER.cs
@@ -243,7 +243,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_THERMAL_CONTROLLER.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_THERMAL_CONTROLLER_LM64
     path: ../NVAPIWrapper/cs_generated/NV_THERMAL_CONTROLLER.cs
@@ -270,7 +270,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_THERMAL_CONTROLLER.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_THERMAL_CONTROLLER_ADT7473
     path: ../NVAPIWrapper/cs_generated/NV_THERMAL_CONTROLLER.cs
@@ -297,7 +297,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_THERMAL_CONTROLLER.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_THERMAL_CONTROLLER_SBMAX6649
     path: ../NVAPIWrapper/cs_generated/NV_THERMAL_CONTROLLER.cs
@@ -324,7 +324,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_THERMAL_CONTROLLER.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_THERMAL_CONTROLLER_VBIOSEVT
     path: ../NVAPIWrapper/cs_generated/NV_THERMAL_CONTROLLER.cs
@@ -351,7 +351,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_THERMAL_CONTROLLER.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_THERMAL_CONTROLLER_OS
     path: ../NVAPIWrapper/cs_generated/NV_THERMAL_CONTROLLER.cs
@@ -378,7 +378,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_THERMAL_CONTROLLER.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_THERMAL_CONTROLLER_UNKNOWN
     path: ../NVAPIWrapper/cs_generated/NV_THERMAL_CONTROLLER.cs

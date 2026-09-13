@@ -17,7 +17,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NVAPI_INTERFACE_TABLE.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_INTERFACE_TABLE
     path: ../NVAPIWrapper/cs_generated/NVAPI_INTERFACE_TABLE.cs
@@ -50,7 +50,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NVAPI_INTERFACE_TABLE.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: func
     path: ../NVAPIWrapper/cs_generated/NVAPI_INTERFACE_TABLE.cs
@@ -78,7 +78,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NVAPI_INTERFACE_TABLE.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: id
     path: ../NVAPIWrapper/cs_generated/NVAPI_INTERFACE_TABLE.cs

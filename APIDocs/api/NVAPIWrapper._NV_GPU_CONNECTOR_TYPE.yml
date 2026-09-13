@@ -44,7 +44,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GPU_CONNECTOR_TYPE.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: _NV_GPU_CONNECTOR_TYPE
     path: ../NVAPIWrapper/cs_generated/_NV_GPU_CONNECTOR_TYPE.cs
@@ -70,7 +70,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GPU_CONNECTOR_TYPE.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_GPU_CONNECTOR_VGA_15_PIN
     path: ../NVAPIWrapper/cs_generated/_NV_GPU_CONNECTOR_TYPE.cs
@@ -97,7 +97,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GPU_CONNECTOR_TYPE.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_GPU_CONNECTOR_TV_COMPOSITE
     path: ../NVAPIWrapper/cs_generated/_NV_GPU_CONNECTOR_TYPE.cs
@@ -124,7 +124,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GPU_CONNECTOR_TYPE.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_GPU_CONNECTOR_TV_SVIDEO
     path: ../NVAPIWrapper/cs_generated/_NV_GPU_CONNECTOR_TYPE.cs
@@ -151,7 +151,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GPU_CONNECTOR_TYPE.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_GPU_CONNECTOR_TV_HDTV_COMPONENT
     path: ../NVAPIWrapper/cs_generated/_NV_GPU_CONNECTOR_TYPE.cs
@@ -178,7 +178,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GPU_CONNECTOR_TYPE.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_GPU_CONNECTOR_TV_SCART
     path: ../NVAPIWrapper/cs_generated/_NV_GPU_CONNECTOR_TYPE.cs
@@ -205,7 +205,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GPU_CONNECTOR_TYPE.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_GPU_CONNECTOR_TV_COMPOSITE_SCART_ON_EIAJ4120
     path: ../NVAPIWrapper/cs_generated/_NV_GPU_CONNECTOR_TYPE.cs
@@ -232,7 +232,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GPU_CONNECTOR_TYPE.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_GPU_CONNECTOR_TV_HDTV_EIAJ4120
     path: ../NVAPIWrapper/cs_generated/_NV_GPU_CONNECTOR_TYPE.cs
@@ -259,7 +259,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GPU_CONNECTOR_TYPE.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_GPU_CONNECTOR_PC_POD_HDTV_YPRPB
     path: ../NVAPIWrapper/cs_generated/_NV_GPU_CONNECTOR_TYPE.cs
@@ -286,7 +286,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GPU_CONNECTOR_TYPE.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_GPU_CONNECTOR_PC_POD_SVIDEO
     path: ../NVAPIWrapper/cs_generated/_NV_GPU_CONNECTOR_TYPE.cs
@@ -313,7 +313,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GPU_CONNECTOR_TYPE.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_GPU_CONNECTOR_PC_POD_COMPOSITE
     path: ../NVAPIWrapper/cs_generated/_NV_GPU_CONNECTOR_TYPE.cs
@@ -340,7 +340,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GPU_CONNECTOR_TYPE.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_GPU_CONNECTOR_DVI_I_TV_SVIDEO
     path: ../NVAPIWrapper/cs_generated/_NV_GPU_CONNECTOR_TYPE.cs
@@ -367,7 +367,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GPU_CONNECTOR_TYPE.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_GPU_CONNECTOR_DVI_I_TV_COMPOSITE
     path: ../NVAPIWrapper/cs_generated/_NV_GPU_CONNECTOR_TYPE.cs
@@ -394,7 +394,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GPU_CONNECTOR_TYPE.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_GPU_CONNECTOR_DVI_I
     path: ../NVAPIWrapper/cs_generated/_NV_GPU_CONNECTOR_TYPE.cs
@@ -421,7 +421,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GPU_CONNECTOR_TYPE.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_GPU_CONNECTOR_DVI_D
     path: ../NVAPIWrapper/cs_generated/_NV_GPU_CONNECTOR_TYPE.cs
@@ -448,7 +448,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GPU_CONNECTOR_TYPE.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_GPU_CONNECTOR_ADC
     path: ../NVAPIWrapper/cs_generated/_NV_GPU_CONNECTOR_TYPE.cs
@@ -475,7 +475,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GPU_CONNECTOR_TYPE.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_GPU_CONNECTOR_LFH_DVI_I_1
     path: ../NVAPIWrapper/cs_generated/_NV_GPU_CONNECTOR_TYPE.cs
@@ -502,7 +502,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GPU_CONNECTOR_TYPE.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_GPU_CONNECTOR_LFH_DVI_I_2
     path: ../NVAPIWrapper/cs_generated/_NV_GPU_CONNECTOR_TYPE.cs
@@ -529,7 +529,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GPU_CONNECTOR_TYPE.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_GPU_CONNECTOR_SPWG
     path: ../NVAPIWrapper/cs_generated/_NV_GPU_CONNECTOR_TYPE.cs
@@ -556,7 +556,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GPU_CONNECTOR_TYPE.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_GPU_CONNECTOR_OEM
     path: ../NVAPIWrapper/cs_generated/_NV_GPU_CONNECTOR_TYPE.cs
@@ -583,7 +583,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GPU_CONNECTOR_TYPE.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_GPU_CONNECTOR_DISPLAYPORT_EXTERNAL
     path: ../NVAPIWrapper/cs_generated/_NV_GPU_CONNECTOR_TYPE.cs
@@ -610,7 +610,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GPU_CONNECTOR_TYPE.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_GPU_CONNECTOR_DISPLAYPORT_INTERNAL
     path: ../NVAPIWrapper/cs_generated/_NV_GPU_CONNECTOR_TYPE.cs
@@ -637,7 +637,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GPU_CONNECTOR_TYPE.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_GPU_CONNECTOR_DISPLAYPORT_MINI_EXT
     path: ../NVAPIWrapper/cs_generated/_NV_GPU_CONNECTOR_TYPE.cs
@@ -664,7 +664,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GPU_CONNECTOR_TYPE.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_GPU_CONNECTOR_HDMI_A
     path: ../NVAPIWrapper/cs_generated/_NV_GPU_CONNECTOR_TYPE.cs
@@ -691,7 +691,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GPU_CONNECTOR_TYPE.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_GPU_CONNECTOR_HDMI_C_MINI
     path: ../NVAPIWrapper/cs_generated/_NV_GPU_CONNECTOR_TYPE.cs
@@ -718,7 +718,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GPU_CONNECTOR_TYPE.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_GPU_CONNECTOR_LFH_DISPLAYPORT_1
     path: ../NVAPIWrapper/cs_generated/_NV_GPU_CONNECTOR_TYPE.cs
@@ -745,7 +745,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GPU_CONNECTOR_TYPE.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_GPU_CONNECTOR_LFH_DISPLAYPORT_2
     path: ../NVAPIWrapper/cs_generated/_NV_GPU_CONNECTOR_TYPE.cs
@@ -772,7 +772,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GPU_CONNECTOR_TYPE.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_GPU_CONNECTOR_VIRTUAL_WFD
     path: ../NVAPIWrapper/cs_generated/_NV_GPU_CONNECTOR_TYPE.cs
@@ -799,7 +799,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GPU_CONNECTOR_TYPE.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_GPU_CONNECTOR_USB_C
     path: ../NVAPIWrapper/cs_generated/_NV_GPU_CONNECTOR_TYPE.cs
@@ -826,7 +826,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GPU_CONNECTOR_TYPE.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_GPU_CONNECTOR_UNKNOWN
     path: ../NVAPIWrapper/cs_generated/_NV_GPU_CONNECTOR_TYPE.cs

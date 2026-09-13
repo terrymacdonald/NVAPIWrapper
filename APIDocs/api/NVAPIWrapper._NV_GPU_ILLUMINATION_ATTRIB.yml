@@ -17,7 +17,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GPU_ILLUMINATION_ATTRIB.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: _NV_GPU_ILLUMINATION_ATTRIB
     path: ../NVAPIWrapper/cs_generated/_NV_GPU_ILLUMINATION_ATTRIB.cs
@@ -43,7 +43,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GPU_ILLUMINATION_ATTRIB.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_GPU_IA_LOGO_BRIGHTNESS
     path: ../NVAPIWrapper/cs_generated/_NV_GPU_ILLUMINATION_ATTRIB.cs
@@ -70,7 +70,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GPU_ILLUMINATION_ATTRIB.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_GPU_IA_SLI_BRIGHTNESS
     path: ../NVAPIWrapper/cs_generated/_NV_GPU_ILLUMINATION_ATTRIB.cs

@@ -24,7 +24,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AUDIO_SAMPLEFREQUENCY.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_INFOFRAME_FIELD_VALUE_AUDIO_SAMPLEFREQUENCY
     path: ../NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AUDIO_SAMPLEFREQUENCY.cs
@@ -50,7 +50,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AUDIO_SAMPLEFREQUENCY.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_INFOFRAME_FIELD_VALUE_AUDIO_SAMPLEFREQUENCY_IN_HEADER
     path: ../NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AUDIO_SAMPLEFREQUENCY.cs
@@ -77,7 +77,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AUDIO_SAMPLEFREQUENCY.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_INFOFRAME_FIELD_VALUE_AUDIO_SAMPLEFREQUENCY_32000HZ
     path: ../NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AUDIO_SAMPLEFREQUENCY.cs
@@ -104,7 +104,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AUDIO_SAMPLEFREQUENCY.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_INFOFRAME_FIELD_VALUE_AUDIO_SAMPLEFREQUENCY_44100HZ
     path: ../NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AUDIO_SAMPLEFREQUENCY.cs
@@ -131,7 +131,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AUDIO_SAMPLEFREQUENCY.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_INFOFRAME_FIELD_VALUE_AUDIO_SAMPLEFREQUENCY_48000HZ
     path: ../NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AUDIO_SAMPLEFREQUENCY.cs
@@ -158,7 +158,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AUDIO_SAMPLEFREQUENCY.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_INFOFRAME_FIELD_VALUE_AUDIO_SAMPLEFREQUENCY_88200KHZ
     path: ../NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AUDIO_SAMPLEFREQUENCY.cs
@@ -185,7 +185,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AUDIO_SAMPLEFREQUENCY.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_INFOFRAME_FIELD_VALUE_AUDIO_SAMPLEFREQUENCY_96000KHZ
     path: ../NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AUDIO_SAMPLEFREQUENCY.cs
@@ -212,7 +212,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AUDIO_SAMPLEFREQUENCY.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_INFOFRAME_FIELD_VALUE_AUDIO_SAMPLEFREQUENCY_176400KHZ
     path: ../NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AUDIO_SAMPLEFREQUENCY.cs
@@ -239,7 +239,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AUDIO_SAMPLEFREQUENCY.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_INFOFRAME_FIELD_VALUE_AUDIO_SAMPLEFREQUENCY_192000KHZ
     path: ../NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AUDIO_SAMPLEFREQUENCY.cs
@@ -266,7 +266,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AUDIO_SAMPLEFREQUENCY.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_INFOFRAME_FIELD_VALUE_AUDIO_SAMPLEFREQUENCY_AUTO
     path: ../NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AUDIO_SAMPLEFREQUENCY.cs

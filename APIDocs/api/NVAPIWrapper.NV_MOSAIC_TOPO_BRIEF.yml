@@ -19,7 +19,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_MOSAIC_TOPO_BRIEF.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_MOSAIC_TOPO_BRIEF
     path: ../NVAPIWrapper/cs_generated/NV_MOSAIC_TOPO_BRIEF.cs
@@ -52,7 +52,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_MOSAIC_TOPO_BRIEF.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: version
     path: ../NVAPIWrapper/cs_generated/NV_MOSAIC_TOPO_BRIEF.cs
@@ -80,7 +80,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_MOSAIC_TOPO_BRIEF.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: topo
     path: ../NVAPIWrapper/cs_generated/NV_MOSAIC_TOPO_BRIEF.cs
@@ -108,7 +108,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_MOSAIC_TOPO_BRIEF.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: enabled
     path: ../NVAPIWrapper/cs_generated/NV_MOSAIC_TOPO_BRIEF.cs
@@ -136,7 +136,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_MOSAIC_TOPO_BRIEF.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: isPossible
     path: ../NVAPIWrapper/cs_generated/NV_MOSAIC_TOPO_BRIEF.cs

@@ -20,7 +20,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AVI_COLORIMETRY.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_INFOFRAME_FIELD_VALUE_AVI_COLORIMETRY
     path: ../NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AVI_COLORIMETRY.cs
@@ -46,7 +46,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AVI_COLORIMETRY.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_INFOFRAME_FIELD_VALUE_AVI_COLORIMETRY_NO_DATA
     path: ../NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AVI_COLORIMETRY.cs
@@ -73,7 +73,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AVI_COLORIMETRY.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_INFOFRAME_FIELD_VALUE_AVI_COLORIMETRY_SMPTE_170M
     path: ../NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AVI_COLORIMETRY.cs
@@ -100,7 +100,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AVI_COLORIMETRY.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_INFOFRAME_FIELD_VALUE_AVI_COLORIMETRY_ITUR_BT709
     path: ../NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AVI_COLORIMETRY.cs
@@ -127,7 +127,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AVI_COLORIMETRY.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_INFOFRAME_FIELD_VALUE_AVI_COLORIMETRY_USE_EXTENDED_COLORIMETRY
     path: ../NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AVI_COLORIMETRY.cs
@@ -154,7 +154,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AVI_COLORIMETRY.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_INFOFRAME_FIELD_VALUE_AVI_COLORIMETRY_AUTO
     path: ../NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AVI_COLORIMETRY.cs

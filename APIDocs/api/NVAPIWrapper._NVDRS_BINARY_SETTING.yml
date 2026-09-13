@@ -17,7 +17,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVDRS_BINARY_SETTING.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: _NVDRS_BINARY_SETTING
     path: ../NVAPIWrapper/cs_generated/_NVDRS_BINARY_SETTING.cs
@@ -50,7 +50,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVDRS_BINARY_SETTING.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: valueLength
     path: ../NVAPIWrapper/cs_generated/_NVDRS_BINARY_SETTING.cs
@@ -78,7 +78,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVDRS_BINARY_SETTING.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: valueData
     path: ../NVAPIWrapper/cs_generated/_NVDRS_BINARY_SETTING.cs

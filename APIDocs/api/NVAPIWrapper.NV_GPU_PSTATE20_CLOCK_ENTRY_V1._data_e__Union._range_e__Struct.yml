@@ -20,7 +20,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_GPU_PSTATE20_CLOCK_ENTRY_V1.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: _range_e__Struct
     path: ../NVAPIWrapper/cs_generated/NV_GPU_PSTATE20_CLOCK_ENTRY_V1.cs
@@ -53,7 +53,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_GPU_PSTATE20_CLOCK_ENTRY_V1.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: minFreq_kHz
     path: ../NVAPIWrapper/cs_generated/NV_GPU_PSTATE20_CLOCK_ENTRY_V1.cs
@@ -81,7 +81,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_GPU_PSTATE20_CLOCK_ENTRY_V1.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: maxFreq_kHz
     path: ../NVAPIWrapper/cs_generated/NV_GPU_PSTATE20_CLOCK_ENTRY_V1.cs
@@ -109,7 +109,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_GPU_PSTATE20_CLOCK_ENTRY_V1.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: domainId
     path: ../NVAPIWrapper/cs_generated/NV_GPU_PSTATE20_CLOCK_ENTRY_V1.cs
@@ -137,7 +137,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_GPU_PSTATE20_CLOCK_ENTRY_V1.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: minVoltage_uV
     path: ../NVAPIWrapper/cs_generated/NV_GPU_PSTATE20_CLOCK_ENTRY_V1.cs
@@ -165,7 +165,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_GPU_PSTATE20_CLOCK_ENTRY_V1.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: maxVoltage_uV
     path: ../NVAPIWrapper/cs_generated/NV_GPU_PSTATE20_CLOCK_ENTRY_V1.cs

@@ -23,7 +23,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_SLI_RENDERING_MODE.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: EValues_SLI_RENDERING_MODE
     path: ../NVAPIWrapper/cs_generated/EValues_SLI_RENDERING_MODE.cs
@@ -49,7 +49,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_SLI_RENDERING_MODE.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SLI_RENDERING_MODE_AUTOSELECT
     path: ../NVAPIWrapper/cs_generated/EValues_SLI_RENDERING_MODE.cs
@@ -76,7 +76,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_SLI_RENDERING_MODE.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SLI_RENDERING_MODE_FORCE_SINGLE
     path: ../NVAPIWrapper/cs_generated/EValues_SLI_RENDERING_MODE.cs
@@ -103,7 +103,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_SLI_RENDERING_MODE.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SLI_RENDERING_MODE_FORCE_AFR
     path: ../NVAPIWrapper/cs_generated/EValues_SLI_RENDERING_MODE.cs
@@ -130,7 +130,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_SLI_RENDERING_MODE.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SLI_RENDERING_MODE_FORCE_AFR2
     path: ../NVAPIWrapper/cs_generated/EValues_SLI_RENDERING_MODE.cs
@@ -157,7 +157,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_SLI_RENDERING_MODE.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SLI_RENDERING_MODE_FORCE_SFR
     path: ../NVAPIWrapper/cs_generated/EValues_SLI_RENDERING_MODE.cs
@@ -184,7 +184,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_SLI_RENDERING_MODE.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SLI_RENDERING_MODE_FORCE_AFR_OF_SFR__FALLBACK_3AFR
     path: ../NVAPIWrapper/cs_generated/EValues_SLI_RENDERING_MODE.cs
@@ -211,7 +211,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_SLI_RENDERING_MODE.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SLI_RENDERING_MODE_NUM_VALUES
     path: ../NVAPIWrapper/cs_generated/EValues_SLI_RENDERING_MODE.cs
@@ -238,7 +238,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_SLI_RENDERING_MODE.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SLI_RENDERING_MODE_DEFAULT
     path: ../NVAPIWrapper/cs_generated/EValues_SLI_RENDERING_MODE.cs

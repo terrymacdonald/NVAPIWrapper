@@ -33,7 +33,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GPU_PERF_PSTATE_ID.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: _NV_GPU_PERF_PSTATE_ID
     path: ../NVAPIWrapper/cs_generated/_NV_GPU_PERF_PSTATE_ID.cs
@@ -59,7 +59,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GPU_PERF_PSTATE_ID.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_GPU_PERF_PSTATE_P0
     path: ../NVAPIWrapper/cs_generated/_NV_GPU_PERF_PSTATE_ID.cs
@@ -86,7 +86,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GPU_PERF_PSTATE_ID.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_GPU_PERF_PSTATE_P1
     path: ../NVAPIWrapper/cs_generated/_NV_GPU_PERF_PSTATE_ID.cs
@@ -113,7 +113,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GPU_PERF_PSTATE_ID.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_GPU_PERF_PSTATE_P2
     path: ../NVAPIWrapper/cs_generated/_NV_GPU_PERF_PSTATE_ID.cs
@@ -140,7 +140,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GPU_PERF_PSTATE_ID.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_GPU_PERF_PSTATE_P3
     path: ../NVAPIWrapper/cs_generated/_NV_GPU_PERF_PSTATE_ID.cs
@@ -167,7 +167,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GPU_PERF_PSTATE_ID.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_GPU_PERF_PSTATE_P4
     path: ../NVAPIWrapper/cs_generated/_NV_GPU_PERF_PSTATE_ID.cs
@@ -194,7 +194,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GPU_PERF_PSTATE_ID.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_GPU_PERF_PSTATE_P5
     path: ../NVAPIWrapper/cs_generated/_NV_GPU_PERF_PSTATE_ID.cs
@@ -221,7 +221,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GPU_PERF_PSTATE_ID.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_GPU_PERF_PSTATE_P6
     path: ../NVAPIWrapper/cs_generated/_NV_GPU_PERF_PSTATE_ID.cs
@@ -248,7 +248,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GPU_PERF_PSTATE_ID.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_GPU_PERF_PSTATE_P7
     path: ../NVAPIWrapper/cs_generated/_NV_GPU_PERF_PSTATE_ID.cs
@@ -275,7 +275,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GPU_PERF_PSTATE_ID.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_GPU_PERF_PSTATE_P8
     path: ../NVAPIWrapper/cs_generated/_NV_GPU_PERF_PSTATE_ID.cs
@@ -302,7 +302,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GPU_PERF_PSTATE_ID.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_GPU_PERF_PSTATE_P9
     path: ../NVAPIWrapper/cs_generated/_NV_GPU_PERF_PSTATE_ID.cs
@@ -329,7 +329,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GPU_PERF_PSTATE_ID.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_GPU_PERF_PSTATE_P10
     path: ../NVAPIWrapper/cs_generated/_NV_GPU_PERF_PSTATE_ID.cs
@@ -356,7 +356,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GPU_PERF_PSTATE_ID.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_GPU_PERF_PSTATE_P11
     path: ../NVAPIWrapper/cs_generated/_NV_GPU_PERF_PSTATE_ID.cs
@@ -383,7 +383,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GPU_PERF_PSTATE_ID.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_GPU_PERF_PSTATE_P12
     path: ../NVAPIWrapper/cs_generated/_NV_GPU_PERF_PSTATE_ID.cs
@@ -410,7 +410,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GPU_PERF_PSTATE_ID.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_GPU_PERF_PSTATE_P13
     path: ../NVAPIWrapper/cs_generated/_NV_GPU_PERF_PSTATE_ID.cs
@@ -437,7 +437,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GPU_PERF_PSTATE_ID.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_GPU_PERF_PSTATE_P14
     path: ../NVAPIWrapper/cs_generated/_NV_GPU_PERF_PSTATE_ID.cs
@@ -464,7 +464,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GPU_PERF_PSTATE_ID.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_GPU_PERF_PSTATE_P15
     path: ../NVAPIWrapper/cs_generated/_NV_GPU_PERF_PSTATE_ID.cs
@@ -491,7 +491,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GPU_PERF_PSTATE_ID.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_GPU_PERF_PSTATE_UNDEFINED
     path: ../NVAPIWrapper/cs_generated/_NV_GPU_PERF_PSTATE_ID.cs
@@ -518,7 +518,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GPU_PERF_PSTATE_ID.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_GPU_PERF_PSTATE_ALL
     path: ../NVAPIWrapper/cs_generated/_NV_GPU_PERF_PSTATE_ID.cs

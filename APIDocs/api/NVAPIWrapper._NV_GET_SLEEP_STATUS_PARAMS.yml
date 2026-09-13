@@ -26,7 +26,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GET_SLEEP_STATUS_PARAMS.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: _NV_GET_SLEEP_STATUS_PARAMS
     path: ../NVAPIWrapper/cs_generated/_NV_GET_SLEEP_STATUS_PARAMS.cs
@@ -59,7 +59,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GET_SLEEP_STATUS_PARAMS.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: version
     path: ../NVAPIWrapper/cs_generated/_NV_GET_SLEEP_STATUS_PARAMS.cs
@@ -87,7 +87,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GET_SLEEP_STATUS_PARAMS.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: bLowLatencyMode
     path: ../NVAPIWrapper/cs_generated/_NV_GET_SLEEP_STATUS_PARAMS.cs
@@ -115,7 +115,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GET_SLEEP_STATUS_PARAMS.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: bFsVrr
     path: ../NVAPIWrapper/cs_generated/_NV_GET_SLEEP_STATUS_PARAMS.cs
@@ -143,7 +143,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GET_SLEEP_STATUS_PARAMS.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: bCplVsyncOn
     path: ../NVAPIWrapper/cs_generated/_NV_GET_SLEEP_STATUS_PARAMS.cs
@@ -171,7 +171,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GET_SLEEP_STATUS_PARAMS.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: sleepIntervalUs
     path: ../NVAPIWrapper/cs_generated/_NV_GET_SLEEP_STATUS_PARAMS.cs
@@ -199,7 +199,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GET_SLEEP_STATUS_PARAMS.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: bUseGameSleep
     path: ../NVAPIWrapper/cs_generated/_NV_GET_SLEEP_STATUS_PARAMS.cs
@@ -227,7 +227,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GET_SLEEP_STATUS_PARAMS.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: bFullscreenIFlip
     path: ../NVAPIWrapper/cs_generated/_NV_GET_SLEEP_STATUS_PARAMS.cs
@@ -255,7 +255,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GET_SLEEP_STATUS_PARAMS.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: fgMultiplier
     path: ../NVAPIWrapper/cs_generated/_NV_GET_SLEEP_STATUS_PARAMS.cs
@@ -283,7 +283,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GET_SLEEP_STATUS_PARAMS.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: bDfgControl
     path: ../NVAPIWrapper/cs_generated/_NV_GET_SLEEP_STATUS_PARAMS.cs
@@ -311,7 +311,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GET_SLEEP_STATUS_PARAMS.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: dfgFrameTimeTargetUs
     path: ../NVAPIWrapper/cs_generated/_NV_GET_SLEEP_STATUS_PARAMS.cs
@@ -339,7 +339,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GET_SLEEP_STATUS_PARAMS.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: rsvd
     path: ../NVAPIWrapper/cs_generated/_NV_GET_SLEEP_STATUS_PARAMS.cs

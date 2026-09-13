@@ -23,7 +23,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_HDR_MODE.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_HDR_MODE
     path: ../NVAPIWrapper/cs_generated/NV_HDR_MODE.cs
@@ -49,7 +49,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_HDR_MODE.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_HDR_MODE_OFF
     path: ../NVAPIWrapper/cs_generated/NV_HDR_MODE.cs
@@ -76,7 +76,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_HDR_MODE.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_HDR_MODE_UHDA
     path: ../NVAPIWrapper/cs_generated/NV_HDR_MODE.cs
@@ -103,7 +103,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_HDR_MODE.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_HDR_MODE_UHDA_PASSTHROUGH
     path: ../NVAPIWrapper/cs_generated/NV_HDR_MODE.cs
@@ -130,7 +130,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_HDR_MODE.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_HDR_MODE_DOLBY_VISION
     path: ../NVAPIWrapper/cs_generated/NV_HDR_MODE.cs
@@ -157,7 +157,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_HDR_MODE.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_HDR_MODE_EDR
     path: ../NVAPIWrapper/cs_generated/NV_HDR_MODE.cs
@@ -184,7 +184,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_HDR_MODE.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_HDR_MODE_SDR
     path: ../NVAPIWrapper/cs_generated/NV_HDR_MODE.cs
@@ -211,7 +211,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_HDR_MODE.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_HDR_MODE_UHDA_NB
     path: ../NVAPIWrapper/cs_generated/NV_HDR_MODE.cs
@@ -238,7 +238,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_HDR_MODE.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_HDR_MODE_UHDBD
     path: ../NVAPIWrapper/cs_generated/NV_HDR_MODE.cs

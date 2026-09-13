@@ -32,7 +32,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AUDIO_LEVELSHIFTVALUES.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_INFOFRAME_FIELD_VALUE_AUDIO_LEVELSHIFTVALUES
     path: ../NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AUDIO_LEVELSHIFTVALUES.cs
@@ -58,7 +58,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AUDIO_LEVELSHIFTVALUES.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_INFOFRAME_FIELD_VALUE_AUDIO_LEVELSHIFTVALUES_0DB
     path: ../NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AUDIO_LEVELSHIFTVALUES.cs
@@ -85,7 +85,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AUDIO_LEVELSHIFTVALUES.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_INFOFRAME_FIELD_VALUE_AUDIO_LEVELSHIFTVALUES_1DB
     path: ../NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AUDIO_LEVELSHIFTVALUES.cs
@@ -112,7 +112,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AUDIO_LEVELSHIFTVALUES.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_INFOFRAME_FIELD_VALUE_AUDIO_LEVELSHIFTVALUES_2DB
     path: ../NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AUDIO_LEVELSHIFTVALUES.cs
@@ -139,7 +139,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AUDIO_LEVELSHIFTVALUES.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_INFOFRAME_FIELD_VALUE_AUDIO_LEVELSHIFTVALUES_3DB
     path: ../NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AUDIO_LEVELSHIFTVALUES.cs
@@ -166,7 +166,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AUDIO_LEVELSHIFTVALUES.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_INFOFRAME_FIELD_VALUE_AUDIO_LEVELSHIFTVALUES_4DB
     path: ../NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AUDIO_LEVELSHIFTVALUES.cs
@@ -193,7 +193,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AUDIO_LEVELSHIFTVALUES.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_INFOFRAME_FIELD_VALUE_AUDIO_LEVELSHIFTVALUES_5DB
     path: ../NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AUDIO_LEVELSHIFTVALUES.cs
@@ -220,7 +220,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AUDIO_LEVELSHIFTVALUES.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_INFOFRAME_FIELD_VALUE_AUDIO_LEVELSHIFTVALUES_6DB
     path: ../NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AUDIO_LEVELSHIFTVALUES.cs
@@ -247,7 +247,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AUDIO_LEVELSHIFTVALUES.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_INFOFRAME_FIELD_VALUE_AUDIO_LEVELSHIFTVALUES_7DB
     path: ../NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AUDIO_LEVELSHIFTVALUES.cs
@@ -274,7 +274,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AUDIO_LEVELSHIFTVALUES.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_INFOFRAME_FIELD_VALUE_AUDIO_LEVELSHIFTVALUES_8DB
     path: ../NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AUDIO_LEVELSHIFTVALUES.cs
@@ -301,7 +301,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AUDIO_LEVELSHIFTVALUES.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_INFOFRAME_FIELD_VALUE_AUDIO_LEVELSHIFTVALUES_9DB
     path: ../NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AUDIO_LEVELSHIFTVALUES.cs
@@ -328,7 +328,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AUDIO_LEVELSHIFTVALUES.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_INFOFRAME_FIELD_VALUE_AUDIO_LEVELSHIFTVALUES_10DB
     path: ../NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AUDIO_LEVELSHIFTVALUES.cs
@@ -355,7 +355,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AUDIO_LEVELSHIFTVALUES.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_INFOFRAME_FIELD_VALUE_AUDIO_LEVELSHIFTVALUES_11DB
     path: ../NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AUDIO_LEVELSHIFTVALUES.cs
@@ -382,7 +382,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AUDIO_LEVELSHIFTVALUES.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_INFOFRAME_FIELD_VALUE_AUDIO_LEVELSHIFTVALUES_12DB
     path: ../NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AUDIO_LEVELSHIFTVALUES.cs
@@ -409,7 +409,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AUDIO_LEVELSHIFTVALUES.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_INFOFRAME_FIELD_VALUE_AUDIO_LEVELSHIFTVALUES_13DB
     path: ../NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AUDIO_LEVELSHIFTVALUES.cs
@@ -436,7 +436,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AUDIO_LEVELSHIFTVALUES.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_INFOFRAME_FIELD_VALUE_AUDIO_LEVELSHIFTVALUES_14DB
     path: ../NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AUDIO_LEVELSHIFTVALUES.cs
@@ -463,7 +463,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AUDIO_LEVELSHIFTVALUES.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_INFOFRAME_FIELD_VALUE_AUDIO_LEVELSHIFTVALUES_15DB
     path: ../NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AUDIO_LEVELSHIFTVALUES.cs
@@ -490,7 +490,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AUDIO_LEVELSHIFTVALUES.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_INFOFRAME_FIELD_VALUE_AUDIO_LEVELSHIFTVALUES_AUTO
     path: ../NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AUDIO_LEVELSHIFTVALUES.cs

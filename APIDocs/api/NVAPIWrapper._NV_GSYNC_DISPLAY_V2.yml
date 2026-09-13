@@ -23,7 +23,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GSYNC_DISPLAY_V2.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: _NV_GSYNC_DISPLAY_V2
     path: ../NVAPIWrapper/cs_generated/_NV_GSYNC_DISPLAY_V2.cs
@@ -56,7 +56,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GSYNC_DISPLAY_V2.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: version
     path: ../NVAPIWrapper/cs_generated/_NV_GSYNC_DISPLAY_V2.cs
@@ -84,7 +84,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GSYNC_DISPLAY_V2.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: displayId
     path: ../NVAPIWrapper/cs_generated/_NV_GSYNC_DISPLAY_V2.cs
@@ -112,7 +112,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GSYNC_DISPLAY_V2.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: _bitfield
     path: ../NVAPIWrapper/cs_generated/_NV_GSYNC_DISPLAY_V2.cs
@@ -139,7 +139,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GSYNC_DISPLAY_V2.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: isMasterable
     path: ../NVAPIWrapper/cs_generated/_NV_GSYNC_DISPLAY_V2.cs
@@ -169,7 +169,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GSYNC_DISPLAY_V2.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: useExactTiming
     path: ../NVAPIWrapper/cs_generated/_NV_GSYNC_DISPLAY_V2.cs
@@ -199,7 +199,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GSYNC_DISPLAY_V2.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: reserved
     path: ../NVAPIWrapper/cs_generated/_NV_GSYNC_DISPLAY_V2.cs
@@ -229,7 +229,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GSYNC_DISPLAY_V2.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: syncState
     path: ../NVAPIWrapper/cs_generated/_NV_GSYNC_DISPLAY_V2.cs
@@ -257,7 +257,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GSYNC_DISPLAY_V2.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: reserved2
     path: ../NVAPIWrapper/cs_generated/_NV_GSYNC_DISPLAY_V2.cs

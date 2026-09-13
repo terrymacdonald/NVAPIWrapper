@@ -26,7 +26,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_HDR_CAPABILITIES_V3.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: _display_data_e__Struct
     path: ../NVAPIWrapper/cs_generated/_NV_HDR_CAPABILITIES_V3.cs
@@ -59,7 +59,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_HDR_CAPABILITIES_V3.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: displayPrimary_x0
     path: ../NVAPIWrapper/cs_generated/_NV_HDR_CAPABILITIES_V3.cs
@@ -87,7 +87,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_HDR_CAPABILITIES_V3.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: displayPrimary_y0
     path: ../NVAPIWrapper/cs_generated/_NV_HDR_CAPABILITIES_V3.cs
@@ -115,7 +115,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_HDR_CAPABILITIES_V3.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: displayPrimary_x1
     path: ../NVAPIWrapper/cs_generated/_NV_HDR_CAPABILITIES_V3.cs
@@ -143,7 +143,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_HDR_CAPABILITIES_V3.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: displayPrimary_y1
     path: ../NVAPIWrapper/cs_generated/_NV_HDR_CAPABILITIES_V3.cs
@@ -171,7 +171,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_HDR_CAPABILITIES_V3.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: displayPrimary_x2
     path: ../NVAPIWrapper/cs_generated/_NV_HDR_CAPABILITIES_V3.cs
@@ -199,7 +199,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_HDR_CAPABILITIES_V3.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: displayPrimary_y2
     path: ../NVAPIWrapper/cs_generated/_NV_HDR_CAPABILITIES_V3.cs
@@ -227,7 +227,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_HDR_CAPABILITIES_V3.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: displayWhitePoint_x
     path: ../NVAPIWrapper/cs_generated/_NV_HDR_CAPABILITIES_V3.cs
@@ -255,7 +255,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_HDR_CAPABILITIES_V3.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: displayWhitePoint_y
     path: ../NVAPIWrapper/cs_generated/_NV_HDR_CAPABILITIES_V3.cs
@@ -283,7 +283,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_HDR_CAPABILITIES_V3.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: desired_content_max_luminance
     path: ../NVAPIWrapper/cs_generated/_NV_HDR_CAPABILITIES_V3.cs
@@ -311,7 +311,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_HDR_CAPABILITIES_V3.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: desired_content_min_luminance
     path: ../NVAPIWrapper/cs_generated/_NV_HDR_CAPABILITIES_V3.cs
@@ -339,7 +339,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_HDR_CAPABILITIES_V3.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: desired_content_max_frame_average_luminance
     path: ../NVAPIWrapper/cs_generated/_NV_HDR_CAPABILITIES_V3.cs

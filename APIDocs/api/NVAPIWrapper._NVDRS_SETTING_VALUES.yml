@@ -24,7 +24,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVDRS_SETTING_VALUES.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: _NVDRS_SETTING_VALUES
     path: ../NVAPIWrapper/cs_generated/_NVDRS_SETTING_VALUES.cs
@@ -57,7 +57,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVDRS_SETTING_VALUES.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: version
     path: ../NVAPIWrapper/cs_generated/_NVDRS_SETTING_VALUES.cs
@@ -85,7 +85,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVDRS_SETTING_VALUES.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: numSettingValues
     path: ../NVAPIWrapper/cs_generated/_NVDRS_SETTING_VALUES.cs
@@ -113,7 +113,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVDRS_SETTING_VALUES.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: settingType
     path: ../NVAPIWrapper/cs_generated/_NVDRS_SETTING_VALUES.cs
@@ -141,7 +141,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVDRS_SETTING_VALUES.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Anonymous
     path: ../NVAPIWrapper/cs_generated/_NVDRS_SETTING_VALUES.cs
@@ -169,7 +169,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVDRS_SETTING_VALUES.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: settingValues
     path: ../NVAPIWrapper/cs_generated/_NVDRS_SETTING_VALUES.cs
@@ -197,7 +197,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVDRS_SETTING_VALUES.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: u32DefaultValue
     path: ../NVAPIWrapper/cs_generated/_NVDRS_SETTING_VALUES.cs
@@ -237,7 +237,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVDRS_SETTING_VALUES.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: binaryDefaultValue
     path: ../NVAPIWrapper/cs_generated/_NVDRS_SETTING_VALUES.cs
@@ -277,7 +277,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVDRS_SETTING_VALUES.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: wszDefaultValue
     path: ../NVAPIWrapper/cs_generated/_NVDRS_SETTING_VALUES.cs
@@ -317,7 +317,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVDRS_SETTING_VALUES.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: u64DefaultValue
     path: ../NVAPIWrapper/cs_generated/_NVDRS_SETTING_VALUES.cs

@@ -28,7 +28,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPIGpuIllumZoneInfoDto
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
@@ -62,7 +62,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Type
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
@@ -93,7 +93,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: IllumDeviceIdx
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
@@ -124,7 +124,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: ProvIdx
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
@@ -155,7 +155,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: ZoneLocation
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
@@ -186,7 +186,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: DataRawBytes
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
@@ -217,7 +217,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: .ctor
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
@@ -259,7 +259,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: FromNative
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
@@ -292,7 +292,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: ToNative
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
@@ -322,7 +322,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Equals
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
@@ -359,7 +359,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Equals
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
@@ -398,7 +398,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetHashCode
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
@@ -430,7 +430,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: op_Equality
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
@@ -468,7 +468,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: op_Inequality
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs

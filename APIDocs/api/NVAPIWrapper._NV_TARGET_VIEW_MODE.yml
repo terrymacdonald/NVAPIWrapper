@@ -21,7 +21,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_TARGET_VIEW_MODE.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: _NV_TARGET_VIEW_MODE
     path: ../NVAPIWrapper/cs_generated/_NV_TARGET_VIEW_MODE.cs
@@ -47,7 +47,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_TARGET_VIEW_MODE.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_VIEW_MODE_STANDARD
     path: ../NVAPIWrapper/cs_generated/_NV_TARGET_VIEW_MODE.cs
@@ -74,7 +74,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_TARGET_VIEW_MODE.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_VIEW_MODE_CLONE
     path: ../NVAPIWrapper/cs_generated/_NV_TARGET_VIEW_MODE.cs
@@ -101,7 +101,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_TARGET_VIEW_MODE.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_VIEW_MODE_HSPAN
     path: ../NVAPIWrapper/cs_generated/_NV_TARGET_VIEW_MODE.cs
@@ -128,7 +128,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_TARGET_VIEW_MODE.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_VIEW_MODE_VSPAN
     path: ../NVAPIWrapper/cs_generated/_NV_TARGET_VIEW_MODE.cs
@@ -155,7 +155,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_TARGET_VIEW_MODE.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_VIEW_MODE_DUALVIEW
     path: ../NVAPIWrapper/cs_generated/_NV_TARGET_VIEW_MODE.cs
@@ -182,7 +182,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_TARGET_VIEW_MODE.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_VIEW_MODE_MULTIVIEW
     path: ../NVAPIWrapper/cs_generated/_NV_TARGET_VIEW_MODE.cs

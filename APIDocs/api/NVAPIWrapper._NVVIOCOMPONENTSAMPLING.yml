@@ -20,7 +20,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOCOMPONENTSAMPLING.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: _NVVIOCOMPONENTSAMPLING
     path: ../NVAPIWrapper/cs_generated/_NVVIOCOMPONENTSAMPLING.cs
@@ -46,7 +46,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOCOMPONENTSAMPLING.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVVIOCOMPONENTSAMPLING_UNKNOWN
     path: ../NVAPIWrapper/cs_generated/_NVVIOCOMPONENTSAMPLING.cs
@@ -73,7 +73,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOCOMPONENTSAMPLING.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVVIOCOMPONENTSAMPLING_4444
     path: ../NVAPIWrapper/cs_generated/_NVVIOCOMPONENTSAMPLING.cs
@@ -100,7 +100,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOCOMPONENTSAMPLING.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVVIOCOMPONENTSAMPLING_4224
     path: ../NVAPIWrapper/cs_generated/_NVVIOCOMPONENTSAMPLING.cs
@@ -127,7 +127,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOCOMPONENTSAMPLING.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVVIOCOMPONENTSAMPLING_444
     path: ../NVAPIWrapper/cs_generated/_NVVIOCOMPONENTSAMPLING.cs
@@ -154,7 +154,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOCOMPONENTSAMPLING.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVVIOCOMPONENTSAMPLING_422
     path: ../NVAPIWrapper/cs_generated/_NVVIOCOMPONENTSAMPLING.cs

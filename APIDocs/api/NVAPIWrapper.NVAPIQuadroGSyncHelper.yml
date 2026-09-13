@@ -32,7 +32,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPIQuadroGSyncHelper
     path: ../NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
@@ -70,7 +70,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: CreateCapabilities
     path: ../NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
@@ -100,7 +100,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: CreateControlParameters
     path: ../NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
@@ -130,7 +130,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: CreateDelay
     path: ../NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
@@ -160,7 +160,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: CreateSyncStatus
     path: ../NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
@@ -190,7 +190,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: CreateStatusParameters
     path: ../NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
@@ -220,7 +220,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: CreateGSyncGpu
     path: ../NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
@@ -250,7 +250,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: CreateGSyncDisplay
     path: ../NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
@@ -280,7 +280,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: QueryCapabilities
     path: ../NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
@@ -311,7 +311,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetTopology
     path: ../NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
@@ -342,7 +342,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetControlParameters
     path: ../NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
@@ -373,7 +373,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SetControlParameters
     path: ../NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
@@ -408,7 +408,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: AdjustSyncDelay
     path: ../NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
@@ -446,7 +446,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetSyncStatus
     path: ../NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
@@ -481,7 +481,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetStatusParameters
     path: ../NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
@@ -512,7 +512,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SetSyncStateSettings
     path: ../NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
@@ -553,7 +553,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetProxyPhysicalGpus
     path: ../NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
@@ -588,7 +588,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Dispose
     path: ../NVAPIWrapper/NVAPIQuadroGSyncHelper.cs

@@ -17,7 +17,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIHardwareDetection.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPIHardwareDetection
     path: ../NVAPIWrapper/NVAPIHardwareDetection.cs
@@ -54,7 +54,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIHardwareDetection.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: HasNVIDIAGPU
     path: ../NVAPIWrapper/NVAPIHardwareDetection.cs
@@ -92,7 +92,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIHardwareDetection.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetNVIDIAGPUNames
     path: ../NVAPIWrapper/NVAPIHardwareDetection.cs

@@ -20,7 +20,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_NGX_DRIVER_FEATURE_SUPPORT_INFO.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: _NV_NGX_DRIVER_FEATURE_SUPPORT_INFO
     path: ../NVAPIWrapper/cs_generated/_NV_NGX_DRIVER_FEATURE_SUPPORT_INFO.cs
@@ -53,7 +53,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_NGX_DRIVER_FEATURE_SUPPORT_INFO.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: featureId
     path: ../NVAPIWrapper/cs_generated/_NV_NGX_DRIVER_FEATURE_SUPPORT_INFO.cs
@@ -81,7 +81,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_NGX_DRIVER_FEATURE_SUPPORT_INFO.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: _bitfield
     path: ../NVAPIWrapper/cs_generated/_NV_NGX_DRIVER_FEATURE_SUPPORT_INFO.cs
@@ -108,7 +108,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_NGX_DRIVER_FEATURE_SUPPORT_INFO.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: bSupported
     path: ../NVAPIWrapper/cs_generated/_NV_NGX_DRIVER_FEATURE_SUPPORT_INFO.cs
@@ -138,7 +138,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_NGX_DRIVER_FEATURE_SUPPORT_INFO.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: reserved1
     path: ../NVAPIWrapper/cs_generated/_NV_NGX_DRIVER_FEATURE_SUPPORT_INFO.cs
@@ -168,7 +168,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_NGX_DRIVER_FEATURE_SUPPORT_INFO.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: reserved2
     path: ../NVAPIWrapper/cs_generated/_NV_NGX_DRIVER_FEATURE_SUPPORT_INFO.cs

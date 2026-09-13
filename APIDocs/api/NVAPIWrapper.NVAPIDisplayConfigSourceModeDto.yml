@@ -29,7 +29,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIDisplayHelper.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPIDisplayConfigSourceModeDto
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
@@ -63,7 +63,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIDisplayHelper.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Resolution
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
@@ -94,7 +94,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIDisplayHelper.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: ColorFormat
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
@@ -125,7 +125,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIDisplayHelper.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Position
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
@@ -156,7 +156,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIDisplayHelper.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SpanningOrientation
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
@@ -187,7 +187,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIDisplayHelper.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: IsGdiPrimary
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
@@ -218,7 +218,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIDisplayHelper.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: IsSliFocus
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
@@ -249,7 +249,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIDisplayHelper.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: .ctor
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
@@ -293,7 +293,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIDisplayHelper.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: FromNative
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
@@ -328,7 +328,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIDisplayHelper.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: ToNative
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
@@ -359,7 +359,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIDisplayHelper.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Equals
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
@@ -396,7 +396,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIDisplayHelper.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Equals
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
@@ -435,7 +435,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIDisplayHelper.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetHashCode
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
@@ -467,7 +467,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIDisplayHelper.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: op_Equality
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
@@ -505,7 +505,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIDisplayHelper.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: op_Inequality
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs

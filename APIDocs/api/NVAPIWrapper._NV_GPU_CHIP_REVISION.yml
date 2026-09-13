@@ -21,7 +21,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GPU_CHIP_REVISION.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: _NV_GPU_CHIP_REVISION
     path: ../NVAPIWrapper/cs_generated/_NV_GPU_CHIP_REVISION.cs
@@ -47,7 +47,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GPU_CHIP_REVISION.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_GPU_CHIP_REV_EMULATION_QT
     path: ../NVAPIWrapper/cs_generated/_NV_GPU_CHIP_REVISION.cs
@@ -74,7 +74,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GPU_CHIP_REVISION.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_GPU_CHIP_REV_EMULATION_FPGA
     path: ../NVAPIWrapper/cs_generated/_NV_GPU_CHIP_REVISION.cs
@@ -101,7 +101,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GPU_CHIP_REVISION.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_GPU_CHIP_REV_A01
     path: ../NVAPIWrapper/cs_generated/_NV_GPU_CHIP_REVISION.cs
@@ -128,7 +128,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GPU_CHIP_REVISION.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_GPU_CHIP_REV_A02
     path: ../NVAPIWrapper/cs_generated/_NV_GPU_CHIP_REVISION.cs
@@ -155,7 +155,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GPU_CHIP_REVISION.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_GPU_CHIP_REV_A03
     path: ../NVAPIWrapper/cs_generated/_NV_GPU_CHIP_REVISION.cs
@@ -182,7 +182,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GPU_CHIP_REVISION.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_GPU_CHIP_REV_UNKNOWN
     path: ../NVAPIWrapper/cs_generated/_NV_GPU_CHIP_REVISION.cs

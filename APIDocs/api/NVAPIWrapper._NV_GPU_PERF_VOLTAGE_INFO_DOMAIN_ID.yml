@@ -17,7 +17,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GPU_PERF_VOLTAGE_INFO_DOMAIN_ID.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: _NV_GPU_PERF_VOLTAGE_INFO_DOMAIN_ID
     path: ../NVAPIWrapper/cs_generated/_NV_GPU_PERF_VOLTAGE_INFO_DOMAIN_ID.cs
@@ -43,7 +43,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GPU_PERF_VOLTAGE_INFO_DOMAIN_ID.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_GPU_PERF_VOLTAGE_INFO_DOMAIN_CORE
     path: ../NVAPIWrapper/cs_generated/_NV_GPU_PERF_VOLTAGE_INFO_DOMAIN_ID.cs
@@ -70,7 +70,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GPU_PERF_VOLTAGE_INFO_DOMAIN_ID.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_GPU_PERF_VOLTAGE_INFO_DOMAIN_UNDEFINED
     path: ../NVAPIWrapper/cs_generated/_NV_GPU_PERF_VOLTAGE_INFO_DOMAIN_ID.cs

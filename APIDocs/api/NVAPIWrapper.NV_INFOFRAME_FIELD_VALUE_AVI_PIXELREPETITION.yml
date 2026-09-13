@@ -32,7 +32,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AVI_PIXELREPETITION.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_INFOFRAME_FIELD_VALUE_AVI_PIXELREPETITION
     path: ../NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AVI_PIXELREPETITION.cs
@@ -58,7 +58,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AVI_PIXELREPETITION.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_INFOFRAME_FIELD_VALUE_AVI_PIXELREPETITION_NONE
     path: ../NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AVI_PIXELREPETITION.cs
@@ -85,7 +85,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AVI_PIXELREPETITION.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_INFOFRAME_FIELD_VALUE_AVI_PIXELREPETITION_X02
     path: ../NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AVI_PIXELREPETITION.cs
@@ -112,7 +112,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AVI_PIXELREPETITION.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_INFOFRAME_FIELD_VALUE_AVI_PIXELREPETITION_X03
     path: ../NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AVI_PIXELREPETITION.cs
@@ -139,7 +139,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AVI_PIXELREPETITION.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_INFOFRAME_FIELD_VALUE_AVI_PIXELREPETITION_X04
     path: ../NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AVI_PIXELREPETITION.cs
@@ -166,7 +166,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AVI_PIXELREPETITION.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_INFOFRAME_FIELD_VALUE_AVI_PIXELREPETITION_X05
     path: ../NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AVI_PIXELREPETITION.cs
@@ -193,7 +193,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AVI_PIXELREPETITION.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_INFOFRAME_FIELD_VALUE_AVI_PIXELREPETITION_X06
     path: ../NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AVI_PIXELREPETITION.cs
@@ -220,7 +220,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AVI_PIXELREPETITION.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_INFOFRAME_FIELD_VALUE_AVI_PIXELREPETITION_X07
     path: ../NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AVI_PIXELREPETITION.cs
@@ -247,7 +247,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AVI_PIXELREPETITION.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_INFOFRAME_FIELD_VALUE_AVI_PIXELREPETITION_X08
     path: ../NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AVI_PIXELREPETITION.cs
@@ -274,7 +274,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AVI_PIXELREPETITION.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_INFOFRAME_FIELD_VALUE_AVI_PIXELREPETITION_X09
     path: ../NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AVI_PIXELREPETITION.cs
@@ -301,7 +301,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AVI_PIXELREPETITION.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_INFOFRAME_FIELD_VALUE_AVI_PIXELREPETITION_X10
     path: ../NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AVI_PIXELREPETITION.cs
@@ -328,7 +328,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AVI_PIXELREPETITION.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_INFOFRAME_FIELD_VALUE_AVI_PIXELREPETITION_RESERVED10
     path: ../NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AVI_PIXELREPETITION.cs
@@ -355,7 +355,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AVI_PIXELREPETITION.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_INFOFRAME_FIELD_VALUE_AVI_PIXELREPETITION_RESERVED11
     path: ../NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AVI_PIXELREPETITION.cs
@@ -382,7 +382,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AVI_PIXELREPETITION.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_INFOFRAME_FIELD_VALUE_AVI_PIXELREPETITION_RESERVED12
     path: ../NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AVI_PIXELREPETITION.cs
@@ -409,7 +409,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AVI_PIXELREPETITION.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_INFOFRAME_FIELD_VALUE_AVI_PIXELREPETITION_RESERVED13
     path: ../NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AVI_PIXELREPETITION.cs
@@ -436,7 +436,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AVI_PIXELREPETITION.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_INFOFRAME_FIELD_VALUE_AVI_PIXELREPETITION_RESERVED14
     path: ../NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AVI_PIXELREPETITION.cs
@@ -463,7 +463,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AVI_PIXELREPETITION.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_INFOFRAME_FIELD_VALUE_AVI_PIXELREPETITION_RESERVED15
     path: ../NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AVI_PIXELREPETITION.cs
@@ -490,7 +490,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AVI_PIXELREPETITION.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_INFOFRAME_FIELD_VALUE_AVI_PIXELREPETITION_AUTO
     path: ../NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AVI_PIXELREPETITION.cs

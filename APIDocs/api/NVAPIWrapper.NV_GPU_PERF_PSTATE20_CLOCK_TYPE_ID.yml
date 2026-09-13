@@ -17,7 +17,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_GPU_PERF_PSTATE20_CLOCK_TYPE_ID.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_GPU_PERF_PSTATE20_CLOCK_TYPE_ID
     path: ../NVAPIWrapper/cs_generated/NV_GPU_PERF_PSTATE20_CLOCK_TYPE_ID.cs
@@ -43,7 +43,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_GPU_PERF_PSTATE20_CLOCK_TYPE_ID.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_GPU_PERF_PSTATE20_CLOCK_TYPE_SINGLE
     path: ../NVAPIWrapper/cs_generated/NV_GPU_PERF_PSTATE20_CLOCK_TYPE_ID.cs
@@ -70,7 +70,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_GPU_PERF_PSTATE20_CLOCK_TYPE_ID.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_GPU_PERF_PSTATE20_CLOCK_TYPE_RANGE
     path: ../NVAPIWrapper/cs_generated/NV_GPU_PERF_PSTATE20_CLOCK_TYPE_ID.cs

@@ -22,7 +22,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_VIEW_TARGET_INFO.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: _target_e__Struct
     path: ../NVAPIWrapper/cs_generated/NV_VIEW_TARGET_INFO.cs
@@ -55,7 +55,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_VIEW_TARGET_INFO.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: deviceMask
     path: ../NVAPIWrapper/cs_generated/NV_VIEW_TARGET_INFO.cs
@@ -83,7 +83,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_VIEW_TARGET_INFO.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: sourceId
     path: ../NVAPIWrapper/cs_generated/NV_VIEW_TARGET_INFO.cs
@@ -111,7 +111,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_VIEW_TARGET_INFO.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: _bitfield
     path: ../NVAPIWrapper/cs_generated/NV_VIEW_TARGET_INFO.cs
@@ -138,7 +138,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_VIEW_TARGET_INFO.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: bPrimary
     path: ../NVAPIWrapper/cs_generated/NV_VIEW_TARGET_INFO.cs
@@ -168,7 +168,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_VIEW_TARGET_INFO.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: bInterlaced
     path: ../NVAPIWrapper/cs_generated/NV_VIEW_TARGET_INFO.cs
@@ -198,7 +198,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_VIEW_TARGET_INFO.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: bGDIPrimary
     path: ../NVAPIWrapper/cs_generated/NV_VIEW_TARGET_INFO.cs
@@ -228,7 +228,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_VIEW_TARGET_INFO.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: bForceModeSet
     path: ../NVAPIWrapper/cs_generated/NV_VIEW_TARGET_INFO.cs

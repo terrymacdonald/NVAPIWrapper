@@ -26,7 +26,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_GPU_SCANOUT_COMPOSITION_PARAMETER_VALUE.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_GPU_SCANOUT_COMPOSITION_PARAMETER_VALUE
     path: ../NVAPIWrapper/cs_generated/NV_GPU_SCANOUT_COMPOSITION_PARAMETER_VALUE.cs
@@ -52,7 +52,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_GPU_SCANOUT_COMPOSITION_PARAMETER_VALUE.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_GPU_SCANOUT_COMPOSITION_PARAMETER_SET_TO_DEFAULT
     path: ../NVAPIWrapper/cs_generated/NV_GPU_SCANOUT_COMPOSITION_PARAMETER_VALUE.cs
@@ -79,7 +79,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_GPU_SCANOUT_COMPOSITION_PARAMETER_VALUE.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_GPU_SCANOUT_COMPOSITION_PARAMETER_VALUE_WARPING_RESAMPLING_METHOD_BILINEAR
     path: ../NVAPIWrapper/cs_generated/NV_GPU_SCANOUT_COMPOSITION_PARAMETER_VALUE.cs
@@ -106,7 +106,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_GPU_SCANOUT_COMPOSITION_PARAMETER_VALUE.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_GPU_SCANOUT_COMPOSITION_PARAMETER_VALUE_WARPING_RESAMPLING_METHOD_BICUBIC_TRIANGULAR
     path: ../NVAPIWrapper/cs_generated/NV_GPU_SCANOUT_COMPOSITION_PARAMETER_VALUE.cs
@@ -133,7 +133,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_GPU_SCANOUT_COMPOSITION_PARAMETER_VALUE.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_GPU_SCANOUT_COMPOSITION_PARAMETER_VALUE_WARPING_RESAMPLING_METHOD_BICUBIC_BELL_SHAPED
     path: ../NVAPIWrapper/cs_generated/NV_GPU_SCANOUT_COMPOSITION_PARAMETER_VALUE.cs
@@ -160,7 +160,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_GPU_SCANOUT_COMPOSITION_PARAMETER_VALUE.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_GPU_SCANOUT_COMPOSITION_PARAMETER_VALUE_WARPING_RESAMPLING_METHOD_BICUBIC_BSPLINE
     path: ../NVAPIWrapper/cs_generated/NV_GPU_SCANOUT_COMPOSITION_PARAMETER_VALUE.cs
@@ -187,7 +187,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_GPU_SCANOUT_COMPOSITION_PARAMETER_VALUE.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_GPU_SCANOUT_COMPOSITION_PARAMETER_VALUE_WARPING_RESAMPLING_METHOD_BICUBIC_ADAPTIVE_TRIANGULAR
     path: ../NVAPIWrapper/cs_generated/NV_GPU_SCANOUT_COMPOSITION_PARAMETER_VALUE.cs
@@ -214,7 +214,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_GPU_SCANOUT_COMPOSITION_PARAMETER_VALUE.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_GPU_SCANOUT_COMPOSITION_PARAMETER_VALUE_WARPING_RESAMPLING_METHOD_BICUBIC_ADAPTIVE_BELL_SHAPED
     path: ../NVAPIWrapper/cs_generated/NV_GPU_SCANOUT_COMPOSITION_PARAMETER_VALUE.cs
@@ -241,7 +241,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_GPU_SCANOUT_COMPOSITION_PARAMETER_VALUE.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_GPU_SCANOUT_COMPOSITION_PARAMETER_VALUE_WARPING_RESAMPLING_METHOD_BICUBIC_ADAPTIVE_BSPLINE
     path: ../NVAPIWrapper/cs_generated/NV_GPU_SCANOUT_COMPOSITION_PARAMETER_VALUE.cs
@@ -268,7 +268,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_GPU_SCANOUT_COMPOSITION_PARAMETER_VALUE.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_GPU_SCANOUT_COMPOSITION_PARAMETER_VALUE_SCANOUT_INTENSITY_NO_GAMMA
     path: ../NVAPIWrapper/cs_generated/NV_GPU_SCANOUT_COMPOSITION_PARAMETER_VALUE.cs
@@ -295,7 +295,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_GPU_SCANOUT_COMPOSITION_PARAMETER_VALUE.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_GPU_SCANOUT_COMPOSITION_PARAMETER_VALUE_SCANOUT_INTENSITY_COLOR_GAMMA
     path: ../NVAPIWrapper/cs_generated/NV_GPU_SCANOUT_COMPOSITION_PARAMETER_VALUE.cs
@@ -322,7 +322,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_GPU_SCANOUT_COMPOSITION_PARAMETER_VALUE.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_GPU_SCANOUT_COMPOSITION_PARAMETER_VALUE_SCANOUT_INTENSITY_COLOR_AND_OFFSET_GAMMA
     path: ../NVAPIWrapper/cs_generated/NV_GPU_SCANOUT_COMPOSITION_PARAMETER_VALUE.cs

@@ -20,7 +20,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_NGX_DLSSG_DYNAMIC_MULTI_FRAME_COUNT_MAX.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: EValues_NGX_DLSSG_DYNAMIC_MULTI_FRAME_COUNT_MAX
     path: ../NVAPIWrapper/cs_generated/EValues_NGX_DLSSG_DYNAMIC_MULTI_FRAME_COUNT_MAX.cs
@@ -46,7 +46,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_NGX_DLSSG_DYNAMIC_MULTI_FRAME_COUNT_MAX.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NGX_DLSSG_DYNAMIC_MULTI_FRAME_COUNT_MAX_OFF
     path: ../NVAPIWrapper/cs_generated/EValues_NGX_DLSSG_DYNAMIC_MULTI_FRAME_COUNT_MAX.cs
@@ -73,7 +73,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_NGX_DLSSG_DYNAMIC_MULTI_FRAME_COUNT_MAX.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NGX_DLSSG_DYNAMIC_MULTI_FRAME_COUNT_MAX_MIN
     path: ../NVAPIWrapper/cs_generated/EValues_NGX_DLSSG_DYNAMIC_MULTI_FRAME_COUNT_MAX.cs
@@ -100,7 +100,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_NGX_DLSSG_DYNAMIC_MULTI_FRAME_COUNT_MAX.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NGX_DLSSG_DYNAMIC_MULTI_FRAME_COUNT_MAX_MAX
     path: ../NVAPIWrapper/cs_generated/EValues_NGX_DLSSG_DYNAMIC_MULTI_FRAME_COUNT_MAX.cs
@@ -127,7 +127,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_NGX_DLSSG_DYNAMIC_MULTI_FRAME_COUNT_MAX.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NGX_DLSSG_DYNAMIC_MULTI_FRAME_COUNT_MAX_NUM_VALUES
     path: ../NVAPIWrapper/cs_generated/EValues_NGX_DLSSG_DYNAMIC_MULTI_FRAME_COUNT_MAX.cs
@@ -154,7 +154,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_NGX_DLSSG_DYNAMIC_MULTI_FRAME_COUNT_MAX.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NGX_DLSSG_DYNAMIC_MULTI_FRAME_COUNT_MAX_DEFAULT
     path: ../NVAPIWrapper/cs_generated/EValues_NGX_DLSSG_DYNAMIC_MULTI_FRAME_COUNT_MAX.cs

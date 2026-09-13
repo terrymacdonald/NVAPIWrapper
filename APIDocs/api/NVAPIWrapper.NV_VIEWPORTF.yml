@@ -19,7 +19,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_VIEWPORTF.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_VIEWPORTF
     path: ../NVAPIWrapper/cs_generated/NV_VIEWPORTF.cs
@@ -52,7 +52,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_VIEWPORTF.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: x
     path: ../NVAPIWrapper/cs_generated/NV_VIEWPORTF.cs
@@ -80,7 +80,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_VIEWPORTF.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: y
     path: ../NVAPIWrapper/cs_generated/NV_VIEWPORTF.cs
@@ -108,7 +108,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_VIEWPORTF.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: w
     path: ../NVAPIWrapper/cs_generated/NV_VIEWPORTF.cs
@@ -136,7 +136,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_VIEWPORTF.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: h
     path: ../NVAPIWrapper/cs_generated/NV_VIEWPORTF.cs

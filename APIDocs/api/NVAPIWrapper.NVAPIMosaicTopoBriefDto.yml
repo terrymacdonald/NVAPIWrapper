@@ -26,7 +26,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIMosaicHelper.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPIMosaicTopoBriefDto
     path: ../NVAPIWrapper/NVAPIMosaicHelper.cs
@@ -60,7 +60,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIMosaicHelper.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Topo
     path: ../NVAPIWrapper/NVAPIMosaicHelper.cs
@@ -89,7 +89,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIMosaicHelper.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Enabled
     path: ../NVAPIWrapper/NVAPIMosaicHelper.cs
@@ -118,7 +118,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIMosaicHelper.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: IsPossible
     path: ../NVAPIWrapper/NVAPIMosaicHelper.cs
@@ -147,7 +147,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIMosaicHelper.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: .ctor
     path: ../NVAPIWrapper/NVAPIMosaicHelper.cs
@@ -188,7 +188,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIMosaicHelper.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: FromNative
     path: ../NVAPIWrapper/NVAPIMosaicHelper.cs
@@ -223,7 +223,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIMosaicHelper.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: ToNative
     path: ../NVAPIWrapper/NVAPIMosaicHelper.cs
@@ -254,7 +254,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIMosaicHelper.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Equals
     path: ../NVAPIWrapper/NVAPIMosaicHelper.cs
@@ -291,7 +291,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIMosaicHelper.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Equals
     path: ../NVAPIWrapper/NVAPIMosaicHelper.cs
@@ -330,7 +330,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIMosaicHelper.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetHashCode
     path: ../NVAPIWrapper/NVAPIMosaicHelper.cs
@@ -362,7 +362,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIMosaicHelper.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: op_Equality
     path: ../NVAPIWrapper/NVAPIMosaicHelper.cs
@@ -403,7 +403,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIMosaicHelper.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: op_Inequality
     path: ../NVAPIWrapper/NVAPIMosaicHelper.cs

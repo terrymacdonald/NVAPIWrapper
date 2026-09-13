@@ -20,7 +20,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GSYNC_CAPABILITIES_V2.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: _NV_GSYNC_CAPABILITIES_V2
     path: ../NVAPIWrapper/cs_generated/_NV_GSYNC_CAPABILITIES_V2.cs
@@ -53,7 +53,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GSYNC_CAPABILITIES_V2.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: version
     path: ../NVAPIWrapper/cs_generated/_NV_GSYNC_CAPABILITIES_V2.cs
@@ -81,7 +81,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GSYNC_CAPABILITIES_V2.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: boardId
     path: ../NVAPIWrapper/cs_generated/_NV_GSYNC_CAPABILITIES_V2.cs
@@ -109,7 +109,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GSYNC_CAPABILITIES_V2.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: revision
     path: ../NVAPIWrapper/cs_generated/_NV_GSYNC_CAPABILITIES_V2.cs
@@ -137,7 +137,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GSYNC_CAPABILITIES_V2.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: capFlags
     path: ../NVAPIWrapper/cs_generated/_NV_GSYNC_CAPABILITIES_V2.cs
@@ -165,7 +165,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GSYNC_CAPABILITIES_V2.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: extendedRevision
     path: ../NVAPIWrapper/cs_generated/_NV_GSYNC_CAPABILITIES_V2.cs

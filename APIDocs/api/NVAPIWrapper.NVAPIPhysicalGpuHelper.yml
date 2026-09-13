@@ -92,7 +92,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPIPhysicalGpuHelper
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
@@ -130,7 +130,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetFullName
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
@@ -161,7 +161,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetBusId
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
@@ -192,7 +192,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetBusType
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
@@ -223,7 +223,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetGpuType
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
@@ -254,7 +254,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetPCIIdentifiers
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
@@ -285,7 +285,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetBusSlotId
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
@@ -316,7 +316,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetVbiosVersionString
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
@@ -347,7 +347,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetPhysicalFrameBufferSize
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
@@ -378,7 +378,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetVirtualFrameBufferSize
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
@@ -409,7 +409,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetTachReading
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
@@ -440,7 +440,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetMemoryInfo
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
@@ -471,7 +471,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetMemoryInfoEx
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
@@ -502,7 +502,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetDisplayIdFromGpuAndOutputId
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
@@ -540,7 +540,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: EnumAllDisplays
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
@@ -571,7 +571,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: EnumConnectedDisplays
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
@@ -602,7 +602,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: EnumActiveDisplays
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
@@ -633,7 +633,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetDisplayConfig
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
@@ -664,7 +664,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SetDisplayConfig
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
@@ -705,7 +705,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetShaderSubPipeCount
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
@@ -736,7 +736,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetGpuCoreCount
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
@@ -767,7 +767,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetSystemType
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
@@ -798,7 +798,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetActiveOutputs
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
@@ -829,7 +829,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetConnectedDisplayIds
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
@@ -867,7 +867,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetAllDisplayIds
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
@@ -898,7 +898,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetPerfDecreaseInfo
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
@@ -929,7 +929,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetCurrentPstate
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
@@ -960,7 +960,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetPstates20Info
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
@@ -991,7 +991,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetDynamicPstatesInfoEx
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
@@ -1022,7 +1022,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetThermalSettings
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
@@ -1060,7 +1060,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetAllClockFrequencies
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
@@ -1095,7 +1095,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: QueryIlluminationSupport
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
@@ -1130,7 +1130,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetIllumination
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
@@ -1165,7 +1165,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SetIllumination
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
@@ -1200,7 +1200,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetIlluminationDevicesInfo
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
@@ -1231,7 +1231,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetIlluminationDevicesControl
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
@@ -1262,7 +1262,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SetIlluminationDevicesControl
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
@@ -1297,7 +1297,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetIlluminationZonesInfo
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
@@ -1328,7 +1328,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetIlluminationZonesControl
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
@@ -1359,7 +1359,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SetIlluminationZonesControl
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
@@ -1394,7 +1394,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetVirtualizationInfo
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
@@ -1425,7 +1425,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetLicensableFeatures
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
@@ -1456,7 +1456,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetEncoderStatistics
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
@@ -1487,7 +1487,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetEncoderSessionsInfo
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
@@ -1518,7 +1518,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetVrReadyData
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
@@ -1549,7 +1549,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetGspFeatures
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
@@ -1580,7 +1580,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetNvlinkCaps
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
@@ -1611,7 +1611,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetNvlinkStatus
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
@@ -1642,7 +1642,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetUuid
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
@@ -1673,7 +1673,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetOverclockStatus
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
@@ -1704,7 +1704,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetNvlinkCapsEx
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
@@ -1735,7 +1735,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetNvlinkStatusEx
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
@@ -1766,7 +1766,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetGpuInfo
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
@@ -1797,7 +1797,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: I2CRead
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
@@ -1832,7 +1832,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: I2CWrite
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
@@ -1867,7 +1867,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetArchInfo
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
@@ -1898,7 +1898,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetBoardInfo
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
@@ -1929,7 +1929,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetVbiosRevision
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
@@ -1960,7 +1960,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetVbiosOemRevision
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
@@ -1991,7 +1991,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetCurrentPcieDownstreamWidth
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
@@ -2022,7 +2022,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetRamBusWidth
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
@@ -2053,7 +2053,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetIrq
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
@@ -2084,7 +2084,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetOutputType
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
@@ -2122,7 +2122,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: ValidateOutputCombination
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
@@ -2160,7 +2160,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetEccConfigurationInfo
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
@@ -2191,7 +2191,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SetEccConfiguration
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
@@ -2232,7 +2232,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetEccErrorInfo
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
@@ -2263,7 +2263,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: ResetEccErrorInfo
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
@@ -2304,7 +2304,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetHdcpSupportStatus
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
@@ -2335,7 +2335,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetOutputIdFromDisplayId
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
@@ -2378,7 +2378,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetEdid
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
@@ -2416,7 +2416,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SetEdid
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
@@ -2457,7 +2457,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetLogicalGpuInfo
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
@@ -2488,7 +2488,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: RegisterForUtilizationSampleUpdates
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
@@ -2523,7 +2523,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: QueryWorkstationFeatureSupport
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
@@ -2558,7 +2558,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: WorkstationFeatureQuery
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
@@ -2589,7 +2589,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: WorkstationFeatureSetup
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
@@ -2630,7 +2630,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Dispose
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs

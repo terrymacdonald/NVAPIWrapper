@@ -16,7 +16,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_QSYNC_EVENT_DATA.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: _reserved_e__FixedBuffer
     path: ../NVAPIWrapper/cs_generated/NV_QSYNC_EVENT_DATA.cs
@@ -49,7 +49,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_QSYNC_EVENT_DATA.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: e0
     path: ../NVAPIWrapper/cs_generated/NV_QSYNC_EVENT_DATA.cs

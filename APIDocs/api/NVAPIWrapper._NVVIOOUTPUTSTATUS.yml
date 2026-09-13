@@ -29,7 +29,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOOUTPUTSTATUS.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: _NVVIOOUTPUTSTATUS
     path: ../NVAPIWrapper/cs_generated/_NVVIOOUTPUTSTATUS.cs
@@ -62,7 +62,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOOUTPUTSTATUS.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: vid1Out
     path: ../NVAPIWrapper/cs_generated/_NVVIOOUTPUTSTATUS.cs
@@ -90,7 +90,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOOUTPUTSTATUS.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: vid2Out
     path: ../NVAPIWrapper/cs_generated/_NVVIOOUTPUTSTATUS.cs
@@ -118,7 +118,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOOUTPUTSTATUS.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: sdiSyncIn
     path: ../NVAPIWrapper/cs_generated/_NVVIOOUTPUTSTATUS.cs
@@ -146,7 +146,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOOUTPUTSTATUS.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: compSyncIn
     path: ../NVAPIWrapper/cs_generated/_NVVIOOUTPUTSTATUS.cs
@@ -174,7 +174,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOOUTPUTSTATUS.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: syncEnable
     path: ../NVAPIWrapper/cs_generated/_NVVIOOUTPUTSTATUS.cs
@@ -202,7 +202,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOOUTPUTSTATUS.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: syncSource
     path: ../NVAPIWrapper/cs_generated/_NVVIOOUTPUTSTATUS.cs
@@ -230,7 +230,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOOUTPUTSTATUS.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: syncFormat
     path: ../NVAPIWrapper/cs_generated/_NVVIOOUTPUTSTATUS.cs
@@ -258,7 +258,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOOUTPUTSTATUS.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: frameLockEnable
     path: ../NVAPIWrapper/cs_generated/_NVVIOOUTPUTSTATUS.cs
@@ -286,7 +286,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOOUTPUTSTATUS.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: outputVideoLocked
     path: ../NVAPIWrapper/cs_generated/_NVVIOOUTPUTSTATUS.cs
@@ -314,7 +314,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOOUTPUTSTATUS.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: dataIntegrityCheckErrorCount
     path: ../NVAPIWrapper/cs_generated/_NVVIOOUTPUTSTATUS.cs
@@ -342,7 +342,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOOUTPUTSTATUS.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: dataIntegrityCheckEnabled
     path: ../NVAPIWrapper/cs_generated/_NVVIOOUTPUTSTATUS.cs
@@ -370,7 +370,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOOUTPUTSTATUS.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: dataIntegrityCheckFailed
     path: ../NVAPIWrapper/cs_generated/_NVVIOOUTPUTSTATUS.cs
@@ -398,7 +398,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOOUTPUTSTATUS.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: uSyncSourceLocked
     path: ../NVAPIWrapper/cs_generated/_NVVIOOUTPUTSTATUS.cs
@@ -426,7 +426,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOOUTPUTSTATUS.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: uPowerOn
     path: ../NVAPIWrapper/cs_generated/_NVVIOOUTPUTSTATUS.cs

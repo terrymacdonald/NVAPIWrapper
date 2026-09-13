@@ -21,7 +21,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_MANAGED_DEDICATED_DISPLAY_INFO.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: _NV_MANAGED_DEDICATED_DISPLAY_INFO
     path: ../NVAPIWrapper/cs_generated/_NV_MANAGED_DEDICATED_DISPLAY_INFO.cs
@@ -54,7 +54,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_MANAGED_DEDICATED_DISPLAY_INFO.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: version
     path: ../NVAPIWrapper/cs_generated/_NV_MANAGED_DEDICATED_DISPLAY_INFO.cs
@@ -82,7 +82,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_MANAGED_DEDICATED_DISPLAY_INFO.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: displayId
     path: ../NVAPIWrapper/cs_generated/_NV_MANAGED_DEDICATED_DISPLAY_INFO.cs
@@ -110,7 +110,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_MANAGED_DEDICATED_DISPLAY_INFO.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: _bitfield
     path: ../NVAPIWrapper/cs_generated/_NV_MANAGED_DEDICATED_DISPLAY_INFO.cs
@@ -137,7 +137,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_MANAGED_DEDICATED_DISPLAY_INFO.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: isAcquired
     path: ../NVAPIWrapper/cs_generated/_NV_MANAGED_DEDICATED_DISPLAY_INFO.cs
@@ -167,7 +167,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_MANAGED_DEDICATED_DISPLAY_INFO.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: isMosaic
     path: ../NVAPIWrapper/cs_generated/_NV_MANAGED_DEDICATED_DISPLAY_INFO.cs
@@ -197,7 +197,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_MANAGED_DEDICATED_DISPLAY_INFO.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: reserved
     path: ../NVAPIWrapper/cs_generated/_NV_MANAGED_DEDICATED_DISPLAY_INFO.cs

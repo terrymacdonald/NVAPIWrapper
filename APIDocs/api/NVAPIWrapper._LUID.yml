@@ -17,7 +17,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/_LUID.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: _LUID
     path: ../NVAPIWrapper/_LUID.cs
@@ -51,7 +51,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/_LUID.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: LowPart
     path: ../NVAPIWrapper/_LUID.cs
@@ -80,7 +80,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/_LUID.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: HighPart
     path: ../NVAPIWrapper/_LUID.cs

@@ -20,7 +20,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AUDIO_SAMPLESIZE.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_INFOFRAME_FIELD_VALUE_AUDIO_SAMPLESIZE
     path: ../NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AUDIO_SAMPLESIZE.cs
@@ -46,7 +46,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AUDIO_SAMPLESIZE.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_INFOFRAME_FIELD_VALUE_AUDIO_SAMPLESIZE_IN_HEADER
     path: ../NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AUDIO_SAMPLESIZE.cs
@@ -73,7 +73,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AUDIO_SAMPLESIZE.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_INFOFRAME_FIELD_VALUE_AUDIO_SAMPLESIZE_16BITS
     path: ../NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AUDIO_SAMPLESIZE.cs
@@ -100,7 +100,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AUDIO_SAMPLESIZE.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_INFOFRAME_FIELD_VALUE_AUDIO_SAMPLESIZE_20BITS
     path: ../NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AUDIO_SAMPLESIZE.cs
@@ -127,7 +127,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AUDIO_SAMPLESIZE.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_INFOFRAME_FIELD_VALUE_AUDIO_SAMPLESIZE_24BITS
     path: ../NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AUDIO_SAMPLESIZE.cs
@@ -154,7 +154,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AUDIO_SAMPLESIZE.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_INFOFRAME_FIELD_VALUE_AUDIO_SAMPLESIZE_AUTO
     path: ../NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AUDIO_SAMPLESIZE.cs

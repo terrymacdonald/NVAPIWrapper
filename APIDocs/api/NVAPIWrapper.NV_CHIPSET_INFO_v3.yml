@@ -24,7 +24,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_CHIPSET_INFO_v3.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_CHIPSET_INFO_v3
     path: ../NVAPIWrapper/cs_generated/NV_CHIPSET_INFO_v3.cs
@@ -57,7 +57,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_CHIPSET_INFO_v3.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: version
     path: ../NVAPIWrapper/cs_generated/NV_CHIPSET_INFO_v3.cs
@@ -85,7 +85,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_CHIPSET_INFO_v3.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: vendorId
     path: ../NVAPIWrapper/cs_generated/NV_CHIPSET_INFO_v3.cs
@@ -113,7 +113,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_CHIPSET_INFO_v3.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: deviceId
     path: ../NVAPIWrapper/cs_generated/NV_CHIPSET_INFO_v3.cs
@@ -141,7 +141,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_CHIPSET_INFO_v3.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: szVendorName
     path: ../NVAPIWrapper/cs_generated/NV_CHIPSET_INFO_v3.cs
@@ -169,7 +169,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_CHIPSET_INFO_v3.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: szChipsetName
     path: ../NVAPIWrapper/cs_generated/NV_CHIPSET_INFO_v3.cs
@@ -197,7 +197,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_CHIPSET_INFO_v3.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: flags
     path: ../NVAPIWrapper/cs_generated/NV_CHIPSET_INFO_v3.cs
@@ -225,7 +225,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_CHIPSET_INFO_v3.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: subSysVendorId
     path: ../NVAPIWrapper/cs_generated/NV_CHIPSET_INFO_v3.cs
@@ -253,7 +253,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_CHIPSET_INFO_v3.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: subSysDeviceId
     path: ../NVAPIWrapper/cs_generated/NV_CHIPSET_INFO_v3.cs
@@ -281,7 +281,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_CHIPSET_INFO_v3.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: szSubSysVendorName
     path: ../NVAPIWrapper/cs_generated/NV_CHIPSET_INFO_v3.cs

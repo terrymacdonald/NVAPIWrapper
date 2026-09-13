@@ -26,7 +26,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIOpenGLHelper.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPIOglExpertDefaultsDto
     path: ../NVAPIWrapper/NVAPIOpenGLHelper.cs
@@ -60,7 +60,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIOpenGLHelper.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: DetailMask
     path: ../NVAPIWrapper/NVAPIOpenGLHelper.cs
@@ -89,7 +89,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIOpenGLHelper.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: ReportMask
     path: ../NVAPIWrapper/NVAPIOpenGLHelper.cs
@@ -118,7 +118,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIOpenGLHelper.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: OutputMask
     path: ../NVAPIWrapper/NVAPIOpenGLHelper.cs
@@ -147,7 +147,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIOpenGLHelper.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: .ctor
     path: ../NVAPIWrapper/NVAPIOpenGLHelper.cs
@@ -183,7 +183,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIOpenGLHelper.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: FromNative
     path: ../NVAPIWrapper/NVAPIOpenGLHelper.cs
@@ -221,7 +221,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIOpenGLHelper.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: ToNative
     path: ../NVAPIWrapper/NVAPIOpenGLHelper.cs
@@ -249,7 +249,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIOpenGLHelper.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Equals
     path: ../NVAPIWrapper/NVAPIOpenGLHelper.cs
@@ -286,7 +286,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIOpenGLHelper.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Equals
     path: ../NVAPIWrapper/NVAPIOpenGLHelper.cs
@@ -325,7 +325,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIOpenGLHelper.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetHashCode
     path: ../NVAPIWrapper/NVAPIOpenGLHelper.cs
@@ -357,7 +357,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIOpenGLHelper.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: op_Equality
     path: ../NVAPIWrapper/NVAPIOpenGLHelper.cs
@@ -393,7 +393,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIOpenGLHelper.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: op_Inequality
     path: ../NVAPIWrapper/NVAPIOpenGLHelper.cs

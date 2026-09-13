@@ -30,7 +30,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_VULKAN_LATENCY_RESULT_PARAMS.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: vkFrameReport
     path: ../NVAPIWrapper/cs_generated/_NV_VULKAN_LATENCY_RESULT_PARAMS.cs
@@ -63,7 +63,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_VULKAN_LATENCY_RESULT_PARAMS.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: frameID
     path: ../NVAPIWrapper/cs_generated/_NV_VULKAN_LATENCY_RESULT_PARAMS.cs
@@ -91,7 +91,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_VULKAN_LATENCY_RESULT_PARAMS.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: inputSampleTime
     path: ../NVAPIWrapper/cs_generated/_NV_VULKAN_LATENCY_RESULT_PARAMS.cs
@@ -119,7 +119,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_VULKAN_LATENCY_RESULT_PARAMS.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: simStartTime
     path: ../NVAPIWrapper/cs_generated/_NV_VULKAN_LATENCY_RESULT_PARAMS.cs
@@ -147,7 +147,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_VULKAN_LATENCY_RESULT_PARAMS.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: simEndTime
     path: ../NVAPIWrapper/cs_generated/_NV_VULKAN_LATENCY_RESULT_PARAMS.cs
@@ -175,7 +175,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_VULKAN_LATENCY_RESULT_PARAMS.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: renderSubmitStartTime
     path: ../NVAPIWrapper/cs_generated/_NV_VULKAN_LATENCY_RESULT_PARAMS.cs
@@ -203,7 +203,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_VULKAN_LATENCY_RESULT_PARAMS.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: renderSubmitEndTime
     path: ../NVAPIWrapper/cs_generated/_NV_VULKAN_LATENCY_RESULT_PARAMS.cs
@@ -231,7 +231,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_VULKAN_LATENCY_RESULT_PARAMS.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: presentStartTime
     path: ../NVAPIWrapper/cs_generated/_NV_VULKAN_LATENCY_RESULT_PARAMS.cs
@@ -259,7 +259,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_VULKAN_LATENCY_RESULT_PARAMS.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: presentEndTime
     path: ../NVAPIWrapper/cs_generated/_NV_VULKAN_LATENCY_RESULT_PARAMS.cs
@@ -287,7 +287,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_VULKAN_LATENCY_RESULT_PARAMS.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: driverStartTime
     path: ../NVAPIWrapper/cs_generated/_NV_VULKAN_LATENCY_RESULT_PARAMS.cs
@@ -315,7 +315,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_VULKAN_LATENCY_RESULT_PARAMS.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: driverEndTime
     path: ../NVAPIWrapper/cs_generated/_NV_VULKAN_LATENCY_RESULT_PARAMS.cs
@@ -343,7 +343,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_VULKAN_LATENCY_RESULT_PARAMS.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: osRenderQueueStartTime
     path: ../NVAPIWrapper/cs_generated/_NV_VULKAN_LATENCY_RESULT_PARAMS.cs
@@ -371,7 +371,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_VULKAN_LATENCY_RESULT_PARAMS.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: osRenderQueueEndTime
     path: ../NVAPIWrapper/cs_generated/_NV_VULKAN_LATENCY_RESULT_PARAMS.cs
@@ -399,7 +399,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_VULKAN_LATENCY_RESULT_PARAMS.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: gpuRenderStartTime
     path: ../NVAPIWrapper/cs_generated/_NV_VULKAN_LATENCY_RESULT_PARAMS.cs
@@ -427,7 +427,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_VULKAN_LATENCY_RESULT_PARAMS.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: gpuRenderEndTime
     path: ../NVAPIWrapper/cs_generated/_NV_VULKAN_LATENCY_RESULT_PARAMS.cs
@@ -455,7 +455,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_VULKAN_LATENCY_RESULT_PARAMS.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: rsvd
     path: ../NVAPIWrapper/cs_generated/_NV_VULKAN_LATENCY_RESULT_PARAMS.cs

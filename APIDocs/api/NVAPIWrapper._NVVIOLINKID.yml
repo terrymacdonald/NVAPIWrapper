@@ -20,7 +20,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOLINKID.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: _NVVIOLINKID
     path: ../NVAPIWrapper/cs_generated/_NVVIOLINKID.cs
@@ -46,7 +46,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOLINKID.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVVIOLINKID_UNKNOWN
     path: ../NVAPIWrapper/cs_generated/_NVVIOLINKID.cs
@@ -73,7 +73,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOLINKID.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVVIOLINKID_A
     path: ../NVAPIWrapper/cs_generated/_NVVIOLINKID.cs
@@ -100,7 +100,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOLINKID.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVVIOLINKID_B
     path: ../NVAPIWrapper/cs_generated/_NVVIOLINKID.cs
@@ -127,7 +127,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOLINKID.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVVIOLINKID_C
     path: ../NVAPIWrapper/cs_generated/_NVVIOLINKID.cs
@@ -154,7 +154,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOLINKID.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVVIOLINKID_D
     path: ../NVAPIWrapper/cs_generated/_NVVIOLINKID.cs

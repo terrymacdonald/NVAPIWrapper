@@ -23,7 +23,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_SET_VAB_DATA.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: EValues_SET_VAB_DATA
     path: ../NVAPIWrapper/cs_generated/EValues_SET_VAB_DATA.cs
@@ -49,7 +49,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_SET_VAB_DATA.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SET_VAB_DATA_ZERO
     path: ../NVAPIWrapper/cs_generated/EValues_SET_VAB_DATA.cs
@@ -76,7 +76,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_SET_VAB_DATA.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SET_VAB_DATA_UINT_ONE
     path: ../NVAPIWrapper/cs_generated/EValues_SET_VAB_DATA.cs
@@ -103,7 +103,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_SET_VAB_DATA.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SET_VAB_DATA_FLOAT_ONE
     path: ../NVAPIWrapper/cs_generated/EValues_SET_VAB_DATA.cs
@@ -130,7 +130,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_SET_VAB_DATA.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SET_VAB_DATA_FLOAT_POS_INF
     path: ../NVAPIWrapper/cs_generated/EValues_SET_VAB_DATA.cs
@@ -157,7 +157,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_SET_VAB_DATA.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SET_VAB_DATA_FLOAT_NAN
     path: ../NVAPIWrapper/cs_generated/EValues_SET_VAB_DATA.cs
@@ -184,7 +184,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_SET_VAB_DATA.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SET_VAB_DATA_USE_API_DEFAULTS
     path: ../NVAPIWrapper/cs_generated/EValues_SET_VAB_DATA.cs
@@ -211,7 +211,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_SET_VAB_DATA.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SET_VAB_DATA_NUM_VALUES
     path: ../NVAPIWrapper/cs_generated/EValues_SET_VAB_DATA.cs
@@ -238,7 +238,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_SET_VAB_DATA.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SET_VAB_DATA_DEFAULT
     path: ../NVAPIWrapper/cs_generated/EValues_SET_VAB_DATA.cs

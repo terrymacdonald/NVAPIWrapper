@@ -37,7 +37,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_HDR_CAPABILITIES_V2.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: _dv_static_metadata_e__Struct
     path: ../NVAPIWrapper/cs_generated/_NV_HDR_CAPABILITIES_V2.cs
@@ -70,7 +70,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_HDR_CAPABILITIES_V2.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: _bitfield
     path: ../NVAPIWrapper/cs_generated/_NV_HDR_CAPABILITIES_V2.cs
@@ -97,7 +97,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_HDR_CAPABILITIES_V2.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: VSVDB_version
     path: ../NVAPIWrapper/cs_generated/_NV_HDR_CAPABILITIES_V2.cs
@@ -127,7 +127,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_HDR_CAPABILITIES_V2.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: dm_version
     path: ../NVAPIWrapper/cs_generated/_NV_HDR_CAPABILITIES_V2.cs
@@ -157,7 +157,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_HDR_CAPABILITIES_V2.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: supports_2160p60hz
     path: ../NVAPIWrapper/cs_generated/_NV_HDR_CAPABILITIES_V2.cs
@@ -187,7 +187,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_HDR_CAPABILITIES_V2.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: supports_YUV422_12bit
     path: ../NVAPIWrapper/cs_generated/_NV_HDR_CAPABILITIES_V2.cs
@@ -217,7 +217,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_HDR_CAPABILITIES_V2.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: supports_global_dimming
     path: ../NVAPIWrapper/cs_generated/_NV_HDR_CAPABILITIES_V2.cs
@@ -247,7 +247,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_HDR_CAPABILITIES_V2.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: colorimetry
     path: ../NVAPIWrapper/cs_generated/_NV_HDR_CAPABILITIES_V2.cs
@@ -277,7 +277,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_HDR_CAPABILITIES_V2.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: supports_backlight_control
     path: ../NVAPIWrapper/cs_generated/_NV_HDR_CAPABILITIES_V2.cs
@@ -307,7 +307,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_HDR_CAPABILITIES_V2.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: backlt_min_luma
     path: ../NVAPIWrapper/cs_generated/_NV_HDR_CAPABILITIES_V2.cs
@@ -337,7 +337,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_HDR_CAPABILITIES_V2.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: interface_supported_by_sink
     path: ../NVAPIWrapper/cs_generated/_NV_HDR_CAPABILITIES_V2.cs
@@ -367,7 +367,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_HDR_CAPABILITIES_V2.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: supports_10b_12b_444
     path: ../NVAPIWrapper/cs_generated/_NV_HDR_CAPABILITIES_V2.cs
@@ -397,7 +397,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_HDR_CAPABILITIES_V2.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: reserved
     path: ../NVAPIWrapper/cs_generated/_NV_HDR_CAPABILITIES_V2.cs
@@ -427,7 +427,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_HDR_CAPABILITIES_V2.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: target_min_luminance
     path: ../NVAPIWrapper/cs_generated/_NV_HDR_CAPABILITIES_V2.cs
@@ -455,7 +455,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_HDR_CAPABILITIES_V2.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: target_max_luminance
     path: ../NVAPIWrapper/cs_generated/_NV_HDR_CAPABILITIES_V2.cs
@@ -483,7 +483,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_HDR_CAPABILITIES_V2.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: cc_red_x
     path: ../NVAPIWrapper/cs_generated/_NV_HDR_CAPABILITIES_V2.cs
@@ -511,7 +511,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_HDR_CAPABILITIES_V2.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: cc_red_y
     path: ../NVAPIWrapper/cs_generated/_NV_HDR_CAPABILITIES_V2.cs
@@ -539,7 +539,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_HDR_CAPABILITIES_V2.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: cc_green_x
     path: ../NVAPIWrapper/cs_generated/_NV_HDR_CAPABILITIES_V2.cs
@@ -567,7 +567,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_HDR_CAPABILITIES_V2.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: cc_green_y
     path: ../NVAPIWrapper/cs_generated/_NV_HDR_CAPABILITIES_V2.cs
@@ -595,7 +595,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_HDR_CAPABILITIES_V2.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: cc_blue_x
     path: ../NVAPIWrapper/cs_generated/_NV_HDR_CAPABILITIES_V2.cs
@@ -623,7 +623,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_HDR_CAPABILITIES_V2.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: cc_blue_y
     path: ../NVAPIWrapper/cs_generated/_NV_HDR_CAPABILITIES_V2.cs
@@ -651,7 +651,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_HDR_CAPABILITIES_V2.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: cc_white_x
     path: ../NVAPIWrapper/cs_generated/_NV_HDR_CAPABILITIES_V2.cs
@@ -679,7 +679,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_HDR_CAPABILITIES_V2.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: cc_white_y
     path: ../NVAPIWrapper/cs_generated/_NV_HDR_CAPABILITIES_V2.cs

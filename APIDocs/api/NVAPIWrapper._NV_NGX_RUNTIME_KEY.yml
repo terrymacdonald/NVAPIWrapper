@@ -25,7 +25,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_NGX_RUNTIME_KEY.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: _NV_NGX_RUNTIME_KEY
     path: ../NVAPIWrapper/cs_generated/_NV_NGX_RUNTIME_KEY.cs
@@ -51,7 +51,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_NGX_RUNTIME_KEY.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_NGX_RUNTIME_KEY_RESERVED0
     path: ../NVAPIWrapper/cs_generated/_NV_NGX_RUNTIME_KEY.cs
@@ -78,7 +78,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_NGX_RUNTIME_KEY.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_NGX_RUNTIME_KEY_RESERVED1
     path: ../NVAPIWrapper/cs_generated/_NV_NGX_RUNTIME_KEY.cs
@@ -105,7 +105,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_NGX_RUNTIME_KEY.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_NGX_RUNTIME_KEY_RESERVED2
     path: ../NVAPIWrapper/cs_generated/_NV_NGX_RUNTIME_KEY.cs
@@ -132,7 +132,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_NGX_RUNTIME_KEY.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_NGX_RUNTIME_KEY_RESERVED3
     path: ../NVAPIWrapper/cs_generated/_NV_NGX_RUNTIME_KEY.cs
@@ -159,7 +159,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_NGX_RUNTIME_KEY.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_NGX_RUNTIME_KEY_RESERVED4
     path: ../NVAPIWrapper/cs_generated/_NV_NGX_RUNTIME_KEY.cs
@@ -186,7 +186,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_NGX_RUNTIME_KEY.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_NGX_RUNTIME_KEY_RESERVED5
     path: ../NVAPIWrapper/cs_generated/_NV_NGX_RUNTIME_KEY.cs
@@ -213,7 +213,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_NGX_RUNTIME_KEY.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_NGX_RUNTIME_KEY_RESERVED6
     path: ../NVAPIWrapper/cs_generated/_NV_NGX_RUNTIME_KEY.cs
@@ -240,7 +240,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_NGX_RUNTIME_KEY.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_NGX_RUNTIME_KEY_RESERVED7
     path: ../NVAPIWrapper/cs_generated/_NV_NGX_RUNTIME_KEY.cs
@@ -267,7 +267,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_NGX_RUNTIME_KEY.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_NGX_RUNTIME_KEY_RESERVED8
     path: ../NVAPIWrapper/cs_generated/_NV_NGX_RUNTIME_KEY.cs
@@ -294,7 +294,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_NGX_RUNTIME_KEY.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_NGX_RUNTIME_KEY_RESERVED9
     path: ../NVAPIWrapper/cs_generated/_NV_NGX_RUNTIME_KEY.cs

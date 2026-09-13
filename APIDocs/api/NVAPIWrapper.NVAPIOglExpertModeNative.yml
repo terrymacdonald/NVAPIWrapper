@@ -19,7 +19,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIOpenGLHelper.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPIOglExpertModeNative
     path: ../NVAPIWrapper/NVAPIOpenGLHelper.cs
@@ -53,7 +53,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIOpenGLHelper.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: DetailMask
     path: ../NVAPIWrapper/NVAPIOpenGLHelper.cs
@@ -80,7 +80,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIOpenGLHelper.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: ReportMask
     path: ../NVAPIWrapper/NVAPIOpenGLHelper.cs
@@ -107,7 +107,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIOpenGLHelper.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: OutputMask
     path: ../NVAPIWrapper/NVAPIOpenGLHelper.cs
@@ -134,7 +134,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIOpenGLHelper.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Callback
     path: ../NVAPIWrapper/NVAPIOpenGLHelper.cs

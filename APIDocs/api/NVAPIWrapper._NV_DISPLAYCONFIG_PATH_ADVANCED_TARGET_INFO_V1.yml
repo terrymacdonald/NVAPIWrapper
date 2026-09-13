@@ -30,7 +30,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIDisplayConfigTypes.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: _NV_DISPLAYCONFIG_PATH_ADVANCED_TARGET_INFO_V1
     path: ../NVAPIWrapper/NVAPIDisplayConfigTypes.cs
@@ -64,7 +64,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIDisplayConfigTypes.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: version
     path: ../NVAPIWrapper/NVAPIDisplayConfigTypes.cs
@@ -93,7 +93,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIDisplayConfigTypes.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: rotation
     path: ../NVAPIWrapper/NVAPIDisplayConfigTypes.cs
@@ -122,7 +122,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIDisplayConfigTypes.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: scaling
     path: ../NVAPIWrapper/NVAPIDisplayConfigTypes.cs
@@ -151,7 +151,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIDisplayConfigTypes.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: refreshRate1K
     path: ../NVAPIWrapper/NVAPIDisplayConfigTypes.cs
@@ -180,7 +180,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIDisplayConfigTypes.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: _bitfield
     path: ../NVAPIWrapper/NVAPIDisplayConfigTypes.cs
@@ -209,7 +209,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIDisplayConfigTypes.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: interlaced
     path: ../NVAPIWrapper/NVAPIDisplayConfigTypes.cs
@@ -240,7 +240,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIDisplayConfigTypes.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: primary
     path: ../NVAPIWrapper/NVAPIDisplayConfigTypes.cs
@@ -271,7 +271,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIDisplayConfigTypes.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: reservedBit1
     path: ../NVAPIWrapper/NVAPIDisplayConfigTypes.cs
@@ -302,7 +302,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIDisplayConfigTypes.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: disableVirtualModeSupport
     path: ../NVAPIWrapper/NVAPIDisplayConfigTypes.cs
@@ -333,7 +333,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIDisplayConfigTypes.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: isPreferredUnscaledTarget
     path: ../NVAPIWrapper/NVAPIDisplayConfigTypes.cs
@@ -364,7 +364,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIDisplayConfigTypes.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: reserved
     path: ../NVAPIWrapper/NVAPIDisplayConfigTypes.cs
@@ -395,7 +395,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIDisplayConfigTypes.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: connector
     path: ../NVAPIWrapper/NVAPIDisplayConfigTypes.cs
@@ -424,7 +424,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIDisplayConfigTypes.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: tvFormat
     path: ../NVAPIWrapper/NVAPIDisplayConfigTypes.cs
@@ -453,7 +453,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIDisplayConfigTypes.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: timingOverride
     path: ../NVAPIWrapper/NVAPIDisplayConfigTypes.cs
@@ -482,7 +482,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIDisplayConfigTypes.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: timing
     path: ../NVAPIWrapper/NVAPIDisplayConfigTypes.cs

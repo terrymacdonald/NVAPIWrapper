@@ -19,7 +19,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_OGL_THREAD_CONTROL.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: EValues_OGL_THREAD_CONTROL
     path: ../NVAPIWrapper/cs_generated/EValues_OGL_THREAD_CONTROL.cs
@@ -45,7 +45,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_OGL_THREAD_CONTROL.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: OGL_THREAD_CONTROL_ENABLE
     path: ../NVAPIWrapper/cs_generated/EValues_OGL_THREAD_CONTROL.cs
@@ -72,7 +72,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_OGL_THREAD_CONTROL.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: OGL_THREAD_CONTROL_DISABLE
     path: ../NVAPIWrapper/cs_generated/EValues_OGL_THREAD_CONTROL.cs
@@ -99,7 +99,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_OGL_THREAD_CONTROL.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: OGL_THREAD_CONTROL_NUM_VALUES
     path: ../NVAPIWrapper/cs_generated/EValues_OGL_THREAD_CONTROL.cs
@@ -126,7 +126,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_OGL_THREAD_CONTROL.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: OGL_THREAD_CONTROL_DEFAULT
     path: ../NVAPIWrapper/cs_generated/EValues_OGL_THREAD_CONTROL.cs

@@ -48,7 +48,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AUDIO_CODINGEXTENSIONTYPE.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_INFOFRAME_FIELD_VALUE_AUDIO_CODINGEXTENSIONTYPE
     path: ../NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AUDIO_CODINGEXTENSIONTYPE.cs
@@ -74,7 +74,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AUDIO_CODINGEXTENSIONTYPE.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_INFOFRAME_FIELD_VALUE_AUDIO_CODINGEXTENSIONTYPE_USE_CODING_TYPE
     path: ../NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AUDIO_CODINGEXTENSIONTYPE.cs
@@ -101,7 +101,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AUDIO_CODINGEXTENSIONTYPE.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_INFOFRAME_FIELD_VALUE_AUDIO_CODINGEXTENSIONTYPE_HEAAC
     path: ../NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AUDIO_CODINGEXTENSIONTYPE.cs
@@ -128,7 +128,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AUDIO_CODINGEXTENSIONTYPE.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_INFOFRAME_FIELD_VALUE_AUDIO_CODINGEXTENSIONTYPE_HEAACV2
     path: ../NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AUDIO_CODINGEXTENSIONTYPE.cs
@@ -155,7 +155,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AUDIO_CODINGEXTENSIONTYPE.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_INFOFRAME_FIELD_VALUE_AUDIO_CODINGEXTENSIONTYPE_MPEGSURROUND
     path: ../NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AUDIO_CODINGEXTENSIONTYPE.cs
@@ -182,7 +182,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AUDIO_CODINGEXTENSIONTYPE.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_INFOFRAME_FIELD_VALUE_AUDIO_CODINGEXTENSIONTYPE_RESERVE04
     path: ../NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AUDIO_CODINGEXTENSIONTYPE.cs
@@ -209,7 +209,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AUDIO_CODINGEXTENSIONTYPE.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_INFOFRAME_FIELD_VALUE_AUDIO_CODINGEXTENSIONTYPE_RESERVE05
     path: ../NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AUDIO_CODINGEXTENSIONTYPE.cs
@@ -236,7 +236,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AUDIO_CODINGEXTENSIONTYPE.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_INFOFRAME_FIELD_VALUE_AUDIO_CODINGEXTENSIONTYPE_RESERVE06
     path: ../NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AUDIO_CODINGEXTENSIONTYPE.cs
@@ -263,7 +263,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AUDIO_CODINGEXTENSIONTYPE.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_INFOFRAME_FIELD_VALUE_AUDIO_CODINGEXTENSIONTYPE_RESERVE07
     path: ../NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AUDIO_CODINGEXTENSIONTYPE.cs
@@ -290,7 +290,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AUDIO_CODINGEXTENSIONTYPE.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_INFOFRAME_FIELD_VALUE_AUDIO_CODINGEXTENSIONTYPE_RESERVE08
     path: ../NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AUDIO_CODINGEXTENSIONTYPE.cs
@@ -317,7 +317,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AUDIO_CODINGEXTENSIONTYPE.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_INFOFRAME_FIELD_VALUE_AUDIO_CODINGEXTENSIONTYPE_RESERVE09
     path: ../NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AUDIO_CODINGEXTENSIONTYPE.cs
@@ -344,7 +344,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AUDIO_CODINGEXTENSIONTYPE.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_INFOFRAME_FIELD_VALUE_AUDIO_CODINGEXTENSIONTYPE_RESERVE10
     path: ../NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AUDIO_CODINGEXTENSIONTYPE.cs
@@ -371,7 +371,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AUDIO_CODINGEXTENSIONTYPE.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_INFOFRAME_FIELD_VALUE_AUDIO_CODINGEXTENSIONTYPE_RESERVE11
     path: ../NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AUDIO_CODINGEXTENSIONTYPE.cs
@@ -398,7 +398,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AUDIO_CODINGEXTENSIONTYPE.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_INFOFRAME_FIELD_VALUE_AUDIO_CODINGEXTENSIONTYPE_RESERVE12
     path: ../NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AUDIO_CODINGEXTENSIONTYPE.cs
@@ -425,7 +425,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AUDIO_CODINGEXTENSIONTYPE.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_INFOFRAME_FIELD_VALUE_AUDIO_CODINGEXTENSIONTYPE_RESERVE13
     path: ../NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AUDIO_CODINGEXTENSIONTYPE.cs
@@ -452,7 +452,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AUDIO_CODINGEXTENSIONTYPE.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_INFOFRAME_FIELD_VALUE_AUDIO_CODINGEXTENSIONTYPE_RESERVE14
     path: ../NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AUDIO_CODINGEXTENSIONTYPE.cs
@@ -479,7 +479,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AUDIO_CODINGEXTENSIONTYPE.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_INFOFRAME_FIELD_VALUE_AUDIO_CODINGEXTENSIONTYPE_RESERVE15
     path: ../NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AUDIO_CODINGEXTENSIONTYPE.cs
@@ -506,7 +506,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AUDIO_CODINGEXTENSIONTYPE.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_INFOFRAME_FIELD_VALUE_AUDIO_CODINGEXTENSIONTYPE_RESERVE16
     path: ../NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AUDIO_CODINGEXTENSIONTYPE.cs
@@ -533,7 +533,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AUDIO_CODINGEXTENSIONTYPE.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_INFOFRAME_FIELD_VALUE_AUDIO_CODINGEXTENSIONTYPE_RESERVE17
     path: ../NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AUDIO_CODINGEXTENSIONTYPE.cs
@@ -560,7 +560,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AUDIO_CODINGEXTENSIONTYPE.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_INFOFRAME_FIELD_VALUE_AUDIO_CODINGEXTENSIONTYPE_RESERVE18
     path: ../NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AUDIO_CODINGEXTENSIONTYPE.cs
@@ -587,7 +587,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AUDIO_CODINGEXTENSIONTYPE.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_INFOFRAME_FIELD_VALUE_AUDIO_CODINGEXTENSIONTYPE_RESERVE19
     path: ../NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AUDIO_CODINGEXTENSIONTYPE.cs
@@ -614,7 +614,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AUDIO_CODINGEXTENSIONTYPE.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_INFOFRAME_FIELD_VALUE_AUDIO_CODINGEXTENSIONTYPE_RESERVE20
     path: ../NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AUDIO_CODINGEXTENSIONTYPE.cs
@@ -641,7 +641,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AUDIO_CODINGEXTENSIONTYPE.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_INFOFRAME_FIELD_VALUE_AUDIO_CODINGEXTENSIONTYPE_RESERVE21
     path: ../NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AUDIO_CODINGEXTENSIONTYPE.cs
@@ -668,7 +668,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AUDIO_CODINGEXTENSIONTYPE.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_INFOFRAME_FIELD_VALUE_AUDIO_CODINGEXTENSIONTYPE_RESERVE22
     path: ../NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AUDIO_CODINGEXTENSIONTYPE.cs
@@ -695,7 +695,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AUDIO_CODINGEXTENSIONTYPE.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_INFOFRAME_FIELD_VALUE_AUDIO_CODINGEXTENSIONTYPE_RESERVE23
     path: ../NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AUDIO_CODINGEXTENSIONTYPE.cs
@@ -722,7 +722,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AUDIO_CODINGEXTENSIONTYPE.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_INFOFRAME_FIELD_VALUE_AUDIO_CODINGEXTENSIONTYPE_RESERVE24
     path: ../NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AUDIO_CODINGEXTENSIONTYPE.cs
@@ -749,7 +749,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AUDIO_CODINGEXTENSIONTYPE.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_INFOFRAME_FIELD_VALUE_AUDIO_CODINGEXTENSIONTYPE_RESERVE25
     path: ../NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AUDIO_CODINGEXTENSIONTYPE.cs
@@ -776,7 +776,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AUDIO_CODINGEXTENSIONTYPE.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_INFOFRAME_FIELD_VALUE_AUDIO_CODINGEXTENSIONTYPE_RESERVE26
     path: ../NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AUDIO_CODINGEXTENSIONTYPE.cs
@@ -803,7 +803,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AUDIO_CODINGEXTENSIONTYPE.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_INFOFRAME_FIELD_VALUE_AUDIO_CODINGEXTENSIONTYPE_RESERVE27
     path: ../NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AUDIO_CODINGEXTENSIONTYPE.cs
@@ -830,7 +830,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AUDIO_CODINGEXTENSIONTYPE.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_INFOFRAME_FIELD_VALUE_AUDIO_CODINGEXTENSIONTYPE_RESERVE28
     path: ../NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AUDIO_CODINGEXTENSIONTYPE.cs
@@ -857,7 +857,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AUDIO_CODINGEXTENSIONTYPE.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_INFOFRAME_FIELD_VALUE_AUDIO_CODINGEXTENSIONTYPE_RESERVE29
     path: ../NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AUDIO_CODINGEXTENSIONTYPE.cs
@@ -884,7 +884,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AUDIO_CODINGEXTENSIONTYPE.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_INFOFRAME_FIELD_VALUE_AUDIO_CODINGEXTENSIONTYPE_RESERVE30
     path: ../NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AUDIO_CODINGEXTENSIONTYPE.cs
@@ -911,7 +911,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AUDIO_CODINGEXTENSIONTYPE.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_INFOFRAME_FIELD_VALUE_AUDIO_CODINGEXTENSIONTYPE_RESERVE31
     path: ../NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AUDIO_CODINGEXTENSIONTYPE.cs
@@ -938,7 +938,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AUDIO_CODINGEXTENSIONTYPE.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_INFOFRAME_FIELD_VALUE_AUDIO_CODINGEXTENSIONTYPE_AUTO
     path: ../NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AUDIO_CODINGEXTENSIONTYPE.cs

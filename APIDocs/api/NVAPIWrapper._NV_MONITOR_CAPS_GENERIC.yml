@@ -24,7 +24,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_MONITOR_CAPS_GENERIC.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: _NV_MONITOR_CAPS_GENERIC
     path: ../NVAPIWrapper/cs_generated/_NV_MONITOR_CAPS_GENERIC.cs
@@ -57,7 +57,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_MONITOR_CAPS_GENERIC.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: _bitfield
     path: ../NVAPIWrapper/cs_generated/_NV_MONITOR_CAPS_GENERIC.cs
@@ -84,7 +84,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_MONITOR_CAPS_GENERIC.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: supportVRR
     path: ../NVAPIWrapper/cs_generated/_NV_MONITOR_CAPS_GENERIC.cs
@@ -114,7 +114,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_MONITOR_CAPS_GENERIC.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: supportULMB
     path: ../NVAPIWrapper/cs_generated/_NV_MONITOR_CAPS_GENERIC.cs
@@ -144,7 +144,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_MONITOR_CAPS_GENERIC.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: isTrueGsync
     path: ../NVAPIWrapper/cs_generated/_NV_MONITOR_CAPS_GENERIC.cs
@@ -174,7 +174,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_MONITOR_CAPS_GENERIC.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: isRLACapable
     path: ../NVAPIWrapper/cs_generated/_NV_MONITOR_CAPS_GENERIC.cs
@@ -204,7 +204,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_MONITOR_CAPS_GENERIC.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: currentlyCapableOfVRR
     path: ../NVAPIWrapper/cs_generated/_NV_MONITOR_CAPS_GENERIC.cs
@@ -234,7 +234,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_MONITOR_CAPS_GENERIC.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: isBasicVRR
     path: ../NVAPIWrapper/cs_generated/_NV_MONITOR_CAPS_GENERIC.cs
@@ -264,7 +264,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_MONITOR_CAPS_GENERIC.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: isBasicEdp
     path: ../NVAPIWrapper/cs_generated/_NV_MONITOR_CAPS_GENERIC.cs
@@ -294,7 +294,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_MONITOR_CAPS_GENERIC.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: reserved
     path: ../NVAPIWrapper/cs_generated/_NV_MONITOR_CAPS_GENERIC.cs

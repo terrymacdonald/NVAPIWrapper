@@ -29,7 +29,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPIGSyncDisplayDto
     path: ../NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
@@ -63,7 +63,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: DisplayId
     path: ../NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
@@ -92,7 +92,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: IsMasterable
     path: ../NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
@@ -121,7 +121,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: UseExactTiming
     path: ../NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
@@ -152,7 +152,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SyncState
     path: ../NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
@@ -181,7 +181,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: .ctor
     path: ../NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
@@ -222,7 +222,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: .ctor
     path: ../NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
@@ -266,7 +266,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: FromNative
     path: ../NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
@@ -301,7 +301,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: FromNative
     path: ../NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
@@ -342,7 +342,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: ToNative
     path: ../NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
@@ -373,7 +373,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Equals
     path: ../NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
@@ -410,7 +410,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Equals
     path: ../NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
@@ -449,7 +449,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetHashCode
     path: ../NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
@@ -481,7 +481,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: op_Equality
     path: ../NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
@@ -522,7 +522,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: op_Inequality
     path: ../NVAPIWrapper/NVAPIQuadroGSyncHelper.cs

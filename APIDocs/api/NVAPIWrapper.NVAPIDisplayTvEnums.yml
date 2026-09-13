@@ -15,7 +15,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIDisplayHelper.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPIDisplayTvEnums
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs

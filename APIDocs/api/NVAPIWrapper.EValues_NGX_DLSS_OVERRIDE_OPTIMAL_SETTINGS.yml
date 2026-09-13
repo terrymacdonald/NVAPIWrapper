@@ -19,7 +19,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_NGX_DLSS_OVERRIDE_OPTIMAL_SETTINGS.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: EValues_NGX_DLSS_OVERRIDE_OPTIMAL_SETTINGS
     path: ../NVAPIWrapper/cs_generated/EValues_NGX_DLSS_OVERRIDE_OPTIMAL_SETTINGS.cs
@@ -45,7 +45,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_NGX_DLSS_OVERRIDE_OPTIMAL_SETTINGS.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NGX_DLSS_OVERRIDE_OPTIMAL_SETTINGS_NGX_DLSS_OVERRIDE_OPTIMAL_SETTINGS_NONE
     path: ../NVAPIWrapper/cs_generated/EValues_NGX_DLSS_OVERRIDE_OPTIMAL_SETTINGS.cs
@@ -72,7 +72,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_NGX_DLSS_OVERRIDE_OPTIMAL_SETTINGS.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NGX_DLSS_OVERRIDE_OPTIMAL_SETTINGS_NGX_DLSS_OVERRIDE_OPTIMAL_SETTINGS_PERF_TO_9X
     path: ../NVAPIWrapper/cs_generated/EValues_NGX_DLSS_OVERRIDE_OPTIMAL_SETTINGS.cs
@@ -99,7 +99,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_NGX_DLSS_OVERRIDE_OPTIMAL_SETTINGS.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NGX_DLSS_OVERRIDE_OPTIMAL_SETTINGS_NUM_VALUES
     path: ../NVAPIWrapper/cs_generated/EValues_NGX_DLSS_OVERRIDE_OPTIMAL_SETTINGS.cs
@@ -126,7 +126,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_NGX_DLSS_OVERRIDE_OPTIMAL_SETTINGS.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NGX_DLSS_OVERRIDE_OPTIMAL_SETTINGS_DEFAULT
     path: ../NVAPIWrapper/cs_generated/EValues_NGX_DLSS_OVERRIDE_OPTIMAL_SETTINGS.cs

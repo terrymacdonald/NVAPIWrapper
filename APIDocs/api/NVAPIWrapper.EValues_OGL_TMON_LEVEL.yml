@@ -23,7 +23,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_OGL_TMON_LEVEL.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: EValues_OGL_TMON_LEVEL
     path: ../NVAPIWrapper/cs_generated/EValues_OGL_TMON_LEVEL.cs
@@ -49,7 +49,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_OGL_TMON_LEVEL.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: OGL_TMON_LEVEL_DISABLE
     path: ../NVAPIWrapper/cs_generated/EValues_OGL_TMON_LEVEL.cs
@@ -76,7 +76,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_OGL_TMON_LEVEL.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: OGL_TMON_LEVEL_CRITICAL
     path: ../NVAPIWrapper/cs_generated/EValues_OGL_TMON_LEVEL.cs
@@ -103,7 +103,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_OGL_TMON_LEVEL.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: OGL_TMON_LEVEL_WARNING
     path: ../NVAPIWrapper/cs_generated/EValues_OGL_TMON_LEVEL.cs
@@ -130,7 +130,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_OGL_TMON_LEVEL.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: OGL_TMON_LEVEL_INFORMATION
     path: ../NVAPIWrapper/cs_generated/EValues_OGL_TMON_LEVEL.cs
@@ -157,7 +157,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_OGL_TMON_LEVEL.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: OGL_TMON_LEVEL_MOST
     path: ../NVAPIWrapper/cs_generated/EValues_OGL_TMON_LEVEL.cs
@@ -184,7 +184,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_OGL_TMON_LEVEL.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: OGL_TMON_LEVEL_VERBOSE
     path: ../NVAPIWrapper/cs_generated/EValues_OGL_TMON_LEVEL.cs
@@ -211,7 +211,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_OGL_TMON_LEVEL.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: OGL_TMON_LEVEL_NUM_VALUES
     path: ../NVAPIWrapper/cs_generated/EValues_OGL_TMON_LEVEL.cs
@@ -238,7 +238,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_OGL_TMON_LEVEL.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: OGL_TMON_LEVEL_DEFAULT
     path: ../NVAPIWrapper/cs_generated/EValues_OGL_TMON_LEVEL.cs

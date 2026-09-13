@@ -17,7 +17,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOSIGNALFORMATDETAIL.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: _NVVIOSIGNALFORMATDETAIL
     path: ../NVAPIWrapper/cs_generated/_NVVIOSIGNALFORMATDETAIL.cs
@@ -50,7 +50,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOSIGNALFORMATDETAIL.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: signalFormat
     path: ../NVAPIWrapper/cs_generated/_NVVIOSIGNALFORMATDETAIL.cs
@@ -78,7 +78,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOSIGNALFORMATDETAIL.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: videoMode
     path: ../NVAPIWrapper/cs_generated/_NVVIOSIGNALFORMATDETAIL.cs

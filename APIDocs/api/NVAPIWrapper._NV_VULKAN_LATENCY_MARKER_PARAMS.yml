@@ -19,7 +19,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_VULKAN_LATENCY_MARKER_PARAMS.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: _NV_VULKAN_LATENCY_MARKER_PARAMS
     path: ../NVAPIWrapper/cs_generated/_NV_VULKAN_LATENCY_MARKER_PARAMS.cs
@@ -52,7 +52,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_VULKAN_LATENCY_MARKER_PARAMS.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: version
     path: ../NVAPIWrapper/cs_generated/_NV_VULKAN_LATENCY_MARKER_PARAMS.cs
@@ -80,7 +80,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_VULKAN_LATENCY_MARKER_PARAMS.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: frameID
     path: ../NVAPIWrapper/cs_generated/_NV_VULKAN_LATENCY_MARKER_PARAMS.cs
@@ -108,7 +108,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_VULKAN_LATENCY_MARKER_PARAMS.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: markerType
     path: ../NVAPIWrapper/cs_generated/_NV_VULKAN_LATENCY_MARKER_PARAMS.cs
@@ -136,7 +136,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_VULKAN_LATENCY_MARKER_PARAMS.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: rsvd
     path: ../NVAPIWrapper/cs_generated/_NV_VULKAN_LATENCY_MARKER_PARAMS.cs

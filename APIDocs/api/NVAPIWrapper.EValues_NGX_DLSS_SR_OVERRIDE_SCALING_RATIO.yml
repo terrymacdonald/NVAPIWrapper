@@ -19,7 +19,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_NGX_DLSS_SR_OVERRIDE_SCALING_RATIO.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: EValues_NGX_DLSS_SR_OVERRIDE_SCALING_RATIO
     path: ../NVAPIWrapper/cs_generated/EValues_NGX_DLSS_SR_OVERRIDE_SCALING_RATIO.cs
@@ -45,7 +45,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_NGX_DLSS_SR_OVERRIDE_SCALING_RATIO.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NGX_DLSS_SR_OVERRIDE_SCALING_RATIO_MIN
     path: ../NVAPIWrapper/cs_generated/EValues_NGX_DLSS_SR_OVERRIDE_SCALING_RATIO.cs
@@ -72,7 +72,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_NGX_DLSS_SR_OVERRIDE_SCALING_RATIO.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NGX_DLSS_SR_OVERRIDE_SCALING_RATIO_MAX
     path: ../NVAPIWrapper/cs_generated/EValues_NGX_DLSS_SR_OVERRIDE_SCALING_RATIO.cs
@@ -99,7 +99,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_NGX_DLSS_SR_OVERRIDE_SCALING_RATIO.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NGX_DLSS_SR_OVERRIDE_SCALING_RATIO_DEFAULT
     path: ../NVAPIWrapper/cs_generated/EValues_NGX_DLSS_SR_OVERRIDE_SCALING_RATIO.cs
@@ -126,7 +126,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_NGX_DLSS_SR_OVERRIDE_SCALING_RATIO.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NGX_DLSS_SR_OVERRIDE_SCALING_RATIO_NUM_VALUES
     path: ../NVAPIWrapper/cs_generated/EValues_NGX_DLSS_SR_OVERRIDE_SCALING_RATIO.cs

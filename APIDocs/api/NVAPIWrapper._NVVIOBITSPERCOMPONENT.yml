@@ -19,7 +19,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOBITSPERCOMPONENT.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: _NVVIOBITSPERCOMPONENT
     path: ../NVAPIWrapper/cs_generated/_NVVIOBITSPERCOMPONENT.cs
@@ -45,7 +45,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOBITSPERCOMPONENT.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVVIOBITSPERCOMPONENT_UNKNOWN
     path: ../NVAPIWrapper/cs_generated/_NVVIOBITSPERCOMPONENT.cs
@@ -72,7 +72,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOBITSPERCOMPONENT.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVVIOBITSPERCOMPONENT_8
     path: ../NVAPIWrapper/cs_generated/_NVVIOBITSPERCOMPONENT.cs
@@ -99,7 +99,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOBITSPERCOMPONENT.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVVIOBITSPERCOMPONENT_10
     path: ../NVAPIWrapper/cs_generated/_NVVIOBITSPERCOMPONENT.cs
@@ -126,7 +126,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOBITSPERCOMPONENT.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVVIOBITSPERCOMPONENT_12
     path: ../NVAPIWrapper/cs_generated/_NVVIOBITSPERCOMPONENT.cs

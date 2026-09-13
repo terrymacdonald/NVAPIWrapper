@@ -42,7 +42,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_INFOFRAME_VIDEO.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_INFOFRAME_VIDEO
     path: ../NVAPIWrapper/cs_generated/NV_INFOFRAME_VIDEO.cs
@@ -75,7 +75,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_INFOFRAME_VIDEO.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: _bitfield1
     path: ../NVAPIWrapper/cs_generated/NV_INFOFRAME_VIDEO.cs
@@ -102,7 +102,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_INFOFRAME_VIDEO.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: vic
     path: ../NVAPIWrapper/cs_generated/NV_INFOFRAME_VIDEO.cs
@@ -132,7 +132,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_INFOFRAME_VIDEO.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: pixelRepeat
     path: ../NVAPIWrapper/cs_generated/NV_INFOFRAME_VIDEO.cs
@@ -162,7 +162,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_INFOFRAME_VIDEO.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: colorSpace
     path: ../NVAPIWrapper/cs_generated/NV_INFOFRAME_VIDEO.cs
@@ -192,7 +192,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_INFOFRAME_VIDEO.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: colorimetry
     path: ../NVAPIWrapper/cs_generated/NV_INFOFRAME_VIDEO.cs
@@ -222,7 +222,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_INFOFRAME_VIDEO.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: extendedColorimetry
     path: ../NVAPIWrapper/cs_generated/NV_INFOFRAME_VIDEO.cs
@@ -252,7 +252,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_INFOFRAME_VIDEO.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: rgbQuantizationRange
     path: ../NVAPIWrapper/cs_generated/NV_INFOFRAME_VIDEO.cs
@@ -282,7 +282,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_INFOFRAME_VIDEO.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: yccQuantizationRange
     path: ../NVAPIWrapper/cs_generated/NV_INFOFRAME_VIDEO.cs
@@ -312,7 +312,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_INFOFRAME_VIDEO.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: itContent
     path: ../NVAPIWrapper/cs_generated/NV_INFOFRAME_VIDEO.cs
@@ -342,7 +342,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_INFOFRAME_VIDEO.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: _bitfield2
     path: ../NVAPIWrapper/cs_generated/NV_INFOFRAME_VIDEO.cs
@@ -369,7 +369,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_INFOFRAME_VIDEO.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: contentTypes
     path: ../NVAPIWrapper/cs_generated/NV_INFOFRAME_VIDEO.cs
@@ -399,7 +399,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_INFOFRAME_VIDEO.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: scanInfo
     path: ../NVAPIWrapper/cs_generated/NV_INFOFRAME_VIDEO.cs
@@ -429,7 +429,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_INFOFRAME_VIDEO.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: activeFormatInfoPresent
     path: ../NVAPIWrapper/cs_generated/NV_INFOFRAME_VIDEO.cs
@@ -459,7 +459,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_INFOFRAME_VIDEO.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: activeFormatAspectRatio
     path: ../NVAPIWrapper/cs_generated/NV_INFOFRAME_VIDEO.cs
@@ -489,7 +489,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_INFOFRAME_VIDEO.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: picAspectRatio
     path: ../NVAPIWrapper/cs_generated/NV_INFOFRAME_VIDEO.cs
@@ -519,7 +519,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_INFOFRAME_VIDEO.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: nonuniformScaling
     path: ../NVAPIWrapper/cs_generated/NV_INFOFRAME_VIDEO.cs
@@ -549,7 +549,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_INFOFRAME_VIDEO.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: barInfo
     path: ../NVAPIWrapper/cs_generated/NV_INFOFRAME_VIDEO.cs
@@ -579,7 +579,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_INFOFRAME_VIDEO.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: _bitfield3
     path: ../NVAPIWrapper/cs_generated/NV_INFOFRAME_VIDEO.cs
@@ -606,7 +606,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_INFOFRAME_VIDEO.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: top_bar
     path: ../NVAPIWrapper/cs_generated/NV_INFOFRAME_VIDEO.cs
@@ -636,7 +636,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_INFOFRAME_VIDEO.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: _bitfield4
     path: ../NVAPIWrapper/cs_generated/NV_INFOFRAME_VIDEO.cs
@@ -663,7 +663,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_INFOFRAME_VIDEO.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: bottom_bar
     path: ../NVAPIWrapper/cs_generated/NV_INFOFRAME_VIDEO.cs
@@ -693,7 +693,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_INFOFRAME_VIDEO.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: _bitfield5
     path: ../NVAPIWrapper/cs_generated/NV_INFOFRAME_VIDEO.cs
@@ -720,7 +720,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_INFOFRAME_VIDEO.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: left_bar
     path: ../NVAPIWrapper/cs_generated/NV_INFOFRAME_VIDEO.cs
@@ -750,7 +750,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_INFOFRAME_VIDEO.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: _bitfield6
     path: ../NVAPIWrapper/cs_generated/NV_INFOFRAME_VIDEO.cs
@@ -777,7 +777,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_INFOFRAME_VIDEO.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: right_bar
     path: ../NVAPIWrapper/cs_generated/NV_INFOFRAME_VIDEO.cs
@@ -807,7 +807,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_INFOFRAME_VIDEO.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Future17
     path: ../NVAPIWrapper/cs_generated/NV_INFOFRAME_VIDEO.cs
@@ -837,7 +837,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_INFOFRAME_VIDEO.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Future47
     path: ../NVAPIWrapper/cs_generated/NV_INFOFRAME_VIDEO.cs

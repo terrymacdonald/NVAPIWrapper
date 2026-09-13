@@ -19,7 +19,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_AO_MODE_ACTIVE.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: EValues_AO_MODE_ACTIVE
     path: ../NVAPIWrapper/cs_generated/EValues_AO_MODE_ACTIVE.cs
@@ -45,7 +45,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_AO_MODE_ACTIVE.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: AO_MODE_ACTIVE_DISABLED
     path: ../NVAPIWrapper/cs_generated/EValues_AO_MODE_ACTIVE.cs
@@ -72,7 +72,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_AO_MODE_ACTIVE.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: AO_MODE_ACTIVE_ENABLED
     path: ../NVAPIWrapper/cs_generated/EValues_AO_MODE_ACTIVE.cs
@@ -99,7 +99,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_AO_MODE_ACTIVE.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: AO_MODE_ACTIVE_NUM_VALUES
     path: ../NVAPIWrapper/cs_generated/EValues_AO_MODE_ACTIVE.cs
@@ -126,7 +126,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_AO_MODE_ACTIVE.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: AO_MODE_ACTIVE_DEFAULT
     path: ../NVAPIWrapper/cs_generated/EValues_AO_MODE_ACTIVE.cs

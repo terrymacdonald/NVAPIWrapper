@@ -19,7 +19,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_GPU_CLOCK_FREQUENCIES_V1.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: _domain_e__Struct
     path: ../NVAPIWrapper/cs_generated/NV_GPU_CLOCK_FREQUENCIES_V1.cs
@@ -52,7 +52,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_GPU_CLOCK_FREQUENCIES_V1.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: _bitfield
     path: ../NVAPIWrapper/cs_generated/NV_GPU_CLOCK_FREQUENCIES_V1.cs
@@ -79,7 +79,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_GPU_CLOCK_FREQUENCIES_V1.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: bIsPresent
     path: ../NVAPIWrapper/cs_generated/NV_GPU_CLOCK_FREQUENCIES_V1.cs
@@ -109,7 +109,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_GPU_CLOCK_FREQUENCIES_V1.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: reserved
     path: ../NVAPIWrapper/cs_generated/NV_GPU_CLOCK_FREQUENCIES_V1.cs
@@ -139,7 +139,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_GPU_CLOCK_FREQUENCIES_V1.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: frequency
     path: ../NVAPIWrapper/cs_generated/NV_GPU_CLOCK_FREQUENCIES_V1.cs

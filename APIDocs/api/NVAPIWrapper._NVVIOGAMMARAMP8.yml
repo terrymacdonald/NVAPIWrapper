@@ -18,7 +18,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOGAMMARAMP8.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: _NVVIOGAMMARAMP8
     path: ../NVAPIWrapper/cs_generated/_NVVIOGAMMARAMP8.cs
@@ -51,7 +51,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOGAMMARAMP8.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: uRed
     path: ../NVAPIWrapper/cs_generated/_NVVIOGAMMARAMP8.cs
@@ -79,7 +79,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOGAMMARAMP8.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: uGreen
     path: ../NVAPIWrapper/cs_generated/_NVVIOGAMMARAMP8.cs
@@ -107,7 +107,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOGAMMARAMP8.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: uBlue
     path: ../NVAPIWrapper/cs_generated/_NVVIOGAMMARAMP8.cs

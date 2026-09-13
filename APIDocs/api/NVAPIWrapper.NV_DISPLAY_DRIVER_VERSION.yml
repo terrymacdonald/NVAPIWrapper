@@ -20,7 +20,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_DISPLAY_DRIVER_VERSION.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_DISPLAY_DRIVER_VERSION
     path: ../NVAPIWrapper/cs_generated/NV_DISPLAY_DRIVER_VERSION.cs
@@ -53,7 +53,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_DISPLAY_DRIVER_VERSION.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: version
     path: ../NVAPIWrapper/cs_generated/NV_DISPLAY_DRIVER_VERSION.cs
@@ -81,7 +81,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_DISPLAY_DRIVER_VERSION.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: drvVersion
     path: ../NVAPIWrapper/cs_generated/NV_DISPLAY_DRIVER_VERSION.cs
@@ -109,7 +109,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_DISPLAY_DRIVER_VERSION.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: bldChangeListNum
     path: ../NVAPIWrapper/cs_generated/NV_DISPLAY_DRIVER_VERSION.cs
@@ -137,7 +137,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_DISPLAY_DRIVER_VERSION.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: szBuildBranchString
     path: ../NVAPIWrapper/cs_generated/NV_DISPLAY_DRIVER_VERSION.cs
@@ -165,7 +165,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_DISPLAY_DRIVER_VERSION.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: szAdapterString
     path: ../NVAPIWrapper/cs_generated/NV_DISPLAY_DRIVER_VERSION.cs

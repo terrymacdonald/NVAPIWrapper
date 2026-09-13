@@ -19,7 +19,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_PRESENT_BARRIER_SYNC_MODE.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: _NV_PRESENT_BARRIER_SYNC_MODE
     path: ../NVAPIWrapper/cs_generated/_NV_PRESENT_BARRIER_SYNC_MODE.cs
@@ -45,7 +45,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_PRESENT_BARRIER_SYNC_MODE.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: PRESENT_BARRIER_NOT_JOINED
     path: ../NVAPIWrapper/cs_generated/_NV_PRESENT_BARRIER_SYNC_MODE.cs
@@ -72,7 +72,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_PRESENT_BARRIER_SYNC_MODE.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: PRESENT_BARRIER_SYNC_CLIENT
     path: ../NVAPIWrapper/cs_generated/_NV_PRESENT_BARRIER_SYNC_MODE.cs
@@ -99,7 +99,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_PRESENT_BARRIER_SYNC_MODE.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: PRESENT_BARRIER_SYNC_SYSTEM
     path: ../NVAPIWrapper/cs_generated/_NV_PRESENT_BARRIER_SYNC_MODE.cs
@@ -126,7 +126,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_PRESENT_BARRIER_SYNC_MODE.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: PRESENT_BARRIER_SYNC_CLUSTER
     path: ../NVAPIWrapper/cs_generated/_NV_PRESENT_BARRIER_SYNC_MODE.cs

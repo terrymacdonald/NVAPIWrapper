@@ -17,7 +17,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOCONFIGTYPE.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: _NVVIOCONFIGTYPE
     path: ../NVAPIWrapper/cs_generated/_NVVIOCONFIGTYPE.cs
@@ -43,7 +43,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOCONFIGTYPE.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVVIOCONFIGTYPE_IN
     path: ../NVAPIWrapper/cs_generated/_NVVIOCONFIGTYPE.cs
@@ -70,7 +70,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOCONFIGTYPE.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVVIOCONFIGTYPE_OUT
     path: ../NVAPIWrapper/cs_generated/_NVVIOCONFIGTYPE.cs

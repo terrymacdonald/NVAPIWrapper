@@ -22,7 +22,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_LID_DOCK_PARAMS.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_LID_DOCK_PARAMS
     path: ../NVAPIWrapper/cs_generated/NV_LID_DOCK_PARAMS.cs
@@ -55,7 +55,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_LID_DOCK_PARAMS.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: version
     path: ../NVAPIWrapper/cs_generated/NV_LID_DOCK_PARAMS.cs
@@ -83,7 +83,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_LID_DOCK_PARAMS.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: currentLidState
     path: ../NVAPIWrapper/cs_generated/NV_LID_DOCK_PARAMS.cs
@@ -111,7 +111,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_LID_DOCK_PARAMS.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: currentDockState
     path: ../NVAPIWrapper/cs_generated/NV_LID_DOCK_PARAMS.cs
@@ -139,7 +139,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_LID_DOCK_PARAMS.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: currentLidPolicy
     path: ../NVAPIWrapper/cs_generated/NV_LID_DOCK_PARAMS.cs
@@ -167,7 +167,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_LID_DOCK_PARAMS.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: currentDockPolicy
     path: ../NVAPIWrapper/cs_generated/NV_LID_DOCK_PARAMS.cs
@@ -195,7 +195,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_LID_DOCK_PARAMS.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: forcedLidMechanismPresent
     path: ../NVAPIWrapper/cs_generated/NV_LID_DOCK_PARAMS.cs
@@ -223,7 +223,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_LID_DOCK_PARAMS.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: forcedDockMechanismPresent
     path: ../NVAPIWrapper/cs_generated/NV_LID_DOCK_PARAMS.cs

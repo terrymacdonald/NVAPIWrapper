@@ -35,7 +35,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIMosaicHelper.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPIMosaicHelper
     path: ../NVAPIWrapper/NVAPIMosaicHelper.cs
@@ -73,7 +73,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIMosaicHelper.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: CreateSupportedTopoInfo
     path: ../NVAPIWrapper/NVAPIMosaicHelper.cs
@@ -103,7 +103,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIMosaicHelper.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: CreateTopoBrief
     path: ../NVAPIWrapper/NVAPIMosaicHelper.cs
@@ -133,7 +133,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIMosaicHelper.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: CreateDisplaySetting
     path: ../NVAPIWrapper/NVAPIMosaicHelper.cs
@@ -163,7 +163,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIMosaicHelper.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: CreateTopoGroup
     path: ../NVAPIWrapper/NVAPIMosaicHelper.cs
@@ -193,7 +193,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIMosaicHelper.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: CreateGridTopology
     path: ../NVAPIWrapper/NVAPIMosaicHelper.cs
@@ -223,7 +223,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIMosaicHelper.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: CreateDisplayTopoStatus
     path: ../NVAPIWrapper/NVAPIMosaicHelper.cs
@@ -253,7 +253,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIMosaicHelper.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetSupportedTopoInfo
     path: ../NVAPIWrapper/NVAPIMosaicHelper.cs
@@ -288,7 +288,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIMosaicHelper.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetTopoGroup
     path: ../NVAPIWrapper/NVAPIMosaicHelper.cs
@@ -323,7 +323,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIMosaicHelper.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetOverlapLimits
     path: ../NVAPIWrapper/NVAPIMosaicHelper.cs
@@ -361,7 +361,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIMosaicHelper.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SetCurrentTopo
     path: ../NVAPIWrapper/NVAPIMosaicHelper.cs
@@ -411,7 +411,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIMosaicHelper.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetCurrentTopo
     path: ../NVAPIWrapper/NVAPIMosaicHelper.cs
@@ -442,7 +442,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIMosaicHelper.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: EnableCurrentTopo
     path: ../NVAPIWrapper/NVAPIMosaicHelper.cs
@@ -480,7 +480,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIMosaicHelper.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetDisplayViewportsByResolution
     path: ../NVAPIWrapper/NVAPIMosaicHelper.cs
@@ -524,7 +524,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIMosaicHelper.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SetDisplayGrids
     path: ../NVAPIWrapper/NVAPIMosaicHelper.cs
@@ -565,7 +565,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIMosaicHelper.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: ValidateDisplayGrids
     path: ../NVAPIWrapper/NVAPIMosaicHelper.cs
@@ -606,7 +606,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIMosaicHelper.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: EnumDisplayModes
     path: ../NVAPIWrapper/NVAPIMosaicHelper.cs
@@ -641,7 +641,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIMosaicHelper.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: EnumDisplayGrids
     path: ../NVAPIWrapper/NVAPIMosaicHelper.cs
@@ -672,7 +672,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIMosaicHelper.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetLogicalGpus
     path: ../NVAPIWrapper/NVAPIMosaicHelper.cs
@@ -707,7 +707,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIMosaicHelper.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetPhysicalGpus
     path: ../NVAPIWrapper/NVAPIMosaicHelper.cs
@@ -742,7 +742,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIMosaicHelper.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Dispose
     path: ../NVAPIWrapper/NVAPIMosaicHelper.cs

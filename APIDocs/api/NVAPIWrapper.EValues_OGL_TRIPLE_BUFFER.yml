@@ -19,7 +19,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_OGL_TRIPLE_BUFFER.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: EValues_OGL_TRIPLE_BUFFER
     path: ../NVAPIWrapper/cs_generated/EValues_OGL_TRIPLE_BUFFER.cs
@@ -45,7 +45,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_OGL_TRIPLE_BUFFER.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: OGL_TRIPLE_BUFFER_DISABLED
     path: ../NVAPIWrapper/cs_generated/EValues_OGL_TRIPLE_BUFFER.cs
@@ -72,7 +72,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_OGL_TRIPLE_BUFFER.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: OGL_TRIPLE_BUFFER_ENABLED
     path: ../NVAPIWrapper/cs_generated/EValues_OGL_TRIPLE_BUFFER.cs
@@ -99,7 +99,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_OGL_TRIPLE_BUFFER.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: OGL_TRIPLE_BUFFER_NUM_VALUES
     path: ../NVAPIWrapper/cs_generated/EValues_OGL_TRIPLE_BUFFER.cs
@@ -126,7 +126,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_OGL_TRIPLE_BUFFER.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: OGL_TRIPLE_BUFFER_DEFAULT
     path: ../NVAPIWrapper/cs_generated/EValues_OGL_TRIPLE_BUFFER.cs

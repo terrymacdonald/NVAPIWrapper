@@ -20,7 +20,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NVAPI_VSYNC_MODE.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_VSYNC_MODE
     path: ../NVAPIWrapper/cs_generated/NVAPI_VSYNC_MODE.cs
@@ -46,7 +46,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NVAPI_VSYNC_MODE.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_VSYNC_DEFAULT
     path: ../NVAPIWrapper/cs_generated/NVAPI_VSYNC_MODE.cs
@@ -73,7 +73,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NVAPI_VSYNC_MODE.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_VSYNC_OFF
     path: ../NVAPIWrapper/cs_generated/NVAPI_VSYNC_MODE.cs
@@ -100,7 +100,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NVAPI_VSYNC_MODE.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_VSYNC_ON
     path: ../NVAPIWrapper/cs_generated/NVAPI_VSYNC_MODE.cs
@@ -127,7 +127,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NVAPI_VSYNC_MODE.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_VSYNC_ADAPTIVE
     path: ../NVAPIWrapper/cs_generated/NVAPI_VSYNC_MODE.cs
@@ -154,7 +154,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NVAPI_VSYNC_MODE.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_VSYNC_ADAPTIVE_HALF_REFRESH_RATE
     path: ../NVAPIWrapper/cs_generated/NVAPI_VSYNC_MODE.cs

@@ -18,7 +18,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVAPI_GSYNC_MULTIPLY_DIVIDE_MODE.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: _NVAPI_GSYNC_MULTIPLY_DIVIDE_MODE
     path: ../NVAPIWrapper/cs_generated/_NVAPI_GSYNC_MULTIPLY_DIVIDE_MODE.cs
@@ -44,7 +44,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVAPI_GSYNC_MULTIPLY_DIVIDE_MODE.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_GSYNC_UNDEFINED_MODE
     path: ../NVAPIWrapper/cs_generated/_NVAPI_GSYNC_MULTIPLY_DIVIDE_MODE.cs
@@ -71,7 +71,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVAPI_GSYNC_MULTIPLY_DIVIDE_MODE.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_GSYNC_MULTIPLY_MODE
     path: ../NVAPIWrapper/cs_generated/_NVAPI_GSYNC_MULTIPLY_DIVIDE_MODE.cs
@@ -98,7 +98,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVAPI_GSYNC_MULTIPLY_DIVIDE_MODE.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_GSYNC_DIVIDE_MODE
     path: ../NVAPIWrapper/cs_generated/_NVAPI_GSYNC_MULTIPLY_DIVIDE_MODE.cs

@@ -80,7 +80,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_LOGICAL_GPU_DATA_V1.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: _physicalGpuHandles_e__FixedBuffer
     path: ../NVAPIWrapper/cs_generated/_NV_LOGICAL_GPU_DATA_V1.cs
@@ -113,7 +113,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_LOGICAL_GPU_DATA_V1.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: e0
     path: ../NVAPIWrapper/cs_generated/_NV_LOGICAL_GPU_DATA_V1.cs
@@ -140,7 +140,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_LOGICAL_GPU_DATA_V1.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: e1
     path: ../NVAPIWrapper/cs_generated/_NV_LOGICAL_GPU_DATA_V1.cs
@@ -167,7 +167,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_LOGICAL_GPU_DATA_V1.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: e2
     path: ../NVAPIWrapper/cs_generated/_NV_LOGICAL_GPU_DATA_V1.cs
@@ -194,7 +194,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_LOGICAL_GPU_DATA_V1.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: e3
     path: ../NVAPIWrapper/cs_generated/_NV_LOGICAL_GPU_DATA_V1.cs
@@ -221,7 +221,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_LOGICAL_GPU_DATA_V1.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: e4
     path: ../NVAPIWrapper/cs_generated/_NV_LOGICAL_GPU_DATA_V1.cs
@@ -248,7 +248,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_LOGICAL_GPU_DATA_V1.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: e5
     path: ../NVAPIWrapper/cs_generated/_NV_LOGICAL_GPU_DATA_V1.cs
@@ -275,7 +275,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_LOGICAL_GPU_DATA_V1.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: e6
     path: ../NVAPIWrapper/cs_generated/_NV_LOGICAL_GPU_DATA_V1.cs
@@ -302,7 +302,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_LOGICAL_GPU_DATA_V1.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: e7
     path: ../NVAPIWrapper/cs_generated/_NV_LOGICAL_GPU_DATA_V1.cs
@@ -329,7 +329,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_LOGICAL_GPU_DATA_V1.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: e8
     path: ../NVAPIWrapper/cs_generated/_NV_LOGICAL_GPU_DATA_V1.cs
@@ -356,7 +356,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_LOGICAL_GPU_DATA_V1.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: e9
     path: ../NVAPIWrapper/cs_generated/_NV_LOGICAL_GPU_DATA_V1.cs
@@ -383,7 +383,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_LOGICAL_GPU_DATA_V1.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: e10
     path: ../NVAPIWrapper/cs_generated/_NV_LOGICAL_GPU_DATA_V1.cs
@@ -410,7 +410,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_LOGICAL_GPU_DATA_V1.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: e11
     path: ../NVAPIWrapper/cs_generated/_NV_LOGICAL_GPU_DATA_V1.cs
@@ -437,7 +437,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_LOGICAL_GPU_DATA_V1.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: e12
     path: ../NVAPIWrapper/cs_generated/_NV_LOGICAL_GPU_DATA_V1.cs
@@ -464,7 +464,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_LOGICAL_GPU_DATA_V1.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: e13
     path: ../NVAPIWrapper/cs_generated/_NV_LOGICAL_GPU_DATA_V1.cs
@@ -491,7 +491,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_LOGICAL_GPU_DATA_V1.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: e14
     path: ../NVAPIWrapper/cs_generated/_NV_LOGICAL_GPU_DATA_V1.cs
@@ -518,7 +518,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_LOGICAL_GPU_DATA_V1.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: e15
     path: ../NVAPIWrapper/cs_generated/_NV_LOGICAL_GPU_DATA_V1.cs
@@ -545,7 +545,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_LOGICAL_GPU_DATA_V1.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: e16
     path: ../NVAPIWrapper/cs_generated/_NV_LOGICAL_GPU_DATA_V1.cs
@@ -572,7 +572,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_LOGICAL_GPU_DATA_V1.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: e17
     path: ../NVAPIWrapper/cs_generated/_NV_LOGICAL_GPU_DATA_V1.cs
@@ -599,7 +599,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_LOGICAL_GPU_DATA_V1.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: e18
     path: ../NVAPIWrapper/cs_generated/_NV_LOGICAL_GPU_DATA_V1.cs
@@ -626,7 +626,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_LOGICAL_GPU_DATA_V1.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: e19
     path: ../NVAPIWrapper/cs_generated/_NV_LOGICAL_GPU_DATA_V1.cs
@@ -653,7 +653,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_LOGICAL_GPU_DATA_V1.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: e20
     path: ../NVAPIWrapper/cs_generated/_NV_LOGICAL_GPU_DATA_V1.cs
@@ -680,7 +680,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_LOGICAL_GPU_DATA_V1.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: e21
     path: ../NVAPIWrapper/cs_generated/_NV_LOGICAL_GPU_DATA_V1.cs
@@ -707,7 +707,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_LOGICAL_GPU_DATA_V1.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: e22
     path: ../NVAPIWrapper/cs_generated/_NV_LOGICAL_GPU_DATA_V1.cs
@@ -734,7 +734,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_LOGICAL_GPU_DATA_V1.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: e23
     path: ../NVAPIWrapper/cs_generated/_NV_LOGICAL_GPU_DATA_V1.cs
@@ -761,7 +761,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_LOGICAL_GPU_DATA_V1.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: e24
     path: ../NVAPIWrapper/cs_generated/_NV_LOGICAL_GPU_DATA_V1.cs
@@ -788,7 +788,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_LOGICAL_GPU_DATA_V1.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: e25
     path: ../NVAPIWrapper/cs_generated/_NV_LOGICAL_GPU_DATA_V1.cs
@@ -815,7 +815,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_LOGICAL_GPU_DATA_V1.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: e26
     path: ../NVAPIWrapper/cs_generated/_NV_LOGICAL_GPU_DATA_V1.cs
@@ -842,7 +842,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_LOGICAL_GPU_DATA_V1.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: e27
     path: ../NVAPIWrapper/cs_generated/_NV_LOGICAL_GPU_DATA_V1.cs
@@ -869,7 +869,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_LOGICAL_GPU_DATA_V1.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: e28
     path: ../NVAPIWrapper/cs_generated/_NV_LOGICAL_GPU_DATA_V1.cs
@@ -896,7 +896,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_LOGICAL_GPU_DATA_V1.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: e29
     path: ../NVAPIWrapper/cs_generated/_NV_LOGICAL_GPU_DATA_V1.cs
@@ -923,7 +923,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_LOGICAL_GPU_DATA_V1.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: e30
     path: ../NVAPIWrapper/cs_generated/_NV_LOGICAL_GPU_DATA_V1.cs
@@ -950,7 +950,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_LOGICAL_GPU_DATA_V1.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: e31
     path: ../NVAPIWrapper/cs_generated/_NV_LOGICAL_GPU_DATA_V1.cs
@@ -977,7 +977,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_LOGICAL_GPU_DATA_V1.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: e32
     path: ../NVAPIWrapper/cs_generated/_NV_LOGICAL_GPU_DATA_V1.cs
@@ -1004,7 +1004,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_LOGICAL_GPU_DATA_V1.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: e33
     path: ../NVAPIWrapper/cs_generated/_NV_LOGICAL_GPU_DATA_V1.cs
@@ -1031,7 +1031,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_LOGICAL_GPU_DATA_V1.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: e34
     path: ../NVAPIWrapper/cs_generated/_NV_LOGICAL_GPU_DATA_V1.cs
@@ -1058,7 +1058,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_LOGICAL_GPU_DATA_V1.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: e35
     path: ../NVAPIWrapper/cs_generated/_NV_LOGICAL_GPU_DATA_V1.cs
@@ -1085,7 +1085,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_LOGICAL_GPU_DATA_V1.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: e36
     path: ../NVAPIWrapper/cs_generated/_NV_LOGICAL_GPU_DATA_V1.cs
@@ -1112,7 +1112,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_LOGICAL_GPU_DATA_V1.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: e37
     path: ../NVAPIWrapper/cs_generated/_NV_LOGICAL_GPU_DATA_V1.cs
@@ -1139,7 +1139,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_LOGICAL_GPU_DATA_V1.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: e38
     path: ../NVAPIWrapper/cs_generated/_NV_LOGICAL_GPU_DATA_V1.cs
@@ -1166,7 +1166,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_LOGICAL_GPU_DATA_V1.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: e39
     path: ../NVAPIWrapper/cs_generated/_NV_LOGICAL_GPU_DATA_V1.cs
@@ -1193,7 +1193,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_LOGICAL_GPU_DATA_V1.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: e40
     path: ../NVAPIWrapper/cs_generated/_NV_LOGICAL_GPU_DATA_V1.cs
@@ -1220,7 +1220,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_LOGICAL_GPU_DATA_V1.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: e41
     path: ../NVAPIWrapper/cs_generated/_NV_LOGICAL_GPU_DATA_V1.cs
@@ -1247,7 +1247,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_LOGICAL_GPU_DATA_V1.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: e42
     path: ../NVAPIWrapper/cs_generated/_NV_LOGICAL_GPU_DATA_V1.cs
@@ -1274,7 +1274,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_LOGICAL_GPU_DATA_V1.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: e43
     path: ../NVAPIWrapper/cs_generated/_NV_LOGICAL_GPU_DATA_V1.cs
@@ -1301,7 +1301,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_LOGICAL_GPU_DATA_V1.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: e44
     path: ../NVAPIWrapper/cs_generated/_NV_LOGICAL_GPU_DATA_V1.cs
@@ -1328,7 +1328,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_LOGICAL_GPU_DATA_V1.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: e45
     path: ../NVAPIWrapper/cs_generated/_NV_LOGICAL_GPU_DATA_V1.cs
@@ -1355,7 +1355,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_LOGICAL_GPU_DATA_V1.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: e46
     path: ../NVAPIWrapper/cs_generated/_NV_LOGICAL_GPU_DATA_V1.cs
@@ -1382,7 +1382,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_LOGICAL_GPU_DATA_V1.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: e47
     path: ../NVAPIWrapper/cs_generated/_NV_LOGICAL_GPU_DATA_V1.cs
@@ -1409,7 +1409,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_LOGICAL_GPU_DATA_V1.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: e48
     path: ../NVAPIWrapper/cs_generated/_NV_LOGICAL_GPU_DATA_V1.cs
@@ -1436,7 +1436,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_LOGICAL_GPU_DATA_V1.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: e49
     path: ../NVAPIWrapper/cs_generated/_NV_LOGICAL_GPU_DATA_V1.cs
@@ -1463,7 +1463,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_LOGICAL_GPU_DATA_V1.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: e50
     path: ../NVAPIWrapper/cs_generated/_NV_LOGICAL_GPU_DATA_V1.cs
@@ -1490,7 +1490,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_LOGICAL_GPU_DATA_V1.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: e51
     path: ../NVAPIWrapper/cs_generated/_NV_LOGICAL_GPU_DATA_V1.cs
@@ -1517,7 +1517,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_LOGICAL_GPU_DATA_V1.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: e52
     path: ../NVAPIWrapper/cs_generated/_NV_LOGICAL_GPU_DATA_V1.cs
@@ -1544,7 +1544,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_LOGICAL_GPU_DATA_V1.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: e53
     path: ../NVAPIWrapper/cs_generated/_NV_LOGICAL_GPU_DATA_V1.cs
@@ -1571,7 +1571,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_LOGICAL_GPU_DATA_V1.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: e54
     path: ../NVAPIWrapper/cs_generated/_NV_LOGICAL_GPU_DATA_V1.cs
@@ -1598,7 +1598,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_LOGICAL_GPU_DATA_V1.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: e55
     path: ../NVAPIWrapper/cs_generated/_NV_LOGICAL_GPU_DATA_V1.cs
@@ -1625,7 +1625,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_LOGICAL_GPU_DATA_V1.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: e56
     path: ../NVAPIWrapper/cs_generated/_NV_LOGICAL_GPU_DATA_V1.cs
@@ -1652,7 +1652,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_LOGICAL_GPU_DATA_V1.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: e57
     path: ../NVAPIWrapper/cs_generated/_NV_LOGICAL_GPU_DATA_V1.cs
@@ -1679,7 +1679,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_LOGICAL_GPU_DATA_V1.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: e58
     path: ../NVAPIWrapper/cs_generated/_NV_LOGICAL_GPU_DATA_V1.cs
@@ -1706,7 +1706,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_LOGICAL_GPU_DATA_V1.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: e59
     path: ../NVAPIWrapper/cs_generated/_NV_LOGICAL_GPU_DATA_V1.cs
@@ -1733,7 +1733,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_LOGICAL_GPU_DATA_V1.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: e60
     path: ../NVAPIWrapper/cs_generated/_NV_LOGICAL_GPU_DATA_V1.cs
@@ -1760,7 +1760,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_LOGICAL_GPU_DATA_V1.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: e61
     path: ../NVAPIWrapper/cs_generated/_NV_LOGICAL_GPU_DATA_V1.cs
@@ -1787,7 +1787,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_LOGICAL_GPU_DATA_V1.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: e62
     path: ../NVAPIWrapper/cs_generated/_NV_LOGICAL_GPU_DATA_V1.cs
@@ -1814,7 +1814,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_LOGICAL_GPU_DATA_V1.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: e63
     path: ../NVAPIWrapper/cs_generated/_NV_LOGICAL_GPU_DATA_V1.cs
@@ -1841,7 +1841,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_LOGICAL_GPU_DATA_V1.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: this[]
     path: ../NVAPIWrapper/cs_generated/_NV_LOGICAL_GPU_DATA_V1.cs

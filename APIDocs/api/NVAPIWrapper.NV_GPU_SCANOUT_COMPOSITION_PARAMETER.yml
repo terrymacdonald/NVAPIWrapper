@@ -17,7 +17,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_GPU_SCANOUT_COMPOSITION_PARAMETER.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_GPU_SCANOUT_COMPOSITION_PARAMETER
     path: ../NVAPIWrapper/cs_generated/NV_GPU_SCANOUT_COMPOSITION_PARAMETER.cs
@@ -43,7 +43,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_GPU_SCANOUT_COMPOSITION_PARAMETER.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_GPU_SCANOUT_COMPOSITION_PARAMETER_WARPING_RESAMPLING_METHOD
     path: ../NVAPIWrapper/cs_generated/NV_GPU_SCANOUT_COMPOSITION_PARAMETER.cs
@@ -70,7 +70,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_GPU_SCANOUT_COMPOSITION_PARAMETER.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_GPU_SCANOUT_COMPOSITION_PARAMETER_SCANOUT_INTENSITY_METHOD
     path: ../NVAPIWrapper/cs_generated/NV_GPU_SCANOUT_COMPOSITION_PARAMETER.cs

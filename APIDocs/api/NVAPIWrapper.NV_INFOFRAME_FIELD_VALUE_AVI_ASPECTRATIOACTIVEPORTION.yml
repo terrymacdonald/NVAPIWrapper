@@ -32,7 +32,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AVI_ASPECTRATIOACTIVEPORTION.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_INFOFRAME_FIELD_VALUE_AVI_ASPECTRATIOACTIVEPORTION
     path: ../NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AVI_ASPECTRATIOACTIVEPORTION.cs
@@ -58,7 +58,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AVI_ASPECTRATIOACTIVEPORTION.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_INFOFRAME_FIELD_VALUE_AVI_ASPECTRATIOACTIVEPORTION_NO_AFD
     path: ../NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AVI_ASPECTRATIOACTIVEPORTION.cs
@@ -85,7 +85,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AVI_ASPECTRATIOACTIVEPORTION.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_INFOFRAME_FIELD_VALUE_AVI_ASPECTRATIOACTIVEPORTION_RESERVE01
     path: ../NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AVI_ASPECTRATIOACTIVEPORTION.cs
@@ -112,7 +112,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AVI_ASPECTRATIOACTIVEPORTION.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_INFOFRAME_FIELD_VALUE_AVI_ASPECTRATIOACTIVEPORTION_RESERVE02
     path: ../NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AVI_ASPECTRATIOACTIVEPORTION.cs
@@ -139,7 +139,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AVI_ASPECTRATIOACTIVEPORTION.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_INFOFRAME_FIELD_VALUE_AVI_ASPECTRATIOACTIVEPORTION_RESERVE03
     path: ../NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AVI_ASPECTRATIOACTIVEPORTION.cs
@@ -166,7 +166,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AVI_ASPECTRATIOACTIVEPORTION.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_INFOFRAME_FIELD_VALUE_AVI_ASPECTRATIOACTIVEPORTION_LETTERBOX_GT16x9
     path: ../NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AVI_ASPECTRATIOACTIVEPORTION.cs
@@ -193,7 +193,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AVI_ASPECTRATIOACTIVEPORTION.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_INFOFRAME_FIELD_VALUE_AVI_ASPECTRATIOACTIVEPORTION_RESERVE05
     path: ../NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AVI_ASPECTRATIOACTIVEPORTION.cs
@@ -220,7 +220,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AVI_ASPECTRATIOACTIVEPORTION.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_INFOFRAME_FIELD_VALUE_AVI_ASPECTRATIOACTIVEPORTION_RESERVE06
     path: ../NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AVI_ASPECTRATIOACTIVEPORTION.cs
@@ -247,7 +247,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AVI_ASPECTRATIOACTIVEPORTION.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_INFOFRAME_FIELD_VALUE_AVI_ASPECTRATIOACTIVEPORTION_RESERVE07
     path: ../NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AVI_ASPECTRATIOACTIVEPORTION.cs
@@ -274,7 +274,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AVI_ASPECTRATIOACTIVEPORTION.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_INFOFRAME_FIELD_VALUE_AVI_ASPECTRATIOACTIVEPORTION_EQUAL_CODEDFRAME
     path: ../NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AVI_ASPECTRATIOACTIVEPORTION.cs
@@ -301,7 +301,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AVI_ASPECTRATIOACTIVEPORTION.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_INFOFRAME_FIELD_VALUE_AVI_ASPECTRATIOACTIVEPORTION_CENTER_4x3
     path: ../NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AVI_ASPECTRATIOACTIVEPORTION.cs
@@ -328,7 +328,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AVI_ASPECTRATIOACTIVEPORTION.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_INFOFRAME_FIELD_VALUE_AVI_ASPECTRATIOACTIVEPORTION_CENTER_16x9
     path: ../NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AVI_ASPECTRATIOACTIVEPORTION.cs
@@ -355,7 +355,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AVI_ASPECTRATIOACTIVEPORTION.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_INFOFRAME_FIELD_VALUE_AVI_ASPECTRATIOACTIVEPORTION_CENTER_14x9
     path: ../NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AVI_ASPECTRATIOACTIVEPORTION.cs
@@ -382,7 +382,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AVI_ASPECTRATIOACTIVEPORTION.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_INFOFRAME_FIELD_VALUE_AVI_ASPECTRATIOACTIVEPORTION_RESERVE12
     path: ../NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AVI_ASPECTRATIOACTIVEPORTION.cs
@@ -409,7 +409,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AVI_ASPECTRATIOACTIVEPORTION.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_INFOFRAME_FIELD_VALUE_AVI_ASPECTRATIOACTIVEPORTION_4x3_ON_14x9
     path: ../NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AVI_ASPECTRATIOACTIVEPORTION.cs
@@ -436,7 +436,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AVI_ASPECTRATIOACTIVEPORTION.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_INFOFRAME_FIELD_VALUE_AVI_ASPECTRATIOACTIVEPORTION_16x9_ON_14x9
     path: ../NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AVI_ASPECTRATIOACTIVEPORTION.cs
@@ -463,7 +463,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AVI_ASPECTRATIOACTIVEPORTION.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_INFOFRAME_FIELD_VALUE_AVI_ASPECTRATIOACTIVEPORTION_16x9_ON_4x3
     path: ../NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AVI_ASPECTRATIOACTIVEPORTION.cs
@@ -490,7 +490,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AVI_ASPECTRATIOACTIVEPORTION.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_INFOFRAME_FIELD_VALUE_AVI_ASPECTRATIOACTIVEPORTION_AUTO
     path: ../NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AVI_ASPECTRATIOACTIVEPORTION.cs

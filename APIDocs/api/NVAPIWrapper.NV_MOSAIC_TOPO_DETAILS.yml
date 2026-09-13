@@ -21,7 +21,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIMosaicHelper.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_MOSAIC_TOPO_DETAILS
     path: ../NVAPIWrapper/NVAPIMosaicHelper.cs
@@ -55,7 +55,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIMosaicHelper.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: version
     path: ../NVAPIWrapper/NVAPIMosaicHelper.cs
@@ -84,7 +84,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIMosaicHelper.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: hLogicalGPU
     path: ../NVAPIWrapper/NVAPIMosaicHelper.cs
@@ -113,7 +113,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIMosaicHelper.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: validityMask
     path: ../NVAPIWrapper/NVAPIMosaicHelper.cs
@@ -142,7 +142,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIMosaicHelper.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: rowCount
     path: ../NVAPIWrapper/NVAPIMosaicHelper.cs
@@ -171,7 +171,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIMosaicHelper.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: colCount
     path: ../NVAPIWrapper/NVAPIMosaicHelper.cs
@@ -200,7 +200,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIMosaicHelper.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: gpuLayout
     path: ../NVAPIWrapper/NVAPIMosaicHelper.cs

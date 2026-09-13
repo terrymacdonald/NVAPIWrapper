@@ -24,7 +24,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOPCIINFO.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: _NVVIOPCIINFO
     path: ../NVAPIWrapper/cs_generated/_NVVIOPCIINFO.cs
@@ -57,7 +57,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOPCIINFO.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: version
     path: ../NVAPIWrapper/cs_generated/_NVVIOPCIINFO.cs
@@ -85,7 +85,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOPCIINFO.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: pciDeviceId
     path: ../NVAPIWrapper/cs_generated/_NVVIOPCIINFO.cs
@@ -113,7 +113,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOPCIINFO.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: pciSubSystemId
     path: ../NVAPIWrapper/cs_generated/_NVVIOPCIINFO.cs
@@ -141,7 +141,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOPCIINFO.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: pciRevisionId
     path: ../NVAPIWrapper/cs_generated/_NVVIOPCIINFO.cs
@@ -169,7 +169,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOPCIINFO.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: pciDomain
     path: ../NVAPIWrapper/cs_generated/_NVVIOPCIINFO.cs
@@ -197,7 +197,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOPCIINFO.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: pciBus
     path: ../NVAPIWrapper/cs_generated/_NVVIOPCIINFO.cs
@@ -225,7 +225,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOPCIINFO.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: pciSlot
     path: ../NVAPIWrapper/cs_generated/_NVVIOPCIINFO.cs
@@ -253,7 +253,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOPCIINFO.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: pciLinkWidth
     path: ../NVAPIWrapper/cs_generated/_NVVIOPCIINFO.cs
@@ -281,7 +281,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOPCIINFO.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: pciLinkRate
     path: ../NVAPIWrapper/cs_generated/_NVVIOPCIINFO.cs

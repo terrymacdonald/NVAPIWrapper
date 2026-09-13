@@ -147,7 +147,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/ESetting.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: ESetting
     path: ../NVAPIWrapper/cs_generated/ESetting.cs
@@ -173,7 +173,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/ESetting.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: OGL_AA_LINE_GAMMA_ID
     path: ../NVAPIWrapper/cs_generated/ESetting.cs
@@ -200,7 +200,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/ESetting.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: OGL_CPL_GDI_COMPATIBILITY_ID
     path: ../NVAPIWrapper/cs_generated/ESetting.cs
@@ -227,7 +227,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/ESetting.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: OGL_CPL_PREFER_DXPRESENT_ID
     path: ../NVAPIWrapper/cs_generated/ESetting.cs
@@ -254,7 +254,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/ESetting.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: OGL_DEEP_COLOR_SCANOUT_ID
     path: ../NVAPIWrapper/cs_generated/ESetting.cs
@@ -281,7 +281,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/ESetting.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: OGL_DEFAULT_SWAP_INTERVAL_ID
     path: ../NVAPIWrapper/cs_generated/ESetting.cs
@@ -308,7 +308,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/ESetting.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: OGL_DEFAULT_SWAP_INTERVAL_FRACTIONAL_ID
     path: ../NVAPIWrapper/cs_generated/ESetting.cs
@@ -335,7 +335,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/ESetting.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: OGL_DEFAULT_SWAP_INTERVAL_SIGN_ID
     path: ../NVAPIWrapper/cs_generated/ESetting.cs
@@ -362,7 +362,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/ESetting.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: OGL_EVENT_LOG_SEVERITY_THRESHOLD_ID
     path: ../NVAPIWrapper/cs_generated/ESetting.cs
@@ -389,7 +389,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/ESetting.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: OGL_EXTENSION_STRING_VERSION_ID
     path: ../NVAPIWrapper/cs_generated/ESetting.cs
@@ -416,7 +416,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/ESetting.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: OGL_FORCE_BLIT_ID
     path: ../NVAPIWrapper/cs_generated/ESetting.cs
@@ -443,7 +443,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/ESetting.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: OGL_FORCE_STEREO_ID
     path: ../NVAPIWrapper/cs_generated/ESetting.cs
@@ -470,7 +470,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/ESetting.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: OGL_IMPLICIT_GPU_AFFINITY_ID
     path: ../NVAPIWrapper/cs_generated/ESetting.cs
@@ -497,7 +497,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/ESetting.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: OGL_MAX_FRAMES_ALLOWED_ID
     path: ../NVAPIWrapper/cs_generated/ESetting.cs
@@ -524,7 +524,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/ESetting.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: OGL_OVERLAY_PIXEL_TYPE_ID
     path: ../NVAPIWrapper/cs_generated/ESetting.cs
@@ -551,7 +551,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/ESetting.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: OGL_OVERLAY_SUPPORT_ID
     path: ../NVAPIWrapper/cs_generated/ESetting.cs
@@ -578,7 +578,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/ESetting.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: OGL_QUALITY_ENHANCEMENTS_ID
     path: ../NVAPIWrapper/cs_generated/ESetting.cs
@@ -605,7 +605,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/ESetting.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: OGL_SINGLE_BACKDEPTH_BUFFER_ID
     path: ../NVAPIWrapper/cs_generated/ESetting.cs
@@ -632,7 +632,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/ESetting.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: OGL_SLI_MULTICAST_ID
     path: ../NVAPIWrapper/cs_generated/ESetting.cs
@@ -659,7 +659,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/ESetting.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: OGL_THREAD_CONTROL_ID
     path: ../NVAPIWrapper/cs_generated/ESetting.cs
@@ -686,7 +686,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/ESetting.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: OGL_TMON_LEVEL_ID
     path: ../NVAPIWrapper/cs_generated/ESetting.cs
@@ -713,7 +713,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/ESetting.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: OGL_TRIPLE_BUFFER_ID
     path: ../NVAPIWrapper/cs_generated/ESetting.cs
@@ -740,7 +740,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/ESetting.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: AA_BEHAVIOR_FLAGS_ID
     path: ../NVAPIWrapper/cs_generated/ESetting.cs
@@ -767,7 +767,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/ESetting.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: AA_MODE_ALPHATOCOVERAGE_ID
     path: ../NVAPIWrapper/cs_generated/ESetting.cs
@@ -794,7 +794,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/ESetting.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: AA_MODE_GAMMACORRECTION_ID
     path: ../NVAPIWrapper/cs_generated/ESetting.cs
@@ -821,7 +821,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/ESetting.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: AA_MODE_METHOD_ID
     path: ../NVAPIWrapper/cs_generated/ESetting.cs
@@ -848,7 +848,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/ESetting.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: AA_MODE_REPLAY_ID
     path: ../NVAPIWrapper/cs_generated/ESetting.cs
@@ -875,7 +875,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/ESetting.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: AA_MODE_SELECTOR_ID
     path: ../NVAPIWrapper/cs_generated/ESetting.cs
@@ -902,7 +902,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/ESetting.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: AA_MODE_SELECTOR_SLIAA_ID
     path: ../NVAPIWrapper/cs_generated/ESetting.cs
@@ -929,7 +929,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/ESetting.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: ANISO_MODE_LEVEL_ID
     path: ../NVAPIWrapper/cs_generated/ESetting.cs
@@ -956,7 +956,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/ESetting.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: ANISO_MODE_SELECTOR_ID
     path: ../NVAPIWrapper/cs_generated/ESetting.cs
@@ -983,7 +983,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/ESetting.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: ANSEL_ALLOW_ID
     path: ../NVAPIWrapper/cs_generated/ESetting.cs
@@ -1010,7 +1010,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/ESetting.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: ANSEL_ALLOWLISTED_ID
     path: ../NVAPIWrapper/cs_generated/ESetting.cs
@@ -1037,7 +1037,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/ESetting.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: ANSEL_ENABLE_ID
     path: ../NVAPIWrapper/cs_generated/ESetting.cs
@@ -1064,7 +1064,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/ESetting.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: APPIDLE_DYNAMIC_FRL_FPS_ID
     path: ../NVAPIWrapper/cs_generated/ESetting.cs
@@ -1091,7 +1091,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/ESetting.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: APPIDLE_DYNAMIC_FRL_THRESHOLD_TIME_ID
     path: ../NVAPIWrapper/cs_generated/ESetting.cs
@@ -1118,7 +1118,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/ESetting.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: APPLICATION_PROFILE_NOTIFICATION_TIMEOUT_ID
     path: ../NVAPIWrapper/cs_generated/ESetting.cs
@@ -1145,7 +1145,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/ESetting.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: APPLICATION_STEAM_ID_ID
     path: ../NVAPIWrapper/cs_generated/ESetting.cs
@@ -1172,7 +1172,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/ESetting.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: BATTERY_BOOST_APP_FPS_ID
     path: ../NVAPIWrapper/cs_generated/ESetting.cs
@@ -1199,7 +1199,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/ESetting.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: CPL_HIDDEN_PROFILE_ID
     path: ../NVAPIWrapper/cs_generated/ESetting.cs
@@ -1226,7 +1226,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/ESetting.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: CUDA_EXCLUDED_GPUS_ID
     path: ../NVAPIWrapper/cs_generated/ESetting.cs
@@ -1253,7 +1253,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/ESetting.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: D3DOGL_GPU_MAX_POWER_ID
     path: ../NVAPIWrapper/cs_generated/ESetting.cs
@@ -1280,7 +1280,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/ESetting.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: EXPORT_PERF_COUNTERS_ID
     path: ../NVAPIWrapper/cs_generated/ESetting.cs
@@ -1307,7 +1307,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/ESetting.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: EXTERNAL_QUIET_MODE_ID
     path: ../NVAPIWrapper/cs_generated/ESetting.cs
@@ -1334,7 +1334,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/ESetting.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: FRL_FPS_ID
     path: ../NVAPIWrapper/cs_generated/ESetting.cs
@@ -1361,7 +1361,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/ESetting.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: FXAA_ALLOW_ID
     path: ../NVAPIWrapper/cs_generated/ESetting.cs
@@ -1388,7 +1388,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/ESetting.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: FXAA_ENABLE_ID
     path: ../NVAPIWrapper/cs_generated/ESetting.cs
@@ -1415,7 +1415,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/ESetting.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: FXAA_INDICATOR_ENABLE_ID
     path: ../NVAPIWrapper/cs_generated/ESetting.cs
@@ -1442,7 +1442,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/ESetting.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: LATENCY_INDICATOR_AUTOALIGN_ID
     path: ../NVAPIWrapper/cs_generated/ESetting.cs
@@ -1469,7 +1469,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/ESetting.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: MCSFRSHOWSPLIT_ID
     path: ../NVAPIWrapper/cs_generated/ESetting.cs
@@ -1496,7 +1496,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/ESetting.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NGX_DLAA_OVERRIDE_ID
     path: ../NVAPIWrapper/cs_generated/ESetting.cs
@@ -1523,7 +1523,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/ESetting.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NGX_DLSSG_DYNAMIC_MULTI_FRAME_COUNT_MAX_ID
     path: ../NVAPIWrapper/cs_generated/ESetting.cs
@@ -1550,7 +1550,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/ESetting.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NGX_DLSSG_DYNAMIC_TARGET_FRAME_RATE_ID
     path: ../NVAPIWrapper/cs_generated/ESetting.cs
@@ -1577,7 +1577,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/ESetting.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NGX_DLSSG_MODE_ID
     path: ../NVAPIWrapper/cs_generated/ESetting.cs
@@ -1604,7 +1604,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/ESetting.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NGX_DLSSG_MULTI_FRAME_COUNT_ID
     path: ../NVAPIWrapper/cs_generated/ESetting.cs
@@ -1631,7 +1631,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/ESetting.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NGX_DLSS_FG_OVERRIDE_ID
     path: ../NVAPIWrapper/cs_generated/ESetting.cs
@@ -1658,7 +1658,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/ESetting.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NGX_DLSS_FG_OVERRIDE_RENDER_PRESET_SELECTION_ID
     path: ../NVAPIWrapper/cs_generated/ESetting.cs
@@ -1685,7 +1685,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/ESetting.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NGX_DLSS_FG_OVERRIDE_RESERVED_KEY1_ID
     path: ../NVAPIWrapper/cs_generated/ESetting.cs
@@ -1712,7 +1712,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/ESetting.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NGX_DLSS_FG_OVERRIDE_RESERVED_KEY2_ID
     path: ../NVAPIWrapper/cs_generated/ESetting.cs
@@ -1739,7 +1739,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/ESetting.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NGX_DLSS_NR_OVERRIDE_ID
     path: ../NVAPIWrapper/cs_generated/ESetting.cs
@@ -1766,7 +1766,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/ESetting.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NGX_DLSS_NR_OVERRIDE_RENDER_PRESET_SELECTION_ID
     path: ../NVAPIWrapper/cs_generated/ESetting.cs
@@ -1793,7 +1793,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/ESetting.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NGX_DLSS_NR_SL_OVERRIDE_ID
     path: ../NVAPIWrapper/cs_generated/ESetting.cs
@@ -1820,7 +1820,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/ESetting.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NGX_DLSS_OVERRIDE_OPTIMAL_SETTINGS_ID
     path: ../NVAPIWrapper/cs_generated/ESetting.cs
@@ -1847,7 +1847,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/ESetting.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NGX_DLSS_RR_MODE_ID
     path: ../NVAPIWrapper/cs_generated/ESetting.cs
@@ -1874,7 +1874,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/ESetting.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NGX_DLSS_RR_OVERRIDE_ID
     path: ../NVAPIWrapper/cs_generated/ESetting.cs
@@ -1901,7 +1901,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/ESetting.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NGX_DLSS_RR_OVERRIDE_RENDER_PRESET_SELECTION_ID
     path: ../NVAPIWrapper/cs_generated/ESetting.cs
@@ -1928,7 +1928,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/ESetting.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NGX_DLSS_RR_OVERRIDE_RESERVED_KEY1_ID
     path: ../NVAPIWrapper/cs_generated/ESetting.cs
@@ -1955,7 +1955,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/ESetting.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NGX_DLSS_RR_OVERRIDE_RESERVED_KEY2_ID
     path: ../NVAPIWrapper/cs_generated/ESetting.cs
@@ -1982,7 +1982,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/ESetting.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NGX_DLSS_RR_OVERRIDE_SCALING_RATIO_ID
     path: ../NVAPIWrapper/cs_generated/ESetting.cs
@@ -2009,7 +2009,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/ESetting.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NGX_DLSS_SR_MODE_ID
     path: ../NVAPIWrapper/cs_generated/ESetting.cs
@@ -2036,7 +2036,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/ESetting.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NGX_DLSS_SR_OVERRIDE_ID
     path: ../NVAPIWrapper/cs_generated/ESetting.cs
@@ -2063,7 +2063,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/ESetting.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NGX_DLSS_SR_OVERRIDE_RENDER_PRESET_SELECTION_ID
     path: ../NVAPIWrapper/cs_generated/ESetting.cs
@@ -2090,7 +2090,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/ESetting.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NGX_DLSS_SR_OVERRIDE_RESERVED_KEY1_ID
     path: ../NVAPIWrapper/cs_generated/ESetting.cs
@@ -2117,7 +2117,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/ESetting.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NGX_DLSS_SR_OVERRIDE_RESERVED_KEY2_ID
     path: ../NVAPIWrapper/cs_generated/ESetting.cs
@@ -2144,7 +2144,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/ESetting.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NGX_DLSS_SR_OVERRIDE_SCALING_RATIO_ID
     path: ../NVAPIWrapper/cs_generated/ESetting.cs
@@ -2171,7 +2171,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/ESetting.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_QUALITY_UPSCALING_ID
     path: ../NVAPIWrapper/cs_generated/ESetting.cs
@@ -2198,7 +2198,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/ESetting.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: OPTIMUS_MAXAA_ID
     path: ../NVAPIWrapper/cs_generated/ESetting.cs
@@ -2225,7 +2225,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/ESetting.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: PHYSXINDICATOR_ID
     path: ../NVAPIWrapper/cs_generated/ESetting.cs
@@ -2252,7 +2252,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/ESetting.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: PREFERRED_PSTATE_ID
     path: ../NVAPIWrapper/cs_generated/ESetting.cs
@@ -2279,7 +2279,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/ESetting.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: PREVENT_UI_AF_OVERRIDE_ID
     path: ../NVAPIWrapper/cs_generated/ESetting.cs
@@ -2306,7 +2306,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/ESetting.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SHIM_MAXRES_ID
     path: ../NVAPIWrapper/cs_generated/ESetting.cs
@@ -2333,7 +2333,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/ESetting.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SHIM_MCCOMPAT_ID
     path: ../NVAPIWrapper/cs_generated/ESetting.cs
@@ -2360,7 +2360,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/ESetting.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SHIM_RENDERING_MODE_ID
     path: ../NVAPIWrapper/cs_generated/ESetting.cs
@@ -2387,7 +2387,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/ESetting.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SHIM_RENDERING_OPTIONS_ID
     path: ../NVAPIWrapper/cs_generated/ESetting.cs
@@ -2414,7 +2414,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/ESetting.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SLI_GPU_COUNT_ID
     path: ../NVAPIWrapper/cs_generated/ESetting.cs
@@ -2441,7 +2441,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/ESetting.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SLI_PREDEFINED_GPU_COUNT_ID
     path: ../NVAPIWrapper/cs_generated/ESetting.cs
@@ -2468,7 +2468,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/ESetting.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SLI_PREDEFINED_GPU_COUNT_DX10_ID
     path: ../NVAPIWrapper/cs_generated/ESetting.cs
@@ -2495,7 +2495,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/ESetting.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SLI_PREDEFINED_MODE_ID
     path: ../NVAPIWrapper/cs_generated/ESetting.cs
@@ -2522,7 +2522,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/ESetting.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SLI_PREDEFINED_MODE_DX10_ID
     path: ../NVAPIWrapper/cs_generated/ESetting.cs
@@ -2549,7 +2549,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/ESetting.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SLI_RENDERING_MODE_ID
     path: ../NVAPIWrapper/cs_generated/ESetting.cs
@@ -2576,7 +2576,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/ESetting.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SL_DLSS_OVERRIDE_ID
     path: ../NVAPIWrapper/cs_generated/ESetting.cs
@@ -2603,7 +2603,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/ESetting.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: VRPRERENDERLIMIT_ID
     path: ../NVAPIWrapper/cs_generated/ESetting.cs
@@ -2630,7 +2630,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/ESetting.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: VRRFEATUREINDICATOR_ID
     path: ../NVAPIWrapper/cs_generated/ESetting.cs
@@ -2657,7 +2657,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/ESetting.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: VRROVERLAYINDICATOR_ID
     path: ../NVAPIWrapper/cs_generated/ESetting.cs
@@ -2684,7 +2684,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/ESetting.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: VRRREQUESTSTATE_ID
     path: ../NVAPIWrapper/cs_generated/ESetting.cs
@@ -2711,7 +2711,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/ESetting.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: VRR_APP_OVERRIDE_ID
     path: ../NVAPIWrapper/cs_generated/ESetting.cs
@@ -2738,7 +2738,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/ESetting.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: VRR_APP_OVERRIDE_REQUEST_STATE_ID
     path: ../NVAPIWrapper/cs_generated/ESetting.cs
@@ -2765,7 +2765,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/ESetting.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: VRR_MODE_ID
     path: ../NVAPIWrapper/cs_generated/ESetting.cs
@@ -2792,7 +2792,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/ESetting.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: VSYNCSMOOTHAFR_ID
     path: ../NVAPIWrapper/cs_generated/ESetting.cs
@@ -2819,7 +2819,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/ESetting.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: VSYNCVRRCONTROL_ID
     path: ../NVAPIWrapper/cs_generated/ESetting.cs
@@ -2846,7 +2846,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/ESetting.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: VSYNC_BEHAVIOR_FLAGS_ID
     path: ../NVAPIWrapper/cs_generated/ESetting.cs
@@ -2873,7 +2873,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/ESetting.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: WKS_API_STEREO_EYES_EXCHANGE_ID
     path: ../NVAPIWrapper/cs_generated/ESetting.cs
@@ -2900,7 +2900,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/ESetting.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: WKS_API_STEREO_MODE_ID
     path: ../NVAPIWrapper/cs_generated/ESetting.cs
@@ -2927,7 +2927,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/ESetting.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: WKS_STEREO_DONGLE_SUPPORT_ID
     path: ../NVAPIWrapper/cs_generated/ESetting.cs
@@ -2954,7 +2954,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/ESetting.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: WKS_STEREO_SUPPORT_ID
     path: ../NVAPIWrapper/cs_generated/ESetting.cs
@@ -2981,7 +2981,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/ESetting.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: WKS_STEREO_SWAP_MODE_ID
     path: ../NVAPIWrapper/cs_generated/ESetting.cs
@@ -3008,7 +3008,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/ESetting.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: AO_MODE_ID
     path: ../NVAPIWrapper/cs_generated/ESetting.cs
@@ -3035,7 +3035,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/ESetting.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: AO_MODE_ACTIVE_ID
     path: ../NVAPIWrapper/cs_generated/ESetting.cs
@@ -3062,7 +3062,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/ESetting.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: AUTO_LODBIASADJUST_ID
     path: ../NVAPIWrapper/cs_generated/ESetting.cs
@@ -3089,7 +3089,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/ESetting.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: EXPORT_PERF_COUNTERS_DX9_ONLY_ID
     path: ../NVAPIWrapper/cs_generated/ESetting.cs
@@ -3116,7 +3116,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/ESetting.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: ICAFE_LOGO_CONFIG_ID
     path: ../NVAPIWrapper/cs_generated/ESetting.cs
@@ -3143,7 +3143,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/ESetting.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: LODBIASADJUST_ID
     path: ../NVAPIWrapper/cs_generated/ESetting.cs
@@ -3170,7 +3170,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/ESetting.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: MAXWELL_B_SAMPLE_INTERLEAVE_ID
     path: ../NVAPIWrapper/cs_generated/ESetting.cs
@@ -3197,7 +3197,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/ESetting.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: PRERENDERLIMIT_ID
     path: ../NVAPIWrapper/cs_generated/ESetting.cs
@@ -3224,7 +3224,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/ESetting.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: PS_OFFLINE_SHADER_COMPILER_ID
     path: ../NVAPIWrapper/cs_generated/ESetting.cs
@@ -3251,7 +3251,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/ESetting.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: PS_SHADERDISKCACHE_ID
     path: ../NVAPIWrapper/cs_generated/ESetting.cs
@@ -3278,7 +3278,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/ESetting.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: PS_SHADERDISKCACHE_DLL_PATH_WCHAR_ID
     path: ../NVAPIWrapper/cs_generated/ESetting.cs
@@ -3305,7 +3305,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/ESetting.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: PS_SHADERDISKCACHE_MAX_SIZE_ID
     path: ../NVAPIWrapper/cs_generated/ESetting.cs
@@ -3332,7 +3332,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/ESetting.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: PS_TEXFILTER_ANISO_OPTS2_ID
     path: ../NVAPIWrapper/cs_generated/ESetting.cs
@@ -3359,7 +3359,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/ESetting.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: PS_TEXFILTER_BILINEAR_IN_ANISO_ID
     path: ../NVAPIWrapper/cs_generated/ESetting.cs
@@ -3386,7 +3386,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/ESetting.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: PS_TEXFILTER_DISABLE_TRILIN_SLOPE_ID
     path: ../NVAPIWrapper/cs_generated/ESetting.cs
@@ -3413,7 +3413,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/ESetting.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: PS_TEXFILTER_NO_NEG_LODBIAS_ID
     path: ../NVAPIWrapper/cs_generated/ESetting.cs
@@ -3440,7 +3440,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/ESetting.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: QUALITY_ENHANCEMENTS_ID
     path: ../NVAPIWrapper/cs_generated/ESetting.cs
@@ -3467,7 +3467,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/ESetting.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: QUALITY_ENHANCEMENT_SUBSTITUTION_ID
     path: ../NVAPIWrapper/cs_generated/ESetting.cs
@@ -3494,7 +3494,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/ESetting.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: REFRESH_RATE_OVERRIDE_ID
     path: ../NVAPIWrapper/cs_generated/ESetting.cs
@@ -3521,7 +3521,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/ESetting.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SET_POWER_THROTTLE_FOR_PCIe_COMPLIANCE_ID
     path: ../NVAPIWrapper/cs_generated/ESetting.cs
@@ -3548,7 +3548,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/ESetting.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SET_VAB_DATA_ID
     path: ../NVAPIWrapper/cs_generated/ESetting.cs
@@ -3575,7 +3575,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/ESetting.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: VSYNCMODE_ID
     path: ../NVAPIWrapper/cs_generated/ESetting.cs
@@ -3602,7 +3602,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/ESetting.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: VSYNCTEARCONTROL_ID
     path: ../NVAPIWrapper/cs_generated/ESetting.cs
@@ -3629,7 +3629,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/ESetting.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: TOTAL_DWORD_SETTING_NUM
     path: ../NVAPIWrapper/cs_generated/ESetting.cs
@@ -3656,7 +3656,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/ESetting.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: TOTAL_WSTRING_SETTING_NUM
     path: ../NVAPIWrapper/cs_generated/ESetting.cs
@@ -3683,7 +3683,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/ESetting.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: TOTAL_SETTING_NUM
     path: ../NVAPIWrapper/cs_generated/ESetting.cs
@@ -3710,7 +3710,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/ESetting.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: INVALID_SETTING_ID
     path: ../NVAPIWrapper/cs_generated/ESetting.cs

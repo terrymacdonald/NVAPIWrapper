@@ -27,7 +27,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_HDMI_SUPPORT_INFO_V1.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: _NV_HDMI_SUPPORT_INFO_V1
     path: ../NVAPIWrapper/cs_generated/_NV_HDMI_SUPPORT_INFO_V1.cs
@@ -60,7 +60,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_HDMI_SUPPORT_INFO_V1.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: version
     path: ../NVAPIWrapper/cs_generated/_NV_HDMI_SUPPORT_INFO_V1.cs
@@ -88,7 +88,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_HDMI_SUPPORT_INFO_V1.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: _bitfield
     path: ../NVAPIWrapper/cs_generated/_NV_HDMI_SUPPORT_INFO_V1.cs
@@ -115,7 +115,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_HDMI_SUPPORT_INFO_V1.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: isGpuHDMICapable
     path: ../NVAPIWrapper/cs_generated/_NV_HDMI_SUPPORT_INFO_V1.cs
@@ -145,7 +145,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_HDMI_SUPPORT_INFO_V1.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: isMonUnderscanCapable
     path: ../NVAPIWrapper/cs_generated/_NV_HDMI_SUPPORT_INFO_V1.cs
@@ -175,7 +175,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_HDMI_SUPPORT_INFO_V1.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: isMonBasicAudioCapable
     path: ../NVAPIWrapper/cs_generated/_NV_HDMI_SUPPORT_INFO_V1.cs
@@ -205,7 +205,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_HDMI_SUPPORT_INFO_V1.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: isMonYCbCr444Capable
     path: ../NVAPIWrapper/cs_generated/_NV_HDMI_SUPPORT_INFO_V1.cs
@@ -235,7 +235,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_HDMI_SUPPORT_INFO_V1.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: isMonYCbCr422Capable
     path: ../NVAPIWrapper/cs_generated/_NV_HDMI_SUPPORT_INFO_V1.cs
@@ -265,7 +265,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_HDMI_SUPPORT_INFO_V1.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: isMonxvYCC601Capable
     path: ../NVAPIWrapper/cs_generated/_NV_HDMI_SUPPORT_INFO_V1.cs
@@ -295,7 +295,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_HDMI_SUPPORT_INFO_V1.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: isMonxvYCC709Capable
     path: ../NVAPIWrapper/cs_generated/_NV_HDMI_SUPPORT_INFO_V1.cs
@@ -325,7 +325,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_HDMI_SUPPORT_INFO_V1.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: isMonHDMI
     path: ../NVAPIWrapper/cs_generated/_NV_HDMI_SUPPORT_INFO_V1.cs
@@ -355,7 +355,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_HDMI_SUPPORT_INFO_V1.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: reserved
     path: ../NVAPIWrapper/cs_generated/_NV_HDMI_SUPPORT_INFO_V1.cs
@@ -385,7 +385,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_HDMI_SUPPORT_INFO_V1.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: EDID861ExtRev
     path: ../NVAPIWrapper/cs_generated/_NV_HDMI_SUPPORT_INFO_V1.cs

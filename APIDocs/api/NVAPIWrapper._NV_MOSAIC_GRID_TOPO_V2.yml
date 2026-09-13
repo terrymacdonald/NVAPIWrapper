@@ -29,7 +29,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_MOSAIC_GRID_TOPO_V2.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: _NV_MOSAIC_GRID_TOPO_V2
     path: ../NVAPIWrapper/cs_generated/_NV_MOSAIC_GRID_TOPO_V2.cs
@@ -62,7 +62,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_MOSAIC_GRID_TOPO_V2.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: version
     path: ../NVAPIWrapper/cs_generated/_NV_MOSAIC_GRID_TOPO_V2.cs
@@ -90,7 +90,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_MOSAIC_GRID_TOPO_V2.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: rows
     path: ../NVAPIWrapper/cs_generated/_NV_MOSAIC_GRID_TOPO_V2.cs
@@ -118,7 +118,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_MOSAIC_GRID_TOPO_V2.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: columns
     path: ../NVAPIWrapper/cs_generated/_NV_MOSAIC_GRID_TOPO_V2.cs
@@ -146,7 +146,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_MOSAIC_GRID_TOPO_V2.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: displayCount
     path: ../NVAPIWrapper/cs_generated/_NV_MOSAIC_GRID_TOPO_V2.cs
@@ -174,7 +174,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_MOSAIC_GRID_TOPO_V2.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: _bitfield
     path: ../NVAPIWrapper/cs_generated/_NV_MOSAIC_GRID_TOPO_V2.cs
@@ -201,7 +201,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_MOSAIC_GRID_TOPO_V2.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: applyWithBezelCorrect
     path: ../NVAPIWrapper/cs_generated/_NV_MOSAIC_GRID_TOPO_V2.cs
@@ -231,7 +231,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_MOSAIC_GRID_TOPO_V2.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: immersiveGaming
     path: ../NVAPIWrapper/cs_generated/_NV_MOSAIC_GRID_TOPO_V2.cs
@@ -261,7 +261,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_MOSAIC_GRID_TOPO_V2.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: baseMosaic
     path: ../NVAPIWrapper/cs_generated/_NV_MOSAIC_GRID_TOPO_V2.cs
@@ -291,7 +291,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_MOSAIC_GRID_TOPO_V2.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: driverReloadAllowed
     path: ../NVAPIWrapper/cs_generated/_NV_MOSAIC_GRID_TOPO_V2.cs
@@ -321,7 +321,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_MOSAIC_GRID_TOPO_V2.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: acceleratePrimaryDisplay
     path: ../NVAPIWrapper/cs_generated/_NV_MOSAIC_GRID_TOPO_V2.cs
@@ -351,7 +351,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_MOSAIC_GRID_TOPO_V2.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: pixelShift
     path: ../NVAPIWrapper/cs_generated/_NV_MOSAIC_GRID_TOPO_V2.cs
@@ -381,7 +381,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_MOSAIC_GRID_TOPO_V2.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: reserved
     path: ../NVAPIWrapper/cs_generated/_NV_MOSAIC_GRID_TOPO_V2.cs
@@ -411,7 +411,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_MOSAIC_GRID_TOPO_V2.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: displays
     path: ../NVAPIWrapper/cs_generated/_NV_MOSAIC_GRID_TOPO_V2.cs
@@ -439,7 +439,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_MOSAIC_GRID_TOPO_V2.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: displaySettings
     path: ../NVAPIWrapper/cs_generated/_NV_MOSAIC_GRID_TOPO_V2.cs

@@ -22,7 +22,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_VRR_APP_OVERRIDE.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: EValues_VRR_APP_OVERRIDE
     path: ../NVAPIWrapper/cs_generated/EValues_VRR_APP_OVERRIDE.cs
@@ -48,7 +48,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_VRR_APP_OVERRIDE.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: VRR_APP_OVERRIDE_ALLOW
     path: ../NVAPIWrapper/cs_generated/EValues_VRR_APP_OVERRIDE.cs
@@ -75,7 +75,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_VRR_APP_OVERRIDE.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: VRR_APP_OVERRIDE_FORCE_OFF
     path: ../NVAPIWrapper/cs_generated/EValues_VRR_APP_OVERRIDE.cs
@@ -102,7 +102,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_VRR_APP_OVERRIDE.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: VRR_APP_OVERRIDE_DISALLOW
     path: ../NVAPIWrapper/cs_generated/EValues_VRR_APP_OVERRIDE.cs
@@ -129,7 +129,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_VRR_APP_OVERRIDE.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: VRR_APP_OVERRIDE_ULMB
     path: ../NVAPIWrapper/cs_generated/EValues_VRR_APP_OVERRIDE.cs
@@ -156,7 +156,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_VRR_APP_OVERRIDE.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: VRR_APP_OVERRIDE_FIXED_REFRESH
     path: ../NVAPIWrapper/cs_generated/EValues_VRR_APP_OVERRIDE.cs
@@ -183,7 +183,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_VRR_APP_OVERRIDE.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: VRR_APP_OVERRIDE_NUM_VALUES
     path: ../NVAPIWrapper/cs_generated/EValues_VRR_APP_OVERRIDE.cs
@@ -210,7 +210,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_VRR_APP_OVERRIDE.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: VRR_APP_OVERRIDE_DEFAULT
     path: ../NVAPIWrapper/cs_generated/EValues_VRR_APP_OVERRIDE.cs

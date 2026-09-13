@@ -19,7 +19,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_COLOR_SELECTION_POLICY.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: _NV_COLOR_SELECTION_POLICY
     path: ../NVAPIWrapper/cs_generated/_NV_COLOR_SELECTION_POLICY.cs
@@ -45,7 +45,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_COLOR_SELECTION_POLICY.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_COLOR_SELECTION_POLICY_USER
     path: ../NVAPIWrapper/cs_generated/_NV_COLOR_SELECTION_POLICY.cs
@@ -72,7 +72,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_COLOR_SELECTION_POLICY.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_COLOR_SELECTION_POLICY_BEST_QUALITY
     path: ../NVAPIWrapper/cs_generated/_NV_COLOR_SELECTION_POLICY.cs
@@ -99,7 +99,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_COLOR_SELECTION_POLICY.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_COLOR_SELECTION_POLICY_DEFAULT
     path: ../NVAPIWrapper/cs_generated/_NV_COLOR_SELECTION_POLICY.cs
@@ -126,7 +126,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_COLOR_SELECTION_POLICY.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_COLOR_SELECTION_POLICY_UNKNOWN
     path: ../NVAPIWrapper/cs_generated/_NV_COLOR_SELECTION_POLICY.cs

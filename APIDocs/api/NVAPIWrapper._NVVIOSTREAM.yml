@@ -20,7 +20,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOSTREAM.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: _NVVIOSTREAM
     path: ../NVAPIWrapper/cs_generated/_NVVIOSTREAM.cs
@@ -53,7 +53,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOSTREAM.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: bitsPerComponent
     path: ../NVAPIWrapper/cs_generated/_NVVIOSTREAM.cs
@@ -81,7 +81,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOSTREAM.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: sampling
     path: ../NVAPIWrapper/cs_generated/_NVVIOSTREAM.cs
@@ -109,7 +109,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOSTREAM.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: expansionEnable
     path: ../NVAPIWrapper/cs_generated/_NVVIOSTREAM.cs
@@ -137,7 +137,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOSTREAM.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: numLinks
     path: ../NVAPIWrapper/cs_generated/_NVVIOSTREAM.cs
@@ -165,7 +165,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOSTREAM.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: links
     path: ../NVAPIWrapper/cs_generated/_NVVIOSTREAM.cs

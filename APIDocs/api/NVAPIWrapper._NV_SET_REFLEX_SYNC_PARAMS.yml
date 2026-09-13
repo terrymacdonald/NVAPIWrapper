@@ -28,7 +28,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_SET_REFLEX_SYNC_PARAMS.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: _NV_SET_REFLEX_SYNC_PARAMS
     path: ../NVAPIWrapper/cs_generated/_NV_SET_REFLEX_SYNC_PARAMS.cs
@@ -61,7 +61,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_SET_REFLEX_SYNC_PARAMS.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: version
     path: ../NVAPIWrapper/cs_generated/_NV_SET_REFLEX_SYNC_PARAMS.cs
@@ -89,7 +89,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_SET_REFLEX_SYNC_PARAMS.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: _bitfield
     path: ../NVAPIWrapper/cs_generated/_NV_SET_REFLEX_SYNC_PARAMS.cs
@@ -116,7 +116,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_SET_REFLEX_SYNC_PARAMS.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: bEnable
     path: ../NVAPIWrapper/cs_generated/_NV_SET_REFLEX_SYNC_PARAMS.cs
@@ -146,7 +146,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_SET_REFLEX_SYNC_PARAMS.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: bDisable
     path: ../NVAPIWrapper/cs_generated/_NV_SET_REFLEX_SYNC_PARAMS.cs
@@ -176,7 +176,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_SET_REFLEX_SYNC_PARAMS.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: flagsRsvd
     path: ../NVAPIWrapper/cs_generated/_NV_SET_REFLEX_SYNC_PARAMS.cs
@@ -206,7 +206,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_SET_REFLEX_SYNC_PARAMS.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: vblankIntervalUs
     path: ../NVAPIWrapper/cs_generated/_NV_SET_REFLEX_SYNC_PARAMS.cs
@@ -234,7 +234,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_SET_REFLEX_SYNC_PARAMS.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: timeInQueueUs
     path: ../NVAPIWrapper/cs_generated/_NV_SET_REFLEX_SYNC_PARAMS.cs
@@ -262,7 +262,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_SET_REFLEX_SYNC_PARAMS.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: timeInQueueUsTarget
     path: ../NVAPIWrapper/cs_generated/_NV_SET_REFLEX_SYNC_PARAMS.cs
@@ -290,7 +290,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_SET_REFLEX_SYNC_PARAMS.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: fgMultiplier
     path: ../NVAPIWrapper/cs_generated/_NV_SET_REFLEX_SYNC_PARAMS.cs
@@ -318,7 +318,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_SET_REFLEX_SYNC_PARAMS.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: dfgMaxMultiplier
     path: ../NVAPIWrapper/cs_generated/_NV_SET_REFLEX_SYNC_PARAMS.cs
@@ -346,7 +346,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_SET_REFLEX_SYNC_PARAMS.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: rsvd1
     path: ../NVAPIWrapper/cs_generated/_NV_SET_REFLEX_SYNC_PARAMS.cs
@@ -374,7 +374,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_SET_REFLEX_SYNC_PARAMS.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: dfgTargetFps
     path: ../NVAPIWrapper/cs_generated/_NV_SET_REFLEX_SYNC_PARAMS.cs
@@ -402,7 +402,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_SET_REFLEX_SYNC_PARAMS.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: rsvd
     path: ../NVAPIWrapper/cs_generated/_NV_SET_REFLEX_SYNC_PARAMS.cs

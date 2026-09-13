@@ -39,7 +39,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOOUTPUTCONFIG_V1.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: _NVVIOOUTPUTCONFIG_V1
     path: ../NVAPIWrapper/cs_generated/_NVVIOOUTPUTCONFIG_V1.cs
@@ -72,7 +72,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOOUTPUTCONFIG_V1.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: signalFormat
     path: ../NVAPIWrapper/cs_generated/_NVVIOOUTPUTCONFIG_V1.cs
@@ -100,7 +100,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOOUTPUTCONFIG_V1.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: dataFormat
     path: ../NVAPIWrapper/cs_generated/_NVVIOOUTPUTCONFIG_V1.cs
@@ -128,7 +128,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOOUTPUTCONFIG_V1.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: outputRegion
     path: ../NVAPIWrapper/cs_generated/_NVVIOOUTPUTCONFIG_V1.cs
@@ -156,7 +156,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOOUTPUTCONFIG_V1.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: outputArea
     path: ../NVAPIWrapper/cs_generated/_NVVIOOUTPUTCONFIG_V1.cs
@@ -184,7 +184,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOOUTPUTCONFIG_V1.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: colorConversion
     path: ../NVAPIWrapper/cs_generated/_NVVIOOUTPUTCONFIG_V1.cs
@@ -212,7 +212,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOOUTPUTCONFIG_V1.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: gammaCorrection
     path: ../NVAPIWrapper/cs_generated/_NVVIOOUTPUTCONFIG_V1.cs
@@ -240,7 +240,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOOUTPUTCONFIG_V1.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: syncEnable
     path: ../NVAPIWrapper/cs_generated/_NVVIOOUTPUTCONFIG_V1.cs
@@ -268,7 +268,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOOUTPUTCONFIG_V1.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: syncSource
     path: ../NVAPIWrapper/cs_generated/_NVVIOOUTPUTCONFIG_V1.cs
@@ -296,7 +296,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOOUTPUTCONFIG_V1.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: syncDelay
     path: ../NVAPIWrapper/cs_generated/_NVVIOOUTPUTCONFIG_V1.cs
@@ -324,7 +324,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOOUTPUTCONFIG_V1.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: compositeSyncType
     path: ../NVAPIWrapper/cs_generated/_NVVIOOUTPUTCONFIG_V1.cs
@@ -352,7 +352,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOOUTPUTCONFIG_V1.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: frameLockEnable
     path: ../NVAPIWrapper/cs_generated/_NVVIOOUTPUTCONFIG_V1.cs
@@ -380,7 +380,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOOUTPUTCONFIG_V1.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: psfSignalFormat
     path: ../NVAPIWrapper/cs_generated/_NVVIOOUTPUTCONFIG_V1.cs
@@ -408,7 +408,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOOUTPUTCONFIG_V1.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: enable422Filter
     path: ../NVAPIWrapper/cs_generated/_NVVIOOUTPUTCONFIG_V1.cs
@@ -436,7 +436,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOOUTPUTCONFIG_V1.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: compositeTerminate
     path: ../NVAPIWrapper/cs_generated/_NVVIOOUTPUTCONFIG_V1.cs
@@ -464,7 +464,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOOUTPUTCONFIG_V1.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: enableDataIntegrityCheck
     path: ../NVAPIWrapper/cs_generated/_NVVIOOUTPUTCONFIG_V1.cs
@@ -492,7 +492,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOOUTPUTCONFIG_V1.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: cscOverride
     path: ../NVAPIWrapper/cs_generated/_NVVIOOUTPUTCONFIG_V1.cs
@@ -520,7 +520,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOOUTPUTCONFIG_V1.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: flipQueueLength
     path: ../NVAPIWrapper/cs_generated/_NVVIOOUTPUTCONFIG_V1.cs
@@ -548,7 +548,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOOUTPUTCONFIG_V1.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: enableANCTimeCodeGeneration
     path: ../NVAPIWrapper/cs_generated/_NVVIOOUTPUTCONFIG_V1.cs
@@ -576,7 +576,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOOUTPUTCONFIG_V1.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: enableComposite
     path: ../NVAPIWrapper/cs_generated/_NVVIOOUTPUTCONFIG_V1.cs
@@ -604,7 +604,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOOUTPUTCONFIG_V1.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: enableAlphaKeyComposite
     path: ../NVAPIWrapper/cs_generated/_NVVIOOUTPUTCONFIG_V1.cs
@@ -632,7 +632,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOOUTPUTCONFIG_V1.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: compRange
     path: ../NVAPIWrapper/cs_generated/_NVVIOOUTPUTCONFIG_V1.cs
@@ -660,7 +660,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOOUTPUTCONFIG_V1.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: reservedData
     path: ../NVAPIWrapper/cs_generated/_NVVIOOUTPUTCONFIG_V1.cs
@@ -688,7 +688,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOOUTPUTCONFIG_V1.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: enableFullColorRange
     path: ../NVAPIWrapper/cs_generated/_NVVIOOUTPUTCONFIG_V1.cs
@@ -716,7 +716,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOOUTPUTCONFIG_V1.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: enableRGBData
     path: ../NVAPIWrapper/cs_generated/_NVVIOOUTPUTCONFIG_V1.cs

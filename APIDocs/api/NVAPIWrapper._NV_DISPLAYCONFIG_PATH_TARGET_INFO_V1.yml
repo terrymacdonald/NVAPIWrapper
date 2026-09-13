@@ -17,7 +17,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_DISPLAYCONFIG_PATH_TARGET_INFO_V1.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: _NV_DISPLAYCONFIG_PATH_TARGET_INFO_V1
     path: ../NVAPIWrapper/cs_generated/_NV_DISPLAYCONFIG_PATH_TARGET_INFO_V1.cs
@@ -50,7 +50,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_DISPLAYCONFIG_PATH_TARGET_INFO_V1.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: displayId
     path: ../NVAPIWrapper/cs_generated/_NV_DISPLAYCONFIG_PATH_TARGET_INFO_V1.cs
@@ -78,7 +78,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_DISPLAYCONFIG_PATH_TARGET_INFO_V1.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: details
     path: ../NVAPIWrapper/cs_generated/_NV_DISPLAYCONFIG_PATH_TARGET_INFO_V1.cs

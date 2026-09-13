@@ -17,7 +17,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_StereoDriverMode.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: _NV_StereoDriverMode
     path: ../NVAPIWrapper/cs_generated/_NV_StereoDriverMode.cs
@@ -43,7 +43,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_StereoDriverMode.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_STEREO_DRIVER_MODE_AUTOMATIC
     path: ../NVAPIWrapper/cs_generated/_NV_StereoDriverMode.cs
@@ -70,7 +70,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_StereoDriverMode.cs
-      branch: feature-2026-09-13-update-R615
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_STEREO_DRIVER_MODE_DIRECT
     path: ../NVAPIWrapper/cs_generated/_NV_StereoDriverMode.cs
