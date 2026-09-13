@@ -92,7 +92,7 @@ namespace NVAPIWrapper
         [InlineArray(64)]
         public partial struct _frameReport_e__FixedBuffer
         {
-            public vkFrameReport e0;
+            public _NV_VULKAN_LATENCY_RESULT_PARAMS.vkFrameReport e0;
         }
 
         /// <include file='_rsvd_e__FixedBuffer.xml' path='doc/member[@name="_rsvd_e__FixedBuffer"]/*' />

@@ -100,7 +100,7 @@ namespace NVAPIWrapper
         [InlineArray(64)]
         public partial struct _frameReport_e__FixedBuffer
         {
-            public FrameReport e0;
+            public _NV_LATENCY_RESULT_PARAMS.FrameReport e0;
         }
 
         /// <include file='_rsvd_e__FixedBuffer.xml' path='doc/member[@name="_rsvd_e__FixedBuffer"]/*' />
