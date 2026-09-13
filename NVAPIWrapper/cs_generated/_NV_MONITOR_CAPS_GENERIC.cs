@@ -95,18 +95,33 @@ namespace NVAPIWrapper
             }
         }
 
-        /// <include file='_NV_MONITOR_CAPS_GENERIC.xml' path='doc/member[@name="_NV_MONITOR_CAPS_GENERIC.reserved"]/*' />
-        [NativeTypeName("NvU8 : 2")]
-        public byte reserved
+        /// <include file='_NV_MONITOR_CAPS_GENERIC.xml' path='doc/member[@name="_NV_MONITOR_CAPS_GENERIC.isBasicEdp"]/*' />
+        [NativeTypeName("NvU8 : 1")]
+        public byte isBasicEdp
         {
             readonly get
             {
-                return (byte)((_bitfield >> 6) & 0x3u);
+                return (byte)((_bitfield >> 6) & 0x1u);
             }
 
             set
             {
-                _bitfield = (byte)((_bitfield & ~(0x3u << 6)) | ((value & 0x3u) << 6));
+                _bitfield = (byte)((_bitfield & ~(0x1u << 6)) | ((value & 0x1u) << 6));
+            }
+        }
+
+        /// <include file='_NV_MONITOR_CAPS_GENERIC.xml' path='doc/member[@name="_NV_MONITOR_CAPS_GENERIC.reserved"]/*' />
+        [NativeTypeName("NvU8 : 1")]
+        public byte reserved
+        {
+            readonly get
+            {
+                return (byte)((_bitfield >> 7) & 0x1u);
+            }
+
+            set
+            {
+                _bitfield = (byte)((_bitfield & ~(0x1u << 7)) | ((value & 0x1u) << 7));
             }
         }
     }

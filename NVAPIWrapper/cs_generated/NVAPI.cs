@@ -10,95 +10,95 @@ namespace NVAPIWrapper
         public static readonly NVDX_SwapChainHandle__* NVDX_SWAPCHAIN_NONE = null;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_SYS_GetDriverAndBranchVersion"]/*' />
-        public static delegate* unmanaged[Cdecl]<uint*, sbyte*, _NvAPI_Status> NvAPI_SYS_GetDriverAndBranchVersion;
+        public delegate* unmanaged[Cdecl]<uint*, sbyte*, _NvAPI_Status> NvAPI_SYS_GetDriverAndBranchVersion;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GPU_GetMemoryInfo"]/*' />
         [Obsolete("Do not use this function - it is deprecated in release 520. Instead, use NvAPI_GPU_GetMemoryInfoEx.")]
-        public static delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, NV_DISPLAY_DRIVER_MEMORY_INFO_V3*, _NvAPI_Status> NvAPI_GPU_GetMemoryInfo;
+        public delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, NV_DISPLAY_DRIVER_MEMORY_INFO_V3*, _NvAPI_Status> NvAPI_GPU_GetMemoryInfo;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GPU_GetMemoryInfoEx"]/*' />
-        public static delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, NV_GPU_MEMORY_INFO_EX_V1*, _NvAPI_Status> NvAPI_GPU_GetMemoryInfoEx;
+        public delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, NV_GPU_MEMORY_INFO_EX_V1*, _NvAPI_Status> NvAPI_GPU_GetMemoryInfoEx;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_EnumPhysicalGPUs"]/*' />
-        public static delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__**, uint*, _NvAPI_Status> NvAPI_EnumPhysicalGPUs;
+        public delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__**, uint*, _NvAPI_Status> NvAPI_EnumPhysicalGPUs;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_DISP_GetGDIPrimaryDisplayId"]/*' />
-        public static delegate* unmanaged[Cdecl]<uint*, _NvAPI_Status> NvAPI_DISP_GetGDIPrimaryDisplayId;
+        public delegate* unmanaged[Cdecl]<uint*, _NvAPI_Status> NvAPI_DISP_GetGDIPrimaryDisplayId;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_Mosaic_GetDisplayViewportsByResolution"]/*' />
-        public static delegate* unmanaged[Cdecl]<uint, uint, uint, _NV_RECT*, byte*, _NvAPI_Status> NvAPI_Mosaic_GetDisplayViewportsByResolution;
+        public delegate* unmanaged[Cdecl]<uint, uint, uint, _NV_RECT*, byte*, _NvAPI_Status> NvAPI_Mosaic_GetDisplayViewportsByResolution;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_Stereo_Enable"]/*' />
-        public static delegate* unmanaged[Cdecl]<_NvAPI_Status> NvAPI_Stereo_Enable;
+        public delegate* unmanaged[Cdecl]<_NvAPI_Status> NvAPI_Stereo_Enable;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_Stereo_Disable"]/*' />
-        public static delegate* unmanaged[Cdecl]<_NvAPI_Status> NvAPI_Stereo_Disable;
+        public delegate* unmanaged[Cdecl]<_NvAPI_Status> NvAPI_Stereo_Disable;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_Stereo_IsEnabled"]/*' />
-        public static delegate* unmanaged[Cdecl]<byte*, _NvAPI_Status> NvAPI_Stereo_IsEnabled;
+        public delegate* unmanaged[Cdecl]<byte*, _NvAPI_Status> NvAPI_Stereo_IsEnabled;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_Stereo_DestroyHandle"]/*' />
-        public static delegate* unmanaged[Cdecl]<void*, _NvAPI_Status> NvAPI_Stereo_DestroyHandle;
+        public delegate* unmanaged[Cdecl]<void*, _NvAPI_Status> NvAPI_Stereo_DestroyHandle;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_Stereo_Activate"]/*' />
-        public static delegate* unmanaged[Cdecl]<void*, _NvAPI_Status> NvAPI_Stereo_Activate;
+        public delegate* unmanaged[Cdecl]<void*, _NvAPI_Status> NvAPI_Stereo_Activate;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_Stereo_Deactivate"]/*' />
-        public static delegate* unmanaged[Cdecl]<void*, _NvAPI_Status> NvAPI_Stereo_Deactivate;
+        public delegate* unmanaged[Cdecl]<void*, _NvAPI_Status> NvAPI_Stereo_Deactivate;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_Stereo_IsActivated"]/*' />
-        public static delegate* unmanaged[Cdecl]<void*, byte*, _NvAPI_Status> NvAPI_Stereo_IsActivated;
+        public delegate* unmanaged[Cdecl]<void*, byte*, _NvAPI_Status> NvAPI_Stereo_IsActivated;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_Stereo_GetSeparation"]/*' />
-        public static delegate* unmanaged[Cdecl]<void*, float*, _NvAPI_Status> NvAPI_Stereo_GetSeparation;
+        public delegate* unmanaged[Cdecl]<void*, float*, _NvAPI_Status> NvAPI_Stereo_GetSeparation;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_Stereo_SetSeparation"]/*' />
-        public static delegate* unmanaged[Cdecl]<void*, float, _NvAPI_Status> NvAPI_Stereo_SetSeparation;
+        public delegate* unmanaged[Cdecl]<void*, float, _NvAPI_Status> NvAPI_Stereo_SetSeparation;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_Stereo_GetConvergence"]/*' />
-        public static delegate* unmanaged[Cdecl]<void*, float*, _NvAPI_Status> NvAPI_Stereo_GetConvergence;
+        public delegate* unmanaged[Cdecl]<void*, float*, _NvAPI_Status> NvAPI_Stereo_GetConvergence;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_Stereo_SetConvergence"]/*' />
-        public static delegate* unmanaged[Cdecl]<void*, float, _NvAPI_Status> NvAPI_Stereo_SetConvergence;
+        public delegate* unmanaged[Cdecl]<void*, float, _NvAPI_Status> NvAPI_Stereo_SetConvergence;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_Stereo_SetActiveEye"]/*' />
-        public static delegate* unmanaged[Cdecl]<void*, _NV_StereoActiveEye, _NvAPI_Status> NvAPI_Stereo_SetActiveEye;
+        public delegate* unmanaged[Cdecl]<void*, _NV_StereoActiveEye, _NvAPI_Status> NvAPI_Stereo_SetActiveEye;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_Stereo_SetDriverMode"]/*' />
-        public static delegate* unmanaged[Cdecl]<_NV_StereoDriverMode, _NvAPI_Status> NvAPI_Stereo_SetDriverMode;
+        public delegate* unmanaged[Cdecl]<_NV_StereoDriverMode, _NvAPI_Status> NvAPI_Stereo_SetDriverMode;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_Stereo_GetEyeSeparation"]/*' />
-        public static delegate* unmanaged[Cdecl]<void*, float*, _NvAPI_Status> NvAPI_Stereo_GetEyeSeparation;
+        public delegate* unmanaged[Cdecl]<void*, float*, _NvAPI_Status> NvAPI_Stereo_GetEyeSeparation;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_Stereo_IsWindowedModeSupported"]/*' />
-        public static delegate* unmanaged[Cdecl]<byte*, _NvAPI_Status> NvAPI_Stereo_IsWindowedModeSupported;
+        public delegate* unmanaged[Cdecl]<byte*, _NvAPI_Status> NvAPI_Stereo_IsWindowedModeSupported;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_Stereo_SetSurfaceCreationMode"]/*' />
-        public static delegate* unmanaged[Cdecl]<void*, _NVAPI_STEREO_SURFACECREATEMODE, _NvAPI_Status> NvAPI_Stereo_SetSurfaceCreationMode;
+        public delegate* unmanaged[Cdecl]<void*, _NVAPI_STEREO_SURFACECREATEMODE, _NvAPI_Status> NvAPI_Stereo_SetSurfaceCreationMode;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_Stereo_GetSurfaceCreationMode"]/*' />
-        public static delegate* unmanaged[Cdecl]<void*, _NVAPI_STEREO_SURFACECREATEMODE*, _NvAPI_Status> NvAPI_Stereo_GetSurfaceCreationMode;
+        public delegate* unmanaged[Cdecl]<void*, _NVAPI_STEREO_SURFACECREATEMODE*, _NvAPI_Status> NvAPI_Stereo_GetSurfaceCreationMode;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_Stereo_Debug_WasLastDrawStereoized"]/*' />
-        public static delegate* unmanaged[Cdecl]<void*, byte*, _NvAPI_Status> NvAPI_Stereo_Debug_WasLastDrawStereoized;
+        public delegate* unmanaged[Cdecl]<void*, byte*, _NvAPI_Status> NvAPI_Stereo_Debug_WasLastDrawStereoized;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_Stereo_SetDefaultProfile"]/*' />
-        public static delegate* unmanaged[Cdecl]<sbyte*, _NvAPI_Status> NvAPI_Stereo_SetDefaultProfile;
+        public delegate* unmanaged[Cdecl]<sbyte*, _NvAPI_Status> NvAPI_Stereo_SetDefaultProfile;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_Stereo_GetDefaultProfile"]/*' />
-        public static delegate* unmanaged[Cdecl]<uint, sbyte*, uint*, _NvAPI_Status> NvAPI_Stereo_GetDefaultProfile;
+        public delegate* unmanaged[Cdecl]<uint, sbyte*, uint*, _NvAPI_Status> NvAPI_Stereo_GetDefaultProfile;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_Initialize"]/*' />
-        public static delegate* unmanaged[Cdecl]<_NvAPI_Status> NvAPI_Initialize;
+        public delegate* unmanaged[Cdecl]<_NvAPI_Status> NvAPI_Initialize;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_Unload"]/*' />
-        public static delegate* unmanaged[Cdecl]<_NvAPI_Status> NvAPI_Unload;
+        public delegate* unmanaged[Cdecl]<_NvAPI_Status> NvAPI_Unload;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GetErrorMessage"]/*' />
-        public static delegate* unmanaged[Cdecl]<_NvAPI_Status, sbyte*, _NvAPI_Status> NvAPI_GetErrorMessage;
+        public delegate* unmanaged[Cdecl]<_NvAPI_Status, sbyte*, _NvAPI_Status> NvAPI_GetErrorMessage;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GetInterfaceVersionString"]/*' />
-        public static delegate* unmanaged[Cdecl]<sbyte*, _NvAPI_Status> NvAPI_GetInterfaceVersionString;
+        public delegate* unmanaged[Cdecl]<sbyte*, _NvAPI_Status> NvAPI_GetInterfaceVersionString;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GetInterfaceVersionStringEx"]/*' />
         [DllImport("nvapi64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
@@ -106,884 +106,911 @@ namespace NVAPIWrapper
         public static extern _NvAPI_Status NvAPI_GetInterfaceVersionStringEx([NativeTypeName("NvAPI_ShortString")] sbyte* szDesc);
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GPU_GetEDID"]/*' />
-        public static delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, uint, NV_EDID_V3*, _NvAPI_Status> NvAPI_GPU_GetEDID;
+        public delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, uint, NV_EDID_V3*, _NvAPI_Status> NvAPI_GPU_GetEDID;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_SetView"]/*' />
         [Obsolete("Do not use this function - it is deprecated in release 290. Instead, use NvAPI_DISP_SetDisplayConfig.")]
-        public static delegate* unmanaged[Cdecl]<NvDisplayHandle__*, NV_VIEW_TARGET_INFO*, _NV_TARGET_VIEW_MODE, _NvAPI_Status> NvAPI_SetView;
+        public delegate* unmanaged[Cdecl]<NvDisplayHandle__*, NV_VIEW_TARGET_INFO*, _NV_TARGET_VIEW_MODE, _NvAPI_Status> NvAPI_SetView;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_SetViewEx"]/*' />
         [Obsolete("Do not use this function - it is deprecated in release 290. Instead, use NvAPI_DISP_SetDisplayConfig.")]
-        public static delegate* unmanaged[Cdecl]<NvDisplayHandle__*, NV_DISPLAY_PATH_INFO*, _NV_TARGET_VIEW_MODE, _NvAPI_Status> NvAPI_SetViewEx;
+        public delegate* unmanaged[Cdecl]<NvDisplayHandle__*, NV_DISPLAY_PATH_INFO*, _NV_TARGET_VIEW_MODE, _NvAPI_Status> NvAPI_SetViewEx;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GetDisplayDriverVersion"]/*' />
         [Obsolete("Do not use this function - it is deprecated in release 290. Instead, use NvAPI_SYS_GetDriverAndBranchVersion.")]
-        public static delegate* unmanaged[Cdecl]<NvDisplayHandle__*, NV_DISPLAY_DRIVER_VERSION*, _NvAPI_Status> NvAPI_GetDisplayDriverVersion;
+        public delegate* unmanaged[Cdecl]<NvDisplayHandle__*, NV_DISPLAY_DRIVER_VERSION*, _NvAPI_Status> NvAPI_GetDisplayDriverVersion;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_OGL_ExpertModeSet"]/*' />
-        public static delegate* unmanaged[Cdecl]<uint, uint, uint, delegate* unmanaged[Cdecl]<uint, uint, uint, int, sbyte*, void>, _NvAPI_Status> NvAPI_OGL_ExpertModeSet;
+        public delegate* unmanaged[Cdecl]<uint, uint, uint, delegate* unmanaged[Cdecl]<uint, uint, uint, int, sbyte*, void>, _NvAPI_Status> NvAPI_OGL_ExpertModeSet;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_OGL_ExpertModeGet"]/*' />
-        public static delegate* unmanaged[Cdecl]<uint*, uint*, uint*, delegate* unmanaged[Cdecl]<uint, uint, uint, int, sbyte*, void>*, _NvAPI_Status> NvAPI_OGL_ExpertModeGet;
+        public delegate* unmanaged[Cdecl]<uint*, uint*, uint*, delegate* unmanaged[Cdecl]<uint, uint, uint, int, sbyte*, void>*, _NvAPI_Status> NvAPI_OGL_ExpertModeGet;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_OGL_ExpertModeDefaultsSet"]/*' />
-        public static delegate* unmanaged[Cdecl]<uint, uint, uint, _NvAPI_Status> NvAPI_OGL_ExpertModeDefaultsSet;
+        public delegate* unmanaged[Cdecl]<uint, uint, uint, _NvAPI_Status> NvAPI_OGL_ExpertModeDefaultsSet;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_OGL_ExpertModeDefaultsGet"]/*' />
-        public static delegate* unmanaged[Cdecl]<uint*, uint*, uint*, _NvAPI_Status> NvAPI_OGL_ExpertModeDefaultsGet;
+        public delegate* unmanaged[Cdecl]<uint*, uint*, uint*, _NvAPI_Status> NvAPI_OGL_ExpertModeDefaultsGet;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_EnumTCCPhysicalGPUs"]/*' />
-        public static delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__**, uint*, _NvAPI_Status> NvAPI_EnumTCCPhysicalGPUs;
+        public delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__**, uint*, _NvAPI_Status> NvAPI_EnumTCCPhysicalGPUs;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_EnumLogicalGPUs"]/*' />
-        public static delegate* unmanaged[Cdecl]<NvLogicalGpuHandle__**, uint*, _NvAPI_Status> NvAPI_EnumLogicalGPUs;
+        public delegate* unmanaged[Cdecl]<NvLogicalGpuHandle__**, uint*, _NvAPI_Status> NvAPI_EnumLogicalGPUs;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GetPhysicalGPUsFromDisplay"]/*' />
-        public static delegate* unmanaged[Cdecl]<NvDisplayHandle__*, NvPhysicalGpuHandle__**, uint*, _NvAPI_Status> NvAPI_GetPhysicalGPUsFromDisplay;
+        public delegate* unmanaged[Cdecl]<NvDisplayHandle__*, NvPhysicalGpuHandle__**, uint*, _NvAPI_Status> NvAPI_GetPhysicalGPUsFromDisplay;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GetPhysicalGPUFromUnAttachedDisplay"]/*' />
-        public static delegate* unmanaged[Cdecl]<NvUnAttachedDisplayHandle__*, NvPhysicalGpuHandle__**, _NvAPI_Status> NvAPI_GetPhysicalGPUFromUnAttachedDisplay;
+        public delegate* unmanaged[Cdecl]<NvUnAttachedDisplayHandle__*, NvPhysicalGpuHandle__**, _NvAPI_Status> NvAPI_GetPhysicalGPUFromUnAttachedDisplay;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GetLogicalGPUFromDisplay"]/*' />
-        public static delegate* unmanaged[Cdecl]<NvDisplayHandle__*, NvLogicalGpuHandle__**, _NvAPI_Status> NvAPI_GetLogicalGPUFromDisplay;
+        public delegate* unmanaged[Cdecl]<NvDisplayHandle__*, NvLogicalGpuHandle__**, _NvAPI_Status> NvAPI_GetLogicalGPUFromDisplay;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GetLogicalGPUFromPhysicalGPU"]/*' />
-        public static delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, NvLogicalGpuHandle__**, _NvAPI_Status> NvAPI_GetLogicalGPUFromPhysicalGPU;
+        public delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, NvLogicalGpuHandle__**, _NvAPI_Status> NvAPI_GetLogicalGPUFromPhysicalGPU;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GetPhysicalGPUsFromLogicalGPU"]/*' />
-        public static delegate* unmanaged[Cdecl]<NvLogicalGpuHandle__*, NvPhysicalGpuHandle__**, uint*, _NvAPI_Status> NvAPI_GetPhysicalGPUsFromLogicalGPU;
+        public delegate* unmanaged[Cdecl]<NvLogicalGpuHandle__*, NvPhysicalGpuHandle__**, uint*, _NvAPI_Status> NvAPI_GetPhysicalGPUsFromLogicalGPU;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GetPhysicalGPUFromGPUID"]/*' />
-        public static delegate* unmanaged[Cdecl]<uint, NvPhysicalGpuHandle__**, _NvAPI_Status> NvAPI_GetPhysicalGPUFromGPUID;
+        public delegate* unmanaged[Cdecl]<uint, NvPhysicalGpuHandle__**, _NvAPI_Status> NvAPI_GetPhysicalGPUFromGPUID;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GetGPUIDfromPhysicalGPU"]/*' />
-        public static delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, uint*, _NvAPI_Status> NvAPI_GetGPUIDfromPhysicalGPU;
+        public delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, uint*, _NvAPI_Status> NvAPI_GetGPUIDfromPhysicalGPU;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GPU_GetShaderSubPipeCount"]/*' />
-        public static delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, uint*, _NvAPI_Status> NvAPI_GPU_GetShaderSubPipeCount;
+        public delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, uint*, _NvAPI_Status> NvAPI_GPU_GetShaderSubPipeCount;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GPU_GetGpuCoreCount"]/*' />
-        public static delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, uint*, _NvAPI_Status> NvAPI_GPU_GetGpuCoreCount;
+        public delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, uint*, _NvAPI_Status> NvAPI_GPU_GetGpuCoreCount;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GPU_GetAllOutputs"]/*' />
         [Obsolete("Do not use this function - it is deprecated in release 290. Instead, use NvAPI_GPU_GetAllDisplayIds.")]
-        public static delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, uint*, _NvAPI_Status> NvAPI_GPU_GetAllOutputs;
+        public delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, uint*, _NvAPI_Status> NvAPI_GPU_GetAllOutputs;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GPU_GetConnectedOutputs"]/*' />
         [Obsolete("Do not use this function - it is deprecated in release 290. Instead, use NvAPI_GPU_GetConnectedDisplayIds.")]
-        public static delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, uint*, _NvAPI_Status> NvAPI_GPU_GetConnectedOutputs;
+        public delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, uint*, _NvAPI_Status> NvAPI_GPU_GetConnectedOutputs;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GPU_GetConnectedSLIOutputs"]/*' />
         [Obsolete("Do not use this function - it is deprecated in release 290. Instead, use NvAPI_GPU_GetConnectedDisplayIds.")]
-        public static delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, uint*, _NvAPI_Status> NvAPI_GPU_GetConnectedSLIOutputs;
+        public delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, uint*, _NvAPI_Status> NvAPI_GPU_GetConnectedSLIOutputs;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GPU_GetConnectedDisplayIds"]/*' />
-        public static delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, _NV_GPU_DISPLAYIDS*, uint*, uint, _NvAPI_Status> NvAPI_GPU_GetConnectedDisplayIds;
+        public delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, _NV_GPU_DISPLAYIDS*, uint*, uint, _NvAPI_Status> NvAPI_GPU_GetConnectedDisplayIds;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GPU_GetAllDisplayIds"]/*' />
-        public static delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, _NV_GPU_DISPLAYIDS*, uint*, _NvAPI_Status> NvAPI_GPU_GetAllDisplayIds;
+        public delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, _NV_GPU_DISPLAYIDS*, uint*, _NvAPI_Status> NvAPI_GPU_GetAllDisplayIds;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GPU_GetConnectedOutputsWithLidState"]/*' />
         [Obsolete("Do not use this function - it is deprecated in release 290. Instead, use NvAPI_GPU_GetConnectedDisplayIds.")]
-        public static delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, uint*, _NvAPI_Status> NvAPI_GPU_GetConnectedOutputsWithLidState;
+        public delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, uint*, _NvAPI_Status> NvAPI_GPU_GetConnectedOutputsWithLidState;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GPU_GetConnectedSLIOutputsWithLidState"]/*' />
         [Obsolete("Do not use this function - it is deprecated in release 290. Instead, use NvAPI_GPU_GetConnectedDisplayIds.")]
-        public static delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, uint*, _NvAPI_Status> NvAPI_GPU_GetConnectedSLIOutputsWithLidState;
+        public delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, uint*, _NvAPI_Status> NvAPI_GPU_GetConnectedSLIOutputsWithLidState;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GPU_GetSystemType"]/*' />
-        public static delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, NV_SYSTEM_TYPE*, _NvAPI_Status> NvAPI_GPU_GetSystemType;
+        public delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, NV_SYSTEM_TYPE*, _NvAPI_Status> NvAPI_GPU_GetSystemType;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GPU_GetActiveOutputs"]/*' />
-        public static delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, uint*, _NvAPI_Status> NvAPI_GPU_GetActiveOutputs;
+        public delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, uint*, _NvAPI_Status> NvAPI_GPU_GetActiveOutputs;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GPU_SetEDID"]/*' />
-        public static delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, uint, NV_EDID_V3*, _NvAPI_Status> NvAPI_GPU_SetEDID;
+        public delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, uint, NV_EDID_V3*, _NvAPI_Status> NvAPI_GPU_SetEDID;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GPU_GetOutputType"]/*' />
-        public static delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, uint, _NV_GPU_OUTPUT_TYPE*, _NvAPI_Status> NvAPI_GPU_GetOutputType;
+        public delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, uint, _NV_GPU_OUTPUT_TYPE*, _NvAPI_Status> NvAPI_GPU_GetOutputType;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GPU_ValidateOutputCombination"]/*' />
-        public static delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, uint, _NvAPI_Status> NvAPI_GPU_ValidateOutputCombination;
+        public delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, uint, _NvAPI_Status> NvAPI_GPU_ValidateOutputCombination;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GPU_GetFullName"]/*' />
-        public static delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, sbyte*, _NvAPI_Status> NvAPI_GPU_GetFullName;
+        public delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, sbyte*, _NvAPI_Status> NvAPI_GPU_GetFullName;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GPU_GetPCIIdentifiers"]/*' />
-        public static delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, uint*, uint*, uint*, uint*, _NvAPI_Status> NvAPI_GPU_GetPCIIdentifiers;
+        public delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, uint*, uint*, uint*, uint*, _NvAPI_Status> NvAPI_GPU_GetPCIIdentifiers;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GPU_GetGPUType"]/*' />
-        public static delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, _NV_GPU_TYPE*, _NvAPI_Status> NvAPI_GPU_GetGPUType;
+        public delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, _NV_GPU_TYPE*, _NvAPI_Status> NvAPI_GPU_GetGPUType;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GPU_GetBusType"]/*' />
-        public static delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, _NV_GPU_BUS_TYPE*, _NvAPI_Status> NvAPI_GPU_GetBusType;
+        public delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, _NV_GPU_BUS_TYPE*, _NvAPI_Status> NvAPI_GPU_GetBusType;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GPU_GetBusId"]/*' />
-        public static delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, uint*, _NvAPI_Status> NvAPI_GPU_GetBusId;
+        public delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, uint*, _NvAPI_Status> NvAPI_GPU_GetBusId;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GPU_GetBusSlotId"]/*' />
-        public static delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, uint*, _NvAPI_Status> NvAPI_GPU_GetBusSlotId;
+        public delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, uint*, _NvAPI_Status> NvAPI_GPU_GetBusSlotId;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GPU_GetIRQ"]/*' />
-        public static delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, uint*, _NvAPI_Status> NvAPI_GPU_GetIRQ;
+        public delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, uint*, _NvAPI_Status> NvAPI_GPU_GetIRQ;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GPU_GetVbiosRevision"]/*' />
-        public static delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, uint*, _NvAPI_Status> NvAPI_GPU_GetVbiosRevision;
+        public delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, uint*, _NvAPI_Status> NvAPI_GPU_GetVbiosRevision;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GPU_GetVbiosOEMRevision"]/*' />
-        public static delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, uint*, _NvAPI_Status> NvAPI_GPU_GetVbiosOEMRevision;
+        public delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, uint*, _NvAPI_Status> NvAPI_GPU_GetVbiosOEMRevision;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GPU_GetVbiosVersionString"]/*' />
-        public static delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, sbyte*, _NvAPI_Status> NvAPI_GPU_GetVbiosVersionString;
+        public delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, sbyte*, _NvAPI_Status> NvAPI_GPU_GetVbiosVersionString;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GPU_GetAGPAperture"]/*' />
         [Obsolete("Do not use this function - it is deprecated in release 455.")]
-        public static delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, uint*, _NvAPI_Status> NvAPI_GPU_GetAGPAperture;
+        public delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, uint*, _NvAPI_Status> NvAPI_GPU_GetAGPAperture;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GPU_GetCurrentAGPRate"]/*' />
         [Obsolete("Do not use this function - it is deprecated in release 455.")]
-        public static delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, uint*, _NvAPI_Status> NvAPI_GPU_GetCurrentAGPRate;
+        public delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, uint*, _NvAPI_Status> NvAPI_GPU_GetCurrentAGPRate;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GPU_GetCurrentPCIEDownstreamWidth"]/*' />
-        public static delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, uint*, _NvAPI_Status> NvAPI_GPU_GetCurrentPCIEDownstreamWidth;
+        public delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, uint*, _NvAPI_Status> NvAPI_GPU_GetCurrentPCIEDownstreamWidth;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GPU_GetPhysicalFrameBufferSize"]/*' />
-        public static delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, uint*, _NvAPI_Status> NvAPI_GPU_GetPhysicalFrameBufferSize;
+        public delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, uint*, _NvAPI_Status> NvAPI_GPU_GetPhysicalFrameBufferSize;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GPU_GetVirtualFrameBufferSize"]/*' />
-        public static delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, uint*, _NvAPI_Status> NvAPI_GPU_GetVirtualFrameBufferSize;
+        public delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, uint*, _NvAPI_Status> NvAPI_GPU_GetVirtualFrameBufferSize;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GPU_GetQuadroStatus"]/*' />
         [Obsolete("Do not use this function - it is deprecated in release 460.")]
-        public static delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, uint*, _NvAPI_Status> NvAPI_GPU_GetQuadroStatus;
+        public delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, uint*, _NvAPI_Status> NvAPI_GPU_GetQuadroStatus;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GPU_GetBoardInfo"]/*' />
-        public static delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, _NV_BOARD_INFO*, _NvAPI_Status> NvAPI_GPU_GetBoardInfo;
+        public delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, _NV_BOARD_INFO*, _NvAPI_Status> NvAPI_GPU_GetBoardInfo;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GPU_GetRamBusWidth"]/*' />
-        public static delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, uint*, _NvAPI_Status> NvAPI_GPU_GetRamBusWidth;
+        public delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, uint*, _NvAPI_Status> NvAPI_GPU_GetRamBusWidth;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GPU_GetArchInfo"]/*' />
-        public static delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, NV_GPU_ARCH_INFO_V2*, _NvAPI_Status> NvAPI_GPU_GetArchInfo;
+        public delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, NV_GPU_ARCH_INFO_V2*, _NvAPI_Status> NvAPI_GPU_GetArchInfo;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_I2CRead"]/*' />
-        public static delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, NV_I2C_INFO_V3*, _NvAPI_Status> NvAPI_I2CRead;
+        public delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, NV_I2C_INFO_V3*, _NvAPI_Status> NvAPI_I2CRead;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_I2CWrite"]/*' />
-        public static delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, NV_I2C_INFO_V3*, _NvAPI_Status> NvAPI_I2CWrite;
+        public delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, NV_I2C_INFO_V3*, _NvAPI_Status> NvAPI_I2CWrite;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GPU_WorkstationFeatureSetup"]/*' />
-        public static delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, uint, uint, _NvAPI_Status> NvAPI_GPU_WorkstationFeatureSetup;
+        public delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, uint, uint, _NvAPI_Status> NvAPI_GPU_WorkstationFeatureSetup;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GPU_WorkstationFeatureQuery"]/*' />
-        public static delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, uint*, uint*, _NvAPI_Status> NvAPI_GPU_WorkstationFeatureQuery;
+        public delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, uint*, uint*, _NvAPI_Status> NvAPI_GPU_WorkstationFeatureQuery;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GPU_GetHDCPSupportStatus"]/*' />
-        public static delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, NV_GPU_GET_HDCP_SUPPORT_STATUS*, _NvAPI_Status> NvAPI_GPU_GetHDCPSupportStatus;
+        public delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, NV_GPU_GET_HDCP_SUPPORT_STATUS*, _NvAPI_Status> NvAPI_GPU_GetHDCPSupportStatus;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GPU_CudaEnumComputeCapableGpus"]/*' />
         [Obsolete("Do not use this function - it is deprecated in release 319.")]
-        public static delegate* unmanaged[Cdecl]<_NV_COMPUTE_GPU_TOPOLOGY_V2*, _NvAPI_Status> NvAPI_GPU_CudaEnumComputeCapableGpus;
+        public delegate* unmanaged[Cdecl]<_NV_COMPUTE_GPU_TOPOLOGY_V2*, _NvAPI_Status> NvAPI_GPU_CudaEnumComputeCapableGpus;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GPU_GetTachReading"]/*' />
-        public static delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, uint*, _NvAPI_Status> NvAPI_GPU_GetTachReading;
+        public delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, uint*, _NvAPI_Status> NvAPI_GPU_GetTachReading;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GPU_GetECCStatusInfo"]/*' />
-        public static delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, NV_GPU_ECC_STATUS_INFO*, _NvAPI_Status> NvAPI_GPU_GetECCStatusInfo;
+        public delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, NV_GPU_ECC_STATUS_INFO*, _NvAPI_Status> NvAPI_GPU_GetECCStatusInfo;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GPU_GetECCErrorInfo"]/*' />
-        public static delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, NV_GPU_ECC_ERROR_INFO*, _NvAPI_Status> NvAPI_GPU_GetECCErrorInfo;
+        public delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, NV_GPU_ECC_ERROR_INFO*, _NvAPI_Status> NvAPI_GPU_GetECCErrorInfo;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GPU_ResetECCErrorInfo"]/*' />
-        public static delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, byte, byte, _NvAPI_Status> NvAPI_GPU_ResetECCErrorInfo;
+        public delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, byte, byte, _NvAPI_Status> NvAPI_GPU_ResetECCErrorInfo;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GPU_GetECCConfigurationInfo"]/*' />
-        public static delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, NV_GPU_ECC_CONFIGURATION_INFO*, _NvAPI_Status> NvAPI_GPU_GetECCConfigurationInfo;
+        public delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, NV_GPU_ECC_CONFIGURATION_INFO*, _NvAPI_Status> NvAPI_GPU_GetECCConfigurationInfo;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GPU_SetECCConfiguration"]/*' />
-        public static delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, byte, byte, _NvAPI_Status> NvAPI_GPU_SetECCConfiguration;
+        public delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, byte, byte, _NvAPI_Status> NvAPI_GPU_SetECCConfiguration;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GPU_QueryWorkstationFeatureSupport"]/*' />
-        public static delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, _NV_GPU_WORKSTATION_FEATURE_TYPE, _NvAPI_Status> NvAPI_GPU_QueryWorkstationFeatureSupport;
+        public delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, _NV_GPU_WORKSTATION_FEATURE_TYPE, _NvAPI_Status> NvAPI_GPU_QueryWorkstationFeatureSupport;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GPU_SetScanoutIntensity"]/*' />
-        public static delegate* unmanaged[Cdecl]<uint, NV_SCANOUT_INTENSITY_DATA_V2*, int*, _NvAPI_Status> NvAPI_GPU_SetScanoutIntensity;
+        public delegate* unmanaged[Cdecl]<uint, NV_SCANOUT_INTENSITY_DATA_V2*, int*, _NvAPI_Status> NvAPI_GPU_SetScanoutIntensity;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GPU_GetScanoutIntensityState"]/*' />
-        public static delegate* unmanaged[Cdecl]<uint, _NV_SCANOUT_INTENSITY_STATE_DATA*, _NvAPI_Status> NvAPI_GPU_GetScanoutIntensityState;
+        public delegate* unmanaged[Cdecl]<uint, _NV_SCANOUT_INTENSITY_STATE_DATA*, _NvAPI_Status> NvAPI_GPU_GetScanoutIntensityState;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GPU_SetScanoutWarping"]/*' />
-        public static delegate* unmanaged[Cdecl]<uint, NV_SCANOUT_WARPING_DATA*, int*, int*, _NvAPI_Status> NvAPI_GPU_SetScanoutWarping;
+        public delegate* unmanaged[Cdecl]<uint, NV_SCANOUT_WARPING_DATA*, int*, int*, _NvAPI_Status> NvAPI_GPU_SetScanoutWarping;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GPU_GetScanoutWarpingState"]/*' />
-        public static delegate* unmanaged[Cdecl]<uint, _NV_SCANOUT_WARPING_STATE_DATA*, _NvAPI_Status> NvAPI_GPU_GetScanoutWarpingState;
+        public delegate* unmanaged[Cdecl]<uint, _NV_SCANOUT_WARPING_STATE_DATA*, _NvAPI_Status> NvAPI_GPU_GetScanoutWarpingState;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GPU_SetScanoutCompositionParameter"]/*' />
-        public static delegate* unmanaged[Cdecl]<uint, NV_GPU_SCANOUT_COMPOSITION_PARAMETER, NV_GPU_SCANOUT_COMPOSITION_PARAMETER_VALUE, float*, _NvAPI_Status> NvAPI_GPU_SetScanoutCompositionParameter;
+        public delegate* unmanaged[Cdecl]<uint, NV_GPU_SCANOUT_COMPOSITION_PARAMETER, NV_GPU_SCANOUT_COMPOSITION_PARAMETER_VALUE, float*, _NvAPI_Status> NvAPI_GPU_SetScanoutCompositionParameter;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GPU_GetScanoutCompositionParameter"]/*' />
-        public static delegate* unmanaged[Cdecl]<uint, NV_GPU_SCANOUT_COMPOSITION_PARAMETER, NV_GPU_SCANOUT_COMPOSITION_PARAMETER_VALUE*, float*, _NvAPI_Status> NvAPI_GPU_GetScanoutCompositionParameter;
+        public delegate* unmanaged[Cdecl]<uint, NV_GPU_SCANOUT_COMPOSITION_PARAMETER, NV_GPU_SCANOUT_COMPOSITION_PARAMETER_VALUE*, float*, _NvAPI_Status> NvAPI_GPU_GetScanoutCompositionParameter;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GPU_GetScanoutConfiguration"]/*' />
-        public static delegate* unmanaged[Cdecl]<uint, NvSBox*, NvSBox*, _NvAPI_Status> NvAPI_GPU_GetScanoutConfiguration;
+        public delegate* unmanaged[Cdecl]<uint, NvSBox*, NvSBox*, _NvAPI_Status> NvAPI_GPU_GetScanoutConfiguration;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GPU_GetScanoutConfigurationEx"]/*' />
-        public static delegate* unmanaged[Cdecl]<uint, _NV_SCANOUT_INFORMATION*, _NvAPI_Status> NvAPI_GPU_GetScanoutConfigurationEx;
+        public delegate* unmanaged[Cdecl]<uint, _NV_SCANOUT_INFORMATION*, _NvAPI_Status> NvAPI_GPU_GetScanoutConfigurationEx;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GPU_GetAdapterIdFromPhysicalGpu"]/*' />
         [Obsolete("Do not use this function - it is deprecated in release 520. Instead, use NvAPI_GPU_GetLogicalGpuInfo.")]
-        public static delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, void*, _NvAPI_Status> NvAPI_GPU_GetAdapterIdFromPhysicalGpu;
+        public delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, void*, _NvAPI_Status> NvAPI_GPU_GetAdapterIdFromPhysicalGpu;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GPU_GetVirtualizationInfo"]/*' />
-        public static delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, _NV_GPU_VIRTUALIZATION_INFO*, _NvAPI_Status> NvAPI_GPU_GetVirtualizationInfo;
+        public delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, _NV_GPU_VIRTUALIZATION_INFO*, _NvAPI_Status> NvAPI_GPU_GetVirtualizationInfo;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GPU_GetLogicalGpuInfo"]/*' />
-        public static delegate* unmanaged[Cdecl]<NvLogicalGpuHandle__*, _NV_LOGICAL_GPU_DATA_V1*, _NvAPI_Status> NvAPI_GPU_GetLogicalGpuInfo;
+        public delegate* unmanaged[Cdecl]<NvLogicalGpuHandle__*, _NV_LOGICAL_GPU_DATA_V1*, _NvAPI_Status> NvAPI_GPU_GetLogicalGpuInfo;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GPU_GetLicensableFeatures"]/*' />
-        public static delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, _NV_LICENSABLE_FEATURES_V4*, _NvAPI_Status> NvAPI_GPU_GetLicensableFeatures;
+        public delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, _NV_LICENSABLE_FEATURES_V4*, _NvAPI_Status> NvAPI_GPU_GetLicensableFeatures;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GPU_GetEncoderStatistics"]/*' />
-        public static delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, _NV_ENCODER_STATISTICS_V1*, _NvAPI_Status> NvAPI_GPU_GetEncoderStatistics;
+        public delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, _NV_ENCODER_STATISTICS_V1*, _NvAPI_Status> NvAPI_GPU_GetEncoderStatistics;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GPU_GetEncoderSessionsInfo"]/*' />
-        public static delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, _NV_ENCODER_SESSIONS_INFO_V1*, _NvAPI_Status> NvAPI_GPU_GetEncoderSessionsInfo;
+        public delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, _NV_ENCODER_SESSIONS_INFO_V1*, _NvAPI_Status> NvAPI_GPU_GetEncoderSessionsInfo;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GPU_GetGPUInfo"]/*' />
-        public static delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, _NV_GPU_INFO_V2*, _NvAPI_Status> NvAPI_GPU_GetGPUInfo;
+        public delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, _NV_GPU_INFO_V2*, _NvAPI_Status> NvAPI_GPU_GetGPUInfo;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GPU_GetVRReadyData"]/*' />
-        public static delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, _NV_GPU_VR_READY_V1*, _NvAPI_Status> NvAPI_GPU_GetVRReadyData;
+        public delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, _NV_GPU_VR_READY_V1*, _NvAPI_Status> NvAPI_GPU_GetVRReadyData;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GPU_GetGspFeatures"]/*' />
-        public static delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, _NV_GPU_GSP_INFO_V1*, _NvAPI_Status> NvAPI_GPU_GetGspFeatures;
+        public delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, _NV_GPU_GSP_INFO_V1*, _NvAPI_Status> NvAPI_GPU_GetGspFeatures;
+
+        /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GPU_GetUUID"]/*' />
+        public delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, _NV_GPU_UUID_V1*, _NvAPI_Status> NvAPI_GPU_GetUUID;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GPU_NVLINK_GetCaps"]/*' />
-        public static delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, NVLINK_GET_CAPS_V1*, _NvAPI_Status> NvAPI_GPU_NVLINK_GetCaps;
+        public delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, NVLINK_GET_CAPS_V1*, _NvAPI_Status> NvAPI_GPU_NVLINK_GetCaps;
+
+        /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GPU_NVLINK_GetCapsEx"]/*' />
+        public delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, _NVLINK_GET_CAPS_EX_V1*, _NvAPI_Status> NvAPI_GPU_NVLINK_GetCapsEx;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GPU_NVLINK_GetStatus"]/*' />
-        public static delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, NVLINK_GET_STATUS_V2*, _NvAPI_Status> NvAPI_GPU_NVLINK_GetStatus;
+        public delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, NVLINK_GET_STATUS_V2*, _NvAPI_Status> NvAPI_GPU_NVLINK_GetStatus;
+
+        /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GPU_NVLINK_GetStatusEx"]/*' />
+        public delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, _NVLINK_GET_STATUS_EX_V1*, _NvAPI_Status> NvAPI_GPU_NVLINK_GetStatusEx;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GPU_GetPerfDecreaseInfo"]/*' />
-        public static delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, uint*, _NvAPI_Status> NvAPI_GPU_GetPerfDecreaseInfo;
+        public delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, uint*, _NvAPI_Status> NvAPI_GPU_GetPerfDecreaseInfo;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GPU_GetPstatesInfoEx"]/*' />
         [Obsolete("Do not use this function - it is deprecated in release 304. Instead, use NvAPI_GPU_GetPstates20.")]
-        public static delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, NV_GPU_PERF_PSTATES_INFO_V2*, uint, _NvAPI_Status> NvAPI_GPU_GetPstatesInfoEx;
+        public delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, NV_GPU_PERF_PSTATES_INFO_V2*, uint, _NvAPI_Status> NvAPI_GPU_GetPstatesInfoEx;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GPU_GetPstates20"]/*' />
-        public static delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, _NV_GPU_PERF_PSTATES20_INFO_V2*, _NvAPI_Status> NvAPI_GPU_GetPstates20;
+        public delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, _NV_GPU_PERF_PSTATES20_INFO_V2*, _NvAPI_Status> NvAPI_GPU_GetPstates20;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GPU_GetCurrentPstate"]/*' />
-        public static delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, _NV_GPU_PERF_PSTATE_ID*, _NvAPI_Status> NvAPI_GPU_GetCurrentPstate;
+        public delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, _NV_GPU_PERF_PSTATE_ID*, _NvAPI_Status> NvAPI_GPU_GetCurrentPstate;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GPU_GetDynamicPstatesInfoEx"]/*' />
-        public static delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, NV_GPU_DYNAMIC_PSTATES_INFO_EX*, _NvAPI_Status> NvAPI_GPU_GetDynamicPstatesInfoEx;
+        public delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, NV_GPU_DYNAMIC_PSTATES_INFO_EX*, _NvAPI_Status> NvAPI_GPU_GetDynamicPstatesInfoEx;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GPU_GetThermalSettings"]/*' />
-        public static delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, uint, NV_GPU_THERMAL_SETTINGS_V2*, _NvAPI_Status> NvAPI_GPU_GetThermalSettings;
+        public delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, uint, NV_GPU_THERMAL_SETTINGS_V2*, _NvAPI_Status> NvAPI_GPU_GetThermalSettings;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GPU_GetAllClockFrequencies"]/*' />
-        public static delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, NV_GPU_CLOCK_FREQUENCIES_V2*, _NvAPI_Status> NvAPI_GPU_GetAllClockFrequencies;
+        public delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, NV_GPU_CLOCK_FREQUENCIES_V2*, _NvAPI_Status> NvAPI_GPU_GetAllClockFrequencies;
+
+        /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GPU_GetOverclockStatus"]/*' />
+        public delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, _NV_GPU_OVERCLOCK_STATUS_V1*, _NvAPI_Status> NvAPI_GPU_GetOverclockStatus;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GPU_QueryIlluminationSupport"]/*' />
-        public static delegate* unmanaged[Cdecl]<_NV_GPU_QUERY_ILLUMINATION_SUPPORT_PARM_V1*, _NvAPI_Status> NvAPI_GPU_QueryIlluminationSupport;
+        public delegate* unmanaged[Cdecl]<_NV_GPU_QUERY_ILLUMINATION_SUPPORT_PARM_V1*, _NvAPI_Status> NvAPI_GPU_QueryIlluminationSupport;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GPU_GetIllumination"]/*' />
-        public static delegate* unmanaged[Cdecl]<_NV_GPU_GET_ILLUMINATION_PARM_V1*, _NvAPI_Status> NvAPI_GPU_GetIllumination;
+        public delegate* unmanaged[Cdecl]<_NV_GPU_GET_ILLUMINATION_PARM_V1*, _NvAPI_Status> NvAPI_GPU_GetIllumination;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GPU_SetIllumination"]/*' />
-        public static delegate* unmanaged[Cdecl]<_NV_GPU_SET_ILLUMINATION_PARM_V1*, _NvAPI_Status> NvAPI_GPU_SetIllumination;
+        public delegate* unmanaged[Cdecl]<_NV_GPU_SET_ILLUMINATION_PARM_V1*, _NvAPI_Status> NvAPI_GPU_SetIllumination;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GPU_ClientIllumDevicesGetInfo"]/*' />
-        public static delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, _NV_GPU_CLIENT_ILLUM_DEVICE_INFO_PARAMS_V1*, _NvAPI_Status> NvAPI_GPU_ClientIllumDevicesGetInfo;
+        public delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, _NV_GPU_CLIENT_ILLUM_DEVICE_INFO_PARAMS_V1*, _NvAPI_Status> NvAPI_GPU_ClientIllumDevicesGetInfo;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GPU_ClientIllumDevicesGetControl"]/*' />
-        public static delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, NV_GPU_CLIENT_ILLUM_DEVICE_CONTROL_PARAMS_V1*, _NvAPI_Status> NvAPI_GPU_ClientIllumDevicesGetControl;
+        public delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, NV_GPU_CLIENT_ILLUM_DEVICE_CONTROL_PARAMS_V1*, _NvAPI_Status> NvAPI_GPU_ClientIllumDevicesGetControl;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GPU_ClientIllumDevicesSetControl"]/*' />
-        public static delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, NV_GPU_CLIENT_ILLUM_DEVICE_CONTROL_PARAMS_V1*, _NvAPI_Status> NvAPI_GPU_ClientIllumDevicesSetControl;
+        public delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, NV_GPU_CLIENT_ILLUM_DEVICE_CONTROL_PARAMS_V1*, _NvAPI_Status> NvAPI_GPU_ClientIllumDevicesSetControl;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GPU_ClientIllumZonesGetInfo"]/*' />
-        public static delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, _NV_GPU_CLIENT_ILLUM_ZONE_INFO_PARAMS_V1*, _NvAPI_Status> NvAPI_GPU_ClientIllumZonesGetInfo;
+        public delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, _NV_GPU_CLIENT_ILLUM_ZONE_INFO_PARAMS_V1*, _NvAPI_Status> NvAPI_GPU_ClientIllumZonesGetInfo;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GPU_ClientIllumZonesGetControl"]/*' />
-        public static delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, _NV_GPU_CLIENT_ILLUM_ZONE_CONTROL_PARAMS_V1*, _NvAPI_Status> NvAPI_GPU_ClientIllumZonesGetControl;
+        public delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, _NV_GPU_CLIENT_ILLUM_ZONE_CONTROL_PARAMS_V1*, _NvAPI_Status> NvAPI_GPU_ClientIllumZonesGetControl;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GPU_ClientIllumZonesSetControl"]/*' />
-        public static delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, _NV_GPU_CLIENT_ILLUM_ZONE_CONTROL_PARAMS_V1*, _NvAPI_Status> NvAPI_GPU_ClientIllumZonesSetControl;
+        public delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, _NV_GPU_CLIENT_ILLUM_ZONE_CONTROL_PARAMS_V1*, _NvAPI_Status> NvAPI_GPU_ClientIllumZonesSetControl;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_Event_RegisterCallback"]/*' />
-        public static delegate* unmanaged[Cdecl]<NV_EVENT_REGISTER_CALLBACK*, NvEventHandle__**, _NvAPI_Status> NvAPI_Event_RegisterCallback;
+        public delegate* unmanaged[Cdecl]<NV_EVENT_REGISTER_CALLBACK*, NvEventHandle__**, _NvAPI_Status> NvAPI_Event_RegisterCallback;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_Event_UnregisterCallback"]/*' />
-        public static delegate* unmanaged[Cdecl]<NvEventHandle__*, _NvAPI_Status> NvAPI_Event_UnregisterCallback;
+        public delegate* unmanaged[Cdecl]<NvEventHandle__*, _NvAPI_Status> NvAPI_Event_UnregisterCallback;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_EnumNvidiaDisplayHandle"]/*' />
-        public static delegate* unmanaged[Cdecl]<uint, NvDisplayHandle__**, _NvAPI_Status> NvAPI_EnumNvidiaDisplayHandle;
+        public delegate* unmanaged[Cdecl]<uint, NvDisplayHandle__**, _NvAPI_Status> NvAPI_EnumNvidiaDisplayHandle;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_EnumNvidiaUnAttachedDisplayHandle"]/*' />
-        public static delegate* unmanaged[Cdecl]<uint, NvUnAttachedDisplayHandle__**, _NvAPI_Status> NvAPI_EnumNvidiaUnAttachedDisplayHandle;
+        public delegate* unmanaged[Cdecl]<uint, NvUnAttachedDisplayHandle__**, _NvAPI_Status> NvAPI_EnumNvidiaUnAttachedDisplayHandle;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_CreateDisplayFromUnAttachedDisplay"]/*' />
-        public static delegate* unmanaged[Cdecl]<NvUnAttachedDisplayHandle__*, NvDisplayHandle__**, _NvAPI_Status> NvAPI_CreateDisplayFromUnAttachedDisplay;
+        public delegate* unmanaged[Cdecl]<NvUnAttachedDisplayHandle__*, NvDisplayHandle__**, _NvAPI_Status> NvAPI_CreateDisplayFromUnAttachedDisplay;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GetAssociatedNvidiaDisplayHandle"]/*' />
-        public static delegate* unmanaged[Cdecl]<sbyte*, NvDisplayHandle__**, _NvAPI_Status> NvAPI_GetAssociatedNvidiaDisplayHandle;
+        public delegate* unmanaged[Cdecl]<sbyte*, NvDisplayHandle__**, _NvAPI_Status> NvAPI_GetAssociatedNvidiaDisplayHandle;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_DISP_GetAssociatedUnAttachedNvidiaDisplayHandle"]/*' />
-        public static delegate* unmanaged[Cdecl]<sbyte*, NvUnAttachedDisplayHandle__**, _NvAPI_Status> NvAPI_DISP_GetAssociatedUnAttachedNvidiaDisplayHandle;
+        public delegate* unmanaged[Cdecl]<sbyte*, NvUnAttachedDisplayHandle__**, _NvAPI_Status> NvAPI_DISP_GetAssociatedUnAttachedNvidiaDisplayHandle;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GetAssociatedNvidiaDisplayName"]/*' />
-        public static delegate* unmanaged[Cdecl]<NvDisplayHandle__*, sbyte*, _NvAPI_Status> NvAPI_GetAssociatedNvidiaDisplayName;
+        public delegate* unmanaged[Cdecl]<NvDisplayHandle__*, sbyte*, _NvAPI_Status> NvAPI_GetAssociatedNvidiaDisplayName;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GetUnAttachedAssociatedDisplayName"]/*' />
-        public static delegate* unmanaged[Cdecl]<NvUnAttachedDisplayHandle__*, sbyte*, _NvAPI_Status> NvAPI_GetUnAttachedAssociatedDisplayName;
+        public delegate* unmanaged[Cdecl]<NvUnAttachedDisplayHandle__*, sbyte*, _NvAPI_Status> NvAPI_GetUnAttachedAssociatedDisplayName;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_EnableHWCursor"]/*' />
-        public static delegate* unmanaged[Cdecl]<NvDisplayHandle__*, _NvAPI_Status> NvAPI_EnableHWCursor;
+        public delegate* unmanaged[Cdecl]<NvDisplayHandle__*, _NvAPI_Status> NvAPI_EnableHWCursor;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_DisableHWCursor"]/*' />
-        public static delegate* unmanaged[Cdecl]<NvDisplayHandle__*, _NvAPI_Status> NvAPI_DisableHWCursor;
+        public delegate* unmanaged[Cdecl]<NvDisplayHandle__*, _NvAPI_Status> NvAPI_DisableHWCursor;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GetVBlankCounter"]/*' />
-        public static delegate* unmanaged[Cdecl]<NvDisplayHandle__*, uint*, _NvAPI_Status> NvAPI_GetVBlankCounter;
+        public delegate* unmanaged[Cdecl]<NvDisplayHandle__*, uint*, _NvAPI_Status> NvAPI_GetVBlankCounter;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_SetRefreshRateOverride"]/*' />
-        public static delegate* unmanaged[Cdecl]<NvDisplayHandle__*, uint, float, uint, _NvAPI_Status> NvAPI_SetRefreshRateOverride;
+        public delegate* unmanaged[Cdecl]<NvDisplayHandle__*, uint, float, uint, _NvAPI_Status> NvAPI_SetRefreshRateOverride;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GetAssociatedDisplayOutputId"]/*' />
-        public static delegate* unmanaged[Cdecl]<NvDisplayHandle__*, uint*, _NvAPI_Status> NvAPI_GetAssociatedDisplayOutputId;
+        public delegate* unmanaged[Cdecl]<NvDisplayHandle__*, uint*, _NvAPI_Status> NvAPI_GetAssociatedDisplayOutputId;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GetDisplayPortInfo"]/*' />
-        public static delegate* unmanaged[Cdecl]<NvDisplayHandle__*, uint, _NV_DISPLAY_PORT_INFO_V1*, _NvAPI_Status> NvAPI_GetDisplayPortInfo;
+        public delegate* unmanaged[Cdecl]<NvDisplayHandle__*, uint, _NV_DISPLAY_PORT_INFO_V1*, _NvAPI_Status> NvAPI_GetDisplayPortInfo;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_SetDisplayPort"]/*' />
-        public static delegate* unmanaged[Cdecl]<NvDisplayHandle__*, uint, NV_DISPLAY_PORT_CONFIG*, _NvAPI_Status> NvAPI_SetDisplayPort;
+        public delegate* unmanaged[Cdecl]<NvDisplayHandle__*, uint, NV_DISPLAY_PORT_CONFIG*, _NvAPI_Status> NvAPI_SetDisplayPort;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GetHDMISupportInfo"]/*' />
-        public static delegate* unmanaged[Cdecl]<NvDisplayHandle__*, uint, _NV_HDMI_SUPPORT_INFO_V2*, _NvAPI_Status> NvAPI_GetHDMISupportInfo;
+        public delegate* unmanaged[Cdecl]<NvDisplayHandle__*, uint, _NV_HDMI_SUPPORT_INFO_V2*, _NvAPI_Status> NvAPI_GetHDMISupportInfo;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_Disp_InfoFrameControl"]/*' />
-        public static delegate* unmanaged[Cdecl]<uint, NV_INFOFRAME_DATA*, _NvAPI_Status> NvAPI_Disp_InfoFrameControl;
+        public delegate* unmanaged[Cdecl]<uint, NV_INFOFRAME_DATA*, _NvAPI_Status> NvAPI_Disp_InfoFrameControl;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_Disp_ColorControl"]/*' />
-        public static delegate* unmanaged[Cdecl]<uint, _NV_COLOR_DATA_V5*, _NvAPI_Status> NvAPI_Disp_ColorControl;
+        public delegate* unmanaged[Cdecl]<uint, _NV_COLOR_DATA_V5*, _NvAPI_Status> NvAPI_Disp_ColorControl;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_Disp_GetHdrCapabilities"]/*' />
-        public static delegate* unmanaged[Cdecl]<uint, _NV_HDR_CAPABILITIES_V3*, _NvAPI_Status> NvAPI_Disp_GetHdrCapabilities;
+        public delegate* unmanaged[Cdecl]<uint, _NV_HDR_CAPABILITIES_V3*, _NvAPI_Status> NvAPI_Disp_GetHdrCapabilities;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_Disp_HdrColorControl"]/*' />
-        public static delegate* unmanaged[Cdecl]<uint, _NV_HDR_COLOR_DATA_V2*, _NvAPI_Status> NvAPI_Disp_HdrColorControl;
+        public delegate* unmanaged[Cdecl]<uint, _NV_HDR_COLOR_DATA_V2*, _NvAPI_Status> NvAPI_Disp_HdrColorControl;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_Disp_SetSourceColorSpace"]/*' />
-        public static delegate* unmanaged[Cdecl]<uint, _NV_COLORSPACE_TYPE, _NvAPI_Status> NvAPI_Disp_SetSourceColorSpace;
+        public delegate* unmanaged[Cdecl]<uint, _NV_COLORSPACE_TYPE, _NvAPI_Status> NvAPI_Disp_SetSourceColorSpace;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_Disp_GetSourceColorSpace"]/*' />
-        public static delegate* unmanaged[Cdecl]<uint, _NV_COLORSPACE_TYPE*, ulong, _NvAPI_Status> NvAPI_Disp_GetSourceColorSpace;
+        public delegate* unmanaged[Cdecl]<uint, _NV_COLORSPACE_TYPE*, ulong, _NvAPI_Status> NvAPI_Disp_GetSourceColorSpace;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_Disp_SetSourceHdrMetadata"]/*' />
-        public static delegate* unmanaged[Cdecl]<uint, _NV_HDR_METADATA_V1*, _NvAPI_Status> NvAPI_Disp_SetSourceHdrMetadata;
+        public delegate* unmanaged[Cdecl]<uint, _NV_HDR_METADATA_V1*, _NvAPI_Status> NvAPI_Disp_SetSourceHdrMetadata;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_Disp_GetSourceHdrMetadata"]/*' />
-        public static delegate* unmanaged[Cdecl]<uint, _NV_HDR_METADATA_V1*, ulong, _NvAPI_Status> NvAPI_Disp_GetSourceHdrMetadata;
+        public delegate* unmanaged[Cdecl]<uint, _NV_HDR_METADATA_V1*, ulong, _NvAPI_Status> NvAPI_Disp_GetSourceHdrMetadata;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_Disp_SetOutputMode"]/*' />
-        public static delegate* unmanaged[Cdecl]<uint, _NV_DISPLAY_OUTPUT_MODE*, _NvAPI_Status> NvAPI_Disp_SetOutputMode;
+        public delegate* unmanaged[Cdecl]<uint, _NV_DISPLAY_OUTPUT_MODE*, _NvAPI_Status> NvAPI_Disp_SetOutputMode;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_Disp_GetOutputMode"]/*' />
-        public static delegate* unmanaged[Cdecl]<uint, _NV_DISPLAY_OUTPUT_MODE*, _NvAPI_Status> NvAPI_Disp_GetOutputMode;
+        public delegate* unmanaged[Cdecl]<uint, _NV_DISPLAY_OUTPUT_MODE*, _NvAPI_Status> NvAPI_Disp_GetOutputMode;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_Disp_SetHdrToneMapping"]/*' />
-        public static delegate* unmanaged[Cdecl]<uint, _NV_HDR_TONEMAPPING_METHOD, _NvAPI_Status> NvAPI_Disp_SetHdrToneMapping;
+        public delegate* unmanaged[Cdecl]<uint, _NV_HDR_TONEMAPPING_METHOD, _NvAPI_Status> NvAPI_Disp_SetHdrToneMapping;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_Disp_GetHdrToneMapping"]/*' />
-        public static delegate* unmanaged[Cdecl]<uint, _NV_HDR_TONEMAPPING_METHOD*, _NvAPI_Status> NvAPI_Disp_GetHdrToneMapping;
+        public delegate* unmanaged[Cdecl]<uint, _NV_HDR_TONEMAPPING_METHOD*, _NvAPI_Status> NvAPI_Disp_GetHdrToneMapping;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_Disp_GetColorimetry"]/*' />
-        public static delegate* unmanaged[Cdecl]<uint, _NV_DISPLAY_COLORIMETRY_V1*, _NvAPI_Status> NvAPI_Disp_GetColorimetry;
+        public delegate* unmanaged[Cdecl]<uint, _NV_DISPLAY_COLORIMETRY_V1*, _NvAPI_Status> NvAPI_Disp_GetColorimetry;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_DISP_GetTiming"]/*' />
-        public static delegate* unmanaged[Cdecl]<uint, _NV_TIMING_INPUT*, _NV_TIMING*, _NvAPI_Status> NvAPI_DISP_GetTiming;
+        public delegate* unmanaged[Cdecl]<uint, _NV_TIMING_INPUT*, _NV_TIMING*, _NvAPI_Status> NvAPI_DISP_GetTiming;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_DISP_GetMonitorCapabilities"]/*' />
-        public static delegate* unmanaged[Cdecl]<uint, _NV_MONITOR_CAPABILITIES_V1*, _NvAPI_Status> NvAPI_DISP_GetMonitorCapabilities;
+        public delegate* unmanaged[Cdecl]<uint, _NV_MONITOR_CAPABILITIES_V1*, _NvAPI_Status> NvAPI_DISP_GetMonitorCapabilities;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_DISP_GetMonitorColorCapabilities"]/*' />
-        public static delegate* unmanaged[Cdecl]<uint, _NV_MONITOR_COLOR_DATA*, uint*, _NvAPI_Status> NvAPI_DISP_GetMonitorColorCapabilities;
+        public delegate* unmanaged[Cdecl]<uint, _NV_MONITOR_COLOR_DATA*, uint*, _NvAPI_Status> NvAPI_DISP_GetMonitorColorCapabilities;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_DISP_EnumCustomDisplay"]/*' />
-        public static delegate* unmanaged[Cdecl]<uint, uint, NV_CUSTOM_DISPLAY*, _NvAPI_Status> NvAPI_DISP_EnumCustomDisplay;
+        public delegate* unmanaged[Cdecl]<uint, uint, NV_CUSTOM_DISPLAY*, _NvAPI_Status> NvAPI_DISP_EnumCustomDisplay;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_DISP_TryCustomDisplay"]/*' />
-        public static delegate* unmanaged[Cdecl]<uint*, uint, NV_CUSTOM_DISPLAY*, _NvAPI_Status> NvAPI_DISP_TryCustomDisplay;
+        public delegate* unmanaged[Cdecl]<uint*, uint, NV_CUSTOM_DISPLAY*, _NvAPI_Status> NvAPI_DISP_TryCustomDisplay;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_DISP_DeleteCustomDisplay"]/*' />
-        public static delegate* unmanaged[Cdecl]<uint*, uint, NV_CUSTOM_DISPLAY*, _NvAPI_Status> NvAPI_DISP_DeleteCustomDisplay;
+        public delegate* unmanaged[Cdecl]<uint*, uint, NV_CUSTOM_DISPLAY*, _NvAPI_Status> NvAPI_DISP_DeleteCustomDisplay;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_DISP_SaveCustomDisplay"]/*' />
-        public static delegate* unmanaged[Cdecl]<uint*, uint, uint, uint, _NvAPI_Status> NvAPI_DISP_SaveCustomDisplay;
+        public delegate* unmanaged[Cdecl]<uint*, uint, uint, uint, _NvAPI_Status> NvAPI_DISP_SaveCustomDisplay;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_DISP_RevertCustomDisplayTrial"]/*' />
-        public static delegate* unmanaged[Cdecl]<uint*, uint, _NvAPI_Status> NvAPI_DISP_RevertCustomDisplayTrial;
+        public delegate* unmanaged[Cdecl]<uint*, uint, _NvAPI_Status> NvAPI_DISP_RevertCustomDisplayTrial;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GetView"]/*' />
         [Obsolete("Do not use this function - it is deprecated in release 290. Instead, use NvAPI_DISP_GetDisplayConfig.")]
-        public static delegate* unmanaged[Cdecl]<NvDisplayHandle__*, NV_VIEW_TARGET_INFO*, uint*, _NV_TARGET_VIEW_MODE*, _NvAPI_Status> NvAPI_GetView;
+        public delegate* unmanaged[Cdecl]<NvDisplayHandle__*, NV_VIEW_TARGET_INFO*, uint*, _NV_TARGET_VIEW_MODE*, _NvAPI_Status> NvAPI_GetView;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GetViewEx"]/*' />
         [Obsolete("Do not use this function - it is deprecated in release 290. Instead, use NvAPI_DISP_GetDisplayConfig.")]
-        public static delegate* unmanaged[Cdecl]<NvDisplayHandle__*, NV_DISPLAY_PATH_INFO*, uint*, _NV_TARGET_VIEW_MODE*, _NvAPI_Status> NvAPI_GetViewEx;
+        public delegate* unmanaged[Cdecl]<NvDisplayHandle__*, NV_DISPLAY_PATH_INFO*, uint*, _NV_TARGET_VIEW_MODE*, _NvAPI_Status> NvAPI_GetViewEx;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GetSupportedViews"]/*' />
-        public static delegate* unmanaged[Cdecl]<NvDisplayHandle__*, _NV_TARGET_VIEW_MODE*, uint*, _NvAPI_Status> NvAPI_GetSupportedViews;
+        public delegate* unmanaged[Cdecl]<NvDisplayHandle__*, _NV_TARGET_VIEW_MODE*, uint*, _NvAPI_Status> NvAPI_GetSupportedViews;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_DISP_GetDisplayIdByDisplayName"]/*' />
-        public static delegate* unmanaged[Cdecl]<sbyte*, uint*, _NvAPI_Status> NvAPI_DISP_GetDisplayIdByDisplayName;
+        public delegate* unmanaged[Cdecl]<sbyte*, uint*, _NvAPI_Status> NvAPI_DISP_GetDisplayIdByDisplayName;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_DISP_GetDisplayConfig"]/*' />
-        public static delegate* unmanaged[Cdecl]<uint*, _NV_DISPLAYCONFIG_PATH_INFO*, _NvAPI_Status> NvAPI_DISP_GetDisplayConfig;
+        public delegate* unmanaged[Cdecl]<uint*, _NV_DISPLAYCONFIG_PATH_INFO*, _NvAPI_Status> NvAPI_DISP_GetDisplayConfig;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_DISP_SetDisplayConfig"]/*' />
-        public static delegate* unmanaged[Cdecl]<uint, _NV_DISPLAYCONFIG_PATH_INFO*, uint, _NvAPI_Status> NvAPI_DISP_SetDisplayConfig;
+        public delegate* unmanaged[Cdecl]<uint, _NV_DISPLAYCONFIG_PATH_INFO*, uint, _NvAPI_Status> NvAPI_DISP_SetDisplayConfig;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_DISP_GetEdidData"]/*' />
-        public static delegate* unmanaged[Cdecl]<uint, _NV_EDID_DATA_V2*, NV_EDID_FLAG*, _NvAPI_Status> NvAPI_DISP_GetEdidData;
+        public delegate* unmanaged[Cdecl]<uint, _NV_EDID_DATA_V2*, NV_EDID_FLAG*, _NvAPI_Status> NvAPI_DISP_GetEdidData;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_DISP_GetAdaptiveSyncData"]/*' />
-        public static delegate* unmanaged[Cdecl]<uint, _NV_GET_ADAPTIVE_SYNC_DATA_V1*, _NvAPI_Status> NvAPI_DISP_GetAdaptiveSyncData;
+        public delegate* unmanaged[Cdecl]<uint, _NV_GET_ADAPTIVE_SYNC_DATA_V1*, _NvAPI_Status> NvAPI_DISP_GetAdaptiveSyncData;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_DISP_SetAdaptiveSyncData"]/*' />
-        public static delegate* unmanaged[Cdecl]<uint, _NV_SET_ADAPTIVE_SYNC_DATA_V1*, _NvAPI_Status> NvAPI_DISP_SetAdaptiveSyncData;
+        public delegate* unmanaged[Cdecl]<uint, _NV_SET_ADAPTIVE_SYNC_DATA_V1*, _NvAPI_Status> NvAPI_DISP_SetAdaptiveSyncData;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_DISP_GetVirtualRefreshRateData"]/*' />
-        public static delegate* unmanaged[Cdecl]<uint, _NV_GET_VIRTUAL_REFRESH_RATE_DATA_V2*, _NvAPI_Status> NvAPI_DISP_GetVirtualRefreshRateData;
+        public delegate* unmanaged[Cdecl]<uint, _NV_GET_VIRTUAL_REFRESH_RATE_DATA_V2*, _NvAPI_Status> NvAPI_DISP_GetVirtualRefreshRateData;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_DISP_SetVirtualRefreshRateData"]/*' />
-        public static delegate* unmanaged[Cdecl]<uint, _NV_SET_VIRTUAL_REFRESH_RATE_DATA_V2*, _NvAPI_Status> NvAPI_DISP_SetVirtualRefreshRateData;
+        public delegate* unmanaged[Cdecl]<uint, _NV_SET_VIRTUAL_REFRESH_RATE_DATA_V2*, _NvAPI_Status> NvAPI_DISP_SetVirtualRefreshRateData;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_DISP_SetPreferredStereoDisplay"]/*' />
-        public static delegate* unmanaged[Cdecl]<NV_SET_PREFERRED_STEREO_DISPLAY_V1*, _NvAPI_Status> NvAPI_DISP_SetPreferredStereoDisplay;
+        public delegate* unmanaged[Cdecl]<NV_SET_PREFERRED_STEREO_DISPLAY_V1*, _NvAPI_Status> NvAPI_DISP_SetPreferredStereoDisplay;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_DISP_GetPreferredStereoDisplay"]/*' />
-        public static delegate* unmanaged[Cdecl]<NV_GET_PREFERRED_STEREO_DISPLAY_V1*, _NvAPI_Status> NvAPI_DISP_GetPreferredStereoDisplay;
+        public delegate* unmanaged[Cdecl]<NV_GET_PREFERRED_STEREO_DISPLAY_V1*, _NvAPI_Status> NvAPI_DISP_GetPreferredStereoDisplay;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_DISP_GetNvManagedDedicatedDisplays"]/*' />
-        public static delegate* unmanaged[Cdecl]<uint*, _NV_MANAGED_DEDICATED_DISPLAY_INFO*, _NvAPI_Status> NvAPI_DISP_GetNvManagedDedicatedDisplays;
+        public delegate* unmanaged[Cdecl]<uint*, _NV_MANAGED_DEDICATED_DISPLAY_INFO*, _NvAPI_Status> NvAPI_DISP_GetNvManagedDedicatedDisplays;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_DISP_AcquireDedicatedDisplay"]/*' />
-        public static delegate* unmanaged[Cdecl]<uint, ulong*, _NvAPI_Status> NvAPI_DISP_AcquireDedicatedDisplay;
+        public delegate* unmanaged[Cdecl]<uint, ulong*, _NvAPI_Status> NvAPI_DISP_AcquireDedicatedDisplay;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_DISP_ReleaseDedicatedDisplay"]/*' />
-        public static delegate* unmanaged[Cdecl]<uint, _NvAPI_Status> NvAPI_DISP_ReleaseDedicatedDisplay;
+        public delegate* unmanaged[Cdecl]<uint, _NvAPI_Status> NvAPI_DISP_ReleaseDedicatedDisplay;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_DISP_GetNvManagedDedicatedDisplayMetadata"]/*' />
-        public static delegate* unmanaged[Cdecl]<_NV_MANAGED_DEDICATED_DISPLAY_METADATA*, _NvAPI_Status> NvAPI_DISP_GetNvManagedDedicatedDisplayMetadata;
+        public delegate* unmanaged[Cdecl]<_NV_MANAGED_DEDICATED_DISPLAY_METADATA*, _NvAPI_Status> NvAPI_DISP_GetNvManagedDedicatedDisplayMetadata;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_DISP_SetNvManagedDedicatedDisplayMetadata"]/*' />
-        public static delegate* unmanaged[Cdecl]<_NV_MANAGED_DEDICATED_DISPLAY_METADATA*, _NvAPI_Status> NvAPI_DISP_SetNvManagedDedicatedDisplayMetadata;
+        public delegate* unmanaged[Cdecl]<_NV_MANAGED_DEDICATED_DISPLAY_METADATA*, _NvAPI_Status> NvAPI_DISP_SetNvManagedDedicatedDisplayMetadata;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_Disp_GetDisplayIdInfo"]/*' />
-        public static delegate* unmanaged[Cdecl]<uint, _NV_DISPLAY_ID_INFO_DATA_V1*, _NvAPI_Status> NvAPI_Disp_GetDisplayIdInfo;
+        public delegate* unmanaged[Cdecl]<uint, _NV_DISPLAY_ID_INFO_DATA_V1*, _NvAPI_Status> NvAPI_Disp_GetDisplayIdInfo;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_Disp_GetDisplayIdsFromTarget"]/*' />
-        public static delegate* unmanaged[Cdecl]<_NV_TARGET_INFO_DATA_V1*, _NvAPI_Status> NvAPI_Disp_GetDisplayIdsFromTarget;
+        public delegate* unmanaged[Cdecl]<_NV_TARGET_INFO_DATA_V1*, _NvAPI_Status> NvAPI_Disp_GetDisplayIdsFromTarget;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_Disp_GetVRRInfo"]/*' />
-        public static delegate* unmanaged[Cdecl]<uint, _NV_GET_VRR_INFO_V1*, _NvAPI_Status> NvAPI_Disp_GetVRRInfo;
+        public delegate* unmanaged[Cdecl]<uint, _NV_GET_VRR_INFO_V1*, _NvAPI_Status> NvAPI_Disp_GetVRRInfo;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_Mosaic_GetSupportedTopoInfo"]/*' />
-        public static delegate* unmanaged[Cdecl]<_NV_MOSAIC_SUPPORTED_TOPO_INFO_V2*, NV_MOSAIC_TOPO_TYPE, _NvAPI_Status> NvAPI_Mosaic_GetSupportedTopoInfo;
+        public delegate* unmanaged[Cdecl]<_NV_MOSAIC_SUPPORTED_TOPO_INFO_V2*, NV_MOSAIC_TOPO_TYPE, _NvAPI_Status> NvAPI_Mosaic_GetSupportedTopoInfo;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_Mosaic_GetTopoGroup"]/*' />
-        public static delegate* unmanaged[Cdecl]<NV_MOSAIC_TOPO_BRIEF*, NV_MOSAIC_TOPO_GROUP*, _NvAPI_Status> NvAPI_Mosaic_GetTopoGroup;
+        public delegate* unmanaged[Cdecl]<NV_MOSAIC_TOPO_BRIEF*, NV_MOSAIC_TOPO_GROUP*, _NvAPI_Status> NvAPI_Mosaic_GetTopoGroup;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_Mosaic_GetOverlapLimits"]/*' />
-        public static delegate* unmanaged[Cdecl]<NV_MOSAIC_TOPO_BRIEF*, NV_MOSAIC_DISPLAY_SETTING_V2*, int*, int*, int*, int*, _NvAPI_Status> NvAPI_Mosaic_GetOverlapLimits;
+        public delegate* unmanaged[Cdecl]<NV_MOSAIC_TOPO_BRIEF*, NV_MOSAIC_DISPLAY_SETTING_V2*, int*, int*, int*, int*, _NvAPI_Status> NvAPI_Mosaic_GetOverlapLimits;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_Mosaic_SetCurrentTopo"]/*' />
-        public static delegate* unmanaged[Cdecl]<NV_MOSAIC_TOPO_BRIEF*, NV_MOSAIC_DISPLAY_SETTING_V2*, int, int, uint, _NvAPI_Status> NvAPI_Mosaic_SetCurrentTopo;
+        public delegate* unmanaged[Cdecl]<NV_MOSAIC_TOPO_BRIEF*, NV_MOSAIC_DISPLAY_SETTING_V2*, int, int, uint, _NvAPI_Status> NvAPI_Mosaic_SetCurrentTopo;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_Mosaic_GetCurrentTopo"]/*' />
-        public static delegate* unmanaged[Cdecl]<NV_MOSAIC_TOPO_BRIEF*, NV_MOSAIC_DISPLAY_SETTING_V2*, int*, int*, _NvAPI_Status> NvAPI_Mosaic_GetCurrentTopo;
+        public delegate* unmanaged[Cdecl]<NV_MOSAIC_TOPO_BRIEF*, NV_MOSAIC_DISPLAY_SETTING_V2*, int*, int*, _NvAPI_Status> NvAPI_Mosaic_GetCurrentTopo;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_Mosaic_EnableCurrentTopo"]/*' />
-        public static delegate* unmanaged[Cdecl]<uint, _NvAPI_Status> NvAPI_Mosaic_EnableCurrentTopo;
+        public delegate* unmanaged[Cdecl]<uint, _NvAPI_Status> NvAPI_Mosaic_EnableCurrentTopo;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_Mosaic_SetDisplayGrids"]/*' />
-        public static delegate* unmanaged[Cdecl]<_NV_MOSAIC_GRID_TOPO_V2*, uint, uint, _NvAPI_Status> NvAPI_Mosaic_SetDisplayGrids;
+        public delegate* unmanaged[Cdecl]<_NV_MOSAIC_GRID_TOPO_V2*, uint, uint, _NvAPI_Status> NvAPI_Mosaic_SetDisplayGrids;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_Mosaic_ValidateDisplayGrids"]/*' />
-        public static delegate* unmanaged[Cdecl]<uint, _NV_MOSAIC_GRID_TOPO_V2*, NV_MOSAIC_DISPLAY_TOPO_STATUS*, uint, _NvAPI_Status> NvAPI_Mosaic_ValidateDisplayGrids;
+        public delegate* unmanaged[Cdecl]<uint, _NV_MOSAIC_GRID_TOPO_V2*, NV_MOSAIC_DISPLAY_TOPO_STATUS*, uint, _NvAPI_Status> NvAPI_Mosaic_ValidateDisplayGrids;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_Mosaic_EnumDisplayModes"]/*' />
-        public static delegate* unmanaged[Cdecl]<_NV_MOSAIC_GRID_TOPO_V2*, NV_MOSAIC_DISPLAY_SETTING_V2*, uint*, _NvAPI_Status> NvAPI_Mosaic_EnumDisplayModes;
+        public delegate* unmanaged[Cdecl]<_NV_MOSAIC_GRID_TOPO_V2*, NV_MOSAIC_DISPLAY_SETTING_V2*, uint*, _NvAPI_Status> NvAPI_Mosaic_EnumDisplayModes;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_Mosaic_EnumDisplayGrids"]/*' />
-        public static delegate* unmanaged[Cdecl]<_NV_MOSAIC_GRID_TOPO_V2*, uint*, _NvAPI_Status> NvAPI_Mosaic_EnumDisplayGrids;
+        public delegate* unmanaged[Cdecl]<_NV_MOSAIC_GRID_TOPO_V2*, uint*, _NvAPI_Status> NvAPI_Mosaic_EnumDisplayGrids;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GetSupportedMosaicTopologies"]/*' />
-        public static delegate* unmanaged[Cdecl]<NV_MOSAIC_SUPPORTED_TOPOLOGIES*, _NvAPI_Status> NvAPI_GetSupportedMosaicTopologies;
+        public delegate* unmanaged[Cdecl]<NV_MOSAIC_SUPPORTED_TOPOLOGIES*, _NvAPI_Status> NvAPI_GetSupportedMosaicTopologies;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GetCurrentMosaicTopology"]/*' />
-        public static delegate* unmanaged[Cdecl]<NV_MOSAIC_TOPOLOGY*, uint*, _NvAPI_Status> NvAPI_GetCurrentMosaicTopology;
+        public delegate* unmanaged[Cdecl]<NV_MOSAIC_TOPOLOGY*, uint*, _NvAPI_Status> NvAPI_GetCurrentMosaicTopology;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_SetCurrentMosaicTopology"]/*' />
-        public static delegate* unmanaged[Cdecl]<NV_MOSAIC_TOPOLOGY*, _NvAPI_Status> NvAPI_SetCurrentMosaicTopology;
+        public delegate* unmanaged[Cdecl]<NV_MOSAIC_TOPOLOGY*, _NvAPI_Status> NvAPI_SetCurrentMosaicTopology;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_EnableCurrentMosaicTopology"]/*' />
-        public static delegate* unmanaged[Cdecl]<uint, _NvAPI_Status> NvAPI_EnableCurrentMosaicTopology;
+        public delegate* unmanaged[Cdecl]<uint, _NvAPI_Status> NvAPI_EnableCurrentMosaicTopology;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GSync_EnumSyncDevices"]/*' />
-        public static delegate* unmanaged[Cdecl]<NvGSyncDeviceHandle__**, uint*, _NvAPI_Status> NvAPI_GSync_EnumSyncDevices;
+        public delegate* unmanaged[Cdecl]<NvGSyncDeviceHandle__**, uint*, _NvAPI_Status> NvAPI_GSync_EnumSyncDevices;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GSync_QueryCapabilities"]/*' />
-        public static delegate* unmanaged[Cdecl]<NvGSyncDeviceHandle__*, _NV_GSYNC_CAPABILITIES_V3*, _NvAPI_Status> NvAPI_GSync_QueryCapabilities;
+        public delegate* unmanaged[Cdecl]<NvGSyncDeviceHandle__*, _NV_GSYNC_CAPABILITIES_V3*, _NvAPI_Status> NvAPI_GSync_QueryCapabilities;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GSync_GetTopology"]/*' />
-        public static delegate* unmanaged[Cdecl]<NvGSyncDeviceHandle__*, uint*, _NV_GSYNC_GPU*, uint*, _NV_GSYNC_DISPLAY*, _NvAPI_Status> NvAPI_GSync_GetTopology;
+        public delegate* unmanaged[Cdecl]<NvGSyncDeviceHandle__*, uint*, _NV_GSYNC_GPU*, uint*, _NV_GSYNC_DISPLAY_V2*, _NvAPI_Status> NvAPI_GSync_GetTopology;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GSync_SetSyncStateSettings"]/*' />
-        public static delegate* unmanaged[Cdecl]<uint, _NV_GSYNC_DISPLAY*, uint, _NvAPI_Status> NvAPI_GSync_SetSyncStateSettings;
+        public delegate* unmanaged[Cdecl]<uint, _NV_GSYNC_DISPLAY_V2*, uint, _NvAPI_Status> NvAPI_GSync_SetSyncStateSettings;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GSync_GetControlParameters"]/*' />
-        public static delegate* unmanaged[Cdecl]<NvGSyncDeviceHandle__*, _NV_GSYNC_CONTROL_PARAMS_V2*, _NvAPI_Status> NvAPI_GSync_GetControlParameters;
+        public delegate* unmanaged[Cdecl]<NvGSyncDeviceHandle__*, _NV_GSYNC_CONTROL_PARAMS_V2*, _NvAPI_Status> NvAPI_GSync_GetControlParameters;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GSync_SetControlParameters"]/*' />
-        public static delegate* unmanaged[Cdecl]<NvGSyncDeviceHandle__*, _NV_GSYNC_CONTROL_PARAMS_V2*, _NvAPI_Status> NvAPI_GSync_SetControlParameters;
+        public delegate* unmanaged[Cdecl]<NvGSyncDeviceHandle__*, _NV_GSYNC_CONTROL_PARAMS_V2*, _NvAPI_Status> NvAPI_GSync_SetControlParameters;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GSync_AdjustSyncDelay"]/*' />
-        public static delegate* unmanaged[Cdecl]<NvGSyncDeviceHandle__*, _NVAPI_GSYNC_DELAY_TYPE, _NV_GSYNC_DELAY*, uint*, _NvAPI_Status> NvAPI_GSync_AdjustSyncDelay;
+        public delegate* unmanaged[Cdecl]<NvGSyncDeviceHandle__*, _NVAPI_GSYNC_DELAY_TYPE, _NV_GSYNC_DELAY*, uint*, _NvAPI_Status> NvAPI_GSync_AdjustSyncDelay;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GSync_GetSyncStatus"]/*' />
-        public static delegate* unmanaged[Cdecl]<NvGSyncDeviceHandle__*, NvPhysicalGpuHandle__*, _NV_GSYNC_STATUS*, _NvAPI_Status> NvAPI_GSync_GetSyncStatus;
+        public delegate* unmanaged[Cdecl]<NvGSyncDeviceHandle__*, NvPhysicalGpuHandle__*, _NV_GSYNC_STATUS*, _NvAPI_Status> NvAPI_GSync_GetSyncStatus;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GSync_GetStatusParameters"]/*' />
-        public static delegate* unmanaged[Cdecl]<NvGSyncDeviceHandle__*, _NV_GSYNC_STATUS_PARAMS_V2*, _NvAPI_Status> NvAPI_GSync_GetStatusParameters;
+        public delegate* unmanaged[Cdecl]<NvGSyncDeviceHandle__*, _NV_GSYNC_STATUS_PARAMS_V2*, _NvAPI_Status> NvAPI_GSync_GetStatusParameters;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_DestroyPresentBarrierClient"]/*' />
-        public static delegate* unmanaged[Cdecl]<NvPresentBarrierClientHandle__*, _NvAPI_Status> NvAPI_DestroyPresentBarrierClient;
+        public delegate* unmanaged[Cdecl]<NvPresentBarrierClientHandle__*, _NvAPI_Status> NvAPI_DestroyPresentBarrierClient;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_JoinPresentBarrier"]/*' />
-        public static delegate* unmanaged[Cdecl]<NvPresentBarrierClientHandle__*, _NV_JOIN_PRESENT_BARRIER_PARAMS*, _NvAPI_Status> NvAPI_JoinPresentBarrier;
+        public delegate* unmanaged[Cdecl]<NvPresentBarrierClientHandle__*, _NV_JOIN_PRESENT_BARRIER_PARAMS*, _NvAPI_Status> NvAPI_JoinPresentBarrier;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_LeavePresentBarrier"]/*' />
-        public static delegate* unmanaged[Cdecl]<NvPresentBarrierClientHandle__*, _NvAPI_Status> NvAPI_LeavePresentBarrier;
+        public delegate* unmanaged[Cdecl]<NvPresentBarrierClientHandle__*, _NvAPI_Status> NvAPI_LeavePresentBarrier;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_QueryPresentBarrierFrameStatistics"]/*' />
-        public static delegate* unmanaged[Cdecl]<NvPresentBarrierClientHandle__*, _NV_PRESENT_BARRIER_FRAME_STATISTICS*, _NvAPI_Status> NvAPI_QueryPresentBarrierFrameStatistics;
+        public delegate* unmanaged[Cdecl]<NvPresentBarrierClientHandle__*, _NV_PRESENT_BARRIER_FRAME_STATISTICS*, _NvAPI_Status> NvAPI_QueryPresentBarrierFrameStatistics;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_NGX_GetNGXOverrideState"]/*' />
-        public static delegate* unmanaged[Cdecl]<_NV_NGX_DLSS_OVERRIDE_GET_STATE_PARAMS_V1*, _NvAPI_Status> NvAPI_NGX_GetNGXOverrideState;
+        public delegate* unmanaged[Cdecl]<_NV_NGX_DLSS_OVERRIDE_GET_STATE_PARAMS_V2*, _NvAPI_Status> NvAPI_NGX_GetNGXOverrideState;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_NGX_SetNGXOverrideState"]/*' />
-        public static delegate* unmanaged[Cdecl]<_NV_NGX_DLSS_OVERRIDE_SET_STATE_PARAMS_V1*, _NvAPI_Status> NvAPI_NGX_SetNGXOverrideState;
+        public delegate* unmanaged[Cdecl]<_NV_NGX_DLSS_OVERRIDE_SET_STATE_PARAMS_V1*, _NvAPI_Status> NvAPI_NGX_SetNGXOverrideState;
+
+        /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_NGX_OpenSession"]/*' />
+        public delegate* unmanaged[Cdecl]<_NV_NGX_SESSION_PARAMS_V1*, _NvAPI_Status> NvAPI_NGX_OpenSession;
+
+        /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_NGX_CloseSession"]/*' />
+        public delegate* unmanaged[Cdecl]<_NV_NGX_SESSION_PARAMS_V1*, _NvAPI_Status> NvAPI_NGX_CloseSession;
+
+        /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_NGX_SetRuntimeParams"]/*' />
+        public delegate* unmanaged[Cdecl]<_NV_NGX_SET_RUNTIME_PARAMS_V1*, _NvAPI_Status> NvAPI_NGX_SetRuntimeParams;
+
+        /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_NGX_GetRuntimeParams"]/*' />
+        public delegate* unmanaged[Cdecl]<_NV_NGX_GET_RUNTIME_PARAMS_V1*, _NvAPI_Status> NvAPI_NGX_GetRuntimeParams;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_VIO_GetCapabilities"]/*' />
         [Obsolete("Do not use this function - it is deprecated in release 440.")]
-        public static delegate* unmanaged[Cdecl]<NvVioHandle__*, _NVVIOCAPS*, _NvAPI_Status> NvAPI_VIO_GetCapabilities;
+        public delegate* unmanaged[Cdecl]<NvVioHandle__*, _NVVIOCAPS*, _NvAPI_Status> NvAPI_VIO_GetCapabilities;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_VIO_Open"]/*' />
         [Obsolete("Do not use this function - it is deprecated in release 440.")]
-        public static delegate* unmanaged[Cdecl]<NvVioHandle__*, uint, _NVVIOOWNERTYPE, _NvAPI_Status> NvAPI_VIO_Open;
+        public delegate* unmanaged[Cdecl]<NvVioHandle__*, uint, _NVVIOOWNERTYPE, _NvAPI_Status> NvAPI_VIO_Open;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_VIO_Close"]/*' />
         [Obsolete("Do not use this function - it is deprecated in release 440.")]
-        public static delegate* unmanaged[Cdecl]<NvVioHandle__*, uint, _NvAPI_Status> NvAPI_VIO_Close;
+        public delegate* unmanaged[Cdecl]<NvVioHandle__*, uint, _NvAPI_Status> NvAPI_VIO_Close;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_VIO_Status"]/*' />
         [Obsolete("Do not use this function - it is deprecated in release 440.")]
-        public static delegate* unmanaged[Cdecl]<NvVioHandle__*, _NVVIOSTATUS*, _NvAPI_Status> NvAPI_VIO_Status;
+        public delegate* unmanaged[Cdecl]<NvVioHandle__*, _NVVIOSTATUS*, _NvAPI_Status> NvAPI_VIO_Status;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_VIO_SyncFormatDetect"]/*' />
         [Obsolete("Do not use this function - it is deprecated in release 440.")]
-        public static delegate* unmanaged[Cdecl]<NvVioHandle__*, uint*, _NvAPI_Status> NvAPI_VIO_SyncFormatDetect;
+        public delegate* unmanaged[Cdecl]<NvVioHandle__*, uint*, _NvAPI_Status> NvAPI_VIO_SyncFormatDetect;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_VIO_GetConfig"]/*' />
         [Obsolete("Do not use this function - it is deprecated in release 440.")]
-        public static delegate* unmanaged[Cdecl]<NvVioHandle__*, _NVVIOCONFIG_V3*, _NvAPI_Status> NvAPI_VIO_GetConfig;
+        public delegate* unmanaged[Cdecl]<NvVioHandle__*, _NVVIOCONFIG_V3*, _NvAPI_Status> NvAPI_VIO_GetConfig;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_VIO_SetConfig"]/*' />
         [Obsolete("Do not use this function - it is deprecated in release 440.")]
-        public static delegate* unmanaged[Cdecl]<NvVioHandle__*, _NVVIOCONFIG_V3*, _NvAPI_Status> NvAPI_VIO_SetConfig;
+        public delegate* unmanaged[Cdecl]<NvVioHandle__*, _NVVIOCONFIG_V3*, _NvAPI_Status> NvAPI_VIO_SetConfig;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_VIO_SetCSC"]/*' />
         [Obsolete("Do not use this function - it is deprecated in release 290. Instead, use NvAPI_VIO_SetConfig.")]
-        public static delegate* unmanaged[Cdecl]<NvVioHandle__*, _NVVIOCOLORCONVERSION*, _NvAPI_Status> NvAPI_VIO_SetCSC;
+        public delegate* unmanaged[Cdecl]<NvVioHandle__*, _NVVIOCOLORCONVERSION*, _NvAPI_Status> NvAPI_VIO_SetCSC;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_VIO_GetCSC"]/*' />
         [Obsolete("Do not use this function - it is deprecated in release 290. Instead, use NvAPI_VIO_GetConfig.")]
-        public static delegate* unmanaged[Cdecl]<NvVioHandle__*, _NVVIOCOLORCONVERSION*, _NvAPI_Status> NvAPI_VIO_GetCSC;
+        public delegate* unmanaged[Cdecl]<NvVioHandle__*, _NVVIOCOLORCONVERSION*, _NvAPI_Status> NvAPI_VIO_GetCSC;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_VIO_SetGamma"]/*' />
         [Obsolete("Do not use this function - it is deprecated in release 290. Instead, use NvAPI_VIO_SetConfig.")]
-        public static delegate* unmanaged[Cdecl]<NvVioHandle__*, _NVVIOGAMMACORRECTION*, _NvAPI_Status> NvAPI_VIO_SetGamma;
+        public delegate* unmanaged[Cdecl]<NvVioHandle__*, _NVVIOGAMMACORRECTION*, _NvAPI_Status> NvAPI_VIO_SetGamma;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_VIO_GetGamma"]/*' />
         [Obsolete("Do not use this function - it is deprecated in release 290. Instead, use NvAPI_VIO_GetConfig.")]
-        public static delegate* unmanaged[Cdecl]<NvVioHandle__*, _NVVIOGAMMACORRECTION*, _NvAPI_Status> NvAPI_VIO_GetGamma;
+        public delegate* unmanaged[Cdecl]<NvVioHandle__*, _NVVIOGAMMACORRECTION*, _NvAPI_Status> NvAPI_VIO_GetGamma;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_VIO_SetSyncDelay"]/*' />
         [Obsolete("Do not use this function - it is deprecated in release 290. Instead, use NvAPI_VIO_SetConfig.")]
-        public static delegate* unmanaged[Cdecl]<NvVioHandle__*, _NVVIOSYNCDELAY*, _NvAPI_Status> NvAPI_VIO_SetSyncDelay;
+        public delegate* unmanaged[Cdecl]<NvVioHandle__*, _NVVIOSYNCDELAY*, _NvAPI_Status> NvAPI_VIO_SetSyncDelay;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_VIO_GetSyncDelay"]/*' />
         [Obsolete("Do not use this function - it is deprecated in release 290. Instead, use NvAPI_VIO_GetConfig.")]
-        public static delegate* unmanaged[Cdecl]<NvVioHandle__*, _NVVIOSYNCDELAY*, _NvAPI_Status> NvAPI_VIO_GetSyncDelay;
+        public delegate* unmanaged[Cdecl]<NvVioHandle__*, _NVVIOSYNCDELAY*, _NvAPI_Status> NvAPI_VIO_GetSyncDelay;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_VIO_GetPCIInfo"]/*' />
         [Obsolete("Do not use this function - it is deprecated in release 440.")]
-        public static delegate* unmanaged[Cdecl]<NvVioHandle__*, _NVVIOPCIINFO*, _NvAPI_Status> NvAPI_VIO_GetPCIInfo;
+        public delegate* unmanaged[Cdecl]<NvVioHandle__*, _NVVIOPCIINFO*, _NvAPI_Status> NvAPI_VIO_GetPCIInfo;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_VIO_IsRunning"]/*' />
         [Obsolete("Do not use this function - it is deprecated in release 440.")]
-        public static delegate* unmanaged[Cdecl]<NvVioHandle__*, _NvAPI_Status> NvAPI_VIO_IsRunning;
+        public delegate* unmanaged[Cdecl]<NvVioHandle__*, _NvAPI_Status> NvAPI_VIO_IsRunning;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_VIO_Start"]/*' />
         [Obsolete("Do not use this function - it is deprecated in release 440.")]
-        public static delegate* unmanaged[Cdecl]<NvVioHandle__*, _NvAPI_Status> NvAPI_VIO_Start;
+        public delegate* unmanaged[Cdecl]<NvVioHandle__*, _NvAPI_Status> NvAPI_VIO_Start;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_VIO_Stop"]/*' />
         [Obsolete("Do not use this function - it is deprecated in release 440.")]
-        public static delegate* unmanaged[Cdecl]<NvVioHandle__*, _NvAPI_Status> NvAPI_VIO_Stop;
+        public delegate* unmanaged[Cdecl]<NvVioHandle__*, _NvAPI_Status> NvAPI_VIO_Stop;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_VIO_IsFrameLockModeCompatible"]/*' />
         [Obsolete("Do not use this function - it is deprecated in release 440.")]
-        public static delegate* unmanaged[Cdecl]<NvVioHandle__*, uint, uint, uint*, _NvAPI_Status> NvAPI_VIO_IsFrameLockModeCompatible;
+        public delegate* unmanaged[Cdecl]<NvVioHandle__*, uint, uint, uint*, _NvAPI_Status> NvAPI_VIO_IsFrameLockModeCompatible;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_VIO_EnumDevices"]/*' />
         [Obsolete("Do not use this function - it is deprecated in release 440.")]
-        public static delegate* unmanaged[Cdecl]<NvVioHandle__**, uint*, _NvAPI_Status> NvAPI_VIO_EnumDevices;
+        public delegate* unmanaged[Cdecl]<NvVioHandle__**, uint*, _NvAPI_Status> NvAPI_VIO_EnumDevices;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_VIO_QueryTopology"]/*' />
         [Obsolete("Do not use this function - it is deprecated in release 440.")]
-        public static delegate* unmanaged[Cdecl]<_NV_VIO_TOPOLOGY*, _NvAPI_Status> NvAPI_VIO_QueryTopology;
+        public delegate* unmanaged[Cdecl]<_NV_VIO_TOPOLOGY*, _NvAPI_Status> NvAPI_VIO_QueryTopology;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_VIO_EnumSignalFormats"]/*' />
         [Obsolete("Do not use this function - it is deprecated in release 440.")]
-        public static delegate* unmanaged[Cdecl]<NvVioHandle__*, uint, _NVVIOSIGNALFORMATDETAIL*, _NvAPI_Status> NvAPI_VIO_EnumSignalFormats;
+        public delegate* unmanaged[Cdecl]<NvVioHandle__*, uint, _NVVIOSIGNALFORMATDETAIL*, _NvAPI_Status> NvAPI_VIO_EnumSignalFormats;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_VIO_EnumDataFormats"]/*' />
         [Obsolete("Do not use this function - it is deprecated in release 440.")]
-        public static delegate* unmanaged[Cdecl]<NvVioHandle__*, uint, _NVVIODATAFORMATDETAIL*, _NvAPI_Status> NvAPI_VIO_EnumDataFormats;
+        public delegate* unmanaged[Cdecl]<NvVioHandle__*, uint, _NVVIODATAFORMATDETAIL*, _NvAPI_Status> NvAPI_VIO_EnumDataFormats;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_Stereo_CreateConfigurationProfileRegistryKey"]/*' />
-        public static delegate* unmanaged[Cdecl]<_NV_StereoRegistryProfileType, _NvAPI_Status> NvAPI_Stereo_CreateConfigurationProfileRegistryKey;
+        public delegate* unmanaged[Cdecl]<_NV_StereoRegistryProfileType, _NvAPI_Status> NvAPI_Stereo_CreateConfigurationProfileRegistryKey;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_Stereo_DeleteConfigurationProfileRegistryKey"]/*' />
-        public static delegate* unmanaged[Cdecl]<_NV_StereoRegistryProfileType, _NvAPI_Status> NvAPI_Stereo_DeleteConfigurationProfileRegistryKey;
+        public delegate* unmanaged[Cdecl]<_NV_StereoRegistryProfileType, _NvAPI_Status> NvAPI_Stereo_DeleteConfigurationProfileRegistryKey;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_Stereo_SetConfigurationProfileValue"]/*' />
-        public static delegate* unmanaged[Cdecl]<_NV_StereoRegistryProfileType, _NV_StereoRegistryID, void*, _NvAPI_Status> NvAPI_Stereo_SetConfigurationProfileValue;
+        public delegate* unmanaged[Cdecl]<_NV_StereoRegistryProfileType, _NV_StereoRegistryID, void*, _NvAPI_Status> NvAPI_Stereo_SetConfigurationProfileValue;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_Stereo_DeleteConfigurationProfileValue"]/*' />
-        public static delegate* unmanaged[Cdecl]<_NV_StereoRegistryProfileType, _NV_StereoRegistryID, _NvAPI_Status> NvAPI_Stereo_DeleteConfigurationProfileValue;
+        public delegate* unmanaged[Cdecl]<_NV_StereoRegistryProfileType, _NV_StereoRegistryID, _NvAPI_Status> NvAPI_Stereo_DeleteConfigurationProfileValue;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_Stereo_GetStereoSupport"]/*' />
-        public static delegate* unmanaged[Cdecl]<NvMonitorHandle__*, _NVAPI_STEREO_CAPS*, _NvAPI_Status> NvAPI_Stereo_GetStereoSupport;
+        public delegate* unmanaged[Cdecl]<NvMonitorHandle__*, _NVAPI_STEREO_CAPS*, _NvAPI_Status> NvAPI_Stereo_GetStereoSupport;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_Stereo_DecreaseSeparation"]/*' />
-        public static delegate* unmanaged[Cdecl]<void*, _NvAPI_Status> NvAPI_Stereo_DecreaseSeparation;
+        public delegate* unmanaged[Cdecl]<void*, _NvAPI_Status> NvAPI_Stereo_DecreaseSeparation;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_Stereo_IncreaseSeparation"]/*' />
-        public static delegate* unmanaged[Cdecl]<void*, _NvAPI_Status> NvAPI_Stereo_IncreaseSeparation;
+        public delegate* unmanaged[Cdecl]<void*, _NvAPI_Status> NvAPI_Stereo_IncreaseSeparation;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_Stereo_DecreaseConvergence"]/*' />
-        public static delegate* unmanaged[Cdecl]<void*, _NvAPI_Status> NvAPI_Stereo_DecreaseConvergence;
+        public delegate* unmanaged[Cdecl]<void*, _NvAPI_Status> NvAPI_Stereo_DecreaseConvergence;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_Stereo_IncreaseConvergence"]/*' />
-        public static delegate* unmanaged[Cdecl]<void*, _NvAPI_Status> NvAPI_Stereo_IncreaseConvergence;
+        public delegate* unmanaged[Cdecl]<void*, _NvAPI_Status> NvAPI_Stereo_IncreaseConvergence;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_Stereo_GetFrustumAdjustMode"]/*' />
-        public static delegate* unmanaged[Cdecl]<void*, _NV_FrustumAdjustMode*, _NvAPI_Status> NvAPI_Stereo_GetFrustumAdjustMode;
+        public delegate* unmanaged[Cdecl]<void*, _NV_FrustumAdjustMode*, _NvAPI_Status> NvAPI_Stereo_GetFrustumAdjustMode;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_Stereo_SetFrustumAdjustMode"]/*' />
-        public static delegate* unmanaged[Cdecl]<void*, _NV_FrustumAdjustMode, _NvAPI_Status> NvAPI_Stereo_SetFrustumAdjustMode;
+        public delegate* unmanaged[Cdecl]<void*, _NV_FrustumAdjustMode, _NvAPI_Status> NvAPI_Stereo_SetFrustumAdjustMode;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_Stereo_CaptureJpegImage"]/*' />
-        public static delegate* unmanaged[Cdecl]<void*, uint, _NvAPI_Status> NvAPI_Stereo_CaptureJpegImage;
+        public delegate* unmanaged[Cdecl]<void*, uint, _NvAPI_Status> NvAPI_Stereo_CaptureJpegImage;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_Stereo_InitActivation"]/*' />
-        public static delegate* unmanaged[Cdecl]<void*, _NVAPI_STEREO_INIT_ACTIVATION_FLAGS, _NvAPI_Status> NvAPI_Stereo_InitActivation;
+        public delegate* unmanaged[Cdecl]<void*, _NVAPI_STEREO_INIT_ACTIVATION_FLAGS, _NvAPI_Status> NvAPI_Stereo_InitActivation;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_Stereo_Trigger_Activation"]/*' />
-        public static delegate* unmanaged[Cdecl]<void*, _NvAPI_Status> NvAPI_Stereo_Trigger_Activation;
+        public delegate* unmanaged[Cdecl]<void*, _NvAPI_Status> NvAPI_Stereo_Trigger_Activation;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_Stereo_CapturePngImage"]/*' />
-        public static delegate* unmanaged[Cdecl]<void*, _NvAPI_Status> NvAPI_Stereo_CapturePngImage;
+        public delegate* unmanaged[Cdecl]<void*, _NvAPI_Status> NvAPI_Stereo_CapturePngImage;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_Stereo_ReverseStereoBlitControl"]/*' />
-        public static delegate* unmanaged[Cdecl]<void*, byte, _NvAPI_Status> NvAPI_Stereo_ReverseStereoBlitControl;
+        public delegate* unmanaged[Cdecl]<void*, byte, _NvAPI_Status> NvAPI_Stereo_ReverseStereoBlitControl;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_Stereo_SetNotificationMessage"]/*' />
-        public static delegate* unmanaged[Cdecl]<void*, ulong, ulong, _NvAPI_Status> NvAPI_Stereo_SetNotificationMessage;
+        public delegate* unmanaged[Cdecl]<void*, ulong, ulong, _NvAPI_Status> NvAPI_Stereo_SetNotificationMessage;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_Vulkan_InitLowLatencyDevice"]/*' />
         [Obsolete("Do not use this function - it is deprecated in release 565.")]
-        public static delegate* unmanaged[Cdecl]<void*, void**, _NvAPI_Status> NvAPI_Vulkan_InitLowLatencyDevice;
+        public delegate* unmanaged[Cdecl]<void*, void**, _NvAPI_Status> NvAPI_Vulkan_InitLowLatencyDevice;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_Vulkan_DestroyLowLatencyDevice"]/*' />
         [Obsolete("Do not use this function - it is deprecated in release 565.")]
-        public static delegate* unmanaged[Cdecl]<void*, _NvAPI_Status> NvAPI_Vulkan_DestroyLowLatencyDevice;
+        public delegate* unmanaged[Cdecl]<void*, _NvAPI_Status> NvAPI_Vulkan_DestroyLowLatencyDevice;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_Vulkan_GetSleepStatus"]/*' />
         [Obsolete("Do not use this function - it is deprecated in release 565.")]
-        public static delegate* unmanaged[Cdecl]<void*, _NV_VULKAN_GET_SLEEP_STATUS_PARAMS*, _NvAPI_Status> NvAPI_Vulkan_GetSleepStatus;
+        public delegate* unmanaged[Cdecl]<void*, _NV_VULKAN_GET_SLEEP_STATUS_PARAMS*, _NvAPI_Status> NvAPI_Vulkan_GetSleepStatus;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_Vulkan_SetSleepMode"]/*' />
         [Obsolete("Do not use this function - it is deprecated in release 565.")]
-        public static delegate* unmanaged[Cdecl]<void*, _NV_VULKAN_SET_SLEEP_MODE_PARAMS*, _NvAPI_Status> NvAPI_Vulkan_SetSleepMode;
+        public delegate* unmanaged[Cdecl]<void*, _NV_VULKAN_SET_SLEEP_MODE_PARAMS*, _NvAPI_Status> NvAPI_Vulkan_SetSleepMode;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_Vulkan_Sleep"]/*' />
         [Obsolete("Do not use this function - it is deprecated in release 565.")]
-        public static delegate* unmanaged[Cdecl]<void*, ulong, _NvAPI_Status> NvAPI_Vulkan_Sleep;
+        public delegate* unmanaged[Cdecl]<void*, ulong, _NvAPI_Status> NvAPI_Vulkan_Sleep;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_Vulkan_GetLatency"]/*' />
         [Obsolete("Do not use this function - it is deprecated in release 565.")]
-        public static delegate* unmanaged[Cdecl]<void*, _NV_VULKAN_LATENCY_RESULT_PARAMS*, _NvAPI_Status> NvAPI_Vulkan_GetLatency;
+        public delegate* unmanaged[Cdecl]<void*, _NV_VULKAN_LATENCY_RESULT_PARAMS*, _NvAPI_Status> NvAPI_Vulkan_GetLatency;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_Vulkan_SetLatencyMarker"]/*' />
         [Obsolete("Do not use this function - it is deprecated in release 565.")]
-        public static delegate* unmanaged[Cdecl]<void*, _NV_VULKAN_LATENCY_MARKER_PARAMS*, _NvAPI_Status> NvAPI_Vulkan_SetLatencyMarker;
+        public delegate* unmanaged[Cdecl]<void*, _NV_VULKAN_LATENCY_MARKER_PARAMS*, _NvAPI_Status> NvAPI_Vulkan_SetLatencyMarker;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_Vulkan_NotifyOutOfBandVkQueue"]/*' />
         [Obsolete("Do not use this function - it is deprecated in release 565.")]
-        public static delegate* unmanaged[Cdecl]<void*, void*, NV_VULKAN_OUT_OF_BAND_QUEUE_TYPE, _NvAPI_Status> NvAPI_Vulkan_NotifyOutOfBandVkQueue;
+        public delegate* unmanaged[Cdecl]<void*, void*, NV_VULKAN_OUT_OF_BAND_QUEUE_TYPE, _NvAPI_Status> NvAPI_Vulkan_NotifyOutOfBandVkQueue;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_DRS_CreateSession"]/*' />
-        public static delegate* unmanaged[Cdecl]<NvDRSSessionHandle__**, _NvAPI_Status> NvAPI_DRS_CreateSession;
+        public delegate* unmanaged[Cdecl]<NvDRSSessionHandle__**, _NvAPI_Status> NvAPI_DRS_CreateSession;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_DRS_DestroySession"]/*' />
-        public static delegate* unmanaged[Cdecl]<NvDRSSessionHandle__*, _NvAPI_Status> NvAPI_DRS_DestroySession;
+        public delegate* unmanaged[Cdecl]<NvDRSSessionHandle__*, _NvAPI_Status> NvAPI_DRS_DestroySession;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_DRS_LoadSettings"]/*' />
-        public static delegate* unmanaged[Cdecl]<NvDRSSessionHandle__*, _NvAPI_Status> NvAPI_DRS_LoadSettings;
+        public delegate* unmanaged[Cdecl]<NvDRSSessionHandle__*, _NvAPI_Status> NvAPI_DRS_LoadSettings;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_DRS_SaveSettings"]/*' />
-        public static delegate* unmanaged[Cdecl]<NvDRSSessionHandle__*, _NvAPI_Status> NvAPI_DRS_SaveSettings;
+        public delegate* unmanaged[Cdecl]<NvDRSSessionHandle__*, _NvAPI_Status> NvAPI_DRS_SaveSettings;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_DRS_LoadSettingsFromFile"]/*' />
-        public static delegate* unmanaged[Cdecl]<NvDRSSessionHandle__*, ushort*, _NvAPI_Status> NvAPI_DRS_LoadSettingsFromFile;
+        public delegate* unmanaged[Cdecl]<NvDRSSessionHandle__*, ushort*, _NvAPI_Status> NvAPI_DRS_LoadSettingsFromFile;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_DRS_SaveSettingsToFile"]/*' />
-        public static delegate* unmanaged[Cdecl]<NvDRSSessionHandle__*, ushort*, _NvAPI_Status> NvAPI_DRS_SaveSettingsToFile;
+        public delegate* unmanaged[Cdecl]<NvDRSSessionHandle__*, ushort*, _NvAPI_Status> NvAPI_DRS_SaveSettingsToFile;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_DRS_CreateProfile"]/*' />
-        public static delegate* unmanaged[Cdecl]<NvDRSSessionHandle__*, _NVDRS_PROFILE_V1*, NvDRSProfileHandle__**, _NvAPI_Status> NvAPI_DRS_CreateProfile;
+        public delegate* unmanaged[Cdecl]<NvDRSSessionHandle__*, _NVDRS_PROFILE_V1*, NvDRSProfileHandle__**, _NvAPI_Status> NvAPI_DRS_CreateProfile;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_DRS_DeleteProfile"]/*' />
-        public static delegate* unmanaged[Cdecl]<NvDRSSessionHandle__*, NvDRSProfileHandle__*, _NvAPI_Status> NvAPI_DRS_DeleteProfile;
+        public delegate* unmanaged[Cdecl]<NvDRSSessionHandle__*, NvDRSProfileHandle__*, _NvAPI_Status> NvAPI_DRS_DeleteProfile;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_DRS_SetCurrentGlobalProfile"]/*' />
-        public static delegate* unmanaged[Cdecl]<NvDRSSessionHandle__*, ushort*, _NvAPI_Status> NvAPI_DRS_SetCurrentGlobalProfile;
+        public delegate* unmanaged[Cdecl]<NvDRSSessionHandle__*, ushort*, _NvAPI_Status> NvAPI_DRS_SetCurrentGlobalProfile;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_DRS_GetCurrentGlobalProfile"]/*' />
-        public static delegate* unmanaged[Cdecl]<NvDRSSessionHandle__*, NvDRSProfileHandle__**, _NvAPI_Status> NvAPI_DRS_GetCurrentGlobalProfile;
+        public delegate* unmanaged[Cdecl]<NvDRSSessionHandle__*, NvDRSProfileHandle__**, _NvAPI_Status> NvAPI_DRS_GetCurrentGlobalProfile;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_DRS_GetProfileInfo"]/*' />
-        public static delegate* unmanaged[Cdecl]<NvDRSSessionHandle__*, NvDRSProfileHandle__*, _NVDRS_PROFILE_V1*, _NvAPI_Status> NvAPI_DRS_GetProfileInfo;
+        public delegate* unmanaged[Cdecl]<NvDRSSessionHandle__*, NvDRSProfileHandle__*, _NVDRS_PROFILE_V1*, _NvAPI_Status> NvAPI_DRS_GetProfileInfo;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_DRS_SetProfileInfo"]/*' />
-        public static delegate* unmanaged[Cdecl]<NvDRSSessionHandle__*, NvDRSProfileHandle__*, _NVDRS_PROFILE_V1*, _NvAPI_Status> NvAPI_DRS_SetProfileInfo;
+        public delegate* unmanaged[Cdecl]<NvDRSSessionHandle__*, NvDRSProfileHandle__*, _NVDRS_PROFILE_V1*, _NvAPI_Status> NvAPI_DRS_SetProfileInfo;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_DRS_FindProfileByName"]/*' />
-        public static delegate* unmanaged[Cdecl]<NvDRSSessionHandle__*, ushort*, NvDRSProfileHandle__**, _NvAPI_Status> NvAPI_DRS_FindProfileByName;
+        public delegate* unmanaged[Cdecl]<NvDRSSessionHandle__*, ushort*, NvDRSProfileHandle__**, _NvAPI_Status> NvAPI_DRS_FindProfileByName;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_DRS_EnumProfiles"]/*' />
-        public static delegate* unmanaged[Cdecl]<NvDRSSessionHandle__*, uint, NvDRSProfileHandle__**, _NvAPI_Status> NvAPI_DRS_EnumProfiles;
+        public delegate* unmanaged[Cdecl]<NvDRSSessionHandle__*, uint, NvDRSProfileHandle__**, _NvAPI_Status> NvAPI_DRS_EnumProfiles;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_DRS_GetNumProfiles"]/*' />
-        public static delegate* unmanaged[Cdecl]<NvDRSSessionHandle__*, uint*, _NvAPI_Status> NvAPI_DRS_GetNumProfiles;
+        public delegate* unmanaged[Cdecl]<NvDRSSessionHandle__*, uint*, _NvAPI_Status> NvAPI_DRS_GetNumProfiles;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_DRS_CreateApplication"]/*' />
-        public static delegate* unmanaged[Cdecl]<NvDRSSessionHandle__*, NvDRSProfileHandle__*, _NVDRS_APPLICATION_V4*, _NvAPI_Status> NvAPI_DRS_CreateApplication;
+        public delegate* unmanaged[Cdecl]<NvDRSSessionHandle__*, NvDRSProfileHandle__*, _NVDRS_APPLICATION_V4*, _NvAPI_Status> NvAPI_DRS_CreateApplication;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_DRS_DeleteApplicationEx"]/*' />
-        public static delegate* unmanaged[Cdecl]<NvDRSSessionHandle__*, NvDRSProfileHandle__*, _NVDRS_APPLICATION_V4*, _NvAPI_Status> NvAPI_DRS_DeleteApplicationEx;
+        public delegate* unmanaged[Cdecl]<NvDRSSessionHandle__*, NvDRSProfileHandle__*, _NVDRS_APPLICATION_V4*, _NvAPI_Status> NvAPI_DRS_DeleteApplicationEx;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_DRS_DeleteApplication"]/*' />
-        public static delegate* unmanaged[Cdecl]<NvDRSSessionHandle__*, NvDRSProfileHandle__*, ushort*, _NvAPI_Status> NvAPI_DRS_DeleteApplication;
+        public delegate* unmanaged[Cdecl]<NvDRSSessionHandle__*, NvDRSProfileHandle__*, ushort*, _NvAPI_Status> NvAPI_DRS_DeleteApplication;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_DRS_GetApplicationInfo"]/*' />
-        public static delegate* unmanaged[Cdecl]<NvDRSSessionHandle__*, NvDRSProfileHandle__*, ushort*, _NVDRS_APPLICATION_V4*, _NvAPI_Status> NvAPI_DRS_GetApplicationInfo;
+        public delegate* unmanaged[Cdecl]<NvDRSSessionHandle__*, NvDRSProfileHandle__*, ushort*, _NVDRS_APPLICATION_V4*, _NvAPI_Status> NvAPI_DRS_GetApplicationInfo;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_DRS_EnumApplications"]/*' />
-        public static delegate* unmanaged[Cdecl]<NvDRSSessionHandle__*, NvDRSProfileHandle__*, uint, uint*, _NVDRS_APPLICATION_V4*, _NvAPI_Status> NvAPI_DRS_EnumApplications;
+        public delegate* unmanaged[Cdecl]<NvDRSSessionHandle__*, NvDRSProfileHandle__*, uint, uint*, _NVDRS_APPLICATION_V4*, _NvAPI_Status> NvAPI_DRS_EnumApplications;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_DRS_FindApplicationByName"]/*' />
-        public static delegate* unmanaged[Cdecl]<NvDRSSessionHandle__*, ushort*, NvDRSProfileHandle__**, _NVDRS_APPLICATION_V4*, _NvAPI_Status> NvAPI_DRS_FindApplicationByName;
+        public delegate* unmanaged[Cdecl]<NvDRSSessionHandle__*, ushort*, NvDRSProfileHandle__**, _NVDRS_APPLICATION_V4*, _NvAPI_Status> NvAPI_DRS_FindApplicationByName;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_DRS_SetSetting"]/*' />
-        public static delegate* unmanaged[Cdecl]<NvDRSSessionHandle__*, NvDRSProfileHandle__*, _NVDRS_SETTING_V1*, _NvAPI_Status> NvAPI_DRS_SetSetting;
+        public delegate* unmanaged[Cdecl]<NvDRSSessionHandle__*, NvDRSProfileHandle__*, _NVDRS_SETTING_V1*, _NvAPI_Status> NvAPI_DRS_SetSetting;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_DRS_GetSetting"]/*' />
-        public static delegate* unmanaged[Cdecl]<NvDRSSessionHandle__*, NvDRSProfileHandle__*, uint, _NVDRS_SETTING_V1*, _NvAPI_Status> NvAPI_DRS_GetSetting;
+        public delegate* unmanaged[Cdecl]<NvDRSSessionHandle__*, NvDRSProfileHandle__*, uint, _NVDRS_SETTING_V1*, _NvAPI_Status> NvAPI_DRS_GetSetting;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_DRS_EnumSettings"]/*' />
-        public static delegate* unmanaged[Cdecl]<NvDRSSessionHandle__*, NvDRSProfileHandle__*, uint, uint*, _NVDRS_SETTING_V1*, _NvAPI_Status> NvAPI_DRS_EnumSettings;
+        public delegate* unmanaged[Cdecl]<NvDRSSessionHandle__*, NvDRSProfileHandle__*, uint, uint*, _NVDRS_SETTING_V1*, _NvAPI_Status> NvAPI_DRS_EnumSettings;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_DRS_EnumAvailableSettingIds"]/*' />
-        public static delegate* unmanaged[Cdecl]<uint*, uint*, _NvAPI_Status> NvAPI_DRS_EnumAvailableSettingIds;
+        public delegate* unmanaged[Cdecl]<uint*, uint*, _NvAPI_Status> NvAPI_DRS_EnumAvailableSettingIds;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_DRS_EnumAvailableSettingValues"]/*' />
-        public static delegate* unmanaged[Cdecl]<uint, uint*, _NVDRS_SETTING_VALUES*, _NvAPI_Status> NvAPI_DRS_EnumAvailableSettingValues;
+        public delegate* unmanaged[Cdecl]<uint, uint*, _NVDRS_SETTING_VALUES*, _NvAPI_Status> NvAPI_DRS_EnumAvailableSettingValues;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_DRS_GetSettingIdFromName"]/*' />
-        public static delegate* unmanaged[Cdecl]<ushort*, uint*, _NvAPI_Status> NvAPI_DRS_GetSettingIdFromName;
+        public delegate* unmanaged[Cdecl]<ushort*, uint*, _NvAPI_Status> NvAPI_DRS_GetSettingIdFromName;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_DRS_GetSettingNameFromId"]/*' />
-        public static delegate* unmanaged[Cdecl]<uint, ushort**, _NvAPI_Status> NvAPI_DRS_GetSettingNameFromId;
+        public delegate* unmanaged[Cdecl]<uint, ushort**, _NvAPI_Status> NvAPI_DRS_GetSettingNameFromId;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_DRS_DeleteProfileSetting"]/*' />
-        public static delegate* unmanaged[Cdecl]<NvDRSSessionHandle__*, NvDRSProfileHandle__*, uint, _NvAPI_Status> NvAPI_DRS_DeleteProfileSetting;
+        public delegate* unmanaged[Cdecl]<NvDRSSessionHandle__*, NvDRSProfileHandle__*, uint, _NvAPI_Status> NvAPI_DRS_DeleteProfileSetting;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_DRS_RestoreAllDefaults"]/*' />
-        public static delegate* unmanaged[Cdecl]<NvDRSSessionHandle__*, _NvAPI_Status> NvAPI_DRS_RestoreAllDefaults;
+        public delegate* unmanaged[Cdecl]<NvDRSSessionHandle__*, _NvAPI_Status> NvAPI_DRS_RestoreAllDefaults;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_DRS_RestoreProfileDefault"]/*' />
-        public static delegate* unmanaged[Cdecl]<NvDRSSessionHandle__*, NvDRSProfileHandle__*, _NvAPI_Status> NvAPI_DRS_RestoreProfileDefault;
+        public delegate* unmanaged[Cdecl]<NvDRSSessionHandle__*, NvDRSProfileHandle__*, _NvAPI_Status> NvAPI_DRS_RestoreProfileDefault;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_DRS_RestoreProfileDefaultSetting"]/*' />
-        public static delegate* unmanaged[Cdecl]<NvDRSSessionHandle__*, NvDRSProfileHandle__*, uint, _NvAPI_Status> NvAPI_DRS_RestoreProfileDefaultSetting;
+        public delegate* unmanaged[Cdecl]<NvDRSSessionHandle__*, NvDRSProfileHandle__*, uint, _NvAPI_Status> NvAPI_DRS_RestoreProfileDefaultSetting;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_DRS_GetBaseProfile"]/*' />
-        public static delegate* unmanaged[Cdecl]<NvDRSSessionHandle__*, NvDRSProfileHandle__**, _NvAPI_Status> NvAPI_DRS_GetBaseProfile;
+        public delegate* unmanaged[Cdecl]<NvDRSSessionHandle__*, NvDRSProfileHandle__**, _NvAPI_Status> NvAPI_DRS_GetBaseProfile;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_SYS_GetChipSetInfo"]/*' />
-        public static delegate* unmanaged[Cdecl]<NV_CHIPSET_INFO_v4*, _NvAPI_Status> NvAPI_SYS_GetChipSetInfo;
+        public delegate* unmanaged[Cdecl]<NV_CHIPSET_INFO_v4*, _NvAPI_Status> NvAPI_SYS_GetChipSetInfo;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_SYS_GetLidAndDockInfo"]/*' />
-        public static delegate* unmanaged[Cdecl]<NV_LID_DOCK_PARAMS*, _NvAPI_Status> NvAPI_SYS_GetLidAndDockInfo;
+        public delegate* unmanaged[Cdecl]<NV_LID_DOCK_PARAMS*, _NvAPI_Status> NvAPI_SYS_GetLidAndDockInfo;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_SYS_GetDisplayIdFromGpuAndOutputId"]/*' />
-        public static delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, uint, uint*, _NvAPI_Status> NvAPI_SYS_GetDisplayIdFromGpuAndOutputId;
+        public delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, uint, uint*, _NvAPI_Status> NvAPI_SYS_GetDisplayIdFromGpuAndOutputId;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_SYS_GetGpuAndOutputIdFromDisplayId"]/*' />
-        public static delegate* unmanaged[Cdecl]<uint, NvPhysicalGpuHandle__**, uint*, _NvAPI_Status> NvAPI_SYS_GetGpuAndOutputIdFromDisplayId;
+        public delegate* unmanaged[Cdecl]<uint, NvPhysicalGpuHandle__**, uint*, _NvAPI_Status> NvAPI_SYS_GetGpuAndOutputIdFromDisplayId;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_SYS_GetPhysicalGpuFromDisplayId"]/*' />
-        public static delegate* unmanaged[Cdecl]<uint, NvPhysicalGpuHandle__**, _NvAPI_Status> NvAPI_SYS_GetPhysicalGpuFromDisplayId;
+        public delegate* unmanaged[Cdecl]<uint, NvPhysicalGpuHandle__**, _NvAPI_Status> NvAPI_SYS_GetPhysicalGpuFromDisplayId;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_SYS_GetDisplayDriverInfo"]/*' />
-        public static delegate* unmanaged[Cdecl]<_NV_DISPLAY_DRIVER_INFO_V2*, _NvAPI_Status> NvAPI_SYS_GetDisplayDriverInfo;
+        public delegate* unmanaged[Cdecl]<_NV_DISPLAY_DRIVER_INFO_V2*, _NvAPI_Status> NvAPI_SYS_GetDisplayDriverInfo;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_SYS_GetPhysicalGPUs"]/*' />
-        public static delegate* unmanaged[Cdecl]<_NV_PHYSICAL_GPUS*, _NvAPI_Status> NvAPI_SYS_GetPhysicalGPUs;
+        public delegate* unmanaged[Cdecl]<_NV_PHYSICAL_GPUS*, _NvAPI_Status> NvAPI_SYS_GetPhysicalGPUs;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_SYS_GetLogicalGPUs"]/*' />
-        public static delegate* unmanaged[Cdecl]<_NV_LOGICAL_GPUS*, _NvAPI_Status> NvAPI_SYS_GetLogicalGPUs;
+        public delegate* unmanaged[Cdecl]<_NV_LOGICAL_GPUS*, _NvAPI_Status> NvAPI_SYS_GetLogicalGPUs;
+
+        /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_NGX_GetDriverFeatureSupport"]/*' />
+        public delegate* unmanaged[Cdecl]<_NV_NGX_GET_DRIVER_FEATURE_SUPPORT_PARAMS_V1*, _NvAPI_Status> NvAPI_NGX_GetDriverFeatureSupport;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GPU_ClientRegisterForUtilizationSampleUpdates"]/*' />
-        public static delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, _NV_GPU_CLIENT_UTILIZATION_PERIODIC_CALLBACK_SETTINGS_V1*, _NvAPI_Status> NvAPI_GPU_ClientRegisterForUtilizationSampleUpdates;
+        public delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, _NV_GPU_CLIENT_UTILIZATION_PERIODIC_CALLBACK_SETTINGS_V1*, _NvAPI_Status> NvAPI_GPU_ClientRegisterForUtilizationSampleUpdates;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_RegisterRiseCallback"]/*' />
-        public static delegate* unmanaged[Cdecl]<_NV_RISE_CALLBACK_SETTINGS_V1*, _NvAPI_Status> NvAPI_RegisterRiseCallback;
+        public delegate* unmanaged[Cdecl]<_NV_RISE_CALLBACK_SETTINGS_V1*, _NvAPI_Status> NvAPI_RegisterRiseCallback;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_RequestRise"]/*' />
-        public static delegate* unmanaged[Cdecl]<_NV_REQUEST_RISE_SETTINGS_V1*, _NvAPI_Status> NvAPI_RequestRise;
+        public delegate* unmanaged[Cdecl]<_NV_REQUEST_RISE_SETTINGS_V1*, _NvAPI_Status> NvAPI_RequestRise;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_UninstallRise"]/*' />
-        public static delegate* unmanaged[Cdecl]<_NV_UNINSTALL_RISE_SETTINGS_V1*, _NvAPI_Status> NvAPI_UninstallRise;
+        public delegate* unmanaged[Cdecl]<_NV_UNINSTALL_RISE_SETTINGS_V1*, _NvAPI_Status> NvAPI_UninstallRise;
 
         [NativeTypeName("#define NV_U8_MAX (+255U)")]
         public const uint NV_U8_MAX = (+255U);
@@ -1006,8 +1033,8 @@ namespace NVAPIWrapper
         [NativeTypeName("#define NVAPI_USE_STDINT 0")]
         public const int NVAPI_USE_STDINT = 0;
 
-        [NativeTypeName("#define NVAPI_SDK_VERSION 59145")]
-        public const int NVAPI_SDK_VERSION = 59145;
+        [NativeTypeName("#define NVAPI_SDK_VERSION 61683")]
+        public const int NVAPI_SDK_VERSION = 61683;
 
         [NativeTypeName("#define NVAPI_DEFAULT_HANDLE 0")]
         public const int NVAPI_DEFAULT_HANDLE = 0;
@@ -1065,6 +1092,9 @@ namespace NVAPIWrapper
 
         [NativeTypeName("#define NVAPI_SYSTEM_HWBC_INVALID_ID 0xffffffff")]
         public const uint NVAPI_SYSTEM_HWBC_INVALID_ID = 0xffffffff;
+
+        [NativeTypeName("#define NVAPI_UUID_LEN 16")]
+        public const int NVAPI_UUID_LEN = 16;
 
         [NativeTypeName("#define NVAPI_SYSTEM_MAX_DISPLAYS NVAPI_MAX_PHYSICAL_GPUS * NV_MAX_HEADS")]
         public const int NVAPI_SYSTEM_MAX_DISPLAYS = 64 * 4;
@@ -1567,11 +1597,20 @@ namespace NVAPIWrapper
         [NativeTypeName("#define NV_GPU_GSP_INFO_VER NV_GPU_GSP_INFO_VER1")]
         public const uint NV_GPU_GSP_INFO_VER = (uint)(72 | ((1) << 16));
 
+        [NativeTypeName("#define NV_GPU_UUID_VER1 MAKE_NVAPI_VERSION(NV_GPU_UUID_V1,1)")]
+        public const uint NV_GPU_UUID_VER1 = (uint)(20 | ((1) << 16));
+
+        [NativeTypeName("#define NV_GPU_UUID_VER NV_GPU_UUID_VER1")]
+        public const uint NV_GPU_UUID_VER = (uint)(20 | ((1) << 16));
+
         [NativeTypeName("#define NVAPI_NVLINK_COUNTER_MAX_TYPES 32")]
         public const int NVAPI_NVLINK_COUNTER_MAX_TYPES = 32;
 
         [NativeTypeName("#define NVAPI_NVLINK_MAX_LINKS 32")]
         public const int NVAPI_NVLINK_MAX_LINKS = 32;
+
+        [NativeTypeName("#define NVAPI_NVLINK_MAX_LINKS_V2 128")]
+        public const int NVAPI_NVLINK_MAX_LINKS_V2 = 128;
 
         [NativeTypeName("#define NVAPI_NVLINK_CAPS_SUPPORTED 0x00000001")]
         public const int NVAPI_NVLINK_CAPS_SUPPORTED = 0x00000001;
@@ -1669,6 +1708,12 @@ namespace NVAPIWrapper
         [NativeTypeName("#define NVLINK_GET_CAPS_VER NVLINK_GET_CAPS_VER1")]
         public const uint NVLINK_GET_CAPS_VER = (uint)(16 | ((1) << 16));
 
+        [NativeTypeName("#define NVLINK_GET_CAPS_EX_VER1 MAKE_NVAPI_VERSION(NVLINK_GET_CAPS_EX_V1, 1)")]
+        public const uint NVLINK_GET_CAPS_EX_VER1 = (uint)(1056 | ((1) << 16));
+
+        [NativeTypeName("#define NVLINK_GET_CAPS_EX_VER NVLINK_GET_CAPS_EX_VER1")]
+        public const uint NVLINK_GET_CAPS_EX_VER = (uint)(1056 | ((1) << 16));
+
         [NativeTypeName("#define NVAPI_NVLINK_DEVICE_INFO_DEVICE_ID_FLAGS_NONE (0x00000000)")]
         public const int NVAPI_NVLINK_DEVICE_INFO_DEVICE_ID_FLAGS_NONE = (0x00000000);
 
@@ -1753,6 +1798,12 @@ namespace NVAPIWrapper
         [NativeTypeName("#define NVLINK_GET_STATUS_VER NVLINK_GET_STATUS_VER2")]
         public const uint NVLINK_GET_STATUS_VER = (uint)(5640 | ((2) << 16));
 
+        [NativeTypeName("#define NVLINK_GET_STATUS_EX_VER1 MAKE_NVAPI_VERSION(NVLINK_GET_STATUS_EX_V1, 1)")]
+        public const uint NVLINK_GET_STATUS_EX_VER1 = (uint)(23568 | ((1) << 16));
+
+        [NativeTypeName("#define NVLINK_GET_STATUS_EX_VER NVLINK_GET_STATUS_EX_VER1")]
+        public const uint NVLINK_GET_STATUS_EX_VER = (uint)(23568 | ((1) << 16));
+
         [NativeTypeName("#define NV_GPU_PERF_PSTATES_INFO_VER1 MAKE_NVAPI_VERSION(NV_GPU_PERF_PSTATES_INFO_V1,1)")]
         public const uint NV_GPU_PERF_PSTATES_INFO_VER1 = (uint)(6288 | ((1) << 16));
 
@@ -1797,6 +1848,12 @@ namespace NVAPIWrapper
 
         [NativeTypeName("#define NV_GPU_CLOCK_FREQUENCIES_VER NV_GPU_CLOCK_FREQUENCIES_VER_3")]
         public const uint NV_GPU_CLOCK_FREQUENCIES_VER = (uint)(264 | ((3) << 16));
+
+        [NativeTypeName("#define NV_GPU_OVERCLOCK_STATUS_VER1 MAKE_NVAPI_VERSION(NV_GPU_OVERCLOCK_STATUS_V1,1)")]
+        public const uint NV_GPU_OVERCLOCK_STATUS_VER1 = (uint)(72 | ((1) << 16));
+
+        [NativeTypeName("#define NV_GPU_OVERCLOCK_STATUS_VER NV_GPU_OVERCLOCK_STATUS_VER1")]
+        public const uint NV_GPU_OVERCLOCK_STATUS_VER = (uint)(72 | ((1) << 16));
 
         [NativeTypeName("#define NV_GPU_QUERY_ILLUMINATION_SUPPORT_PARM_VER_1 MAKE_NVAPI_VERSION(NV_GPU_QUERY_ILLUMINATION_SUPPORT_PARM_V1,1)")]
         public static readonly uint NV_GPU_QUERY_ILLUMINATION_SUPPORT_PARM_VER_1 = unchecked((uint)(sizeof(_NV_GPU_QUERY_ILLUMINATION_SUPPORT_PARM_V1) | ((1) << 16)));
@@ -2194,11 +2251,17 @@ namespace NVAPIWrapper
         [NativeTypeName("#define NV_GSYNC_CAPABILITIES_VER NV_GSYNC_CAPABILITIES_VER3")]
         public const uint NV_GSYNC_CAPABILITIES_VER = (uint)(28 | ((3) << 16));
 
-        [NativeTypeName("#define NV_GSYNC_DISPLAY_VER MAKE_NVAPI_VERSION(NV_GSYNC_DISPLAY,1)")]
-        public const uint NV_GSYNC_DISPLAY_VER = (uint)(16 | ((1) << 16));
-
         [NativeTypeName("#define NV_GSYNC_GPU_VER MAKE_NVAPI_VERSION(NV_GSYNC_GPU,1)")]
         public static readonly uint NV_GSYNC_GPU_VER = unchecked((uint)(sizeof(_NV_GSYNC_GPU) | ((1) << 16)));
+
+        [NativeTypeName("#define NV_GSYNC_DISPLAY_VER1 MAKE_NVAPI_VERSION(NV_GSYNC_DISPLAY_V1,1)")]
+        public const uint NV_GSYNC_DISPLAY_VER1 = (uint)(16 | ((1) << 16));
+
+        [NativeTypeName("#define NV_GSYNC_DISPLAY_VER2 MAKE_NVAPI_VERSION(NV_GSYNC_DISPLAY_V2,2)")]
+        public const uint NV_GSYNC_DISPLAY_VER2 = (uint)(96 | ((2) << 16));
+
+        [NativeTypeName("#define NV_GSYNC_DISPLAY_VER NV_GSYNC_DISPLAY_VER2")]
+        public const uint NV_GSYNC_DISPLAY_VER = (uint)(96 | ((2) << 16));
 
         [NativeTypeName("#define NV_GSYNC_DELAY_VER MAKE_NVAPI_VERSION(NV_GSYNC_DELAY,1)")]
         public const uint NV_GSYNC_DELAY_VER = (uint)(20 | ((1) << 16));
@@ -2232,6 +2295,9 @@ namespace NVAPIWrapper
 
         [NativeTypeName("#define NV_PRESENT_BARRIER_FRAME_STATICS_VER1 MAKE_NVAPI_VERSION(NV_PRESENT_BARRIER_FRAME_STATISTICS,1)")]
         public const uint NV_PRESENT_BARRIER_FRAME_STATICS_VER1 = (uint)(24 | ((1) << 16));
+
+        [NativeTypeName("#define NVAPI_MAX_FRAMES_PER_FLIP_BATCH 8")]
+        public const int NVAPI_MAX_FRAMES_PER_FLIP_BATCH = 8;
 
         [NativeTypeName("#define NV_QUERY_SINGLE_PASS_STEREO_SUPPORT_PARAMS_VER1 MAKE_NVAPI_VERSION(NV_QUERY_SINGLE_PASS_STEREO_SUPPORT_PARAMS_V1, 1)")]
         public const uint NV_QUERY_SINGLE_PASS_STEREO_SUPPORT_PARAMS_VER1 = (uint)(8 | ((1) << 16));
@@ -2323,17 +2389,44 @@ namespace NVAPIWrapper
         [NativeTypeName("#define NV_NGX_DLSS_OVERRIDE_FEATURE_INDEX_FG 3")]
         public const int NV_NGX_DLSS_OVERRIDE_FEATURE_INDEX_FG = 3;
 
+        [NativeTypeName("#define NV_NGX_DLSS_OVERRIDE_FEATURE_INDEX_RESERVED 4")]
+        public const int NV_NGX_DLSS_OVERRIDE_FEATURE_INDEX_RESERVED = 4;
+
         [NativeTypeName("#define NV_NGX_DLSS_OVERRIDE_GET_STATE_PARAMS_VER1 MAKE_NVAPI_VERSION(NV_NGX_DLSS_OVERRIDE_GET_STATE_PARAMS_V1, 1)")]
         public const uint NV_NGX_DLSS_OVERRIDE_GET_STATE_PARAMS_VER1 = (uint)(64 | ((1) << 16));
 
-        [NativeTypeName("#define NV_NGX_DLSS_OVERRIDE_GET_STATE_PARAMS_VER NV_NGX_DLSS_OVERRIDE_GET_STATE_PARAMS_VER1")]
-        public const uint NV_NGX_DLSS_OVERRIDE_GET_STATE_PARAMS_VER = (uint)(64 | ((1) << 16));
+        [NativeTypeName("#define NV_NGX_DLSS_OVERRIDE_GET_STATE_PARAMS_VER2 MAKE_NVAPI_VERSION(NV_NGX_DLSS_OVERRIDE_GET_STATE_PARAMS_V2, 2)")]
+        public const uint NV_NGX_DLSS_OVERRIDE_GET_STATE_PARAMS_VER2 = (uint)(96 | ((2) << 16));
+
+        [NativeTypeName("#define NV_NGX_DLSS_OVERRIDE_GET_STATE_PARAMS_VER NV_NGX_DLSS_OVERRIDE_GET_STATE_PARAMS_VER2")]
+        public const uint NV_NGX_DLSS_OVERRIDE_GET_STATE_PARAMS_VER = (uint)(96 | ((2) << 16));
 
         [NativeTypeName("#define NV_NGX_DLSS_OVERRIDE_SET_STATE_PARAMS_VER1 MAKE_NVAPI_VERSION(NV_NGX_DLSS_OVERRIDE_SET_STATE_PARAMS_V1, 1)")]
         public const uint NV_NGX_DLSS_OVERRIDE_SET_STATE_PARAMS_VER1 = (uint)(56 | ((1) << 16));
 
         [NativeTypeName("#define NV_NGX_DLSS_OVERRIDE_SET_STATE_PARAMS_VER NV_NGX_DLSS_OVERRIDE_SET_STATE_PARAMS_VER1")]
         public const uint NV_NGX_DLSS_OVERRIDE_SET_STATE_PARAMS_VER = (uint)(56 | ((1) << 16));
+
+        [NativeTypeName("#define NV_NGX_RUNTIME_KEY_COUNT 10")]
+        public const int NV_NGX_RUNTIME_KEY_COUNT = 10;
+
+        [NativeTypeName("#define NV_NGX_SESSION_PARAMS_VER1 MAKE_NVAPI_VERSION(NV_NGX_SESSION_PARAMS_V1, 1)")]
+        public const uint NV_NGX_SESSION_PARAMS_VER1 = (uint)(48 | ((1) << 16));
+
+        [NativeTypeName("#define NV_NGX_SESSION_PARAMS_VER NV_NGX_SESSION_PARAMS_VER1")]
+        public const uint NV_NGX_SESSION_PARAMS_VER = (uint)(48 | ((1) << 16));
+
+        [NativeTypeName("#define NV_NGX_SET_RUNTIME_PARAMS_VER1 MAKE_NVAPI_VERSION(NV_NGX_SET_RUNTIME_PARAMS_V1, 1)")]
+        public const uint NV_NGX_SET_RUNTIME_PARAMS_VER1 = (uint)(64 | ((1) << 16));
+
+        [NativeTypeName("#define NV_NGX_SET_RUNTIME_PARAMS_VER NV_NGX_SET_RUNTIME_PARAMS_VER1")]
+        public const uint NV_NGX_SET_RUNTIME_PARAMS_VER = (uint)(64 | ((1) << 16));
+
+        [NativeTypeName("#define NV_NGX_GET_RUNTIME_PARAMS_VER1 MAKE_NVAPI_VERSION(NV_NGX_GET_RUNTIME_PARAMS_V1, 1)")]
+        public const uint NV_NGX_GET_RUNTIME_PARAMS_VER1 = (uint)(64 | ((1) << 16));
+
+        [NativeTypeName("#define NV_NGX_GET_RUNTIME_PARAMS_VER NV_NGX_GET_RUNTIME_PARAMS_VER1")]
+        public const uint NV_NGX_GET_RUNTIME_PARAMS_VER = (uint)(64 | ((1) << 16));
 
         [NativeTypeName("#define NVVIOOWNERID_NONE 0")]
         public const int NVVIOOWNERID_NONE = 0;
@@ -2704,6 +2797,15 @@ namespace NVAPIWrapper
         [NativeTypeName("#define NV_LOGICAL_GPUS_VER NV_LOGICAL_GPUS_VER1")]
         public static readonly uint NV_LOGICAL_GPUS_VER = unchecked((uint)(sizeof(_NV_LOGICAL_GPUS) | ((1) << 16)));
 
+        [NativeTypeName("#define NVAPI_MAX_NGX_FEATURES_PER_QUERY 16")]
+        public const int NVAPI_MAX_NGX_FEATURES_PER_QUERY = 16;
+
+        [NativeTypeName("#define NV_NGX_GET_DRIVER_FEATURE_SUPPORT_PARAMS_VER1 MAKE_NVAPI_VERSION(NV_NGX_GET_DRIVER_FEATURE_SUPPORT_PARAMS_V1,1)")]
+        public const uint NV_NGX_GET_DRIVER_FEATURE_SUPPORT_PARAMS_VER1 = (uint)(288 | ((1) << 16));
+
+        [NativeTypeName("#define NV_NGX_GET_DRIVER_FEATURE_SUPPORT_PARAMS_VER NV_NGX_GET_DRIVER_FEATURE_SUPPORT_PARAMS_VER1")]
+        public const uint NV_NGX_GET_DRIVER_FEATURE_SUPPORT_PARAMS_VER = (uint)(288 | ((1) << 16));
+
         [NativeTypeName("#define NV_GPU_CLIENT_UTIL_DOMAINS_MAX_V1 (4)")]
         public const int NV_GPU_CLIENT_UTIL_DOMAINS_MAX_V1 = (4);
 
@@ -2881,17 +2983,38 @@ namespace NVAPIWrapper
         [NativeTypeName("#define NGX_DLAA_OVERRIDE_STRING L\"Override DLSS mode to be DLAA\"")]
         public const string NGX_DLAA_OVERRIDE_STRING = "Override DLSS mode to be DLAA";
 
+        [NativeTypeName("#define NGX_DLSSG_DYNAMIC_MULTI_FRAME_COUNT_MAX_STRING L\"Override maximum DLSSG dynamic multi frame count\"")]
+        public const string NGX_DLSSG_DYNAMIC_MULTI_FRAME_COUNT_MAX_STRING = "Override maximum DLSSG dynamic multi frame count";
+
+        [NativeTypeName("#define NGX_DLSSG_DYNAMIC_TARGET_FRAME_RATE_STRING L\"Override DLSSG Target Frame Rate\"")]
+        public const string NGX_DLSSG_DYNAMIC_TARGET_FRAME_RATE_STRING = "Override DLSSG Target Frame Rate";
+
+        [NativeTypeName("#define NGX_DLSSG_MODE_STRING L\"Override DLSSG mode\"")]
+        public const string NGX_DLSSG_MODE_STRING = "Override DLSSG mode";
+
         [NativeTypeName("#define NGX_DLSSG_MULTI_FRAME_COUNT_STRING L\"Override DLSSG multi-frame count\"")]
         public const string NGX_DLSSG_MULTI_FRAME_COUNT_STRING = "Override DLSSG multi-frame count";
 
         [NativeTypeName("#define NGX_DLSS_FG_OVERRIDE_STRING L\"Enable DLSS-FG override\"")]
         public const string NGX_DLSS_FG_OVERRIDE_STRING = "Enable DLSS-FG override";
 
+        [NativeTypeName("#define NGX_DLSS_FG_OVERRIDE_RENDER_PRESET_SELECTION_STRING L\"Override DLSS-FG preset\"")]
+        public const string NGX_DLSS_FG_OVERRIDE_RENDER_PRESET_SELECTION_STRING = "Override DLSS-FG preset";
+
         [NativeTypeName("#define NGX_DLSS_FG_OVERRIDE_RESERVED_KEY1_STRING L\"Override reserved key 1 for FG\"")]
         public const string NGX_DLSS_FG_OVERRIDE_RESERVED_KEY1_STRING = "Override reserved key 1 for FG";
 
         [NativeTypeName("#define NGX_DLSS_FG_OVERRIDE_RESERVED_KEY2_STRING L\"Override reserved key 2 for FG\"")]
         public const string NGX_DLSS_FG_OVERRIDE_RESERVED_KEY2_STRING = "Override reserved key 2 for FG";
+
+        [NativeTypeName("#define NGX_DLSS_NR_OVERRIDE_STRING L\"Enable DLSS NR override\"")]
+        public const string NGX_DLSS_NR_OVERRIDE_STRING = "Enable DLSS NR override";
+
+        [NativeTypeName("#define NGX_DLSS_NR_OVERRIDE_RENDER_PRESET_SELECTION_STRING L\"Override DLSS NR presets\"")]
+        public const string NGX_DLSS_NR_OVERRIDE_RENDER_PRESET_SELECTION_STRING = "Override DLSS NR presets";
+
+        [NativeTypeName("#define NGX_DLSS_NR_SL_OVERRIDE_STRING L\"Enable DLSS NR SL override\"")]
+        public const string NGX_DLSS_NR_SL_OVERRIDE_STRING = "Enable DLSS NR SL override";
 
         [NativeTypeName("#define NGX_DLSS_OVERRIDE_OPTIMAL_SETTINGS_STRING L\"Override DLSS performance mode to be ultra-perfomance\"")]
         public const string NGX_DLSS_OVERRIDE_OPTIMAL_SETTINGS_STRING = "Override DLSS performance mode to be ultra-perfomance";
@@ -2976,6 +3099,9 @@ namespace NVAPIWrapper
 
         [NativeTypeName("#define SLI_RENDERING_MODE_STRING L\"SLI rendering mode\"")]
         public const string SLI_RENDERING_MODE_STRING = "SLI rendering mode";
+
+        [NativeTypeName("#define SL_DLSS_OVERRIDE_STRING L\"Enable Streamline override\"")]
+        public const string SL_DLSS_OVERRIDE_STRING = "Enable Streamline override";
 
         [NativeTypeName("#define VRPRERENDERLIMIT_STRING L\"Virtual Reality pre-rendered frames\"")]
         public const string VRPRERENDERLIMIT_STRING = "Virtual Reality pre-rendered frames";
