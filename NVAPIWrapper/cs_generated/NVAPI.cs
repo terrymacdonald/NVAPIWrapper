@@ -358,9 +358,6 @@ namespace NVAPIWrapper
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GPU_GetGspFeatures"]/*' />
         public static delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, _NV_GPU_GSP_INFO_V1*, _NvAPI_Status> NvAPI_GPU_GetGspFeatures;
 
-        /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GPU_GetUUID"]/*' />
-        public static delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, _NV_GPU_UUID_V1*, _NvAPI_Status> NvAPI_GPU_GetUUID;
-
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GPU_NVLINK_GetCaps"]/*' />
         public static delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, NVLINK_GET_CAPS_V1*, _NvAPI_Status> NvAPI_GPU_NVLINK_GetCaps;
 
@@ -976,9 +973,6 @@ namespace NVAPIWrapper
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_SYS_GetLogicalGPUs"]/*' />
         public static delegate* unmanaged[Cdecl]<_NV_LOGICAL_GPUS*, _NvAPI_Status> NvAPI_SYS_GetLogicalGPUs;
 
-        /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_NGX_GetDriverFeatureSupport"]/*' />
-        public static delegate* unmanaged[Cdecl]<_NV_NGX_GET_DRIVER_FEATURE_SUPPORT_PARAMS_V1*, _NvAPI_Status> NvAPI_NGX_GetDriverFeatureSupport;
-
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GPU_ClientRegisterForUtilizationSampleUpdates"]/*' />
         public static delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, _NV_GPU_CLIENT_UTILIZATION_PERIODIC_CALLBACK_SETTINGS_V1*, _NvAPI_Status> NvAPI_GPU_ClientRegisterForUtilizationSampleUpdates;
 
@@ -1012,8 +1006,8 @@ namespace NVAPIWrapper
         [NativeTypeName("#define NVAPI_USE_STDINT 0")]
         public const int NVAPI_USE_STDINT = 0;
 
-        [NativeTypeName("#define NVAPI_SDK_VERSION 59596")]
-        public const int NVAPI_SDK_VERSION = 59596;
+        [NativeTypeName("#define NVAPI_SDK_VERSION 59145")]
+        public const int NVAPI_SDK_VERSION = 59145;
 
         [NativeTypeName("#define NVAPI_DEFAULT_HANDLE 0")]
         public const int NVAPI_DEFAULT_HANDLE = 0;
@@ -1071,9 +1065,6 @@ namespace NVAPIWrapper
 
         [NativeTypeName("#define NVAPI_SYSTEM_HWBC_INVALID_ID 0xffffffff")]
         public const uint NVAPI_SYSTEM_HWBC_INVALID_ID = 0xffffffff;
-
-        [NativeTypeName("#define NVAPI_UUID_LEN 16")]
-        public const int NVAPI_UUID_LEN = 16;
 
         [NativeTypeName("#define NVAPI_SYSTEM_MAX_DISPLAYS NVAPI_MAX_PHYSICAL_GPUS * NV_MAX_HEADS")]
         public const int NVAPI_SYSTEM_MAX_DISPLAYS = 64 * 4;
@@ -1575,12 +1566,6 @@ namespace NVAPIWrapper
 
         [NativeTypeName("#define NV_GPU_GSP_INFO_VER NV_GPU_GSP_INFO_VER1")]
         public const uint NV_GPU_GSP_INFO_VER = (uint)(72 | ((1) << 16));
-
-        [NativeTypeName("#define NV_GPU_UUID_VER1 MAKE_NVAPI_VERSION(NV_GPU_UUID_V1,1)")]
-        public const uint NV_GPU_UUID_VER1 = (uint)(20 | ((1) << 16));
-
-        [NativeTypeName("#define NV_GPU_UUID_VER NV_GPU_UUID_VER1")]
-        public const uint NV_GPU_UUID_VER = (uint)(20 | ((1) << 16));
 
         [NativeTypeName("#define NVAPI_NVLINK_COUNTER_MAX_TYPES 32")]
         public const int NVAPI_NVLINK_COUNTER_MAX_TYPES = 32;
@@ -2248,9 +2233,6 @@ namespace NVAPIWrapper
         [NativeTypeName("#define NV_PRESENT_BARRIER_FRAME_STATICS_VER1 MAKE_NVAPI_VERSION(NV_PRESENT_BARRIER_FRAME_STATISTICS,1)")]
         public const uint NV_PRESENT_BARRIER_FRAME_STATICS_VER1 = (uint)(24 | ((1) << 16));
 
-        [NativeTypeName("#define NVAPI_MAX_FRAMES_PER_FLIP_BATCH 8")]
-        public const int NVAPI_MAX_FRAMES_PER_FLIP_BATCH = 8;
-
         [NativeTypeName("#define NV_QUERY_SINGLE_PASS_STEREO_SUPPORT_PARAMS_VER1 MAKE_NVAPI_VERSION(NV_QUERY_SINGLE_PASS_STEREO_SUPPORT_PARAMS_V1, 1)")]
         public const uint NV_QUERY_SINGLE_PASS_STEREO_SUPPORT_PARAMS_VER1 = (uint)(8 | ((1) << 16));
 
@@ -2722,15 +2704,6 @@ namespace NVAPIWrapper
         [NativeTypeName("#define NV_LOGICAL_GPUS_VER NV_LOGICAL_GPUS_VER1")]
         public static readonly uint NV_LOGICAL_GPUS_VER = unchecked((uint)(sizeof(_NV_LOGICAL_GPUS) | ((1) << 16)));
 
-        [NativeTypeName("#define NVAPI_MAX_NGX_FEATURES_PER_QUERY 16")]
-        public const int NVAPI_MAX_NGX_FEATURES_PER_QUERY = 16;
-
-        [NativeTypeName("#define NV_NGX_GET_DRIVER_FEATURE_SUPPORT_PARAMS_VER1 MAKE_NVAPI_VERSION(NV_NGX_GET_DRIVER_FEATURE_SUPPORT_PARAMS_V1,1)")]
-        public const uint NV_NGX_GET_DRIVER_FEATURE_SUPPORT_PARAMS_VER1 = (uint)(288 | ((1) << 16));
-
-        [NativeTypeName("#define NV_NGX_GET_DRIVER_FEATURE_SUPPORT_PARAMS_VER NV_NGX_GET_DRIVER_FEATURE_SUPPORT_PARAMS_VER1")]
-        public const uint NV_NGX_GET_DRIVER_FEATURE_SUPPORT_PARAMS_VER = (uint)(288 | ((1) << 16));
-
         [NativeTypeName("#define NV_GPU_CLIENT_UTIL_DOMAINS_MAX_V1 (4)")]
         public const int NV_GPU_CLIENT_UTIL_DOMAINS_MAX_V1 = (4);
 
@@ -2908,23 +2881,11 @@ namespace NVAPIWrapper
         [NativeTypeName("#define NGX_DLAA_OVERRIDE_STRING L\"Override DLSS mode to be DLAA\"")]
         public const string NGX_DLAA_OVERRIDE_STRING = "Override DLSS mode to be DLAA";
 
-        [NativeTypeName("#define NGX_DLSSG_DYNAMIC_MULTI_FRAME_COUNT_MAX_STRING L\"Override maximum DLSSG dynamic multi frame count\"")]
-        public const string NGX_DLSSG_DYNAMIC_MULTI_FRAME_COUNT_MAX_STRING = "Override maximum DLSSG dynamic multi frame count";
-
-        [NativeTypeName("#define NGX_DLSSG_DYNAMIC_TARGET_FRAME_RATE_STRING L\"Override DLSSG Target Frame Rate\"")]
-        public const string NGX_DLSSG_DYNAMIC_TARGET_FRAME_RATE_STRING = "Override DLSSG Target Frame Rate";
-
-        [NativeTypeName("#define NGX_DLSSG_MODE_STRING L\"Override DLSSG mode\"")]
-        public const string NGX_DLSSG_MODE_STRING = "Override DLSSG mode";
-
         [NativeTypeName("#define NGX_DLSSG_MULTI_FRAME_COUNT_STRING L\"Override DLSSG multi-frame count\"")]
         public const string NGX_DLSSG_MULTI_FRAME_COUNT_STRING = "Override DLSSG multi-frame count";
 
         [NativeTypeName("#define NGX_DLSS_FG_OVERRIDE_STRING L\"Enable DLSS-FG override\"")]
         public const string NGX_DLSS_FG_OVERRIDE_STRING = "Enable DLSS-FG override";
-
-        [NativeTypeName("#define NGX_DLSS_FG_OVERRIDE_RENDER_PRESET_SELECTION_STRING L\"Override DLSS-FG preset\"")]
-        public const string NGX_DLSS_FG_OVERRIDE_RENDER_PRESET_SELECTION_STRING = "Override DLSS-FG preset";
 
         [NativeTypeName("#define NGX_DLSS_FG_OVERRIDE_RESERVED_KEY1_STRING L\"Override reserved key 1 for FG\"")]
         public const string NGX_DLSS_FG_OVERRIDE_RESERVED_KEY1_STRING = "Override reserved key 1 for FG";
