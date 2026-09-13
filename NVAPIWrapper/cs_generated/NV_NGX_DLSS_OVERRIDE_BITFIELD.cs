@@ -36,6 +36,9 @@ namespace NVAPIWrapper
         /// <include file='NV_NGX_DLSS_OVERRIDE_BITFIELD.xml' path='doc/member[@name="NV_NGX_DLSS_OVERRIDE_BITFIELD.NV_NGX_DLSS_OVERRIDE_FLAG_EVALUATE"]/*' />
         NV_NGX_DLSS_OVERRIDE_FLAG_EVALUATE = (1 << (10)),
 
+        /// <include file='NV_NGX_DLSS_OVERRIDE_BITFIELD.xml' path='doc/member[@name="NV_NGX_DLSS_OVERRIDE_BITFIELD.NV_NGX_DLSS_OVERRIDE_FLAG_FG_MODE"]/*' />
+        NV_NGX_DLSS_OVERRIDE_FLAG_FG_MODE = (1 << (13)),
+
         /// <include file='NV_NGX_DLSS_OVERRIDE_BITFIELD.xml' path='doc/member[@name="NV_NGX_DLSS_OVERRIDE_BITFIELD.NV_NGX_DLSS_OVERRIDE_FLAG_SR_DLAA_MODE"]/*' />
         NV_NGX_DLSS_OVERRIDE_FLAG_SR_DLAA_MODE = (1 << (14)),
 

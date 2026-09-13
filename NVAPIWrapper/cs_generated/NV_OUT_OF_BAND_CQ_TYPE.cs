@@ -14,5 +14,8 @@ namespace NVAPIWrapper
 
         /// <include file='NV_OUT_OF_BAND_CQ_TYPE.xml' path='doc/member[@name="NV_OUT_OF_BAND_CQ_TYPE.OUT_OF_BAND_RENDER_PRESENT"]/*' />
         OUT_OF_BAND_RENDER_PRESENT = 3,
+
+        /// <include file='NV_OUT_OF_BAND_CQ_TYPE.xml' path='doc/member[@name="NV_OUT_OF_BAND_CQ_TYPE.OUT_OF_BAND_EXPLICIT_COPY"]/*' />
+        OUT_OF_BAND_EXPLICIT_COPY = 4,
     }
 }

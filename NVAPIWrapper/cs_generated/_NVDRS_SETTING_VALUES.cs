@@ -21,11 +21,11 @@ namespace NVAPIWrapper
         public _NVDRS_SETTING_TYPE settingType;
 
         /// <include file='_NVDRS_SETTING_VALUES.xml' path='doc/member[@name="_NVDRS_SETTING_VALUES.Anonymous"]/*' />
-        [NativeTypeName("__AnonymousRecord_nvapi_L23944_C6")]
+        [NativeTypeName("__AnonymousRecord_nvapi_L24464_C6")]
         public _Anonymous_e__Union Anonymous;
 
         /// <include file='_NVDRS_SETTING_VALUES.xml' path='doc/member[@name="_NVDRS_SETTING_VALUES.settingValues"]/*' />
-        [NativeTypeName("union (anonymous union at ./../nvapi/nvapi.h:23951:6)[100]")]
+        [NativeTypeName("union (anonymous union at ./../nvapi/nvapi.h:24472:6)[100]")]
         public _settingValues_e__FixedBuffer settingValues;
 
         /// <include file='_Anonymous_e__Union.xml' path='doc/member[@name="_Anonymous_e__Union.u32DefaultValue"]/*' />
@@ -58,8 +58,18 @@ namespace NVAPIWrapper
             }
         }
 
+        /// <include file='_Anonymous_e__Union.xml' path='doc/member[@name="_Anonymous_e__Union.u64DefaultValue"]/*' />
+        [UnscopedRef]
+        public ref ulong u64DefaultValue
+        {
+            get
+            {
+                return ref Anonymous.u64DefaultValue;
+            }
+        }
+
         /// <include file='_Anonymous_e__Union.xml' path='doc/member[@name="_Anonymous_e__Union"]/*' />
-        [StructLayout(LayoutKind.Explicit)]
+        [StructLayout(LayoutKind.Explicit, Pack = 4)]
         public partial struct _Anonymous_e__Union
         {
             /// <include file='_Anonymous_e__Union.xml' path='doc/member[@name="_Anonymous_e__Union.u32DefaultValue"]/*' />
@@ -77,7 +87,13 @@ namespace NVAPIWrapper
             [NativeTypeName("NvAPI_UnicodeString")]
             public _wszDefaultValue_e__FixedBuffer wszDefaultValue;
 
+            /// <include file='_Anonymous_e__Union.xml' path='doc/member[@name="_Anonymous_e__Union.u64DefaultValue"]/*' />
+            [FieldOffset(0)]
+            [NativeTypeName("NvU64")]
+            public ulong u64DefaultValue;
+
             /// <include file='_wszDefaultValue_e__FixedBuffer.xml' path='doc/member[@name="_wszDefaultValue_e__FixedBuffer"]/*' />
+            [StructLayout(LayoutKind.Sequential, Pack = 4)]
             [InlineArray(2048)]
             public partial struct _wszDefaultValue_e__FixedBuffer
             {
@@ -86,7 +102,7 @@ namespace NVAPIWrapper
         }
 
         /// <include file='_settingValues_e__Union.xml' path='doc/member[@name="_settingValues_e__Union"]/*' />
-        [StructLayout(LayoutKind.Explicit)]
+        [StructLayout(LayoutKind.Explicit, Pack = 4)]
         public partial struct _settingValues_e__Union
         {
             /// <include file='_settingValues_e__Union.xml' path='doc/member[@name="_settingValues_e__Union.u32Value"]/*' />
@@ -104,7 +120,13 @@ namespace NVAPIWrapper
             [NativeTypeName("NvAPI_UnicodeString")]
             public _wszValue_e__FixedBuffer wszValue;
 
+            /// <include file='_settingValues_e__Union.xml' path='doc/member[@name="_settingValues_e__Union.u64Value"]/*' />
+            [FieldOffset(0)]
+            [NativeTypeName("NvU64")]
+            public ulong u64Value;
+
             /// <include file='_wszValue_e__FixedBuffer.xml' path='doc/member[@name="_wszValue_e__FixedBuffer"]/*' />
+            [StructLayout(LayoutKind.Sequential, Pack = 4)]
             [InlineArray(2048)]
             public partial struct _wszValue_e__FixedBuffer
             {

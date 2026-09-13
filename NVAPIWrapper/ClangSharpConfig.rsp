@@ -37,10 +37,10 @@ cs_generated
 --output-mode
 CSharp
 
---libraryPath
+--library-path
 nvapi64
 
---methodClassName
+--method-class-name
 NVAPI
 
 --language
@@ -116,13 +116,23 @@ NV_FALSE
 # nvapi_interface.h so ClangSharp emits delegate* function-pointer fields
 # instead of [DllImport] methods.  See ClangSharpConfig.generated.rsp.
 
+--generate
+helper-types
+
+--generate
+doc-includes
+
+--generate
+macro-bindings
+
+--generate
+tests-xunit
+
+--log
+visited-files
+
 # --- CONFIG ---
 --config
-latest-codegen
-generate-helper-types
-generate-doc-includes
-multi-file
-generate-macro-bindings
-windows-types
-generate-tests-xunit
-log-visited-files
+codegen=latest
+file=multi
+types=windows

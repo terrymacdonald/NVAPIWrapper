@@ -68,12 +68,16 @@ namespace NVAPIWrapper
         [NativeTypeName("NvU64")]
         public ulong lastFlipTimeStamp;
 
+        /// <include file='_NV_GET_ADAPTIVE_SYNC_DATA_V1.xml' path='doc/member[@name="_NV_GET_ADAPTIVE_SYNC_DATA_V1.flipToken"]/*' />
+        [NativeTypeName("NvU32")]
+        public uint flipToken;
+
         /// <include file='_NV_GET_ADAPTIVE_SYNC_DATA_V1.xml' path='doc/member[@name="_NV_GET_ADAPTIVE_SYNC_DATA_V1.reservedEx"]/*' />
-        [NativeTypeName("NvU32[4]")]
+        [NativeTypeName("NvU32[3]")]
         public _reservedEx_e__FixedBuffer reservedEx;
 
         /// <include file='_reservedEx_e__FixedBuffer.xml' path='doc/member[@name="_reservedEx_e__FixedBuffer"]/*' />
-        [InlineArray(4)]
+        [InlineArray(3)]
         public partial struct _reservedEx_e__FixedBuffer
         {
             public uint e0;

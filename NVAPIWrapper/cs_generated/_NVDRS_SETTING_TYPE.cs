@@ -14,5 +14,8 @@ namespace NVAPIWrapper
 
         /// <include file='_NVDRS_SETTING_TYPE.xml' path='doc/member[@name="_NVDRS_SETTING_TYPE.NVDRS_WSTRING_TYPE"]/*' />
         NVDRS_WSTRING_TYPE,
+
+        /// <include file='_NVDRS_SETTING_TYPE.xml' path='doc/member[@name="_NVDRS_SETTING_TYPE.NVDRS_QWORD_TYPE"]/*' />
+        NVDRS_QWORD_TYPE,
     }
 }
