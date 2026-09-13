@@ -74,8 +74,12 @@ namespace NVAPIWrapper
         private const uint NvApiIdGpuGetEncoderSessionsInfo = 0xD8A72CE5;
         private const uint NvApiIdGpuGetVrReadyData = 0x81D629C5;
         private const uint NvApiIdGpuGetGspFeatures = 0x581C4391;
+        private const uint NvApiIdGpuGetUuid = 0xDC95673D;
+        private const uint NvApiIdGpuGetOverclockStatus = 0x4A1F6712;
         private const uint NvApiIdGpuNvlinkGetCaps = 0xBEF1119D;
         private const uint NvApiIdGpuNvlinkGetStatus = 0xC72A38E3;
+        private const uint NvApiIdGpuNvlinkGetCapsEx = 0xAE8B8E03;
+        private const uint NvApiIdGpuNvlinkGetStatusEx = 0x94C04D7C;
         private const uint NvApiIdGpuGetGpuInfo = 0xAFD1B02C;
         private const uint NvApiIdI2CRead = 0x2FDE12C5;
         private const uint NvApiIdI2CWrite = 0xE812EB07;
@@ -1302,6 +1306,66 @@ namespace NVAPIWrapper
             throw new NVAPIException(status);
         }
 
+        /// <summary>Get the UUID for this physical GPU.</summary>
+        /// <returns>GPU UUID DTO, or null if unavailable.</returns>
+        public unsafe NVAPIGpuUuidDto? GetUuid()
+        {
+            ThrowIfDisposed();
+            var getUuid = GetDelegate<NvApiGpuGetUuidDelegate>(NvApiIdGpuGetUuid, "NvAPI_GPU_GetUUID");
+            var uuid = CreateGpuUuid();
+            var status = getUuid(GetHandle(), &uuid);
+            if (status == _NvAPI_Status.NVAPI_OK)
+                return NVAPIGpuUuidDto.FromNative(uuid);
+            if (status == _NvAPI_Status.NVAPI_NOT_SUPPORTED || status == _NvAPI_Status.NVAPI_NVIDIA_DEVICE_NOT_FOUND)
+                return null;
+            throw new NVAPIException(status);
+        }
+
+        /// <summary>Get the overclock detection status for this physical GPU.</summary>
+        /// <returns>Overclock status DTO, or null if unavailable.</returns>
+        public unsafe NVAPIGpuOverclockStatusDto? GetOverclockStatus()
+        {
+            ThrowIfDisposed();
+            var getStatus = GetDelegate<NvApiGpuGetOverclockStatusDelegate>(NvApiIdGpuGetOverclockStatus, "NvAPI_GPU_GetOverclockStatus");
+            var overclockStatus = CreateOverclockStatus();
+            var status = getStatus(GetHandle(), &overclockStatus);
+            if (status == _NvAPI_Status.NVAPI_OK)
+                return NVAPIGpuOverclockStatusDto.FromNative(overclockStatus);
+            if (status == _NvAPI_Status.NVAPI_NOT_SUPPORTED || status == _NvAPI_Status.NVAPI_NVIDIA_DEVICE_NOT_FOUND)
+                return null;
+            throw new NVAPIException(status);
+        }
+
+        /// <summary>Get extended NVLINK capabilities for this physical GPU.</summary>
+        /// <returns>Extended NVLINK capabilities DTO, or null if unavailable.</returns>
+        public unsafe NVAPINvLinkCapsExDto? GetNvlinkCapsEx()
+        {
+            ThrowIfDisposed();
+            var getCaps = GetDelegate<NvApiGpuNvlinkGetCapsExDelegate>(NvApiIdGpuNvlinkGetCapsEx, "NvAPI_GPU_NVLINK_GetCapsEx");
+            var caps = CreateNvlinkCapsEx();
+            var status = getCaps(GetHandle(), &caps);
+            if (status == _NvAPI_Status.NVAPI_OK)
+                return NVAPINvLinkCapsExDto.FromNative(caps);
+            if (status == _NvAPI_Status.NVAPI_NOT_SUPPORTED || status == _NvAPI_Status.NVAPI_NVIDIA_DEVICE_NOT_FOUND)
+                return null;
+            throw new NVAPIException(status);
+        }
+
+        /// <summary>Get extended NVLINK status for this physical GPU.</summary>
+        /// <returns>Extended NVLINK status DTO, or null if unavailable.</returns>
+        public unsafe NVAPINvLinkStatusExDto? GetNvlinkStatusEx()
+        {
+            ThrowIfDisposed();
+            var getStatus = GetDelegate<NvApiGpuNvlinkGetStatusExDelegate>(NvApiIdGpuNvlinkGetStatusEx, "NvAPI_GPU_NVLINK_GetStatusEx");
+            var statusInfo = CreateNvlinkStatusEx();
+            var status = getStatus(GetHandle(), &statusInfo);
+            if (status == _NvAPI_Status.NVAPI_OK)
+                return NVAPINvLinkStatusExDto.FromNative(statusInfo);
+            if (status == _NvAPI_Status.NVAPI_NOT_SUPPORTED || status == _NvAPI_Status.NVAPI_NVIDIA_DEVICE_NOT_FOUND)
+                return null;
+            throw new NVAPIException(status);
+        }
+
         /// <summary>
         /// Get GPU info for this GPU.
         /// </summary>
@@ -2142,6 +2206,14 @@ namespace NVAPIWrapper
             return new NVLINK_GET_STATUS_V2 { version = NVAPI.NVLINK_GET_STATUS_VER };
         }
 
+        private static _NV_GPU_UUID_V1 CreateGpuUuid() => new _NV_GPU_UUID_V1 { version = NVAPI.NV_GPU_UUID_VER };
+
+        private static _NV_GPU_OVERCLOCK_STATUS_V1 CreateOverclockStatus() => new _NV_GPU_OVERCLOCK_STATUS_V1 { version = NVAPI.NV_GPU_OVERCLOCK_STATUS_VER };
+
+        private static _NVLINK_GET_CAPS_EX_V1 CreateNvlinkCapsEx() => new _NVLINK_GET_CAPS_EX_V1 { version = NVAPI.NVLINK_GET_CAPS_EX_VER };
+
+        private static _NVLINK_GET_STATUS_EX_V1 CreateNvlinkStatusEx() => new _NVLINK_GET_STATUS_EX_V1 { version = NVAPI.NVLINK_GET_STATUS_EX_VER };
+
         private static _NV_GPU_INFO_V2 CreateGpuInfo()
         {
             return new _NV_GPU_INFO_V2 { version = NVAPI.NV_GPU_INFO_VER };
@@ -2322,6 +2394,18 @@ namespace NVAPIWrapper
 
         [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
         private unsafe delegate _NvAPI_Status NvApiGpuNvlinkGetStatusDelegate(NvPhysicalGpuHandle__* hPhysicalGpu, NVLINK_GET_STATUS_V2* pStatus);
+
+        [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
+        private unsafe delegate _NvAPI_Status NvApiGpuGetUuidDelegate(NvPhysicalGpuHandle__* hPhysicalGpu, _NV_GPU_UUID_V1* pGpuUuid);
+
+        [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
+        private unsafe delegate _NvAPI_Status NvApiGpuGetOverclockStatusDelegate(NvPhysicalGpuHandle__* hPhysicalGpu, _NV_GPU_OVERCLOCK_STATUS_V1* pOverclockStatus);
+
+        [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
+        private unsafe delegate _NvAPI_Status NvApiGpuNvlinkGetCapsExDelegate(NvPhysicalGpuHandle__* hPhysicalGpu, _NVLINK_GET_CAPS_EX_V1* pCaps);
+
+        [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
+        private unsafe delegate _NvAPI_Status NvApiGpuNvlinkGetStatusExDelegate(NvPhysicalGpuHandle__* hPhysicalGpu, _NVLINK_GET_STATUS_EX_V1* pStatus);
 
         [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
         private unsafe delegate _NvAPI_Status NvApiGpuGetGpuInfoDelegate(NvPhysicalGpuHandle__* hPhysicalGpu, _NV_GPU_INFO_V2* pGpuInfo);
@@ -4950,6 +5034,176 @@ namespace NVAPIWrapper
         public static bool operator ==(NVAPIGpuGspInfoDto left, NVAPIGpuGspInfoDto right) => left.Equals(right);
         /// <summary>Inequality operator.</summary>
         public static bool operator !=(NVAPIGpuGspInfoDto left, NVAPIGpuGspInfoDto right) => !left.Equals(right);
+    }
+
+    /// <summary>
+    /// Snapshot of a physical GPU UUID.
+    /// </summary>
+    public struct NVAPIGpuUuidDto : IEquatable<NVAPIGpuUuidDto>
+    {
+        private byte[]? _value;
+
+        /// <summary>Gets or sets the 16-byte UUID value.</summary>
+        public byte[] Value
+        {
+            get => _value ?? Array.Empty<byte>();
+            set => _value = value ?? Array.Empty<byte>();
+        }
+
+        /// <summary>Initializes a new instance of <see cref="NVAPIGpuUuidDto"/>.</summary>
+        /// <param name="value">The 16-byte UUID value.</param>
+        public NVAPIGpuUuidDto(byte[] value) => Value = value;
+
+        /// <summary>Creates a UUID DTO from its native representation.</summary>
+        public static NVAPIGpuUuidDto FromNative(_NV_GPU_UUID_V1 native)
+        {
+            var value = new byte[16];
+            for (var i = 0; i < value.Length; i++) value[i] = native.uuid[i];
+            return new NVAPIGpuUuidDto(value);
+        }
+
+        /// <inheritdoc/>
+        public bool Equals(NVAPIGpuUuidDto other)
+        {
+            if (Value.Length != other.Value.Length) return false;
+            for (var i = 0; i < Value.Length; i++) if (Value[i] != other.Value[i]) return false;
+            return true;
+        }
+
+        /// <inheritdoc/>
+        public override bool Equals(object? obj) => obj is NVAPIGpuUuidDto other && Equals(other);
+
+        /// <inheritdoc/>
+        public override int GetHashCode()
+        {
+            var hash = 17;
+            foreach (var value in Value) hash = (hash * 31) + value.GetHashCode();
+            return hash;
+        }
+
+        /// <summary>Equality operator.</summary>
+        public static bool operator ==(NVAPIGpuUuidDto left, NVAPIGpuUuidDto right) => left.Equals(right);
+        /// <summary>Inequality operator.</summary>
+        public static bool operator !=(NVAPIGpuUuidDto left, NVAPIGpuUuidDto right) => !left.Equals(right);
+    }
+
+    /// <summary>
+    /// Snapshot of physical GPU overclock detection status.
+    /// </summary>
+    public struct NVAPIGpuOverclockStatusDto : IEquatable<NVAPIGpuOverclockStatusDto>
+    {
+        /// <summary>Gets or sets whether non-default GPU clocking was detected.</summary>
+        public bool IsOverclockingDetected { get; set; }
+
+        /// <summary>Initializes a new instance of <see cref="NVAPIGpuOverclockStatusDto"/>.</summary>
+        public NVAPIGpuOverclockStatusDto(bool isOverclockingDetected) => IsOverclockingDetected = isOverclockingDetected;
+
+        /// <summary>Creates an overclock status DTO from its native representation.</summary>
+        public static NVAPIGpuOverclockStatusDto FromNative(_NV_GPU_OVERCLOCK_STATUS_V1 native) => new NVAPIGpuOverclockStatusDto(native.bOverclockingDetected != 0);
+
+        /// <inheritdoc/>
+        public bool Equals(NVAPIGpuOverclockStatusDto other) => IsOverclockingDetected == other.IsOverclockingDetected;
+        /// <inheritdoc/>
+        public override bool Equals(object? obj) => obj is NVAPIGpuOverclockStatusDto other && Equals(other);
+        /// <inheritdoc/>
+        public override int GetHashCode() => IsOverclockingDetected.GetHashCode();
+        /// <summary>Equality operator.</summary>
+        public static bool operator ==(NVAPIGpuOverclockStatusDto left, NVAPIGpuOverclockStatusDto right) => left.Equals(right);
+        /// <summary>Inequality operator.</summary>
+        public static bool operator !=(NVAPIGpuOverclockStatusDto left, NVAPIGpuOverclockStatusDto right) => !left.Equals(right);
+    }
+
+    /// <summary>
+    /// Extended NVLINK capabilities snapshot.
+    /// </summary>
+    public struct NVAPINvLinkCapsExDto : IEquatable<NVAPINvLinkCapsExDto>
+    {
+        /// <summary>NVLINK global capability bitmask table.</summary>
+        public uint CapsTbl { get; set; }
+        /// <summary>Lowest supported NVLINK version.</summary>
+        public byte LowestNvlinkVersion { get; set; }
+        /// <summary>Highest supported NVLINK version.</summary>
+        public byte HighestNvlinkVersion { get; set; }
+        /// <summary>Lowest supported NCI version.</summary>
+        public byte LowestNciVersion { get; set; }
+        /// <summary>Highest supported NCI version.</summary>
+        public byte HighestNciVersion { get; set; }
+        /// <summary>Number of valid entries in <see cref="LinkMasks"/>.</summary>
+        public uint LinkMaskCount { get; set; }
+        private ulong[]? _linkMasks;
+        /// <summary>Extended 64-bit NVLINK masks returned by the driver.</summary>
+        public ulong[] LinkMasks { get => _linkMasks ?? Array.Empty<ulong>(); set => _linkMasks = value ?? Array.Empty<ulong>(); }
+
+        /// <summary>Creates an extended NVLINK capabilities DTO from native data.</summary>
+        public static NVAPINvLinkCapsExDto FromNative(_NVLINK_GET_CAPS_EX_V1 native)
+        {
+            var count = Math.Min((int)native.links.lenMasks, 128);
+            var masks = new ulong[count];
+            for (var i = 0; i < count; i++) masks[i] = native.links.masks[i];
+            return new NVAPINvLinkCapsExDto { CapsTbl = native.capsTbl, LowestNvlinkVersion = native.lowestNvlinkVersion, HighestNvlinkVersion = native.highestNvlinkVersion, LowestNciVersion = native.lowestNciVersion, HighestNciVersion = native.highestNciVersion, LinkMaskCount = native.links.lenMasks, LinkMasks = masks };
+        }
+
+        /// <inheritdoc/>
+        public bool Equals(NVAPINvLinkCapsExDto other)
+        {
+            if (CapsTbl != other.CapsTbl || LowestNvlinkVersion != other.LowestNvlinkVersion || HighestNvlinkVersion != other.HighestNvlinkVersion || LowestNciVersion != other.LowestNciVersion || HighestNciVersion != other.HighestNciVersion || LinkMaskCount != other.LinkMaskCount || LinkMasks.Length != other.LinkMasks.Length) return false;
+            for (var i = 0; i < LinkMasks.Length; i++) if (LinkMasks[i] != other.LinkMasks[i]) return false;
+            return true;
+        }
+        /// <inheritdoc/>
+        public override bool Equals(object? obj) => obj is NVAPINvLinkCapsExDto other && Equals(other);
+        /// <inheritdoc/>
+        public override int GetHashCode()
+        {
+            var hash = HashCode.Combine(CapsTbl, LowestNvlinkVersion, HighestNvlinkVersion, LowestNciVersion, HighestNciVersion, LinkMaskCount);
+            foreach (var mask in LinkMasks) hash = (hash * 31) + mask.GetHashCode();
+            return hash;
+        }
+    }
+
+    /// <summary>
+    /// Extended NVLINK status snapshot indexed by link number.
+    /// </summary>
+    public struct NVAPINvLinkStatusExDto : IEquatable<NVAPINvLinkStatusExDto>
+    {
+        /// <summary>Number of valid entries in <see cref="LinkMasks"/>.</summary>
+        public uint LinkMaskCount { get; set; }
+        private ulong[]? _linkMasks;
+        /// <summary>Extended 64-bit NVLINK masks returned by the driver.</summary>
+        public ulong[] LinkMasks { get => _linkMasks ?? Array.Empty<ulong>(); set => _linkMasks = value ?? Array.Empty<ulong>(); }
+        private NVAPINvLinkStatusInfoDto[]? _linkInfo;
+        /// <summary>Per-link status entries; the array index is the NVLINK link number.</summary>
+        public NVAPINvLinkStatusInfoDto[] LinkInfo { get => _linkInfo ?? Array.Empty<NVAPINvLinkStatusInfoDto>(); set => _linkInfo = value ?? Array.Empty<NVAPINvLinkStatusInfoDto>(); }
+
+        /// <summary>Creates an extended NVLINK status DTO from native data.</summary>
+        public static NVAPINvLinkStatusExDto FromNative(_NVLINK_GET_STATUS_EX_V1 native)
+        {
+            var count = Math.Min((int)native.links.lenMasks, 128);
+            var masks = new ulong[count];
+            for (var i = 0; i < count; i++) masks[i] = native.links.masks[i];
+            var linkInfo = new NVAPINvLinkStatusInfoDto[128];
+            for (var i = 0; i < linkInfo.Length; i++) linkInfo[i] = NVAPINvLinkStatusInfoDto.FromNative(native.linkInfo[i]);
+            return new NVAPINvLinkStatusExDto { LinkMaskCount = native.links.lenMasks, LinkMasks = masks, LinkInfo = linkInfo };
+        }
+
+        /// <inheritdoc/>
+        public bool Equals(NVAPINvLinkStatusExDto other)
+        {
+            if (LinkMaskCount != other.LinkMaskCount || LinkMasks.Length != other.LinkMasks.Length || LinkInfo.Length != other.LinkInfo.Length) return false;
+            for (var i = 0; i < LinkMasks.Length; i++) if (LinkMasks[i] != other.LinkMasks[i]) return false;
+            for (var i = 0; i < LinkInfo.Length; i++) if (!LinkInfo[i].Equals(other.LinkInfo[i])) return false;
+            return true;
+        }
+        /// <inheritdoc/>
+        public override bool Equals(object? obj) => obj is NVAPINvLinkStatusExDto other && Equals(other);
+        /// <inheritdoc/>
+        public override int GetHashCode()
+        {
+            var hash = LinkMaskCount.GetHashCode();
+            foreach (var mask in LinkMasks) hash = (hash * 31) + mask.GetHashCode();
+            foreach (var info in LinkInfo) hash = (hash * 31) + info.GetHashCode();
+            return hash;
+        }
     }
 
     /// <summary>

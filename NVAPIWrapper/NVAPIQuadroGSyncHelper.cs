@@ -99,9 +99,9 @@ namespace NVAPIWrapper
         /// <summary>
         /// Create a G-Sync display topology struct with the version initialized.
         /// </summary>
-        public static _NV_GSYNC_DISPLAY CreateGSyncDisplay()
+        public static _NV_GSYNC_DISPLAY_V2 CreateGSyncDisplay()
         {
-            return new _NV_GSYNC_DISPLAY
+            return new _NV_GSYNC_DISPLAY_V2
             {
                 version = NVAPI.NV_GSYNC_DISPLAY_VER
             };
@@ -160,7 +160,7 @@ namespace NVAPIWrapper
 
                     if (displayCount > 0)
                     {
-                        var nativeDisplays = stackalloc _NV_GSYNC_DISPLAY[(int)displayCount];
+                        var nativeDisplays = stackalloc _NV_GSYNC_DISPLAY_V2[(int)displayCount];
                         for (var i = 0; i < displayCount; i++)
                         {
                             nativeDisplays[i] = CreateGSyncDisplay();
@@ -186,7 +186,7 @@ namespace NVAPIWrapper
                 }
                 else if (displayCount > 0)
                 {
-                    var nativeDisplays = stackalloc _NV_GSYNC_DISPLAY[(int)displayCount];
+                    var nativeDisplays = stackalloc _NV_GSYNC_DISPLAY_V2[(int)displayCount];
                     for (var i = 0; i < displayCount; i++)
                     {
                         nativeDisplays[i] = CreateGSyncDisplay();
@@ -352,7 +352,7 @@ namespace NVAPIWrapper
             if (items.Length == 0)
                 return false;
 
-            var native = stackalloc _NV_GSYNC_DISPLAY[items.Length];
+            var native = stackalloc _NV_GSYNC_DISPLAY_V2[items.Length];
             for (var i = 0; i < items.Length; i++)
             {
                 native[i] = items[i].ToNative();
@@ -418,10 +418,10 @@ namespace NVAPIWrapper
         private unsafe delegate _NvAPI_Status NvApiGSyncQueryCapabilitiesDelegate(NvGSyncDeviceHandle__* hNvGSyncDevice, _NV_GSYNC_CAPABILITIES_V3* pNvGSyncCapabilities);
 
         [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
-        private unsafe delegate _NvAPI_Status NvApiGSyncGetTopologyDelegate(NvGSyncDeviceHandle__* hNvGSyncDevice, uint* gsyncGpuCount, _NV_GSYNC_GPU* gsyncGPUs, uint* gsyncDisplayCount, _NV_GSYNC_DISPLAY* gsyncDisplays);
+        private unsafe delegate _NvAPI_Status NvApiGSyncGetTopologyDelegate(NvGSyncDeviceHandle__* hNvGSyncDevice, uint* gsyncGpuCount, _NV_GSYNC_GPU* gsyncGPUs, uint* gsyncDisplayCount, _NV_GSYNC_DISPLAY_V2* gsyncDisplays);
 
         [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
-        private unsafe delegate _NvAPI_Status NvApiGSyncSetSyncStateSettingsDelegate(uint gsyncDisplayCount, _NV_GSYNC_DISPLAY* pGsyncDisplays, uint flags);
+        private unsafe delegate _NvAPI_Status NvApiGSyncSetSyncStateSettingsDelegate(uint gsyncDisplayCount, _NV_GSYNC_DISPLAY_V2* pGsyncDisplays, uint flags);
 
         [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
         private unsafe delegate _NvAPI_Status NvApiGSyncGetControlParametersDelegate(NvGSyncDeviceHandle__* hNvGSyncDevice, _NV_GSYNC_CONTROL_PARAMS_V2* pGsyncControls);
@@ -765,6 +765,10 @@ namespace NVAPIWrapper
     {
         public uint DisplayId { get; set; }
         public bool IsMasterable { get; set; }
+        /// <summary>
+        /// Gets or sets whether the exact display timing supplied by the caller should be used.
+        /// </summary>
+        public bool UseExactTiming { get; set; }
         public _NVAPI_GSYNC_DISPLAY_SYNC_STATE SyncState { get; set; }
 
         /// <summary>
@@ -774,9 +778,22 @@ namespace NVAPIWrapper
         /// <param name="isMasterable">Whether the display is masterable.</param>
         /// <param name="syncState">Display sync state.</param>
         public NVAPIGSyncDisplayDto(uint displayId, bool isMasterable, _NVAPI_GSYNC_DISPLAY_SYNC_STATE syncState)
+            : this(displayId, isMasterable, false, syncState)
+        {
+        }
+
+        /// <summary>
+        /// Create a G-Sync display DTO.
+        /// </summary>
+        /// <param name="displayId">Display identifier.</param>
+        /// <param name="isMasterable">Whether the display is masterable.</param>
+        /// <param name="useExactTiming">Whether the exact display timing should be used.</param>
+        /// <param name="syncState">Display sync state.</param>
+        public NVAPIGSyncDisplayDto(uint displayId, bool isMasterable, bool useExactTiming, _NVAPI_GSYNC_DISPLAY_SYNC_STATE syncState)
         {
             DisplayId = displayId;
             IsMasterable = isMasterable;
+            UseExactTiming = useExactTiming;
             SyncState = syncState;
         }
 
@@ -785,11 +802,12 @@ namespace NVAPIWrapper
         /// </summary>
         /// <param name="native">Native display data.</param>
         /// <returns>G-Sync display DTO.</returns>
-        public static NVAPIGSyncDisplayDto FromNative(_NV_GSYNC_DISPLAY native)
+        public static NVAPIGSyncDisplayDto FromNative(_NV_GSYNC_DISPLAY_V2 native)
         {
             return new NVAPIGSyncDisplayDto(
                 native.displayId,
                 native.isMasterable != 0,
+                native.useExactTiming != 0,
                 native.syncState);
         }
 
@@ -799,7 +817,7 @@ namespace NVAPIWrapper
         /// <param name="native">Native display array pointer.</param>
         /// <param name="count">Number of entries.</param>
         /// <returns>G-Sync display DTO array.</returns>
-        public static unsafe NVAPIGSyncDisplayDto[] FromNative(_NV_GSYNC_DISPLAY* native, int count)
+        public static unsafe NVAPIGSyncDisplayDto[] FromNative(_NV_GSYNC_DISPLAY_V2* native, int count)
         {
             if (count <= 0 || native == null)
                 return Array.Empty<NVAPIGSyncDisplayDto>();
@@ -817,13 +835,14 @@ namespace NVAPIWrapper
         /// Convert this DTO to native display data.
         /// </summary>
         /// <returns>Native display data.</returns>
-        public _NV_GSYNC_DISPLAY ToNative()
+        public _NV_GSYNC_DISPLAY_V2 ToNative()
         {
-            return new _NV_GSYNC_DISPLAY
+            return new _NV_GSYNC_DISPLAY_V2
             {
                 version = NVAPI.NV_GSYNC_DISPLAY_VER,
                 displayId = DisplayId,
                 isMasterable = IsMasterable ? 1u : 0u,
+                useExactTiming = UseExactTiming ? 1u : 0u,
                 reserved = 0,
                 syncState = SyncState,
             };
@@ -838,6 +857,7 @@ namespace NVAPIWrapper
         {
             return DisplayId == other.DisplayId
                 && IsMasterable == other.IsMasterable
+                && UseExactTiming == other.UseExactTiming
                 && SyncState == other.SyncState;
         }
 
@@ -858,6 +878,7 @@ namespace NVAPIWrapper
             {
                 var hash = DisplayId.GetHashCode();
                 hash = (hash * 31) + IsMasterable.GetHashCode();
+                hash = (hash * 31) + UseExactTiming.GetHashCode();
                 hash = (hash * 31) + SyncState.GetHashCode();
                 return hash;
             }

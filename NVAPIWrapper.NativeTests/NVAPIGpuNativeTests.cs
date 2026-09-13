@@ -594,6 +594,82 @@ namespace NVAPIWrapper.NativeTests
         }
 
         [SkippableFact]
+        public unsafe void GpuGetUuid_ShouldReturnData()
+        {
+            SkipIfUnavailable("NvAPI_GPU_GetUUID");
+
+            WithPhysicalGpu(gpu =>
+            {
+                var uuid = new _NV_GPU_UUID_V1 { version = NVAPI.NV_GPU_UUID_VER };
+                var status = NVAPI.NvAPI_GPU_GetUUID(gpu, &uuid);
+                if (IsUnsupported(status))
+                {
+                    Skip.If(true, $"GPU UUID unsupported: {status}");
+                    return;
+                }
+
+                Assert.Equal(_NvAPI_Status.NVAPI_OK, status);
+            });
+        }
+
+        [SkippableFact]
+        public unsafe void GpuGetOverclockStatus_ShouldReturnData()
+        {
+            SkipIfUnavailable("NvAPI_GPU_GetOverclockStatus");
+
+            WithPhysicalGpu(gpu =>
+            {
+                var overclockStatus = new _NV_GPU_OVERCLOCK_STATUS_V1 { version = NVAPI.NV_GPU_OVERCLOCK_STATUS_VER };
+                var status = NVAPI.NvAPI_GPU_GetOverclockStatus(gpu, &overclockStatus);
+                if (IsUnsupported(status))
+                {
+                    Skip.If(true, $"GPU overclock status unsupported: {status}");
+                    return;
+                }
+
+                Assert.Equal(_NvAPI_Status.NVAPI_OK, status);
+            });
+        }
+
+        [SkippableFact]
+        public unsafe void GpuNvlinkGetCapsEx_ShouldReturnData()
+        {
+            SkipIfUnavailable("NvAPI_GPU_NVLINK_GetCapsEx");
+
+            WithPhysicalGpu(gpu =>
+            {
+                var caps = new _NVLINK_GET_CAPS_EX_V1 { version = NVAPI.NVLINK_GET_CAPS_EX_VER };
+                var status = NVAPI.NvAPI_GPU_NVLINK_GetCapsEx(gpu, &caps);
+                if (IsUnsupported(status))
+                {
+                    Skip.If(true, $"Extended GPU NVLINK caps unsupported: {status}");
+                    return;
+                }
+
+                Assert.Equal(_NvAPI_Status.NVAPI_OK, status);
+            });
+        }
+
+        [SkippableFact]
+        public unsafe void GpuNvlinkGetStatusEx_ShouldReturnData()
+        {
+            SkipIfUnavailable("NvAPI_GPU_NVLINK_GetStatusEx");
+
+            WithPhysicalGpu(gpu =>
+            {
+                var statusInfo = new _NVLINK_GET_STATUS_EX_V1 { version = NVAPI.NVLINK_GET_STATUS_EX_VER };
+                var status = NVAPI.NvAPI_GPU_NVLINK_GetStatusEx(gpu, &statusInfo);
+                if (IsUnsupported(status))
+                {
+                    Skip.If(true, $"Extended GPU NVLINK status unsupported: {status}");
+                    return;
+                }
+
+                Assert.Equal(_NvAPI_Status.NVAPI_OK, status);
+            });
+        }
+
+        [SkippableFact]
         public unsafe void GpuGetGpuInfo_ShouldReturnData()
         {
             SkipIfUnavailable("NvAPI_GPU_GetGPUInfo");
