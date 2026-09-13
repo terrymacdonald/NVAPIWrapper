@@ -22,7 +22,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GPU_CLIENT_ILLUM_ZONE_CONTROL_PARAMS_V1.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: _NV_GPU_CLIENT_ILLUM_ZONE_CONTROL_PARAMS_V1
     path: ../NVAPIWrapper/cs_generated/_NV_GPU_CLIENT_ILLUM_ZONE_CONTROL_PARAMS_V1.cs
@@ -55,7 +55,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GPU_CLIENT_ILLUM_ZONE_CONTROL_PARAMS_V1.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: version
     path: ../NVAPIWrapper/cs_generated/_NV_GPU_CLIENT_ILLUM_ZONE_CONTROL_PARAMS_V1.cs
@@ -83,7 +83,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GPU_CLIENT_ILLUM_ZONE_CONTROL_PARAMS_V1.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: _bitfield
     path: ../NVAPIWrapper/cs_generated/_NV_GPU_CLIENT_ILLUM_ZONE_CONTROL_PARAMS_V1.cs
@@ -110,7 +110,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GPU_CLIENT_ILLUM_ZONE_CONTROL_PARAMS_V1.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: bDefault
     path: ../NVAPIWrapper/cs_generated/_NV_GPU_CLIENT_ILLUM_ZONE_CONTROL_PARAMS_V1.cs
@@ -140,7 +140,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GPU_CLIENT_ILLUM_ZONE_CONTROL_PARAMS_V1.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: rsvdField
     path: ../NVAPIWrapper/cs_generated/_NV_GPU_CLIENT_ILLUM_ZONE_CONTROL_PARAMS_V1.cs
@@ -170,7 +170,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GPU_CLIENT_ILLUM_ZONE_CONTROL_PARAMS_V1.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: numIllumZonesControl
     path: ../NVAPIWrapper/cs_generated/_NV_GPU_CLIENT_ILLUM_ZONE_CONTROL_PARAMS_V1.cs
@@ -198,7 +198,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GPU_CLIENT_ILLUM_ZONE_CONTROL_PARAMS_V1.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: rsvd
     path: ../NVAPIWrapper/cs_generated/_NV_GPU_CLIENT_ILLUM_ZONE_CONTROL_PARAMS_V1.cs
@@ -226,7 +226,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GPU_CLIENT_ILLUM_ZONE_CONTROL_PARAMS_V1.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: zones
     path: ../NVAPIWrapper/cs_generated/_NV_GPU_CLIENT_ILLUM_ZONE_CONTROL_PARAMS_V1.cs

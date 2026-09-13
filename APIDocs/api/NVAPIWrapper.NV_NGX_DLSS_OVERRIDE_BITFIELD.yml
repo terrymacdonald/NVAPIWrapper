@@ -34,7 +34,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_NGX_DLSS_OVERRIDE_BITFIELD.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_NGX_DLSS_OVERRIDE_BITFIELD
     path: ../NVAPIWrapper/cs_generated/NV_NGX_DLSS_OVERRIDE_BITFIELD.cs
@@ -60,7 +60,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_NGX_DLSS_OVERRIDE_BITFIELD.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_NGX_DLSS_OVERRIDE_FLAG_INITIALIZED
     path: ../NVAPIWrapper/cs_generated/NV_NGX_DLSS_OVERRIDE_BITFIELD.cs
@@ -87,7 +87,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_NGX_DLSS_OVERRIDE_BITFIELD.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_NGX_DLSS_OVERRIDE_FLAG_ENABLED
     path: ../NVAPIWrapper/cs_generated/NV_NGX_DLSS_OVERRIDE_BITFIELD.cs
@@ -114,7 +114,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_NGX_DLSS_OVERRIDE_BITFIELD.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_NGX_DLSS_OVERRIDE_FLAG_DLL_EXISTS
     path: ../NVAPIWrapper/cs_generated/NV_NGX_DLSS_OVERRIDE_BITFIELD.cs
@@ -141,7 +141,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_NGX_DLSS_OVERRIDE_BITFIELD.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_NGX_DLSS_OVERRIDE_FLAG_DLL_LOADED
     path: ../NVAPIWrapper/cs_generated/NV_NGX_DLSS_OVERRIDE_BITFIELD.cs
@@ -168,7 +168,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_NGX_DLSS_OVERRIDE_BITFIELD.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_NGX_DLSS_OVERRIDE_FLAG_DLL_SELECTED
     path: ../NVAPIWrapper/cs_generated/NV_NGX_DLSS_OVERRIDE_BITFIELD.cs
@@ -195,7 +195,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_NGX_DLSS_OVERRIDE_BITFIELD.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_NGX_DLSS_OVERRIDE_FLAG_PRESET
     path: ../NVAPIWrapper/cs_generated/NV_NGX_DLSS_OVERRIDE_BITFIELD.cs
@@ -222,7 +222,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_NGX_DLSS_OVERRIDE_BITFIELD.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_NGX_DLSS_OVERRIDE_FLAG_PERF_MODE
     path: ../NVAPIWrapper/cs_generated/NV_NGX_DLSS_OVERRIDE_BITFIELD.cs
@@ -249,7 +249,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_NGX_DLSS_OVERRIDE_BITFIELD.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_NGX_DLSS_OVERRIDE_FLAG_SCALING_RATIO
     path: ../NVAPIWrapper/cs_generated/NV_NGX_DLSS_OVERRIDE_BITFIELD.cs
@@ -276,7 +276,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_NGX_DLSS_OVERRIDE_BITFIELD.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_NGX_DLSS_OVERRIDE_FLAG_OPTIMAL_SETTINGS
     path: ../NVAPIWrapper/cs_generated/NV_NGX_DLSS_OVERRIDE_BITFIELD.cs
@@ -303,7 +303,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_NGX_DLSS_OVERRIDE_BITFIELD.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_NGX_DLSS_OVERRIDE_FLAG_CREATED
     path: ../NVAPIWrapper/cs_generated/NV_NGX_DLSS_OVERRIDE_BITFIELD.cs
@@ -330,7 +330,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_NGX_DLSS_OVERRIDE_BITFIELD.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_NGX_DLSS_OVERRIDE_FLAG_EVALUATE
     path: ../NVAPIWrapper/cs_generated/NV_NGX_DLSS_OVERRIDE_BITFIELD.cs
@@ -357,7 +357,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_NGX_DLSS_OVERRIDE_BITFIELD.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_NGX_DLSS_OVERRIDE_FLAG_FG_MODE
     path: ../NVAPIWrapper/cs_generated/NV_NGX_DLSS_OVERRIDE_BITFIELD.cs
@@ -384,7 +384,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_NGX_DLSS_OVERRIDE_BITFIELD.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_NGX_DLSS_OVERRIDE_FLAG_SR_DLAA_MODE
     path: ../NVAPIWrapper/cs_generated/NV_NGX_DLSS_OVERRIDE_BITFIELD.cs
@@ -411,7 +411,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_NGX_DLSS_OVERRIDE_BITFIELD.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_NGX_DLSS_OVERRIDE_FLAG_FG_MULTI_FRAME
     path: ../NVAPIWrapper/cs_generated/NV_NGX_DLSS_OVERRIDE_BITFIELD.cs
@@ -438,7 +438,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_NGX_DLSS_OVERRIDE_BITFIELD.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_NGX_DLSS_OVERRIDE_FLAG_ERR_FAILED
     path: ../NVAPIWrapper/cs_generated/NV_NGX_DLSS_OVERRIDE_BITFIELD.cs
@@ -465,7 +465,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_NGX_DLSS_OVERRIDE_BITFIELD.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_NGX_DLSS_OVERRIDE_FLAG_ERR_DENIED
     path: ../NVAPIWrapper/cs_generated/NV_NGX_DLSS_OVERRIDE_BITFIELD.cs
@@ -492,7 +492,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_NGX_DLSS_OVERRIDE_BITFIELD.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_NGX_DLSS_OVERRIDE_FLAG_ERR_DRS
     path: ../NVAPIWrapper/cs_generated/NV_NGX_DLSS_OVERRIDE_BITFIELD.cs
@@ -519,7 +519,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_NGX_DLSS_OVERRIDE_BITFIELD.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_NGX_DLSS_OVERRIDE_FLAG_ERR_NOT_FOUND
     path: ../NVAPIWrapper/cs_generated/NV_NGX_DLSS_OVERRIDE_BITFIELD.cs
@@ -546,7 +546,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_NGX_DLSS_OVERRIDE_BITFIELD.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_NGX_DLSS_OVERRIDE_FLAG_ERR_DLL_LOAD
     path: ../NVAPIWrapper/cs_generated/NV_NGX_DLSS_OVERRIDE_BITFIELD.cs

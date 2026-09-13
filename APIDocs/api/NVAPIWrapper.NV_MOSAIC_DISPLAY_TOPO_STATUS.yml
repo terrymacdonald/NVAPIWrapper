@@ -20,7 +20,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_MOSAIC_DISPLAY_TOPO_STATUS.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_MOSAIC_DISPLAY_TOPO_STATUS
     path: ../NVAPIWrapper/cs_generated/NV_MOSAIC_DISPLAY_TOPO_STATUS.cs
@@ -53,7 +53,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_MOSAIC_DISPLAY_TOPO_STATUS.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: version
     path: ../NVAPIWrapper/cs_generated/NV_MOSAIC_DISPLAY_TOPO_STATUS.cs
@@ -81,7 +81,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_MOSAIC_DISPLAY_TOPO_STATUS.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: errorFlags
     path: ../NVAPIWrapper/cs_generated/NV_MOSAIC_DISPLAY_TOPO_STATUS.cs
@@ -109,7 +109,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_MOSAIC_DISPLAY_TOPO_STATUS.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: warningFlags
     path: ../NVAPIWrapper/cs_generated/NV_MOSAIC_DISPLAY_TOPO_STATUS.cs
@@ -137,7 +137,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_MOSAIC_DISPLAY_TOPO_STATUS.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: displayCount
     path: ../NVAPIWrapper/cs_generated/NV_MOSAIC_DISPLAY_TOPO_STATUS.cs
@@ -165,7 +165,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_MOSAIC_DISPLAY_TOPO_STATUS.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: displays
     path: ../NVAPIWrapper/cs_generated/NV_MOSAIC_DISPLAY_TOPO_STATUS.cs

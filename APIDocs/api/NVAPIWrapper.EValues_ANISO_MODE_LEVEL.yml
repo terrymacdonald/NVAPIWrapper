@@ -21,7 +21,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_ANISO_MODE_LEVEL.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: EValues_ANISO_MODE_LEVEL
     path: ../NVAPIWrapper/cs_generated/EValues_ANISO_MODE_LEVEL.cs
@@ -47,7 +47,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_ANISO_MODE_LEVEL.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: ANISO_MODE_LEVEL_MASK
     path: ../NVAPIWrapper/cs_generated/EValues_ANISO_MODE_LEVEL.cs
@@ -74,7 +74,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_ANISO_MODE_LEVEL.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: ANISO_MODE_LEVEL_NONE_POINT
     path: ../NVAPIWrapper/cs_generated/EValues_ANISO_MODE_LEVEL.cs
@@ -101,7 +101,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_ANISO_MODE_LEVEL.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: ANISO_MODE_LEVEL_NONE_LINEAR
     path: ../NVAPIWrapper/cs_generated/EValues_ANISO_MODE_LEVEL.cs
@@ -128,7 +128,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_ANISO_MODE_LEVEL.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: ANISO_MODE_LEVEL_MAX
     path: ../NVAPIWrapper/cs_generated/EValues_ANISO_MODE_LEVEL.cs
@@ -155,7 +155,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_ANISO_MODE_LEVEL.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: ANISO_MODE_LEVEL_DEFAULT
     path: ../NVAPIWrapper/cs_generated/EValues_ANISO_MODE_LEVEL.cs
@@ -182,7 +182,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_ANISO_MODE_LEVEL.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: ANISO_MODE_LEVEL_NUM_VALUES
     path: ../NVAPIWrapper/cs_generated/EValues_ANISO_MODE_LEVEL.cs

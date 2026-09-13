@@ -1,5 +1,5 @@
 {
-  "source_base_path": "D:/visual-studio-projects/NVAPIWrapper/APIDocs",
+  "source_base_path": "C:/vs-code/NVAPIWrapper/APIDocs",
   "xrefmap": "xrefmap.yml",
   "files": [
     {
@@ -5612,6 +5612,48 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/NVAPIWrapper.EValues_NGX_DLSS_NR_OVERRIDE.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NVAPIWrapper.EValues_NGX_DLSS_NR_OVERRIDE.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "NVAPIWrapper.EValues_NGX_DLSS_NR_OVERRIDE",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NVAPIWrapper.EValues_NGX_DLSS_NR_OVERRIDE_RENDER_PRESET_SELECTION.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NVAPIWrapper.EValues_NGX_DLSS_NR_OVERRIDE_RENDER_PRESET_SELECTION.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "NVAPIWrapper.EValues_NGX_DLSS_NR_OVERRIDE_RENDER_PRESET_SELECTION",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NVAPIWrapper.EValues_NGX_DLSS_NR_SL_OVERRIDE.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NVAPIWrapper.EValues_NGX_DLSS_NR_SL_OVERRIDE.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "NVAPIWrapper.EValues_NGX_DLSS_NR_SL_OVERRIDE",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/NVAPIWrapper.EValues_NGX_DLSS_OVERRIDE_OPTIMAL_SETTINGS.yml",
       "output": {
         ".html": {
@@ -6420,6 +6462,20 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "NVAPIWrapper.EValues_SLI_RENDERING_MODE",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NVAPIWrapper.EValues_SL_DLSS_OVERRIDE.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NVAPIWrapper.EValues_SL_DLSS_OVERRIDE.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "NVAPIWrapper.EValues_SL_DLSS_OVERRIDE",
       "Summary": null
     },
     {
@@ -7698,6 +7754,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/NVAPIWrapper.NVAPIGpuOverclockStatusDto.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NVAPIWrapper.NVAPIGpuOverclockStatusDto.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "NVAPIWrapper.NVAPIGpuOverclockStatusDto",
+      "Summary": "<p sourcefile=\"api/NVAPIWrapper.NVAPIGpuOverclockStatusDto.yml\" sourcestartlinenumber=\"1\">Snapshot of physical GPU overclock detection status.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/NVAPIWrapper.NVAPIGpuPerfPstates20InfoDto.yml",
       "output": {
         ".html": {
@@ -7877,6 +7947,20 @@
       "IsMRef": true,
       "Title": "NVAPIWrapper.NVAPIGpuUtilizationSampleCallbackSettingsDto",
       "Summary": "<p sourcefile=\"api/NVAPIWrapper.NVAPIGpuUtilizationSampleCallbackSettingsDto.yml\" sourcestartlinenumber=\"1\">Utilization sample callback settings DTO.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NVAPIWrapper.NVAPIGpuUuidDto.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NVAPIWrapper.NVAPIGpuUuidDto.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "NVAPIWrapper.NVAPIGpuUuidDto",
+      "Summary": "<p sourcefile=\"api/NVAPIWrapper.NVAPIGpuUuidDto.yml\" sourcestartlinenumber=\"1\">Snapshot of a physical GPU UUID.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -8412,6 +8496,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/NVAPIWrapper.NVAPINvLinkCapsExDto.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NVAPIWrapper.NVAPINvLinkCapsExDto.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "NVAPIWrapper.NVAPINvLinkCapsExDto",
+      "Summary": "<p sourcefile=\"api/NVAPIWrapper.NVAPINvLinkCapsExDto.yml\" sourcestartlinenumber=\"1\">Extended NVLINK capabilities snapshot.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/NVAPIWrapper.NVAPINvLinkDeviceInfoDto.yml",
       "output": {
         ".html": {
@@ -8437,6 +8535,20 @@
       "IsMRef": true,
       "Title": "NVAPIWrapper.NVAPINvLinkStatusDto",
       "Summary": "<p sourcefile=\"api/NVAPIWrapper.NVAPINvLinkStatusDto.yml\" sourcestartlinenumber=\"1\">NVLINK status DTO.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NVAPIWrapper.NVAPINvLinkStatusExDto.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NVAPIWrapper.NVAPINvLinkStatusExDto.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "NVAPIWrapper.NVAPINvLinkStatusExDto",
+      "Summary": "<p sourcefile=\"api/NVAPIWrapper.NVAPINvLinkStatusExDto.yml\" sourcestartlinenumber=\"1\">Extended NVLINK status snapshot indexed by link number.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -12472,6 +12584,34 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/NVAPIWrapper._NVAPI_NVLINK_LINK_MASK_V1._masks_e__FixedBuffer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NVAPIWrapper._NVAPI_NVLINK_LINK_MASK_V1._masks_e__FixedBuffer.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "NVAPIWrapper._NVAPI_NVLINK_LINK_MASK_V1._masks_e__FixedBuffer",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NVAPIWrapper._NVAPI_NVLINK_LINK_MASK_V1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NVAPIWrapper._NVAPI_NVLINK_LINK_MASK_V1.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "NVAPIWrapper._NVAPI_NVLINK_LINK_MASK_V1",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/NVAPIWrapper._NVAPI_NVLINK_STATUS_LINK_STATE.yml",
       "output": {
         ".html": {
@@ -13112,6 +13252,62 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "NVAPIWrapper._NVDRS_SETTING_VALUES",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NVAPIWrapper._NVLINK_GET_CAPS_EX_V1._reserved_e__FixedBuffer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NVAPIWrapper._NVLINK_GET_CAPS_EX_V1._reserved_e__FixedBuffer.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "NVAPIWrapper._NVLINK_GET_CAPS_EX_V1._reserved_e__FixedBuffer",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NVAPIWrapper._NVLINK_GET_CAPS_EX_V1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NVAPIWrapper._NVLINK_GET_CAPS_EX_V1.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "NVAPIWrapper._NVLINK_GET_CAPS_EX_V1",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NVAPIWrapper._NVLINK_GET_STATUS_EX_V1._linkInfo_e__FixedBuffer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NVAPIWrapper._NVLINK_GET_STATUS_EX_V1._linkInfo_e__FixedBuffer.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "NVAPIWrapper._NVLINK_GET_STATUS_EX_V1._linkInfo_e__FixedBuffer",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NVAPIWrapper._NVLINK_GET_STATUS_EX_V1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NVAPIWrapper._NVLINK_GET_STATUS_EX_V1.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "NVAPIWrapper._NVLINK_GET_STATUS_EX_V1",
       "Summary": null
     },
     {
@@ -16406,6 +16602,34 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/NVAPIWrapper._NV_GPU_OVERCLOCK_STATUS_V1._rsvd_e__FixedBuffer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NVAPIWrapper._NV_GPU_OVERCLOCK_STATUS_V1._rsvd_e__FixedBuffer.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "NVAPIWrapper._NV_GPU_OVERCLOCK_STATUS_V1._rsvd_e__FixedBuffer",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NVAPIWrapper._NV_GPU_OVERCLOCK_STATUS_V1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NVAPIWrapper._NV_GPU_OVERCLOCK_STATUS_V1.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "NVAPIWrapper._NV_GPU_OVERCLOCK_STATUS_V1",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/NVAPIWrapper._NV_GPU_PERF_PSTATES20_INFO_V2._ov_e__Struct._voltages_e__FixedBuffer.yml",
       "output": {
         ".html": {
@@ -16752,6 +16976,48 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "NVAPIWrapper._NV_GSYNC_DISPLAY",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NVAPIWrapper._NV_GSYNC_DISPLAY_V1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NVAPIWrapper._NV_GSYNC_DISPLAY_V1.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "NVAPIWrapper._NV_GSYNC_DISPLAY_V1",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NVAPIWrapper._NV_GSYNC_DISPLAY_V2._reserved2_e__FixedBuffer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NVAPIWrapper._NV_GSYNC_DISPLAY_V2._reserved2_e__FixedBuffer.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "NVAPIWrapper._NV_GSYNC_DISPLAY_V2._reserved2_e__FixedBuffer",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NVAPIWrapper._NV_GSYNC_DISPLAY_V2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NVAPIWrapper._NV_GSYNC_DISPLAY_V2.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "NVAPIWrapper._NV_GSYNC_DISPLAY_V2",
       "Summary": null
     },
     {
@@ -18142,6 +18408,34 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/NVAPIWrapper._NV_NGX_DLSS_OVERRIDE_GET_STATE_PARAMS_V2._reserved_e__FixedBuffer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NVAPIWrapper._NV_NGX_DLSS_OVERRIDE_GET_STATE_PARAMS_V2._reserved_e__FixedBuffer.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "NVAPIWrapper._NV_NGX_DLSS_OVERRIDE_GET_STATE_PARAMS_V2._reserved_e__FixedBuffer",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NVAPIWrapper._NV_NGX_DLSS_OVERRIDE_GET_STATE_PARAMS_V2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NVAPIWrapper._NV_NGX_DLSS_OVERRIDE_GET_STATE_PARAMS_V2.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "NVAPIWrapper._NV_NGX_DLSS_OVERRIDE_GET_STATE_PARAMS_V2",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/NVAPIWrapper._NV_NGX_DLSS_OVERRIDE_SET_STATE_PARAMS_V1._reserved_e__FixedBuffer.yml",
       "output": {
         ".html": {
@@ -18250,6 +18544,118 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "NVAPIWrapper._NV_NGX_GET_DRIVER_FEATURE_SUPPORT_PARAMS_V1",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NVAPIWrapper._NV_NGX_GET_RUNTIME_PARAMS_V1._reserved_e__FixedBuffer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NVAPIWrapper._NV_NGX_GET_RUNTIME_PARAMS_V1._reserved_e__FixedBuffer.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "NVAPIWrapper._NV_NGX_GET_RUNTIME_PARAMS_V1._reserved_e__FixedBuffer",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NVAPIWrapper._NV_NGX_GET_RUNTIME_PARAMS_V1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NVAPIWrapper._NV_NGX_GET_RUNTIME_PARAMS_V1.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "NVAPIWrapper._NV_NGX_GET_RUNTIME_PARAMS_V1",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NVAPIWrapper._NV_NGX_RUNTIME_KEY.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NVAPIWrapper._NV_NGX_RUNTIME_KEY.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "NVAPIWrapper._NV_NGX_RUNTIME_KEY",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NVAPIWrapper._NV_NGX_RUNTIME_KEY_VALUE.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NVAPIWrapper._NV_NGX_RUNTIME_KEY_VALUE.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "NVAPIWrapper._NV_NGX_RUNTIME_KEY_VALUE",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NVAPIWrapper._NV_NGX_SESSION_PARAMS_V1._reserved_e__FixedBuffer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NVAPIWrapper._NV_NGX_SESSION_PARAMS_V1._reserved_e__FixedBuffer.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "NVAPIWrapper._NV_NGX_SESSION_PARAMS_V1._reserved_e__FixedBuffer",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NVAPIWrapper._NV_NGX_SESSION_PARAMS_V1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NVAPIWrapper._NV_NGX_SESSION_PARAMS_V1.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "NVAPIWrapper._NV_NGX_SESSION_PARAMS_V1",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NVAPIWrapper._NV_NGX_SET_RUNTIME_PARAMS_V1._reserved_e__FixedBuffer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NVAPIWrapper._NV_NGX_SET_RUNTIME_PARAMS_V1._reserved_e__FixedBuffer.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "NVAPIWrapper._NV_NGX_SET_RUNTIME_PARAMS_V1._reserved_e__FixedBuffer",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NVAPIWrapper._NV_NGX_SET_RUNTIME_PARAMS_V1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NVAPIWrapper._NV_NGX_SET_RUNTIME_PARAMS_V1.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "NVAPIWrapper._NV_NGX_SET_RUNTIME_PARAMS_V1",
       "Summary": null
     },
     {
@@ -18684,6 +19090,20 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "NVAPIWrapper._NV_SET_ADAPTIVE_SYNC_DATA_V1",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NVAPIWrapper._NV_SET_REFLEX_SYNC_PARAMS._rsvd1_e__FixedBuffer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NVAPIWrapper._NV_SET_REFLEX_SYNC_PARAMS._rsvd1_e__FixedBuffer.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "NVAPIWrapper._NV_SET_REFLEX_SYNC_PARAMS._rsvd1_e__FixedBuffer",
       "Summary": null
     },
     {

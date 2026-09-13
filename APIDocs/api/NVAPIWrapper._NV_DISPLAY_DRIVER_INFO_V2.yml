@@ -27,7 +27,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_DISPLAY_DRIVER_INFO_V2.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: _NV_DISPLAY_DRIVER_INFO_V2
     path: ../NVAPIWrapper/cs_generated/_NV_DISPLAY_DRIVER_INFO_V2.cs
@@ -60,7 +60,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_DISPLAY_DRIVER_INFO_V2.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: version
     path: ../NVAPIWrapper/cs_generated/_NV_DISPLAY_DRIVER_INFO_V2.cs
@@ -88,7 +88,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_DISPLAY_DRIVER_INFO_V2.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: driverVersion
     path: ../NVAPIWrapper/cs_generated/_NV_DISPLAY_DRIVER_INFO_V2.cs
@@ -116,7 +116,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_DISPLAY_DRIVER_INFO_V2.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: szBuildBranch
     path: ../NVAPIWrapper/cs_generated/_NV_DISPLAY_DRIVER_INFO_V2.cs
@@ -144,7 +144,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_DISPLAY_DRIVER_INFO_V2.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: _bitfield
     path: ../NVAPIWrapper/cs_generated/_NV_DISPLAY_DRIVER_INFO_V2.cs
@@ -171,7 +171,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_DISPLAY_DRIVER_INFO_V2.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: bIsDCHDriver
     path: ../NVAPIWrapper/cs_generated/_NV_DISPLAY_DRIVER_INFO_V2.cs
@@ -201,7 +201,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_DISPLAY_DRIVER_INFO_V2.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: bIsNVIDIAStudioPackage
     path: ../NVAPIWrapper/cs_generated/_NV_DISPLAY_DRIVER_INFO_V2.cs
@@ -231,7 +231,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_DISPLAY_DRIVER_INFO_V2.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: bIsNVIDIAGameReadyPackage
     path: ../NVAPIWrapper/cs_generated/_NV_DISPLAY_DRIVER_INFO_V2.cs
@@ -261,7 +261,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_DISPLAY_DRIVER_INFO_V2.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: bIsNVIDIARTXProductionBranchPackage
     path: ../NVAPIWrapper/cs_generated/_NV_DISPLAY_DRIVER_INFO_V2.cs
@@ -291,7 +291,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_DISPLAY_DRIVER_INFO_V2.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: bIsNVIDIARTXNewFeatureBranchPackage
     path: ../NVAPIWrapper/cs_generated/_NV_DISPLAY_DRIVER_INFO_V2.cs
@@ -321,7 +321,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_DISPLAY_DRIVER_INFO_V2.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: reserved
     path: ../NVAPIWrapper/cs_generated/_NV_DISPLAY_DRIVER_INFO_V2.cs
@@ -351,7 +351,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_DISPLAY_DRIVER_INFO_V2.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: szBuildBaseBranch
     path: ../NVAPIWrapper/cs_generated/_NV_DISPLAY_DRIVER_INFO_V2.cs
@@ -379,7 +379,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_DISPLAY_DRIVER_INFO_V2.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: reservedEx
     path: ../NVAPIWrapper/cs_generated/_NV_DISPLAY_DRIVER_INFO_V2.cs

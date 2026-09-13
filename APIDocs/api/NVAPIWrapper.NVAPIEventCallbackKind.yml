@@ -18,7 +18,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIApiHelper.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPIEventCallbackKind
     path: ../NVAPIWrapper/NVAPIApiHelper.cs
@@ -45,7 +45,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIApiHelper.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Qsync
     path: ../NVAPIWrapper/NVAPIApiHelper.cs
@@ -73,7 +73,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIApiHelper.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: DisplayOutputModeChange
     path: ../NVAPIWrapper/NVAPIApiHelper.cs
@@ -101,7 +101,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIApiHelper.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: DisplayColorimetryChange
     path: ../NVAPIWrapper/NVAPIApiHelper.cs

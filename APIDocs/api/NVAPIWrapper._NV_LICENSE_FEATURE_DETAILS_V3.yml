@@ -23,7 +23,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_LICENSE_FEATURE_DETAILS_V3.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: _NV_LICENSE_FEATURE_DETAILS_V3
     path: ../NVAPIWrapper/cs_generated/_NV_LICENSE_FEATURE_DETAILS_V3.cs
@@ -56,7 +56,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_LICENSE_FEATURE_DETAILS_V3.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: version
     path: ../NVAPIWrapper/cs_generated/_NV_LICENSE_FEATURE_DETAILS_V3.cs
@@ -84,7 +84,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_LICENSE_FEATURE_DETAILS_V3.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: _bitfield
     path: ../NVAPIWrapper/cs_generated/_NV_LICENSE_FEATURE_DETAILS_V3.cs
@@ -111,7 +111,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_LICENSE_FEATURE_DETAILS_V3.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: isEnabled
     path: ../NVAPIWrapper/cs_generated/_NV_LICENSE_FEATURE_DETAILS_V3.cs
@@ -141,7 +141,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_LICENSE_FEATURE_DETAILS_V3.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: isFeatureEnabled
     path: ../NVAPIWrapper/cs_generated/_NV_LICENSE_FEATURE_DETAILS_V3.cs
@@ -171,7 +171,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_LICENSE_FEATURE_DETAILS_V3.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: reserved
     path: ../NVAPIWrapper/cs_generated/_NV_LICENSE_FEATURE_DETAILS_V3.cs
@@ -201,7 +201,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_LICENSE_FEATURE_DETAILS_V3.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: featureCode
     path: ../NVAPIWrapper/cs_generated/_NV_LICENSE_FEATURE_DETAILS_V3.cs
@@ -229,7 +229,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_LICENSE_FEATURE_DETAILS_V3.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: licenseInfo
     path: ../NVAPIWrapper/cs_generated/_NV_LICENSE_FEATURE_DETAILS_V3.cs
@@ -257,7 +257,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_LICENSE_FEATURE_DETAILS_V3.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: productName
     path: ../NVAPIWrapper/cs_generated/_NV_LICENSE_FEATURE_DETAILS_V3.cs

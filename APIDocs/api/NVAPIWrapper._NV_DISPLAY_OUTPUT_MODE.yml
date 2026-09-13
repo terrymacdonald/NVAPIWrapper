@@ -18,7 +18,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_DISPLAY_OUTPUT_MODE.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: _NV_DISPLAY_OUTPUT_MODE
     path: ../NVAPIWrapper/cs_generated/_NV_DISPLAY_OUTPUT_MODE.cs
@@ -44,7 +44,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_DISPLAY_OUTPUT_MODE.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_DISPLAY_OUTPUT_MODE_SDR
     path: ../NVAPIWrapper/cs_generated/_NV_DISPLAY_OUTPUT_MODE.cs
@@ -71,7 +71,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_DISPLAY_OUTPUT_MODE.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_DISPLAY_OUTPUT_MODE_HDR10
     path: ../NVAPIWrapper/cs_generated/_NV_DISPLAY_OUTPUT_MODE.cs
@@ -98,7 +98,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_DISPLAY_OUTPUT_MODE.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_DISPLAY_OUTPUT_MODE_HDR10PLUS_GAMING
     path: ../NVAPIWrapper/cs_generated/_NV_DISPLAY_OUTPUT_MODE.cs

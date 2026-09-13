@@ -19,7 +19,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_OGL_DEFAULT_SWAP_INTERVAL_SIGN.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: EValues_OGL_DEFAULT_SWAP_INTERVAL_SIGN
     path: ../NVAPIWrapper/cs_generated/EValues_OGL_DEFAULT_SWAP_INTERVAL_SIGN.cs
@@ -45,7 +45,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_OGL_DEFAULT_SWAP_INTERVAL_SIGN.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: OGL_DEFAULT_SWAP_INTERVAL_SIGN_POSITIVE
     path: ../NVAPIWrapper/cs_generated/EValues_OGL_DEFAULT_SWAP_INTERVAL_SIGN.cs
@@ -72,7 +72,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_OGL_DEFAULT_SWAP_INTERVAL_SIGN.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: OGL_DEFAULT_SWAP_INTERVAL_SIGN_NEGATIVE
     path: ../NVAPIWrapper/cs_generated/EValues_OGL_DEFAULT_SWAP_INTERVAL_SIGN.cs
@@ -99,7 +99,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_OGL_DEFAULT_SWAP_INTERVAL_SIGN.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: OGL_DEFAULT_SWAP_INTERVAL_SIGN_NUM_VALUES
     path: ../NVAPIWrapper/cs_generated/EValues_OGL_DEFAULT_SWAP_INTERVAL_SIGN.cs
@@ -126,7 +126,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_OGL_DEFAULT_SWAP_INTERVAL_SIGN.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: OGL_DEFAULT_SWAP_INTERVAL_SIGN_DEFAULT
     path: ../NVAPIWrapper/cs_generated/EValues_OGL_DEFAULT_SWAP_INTERVAL_SIGN.cs

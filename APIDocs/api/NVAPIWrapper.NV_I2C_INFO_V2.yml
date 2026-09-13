@@ -25,7 +25,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_I2C_INFO_V2.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_I2C_INFO_V2
     path: ../NVAPIWrapper/cs_generated/NV_I2C_INFO_V2.cs
@@ -58,7 +58,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_I2C_INFO_V2.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: version
     path: ../NVAPIWrapper/cs_generated/NV_I2C_INFO_V2.cs
@@ -86,7 +86,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_I2C_INFO_V2.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: displayMask
     path: ../NVAPIWrapper/cs_generated/NV_I2C_INFO_V2.cs
@@ -114,7 +114,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_I2C_INFO_V2.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: bIsDDCPort
     path: ../NVAPIWrapper/cs_generated/NV_I2C_INFO_V2.cs
@@ -142,7 +142,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_I2C_INFO_V2.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: i2cDevAddress
     path: ../NVAPIWrapper/cs_generated/NV_I2C_INFO_V2.cs
@@ -170,7 +170,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_I2C_INFO_V2.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: pbI2cRegAddress
     path: ../NVAPIWrapper/cs_generated/NV_I2C_INFO_V2.cs
@@ -198,7 +198,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_I2C_INFO_V2.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: regAddrSize
     path: ../NVAPIWrapper/cs_generated/NV_I2C_INFO_V2.cs
@@ -226,7 +226,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_I2C_INFO_V2.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: pbData
     path: ../NVAPIWrapper/cs_generated/NV_I2C_INFO_V2.cs
@@ -254,7 +254,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_I2C_INFO_V2.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: cbSize
     path: ../NVAPIWrapper/cs_generated/NV_I2C_INFO_V2.cs
@@ -282,7 +282,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_I2C_INFO_V2.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: i2cSpeed
     path: ../NVAPIWrapper/cs_generated/NV_I2C_INFO_V2.cs
@@ -310,7 +310,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_I2C_INFO_V2.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: i2cSpeedKhz
     path: ../NVAPIWrapper/cs_generated/NV_I2C_INFO_V2.cs

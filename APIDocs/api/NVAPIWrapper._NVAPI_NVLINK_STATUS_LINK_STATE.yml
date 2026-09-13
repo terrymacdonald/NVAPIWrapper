@@ -25,7 +25,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVAPI_NVLINK_STATUS_LINK_STATE.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: _NVAPI_NVLINK_STATUS_LINK_STATE
     path: ../NVAPIWrapper/cs_generated/_NVAPI_NVLINK_STATUS_LINK_STATE.cs
@@ -51,7 +51,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVAPI_NVLINK_STATUS_LINK_STATE.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_NVLINK_STATUS_LINK_STATE_UNKNOWN
     path: ../NVAPIWrapper/cs_generated/_NVAPI_NVLINK_STATUS_LINK_STATE.cs
@@ -78,7 +78,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVAPI_NVLINK_STATUS_LINK_STATE.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_NVLINK_STATUS_LINK_STATE_INIT
     path: ../NVAPIWrapper/cs_generated/_NVAPI_NVLINK_STATUS_LINK_STATE.cs
@@ -105,7 +105,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVAPI_NVLINK_STATUS_LINK_STATE.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_NVLINK_STATUS_LINK_STATE_HWCFG
     path: ../NVAPIWrapper/cs_generated/_NVAPI_NVLINK_STATUS_LINK_STATE.cs
@@ -132,7 +132,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVAPI_NVLINK_STATUS_LINK_STATE.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_NVLINK_STATUS_LINK_STATE_SWCFG
     path: ../NVAPIWrapper/cs_generated/_NVAPI_NVLINK_STATUS_LINK_STATE.cs
@@ -159,7 +159,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVAPI_NVLINK_STATUS_LINK_STATE.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_NVLINK_STATUS_LINK_STATE_ACTIVE
     path: ../NVAPIWrapper/cs_generated/_NVAPI_NVLINK_STATUS_LINK_STATE.cs
@@ -186,7 +186,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVAPI_NVLINK_STATUS_LINK_STATE.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_NVLINK_STATUS_LINK_STATE_FAULT
     path: ../NVAPIWrapper/cs_generated/_NVAPI_NVLINK_STATUS_LINK_STATE.cs
@@ -213,7 +213,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVAPI_NVLINK_STATUS_LINK_STATE.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_NVLINK_STATUS_LINK_STATE_RECOVERY
     path: ../NVAPIWrapper/cs_generated/_NVAPI_NVLINK_STATUS_LINK_STATE.cs
@@ -240,7 +240,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVAPI_NVLINK_STATUS_LINK_STATE.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_NVLINK_STATUS_LINK_STATE_RECOVERY_AC
     path: ../NVAPIWrapper/cs_generated/_NVAPI_NVLINK_STATUS_LINK_STATE.cs
@@ -267,7 +267,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVAPI_NVLINK_STATUS_LINK_STATE.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_NVLINK_STATUS_LINK_STATE_RECOVERY_AX
     path: ../NVAPIWrapper/cs_generated/_NVAPI_NVLINK_STATUS_LINK_STATE.cs
@@ -294,7 +294,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVAPI_NVLINK_STATUS_LINK_STATE.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_NVLINK_STATUS_LINK_STATE_INVALID
     path: ../NVAPIWrapper/cs_generated/_NVAPI_NVLINK_STATUS_LINK_STATE.cs

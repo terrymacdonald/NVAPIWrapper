@@ -17,7 +17,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIException.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPIException
     path: ../NVAPIWrapper/NVAPIException.cs
@@ -67,7 +67,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIException.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Status
     path: ../NVAPIWrapper/NVAPIException.cs
@@ -98,7 +98,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIException.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: .ctor
     path: ../NVAPIWrapper/NVAPIException.cs

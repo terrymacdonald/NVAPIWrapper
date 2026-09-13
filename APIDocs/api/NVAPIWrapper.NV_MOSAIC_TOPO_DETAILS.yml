@@ -21,11 +21,11 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIMosaicHelper.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_MOSAIC_TOPO_DETAILS
     path: ../NVAPIWrapper/NVAPIMosaicHelper.cs
-    startLine: 2260
+    startLine: 2393
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -55,11 +55,11 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIMosaicHelper.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: version
     path: ../NVAPIWrapper/NVAPIMosaicHelper.cs
-    startLine: 2264
+    startLine: 2397
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -84,11 +84,11 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIMosaicHelper.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: hLogicalGPU
     path: ../NVAPIWrapper/NVAPIMosaicHelper.cs
-    startLine: 2268
+    startLine: 2401
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -113,11 +113,11 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIMosaicHelper.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: validityMask
     path: ../NVAPIWrapper/NVAPIMosaicHelper.cs
-    startLine: 2272
+    startLine: 2405
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -142,11 +142,11 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIMosaicHelper.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: rowCount
     path: ../NVAPIWrapper/NVAPIMosaicHelper.cs
-    startLine: 2276
+    startLine: 2409
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -171,11 +171,11 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIMosaicHelper.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: colCount
     path: ../NVAPIWrapper/NVAPIMosaicHelper.cs
-    startLine: 2280
+    startLine: 2413
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -200,11 +200,11 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIMosaicHelper.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: gpuLayout
     path: ../NVAPIWrapper/NVAPIMosaicHelper.cs
-    startLine: 2284
+    startLine: 2417
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper

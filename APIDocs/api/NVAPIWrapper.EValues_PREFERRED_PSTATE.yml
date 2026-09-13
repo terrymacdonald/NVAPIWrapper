@@ -25,7 +25,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_PREFERRED_PSTATE.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: EValues_PREFERRED_PSTATE
     path: ../NVAPIWrapper/cs_generated/EValues_PREFERRED_PSTATE.cs
@@ -51,7 +51,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_PREFERRED_PSTATE.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: PREFERRED_PSTATE_ADAPTIVE
     path: ../NVAPIWrapper/cs_generated/EValues_PREFERRED_PSTATE.cs
@@ -78,7 +78,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_PREFERRED_PSTATE.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: PREFERRED_PSTATE_PREFER_MAX
     path: ../NVAPIWrapper/cs_generated/EValues_PREFERRED_PSTATE.cs
@@ -105,7 +105,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_PREFERRED_PSTATE.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: PREFERRED_PSTATE_DRIVER_CONTROLLED
     path: ../NVAPIWrapper/cs_generated/EValues_PREFERRED_PSTATE.cs
@@ -132,7 +132,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_PREFERRED_PSTATE.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: PREFERRED_PSTATE_PREFER_CONSISTENT_PERFORMANCE
     path: ../NVAPIWrapper/cs_generated/EValues_PREFERRED_PSTATE.cs
@@ -159,7 +159,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_PREFERRED_PSTATE.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: PREFERRED_PSTATE_PREFER_MIN
     path: ../NVAPIWrapper/cs_generated/EValues_PREFERRED_PSTATE.cs
@@ -186,7 +186,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_PREFERRED_PSTATE.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: PREFERRED_PSTATE_OPTIMAL_POWER
     path: ../NVAPIWrapper/cs_generated/EValues_PREFERRED_PSTATE.cs
@@ -213,7 +213,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_PREFERRED_PSTATE.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: PREFERRED_PSTATE_MIN
     path: ../NVAPIWrapper/cs_generated/EValues_PREFERRED_PSTATE.cs
@@ -240,7 +240,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_PREFERRED_PSTATE.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: PREFERRED_PSTATE_MAX
     path: ../NVAPIWrapper/cs_generated/EValues_PREFERRED_PSTATE.cs
@@ -267,7 +267,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_PREFERRED_PSTATE.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: PREFERRED_PSTATE_NUM_VALUES
     path: ../NVAPIWrapper/cs_generated/EValues_PREFERRED_PSTATE.cs
@@ -294,7 +294,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_PREFERRED_PSTATE.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: PREFERRED_PSTATE_DEFAULT
     path: ../NVAPIWrapper/cs_generated/EValues_PREFERRED_PSTATE.cs

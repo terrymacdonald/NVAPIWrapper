@@ -19,7 +19,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_EXPORT_PERF_COUNTERS_DX9_ONLY.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: EValues_EXPORT_PERF_COUNTERS_DX9_ONLY
     path: ../NVAPIWrapper/cs_generated/EValues_EXPORT_PERF_COUNTERS_DX9_ONLY.cs
@@ -45,7 +45,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_EXPORT_PERF_COUNTERS_DX9_ONLY.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: EXPORT_PERF_COUNTERS_DX9_ONLY_OFF
     path: ../NVAPIWrapper/cs_generated/EValues_EXPORT_PERF_COUNTERS_DX9_ONLY.cs
@@ -72,7 +72,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_EXPORT_PERF_COUNTERS_DX9_ONLY.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: EXPORT_PERF_COUNTERS_DX9_ONLY_ON
     path: ../NVAPIWrapper/cs_generated/EValues_EXPORT_PERF_COUNTERS_DX9_ONLY.cs
@@ -99,7 +99,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_EXPORT_PERF_COUNTERS_DX9_ONLY.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: EXPORT_PERF_COUNTERS_DX9_ONLY_NUM_VALUES
     path: ../NVAPIWrapper/cs_generated/EValues_EXPORT_PERF_COUNTERS_DX9_ONLY.cs
@@ -126,7 +126,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_EXPORT_PERF_COUNTERS_DX9_ONLY.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: EXPORT_PERF_COUNTERS_DX9_ONLY_DEFAULT
     path: ../NVAPIWrapper/cs_generated/EValues_EXPORT_PERF_COUNTERS_DX9_ONLY.cs

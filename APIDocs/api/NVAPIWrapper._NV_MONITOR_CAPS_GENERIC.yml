@@ -7,6 +7,7 @@ items:
   children:
   - NVAPIWrapper._NV_MONITOR_CAPS_GENERIC._bitfield
   - NVAPIWrapper._NV_MONITOR_CAPS_GENERIC.currentlyCapableOfVRR
+  - NVAPIWrapper._NV_MONITOR_CAPS_GENERIC.isBasicEdp
   - NVAPIWrapper._NV_MONITOR_CAPS_GENERIC.isBasicVRR
   - NVAPIWrapper._NV_MONITOR_CAPS_GENERIC.isRLACapable
   - NVAPIWrapper._NV_MONITOR_CAPS_GENERIC.isTrueGsync
@@ -23,7 +24,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_MONITOR_CAPS_GENERIC.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: _NV_MONITOR_CAPS_GENERIC
     path: ../NVAPIWrapper/cs_generated/_NV_MONITOR_CAPS_GENERIC.cs
@@ -56,7 +57,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_MONITOR_CAPS_GENERIC.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: _bitfield
     path: ../NVAPIWrapper/cs_generated/_NV_MONITOR_CAPS_GENERIC.cs
@@ -83,7 +84,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_MONITOR_CAPS_GENERIC.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: supportVRR
     path: ../NVAPIWrapper/cs_generated/_NV_MONITOR_CAPS_GENERIC.cs
@@ -113,7 +114,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_MONITOR_CAPS_GENERIC.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: supportULMB
     path: ../NVAPIWrapper/cs_generated/_NV_MONITOR_CAPS_GENERIC.cs
@@ -143,7 +144,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_MONITOR_CAPS_GENERIC.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: isTrueGsync
     path: ../NVAPIWrapper/cs_generated/_NV_MONITOR_CAPS_GENERIC.cs
@@ -173,7 +174,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_MONITOR_CAPS_GENERIC.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: isRLACapable
     path: ../NVAPIWrapper/cs_generated/_NV_MONITOR_CAPS_GENERIC.cs
@@ -203,7 +204,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_MONITOR_CAPS_GENERIC.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: currentlyCapableOfVRR
     path: ../NVAPIWrapper/cs_generated/_NV_MONITOR_CAPS_GENERIC.cs
@@ -233,7 +234,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_MONITOR_CAPS_GENERIC.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: isBasicVRR
     path: ../NVAPIWrapper/cs_generated/_NV_MONITOR_CAPS_GENERIC.cs
@@ -249,6 +250,36 @@ items:
       type: System.Byte
     content.vb: Public Property isBasicVRR As Byte
   overload: NVAPIWrapper._NV_MONITOR_CAPS_GENERIC.isBasicVRR*
+- uid: NVAPIWrapper._NV_MONITOR_CAPS_GENERIC.isBasicEdp
+  commentId: P:NVAPIWrapper._NV_MONITOR_CAPS_GENERIC.isBasicEdp
+  id: isBasicEdp
+  parent: NVAPIWrapper._NV_MONITOR_CAPS_GENERIC
+  langs:
+  - csharp
+  - vb
+  name: isBasicEdp
+  nameWithType: _NV_MONITOR_CAPS_GENERIC.isBasicEdp
+  fullName: NVAPIWrapper._NV_MONITOR_CAPS_GENERIC.isBasicEdp
+  type: Property
+  source:
+    remote:
+      path: NVAPIWrapper/cs_generated/_NV_MONITOR_CAPS_GENERIC.cs
+      branch: feature-2026-09-13-update-R615
+      repo: https://github.com/terrymacdonald/NVAPIWrapper.git
+    id: isBasicEdp
+    path: ../NVAPIWrapper/cs_generated/_NV_MONITOR_CAPS_GENERIC.cs
+    startLine: 98
+  assemblies:
+  - NVAPIWrapper
+  namespace: NVAPIWrapper
+  example: []
+  syntax:
+    content: public byte isBasicEdp { readonly get; set; }
+    parameters: []
+    return:
+      type: System.Byte
+    content.vb: Public Property isBasicEdp As Byte
+  overload: NVAPIWrapper._NV_MONITOR_CAPS_GENERIC.isBasicEdp*
 - uid: NVAPIWrapper._NV_MONITOR_CAPS_GENERIC.reserved
   commentId: P:NVAPIWrapper._NV_MONITOR_CAPS_GENERIC.reserved
   id: reserved
@@ -263,11 +294,11 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_MONITOR_CAPS_GENERIC.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: reserved
     path: ../NVAPIWrapper/cs_generated/_NV_MONITOR_CAPS_GENERIC.cs
-    startLine: 98
+    startLine: 113
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -550,6 +581,12 @@ references:
   name: isBasicVRR
   nameWithType: _NV_MONITOR_CAPS_GENERIC.isBasicVRR
   fullName: NVAPIWrapper._NV_MONITOR_CAPS_GENERIC.isBasicVRR
+- uid: NVAPIWrapper._NV_MONITOR_CAPS_GENERIC.isBasicEdp*
+  commentId: Overload:NVAPIWrapper._NV_MONITOR_CAPS_GENERIC.isBasicEdp
+  href: NVAPIWrapper._NV_MONITOR_CAPS_GENERIC.html#NVAPIWrapper__NV_MONITOR_CAPS_GENERIC_isBasicEdp
+  name: isBasicEdp
+  nameWithType: _NV_MONITOR_CAPS_GENERIC.isBasicEdp
+  fullName: NVAPIWrapper._NV_MONITOR_CAPS_GENERIC.isBasicEdp
 - uid: NVAPIWrapper._NV_MONITOR_CAPS_GENERIC.reserved*
   commentId: Overload:NVAPIWrapper._NV_MONITOR_CAPS_GENERIC.reserved
   href: NVAPIWrapper._NV_MONITOR_CAPS_GENERIC.html#NVAPIWrapper__NV_MONITOR_CAPS_GENERIC_reserved

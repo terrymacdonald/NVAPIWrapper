@@ -16,7 +16,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_STATIC_METADATA_DESCRIPTOR_ID.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_STATIC_METADATA_DESCRIPTOR_ID
     path: ../NVAPIWrapper/cs_generated/NV_STATIC_METADATA_DESCRIPTOR_ID.cs
@@ -42,7 +42,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_STATIC_METADATA_DESCRIPTOR_ID.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_STATIC_METADATA_TYPE_1
     path: ../NVAPIWrapper/cs_generated/NV_STATIC_METADATA_DESCRIPTOR_ID.cs

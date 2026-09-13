@@ -20,7 +20,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_D3D12_WORKSTATION_FEATURE_PROPERTIES.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: _NV_D3D12_WORKSTATION_FEATURE_PROPERTIES
     path: ../NVAPIWrapper/cs_generated/_NV_D3D12_WORKSTATION_FEATURE_PROPERTIES.cs
@@ -53,7 +53,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_D3D12_WORKSTATION_FEATURE_PROPERTIES.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: version
     path: ../NVAPIWrapper/cs_generated/_NV_D3D12_WORKSTATION_FEATURE_PROPERTIES.cs
@@ -81,7 +81,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_D3D12_WORKSTATION_FEATURE_PROPERTIES.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: workstationFeatureType
     path: ../NVAPIWrapper/cs_generated/_NV_D3D12_WORKSTATION_FEATURE_PROPERTIES.cs
@@ -109,7 +109,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_D3D12_WORKSTATION_FEATURE_PROPERTIES.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: supported
     path: ../NVAPIWrapper/cs_generated/_NV_D3D12_WORKSTATION_FEATURE_PROPERTIES.cs
@@ -137,7 +137,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_D3D12_WORKSTATION_FEATURE_PROPERTIES.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Anonymous
     path: ../NVAPIWrapper/cs_generated/_NV_D3D12_WORKSTATION_FEATURE_PROPERTIES.cs
@@ -165,7 +165,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_D3D12_WORKSTATION_FEATURE_PROPERTIES.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: rdmaInfo
     path: ../NVAPIWrapper/cs_generated/_NV_D3D12_WORKSTATION_FEATURE_PROPERTIES.cs

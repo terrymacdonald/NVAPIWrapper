@@ -21,7 +21,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOGAMMACORRECTION.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: _NVVIOGAMMACORRECTION
     path: ../NVAPIWrapper/cs_generated/_NVVIOGAMMACORRECTION.cs
@@ -54,7 +54,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOGAMMACORRECTION.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: version
     path: ../NVAPIWrapper/cs_generated/_NVVIOGAMMACORRECTION.cs
@@ -82,7 +82,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOGAMMACORRECTION.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: vioGammaCorrectionType
     path: ../NVAPIWrapper/cs_generated/_NVVIOGAMMACORRECTION.cs
@@ -110,7 +110,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOGAMMACORRECTION.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: gammaRamp
     path: ../NVAPIWrapper/cs_generated/_NVVIOGAMMACORRECTION.cs
@@ -138,7 +138,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOGAMMACORRECTION.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: fGammaValueR
     path: ../NVAPIWrapper/cs_generated/_NVVIOGAMMACORRECTION.cs
@@ -166,7 +166,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOGAMMACORRECTION.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: fGammaValueG
     path: ../NVAPIWrapper/cs_generated/_NVVIOGAMMACORRECTION.cs
@@ -194,7 +194,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOGAMMACORRECTION.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: fGammaValueB
     path: ../NVAPIWrapper/cs_generated/_NVVIOGAMMACORRECTION.cs

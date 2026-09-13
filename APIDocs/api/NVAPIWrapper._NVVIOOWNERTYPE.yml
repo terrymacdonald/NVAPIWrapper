@@ -18,7 +18,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOOWNERTYPE.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: _NVVIOOWNERTYPE
     path: ../NVAPIWrapper/cs_generated/_NVVIOOWNERTYPE.cs
@@ -44,7 +44,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOOWNERTYPE.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVVIOOWNERTYPE_NONE
     path: ../NVAPIWrapper/cs_generated/_NVVIOOWNERTYPE.cs
@@ -71,7 +71,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOOWNERTYPE.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVVIOOWNERTYPE_APPLICATION
     path: ../NVAPIWrapper/cs_generated/_NVVIOOWNERTYPE.cs
@@ -98,7 +98,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOOWNERTYPE.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVVIOOWNERTYPE_DESKTOP
     path: ../NVAPIWrapper/cs_generated/_NVVIOOWNERTYPE.cs

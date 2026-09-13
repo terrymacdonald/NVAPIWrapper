@@ -358,11 +358,20 @@ namespace NVAPIWrapper
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GPU_GetGspFeatures"]/*' />
         public delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, _NV_GPU_GSP_INFO_V1*, _NvAPI_Status> NvAPI_GPU_GetGspFeatures;
 
+        /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GPU_GetUUID"]/*' />
+        public delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, _NV_GPU_UUID_V1*, _NvAPI_Status> NvAPI_GPU_GetUUID;
+
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GPU_NVLINK_GetCaps"]/*' />
         public delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, NVLINK_GET_CAPS_V1*, _NvAPI_Status> NvAPI_GPU_NVLINK_GetCaps;
 
+        /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GPU_NVLINK_GetCapsEx"]/*' />
+        public delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, _NVLINK_GET_CAPS_EX_V1*, _NvAPI_Status> NvAPI_GPU_NVLINK_GetCapsEx;
+
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GPU_NVLINK_GetStatus"]/*' />
         public delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, NVLINK_GET_STATUS_V2*, _NvAPI_Status> NvAPI_GPU_NVLINK_GetStatus;
+
+        /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GPU_NVLINK_GetStatusEx"]/*' />
+        public delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, _NVLINK_GET_STATUS_EX_V1*, _NvAPI_Status> NvAPI_GPU_NVLINK_GetStatusEx;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GPU_GetPerfDecreaseInfo"]/*' />
         public delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, uint*, _NvAPI_Status> NvAPI_GPU_GetPerfDecreaseInfo;
@@ -385,6 +394,9 @@ namespace NVAPIWrapper
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GPU_GetAllClockFrequencies"]/*' />
         public delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, NV_GPU_CLOCK_FREQUENCIES_V2*, _NvAPI_Status> NvAPI_GPU_GetAllClockFrequencies;
+
+        /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GPU_GetOverclockStatus"]/*' />
+        public delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, _NV_GPU_OVERCLOCK_STATUS_V1*, _NvAPI_Status> NvAPI_GPU_GetOverclockStatus;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GPU_QueryIlluminationSupport"]/*' />
         public delegate* unmanaged[Cdecl]<_NV_GPU_QUERY_ILLUMINATION_SUPPORT_PARM_V1*, _NvAPI_Status> NvAPI_GPU_QueryIlluminationSupport;
@@ -641,10 +653,10 @@ namespace NVAPIWrapper
         public delegate* unmanaged[Cdecl]<NvGSyncDeviceHandle__*, _NV_GSYNC_CAPABILITIES_V3*, _NvAPI_Status> NvAPI_GSync_QueryCapabilities;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GSync_GetTopology"]/*' />
-        public delegate* unmanaged[Cdecl]<NvGSyncDeviceHandle__*, uint*, _NV_GSYNC_GPU*, uint*, _NV_GSYNC_DISPLAY*, _NvAPI_Status> NvAPI_GSync_GetTopology;
+        public delegate* unmanaged[Cdecl]<NvGSyncDeviceHandle__*, uint*, _NV_GSYNC_GPU*, uint*, _NV_GSYNC_DISPLAY_V2*, _NvAPI_Status> NvAPI_GSync_GetTopology;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GSync_SetSyncStateSettings"]/*' />
-        public delegate* unmanaged[Cdecl]<uint, _NV_GSYNC_DISPLAY*, uint, _NvAPI_Status> NvAPI_GSync_SetSyncStateSettings;
+        public delegate* unmanaged[Cdecl]<uint, _NV_GSYNC_DISPLAY_V2*, uint, _NvAPI_Status> NvAPI_GSync_SetSyncStateSettings;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GSync_GetControlParameters"]/*' />
         public delegate* unmanaged[Cdecl]<NvGSyncDeviceHandle__*, _NV_GSYNC_CONTROL_PARAMS_V2*, _NvAPI_Status> NvAPI_GSync_GetControlParameters;
@@ -674,10 +686,22 @@ namespace NVAPIWrapper
         public delegate* unmanaged[Cdecl]<NvPresentBarrierClientHandle__*, _NV_PRESENT_BARRIER_FRAME_STATISTICS*, _NvAPI_Status> NvAPI_QueryPresentBarrierFrameStatistics;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_NGX_GetNGXOverrideState"]/*' />
-        public delegate* unmanaged[Cdecl]<_NV_NGX_DLSS_OVERRIDE_GET_STATE_PARAMS_V1*, _NvAPI_Status> NvAPI_NGX_GetNGXOverrideState;
+        public delegate* unmanaged[Cdecl]<_NV_NGX_DLSS_OVERRIDE_GET_STATE_PARAMS_V2*, _NvAPI_Status> NvAPI_NGX_GetNGXOverrideState;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_NGX_SetNGXOverrideState"]/*' />
         public delegate* unmanaged[Cdecl]<_NV_NGX_DLSS_OVERRIDE_SET_STATE_PARAMS_V1*, _NvAPI_Status> NvAPI_NGX_SetNGXOverrideState;
+
+        /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_NGX_OpenSession"]/*' />
+        public delegate* unmanaged[Cdecl]<_NV_NGX_SESSION_PARAMS_V1*, _NvAPI_Status> NvAPI_NGX_OpenSession;
+
+        /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_NGX_CloseSession"]/*' />
+        public delegate* unmanaged[Cdecl]<_NV_NGX_SESSION_PARAMS_V1*, _NvAPI_Status> NvAPI_NGX_CloseSession;
+
+        /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_NGX_SetRuntimeParams"]/*' />
+        public delegate* unmanaged[Cdecl]<_NV_NGX_SET_RUNTIME_PARAMS_V1*, _NvAPI_Status> NvAPI_NGX_SetRuntimeParams;
+
+        /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_NGX_GetRuntimeParams"]/*' />
+        public delegate* unmanaged[Cdecl]<_NV_NGX_GET_RUNTIME_PARAMS_V1*, _NvAPI_Status> NvAPI_NGX_GetRuntimeParams;
 
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_VIO_GetCapabilities"]/*' />
         [Obsolete("Do not use this function - it is deprecated in release 440.")]
@@ -973,6 +997,9 @@ namespace NVAPIWrapper
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_SYS_GetLogicalGPUs"]/*' />
         public delegate* unmanaged[Cdecl]<_NV_LOGICAL_GPUS*, _NvAPI_Status> NvAPI_SYS_GetLogicalGPUs;
 
+        /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_NGX_GetDriverFeatureSupport"]/*' />
+        public delegate* unmanaged[Cdecl]<_NV_NGX_GET_DRIVER_FEATURE_SUPPORT_PARAMS_V1*, _NvAPI_Status> NvAPI_NGX_GetDriverFeatureSupport;
+
         /// <include file='NVAPI.xml' path='doc/member[@name="NVAPI.NvAPI_GPU_ClientRegisterForUtilizationSampleUpdates"]/*' />
         public delegate* unmanaged[Cdecl]<NvPhysicalGpuHandle__*, _NV_GPU_CLIENT_UTILIZATION_PERIODIC_CALLBACK_SETTINGS_V1*, _NvAPI_Status> NvAPI_GPU_ClientRegisterForUtilizationSampleUpdates;
 
@@ -1006,8 +1033,8 @@ namespace NVAPIWrapper
         [NativeTypeName("#define NVAPI_USE_STDINT 0")]
         public const int NVAPI_USE_STDINT = 0;
 
-        [NativeTypeName("#define NVAPI_SDK_VERSION 59145")]
-        public const int NVAPI_SDK_VERSION = 59145;
+        [NativeTypeName("#define NVAPI_SDK_VERSION 61683")]
+        public const int NVAPI_SDK_VERSION = 61683;
 
         [NativeTypeName("#define NVAPI_DEFAULT_HANDLE 0")]
         public const int NVAPI_DEFAULT_HANDLE = 0;
@@ -1065,6 +1092,9 @@ namespace NVAPIWrapper
 
         [NativeTypeName("#define NVAPI_SYSTEM_HWBC_INVALID_ID 0xffffffff")]
         public const uint NVAPI_SYSTEM_HWBC_INVALID_ID = 0xffffffff;
+
+        [NativeTypeName("#define NVAPI_UUID_LEN 16")]
+        public const int NVAPI_UUID_LEN = 16;
 
         [NativeTypeName("#define NVAPI_SYSTEM_MAX_DISPLAYS NVAPI_MAX_PHYSICAL_GPUS * NV_MAX_HEADS")]
         public const int NVAPI_SYSTEM_MAX_DISPLAYS = 64 * 4;
@@ -1567,11 +1597,20 @@ namespace NVAPIWrapper
         [NativeTypeName("#define NV_GPU_GSP_INFO_VER NV_GPU_GSP_INFO_VER1")]
         public const uint NV_GPU_GSP_INFO_VER = (uint)(72 | ((1) << 16));
 
+        [NativeTypeName("#define NV_GPU_UUID_VER1 MAKE_NVAPI_VERSION(NV_GPU_UUID_V1,1)")]
+        public const uint NV_GPU_UUID_VER1 = (uint)(20 | ((1) << 16));
+
+        [NativeTypeName("#define NV_GPU_UUID_VER NV_GPU_UUID_VER1")]
+        public const uint NV_GPU_UUID_VER = (uint)(20 | ((1) << 16));
+
         [NativeTypeName("#define NVAPI_NVLINK_COUNTER_MAX_TYPES 32")]
         public const int NVAPI_NVLINK_COUNTER_MAX_TYPES = 32;
 
         [NativeTypeName("#define NVAPI_NVLINK_MAX_LINKS 32")]
         public const int NVAPI_NVLINK_MAX_LINKS = 32;
+
+        [NativeTypeName("#define NVAPI_NVLINK_MAX_LINKS_V2 128")]
+        public const int NVAPI_NVLINK_MAX_LINKS_V2 = 128;
 
         [NativeTypeName("#define NVAPI_NVLINK_CAPS_SUPPORTED 0x00000001")]
         public const int NVAPI_NVLINK_CAPS_SUPPORTED = 0x00000001;
@@ -1669,6 +1708,12 @@ namespace NVAPIWrapper
         [NativeTypeName("#define NVLINK_GET_CAPS_VER NVLINK_GET_CAPS_VER1")]
         public const uint NVLINK_GET_CAPS_VER = (uint)(16 | ((1) << 16));
 
+        [NativeTypeName("#define NVLINK_GET_CAPS_EX_VER1 MAKE_NVAPI_VERSION(NVLINK_GET_CAPS_EX_V1, 1)")]
+        public const uint NVLINK_GET_CAPS_EX_VER1 = (uint)(1056 | ((1) << 16));
+
+        [NativeTypeName("#define NVLINK_GET_CAPS_EX_VER NVLINK_GET_CAPS_EX_VER1")]
+        public const uint NVLINK_GET_CAPS_EX_VER = (uint)(1056 | ((1) << 16));
+
         [NativeTypeName("#define NVAPI_NVLINK_DEVICE_INFO_DEVICE_ID_FLAGS_NONE (0x00000000)")]
         public const int NVAPI_NVLINK_DEVICE_INFO_DEVICE_ID_FLAGS_NONE = (0x00000000);
 
@@ -1753,6 +1798,12 @@ namespace NVAPIWrapper
         [NativeTypeName("#define NVLINK_GET_STATUS_VER NVLINK_GET_STATUS_VER2")]
         public const uint NVLINK_GET_STATUS_VER = (uint)(5640 | ((2) << 16));
 
+        [NativeTypeName("#define NVLINK_GET_STATUS_EX_VER1 MAKE_NVAPI_VERSION(NVLINK_GET_STATUS_EX_V1, 1)")]
+        public const uint NVLINK_GET_STATUS_EX_VER1 = (uint)(23568 | ((1) << 16));
+
+        [NativeTypeName("#define NVLINK_GET_STATUS_EX_VER NVLINK_GET_STATUS_EX_VER1")]
+        public const uint NVLINK_GET_STATUS_EX_VER = (uint)(23568 | ((1) << 16));
+
         [NativeTypeName("#define NV_GPU_PERF_PSTATES_INFO_VER1 MAKE_NVAPI_VERSION(NV_GPU_PERF_PSTATES_INFO_V1,1)")]
         public const uint NV_GPU_PERF_PSTATES_INFO_VER1 = (uint)(6288 | ((1) << 16));
 
@@ -1797,6 +1848,12 @@ namespace NVAPIWrapper
 
         [NativeTypeName("#define NV_GPU_CLOCK_FREQUENCIES_VER NV_GPU_CLOCK_FREQUENCIES_VER_3")]
         public const uint NV_GPU_CLOCK_FREQUENCIES_VER = (uint)(264 | ((3) << 16));
+
+        [NativeTypeName("#define NV_GPU_OVERCLOCK_STATUS_VER1 MAKE_NVAPI_VERSION(NV_GPU_OVERCLOCK_STATUS_V1,1)")]
+        public const uint NV_GPU_OVERCLOCK_STATUS_VER1 = (uint)(72 | ((1) << 16));
+
+        [NativeTypeName("#define NV_GPU_OVERCLOCK_STATUS_VER NV_GPU_OVERCLOCK_STATUS_VER1")]
+        public const uint NV_GPU_OVERCLOCK_STATUS_VER = (uint)(72 | ((1) << 16));
 
         [NativeTypeName("#define NV_GPU_QUERY_ILLUMINATION_SUPPORT_PARM_VER_1 MAKE_NVAPI_VERSION(NV_GPU_QUERY_ILLUMINATION_SUPPORT_PARM_V1,1)")]
         public static readonly uint NV_GPU_QUERY_ILLUMINATION_SUPPORT_PARM_VER_1 = unchecked((uint)(sizeof(_NV_GPU_QUERY_ILLUMINATION_SUPPORT_PARM_V1) | ((1) << 16)));
@@ -2194,11 +2251,17 @@ namespace NVAPIWrapper
         [NativeTypeName("#define NV_GSYNC_CAPABILITIES_VER NV_GSYNC_CAPABILITIES_VER3")]
         public const uint NV_GSYNC_CAPABILITIES_VER = (uint)(28 | ((3) << 16));
 
-        [NativeTypeName("#define NV_GSYNC_DISPLAY_VER MAKE_NVAPI_VERSION(NV_GSYNC_DISPLAY,1)")]
-        public const uint NV_GSYNC_DISPLAY_VER = (uint)(16 | ((1) << 16));
-
         [NativeTypeName("#define NV_GSYNC_GPU_VER MAKE_NVAPI_VERSION(NV_GSYNC_GPU,1)")]
         public static readonly uint NV_GSYNC_GPU_VER = unchecked((uint)(sizeof(_NV_GSYNC_GPU) | ((1) << 16)));
+
+        [NativeTypeName("#define NV_GSYNC_DISPLAY_VER1 MAKE_NVAPI_VERSION(NV_GSYNC_DISPLAY_V1,1)")]
+        public const uint NV_GSYNC_DISPLAY_VER1 = (uint)(16 | ((1) << 16));
+
+        [NativeTypeName("#define NV_GSYNC_DISPLAY_VER2 MAKE_NVAPI_VERSION(NV_GSYNC_DISPLAY_V2,2)")]
+        public const uint NV_GSYNC_DISPLAY_VER2 = (uint)(96 | ((2) << 16));
+
+        [NativeTypeName("#define NV_GSYNC_DISPLAY_VER NV_GSYNC_DISPLAY_VER2")]
+        public const uint NV_GSYNC_DISPLAY_VER = (uint)(96 | ((2) << 16));
 
         [NativeTypeName("#define NV_GSYNC_DELAY_VER MAKE_NVAPI_VERSION(NV_GSYNC_DELAY,1)")]
         public const uint NV_GSYNC_DELAY_VER = (uint)(20 | ((1) << 16));
@@ -2232,6 +2295,9 @@ namespace NVAPIWrapper
 
         [NativeTypeName("#define NV_PRESENT_BARRIER_FRAME_STATICS_VER1 MAKE_NVAPI_VERSION(NV_PRESENT_BARRIER_FRAME_STATISTICS,1)")]
         public const uint NV_PRESENT_BARRIER_FRAME_STATICS_VER1 = (uint)(24 | ((1) << 16));
+
+        [NativeTypeName("#define NVAPI_MAX_FRAMES_PER_FLIP_BATCH 8")]
+        public const int NVAPI_MAX_FRAMES_PER_FLIP_BATCH = 8;
 
         [NativeTypeName("#define NV_QUERY_SINGLE_PASS_STEREO_SUPPORT_PARAMS_VER1 MAKE_NVAPI_VERSION(NV_QUERY_SINGLE_PASS_STEREO_SUPPORT_PARAMS_V1, 1)")]
         public const uint NV_QUERY_SINGLE_PASS_STEREO_SUPPORT_PARAMS_VER1 = (uint)(8 | ((1) << 16));
@@ -2323,17 +2389,44 @@ namespace NVAPIWrapper
         [NativeTypeName("#define NV_NGX_DLSS_OVERRIDE_FEATURE_INDEX_FG 3")]
         public const int NV_NGX_DLSS_OVERRIDE_FEATURE_INDEX_FG = 3;
 
+        [NativeTypeName("#define NV_NGX_DLSS_OVERRIDE_FEATURE_INDEX_RESERVED 4")]
+        public const int NV_NGX_DLSS_OVERRIDE_FEATURE_INDEX_RESERVED = 4;
+
         [NativeTypeName("#define NV_NGX_DLSS_OVERRIDE_GET_STATE_PARAMS_VER1 MAKE_NVAPI_VERSION(NV_NGX_DLSS_OVERRIDE_GET_STATE_PARAMS_V1, 1)")]
         public const uint NV_NGX_DLSS_OVERRIDE_GET_STATE_PARAMS_VER1 = (uint)(64 | ((1) << 16));
 
-        [NativeTypeName("#define NV_NGX_DLSS_OVERRIDE_GET_STATE_PARAMS_VER NV_NGX_DLSS_OVERRIDE_GET_STATE_PARAMS_VER1")]
-        public const uint NV_NGX_DLSS_OVERRIDE_GET_STATE_PARAMS_VER = (uint)(64 | ((1) << 16));
+        [NativeTypeName("#define NV_NGX_DLSS_OVERRIDE_GET_STATE_PARAMS_VER2 MAKE_NVAPI_VERSION(NV_NGX_DLSS_OVERRIDE_GET_STATE_PARAMS_V2, 2)")]
+        public const uint NV_NGX_DLSS_OVERRIDE_GET_STATE_PARAMS_VER2 = (uint)(96 | ((2) << 16));
+
+        [NativeTypeName("#define NV_NGX_DLSS_OVERRIDE_GET_STATE_PARAMS_VER NV_NGX_DLSS_OVERRIDE_GET_STATE_PARAMS_VER2")]
+        public const uint NV_NGX_DLSS_OVERRIDE_GET_STATE_PARAMS_VER = (uint)(96 | ((2) << 16));
 
         [NativeTypeName("#define NV_NGX_DLSS_OVERRIDE_SET_STATE_PARAMS_VER1 MAKE_NVAPI_VERSION(NV_NGX_DLSS_OVERRIDE_SET_STATE_PARAMS_V1, 1)")]
         public const uint NV_NGX_DLSS_OVERRIDE_SET_STATE_PARAMS_VER1 = (uint)(56 | ((1) << 16));
 
         [NativeTypeName("#define NV_NGX_DLSS_OVERRIDE_SET_STATE_PARAMS_VER NV_NGX_DLSS_OVERRIDE_SET_STATE_PARAMS_VER1")]
         public const uint NV_NGX_DLSS_OVERRIDE_SET_STATE_PARAMS_VER = (uint)(56 | ((1) << 16));
+
+        [NativeTypeName("#define NV_NGX_RUNTIME_KEY_COUNT 10")]
+        public const int NV_NGX_RUNTIME_KEY_COUNT = 10;
+
+        [NativeTypeName("#define NV_NGX_SESSION_PARAMS_VER1 MAKE_NVAPI_VERSION(NV_NGX_SESSION_PARAMS_V1, 1)")]
+        public const uint NV_NGX_SESSION_PARAMS_VER1 = (uint)(48 | ((1) << 16));
+
+        [NativeTypeName("#define NV_NGX_SESSION_PARAMS_VER NV_NGX_SESSION_PARAMS_VER1")]
+        public const uint NV_NGX_SESSION_PARAMS_VER = (uint)(48 | ((1) << 16));
+
+        [NativeTypeName("#define NV_NGX_SET_RUNTIME_PARAMS_VER1 MAKE_NVAPI_VERSION(NV_NGX_SET_RUNTIME_PARAMS_V1, 1)")]
+        public const uint NV_NGX_SET_RUNTIME_PARAMS_VER1 = (uint)(64 | ((1) << 16));
+
+        [NativeTypeName("#define NV_NGX_SET_RUNTIME_PARAMS_VER NV_NGX_SET_RUNTIME_PARAMS_VER1")]
+        public const uint NV_NGX_SET_RUNTIME_PARAMS_VER = (uint)(64 | ((1) << 16));
+
+        [NativeTypeName("#define NV_NGX_GET_RUNTIME_PARAMS_VER1 MAKE_NVAPI_VERSION(NV_NGX_GET_RUNTIME_PARAMS_V1, 1)")]
+        public const uint NV_NGX_GET_RUNTIME_PARAMS_VER1 = (uint)(64 | ((1) << 16));
+
+        [NativeTypeName("#define NV_NGX_GET_RUNTIME_PARAMS_VER NV_NGX_GET_RUNTIME_PARAMS_VER1")]
+        public const uint NV_NGX_GET_RUNTIME_PARAMS_VER = (uint)(64 | ((1) << 16));
 
         [NativeTypeName("#define NVVIOOWNERID_NONE 0")]
         public const int NVVIOOWNERID_NONE = 0;
@@ -2704,6 +2797,15 @@ namespace NVAPIWrapper
         [NativeTypeName("#define NV_LOGICAL_GPUS_VER NV_LOGICAL_GPUS_VER1")]
         public static readonly uint NV_LOGICAL_GPUS_VER = unchecked((uint)(sizeof(_NV_LOGICAL_GPUS) | ((1) << 16)));
 
+        [NativeTypeName("#define NVAPI_MAX_NGX_FEATURES_PER_QUERY 16")]
+        public const int NVAPI_MAX_NGX_FEATURES_PER_QUERY = 16;
+
+        [NativeTypeName("#define NV_NGX_GET_DRIVER_FEATURE_SUPPORT_PARAMS_VER1 MAKE_NVAPI_VERSION(NV_NGX_GET_DRIVER_FEATURE_SUPPORT_PARAMS_V1,1)")]
+        public const uint NV_NGX_GET_DRIVER_FEATURE_SUPPORT_PARAMS_VER1 = (uint)(288 | ((1) << 16));
+
+        [NativeTypeName("#define NV_NGX_GET_DRIVER_FEATURE_SUPPORT_PARAMS_VER NV_NGX_GET_DRIVER_FEATURE_SUPPORT_PARAMS_VER1")]
+        public const uint NV_NGX_GET_DRIVER_FEATURE_SUPPORT_PARAMS_VER = (uint)(288 | ((1) << 16));
+
         [NativeTypeName("#define NV_GPU_CLIENT_UTIL_DOMAINS_MAX_V1 (4)")]
         public const int NV_GPU_CLIENT_UTIL_DOMAINS_MAX_V1 = (4);
 
@@ -2881,17 +2983,38 @@ namespace NVAPIWrapper
         [NativeTypeName("#define NGX_DLAA_OVERRIDE_STRING L\"Override DLSS mode to be DLAA\"")]
         public const string NGX_DLAA_OVERRIDE_STRING = "Override DLSS mode to be DLAA";
 
+        [NativeTypeName("#define NGX_DLSSG_DYNAMIC_MULTI_FRAME_COUNT_MAX_STRING L\"Override maximum DLSSG dynamic multi frame count\"")]
+        public const string NGX_DLSSG_DYNAMIC_MULTI_FRAME_COUNT_MAX_STRING = "Override maximum DLSSG dynamic multi frame count";
+
+        [NativeTypeName("#define NGX_DLSSG_DYNAMIC_TARGET_FRAME_RATE_STRING L\"Override DLSSG Target Frame Rate\"")]
+        public const string NGX_DLSSG_DYNAMIC_TARGET_FRAME_RATE_STRING = "Override DLSSG Target Frame Rate";
+
+        [NativeTypeName("#define NGX_DLSSG_MODE_STRING L\"Override DLSSG mode\"")]
+        public const string NGX_DLSSG_MODE_STRING = "Override DLSSG mode";
+
         [NativeTypeName("#define NGX_DLSSG_MULTI_FRAME_COUNT_STRING L\"Override DLSSG multi-frame count\"")]
         public const string NGX_DLSSG_MULTI_FRAME_COUNT_STRING = "Override DLSSG multi-frame count";
 
         [NativeTypeName("#define NGX_DLSS_FG_OVERRIDE_STRING L\"Enable DLSS-FG override\"")]
         public const string NGX_DLSS_FG_OVERRIDE_STRING = "Enable DLSS-FG override";
 
+        [NativeTypeName("#define NGX_DLSS_FG_OVERRIDE_RENDER_PRESET_SELECTION_STRING L\"Override DLSS-FG preset\"")]
+        public const string NGX_DLSS_FG_OVERRIDE_RENDER_PRESET_SELECTION_STRING = "Override DLSS-FG preset";
+
         [NativeTypeName("#define NGX_DLSS_FG_OVERRIDE_RESERVED_KEY1_STRING L\"Override reserved key 1 for FG\"")]
         public const string NGX_DLSS_FG_OVERRIDE_RESERVED_KEY1_STRING = "Override reserved key 1 for FG";
 
         [NativeTypeName("#define NGX_DLSS_FG_OVERRIDE_RESERVED_KEY2_STRING L\"Override reserved key 2 for FG\"")]
         public const string NGX_DLSS_FG_OVERRIDE_RESERVED_KEY2_STRING = "Override reserved key 2 for FG";
+
+        [NativeTypeName("#define NGX_DLSS_NR_OVERRIDE_STRING L\"Enable DLSS NR override\"")]
+        public const string NGX_DLSS_NR_OVERRIDE_STRING = "Enable DLSS NR override";
+
+        [NativeTypeName("#define NGX_DLSS_NR_OVERRIDE_RENDER_PRESET_SELECTION_STRING L\"Override DLSS NR presets\"")]
+        public const string NGX_DLSS_NR_OVERRIDE_RENDER_PRESET_SELECTION_STRING = "Override DLSS NR presets";
+
+        [NativeTypeName("#define NGX_DLSS_NR_SL_OVERRIDE_STRING L\"Enable DLSS NR SL override\"")]
+        public const string NGX_DLSS_NR_SL_OVERRIDE_STRING = "Enable DLSS NR SL override";
 
         [NativeTypeName("#define NGX_DLSS_OVERRIDE_OPTIMAL_SETTINGS_STRING L\"Override DLSS performance mode to be ultra-perfomance\"")]
         public const string NGX_DLSS_OVERRIDE_OPTIMAL_SETTINGS_STRING = "Override DLSS performance mode to be ultra-perfomance";
@@ -2976,6 +3099,9 @@ namespace NVAPIWrapper
 
         [NativeTypeName("#define SLI_RENDERING_MODE_STRING L\"SLI rendering mode\"")]
         public const string SLI_RENDERING_MODE_STRING = "SLI rendering mode";
+
+        [NativeTypeName("#define SL_DLSS_OVERRIDE_STRING L\"Enable Streamline override\"")]
+        public const string SL_DLSS_OVERRIDE_STRING = "Enable Streamline override";
 
         [NativeTypeName("#define VRPRERENDERLIMIT_STRING L\"Virtual Reality pre-rendered frames\"")]
         public const string VRPRERENDERLIMIT_STRING = "Virtual Reality pre-rendered frames";

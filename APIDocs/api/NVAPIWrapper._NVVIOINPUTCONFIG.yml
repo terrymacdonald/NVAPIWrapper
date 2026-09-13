@@ -20,7 +20,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOINPUTCONFIG.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: _NVVIOINPUTCONFIG
     path: ../NVAPIWrapper/cs_generated/_NVVIOINPUTCONFIG.cs
@@ -53,7 +53,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOINPUTCONFIG.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: numRawCaptureImages
     path: ../NVAPIWrapper/cs_generated/_NVVIOINPUTCONFIG.cs
@@ -81,7 +81,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOINPUTCONFIG.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: signalFormat
     path: ../NVAPIWrapper/cs_generated/_NVVIOINPUTCONFIG.cs
@@ -109,7 +109,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOINPUTCONFIG.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: numStreams
     path: ../NVAPIWrapper/cs_generated/_NVVIOINPUTCONFIG.cs
@@ -137,7 +137,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOINPUTCONFIG.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: streams
     path: ../NVAPIWrapper/cs_generated/_NVVIOINPUTCONFIG.cs
@@ -165,7 +165,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOINPUTCONFIG.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: bTestMode
     path: ../NVAPIWrapper/cs_generated/_NVVIOINPUTCONFIG.cs

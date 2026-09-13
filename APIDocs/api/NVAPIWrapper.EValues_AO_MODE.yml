@@ -21,7 +21,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_AO_MODE.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: EValues_AO_MODE
     path: ../NVAPIWrapper/cs_generated/EValues_AO_MODE.cs
@@ -47,7 +47,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_AO_MODE.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: AO_MODE_OFF
     path: ../NVAPIWrapper/cs_generated/EValues_AO_MODE.cs
@@ -74,7 +74,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_AO_MODE.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: AO_MODE_LOW
     path: ../NVAPIWrapper/cs_generated/EValues_AO_MODE.cs
@@ -101,7 +101,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_AO_MODE.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: AO_MODE_MEDIUM
     path: ../NVAPIWrapper/cs_generated/EValues_AO_MODE.cs
@@ -128,7 +128,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_AO_MODE.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: AO_MODE_HIGH
     path: ../NVAPIWrapper/cs_generated/EValues_AO_MODE.cs
@@ -155,7 +155,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_AO_MODE.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: AO_MODE_NUM_VALUES
     path: ../NVAPIWrapper/cs_generated/EValues_AO_MODE.cs
@@ -182,7 +182,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_AO_MODE.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: AO_MODE_DEFAULT
     path: ../NVAPIWrapper/cs_generated/EValues_AO_MODE.cs

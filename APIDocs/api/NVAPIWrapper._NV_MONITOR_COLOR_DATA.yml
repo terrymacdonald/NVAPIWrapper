@@ -18,7 +18,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_MONITOR_COLOR_DATA.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: _NV_MONITOR_COLOR_DATA
     path: ../NVAPIWrapper/cs_generated/_NV_MONITOR_COLOR_DATA.cs
@@ -51,7 +51,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_MONITOR_COLOR_DATA.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: version
     path: ../NVAPIWrapper/cs_generated/_NV_MONITOR_COLOR_DATA.cs
@@ -79,7 +79,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_MONITOR_COLOR_DATA.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: colorFormat
     path: ../NVAPIWrapper/cs_generated/_NV_MONITOR_COLOR_DATA.cs
@@ -107,7 +107,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_MONITOR_COLOR_DATA.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: backendBitDepths
     path: ../NVAPIWrapper/cs_generated/_NV_MONITOR_COLOR_DATA.cs

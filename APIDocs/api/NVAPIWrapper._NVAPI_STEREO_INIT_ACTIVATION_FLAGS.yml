@@ -17,7 +17,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVAPI_STEREO_INIT_ACTIVATION_FLAGS.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: _NVAPI_STEREO_INIT_ACTIVATION_FLAGS
     path: ../NVAPIWrapper/cs_generated/_NVAPI_STEREO_INIT_ACTIVATION_FLAGS.cs
@@ -43,7 +43,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVAPI_STEREO_INIT_ACTIVATION_FLAGS.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_STEREO_INIT_ACTIVATION_IMMEDIATE
     path: ../NVAPIWrapper/cs_generated/_NVAPI_STEREO_INIT_ACTIVATION_FLAGS.cs
@@ -70,7 +70,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVAPI_STEREO_INIT_ACTIVATION_FLAGS.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_STEREO_INIT_ACTIVATION_DELAYED
     path: ../NVAPIWrapper/cs_generated/_NVAPI_STEREO_INIT_ACTIVATION_FLAGS.cs

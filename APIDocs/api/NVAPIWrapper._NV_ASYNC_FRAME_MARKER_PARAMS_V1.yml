@@ -21,7 +21,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_ASYNC_FRAME_MARKER_PARAMS_V1.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: _NV_ASYNC_FRAME_MARKER_PARAMS_V1
     path: ../NVAPIWrapper/cs_generated/_NV_ASYNC_FRAME_MARKER_PARAMS_V1.cs
@@ -54,7 +54,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_ASYNC_FRAME_MARKER_PARAMS_V1.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: version
     path: ../NVAPIWrapper/cs_generated/_NV_ASYNC_FRAME_MARKER_PARAMS_V1.cs
@@ -82,7 +82,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_ASYNC_FRAME_MARKER_PARAMS_V1.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: frameID
     path: ../NVAPIWrapper/cs_generated/_NV_ASYNC_FRAME_MARKER_PARAMS_V1.cs
@@ -110,7 +110,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_ASYNC_FRAME_MARKER_PARAMS_V1.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: markerType
     path: ../NVAPIWrapper/cs_generated/_NV_ASYNC_FRAME_MARKER_PARAMS_V1.cs
@@ -138,7 +138,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_ASYNC_FRAME_MARKER_PARAMS_V1.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: presentFrameID
     path: ../NVAPIWrapper/cs_generated/_NV_ASYNC_FRAME_MARKER_PARAMS_V1.cs
@@ -166,7 +166,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_ASYNC_FRAME_MARKER_PARAMS_V1.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: vendorInternal
     path: ../NVAPIWrapper/cs_generated/_NV_ASYNC_FRAME_MARKER_PARAMS_V1.cs
@@ -194,7 +194,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_ASYNC_FRAME_MARKER_PARAMS_V1.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: rsvd
     path: ../NVAPIWrapper/cs_generated/_NV_ASYNC_FRAME_MARKER_PARAMS_V1.cs

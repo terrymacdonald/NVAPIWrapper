@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/terrymacdonald/NVAPIWrapper/new/main/apiSpec/new?filename=NVAPIWrapper_NVAPISystemLogicalGpuHandleDto.md&amp;value=---%0Auid%3A%20NVAPIWrapper.NVAPISystemLogicalGpuHandleDto%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="docfx:docurl" content="https://github.com/terrymacdonald/NVAPIWrapper/new/feature-2026-09-13-update-R615/apiSpec/new?filename=NVAPIWrapper_NVAPISystemLogicalGpuHandleDto.md&amp;value=---%0Auid%3A%20NVAPIWrapper.NVAPISystemLogicalGpuHandleDto%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -89,7 +89,7 @@
 
 
   <h1 id="NVAPIWrapper_NVAPISystemLogicalGpuHandleDto" data-uid="NVAPIWrapper.NVAPISystemLogicalGpuHandleDto" class="text-break">
-Struct NVAPISystemLogicalGpuHandleDto  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIApiHelper.cs/#L1976"><i class="bi bi-code-slash"></i></a>
+Struct NVAPISystemLogicalGpuHandleDto  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/feature-2026-09-13-update-R615/NVAPIWrapper/NVAPIApiHelper.cs/#L1992"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -147,7 +147,7 @@ Struct NVAPISystemLogicalGpuHandleDto  <a class="header-action link-secondary" t
 
   <h3 id="NVAPIWrapper_NVAPISystemLogicalGpuHandleDto_AdapterType" data-uid="NVAPIWrapper.NVAPISystemLogicalGpuHandleDto.AdapterType">
   AdapterType
-  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIApiHelper.cs/#L1980"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/feature-2026-09-13-update-R615/NVAPIWrapper/NVAPIApiHelper.cs/#L2012"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -174,18 +174,52 @@ Struct NVAPISystemLogicalGpuHandleDto  <a class="header-action link-secondary" t
 
 
 
+  <a id="NVAPIWrapper_NVAPISystemLogicalGpuHandleDto_HasLogicalGpu_" data-uid="NVAPIWrapper.NVAPISystemLogicalGpuHandleDto.HasLogicalGpu*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPISystemLogicalGpuHandleDto_HasLogicalGpu" data-uid="NVAPIWrapper.NVAPISystemLogicalGpuHandleDto.HasLogicalGpu">
+  HasLogicalGpu
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/feature-2026-09-13-update-R615/NVAPIWrapper/NVAPIApiHelper.cs/#L1999"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets whether this DTO references a logical GPU handle.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool HasLogicalGpu { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="NVAPIWrapper_NVAPISystemLogicalGpuHandleDto_LogicalGpu_" data-uid="NVAPIWrapper.NVAPISystemLogicalGpuHandleDto.LogicalGpu*"></a>
 
   <h3 id="NVAPIWrapper_NVAPISystemLogicalGpuHandleDto_LogicalGpu" data-uid="NVAPIWrapper.NVAPISystemLogicalGpuHandleDto.LogicalGpu">
   LogicalGpu
-  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIApiHelper.cs/#L1979"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/feature-2026-09-13-update-R615/NVAPIWrapper/NVAPIApiHelper.cs/#L2009"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets the logical GPU helper for in-process callers. Ignored during JSON serialization.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public NVAPILogicalGpuHelper LogicalGpu { readonly get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonIgnore]
+public NVAPILogicalGpuHelper LogicalGpu { readonly get; set; }</code></pre>
   </div>
 
 
@@ -205,6 +239,38 @@ Struct NVAPISystemLogicalGpuHandleDto  <a class="header-action link-secondary" t
 
 
 
+  <a id="NVAPIWrapper_NVAPISystemLogicalGpuHandleDto_LogicalGpuHandleValue_" data-uid="NVAPIWrapper.NVAPISystemLogicalGpuHandleDto.LogicalGpuHandleValue*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPISystemLogicalGpuHandleDto_LogicalGpuHandleValue" data-uid="NVAPIWrapper.NVAPISystemLogicalGpuHandleDto.LogicalGpuHandleValue">
+  LogicalGpuHandleValue
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/feature-2026-09-13-update-R615/NVAPIWrapper/NVAPIApiHelper.cs/#L2004"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the logical GPU handle value, or 0 when no logical GPU handle is present.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public long LogicalGpuHandleValue { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <h2 class="section" id="methods">Methods
 </h2>
 
@@ -213,7 +279,7 @@ Struct NVAPISystemLogicalGpuHandleDto  <a class="header-action link-secondary" t
 
   <h3 id="NVAPIWrapper_NVAPISystemLogicalGpuHandleDto_Equals_NVAPIWrapper_NVAPISystemLogicalGpuHandleDto_" data-uid="NVAPIWrapper.NVAPISystemLogicalGpuHandleDto.Equals(NVAPIWrapper.NVAPISystemLogicalGpuHandleDto)">
   Equals(NVAPISystemLogicalGpuHandleDto)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIApiHelper.cs/#L2005"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/feature-2026-09-13-update-R615/NVAPIWrapper/NVAPIApiHelper.cs/#L2037"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Determine whether this instance and another system logical GPU handle instance are equal.</p>
@@ -252,7 +318,7 @@ Struct NVAPISystemLogicalGpuHandleDto  <a class="header-action link-secondary" t
 
   <h3 id="NVAPIWrapper_NVAPISystemLogicalGpuHandleDto_Equals_System_Object_" data-uid="NVAPIWrapper.NVAPISystemLogicalGpuHandleDto.Equals(System.Object)">
   Equals(object?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIApiHelper.cs/#L2015"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/feature-2026-09-13-update-R615/NVAPIWrapper/NVAPIApiHelper.cs/#L2047"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Determine whether this instance and a specified object are equal.</p>
@@ -291,7 +357,7 @@ Struct NVAPISystemLogicalGpuHandleDto  <a class="header-action link-secondary" t
 
   <h3 id="NVAPIWrapper_NVAPISystemLogicalGpuHandleDto_FromNative_NVAPIWrapper_NVAPIApiHelper_NVAPIWrapper__NV_LOGICAL_GPU_HANDLE_DATA_" data-uid="NVAPIWrapper.NVAPISystemLogicalGpuHandleDto.FromNative(NVAPIWrapper.NVAPIApiHelper,NVAPIWrapper._NV_LOGICAL_GPU_HANDLE_DATA)">
   FromNative(NVAPIApiHelper, _NV_LOGICAL_GPU_HANDLE_DATA)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIApiHelper.cs/#L1995"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/feature-2026-09-13-update-R615/NVAPIWrapper/NVAPIApiHelper.cs/#L2027"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Create a system logical GPU handle DTO from native handle data.</p>
@@ -333,7 +399,7 @@ Struct NVAPISystemLogicalGpuHandleDto  <a class="header-action link-secondary" t
 
   <h3 id="NVAPIWrapper_NVAPISystemLogicalGpuHandleDto_GetHashCode" data-uid="NVAPIWrapper.NVAPISystemLogicalGpuHandleDto.GetHashCode">
   GetHashCode()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIApiHelper.cs/#L2021"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/feature-2026-09-13-update-R615/NVAPIWrapper/NVAPIApiHelper.cs/#L2053"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Get a hash code for this instance.</p>
@@ -370,7 +436,7 @@ Struct NVAPISystemLogicalGpuHandleDto  <a class="header-action link-secondary" t
 
   <h3 id="NVAPIWrapper_NVAPISystemLogicalGpuHandleDto_op_Equality_NVAPIWrapper_NVAPISystemLogicalGpuHandleDto_NVAPIWrapper_NVAPISystemLogicalGpuHandleDto_" data-uid="NVAPIWrapper.NVAPISystemLogicalGpuHandleDto.op_Equality(NVAPIWrapper.NVAPISystemLogicalGpuHandleDto,NVAPIWrapper.NVAPISystemLogicalGpuHandleDto)">
   operator ==(NVAPISystemLogicalGpuHandleDto, NVAPISystemLogicalGpuHandleDto)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIApiHelper.cs/#L2037"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/feature-2026-09-13-update-R615/NVAPIWrapper/NVAPIApiHelper.cs/#L2069"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Determine whether two system logical GPU handle instances are equal.</p>
@@ -412,7 +478,7 @@ Struct NVAPISystemLogicalGpuHandleDto  <a class="header-action link-secondary" t
 
   <h3 id="NVAPIWrapper_NVAPISystemLogicalGpuHandleDto_op_Inequality_NVAPIWrapper_NVAPISystemLogicalGpuHandleDto_NVAPIWrapper_NVAPISystemLogicalGpuHandleDto_" data-uid="NVAPIWrapper.NVAPISystemLogicalGpuHandleDto.op_Inequality(NVAPIWrapper.NVAPISystemLogicalGpuHandleDto,NVAPIWrapper.NVAPISystemLogicalGpuHandleDto)">
   operator !=(NVAPISystemLogicalGpuHandleDto, NVAPISystemLogicalGpuHandleDto)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIApiHelper.cs/#L2045"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/feature-2026-09-13-update-R615/NVAPIWrapper/NVAPIApiHelper.cs/#L2077"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Determine whether two system logical GPU handle instances are not equal.</p>
@@ -454,7 +520,7 @@ Struct NVAPISystemLogicalGpuHandleDto  <a class="header-action link-secondary" t
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIApiHelper.cs/#L1976" class="edit-link">Edit this page</a>
+          <a href="https://github.com/terrymacdonald/NVAPIWrapper/blob/feature-2026-09-13-update-R615/NVAPIWrapper/NVAPIApiHelper.cs/#L1992" class="edit-link">Edit this page</a>
         </div>
 
 

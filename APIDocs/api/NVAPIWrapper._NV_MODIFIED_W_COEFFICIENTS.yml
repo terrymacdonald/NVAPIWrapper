@@ -20,7 +20,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_MODIFIED_W_COEFFICIENTS.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: _NV_MODIFIED_W_COEFFICIENTS
     path: ../NVAPIWrapper/cs_generated/_NV_MODIFIED_W_COEFFICIENTS.cs
@@ -53,7 +53,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_MODIFIED_W_COEFFICIENTS.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: fA
     path: ../NVAPIWrapper/cs_generated/_NV_MODIFIED_W_COEFFICIENTS.cs
@@ -81,7 +81,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_MODIFIED_W_COEFFICIENTS.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: fB
     path: ../NVAPIWrapper/cs_generated/_NV_MODIFIED_W_COEFFICIENTS.cs
@@ -109,7 +109,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_MODIFIED_W_COEFFICIENTS.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: fAReserved
     path: ../NVAPIWrapper/cs_generated/_NV_MODIFIED_W_COEFFICIENTS.cs
@@ -137,7 +137,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_MODIFIED_W_COEFFICIENTS.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: fBReserved
     path: ../NVAPIWrapper/cs_generated/_NV_MODIFIED_W_COEFFICIENTS.cs
@@ -165,7 +165,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_MODIFIED_W_COEFFICIENTS.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: fReserved
     path: ../NVAPIWrapper/cs_generated/_NV_MODIFIED_W_COEFFICIENTS.cs

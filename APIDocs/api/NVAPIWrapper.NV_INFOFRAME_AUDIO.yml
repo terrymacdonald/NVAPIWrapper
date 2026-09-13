@@ -37,7 +37,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_INFOFRAME_AUDIO.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_INFOFRAME_AUDIO
     path: ../NVAPIWrapper/cs_generated/NV_INFOFRAME_AUDIO.cs
@@ -70,7 +70,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_INFOFRAME_AUDIO.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: _bitfield1
     path: ../NVAPIWrapper/cs_generated/NV_INFOFRAME_AUDIO.cs
@@ -97,7 +97,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_INFOFRAME_AUDIO.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: codingType
     path: ../NVAPIWrapper/cs_generated/NV_INFOFRAME_AUDIO.cs
@@ -127,7 +127,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_INFOFRAME_AUDIO.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: codingExtensionType
     path: ../NVAPIWrapper/cs_generated/NV_INFOFRAME_AUDIO.cs
@@ -157,7 +157,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_INFOFRAME_AUDIO.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: sampleSize
     path: ../NVAPIWrapper/cs_generated/NV_INFOFRAME_AUDIO.cs
@@ -187,7 +187,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_INFOFRAME_AUDIO.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: sampleRate
     path: ../NVAPIWrapper/cs_generated/NV_INFOFRAME_AUDIO.cs
@@ -217,7 +217,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_INFOFRAME_AUDIO.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: channelCount
     path: ../NVAPIWrapper/cs_generated/NV_INFOFRAME_AUDIO.cs
@@ -247,7 +247,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_INFOFRAME_AUDIO.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: speakerPlacement
     path: ../NVAPIWrapper/cs_generated/NV_INFOFRAME_AUDIO.cs
@@ -277,7 +277,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_INFOFRAME_AUDIO.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: _bitfield2
     path: ../NVAPIWrapper/cs_generated/NV_INFOFRAME_AUDIO.cs
@@ -304,7 +304,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_INFOFRAME_AUDIO.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: downmixInhibit
     path: ../NVAPIWrapper/cs_generated/NV_INFOFRAME_AUDIO.cs
@@ -334,7 +334,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_INFOFRAME_AUDIO.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: lfePlaybackLevel
     path: ../NVAPIWrapper/cs_generated/NV_INFOFRAME_AUDIO.cs
@@ -364,7 +364,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_INFOFRAME_AUDIO.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: levelShift
     path: ../NVAPIWrapper/cs_generated/NV_INFOFRAME_AUDIO.cs
@@ -394,7 +394,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_INFOFRAME_AUDIO.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Future12
     path: ../NVAPIWrapper/cs_generated/NV_INFOFRAME_AUDIO.cs
@@ -424,7 +424,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_INFOFRAME_AUDIO.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Future2x
     path: ../NVAPIWrapper/cs_generated/NV_INFOFRAME_AUDIO.cs
@@ -454,7 +454,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_INFOFRAME_AUDIO.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Future3x
     path: ../NVAPIWrapper/cs_generated/NV_INFOFRAME_AUDIO.cs
@@ -484,7 +484,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_INFOFRAME_AUDIO.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Future52
     path: ../NVAPIWrapper/cs_generated/NV_INFOFRAME_AUDIO.cs
@@ -514,7 +514,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_INFOFRAME_AUDIO.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Future6
     path: ../NVAPIWrapper/cs_generated/NV_INFOFRAME_AUDIO.cs
@@ -544,7 +544,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_INFOFRAME_AUDIO.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: _bitfield3
     path: ../NVAPIWrapper/cs_generated/NV_INFOFRAME_AUDIO.cs
@@ -571,7 +571,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_INFOFRAME_AUDIO.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Future7
     path: ../NVAPIWrapper/cs_generated/NV_INFOFRAME_AUDIO.cs
@@ -601,7 +601,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_INFOFRAME_AUDIO.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Future8
     path: ../NVAPIWrapper/cs_generated/NV_INFOFRAME_AUDIO.cs
@@ -631,7 +631,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_INFOFRAME_AUDIO.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Future9
     path: ../NVAPIWrapper/cs_generated/NV_INFOFRAME_AUDIO.cs
@@ -661,7 +661,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_INFOFRAME_AUDIO.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: _bitfield4
     path: ../NVAPIWrapper/cs_generated/NV_INFOFRAME_AUDIO.cs
@@ -688,7 +688,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_INFOFRAME_AUDIO.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Future10
     path: ../NVAPIWrapper/cs_generated/NV_INFOFRAME_AUDIO.cs

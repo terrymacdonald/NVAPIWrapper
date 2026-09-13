@@ -7,6 +7,7 @@ items:
   children:
   - NVAPIWrapper._NVDRS_SETTING_TYPE.NVDRS_BINARY_TYPE
   - NVAPIWrapper._NVDRS_SETTING_TYPE.NVDRS_DWORD_TYPE
+  - NVAPIWrapper._NVDRS_SETTING_TYPE.NVDRS_QWORD_TYPE
   - NVAPIWrapper._NVDRS_SETTING_TYPE.NVDRS_STRING_TYPE
   - NVAPIWrapper._NVDRS_SETTING_TYPE.NVDRS_WSTRING_TYPE
   langs:
@@ -19,7 +20,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVDRS_SETTING_TYPE.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: _NVDRS_SETTING_TYPE
     path: ../NVAPIWrapper/cs_generated/_NVDRS_SETTING_TYPE.cs
@@ -45,7 +46,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVDRS_SETTING_TYPE.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVDRS_DWORD_TYPE
     path: ../NVAPIWrapper/cs_generated/_NVDRS_SETTING_TYPE.cs
@@ -72,7 +73,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVDRS_SETTING_TYPE.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVDRS_BINARY_TYPE
     path: ../NVAPIWrapper/cs_generated/_NVDRS_SETTING_TYPE.cs
@@ -99,7 +100,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVDRS_SETTING_TYPE.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVDRS_STRING_TYPE
     path: ../NVAPIWrapper/cs_generated/_NVDRS_SETTING_TYPE.cs
@@ -126,7 +127,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVDRS_SETTING_TYPE.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVDRS_WSTRING_TYPE
     path: ../NVAPIWrapper/cs_generated/_NVDRS_SETTING_TYPE.cs
@@ -137,6 +138,33 @@ items:
   example: []
   syntax:
     content: NVDRS_WSTRING_TYPE = 3
+    return:
+      type: NVAPIWrapper._NVDRS_SETTING_TYPE
+- uid: NVAPIWrapper._NVDRS_SETTING_TYPE.NVDRS_QWORD_TYPE
+  commentId: F:NVAPIWrapper._NVDRS_SETTING_TYPE.NVDRS_QWORD_TYPE
+  id: NVDRS_QWORD_TYPE
+  parent: NVAPIWrapper._NVDRS_SETTING_TYPE
+  langs:
+  - csharp
+  - vb
+  name: NVDRS_QWORD_TYPE
+  nameWithType: _NVDRS_SETTING_TYPE.NVDRS_QWORD_TYPE
+  fullName: NVAPIWrapper._NVDRS_SETTING_TYPE.NVDRS_QWORD_TYPE
+  type: Field
+  source:
+    remote:
+      path: NVAPIWrapper/cs_generated/_NVDRS_SETTING_TYPE.cs
+      branch: feature-2026-09-13-update-R615
+      repo: https://github.com/terrymacdonald/NVAPIWrapper.git
+    id: NVDRS_QWORD_TYPE
+    path: ../NVAPIWrapper/cs_generated/_NVDRS_SETTING_TYPE.cs
+    startLine: 18
+  assemblies:
+  - NVAPIWrapper
+  namespace: NVAPIWrapper
+  example: []
+  syntax:
+    content: NVDRS_QWORD_TYPE = 4
     return:
       type: NVAPIWrapper._NVDRS_SETTING_TYPE
 references:

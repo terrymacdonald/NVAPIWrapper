@@ -18,7 +18,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_MOSAIC_SUPPORTED_TOPOLOGIES.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_MOSAIC_SUPPORTED_TOPOLOGIES
     path: ../NVAPIWrapper/cs_generated/NV_MOSAIC_SUPPORTED_TOPOLOGIES.cs
@@ -51,7 +51,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_MOSAIC_SUPPORTED_TOPOLOGIES.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: version
     path: ../NVAPIWrapper/cs_generated/NV_MOSAIC_SUPPORTED_TOPOLOGIES.cs
@@ -79,7 +79,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_MOSAIC_SUPPORTED_TOPOLOGIES.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: totalCount
     path: ../NVAPIWrapper/cs_generated/NV_MOSAIC_SUPPORTED_TOPOLOGIES.cs
@@ -107,7 +107,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_MOSAIC_SUPPORTED_TOPOLOGIES.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: topos
     path: ../NVAPIWrapper/cs_generated/NV_MOSAIC_SUPPORTED_TOPOLOGIES.cs

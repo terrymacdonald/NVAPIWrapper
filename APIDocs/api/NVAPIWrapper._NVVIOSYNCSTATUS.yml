@@ -21,7 +21,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOSYNCSTATUS.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: _NVVIOSYNCSTATUS
     path: ../NVAPIWrapper/cs_generated/_NVVIOSYNCSTATUS.cs
@@ -47,7 +47,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOSYNCSTATUS.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVVIOSYNCSTATUS_OFF
     path: ../NVAPIWrapper/cs_generated/_NVVIOSYNCSTATUS.cs
@@ -74,7 +74,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOSYNCSTATUS.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVVIOSYNCSTATUS_ERROR
     path: ../NVAPIWrapper/cs_generated/_NVVIOSYNCSTATUS.cs
@@ -101,7 +101,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOSYNCSTATUS.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVVIOSYNCSTATUS_SYNCLOSS
     path: ../NVAPIWrapper/cs_generated/_NVVIOSYNCSTATUS.cs
@@ -128,7 +128,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOSYNCSTATUS.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVVIOSYNCSTATUS_COMPOSITE
     path: ../NVAPIWrapper/cs_generated/_NVVIOSYNCSTATUS.cs
@@ -155,7 +155,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOSYNCSTATUS.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVVIOSYNCSTATUS_SDI_SD
     path: ../NVAPIWrapper/cs_generated/_NVVIOSYNCSTATUS.cs
@@ -182,7 +182,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOSYNCSTATUS.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVVIOSYNCSTATUS_SDI_HD
     path: ../NVAPIWrapper/cs_generated/_NVVIOSYNCSTATUS.cs

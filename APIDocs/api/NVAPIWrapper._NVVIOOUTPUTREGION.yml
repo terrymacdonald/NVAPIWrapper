@@ -19,7 +19,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOOUTPUTREGION.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: _NVVIOOUTPUTREGION
     path: ../NVAPIWrapper/cs_generated/_NVVIOOUTPUTREGION.cs
@@ -52,7 +52,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOOUTPUTREGION.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: x
     path: ../NVAPIWrapper/cs_generated/_NVVIOOUTPUTREGION.cs
@@ -80,7 +80,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOOUTPUTREGION.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: y
     path: ../NVAPIWrapper/cs_generated/_NVVIOOUTPUTREGION.cs
@@ -108,7 +108,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOOUTPUTREGION.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: width
     path: ../NVAPIWrapper/cs_generated/_NVVIOOUTPUTREGION.cs
@@ -136,7 +136,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOOUTPUTREGION.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: height
     path: ../NVAPIWrapper/cs_generated/_NVVIOOUTPUTREGION.cs

@@ -17,7 +17,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIODATAFORMATDETAIL.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: _NVVIODATAFORMATDETAIL
     path: ../NVAPIWrapper/cs_generated/_NVVIODATAFORMATDETAIL.cs
@@ -50,7 +50,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIODATAFORMATDETAIL.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: dataFormat
     path: ../NVAPIWrapper/cs_generated/_NVVIODATAFORMATDETAIL.cs
@@ -78,7 +78,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIODATAFORMATDETAIL.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: vioCaps
     path: ../NVAPIWrapper/cs_generated/_NVVIODATAFORMATDETAIL.cs

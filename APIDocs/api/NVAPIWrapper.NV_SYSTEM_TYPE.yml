@@ -18,7 +18,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_SYSTEM_TYPE.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_SYSTEM_TYPE
     path: ../NVAPIWrapper/cs_generated/NV_SYSTEM_TYPE.cs
@@ -44,7 +44,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_SYSTEM_TYPE.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_SYSTEM_TYPE_UNKNOWN
     path: ../NVAPIWrapper/cs_generated/NV_SYSTEM_TYPE.cs
@@ -71,7 +71,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_SYSTEM_TYPE.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_SYSTEM_TYPE_LAPTOP
     path: ../NVAPIWrapper/cs_generated/NV_SYSTEM_TYPE.cs
@@ -98,7 +98,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_SYSTEM_TYPE.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_SYSTEM_TYPE_DESKTOP
     path: ../NVAPIWrapper/cs_generated/NV_SYSTEM_TYPE.cs

@@ -19,7 +19,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_GPU_GET_HDCP_SUPPORT_STATUS.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_GPU_GET_HDCP_SUPPORT_STATUS
     path: ../NVAPIWrapper/cs_generated/NV_GPU_GET_HDCP_SUPPORT_STATUS.cs
@@ -52,7 +52,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_GPU_GET_HDCP_SUPPORT_STATUS.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: version
     path: ../NVAPIWrapper/cs_generated/NV_GPU_GET_HDCP_SUPPORT_STATUS.cs
@@ -80,7 +80,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_GPU_GET_HDCP_SUPPORT_STATUS.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: hdcpFuseState
     path: ../NVAPIWrapper/cs_generated/NV_GPU_GET_HDCP_SUPPORT_STATUS.cs
@@ -108,7 +108,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_GPU_GET_HDCP_SUPPORT_STATUS.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: hdcpKeySource
     path: ../NVAPIWrapper/cs_generated/NV_GPU_GET_HDCP_SUPPORT_STATUS.cs
@@ -136,7 +136,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_GPU_GET_HDCP_SUPPORT_STATUS.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: hdcpKeySourceState
     path: ../NVAPIWrapper/cs_generated/NV_GPU_GET_HDCP_SUPPORT_STATUS.cs

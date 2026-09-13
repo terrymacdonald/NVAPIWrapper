@@ -24,7 +24,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_SET_ADAPTIVE_SYNC_DATA_V1.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: _NV_SET_ADAPTIVE_SYNC_DATA_V1
     path: ../NVAPIWrapper/cs_generated/_NV_SET_ADAPTIVE_SYNC_DATA_V1.cs
@@ -57,7 +57,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_SET_ADAPTIVE_SYNC_DATA_V1.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: version
     path: ../NVAPIWrapper/cs_generated/_NV_SET_ADAPTIVE_SYNC_DATA_V1.cs
@@ -85,7 +85,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_SET_ADAPTIVE_SYNC_DATA_V1.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: maxFrameInterval
     path: ../NVAPIWrapper/cs_generated/_NV_SET_ADAPTIVE_SYNC_DATA_V1.cs
@@ -113,7 +113,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_SET_ADAPTIVE_SYNC_DATA_V1.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: _bitfield
     path: ../NVAPIWrapper/cs_generated/_NV_SET_ADAPTIVE_SYNC_DATA_V1.cs
@@ -140,7 +140,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_SET_ADAPTIVE_SYNC_DATA_V1.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: bDisableAdaptiveSync
     path: ../NVAPIWrapper/cs_generated/_NV_SET_ADAPTIVE_SYNC_DATA_V1.cs
@@ -170,7 +170,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_SET_ADAPTIVE_SYNC_DATA_V1.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: bDisableFrameSplitting
     path: ../NVAPIWrapper/cs_generated/_NV_SET_ADAPTIVE_SYNC_DATA_V1.cs
@@ -200,7 +200,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_SET_ADAPTIVE_SYNC_DATA_V1.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: reserved
     path: ../NVAPIWrapper/cs_generated/_NV_SET_ADAPTIVE_SYNC_DATA_V1.cs
@@ -230,7 +230,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_SET_ADAPTIVE_SYNC_DATA_V1.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: reserved1
     path: ../NVAPIWrapper/cs_generated/_NV_SET_ADAPTIVE_SYNC_DATA_V1.cs
@@ -258,7 +258,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_SET_ADAPTIVE_SYNC_DATA_V1.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: maxFrameIntervalNs
     path: ../NVAPIWrapper/cs_generated/_NV_SET_ADAPTIVE_SYNC_DATA_V1.cs
@@ -286,7 +286,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_SET_ADAPTIVE_SYNC_DATA_V1.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: reservedEx
     path: ../NVAPIWrapper/cs_generated/_NV_SET_ADAPTIVE_SYNC_DATA_V1.cs

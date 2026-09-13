@@ -8,9 +8,12 @@ items:
   - NVAPIWrapper._NV_SET_REFLEX_SYNC_PARAMS._bitfield
   - NVAPIWrapper._NV_SET_REFLEX_SYNC_PARAMS.bDisable
   - NVAPIWrapper._NV_SET_REFLEX_SYNC_PARAMS.bEnable
+  - NVAPIWrapper._NV_SET_REFLEX_SYNC_PARAMS.dfgMaxMultiplier
+  - NVAPIWrapper._NV_SET_REFLEX_SYNC_PARAMS.dfgTargetFps
   - NVAPIWrapper._NV_SET_REFLEX_SYNC_PARAMS.fgMultiplier
   - NVAPIWrapper._NV_SET_REFLEX_SYNC_PARAMS.flagsRsvd
   - NVAPIWrapper._NV_SET_REFLEX_SYNC_PARAMS.rsvd
+  - NVAPIWrapper._NV_SET_REFLEX_SYNC_PARAMS.rsvd1
   - NVAPIWrapper._NV_SET_REFLEX_SYNC_PARAMS.timeInQueueUs
   - NVAPIWrapper._NV_SET_REFLEX_SYNC_PARAMS.timeInQueueUsTarget
   - NVAPIWrapper._NV_SET_REFLEX_SYNC_PARAMS.vblankIntervalUs
@@ -25,7 +28,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_SET_REFLEX_SYNC_PARAMS.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: _NV_SET_REFLEX_SYNC_PARAMS
     path: ../NVAPIWrapper/cs_generated/_NV_SET_REFLEX_SYNC_PARAMS.cs
@@ -58,7 +61,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_SET_REFLEX_SYNC_PARAMS.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: version
     path: ../NVAPIWrapper/cs_generated/_NV_SET_REFLEX_SYNC_PARAMS.cs
@@ -86,7 +89,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_SET_REFLEX_SYNC_PARAMS.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: _bitfield
     path: ../NVAPIWrapper/cs_generated/_NV_SET_REFLEX_SYNC_PARAMS.cs
@@ -113,7 +116,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_SET_REFLEX_SYNC_PARAMS.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: bEnable
     path: ../NVAPIWrapper/cs_generated/_NV_SET_REFLEX_SYNC_PARAMS.cs
@@ -143,7 +146,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_SET_REFLEX_SYNC_PARAMS.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: bDisable
     path: ../NVAPIWrapper/cs_generated/_NV_SET_REFLEX_SYNC_PARAMS.cs
@@ -173,7 +176,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_SET_REFLEX_SYNC_PARAMS.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: flagsRsvd
     path: ../NVAPIWrapper/cs_generated/_NV_SET_REFLEX_SYNC_PARAMS.cs
@@ -203,7 +206,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_SET_REFLEX_SYNC_PARAMS.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: vblankIntervalUs
     path: ../NVAPIWrapper/cs_generated/_NV_SET_REFLEX_SYNC_PARAMS.cs
@@ -231,7 +234,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_SET_REFLEX_SYNC_PARAMS.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: timeInQueueUs
     path: ../NVAPIWrapper/cs_generated/_NV_SET_REFLEX_SYNC_PARAMS.cs
@@ -259,7 +262,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_SET_REFLEX_SYNC_PARAMS.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: timeInQueueUsTarget
     path: ../NVAPIWrapper/cs_generated/_NV_SET_REFLEX_SYNC_PARAMS.cs
@@ -287,7 +290,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_SET_REFLEX_SYNC_PARAMS.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: fgMultiplier
     path: ../NVAPIWrapper/cs_generated/_NV_SET_REFLEX_SYNC_PARAMS.cs
@@ -301,6 +304,90 @@ items:
     return:
       type: System.Byte
     content.vb: Public fgMultiplier As Byte
+- uid: NVAPIWrapper._NV_SET_REFLEX_SYNC_PARAMS.dfgMaxMultiplier
+  commentId: F:NVAPIWrapper._NV_SET_REFLEX_SYNC_PARAMS.dfgMaxMultiplier
+  id: dfgMaxMultiplier
+  parent: NVAPIWrapper._NV_SET_REFLEX_SYNC_PARAMS
+  langs:
+  - csharp
+  - vb
+  name: dfgMaxMultiplier
+  nameWithType: _NV_SET_REFLEX_SYNC_PARAMS.dfgMaxMultiplier
+  fullName: NVAPIWrapper._NV_SET_REFLEX_SYNC_PARAMS.dfgMaxMultiplier
+  type: Field
+  source:
+    remote:
+      path: NVAPIWrapper/cs_generated/_NV_SET_REFLEX_SYNC_PARAMS.cs
+      branch: feature-2026-09-13-update-R615
+      repo: https://github.com/terrymacdonald/NVAPIWrapper.git
+    id: dfgMaxMultiplier
+    path: ../NVAPIWrapper/cs_generated/_NV_SET_REFLEX_SYNC_PARAMS.cs
+    startLine: 76
+  assemblies:
+  - NVAPIWrapper
+  namespace: NVAPIWrapper
+  example: []
+  syntax:
+    content: public byte dfgMaxMultiplier
+    return:
+      type: System.Byte
+    content.vb: Public dfgMaxMultiplier As Byte
+- uid: NVAPIWrapper._NV_SET_REFLEX_SYNC_PARAMS.rsvd1
+  commentId: F:NVAPIWrapper._NV_SET_REFLEX_SYNC_PARAMS.rsvd1
+  id: rsvd1
+  parent: NVAPIWrapper._NV_SET_REFLEX_SYNC_PARAMS
+  langs:
+  - csharp
+  - vb
+  name: rsvd1
+  nameWithType: _NV_SET_REFLEX_SYNC_PARAMS.rsvd1
+  fullName: NVAPIWrapper._NV_SET_REFLEX_SYNC_PARAMS.rsvd1
+  type: Field
+  source:
+    remote:
+      path: NVAPIWrapper/cs_generated/_NV_SET_REFLEX_SYNC_PARAMS.cs
+      branch: feature-2026-09-13-update-R615
+      repo: https://github.com/terrymacdonald/NVAPIWrapper.git
+    id: rsvd1
+    path: ../NVAPIWrapper/cs_generated/_NV_SET_REFLEX_SYNC_PARAMS.cs
+    startLine: 80
+  assemblies:
+  - NVAPIWrapper
+  namespace: NVAPIWrapper
+  example: []
+  syntax:
+    content: public _NV_SET_REFLEX_SYNC_PARAMS._rsvd1_e__FixedBuffer rsvd1
+    return:
+      type: NVAPIWrapper._NV_SET_REFLEX_SYNC_PARAMS._rsvd1_e__FixedBuffer
+    content.vb: Public rsvd1 As _NV_SET_REFLEX_SYNC_PARAMS._rsvd1_e__FixedBuffer
+- uid: NVAPIWrapper._NV_SET_REFLEX_SYNC_PARAMS.dfgTargetFps
+  commentId: F:NVAPIWrapper._NV_SET_REFLEX_SYNC_PARAMS.dfgTargetFps
+  id: dfgTargetFps
+  parent: NVAPIWrapper._NV_SET_REFLEX_SYNC_PARAMS
+  langs:
+  - csharp
+  - vb
+  name: dfgTargetFps
+  nameWithType: _NV_SET_REFLEX_SYNC_PARAMS.dfgTargetFps
+  fullName: NVAPIWrapper._NV_SET_REFLEX_SYNC_PARAMS.dfgTargetFps
+  type: Field
+  source:
+    remote:
+      path: NVAPIWrapper/cs_generated/_NV_SET_REFLEX_SYNC_PARAMS.cs
+      branch: feature-2026-09-13-update-R615
+      repo: https://github.com/terrymacdonald/NVAPIWrapper.git
+    id: dfgTargetFps
+    path: ../NVAPIWrapper/cs_generated/_NV_SET_REFLEX_SYNC_PARAMS.cs
+    startLine: 84
+  assemblies:
+  - NVAPIWrapper
+  namespace: NVAPIWrapper
+  example: []
+  syntax:
+    content: public uint dfgTargetFps
+    return:
+      type: System.UInt32
+    content.vb: Public dfgTargetFps As UInteger
 - uid: NVAPIWrapper._NV_SET_REFLEX_SYNC_PARAMS.rsvd
   commentId: F:NVAPIWrapper._NV_SET_REFLEX_SYNC_PARAMS.rsvd
   id: rsvd
@@ -315,11 +402,11 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_SET_REFLEX_SYNC_PARAMS.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: rsvd
     path: ../NVAPIWrapper/cs_generated/_NV_SET_REFLEX_SYNC_PARAMS.cs
-    startLine: 76
+    startLine: 88
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -604,6 +691,29 @@ references:
   nameWithType.vb: Byte
   fullName.vb: Byte
   name.vb: Byte
+- uid: NVAPIWrapper._NV_SET_REFLEX_SYNC_PARAMS._rsvd1_e__FixedBuffer
+  commentId: T:NVAPIWrapper._NV_SET_REFLEX_SYNC_PARAMS._rsvd1_e__FixedBuffer
+  parent: NVAPIWrapper
+  href: NVAPIWrapper._NV_SET_REFLEX_SYNC_PARAMS.html
+  name: _NV_SET_REFLEX_SYNC_PARAMS._rsvd1_e__FixedBuffer
+  nameWithType: _NV_SET_REFLEX_SYNC_PARAMS._rsvd1_e__FixedBuffer
+  fullName: NVAPIWrapper._NV_SET_REFLEX_SYNC_PARAMS._rsvd1_e__FixedBuffer
+  spec.csharp:
+  - uid: NVAPIWrapper._NV_SET_REFLEX_SYNC_PARAMS
+    name: _NV_SET_REFLEX_SYNC_PARAMS
+    href: NVAPIWrapper._NV_SET_REFLEX_SYNC_PARAMS.html
+  - name: .
+  - uid: NVAPIWrapper._NV_SET_REFLEX_SYNC_PARAMS._rsvd1_e__FixedBuffer
+    name: _rsvd1_e__FixedBuffer
+    href: NVAPIWrapper._NV_SET_REFLEX_SYNC_PARAMS._rsvd1_e__FixedBuffer.html
+  spec.vb:
+  - uid: NVAPIWrapper._NV_SET_REFLEX_SYNC_PARAMS
+    name: _NV_SET_REFLEX_SYNC_PARAMS
+    href: NVAPIWrapper._NV_SET_REFLEX_SYNC_PARAMS.html
+  - name: .
+  - uid: NVAPIWrapper._NV_SET_REFLEX_SYNC_PARAMS._rsvd1_e__FixedBuffer
+    name: _rsvd1_e__FixedBuffer
+    href: NVAPIWrapper._NV_SET_REFLEX_SYNC_PARAMS._rsvd1_e__FixedBuffer.html
 - uid: NVAPIWrapper._NV_SET_REFLEX_SYNC_PARAMS._rsvd_e__FixedBuffer
   commentId: T:NVAPIWrapper._NV_SET_REFLEX_SYNC_PARAMS._rsvd_e__FixedBuffer
   parent: NVAPIWrapper

@@ -18,7 +18,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_COLOR_DATA_V2.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: _data_e__Struct
     path: ../NVAPIWrapper/cs_generated/_NV_COLOR_DATA_V2.cs
@@ -51,7 +51,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_COLOR_DATA_V2.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: colorFormat
     path: ../NVAPIWrapper/cs_generated/_NV_COLOR_DATA_V2.cs
@@ -79,7 +79,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_COLOR_DATA_V2.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: colorimetry
     path: ../NVAPIWrapper/cs_generated/_NV_COLOR_DATA_V2.cs
@@ -107,7 +107,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_COLOR_DATA_V2.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: dynamicRange
     path: ../NVAPIWrapper/cs_generated/_NV_COLOR_DATA_V2.cs

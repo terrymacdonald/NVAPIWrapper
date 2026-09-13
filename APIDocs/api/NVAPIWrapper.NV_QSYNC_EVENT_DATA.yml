@@ -17,7 +17,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_QSYNC_EVENT_DATA.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_QSYNC_EVENT_DATA
     path: ../NVAPIWrapper/cs_generated/NV_QSYNC_EVENT_DATA.cs
@@ -50,7 +50,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_QSYNC_EVENT_DATA.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: qsyncEvent
     path: ../NVAPIWrapper/cs_generated/NV_QSYNC_EVENT_DATA.cs
@@ -78,7 +78,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_QSYNC_EVENT_DATA.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: reserved
     path: ../NVAPIWrapper/cs_generated/NV_QSYNC_EVENT_DATA.cs

@@ -20,7 +20,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOCOLORCONVERSION.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: _NVVIOCOLORCONVERSION
     path: ../NVAPIWrapper/cs_generated/_NVVIOCOLORCONVERSION.cs
@@ -53,7 +53,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOCOLORCONVERSION.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: version
     path: ../NVAPIWrapper/cs_generated/_NVVIOCOLORCONVERSION.cs
@@ -81,7 +81,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOCOLORCONVERSION.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: colorMatrix
     path: ../NVAPIWrapper/cs_generated/_NVVIOCOLORCONVERSION.cs
@@ -109,7 +109,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOCOLORCONVERSION.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: colorOffset
     path: ../NVAPIWrapper/cs_generated/_NVVIOCOLORCONVERSION.cs
@@ -137,7 +137,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOCOLORCONVERSION.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: colorScale
     path: ../NVAPIWrapper/cs_generated/_NVVIOCOLORCONVERSION.cs
@@ -165,7 +165,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOCOLORCONVERSION.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: compositeSafe
     path: ../NVAPIWrapper/cs_generated/_NVVIOCOLORCONVERSION.cs

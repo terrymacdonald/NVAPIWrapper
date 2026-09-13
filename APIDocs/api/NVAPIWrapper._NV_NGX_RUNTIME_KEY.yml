@@ -1,0 +1,323 @@
+### YamlMime:ManagedReference
+items:
+- uid: NVAPIWrapper._NV_NGX_RUNTIME_KEY
+  commentId: T:NVAPIWrapper._NV_NGX_RUNTIME_KEY
+  id: _NV_NGX_RUNTIME_KEY
+  parent: NVAPIWrapper
+  children:
+  - NVAPIWrapper._NV_NGX_RUNTIME_KEY.NV_NGX_RUNTIME_KEY_RESERVED0
+  - NVAPIWrapper._NV_NGX_RUNTIME_KEY.NV_NGX_RUNTIME_KEY_RESERVED1
+  - NVAPIWrapper._NV_NGX_RUNTIME_KEY.NV_NGX_RUNTIME_KEY_RESERVED2
+  - NVAPIWrapper._NV_NGX_RUNTIME_KEY.NV_NGX_RUNTIME_KEY_RESERVED3
+  - NVAPIWrapper._NV_NGX_RUNTIME_KEY.NV_NGX_RUNTIME_KEY_RESERVED4
+  - NVAPIWrapper._NV_NGX_RUNTIME_KEY.NV_NGX_RUNTIME_KEY_RESERVED5
+  - NVAPIWrapper._NV_NGX_RUNTIME_KEY.NV_NGX_RUNTIME_KEY_RESERVED6
+  - NVAPIWrapper._NV_NGX_RUNTIME_KEY.NV_NGX_RUNTIME_KEY_RESERVED7
+  - NVAPIWrapper._NV_NGX_RUNTIME_KEY.NV_NGX_RUNTIME_KEY_RESERVED8
+  - NVAPIWrapper._NV_NGX_RUNTIME_KEY.NV_NGX_RUNTIME_KEY_RESERVED9
+  langs:
+  - csharp
+  - vb
+  name: _NV_NGX_RUNTIME_KEY
+  nameWithType: _NV_NGX_RUNTIME_KEY
+  fullName: NVAPIWrapper._NV_NGX_RUNTIME_KEY
+  type: Enum
+  source:
+    remote:
+      path: NVAPIWrapper/cs_generated/_NV_NGX_RUNTIME_KEY.cs
+      branch: feature-2026-09-13-update-R615
+      repo: https://github.com/terrymacdonald/NVAPIWrapper.git
+    id: _NV_NGX_RUNTIME_KEY
+    path: ../NVAPIWrapper/cs_generated/_NV_NGX_RUNTIME_KEY.cs
+    startLine: 3
+  assemblies:
+  - NVAPIWrapper
+  namespace: NVAPIWrapper
+  example: []
+  syntax:
+    content: public enum _NV_NGX_RUNTIME_KEY
+    content.vb: Public Enum _NV_NGX_RUNTIME_KEY
+- uid: NVAPIWrapper._NV_NGX_RUNTIME_KEY.NV_NGX_RUNTIME_KEY_RESERVED0
+  commentId: F:NVAPIWrapper._NV_NGX_RUNTIME_KEY.NV_NGX_RUNTIME_KEY_RESERVED0
+  id: NV_NGX_RUNTIME_KEY_RESERVED0
+  parent: NVAPIWrapper._NV_NGX_RUNTIME_KEY
+  langs:
+  - csharp
+  - vb
+  name: NV_NGX_RUNTIME_KEY_RESERVED0
+  nameWithType: _NV_NGX_RUNTIME_KEY.NV_NGX_RUNTIME_KEY_RESERVED0
+  fullName: NVAPIWrapper._NV_NGX_RUNTIME_KEY.NV_NGX_RUNTIME_KEY_RESERVED0
+  type: Field
+  source:
+    remote:
+      path: NVAPIWrapper/cs_generated/_NV_NGX_RUNTIME_KEY.cs
+      branch: feature-2026-09-13-update-R615
+      repo: https://github.com/terrymacdonald/NVAPIWrapper.git
+    id: NV_NGX_RUNTIME_KEY_RESERVED0
+    path: ../NVAPIWrapper/cs_generated/_NV_NGX_RUNTIME_KEY.cs
+    startLine: 6
+  assemblies:
+  - NVAPIWrapper
+  namespace: NVAPIWrapper
+  example: []
+  syntax:
+    content: NV_NGX_RUNTIME_KEY_RESERVED0 = 0
+    return:
+      type: NVAPIWrapper._NV_NGX_RUNTIME_KEY
+- uid: NVAPIWrapper._NV_NGX_RUNTIME_KEY.NV_NGX_RUNTIME_KEY_RESERVED1
+  commentId: F:NVAPIWrapper._NV_NGX_RUNTIME_KEY.NV_NGX_RUNTIME_KEY_RESERVED1
+  id: NV_NGX_RUNTIME_KEY_RESERVED1
+  parent: NVAPIWrapper._NV_NGX_RUNTIME_KEY
+  langs:
+  - csharp
+  - vb
+  name: NV_NGX_RUNTIME_KEY_RESERVED1
+  nameWithType: _NV_NGX_RUNTIME_KEY.NV_NGX_RUNTIME_KEY_RESERVED1
+  fullName: NVAPIWrapper._NV_NGX_RUNTIME_KEY.NV_NGX_RUNTIME_KEY_RESERVED1
+  type: Field
+  source:
+    remote:
+      path: NVAPIWrapper/cs_generated/_NV_NGX_RUNTIME_KEY.cs
+      branch: feature-2026-09-13-update-R615
+      repo: https://github.com/terrymacdonald/NVAPIWrapper.git
+    id: NV_NGX_RUNTIME_KEY_RESERVED1
+    path: ../NVAPIWrapper/cs_generated/_NV_NGX_RUNTIME_KEY.cs
+    startLine: 9
+  assemblies:
+  - NVAPIWrapper
+  namespace: NVAPIWrapper
+  example: []
+  syntax:
+    content: NV_NGX_RUNTIME_KEY_RESERVED1 = 1
+    return:
+      type: NVAPIWrapper._NV_NGX_RUNTIME_KEY
+- uid: NVAPIWrapper._NV_NGX_RUNTIME_KEY.NV_NGX_RUNTIME_KEY_RESERVED2
+  commentId: F:NVAPIWrapper._NV_NGX_RUNTIME_KEY.NV_NGX_RUNTIME_KEY_RESERVED2
+  id: NV_NGX_RUNTIME_KEY_RESERVED2
+  parent: NVAPIWrapper._NV_NGX_RUNTIME_KEY
+  langs:
+  - csharp
+  - vb
+  name: NV_NGX_RUNTIME_KEY_RESERVED2
+  nameWithType: _NV_NGX_RUNTIME_KEY.NV_NGX_RUNTIME_KEY_RESERVED2
+  fullName: NVAPIWrapper._NV_NGX_RUNTIME_KEY.NV_NGX_RUNTIME_KEY_RESERVED2
+  type: Field
+  source:
+    remote:
+      path: NVAPIWrapper/cs_generated/_NV_NGX_RUNTIME_KEY.cs
+      branch: feature-2026-09-13-update-R615
+      repo: https://github.com/terrymacdonald/NVAPIWrapper.git
+    id: NV_NGX_RUNTIME_KEY_RESERVED2
+    path: ../NVAPIWrapper/cs_generated/_NV_NGX_RUNTIME_KEY.cs
+    startLine: 12
+  assemblies:
+  - NVAPIWrapper
+  namespace: NVAPIWrapper
+  example: []
+  syntax:
+    content: NV_NGX_RUNTIME_KEY_RESERVED2 = 2
+    return:
+      type: NVAPIWrapper._NV_NGX_RUNTIME_KEY
+- uid: NVAPIWrapper._NV_NGX_RUNTIME_KEY.NV_NGX_RUNTIME_KEY_RESERVED3
+  commentId: F:NVAPIWrapper._NV_NGX_RUNTIME_KEY.NV_NGX_RUNTIME_KEY_RESERVED3
+  id: NV_NGX_RUNTIME_KEY_RESERVED3
+  parent: NVAPIWrapper._NV_NGX_RUNTIME_KEY
+  langs:
+  - csharp
+  - vb
+  name: NV_NGX_RUNTIME_KEY_RESERVED3
+  nameWithType: _NV_NGX_RUNTIME_KEY.NV_NGX_RUNTIME_KEY_RESERVED3
+  fullName: NVAPIWrapper._NV_NGX_RUNTIME_KEY.NV_NGX_RUNTIME_KEY_RESERVED3
+  type: Field
+  source:
+    remote:
+      path: NVAPIWrapper/cs_generated/_NV_NGX_RUNTIME_KEY.cs
+      branch: feature-2026-09-13-update-R615
+      repo: https://github.com/terrymacdonald/NVAPIWrapper.git
+    id: NV_NGX_RUNTIME_KEY_RESERVED3
+    path: ../NVAPIWrapper/cs_generated/_NV_NGX_RUNTIME_KEY.cs
+    startLine: 15
+  assemblies:
+  - NVAPIWrapper
+  namespace: NVAPIWrapper
+  example: []
+  syntax:
+    content: NV_NGX_RUNTIME_KEY_RESERVED3 = 3
+    return:
+      type: NVAPIWrapper._NV_NGX_RUNTIME_KEY
+- uid: NVAPIWrapper._NV_NGX_RUNTIME_KEY.NV_NGX_RUNTIME_KEY_RESERVED4
+  commentId: F:NVAPIWrapper._NV_NGX_RUNTIME_KEY.NV_NGX_RUNTIME_KEY_RESERVED4
+  id: NV_NGX_RUNTIME_KEY_RESERVED4
+  parent: NVAPIWrapper._NV_NGX_RUNTIME_KEY
+  langs:
+  - csharp
+  - vb
+  name: NV_NGX_RUNTIME_KEY_RESERVED4
+  nameWithType: _NV_NGX_RUNTIME_KEY.NV_NGX_RUNTIME_KEY_RESERVED4
+  fullName: NVAPIWrapper._NV_NGX_RUNTIME_KEY.NV_NGX_RUNTIME_KEY_RESERVED4
+  type: Field
+  source:
+    remote:
+      path: NVAPIWrapper/cs_generated/_NV_NGX_RUNTIME_KEY.cs
+      branch: feature-2026-09-13-update-R615
+      repo: https://github.com/terrymacdonald/NVAPIWrapper.git
+    id: NV_NGX_RUNTIME_KEY_RESERVED4
+    path: ../NVAPIWrapper/cs_generated/_NV_NGX_RUNTIME_KEY.cs
+    startLine: 18
+  assemblies:
+  - NVAPIWrapper
+  namespace: NVAPIWrapper
+  example: []
+  syntax:
+    content: NV_NGX_RUNTIME_KEY_RESERVED4 = 4
+    return:
+      type: NVAPIWrapper._NV_NGX_RUNTIME_KEY
+- uid: NVAPIWrapper._NV_NGX_RUNTIME_KEY.NV_NGX_RUNTIME_KEY_RESERVED5
+  commentId: F:NVAPIWrapper._NV_NGX_RUNTIME_KEY.NV_NGX_RUNTIME_KEY_RESERVED5
+  id: NV_NGX_RUNTIME_KEY_RESERVED5
+  parent: NVAPIWrapper._NV_NGX_RUNTIME_KEY
+  langs:
+  - csharp
+  - vb
+  name: NV_NGX_RUNTIME_KEY_RESERVED5
+  nameWithType: _NV_NGX_RUNTIME_KEY.NV_NGX_RUNTIME_KEY_RESERVED5
+  fullName: NVAPIWrapper._NV_NGX_RUNTIME_KEY.NV_NGX_RUNTIME_KEY_RESERVED5
+  type: Field
+  source:
+    remote:
+      path: NVAPIWrapper/cs_generated/_NV_NGX_RUNTIME_KEY.cs
+      branch: feature-2026-09-13-update-R615
+      repo: https://github.com/terrymacdonald/NVAPIWrapper.git
+    id: NV_NGX_RUNTIME_KEY_RESERVED5
+    path: ../NVAPIWrapper/cs_generated/_NV_NGX_RUNTIME_KEY.cs
+    startLine: 21
+  assemblies:
+  - NVAPIWrapper
+  namespace: NVAPIWrapper
+  example: []
+  syntax:
+    content: NV_NGX_RUNTIME_KEY_RESERVED5 = 5
+    return:
+      type: NVAPIWrapper._NV_NGX_RUNTIME_KEY
+- uid: NVAPIWrapper._NV_NGX_RUNTIME_KEY.NV_NGX_RUNTIME_KEY_RESERVED6
+  commentId: F:NVAPIWrapper._NV_NGX_RUNTIME_KEY.NV_NGX_RUNTIME_KEY_RESERVED6
+  id: NV_NGX_RUNTIME_KEY_RESERVED6
+  parent: NVAPIWrapper._NV_NGX_RUNTIME_KEY
+  langs:
+  - csharp
+  - vb
+  name: NV_NGX_RUNTIME_KEY_RESERVED6
+  nameWithType: _NV_NGX_RUNTIME_KEY.NV_NGX_RUNTIME_KEY_RESERVED6
+  fullName: NVAPIWrapper._NV_NGX_RUNTIME_KEY.NV_NGX_RUNTIME_KEY_RESERVED6
+  type: Field
+  source:
+    remote:
+      path: NVAPIWrapper/cs_generated/_NV_NGX_RUNTIME_KEY.cs
+      branch: feature-2026-09-13-update-R615
+      repo: https://github.com/terrymacdonald/NVAPIWrapper.git
+    id: NV_NGX_RUNTIME_KEY_RESERVED6
+    path: ../NVAPIWrapper/cs_generated/_NV_NGX_RUNTIME_KEY.cs
+    startLine: 24
+  assemblies:
+  - NVAPIWrapper
+  namespace: NVAPIWrapper
+  example: []
+  syntax:
+    content: NV_NGX_RUNTIME_KEY_RESERVED6 = 6
+    return:
+      type: NVAPIWrapper._NV_NGX_RUNTIME_KEY
+- uid: NVAPIWrapper._NV_NGX_RUNTIME_KEY.NV_NGX_RUNTIME_KEY_RESERVED7
+  commentId: F:NVAPIWrapper._NV_NGX_RUNTIME_KEY.NV_NGX_RUNTIME_KEY_RESERVED7
+  id: NV_NGX_RUNTIME_KEY_RESERVED7
+  parent: NVAPIWrapper._NV_NGX_RUNTIME_KEY
+  langs:
+  - csharp
+  - vb
+  name: NV_NGX_RUNTIME_KEY_RESERVED7
+  nameWithType: _NV_NGX_RUNTIME_KEY.NV_NGX_RUNTIME_KEY_RESERVED7
+  fullName: NVAPIWrapper._NV_NGX_RUNTIME_KEY.NV_NGX_RUNTIME_KEY_RESERVED7
+  type: Field
+  source:
+    remote:
+      path: NVAPIWrapper/cs_generated/_NV_NGX_RUNTIME_KEY.cs
+      branch: feature-2026-09-13-update-R615
+      repo: https://github.com/terrymacdonald/NVAPIWrapper.git
+    id: NV_NGX_RUNTIME_KEY_RESERVED7
+    path: ../NVAPIWrapper/cs_generated/_NV_NGX_RUNTIME_KEY.cs
+    startLine: 27
+  assemblies:
+  - NVAPIWrapper
+  namespace: NVAPIWrapper
+  example: []
+  syntax:
+    content: NV_NGX_RUNTIME_KEY_RESERVED7 = 7
+    return:
+      type: NVAPIWrapper._NV_NGX_RUNTIME_KEY
+- uid: NVAPIWrapper._NV_NGX_RUNTIME_KEY.NV_NGX_RUNTIME_KEY_RESERVED8
+  commentId: F:NVAPIWrapper._NV_NGX_RUNTIME_KEY.NV_NGX_RUNTIME_KEY_RESERVED8
+  id: NV_NGX_RUNTIME_KEY_RESERVED8
+  parent: NVAPIWrapper._NV_NGX_RUNTIME_KEY
+  langs:
+  - csharp
+  - vb
+  name: NV_NGX_RUNTIME_KEY_RESERVED8
+  nameWithType: _NV_NGX_RUNTIME_KEY.NV_NGX_RUNTIME_KEY_RESERVED8
+  fullName: NVAPIWrapper._NV_NGX_RUNTIME_KEY.NV_NGX_RUNTIME_KEY_RESERVED8
+  type: Field
+  source:
+    remote:
+      path: NVAPIWrapper/cs_generated/_NV_NGX_RUNTIME_KEY.cs
+      branch: feature-2026-09-13-update-R615
+      repo: https://github.com/terrymacdonald/NVAPIWrapper.git
+    id: NV_NGX_RUNTIME_KEY_RESERVED8
+    path: ../NVAPIWrapper/cs_generated/_NV_NGX_RUNTIME_KEY.cs
+    startLine: 30
+  assemblies:
+  - NVAPIWrapper
+  namespace: NVAPIWrapper
+  example: []
+  syntax:
+    content: NV_NGX_RUNTIME_KEY_RESERVED8 = 8
+    return:
+      type: NVAPIWrapper._NV_NGX_RUNTIME_KEY
+- uid: NVAPIWrapper._NV_NGX_RUNTIME_KEY.NV_NGX_RUNTIME_KEY_RESERVED9
+  commentId: F:NVAPIWrapper._NV_NGX_RUNTIME_KEY.NV_NGX_RUNTIME_KEY_RESERVED9
+  id: NV_NGX_RUNTIME_KEY_RESERVED9
+  parent: NVAPIWrapper._NV_NGX_RUNTIME_KEY
+  langs:
+  - csharp
+  - vb
+  name: NV_NGX_RUNTIME_KEY_RESERVED9
+  nameWithType: _NV_NGX_RUNTIME_KEY.NV_NGX_RUNTIME_KEY_RESERVED9
+  fullName: NVAPIWrapper._NV_NGX_RUNTIME_KEY.NV_NGX_RUNTIME_KEY_RESERVED9
+  type: Field
+  source:
+    remote:
+      path: NVAPIWrapper/cs_generated/_NV_NGX_RUNTIME_KEY.cs
+      branch: feature-2026-09-13-update-R615
+      repo: https://github.com/terrymacdonald/NVAPIWrapper.git
+    id: NV_NGX_RUNTIME_KEY_RESERVED9
+    path: ../NVAPIWrapper/cs_generated/_NV_NGX_RUNTIME_KEY.cs
+    startLine: 33
+  assemblies:
+  - NVAPIWrapper
+  namespace: NVAPIWrapper
+  example: []
+  syntax:
+    content: NV_NGX_RUNTIME_KEY_RESERVED9 = 9
+    return:
+      type: NVAPIWrapper._NV_NGX_RUNTIME_KEY
+references:
+- uid: NVAPIWrapper
+  commentId: N:NVAPIWrapper
+  href: NVAPIWrapper.html
+  name: NVAPIWrapper
+  nameWithType: NVAPIWrapper
+  fullName: NVAPIWrapper
+- uid: NVAPIWrapper._NV_NGX_RUNTIME_KEY
+  commentId: T:NVAPIWrapper._NV_NGX_RUNTIME_KEY
+  parent: NVAPIWrapper
+  href: NVAPIWrapper._NV_NGX_RUNTIME_KEY.html
+  name: _NV_NGX_RUNTIME_KEY
+  nameWithType: _NV_NGX_RUNTIME_KEY
+  fullName: NVAPIWrapper._NV_NGX_RUNTIME_KEY

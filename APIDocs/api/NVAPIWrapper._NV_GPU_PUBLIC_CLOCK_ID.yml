@@ -20,7 +20,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GPU_PUBLIC_CLOCK_ID.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: _NV_GPU_PUBLIC_CLOCK_ID
     path: ../NVAPIWrapper/cs_generated/_NV_GPU_PUBLIC_CLOCK_ID.cs
@@ -46,7 +46,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GPU_PUBLIC_CLOCK_ID.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_GPU_PUBLIC_CLOCK_GRAPHICS
     path: ../NVAPIWrapper/cs_generated/_NV_GPU_PUBLIC_CLOCK_ID.cs
@@ -73,7 +73,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GPU_PUBLIC_CLOCK_ID.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_GPU_PUBLIC_CLOCK_MEMORY
     path: ../NVAPIWrapper/cs_generated/_NV_GPU_PUBLIC_CLOCK_ID.cs
@@ -100,7 +100,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GPU_PUBLIC_CLOCK_ID.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_GPU_PUBLIC_CLOCK_PROCESSOR
     path: ../NVAPIWrapper/cs_generated/_NV_GPU_PUBLIC_CLOCK_ID.cs
@@ -127,7 +127,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GPU_PUBLIC_CLOCK_ID.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_GPU_PUBLIC_CLOCK_VIDEO
     path: ../NVAPIWrapper/cs_generated/_NV_GPU_PUBLIC_CLOCK_ID.cs
@@ -154,7 +154,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GPU_PUBLIC_CLOCK_ID.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_GPU_PUBLIC_CLOCK_UNDEFINED
     path: ../NVAPIWrapper/cs_generated/_NV_GPU_PUBLIC_CLOCK_ID.cs

@@ -21,7 +21,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_OGL_OVERLAY_PIXEL_TYPE.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: EValues_OGL_OVERLAY_PIXEL_TYPE
     path: ../NVAPIWrapper/cs_generated/EValues_OGL_OVERLAY_PIXEL_TYPE.cs
@@ -47,7 +47,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_OGL_OVERLAY_PIXEL_TYPE.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: OGL_OVERLAY_PIXEL_TYPE_NONE
     path: ../NVAPIWrapper/cs_generated/EValues_OGL_OVERLAY_PIXEL_TYPE.cs
@@ -74,7 +74,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_OGL_OVERLAY_PIXEL_TYPE.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: OGL_OVERLAY_PIXEL_TYPE_CI
     path: ../NVAPIWrapper/cs_generated/EValues_OGL_OVERLAY_PIXEL_TYPE.cs
@@ -101,7 +101,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_OGL_OVERLAY_PIXEL_TYPE.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: OGL_OVERLAY_PIXEL_TYPE_RGBA
     path: ../NVAPIWrapper/cs_generated/EValues_OGL_OVERLAY_PIXEL_TYPE.cs
@@ -128,7 +128,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_OGL_OVERLAY_PIXEL_TYPE.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: OGL_OVERLAY_PIXEL_TYPE_CI_AND_RGBA
     path: ../NVAPIWrapper/cs_generated/EValues_OGL_OVERLAY_PIXEL_TYPE.cs
@@ -155,7 +155,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_OGL_OVERLAY_PIXEL_TYPE.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: OGL_OVERLAY_PIXEL_TYPE_NUM_VALUES
     path: ../NVAPIWrapper/cs_generated/EValues_OGL_OVERLAY_PIXEL_TYPE.cs
@@ -182,7 +182,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_OGL_OVERLAY_PIXEL_TYPE.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: OGL_OVERLAY_PIXEL_TYPE_DEFAULT
     path: ../NVAPIWrapper/cs_generated/EValues_OGL_OVERLAY_PIXEL_TYPE.cs

@@ -21,7 +21,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_OGL_AA_LINE_GAMMA.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: EValues_OGL_AA_LINE_GAMMA
     path: ../NVAPIWrapper/cs_generated/EValues_OGL_AA_LINE_GAMMA.cs
@@ -47,7 +47,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_OGL_AA_LINE_GAMMA.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: OGL_AA_LINE_GAMMA_DISABLED
     path: ../NVAPIWrapper/cs_generated/EValues_OGL_AA_LINE_GAMMA.cs
@@ -74,7 +74,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_OGL_AA_LINE_GAMMA.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: OGL_AA_LINE_GAMMA_ENABLED
     path: ../NVAPIWrapper/cs_generated/EValues_OGL_AA_LINE_GAMMA.cs
@@ -101,7 +101,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_OGL_AA_LINE_GAMMA.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: OGL_AA_LINE_GAMMA_MIN
     path: ../NVAPIWrapper/cs_generated/EValues_OGL_AA_LINE_GAMMA.cs
@@ -128,7 +128,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_OGL_AA_LINE_GAMMA.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: OGL_AA_LINE_GAMMA_MAX
     path: ../NVAPIWrapper/cs_generated/EValues_OGL_AA_LINE_GAMMA.cs
@@ -155,7 +155,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_OGL_AA_LINE_GAMMA.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: OGL_AA_LINE_GAMMA_NUM_VALUES
     path: ../NVAPIWrapper/cs_generated/EValues_OGL_AA_LINE_GAMMA.cs
@@ -182,7 +182,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_OGL_AA_LINE_GAMMA.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: OGL_AA_LINE_GAMMA_DEFAULT
     path: ../NVAPIWrapper/cs_generated/EValues_OGL_AA_LINE_GAMMA.cs

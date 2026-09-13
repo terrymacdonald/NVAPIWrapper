@@ -19,7 +19,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GPU_CLIENT_UTIL_DOMAIN_ID.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: _NV_GPU_CLIENT_UTIL_DOMAIN_ID
     path: ../NVAPIWrapper/cs_generated/_NV_GPU_CLIENT_UTIL_DOMAIN_ID.cs
@@ -45,7 +45,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GPU_CLIENT_UTIL_DOMAIN_ID.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_GPU_CLIENT_UTIL_DOMAIN_GRAPHICS
     path: ../NVAPIWrapper/cs_generated/_NV_GPU_CLIENT_UTIL_DOMAIN_ID.cs
@@ -72,7 +72,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GPU_CLIENT_UTIL_DOMAIN_ID.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_GPU_CLIENT_UTIL_DOMAIN_FRAME_BUFFER
     path: ../NVAPIWrapper/cs_generated/_NV_GPU_CLIENT_UTIL_DOMAIN_ID.cs
@@ -99,7 +99,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GPU_CLIENT_UTIL_DOMAIN_ID.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_GPU_CLIENT_UTIL_DOMAIN_VIDEO
     path: ../NVAPIWrapper/cs_generated/_NV_GPU_CLIENT_UTIL_DOMAIN_ID.cs
@@ -126,7 +126,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GPU_CLIENT_UTIL_DOMAIN_ID.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_GPU_CLIENT_UTIL_DOMAIN_RSVD
     path: ../NVAPIWrapper/cs_generated/_NV_GPU_CLIENT_UTIL_DOMAIN_ID.cs

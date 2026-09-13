@@ -21,7 +21,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_QUERY_MULTIVIEW_SUPPORT_PARAMS_V1.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: _NV_QUERY_MULTIVIEW_SUPPORT_PARAMS_V1
     path: ../NVAPIWrapper/cs_generated/_NV_QUERY_MULTIVIEW_SUPPORT_PARAMS_V1.cs
@@ -54,7 +54,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_QUERY_MULTIVIEW_SUPPORT_PARAMS_V1.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: version
     path: ../NVAPIWrapper/cs_generated/_NV_QUERY_MULTIVIEW_SUPPORT_PARAMS_V1.cs
@@ -82,7 +82,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_QUERY_MULTIVIEW_SUPPORT_PARAMS_V1.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: _bitfield
     path: ../NVAPIWrapper/cs_generated/_NV_QUERY_MULTIVIEW_SUPPORT_PARAMS_V1.cs
@@ -109,7 +109,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_QUERY_MULTIVIEW_SUPPORT_PARAMS_V1.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: bMultiViewSupported
     path: ../NVAPIWrapper/cs_generated/_NV_QUERY_MULTIVIEW_SUPPORT_PARAMS_V1.cs
@@ -139,7 +139,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_QUERY_MULTIVIEW_SUPPORT_PARAMS_V1.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: bSinglePassStereoSupported
     path: ../NVAPIWrapper/cs_generated/_NV_QUERY_MULTIVIEW_SUPPORT_PARAMS_V1.cs
@@ -169,7 +169,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_QUERY_MULTIVIEW_SUPPORT_PARAMS_V1.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: bSinglePassStereoXYZWSupported
     path: ../NVAPIWrapper/cs_generated/_NV_QUERY_MULTIVIEW_SUPPORT_PARAMS_V1.cs
@@ -199,7 +199,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_QUERY_MULTIVIEW_SUPPORT_PARAMS_V1.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: reserved
     path: ../NVAPIWrapper/cs_generated/_NV_QUERY_MULTIVIEW_SUPPORT_PARAMS_V1.cs

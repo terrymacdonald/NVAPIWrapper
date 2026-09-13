@@ -20,5 +20,8 @@ namespace NVAPIWrapper
 
         /// <include file='_NV_LICENSE_FEATURE_TYPE.xml' path='doc/member[@name="_NV_LICENSE_FEATURE_TYPE.NV_LICENSE_FEATURE_COMPUTE"]/*' />
         NV_LICENSE_FEATURE_COMPUTE = 4,
+
+        /// <include file='_NV_LICENSE_FEATURE_TYPE.xml' path='doc/member[@name="_NV_LICENSE_FEATURE_TYPE.NV_LICENSE_FEATURE_VGAMEDEV"]/*' />
+        NV_LICENSE_FEATURE_VGAMEDEV = 5,
     }
 }

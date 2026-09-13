@@ -34,7 +34,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NVLINK_LINK_STATUS_INFO_V1.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVLINK_LINK_STATUS_INFO_V1
     path: ../NVAPIWrapper/cs_generated/NVLINK_LINK_STATUS_INFO_V1.cs
@@ -67,7 +67,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NVLINK_LINK_STATUS_INFO_V1.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: capsTbl
     path: ../NVAPIWrapper/cs_generated/NVLINK_LINK_STATUS_INFO_V1.cs
@@ -95,7 +95,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NVLINK_LINK_STATUS_INFO_V1.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: phyType
     path: ../NVAPIWrapper/cs_generated/NVLINK_LINK_STATUS_INFO_V1.cs
@@ -123,7 +123,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NVLINK_LINK_STATUS_INFO_V1.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: subLinkWidth
     path: ../NVAPIWrapper/cs_generated/NVLINK_LINK_STATUS_INFO_V1.cs
@@ -151,7 +151,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NVLINK_LINK_STATUS_INFO_V1.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: linkState
     path: ../NVAPIWrapper/cs_generated/NVLINK_LINK_STATUS_INFO_V1.cs
@@ -179,7 +179,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NVLINK_LINK_STATUS_INFO_V1.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: rxSublinkStatus
     path: ../NVAPIWrapper/cs_generated/NVLINK_LINK_STATUS_INFO_V1.cs
@@ -207,7 +207,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NVLINK_LINK_STATUS_INFO_V1.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: txSublinkStatus
     path: ../NVAPIWrapper/cs_generated/NVLINK_LINK_STATUS_INFO_V1.cs
@@ -235,7 +235,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NVLINK_LINK_STATUS_INFO_V1.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: nvlinkVersion
     path: ../NVAPIWrapper/cs_generated/NVLINK_LINK_STATUS_INFO_V1.cs
@@ -263,7 +263,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NVLINK_LINK_STATUS_INFO_V1.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: nciVersion
     path: ../NVAPIWrapper/cs_generated/NVLINK_LINK_STATUS_INFO_V1.cs
@@ -291,7 +291,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NVLINK_LINK_STATUS_INFO_V1.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: phyVersion
     path: ../NVAPIWrapper/cs_generated/NVLINK_LINK_STATUS_INFO_V1.cs
@@ -319,7 +319,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NVLINK_LINK_STATUS_INFO_V1.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: nvlinkCommonClockSpeedMhz
     path: ../NVAPIWrapper/cs_generated/NVLINK_LINK_STATUS_INFO_V1.cs
@@ -347,7 +347,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NVLINK_LINK_STATUS_INFO_V1.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: nvlinkRefClkSpeedMhz
     path: ../NVAPIWrapper/cs_generated/NVLINK_LINK_STATUS_INFO_V1.cs
@@ -375,7 +375,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NVLINK_LINK_STATUS_INFO_V1.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: nvlinkRefClkType
     path: ../NVAPIWrapper/cs_generated/NVLINK_LINK_STATUS_INFO_V1.cs
@@ -403,7 +403,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NVLINK_LINK_STATUS_INFO_V1.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: nvlinkLinkClockMhz
     path: ../NVAPIWrapper/cs_generated/NVLINK_LINK_STATUS_INFO_V1.cs
@@ -431,7 +431,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NVLINK_LINK_STATUS_INFO_V1.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: _bitfield
     path: ../NVAPIWrapper/cs_generated/NVLINK_LINK_STATUS_INFO_V1.cs
@@ -458,7 +458,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NVLINK_LINK_STATUS_INFO_V1.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: connected
     path: ../NVAPIWrapper/cs_generated/NVLINK_LINK_STATUS_INFO_V1.cs
@@ -488,7 +488,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NVLINK_LINK_STATUS_INFO_V1.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: reserved
     path: ../NVAPIWrapper/cs_generated/NVLINK_LINK_STATUS_INFO_V1.cs
@@ -518,7 +518,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NVLINK_LINK_STATUS_INFO_V1.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: loopProperty
     path: ../NVAPIWrapper/cs_generated/NVLINK_LINK_STATUS_INFO_V1.cs
@@ -546,7 +546,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NVLINK_LINK_STATUS_INFO_V1.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: remoteDeviceLinkNumber
     path: ../NVAPIWrapper/cs_generated/NVLINK_LINK_STATUS_INFO_V1.cs
@@ -574,7 +574,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NVLINK_LINK_STATUS_INFO_V1.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: remoteDeviceInfo
     path: ../NVAPIWrapper/cs_generated/NVLINK_LINK_STATUS_INFO_V1.cs

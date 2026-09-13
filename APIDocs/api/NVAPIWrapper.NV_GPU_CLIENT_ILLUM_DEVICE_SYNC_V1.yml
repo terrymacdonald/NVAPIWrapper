@@ -18,7 +18,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_GPU_CLIENT_ILLUM_DEVICE_SYNC_V1.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_GPU_CLIENT_ILLUM_DEVICE_SYNC_V1
     path: ../NVAPIWrapper/cs_generated/NV_GPU_CLIENT_ILLUM_DEVICE_SYNC_V1.cs
@@ -51,7 +51,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_GPU_CLIENT_ILLUM_DEVICE_SYNC_V1.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: bSync
     path: ../NVAPIWrapper/cs_generated/NV_GPU_CLIENT_ILLUM_DEVICE_SYNC_V1.cs
@@ -79,7 +79,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_GPU_CLIENT_ILLUM_DEVICE_SYNC_V1.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: timeStampms
     path: ../NVAPIWrapper/cs_generated/NV_GPU_CLIENT_ILLUM_DEVICE_SYNC_V1.cs
@@ -107,7 +107,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_GPU_CLIENT_ILLUM_DEVICE_SYNC_V1.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: rsvd
     path: ../NVAPIWrapper/cs_generated/NV_GPU_CLIENT_ILLUM_DEVICE_SYNC_V1.cs

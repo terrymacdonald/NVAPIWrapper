@@ -25,7 +25,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVDRS_APPLICATION_V3.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: _NVDRS_APPLICATION_V3
     path: ../NVAPIWrapper/cs_generated/_NVDRS_APPLICATION_V3.cs
@@ -58,7 +58,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVDRS_APPLICATION_V3.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: version
     path: ../NVAPIWrapper/cs_generated/_NVDRS_APPLICATION_V3.cs
@@ -86,7 +86,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVDRS_APPLICATION_V3.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: isPredefined
     path: ../NVAPIWrapper/cs_generated/_NVDRS_APPLICATION_V3.cs
@@ -114,7 +114,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVDRS_APPLICATION_V3.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: appName
     path: ../NVAPIWrapper/cs_generated/_NVDRS_APPLICATION_V3.cs
@@ -142,7 +142,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVDRS_APPLICATION_V3.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: userFriendlyName
     path: ../NVAPIWrapper/cs_generated/_NVDRS_APPLICATION_V3.cs
@@ -170,7 +170,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVDRS_APPLICATION_V3.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: launcher
     path: ../NVAPIWrapper/cs_generated/_NVDRS_APPLICATION_V3.cs
@@ -198,7 +198,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVDRS_APPLICATION_V3.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: fileInFolder
     path: ../NVAPIWrapper/cs_generated/_NVDRS_APPLICATION_V3.cs
@@ -226,7 +226,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVDRS_APPLICATION_V3.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: _bitfield
     path: ../NVAPIWrapper/cs_generated/_NVDRS_APPLICATION_V3.cs
@@ -253,7 +253,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVDRS_APPLICATION_V3.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: isMetro
     path: ../NVAPIWrapper/cs_generated/_NVDRS_APPLICATION_V3.cs
@@ -283,7 +283,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVDRS_APPLICATION_V3.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: isCommandLine
     path: ../NVAPIWrapper/cs_generated/_NVDRS_APPLICATION_V3.cs
@@ -313,7 +313,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVDRS_APPLICATION_V3.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: reserved
     path: ../NVAPIWrapper/cs_generated/_NVDRS_APPLICATION_V3.cs

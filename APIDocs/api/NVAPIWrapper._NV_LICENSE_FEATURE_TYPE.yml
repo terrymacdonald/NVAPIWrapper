@@ -10,6 +10,7 @@ items:
   - NVAPIWrapper._NV_LICENSE_FEATURE_TYPE.NV_LICENSE_FEATURE_NVIDIA_RTX
   - NVAPIWrapper._NV_LICENSE_FEATURE_TYPE.NV_LICENSE_FEATURE_QUADRO
   - NVAPIWrapper._NV_LICENSE_FEATURE_TYPE.NV_LICENSE_FEATURE_UNKNOWN
+  - NVAPIWrapper._NV_LICENSE_FEATURE_TYPE.NV_LICENSE_FEATURE_VGAMEDEV
   - NVAPIWrapper._NV_LICENSE_FEATURE_TYPE.NV_LICENSE_FEATURE_VGPU
   langs:
   - csharp
@@ -21,7 +22,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_LICENSE_FEATURE_TYPE.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: _NV_LICENSE_FEATURE_TYPE
     path: ../NVAPIWrapper/cs_generated/_NV_LICENSE_FEATURE_TYPE.cs
@@ -47,7 +48,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_LICENSE_FEATURE_TYPE.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_LICENSE_FEATURE_UNKNOWN
     path: ../NVAPIWrapper/cs_generated/_NV_LICENSE_FEATURE_TYPE.cs
@@ -74,7 +75,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_LICENSE_FEATURE_TYPE.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_LICENSE_FEATURE_VGPU
     path: ../NVAPIWrapper/cs_generated/_NV_LICENSE_FEATURE_TYPE.cs
@@ -101,7 +102,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_LICENSE_FEATURE_TYPE.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_LICENSE_FEATURE_NVIDIA_RTX
     path: ../NVAPIWrapper/cs_generated/_NV_LICENSE_FEATURE_TYPE.cs
@@ -128,7 +129,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_LICENSE_FEATURE_TYPE.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_LICENSE_FEATURE_QUADRO
     path: ../NVAPIWrapper/cs_generated/_NV_LICENSE_FEATURE_TYPE.cs
@@ -155,7 +156,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_LICENSE_FEATURE_TYPE.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_LICENSE_FEATURE_GAMING
     path: ../NVAPIWrapper/cs_generated/_NV_LICENSE_FEATURE_TYPE.cs
@@ -182,7 +183,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_LICENSE_FEATURE_TYPE.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_LICENSE_FEATURE_COMPUTE
     path: ../NVAPIWrapper/cs_generated/_NV_LICENSE_FEATURE_TYPE.cs
@@ -193,6 +194,33 @@ items:
   example: []
   syntax:
     content: NV_LICENSE_FEATURE_COMPUTE = 4
+    return:
+      type: NVAPIWrapper._NV_LICENSE_FEATURE_TYPE
+- uid: NVAPIWrapper._NV_LICENSE_FEATURE_TYPE.NV_LICENSE_FEATURE_VGAMEDEV
+  commentId: F:NVAPIWrapper._NV_LICENSE_FEATURE_TYPE.NV_LICENSE_FEATURE_VGAMEDEV
+  id: NV_LICENSE_FEATURE_VGAMEDEV
+  parent: NVAPIWrapper._NV_LICENSE_FEATURE_TYPE
+  langs:
+  - csharp
+  - vb
+  name: NV_LICENSE_FEATURE_VGAMEDEV
+  nameWithType: _NV_LICENSE_FEATURE_TYPE.NV_LICENSE_FEATURE_VGAMEDEV
+  fullName: NVAPIWrapper._NV_LICENSE_FEATURE_TYPE.NV_LICENSE_FEATURE_VGAMEDEV
+  type: Field
+  source:
+    remote:
+      path: NVAPIWrapper/cs_generated/_NV_LICENSE_FEATURE_TYPE.cs
+      branch: feature-2026-09-13-update-R615
+      repo: https://github.com/terrymacdonald/NVAPIWrapper.git
+    id: NV_LICENSE_FEATURE_VGAMEDEV
+    path: ../NVAPIWrapper/cs_generated/_NV_LICENSE_FEATURE_TYPE.cs
+    startLine: 24
+  assemblies:
+  - NVAPIWrapper
+  namespace: NVAPIWrapper
+  example: []
+  syntax:
+    content: NV_LICENSE_FEATURE_VGAMEDEV = 5
     return:
       type: NVAPIWrapper._NV_LICENSE_FEATURE_TYPE
 references:

@@ -15,6 +15,7 @@ items:
   - NVAPIWrapper.NVAPIQuadroGSyncHelper.CreateSyncStatus
   - NVAPIWrapper.NVAPIQuadroGSyncHelper.Dispose
   - NVAPIWrapper.NVAPIQuadroGSyncHelper.GetControlParameters
+  - NVAPIWrapper.NVAPIQuadroGSyncHelper.GetProxyPhysicalGpus(NVAPIWrapper.NVAPIGSyncGpuDto)
   - NVAPIWrapper.NVAPIQuadroGSyncHelper.GetStatusParameters
   - NVAPIWrapper.NVAPIQuadroGSyncHelper.GetSyncStatus(NVAPIWrapper.NVAPIPhysicalGpuHelper)
   - NVAPIWrapper.NVAPIQuadroGSyncHelper.GetTopology
@@ -31,7 +32,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPIQuadroGSyncHelper
     path: ../NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
@@ -69,7 +70,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: CreateCapabilities
     path: ../NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
@@ -99,7 +100,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: CreateControlParameters
     path: ../NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
@@ -129,7 +130,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: CreateDelay
     path: ../NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
@@ -159,7 +160,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: CreateSyncStatus
     path: ../NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
@@ -189,7 +190,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: CreateStatusParameters
     path: ../NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
@@ -219,7 +220,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: CreateGSyncGpu
     path: ../NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
@@ -249,7 +250,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: CreateGSyncDisplay
     path: ../NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
@@ -260,10 +261,10 @@ items:
   summary: Create a G-Sync display topology struct with the version initialized.
   example: []
   syntax:
-    content: public static _NV_GSYNC_DISPLAY CreateGSyncDisplay()
+    content: public static _NV_GSYNC_DISPLAY_V2 CreateGSyncDisplay()
     return:
-      type: NVAPIWrapper._NV_GSYNC_DISPLAY
-    content.vb: Public Shared Function CreateGSyncDisplay() As _NV_GSYNC_DISPLAY
+      type: NVAPIWrapper._NV_GSYNC_DISPLAY_V2
+    content.vb: Public Shared Function CreateGSyncDisplay() As _NV_GSYNC_DISPLAY_V2
   overload: NVAPIWrapper.NVAPIQuadroGSyncHelper.CreateGSyncDisplay*
 - uid: NVAPIWrapper.NVAPIQuadroGSyncHelper.QueryCapabilities
   commentId: M:NVAPIWrapper.NVAPIQuadroGSyncHelper.QueryCapabilities
@@ -279,7 +280,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: QueryCapabilities
     path: ../NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
@@ -310,7 +311,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetTopology
     path: ../NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
@@ -341,7 +342,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetControlParameters
     path: ../NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
@@ -372,7 +373,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SetControlParameters
     path: ../NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
@@ -407,7 +408,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: AdjustSyncDelay
     path: ../NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
@@ -445,7 +446,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetSyncStatus
     path: ../NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
@@ -480,7 +481,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetStatusParameters
     path: ../NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
@@ -511,7 +512,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SetSyncStateSettings
     path: ../NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
@@ -538,6 +539,41 @@ items:
   nameWithType.vb: NVAPIQuadroGSyncHelper.SetSyncStateSettings(NVAPIGSyncDisplayDto(), UInteger)
   fullName.vb: NVAPIWrapper.NVAPIQuadroGSyncHelper.SetSyncStateSettings(NVAPIWrapper.NVAPIGSyncDisplayDto(), UInteger)
   name.vb: SetSyncStateSettings(NVAPIGSyncDisplayDto(), UInteger)
+- uid: NVAPIWrapper.NVAPIQuadroGSyncHelper.GetProxyPhysicalGpus(NVAPIWrapper.NVAPIGSyncGpuDto)
+  commentId: M:NVAPIWrapper.NVAPIQuadroGSyncHelper.GetProxyPhysicalGpus(NVAPIWrapper.NVAPIGSyncGpuDto)
+  id: GetProxyPhysicalGpus(NVAPIWrapper.NVAPIGSyncGpuDto)
+  parent: NVAPIWrapper.NVAPIQuadroGSyncHelper
+  langs:
+  - csharp
+  - vb
+  name: GetProxyPhysicalGpus(NVAPIGSyncGpuDto)
+  nameWithType: NVAPIQuadroGSyncHelper.GetProxyPhysicalGpus(NVAPIGSyncGpuDto)
+  fullName: NVAPIWrapper.NVAPIQuadroGSyncHelper.GetProxyPhysicalGpus(NVAPIWrapper.NVAPIGSyncGpuDto)
+  type: Method
+  source:
+    remote:
+      path: NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
+      branch: feature-2026-09-13-update-R615
+      repo: https://github.com/terrymacdonald/NVAPIWrapper.git
+    id: GetProxyPhysicalGpus
+    path: ../NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
+    startLine: 375
+  assemblies:
+  - NVAPIWrapper
+  namespace: NVAPIWrapper
+  summary: Resolve the proxy physical GPU referenced by a G-Sync GPU DTO.
+  example: []
+  syntax:
+    content: public NVAPIPhysicalGpuHelper[] GetProxyPhysicalGpus(NVAPIGSyncGpuDto gpu)
+    parameters:
+    - id: gpu
+      type: NVAPIWrapper.NVAPIGSyncGpuDto
+      description: G-Sync GPU DTO.
+    return:
+      type: NVAPIWrapper.NVAPIPhysicalGpuHelper[]
+      description: A single physical GPU helper when the DTO references a valid proxy physical GPU; otherwise an empty array.
+    content.vb: Public Function GetProxyPhysicalGpus(gpu As NVAPIGSyncGpuDto) As NVAPIPhysicalGpuHelper()
+  overload: NVAPIWrapper.NVAPIQuadroGSyncHelper.GetProxyPhysicalGpus*
 - uid: NVAPIWrapper.NVAPIQuadroGSyncHelper.Dispose
   commentId: M:NVAPIWrapper.NVAPIQuadroGSyncHelper.Dispose
   id: Dispose
@@ -552,11 +588,11 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Dispose
     path: ../NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
-    startLine: 396
+    startLine: 411
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -880,13 +916,13 @@ references:
   name: CreateGSyncDisplay
   nameWithType: NVAPIQuadroGSyncHelper.CreateGSyncDisplay
   fullName: NVAPIWrapper.NVAPIQuadroGSyncHelper.CreateGSyncDisplay
-- uid: NVAPIWrapper._NV_GSYNC_DISPLAY
-  commentId: T:NVAPIWrapper._NV_GSYNC_DISPLAY
+- uid: NVAPIWrapper._NV_GSYNC_DISPLAY_V2
+  commentId: T:NVAPIWrapper._NV_GSYNC_DISPLAY_V2
   parent: NVAPIWrapper
-  href: NVAPIWrapper._NV_GSYNC_DISPLAY.html
-  name: _NV_GSYNC_DISPLAY
-  nameWithType: _NV_GSYNC_DISPLAY
-  fullName: NVAPIWrapper._NV_GSYNC_DISPLAY
+  href: NVAPIWrapper._NV_GSYNC_DISPLAY_V2.html
+  name: _NV_GSYNC_DISPLAY_V2
+  nameWithType: _NV_GSYNC_DISPLAY_V2
+  fullName: NVAPIWrapper._NV_GSYNC_DISPLAY_V2
 - uid: NVAPIWrapper.NVAPIQuadroGSyncHelper.QueryCapabilities*
   commentId: Overload:NVAPIWrapper.NVAPIQuadroGSyncHelper.QueryCapabilities
   href: NVAPIWrapper.NVAPIQuadroGSyncHelper.html#NVAPIWrapper_NVAPIQuadroGSyncHelper_QueryCapabilities
@@ -1154,6 +1190,40 @@ references:
   nameWithType.vb: UInteger
   fullName.vb: UInteger
   name.vb: UInteger
+- uid: NVAPIWrapper.NVAPIQuadroGSyncHelper.GetProxyPhysicalGpus*
+  commentId: Overload:NVAPIWrapper.NVAPIQuadroGSyncHelper.GetProxyPhysicalGpus
+  href: NVAPIWrapper.NVAPIQuadroGSyncHelper.html#NVAPIWrapper_NVAPIQuadroGSyncHelper_GetProxyPhysicalGpus_NVAPIWrapper_NVAPIGSyncGpuDto_
+  name: GetProxyPhysicalGpus
+  nameWithType: NVAPIQuadroGSyncHelper.GetProxyPhysicalGpus
+  fullName: NVAPIWrapper.NVAPIQuadroGSyncHelper.GetProxyPhysicalGpus
+- uid: NVAPIWrapper.NVAPIGSyncGpuDto
+  commentId: T:NVAPIWrapper.NVAPIGSyncGpuDto
+  parent: NVAPIWrapper
+  href: NVAPIWrapper.NVAPIGSyncGpuDto.html
+  name: NVAPIGSyncGpuDto
+  nameWithType: NVAPIGSyncGpuDto
+  fullName: NVAPIWrapper.NVAPIGSyncGpuDto
+- uid: NVAPIWrapper.NVAPIPhysicalGpuHelper[]
+  isExternal: true
+  href: NVAPIWrapper.NVAPIPhysicalGpuHelper.html
+  name: NVAPIPhysicalGpuHelper[]
+  nameWithType: NVAPIPhysicalGpuHelper[]
+  fullName: NVAPIWrapper.NVAPIPhysicalGpuHelper[]
+  nameWithType.vb: NVAPIPhysicalGpuHelper()
+  fullName.vb: NVAPIWrapper.NVAPIPhysicalGpuHelper()
+  name.vb: NVAPIPhysicalGpuHelper()
+  spec.csharp:
+  - uid: NVAPIWrapper.NVAPIPhysicalGpuHelper
+    name: NVAPIPhysicalGpuHelper
+    href: NVAPIWrapper.NVAPIPhysicalGpuHelper.html
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: NVAPIWrapper.NVAPIPhysicalGpuHelper
+    name: NVAPIPhysicalGpuHelper
+    href: NVAPIWrapper.NVAPIPhysicalGpuHelper.html
+  - name: (
+  - name: )
 - uid: NVAPIWrapper.NVAPIQuadroGSyncHelper.Dispose*
   commentId: Overload:NVAPIWrapper.NVAPIQuadroGSyncHelper.Dispose
   href: NVAPIWrapper.NVAPIQuadroGSyncHelper.html#NVAPIWrapper_NVAPIQuadroGSyncHelper_Dispose

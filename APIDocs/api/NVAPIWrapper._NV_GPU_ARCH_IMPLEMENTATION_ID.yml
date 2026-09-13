@@ -92,7 +92,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GPU_ARCH_IMPLEMENTATION_ID.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: _NV_GPU_ARCH_IMPLEMENTATION_ID
     path: ../NVAPIWrapper/cs_generated/_NV_GPU_ARCH_IMPLEMENTATION_ID.cs
@@ -118,7 +118,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GPU_ARCH_IMPLEMENTATION_ID.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_GPU_ARCH_IMPLEMENTATION_T20
     path: ../NVAPIWrapper/cs_generated/_NV_GPU_ARCH_IMPLEMENTATION_ID.cs
@@ -145,7 +145,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GPU_ARCH_IMPLEMENTATION_ID.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_GPU_ARCH_IMPLEMENTATION_T30
     path: ../NVAPIWrapper/cs_generated/_NV_GPU_ARCH_IMPLEMENTATION_ID.cs
@@ -172,7 +172,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GPU_ARCH_IMPLEMENTATION_ID.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_GPU_ARCH_IMPLEMENTATION_T35
     path: ../NVAPIWrapper/cs_generated/_NV_GPU_ARCH_IMPLEMENTATION_ID.cs
@@ -199,7 +199,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GPU_ARCH_IMPLEMENTATION_ID.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_GPU_ARCH_IMPLEMENTATION_T40
     path: ../NVAPIWrapper/cs_generated/_NV_GPU_ARCH_IMPLEMENTATION_ID.cs
@@ -226,7 +226,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GPU_ARCH_IMPLEMENTATION_ID.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_GPU_ARCH_IMPLEMENTATION_T124
     path: ../NVAPIWrapper/cs_generated/_NV_GPU_ARCH_IMPLEMENTATION_ID.cs
@@ -253,7 +253,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GPU_ARCH_IMPLEMENTATION_ID.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_GPU_ARCH_IMPLEMENTATION_NV40
     path: ../NVAPIWrapper/cs_generated/_NV_GPU_ARCH_IMPLEMENTATION_ID.cs
@@ -280,7 +280,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GPU_ARCH_IMPLEMENTATION_ID.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_GPU_ARCH_IMPLEMENTATION_NV41
     path: ../NVAPIWrapper/cs_generated/_NV_GPU_ARCH_IMPLEMENTATION_ID.cs
@@ -307,7 +307,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GPU_ARCH_IMPLEMENTATION_ID.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_GPU_ARCH_IMPLEMENTATION_NV42
     path: ../NVAPIWrapper/cs_generated/_NV_GPU_ARCH_IMPLEMENTATION_ID.cs
@@ -334,7 +334,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GPU_ARCH_IMPLEMENTATION_ID.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_GPU_ARCH_IMPLEMENTATION_NV43
     path: ../NVAPIWrapper/cs_generated/_NV_GPU_ARCH_IMPLEMENTATION_ID.cs
@@ -361,7 +361,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GPU_ARCH_IMPLEMENTATION_ID.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_GPU_ARCH_IMPLEMENTATION_NV44
     path: ../NVAPIWrapper/cs_generated/_NV_GPU_ARCH_IMPLEMENTATION_ID.cs
@@ -388,7 +388,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GPU_ARCH_IMPLEMENTATION_ID.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_GPU_ARCH_IMPLEMENTATION_NV44A
     path: ../NVAPIWrapper/cs_generated/_NV_GPU_ARCH_IMPLEMENTATION_ID.cs
@@ -415,7 +415,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GPU_ARCH_IMPLEMENTATION_ID.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_GPU_ARCH_IMPLEMENTATION_NV46
     path: ../NVAPIWrapper/cs_generated/_NV_GPU_ARCH_IMPLEMENTATION_ID.cs
@@ -442,7 +442,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GPU_ARCH_IMPLEMENTATION_ID.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_GPU_ARCH_IMPLEMENTATION_NV47
     path: ../NVAPIWrapper/cs_generated/_NV_GPU_ARCH_IMPLEMENTATION_ID.cs
@@ -469,7 +469,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GPU_ARCH_IMPLEMENTATION_ID.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_GPU_ARCH_IMPLEMENTATION_NV49
     path: ../NVAPIWrapper/cs_generated/_NV_GPU_ARCH_IMPLEMENTATION_ID.cs
@@ -496,7 +496,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GPU_ARCH_IMPLEMENTATION_ID.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_GPU_ARCH_IMPLEMENTATION_NV4B
     path: ../NVAPIWrapper/cs_generated/_NV_GPU_ARCH_IMPLEMENTATION_ID.cs
@@ -523,7 +523,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GPU_ARCH_IMPLEMENTATION_ID.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_GPU_ARCH_IMPLEMENTATION_NV4C
     path: ../NVAPIWrapper/cs_generated/_NV_GPU_ARCH_IMPLEMENTATION_ID.cs
@@ -550,7 +550,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GPU_ARCH_IMPLEMENTATION_ID.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_GPU_ARCH_IMPLEMENTATION_NV4E
     path: ../NVAPIWrapper/cs_generated/_NV_GPU_ARCH_IMPLEMENTATION_ID.cs
@@ -577,7 +577,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GPU_ARCH_IMPLEMENTATION_ID.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_GPU_ARCH_IMPLEMENTATION_NV50
     path: ../NVAPIWrapper/cs_generated/_NV_GPU_ARCH_IMPLEMENTATION_ID.cs
@@ -604,7 +604,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GPU_ARCH_IMPLEMENTATION_ID.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_GPU_ARCH_IMPLEMENTATION_NV63
     path: ../NVAPIWrapper/cs_generated/_NV_GPU_ARCH_IMPLEMENTATION_ID.cs
@@ -631,7 +631,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GPU_ARCH_IMPLEMENTATION_ID.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_GPU_ARCH_IMPLEMENTATION_NV67
     path: ../NVAPIWrapper/cs_generated/_NV_GPU_ARCH_IMPLEMENTATION_ID.cs
@@ -658,7 +658,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GPU_ARCH_IMPLEMENTATION_ID.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_GPU_ARCH_IMPLEMENTATION_G84
     path: ../NVAPIWrapper/cs_generated/_NV_GPU_ARCH_IMPLEMENTATION_ID.cs
@@ -685,7 +685,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GPU_ARCH_IMPLEMENTATION_ID.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_GPU_ARCH_IMPLEMENTATION_G86
     path: ../NVAPIWrapper/cs_generated/_NV_GPU_ARCH_IMPLEMENTATION_ID.cs
@@ -712,7 +712,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GPU_ARCH_IMPLEMENTATION_ID.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_GPU_ARCH_IMPLEMENTATION_G92
     path: ../NVAPIWrapper/cs_generated/_NV_GPU_ARCH_IMPLEMENTATION_ID.cs
@@ -739,7 +739,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GPU_ARCH_IMPLEMENTATION_ID.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_GPU_ARCH_IMPLEMENTATION_G94
     path: ../NVAPIWrapper/cs_generated/_NV_GPU_ARCH_IMPLEMENTATION_ID.cs
@@ -766,7 +766,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GPU_ARCH_IMPLEMENTATION_ID.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_GPU_ARCH_IMPLEMENTATION_G96
     path: ../NVAPIWrapper/cs_generated/_NV_GPU_ARCH_IMPLEMENTATION_ID.cs
@@ -793,7 +793,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GPU_ARCH_IMPLEMENTATION_ID.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_GPU_ARCH_IMPLEMENTATION_G98
     path: ../NVAPIWrapper/cs_generated/_NV_GPU_ARCH_IMPLEMENTATION_ID.cs
@@ -820,7 +820,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GPU_ARCH_IMPLEMENTATION_ID.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_GPU_ARCH_IMPLEMENTATION_GT200
     path: ../NVAPIWrapper/cs_generated/_NV_GPU_ARCH_IMPLEMENTATION_ID.cs
@@ -847,7 +847,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GPU_ARCH_IMPLEMENTATION_ID.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_GPU_ARCH_IMPLEMENTATION_GT212
     path: ../NVAPIWrapper/cs_generated/_NV_GPU_ARCH_IMPLEMENTATION_ID.cs
@@ -874,7 +874,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GPU_ARCH_IMPLEMENTATION_ID.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_GPU_ARCH_IMPLEMENTATION_GT214
     path: ../NVAPIWrapper/cs_generated/_NV_GPU_ARCH_IMPLEMENTATION_ID.cs
@@ -901,7 +901,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GPU_ARCH_IMPLEMENTATION_ID.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_GPU_ARCH_IMPLEMENTATION_GT215
     path: ../NVAPIWrapper/cs_generated/_NV_GPU_ARCH_IMPLEMENTATION_ID.cs
@@ -928,7 +928,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GPU_ARCH_IMPLEMENTATION_ID.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_GPU_ARCH_IMPLEMENTATION_GT216
     path: ../NVAPIWrapper/cs_generated/_NV_GPU_ARCH_IMPLEMENTATION_ID.cs
@@ -955,7 +955,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GPU_ARCH_IMPLEMENTATION_ID.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_GPU_ARCH_IMPLEMENTATION_GT218
     path: ../NVAPIWrapper/cs_generated/_NV_GPU_ARCH_IMPLEMENTATION_ID.cs
@@ -982,7 +982,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GPU_ARCH_IMPLEMENTATION_ID.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_GPU_ARCH_IMPLEMENTATION_MCP77
     path: ../NVAPIWrapper/cs_generated/_NV_GPU_ARCH_IMPLEMENTATION_ID.cs
@@ -1009,7 +1009,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GPU_ARCH_IMPLEMENTATION_ID.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_GPU_ARCH_IMPLEMENTATION_GT21C
     path: ../NVAPIWrapper/cs_generated/_NV_GPU_ARCH_IMPLEMENTATION_ID.cs
@@ -1036,7 +1036,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GPU_ARCH_IMPLEMENTATION_ID.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_GPU_ARCH_IMPLEMENTATION_MCP79
     path: ../NVAPIWrapper/cs_generated/_NV_GPU_ARCH_IMPLEMENTATION_ID.cs
@@ -1063,7 +1063,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GPU_ARCH_IMPLEMENTATION_ID.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_GPU_ARCH_IMPLEMENTATION_GT21A
     path: ../NVAPIWrapper/cs_generated/_NV_GPU_ARCH_IMPLEMENTATION_ID.cs
@@ -1090,7 +1090,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GPU_ARCH_IMPLEMENTATION_ID.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_GPU_ARCH_IMPLEMENTATION_MCP89
     path: ../NVAPIWrapper/cs_generated/_NV_GPU_ARCH_IMPLEMENTATION_ID.cs
@@ -1117,7 +1117,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GPU_ARCH_IMPLEMENTATION_ID.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_GPU_ARCH_IMPLEMENTATION_GF100
     path: ../NVAPIWrapper/cs_generated/_NV_GPU_ARCH_IMPLEMENTATION_ID.cs
@@ -1144,7 +1144,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GPU_ARCH_IMPLEMENTATION_ID.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_GPU_ARCH_IMPLEMENTATION_GF104
     path: ../NVAPIWrapper/cs_generated/_NV_GPU_ARCH_IMPLEMENTATION_ID.cs
@@ -1171,7 +1171,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GPU_ARCH_IMPLEMENTATION_ID.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_GPU_ARCH_IMPLEMENTATION_GF106
     path: ../NVAPIWrapper/cs_generated/_NV_GPU_ARCH_IMPLEMENTATION_ID.cs
@@ -1198,7 +1198,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GPU_ARCH_IMPLEMENTATION_ID.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_GPU_ARCH_IMPLEMENTATION_GF108
     path: ../NVAPIWrapper/cs_generated/_NV_GPU_ARCH_IMPLEMENTATION_ID.cs
@@ -1225,7 +1225,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GPU_ARCH_IMPLEMENTATION_ID.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_GPU_ARCH_IMPLEMENTATION_GF110
     path: ../NVAPIWrapper/cs_generated/_NV_GPU_ARCH_IMPLEMENTATION_ID.cs
@@ -1252,7 +1252,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GPU_ARCH_IMPLEMENTATION_ID.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_GPU_ARCH_IMPLEMENTATION_GF116
     path: ../NVAPIWrapper/cs_generated/_NV_GPU_ARCH_IMPLEMENTATION_ID.cs
@@ -1279,7 +1279,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GPU_ARCH_IMPLEMENTATION_ID.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_GPU_ARCH_IMPLEMENTATION_GF117
     path: ../NVAPIWrapper/cs_generated/_NV_GPU_ARCH_IMPLEMENTATION_ID.cs
@@ -1306,7 +1306,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GPU_ARCH_IMPLEMENTATION_ID.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_GPU_ARCH_IMPLEMENTATION_GF118
     path: ../NVAPIWrapper/cs_generated/_NV_GPU_ARCH_IMPLEMENTATION_ID.cs
@@ -1333,7 +1333,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GPU_ARCH_IMPLEMENTATION_ID.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_GPU_ARCH_IMPLEMENTATION_GF119
     path: ../NVAPIWrapper/cs_generated/_NV_GPU_ARCH_IMPLEMENTATION_ID.cs
@@ -1360,7 +1360,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GPU_ARCH_IMPLEMENTATION_ID.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_GPU_ARCH_IMPLEMENTATION_GK104
     path: ../NVAPIWrapper/cs_generated/_NV_GPU_ARCH_IMPLEMENTATION_ID.cs
@@ -1387,7 +1387,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GPU_ARCH_IMPLEMENTATION_ID.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_GPU_ARCH_IMPLEMENTATION_GK106
     path: ../NVAPIWrapper/cs_generated/_NV_GPU_ARCH_IMPLEMENTATION_ID.cs
@@ -1414,7 +1414,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GPU_ARCH_IMPLEMENTATION_ID.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_GPU_ARCH_IMPLEMENTATION_GK107
     path: ../NVAPIWrapper/cs_generated/_NV_GPU_ARCH_IMPLEMENTATION_ID.cs
@@ -1441,7 +1441,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GPU_ARCH_IMPLEMENTATION_ID.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_GPU_ARCH_IMPLEMENTATION_GK20A
     path: ../NVAPIWrapper/cs_generated/_NV_GPU_ARCH_IMPLEMENTATION_ID.cs
@@ -1468,7 +1468,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GPU_ARCH_IMPLEMENTATION_ID.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_GPU_ARCH_IMPLEMENTATION_GK110
     path: ../NVAPIWrapper/cs_generated/_NV_GPU_ARCH_IMPLEMENTATION_ID.cs
@@ -1495,7 +1495,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GPU_ARCH_IMPLEMENTATION_ID.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_GPU_ARCH_IMPLEMENTATION_GK208
     path: ../NVAPIWrapper/cs_generated/_NV_GPU_ARCH_IMPLEMENTATION_ID.cs
@@ -1522,7 +1522,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GPU_ARCH_IMPLEMENTATION_ID.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_GPU_ARCH_IMPLEMENTATION_GM204
     path: ../NVAPIWrapper/cs_generated/_NV_GPU_ARCH_IMPLEMENTATION_ID.cs
@@ -1549,7 +1549,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GPU_ARCH_IMPLEMENTATION_ID.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_GPU_ARCH_IMPLEMENTATION_GM206
     path: ../NVAPIWrapper/cs_generated/_NV_GPU_ARCH_IMPLEMENTATION_ID.cs
@@ -1576,7 +1576,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GPU_ARCH_IMPLEMENTATION_ID.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_GPU_ARCH_IMPLEMENTATION_GP100
     path: ../NVAPIWrapper/cs_generated/_NV_GPU_ARCH_IMPLEMENTATION_ID.cs
@@ -1603,7 +1603,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GPU_ARCH_IMPLEMENTATION_ID.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_GPU_ARCH_IMPLEMENTATION_GP000
     path: ../NVAPIWrapper/cs_generated/_NV_GPU_ARCH_IMPLEMENTATION_ID.cs
@@ -1630,7 +1630,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GPU_ARCH_IMPLEMENTATION_ID.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_GPU_ARCH_IMPLEMENTATION_GP102
     path: ../NVAPIWrapper/cs_generated/_NV_GPU_ARCH_IMPLEMENTATION_ID.cs
@@ -1657,7 +1657,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GPU_ARCH_IMPLEMENTATION_ID.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_GPU_ARCH_IMPLEMENTATION_GP104
     path: ../NVAPIWrapper/cs_generated/_NV_GPU_ARCH_IMPLEMENTATION_ID.cs
@@ -1684,7 +1684,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GPU_ARCH_IMPLEMENTATION_ID.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_GPU_ARCH_IMPLEMENTATION_GP106
     path: ../NVAPIWrapper/cs_generated/_NV_GPU_ARCH_IMPLEMENTATION_ID.cs
@@ -1711,7 +1711,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GPU_ARCH_IMPLEMENTATION_ID.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_GPU_ARCH_IMPLEMENTATION_GP107
     path: ../NVAPIWrapper/cs_generated/_NV_GPU_ARCH_IMPLEMENTATION_ID.cs
@@ -1738,7 +1738,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GPU_ARCH_IMPLEMENTATION_ID.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_GPU_ARCH_IMPLEMENTATION_GP108
     path: ../NVAPIWrapper/cs_generated/_NV_GPU_ARCH_IMPLEMENTATION_ID.cs
@@ -1765,7 +1765,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GPU_ARCH_IMPLEMENTATION_ID.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_GPU_ARCH_IMPLEMENTATION_GV100
     path: ../NVAPIWrapper/cs_generated/_NV_GPU_ARCH_IMPLEMENTATION_ID.cs
@@ -1792,7 +1792,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GPU_ARCH_IMPLEMENTATION_ID.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_GPU_ARCH_IMPLEMENTATION_GV10B
     path: ../NVAPIWrapper/cs_generated/_NV_GPU_ARCH_IMPLEMENTATION_ID.cs
@@ -1819,7 +1819,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GPU_ARCH_IMPLEMENTATION_ID.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_GPU_ARCH_IMPLEMENTATION_TU100
     path: ../NVAPIWrapper/cs_generated/_NV_GPU_ARCH_IMPLEMENTATION_ID.cs
@@ -1846,7 +1846,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GPU_ARCH_IMPLEMENTATION_ID.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_GPU_ARCH_IMPLEMENTATION_TU102
     path: ../NVAPIWrapper/cs_generated/_NV_GPU_ARCH_IMPLEMENTATION_ID.cs
@@ -1873,7 +1873,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GPU_ARCH_IMPLEMENTATION_ID.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_GPU_ARCH_IMPLEMENTATION_TU104
     path: ../NVAPIWrapper/cs_generated/_NV_GPU_ARCH_IMPLEMENTATION_ID.cs
@@ -1900,7 +1900,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GPU_ARCH_IMPLEMENTATION_ID.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_GPU_ARCH_IMPLEMENTATION_TU106
     path: ../NVAPIWrapper/cs_generated/_NV_GPU_ARCH_IMPLEMENTATION_ID.cs
@@ -1927,7 +1927,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GPU_ARCH_IMPLEMENTATION_ID.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_GPU_ARCH_IMPLEMENTATION_TU116
     path: ../NVAPIWrapper/cs_generated/_NV_GPU_ARCH_IMPLEMENTATION_ID.cs
@@ -1954,7 +1954,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GPU_ARCH_IMPLEMENTATION_ID.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_GPU_ARCH_IMPLEMENTATION_TU117
     path: ../NVAPIWrapper/cs_generated/_NV_GPU_ARCH_IMPLEMENTATION_ID.cs
@@ -1981,7 +1981,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GPU_ARCH_IMPLEMENTATION_ID.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_GPU_ARCH_IMPLEMENTATION_TU000
     path: ../NVAPIWrapper/cs_generated/_NV_GPU_ARCH_IMPLEMENTATION_ID.cs
@@ -2008,7 +2008,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GPU_ARCH_IMPLEMENTATION_ID.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_GPU_ARCH_IMPLEMENTATION_GA100
     path: ../NVAPIWrapper/cs_generated/_NV_GPU_ARCH_IMPLEMENTATION_ID.cs
@@ -2035,7 +2035,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GPU_ARCH_IMPLEMENTATION_ID.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_GPU_ARCH_IMPLEMENTATION_GA102
     path: ../NVAPIWrapper/cs_generated/_NV_GPU_ARCH_IMPLEMENTATION_ID.cs
@@ -2062,7 +2062,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GPU_ARCH_IMPLEMENTATION_ID.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_GPU_ARCH_IMPLEMENTATION_GA104
     path: ../NVAPIWrapper/cs_generated/_NV_GPU_ARCH_IMPLEMENTATION_ID.cs
@@ -2089,7 +2089,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GPU_ARCH_IMPLEMENTATION_ID.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_GPU_ARCH_IMPLEMENTATION_AD102
     path: ../NVAPIWrapper/cs_generated/_NV_GPU_ARCH_IMPLEMENTATION_ID.cs
@@ -2116,7 +2116,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GPU_ARCH_IMPLEMENTATION_ID.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_GPU_ARCH_IMPLEMENTATION_AD103
     path: ../NVAPIWrapper/cs_generated/_NV_GPU_ARCH_IMPLEMENTATION_ID.cs
@@ -2143,7 +2143,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GPU_ARCH_IMPLEMENTATION_ID.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_GPU_ARCH_IMPLEMENTATION_AD104
     path: ../NVAPIWrapper/cs_generated/_NV_GPU_ARCH_IMPLEMENTATION_ID.cs
@@ -2170,7 +2170,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GPU_ARCH_IMPLEMENTATION_ID.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_GPU_ARCH_IMPLEMENTATION_GB202
     path: ../NVAPIWrapper/cs_generated/_NV_GPU_ARCH_IMPLEMENTATION_ID.cs

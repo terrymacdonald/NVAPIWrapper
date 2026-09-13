@@ -48,7 +48,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVDRS_GPU_SUPPORT.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: _NVDRS_GPU_SUPPORT
     path: ../NVAPIWrapper/cs_generated/_NVDRS_GPU_SUPPORT.cs
@@ -81,7 +81,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVDRS_GPU_SUPPORT.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: _bitfield
     path: ../NVAPIWrapper/cs_generated/_NVDRS_GPU_SUPPORT.cs
@@ -108,7 +108,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVDRS_GPU_SUPPORT.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: geforce
     path: ../NVAPIWrapper/cs_generated/_NVDRS_GPU_SUPPORT.cs
@@ -138,7 +138,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVDRS_GPU_SUPPORT.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: quadro
     path: ../NVAPIWrapper/cs_generated/_NVDRS_GPU_SUPPORT.cs
@@ -168,7 +168,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVDRS_GPU_SUPPORT.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: nvs
     path: ../NVAPIWrapper/cs_generated/_NVDRS_GPU_SUPPORT.cs
@@ -198,7 +198,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVDRS_GPU_SUPPORT.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: reserved4
     path: ../NVAPIWrapper/cs_generated/_NVDRS_GPU_SUPPORT.cs
@@ -228,7 +228,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVDRS_GPU_SUPPORT.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: reserved5
     path: ../NVAPIWrapper/cs_generated/_NVDRS_GPU_SUPPORT.cs
@@ -258,7 +258,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVDRS_GPU_SUPPORT.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: reserved6
     path: ../NVAPIWrapper/cs_generated/_NVDRS_GPU_SUPPORT.cs
@@ -288,7 +288,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVDRS_GPU_SUPPORT.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: reserved7
     path: ../NVAPIWrapper/cs_generated/_NVDRS_GPU_SUPPORT.cs
@@ -318,7 +318,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVDRS_GPU_SUPPORT.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: reserved8
     path: ../NVAPIWrapper/cs_generated/_NVDRS_GPU_SUPPORT.cs
@@ -348,7 +348,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVDRS_GPU_SUPPORT.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: reserved9
     path: ../NVAPIWrapper/cs_generated/_NVDRS_GPU_SUPPORT.cs
@@ -378,7 +378,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVDRS_GPU_SUPPORT.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: reserved10
     path: ../NVAPIWrapper/cs_generated/_NVDRS_GPU_SUPPORT.cs
@@ -408,7 +408,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVDRS_GPU_SUPPORT.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: reserved11
     path: ../NVAPIWrapper/cs_generated/_NVDRS_GPU_SUPPORT.cs
@@ -438,7 +438,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVDRS_GPU_SUPPORT.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: reserved12
     path: ../NVAPIWrapper/cs_generated/_NVDRS_GPU_SUPPORT.cs
@@ -468,7 +468,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVDRS_GPU_SUPPORT.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: reserved13
     path: ../NVAPIWrapper/cs_generated/_NVDRS_GPU_SUPPORT.cs
@@ -498,7 +498,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVDRS_GPU_SUPPORT.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: reserved14
     path: ../NVAPIWrapper/cs_generated/_NVDRS_GPU_SUPPORT.cs
@@ -528,7 +528,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVDRS_GPU_SUPPORT.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: reserved15
     path: ../NVAPIWrapper/cs_generated/_NVDRS_GPU_SUPPORT.cs
@@ -558,7 +558,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVDRS_GPU_SUPPORT.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: reserved16
     path: ../NVAPIWrapper/cs_generated/_NVDRS_GPU_SUPPORT.cs
@@ -588,7 +588,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVDRS_GPU_SUPPORT.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: reserved17
     path: ../NVAPIWrapper/cs_generated/_NVDRS_GPU_SUPPORT.cs
@@ -618,7 +618,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVDRS_GPU_SUPPORT.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: reserved18
     path: ../NVAPIWrapper/cs_generated/_NVDRS_GPU_SUPPORT.cs
@@ -648,7 +648,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVDRS_GPU_SUPPORT.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: reserved19
     path: ../NVAPIWrapper/cs_generated/_NVDRS_GPU_SUPPORT.cs
@@ -678,7 +678,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVDRS_GPU_SUPPORT.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: reserved20
     path: ../NVAPIWrapper/cs_generated/_NVDRS_GPU_SUPPORT.cs
@@ -708,7 +708,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVDRS_GPU_SUPPORT.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: reserved21
     path: ../NVAPIWrapper/cs_generated/_NVDRS_GPU_SUPPORT.cs
@@ -738,7 +738,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVDRS_GPU_SUPPORT.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: reserved22
     path: ../NVAPIWrapper/cs_generated/_NVDRS_GPU_SUPPORT.cs
@@ -768,7 +768,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVDRS_GPU_SUPPORT.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: reserved23
     path: ../NVAPIWrapper/cs_generated/_NVDRS_GPU_SUPPORT.cs
@@ -798,7 +798,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVDRS_GPU_SUPPORT.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: reserved24
     path: ../NVAPIWrapper/cs_generated/_NVDRS_GPU_SUPPORT.cs
@@ -828,7 +828,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVDRS_GPU_SUPPORT.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: reserved25
     path: ../NVAPIWrapper/cs_generated/_NVDRS_GPU_SUPPORT.cs
@@ -858,7 +858,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVDRS_GPU_SUPPORT.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: reserved26
     path: ../NVAPIWrapper/cs_generated/_NVDRS_GPU_SUPPORT.cs
@@ -888,7 +888,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVDRS_GPU_SUPPORT.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: reserved27
     path: ../NVAPIWrapper/cs_generated/_NVDRS_GPU_SUPPORT.cs
@@ -918,7 +918,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVDRS_GPU_SUPPORT.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: reserved28
     path: ../NVAPIWrapper/cs_generated/_NVDRS_GPU_SUPPORT.cs
@@ -948,7 +948,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVDRS_GPU_SUPPORT.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: reserved29
     path: ../NVAPIWrapper/cs_generated/_NVDRS_GPU_SUPPORT.cs
@@ -978,7 +978,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVDRS_GPU_SUPPORT.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: reserved30
     path: ../NVAPIWrapper/cs_generated/_NVDRS_GPU_SUPPORT.cs
@@ -1008,7 +1008,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVDRS_GPU_SUPPORT.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: reserved31
     path: ../NVAPIWrapper/cs_generated/_NVDRS_GPU_SUPPORT.cs
@@ -1038,7 +1038,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVDRS_GPU_SUPPORT.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: reserved32
     path: ../NVAPIWrapper/cs_generated/_NVDRS_GPU_SUPPORT.cs

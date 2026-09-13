@@ -16,11 +16,11 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_SET_REFLEX_SYNC_PARAMS.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: _rsvd_e__FixedBuffer
     path: ../NVAPIWrapper/cs_generated/_NV_SET_REFLEX_SYNC_PARAMS.cs
-    startLine: 79
+    startLine: 98
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -49,11 +49,11 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_SET_REFLEX_SYNC_PARAMS.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: e0
     path: ../NVAPIWrapper/cs_generated/_NV_SET_REFLEX_SYNC_PARAMS.cs
-    startLine: 82
+    startLine: 101
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper

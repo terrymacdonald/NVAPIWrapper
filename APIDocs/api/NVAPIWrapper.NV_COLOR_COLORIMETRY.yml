@@ -28,7 +28,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_COLOR_COLORIMETRY.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_COLOR_COLORIMETRY
     path: ../NVAPIWrapper/cs_generated/NV_COLOR_COLORIMETRY.cs
@@ -54,7 +54,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_COLOR_COLORIMETRY.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_COLOR_COLORIMETRY_RGB
     path: ../NVAPIWrapper/cs_generated/NV_COLOR_COLORIMETRY.cs
@@ -81,7 +81,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_COLOR_COLORIMETRY.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_COLOR_COLORIMETRY_YCC601
     path: ../NVAPIWrapper/cs_generated/NV_COLOR_COLORIMETRY.cs
@@ -108,7 +108,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_COLOR_COLORIMETRY.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_COLOR_COLORIMETRY_YCC709
     path: ../NVAPIWrapper/cs_generated/NV_COLOR_COLORIMETRY.cs
@@ -135,7 +135,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_COLOR_COLORIMETRY.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_COLOR_COLORIMETRY_XVYCC601
     path: ../NVAPIWrapper/cs_generated/NV_COLOR_COLORIMETRY.cs
@@ -162,7 +162,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_COLOR_COLORIMETRY.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_COLOR_COLORIMETRY_XVYCC709
     path: ../NVAPIWrapper/cs_generated/NV_COLOR_COLORIMETRY.cs
@@ -189,7 +189,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_COLOR_COLORIMETRY.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_COLOR_COLORIMETRY_SYCC601
     path: ../NVAPIWrapper/cs_generated/NV_COLOR_COLORIMETRY.cs
@@ -216,7 +216,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_COLOR_COLORIMETRY.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_COLOR_COLORIMETRY_ADOBEYCC601
     path: ../NVAPIWrapper/cs_generated/NV_COLOR_COLORIMETRY.cs
@@ -243,7 +243,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_COLOR_COLORIMETRY.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_COLOR_COLORIMETRY_ADOBERGB
     path: ../NVAPIWrapper/cs_generated/NV_COLOR_COLORIMETRY.cs
@@ -270,7 +270,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_COLOR_COLORIMETRY.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_COLOR_COLORIMETRY_BT2020RGB
     path: ../NVAPIWrapper/cs_generated/NV_COLOR_COLORIMETRY.cs
@@ -297,7 +297,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_COLOR_COLORIMETRY.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_COLOR_COLORIMETRY_BT2020YCC
     path: ../NVAPIWrapper/cs_generated/NV_COLOR_COLORIMETRY.cs
@@ -324,7 +324,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_COLOR_COLORIMETRY.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_COLOR_COLORIMETRY_BT2020cYCC
     path: ../NVAPIWrapper/cs_generated/NV_COLOR_COLORIMETRY.cs
@@ -351,7 +351,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_COLOR_COLORIMETRY.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_COLOR_COLORIMETRY_DEFAULT
     path: ../NVAPIWrapper/cs_generated/NV_COLOR_COLORIMETRY.cs
@@ -378,7 +378,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_COLOR_COLORIMETRY.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_COLOR_COLORIMETRY_AUTO
     path: ../NVAPIWrapper/cs_generated/NV_COLOR_COLORIMETRY.cs

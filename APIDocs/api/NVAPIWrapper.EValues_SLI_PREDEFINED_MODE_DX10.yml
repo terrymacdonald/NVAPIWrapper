@@ -23,7 +23,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_SLI_PREDEFINED_MODE_DX10.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: EValues_SLI_PREDEFINED_MODE_DX10
     path: ../NVAPIWrapper/cs_generated/EValues_SLI_PREDEFINED_MODE_DX10.cs
@@ -49,7 +49,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_SLI_PREDEFINED_MODE_DX10.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SLI_PREDEFINED_MODE_DX10_AUTOSELECT
     path: ../NVAPIWrapper/cs_generated/EValues_SLI_PREDEFINED_MODE_DX10.cs
@@ -76,7 +76,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_SLI_PREDEFINED_MODE_DX10.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SLI_PREDEFINED_MODE_DX10_FORCE_SINGLE
     path: ../NVAPIWrapper/cs_generated/EValues_SLI_PREDEFINED_MODE_DX10.cs
@@ -103,7 +103,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_SLI_PREDEFINED_MODE_DX10.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SLI_PREDEFINED_MODE_DX10_FORCE_AFR
     path: ../NVAPIWrapper/cs_generated/EValues_SLI_PREDEFINED_MODE_DX10.cs
@@ -130,7 +130,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_SLI_PREDEFINED_MODE_DX10.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SLI_PREDEFINED_MODE_DX10_FORCE_AFR2
     path: ../NVAPIWrapper/cs_generated/EValues_SLI_PREDEFINED_MODE_DX10.cs
@@ -157,7 +157,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_SLI_PREDEFINED_MODE_DX10.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SLI_PREDEFINED_MODE_DX10_FORCE_SFR
     path: ../NVAPIWrapper/cs_generated/EValues_SLI_PREDEFINED_MODE_DX10.cs
@@ -184,7 +184,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_SLI_PREDEFINED_MODE_DX10.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SLI_PREDEFINED_MODE_DX10_FORCE_AFR_OF_SFR__FALLBACK_3AFR
     path: ../NVAPIWrapper/cs_generated/EValues_SLI_PREDEFINED_MODE_DX10.cs
@@ -211,7 +211,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_SLI_PREDEFINED_MODE_DX10.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SLI_PREDEFINED_MODE_DX10_NUM_VALUES
     path: ../NVAPIWrapper/cs_generated/EValues_SLI_PREDEFINED_MODE_DX10.cs
@@ -238,7 +238,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_SLI_PREDEFINED_MODE_DX10.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SLI_PREDEFINED_MODE_DX10_DEFAULT
     path: ../NVAPIWrapper/cs_generated/EValues_SLI_PREDEFINED_MODE_DX10.cs

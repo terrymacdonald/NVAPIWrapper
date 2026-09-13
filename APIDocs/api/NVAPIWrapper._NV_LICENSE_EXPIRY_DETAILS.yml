@@ -22,7 +22,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_LICENSE_EXPIRY_DETAILS.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: _NV_LICENSE_EXPIRY_DETAILS
     path: ../NVAPIWrapper/cs_generated/_NV_LICENSE_EXPIRY_DETAILS.cs
@@ -55,7 +55,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_LICENSE_EXPIRY_DETAILS.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: year
     path: ../NVAPIWrapper/cs_generated/_NV_LICENSE_EXPIRY_DETAILS.cs
@@ -83,7 +83,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_LICENSE_EXPIRY_DETAILS.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: month
     path: ../NVAPIWrapper/cs_generated/_NV_LICENSE_EXPIRY_DETAILS.cs
@@ -111,7 +111,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_LICENSE_EXPIRY_DETAILS.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: day
     path: ../NVAPIWrapper/cs_generated/_NV_LICENSE_EXPIRY_DETAILS.cs
@@ -139,7 +139,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_LICENSE_EXPIRY_DETAILS.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: hour
     path: ../NVAPIWrapper/cs_generated/_NV_LICENSE_EXPIRY_DETAILS.cs
@@ -167,7 +167,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_LICENSE_EXPIRY_DETAILS.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: min
     path: ../NVAPIWrapper/cs_generated/_NV_LICENSE_EXPIRY_DETAILS.cs
@@ -195,7 +195,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_LICENSE_EXPIRY_DETAILS.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: sec
     path: ../NVAPIWrapper/cs_generated/_NV_LICENSE_EXPIRY_DETAILS.cs
@@ -223,7 +223,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_LICENSE_EXPIRY_DETAILS.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: status
     path: ../NVAPIWrapper/cs_generated/_NV_LICENSE_EXPIRY_DETAILS.cs

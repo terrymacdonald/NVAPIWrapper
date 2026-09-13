@@ -27,7 +27,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_NGX_DLSS_OVERRIDE_GET_STATE_PARAMS_V1.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: _NV_NGX_DLSS_OVERRIDE_GET_STATE_PARAMS_V1
     path: ../NVAPIWrapper/cs_generated/_NV_NGX_DLSS_OVERRIDE_GET_STATE_PARAMS_V1.cs
@@ -60,7 +60,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_NGX_DLSS_OVERRIDE_GET_STATE_PARAMS_V1.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: version
     path: ../NVAPIWrapper/cs_generated/_NV_NGX_DLSS_OVERRIDE_GET_STATE_PARAMS_V1.cs
@@ -88,7 +88,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_NGX_DLSS_OVERRIDE_GET_STATE_PARAMS_V1.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: processIdentifier
     path: ../NVAPIWrapper/cs_generated/_NV_NGX_DLSS_OVERRIDE_GET_STATE_PARAMS_V1.cs
@@ -116,7 +116,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_NGX_DLSS_OVERRIDE_GET_STATE_PARAMS_V1.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: feedbackMaskSR
     path: ../NVAPIWrapper/cs_generated/_NV_NGX_DLSS_OVERRIDE_GET_STATE_PARAMS_V1.cs
@@ -144,7 +144,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_NGX_DLSS_OVERRIDE_GET_STATE_PARAMS_V1.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: feedbackMaskRR
     path: ../NVAPIWrapper/cs_generated/_NV_NGX_DLSS_OVERRIDE_GET_STATE_PARAMS_V1.cs
@@ -172,7 +172,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_NGX_DLSS_OVERRIDE_GET_STATE_PARAMS_V1.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: feedbackMaskFG
     path: ../NVAPIWrapper/cs_generated/_NV_NGX_DLSS_OVERRIDE_GET_STATE_PARAMS_V1.cs
@@ -200,7 +200,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_NGX_DLSS_OVERRIDE_GET_STATE_PARAMS_V1.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: scalingRatio
     path: ../NVAPIWrapper/cs_generated/_NV_NGX_DLSS_OVERRIDE_GET_STATE_PARAMS_V1.cs
@@ -228,7 +228,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_NGX_DLSS_OVERRIDE_GET_STATE_PARAMS_V1.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: performanceMode
     path: ../NVAPIWrapper/cs_generated/_NV_NGX_DLSS_OVERRIDE_GET_STATE_PARAMS_V1.cs
@@ -256,7 +256,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_NGX_DLSS_OVERRIDE_GET_STATE_PARAMS_V1.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: renderPreset
     path: ../NVAPIWrapper/cs_generated/_NV_NGX_DLSS_OVERRIDE_GET_STATE_PARAMS_V1.cs
@@ -284,7 +284,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_NGX_DLSS_OVERRIDE_GET_STATE_PARAMS_V1.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: frameGenerationCount
     path: ../NVAPIWrapper/cs_generated/_NV_NGX_DLSS_OVERRIDE_GET_STATE_PARAMS_V1.cs
@@ -312,7 +312,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_NGX_DLSS_OVERRIDE_GET_STATE_PARAMS_V1.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: frameGenerationPreset
     path: ../NVAPIWrapper/cs_generated/_NV_NGX_DLSS_OVERRIDE_GET_STATE_PARAMS_V1.cs
@@ -340,7 +340,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_NGX_DLSS_OVERRIDE_GET_STATE_PARAMS_V1.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: frameGenerationMode
     path: ../NVAPIWrapper/cs_generated/_NV_NGX_DLSS_OVERRIDE_GET_STATE_PARAMS_V1.cs
@@ -368,7 +368,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_NGX_DLSS_OVERRIDE_GET_STATE_PARAMS_V1.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: reserved
     path: ../NVAPIWrapper/cs_generated/_NV_NGX_DLSS_OVERRIDE_GET_STATE_PARAMS_V1.cs

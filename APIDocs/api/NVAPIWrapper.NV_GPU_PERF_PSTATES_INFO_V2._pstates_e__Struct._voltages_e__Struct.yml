@@ -18,7 +18,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_GPU_PERF_PSTATES_INFO_V2.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: _voltages_e__Struct
     path: ../NVAPIWrapper/cs_generated/NV_GPU_PERF_PSTATES_INFO_V2.cs
@@ -51,7 +51,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_GPU_PERF_PSTATES_INFO_V2.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: domainId
     path: ../NVAPIWrapper/cs_generated/NV_GPU_PERF_PSTATES_INFO_V2.cs
@@ -79,7 +79,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_GPU_PERF_PSTATES_INFO_V2.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: flags
     path: ../NVAPIWrapper/cs_generated/NV_GPU_PERF_PSTATES_INFO_V2.cs
@@ -107,7 +107,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_GPU_PERF_PSTATES_INFO_V2.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: mvolt
     path: ../NVAPIWrapper/cs_generated/NV_GPU_PERF_PSTATES_INFO_V2.cs

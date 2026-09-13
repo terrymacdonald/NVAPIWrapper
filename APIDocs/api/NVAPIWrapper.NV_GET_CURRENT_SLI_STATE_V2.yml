@@ -23,7 +23,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_GET_CURRENT_SLI_STATE_V2.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_GET_CURRENT_SLI_STATE_V2
     path: ../NVAPIWrapper/cs_generated/NV_GET_CURRENT_SLI_STATE_V2.cs
@@ -56,7 +56,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_GET_CURRENT_SLI_STATE_V2.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: version
     path: ../NVAPIWrapper/cs_generated/NV_GET_CURRENT_SLI_STATE_V2.cs
@@ -84,7 +84,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_GET_CURRENT_SLI_STATE_V2.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: maxNumAFRGroups
     path: ../NVAPIWrapper/cs_generated/NV_GET_CURRENT_SLI_STATE_V2.cs
@@ -112,7 +112,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_GET_CURRENT_SLI_STATE_V2.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: numAFRGroups
     path: ../NVAPIWrapper/cs_generated/NV_GET_CURRENT_SLI_STATE_V2.cs
@@ -140,7 +140,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_GET_CURRENT_SLI_STATE_V2.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: currentAFRIndex
     path: ../NVAPIWrapper/cs_generated/NV_GET_CURRENT_SLI_STATE_V2.cs
@@ -168,7 +168,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_GET_CURRENT_SLI_STATE_V2.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: nextFrameAFRIndex
     path: ../NVAPIWrapper/cs_generated/NV_GET_CURRENT_SLI_STATE_V2.cs
@@ -196,7 +196,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_GET_CURRENT_SLI_STATE_V2.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: previousFrameAFRIndex
     path: ../NVAPIWrapper/cs_generated/NV_GET_CURRENT_SLI_STATE_V2.cs
@@ -224,7 +224,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_GET_CURRENT_SLI_STATE_V2.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: bIsCurAFRGroupNew
     path: ../NVAPIWrapper/cs_generated/NV_GET_CURRENT_SLI_STATE_V2.cs
@@ -252,7 +252,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_GET_CURRENT_SLI_STATE_V2.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: numVRSLIGpus
     path: ../NVAPIWrapper/cs_generated/NV_GET_CURRENT_SLI_STATE_V2.cs

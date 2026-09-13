@@ -18,7 +18,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_StereoActiveEye.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: _NV_StereoActiveEye
     path: ../NVAPIWrapper/cs_generated/_NV_StereoActiveEye.cs
@@ -44,7 +44,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_StereoActiveEye.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_STEREO_EYE_RIGHT
     path: ../NVAPIWrapper/cs_generated/_NV_StereoActiveEye.cs
@@ -71,7 +71,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_StereoActiveEye.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_STEREO_EYE_LEFT
     path: ../NVAPIWrapper/cs_generated/_NV_StereoActiveEye.cs
@@ -98,7 +98,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_StereoActiveEye.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_STEREO_EYE_MONO
     path: ../NVAPIWrapper/cs_generated/_NV_StereoActiveEye.cs

@@ -17,7 +17,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOSTATUSTYPE.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: _NVVIOSTATUSTYPE
     path: ../NVAPIWrapper/cs_generated/_NVVIOSTATUSTYPE.cs
@@ -43,7 +43,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOSTATUSTYPE.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVVIOSTATUSTYPE_IN
     path: ../NVAPIWrapper/cs_generated/_NVVIOSTATUSTYPE.cs
@@ -70,7 +70,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOSTATUSTYPE.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVVIOSTATUSTYPE_OUT
     path: ../NVAPIWrapper/cs_generated/_NVVIOSTATUSTYPE.cs

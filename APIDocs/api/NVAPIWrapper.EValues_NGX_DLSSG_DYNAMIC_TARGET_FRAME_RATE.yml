@@ -21,7 +21,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_NGX_DLSSG_DYNAMIC_TARGET_FRAME_RATE.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: EValues_NGX_DLSSG_DYNAMIC_TARGET_FRAME_RATE
     path: ../NVAPIWrapper/cs_generated/EValues_NGX_DLSSG_DYNAMIC_TARGET_FRAME_RATE.cs
@@ -47,7 +47,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_NGX_DLSSG_DYNAMIC_TARGET_FRAME_RATE.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NGX_DLSSG_DYNAMIC_TARGET_FRAME_RATE_DISABLED
     path: ../NVAPIWrapper/cs_generated/EValues_NGX_DLSSG_DYNAMIC_TARGET_FRAME_RATE.cs
@@ -74,7 +74,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_NGX_DLSSG_DYNAMIC_TARGET_FRAME_RATE.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NGX_DLSSG_DYNAMIC_TARGET_FRAME_RATE_MIN
     path: ../NVAPIWrapper/cs_generated/EValues_NGX_DLSSG_DYNAMIC_TARGET_FRAME_RATE.cs
@@ -101,7 +101,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_NGX_DLSSG_DYNAMIC_TARGET_FRAME_RATE.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NGX_DLSSG_DYNAMIC_TARGET_FRAME_RATE_MAX
     path: ../NVAPIWrapper/cs_generated/EValues_NGX_DLSSG_DYNAMIC_TARGET_FRAME_RATE.cs
@@ -128,7 +128,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_NGX_DLSSG_DYNAMIC_TARGET_FRAME_RATE.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NGX_DLSSG_DYNAMIC_TARGET_FRAME_RATE_AUTO
     path: ../NVAPIWrapper/cs_generated/EValues_NGX_DLSSG_DYNAMIC_TARGET_FRAME_RATE.cs
@@ -155,7 +155,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_NGX_DLSSG_DYNAMIC_TARGET_FRAME_RATE.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NGX_DLSSG_DYNAMIC_TARGET_FRAME_RATE_NUM_VALUES
     path: ../NVAPIWrapper/cs_generated/EValues_NGX_DLSSG_DYNAMIC_TARGET_FRAME_RATE.cs
@@ -182,7 +182,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_NGX_DLSSG_DYNAMIC_TARGET_FRAME_RATE.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NGX_DLSSG_DYNAMIC_TARGET_FRAME_RATE_DEFAULT
     path: ../NVAPIWrapper/cs_generated/EValues_NGX_DLSSG_DYNAMIC_TARGET_FRAME_RATE.cs

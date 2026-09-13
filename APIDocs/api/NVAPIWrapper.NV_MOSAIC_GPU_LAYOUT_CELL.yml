@@ -19,11 +19,11 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIMosaicHelper.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_MOSAIC_GPU_LAYOUT_CELL
     path: ../NVAPIWrapper/NVAPIMosaicHelper.cs
-    startLine: 2240
+    startLine: 2373
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -53,11 +53,11 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIMosaicHelper.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: hPhysicalGPU
     path: ../NVAPIWrapper/NVAPIMosaicHelper.cs
-    startLine: 2244
+    startLine: 2377
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -82,11 +82,11 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIMosaicHelper.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: displayOutputId
     path: ../NVAPIWrapper/NVAPIMosaicHelper.cs
-    startLine: 2248
+    startLine: 2381
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -111,11 +111,11 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIMosaicHelper.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: overlapX
     path: ../NVAPIWrapper/NVAPIMosaicHelper.cs
-    startLine: 2252
+    startLine: 2385
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -140,11 +140,11 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIMosaicHelper.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: overlapY
     path: ../NVAPIWrapper/NVAPIMosaicHelper.cs
-    startLine: 2256
+    startLine: 2389
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper

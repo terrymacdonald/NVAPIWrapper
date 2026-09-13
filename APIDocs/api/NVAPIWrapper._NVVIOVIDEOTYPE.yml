@@ -17,7 +17,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOVIDEOTYPE.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: _NVVIOVIDEOTYPE
     path: ../NVAPIWrapper/cs_generated/_NVVIOVIDEOTYPE.cs
@@ -43,7 +43,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOVIDEOTYPE.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVVIOVIDEOTYPE_SD
     path: ../NVAPIWrapper/cs_generated/_NVVIOVIDEOTYPE.cs
@@ -70,7 +70,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOVIDEOTYPE.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVVIOVIDEOTYPE_HD
     path: ../NVAPIWrapper/cs_generated/_NVVIOVIDEOTYPE.cs

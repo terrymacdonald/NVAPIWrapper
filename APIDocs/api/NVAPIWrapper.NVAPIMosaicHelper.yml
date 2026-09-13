@@ -17,7 +17,9 @@ items:
   - NVAPIWrapper.NVAPIMosaicHelper.EnumDisplayModes(NVAPIWrapper.NVAPIMosaicGridTopoDto)
   - NVAPIWrapper.NVAPIMosaicHelper.GetCurrentTopo
   - NVAPIWrapper.NVAPIMosaicHelper.GetDisplayViewportsByResolution(System.UInt32,System.UInt32,System.UInt32)
+  - NVAPIWrapper.NVAPIMosaicHelper.GetLogicalGpus(NVAPIWrapper.NVAPIMosaicTopoDetailsDto)
   - NVAPIWrapper.NVAPIMosaicHelper.GetOverlapLimits(NVAPIWrapper.NVAPIMosaicTopoBriefDto,NVAPIWrapper.NVAPIMosaicDisplaySettingDto)
+  - NVAPIWrapper.NVAPIMosaicHelper.GetPhysicalGpus(NVAPIWrapper.NVAPIMosaicGpuLayoutCellDto)
   - NVAPIWrapper.NVAPIMosaicHelper.GetSupportedTopoInfo(NVAPIWrapper.NV_MOSAIC_TOPO_TYPE)
   - NVAPIWrapper.NVAPIMosaicHelper.GetTopoGroup(NVAPIWrapper.NVAPIMosaicTopoBriefDto)
   - NVAPIWrapper.NVAPIMosaicHelper.SetCurrentTopo(NVAPIWrapper.NVAPIMosaicTopoBriefDto,NVAPIWrapper.NVAPIMosaicDisplaySettingDto,System.Int32,System.Int32,System.Boolean)
@@ -33,7 +35,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIMosaicHelper.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPIMosaicHelper
     path: ../NVAPIWrapper/NVAPIMosaicHelper.cs
@@ -71,7 +73,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIMosaicHelper.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: CreateSupportedTopoInfo
     path: ../NVAPIWrapper/NVAPIMosaicHelper.cs
@@ -101,7 +103,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIMosaicHelper.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: CreateTopoBrief
     path: ../NVAPIWrapper/NVAPIMosaicHelper.cs
@@ -131,7 +133,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIMosaicHelper.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: CreateDisplaySetting
     path: ../NVAPIWrapper/NVAPIMosaicHelper.cs
@@ -161,7 +163,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIMosaicHelper.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: CreateTopoGroup
     path: ../NVAPIWrapper/NVAPIMosaicHelper.cs
@@ -191,7 +193,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIMosaicHelper.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: CreateGridTopology
     path: ../NVAPIWrapper/NVAPIMosaicHelper.cs
@@ -221,7 +223,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIMosaicHelper.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: CreateDisplayTopoStatus
     path: ../NVAPIWrapper/NVAPIMosaicHelper.cs
@@ -251,7 +253,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIMosaicHelper.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetSupportedTopoInfo
     path: ../NVAPIWrapper/NVAPIMosaicHelper.cs
@@ -286,7 +288,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIMosaicHelper.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetTopoGroup
     path: ../NVAPIWrapper/NVAPIMosaicHelper.cs
@@ -321,7 +323,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIMosaicHelper.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetOverlapLimits
     path: ../NVAPIWrapper/NVAPIMosaicHelper.cs
@@ -359,7 +361,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIMosaicHelper.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SetCurrentTopo
     path: ../NVAPIWrapper/NVAPIMosaicHelper.cs
@@ -409,7 +411,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIMosaicHelper.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetCurrentTopo
     path: ../NVAPIWrapper/NVAPIMosaicHelper.cs
@@ -440,7 +442,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIMosaicHelper.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: EnableCurrentTopo
     path: ../NVAPIWrapper/NVAPIMosaicHelper.cs
@@ -478,7 +480,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIMosaicHelper.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetDisplayViewportsByResolution
     path: ../NVAPIWrapper/NVAPIMosaicHelper.cs
@@ -522,7 +524,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIMosaicHelper.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SetDisplayGrids
     path: ../NVAPIWrapper/NVAPIMosaicHelper.cs
@@ -563,7 +565,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIMosaicHelper.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: ValidateDisplayGrids
     path: ../NVAPIWrapper/NVAPIMosaicHelper.cs
@@ -604,7 +606,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIMosaicHelper.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: EnumDisplayModes
     path: ../NVAPIWrapper/NVAPIMosaicHelper.cs
@@ -639,7 +641,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIMosaicHelper.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: EnumDisplayGrids
     path: ../NVAPIWrapper/NVAPIMosaicHelper.cs
@@ -656,6 +658,76 @@ items:
       description: Grid topologies, or null if unavailable.
     content.vb: Public Function EnumDisplayGrids() As NVAPIMosaicGridTopologiesDto?
   overload: NVAPIWrapper.NVAPIMosaicHelper.EnumDisplayGrids*
+- uid: NVAPIWrapper.NVAPIMosaicHelper.GetLogicalGpus(NVAPIWrapper.NVAPIMosaicTopoDetailsDto)
+  commentId: M:NVAPIWrapper.NVAPIMosaicHelper.GetLogicalGpus(NVAPIWrapper.NVAPIMosaicTopoDetailsDto)
+  id: GetLogicalGpus(NVAPIWrapper.NVAPIMosaicTopoDetailsDto)
+  parent: NVAPIWrapper.NVAPIMosaicHelper
+  langs:
+  - csharp
+  - vb
+  name: GetLogicalGpus(NVAPIMosaicTopoDetailsDto)
+  nameWithType: NVAPIMosaicHelper.GetLogicalGpus(NVAPIMosaicTopoDetailsDto)
+  fullName: NVAPIWrapper.NVAPIMosaicHelper.GetLogicalGpus(NVAPIWrapper.NVAPIMosaicTopoDetailsDto)
+  type: Method
+  source:
+    remote:
+      path: NVAPIWrapper/NVAPIMosaicHelper.cs
+      branch: feature-2026-09-13-update-R615
+      repo: https://github.com/terrymacdonald/NVAPIWrapper.git
+    id: GetLogicalGpus
+    path: ../NVAPIWrapper/NVAPIMosaicHelper.cs
+    startLine: 529
+  assemblies:
+  - NVAPIWrapper
+  namespace: NVAPIWrapper
+  summary: Resolve the logical GPU referenced by a Mosaic topology details DTO.
+  example: []
+  syntax:
+    content: public NVAPILogicalGpuHelper[] GetLogicalGpus(NVAPIMosaicTopoDetailsDto topoDetails)
+    parameters:
+    - id: topoDetails
+      type: NVAPIWrapper.NVAPIMosaicTopoDetailsDto
+      description: Mosaic topology details DTO.
+    return:
+      type: NVAPIWrapper.NVAPILogicalGpuHelper[]
+      description: A single logical GPU helper when the DTO references a valid logical GPU; otherwise an empty array.
+    content.vb: Public Function GetLogicalGpus(topoDetails As NVAPIMosaicTopoDetailsDto) As NVAPILogicalGpuHelper()
+  overload: NVAPIWrapper.NVAPIMosaicHelper.GetLogicalGpus*
+- uid: NVAPIWrapper.NVAPIMosaicHelper.GetPhysicalGpus(NVAPIWrapper.NVAPIMosaicGpuLayoutCellDto)
+  commentId: M:NVAPIWrapper.NVAPIMosaicHelper.GetPhysicalGpus(NVAPIWrapper.NVAPIMosaicGpuLayoutCellDto)
+  id: GetPhysicalGpus(NVAPIWrapper.NVAPIMosaicGpuLayoutCellDto)
+  parent: NVAPIWrapper.NVAPIMosaicHelper
+  langs:
+  - csharp
+  - vb
+  name: GetPhysicalGpus(NVAPIMosaicGpuLayoutCellDto)
+  nameWithType: NVAPIMosaicHelper.GetPhysicalGpus(NVAPIMosaicGpuLayoutCellDto)
+  fullName: NVAPIWrapper.NVAPIMosaicHelper.GetPhysicalGpus(NVAPIWrapper.NVAPIMosaicGpuLayoutCellDto)
+  type: Method
+  source:
+    remote:
+      path: NVAPIWrapper/NVAPIMosaicHelper.cs
+      branch: feature-2026-09-13-update-R615
+      repo: https://github.com/terrymacdonald/NVAPIWrapper.git
+    id: GetPhysicalGpus
+    path: ../NVAPIWrapper/NVAPIMosaicHelper.cs
+    startLine: 544
+  assemblies:
+  - NVAPIWrapper
+  namespace: NVAPIWrapper
+  summary: Resolve the physical GPU referenced by a Mosaic GPU layout cell DTO.
+  example: []
+  syntax:
+    content: public NVAPIPhysicalGpuHelper[] GetPhysicalGpus(NVAPIMosaicGpuLayoutCellDto layoutCell)
+    parameters:
+    - id: layoutCell
+      type: NVAPIWrapper.NVAPIMosaicGpuLayoutCellDto
+      description: Mosaic GPU layout cell DTO.
+    return:
+      type: NVAPIWrapper.NVAPIPhysicalGpuHelper[]
+      description: A single physical GPU helper when the DTO references a valid physical GPU; otherwise an empty array.
+    content.vb: Public Function GetPhysicalGpus(layoutCell As NVAPIMosaicGpuLayoutCellDto) As NVAPIPhysicalGpuHelper()
+  overload: NVAPIWrapper.NVAPIMosaicHelper.GetPhysicalGpus*
 - uid: NVAPIWrapper.NVAPIMosaicHelper.Dispose
   commentId: M:NVAPIWrapper.NVAPIMosaicHelper.Dispose
   id: Dispose
@@ -670,11 +742,11 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIMosaicHelper.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Dispose
     path: ../NVAPIWrapper/NVAPIMosaicHelper.cs
-    startLine: 544
+    startLine: 574
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -1298,6 +1370,74 @@ references:
     name: NVAPIMosaicGridTopologiesDto
     href: NVAPIWrapper.NVAPIMosaicGridTopologiesDto.html
   - name: '?'
+- uid: NVAPIWrapper.NVAPIMosaicHelper.GetLogicalGpus*
+  commentId: Overload:NVAPIWrapper.NVAPIMosaicHelper.GetLogicalGpus
+  href: NVAPIWrapper.NVAPIMosaicHelper.html#NVAPIWrapper_NVAPIMosaicHelper_GetLogicalGpus_NVAPIWrapper_NVAPIMosaicTopoDetailsDto_
+  name: GetLogicalGpus
+  nameWithType: NVAPIMosaicHelper.GetLogicalGpus
+  fullName: NVAPIWrapper.NVAPIMosaicHelper.GetLogicalGpus
+- uid: NVAPIWrapper.NVAPIMosaicTopoDetailsDto
+  commentId: T:NVAPIWrapper.NVAPIMosaicTopoDetailsDto
+  parent: NVAPIWrapper
+  href: NVAPIWrapper.NVAPIMosaicTopoDetailsDto.html
+  name: NVAPIMosaicTopoDetailsDto
+  nameWithType: NVAPIMosaicTopoDetailsDto
+  fullName: NVAPIWrapper.NVAPIMosaicTopoDetailsDto
+- uid: NVAPIWrapper.NVAPILogicalGpuHelper[]
+  isExternal: true
+  href: NVAPIWrapper.NVAPILogicalGpuHelper.html
+  name: NVAPILogicalGpuHelper[]
+  nameWithType: NVAPILogicalGpuHelper[]
+  fullName: NVAPIWrapper.NVAPILogicalGpuHelper[]
+  nameWithType.vb: NVAPILogicalGpuHelper()
+  fullName.vb: NVAPIWrapper.NVAPILogicalGpuHelper()
+  name.vb: NVAPILogicalGpuHelper()
+  spec.csharp:
+  - uid: NVAPIWrapper.NVAPILogicalGpuHelper
+    name: NVAPILogicalGpuHelper
+    href: NVAPIWrapper.NVAPILogicalGpuHelper.html
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: NVAPIWrapper.NVAPILogicalGpuHelper
+    name: NVAPILogicalGpuHelper
+    href: NVAPIWrapper.NVAPILogicalGpuHelper.html
+  - name: (
+  - name: )
+- uid: NVAPIWrapper.NVAPIMosaicHelper.GetPhysicalGpus*
+  commentId: Overload:NVAPIWrapper.NVAPIMosaicHelper.GetPhysicalGpus
+  href: NVAPIWrapper.NVAPIMosaicHelper.html#NVAPIWrapper_NVAPIMosaicHelper_GetPhysicalGpus_NVAPIWrapper_NVAPIMosaicGpuLayoutCellDto_
+  name: GetPhysicalGpus
+  nameWithType: NVAPIMosaicHelper.GetPhysicalGpus
+  fullName: NVAPIWrapper.NVAPIMosaicHelper.GetPhysicalGpus
+- uid: NVAPIWrapper.NVAPIMosaicGpuLayoutCellDto
+  commentId: T:NVAPIWrapper.NVAPIMosaicGpuLayoutCellDto
+  parent: NVAPIWrapper
+  href: NVAPIWrapper.NVAPIMosaicGpuLayoutCellDto.html
+  name: NVAPIMosaicGpuLayoutCellDto
+  nameWithType: NVAPIMosaicGpuLayoutCellDto
+  fullName: NVAPIWrapper.NVAPIMosaicGpuLayoutCellDto
+- uid: NVAPIWrapper.NVAPIPhysicalGpuHelper[]
+  isExternal: true
+  href: NVAPIWrapper.NVAPIPhysicalGpuHelper.html
+  name: NVAPIPhysicalGpuHelper[]
+  nameWithType: NVAPIPhysicalGpuHelper[]
+  fullName: NVAPIWrapper.NVAPIPhysicalGpuHelper[]
+  nameWithType.vb: NVAPIPhysicalGpuHelper()
+  fullName.vb: NVAPIWrapper.NVAPIPhysicalGpuHelper()
+  name.vb: NVAPIPhysicalGpuHelper()
+  spec.csharp:
+  - uid: NVAPIWrapper.NVAPIPhysicalGpuHelper
+    name: NVAPIPhysicalGpuHelper
+    href: NVAPIWrapper.NVAPIPhysicalGpuHelper.html
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: NVAPIWrapper.NVAPIPhysicalGpuHelper
+    name: NVAPIPhysicalGpuHelper
+    href: NVAPIWrapper.NVAPIPhysicalGpuHelper.html
+  - name: (
+  - name: )
 - uid: NVAPIWrapper.NVAPIMosaicHelper.Dispose*
   commentId: Overload:NVAPIWrapper.NVAPIMosaicHelper.Dispose
   href: NVAPIWrapper.NVAPIMosaicHelper.html#NVAPIWrapper_NVAPIMosaicHelper_Dispose

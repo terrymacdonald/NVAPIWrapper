@@ -20,7 +20,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GPU_CLIENT_CALLBACK_UTILIZATION_DATA_V1.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: _NV_GPU_CLIENT_CALLBACK_UTILIZATION_DATA_V1
     path: ../NVAPIWrapper/cs_generated/_NV_GPU_CLIENT_CALLBACK_UTILIZATION_DATA_V1.cs
@@ -53,7 +53,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GPU_CLIENT_CALLBACK_UTILIZATION_DATA_V1.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: super
     path: ../NVAPIWrapper/cs_generated/_NV_GPU_CLIENT_CALLBACK_UTILIZATION_DATA_V1.cs
@@ -81,7 +81,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GPU_CLIENT_CALLBACK_UTILIZATION_DATA_V1.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: numUtils
     path: ../NVAPIWrapper/cs_generated/_NV_GPU_CLIENT_CALLBACK_UTILIZATION_DATA_V1.cs
@@ -109,7 +109,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GPU_CLIENT_CALLBACK_UTILIZATION_DATA_V1.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: timestamp
     path: ../NVAPIWrapper/cs_generated/_NV_GPU_CLIENT_CALLBACK_UTILIZATION_DATA_V1.cs
@@ -137,7 +137,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GPU_CLIENT_CALLBACK_UTILIZATION_DATA_V1.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: rsvd
     path: ../NVAPIWrapper/cs_generated/_NV_GPU_CLIENT_CALLBACK_UTILIZATION_DATA_V1.cs
@@ -165,7 +165,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GPU_CLIENT_CALLBACK_UTILIZATION_DATA_V1.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: utils
     path: ../NVAPIWrapper/cs_generated/_NV_GPU_CLIENT_CALLBACK_UTILIZATION_DATA_V1.cs

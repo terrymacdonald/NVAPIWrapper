@@ -36,7 +36,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIVideoHelper.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPIVioDeviceHelper
     path: ../NVAPIWrapper/NVAPIVideoHelper.cs
@@ -74,7 +74,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIVideoHelper.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetCapabilities
     path: ../NVAPIWrapper/NVAPIVideoHelper.cs
@@ -105,7 +105,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIVideoHelper.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Open
     path: ../NVAPIWrapper/NVAPIVideoHelper.cs
@@ -146,7 +146,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIVideoHelper.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Close
     path: ../NVAPIWrapper/NVAPIVideoHelper.cs
@@ -184,7 +184,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIVideoHelper.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetStatus
     path: ../NVAPIWrapper/NVAPIVideoHelper.cs
@@ -215,7 +215,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIVideoHelper.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SyncFormatDetect
     path: ../NVAPIWrapper/NVAPIVideoHelper.cs
@@ -253,7 +253,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIVideoHelper.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetConfig
     path: ../NVAPIWrapper/NVAPIVideoHelper.cs
@@ -284,7 +284,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIVideoHelper.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SetConfig
     path: ../NVAPIWrapper/NVAPIVideoHelper.cs
@@ -319,7 +319,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIVideoHelper.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetCsc
     path: ../NVAPIWrapper/NVAPIVideoHelper.cs
@@ -362,7 +362,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIVideoHelper.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SetCsc
     path: ../NVAPIWrapper/NVAPIVideoHelper.cs
@@ -409,7 +409,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIVideoHelper.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetGamma
     path: ../NVAPIWrapper/NVAPIVideoHelper.cs
@@ -452,7 +452,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIVideoHelper.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SetGamma
     path: ../NVAPIWrapper/NVAPIVideoHelper.cs
@@ -499,7 +499,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIVideoHelper.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetSyncDelay
     path: ../NVAPIWrapper/NVAPIVideoHelper.cs
@@ -542,7 +542,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIVideoHelper.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SetSyncDelay
     path: ../NVAPIWrapper/NVAPIVideoHelper.cs
@@ -589,7 +589,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIVideoHelper.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetPciInfo
     path: ../NVAPIWrapper/NVAPIVideoHelper.cs
@@ -620,7 +620,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIVideoHelper.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: IsRunning
     path: ../NVAPIWrapper/NVAPIVideoHelper.cs
@@ -651,7 +651,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIVideoHelper.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Start
     path: ../NVAPIWrapper/NVAPIVideoHelper.cs
@@ -682,7 +682,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIVideoHelper.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Stop
     path: ../NVAPIWrapper/NVAPIVideoHelper.cs
@@ -713,7 +713,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIVideoHelper.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: IsFrameLockModeCompatible
     path: ../NVAPIWrapper/NVAPIVideoHelper.cs
@@ -754,7 +754,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIVideoHelper.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: EnumSignalFormats
     path: ../NVAPIWrapper/NVAPIVideoHelper.cs
@@ -785,7 +785,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIVideoHelper.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: EnumDataFormats
     path: ../NVAPIWrapper/NVAPIVideoHelper.cs
@@ -816,7 +816,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIVideoHelper.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Dispose
     path: ../NVAPIWrapper/NVAPIVideoHelper.cs

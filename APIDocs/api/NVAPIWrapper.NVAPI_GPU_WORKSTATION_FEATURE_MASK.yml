@@ -21,7 +21,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NVAPI_GPU_WORKSTATION_FEATURE_MASK.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_GPU_WORKSTATION_FEATURE_MASK
     path: ../NVAPIWrapper/cs_generated/NVAPI_GPU_WORKSTATION_FEATURE_MASK.cs
@@ -47,7 +47,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NVAPI_GPU_WORKSTATION_FEATURE_MASK.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_GPU_WORKSTATION_FEATURE_MASK_SWAPGROUP
     path: ../NVAPIWrapper/cs_generated/NVAPI_GPU_WORKSTATION_FEATURE_MASK.cs
@@ -74,7 +74,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NVAPI_GPU_WORKSTATION_FEATURE_MASK.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_GPU_WORKSTATION_FEATURE_MASK_STEREO
     path: ../NVAPIWrapper/cs_generated/NVAPI_GPU_WORKSTATION_FEATURE_MASK.cs
@@ -101,7 +101,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NVAPI_GPU_WORKSTATION_FEATURE_MASK.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_GPU_WORKSTATION_FEATURE_MASK_WARPING
     path: ../NVAPIWrapper/cs_generated/NVAPI_GPU_WORKSTATION_FEATURE_MASK.cs
@@ -128,7 +128,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NVAPI_GPU_WORKSTATION_FEATURE_MASK.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_GPU_WORKSTATION_FEATURE_MASK_PIXINTENSITY
     path: ../NVAPIWrapper/cs_generated/NVAPI_GPU_WORKSTATION_FEATURE_MASK.cs
@@ -155,7 +155,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NVAPI_GPU_WORKSTATION_FEATURE_MASK.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_GPU_WORKSTATION_FEATURE_MASK_GRAYSCALE
     path: ../NVAPIWrapper/cs_generated/NVAPI_GPU_WORKSTATION_FEATURE_MASK.cs
@@ -182,7 +182,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NVAPI_GPU_WORKSTATION_FEATURE_MASK.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_GPU_WORKSTATION_FEATURE_MASK_BPC10
     path: ../NVAPIWrapper/cs_generated/NVAPI_GPU_WORKSTATION_FEATURE_MASK.cs

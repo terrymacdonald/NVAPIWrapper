@@ -20,7 +20,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_GPU_THERMAL_SETTINGS_V2.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: _sensor_e__Struct
     path: ../NVAPIWrapper/cs_generated/NV_GPU_THERMAL_SETTINGS_V2.cs
@@ -53,7 +53,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_GPU_THERMAL_SETTINGS_V2.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: controller
     path: ../NVAPIWrapper/cs_generated/NV_GPU_THERMAL_SETTINGS_V2.cs
@@ -81,7 +81,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_GPU_THERMAL_SETTINGS_V2.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: defaultMinTemp
     path: ../NVAPIWrapper/cs_generated/NV_GPU_THERMAL_SETTINGS_V2.cs
@@ -109,7 +109,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_GPU_THERMAL_SETTINGS_V2.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: defaultMaxTemp
     path: ../NVAPIWrapper/cs_generated/NV_GPU_THERMAL_SETTINGS_V2.cs
@@ -137,7 +137,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_GPU_THERMAL_SETTINGS_V2.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: currentTemp
     path: ../NVAPIWrapper/cs_generated/NV_GPU_THERMAL_SETTINGS_V2.cs
@@ -165,7 +165,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_GPU_THERMAL_SETTINGS_V2.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: target
     path: ../NVAPIWrapper/cs_generated/NV_GPU_THERMAL_SETTINGS_V2.cs

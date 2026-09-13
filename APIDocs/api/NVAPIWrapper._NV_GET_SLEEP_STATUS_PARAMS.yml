@@ -6,10 +6,12 @@ items:
   parent: NVAPIWrapper
   children:
   - NVAPIWrapper._NV_GET_SLEEP_STATUS_PARAMS.bCplVsyncOn
+  - NVAPIWrapper._NV_GET_SLEEP_STATUS_PARAMS.bDfgControl
   - NVAPIWrapper._NV_GET_SLEEP_STATUS_PARAMS.bFsVrr
   - NVAPIWrapper._NV_GET_SLEEP_STATUS_PARAMS.bFullscreenIFlip
   - NVAPIWrapper._NV_GET_SLEEP_STATUS_PARAMS.bLowLatencyMode
   - NVAPIWrapper._NV_GET_SLEEP_STATUS_PARAMS.bUseGameSleep
+  - NVAPIWrapper._NV_GET_SLEEP_STATUS_PARAMS.dfgFrameTimeTargetUs
   - NVAPIWrapper._NV_GET_SLEEP_STATUS_PARAMS.fgMultiplier
   - NVAPIWrapper._NV_GET_SLEEP_STATUS_PARAMS.rsvd
   - NVAPIWrapper._NV_GET_SLEEP_STATUS_PARAMS.sleepIntervalUs
@@ -24,7 +26,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GET_SLEEP_STATUS_PARAMS.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: _NV_GET_SLEEP_STATUS_PARAMS
     path: ../NVAPIWrapper/cs_generated/_NV_GET_SLEEP_STATUS_PARAMS.cs
@@ -57,7 +59,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GET_SLEEP_STATUS_PARAMS.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: version
     path: ../NVAPIWrapper/cs_generated/_NV_GET_SLEEP_STATUS_PARAMS.cs
@@ -85,7 +87,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GET_SLEEP_STATUS_PARAMS.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: bLowLatencyMode
     path: ../NVAPIWrapper/cs_generated/_NV_GET_SLEEP_STATUS_PARAMS.cs
@@ -113,7 +115,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GET_SLEEP_STATUS_PARAMS.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: bFsVrr
     path: ../NVAPIWrapper/cs_generated/_NV_GET_SLEEP_STATUS_PARAMS.cs
@@ -141,7 +143,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GET_SLEEP_STATUS_PARAMS.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: bCplVsyncOn
     path: ../NVAPIWrapper/cs_generated/_NV_GET_SLEEP_STATUS_PARAMS.cs
@@ -169,7 +171,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GET_SLEEP_STATUS_PARAMS.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: sleepIntervalUs
     path: ../NVAPIWrapper/cs_generated/_NV_GET_SLEEP_STATUS_PARAMS.cs
@@ -197,7 +199,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GET_SLEEP_STATUS_PARAMS.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: bUseGameSleep
     path: ../NVAPIWrapper/cs_generated/_NV_GET_SLEEP_STATUS_PARAMS.cs
@@ -225,7 +227,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GET_SLEEP_STATUS_PARAMS.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: bFullscreenIFlip
     path: ../NVAPIWrapper/cs_generated/_NV_GET_SLEEP_STATUS_PARAMS.cs
@@ -253,7 +255,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GET_SLEEP_STATUS_PARAMS.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: fgMultiplier
     path: ../NVAPIWrapper/cs_generated/_NV_GET_SLEEP_STATUS_PARAMS.cs
@@ -267,6 +269,62 @@ items:
     return:
       type: System.Byte
     content.vb: Public fgMultiplier As Byte
+- uid: NVAPIWrapper._NV_GET_SLEEP_STATUS_PARAMS.bDfgControl
+  commentId: F:NVAPIWrapper._NV_GET_SLEEP_STATUS_PARAMS.bDfgControl
+  id: bDfgControl
+  parent: NVAPIWrapper._NV_GET_SLEEP_STATUS_PARAMS
+  langs:
+  - csharp
+  - vb
+  name: bDfgControl
+  nameWithType: _NV_GET_SLEEP_STATUS_PARAMS.bDfgControl
+  fullName: NVAPIWrapper._NV_GET_SLEEP_STATUS_PARAMS.bDfgControl
+  type: Field
+  source:
+    remote:
+      path: NVAPIWrapper/cs_generated/_NV_GET_SLEEP_STATUS_PARAMS.cs
+      branch: feature-2026-09-13-update-R615
+      repo: https://github.com/terrymacdonald/NVAPIWrapper.git
+    id: bDfgControl
+    path: ../NVAPIWrapper/cs_generated/_NV_GET_SLEEP_STATUS_PARAMS.cs
+    startLine: 41
+  assemblies:
+  - NVAPIWrapper
+  namespace: NVAPIWrapper
+  example: []
+  syntax:
+    content: public byte bDfgControl
+    return:
+      type: System.Byte
+    content.vb: Public bDfgControl As Byte
+- uid: NVAPIWrapper._NV_GET_SLEEP_STATUS_PARAMS.dfgFrameTimeTargetUs
+  commentId: F:NVAPIWrapper._NV_GET_SLEEP_STATUS_PARAMS.dfgFrameTimeTargetUs
+  id: dfgFrameTimeTargetUs
+  parent: NVAPIWrapper._NV_GET_SLEEP_STATUS_PARAMS
+  langs:
+  - csharp
+  - vb
+  name: dfgFrameTimeTargetUs
+  nameWithType: _NV_GET_SLEEP_STATUS_PARAMS.dfgFrameTimeTargetUs
+  fullName: NVAPIWrapper._NV_GET_SLEEP_STATUS_PARAMS.dfgFrameTimeTargetUs
+  type: Field
+  source:
+    remote:
+      path: NVAPIWrapper/cs_generated/_NV_GET_SLEEP_STATUS_PARAMS.cs
+      branch: feature-2026-09-13-update-R615
+      repo: https://github.com/terrymacdonald/NVAPIWrapper.git
+    id: dfgFrameTimeTargetUs
+    path: ../NVAPIWrapper/cs_generated/_NV_GET_SLEEP_STATUS_PARAMS.cs
+    startLine: 45
+  assemblies:
+  - NVAPIWrapper
+  namespace: NVAPIWrapper
+  example: []
+  syntax:
+    content: public uint dfgFrameTimeTargetUs
+    return:
+      type: System.UInt32
+    content.vb: Public dfgFrameTimeTargetUs As UInteger
 - uid: NVAPIWrapper._NV_GET_SLEEP_STATUS_PARAMS.rsvd
   commentId: F:NVAPIWrapper._NV_GET_SLEEP_STATUS_PARAMS.rsvd
   id: rsvd
@@ -281,11 +339,11 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GET_SLEEP_STATUS_PARAMS.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: rsvd
     path: ../NVAPIWrapper/cs_generated/_NV_GET_SLEEP_STATUS_PARAMS.cs
-    startLine: 41
+    startLine: 49
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper

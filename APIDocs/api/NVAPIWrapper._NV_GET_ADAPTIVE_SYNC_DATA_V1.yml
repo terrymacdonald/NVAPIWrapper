@@ -8,6 +8,7 @@ items:
   - NVAPIWrapper._NV_GET_ADAPTIVE_SYNC_DATA_V1._bitfield
   - NVAPIWrapper._NV_GET_ADAPTIVE_SYNC_DATA_V1.bDisableAdaptiveSync
   - NVAPIWrapper._NV_GET_ADAPTIVE_SYNC_DATA_V1.bDisableFrameSplitting
+  - NVAPIWrapper._NV_GET_ADAPTIVE_SYNC_DATA_V1.flipToken
   - NVAPIWrapper._NV_GET_ADAPTIVE_SYNC_DATA_V1.lastFlipRefreshCount
   - NVAPIWrapper._NV_GET_ADAPTIVE_SYNC_DATA_V1.lastFlipTimeStamp
   - NVAPIWrapper._NV_GET_ADAPTIVE_SYNC_DATA_V1.maxFrameInterval
@@ -24,7 +25,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GET_ADAPTIVE_SYNC_DATA_V1.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: _NV_GET_ADAPTIVE_SYNC_DATA_V1
     path: ../NVAPIWrapper/cs_generated/_NV_GET_ADAPTIVE_SYNC_DATA_V1.cs
@@ -57,7 +58,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GET_ADAPTIVE_SYNC_DATA_V1.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: version
     path: ../NVAPIWrapper/cs_generated/_NV_GET_ADAPTIVE_SYNC_DATA_V1.cs
@@ -85,7 +86,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GET_ADAPTIVE_SYNC_DATA_V1.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: maxFrameInterval
     path: ../NVAPIWrapper/cs_generated/_NV_GET_ADAPTIVE_SYNC_DATA_V1.cs
@@ -113,7 +114,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GET_ADAPTIVE_SYNC_DATA_V1.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: _bitfield
     path: ../NVAPIWrapper/cs_generated/_NV_GET_ADAPTIVE_SYNC_DATA_V1.cs
@@ -140,7 +141,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GET_ADAPTIVE_SYNC_DATA_V1.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: bDisableAdaptiveSync
     path: ../NVAPIWrapper/cs_generated/_NV_GET_ADAPTIVE_SYNC_DATA_V1.cs
@@ -170,7 +171,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GET_ADAPTIVE_SYNC_DATA_V1.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: bDisableFrameSplitting
     path: ../NVAPIWrapper/cs_generated/_NV_GET_ADAPTIVE_SYNC_DATA_V1.cs
@@ -200,7 +201,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GET_ADAPTIVE_SYNC_DATA_V1.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: reserved
     path: ../NVAPIWrapper/cs_generated/_NV_GET_ADAPTIVE_SYNC_DATA_V1.cs
@@ -230,7 +231,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GET_ADAPTIVE_SYNC_DATA_V1.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: lastFlipRefreshCount
     path: ../NVAPIWrapper/cs_generated/_NV_GET_ADAPTIVE_SYNC_DATA_V1.cs
@@ -258,7 +259,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GET_ADAPTIVE_SYNC_DATA_V1.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: lastFlipTimeStamp
     path: ../NVAPIWrapper/cs_generated/_NV_GET_ADAPTIVE_SYNC_DATA_V1.cs
@@ -272,6 +273,34 @@ items:
     return:
       type: System.UInt64
     content.vb: Public lastFlipTimeStamp As ULong
+- uid: NVAPIWrapper._NV_GET_ADAPTIVE_SYNC_DATA_V1.flipToken
+  commentId: F:NVAPIWrapper._NV_GET_ADAPTIVE_SYNC_DATA_V1.flipToken
+  id: flipToken
+  parent: NVAPIWrapper._NV_GET_ADAPTIVE_SYNC_DATA_V1
+  langs:
+  - csharp
+  - vb
+  name: flipToken
+  nameWithType: _NV_GET_ADAPTIVE_SYNC_DATA_V1.flipToken
+  fullName: NVAPIWrapper._NV_GET_ADAPTIVE_SYNC_DATA_V1.flipToken
+  type: Field
+  source:
+    remote:
+      path: NVAPIWrapper/cs_generated/_NV_GET_ADAPTIVE_SYNC_DATA_V1.cs
+      branch: feature-2026-09-13-update-R615
+      repo: https://github.com/terrymacdonald/NVAPIWrapper.git
+    id: flipToken
+    path: ../NVAPIWrapper/cs_generated/_NV_GET_ADAPTIVE_SYNC_DATA_V1.cs
+    startLine: 72
+  assemblies:
+  - NVAPIWrapper
+  namespace: NVAPIWrapper
+  example: []
+  syntax:
+    content: public uint flipToken
+    return:
+      type: System.UInt32
+    content.vb: Public flipToken As UInteger
 - uid: NVAPIWrapper._NV_GET_ADAPTIVE_SYNC_DATA_V1.reservedEx
   commentId: F:NVAPIWrapper._NV_GET_ADAPTIVE_SYNC_DATA_V1.reservedEx
   id: reservedEx
@@ -286,11 +315,11 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GET_ADAPTIVE_SYNC_DATA_V1.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: reservedEx
     path: ../NVAPIWrapper/cs_generated/_NV_GET_ADAPTIVE_SYNC_DATA_V1.cs
-    startLine: 72
+    startLine: 76
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper

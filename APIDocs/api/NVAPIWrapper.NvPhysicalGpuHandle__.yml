@@ -16,7 +16,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NvPhysicalGpuHandle__.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NvPhysicalGpuHandle__
     path: ../NVAPIWrapper/cs_generated/NvPhysicalGpuHandle__.cs
@@ -49,7 +49,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NvPhysicalGpuHandle__.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: unused
     path: ../NVAPIWrapper/cs_generated/NvPhysicalGpuHandle__.cs

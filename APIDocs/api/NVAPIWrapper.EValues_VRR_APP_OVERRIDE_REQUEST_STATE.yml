@@ -22,7 +22,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_VRR_APP_OVERRIDE_REQUEST_STATE.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: EValues_VRR_APP_OVERRIDE_REQUEST_STATE
     path: ../NVAPIWrapper/cs_generated/EValues_VRR_APP_OVERRIDE_REQUEST_STATE.cs
@@ -48,7 +48,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_VRR_APP_OVERRIDE_REQUEST_STATE.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: VRR_APP_OVERRIDE_REQUEST_STATE_ALLOW
     path: ../NVAPIWrapper/cs_generated/EValues_VRR_APP_OVERRIDE_REQUEST_STATE.cs
@@ -75,7 +75,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_VRR_APP_OVERRIDE_REQUEST_STATE.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: VRR_APP_OVERRIDE_REQUEST_STATE_FORCE_OFF
     path: ../NVAPIWrapper/cs_generated/EValues_VRR_APP_OVERRIDE_REQUEST_STATE.cs
@@ -102,7 +102,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_VRR_APP_OVERRIDE_REQUEST_STATE.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: VRR_APP_OVERRIDE_REQUEST_STATE_DISALLOW
     path: ../NVAPIWrapper/cs_generated/EValues_VRR_APP_OVERRIDE_REQUEST_STATE.cs
@@ -129,7 +129,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_VRR_APP_OVERRIDE_REQUEST_STATE.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: VRR_APP_OVERRIDE_REQUEST_STATE_ULMB
     path: ../NVAPIWrapper/cs_generated/EValues_VRR_APP_OVERRIDE_REQUEST_STATE.cs
@@ -156,7 +156,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_VRR_APP_OVERRIDE_REQUEST_STATE.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: VRR_APP_OVERRIDE_REQUEST_STATE_FIXED_REFRESH
     path: ../NVAPIWrapper/cs_generated/EValues_VRR_APP_OVERRIDE_REQUEST_STATE.cs
@@ -183,7 +183,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_VRR_APP_OVERRIDE_REQUEST_STATE.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: VRR_APP_OVERRIDE_REQUEST_STATE_NUM_VALUES
     path: ../NVAPIWrapper/cs_generated/EValues_VRR_APP_OVERRIDE_REQUEST_STATE.cs
@@ -210,7 +210,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_VRR_APP_OVERRIDE_REQUEST_STATE.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: VRR_APP_OVERRIDE_REQUEST_STATE_DEFAULT
     path: ../NVAPIWrapper/cs_generated/EValues_VRR_APP_OVERRIDE_REQUEST_STATE.cs

@@ -42,7 +42,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_WKS_API_STEREO_MODE.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: EValues_WKS_API_STEREO_MODE
     path: ../NVAPIWrapper/cs_generated/EValues_WKS_API_STEREO_MODE.cs
@@ -68,7 +68,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_WKS_API_STEREO_MODE.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: WKS_API_STEREO_MODE_SHUTTER_GLASSES
     path: ../NVAPIWrapper/cs_generated/EValues_WKS_API_STEREO_MODE.cs
@@ -95,7 +95,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_WKS_API_STEREO_MODE.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: WKS_API_STEREO_MODE_VERTICAL_INTERLACED
     path: ../NVAPIWrapper/cs_generated/EValues_WKS_API_STEREO_MODE.cs
@@ -122,7 +122,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_WKS_API_STEREO_MODE.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: WKS_API_STEREO_MODE_TWINVIEW
     path: ../NVAPIWrapper/cs_generated/EValues_WKS_API_STEREO_MODE.cs
@@ -149,7 +149,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_WKS_API_STEREO_MODE.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: WKS_API_STEREO_MODE_NV17_SHUTTER_GLASSES_AUTO
     path: ../NVAPIWrapper/cs_generated/EValues_WKS_API_STEREO_MODE.cs
@@ -176,7 +176,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_WKS_API_STEREO_MODE.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: WKS_API_STEREO_MODE_NV17_SHUTTER_GLASSES_DAC0
     path: ../NVAPIWrapper/cs_generated/EValues_WKS_API_STEREO_MODE.cs
@@ -203,7 +203,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_WKS_API_STEREO_MODE.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: WKS_API_STEREO_MODE_NV17_SHUTTER_GLASSES_DAC1
     path: ../NVAPIWrapper/cs_generated/EValues_WKS_API_STEREO_MODE.cs
@@ -230,7 +230,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_WKS_API_STEREO_MODE.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: WKS_API_STEREO_MODE_COLOR_LINE
     path: ../NVAPIWrapper/cs_generated/EValues_WKS_API_STEREO_MODE.cs
@@ -257,7 +257,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_WKS_API_STEREO_MODE.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: WKS_API_STEREO_MODE_COLOR_INTERLEAVED
     path: ../NVAPIWrapper/cs_generated/EValues_WKS_API_STEREO_MODE.cs
@@ -284,7 +284,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_WKS_API_STEREO_MODE.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: WKS_API_STEREO_MODE_ANAGLYPH
     path: ../NVAPIWrapper/cs_generated/EValues_WKS_API_STEREO_MODE.cs
@@ -311,7 +311,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_WKS_API_STEREO_MODE.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: WKS_API_STEREO_MODE_HORIZONTAL_INTERLACED
     path: ../NVAPIWrapper/cs_generated/EValues_WKS_API_STEREO_MODE.cs
@@ -338,7 +338,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_WKS_API_STEREO_MODE.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: WKS_API_STEREO_MODE_SIDE_FIELD
     path: ../NVAPIWrapper/cs_generated/EValues_WKS_API_STEREO_MODE.cs
@@ -365,7 +365,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_WKS_API_STEREO_MODE.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: WKS_API_STEREO_MODE_SUB_FIELD
     path: ../NVAPIWrapper/cs_generated/EValues_WKS_API_STEREO_MODE.cs
@@ -392,7 +392,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_WKS_API_STEREO_MODE.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: WKS_API_STEREO_MODE_CHECKERBOARD
     path: ../NVAPIWrapper/cs_generated/EValues_WKS_API_STEREO_MODE.cs
@@ -419,7 +419,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_WKS_API_STEREO_MODE.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: WKS_API_STEREO_MODE_INVERSE_CHECKERBOARD
     path: ../NVAPIWrapper/cs_generated/EValues_WKS_API_STEREO_MODE.cs
@@ -446,7 +446,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_WKS_API_STEREO_MODE.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: WKS_API_STEREO_MODE_TRIDELITY_SL
     path: ../NVAPIWrapper/cs_generated/EValues_WKS_API_STEREO_MODE.cs
@@ -473,7 +473,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_WKS_API_STEREO_MODE.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: WKS_API_STEREO_MODE_TRIDELITY_MV
     path: ../NVAPIWrapper/cs_generated/EValues_WKS_API_STEREO_MODE.cs
@@ -500,7 +500,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_WKS_API_STEREO_MODE.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: WKS_API_STEREO_MODE_SEEFRONT
     path: ../NVAPIWrapper/cs_generated/EValues_WKS_API_STEREO_MODE.cs
@@ -527,7 +527,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_WKS_API_STEREO_MODE.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: WKS_API_STEREO_MODE_STEREO_MIRROR
     path: ../NVAPIWrapper/cs_generated/EValues_WKS_API_STEREO_MODE.cs
@@ -554,7 +554,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_WKS_API_STEREO_MODE.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: WKS_API_STEREO_MODE_FRAME_SEQUENTIAL
     path: ../NVAPIWrapper/cs_generated/EValues_WKS_API_STEREO_MODE.cs
@@ -581,7 +581,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_WKS_API_STEREO_MODE.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: WKS_API_STEREO_MODE_AUTODETECT_PASSIVE_MODE
     path: ../NVAPIWrapper/cs_generated/EValues_WKS_API_STEREO_MODE.cs
@@ -608,7 +608,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_WKS_API_STEREO_MODE.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: WKS_API_STEREO_MODE_AEGIS_DT_FRAME_SEQUENTIAL
     path: ../NVAPIWrapper/cs_generated/EValues_WKS_API_STEREO_MODE.cs
@@ -635,7 +635,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_WKS_API_STEREO_MODE.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: WKS_API_STEREO_MODE_OEM_EMITTER_FRAME_SEQUENTIAL
     path: ../NVAPIWrapper/cs_generated/EValues_WKS_API_STEREO_MODE.cs
@@ -662,7 +662,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_WKS_API_STEREO_MODE.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: WKS_API_STEREO_MODE_DP_INBAND
     path: ../NVAPIWrapper/cs_generated/EValues_WKS_API_STEREO_MODE.cs
@@ -689,7 +689,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_WKS_API_STEREO_MODE.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: WKS_API_STEREO_MODE_USE_HW_DEFAULT
     path: ../NVAPIWrapper/cs_generated/EValues_WKS_API_STEREO_MODE.cs
@@ -716,7 +716,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_WKS_API_STEREO_MODE.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: WKS_API_STEREO_MODE_DEFAULT_GL
     path: ../NVAPIWrapper/cs_generated/EValues_WKS_API_STEREO_MODE.cs
@@ -743,7 +743,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_WKS_API_STEREO_MODE.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: WKS_API_STEREO_MODE_NUM_VALUES
     path: ../NVAPIWrapper/cs_generated/EValues_WKS_API_STEREO_MODE.cs
@@ -770,7 +770,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_WKS_API_STEREO_MODE.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: WKS_API_STEREO_MODE_DEFAULT
     path: ../NVAPIWrapper/cs_generated/EValues_WKS_API_STEREO_MODE.cs

@@ -29,12 +29,28 @@ namespace NVAPIWrapper
         [NativeTypeName("NvBool")]
         public byte bUseGameSleep;
 
+        /// <include file='_NV_GET_SLEEP_STATUS_PARAMS.xml' path='doc/member[@name="_NV_GET_SLEEP_STATUS_PARAMS.bFullscreenIFlip"]/*' />
+        [NativeTypeName("NvBool")]
+        public byte bFullscreenIFlip;
+
+        /// <include file='_NV_GET_SLEEP_STATUS_PARAMS.xml' path='doc/member[@name="_NV_GET_SLEEP_STATUS_PARAMS.fgMultiplier"]/*' />
+        [NativeTypeName("NvU8")]
+        public byte fgMultiplier;
+
+        /// <include file='_NV_GET_SLEEP_STATUS_PARAMS.xml' path='doc/member[@name="_NV_GET_SLEEP_STATUS_PARAMS.bDfgControl"]/*' />
+        [NativeTypeName("NvBool")]
+        public byte bDfgControl;
+
+        /// <include file='_NV_GET_SLEEP_STATUS_PARAMS.xml' path='doc/member[@name="_NV_GET_SLEEP_STATUS_PARAMS.dfgFrameTimeTargetUs"]/*' />
+        [NativeTypeName("NvU32")]
+        public uint dfgFrameTimeTargetUs;
+
         /// <include file='_NV_GET_SLEEP_STATUS_PARAMS.xml' path='doc/member[@name="_NV_GET_SLEEP_STATUS_PARAMS.rsvd"]/*' />
-        [NativeTypeName("NvU8[121]")]
+        [NativeTypeName("NvU8[114]")]
         public _rsvd_e__FixedBuffer rsvd;
 
         /// <include file='_rsvd_e__FixedBuffer.xml' path='doc/member[@name="_rsvd_e__FixedBuffer"]/*' />
-        [InlineArray(121)]
+        [InlineArray(114)]
         public partial struct _rsvd_e__FixedBuffer
         {
             public byte e0;

@@ -68,12 +68,35 @@ namespace NVAPIWrapper
         [NativeTypeName("NvU32")]
         public uint timeInQueueUsTarget;
 
+        /// <include file='_NV_SET_REFLEX_SYNC_PARAMS.xml' path='doc/member[@name="_NV_SET_REFLEX_SYNC_PARAMS.fgMultiplier"]/*' />
+        [NativeTypeName("NvU8")]
+        public byte fgMultiplier;
+
+        /// <include file='_NV_SET_REFLEX_SYNC_PARAMS.xml' path='doc/member[@name="_NV_SET_REFLEX_SYNC_PARAMS.dfgMaxMultiplier"]/*' />
+        [NativeTypeName("NvU8")]
+        public byte dfgMaxMultiplier;
+
+        /// <include file='_NV_SET_REFLEX_SYNC_PARAMS.xml' path='doc/member[@name="_NV_SET_REFLEX_SYNC_PARAMS.rsvd1"]/*' />
+        [NativeTypeName("NvU8[2]")]
+        public _rsvd1_e__FixedBuffer rsvd1;
+
+        /// <include file='_NV_SET_REFLEX_SYNC_PARAMS.xml' path='doc/member[@name="_NV_SET_REFLEX_SYNC_PARAMS.dfgTargetFps"]/*' />
+        [NativeTypeName("NvU32")]
+        public uint dfgTargetFps;
+
         /// <include file='_NV_SET_REFLEX_SYNC_PARAMS.xml' path='doc/member[@name="_NV_SET_REFLEX_SYNC_PARAMS.rsvd"]/*' />
-        [NativeTypeName("NvU8[28]")]
+        [NativeTypeName("NvU8[20]")]
         public _rsvd_e__FixedBuffer rsvd;
 
+        /// <include file='_rsvd1_e__FixedBuffer.xml' path='doc/member[@name="_rsvd1_e__FixedBuffer"]/*' />
+        [InlineArray(2)]
+        public partial struct _rsvd1_e__FixedBuffer
+        {
+            public byte e0;
+        }
+
         /// <include file='_rsvd_e__FixedBuffer.xml' path='doc/member[@name="_rsvd_e__FixedBuffer"]/*' />
-        [InlineArray(28)]
+        [InlineArray(20)]
         public partial struct _rsvd_e__FixedBuffer
         {
             public byte e0;

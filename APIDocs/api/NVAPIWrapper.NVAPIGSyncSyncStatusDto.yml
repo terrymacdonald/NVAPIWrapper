@@ -26,11 +26,11 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPIGSyncSyncStatusDto
     path: ../NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
-    startLine: 1248
+    startLine: 1326
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -60,11 +60,11 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: IsSynced
     path: ../NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
-    startLine: 1250
+    startLine: 1328
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -89,11 +89,11 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: IsStereoSynced
     path: ../NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
-    startLine: 1251
+    startLine: 1329
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -118,11 +118,11 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: IsSyncSignalAvailable
     path: ../NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
-    startLine: 1252
+    startLine: 1330
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -147,11 +147,11 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: .ctor
     path: ../NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
-    startLine: 1260
+    startLine: 1338
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -188,11 +188,11 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: FromNative
     path: ../NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
-    startLine: 1272
+    startLine: 1350
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -223,11 +223,11 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: ToNative
     path: ../NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
-    startLine: 1284
+    startLine: 1362
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -254,11 +254,11 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Equals
     path: ../NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
-    startLine: 1300
+    startLine: 1378
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -291,11 +291,11 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Equals
     path: ../NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
-    startLine: 1312
+    startLine: 1390
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -330,11 +330,11 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetHashCode
     path: ../NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
-    startLine: 1318
+    startLine: 1396
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -362,11 +362,11 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: op_Equality
     path: ../NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
-    startLine: 1335
+    startLine: 1413
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -403,11 +403,11 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: op_Inequality
     path: ../NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
-    startLine: 1343
+    startLine: 1421
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper

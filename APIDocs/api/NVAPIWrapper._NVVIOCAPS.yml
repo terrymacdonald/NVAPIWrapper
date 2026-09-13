@@ -26,7 +26,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOCAPS.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: _NVVIOCAPS
     path: ../NVAPIWrapper/cs_generated/_NVVIOCAPS.cs
@@ -59,7 +59,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOCAPS.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: version
     path: ../NVAPIWrapper/cs_generated/_NVVIOCAPS.cs
@@ -87,7 +87,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOCAPS.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: adapterName
     path: ../NVAPIWrapper/cs_generated/_NVVIOCAPS.cs
@@ -115,7 +115,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOCAPS.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: adapterClass
     path: ../NVAPIWrapper/cs_generated/_NVVIOCAPS.cs
@@ -143,7 +143,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOCAPS.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: adapterCaps
     path: ../NVAPIWrapper/cs_generated/_NVVIOCAPS.cs
@@ -171,7 +171,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOCAPS.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: dipSwitch
     path: ../NVAPIWrapper/cs_generated/_NVVIOCAPS.cs
@@ -199,7 +199,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOCAPS.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: dipSwitchReserved
     path: ../NVAPIWrapper/cs_generated/_NVVIOCAPS.cs
@@ -227,7 +227,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOCAPS.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: boardID
     path: ../NVAPIWrapper/cs_generated/_NVVIOCAPS.cs
@@ -255,7 +255,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOCAPS.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: driver
     path: ../NVAPIWrapper/cs_generated/_NVVIOCAPS.cs
@@ -283,7 +283,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOCAPS.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: firmWare
     path: ../NVAPIWrapper/cs_generated/_NVVIOCAPS.cs
@@ -311,7 +311,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOCAPS.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: ownerId
     path: ../NVAPIWrapper/cs_generated/_NVVIOCAPS.cs
@@ -339,7 +339,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOCAPS.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: ownerType
     path: ../NVAPIWrapper/cs_generated/_NVVIOCAPS.cs

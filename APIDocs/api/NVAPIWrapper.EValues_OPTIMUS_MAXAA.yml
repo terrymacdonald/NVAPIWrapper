@@ -19,7 +19,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_OPTIMUS_MAXAA.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: EValues_OPTIMUS_MAXAA
     path: ../NVAPIWrapper/cs_generated/EValues_OPTIMUS_MAXAA.cs
@@ -45,7 +45,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_OPTIMUS_MAXAA.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: OPTIMUS_MAXAA_MIN
     path: ../NVAPIWrapper/cs_generated/EValues_OPTIMUS_MAXAA.cs
@@ -72,7 +72,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_OPTIMUS_MAXAA.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: OPTIMUS_MAXAA_MAX
     path: ../NVAPIWrapper/cs_generated/EValues_OPTIMUS_MAXAA.cs
@@ -99,7 +99,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_OPTIMUS_MAXAA.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: OPTIMUS_MAXAA_NUM_VALUES
     path: ../NVAPIWrapper/cs_generated/EValues_OPTIMUS_MAXAA.cs
@@ -126,7 +126,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_OPTIMUS_MAXAA.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: OPTIMUS_MAXAA_DEFAULT
     path: ../NVAPIWrapper/cs_generated/EValues_OPTIMUS_MAXAA.cs

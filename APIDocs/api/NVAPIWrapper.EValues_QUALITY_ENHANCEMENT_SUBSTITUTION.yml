@@ -19,7 +19,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_QUALITY_ENHANCEMENT_SUBSTITUTION.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: EValues_QUALITY_ENHANCEMENT_SUBSTITUTION
     path: ../NVAPIWrapper/cs_generated/EValues_QUALITY_ENHANCEMENT_SUBSTITUTION.cs
@@ -45,7 +45,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_QUALITY_ENHANCEMENT_SUBSTITUTION.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: QUALITY_ENHANCEMENT_SUBSTITUTION_NO_SUBSTITUTION
     path: ../NVAPIWrapper/cs_generated/EValues_QUALITY_ENHANCEMENT_SUBSTITUTION.cs
@@ -72,7 +72,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_QUALITY_ENHANCEMENT_SUBSTITUTION.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: QUALITY_ENHANCEMENT_SUBSTITUTION_HIGHQUALITY_BECOMES_QUALITY
     path: ../NVAPIWrapper/cs_generated/EValues_QUALITY_ENHANCEMENT_SUBSTITUTION.cs
@@ -99,7 +99,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_QUALITY_ENHANCEMENT_SUBSTITUTION.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: QUALITY_ENHANCEMENT_SUBSTITUTION_NUM_VALUES
     path: ../NVAPIWrapper/cs_generated/EValues_QUALITY_ENHANCEMENT_SUBSTITUTION.cs
@@ -126,7 +126,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_QUALITY_ENHANCEMENT_SUBSTITUTION.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: QUALITY_ENHANCEMENT_SUBSTITUTION_DEFAULT
     path: ../NVAPIWrapper/cs_generated/EValues_QUALITY_ENHANCEMENT_SUBSTITUTION.cs

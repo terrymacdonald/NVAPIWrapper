@@ -37,11 +37,11 @@ namespace NVAPIWrapper
         public uint isPredefinedValid;
 
         /// <include file='_NVDRS_SETTING_V1.xml' path='doc/member[@name="_NVDRS_SETTING_V1.Anonymous1"]/*' />
-        [NativeTypeName("__AnonymousRecord_nvapi_L23972_C6")]
+        [NativeTypeName("__AnonymousRecord_nvapi_L24496_C6")]
         public _Anonymous1_e__Union Anonymous1;
 
         /// <include file='_NVDRS_SETTING_V1.xml' path='doc/member[@name="_NVDRS_SETTING_V1.Anonymous2"]/*' />
-        [NativeTypeName("__AnonymousRecord_nvapi_L23980_C6")]
+        [NativeTypeName("__AnonymousRecord_nvapi_L24505_C6")]
         public _Anonymous2_e__Union Anonymous2;
 
         /// <include file='_Anonymous1_e__Union.xml' path='doc/member[@name="_Anonymous1_e__Union.u32PredefinedValue"]/*' />
@@ -71,6 +71,16 @@ namespace NVAPIWrapper
             get
             {
                 return Anonymous1.wszPredefinedValue;
+            }
+        }
+
+        /// <include file='_Anonymous1_e__Union.xml' path='doc/member[@name="_Anonymous1_e__Union.u64PredefinedValue"]/*' />
+        [UnscopedRef]
+        public ref ulong u64PredefinedValue
+        {
+            get
+            {
+                return ref Anonymous1.u64PredefinedValue;
             }
         }
 
@@ -104,8 +114,18 @@ namespace NVAPIWrapper
             }
         }
 
+        /// <include file='_Anonymous2_e__Union.xml' path='doc/member[@name="_Anonymous2_e__Union.u64CurrentValue"]/*' />
+        [UnscopedRef]
+        public ref ulong u64CurrentValue
+        {
+            get
+            {
+                return ref Anonymous2.u64CurrentValue;
+            }
+        }
+
         /// <include file='_Anonymous1_e__Union.xml' path='doc/member[@name="_Anonymous1_e__Union"]/*' />
-        [StructLayout(LayoutKind.Explicit)]
+        [StructLayout(LayoutKind.Explicit, Pack = 4)]
         public partial struct _Anonymous1_e__Union
         {
             /// <include file='_Anonymous1_e__Union.xml' path='doc/member[@name="_Anonymous1_e__Union.u32PredefinedValue"]/*' />
@@ -123,7 +143,13 @@ namespace NVAPIWrapper
             [NativeTypeName("NvAPI_UnicodeString")]
             public _wszPredefinedValue_e__FixedBuffer wszPredefinedValue;
 
+            /// <include file='_Anonymous1_e__Union.xml' path='doc/member[@name="_Anonymous1_e__Union.u64PredefinedValue"]/*' />
+            [FieldOffset(0)]
+            [NativeTypeName("NvU64")]
+            public ulong u64PredefinedValue;
+
             /// <include file='_wszPredefinedValue_e__FixedBuffer.xml' path='doc/member[@name="_wszPredefinedValue_e__FixedBuffer"]/*' />
+            [StructLayout(LayoutKind.Sequential, Pack = 4)]
             [InlineArray(2048)]
             public partial struct _wszPredefinedValue_e__FixedBuffer
             {
@@ -132,7 +158,7 @@ namespace NVAPIWrapper
         }
 
         /// <include file='_Anonymous2_e__Union.xml' path='doc/member[@name="_Anonymous2_e__Union"]/*' />
-        [StructLayout(LayoutKind.Explicit)]
+        [StructLayout(LayoutKind.Explicit, Pack = 4)]
         public partial struct _Anonymous2_e__Union
         {
             /// <include file='_Anonymous2_e__Union.xml' path='doc/member[@name="_Anonymous2_e__Union.u32CurrentValue"]/*' />
@@ -150,7 +176,13 @@ namespace NVAPIWrapper
             [NativeTypeName("NvAPI_UnicodeString")]
             public _wszCurrentValue_e__FixedBuffer wszCurrentValue;
 
+            /// <include file='_Anonymous2_e__Union.xml' path='doc/member[@name="_Anonymous2_e__Union.u64CurrentValue"]/*' />
+            [FieldOffset(0)]
+            [NativeTypeName("NvU64")]
+            public ulong u64CurrentValue;
+
             /// <include file='_wszCurrentValue_e__FixedBuffer.xml' path='doc/member[@name="_wszCurrentValue_e__FixedBuffer"]/*' />
+            [StructLayout(LayoutKind.Sequential, Pack = 4)]
             [InlineArray(2048)]
             public partial struct _wszCurrentValue_e__FixedBuffer
             {

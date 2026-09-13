@@ -29,7 +29,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_DISPLAY_PORT_CONFIG.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_DISPLAY_PORT_CONFIG
     path: ../NVAPIWrapper/cs_generated/NV_DISPLAY_PORT_CONFIG.cs
@@ -62,7 +62,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_DISPLAY_PORT_CONFIG.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: version
     path: ../NVAPIWrapper/cs_generated/NV_DISPLAY_PORT_CONFIG.cs
@@ -90,7 +90,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_DISPLAY_PORT_CONFIG.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: linkRate
     path: ../NVAPIWrapper/cs_generated/NV_DISPLAY_PORT_CONFIG.cs
@@ -118,7 +118,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_DISPLAY_PORT_CONFIG.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: laneCount
     path: ../NVAPIWrapper/cs_generated/NV_DISPLAY_PORT_CONFIG.cs
@@ -146,7 +146,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_DISPLAY_PORT_CONFIG.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: colorFormat
     path: ../NVAPIWrapper/cs_generated/NV_DISPLAY_PORT_CONFIG.cs
@@ -174,7 +174,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_DISPLAY_PORT_CONFIG.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: dynamicRange
     path: ../NVAPIWrapper/cs_generated/NV_DISPLAY_PORT_CONFIG.cs
@@ -202,7 +202,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_DISPLAY_PORT_CONFIG.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: colorimetry
     path: ../NVAPIWrapper/cs_generated/NV_DISPLAY_PORT_CONFIG.cs
@@ -230,7 +230,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_DISPLAY_PORT_CONFIG.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: bpc
     path: ../NVAPIWrapper/cs_generated/NV_DISPLAY_PORT_CONFIG.cs
@@ -258,7 +258,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_DISPLAY_PORT_CONFIG.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: _bitfield
     path: ../NVAPIWrapper/cs_generated/NV_DISPLAY_PORT_CONFIG.cs
@@ -285,7 +285,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_DISPLAY_PORT_CONFIG.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: isHPD
     path: ../NVAPIWrapper/cs_generated/NV_DISPLAY_PORT_CONFIG.cs
@@ -315,7 +315,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_DISPLAY_PORT_CONFIG.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: isSetDeferred
     path: ../NVAPIWrapper/cs_generated/NV_DISPLAY_PORT_CONFIG.cs
@@ -345,7 +345,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_DISPLAY_PORT_CONFIG.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: isChromaLpfOff
     path: ../NVAPIWrapper/cs_generated/NV_DISPLAY_PORT_CONFIG.cs
@@ -375,7 +375,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_DISPLAY_PORT_CONFIG.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: isDitherOff
     path: ../NVAPIWrapper/cs_generated/NV_DISPLAY_PORT_CONFIG.cs
@@ -405,7 +405,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_DISPLAY_PORT_CONFIG.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: testLinkTrain
     path: ../NVAPIWrapper/cs_generated/NV_DISPLAY_PORT_CONFIG.cs
@@ -435,7 +435,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_DISPLAY_PORT_CONFIG.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: testColorChange
     path: ../NVAPIWrapper/cs_generated/NV_DISPLAY_PORT_CONFIG.cs

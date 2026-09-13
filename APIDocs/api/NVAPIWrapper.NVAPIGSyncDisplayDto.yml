@@ -6,15 +6,17 @@ items:
   parent: NVAPIWrapper
   children:
   - NVAPIWrapper.NVAPIGSyncDisplayDto.#ctor(System.UInt32,System.Boolean,NVAPIWrapper._NVAPI_GSYNC_DISPLAY_SYNC_STATE)
+  - NVAPIWrapper.NVAPIGSyncDisplayDto.#ctor(System.UInt32,System.Boolean,System.Boolean,NVAPIWrapper._NVAPI_GSYNC_DISPLAY_SYNC_STATE)
   - NVAPIWrapper.NVAPIGSyncDisplayDto.DisplayId
   - NVAPIWrapper.NVAPIGSyncDisplayDto.Equals(NVAPIWrapper.NVAPIGSyncDisplayDto)
   - NVAPIWrapper.NVAPIGSyncDisplayDto.Equals(System.Object)
-  - NVAPIWrapper.NVAPIGSyncDisplayDto.FromNative(NVAPIWrapper._NV_GSYNC_DISPLAY)
-  - NVAPIWrapper.NVAPIGSyncDisplayDto.FromNative(NVAPIWrapper._NV_GSYNC_DISPLAY*,System.Int32)
+  - NVAPIWrapper.NVAPIGSyncDisplayDto.FromNative(NVAPIWrapper._NV_GSYNC_DISPLAY_V2)
+  - NVAPIWrapper.NVAPIGSyncDisplayDto.FromNative(NVAPIWrapper._NV_GSYNC_DISPLAY_V2*,System.Int32)
   - NVAPIWrapper.NVAPIGSyncDisplayDto.GetHashCode
   - NVAPIWrapper.NVAPIGSyncDisplayDto.IsMasterable
   - NVAPIWrapper.NVAPIGSyncDisplayDto.SyncState
   - NVAPIWrapper.NVAPIGSyncDisplayDto.ToNative
+  - NVAPIWrapper.NVAPIGSyncDisplayDto.UseExactTiming
   - NVAPIWrapper.NVAPIGSyncDisplayDto.op_Equality(NVAPIWrapper.NVAPIGSyncDisplayDto,NVAPIWrapper.NVAPIGSyncDisplayDto)
   - NVAPIWrapper.NVAPIGSyncDisplayDto.op_Inequality(NVAPIWrapper.NVAPIGSyncDisplayDto,NVAPIWrapper.NVAPIGSyncDisplayDto)
   langs:
@@ -27,11 +29,11 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPIGSyncDisplayDto
     path: ../NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
-    startLine: 724
+    startLine: 763
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -61,11 +63,11 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: DisplayId
     path: ../NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
-    startLine: 726
+    startLine: 765
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -90,11 +92,11 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: IsMasterable
     path: ../NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
-    startLine: 727
+    startLine: 766
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -105,6 +107,37 @@ items:
       type: System.Boolean
     content.vb: Public Property IsMasterable As Boolean
   overload: NVAPIWrapper.NVAPIGSyncDisplayDto.IsMasterable*
+- uid: NVAPIWrapper.NVAPIGSyncDisplayDto.UseExactTiming
+  commentId: P:NVAPIWrapper.NVAPIGSyncDisplayDto.UseExactTiming
+  id: UseExactTiming
+  parent: NVAPIWrapper.NVAPIGSyncDisplayDto
+  langs:
+  - csharp
+  - vb
+  name: UseExactTiming
+  nameWithType: NVAPIGSyncDisplayDto.UseExactTiming
+  fullName: NVAPIWrapper.NVAPIGSyncDisplayDto.UseExactTiming
+  type: Property
+  source:
+    remote:
+      path: NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
+      branch: feature-2026-09-13-update-R615
+      repo: https://github.com/terrymacdonald/NVAPIWrapper.git
+    id: UseExactTiming
+    path: ../NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
+    startLine: 770
+  assemblies:
+  - NVAPIWrapper
+  namespace: NVAPIWrapper
+  summary: Gets or sets whether the exact display timing supplied by the caller should be used.
+  example: []
+  syntax:
+    content: public bool UseExactTiming { readonly get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property UseExactTiming As Boolean
+  overload: NVAPIWrapper.NVAPIGSyncDisplayDto.UseExactTiming*
 - uid: NVAPIWrapper.NVAPIGSyncDisplayDto.SyncState
   commentId: P:NVAPIWrapper.NVAPIGSyncDisplayDto.SyncState
   id: SyncState
@@ -119,11 +152,11 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SyncState
     path: ../NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
-    startLine: 728
+    startLine: 771
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -148,11 +181,11 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: .ctor
     path: ../NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
-    startLine: 736
+    startLine: 779
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -175,70 +208,114 @@ items:
   nameWithType.vb: NVAPIGSyncDisplayDto.New(UInteger, Boolean, _NVAPI_GSYNC_DISPLAY_SYNC_STATE)
   fullName.vb: NVAPIWrapper.NVAPIGSyncDisplayDto.New(UInteger, Boolean, NVAPIWrapper._NVAPI_GSYNC_DISPLAY_SYNC_STATE)
   name.vb: New(UInteger, Boolean, _NVAPI_GSYNC_DISPLAY_SYNC_STATE)
-- uid: NVAPIWrapper.NVAPIGSyncDisplayDto.FromNative(NVAPIWrapper._NV_GSYNC_DISPLAY)
-  commentId: M:NVAPIWrapper.NVAPIGSyncDisplayDto.FromNative(NVAPIWrapper._NV_GSYNC_DISPLAY)
-  id: FromNative(NVAPIWrapper._NV_GSYNC_DISPLAY)
+- uid: NVAPIWrapper.NVAPIGSyncDisplayDto.#ctor(System.UInt32,System.Boolean,System.Boolean,NVAPIWrapper._NVAPI_GSYNC_DISPLAY_SYNC_STATE)
+  commentId: M:NVAPIWrapper.NVAPIGSyncDisplayDto.#ctor(System.UInt32,System.Boolean,System.Boolean,NVAPIWrapper._NVAPI_GSYNC_DISPLAY_SYNC_STATE)
+  id: '#ctor(System.UInt32,System.Boolean,System.Boolean,NVAPIWrapper._NVAPI_GSYNC_DISPLAY_SYNC_STATE)'
   parent: NVAPIWrapper.NVAPIGSyncDisplayDto
   langs:
   - csharp
   - vb
-  name: FromNative(_NV_GSYNC_DISPLAY)
-  nameWithType: NVAPIGSyncDisplayDto.FromNative(_NV_GSYNC_DISPLAY)
-  fullName: NVAPIWrapper.NVAPIGSyncDisplayDto.FromNative(NVAPIWrapper._NV_GSYNC_DISPLAY)
+  name: NVAPIGSyncDisplayDto(uint, bool, bool, _NVAPI_GSYNC_DISPLAY_SYNC_STATE)
+  nameWithType: NVAPIGSyncDisplayDto.NVAPIGSyncDisplayDto(uint, bool, bool, _NVAPI_GSYNC_DISPLAY_SYNC_STATE)
+  fullName: NVAPIWrapper.NVAPIGSyncDisplayDto.NVAPIGSyncDisplayDto(uint, bool, bool, NVAPIWrapper._NVAPI_GSYNC_DISPLAY_SYNC_STATE)
+  type: Constructor
+  source:
+    remote:
+      path: NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
+      branch: feature-2026-09-13-update-R615
+      repo: https://github.com/terrymacdonald/NVAPIWrapper.git
+    id: .ctor
+    path: ../NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
+    startLine: 791
+  assemblies:
+  - NVAPIWrapper
+  namespace: NVAPIWrapper
+  summary: Create a G-Sync display DTO.
+  example: []
+  syntax:
+    content: public NVAPIGSyncDisplayDto(uint displayId, bool isMasterable, bool useExactTiming, _NVAPI_GSYNC_DISPLAY_SYNC_STATE syncState)
+    parameters:
+    - id: displayId
+      type: System.UInt32
+      description: Display identifier.
+    - id: isMasterable
+      type: System.Boolean
+      description: Whether the display is masterable.
+    - id: useExactTiming
+      type: System.Boolean
+      description: Whether the exact display timing should be used.
+    - id: syncState
+      type: NVAPIWrapper._NVAPI_GSYNC_DISPLAY_SYNC_STATE
+      description: Display sync state.
+    content.vb: Public Sub New(displayId As UInteger, isMasterable As Boolean, useExactTiming As Boolean, syncState As _NVAPI_GSYNC_DISPLAY_SYNC_STATE)
+  overload: NVAPIWrapper.NVAPIGSyncDisplayDto.#ctor*
+  nameWithType.vb: NVAPIGSyncDisplayDto.New(UInteger, Boolean, Boolean, _NVAPI_GSYNC_DISPLAY_SYNC_STATE)
+  fullName.vb: NVAPIWrapper.NVAPIGSyncDisplayDto.New(UInteger, Boolean, Boolean, NVAPIWrapper._NVAPI_GSYNC_DISPLAY_SYNC_STATE)
+  name.vb: New(UInteger, Boolean, Boolean, _NVAPI_GSYNC_DISPLAY_SYNC_STATE)
+- uid: NVAPIWrapper.NVAPIGSyncDisplayDto.FromNative(NVAPIWrapper._NV_GSYNC_DISPLAY_V2)
+  commentId: M:NVAPIWrapper.NVAPIGSyncDisplayDto.FromNative(NVAPIWrapper._NV_GSYNC_DISPLAY_V2)
+  id: FromNative(NVAPIWrapper._NV_GSYNC_DISPLAY_V2)
+  parent: NVAPIWrapper.NVAPIGSyncDisplayDto
+  langs:
+  - csharp
+  - vb
+  name: FromNative(_NV_GSYNC_DISPLAY_V2)
+  nameWithType: NVAPIGSyncDisplayDto.FromNative(_NV_GSYNC_DISPLAY_V2)
+  fullName: NVAPIWrapper.NVAPIGSyncDisplayDto.FromNative(NVAPIWrapper._NV_GSYNC_DISPLAY_V2)
   type: Method
   source:
     remote:
       path: NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: FromNative
     path: ../NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
-    startLine: 748
+    startLine: 804
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   summary: Create a G-Sync display DTO from native data.
   example: []
   syntax:
-    content: public static NVAPIGSyncDisplayDto FromNative(_NV_GSYNC_DISPLAY native)
+    content: public static NVAPIGSyncDisplayDto FromNative(_NV_GSYNC_DISPLAY_V2 native)
     parameters:
     - id: native
-      type: NVAPIWrapper._NV_GSYNC_DISPLAY
+      type: NVAPIWrapper._NV_GSYNC_DISPLAY_V2
       description: Native display data.
     return:
       type: NVAPIWrapper.NVAPIGSyncDisplayDto
       description: G-Sync display DTO.
-    content.vb: Public Shared Function FromNative(native As _NV_GSYNC_DISPLAY) As NVAPIGSyncDisplayDto
+    content.vb: Public Shared Function FromNative(native As _NV_GSYNC_DISPLAY_V2) As NVAPIGSyncDisplayDto
   overload: NVAPIWrapper.NVAPIGSyncDisplayDto.FromNative*
-- uid: NVAPIWrapper.NVAPIGSyncDisplayDto.FromNative(NVAPIWrapper._NV_GSYNC_DISPLAY*,System.Int32)
-  commentId: M:NVAPIWrapper.NVAPIGSyncDisplayDto.FromNative(NVAPIWrapper._NV_GSYNC_DISPLAY*,System.Int32)
-  id: FromNative(NVAPIWrapper._NV_GSYNC_DISPLAY*,System.Int32)
+- uid: NVAPIWrapper.NVAPIGSyncDisplayDto.FromNative(NVAPIWrapper._NV_GSYNC_DISPLAY_V2*,System.Int32)
+  commentId: M:NVAPIWrapper.NVAPIGSyncDisplayDto.FromNative(NVAPIWrapper._NV_GSYNC_DISPLAY_V2*,System.Int32)
+  id: FromNative(NVAPIWrapper._NV_GSYNC_DISPLAY_V2*,System.Int32)
   parent: NVAPIWrapper.NVAPIGSyncDisplayDto
   langs:
   - csharp
   - vb
-  name: FromNative(_NV_GSYNC_DISPLAY*, int)
-  nameWithType: NVAPIGSyncDisplayDto.FromNative(_NV_GSYNC_DISPLAY*, int)
-  fullName: NVAPIWrapper.NVAPIGSyncDisplayDto.FromNative(NVAPIWrapper._NV_GSYNC_DISPLAY*, int)
+  name: FromNative(_NV_GSYNC_DISPLAY_V2*, int)
+  nameWithType: NVAPIGSyncDisplayDto.FromNative(_NV_GSYNC_DISPLAY_V2*, int)
+  fullName: NVAPIWrapper.NVAPIGSyncDisplayDto.FromNative(NVAPIWrapper._NV_GSYNC_DISPLAY_V2*, int)
   type: Method
   source:
     remote:
       path: NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: FromNative
     path: ../NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
-    startLine: 762
+    startLine: 819
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   summary: Create G-Sync display DTOs from a native array.
   example: []
   syntax:
-    content: public static NVAPIGSyncDisplayDto[] FromNative(_NV_GSYNC_DISPLAY* native, int count)
+    content: public static NVAPIGSyncDisplayDto[] FromNative(_NV_GSYNC_DISPLAY_V2* native, int count)
     parameters:
     - id: native
-      type: NVAPIWrapper._NV_GSYNC_DISPLAY*
+      type: NVAPIWrapper._NV_GSYNC_DISPLAY_V2*
       description: Native display array pointer.
     - id: count
       type: System.Int32
@@ -246,11 +323,11 @@ items:
     return:
       type: NVAPIWrapper.NVAPIGSyncDisplayDto[]
       description: G-Sync display DTO array.
-    content.vb: Public Shared Function FromNative(native As _NV_GSYNC_DISPLAY*, count As Integer) As NVAPIGSyncDisplayDto()
+    content.vb: Public Shared Function FromNative(native As _NV_GSYNC_DISPLAY_V2*, count As Integer) As NVAPIGSyncDisplayDto()
   overload: NVAPIWrapper.NVAPIGSyncDisplayDto.FromNative*
-  nameWithType.vb: NVAPIGSyncDisplayDto.FromNative(_NV_GSYNC_DISPLAY*, Integer)
-  fullName.vb: NVAPIWrapper.NVAPIGSyncDisplayDto.FromNative(NVAPIWrapper._NV_GSYNC_DISPLAY*, Integer)
-  name.vb: FromNative(_NV_GSYNC_DISPLAY*, Integer)
+  nameWithType.vb: NVAPIGSyncDisplayDto.FromNative(_NV_GSYNC_DISPLAY_V2*, Integer)
+  fullName.vb: NVAPIWrapper.NVAPIGSyncDisplayDto.FromNative(NVAPIWrapper._NV_GSYNC_DISPLAY_V2*, Integer)
+  name.vb: FromNative(_NV_GSYNC_DISPLAY_V2*, Integer)
 - uid: NVAPIWrapper.NVAPIGSyncDisplayDto.ToNative
   commentId: M:NVAPIWrapper.NVAPIGSyncDisplayDto.ToNative
   id: ToNative
@@ -265,22 +342,22 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: ToNative
     path: ../NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
-    startLine: 780
+    startLine: 837
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   summary: Convert this DTO to native display data.
   example: []
   syntax:
-    content: public _NV_GSYNC_DISPLAY ToNative()
+    content: public _NV_GSYNC_DISPLAY_V2 ToNative()
     return:
-      type: NVAPIWrapper._NV_GSYNC_DISPLAY
+      type: NVAPIWrapper._NV_GSYNC_DISPLAY_V2
       description: Native display data.
-    content.vb: Public Function ToNative() As _NV_GSYNC_DISPLAY
+    content.vb: Public Function ToNative() As _NV_GSYNC_DISPLAY_V2
   overload: NVAPIWrapper.NVAPIGSyncDisplayDto.ToNative*
 - uid: NVAPIWrapper.NVAPIGSyncDisplayDto.Equals(NVAPIWrapper.NVAPIGSyncDisplayDto)
   commentId: M:NVAPIWrapper.NVAPIGSyncDisplayDto.Equals(NVAPIWrapper.NVAPIGSyncDisplayDto)
@@ -296,11 +373,11 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Equals
     path: ../NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
-    startLine: 797
+    startLine: 855
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -333,11 +410,11 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Equals
     path: ../NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
-    startLine: 809
+    startLine: 868
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -372,11 +449,11 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetHashCode
     path: ../NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
-    startLine: 815
+    startLine: 874
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -404,11 +481,11 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: op_Equality
     path: ../NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
-    startLine: 832
+    startLine: 892
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -445,11 +522,11 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: op_Inequality
     path: ../NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
-    startLine: 840
+    startLine: 900
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -736,6 +813,12 @@ references:
   nameWithType.vb: Boolean
   fullName.vb: Boolean
   name.vb: Boolean
+- uid: NVAPIWrapper.NVAPIGSyncDisplayDto.UseExactTiming*
+  commentId: Overload:NVAPIWrapper.NVAPIGSyncDisplayDto.UseExactTiming
+  href: NVAPIWrapper.NVAPIGSyncDisplayDto.html#NVAPIWrapper_NVAPIGSyncDisplayDto_UseExactTiming
+  name: UseExactTiming
+  nameWithType: NVAPIGSyncDisplayDto.UseExactTiming
+  fullName: NVAPIWrapper.NVAPIGSyncDisplayDto.UseExactTiming
 - uid: NVAPIWrapper.NVAPIGSyncDisplayDto.SyncState*
   commentId: Overload:NVAPIWrapper.NVAPIGSyncDisplayDto.SyncState
   href: NVAPIWrapper.NVAPIGSyncDisplayDto.html#NVAPIWrapper_NVAPIGSyncDisplayDto_SyncState
@@ -760,17 +843,17 @@ references:
   name.vb: New
 - uid: NVAPIWrapper.NVAPIGSyncDisplayDto.FromNative*
   commentId: Overload:NVAPIWrapper.NVAPIGSyncDisplayDto.FromNative
-  href: NVAPIWrapper.NVAPIGSyncDisplayDto.html#NVAPIWrapper_NVAPIGSyncDisplayDto_FromNative_NVAPIWrapper__NV_GSYNC_DISPLAY_
+  href: NVAPIWrapper.NVAPIGSyncDisplayDto.html#NVAPIWrapper_NVAPIGSyncDisplayDto_FromNative_NVAPIWrapper__NV_GSYNC_DISPLAY_V2_
   name: FromNative
   nameWithType: NVAPIGSyncDisplayDto.FromNative
   fullName: NVAPIWrapper.NVAPIGSyncDisplayDto.FromNative
-- uid: NVAPIWrapper._NV_GSYNC_DISPLAY
-  commentId: T:NVAPIWrapper._NV_GSYNC_DISPLAY
+- uid: NVAPIWrapper._NV_GSYNC_DISPLAY_V2
+  commentId: T:NVAPIWrapper._NV_GSYNC_DISPLAY_V2
   parent: NVAPIWrapper
-  href: NVAPIWrapper._NV_GSYNC_DISPLAY.html
-  name: _NV_GSYNC_DISPLAY
-  nameWithType: _NV_GSYNC_DISPLAY
-  fullName: NVAPIWrapper._NV_GSYNC_DISPLAY
+  href: NVAPIWrapper._NV_GSYNC_DISPLAY_V2.html
+  name: _NV_GSYNC_DISPLAY_V2
+  nameWithType: _NV_GSYNC_DISPLAY_V2
+  fullName: NVAPIWrapper._NV_GSYNC_DISPLAY_V2
 - uid: NVAPIWrapper.NVAPIGSyncDisplayDto
   commentId: T:NVAPIWrapper.NVAPIGSyncDisplayDto
   parent: NVAPIWrapper
@@ -778,21 +861,21 @@ references:
   name: NVAPIGSyncDisplayDto
   nameWithType: NVAPIGSyncDisplayDto
   fullName: NVAPIWrapper.NVAPIGSyncDisplayDto
-- uid: NVAPIWrapper._NV_GSYNC_DISPLAY*
+- uid: NVAPIWrapper._NV_GSYNC_DISPLAY_V2*
   isExternal: true
-  href: NVAPIWrapper._NV_GSYNC_DISPLAY.html
-  name: _NV_GSYNC_DISPLAY*
-  nameWithType: _NV_GSYNC_DISPLAY*
-  fullName: NVAPIWrapper._NV_GSYNC_DISPLAY*
+  href: NVAPIWrapper._NV_GSYNC_DISPLAY_V2.html
+  name: _NV_GSYNC_DISPLAY_V2*
+  nameWithType: _NV_GSYNC_DISPLAY_V2*
+  fullName: NVAPIWrapper._NV_GSYNC_DISPLAY_V2*
   spec.csharp:
-  - uid: NVAPIWrapper._NV_GSYNC_DISPLAY
-    name: _NV_GSYNC_DISPLAY
-    href: NVAPIWrapper._NV_GSYNC_DISPLAY.html
+  - uid: NVAPIWrapper._NV_GSYNC_DISPLAY_V2
+    name: _NV_GSYNC_DISPLAY_V2
+    href: NVAPIWrapper._NV_GSYNC_DISPLAY_V2.html
   - name: '*'
   spec.vb:
-  - uid: NVAPIWrapper._NV_GSYNC_DISPLAY
-    name: _NV_GSYNC_DISPLAY
-    href: NVAPIWrapper._NV_GSYNC_DISPLAY.html
+  - uid: NVAPIWrapper._NV_GSYNC_DISPLAY_V2
+    name: _NV_GSYNC_DISPLAY_V2
+    href: NVAPIWrapper._NV_GSYNC_DISPLAY_V2.html
   - name: '*'
 - uid: System.Int32
   commentId: T:System.Int32

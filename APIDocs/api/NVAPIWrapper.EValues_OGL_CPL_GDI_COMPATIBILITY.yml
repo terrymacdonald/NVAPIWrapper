@@ -20,7 +20,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_OGL_CPL_GDI_COMPATIBILITY.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: EValues_OGL_CPL_GDI_COMPATIBILITY
     path: ../NVAPIWrapper/cs_generated/EValues_OGL_CPL_GDI_COMPATIBILITY.cs
@@ -46,7 +46,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_OGL_CPL_GDI_COMPATIBILITY.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: OGL_CPL_GDI_COMPATIBILITY_PREFER_DISABLED
     path: ../NVAPIWrapper/cs_generated/EValues_OGL_CPL_GDI_COMPATIBILITY.cs
@@ -73,7 +73,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_OGL_CPL_GDI_COMPATIBILITY.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: OGL_CPL_GDI_COMPATIBILITY_PREFER_ENABLED
     path: ../NVAPIWrapper/cs_generated/EValues_OGL_CPL_GDI_COMPATIBILITY.cs
@@ -100,7 +100,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_OGL_CPL_GDI_COMPATIBILITY.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: OGL_CPL_GDI_COMPATIBILITY_AUTO
     path: ../NVAPIWrapper/cs_generated/EValues_OGL_CPL_GDI_COMPATIBILITY.cs
@@ -127,7 +127,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_OGL_CPL_GDI_COMPATIBILITY.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: OGL_CPL_GDI_COMPATIBILITY_NUM_VALUES
     path: ../NVAPIWrapper/cs_generated/EValues_OGL_CPL_GDI_COMPATIBILITY.cs
@@ -154,7 +154,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_OGL_CPL_GDI_COMPATIBILITY.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: OGL_CPL_GDI_COMPATIBILITY_DEFAULT
     path: ../NVAPIWrapper/cs_generated/EValues_OGL_CPL_GDI_COMPATIBILITY.cs

@@ -22,7 +22,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_SLI_PREDEFINED_GPU_COUNT_DX10.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: EValues_SLI_PREDEFINED_GPU_COUNT_DX10
     path: ../NVAPIWrapper/cs_generated/EValues_SLI_PREDEFINED_GPU_COUNT_DX10.cs
@@ -48,7 +48,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_SLI_PREDEFINED_GPU_COUNT_DX10.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SLI_PREDEFINED_GPU_COUNT_DX10_AUTOSELECT
     path: ../NVAPIWrapper/cs_generated/EValues_SLI_PREDEFINED_GPU_COUNT_DX10.cs
@@ -75,7 +75,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_SLI_PREDEFINED_GPU_COUNT_DX10.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SLI_PREDEFINED_GPU_COUNT_DX10_ONE
     path: ../NVAPIWrapper/cs_generated/EValues_SLI_PREDEFINED_GPU_COUNT_DX10.cs
@@ -102,7 +102,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_SLI_PREDEFINED_GPU_COUNT_DX10.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SLI_PREDEFINED_GPU_COUNT_DX10_TWO
     path: ../NVAPIWrapper/cs_generated/EValues_SLI_PREDEFINED_GPU_COUNT_DX10.cs
@@ -129,7 +129,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_SLI_PREDEFINED_GPU_COUNT_DX10.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SLI_PREDEFINED_GPU_COUNT_DX10_THREE
     path: ../NVAPIWrapper/cs_generated/EValues_SLI_PREDEFINED_GPU_COUNT_DX10.cs
@@ -156,7 +156,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_SLI_PREDEFINED_GPU_COUNT_DX10.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SLI_PREDEFINED_GPU_COUNT_DX10_FOUR
     path: ../NVAPIWrapper/cs_generated/EValues_SLI_PREDEFINED_GPU_COUNT_DX10.cs
@@ -183,7 +183,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_SLI_PREDEFINED_GPU_COUNT_DX10.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SLI_PREDEFINED_GPU_COUNT_DX10_NUM_VALUES
     path: ../NVAPIWrapper/cs_generated/EValues_SLI_PREDEFINED_GPU_COUNT_DX10.cs
@@ -210,7 +210,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_SLI_PREDEFINED_GPU_COUNT_DX10.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SLI_PREDEFINED_GPU_COUNT_DX10_DEFAULT
     path: ../NVAPIWrapper/cs_generated/EValues_SLI_PREDEFINED_GPU_COUNT_DX10.cs

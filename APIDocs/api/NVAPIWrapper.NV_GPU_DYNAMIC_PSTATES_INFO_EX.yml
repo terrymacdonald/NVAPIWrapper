@@ -18,7 +18,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_GPU_DYNAMIC_PSTATES_INFO_EX.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_GPU_DYNAMIC_PSTATES_INFO_EX
     path: ../NVAPIWrapper/cs_generated/NV_GPU_DYNAMIC_PSTATES_INFO_EX.cs
@@ -51,7 +51,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_GPU_DYNAMIC_PSTATES_INFO_EX.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: version
     path: ../NVAPIWrapper/cs_generated/NV_GPU_DYNAMIC_PSTATES_INFO_EX.cs
@@ -79,7 +79,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_GPU_DYNAMIC_PSTATES_INFO_EX.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: flags
     path: ../NVAPIWrapper/cs_generated/NV_GPU_DYNAMIC_PSTATES_INFO_EX.cs
@@ -107,7 +107,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_GPU_DYNAMIC_PSTATES_INFO_EX.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: utilization
     path: ../NVAPIWrapper/cs_generated/NV_GPU_DYNAMIC_PSTATES_INFO_EX.cs

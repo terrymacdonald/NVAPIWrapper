@@ -20,7 +20,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVAPI_GSYNC_GPU_TOPOLOGY_CONNECTOR.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: _NVAPI_GSYNC_GPU_TOPOLOGY_CONNECTOR
     path: ../NVAPIWrapper/cs_generated/_NVAPI_GSYNC_GPU_TOPOLOGY_CONNECTOR.cs
@@ -46,7 +46,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVAPI_GSYNC_GPU_TOPOLOGY_CONNECTOR.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_GSYNC_GPU_TOPOLOGY_CONNECTOR_NONE
     path: ../NVAPIWrapper/cs_generated/_NVAPI_GSYNC_GPU_TOPOLOGY_CONNECTOR.cs
@@ -73,7 +73,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVAPI_GSYNC_GPU_TOPOLOGY_CONNECTOR.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_GSYNC_GPU_TOPOLOGY_CONNECTOR_PRIMARY
     path: ../NVAPIWrapper/cs_generated/_NVAPI_GSYNC_GPU_TOPOLOGY_CONNECTOR.cs
@@ -100,7 +100,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVAPI_GSYNC_GPU_TOPOLOGY_CONNECTOR.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_GSYNC_GPU_TOPOLOGY_CONNECTOR_SECONDARY
     path: ../NVAPIWrapper/cs_generated/_NVAPI_GSYNC_GPU_TOPOLOGY_CONNECTOR.cs
@@ -127,7 +127,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVAPI_GSYNC_GPU_TOPOLOGY_CONNECTOR.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_GSYNC_GPU_TOPOLOGY_CONNECTOR_TERTIARY
     path: ../NVAPIWrapper/cs_generated/_NVAPI_GSYNC_GPU_TOPOLOGY_CONNECTOR.cs
@@ -154,7 +154,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVAPI_GSYNC_GPU_TOPOLOGY_CONNECTOR.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_GSYNC_GPU_TOPOLOGY_CONNECTOR_QUARTERNARY
     path: ../NVAPIWrapper/cs_generated/_NVAPI_GSYNC_GPU_TOPOLOGY_CONNECTOR.cs

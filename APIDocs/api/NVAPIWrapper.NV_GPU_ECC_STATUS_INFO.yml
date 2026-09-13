@@ -19,7 +19,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIStatusAndTimingTypes.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_GPU_ECC_STATUS_INFO
     path: ../NVAPIWrapper/NVAPIStatusAndTimingTypes.cs
@@ -53,7 +53,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIStatusAndTimingTypes.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: version
     path: ../NVAPIWrapper/NVAPIStatusAndTimingTypes.cs
@@ -82,7 +82,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIStatusAndTimingTypes.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: configurationOptions
     path: ../NVAPIWrapper/NVAPIStatusAndTimingTypes.cs
@@ -111,7 +111,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIStatusAndTimingTypes.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: isSupported
     path: ../NVAPIWrapper/NVAPIStatusAndTimingTypes.cs
@@ -142,7 +142,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIStatusAndTimingTypes.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: isEnabled
     path: ../NVAPIWrapper/NVAPIStatusAndTimingTypes.cs

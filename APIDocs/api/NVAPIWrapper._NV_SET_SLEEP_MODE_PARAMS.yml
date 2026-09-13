@@ -22,7 +22,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_SET_SLEEP_MODE_PARAMS.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: _NV_SET_SLEEP_MODE_PARAMS
     path: ../NVAPIWrapper/cs_generated/_NV_SET_SLEEP_MODE_PARAMS.cs
@@ -55,7 +55,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_SET_SLEEP_MODE_PARAMS.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: version
     path: ../NVAPIWrapper/cs_generated/_NV_SET_SLEEP_MODE_PARAMS.cs
@@ -83,7 +83,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_SET_SLEEP_MODE_PARAMS.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: bLowLatencyMode
     path: ../NVAPIWrapper/cs_generated/_NV_SET_SLEEP_MODE_PARAMS.cs
@@ -111,7 +111,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_SET_SLEEP_MODE_PARAMS.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: bLowLatencyBoost
     path: ../NVAPIWrapper/cs_generated/_NV_SET_SLEEP_MODE_PARAMS.cs
@@ -139,7 +139,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_SET_SLEEP_MODE_PARAMS.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: minimumIntervalUs
     path: ../NVAPIWrapper/cs_generated/_NV_SET_SLEEP_MODE_PARAMS.cs
@@ -167,7 +167,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_SET_SLEEP_MODE_PARAMS.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: bUseMarkersToOptimize
     path: ../NVAPIWrapper/cs_generated/_NV_SET_SLEEP_MODE_PARAMS.cs
@@ -195,7 +195,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_SET_SLEEP_MODE_PARAMS.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: bUseMinQueueTime
     path: ../NVAPIWrapper/cs_generated/_NV_SET_SLEEP_MODE_PARAMS.cs
@@ -223,7 +223,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_SET_SLEEP_MODE_PARAMS.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: rsvd
     path: ../NVAPIWrapper/cs_generated/_NV_SET_SLEEP_MODE_PARAMS.cs

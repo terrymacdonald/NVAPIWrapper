@@ -21,7 +21,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GPU_HDCP_KEY_SOURCE.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: _NV_GPU_HDCP_KEY_SOURCE
     path: ../NVAPIWrapper/cs_generated/_NV_GPU_HDCP_KEY_SOURCE.cs
@@ -47,7 +47,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GPU_HDCP_KEY_SOURCE.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_GPU_HDCP_KEY_SOURCE_UNKNOWN
     path: ../NVAPIWrapper/cs_generated/_NV_GPU_HDCP_KEY_SOURCE.cs
@@ -74,7 +74,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GPU_HDCP_KEY_SOURCE.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_GPU_HDCP_KEY_SOURCE_NONE
     path: ../NVAPIWrapper/cs_generated/_NV_GPU_HDCP_KEY_SOURCE.cs
@@ -101,7 +101,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GPU_HDCP_KEY_SOURCE.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_GPU_HDCP_KEY_SOURCE_CRYPTO_ROM
     path: ../NVAPIWrapper/cs_generated/_NV_GPU_HDCP_KEY_SOURCE.cs
@@ -128,7 +128,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GPU_HDCP_KEY_SOURCE.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_GPU_HDCP_KEY_SOURCE_SBIOS
     path: ../NVAPIWrapper/cs_generated/_NV_GPU_HDCP_KEY_SOURCE.cs
@@ -155,7 +155,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GPU_HDCP_KEY_SOURCE.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_GPU_HDCP_KEY_SOURCE_I2C_ROM
     path: ../NVAPIWrapper/cs_generated/_NV_GPU_HDCP_KEY_SOURCE.cs
@@ -182,7 +182,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GPU_HDCP_KEY_SOURCE.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_GPU_HDCP_KEY_SOURCE_FUSES
     path: ../NVAPIWrapper/cs_generated/_NV_GPU_HDCP_KEY_SOURCE.cs

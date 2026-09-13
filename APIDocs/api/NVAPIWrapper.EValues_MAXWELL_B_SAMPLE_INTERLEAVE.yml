@@ -19,7 +19,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_MAXWELL_B_SAMPLE_INTERLEAVE.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: EValues_MAXWELL_B_SAMPLE_INTERLEAVE
     path: ../NVAPIWrapper/cs_generated/EValues_MAXWELL_B_SAMPLE_INTERLEAVE.cs
@@ -45,7 +45,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_MAXWELL_B_SAMPLE_INTERLEAVE.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: MAXWELL_B_SAMPLE_INTERLEAVE_OFF
     path: ../NVAPIWrapper/cs_generated/EValues_MAXWELL_B_SAMPLE_INTERLEAVE.cs
@@ -72,7 +72,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_MAXWELL_B_SAMPLE_INTERLEAVE.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: MAXWELL_B_SAMPLE_INTERLEAVE_ON
     path: ../NVAPIWrapper/cs_generated/EValues_MAXWELL_B_SAMPLE_INTERLEAVE.cs
@@ -99,7 +99,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_MAXWELL_B_SAMPLE_INTERLEAVE.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: MAXWELL_B_SAMPLE_INTERLEAVE_NUM_VALUES
     path: ../NVAPIWrapper/cs_generated/EValues_MAXWELL_B_SAMPLE_INTERLEAVE.cs
@@ -126,7 +126,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_MAXWELL_B_SAMPLE_INTERLEAVE.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: MAXWELL_B_SAMPLE_INTERLEAVE_DEFAULT
     path: ../NVAPIWrapper/cs_generated/EValues_MAXWELL_B_SAMPLE_INTERLEAVE.cs

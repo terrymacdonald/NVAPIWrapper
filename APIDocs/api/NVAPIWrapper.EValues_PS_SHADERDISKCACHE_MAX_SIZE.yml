@@ -19,7 +19,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_PS_SHADERDISKCACHE_MAX_SIZE.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: EValues_PS_SHADERDISKCACHE_MAX_SIZE
     path: ../NVAPIWrapper/cs_generated/EValues_PS_SHADERDISKCACHE_MAX_SIZE.cs
@@ -45,7 +45,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_PS_SHADERDISKCACHE_MAX_SIZE.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: PS_SHADERDISKCACHE_MAX_SIZE_MIN
     path: ../NVAPIWrapper/cs_generated/EValues_PS_SHADERDISKCACHE_MAX_SIZE.cs
@@ -72,7 +72,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_PS_SHADERDISKCACHE_MAX_SIZE.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: PS_SHADERDISKCACHE_MAX_SIZE_MAX
     path: ../NVAPIWrapper/cs_generated/EValues_PS_SHADERDISKCACHE_MAX_SIZE.cs
@@ -99,7 +99,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_PS_SHADERDISKCACHE_MAX_SIZE.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: PS_SHADERDISKCACHE_MAX_SIZE_NUM_VALUES
     path: ../NVAPIWrapper/cs_generated/EValues_PS_SHADERDISKCACHE_MAX_SIZE.cs
@@ -126,7 +126,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_PS_SHADERDISKCACHE_MAX_SIZE.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: PS_SHADERDISKCACHE_MAX_SIZE_DEFAULT
     path: ../NVAPIWrapper/cs_generated/EValues_PS_SHADERDISKCACHE_MAX_SIZE.cs

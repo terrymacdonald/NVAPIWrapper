@@ -25,7 +25,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIVideoHelper.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPIVioStatusDto
     path: ../NVAPIWrapper/NVAPIVideoHelper.cs
@@ -59,7 +59,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIVideoHelper.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: RawBytes
     path: ../NVAPIWrapper/NVAPIVideoHelper.cs
@@ -88,7 +88,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIVideoHelper.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: .ctor
     path: ../NVAPIWrapper/NVAPIVideoHelper.cs
@@ -120,7 +120,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIVideoHelper.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: CreateDefault
     path: ../NVAPIWrapper/NVAPIVideoHelper.cs
@@ -148,7 +148,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIVideoHelper.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: FromNative
     path: ../NVAPIWrapper/NVAPIVideoHelper.cs
@@ -179,7 +179,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIVideoHelper.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: ToNative
     path: ../NVAPIWrapper/NVAPIVideoHelper.cs
@@ -207,7 +207,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIVideoHelper.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Equals
     path: ../NVAPIWrapper/NVAPIVideoHelper.cs
@@ -244,7 +244,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIVideoHelper.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Equals
     path: ../NVAPIWrapper/NVAPIVideoHelper.cs
@@ -283,7 +283,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIVideoHelper.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetHashCode
     path: ../NVAPIWrapper/NVAPIVideoHelper.cs
@@ -315,7 +315,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIVideoHelper.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: op_Equality
     path: ../NVAPIWrapper/NVAPIVideoHelper.cs
@@ -351,7 +351,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIVideoHelper.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: op_Inequality
     path: ../NVAPIWrapper/NVAPIVideoHelper.cs

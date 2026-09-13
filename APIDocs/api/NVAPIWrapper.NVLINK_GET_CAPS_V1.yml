@@ -22,7 +22,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NVLINK_GET_CAPS_V1.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVLINK_GET_CAPS_V1
     path: ../NVAPIWrapper/cs_generated/NVLINK_GET_CAPS_V1.cs
@@ -55,7 +55,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NVLINK_GET_CAPS_V1.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: version
     path: ../NVAPIWrapper/cs_generated/NVLINK_GET_CAPS_V1.cs
@@ -83,7 +83,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NVLINK_GET_CAPS_V1.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: capsTbl
     path: ../NVAPIWrapper/cs_generated/NVLINK_GET_CAPS_V1.cs
@@ -111,7 +111,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NVLINK_GET_CAPS_V1.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: lowestNvlinkVersion
     path: ../NVAPIWrapper/cs_generated/NVLINK_GET_CAPS_V1.cs
@@ -139,7 +139,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NVLINK_GET_CAPS_V1.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: highestNvlinkVersion
     path: ../NVAPIWrapper/cs_generated/NVLINK_GET_CAPS_V1.cs
@@ -167,7 +167,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NVLINK_GET_CAPS_V1.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: lowestNciVersion
     path: ../NVAPIWrapper/cs_generated/NVLINK_GET_CAPS_V1.cs
@@ -195,7 +195,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NVLINK_GET_CAPS_V1.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: highestNciVersion
     path: ../NVAPIWrapper/cs_generated/NVLINK_GET_CAPS_V1.cs
@@ -223,7 +223,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NVLINK_GET_CAPS_V1.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: linkMask
     path: ../NVAPIWrapper/cs_generated/NVLINK_GET_CAPS_V1.cs

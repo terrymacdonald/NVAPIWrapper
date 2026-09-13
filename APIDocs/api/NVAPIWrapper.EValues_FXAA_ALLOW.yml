@@ -19,7 +19,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_FXAA_ALLOW.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: EValues_FXAA_ALLOW
     path: ../NVAPIWrapper/cs_generated/EValues_FXAA_ALLOW.cs
@@ -45,7 +45,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_FXAA_ALLOW.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: FXAA_ALLOW_DISALLOWED
     path: ../NVAPIWrapper/cs_generated/EValues_FXAA_ALLOW.cs
@@ -72,7 +72,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_FXAA_ALLOW.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: FXAA_ALLOW_ALLOWED
     path: ../NVAPIWrapper/cs_generated/EValues_FXAA_ALLOW.cs
@@ -99,7 +99,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_FXAA_ALLOW.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: FXAA_ALLOW_NUM_VALUES
     path: ../NVAPIWrapper/cs_generated/EValues_FXAA_ALLOW.cs
@@ -126,7 +126,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_FXAA_ALLOW.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: FXAA_ALLOW_DEFAULT
     path: ../NVAPIWrapper/cs_generated/EValues_FXAA_ALLOW.cs

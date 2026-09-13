@@ -20,7 +20,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_SettingWSTRINGNameString.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: _SettingWSTRINGNameString
     path: ../NVAPIWrapper/cs_generated/_SettingWSTRINGNameString.cs
@@ -53,7 +53,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_SettingWSTRINGNameString.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: settingId
     path: ../NVAPIWrapper/cs_generated/_SettingWSTRINGNameString.cs
@@ -81,7 +81,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_SettingWSTRINGNameString.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: settingNameString
     path: ../NVAPIWrapper/cs_generated/_SettingWSTRINGNameString.cs
@@ -109,7 +109,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_SettingWSTRINGNameString.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: numSettingValues
     path: ../NVAPIWrapper/cs_generated/_SettingWSTRINGNameString.cs
@@ -137,7 +137,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_SettingWSTRINGNameString.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: settingValues
     path: ../NVAPIWrapper/cs_generated/_SettingWSTRINGNameString.cs
@@ -165,7 +165,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_SettingWSTRINGNameString.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: defaultValue
     path: ../NVAPIWrapper/cs_generated/_SettingWSTRINGNameString.cs

@@ -17,7 +17,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_INFOFRAME_PROPERTY_BLACKLIST.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_INFOFRAME_PROPERTY_BLACKLIST
     path: ../NVAPIWrapper/cs_generated/NV_INFOFRAME_PROPERTY_BLACKLIST.cs
@@ -43,7 +43,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_INFOFRAME_PROPERTY_BLACKLIST.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_INFOFRAME_PROPERTY_BLACKLIST_FALSE
     path: ../NVAPIWrapper/cs_generated/NV_INFOFRAME_PROPERTY_BLACKLIST.cs
@@ -70,7 +70,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_INFOFRAME_PROPERTY_BLACKLIST.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_INFOFRAME_PROPERTY_BLACKLIST_TRUE
     path: ../NVAPIWrapper/cs_generated/NV_INFOFRAME_PROPERTY_BLACKLIST.cs

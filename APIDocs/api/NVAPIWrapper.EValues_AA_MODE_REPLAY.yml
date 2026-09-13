@@ -37,7 +37,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_AA_MODE_REPLAY.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: EValues_AA_MODE_REPLAY
     path: ../NVAPIWrapper/cs_generated/EValues_AA_MODE_REPLAY.cs
@@ -63,7 +63,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_AA_MODE_REPLAY.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: AA_MODE_REPLAY_SAMPLES_MASK
     path: ../NVAPIWrapper/cs_generated/EValues_AA_MODE_REPLAY.cs
@@ -90,7 +90,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_AA_MODE_REPLAY.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: AA_MODE_REPLAY_SAMPLES_ONE
     path: ../NVAPIWrapper/cs_generated/EValues_AA_MODE_REPLAY.cs
@@ -117,7 +117,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_AA_MODE_REPLAY.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: AA_MODE_REPLAY_SAMPLES_TWO
     path: ../NVAPIWrapper/cs_generated/EValues_AA_MODE_REPLAY.cs
@@ -144,7 +144,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_AA_MODE_REPLAY.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: AA_MODE_REPLAY_SAMPLES_FOUR
     path: ../NVAPIWrapper/cs_generated/EValues_AA_MODE_REPLAY.cs
@@ -171,7 +171,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_AA_MODE_REPLAY.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: AA_MODE_REPLAY_SAMPLES_EIGHT
     path: ../NVAPIWrapper/cs_generated/EValues_AA_MODE_REPLAY.cs
@@ -198,7 +198,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_AA_MODE_REPLAY.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: AA_MODE_REPLAY_SAMPLES_MAX
     path: ../NVAPIWrapper/cs_generated/EValues_AA_MODE_REPLAY.cs
@@ -225,7 +225,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_AA_MODE_REPLAY.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: AA_MODE_REPLAY_MODE_MASK
     path: ../NVAPIWrapper/cs_generated/EValues_AA_MODE_REPLAY.cs
@@ -252,7 +252,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_AA_MODE_REPLAY.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: AA_MODE_REPLAY_MODE_OFF
     path: ../NVAPIWrapper/cs_generated/EValues_AA_MODE_REPLAY.cs
@@ -279,7 +279,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_AA_MODE_REPLAY.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: AA_MODE_REPLAY_MODE_ALPHA_TEST
     path: ../NVAPIWrapper/cs_generated/EValues_AA_MODE_REPLAY.cs
@@ -306,7 +306,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_AA_MODE_REPLAY.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: AA_MODE_REPLAY_MODE_PIXEL_KILL
     path: ../NVAPIWrapper/cs_generated/EValues_AA_MODE_REPLAY.cs
@@ -333,7 +333,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_AA_MODE_REPLAY.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: AA_MODE_REPLAY_MODE_DYN_BRANCH
     path: ../NVAPIWrapper/cs_generated/EValues_AA_MODE_REPLAY.cs
@@ -360,7 +360,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_AA_MODE_REPLAY.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: AA_MODE_REPLAY_MODE_OPTIMAL
     path: ../NVAPIWrapper/cs_generated/EValues_AA_MODE_REPLAY.cs
@@ -387,7 +387,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_AA_MODE_REPLAY.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: AA_MODE_REPLAY_MODE_ALL
     path: ../NVAPIWrapper/cs_generated/EValues_AA_MODE_REPLAY.cs
@@ -414,7 +414,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_AA_MODE_REPLAY.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: AA_MODE_REPLAY_MODE_MAX
     path: ../NVAPIWrapper/cs_generated/EValues_AA_MODE_REPLAY.cs
@@ -441,7 +441,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_AA_MODE_REPLAY.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: AA_MODE_REPLAY_TRANSPARENCY
     path: ../NVAPIWrapper/cs_generated/EValues_AA_MODE_REPLAY.cs
@@ -468,7 +468,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_AA_MODE_REPLAY.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: AA_MODE_REPLAY_DISALLOW_TRAA
     path: ../NVAPIWrapper/cs_generated/EValues_AA_MODE_REPLAY.cs
@@ -495,7 +495,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_AA_MODE_REPLAY.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: AA_MODE_REPLAY_TRANSPARENCY_DEFAULT
     path: ../NVAPIWrapper/cs_generated/EValues_AA_MODE_REPLAY.cs
@@ -522,7 +522,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_AA_MODE_REPLAY.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: AA_MODE_REPLAY_TRANSPARENCY_DEFAULT_TESLA
     path: ../NVAPIWrapper/cs_generated/EValues_AA_MODE_REPLAY.cs
@@ -549,7 +549,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_AA_MODE_REPLAY.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: AA_MODE_REPLAY_TRANSPARENCY_DEFAULT_FERMI
     path: ../NVAPIWrapper/cs_generated/EValues_AA_MODE_REPLAY.cs
@@ -576,7 +576,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_AA_MODE_REPLAY.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: AA_MODE_REPLAY_MASK
     path: ../NVAPIWrapper/cs_generated/EValues_AA_MODE_REPLAY.cs
@@ -603,7 +603,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_AA_MODE_REPLAY.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: AA_MODE_REPLAY_NUM_VALUES
     path: ../NVAPIWrapper/cs_generated/EValues_AA_MODE_REPLAY.cs
@@ -630,7 +630,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_AA_MODE_REPLAY.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: AA_MODE_REPLAY_DEFAULT
     path: ../NVAPIWrapper/cs_generated/EValues_AA_MODE_REPLAY.cs

@@ -18,7 +18,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOANCPARITYCOMPUTATION.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: _NVVIOANCPARITYCOMPUTATION
     path: ../NVAPIWrapper/cs_generated/_NVVIOANCPARITYCOMPUTATION.cs
@@ -44,7 +44,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOANCPARITYCOMPUTATION.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVVIOANCPARITYCOMPUTATION_AUTO
     path: ../NVAPIWrapper/cs_generated/_NVVIOANCPARITYCOMPUTATION.cs
@@ -71,7 +71,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOANCPARITYCOMPUTATION.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVVIOANCPARITYCOMPUTATION_ON
     path: ../NVAPIWrapper/cs_generated/_NVVIOANCPARITYCOMPUTATION.cs
@@ -98,7 +98,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOANCPARITYCOMPUTATION.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVVIOANCPARITYCOMPUTATION_OFF
     path: ../NVAPIWrapper/cs_generated/_NVVIOANCPARITYCOMPUTATION.cs

@@ -27,11 +27,11 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPIPstateInfoDto
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 4029
+    startLine: 4221
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -61,11 +61,11 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: PstateId
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 4032
+    startLine: 4224
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -92,11 +92,11 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: IsEditable
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 4034
+    startLine: 4226
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -123,18 +123,18 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Clocks
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 4036
+    startLine: 4233
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
-  summary: Clock entries for this P-state (up to 8).
+  summary: Gets or sets Clocks. Empty when no values are present.
   example: []
   syntax:
-    content: public NVAPIPstateClockEntryDto[] Clocks { readonly get; set; }
+    content: public NVAPIPstateClockEntryDto[] Clocks { get; set; }
     parameters: []
     return:
       type: NVAPIWrapper.NVAPIPstateClockEntryDto[]
@@ -154,18 +154,18 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: BaseVoltages
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 4038
+    startLine: 4244
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
-  summary: Base voltage entries for this P-state (up to 4).
+  summary: Gets or sets BaseVoltages. Empty when no values are present.
   example: []
   syntax:
-    content: public NVAPIPstateBaseVoltageEntryDto[] BaseVoltages { readonly get; set; }
+    content: public NVAPIPstateBaseVoltageEntryDto[] BaseVoltages { get; set; }
     parameters: []
     return:
       type: NVAPIWrapper.NVAPIPstateBaseVoltageEntryDto[]
@@ -185,11 +185,11 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: .ctor
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 4041
+    startLine: 4251
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -225,11 +225,11 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: FromNative
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 4050
+    startLine: 4260
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -258,11 +258,11 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: ToNative
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 4062
+    startLine: 4272
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -288,11 +288,11 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Equals
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 4076
+    startLine: 4286
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -325,11 +325,11 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Equals
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 4096
+    startLine: 4306
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -364,11 +364,11 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetHashCode
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 4098
+    startLine: 4308
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -396,11 +396,11 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: op_Equality
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 4110
+    startLine: 4320
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -434,11 +434,11 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: op_Inequality
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 4112
+    startLine: 4322
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper

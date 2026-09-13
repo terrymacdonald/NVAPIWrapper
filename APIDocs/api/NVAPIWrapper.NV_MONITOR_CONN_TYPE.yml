@@ -25,7 +25,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_MONITOR_CONN_TYPE.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_MONITOR_CONN_TYPE
     path: ../NVAPIWrapper/cs_generated/NV_MONITOR_CONN_TYPE.cs
@@ -51,7 +51,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_MONITOR_CONN_TYPE.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_MONITOR_CONN_TYPE_UNINITIALIZED
     path: ../NVAPIWrapper/cs_generated/NV_MONITOR_CONN_TYPE.cs
@@ -78,7 +78,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_MONITOR_CONN_TYPE.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_MONITOR_CONN_TYPE_VGA
     path: ../NVAPIWrapper/cs_generated/NV_MONITOR_CONN_TYPE.cs
@@ -105,7 +105,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_MONITOR_CONN_TYPE.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_MONITOR_CONN_TYPE_COMPONENT
     path: ../NVAPIWrapper/cs_generated/NV_MONITOR_CONN_TYPE.cs
@@ -132,7 +132,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_MONITOR_CONN_TYPE.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_MONITOR_CONN_TYPE_SVIDEO
     path: ../NVAPIWrapper/cs_generated/NV_MONITOR_CONN_TYPE.cs
@@ -159,7 +159,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_MONITOR_CONN_TYPE.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_MONITOR_CONN_TYPE_HDMI
     path: ../NVAPIWrapper/cs_generated/NV_MONITOR_CONN_TYPE.cs
@@ -186,7 +186,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_MONITOR_CONN_TYPE.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_MONITOR_CONN_TYPE_DVI
     path: ../NVAPIWrapper/cs_generated/NV_MONITOR_CONN_TYPE.cs
@@ -213,7 +213,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_MONITOR_CONN_TYPE.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_MONITOR_CONN_TYPE_LVDS
     path: ../NVAPIWrapper/cs_generated/NV_MONITOR_CONN_TYPE.cs
@@ -240,7 +240,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_MONITOR_CONN_TYPE.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_MONITOR_CONN_TYPE_DP
     path: ../NVAPIWrapper/cs_generated/NV_MONITOR_CONN_TYPE.cs
@@ -267,7 +267,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_MONITOR_CONN_TYPE.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_MONITOR_CONN_TYPE_COMPOSITE
     path: ../NVAPIWrapper/cs_generated/NV_MONITOR_CONN_TYPE.cs
@@ -294,7 +294,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_MONITOR_CONN_TYPE.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_MONITOR_CONN_TYPE_UNKNOWN
     path: ../NVAPIWrapper/cs_generated/NV_MONITOR_CONN_TYPE.cs

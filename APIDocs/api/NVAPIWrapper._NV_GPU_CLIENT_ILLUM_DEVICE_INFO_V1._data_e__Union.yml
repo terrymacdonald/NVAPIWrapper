@@ -19,7 +19,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GPU_CLIENT_ILLUM_DEVICE_INFO_V1.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: _data_e__Union
     path: ../NVAPIWrapper/cs_generated/_NV_GPU_CLIENT_ILLUM_DEVICE_INFO_V1.cs
@@ -52,7 +52,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GPU_CLIENT_ILLUM_DEVICE_INFO_V1.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: mcuv10
     path: ../NVAPIWrapper/cs_generated/_NV_GPU_CLIENT_ILLUM_DEVICE_INFO_V1.cs
@@ -80,7 +80,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GPU_CLIENT_ILLUM_DEVICE_INFO_V1.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: gpioPwmRgbwv10
     path: ../NVAPIWrapper/cs_generated/_NV_GPU_CLIENT_ILLUM_DEVICE_INFO_V1.cs
@@ -108,7 +108,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GPU_CLIENT_ILLUM_DEVICE_INFO_V1.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: gpioPwmSingleColorv10
     path: ../NVAPIWrapper/cs_generated/_NV_GPU_CLIENT_ILLUM_DEVICE_INFO_V1.cs
@@ -136,7 +136,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GPU_CLIENT_ILLUM_DEVICE_INFO_V1.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: rsvd
     path: ../NVAPIWrapper/cs_generated/_NV_GPU_CLIENT_ILLUM_DEVICE_INFO_V1.cs

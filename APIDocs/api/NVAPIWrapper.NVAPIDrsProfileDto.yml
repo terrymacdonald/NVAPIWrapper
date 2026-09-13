@@ -29,7 +29,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIDrsHelper.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPIDrsProfileDto
     path: ../NVAPIWrapper/NVAPIDrsHelper.cs
@@ -63,7 +63,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIDrsHelper.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: ProfileName
     path: ../NVAPIWrapper/NVAPIDrsHelper.cs
@@ -92,7 +92,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIDrsHelper.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GpuSupport
     path: ../NVAPIWrapper/NVAPIDrsHelper.cs
@@ -121,7 +121,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIDrsHelper.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: IsPredefined
     path: ../NVAPIWrapper/NVAPIDrsHelper.cs
@@ -150,7 +150,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIDrsHelper.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NumOfApps
     path: ../NVAPIWrapper/NVAPIDrsHelper.cs
@@ -179,7 +179,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIDrsHelper.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NumOfSettings
     path: ../NVAPIWrapper/NVAPIDrsHelper.cs
@@ -208,7 +208,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIDrsHelper.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: .ctor
     path: ../NVAPIWrapper/NVAPIDrsHelper.cs
@@ -255,7 +255,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIDrsHelper.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Create
     path: ../NVAPIWrapper/NVAPIDrsHelper.cs
@@ -293,7 +293,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIDrsHelper.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: FromNative
     path: ../NVAPIWrapper/NVAPIDrsHelper.cs
@@ -331,7 +331,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIDrsHelper.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: ToNative
     path: ../NVAPIWrapper/NVAPIDrsHelper.cs
@@ -362,7 +362,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIDrsHelper.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Equals
     path: ../NVAPIWrapper/NVAPIDrsHelper.cs
@@ -399,7 +399,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIDrsHelper.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Equals
     path: ../NVAPIWrapper/NVAPIDrsHelper.cs
@@ -438,7 +438,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIDrsHelper.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetHashCode
     path: ../NVAPIWrapper/NVAPIDrsHelper.cs
@@ -470,7 +470,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIDrsHelper.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: op_Equality
     path: ../NVAPIWrapper/NVAPIDrsHelper.cs
@@ -511,7 +511,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIDrsHelper.cs
-      branch: main
+      branch: feature-2026-09-13-update-R615
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: op_Inequality
     path: ../NVAPIWrapper/NVAPIDrsHelper.cs
