@@ -82,6 +82,22 @@ NvF32TONvU32
 __nvapi_deprecated_function
 --exclude
 __nvapi_deprecated_datatype
+--exclude
+NV_NGX_PACK_FP
+--exclude
+NV_NGX_UNPACK_FP
+--exclude
+NV_NGX_PACK_BOOL
+--exclude
+NV_GET_CURRENT_SLI_STATE
+--exclude
+NVAPI_MAX_MOSAIC_DISPLAY_ROWS
+--exclude
+NVAPI_MAX_MOSAIC_DISPLAY_COLUMNS
+--exclude
+NVAPI_D3D12_WORKSTATION_FEATURE_PROPERTIES_PARAMS
+--exclude
+NV_CHIPSET_INFO
 
 # Force unsigned backing for NVAPI driver settings value enums that use unsigned literals.
 --with-type
