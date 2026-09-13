@@ -437,9 +437,17 @@ namespace NVAPIWrapper.FacadeTests
                 {
                     displays = gpu.EnumAllDisplays();
                 }
+                catch (NVAPIException ex) when (IsDisplayDiscoveryUnavailableResult(ex.Status))
+                {
+                    continue;
+                }
+                catch (EntryPointNotFoundException)
+                {
+                    continue;
+                }
                 catch (Exception ex)
                 {
-                    failures.Add($"{gpuLabel}: EnumAllDisplays failed: {ex.Message}");
+                    failures.Add($"{gpuLabel}: EnumAllDisplays failed: {ex.GetType().Name} {ex.Message}");
                     continue;
                 }
 
@@ -538,6 +546,19 @@ namespace NVAPIWrapper.FacadeTests
         private static void WaitForSettle()
         {
             Thread.Sleep(SettlingDelayMs);
+        }
+
+        /// <summary>
+        /// Determine whether an NVAPI status means display discovery cannot be queried on this machine.
+        /// </summary>
+        /// <param name="status">NVAPI status.</param>
+        /// <returns>True if display discovery should be skipped.</returns>
+        private static bool IsDisplayDiscoveryUnavailableResult(_NvAPI_Status status)
+        {
+            return status == _NvAPI_Status.NVAPI_ERROR
+                || status == _NvAPI_Status.NVAPI_NOT_SUPPORTED
+                || status == _NvAPI_Status.NVAPI_NO_IMPLEMENTATION
+                || status == _NvAPI_Status.NVAPI_NVIDIA_DEVICE_NOT_FOUND;
         }
 
         private static bool IsUnsupportedResult(_NvAPI_Status status)

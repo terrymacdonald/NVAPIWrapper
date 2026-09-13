@@ -27,12 +27,10 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPIMosaicGridTopologiesDto
     path: ../NVAPIWrapper/NVAPIMosaicHelper.cs
-    startLine: 1719
+    startLine: 1718
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
-  summary: Mosaic grid topology collection DTO.
-  example: []
   syntax:
     content: 'public struct NVAPIMosaicGridTopologiesDto : IEquatable<NVAPIMosaicGridTopologiesDto>'
     content.vb: Public Structure NVAPIMosaicGridTopologiesDto Implements IEquatable(Of NVAPIMosaicGridTopologiesDto)
@@ -61,12 +59,12 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Grids
     path: ../NVAPIWrapper/NVAPIMosaicHelper.cs
-    startLine: 1721
+    startLine: 1722
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
   syntax:
-    content: public NVAPIMosaicGridTopoDto[] Grids { readonly get; set; }
+    content: public NVAPIMosaicGridTopoDto[] Grids { get; set; }
     parameters: []
     return:
       type: NVAPIWrapper.NVAPIMosaicGridTopoDto[]
@@ -90,18 +88,15 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: .ctor
     path: ../NVAPIWrapper/NVAPIMosaicHelper.cs
-    startLine: 1727
+    startLine: 1728
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
-  summary: Create a Mosaic grid topologies DTO.
-  example: []
   syntax:
     content: public NVAPIMosaicGridTopologiesDto(NVAPIMosaicGridTopoDto[] grids)
     parameters:
     - id: grids
       type: NVAPIWrapper.NVAPIMosaicGridTopoDto[]
-      description: Grid topologies.
     content.vb: Public Sub New(grids As NVAPIMosaicGridTopoDto())
   overload: NVAPIWrapper.NVAPIMosaicGridTopologiesDto.#ctor*
   nameWithType.vb: NVAPIMosaicGridTopologiesDto.New(NVAPIMosaicGridTopoDto())
@@ -125,24 +120,19 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: FromNative
     path: ../NVAPIWrapper/NVAPIMosaicHelper.cs
-    startLine: 1738
+    startLine: 1733
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
-  summary: Create a Mosaic grid topologies DTO from native data.
-  example: []
   syntax:
     content: public static NVAPIMosaicGridTopologiesDto FromNative(uint count, _NV_MOSAIC_GRID_TOPO_V2[] native)
     parameters:
     - id: count
       type: System.UInt32
-      description: Number of grids.
     - id: native
       type: NVAPIWrapper._NV_MOSAIC_GRID_TOPO_V2[]
-      description: Native grid topology data.
     return:
       type: NVAPIWrapper.NVAPIMosaicGridTopologiesDto
-      description: Mosaic grid topologies DTO.
     content.vb: Public Shared Function FromNative(count As UInteger, native As _NV_MOSAIC_GRID_TOPO_V2()) As NVAPIMosaicGridTopologiesDto
   overload: NVAPIWrapper.NVAPIMosaicGridTopologiesDto.FromNative*
   nameWithType.vb: NVAPIMosaicGridTopologiesDto.FromNative(UInteger, _NV_MOSAIC_GRID_TOPO_V2())
@@ -166,21 +156,21 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Equals
     path: ../NVAPIWrapper/NVAPIMosaicHelper.cs
-    startLine: 1766
+    startLine: 1762
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
-  summary: Determine whether this instance equals another Mosaic grid topologies DTO.
+  summary: Indicates whether the current object is equal to another object of the same type.
   example: []
   syntax:
     content: public bool Equals(NVAPIMosaicGridTopologiesDto other)
     parameters:
     - id: other
       type: NVAPIWrapper.NVAPIMosaicGridTopologiesDto
-      description: The other DTO to compare.
+      description: An object to compare with this object.
     return:
       type: System.Boolean
-      description: True if the DTOs are equal; otherwise false.
+      description: <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the current object is equal to the <code class="paramref">other</code> parameter; otherwise, <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
     content.vb: Public Function Equals(other As NVAPIMosaicGridTopologiesDto) As Boolean
   overload: NVAPIWrapper.NVAPIMosaicGridTopologiesDto.Equals*
   implements:
@@ -203,21 +193,21 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Equals
     path: ../NVAPIWrapper/NVAPIMosaicHelper.cs
-    startLine: 1776
+    startLine: 1767
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
-  summary: Determine whether this instance equals another object.
+  summary: Indicates whether this instance and a specified object are equal.
   example: []
   syntax:
     content: public override bool Equals(object? obj)
     parameters:
     - id: obj
       type: System.Object
-      description: The object to compare.
+      description: The object to compare with the current instance.
     return:
       type: System.Boolean
-      description: True if the object is an equivalent DTO; otherwise false.
+      description: <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if <code class="paramref">obj</code> and this instance are the same type and represent the same value; otherwise, <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
     content.vb: Public Overrides Function Equals(obj As Object) As Boolean
   overridden: System.ValueType.Equals(System.Object)
   overload: NVAPIWrapper.NVAPIMosaicGridTopologiesDto.Equals*
@@ -242,17 +232,17 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetHashCode
     path: ../NVAPIWrapper/NVAPIMosaicHelper.cs
-    startLine: 1782
+    startLine: 1769
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
-  summary: Get a hash code for this instance.
+  summary: Returns the hash code for this instance.
   example: []
   syntax:
     content: public override int GetHashCode()
     return:
       type: System.Int32
-      description: Hash code for this instance.
+      description: A 32-bit signed integer that is the hash code for this instance.
     content.vb: Public Overrides Function GetHashCode() As Integer
   overridden: System.ValueType.GetHashCode
   overload: NVAPIWrapper.NVAPIMosaicGridTopologiesDto.GetHashCode*
@@ -274,24 +264,19 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: op_Equality
     path: ../NVAPIWrapper/NVAPIMosaicHelper.cs
-    startLine: 1790
+    startLine: 1771
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
-  summary: Determine whether two Mosaic grid topologies DTOs are equal.
-  example: []
   syntax:
     content: public static bool operator ==(NVAPIMosaicGridTopologiesDto left, NVAPIMosaicGridTopologiesDto right)
     parameters:
     - id: left
       type: NVAPIWrapper.NVAPIMosaicGridTopologiesDto
-      description: Left DTO.
     - id: right
       type: NVAPIWrapper.NVAPIMosaicGridTopologiesDto
-      description: Right DTO.
     return:
       type: System.Boolean
-      description: True if the DTOs are equal; otherwise false.
     content.vb: Public Shared Operator =(left As NVAPIMosaicGridTopologiesDto, right As NVAPIMosaicGridTopologiesDto) As Boolean
   overload: NVAPIWrapper.NVAPIMosaicGridTopologiesDto.op_Equality*
   nameWithType.vb: NVAPIMosaicGridTopologiesDto.=(NVAPIMosaicGridTopologiesDto, NVAPIMosaicGridTopologiesDto)
@@ -315,24 +300,19 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: op_Inequality
     path: ../NVAPIWrapper/NVAPIMosaicHelper.cs
-    startLine: 1798
+    startLine: 1773
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
-  summary: Determine whether two Mosaic grid topologies DTOs are not equal.
-  example: []
   syntax:
     content: public static bool operator !=(NVAPIMosaicGridTopologiesDto left, NVAPIMosaicGridTopologiesDto right)
     parameters:
     - id: left
       type: NVAPIWrapper.NVAPIMosaicGridTopologiesDto
-      description: Left DTO.
     - id: right
       type: NVAPIWrapper.NVAPIMosaicGridTopologiesDto
-      description: Right DTO.
     return:
       type: System.Boolean
-      description: True if the DTOs are not equal; otherwise false.
     content.vb: Public Shared Operator <>(left As NVAPIMosaicGridTopologiesDto, right As NVAPIMosaicGridTopologiesDto) As Boolean
   overload: NVAPIWrapper.NVAPIMosaicGridTopologiesDto.op_Inequality*
   nameWithType.vb: NVAPIMosaicGridTopologiesDto.<>(NVAPIMosaicGridTopologiesDto, NVAPIMosaicGridTopologiesDto)

@@ -197,17 +197,11 @@ namespace NVAPIWrapper.FacadeTests
         {
             Skip.If(_fixture.ApiHelper == null, _fixture.SkipReason);
 
-            var gpus = _fixture.ApiHelper.EnumeratePhysicalGpus();
-            Skip.If(gpus.Length == 0, "No NVIDIA physical GPUs found.");
-
-            var displays = gpus[0].EnumAllDisplays();
-            Skip.If(displays.Length == 0, "No NVIDIA displays found.");
-
-            var outputId = displays[0].GetAssociatedDisplayOutputId();
-            Skip.If(outputId == null, "Display output ID not supported.");
+            var gpu = GetFirstGpuOrSkip();
+            var outputId = GetFirstOutputIdOrSkip(gpu);
 
             var displayId = FacadeTestUtils.InvokeOrSkip(
-                () => gpus[0].GetDisplayIdFromGpuAndOutputId(outputId.Value),
+                () => gpu.GetDisplayIdFromGpuAndOutputId(outputId),
                 "Display ID lookup unsupported");
 
             Skip.If(displayId == null, "Display ID not supported.");
@@ -847,14 +841,10 @@ namespace NVAPIWrapper.FacadeTests
         public void I2CRead_ShouldReturnDto()
         {
             var gpu = GetFirstGpuOrSkip();
-            var displays = gpu.EnumAllDisplays();
-            Skip.If(displays.Length == 0, "No NVIDIA displays found.");
-
-            var outputId = displays[0].GetAssociatedDisplayOutputId();
-            Skip.If(outputId == null || outputId.Value == 0, "Display output ID not available.");
+            var outputId = GetFirstOutputIdOrSkip(gpu);
 
             var request = new NVAPII2CInfoDto(
-                outputId.Value,
+                outputId,
                 true,
                 0xA0,
                 new byte[] { 0x00 },
@@ -864,16 +854,9 @@ namespace NVAPIWrapper.FacadeTests
                 0,
                 false);
 
-            NVAPII2CInfoDto? response;
-            try
-            {
-                response = gpu.I2CRead(request);
-            }
-            catch (NVAPIException ex)
-            {
-                Skip.If(true, $"I2C read failed: {ex.Status}");
-                return;
-            }
+            var response = FacadeTestUtils.InvokeOrSkip(
+                () => gpu.I2CRead(request),
+                "I2C read unsupported");
 
             Skip.If(response == null, "I2C read not supported.");
 
@@ -888,14 +871,10 @@ namespace NVAPIWrapper.FacadeTests
         public void I2CWrite_ShouldReturnSuccess()
         {
             var gpu = GetFirstGpuOrSkip();
-            var displays = gpu.EnumAllDisplays();
-            Skip.If(displays.Length == 0, "No NVIDIA displays found.");
-
-            var outputId = displays[0].GetAssociatedDisplayOutputId();
-            Skip.If(outputId == null || outputId.Value == 0, "Display output ID not available.");
+            var outputId = GetFirstOutputIdOrSkip(gpu);
 
             var request = new NVAPII2CInfoDto(
-                outputId.Value,
+                outputId,
                 true,
                 0xA0,
                 Array.Empty<byte>(),
@@ -905,16 +884,9 @@ namespace NVAPIWrapper.FacadeTests
                 0,
                 false);
 
-            bool? result;
-            try
-            {
-                result = gpu.I2CWrite(request);
-            }
-            catch (NVAPIException ex)
-            {
-                Skip.If(true, $"I2C write failed: {ex.Status}");
-                return;
-            }
+            var result = FacadeTestUtils.InvokeOrSkip(
+                () => gpu.I2CWrite(request),
+                "I2C write unsupported");
 
             Skip.If(result == null, "I2C write not supported.");
             Skip.If(result != true, "I2C write did not succeed.");
@@ -926,7 +898,9 @@ namespace NVAPIWrapper.FacadeTests
         {
             var gpu = GetFirstGpuOrSkip();
 
-            var config = gpu.GetDisplayConfig();
+            var config = FacadeTestUtils.InvokeOrSkipDisplayDiscoveryUnavailable(
+                () => gpu.GetDisplayConfig(),
+                "Display config not available on this machine/driver");
             Skip.If(config == null, "Display config not supported.");
 
             Assert.NotNull(config.Value.Paths);
@@ -945,7 +919,9 @@ namespace NVAPIWrapper.FacadeTests
 
         private NVAPIDisplayHelper GetFirstDisplayOrSkip(NVAPIPhysicalGpuHelper gpu)
         {
-            var displays = gpu.EnumAllDisplays();
+            var displays = FacadeTestUtils.InvokeOrSkipDisplayDiscoveryUnavailable(
+                () => gpu.EnumAllDisplays(),
+                "Display enumeration not available on this machine/driver");
             Skip.If(displays.Length == 0, "No NVIDIA displays found.");
             return displays[0];
         }

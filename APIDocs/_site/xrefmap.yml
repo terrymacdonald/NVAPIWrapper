@@ -35864,15 +35864,15 @@ references:
   commentId: T:NVAPIWrapper.NVAPIDisplayConfigPathDto
   fullName: NVAPIWrapper.NVAPIDisplayConfigPathDto
   nameWithType: NVAPIDisplayConfigPathDto
-- uid: NVAPIWrapper.NVAPIDisplayConfigPathDto.#ctor(System.UInt32,System.UInt32,System.Boolean,System.Int64,System.Nullable{NVAPIWrapper.NVAPIDisplayConfigSourceModeDto},NVAPIWrapper.NVAPIDisplayConfigTargetDto[])
-  name: NVAPIDisplayConfigPathDto(uint, uint, bool, long, NVAPIDisplayConfigSourceModeDto?, NVAPIDisplayConfigTargetDto[])
-  href: api/NVAPIWrapper.NVAPIDisplayConfigPathDto.html#NVAPIWrapper_NVAPIDisplayConfigPathDto__ctor_System_UInt32_System_UInt32_System_Boolean_System_Int64_System_Nullable_NVAPIWrapper_NVAPIDisplayConfigSourceModeDto__NVAPIWrapper_NVAPIDisplayConfigTargetDto___
-  commentId: M:NVAPIWrapper.NVAPIDisplayConfigPathDto.#ctor(System.UInt32,System.UInt32,System.Boolean,System.Int64,System.Nullable{NVAPIWrapper.NVAPIDisplayConfigSourceModeDto},NVAPIWrapper.NVAPIDisplayConfigTargetDto[])
-  name.vb: New(UInteger, UInteger, Boolean, Long, NVAPIDisplayConfigSourceModeDto?, NVAPIDisplayConfigTargetDto())
-  fullName: NVAPIWrapper.NVAPIDisplayConfigPathDto.NVAPIDisplayConfigPathDto(uint, uint, bool, long, NVAPIWrapper.NVAPIDisplayConfigSourceModeDto?, NVAPIWrapper.NVAPIDisplayConfigTargetDto[])
-  fullName.vb: NVAPIWrapper.NVAPIDisplayConfigPathDto.New(UInteger, UInteger, Boolean, Long, NVAPIWrapper.NVAPIDisplayConfigSourceModeDto?, NVAPIWrapper.NVAPIDisplayConfigTargetDto())
-  nameWithType: NVAPIDisplayConfigPathDto.NVAPIDisplayConfigPathDto(uint, uint, bool, long, NVAPIDisplayConfigSourceModeDto?, NVAPIDisplayConfigTargetDto[])
-  nameWithType.vb: NVAPIDisplayConfigPathDto.New(UInteger, UInteger, Boolean, Long, NVAPIDisplayConfigSourceModeDto?, NVAPIDisplayConfigTargetDto())
+- uid: NVAPIWrapper.NVAPIDisplayConfigPathDto.#ctor(System.UInt32,System.UInt32,System.Boolean,System.Int64,System.Boolean,NVAPIWrapper.NVAPIDisplayConfigSourceModeDto,NVAPIWrapper.NVAPIDisplayConfigTargetDto[])
+  name: NVAPIDisplayConfigPathDto(uint, uint, bool, long, bool, NVAPIDisplayConfigSourceModeDto, NVAPIDisplayConfigTargetDto[])
+  href: api/NVAPIWrapper.NVAPIDisplayConfigPathDto.html#NVAPIWrapper_NVAPIDisplayConfigPathDto__ctor_System_UInt32_System_UInt32_System_Boolean_System_Int64_System_Boolean_NVAPIWrapper_NVAPIDisplayConfigSourceModeDto_NVAPIWrapper_NVAPIDisplayConfigTargetDto___
+  commentId: M:NVAPIWrapper.NVAPIDisplayConfigPathDto.#ctor(System.UInt32,System.UInt32,System.Boolean,System.Int64,System.Boolean,NVAPIWrapper.NVAPIDisplayConfigSourceModeDto,NVAPIWrapper.NVAPIDisplayConfigTargetDto[])
+  name.vb: New(UInteger, UInteger, Boolean, Long, Boolean, NVAPIDisplayConfigSourceModeDto, NVAPIDisplayConfigTargetDto())
+  fullName: NVAPIWrapper.NVAPIDisplayConfigPathDto.NVAPIDisplayConfigPathDto(uint, uint, bool, long, bool, NVAPIWrapper.NVAPIDisplayConfigSourceModeDto, NVAPIWrapper.NVAPIDisplayConfigTargetDto[])
+  fullName.vb: NVAPIWrapper.NVAPIDisplayConfigPathDto.New(UInteger, UInteger, Boolean, Long, Boolean, NVAPIWrapper.NVAPIDisplayConfigSourceModeDto, NVAPIWrapper.NVAPIDisplayConfigTargetDto())
+  nameWithType: NVAPIDisplayConfigPathDto.NVAPIDisplayConfigPathDto(uint, uint, bool, long, bool, NVAPIDisplayConfigSourceModeDto, NVAPIDisplayConfigTargetDto[])
+  nameWithType.vb: NVAPIDisplayConfigPathDto.New(UInteger, UInteger, Boolean, Long, Boolean, NVAPIDisplayConfigSourceModeDto, NVAPIDisplayConfigTargetDto())
 - uid: NVAPIWrapper.NVAPIDisplayConfigPathDto.#ctor*
   name: NVAPIDisplayConfigPathDto
   href: api/NVAPIWrapper.NVAPIDisplayConfigPathDto.html#NVAPIWrapper_NVAPIDisplayConfigPathDto__ctor_
@@ -35931,6 +35931,19 @@ references:
   isSpec: "True"
   fullName: NVAPIWrapper.NVAPIDisplayConfigPathDto.GetHashCode
   nameWithType: NVAPIDisplayConfigPathDto.GetHashCode
+- uid: NVAPIWrapper.NVAPIDisplayConfigPathDto.HasSourceModeInfo
+  name: HasSourceModeInfo
+  href: api/NVAPIWrapper.NVAPIDisplayConfigPathDto.html#NVAPIWrapper_NVAPIDisplayConfigPathDto_HasSourceModeInfo
+  commentId: P:NVAPIWrapper.NVAPIDisplayConfigPathDto.HasSourceModeInfo
+  fullName: NVAPIWrapper.NVAPIDisplayConfigPathDto.HasSourceModeInfo
+  nameWithType: NVAPIDisplayConfigPathDto.HasSourceModeInfo
+- uid: NVAPIWrapper.NVAPIDisplayConfigPathDto.HasSourceModeInfo*
+  name: HasSourceModeInfo
+  href: api/NVAPIWrapper.NVAPIDisplayConfigPathDto.html#NVAPIWrapper_NVAPIDisplayConfigPathDto_HasSourceModeInfo_
+  commentId: Overload:NVAPIWrapper.NVAPIDisplayConfigPathDto.HasSourceModeInfo
+  isSpec: "True"
+  fullName: NVAPIWrapper.NVAPIDisplayConfigPathDto.HasSourceModeInfo
+  nameWithType: NVAPIDisplayConfigPathDto.HasSourceModeInfo
 - uid: NVAPIWrapper.NVAPIDisplayConfigPathDto.IsNonNvidiaAdapter
   name: IsNonNvidiaAdapter
   href: api/NVAPIWrapper.NVAPIDisplayConfigPathDto.html#NVAPIWrapper_NVAPIDisplayConfigPathDto_IsNonNvidiaAdapter
@@ -36271,15 +36284,15 @@ references:
   commentId: T:NVAPIWrapper.NVAPIDisplayConfigTargetDto
   fullName: NVAPIWrapper.NVAPIDisplayConfigTargetDto
   nameWithType: NVAPIDisplayConfigTargetDto
-- uid: NVAPIWrapper.NVAPIDisplayConfigTargetDto.#ctor(System.UInt32,System.UInt32,System.Nullable{NVAPIWrapper.NVAPIDisplayConfigAdvancedTargetDto})
-  name: NVAPIDisplayConfigTargetDto(uint, uint, NVAPIDisplayConfigAdvancedTargetDto?)
-  href: api/NVAPIWrapper.NVAPIDisplayConfigTargetDto.html#NVAPIWrapper_NVAPIDisplayConfigTargetDto__ctor_System_UInt32_System_UInt32_System_Nullable_NVAPIWrapper_NVAPIDisplayConfigAdvancedTargetDto__
-  commentId: M:NVAPIWrapper.NVAPIDisplayConfigTargetDto.#ctor(System.UInt32,System.UInt32,System.Nullable{NVAPIWrapper.NVAPIDisplayConfigAdvancedTargetDto})
-  name.vb: New(UInteger, UInteger, NVAPIDisplayConfigAdvancedTargetDto?)
-  fullName: NVAPIWrapper.NVAPIDisplayConfigTargetDto.NVAPIDisplayConfigTargetDto(uint, uint, NVAPIWrapper.NVAPIDisplayConfigAdvancedTargetDto?)
-  fullName.vb: NVAPIWrapper.NVAPIDisplayConfigTargetDto.New(UInteger, UInteger, NVAPIWrapper.NVAPIDisplayConfigAdvancedTargetDto?)
-  nameWithType: NVAPIDisplayConfigTargetDto.NVAPIDisplayConfigTargetDto(uint, uint, NVAPIDisplayConfigAdvancedTargetDto?)
-  nameWithType.vb: NVAPIDisplayConfigTargetDto.New(UInteger, UInteger, NVAPIDisplayConfigAdvancedTargetDto?)
+- uid: NVAPIWrapper.NVAPIDisplayConfigTargetDto.#ctor(System.UInt32,System.UInt32,System.Boolean,NVAPIWrapper.NVAPIDisplayConfigAdvancedTargetDto)
+  name: NVAPIDisplayConfigTargetDto(uint, uint, bool, NVAPIDisplayConfigAdvancedTargetDto)
+  href: api/NVAPIWrapper.NVAPIDisplayConfigTargetDto.html#NVAPIWrapper_NVAPIDisplayConfigTargetDto__ctor_System_UInt32_System_UInt32_System_Boolean_NVAPIWrapper_NVAPIDisplayConfigAdvancedTargetDto_
+  commentId: M:NVAPIWrapper.NVAPIDisplayConfigTargetDto.#ctor(System.UInt32,System.UInt32,System.Boolean,NVAPIWrapper.NVAPIDisplayConfigAdvancedTargetDto)
+  name.vb: New(UInteger, UInteger, Boolean, NVAPIDisplayConfigAdvancedTargetDto)
+  fullName: NVAPIWrapper.NVAPIDisplayConfigTargetDto.NVAPIDisplayConfigTargetDto(uint, uint, bool, NVAPIWrapper.NVAPIDisplayConfigAdvancedTargetDto)
+  fullName.vb: NVAPIWrapper.NVAPIDisplayConfigTargetDto.New(UInteger, UInteger, Boolean, NVAPIWrapper.NVAPIDisplayConfigAdvancedTargetDto)
+  nameWithType: NVAPIDisplayConfigTargetDto.NVAPIDisplayConfigTargetDto(uint, uint, bool, NVAPIDisplayConfigAdvancedTargetDto)
+  nameWithType.vb: NVAPIDisplayConfigTargetDto.New(UInteger, UInteger, Boolean, NVAPIDisplayConfigAdvancedTargetDto)
 - uid: NVAPIWrapper.NVAPIDisplayConfigTargetDto.#ctor*
   name: NVAPIDisplayConfigTargetDto
   href: api/NVAPIWrapper.NVAPIDisplayConfigTargetDto.html#NVAPIWrapper_NVAPIDisplayConfigTargetDto__ctor_
@@ -36364,6 +36377,19 @@ references:
   isSpec: "True"
   fullName: NVAPIWrapper.NVAPIDisplayConfigTargetDto.GetHashCode
   nameWithType: NVAPIDisplayConfigTargetDto.GetHashCode
+- uid: NVAPIWrapper.NVAPIDisplayConfigTargetDto.HasDetails
+  name: HasDetails
+  href: api/NVAPIWrapper.NVAPIDisplayConfigTargetDto.html#NVAPIWrapper_NVAPIDisplayConfigTargetDto_HasDetails
+  commentId: P:NVAPIWrapper.NVAPIDisplayConfigTargetDto.HasDetails
+  fullName: NVAPIWrapper.NVAPIDisplayConfigTargetDto.HasDetails
+  nameWithType: NVAPIDisplayConfigTargetDto.HasDetails
+- uid: NVAPIWrapper.NVAPIDisplayConfigTargetDto.HasDetails*
+  name: HasDetails
+  href: api/NVAPIWrapper.NVAPIDisplayConfigTargetDto.html#NVAPIWrapper_NVAPIDisplayConfigTargetDto_HasDetails_
+  commentId: Overload:NVAPIWrapper.NVAPIDisplayConfigTargetDto.HasDetails
+  isSpec: "True"
+  fullName: NVAPIWrapper.NVAPIDisplayConfigTargetDto.HasDetails
+  nameWithType: NVAPIDisplayConfigTargetDto.HasDetails
 - uid: NVAPIWrapper.NVAPIDisplayConfigTargetDto.TargetId
   name: TargetId
   href: api/NVAPIWrapper.NVAPIDisplayConfigTargetDto.html#NVAPIWrapper_NVAPIDisplayConfigTargetDto_TargetId
@@ -49045,15 +49071,15 @@ references:
   commentId: T:NVAPIWrapper.NVAPIGpuScanoutWarpingDataDto
   fullName: NVAPIWrapper.NVAPIGpuScanoutWarpingDataDto
   nameWithType: NVAPIGpuScanoutWarpingDataDto
-- uid: NVAPIWrapper.NVAPIGpuScanoutWarpingDataDto.#ctor(System.Single[],NVAPIWrapper.NV_GPU_WARPING_VERTICE_FORMAT,System.Int32,System.Nullable{NVAPIWrapper.NVAPISBoxDto})
-  name: NVAPIGpuScanoutWarpingDataDto(float[], NV_GPU_WARPING_VERTICE_FORMAT, int, NVAPISBoxDto?)
-  href: api/NVAPIWrapper.NVAPIGpuScanoutWarpingDataDto.html#NVAPIWrapper_NVAPIGpuScanoutWarpingDataDto__ctor_System_Single___NVAPIWrapper_NV_GPU_WARPING_VERTICE_FORMAT_System_Int32_System_Nullable_NVAPIWrapper_NVAPISBoxDto__
-  commentId: M:NVAPIWrapper.NVAPIGpuScanoutWarpingDataDto.#ctor(System.Single[],NVAPIWrapper.NV_GPU_WARPING_VERTICE_FORMAT,System.Int32,System.Nullable{NVAPIWrapper.NVAPISBoxDto})
-  name.vb: New(Single(), NV_GPU_WARPING_VERTICE_FORMAT, Integer, NVAPISBoxDto?)
-  fullName: NVAPIWrapper.NVAPIGpuScanoutWarpingDataDto.NVAPIGpuScanoutWarpingDataDto(float[], NVAPIWrapper.NV_GPU_WARPING_VERTICE_FORMAT, int, NVAPIWrapper.NVAPISBoxDto?)
-  fullName.vb: NVAPIWrapper.NVAPIGpuScanoutWarpingDataDto.New(Single(), NVAPIWrapper.NV_GPU_WARPING_VERTICE_FORMAT, Integer, NVAPIWrapper.NVAPISBoxDto?)
-  nameWithType: NVAPIGpuScanoutWarpingDataDto.NVAPIGpuScanoutWarpingDataDto(float[], NV_GPU_WARPING_VERTICE_FORMAT, int, NVAPISBoxDto?)
-  nameWithType.vb: NVAPIGpuScanoutWarpingDataDto.New(Single(), NV_GPU_WARPING_VERTICE_FORMAT, Integer, NVAPISBoxDto?)
+- uid: NVAPIWrapper.NVAPIGpuScanoutWarpingDataDto.#ctor(System.Single[],NVAPIWrapper.NV_GPU_WARPING_VERTICE_FORMAT,System.Int32,System.Boolean,NVAPIWrapper.NVAPISBoxDto)
+  name: NVAPIGpuScanoutWarpingDataDto(float[], NV_GPU_WARPING_VERTICE_FORMAT, int, bool, NVAPISBoxDto)
+  href: api/NVAPIWrapper.NVAPIGpuScanoutWarpingDataDto.html#NVAPIWrapper_NVAPIGpuScanoutWarpingDataDto__ctor_System_Single___NVAPIWrapper_NV_GPU_WARPING_VERTICE_FORMAT_System_Int32_System_Boolean_NVAPIWrapper_NVAPISBoxDto_
+  commentId: M:NVAPIWrapper.NVAPIGpuScanoutWarpingDataDto.#ctor(System.Single[],NVAPIWrapper.NV_GPU_WARPING_VERTICE_FORMAT,System.Int32,System.Boolean,NVAPIWrapper.NVAPISBoxDto)
+  name.vb: New(Single(), NV_GPU_WARPING_VERTICE_FORMAT, Integer, Boolean, NVAPISBoxDto)
+  fullName: NVAPIWrapper.NVAPIGpuScanoutWarpingDataDto.NVAPIGpuScanoutWarpingDataDto(float[], NVAPIWrapper.NV_GPU_WARPING_VERTICE_FORMAT, int, bool, NVAPIWrapper.NVAPISBoxDto)
+  fullName.vb: NVAPIWrapper.NVAPIGpuScanoutWarpingDataDto.New(Single(), NVAPIWrapper.NV_GPU_WARPING_VERTICE_FORMAT, Integer, Boolean, NVAPIWrapper.NVAPISBoxDto)
+  nameWithType: NVAPIGpuScanoutWarpingDataDto.NVAPIGpuScanoutWarpingDataDto(float[], NV_GPU_WARPING_VERTICE_FORMAT, int, bool, NVAPISBoxDto)
+  nameWithType.vb: NVAPIGpuScanoutWarpingDataDto.New(Single(), NV_GPU_WARPING_VERTICE_FORMAT, Integer, Boolean, NVAPISBoxDto)
 - uid: NVAPIWrapper.NVAPIGpuScanoutWarpingDataDto.#ctor*
   name: NVAPIGpuScanoutWarpingDataDto
   href: api/NVAPIWrapper.NVAPIGpuScanoutWarpingDataDto.html#NVAPIWrapper_NVAPIGpuScanoutWarpingDataDto__ctor_
@@ -49099,6 +49125,19 @@ references:
   isSpec: "True"
   fullName: NVAPIWrapper.NVAPIGpuScanoutWarpingDataDto.GetHashCode
   nameWithType: NVAPIGpuScanoutWarpingDataDto.GetHashCode
+- uid: NVAPIWrapper.NVAPIGpuScanoutWarpingDataDto.HasTextureRect
+  name: HasTextureRect
+  href: api/NVAPIWrapper.NVAPIGpuScanoutWarpingDataDto.html#NVAPIWrapper_NVAPIGpuScanoutWarpingDataDto_HasTextureRect
+  commentId: P:NVAPIWrapper.NVAPIGpuScanoutWarpingDataDto.HasTextureRect
+  fullName: NVAPIWrapper.NVAPIGpuScanoutWarpingDataDto.HasTextureRect
+  nameWithType: NVAPIGpuScanoutWarpingDataDto.HasTextureRect
+- uid: NVAPIWrapper.NVAPIGpuScanoutWarpingDataDto.HasTextureRect*
+  name: HasTextureRect
+  href: api/NVAPIWrapper.NVAPIGpuScanoutWarpingDataDto.html#NVAPIWrapper_NVAPIGpuScanoutWarpingDataDto_HasTextureRect_
+  commentId: Overload:NVAPIWrapper.NVAPIGpuScanoutWarpingDataDto.HasTextureRect
+  isSpec: "True"
+  fullName: NVAPIWrapper.NVAPIGpuScanoutWarpingDataDto.HasTextureRect
+  nameWithType: NVAPIGpuScanoutWarpingDataDto.HasTextureRect
 - uid: NVAPIWrapper.NVAPIGpuScanoutWarpingDataDto.NumVertices
   name: NumVertices
   href: api/NVAPIWrapper.NVAPIGpuScanoutWarpingDataDto.html#NVAPIWrapper_NVAPIGpuScanoutWarpingDataDto_NumVertices
@@ -51968,6 +52007,19 @@ references:
   isSpec: "True"
   fullName: NVAPIWrapper.NVAPILogicalGpuInfoDto.GetHashCode
   nameWithType: NVAPILogicalGpuInfoDto.GetHashCode
+- uid: NVAPIWrapper.NVAPILogicalGpuInfoDto.HasOsAdapterId
+  name: HasOsAdapterId
+  href: api/NVAPIWrapper.NVAPILogicalGpuInfoDto.html#NVAPIWrapper_NVAPILogicalGpuInfoDto_HasOsAdapterId
+  commentId: P:NVAPIWrapper.NVAPILogicalGpuInfoDto.HasOsAdapterId
+  fullName: NVAPIWrapper.NVAPILogicalGpuInfoDto.HasOsAdapterId
+  nameWithType: NVAPILogicalGpuInfoDto.HasOsAdapterId
+- uid: NVAPIWrapper.NVAPILogicalGpuInfoDto.HasOsAdapterId*
+  name: HasOsAdapterId
+  href: api/NVAPIWrapper.NVAPILogicalGpuInfoDto.html#NVAPIWrapper_NVAPILogicalGpuInfoDto_HasOsAdapterId_
+  commentId: Overload:NVAPIWrapper.NVAPILogicalGpuInfoDto.HasOsAdapterId
+  isSpec: "True"
+  fullName: NVAPIWrapper.NVAPILogicalGpuInfoDto.HasOsAdapterId
+  nameWithType: NVAPILogicalGpuInfoDto.HasOsAdapterId
 - uid: NVAPIWrapper.NVAPILogicalGpuInfoDto.OsAdapterId
   name: OsAdapterId
   href: api/NVAPIWrapper.NVAPILogicalGpuInfoDto.html#NVAPIWrapper_NVAPILogicalGpuInfoDto_OsAdapterId

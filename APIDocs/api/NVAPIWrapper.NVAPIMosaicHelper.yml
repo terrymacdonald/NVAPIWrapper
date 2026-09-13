@@ -674,7 +674,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Dispose
     path: ../NVAPIWrapper/NVAPIMosaicHelper.cs
-    startLine: 542
+    startLine: 544
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper

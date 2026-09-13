@@ -1901,7 +1901,23 @@ namespace NVAPIWrapper
     public struct NVAPISystemPhysicalGpuHandleDto : IEquatable<NVAPISystemPhysicalGpuHandleDto>
     {
         internal IntPtr Handle { get; set; }
+
+        /// <summary>
+        /// Gets whether this DTO references a physical GPU handle.
+        /// </summary>
+        public bool HasPhysicalGpu => Handle != IntPtr.Zero;
+
+        /// <summary>
+        /// Gets the physical GPU handle value, or 0 when no physical GPU handle is present.
+        /// </summary>
+        public long PhysicalGpuHandleValue => Handle.ToInt64();
+
+        /// <summary>
+        /// Gets the physical GPU helper for in-process callers. Ignored during JSON serialization.
+        /// </summary>
+        [System.Text.Json.Serialization.JsonIgnore]
         public NVAPIPhysicalGpuHelper PhysicalGpu { get; set; }
+
         public _NV_ADAPTER_TYPE AdapterType { get; set; }
 
         internal NVAPISystemPhysicalGpuHandleDto(IntPtr handle, _NV_ADAPTER_TYPE adapterType, NVAPIApiHelper helper)
@@ -1976,7 +1992,23 @@ namespace NVAPIWrapper
     public struct NVAPISystemLogicalGpuHandleDto : IEquatable<NVAPISystemLogicalGpuHandleDto>
     {
         internal IntPtr Handle { get; set; }
+
+        /// <summary>
+        /// Gets whether this DTO references a logical GPU handle.
+        /// </summary>
+        public bool HasLogicalGpu => Handle != IntPtr.Zero;
+
+        /// <summary>
+        /// Gets the logical GPU handle value, or 0 when no logical GPU handle is present.
+        /// </summary>
+        public long LogicalGpuHandleValue => Handle.ToInt64();
+
+        /// <summary>
+        /// Gets the logical GPU helper for in-process callers. Ignored during JSON serialization.
+        /// </summary>
+        [System.Text.Json.Serialization.JsonIgnore]
         public NVAPILogicalGpuHelper LogicalGpu { get; set; }
+
         public _NV_ADAPTER_TYPE AdapterType { get; set; }
 
         internal NVAPISystemLogicalGpuHandleDto(IntPtr handle, _NV_ADAPTER_TYPE adapterType, NVAPIApiHelper helper)

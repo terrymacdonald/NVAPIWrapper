@@ -1,5 +1,5 @@
 {
-  "source_base_path": "E:/vscode-projects/NVAPIWrapper/APIDocs",
+  "source_base_path": "D:/visual-studio-projects/NVAPIWrapper/APIDocs",
   "xrefmap": "xrefmap.yml",
   "files": [
     {
@@ -8268,7 +8268,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "NVAPIWrapper.NVAPIMosaicGridTopologiesDto",
-      "Summary": "<p sourcefile=\"api/NVAPIWrapper.NVAPIMosaicGridTopologiesDto.yml\" sourcestartlinenumber=\"1\">Mosaic grid topology collection DTO.</p>\n"
+      "Summary": null
     },
     {
       "type": "ManagedReference",

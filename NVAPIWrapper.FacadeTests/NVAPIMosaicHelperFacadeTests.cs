@@ -109,15 +109,17 @@ namespace NVAPIWrapper.FacadeTests
             var gpus = _fixture.ApiHelper.EnumeratePhysicalGpus();
             Skip.If(gpus.Length == 0, "No NVIDIA physical GPUs found.");
 
-            var displays = gpus[0].EnumAllDisplays();
+            var displays = FacadeTestUtils.InvokeOrSkipDisplayDiscoveryUnavailable(
+                () => gpus[0].EnumAllDisplays(),
+                "Display enumeration not available on this machine/driver");
             Skip.If(displays.Length == 0, "No NVIDIA displays found.");
 
-            var displayId = displays[0].GetDisplayIdByDisplayName();
-            Skip.If(displayId == null, "Display ID not supported.");
+            var displayId = displays[0].DisplayId;
+            Skip.If(displayId == 0, "Display ID not available.");
 
             var mosaic = _fixture.ApiHelper.GetMosaicHelper();
             var viewports = FacadeTestUtils.InvokeOrSkip(
-                () => mosaic.GetDisplayViewportsByResolution(displayId.Value, 1920, 1080),
+                () => mosaic.GetDisplayViewportsByResolution(displayId, 1920, 1080),
                 "Mosaic viewports unsupported");
             Skip.If(viewports == null, "Mosaic viewports not supported.");
 

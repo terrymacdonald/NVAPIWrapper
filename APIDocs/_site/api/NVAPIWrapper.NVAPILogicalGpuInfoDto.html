@@ -143,18 +143,19 @@ Struct NVAPILogicalGpuInfoDto  <a class="header-action link-secondary" title="Vi
 </h2>
 
 
-  <a id="NVAPIWrapper_NVAPILogicalGpuInfoDto_OsAdapterId_" data-uid="NVAPIWrapper.NVAPILogicalGpuInfoDto.OsAdapterId*"></a>
+  <a id="NVAPIWrapper_NVAPILogicalGpuInfoDto_HasOsAdapterId_" data-uid="NVAPIWrapper.NVAPILogicalGpuInfoDto.HasOsAdapterId*"></a>
 
-  <h3 id="NVAPIWrapper_NVAPILogicalGpuInfoDto_OsAdapterId" data-uid="NVAPIWrapper.NVAPILogicalGpuInfoDto.OsAdapterId">
-  OsAdapterId
-  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L5706"><i class="bi bi-code-slash"></i></a>
+  <h3 id="NVAPIWrapper_NVAPILogicalGpuInfoDto_HasOsAdapterId" data-uid="NVAPIWrapper.NVAPILogicalGpuInfoDto.HasOsAdapterId">
+  HasOsAdapterId
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L5733"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>True when <a class="xref" href="NVAPIWrapper.NVAPILogicalGpuInfoDto.html#NVAPIWrapper_NVAPILogicalGpuInfoDto_OsAdapterId">OsAdapterId</a> contains an OS adapter LUID.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public _LUID? OsAdapterId { readonly get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public bool HasOsAdapterId { readonly get; set; }</code></pre>
   </div>
 
 
@@ -163,7 +164,39 @@ Struct NVAPILogicalGpuInfoDto  <a class="header-action link-secondary" title="Vi
 
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="NVAPIWrapper._LUID.html">_LUID</a>?</dt>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPILogicalGpuInfoDto_OsAdapterId_" data-uid="NVAPIWrapper.NVAPILogicalGpuInfoDto.OsAdapterId*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPILogicalGpuInfoDto_OsAdapterId" data-uid="NVAPIWrapper.NVAPILogicalGpuInfoDto.OsAdapterId">
+  OsAdapterId
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L5738"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>OS adapter LUID. When <a class="xref" href="NVAPIWrapper.NVAPILogicalGpuInfoDto.html#NVAPIWrapper_NVAPILogicalGpuInfoDto_HasOsAdapterId">HasOsAdapterId</a> is false, this contains a default value.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public _LUID OsAdapterId { readonly get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="NVAPIWrapper._LUID.html">_LUID</a></dt>
     <dd></dd>
   </dl>
 
@@ -178,10 +211,11 @@ Struct NVAPILogicalGpuInfoDto  <a class="header-action link-secondary" title="Vi
 
   <h3 id="NVAPIWrapper_NVAPILogicalGpuInfoDto_PhysicalGpuCount" data-uid="NVAPIWrapper.NVAPILogicalGpuInfoDto.PhysicalGpuCount">
   PhysicalGpuCount
-  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L5705"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L5728"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Number of physical GPUs included in this logical GPU.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -209,14 +243,15 @@ Struct NVAPILogicalGpuInfoDto  <a class="header-action link-secondary" title="Vi
 
   <h3 id="NVAPIWrapper_NVAPILogicalGpuInfoDto_PhysicalGpus" data-uid="NVAPIWrapper.NVAPILogicalGpuInfoDto.PhysicalGpus">
   PhysicalGpus
-  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L5704"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L5719"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Physical GPU helpers included in this logical GPU.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public NVAPIPhysicalGpuHelper[] PhysicalGpus { readonly get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public NVAPIPhysicalGpuHelper[] PhysicalGpus { get; set; }</code></pre>
   </div>
 
 
@@ -240,14 +275,15 @@ Struct NVAPILogicalGpuInfoDto  <a class="header-action link-secondary" title="Vi
 
   <h3 id="NVAPIWrapper_NVAPILogicalGpuInfoDto_Reserved" data-uid="NVAPIWrapper.NVAPILogicalGpuInfoDto.Reserved">
   Reserved
-  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L5707"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L5743"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Reserved native fields.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public uint[] Reserved { readonly get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public uint[] Reserved { get; set; }</code></pre>
   </div>
 
 
@@ -275,7 +311,7 @@ Struct NVAPILogicalGpuInfoDto  <a class="header-action link-secondary" title="Vi
 
   <h3 id="NVAPIWrapper_NVAPILogicalGpuInfoDto_Equals_NVAPIWrapper_NVAPILogicalGpuInfoDto_" data-uid="NVAPIWrapper.NVAPILogicalGpuInfoDto.Equals(NVAPIWrapper.NVAPILogicalGpuInfoDto)">
   Equals(NVAPILogicalGpuInfoDto)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L5743"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L5801"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Indicates whether the current object is equal to another object of the same type.</p>
@@ -314,7 +350,7 @@ Struct NVAPILogicalGpuInfoDto  <a class="header-action link-secondary" title="Vi
 
   <h3 id="NVAPIWrapper_NVAPILogicalGpuInfoDto_Equals_System_Object_" data-uid="NVAPIWrapper.NVAPILogicalGpuInfoDto.Equals(System.Object)">
   Equals(object?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L5758"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L5816"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Indicates whether this instance and a specified object are equal.</p>
@@ -353,10 +389,11 @@ Struct NVAPILogicalGpuInfoDto  <a class="header-action link-secondary" title="Vi
 
   <h3 id="NVAPIWrapper_NVAPILogicalGpuInfoDto_FromNative_NVAPIWrapper_NVAPIApiHelper_NVAPIWrapper__NV_LOGICAL_GPU_DATA_V1_" data-uid="NVAPIWrapper.NVAPILogicalGpuInfoDto.FromNative(NVAPIWrapper.NVAPIApiHelper,NVAPIWrapper._NV_LOGICAL_GPU_DATA_V1)">
   FromNative(NVAPIApiHelper, _NV_LOGICAL_GPU_DATA_V1)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L5718"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L5778"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Create logical GPU information from native data.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -366,15 +403,18 @@ Struct NVAPILogicalGpuInfoDto  <a class="header-action link-secondary" title="Vi
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>apiHelper</code> <a class="xref" href="NVAPIWrapper.NVAPIApiHelper.html">NVAPIApiHelper</a></dt>
-    <dd></dd>
+    <dd><p>API helper used to create physical GPU helpers.</p>
+</dd>
     <dt><code>native</code> <a class="xref" href="NVAPIWrapper._NV_LOGICAL_GPU_DATA_V1.html">_NV_LOGICAL_GPU_DATA_V1</a></dt>
-    <dd></dd>
+    <dd><p>Native logical GPU data.</p>
+</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="NVAPIWrapper.NVAPILogicalGpuInfoDto.html">NVAPILogicalGpuInfoDto</a></dt>
-    <dd></dd>
+    <dd><p>Logical GPU information DTO.</p>
+</dd>
   </dl>
 
 
@@ -391,7 +431,7 @@ Struct NVAPILogicalGpuInfoDto  <a class="header-action link-secondary" title="Vi
 
   <h3 id="NVAPIWrapper_NVAPILogicalGpuInfoDto_GetHashCode" data-uid="NVAPIWrapper.NVAPILogicalGpuInfoDto.GetHashCode">
   GetHashCode()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L5759"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L5819"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Returns the hash code for this instance.</p>
@@ -428,10 +468,11 @@ Struct NVAPILogicalGpuInfoDto  <a class="header-action link-secondary" title="Vi
 
   <h3 id="NVAPIWrapper_NVAPILogicalGpuInfoDto_op_Equality_NVAPIWrapper_NVAPILogicalGpuInfoDto_NVAPIWrapper_NVAPILogicalGpuInfoDto_" data-uid="NVAPIWrapper.NVAPILogicalGpuInfoDto.op_Equality(NVAPIWrapper.NVAPILogicalGpuInfoDto,NVAPIWrapper.NVAPILogicalGpuInfoDto)">
   operator ==(NVAPILogicalGpuInfoDto, NVAPILogicalGpuInfoDto)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L5770"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L5839"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Determine whether two logical GPU information DTOs are equal.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -466,10 +507,11 @@ Struct NVAPILogicalGpuInfoDto  <a class="header-action link-secondary" title="Vi
 
   <h3 id="NVAPIWrapper_NVAPILogicalGpuInfoDto_op_Inequality_NVAPIWrapper_NVAPILogicalGpuInfoDto_NVAPIWrapper_NVAPILogicalGpuInfoDto_" data-uid="NVAPIWrapper.NVAPILogicalGpuInfoDto.op_Inequality(NVAPIWrapper.NVAPILogicalGpuInfoDto,NVAPIWrapper.NVAPILogicalGpuInfoDto)">
   operator !=(NVAPILogicalGpuInfoDto, NVAPILogicalGpuInfoDto)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L5771"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L5844"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Determine whether two logical GPU information DTOs are not equal.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">

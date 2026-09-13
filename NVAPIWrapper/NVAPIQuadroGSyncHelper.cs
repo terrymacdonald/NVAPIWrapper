@@ -368,6 +368,21 @@ namespace NVAPIWrapper
             throw new NVAPIException(status);
         }
 
+        /// <summary>
+        /// Resolve the proxy physical GPU referenced by a G-Sync GPU DTO.
+        /// </summary>
+        /// <param name="gpu">G-Sync GPU DTO.</param>
+        /// <returns>A single physical GPU helper when the DTO references a valid proxy physical GPU; otherwise an empty array.</returns>
+        public NVAPIPhysicalGpuHelper[] GetProxyPhysicalGpus(NVAPIGSyncGpuDto gpu)
+        {
+            ThrowIfDisposed();
+
+            if (!gpu.HasProxyPhysicalGpu || gpu.ProxyPhysicalGpuHandle == IntPtr.Zero)
+                return Array.Empty<NVAPIPhysicalGpuHelper>();
+
+            return new[] { new NVAPIPhysicalGpuHelper(_apiHelper, gpu.ProxyPhysicalGpuHandle) };
+        }
+
         private bool IsUnsupported(_NvAPI_Status status)
         {
             return status == _NvAPI_Status.NVAPI_NOT_SUPPORTED
@@ -560,8 +575,33 @@ namespace NVAPIWrapper
     {
         internal IntPtr PhysicalGpuHandle { get; set; }
         internal IntPtr ProxyPhysicalGpuHandle { get; set; }
+
+        /// <summary>
+        /// Gets whether this DTO references a physical GPU handle.
+        /// </summary>
+        public bool HasPhysicalGpu => PhysicalGpuHandle != IntPtr.Zero;
+
+        /// <summary>
+        /// Gets the physical GPU handle value, or 0 when no physical GPU handle is present.
+        /// </summary>
+        public long PhysicalGpuHandleValue => PhysicalGpuHandle.ToInt64();
+
+        /// <summary>
+        /// Gets the physical GPU helper for in-process callers. Ignored during JSON serialization.
+        /// </summary>
+        [System.Text.Json.Serialization.JsonIgnore]
         public NVAPIPhysicalGpuHelper PhysicalGpu { get; set; }
-        public NVAPIPhysicalGpuHelper? ProxyPhysicalGpu { get; set; }
+
+        /// <summary>
+        /// Gets whether this DTO references a proxy physical GPU handle.
+        /// </summary>
+        public bool HasProxyPhysicalGpu { get; set; }
+
+        /// <summary>
+        /// Gets the proxy physical GPU handle value, or 0 when no proxy physical GPU handle is present.
+        /// </summary>
+        public long ProxyPhysicalGpuHandleValue => ProxyPhysicalGpuHandle.ToInt64();
+
         public _NVAPI_GSYNC_GPU_TOPOLOGY_CONNECTOR Connector { get; set; }
         public bool IsSynced { get; set; }
 
@@ -579,11 +619,11 @@ namespace NVAPIWrapper
             bool isSynced)
         {
             PhysicalGpu = physicalGpu ?? throw new ArgumentNullException(nameof(physicalGpu));
-            ProxyPhysicalGpu = proxyPhysicalGpu;
             Connector = connector;
             IsSynced = isSynced;
             PhysicalGpuHandle = physicalGpu.GetHandleOrThrow();
             ProxyPhysicalGpuHandle = proxyPhysicalGpu != null ? proxyPhysicalGpu.GetHandleOrThrow() : IntPtr.Zero;
+            HasProxyPhysicalGpu = ProxyPhysicalGpuHandle != IntPtr.Zero;
         }
 
         private NVAPIGSyncGpuDto(
@@ -597,7 +637,7 @@ namespace NVAPIWrapper
             PhysicalGpuHandle = physicalGpuHandle;
             PhysicalGpu = physicalGpu;
             ProxyPhysicalGpuHandle = proxyPhysicalGpuHandle;
-            ProxyPhysicalGpu = proxyPhysicalGpu;
+            HasProxyPhysicalGpu = proxyPhysicalGpuHandle != IntPtr.Zero;
             Connector = connector;
             IsSynced = isSynced;
         }
@@ -613,15 +653,12 @@ namespace NVAPIWrapper
             var gpuHandle = (IntPtr)native.hPhysicalGpu;
             var proxyHandle = (IntPtr)native.hProxyPhysicalGpu;
             var gpu = new NVAPIPhysicalGpuHelper(apiHelper, gpuHandle);
-            NVAPIPhysicalGpuHelper? proxy = null;
-            if (proxyHandle != IntPtr.Zero)
-                proxy = new NVAPIPhysicalGpuHelper(apiHelper, proxyHandle);
 
             return new NVAPIGSyncGpuDto(
                 gpuHandle,
                 gpu,
                 proxyHandle,
-                proxy,
+                null,
                 native.connector,
                 native.isSynced != 0);
         }
@@ -675,6 +712,7 @@ namespace NVAPIWrapper
         {
             return PhysicalGpuHandle == other.PhysicalGpuHandle
                 && ProxyPhysicalGpuHandle == other.ProxyPhysicalGpuHandle
+                && HasProxyPhysicalGpu == other.HasProxyPhysicalGpu
                 && Connector == other.Connector
                 && IsSynced == other.IsSynced;
         }
@@ -696,6 +734,7 @@ namespace NVAPIWrapper
             {
                 var hash = PhysicalGpuHandle.GetHashCode();
                 hash = (hash * 31) + ProxyPhysicalGpuHandle.GetHashCode();
+                hash = (hash * 31) + HasProxyPhysicalGpu.GetHashCode();
                 hash = (hash * 31) + Connector.GetHashCode();
                 hash = (hash * 31) + IsSynced.GetHashCode();
                 return hash;
@@ -846,8 +885,26 @@ namespace NVAPIWrapper
     /// </summary>
     public struct NVAPIGSyncTopologyDto : IEquatable<NVAPIGSyncTopologyDto>
     {
-        public NVAPIGSyncGpuDto[] Gpus { get; set; }
-        public NVAPIGSyncDisplayDto[] Displays { get; set; }
+        private NVAPIGSyncGpuDto[]? _gpus;
+
+        /// <summary>
+        /// Gets or sets Gpus. Empty when no values are present.
+        /// </summary>
+        public NVAPIGSyncGpuDto[] Gpus
+        {
+            get => _gpus ?? Array.Empty<NVAPIGSyncGpuDto>();
+            set => _gpus = value ?? Array.Empty<NVAPIGSyncGpuDto>();
+        }
+        private NVAPIGSyncDisplayDto[]? _displays;
+
+        /// <summary>
+        /// Gets or sets Displays. Empty when no values are present.
+        /// </summary>
+        public NVAPIGSyncDisplayDto[] Displays
+        {
+            get => _displays ?? Array.Empty<NVAPIGSyncDisplayDto>();
+            set => _displays = value ?? Array.Empty<NVAPIGSyncDisplayDto>();
+        }
 
         /// <summary>
         /// Create a G-Sync topology DTO.
@@ -1350,8 +1407,26 @@ namespace NVAPIWrapper
     public struct NVAPIGSyncStatusParametersDto : IEquatable<NVAPIGSyncStatusParametersDto>
     {
         public uint RefreshRate { get; set; }
-        public _NVAPI_GSYNC_RJ45_IO[] Rj45Io { get; set; }
-        public uint[] Rj45Ethernet { get; set; }
+        private _NVAPI_GSYNC_RJ45_IO[]? _rj45Io;
+
+        /// <summary>
+        /// Gets or sets Rj45Io. Empty when no values are present.
+        /// </summary>
+        public _NVAPI_GSYNC_RJ45_IO[] Rj45Io
+        {
+            get => _rj45Io ?? Array.Empty<_NVAPI_GSYNC_RJ45_IO>();
+            set => _rj45Io = value ?? Array.Empty<_NVAPI_GSYNC_RJ45_IO>();
+        }
+        private uint[]? _rj45Ethernet;
+
+        /// <summary>
+        /// Gets or sets Rj45Ethernet. Empty when no values are present.
+        /// </summary>
+        public uint[] Rj45Ethernet
+        {
+            get => _rj45Ethernet ?? Array.Empty<uint>();
+            set => _rj45Ethernet = value ?? Array.Empty<uint>();
+        }
         public uint HouseSyncIncoming { get; set; }
         public bool IsHouseSyncConnected { get; set; }
         public bool IsInternalSlave { get; set; }

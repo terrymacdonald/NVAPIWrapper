@@ -20,7 +20,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_INFOFRAME_PROPERTY_TYPE
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 5858
+    startLine: 5912
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -47,7 +47,7 @@ items:
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_INFOFRAME_PROPERTY_TYPE_UNKNOWN
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
-    startLine: 5863
+    startLine: 5917
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper

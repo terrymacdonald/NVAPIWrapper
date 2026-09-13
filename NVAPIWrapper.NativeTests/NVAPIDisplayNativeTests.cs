@@ -653,10 +653,9 @@ namespace NVAPIWrapper.NativeTests
             SkipIfUnavailable("NvAPI_DISP_AcquireDedicatedDisplay");
 
             var displayId = GetAnyDisplayId();
-            Skip.If(displayId == null, "No display ID available.");
 
             ulong handle = 0;
-            var status = NVAPI.NvAPI_DISP_AcquireDedicatedDisplay(displayId.Value, &handle);
+            var status = NVAPI.NvAPI_DISP_AcquireDedicatedDisplay(displayId, &handle);
             if (IsUnsupported(status) ||
                 status == _NvAPI_Status.NVAPI_UNREGISTERED_RESOURCE ||
                 status == _NvAPI_Status.NVAPI_RESOURCE_IN_USE ||
@@ -676,9 +675,8 @@ namespace NVAPIWrapper.NativeTests
             SkipIfUnavailable("NvAPI_DISP_ReleaseDedicatedDisplay");
 
             var displayId = GetAnyDisplayId();
-            Skip.If(displayId == null, "No display ID available.");
 
-            var status = NVAPI.NvAPI_DISP_ReleaseDedicatedDisplay(displayId.Value);
+            var status = NVAPI.NvAPI_DISP_ReleaseDedicatedDisplay(displayId);
             if (IsUnsupported(status) ||
                 status == _NvAPI_Status.NVAPI_UNREGISTERED_RESOURCE ||
                 status == _NvAPI_Status.NVAPI_RESOURCE_NOT_ACQUIRED ||
@@ -698,12 +696,11 @@ namespace NVAPIWrapper.NativeTests
             SkipIfUnavailable("NvAPI_DISP_GetNvManagedDedicatedDisplayMetadata");
 
             var displayId = GetAnyDisplayId();
-            Skip.If(displayId == null, "No display ID available.");
 
             var metadata = new _NV_MANAGED_DEDICATED_DISPLAY_METADATA
             {
                 version = NVAPI.NV_MANAGED_DEDICATED_DISPLAY_METADATA_VER,
-                displayId = displayId.Value
+                displayId = displayId
             };
 
             var status = NVAPI.NvAPI_DISP_GetNvManagedDedicatedDisplayMetadata(&metadata);
@@ -723,12 +720,11 @@ namespace NVAPIWrapper.NativeTests
             SkipIfUnavailable("NvAPI_DISP_GetNvManagedDedicatedDisplayMetadata");
 
             var displayId = GetAnyDisplayId();
-            Skip.If(displayId == null, "No display ID available.");
 
             var metadata = new _NV_MANAGED_DEDICATED_DISPLAY_METADATA
             {
                 version = NVAPI.NV_MANAGED_DEDICATED_DISPLAY_METADATA_VER,
-                displayId = displayId.Value
+                displayId = displayId
             };
 
             var getStatus = NVAPI.NvAPI_DISP_GetNvManagedDedicatedDisplayMetadata(&metadata);
@@ -913,47 +909,58 @@ namespace NVAPIWrapper.NativeTests
         private unsafe void WithDisplayId(Action<uint> action)
         {
             var displayId = GetAnyDisplayId();
-            Skip.If(displayId == null, "No NVIDIA display IDs found.");
-            action(displayId.Value);
+            action(displayId);
         }
 
-        private unsafe uint? GetAnyDisplayId()
+        private unsafe uint GetAnyDisplayId()
         {
             SkipIfUnavailable("NvAPI_EnumNvidiaDisplayHandle");
             SkipIfUnavailable("NvAPI_GetAssociatedNvidiaDisplayName");
             SkipIfUnavailable("NvAPI_DISP_GetDisplayIdByDisplayName");
 
-            NvDisplayHandle__* handle;
-            var enumStatus = NVAPI.NvAPI_EnumNvidiaDisplayHandle(0, &handle);
-            if (enumStatus == _NvAPI_Status.NVAPI_END_ENUMERATION)
-                return null;
-
-            if (IsUnsupported(enumStatus))
+            try
             {
-                Skip.If(true, $"Display handle enumeration unsupported: {enumStatus}");
-                return null;
-            }
 
-            if (enumStatus != _NvAPI_Status.NVAPI_OK)
-                throw new NVAPIException(enumStatus);
+                NvDisplayHandle__* handle;
+                var enumStatus = NVAPI.NvAPI_EnumNvidiaDisplayHandle(0, &handle);
+                if (enumStatus == _NvAPI_Status.NVAPI_END_ENUMERATION)
+                    throw new Xunit.SkipException("No NVIDIA display handles available.");
 
-            uint displayId = 0;
-            var name = GetAssociatedDisplayName();
-            if (string.IsNullOrWhiteSpace(name))
-                return null;
+                if (IsUnsupported(enumStatus))
+                {
+                    Skip.If(true, $"Display handle enumeration unsupported: {enumStatus}");
+                    throw new Xunit.SkipException($"Display handle enumeration unsupported: {enumStatus}");
+                }
 
-            var bytes = System.Text.Encoding.ASCII.GetBytes(name + "\0");
-            fixed (byte* pBytes = bytes)
+                if (enumStatus != _NvAPI_Status.NVAPI_OK)
+                    throw new NVAPIException(enumStatus);
+
+                uint displayId = 0;
+                var name = GetAssociatedDisplayName();
+                if (string.IsNullOrWhiteSpace(name))
+                    throw new Xunit.SkipException("No associated display name available.");
+
+                var bytes = System.Text.Encoding.ASCII.GetBytes(name + "\0");
+                fixed (byte* pBytes = bytes)
+                {
+                    var status = NVAPI.NvAPI_DISP_GetDisplayIdByDisplayName((sbyte*)pBytes, &displayId);
+                    if (IsUnsupported(status) || status == _NvAPI_Status.NVAPI_INVALID_ARGUMENT)
+                        throw new Xunit.SkipException($"Display ID retrieval unsupported: {status}");
+
+                    if (status != _NvAPI_Status.NVAPI_OK)
+                        throw new NVAPIException(status);
+                }
+
+                return displayId;
+             }
+             catch (NVAPIException ex) when (
+                ex.Status == _NvAPI_Status.NVAPI_ERROR ||
+                ex.Status == _NvAPI_Status.NVAPI_NOT_SUPPORTED ||
+                ex.Status == _NvAPI_Status.NVAPI_NVIDIA_DEVICE_NOT_FOUND ||
+                ex.Status == _NvAPI_Status.NVAPI_NO_IMPLEMENTATION)
             {
-                var status = NVAPI.NvAPI_DISP_GetDisplayIdByDisplayName((sbyte*)pBytes, &displayId);
-                if (IsUnsupported(status) || status == _NvAPI_Status.NVAPI_INVALID_ARGUMENT)
-                    return null;
-
-                if (status != _NvAPI_Status.NVAPI_OK)
-                    throw new NVAPIException(status);
+                throw new Xunit.SkipException($"Display ID not available on this machine/driver: {ex.Status}");
             }
-
-            return displayId;
         }
 
         private unsafe string? GetAssociatedDisplayName()
