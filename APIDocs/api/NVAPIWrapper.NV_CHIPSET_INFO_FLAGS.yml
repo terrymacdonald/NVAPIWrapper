@@ -16,7 +16,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_CHIPSET_INFO_FLAGS.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_CHIPSET_INFO_FLAGS
     path: ../NVAPIWrapper/cs_generated/NV_CHIPSET_INFO_FLAGS.cs
@@ -42,7 +42,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_CHIPSET_INFO_FLAGS.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_CHIPSET_INFO_HYBRID
     path: ../NVAPIWrapper/cs_generated/NV_CHIPSET_INFO_FLAGS.cs

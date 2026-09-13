@@ -21,7 +21,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_OGL_QUALITY_ENHANCEMENTS.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: EValues_OGL_QUALITY_ENHANCEMENTS
     path: ../NVAPIWrapper/cs_generated/EValues_OGL_QUALITY_ENHANCEMENTS.cs
@@ -47,7 +47,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_OGL_QUALITY_ENHANCEMENTS.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: OGL_QUALITY_ENHANCEMENTS_HQUAL
     path: ../NVAPIWrapper/cs_generated/EValues_OGL_QUALITY_ENHANCEMENTS.cs
@@ -74,7 +74,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_OGL_QUALITY_ENHANCEMENTS.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: OGL_QUALITY_ENHANCEMENTS_QUAL
     path: ../NVAPIWrapper/cs_generated/EValues_OGL_QUALITY_ENHANCEMENTS.cs
@@ -101,7 +101,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_OGL_QUALITY_ENHANCEMENTS.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: OGL_QUALITY_ENHANCEMENTS_PERF
     path: ../NVAPIWrapper/cs_generated/EValues_OGL_QUALITY_ENHANCEMENTS.cs
@@ -128,7 +128,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_OGL_QUALITY_ENHANCEMENTS.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: OGL_QUALITY_ENHANCEMENTS_HPERF
     path: ../NVAPIWrapper/cs_generated/EValues_OGL_QUALITY_ENHANCEMENTS.cs
@@ -155,7 +155,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_OGL_QUALITY_ENHANCEMENTS.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: OGL_QUALITY_ENHANCEMENTS_NUM_VALUES
     path: ../NVAPIWrapper/cs_generated/EValues_OGL_QUALITY_ENHANCEMENTS.cs
@@ -182,7 +182,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_OGL_QUALITY_ENHANCEMENTS.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: OGL_QUALITY_ENHANCEMENTS_DEFAULT
     path: ../NVAPIWrapper/cs_generated/EValues_OGL_QUALITY_ENHANCEMENTS.cs

@@ -25,7 +25,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_RISE_CONTENT_TYPE.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: _NV_RISE_CONTENT_TYPE
     path: ../NVAPIWrapper/cs_generated/_NV_RISE_CONTENT_TYPE.cs
@@ -51,7 +51,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_RISE_CONTENT_TYPE.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_RISE_CONTENT_TYPE_INVALID
     path: ../NVAPIWrapper/cs_generated/_NV_RISE_CONTENT_TYPE.cs
@@ -78,7 +78,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_RISE_CONTENT_TYPE.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_RISE_CONTENT_TYPE_TEXT
     path: ../NVAPIWrapper/cs_generated/_NV_RISE_CONTENT_TYPE.cs
@@ -105,7 +105,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_RISE_CONTENT_TYPE.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_RISE_CONTENT_TYPE_GRAPH
     path: ../NVAPIWrapper/cs_generated/_NV_RISE_CONTENT_TYPE.cs
@@ -132,7 +132,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_RISE_CONTENT_TYPE.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_RISE_CONTENT_TYPE_CUSTOM_BEHAVIOR
     path: ../NVAPIWrapper/cs_generated/_NV_RISE_CONTENT_TYPE.cs
@@ -159,7 +159,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_RISE_CONTENT_TYPE.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_RISE_CONTENT_TYPE_CUSTOM_BEHAVIOR_RESULT
     path: ../NVAPIWrapper/cs_generated/_NV_RISE_CONTENT_TYPE.cs
@@ -186,7 +186,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_RISE_CONTENT_TYPE.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_RISE_CONTENT_TYPE_INSTALLING
     path: ../NVAPIWrapper/cs_generated/_NV_RISE_CONTENT_TYPE.cs
@@ -213,7 +213,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_RISE_CONTENT_TYPE.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_RISE_CONTENT_TYPE_PROGRESS_UPDATE
     path: ../NVAPIWrapper/cs_generated/_NV_RISE_CONTENT_TYPE.cs
@@ -240,7 +240,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_RISE_CONTENT_TYPE.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_RISE_CONTENT_TYPE_READY
     path: ../NVAPIWrapper/cs_generated/_NV_RISE_CONTENT_TYPE.cs
@@ -267,7 +267,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_RISE_CONTENT_TYPE.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_RISE_CONTENT_TYPE_DOWNLOAD_REQUEST
     path: ../NVAPIWrapper/cs_generated/_NV_RISE_CONTENT_TYPE.cs
@@ -294,7 +294,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_RISE_CONTENT_TYPE.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_RISE_CONTENT_TYPE_UPDATE_INFO
     path: ../NVAPIWrapper/cs_generated/_NV_RISE_CONTENT_TYPE.cs

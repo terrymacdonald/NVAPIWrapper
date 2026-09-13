@@ -22,7 +22,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GSYNC_GPU.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: _NV_GSYNC_GPU
     path: ../NVAPIWrapper/cs_generated/_NV_GSYNC_GPU.cs
@@ -55,7 +55,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GSYNC_GPU.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: version
     path: ../NVAPIWrapper/cs_generated/_NV_GSYNC_GPU.cs
@@ -83,7 +83,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GSYNC_GPU.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: hPhysicalGpu
     path: ../NVAPIWrapper/cs_generated/_NV_GSYNC_GPU.cs
@@ -111,7 +111,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GSYNC_GPU.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: connector
     path: ../NVAPIWrapper/cs_generated/_NV_GSYNC_GPU.cs
@@ -139,7 +139,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GSYNC_GPU.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: hProxyPhysicalGpu
     path: ../NVAPIWrapper/cs_generated/_NV_GSYNC_GPU.cs
@@ -167,7 +167,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GSYNC_GPU.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: _bitfield
     path: ../NVAPIWrapper/cs_generated/_NV_GSYNC_GPU.cs
@@ -194,7 +194,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GSYNC_GPU.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: isSynced
     path: ../NVAPIWrapper/cs_generated/_NV_GSYNC_GPU.cs
@@ -224,7 +224,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GSYNC_GPU.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: reserved
     path: ../NVAPIWrapper/cs_generated/_NV_GSYNC_GPU.cs

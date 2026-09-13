@@ -23,7 +23,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_DP_LINK_RATE.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: _NV_DP_LINK_RATE
     path: ../NVAPIWrapper/cs_generated/_NV_DP_LINK_RATE.cs
@@ -49,7 +49,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_DP_LINK_RATE.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_DP_1_62GBPS
     path: ../NVAPIWrapper/cs_generated/_NV_DP_LINK_RATE.cs
@@ -76,7 +76,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_DP_LINK_RATE.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_DP_2_70GBPS
     path: ../NVAPIWrapper/cs_generated/_NV_DP_LINK_RATE.cs
@@ -103,7 +103,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_DP_LINK_RATE.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_DP_5_40GBPS
     path: ../NVAPIWrapper/cs_generated/_NV_DP_LINK_RATE.cs
@@ -130,7 +130,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_DP_LINK_RATE.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_DP_8_10GBPS
     path: ../NVAPIWrapper/cs_generated/_NV_DP_LINK_RATE.cs
@@ -157,7 +157,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_DP_LINK_RATE.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_EDP_2_16GBPS
     path: ../NVAPIWrapper/cs_generated/_NV_DP_LINK_RATE.cs
@@ -184,7 +184,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_DP_LINK_RATE.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_EDP_2_43GBPS
     path: ../NVAPIWrapper/cs_generated/_NV_DP_LINK_RATE.cs
@@ -211,7 +211,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_DP_LINK_RATE.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_EDP_3_24GBPS
     path: ../NVAPIWrapper/cs_generated/_NV_DP_LINK_RATE.cs
@@ -238,7 +238,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_DP_LINK_RATE.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_EDP_4_32GBPS
     path: ../NVAPIWrapper/cs_generated/_NV_DP_LINK_RATE.cs

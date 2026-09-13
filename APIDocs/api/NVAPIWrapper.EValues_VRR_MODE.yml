@@ -20,7 +20,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_VRR_MODE.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: EValues_VRR_MODE
     path: ../NVAPIWrapper/cs_generated/EValues_VRR_MODE.cs
@@ -46,7 +46,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_VRR_MODE.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: VRR_MODE_DISABLED
     path: ../NVAPIWrapper/cs_generated/EValues_VRR_MODE.cs
@@ -73,7 +73,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_VRR_MODE.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: VRR_MODE_FULLSCREEN_ONLY
     path: ../NVAPIWrapper/cs_generated/EValues_VRR_MODE.cs
@@ -100,7 +100,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_VRR_MODE.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: VRR_MODE_FULLSCREEN_AND_WINDOWED
     path: ../NVAPIWrapper/cs_generated/EValues_VRR_MODE.cs
@@ -127,7 +127,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_VRR_MODE.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: VRR_MODE_NUM_VALUES
     path: ../NVAPIWrapper/cs_generated/EValues_VRR_MODE.cs
@@ -154,7 +154,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_VRR_MODE.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: VRR_MODE_DEFAULT
     path: ../NVAPIWrapper/cs_generated/EValues_VRR_MODE.cs

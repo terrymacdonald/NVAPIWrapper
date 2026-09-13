@@ -23,11 +23,11 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPIGSyncTopologyDto
     path: ../NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
-    startLine: 846
+    startLine: 906
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -57,16 +57,18 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Gpus
     path: ../NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
-    startLine: 848
+    startLine: 913
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
+  summary: Gets or sets Gpus. Empty when no values are present.
+  example: []
   syntax:
-    content: public NVAPIGSyncGpuDto[] Gpus { readonly get; set; }
+    content: public NVAPIGSyncGpuDto[] Gpus { get; set; }
     parameters: []
     return:
       type: NVAPIWrapper.NVAPIGSyncGpuDto[]
@@ -86,16 +88,18 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Displays
     path: ../NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
-    startLine: 849
+    startLine: 923
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
+  summary: Gets or sets Displays. Empty when no values are present.
+  example: []
   syntax:
-    content: public NVAPIGSyncDisplayDto[] Displays { readonly get; set; }
+    content: public NVAPIGSyncDisplayDto[] Displays { get; set; }
     parameters: []
     return:
       type: NVAPIWrapper.NVAPIGSyncDisplayDto[]
@@ -115,11 +119,11 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: .ctor
     path: ../NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
-    startLine: 856
+    startLine: 934
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -153,11 +157,11 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Equals
     path: ../NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
-    startLine: 867
+    startLine: 945
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -190,11 +194,11 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Equals
     path: ../NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
-    startLine: 878
+    startLine: 956
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -229,11 +233,11 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetHashCode
     path: ../NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
-    startLine: 884
+    startLine: 962
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -261,11 +265,11 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: op_Equality
     path: ../NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
-    startLine: 900
+    startLine: 978
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -302,11 +306,11 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: op_Inequality
     path: ../NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
-    startLine: 908
+    startLine: 986
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper

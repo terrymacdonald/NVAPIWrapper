@@ -17,7 +17,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVAPI_GSYNC_SYNC_SOURCE.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: _NVAPI_GSYNC_SYNC_SOURCE
     path: ../NVAPIWrapper/cs_generated/_NVAPI_GSYNC_SYNC_SOURCE.cs
@@ -43,7 +43,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVAPI_GSYNC_SYNC_SOURCE.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_GSYNC_SYNC_SOURCE_VSYNC
     path: ../NVAPIWrapper/cs_generated/_NVAPI_GSYNC_SYNC_SOURCE.cs
@@ -70,7 +70,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVAPI_GSYNC_SYNC_SOURCE.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_GSYNC_SYNC_SOURCE_HOUSESYNC
     path: ../NVAPIWrapper/cs_generated/_NVAPI_GSYNC_SYNC_SOURCE.cs

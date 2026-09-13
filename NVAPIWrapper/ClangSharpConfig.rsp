@@ -37,10 +37,10 @@ cs_generated
 --output-mode
 CSharp
 
---libraryPath
+--library-path
 nvapi64
 
---methodClassName
+--method-class-name
 NVAPI
 
 --language
@@ -82,6 +82,22 @@ NvF32TONvU32
 __nvapi_deprecated_function
 --exclude
 __nvapi_deprecated_datatype
+--exclude
+NV_NGX_PACK_FP
+--exclude
+NV_NGX_UNPACK_FP
+--exclude
+NV_NGX_PACK_BOOL
+--exclude
+NV_GET_CURRENT_SLI_STATE
+--exclude
+NVAPI_MAX_MOSAIC_DISPLAY_ROWS
+--exclude
+NVAPI_MAX_MOSAIC_DISPLAY_COLUMNS
+--exclude
+NVAPI_D3D12_WORKSTATION_FEATURE_PROPERTIES_PARAMS
+--exclude
+NV_CHIPSET_INFO
 
 # Force unsigned backing for NVAPI driver settings value enums that use unsigned literals.
 --with-type
@@ -116,13 +132,23 @@ NV_FALSE
 # nvapi_interface.h so ClangSharp emits delegate* function-pointer fields
 # instead of [DllImport] methods.  See ClangSharpConfig.generated.rsp.
 
+--generate
+helper-types
+
+--generate
+doc-includes
+
+--generate
+macro-bindings
+
+--generate
+tests-xunit
+
+--log
+visited-files
+
 # --- CONFIG ---
 --config
-latest-codegen
-generate-helper-types
-generate-doc-includes
-multi-file
-generate-macro-bindings
-windows-types
-generate-tests-xunit
-log-visited-files
+codegen=latest
+file=multi
+types=windows

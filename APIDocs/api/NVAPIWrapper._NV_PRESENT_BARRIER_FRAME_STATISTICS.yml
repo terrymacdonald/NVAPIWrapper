@@ -21,7 +21,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_PRESENT_BARRIER_FRAME_STATISTICS.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: _NV_PRESENT_BARRIER_FRAME_STATISTICS
     path: ../NVAPIWrapper/cs_generated/_NV_PRESENT_BARRIER_FRAME_STATISTICS.cs
@@ -54,7 +54,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_PRESENT_BARRIER_FRAME_STATISTICS.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: dwVersion
     path: ../NVAPIWrapper/cs_generated/_NV_PRESENT_BARRIER_FRAME_STATISTICS.cs
@@ -82,7 +82,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_PRESENT_BARRIER_FRAME_STATISTICS.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SyncMode
     path: ../NVAPIWrapper/cs_generated/_NV_PRESENT_BARRIER_FRAME_STATISTICS.cs
@@ -110,7 +110,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_PRESENT_BARRIER_FRAME_STATISTICS.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: PresentCount
     path: ../NVAPIWrapper/cs_generated/_NV_PRESENT_BARRIER_FRAME_STATISTICS.cs
@@ -138,7 +138,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_PRESENT_BARRIER_FRAME_STATISTICS.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: PresentInSyncCount
     path: ../NVAPIWrapper/cs_generated/_NV_PRESENT_BARRIER_FRAME_STATISTICS.cs
@@ -166,7 +166,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_PRESENT_BARRIER_FRAME_STATISTICS.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: FlipInSyncCount
     path: ../NVAPIWrapper/cs_generated/_NV_PRESENT_BARRIER_FRAME_STATISTICS.cs
@@ -194,7 +194,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_PRESENT_BARRIER_FRAME_STATISTICS.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: RefreshCount
     path: ../NVAPIWrapper/cs_generated/_NV_PRESENT_BARRIER_FRAME_STATISTICS.cs

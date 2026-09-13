@@ -18,7 +18,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOINTERLACEMODE.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: _NVVIOINTERLACEMODE
     path: ../NVAPIWrapper/cs_generated/_NVVIOINTERLACEMODE.cs
@@ -44,7 +44,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOINTERLACEMODE.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVVIOINTERLACEMODE_PROGRESSIVE
     path: ../NVAPIWrapper/cs_generated/_NVVIOINTERLACEMODE.cs
@@ -71,7 +71,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOINTERLACEMODE.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVVIOINTERLACEMODE_INTERLACE
     path: ../NVAPIWrapper/cs_generated/_NVVIOINTERLACEMODE.cs
@@ -98,7 +98,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOINTERLACEMODE.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVVIOINTERLACEMODE_PSF
     path: ../NVAPIWrapper/cs_generated/_NVVIOINTERLACEMODE.cs

@@ -19,7 +19,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_EVENT_REGISTER_CALLBACK.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_EVENT_REGISTER_CALLBACK
     path: ../NVAPIWrapper/cs_generated/NV_EVENT_REGISTER_CALLBACK.cs
@@ -52,7 +52,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_EVENT_REGISTER_CALLBACK.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: version
     path: ../NVAPIWrapper/cs_generated/NV_EVENT_REGISTER_CALLBACK.cs
@@ -80,7 +80,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_EVENT_REGISTER_CALLBACK.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: eventId
     path: ../NVAPIWrapper/cs_generated/NV_EVENT_REGISTER_CALLBACK.cs
@@ -108,7 +108,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_EVENT_REGISTER_CALLBACK.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: callbackParam
     path: ../NVAPIWrapper/cs_generated/NV_EVENT_REGISTER_CALLBACK.cs
@@ -136,7 +136,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_EVENT_REGISTER_CALLBACK.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: nvCallBackFunc
     path: ../NVAPIWrapper/cs_generated/NV_EVENT_REGISTER_CALLBACK.cs

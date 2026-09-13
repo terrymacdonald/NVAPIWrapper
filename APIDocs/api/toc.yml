@@ -121,6 +121,15 @@ items:
   - uid: NVAPIWrapper.EValues_NGX_DLSS_FG_OVERRIDE_RESERVED_KEY2
     name: EValues_NGX_DLSS_FG_OVERRIDE_RESERVED_KEY2
     type: Enum
+  - uid: NVAPIWrapper.EValues_NGX_DLSS_NR_OVERRIDE
+    name: EValues_NGX_DLSS_NR_OVERRIDE
+    type: Enum
+  - uid: NVAPIWrapper.EValues_NGX_DLSS_NR_OVERRIDE_RENDER_PRESET_SELECTION
+    name: EValues_NGX_DLSS_NR_OVERRIDE_RENDER_PRESET_SELECTION
+    type: Enum
+  - uid: NVAPIWrapper.EValues_NGX_DLSS_NR_SL_OVERRIDE
+    name: EValues_NGX_DLSS_NR_SL_OVERRIDE
+    type: Enum
   - uid: NVAPIWrapper.EValues_NGX_DLSS_OVERRIDE_OPTIMAL_SETTINGS
     name: EValues_NGX_DLSS_OVERRIDE_OPTIMAL_SETTINGS
     type: Enum
@@ -294,6 +303,9 @@ items:
     type: Enum
   - uid: NVAPIWrapper.EValues_SLI_RENDERING_MODE
     name: EValues_SLI_RENDERING_MODE
+    type: Enum
+  - uid: NVAPIWrapper.EValues_SL_DLSS_OVERRIDE
+    name: EValues_SL_DLSS_OVERRIDE
     type: Enum
   - uid: NVAPIWrapper.EValues_VRPRERENDERLIMIT
     name: EValues_VRPRERENDERLIMIT
@@ -568,6 +580,9 @@ items:
   - uid: NVAPIWrapper.NVAPIGpuMemoryInfoExDto
     name: NVAPIGpuMemoryInfoExDto
     type: Struct
+  - uid: NVAPIWrapper.NVAPIGpuOverclockStatusDto
+    name: NVAPIGpuOverclockStatusDto
+    type: Struct
   - uid: NVAPIWrapper.NVAPIGpuPerfPstates20InfoDto
     name: NVAPIGpuPerfPstates20InfoDto
     type: Struct
@@ -606,6 +621,9 @@ items:
     type: Struct
   - uid: NVAPIWrapper.NVAPIGpuUtilizationSampleCallbackSettingsDto
     name: NVAPIGpuUtilizationSampleCallbackSettingsDto
+    type: Struct
+  - uid: NVAPIWrapper.NVAPIGpuUuidDto
+    name: NVAPIGpuUuidDto
     type: Struct
   - uid: NVAPIWrapper.NVAPIGpuVirtualizationInfoDto
     name: NVAPIGpuVirtualizationInfoDto
@@ -721,11 +739,17 @@ items:
   - uid: NVAPIWrapper.NVAPINvLinkCapsDto
     name: NVAPINvLinkCapsDto
     type: Struct
+  - uid: NVAPIWrapper.NVAPINvLinkCapsExDto
+    name: NVAPINvLinkCapsExDto
+    type: Struct
   - uid: NVAPIWrapper.NVAPINvLinkDeviceInfoDto
     name: NVAPINvLinkDeviceInfoDto
     type: Struct
   - uid: NVAPIWrapper.NVAPINvLinkStatusDto
     name: NVAPINvLinkStatusDto
+    type: Struct
+  - uid: NVAPIWrapper.NVAPINvLinkStatusExDto
+    name: NVAPINvLinkStatusExDto
     type: Struct
   - uid: NVAPIWrapper.NVAPINvLinkStatusInfoDto
     name: NVAPINvLinkStatusInfoDto
@@ -1591,6 +1615,12 @@ items:
   - uid: NVAPIWrapper._NVAPI_NVLINK_DEVICE_INFO_DEVICE_TYPE
     name: _NVAPI_NVLINK_DEVICE_INFO_DEVICE_TYPE
     type: Enum
+  - uid: NVAPIWrapper._NVAPI_NVLINK_LINK_MASK_V1
+    name: _NVAPI_NVLINK_LINK_MASK_V1
+    type: Struct
+  - uid: NVAPIWrapper._NVAPI_NVLINK_LINK_MASK_V1._masks_e__FixedBuffer
+    name: _NVAPI_NVLINK_LINK_MASK_V1._masks_e__FixedBuffer
+    type: Struct
   - uid: NVAPIWrapper._NVAPI_NVLINK_STATUS_LINK_STATE
     name: _NVAPI_NVLINK_STATUS_LINK_STATE
     type: Enum
@@ -1728,6 +1758,18 @@ items:
     type: Struct
   - uid: NVAPIWrapper._NVDRS_SETTING_VALUES._settingValues_e__Union._wszValue_e__FixedBuffer
     name: _NVDRS_SETTING_VALUES._settingValues_e__Union._wszValue_e__FixedBuffer
+    type: Struct
+  - uid: NVAPIWrapper._NVLINK_GET_CAPS_EX_V1
+    name: _NVLINK_GET_CAPS_EX_V1
+    type: Struct
+  - uid: NVAPIWrapper._NVLINK_GET_CAPS_EX_V1._reserved_e__FixedBuffer
+    name: _NVLINK_GET_CAPS_EX_V1._reserved_e__FixedBuffer
+    type: Struct
+  - uid: NVAPIWrapper._NVLINK_GET_STATUS_EX_V1
+    name: _NVLINK_GET_STATUS_EX_V1
+    type: Struct
+  - uid: NVAPIWrapper._NVLINK_GET_STATUS_EX_V1._linkInfo_e__FixedBuffer
+    name: _NVLINK_GET_STATUS_EX_V1._linkInfo_e__FixedBuffer
     type: Struct
   - uid: NVAPIWrapper._NVVIOANCPARITYCOMPUTATION
     name: _NVVIOANCPARITYCOMPUTATION
@@ -2434,6 +2476,12 @@ items:
   - uid: NVAPIWrapper._NV_GPU_OUTPUT_TYPE
     name: _NV_GPU_OUTPUT_TYPE
     type: Enum
+  - uid: NVAPIWrapper._NV_GPU_OVERCLOCK_STATUS_V1
+    name: _NV_GPU_OVERCLOCK_STATUS_V1
+    type: Struct
+  - uid: NVAPIWrapper._NV_GPU_OVERCLOCK_STATUS_V1._rsvd_e__FixedBuffer
+    name: _NV_GPU_OVERCLOCK_STATUS_V1._rsvd_e__FixedBuffer
+    type: Struct
   - uid: NVAPIWrapper._NV_GPU_PERF_PSTATES20_INFO_V2
     name: _NV_GPU_PERF_PSTATES20_INFO_V2
     type: Struct
@@ -2506,8 +2554,14 @@ items:
   - uid: NVAPIWrapper._NV_GSYNC_DELAY
     name: _NV_GSYNC_DELAY
     type: Struct
-  - uid: NVAPIWrapper._NV_GSYNC_DISPLAY
-    name: _NV_GSYNC_DISPLAY
+  - uid: NVAPIWrapper._NV_GSYNC_DISPLAY_V1
+    name: _NV_GSYNC_DISPLAY_V1
+    type: Struct
+  - uid: NVAPIWrapper._NV_GSYNC_DISPLAY_V2
+    name: _NV_GSYNC_DISPLAY_V2
+    type: Struct
+  - uid: NVAPIWrapper._NV_GSYNC_DISPLAY_V2._reserved2_e__FixedBuffer
+    name: _NV_GSYNC_DISPLAY_V2._reserved2_e__FixedBuffer
     type: Struct
   - uid: NVAPIWrapper._NV_GSYNC_GPU
     name: _NV_GSYNC_GPU
@@ -2806,6 +2860,12 @@ items:
   - uid: NVAPIWrapper._NV_NGX_DLSS_OVERRIDE_GET_STATE_PARAMS_V1._reserved_e__FixedBuffer
     name: _NV_NGX_DLSS_OVERRIDE_GET_STATE_PARAMS_V1._reserved_e__FixedBuffer
     type: Struct
+  - uid: NVAPIWrapper._NV_NGX_DLSS_OVERRIDE_GET_STATE_PARAMS_V2
+    name: _NV_NGX_DLSS_OVERRIDE_GET_STATE_PARAMS_V2
+    type: Struct
+  - uid: NVAPIWrapper._NV_NGX_DLSS_OVERRIDE_GET_STATE_PARAMS_V2._reserved_e__FixedBuffer
+    name: _NV_NGX_DLSS_OVERRIDE_GET_STATE_PARAMS_V2._reserved_e__FixedBuffer
+    type: Struct
   - uid: NVAPIWrapper._NV_NGX_DLSS_OVERRIDE_SET_STATE_PARAMS_V1
     name: _NV_NGX_DLSS_OVERRIDE_SET_STATE_PARAMS_V1
     type: Struct
@@ -2829,6 +2889,30 @@ items:
     type: Struct
   - uid: NVAPIWrapper._NV_NGX_GET_DRIVER_FEATURE_SUPPORT_PARAMS_V1._reserved_e__FixedBuffer
     name: _NV_NGX_GET_DRIVER_FEATURE_SUPPORT_PARAMS_V1._reserved_e__FixedBuffer
+    type: Struct
+  - uid: NVAPIWrapper._NV_NGX_GET_RUNTIME_PARAMS_V1
+    name: _NV_NGX_GET_RUNTIME_PARAMS_V1
+    type: Struct
+  - uid: NVAPIWrapper._NV_NGX_GET_RUNTIME_PARAMS_V1._reserved_e__FixedBuffer
+    name: _NV_NGX_GET_RUNTIME_PARAMS_V1._reserved_e__FixedBuffer
+    type: Struct
+  - uid: NVAPIWrapper._NV_NGX_RUNTIME_KEY
+    name: _NV_NGX_RUNTIME_KEY
+    type: Enum
+  - uid: NVAPIWrapper._NV_NGX_RUNTIME_KEY_VALUE
+    name: _NV_NGX_RUNTIME_KEY_VALUE
+    type: Struct
+  - uid: NVAPIWrapper._NV_NGX_SESSION_PARAMS_V1
+    name: _NV_NGX_SESSION_PARAMS_V1
+    type: Struct
+  - uid: NVAPIWrapper._NV_NGX_SESSION_PARAMS_V1._reserved_e__FixedBuffer
+    name: _NV_NGX_SESSION_PARAMS_V1._reserved_e__FixedBuffer
+    type: Struct
+  - uid: NVAPIWrapper._NV_NGX_SET_RUNTIME_PARAMS_V1
+    name: _NV_NGX_SET_RUNTIME_PARAMS_V1
+    type: Struct
+  - uid: NVAPIWrapper._NV_NGX_SET_RUNTIME_PARAMS_V1._reserved_e__FixedBuffer
+    name: _NV_NGX_SET_RUNTIME_PARAMS_V1._reserved_e__FixedBuffer
     type: Struct
   - uid: NVAPIWrapper._NV_PHYSICAL_GPUS
     name: _NV_PHYSICAL_GPUS
@@ -2925,6 +3009,9 @@ items:
     type: Struct
   - uid: NVAPIWrapper._NV_SET_REFLEX_SYNC_PARAMS
     name: _NV_SET_REFLEX_SYNC_PARAMS
+    type: Struct
+  - uid: NVAPIWrapper._NV_SET_REFLEX_SYNC_PARAMS._rsvd1_e__FixedBuffer
+    name: _NV_SET_REFLEX_SYNC_PARAMS._rsvd1_e__FixedBuffer
     type: Struct
   - uid: NVAPIWrapper._NV_SET_REFLEX_SYNC_PARAMS._rsvd_e__FixedBuffer
     name: _NV_SET_REFLEX_SYNC_PARAMS._rsvd_e__FixedBuffer

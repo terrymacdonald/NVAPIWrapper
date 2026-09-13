@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/terrymacdonald/NVAPIWrapper/new/main/apiSpec/new?filename=NVAPIWrapper_NVAPIGSyncDisplayDto.md&amp;value=---%0Auid%3A%20NVAPIWrapper.NVAPIGSyncDisplayDto%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="docfx:docurl" content="https://github.com/terrymacdonald/NVAPIWrapper/new/develop/apiSpec/new?filename=NVAPIWrapper_NVAPIGSyncDisplayDto.md&amp;value=---%0Auid%3A%20NVAPIWrapper.NVAPIGSyncDisplayDto%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -89,7 +89,7 @@
 
 
   <h1 id="NVAPIWrapper_NVAPIGSyncDisplayDto" data-uid="NVAPIWrapper.NVAPIGSyncDisplayDto" class="text-break">
-Struct NVAPIGSyncDisplayDto  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIQuadroGSyncHelper.cs/#L725"><i class="bi bi-code-slash"></i></a>
+Struct NVAPIGSyncDisplayDto  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/develop/NVAPIWrapper/NVAPIQuadroGSyncHelper.cs/#L764"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -147,7 +147,7 @@ Struct NVAPIGSyncDisplayDto  <a class="header-action link-secondary" title="View
 
   <h3 id="NVAPIWrapper_NVAPIGSyncDisplayDto__ctor_System_UInt32_System_Boolean_NVAPIWrapper__NVAPI_GSYNC_DISPLAY_SYNC_STATE_" data-uid="NVAPIWrapper.NVAPIGSyncDisplayDto.#ctor(System.UInt32,System.Boolean,NVAPIWrapper._NVAPI_GSYNC_DISPLAY_SYNC_STATE)">
   NVAPIGSyncDisplayDto(uint, bool, _NVAPI_GSYNC_DISPLAY_SYNC_STATE)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIQuadroGSyncHelper.cs/#L737"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/develop/NVAPIWrapper/NVAPIQuadroGSyncHelper.cs/#L780"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Create a G-Sync display DTO.</p>
@@ -182,6 +182,48 @@ Struct NVAPIGSyncDisplayDto  <a class="header-action link-secondary" title="View
 
 
 
+  <a id="NVAPIWrapper_NVAPIGSyncDisplayDto__ctor_" data-uid="NVAPIWrapper.NVAPIGSyncDisplayDto.#ctor*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIGSyncDisplayDto__ctor_System_UInt32_System_Boolean_System_Boolean_NVAPIWrapper__NVAPI_GSYNC_DISPLAY_SYNC_STATE_" data-uid="NVAPIWrapper.NVAPIGSyncDisplayDto.#ctor(System.UInt32,System.Boolean,System.Boolean,NVAPIWrapper._NVAPI_GSYNC_DISPLAY_SYNC_STATE)">
+  NVAPIGSyncDisplayDto(uint, bool, bool, _NVAPI_GSYNC_DISPLAY_SYNC_STATE)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/develop/NVAPIWrapper/NVAPIQuadroGSyncHelper.cs/#L792"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Create a G-Sync display DTO.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NVAPIGSyncDisplayDto(uint displayId, bool isMasterable, bool useExactTiming, _NVAPI_GSYNC_DISPLAY_SYNC_STATE syncState)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>displayId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>Display identifier.</p>
+</dd>
+    <dt><code>isMasterable</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Whether the display is masterable.</p>
+</dd>
+    <dt><code>useExactTiming</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Whether the exact display timing should be used.</p>
+</dd>
+    <dt><code>syncState</code> <a class="xref" href="NVAPIWrapper._NVAPI_GSYNC_DISPLAY_SYNC_STATE.html">_NVAPI_GSYNC_DISPLAY_SYNC_STATE</a></dt>
+    <dd><p>Display sync state.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
   <h2 class="section" id="properties">Properties
 </h2>
 
@@ -190,7 +232,7 @@ Struct NVAPIGSyncDisplayDto  <a class="header-action link-secondary" title="View
 
   <h3 id="NVAPIWrapper_NVAPIGSyncDisplayDto_DisplayId" data-uid="NVAPIWrapper.NVAPIGSyncDisplayDto.DisplayId">
   DisplayId
-  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIQuadroGSyncHelper.cs/#L727"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/develop/NVAPIWrapper/NVAPIQuadroGSyncHelper.cs/#L766"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -221,7 +263,7 @@ Struct NVAPIGSyncDisplayDto  <a class="header-action link-secondary" title="View
 
   <h3 id="NVAPIWrapper_NVAPIGSyncDisplayDto_IsMasterable" data-uid="NVAPIWrapper.NVAPIGSyncDisplayDto.IsMasterable">
   IsMasterable
-  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIQuadroGSyncHelper.cs/#L728"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/develop/NVAPIWrapper/NVAPIQuadroGSyncHelper.cs/#L767"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -252,7 +294,7 @@ Struct NVAPIGSyncDisplayDto  <a class="header-action link-secondary" title="View
 
   <h3 id="NVAPIWrapper_NVAPIGSyncDisplayDto_SyncState" data-uid="NVAPIWrapper.NVAPIGSyncDisplayDto.SyncState">
   SyncState
-  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIQuadroGSyncHelper.cs/#L729"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/develop/NVAPIWrapper/NVAPIQuadroGSyncHelper.cs/#L772"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -279,6 +321,38 @@ Struct NVAPIGSyncDisplayDto  <a class="header-action link-secondary" title="View
 
 
 
+  <a id="NVAPIWrapper_NVAPIGSyncDisplayDto_UseExactTiming_" data-uid="NVAPIWrapper.NVAPIGSyncDisplayDto.UseExactTiming*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIGSyncDisplayDto_UseExactTiming" data-uid="NVAPIWrapper.NVAPIGSyncDisplayDto.UseExactTiming">
+  UseExactTiming
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/develop/NVAPIWrapper/NVAPIQuadroGSyncHelper.cs/#L771"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets whether the exact display timing supplied by the caller should be used.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool UseExactTiming { readonly get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <h2 class="section" id="methods">Methods
 </h2>
 
@@ -287,7 +361,7 @@ Struct NVAPIGSyncDisplayDto  <a class="header-action link-secondary" title="View
 
   <h3 id="NVAPIWrapper_NVAPIGSyncDisplayDto_Equals_NVAPIWrapper_NVAPIGSyncDisplayDto_" data-uid="NVAPIWrapper.NVAPIGSyncDisplayDto.Equals(NVAPIWrapper.NVAPIGSyncDisplayDto)">
   Equals(NVAPIGSyncDisplayDto)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIQuadroGSyncHelper.cs/#L798"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/develop/NVAPIWrapper/NVAPIQuadroGSyncHelper.cs/#L856"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Determine whether this instance equals another G-Sync display DTO.</p>
@@ -326,7 +400,7 @@ Struct NVAPIGSyncDisplayDto  <a class="header-action link-secondary" title="View
 
   <h3 id="NVAPIWrapper_NVAPIGSyncDisplayDto_Equals_System_Object_" data-uid="NVAPIWrapper.NVAPIGSyncDisplayDto.Equals(System.Object)">
   Equals(object?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIQuadroGSyncHelper.cs/#L810"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/develop/NVAPIWrapper/NVAPIQuadroGSyncHelper.cs/#L869"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Determine whether this instance equals another object.</p>
@@ -363,9 +437,9 @@ Struct NVAPIGSyncDisplayDto  <a class="header-action link-secondary" title="View
 
   <a id="NVAPIWrapper_NVAPIGSyncDisplayDto_FromNative_" data-uid="NVAPIWrapper.NVAPIGSyncDisplayDto.FromNative*"></a>
 
-  <h3 id="NVAPIWrapper_NVAPIGSyncDisplayDto_FromNative_NVAPIWrapper__NV_GSYNC_DISPLAY_" data-uid="NVAPIWrapper.NVAPIGSyncDisplayDto.FromNative(NVAPIWrapper._NV_GSYNC_DISPLAY)">
-  FromNative(_NV_GSYNC_DISPLAY)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIQuadroGSyncHelper.cs/#L749"><i class="bi bi-code-slash"></i></a>
+  <h3 id="NVAPIWrapper_NVAPIGSyncDisplayDto_FromNative_NVAPIWrapper__NV_GSYNC_DISPLAY_V2_" data-uid="NVAPIWrapper.NVAPIGSyncDisplayDto.FromNative(NVAPIWrapper._NV_GSYNC_DISPLAY_V2)">
+  FromNative(_NV_GSYNC_DISPLAY_V2)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/develop/NVAPIWrapper/NVAPIQuadroGSyncHelper.cs/#L805"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Create a G-Sync display DTO from native data.</p>
@@ -373,12 +447,12 @@ Struct NVAPIGSyncDisplayDto  <a class="header-action link-secondary" title="View
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static NVAPIGSyncDisplayDto FromNative(_NV_GSYNC_DISPLAY native)</code></pre>
+    <pre><code class="lang-csharp hljs">public static NVAPIGSyncDisplayDto FromNative(_NV_GSYNC_DISPLAY_V2 native)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>native</code> <a class="xref" href="NVAPIWrapper._NV_GSYNC_DISPLAY.html">_NV_GSYNC_DISPLAY</a></dt>
+    <dt><code>native</code> <a class="xref" href="NVAPIWrapper._NV_GSYNC_DISPLAY_V2.html">_NV_GSYNC_DISPLAY_V2</a></dt>
     <dd><p>Native display data.</p>
 </dd>
   </dl>
@@ -402,9 +476,9 @@ Struct NVAPIGSyncDisplayDto  <a class="header-action link-secondary" title="View
 
   <a id="NVAPIWrapper_NVAPIGSyncDisplayDto_FromNative_" data-uid="NVAPIWrapper.NVAPIGSyncDisplayDto.FromNative*"></a>
 
-  <h3 id="NVAPIWrapper_NVAPIGSyncDisplayDto_FromNative_NVAPIWrapper__NV_GSYNC_DISPLAY__System_Int32_" data-uid="NVAPIWrapper.NVAPIGSyncDisplayDto.FromNative(NVAPIWrapper._NV_GSYNC_DISPLAY*,System.Int32)">
-  FromNative(_NV_GSYNC_DISPLAY*, int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIQuadroGSyncHelper.cs/#L763"><i class="bi bi-code-slash"></i></a>
+  <h3 id="NVAPIWrapper_NVAPIGSyncDisplayDto_FromNative_NVAPIWrapper__NV_GSYNC_DISPLAY_V2__System_Int32_" data-uid="NVAPIWrapper.NVAPIGSyncDisplayDto.FromNative(NVAPIWrapper._NV_GSYNC_DISPLAY_V2*,System.Int32)">
+  FromNative(_NV_GSYNC_DISPLAY_V2*, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/develop/NVAPIWrapper/NVAPIQuadroGSyncHelper.cs/#L820"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Create G-Sync display DTOs from a native array.</p>
@@ -412,12 +486,12 @@ Struct NVAPIGSyncDisplayDto  <a class="header-action link-secondary" title="View
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static NVAPIGSyncDisplayDto[] FromNative(_NV_GSYNC_DISPLAY* native, int count)</code></pre>
+    <pre><code class="lang-csharp hljs">public static NVAPIGSyncDisplayDto[] FromNative(_NV_GSYNC_DISPLAY_V2* native, int count)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>native</code> <a class="xref" href="NVAPIWrapper._NV_GSYNC_DISPLAY.html">_NV_GSYNC_DISPLAY</a>*</dt>
+    <dt><code>native</code> <a class="xref" href="NVAPIWrapper._NV_GSYNC_DISPLAY_V2.html">_NV_GSYNC_DISPLAY_V2</a>*</dt>
     <dd><p>Native display array pointer.</p>
 </dd>
     <dt><code>count</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
@@ -446,7 +520,7 @@ Struct NVAPIGSyncDisplayDto  <a class="header-action link-secondary" title="View
 
   <h3 id="NVAPIWrapper_NVAPIGSyncDisplayDto_GetHashCode" data-uid="NVAPIWrapper.NVAPIGSyncDisplayDto.GetHashCode">
   GetHashCode()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIQuadroGSyncHelper.cs/#L816"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/develop/NVAPIWrapper/NVAPIQuadroGSyncHelper.cs/#L875"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Get a hash code for this instance.</p>
@@ -479,7 +553,7 @@ Struct NVAPIGSyncDisplayDto  <a class="header-action link-secondary" title="View
 
   <h3 id="NVAPIWrapper_NVAPIGSyncDisplayDto_ToNative" data-uid="NVAPIWrapper.NVAPIGSyncDisplayDto.ToNative">
   ToNative()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIQuadroGSyncHelper.cs/#L781"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/develop/NVAPIWrapper/NVAPIQuadroGSyncHelper.cs/#L838"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Convert this DTO to native display data.</p>
@@ -487,13 +561,13 @@ Struct NVAPIGSyncDisplayDto  <a class="header-action link-secondary" title="View
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public _NV_GSYNC_DISPLAY ToNative()</code></pre>
+    <pre><code class="lang-csharp hljs">public _NV_GSYNC_DISPLAY_V2 ToNative()</code></pre>
   </div>
 
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="NVAPIWrapper._NV_GSYNC_DISPLAY.html">_NV_GSYNC_DISPLAY</a></dt>
+    <dt><a class="xref" href="NVAPIWrapper._NV_GSYNC_DISPLAY_V2.html">_NV_GSYNC_DISPLAY_V2</a></dt>
     <dd><p>Native display data.</p>
 </dd>
   </dl>
@@ -516,7 +590,7 @@ Struct NVAPIGSyncDisplayDto  <a class="header-action link-secondary" title="View
 
   <h3 id="NVAPIWrapper_NVAPIGSyncDisplayDto_op_Equality_NVAPIWrapper_NVAPIGSyncDisplayDto_NVAPIWrapper_NVAPIGSyncDisplayDto_" data-uid="NVAPIWrapper.NVAPIGSyncDisplayDto.op_Equality(NVAPIWrapper.NVAPIGSyncDisplayDto,NVAPIWrapper.NVAPIGSyncDisplayDto)">
   operator ==(NVAPIGSyncDisplayDto, NVAPIGSyncDisplayDto)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIQuadroGSyncHelper.cs/#L833"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/develop/NVAPIWrapper/NVAPIQuadroGSyncHelper.cs/#L893"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Determine whether two G-Sync display DTOs are equal.</p>
@@ -558,7 +632,7 @@ Struct NVAPIGSyncDisplayDto  <a class="header-action link-secondary" title="View
 
   <h3 id="NVAPIWrapper_NVAPIGSyncDisplayDto_op_Inequality_NVAPIWrapper_NVAPIGSyncDisplayDto_NVAPIWrapper_NVAPIGSyncDisplayDto_" data-uid="NVAPIWrapper.NVAPIGSyncDisplayDto.op_Inequality(NVAPIWrapper.NVAPIGSyncDisplayDto,NVAPIWrapper.NVAPIGSyncDisplayDto)">
   operator !=(NVAPIGSyncDisplayDto, NVAPIGSyncDisplayDto)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIQuadroGSyncHelper.cs/#L841"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/develop/NVAPIWrapper/NVAPIQuadroGSyncHelper.cs/#L901"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Determine whether two G-Sync display DTOs are not equal.</p>
@@ -600,7 +674,7 @@ Struct NVAPIGSyncDisplayDto  <a class="header-action link-secondary" title="View
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIQuadroGSyncHelper.cs/#L725" class="edit-link">Edit this page</a>
+          <a href="https://github.com/terrymacdonald/NVAPIWrapper/blob/develop/NVAPIWrapper/NVAPIQuadroGSyncHelper.cs/#L764" class="edit-link">Edit this page</a>
         </div>
 
 

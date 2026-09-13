@@ -20,7 +20,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_HDR_CAPABILITIES_V3.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: _hdr10plus_vsvdb_e__Struct
     path: ../NVAPIWrapper/cs_generated/_NV_HDR_CAPABILITIES_V3.cs
@@ -53,7 +53,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_HDR_CAPABILITIES_V3.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: _bitfield
     path: ../NVAPIWrapper/cs_generated/_NV_HDR_CAPABILITIES_V3.cs
@@ -80,7 +80,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_HDR_CAPABILITIES_V3.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: application_version
     path: ../NVAPIWrapper/cs_generated/_NV_HDR_CAPABILITIES_V3.cs
@@ -110,7 +110,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_HDR_CAPABILITIES_V3.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: full_frame_peak_luminance_index
     path: ../NVAPIWrapper/cs_generated/_NV_HDR_CAPABILITIES_V3.cs
@@ -140,7 +140,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_HDR_CAPABILITIES_V3.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: peak_luminance_index
     path: ../NVAPIWrapper/cs_generated/_NV_HDR_CAPABILITIES_V3.cs
@@ -170,7 +170,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_HDR_CAPABILITIES_V3.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: reserved
     path: ../NVAPIWrapper/cs_generated/_NV_HDR_CAPABILITIES_V3.cs

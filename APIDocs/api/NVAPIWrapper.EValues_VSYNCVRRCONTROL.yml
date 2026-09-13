@@ -20,7 +20,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_VSYNCVRRCONTROL.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: EValues_VSYNCVRRCONTROL
     path: ../NVAPIWrapper/cs_generated/EValues_VSYNCVRRCONTROL.cs
@@ -46,7 +46,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_VSYNCVRRCONTROL.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: VSYNCVRRCONTROL_DISABLE
     path: ../NVAPIWrapper/cs_generated/EValues_VSYNCVRRCONTROL.cs
@@ -73,7 +73,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_VSYNCVRRCONTROL.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: VSYNCVRRCONTROL_ENABLE
     path: ../NVAPIWrapper/cs_generated/EValues_VSYNCVRRCONTROL.cs
@@ -100,7 +100,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_VSYNCVRRCONTROL.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: VSYNCVRRCONTROL_NOTSUPPORTED
     path: ../NVAPIWrapper/cs_generated/EValues_VSYNCVRRCONTROL.cs
@@ -127,7 +127,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_VSYNCVRRCONTROL.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: VSYNCVRRCONTROL_NUM_VALUES
     path: ../NVAPIWrapper/cs_generated/EValues_VSYNCVRRCONTROL.cs
@@ -154,7 +154,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_VSYNCVRRCONTROL.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: VSYNCVRRCONTROL_DEFAULT
     path: ../NVAPIWrapper/cs_generated/EValues_VSYNCVRRCONTROL.cs

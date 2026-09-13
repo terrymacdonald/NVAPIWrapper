@@ -22,7 +22,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_SLI_GPU_COUNT.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: EValues_SLI_GPU_COUNT
     path: ../NVAPIWrapper/cs_generated/EValues_SLI_GPU_COUNT.cs
@@ -48,7 +48,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_SLI_GPU_COUNT.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SLI_GPU_COUNT_AUTOSELECT
     path: ../NVAPIWrapper/cs_generated/EValues_SLI_GPU_COUNT.cs
@@ -75,7 +75,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_SLI_GPU_COUNT.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SLI_GPU_COUNT_ONE
     path: ../NVAPIWrapper/cs_generated/EValues_SLI_GPU_COUNT.cs
@@ -102,7 +102,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_SLI_GPU_COUNT.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SLI_GPU_COUNT_TWO
     path: ../NVAPIWrapper/cs_generated/EValues_SLI_GPU_COUNT.cs
@@ -129,7 +129,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_SLI_GPU_COUNT.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SLI_GPU_COUNT_THREE
     path: ../NVAPIWrapper/cs_generated/EValues_SLI_GPU_COUNT.cs
@@ -156,7 +156,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_SLI_GPU_COUNT.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SLI_GPU_COUNT_FOUR
     path: ../NVAPIWrapper/cs_generated/EValues_SLI_GPU_COUNT.cs
@@ -183,7 +183,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_SLI_GPU_COUNT.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SLI_GPU_COUNT_NUM_VALUES
     path: ../NVAPIWrapper/cs_generated/EValues_SLI_GPU_COUNT.cs
@@ -210,7 +210,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_SLI_GPU_COUNT.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SLI_GPU_COUNT_DEFAULT
     path: ../NVAPIWrapper/cs_generated/EValues_SLI_GPU_COUNT.cs

@@ -28,11 +28,11 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPIGpuIllumZoneInfoDto
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 3575
+    startLine: 3731
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -62,11 +62,11 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Type
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 3578
+    startLine: 3734
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -93,11 +93,11 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: IllumDeviceIdx
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 3580
+    startLine: 3736
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -124,11 +124,11 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: ProvIdx
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 3582
+    startLine: 3738
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -155,11 +155,11 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: ZoneLocation
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 3584
+    startLine: 3740
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -186,21 +186,18 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: DataRawBytes
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 3589
+    startLine: 3750
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
-  summary: >-
-    Raw bytes for the type-discriminated union <code>data</code> field (64 bytes).
-
-    Interpret using <xref href="NVAPIWrapper.NVAPIGpuIllumZoneInfoDto.Type" data-throw-if-not-resolved="false"></xref> to select the appropriate union member.
+  summary: Gets or sets DataRawBytes. Empty when no values are present.
   example: []
   syntax:
-    content: public byte[] DataRawBytes { readonly get; set; }
+    content: public byte[] DataRawBytes { get; set; }
     parameters: []
     return:
       type: System.Byte[]
@@ -220,11 +217,11 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: .ctor
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 3592
+    startLine: 3757
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -262,11 +259,11 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: FromNative
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 3602
+    startLine: 3767
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -295,11 +292,11 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: ToNative
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 3609
+    startLine: 3774
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -325,11 +322,11 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Equals
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 3628
+    startLine: 3793
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -362,11 +359,11 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Equals
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 3635
+    startLine: 3800
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -401,11 +398,11 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetHashCode
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 3637
+    startLine: 3802
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -433,11 +430,11 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: op_Equality
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 3639
+    startLine: 3804
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -471,11 +468,11 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: op_Inequality
     path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
-    startLine: 3641
+    startLine: 3806
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -781,12 +778,6 @@ references:
   name: NV_GPU_CLIENT_ILLUM_ZONE_LOCATION
   nameWithType: NV_GPU_CLIENT_ILLUM_ZONE_LOCATION
   fullName: NVAPIWrapper.NV_GPU_CLIENT_ILLUM_ZONE_LOCATION
-- uid: NVAPIWrapper.NVAPIGpuIllumZoneInfoDto.Type
-  commentId: P:NVAPIWrapper.NVAPIGpuIllumZoneInfoDto.Type
-  href: NVAPIWrapper.NVAPIGpuIllumZoneInfoDto.html#NVAPIWrapper_NVAPIGpuIllumZoneInfoDto_Type
-  name: Type
-  nameWithType: NVAPIGpuIllumZoneInfoDto.Type
-  fullName: NVAPIWrapper.NVAPIGpuIllumZoneInfoDto.Type
 - uid: NVAPIWrapper.NVAPIGpuIllumZoneInfoDto.DataRawBytes*
   commentId: Overload:NVAPIWrapper.NVAPIGpuIllumZoneInfoDto.DataRawBytes
   href: NVAPIWrapper.NVAPIGpuIllumZoneInfoDto.html#NVAPIWrapper_NVAPIGpuIllumZoneInfoDto_DataRawBytes

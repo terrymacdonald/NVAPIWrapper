@@ -19,7 +19,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_INFOFRAME_PROPERTY_MODE.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_INFOFRAME_PROPERTY_MODE
     path: ../NVAPIWrapper/cs_generated/NV_INFOFRAME_PROPERTY_MODE.cs
@@ -45,7 +45,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_INFOFRAME_PROPERTY_MODE.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_INFOFRAME_PROPERTY_MODE_AUTO
     path: ../NVAPIWrapper/cs_generated/NV_INFOFRAME_PROPERTY_MODE.cs
@@ -72,7 +72,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_INFOFRAME_PROPERTY_MODE.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_INFOFRAME_PROPERTY_MODE_ENABLE
     path: ../NVAPIWrapper/cs_generated/NV_INFOFRAME_PROPERTY_MODE.cs
@@ -99,7 +99,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_INFOFRAME_PROPERTY_MODE.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_INFOFRAME_PROPERTY_MODE_DISABLE
     path: ../NVAPIWrapper/cs_generated/NV_INFOFRAME_PROPERTY_MODE.cs
@@ -126,7 +126,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_INFOFRAME_PROPERTY_MODE.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_INFOFRAME_PROPERTY_MODE_ALLOW_OVERRIDE
     path: ../NVAPIWrapper/cs_generated/NV_INFOFRAME_PROPERTY_MODE.cs

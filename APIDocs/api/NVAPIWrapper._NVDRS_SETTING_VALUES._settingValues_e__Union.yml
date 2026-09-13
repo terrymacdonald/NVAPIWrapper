@@ -7,6 +7,7 @@ items:
   children:
   - NVAPIWrapper._NVDRS_SETTING_VALUES._settingValues_e__Union.binaryValue
   - NVAPIWrapper._NVDRS_SETTING_VALUES._settingValues_e__Union.u32Value
+  - NVAPIWrapper._NVDRS_SETTING_VALUES._settingValues_e__Union.u64Value
   - NVAPIWrapper._NVDRS_SETTING_VALUES._settingValues_e__Union.wszValue
   langs:
   - csharp
@@ -18,11 +19,11 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVDRS_SETTING_VALUES.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: _settingValues_e__Union
     path: ../NVAPIWrapper/cs_generated/_NVDRS_SETTING_VALUES.cs
-    startLine: 88
+    startLine: 104
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -51,11 +52,11 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVDRS_SETTING_VALUES.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: u32Value
     path: ../NVAPIWrapper/cs_generated/_NVDRS_SETTING_VALUES.cs
-    startLine: 94
+    startLine: 110
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -79,11 +80,11 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVDRS_SETTING_VALUES.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: binaryValue
     path: ../NVAPIWrapper/cs_generated/_NVDRS_SETTING_VALUES.cs
-    startLine: 99
+    startLine: 115
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -107,11 +108,11 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVDRS_SETTING_VALUES.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: wszValue
     path: ../NVAPIWrapper/cs_generated/_NVDRS_SETTING_VALUES.cs
-    startLine: 104
+    startLine: 120
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -121,6 +122,34 @@ items:
     return:
       type: NVAPIWrapper._NVDRS_SETTING_VALUES._settingValues_e__Union._wszValue_e__FixedBuffer
     content.vb: Public wszValue As _NVDRS_SETTING_VALUES._settingValues_e__Union._wszValue_e__FixedBuffer
+- uid: NVAPIWrapper._NVDRS_SETTING_VALUES._settingValues_e__Union.u64Value
+  commentId: F:NVAPIWrapper._NVDRS_SETTING_VALUES._settingValues_e__Union.u64Value
+  id: u64Value
+  parent: NVAPIWrapper._NVDRS_SETTING_VALUES._settingValues_e__Union
+  langs:
+  - csharp
+  - vb
+  name: u64Value
+  nameWithType: _NVDRS_SETTING_VALUES._settingValues_e__Union.u64Value
+  fullName: NVAPIWrapper._NVDRS_SETTING_VALUES._settingValues_e__Union.u64Value
+  type: Field
+  source:
+    remote:
+      path: NVAPIWrapper/cs_generated/_NVDRS_SETTING_VALUES.cs
+      branch: develop
+      repo: https://github.com/terrymacdonald/NVAPIWrapper.git
+    id: u64Value
+    path: ../NVAPIWrapper/cs_generated/_NVDRS_SETTING_VALUES.cs
+    startLine: 125
+  assemblies:
+  - NVAPIWrapper
+  namespace: NVAPIWrapper
+  example: []
+  syntax:
+    content: public ulong u64Value
+    return:
+      type: System.UInt64
+    content.vb: Public u64Value As ULong
 references:
 - uid: NVAPIWrapper
   commentId: N:NVAPIWrapper
@@ -394,3 +423,14 @@ references:
   - uid: NVAPIWrapper._NVDRS_SETTING_VALUES._settingValues_e__Union._wszValue_e__FixedBuffer
     name: _wszValue_e__FixedBuffer
     href: NVAPIWrapper._NVDRS_SETTING_VALUES._settingValues_e__Union._wszValue_e__FixedBuffer.html
+- uid: System.UInt64
+  commentId: T:System.UInt64
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.uint64
+  name: ulong
+  nameWithType: ulong
+  fullName: ulong
+  nameWithType.vb: ULong
+  fullName.vb: ULong
+  name.vb: ULong

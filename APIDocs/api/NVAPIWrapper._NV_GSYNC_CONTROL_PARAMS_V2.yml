@@ -28,7 +28,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GSYNC_CONTROL_PARAMS_V2.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: _NV_GSYNC_CONTROL_PARAMS_V2
     path: ../NVAPIWrapper/cs_generated/_NV_GSYNC_CONTROL_PARAMS_V2.cs
@@ -61,7 +61,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GSYNC_CONTROL_PARAMS_V2.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: version
     path: ../NVAPIWrapper/cs_generated/_NV_GSYNC_CONTROL_PARAMS_V2.cs
@@ -89,7 +89,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GSYNC_CONTROL_PARAMS_V2.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: polarity
     path: ../NVAPIWrapper/cs_generated/_NV_GSYNC_CONTROL_PARAMS_V2.cs
@@ -117,7 +117,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GSYNC_CONTROL_PARAMS_V2.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: vmode
     path: ../NVAPIWrapper/cs_generated/_NV_GSYNC_CONTROL_PARAMS_V2.cs
@@ -145,7 +145,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GSYNC_CONTROL_PARAMS_V2.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: interval
     path: ../NVAPIWrapper/cs_generated/_NV_GSYNC_CONTROL_PARAMS_V2.cs
@@ -173,7 +173,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GSYNC_CONTROL_PARAMS_V2.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: source
     path: ../NVAPIWrapper/cs_generated/_NV_GSYNC_CONTROL_PARAMS_V2.cs
@@ -201,7 +201,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GSYNC_CONTROL_PARAMS_V2.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: _bitfield
     path: ../NVAPIWrapper/cs_generated/_NV_GSYNC_CONTROL_PARAMS_V2.cs
@@ -228,7 +228,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GSYNC_CONTROL_PARAMS_V2.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: interlaceMode
     path: ../NVAPIWrapper/cs_generated/_NV_GSYNC_CONTROL_PARAMS_V2.cs
@@ -258,7 +258,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GSYNC_CONTROL_PARAMS_V2.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: syncSourceIsOutput
     path: ../NVAPIWrapper/cs_generated/_NV_GSYNC_CONTROL_PARAMS_V2.cs
@@ -288,7 +288,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GSYNC_CONTROL_PARAMS_V2.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: reserved
     path: ../NVAPIWrapper/cs_generated/_NV_GSYNC_CONTROL_PARAMS_V2.cs
@@ -318,7 +318,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GSYNC_CONTROL_PARAMS_V2.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: syncSkew
     path: ../NVAPIWrapper/cs_generated/_NV_GSYNC_CONTROL_PARAMS_V2.cs
@@ -346,7 +346,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GSYNC_CONTROL_PARAMS_V2.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: startupDelay
     path: ../NVAPIWrapper/cs_generated/_NV_GSYNC_CONTROL_PARAMS_V2.cs
@@ -374,7 +374,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GSYNC_CONTROL_PARAMS_V2.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: multiplyDivideMode
     path: ../NVAPIWrapper/cs_generated/_NV_GSYNC_CONTROL_PARAMS_V2.cs
@@ -402,7 +402,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GSYNC_CONTROL_PARAMS_V2.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: multiplyDivideValue
     path: ../NVAPIWrapper/cs_generated/_NV_GSYNC_CONTROL_PARAMS_V2.cs

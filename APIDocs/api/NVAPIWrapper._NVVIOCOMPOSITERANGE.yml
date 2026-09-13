@@ -19,7 +19,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOCOMPOSITERANGE.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: _NVVIOCOMPOSITERANGE
     path: ../NVAPIWrapper/cs_generated/_NVVIOCOMPOSITERANGE.cs
@@ -52,7 +52,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOCOMPOSITERANGE.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: uRange
     path: ../NVAPIWrapper/cs_generated/_NVVIOCOMPOSITERANGE.cs
@@ -80,7 +80,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOCOMPOSITERANGE.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: uEnabled
     path: ../NVAPIWrapper/cs_generated/_NVVIOCOMPOSITERANGE.cs
@@ -108,7 +108,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOCOMPOSITERANGE.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: uMin
     path: ../NVAPIWrapper/cs_generated/_NVVIOCOMPOSITERANGE.cs
@@ -136,7 +136,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOCOMPOSITERANGE.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: uMax
     path: ../NVAPIWrapper/cs_generated/_NVVIOCOMPOSITERANGE.cs

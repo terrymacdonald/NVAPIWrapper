@@ -21,7 +21,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_MOSAIC_TOPO_TYPE.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_MOSAIC_TOPO_TYPE
     path: ../NVAPIWrapper/cs_generated/NV_MOSAIC_TOPO_TYPE.cs
@@ -47,7 +47,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_MOSAIC_TOPO_TYPE.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_MOSAIC_TOPO_TYPE_ALL
     path: ../NVAPIWrapper/cs_generated/NV_MOSAIC_TOPO_TYPE.cs
@@ -74,7 +74,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_MOSAIC_TOPO_TYPE.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_MOSAIC_TOPO_TYPE_BASIC
     path: ../NVAPIWrapper/cs_generated/NV_MOSAIC_TOPO_TYPE.cs
@@ -101,7 +101,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_MOSAIC_TOPO_TYPE.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_MOSAIC_TOPO_TYPE_PASSIVE_STEREO
     path: ../NVAPIWrapper/cs_generated/NV_MOSAIC_TOPO_TYPE.cs
@@ -128,7 +128,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_MOSAIC_TOPO_TYPE.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_MOSAIC_TOPO_TYPE_SCALED_CLONE
     path: ../NVAPIWrapper/cs_generated/NV_MOSAIC_TOPO_TYPE.cs
@@ -155,7 +155,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_MOSAIC_TOPO_TYPE.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_MOSAIC_TOPO_TYPE_PASSIVE_STEREO_SCALED_CLONE
     path: ../NVAPIWrapper/cs_generated/NV_MOSAIC_TOPO_TYPE.cs
@@ -182,7 +182,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_MOSAIC_TOPO_TYPE.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_MOSAIC_TOPO_TYPE_MAX
     path: ../NVAPIWrapper/cs_generated/NV_MOSAIC_TOPO_TYPE.cs

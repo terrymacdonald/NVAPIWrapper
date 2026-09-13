@@ -19,7 +19,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_PS_TEXFILTER_DISABLE_TRILIN_SLOPE.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: EValues_PS_TEXFILTER_DISABLE_TRILIN_SLOPE
     path: ../NVAPIWrapper/cs_generated/EValues_PS_TEXFILTER_DISABLE_TRILIN_SLOPE.cs
@@ -45,7 +45,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_PS_TEXFILTER_DISABLE_TRILIN_SLOPE.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: PS_TEXFILTER_DISABLE_TRILIN_SLOPE_OFF
     path: ../NVAPIWrapper/cs_generated/EValues_PS_TEXFILTER_DISABLE_TRILIN_SLOPE.cs
@@ -72,7 +72,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_PS_TEXFILTER_DISABLE_TRILIN_SLOPE.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: PS_TEXFILTER_DISABLE_TRILIN_SLOPE_ON
     path: ../NVAPIWrapper/cs_generated/EValues_PS_TEXFILTER_DISABLE_TRILIN_SLOPE.cs
@@ -99,7 +99,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_PS_TEXFILTER_DISABLE_TRILIN_SLOPE.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: PS_TEXFILTER_DISABLE_TRILIN_SLOPE_NUM_VALUES
     path: ../NVAPIWrapper/cs_generated/EValues_PS_TEXFILTER_DISABLE_TRILIN_SLOPE.cs
@@ -126,7 +126,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_PS_TEXFILTER_DISABLE_TRILIN_SLOPE.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: PS_TEXFILTER_DISABLE_TRILIN_SLOPE_DEFAULT
     path: ../NVAPIWrapper/cs_generated/EValues_PS_TEXFILTER_DISABLE_TRILIN_SLOPE.cs

@@ -20,7 +20,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_GPU_CLIENT_ILLUM_ZONE_LOCATION.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_GPU_CLIENT_ILLUM_ZONE_LOCATION
     path: ../NVAPIWrapper/cs_generated/NV_GPU_CLIENT_ILLUM_ZONE_LOCATION.cs
@@ -46,7 +46,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_GPU_CLIENT_ILLUM_ZONE_LOCATION.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_GPU_CLIENT_ILLUM_ZONE_LOCATION_GPU_TOP_0
     path: ../NVAPIWrapper/cs_generated/NV_GPU_CLIENT_ILLUM_ZONE_LOCATION.cs
@@ -73,7 +73,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_GPU_CLIENT_ILLUM_ZONE_LOCATION.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_GPU_CLIENT_ILLUM_ZONE_LOCATION_GPU_FRONT_0
     path: ../NVAPIWrapper/cs_generated/NV_GPU_CLIENT_ILLUM_ZONE_LOCATION.cs
@@ -100,7 +100,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_GPU_CLIENT_ILLUM_ZONE_LOCATION.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_GPU_CLIENT_ILLUM_ZONE_LOCATION_GPU_BACK_0
     path: ../NVAPIWrapper/cs_generated/NV_GPU_CLIENT_ILLUM_ZONE_LOCATION.cs
@@ -127,7 +127,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_GPU_CLIENT_ILLUM_ZONE_LOCATION.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_GPU_CLIENT_ILLUM_ZONE_LOCATION_SLI_TOP_0
     path: ../NVAPIWrapper/cs_generated/NV_GPU_CLIENT_ILLUM_ZONE_LOCATION.cs
@@ -154,7 +154,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_GPU_CLIENT_ILLUM_ZONE_LOCATION.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_GPU_CLIENT_ILLUM_ZONE_LOCATION_INVALID
     path: ../NVAPIWrapper/cs_generated/NV_GPU_CLIENT_ILLUM_ZONE_LOCATION.cs

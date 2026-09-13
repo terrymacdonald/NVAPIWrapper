@@ -1,0 +1,486 @@
+### YamlMime:ManagedReference
+items:
+- uid: NVAPIWrapper._NV_NGX_RUNTIME_KEY_VALUE
+  commentId: T:NVAPIWrapper._NV_NGX_RUNTIME_KEY_VALUE
+  id: _NV_NGX_RUNTIME_KEY_VALUE
+  parent: NVAPIWrapper
+  children:
+  - NVAPIWrapper._NV_NGX_RUNTIME_KEY_VALUE._bitfield
+  - NVAPIWrapper._NV_NGX_RUNTIME_KEY_VALUE.bClear
+  - NVAPIWrapper._NV_NGX_RUNTIME_KEY_VALUE.bIsSet
+  - NVAPIWrapper._NV_NGX_RUNTIME_KEY_VALUE.key
+  - NVAPIWrapper._NV_NGX_RUNTIME_KEY_VALUE.reserved
+  - NVAPIWrapper._NV_NGX_RUNTIME_KEY_VALUE.value
+  langs:
+  - csharp
+  - vb
+  name: _NV_NGX_RUNTIME_KEY_VALUE
+  nameWithType: _NV_NGX_RUNTIME_KEY_VALUE
+  fullName: NVAPIWrapper._NV_NGX_RUNTIME_KEY_VALUE
+  type: Struct
+  source:
+    remote:
+      path: NVAPIWrapper/cs_generated/_NV_NGX_RUNTIME_KEY_VALUE.cs
+      branch: develop
+      repo: https://github.com/terrymacdonald/NVAPIWrapper.git
+    id: _NV_NGX_RUNTIME_KEY_VALUE
+    path: ../NVAPIWrapper/cs_generated/_NV_NGX_RUNTIME_KEY_VALUE.cs
+    startLine: 3
+  assemblies:
+  - NVAPIWrapper
+  namespace: NVAPIWrapper
+  example: []
+  syntax:
+    content: public struct _NV_NGX_RUNTIME_KEY_VALUE
+    content.vb: Public Structure _NV_NGX_RUNTIME_KEY_VALUE
+  inheritedMembers:
+  - System.ValueType.Equals(System.Object)
+  - System.ValueType.GetHashCode
+  - System.ValueType.ToString
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+- uid: NVAPIWrapper._NV_NGX_RUNTIME_KEY_VALUE.key
+  commentId: F:NVAPIWrapper._NV_NGX_RUNTIME_KEY_VALUE.key
+  id: key
+  parent: NVAPIWrapper._NV_NGX_RUNTIME_KEY_VALUE
+  langs:
+  - csharp
+  - vb
+  name: key
+  nameWithType: _NV_NGX_RUNTIME_KEY_VALUE.key
+  fullName: NVAPIWrapper._NV_NGX_RUNTIME_KEY_VALUE.key
+  type: Field
+  source:
+    remote:
+      path: NVAPIWrapper/cs_generated/_NV_NGX_RUNTIME_KEY_VALUE.cs
+      branch: develop
+      repo: https://github.com/terrymacdonald/NVAPIWrapper.git
+    id: key
+    path: ../NVAPIWrapper/cs_generated/_NV_NGX_RUNTIME_KEY_VALUE.cs
+    startLine: 7
+  assemblies:
+  - NVAPIWrapper
+  namespace: NVAPIWrapper
+  example: []
+  syntax:
+    content: public _NV_NGX_RUNTIME_KEY key
+    return:
+      type: NVAPIWrapper._NV_NGX_RUNTIME_KEY
+    content.vb: Public key As _NV_NGX_RUNTIME_KEY
+- uid: NVAPIWrapper._NV_NGX_RUNTIME_KEY_VALUE._bitfield
+  commentId: F:NVAPIWrapper._NV_NGX_RUNTIME_KEY_VALUE._bitfield
+  id: _bitfield
+  parent: NVAPIWrapper._NV_NGX_RUNTIME_KEY_VALUE
+  langs:
+  - csharp
+  - vb
+  name: _bitfield
+  nameWithType: _NV_NGX_RUNTIME_KEY_VALUE._bitfield
+  fullName: NVAPIWrapper._NV_NGX_RUNTIME_KEY_VALUE._bitfield
+  type: Field
+  source:
+    remote:
+      path: NVAPIWrapper/cs_generated/_NV_NGX_RUNTIME_KEY_VALUE.cs
+      branch: develop
+      repo: https://github.com/terrymacdonald/NVAPIWrapper.git
+    id: _bitfield
+    path: ../NVAPIWrapper/cs_generated/_NV_NGX_RUNTIME_KEY_VALUE.cs
+    startLine: 9
+  assemblies:
+  - NVAPIWrapper
+  namespace: NVAPIWrapper
+  syntax:
+    content: public uint _bitfield
+    return:
+      type: System.UInt32
+    content.vb: Public _bitfield As UInteger
+- uid: NVAPIWrapper._NV_NGX_RUNTIME_KEY_VALUE.bIsSet
+  commentId: P:NVAPIWrapper._NV_NGX_RUNTIME_KEY_VALUE.bIsSet
+  id: bIsSet
+  parent: NVAPIWrapper._NV_NGX_RUNTIME_KEY_VALUE
+  langs:
+  - csharp
+  - vb
+  name: bIsSet
+  nameWithType: _NV_NGX_RUNTIME_KEY_VALUE.bIsSet
+  fullName: NVAPIWrapper._NV_NGX_RUNTIME_KEY_VALUE.bIsSet
+  type: Property
+  source:
+    remote:
+      path: NVAPIWrapper/cs_generated/_NV_NGX_RUNTIME_KEY_VALUE.cs
+      branch: develop
+      repo: https://github.com/terrymacdonald/NVAPIWrapper.git
+    id: bIsSet
+    path: ../NVAPIWrapper/cs_generated/_NV_NGX_RUNTIME_KEY_VALUE.cs
+    startLine: 12
+  assemblies:
+  - NVAPIWrapper
+  namespace: NVAPIWrapper
+  example: []
+  syntax:
+    content: public uint bIsSet { readonly get; set; }
+    parameters: []
+    return:
+      type: System.UInt32
+    content.vb: Public Property bIsSet As UInteger
+  overload: NVAPIWrapper._NV_NGX_RUNTIME_KEY_VALUE.bIsSet*
+- uid: NVAPIWrapper._NV_NGX_RUNTIME_KEY_VALUE.bClear
+  commentId: P:NVAPIWrapper._NV_NGX_RUNTIME_KEY_VALUE.bClear
+  id: bClear
+  parent: NVAPIWrapper._NV_NGX_RUNTIME_KEY_VALUE
+  langs:
+  - csharp
+  - vb
+  name: bClear
+  nameWithType: _NV_NGX_RUNTIME_KEY_VALUE.bClear
+  fullName: NVAPIWrapper._NV_NGX_RUNTIME_KEY_VALUE.bClear
+  type: Property
+  source:
+    remote:
+      path: NVAPIWrapper/cs_generated/_NV_NGX_RUNTIME_KEY_VALUE.cs
+      branch: develop
+      repo: https://github.com/terrymacdonald/NVAPIWrapper.git
+    id: bClear
+    path: ../NVAPIWrapper/cs_generated/_NV_NGX_RUNTIME_KEY_VALUE.cs
+    startLine: 27
+  assemblies:
+  - NVAPIWrapper
+  namespace: NVAPIWrapper
+  example: []
+  syntax:
+    content: public uint bClear { readonly get; set; }
+    parameters: []
+    return:
+      type: System.UInt32
+    content.vb: Public Property bClear As UInteger
+  overload: NVAPIWrapper._NV_NGX_RUNTIME_KEY_VALUE.bClear*
+- uid: NVAPIWrapper._NV_NGX_RUNTIME_KEY_VALUE.reserved
+  commentId: P:NVAPIWrapper._NV_NGX_RUNTIME_KEY_VALUE.reserved
+  id: reserved
+  parent: NVAPIWrapper._NV_NGX_RUNTIME_KEY_VALUE
+  langs:
+  - csharp
+  - vb
+  name: reserved
+  nameWithType: _NV_NGX_RUNTIME_KEY_VALUE.reserved
+  fullName: NVAPIWrapper._NV_NGX_RUNTIME_KEY_VALUE.reserved
+  type: Property
+  source:
+    remote:
+      path: NVAPIWrapper/cs_generated/_NV_NGX_RUNTIME_KEY_VALUE.cs
+      branch: develop
+      repo: https://github.com/terrymacdonald/NVAPIWrapper.git
+    id: reserved
+    path: ../NVAPIWrapper/cs_generated/_NV_NGX_RUNTIME_KEY_VALUE.cs
+    startLine: 42
+  assemblies:
+  - NVAPIWrapper
+  namespace: NVAPIWrapper
+  example: []
+  syntax:
+    content: public uint reserved { readonly get; set; }
+    parameters: []
+    return:
+      type: System.UInt32
+    content.vb: Public Property reserved As UInteger
+  overload: NVAPIWrapper._NV_NGX_RUNTIME_KEY_VALUE.reserved*
+- uid: NVAPIWrapper._NV_NGX_RUNTIME_KEY_VALUE.value
+  commentId: F:NVAPIWrapper._NV_NGX_RUNTIME_KEY_VALUE.value
+  id: value
+  parent: NVAPIWrapper._NV_NGX_RUNTIME_KEY_VALUE
+  langs:
+  - csharp
+  - vb
+  name: value
+  nameWithType: _NV_NGX_RUNTIME_KEY_VALUE.value
+  fullName: NVAPIWrapper._NV_NGX_RUNTIME_KEY_VALUE.value
+  type: Field
+  source:
+    remote:
+      path: NVAPIWrapper/cs_generated/_NV_NGX_RUNTIME_KEY_VALUE.cs
+      branch: develop
+      repo: https://github.com/terrymacdonald/NVAPIWrapper.git
+    id: value
+    path: ../NVAPIWrapper/cs_generated/_NV_NGX_RUNTIME_KEY_VALUE.cs
+    startLine: 58
+  assemblies:
+  - NVAPIWrapper
+  namespace: NVAPIWrapper
+  example: []
+  syntax:
+    content: public ulong value
+    return:
+      type: System.UInt64
+    content.vb: Public value As ULong
+references:
+- uid: NVAPIWrapper
+  commentId: N:NVAPIWrapper
+  href: NVAPIWrapper.html
+  name: NVAPIWrapper
+  nameWithType: NVAPIWrapper
+  fullName: NVAPIWrapper
+- uid: System.ValueType.Equals(System.Object)
+  commentId: M:System.ValueType.Equals(System.Object)
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  name: Equals(object)
+  nameWithType: ValueType.Equals(object)
+  fullName: System.ValueType.Equals(object)
+  nameWithType.vb: ValueType.Equals(Object)
+  fullName.vb: System.ValueType.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.ValueType.GetHashCode
+  commentId: M:System.ValueType.GetHashCode
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  name: GetHashCode()
+  nameWithType: ValueType.GetHashCode()
+  fullName: System.ValueType.GetHashCode()
+  spec.csharp:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+- uid: System.ValueType.ToString
+  commentId: M:System.ValueType.ToString
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  name: ToString()
+  nameWithType: ValueType.ToString()
+  fullName: System.ValueType.ToString()
+  spec.csharp:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.ValueType
+  commentId: T:System.ValueType
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype
+  name: ValueType
+  nameWithType: ValueType
+  fullName: System.ValueType
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: NVAPIWrapper._NV_NGX_RUNTIME_KEY
+  commentId: T:NVAPIWrapper._NV_NGX_RUNTIME_KEY
+  parent: NVAPIWrapper
+  href: NVAPIWrapper._NV_NGX_RUNTIME_KEY.html
+  name: _NV_NGX_RUNTIME_KEY
+  nameWithType: _NV_NGX_RUNTIME_KEY
+  fullName: NVAPIWrapper._NV_NGX_RUNTIME_KEY
+- uid: System.UInt32
+  commentId: T:System.UInt32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.uint32
+  name: uint
+  nameWithType: uint
+  fullName: uint
+  nameWithType.vb: UInteger
+  fullName.vb: UInteger
+  name.vb: UInteger
+- uid: NVAPIWrapper._NV_NGX_RUNTIME_KEY_VALUE.bIsSet*
+  commentId: Overload:NVAPIWrapper._NV_NGX_RUNTIME_KEY_VALUE.bIsSet
+  href: NVAPIWrapper._NV_NGX_RUNTIME_KEY_VALUE.html#NVAPIWrapper__NV_NGX_RUNTIME_KEY_VALUE_bIsSet
+  name: bIsSet
+  nameWithType: _NV_NGX_RUNTIME_KEY_VALUE.bIsSet
+  fullName: NVAPIWrapper._NV_NGX_RUNTIME_KEY_VALUE.bIsSet
+- uid: NVAPIWrapper._NV_NGX_RUNTIME_KEY_VALUE.bClear*
+  commentId: Overload:NVAPIWrapper._NV_NGX_RUNTIME_KEY_VALUE.bClear
+  href: NVAPIWrapper._NV_NGX_RUNTIME_KEY_VALUE.html#NVAPIWrapper__NV_NGX_RUNTIME_KEY_VALUE_bClear
+  name: bClear
+  nameWithType: _NV_NGX_RUNTIME_KEY_VALUE.bClear
+  fullName: NVAPIWrapper._NV_NGX_RUNTIME_KEY_VALUE.bClear
+- uid: NVAPIWrapper._NV_NGX_RUNTIME_KEY_VALUE.reserved*
+  commentId: Overload:NVAPIWrapper._NV_NGX_RUNTIME_KEY_VALUE.reserved
+  href: NVAPIWrapper._NV_NGX_RUNTIME_KEY_VALUE.html#NVAPIWrapper__NV_NGX_RUNTIME_KEY_VALUE_reserved
+  name: reserved
+  nameWithType: _NV_NGX_RUNTIME_KEY_VALUE.reserved
+  fullName: NVAPIWrapper._NV_NGX_RUNTIME_KEY_VALUE.reserved
+- uid: System.UInt64
+  commentId: T:System.UInt64
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.uint64
+  name: ulong
+  nameWithType: ulong
+  fullName: ulong
+  nameWithType.vb: ULong
+  fullName.vb: ULong
+  name.vb: ULong

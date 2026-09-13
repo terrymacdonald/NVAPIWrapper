@@ -21,7 +21,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GPU_CLIENT_ILLUM_ZONE_INFO_V1.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: _NV_GPU_CLIENT_ILLUM_ZONE_INFO_V1
     path: ../NVAPIWrapper/cs_generated/_NV_GPU_CLIENT_ILLUM_ZONE_INFO_V1.cs
@@ -54,7 +54,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GPU_CLIENT_ILLUM_ZONE_INFO_V1.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: type
     path: ../NVAPIWrapper/cs_generated/_NV_GPU_CLIENT_ILLUM_ZONE_INFO_V1.cs
@@ -82,7 +82,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GPU_CLIENT_ILLUM_ZONE_INFO_V1.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: illumDeviceIdx
     path: ../NVAPIWrapper/cs_generated/_NV_GPU_CLIENT_ILLUM_ZONE_INFO_V1.cs
@@ -110,7 +110,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GPU_CLIENT_ILLUM_ZONE_INFO_V1.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: provIdx
     path: ../NVAPIWrapper/cs_generated/_NV_GPU_CLIENT_ILLUM_ZONE_INFO_V1.cs
@@ -138,7 +138,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GPU_CLIENT_ILLUM_ZONE_INFO_V1.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: zoneLocation
     path: ../NVAPIWrapper/cs_generated/_NV_GPU_CLIENT_ILLUM_ZONE_INFO_V1.cs
@@ -166,7 +166,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GPU_CLIENT_ILLUM_ZONE_INFO_V1.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: data
     path: ../NVAPIWrapper/cs_generated/_NV_GPU_CLIENT_ILLUM_ZONE_INFO_V1.cs
@@ -194,7 +194,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GPU_CLIENT_ILLUM_ZONE_INFO_V1.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: rsvd
     path: ../NVAPIWrapper/cs_generated/_NV_GPU_CLIENT_ILLUM_ZONE_INFO_V1.cs

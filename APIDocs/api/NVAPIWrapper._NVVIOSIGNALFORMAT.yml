@@ -81,7 +81,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOSIGNALFORMAT.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: _NVVIOSIGNALFORMAT
     path: ../NVAPIWrapper/cs_generated/_NVVIOSIGNALFORMAT.cs
@@ -107,7 +107,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOSIGNALFORMAT.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVVIOSIGNALFORMAT_NONE
     path: ../NVAPIWrapper/cs_generated/_NVVIOSIGNALFORMAT.cs
@@ -134,7 +134,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOSIGNALFORMAT.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVVIOSIGNALFORMAT_487I_59_94_SMPTE259_NTSC
     path: ../NVAPIWrapper/cs_generated/_NVVIOSIGNALFORMAT.cs
@@ -161,7 +161,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOSIGNALFORMAT.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVVIOSIGNALFORMAT_576I_50_00_SMPTE259_PAL
     path: ../NVAPIWrapper/cs_generated/_NVVIOSIGNALFORMAT.cs
@@ -188,7 +188,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOSIGNALFORMAT.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVVIOSIGNALFORMAT_1035I_60_00_SMPTE260
     path: ../NVAPIWrapper/cs_generated/_NVVIOSIGNALFORMAT.cs
@@ -215,7 +215,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOSIGNALFORMAT.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVVIOSIGNALFORMAT_1035I_59_94_SMPTE260
     path: ../NVAPIWrapper/cs_generated/_NVVIOSIGNALFORMAT.cs
@@ -242,7 +242,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOSIGNALFORMAT.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVVIOSIGNALFORMAT_1080I_50_00_SMPTE295
     path: ../NVAPIWrapper/cs_generated/_NVVIOSIGNALFORMAT.cs
@@ -269,7 +269,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOSIGNALFORMAT.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVVIOSIGNALFORMAT_1080I_60_00_SMPTE274
     path: ../NVAPIWrapper/cs_generated/_NVVIOSIGNALFORMAT.cs
@@ -296,7 +296,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOSIGNALFORMAT.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVVIOSIGNALFORMAT_1080I_59_94_SMPTE274
     path: ../NVAPIWrapper/cs_generated/_NVVIOSIGNALFORMAT.cs
@@ -323,7 +323,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOSIGNALFORMAT.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVVIOSIGNALFORMAT_1080I_50_00_SMPTE274
     path: ../NVAPIWrapper/cs_generated/_NVVIOSIGNALFORMAT.cs
@@ -350,7 +350,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOSIGNALFORMAT.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVVIOSIGNALFORMAT_1080P_30_00_SMPTE274
     path: ../NVAPIWrapper/cs_generated/_NVVIOSIGNALFORMAT.cs
@@ -377,7 +377,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOSIGNALFORMAT.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVVIOSIGNALFORMAT_1080P_29_97_SMPTE274
     path: ../NVAPIWrapper/cs_generated/_NVVIOSIGNALFORMAT.cs
@@ -404,7 +404,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOSIGNALFORMAT.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVVIOSIGNALFORMAT_1080P_25_00_SMPTE274
     path: ../NVAPIWrapper/cs_generated/_NVVIOSIGNALFORMAT.cs
@@ -431,7 +431,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOSIGNALFORMAT.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVVIOSIGNALFORMAT_1080P_24_00_SMPTE274
     path: ../NVAPIWrapper/cs_generated/_NVVIOSIGNALFORMAT.cs
@@ -458,7 +458,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOSIGNALFORMAT.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVVIOSIGNALFORMAT_1080P_23_976_SMPTE274
     path: ../NVAPIWrapper/cs_generated/_NVVIOSIGNALFORMAT.cs
@@ -485,7 +485,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOSIGNALFORMAT.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVVIOSIGNALFORMAT_720P_60_00_SMPTE296
     path: ../NVAPIWrapper/cs_generated/_NVVIOSIGNALFORMAT.cs
@@ -512,7 +512,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOSIGNALFORMAT.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVVIOSIGNALFORMAT_720P_59_94_SMPTE296
     path: ../NVAPIWrapper/cs_generated/_NVVIOSIGNALFORMAT.cs
@@ -539,7 +539,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOSIGNALFORMAT.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVVIOSIGNALFORMAT_720P_50_00_SMPTE296
     path: ../NVAPIWrapper/cs_generated/_NVVIOSIGNALFORMAT.cs
@@ -566,7 +566,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOSIGNALFORMAT.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVVIOSIGNALFORMAT_1080I_48_00_SMPTE274
     path: ../NVAPIWrapper/cs_generated/_NVVIOSIGNALFORMAT.cs
@@ -593,7 +593,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOSIGNALFORMAT.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVVIOSIGNALFORMAT_1080I_47_96_SMPTE274
     path: ../NVAPIWrapper/cs_generated/_NVVIOSIGNALFORMAT.cs
@@ -620,7 +620,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOSIGNALFORMAT.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVVIOSIGNALFORMAT_720P_30_00_SMPTE296
     path: ../NVAPIWrapper/cs_generated/_NVVIOSIGNALFORMAT.cs
@@ -647,7 +647,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOSIGNALFORMAT.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVVIOSIGNALFORMAT_720P_29_97_SMPTE296
     path: ../NVAPIWrapper/cs_generated/_NVVIOSIGNALFORMAT.cs
@@ -674,7 +674,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOSIGNALFORMAT.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVVIOSIGNALFORMAT_720P_25_00_SMPTE296
     path: ../NVAPIWrapper/cs_generated/_NVVIOSIGNALFORMAT.cs
@@ -701,7 +701,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOSIGNALFORMAT.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVVIOSIGNALFORMAT_720P_24_00_SMPTE296
     path: ../NVAPIWrapper/cs_generated/_NVVIOSIGNALFORMAT.cs
@@ -728,7 +728,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOSIGNALFORMAT.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVVIOSIGNALFORMAT_720P_23_98_SMPTE296
     path: ../NVAPIWrapper/cs_generated/_NVVIOSIGNALFORMAT.cs
@@ -755,7 +755,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOSIGNALFORMAT.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVVIOSIGNALFORMAT_2048P_30_00_SMPTE372
     path: ../NVAPIWrapper/cs_generated/_NVVIOSIGNALFORMAT.cs
@@ -782,7 +782,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOSIGNALFORMAT.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVVIOSIGNALFORMAT_2048P_29_97_SMPTE372
     path: ../NVAPIWrapper/cs_generated/_NVVIOSIGNALFORMAT.cs
@@ -809,7 +809,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOSIGNALFORMAT.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVVIOSIGNALFORMAT_2048I_60_00_SMPTE372
     path: ../NVAPIWrapper/cs_generated/_NVVIOSIGNALFORMAT.cs
@@ -836,7 +836,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOSIGNALFORMAT.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVVIOSIGNALFORMAT_2048I_59_94_SMPTE372
     path: ../NVAPIWrapper/cs_generated/_NVVIOSIGNALFORMAT.cs
@@ -863,7 +863,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOSIGNALFORMAT.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVVIOSIGNALFORMAT_2048P_25_00_SMPTE372
     path: ../NVAPIWrapper/cs_generated/_NVVIOSIGNALFORMAT.cs
@@ -890,7 +890,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOSIGNALFORMAT.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVVIOSIGNALFORMAT_2048I_50_00_SMPTE372
     path: ../NVAPIWrapper/cs_generated/_NVVIOSIGNALFORMAT.cs
@@ -917,7 +917,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOSIGNALFORMAT.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVVIOSIGNALFORMAT_2048P_24_00_SMPTE372
     path: ../NVAPIWrapper/cs_generated/_NVVIOSIGNALFORMAT.cs
@@ -944,7 +944,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOSIGNALFORMAT.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVVIOSIGNALFORMAT_2048P_23_98_SMPTE372
     path: ../NVAPIWrapper/cs_generated/_NVVIOSIGNALFORMAT.cs
@@ -971,7 +971,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOSIGNALFORMAT.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVVIOSIGNALFORMAT_2048I_48_00_SMPTE372
     path: ../NVAPIWrapper/cs_generated/_NVVIOSIGNALFORMAT.cs
@@ -998,7 +998,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOSIGNALFORMAT.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVVIOSIGNALFORMAT_2048I_47_96_SMPTE372
     path: ../NVAPIWrapper/cs_generated/_NVVIOSIGNALFORMAT.cs
@@ -1025,7 +1025,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOSIGNALFORMAT.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVVIOSIGNALFORMAT_1080PSF_25_00_SMPTE274
     path: ../NVAPIWrapper/cs_generated/_NVVIOSIGNALFORMAT.cs
@@ -1052,7 +1052,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOSIGNALFORMAT.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVVIOSIGNALFORMAT_1080PSF_29_97_SMPTE274
     path: ../NVAPIWrapper/cs_generated/_NVVIOSIGNALFORMAT.cs
@@ -1079,7 +1079,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOSIGNALFORMAT.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVVIOSIGNALFORMAT_1080PSF_30_00_SMPTE274
     path: ../NVAPIWrapper/cs_generated/_NVVIOSIGNALFORMAT.cs
@@ -1106,7 +1106,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOSIGNALFORMAT.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVVIOSIGNALFORMAT_1080PSF_24_00_SMPTE274
     path: ../NVAPIWrapper/cs_generated/_NVVIOSIGNALFORMAT.cs
@@ -1133,7 +1133,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOSIGNALFORMAT.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVVIOSIGNALFORMAT_1080PSF_23_98_SMPTE274
     path: ../NVAPIWrapper/cs_generated/_NVVIOSIGNALFORMAT.cs
@@ -1160,7 +1160,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOSIGNALFORMAT.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVVIOSIGNALFORMAT_1080P_50_00_SMPTE274_3G_LEVEL_A
     path: ../NVAPIWrapper/cs_generated/_NVVIOSIGNALFORMAT.cs
@@ -1187,7 +1187,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOSIGNALFORMAT.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVVIOSIGNALFORMAT_1080P_59_94_SMPTE274_3G_LEVEL_A
     path: ../NVAPIWrapper/cs_generated/_NVVIOSIGNALFORMAT.cs
@@ -1214,7 +1214,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOSIGNALFORMAT.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVVIOSIGNALFORMAT_1080P_60_00_SMPTE274_3G_LEVEL_A
     path: ../NVAPIWrapper/cs_generated/_NVVIOSIGNALFORMAT.cs
@@ -1241,7 +1241,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOSIGNALFORMAT.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVVIOSIGNALFORMAT_1080P_60_00_SMPTE274_3G_LEVEL_B
     path: ../NVAPIWrapper/cs_generated/_NVVIOSIGNALFORMAT.cs
@@ -1268,7 +1268,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOSIGNALFORMAT.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVVIOSIGNALFORMAT_1080I_60_00_SMPTE274_3G_LEVEL_B
     path: ../NVAPIWrapper/cs_generated/_NVVIOSIGNALFORMAT.cs
@@ -1295,7 +1295,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOSIGNALFORMAT.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVVIOSIGNALFORMAT_2048I_60_00_SMPTE372_3G_LEVEL_B
     path: ../NVAPIWrapper/cs_generated/_NVVIOSIGNALFORMAT.cs
@@ -1322,7 +1322,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOSIGNALFORMAT.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVVIOSIGNALFORMAT_1080P_50_00_SMPTE274_3G_LEVEL_B
     path: ../NVAPIWrapper/cs_generated/_NVVIOSIGNALFORMAT.cs
@@ -1349,7 +1349,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOSIGNALFORMAT.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVVIOSIGNALFORMAT_1080I_50_00_SMPTE274_3G_LEVEL_B
     path: ../NVAPIWrapper/cs_generated/_NVVIOSIGNALFORMAT.cs
@@ -1376,7 +1376,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOSIGNALFORMAT.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVVIOSIGNALFORMAT_2048I_50_00_SMPTE372_3G_LEVEL_B
     path: ../NVAPIWrapper/cs_generated/_NVVIOSIGNALFORMAT.cs
@@ -1403,7 +1403,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOSIGNALFORMAT.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVVIOSIGNALFORMAT_1080P_30_00_SMPTE274_3G_LEVEL_B
     path: ../NVAPIWrapper/cs_generated/_NVVIOSIGNALFORMAT.cs
@@ -1430,7 +1430,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOSIGNALFORMAT.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVVIOSIGNALFORMAT_2048P_30_00_SMPTE372_3G_LEVEL_B
     path: ../NVAPIWrapper/cs_generated/_NVVIOSIGNALFORMAT.cs
@@ -1457,7 +1457,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOSIGNALFORMAT.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVVIOSIGNALFORMAT_1080P_25_00_SMPTE274_3G_LEVEL_B
     path: ../NVAPIWrapper/cs_generated/_NVVIOSIGNALFORMAT.cs
@@ -1484,7 +1484,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOSIGNALFORMAT.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVVIOSIGNALFORMAT_2048P_25_00_SMPTE372_3G_LEVEL_B
     path: ../NVAPIWrapper/cs_generated/_NVVIOSIGNALFORMAT.cs
@@ -1511,7 +1511,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOSIGNALFORMAT.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVVIOSIGNALFORMAT_1080P_24_00_SMPTE274_3G_LEVEL_B
     path: ../NVAPIWrapper/cs_generated/_NVVIOSIGNALFORMAT.cs
@@ -1538,7 +1538,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOSIGNALFORMAT.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVVIOSIGNALFORMAT_2048P_24_00_SMPTE372_3G_LEVEL_B
     path: ../NVAPIWrapper/cs_generated/_NVVIOSIGNALFORMAT.cs
@@ -1565,7 +1565,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOSIGNALFORMAT.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVVIOSIGNALFORMAT_1080I_48_00_SMPTE274_3G_LEVEL_B
     path: ../NVAPIWrapper/cs_generated/_NVVIOSIGNALFORMAT.cs
@@ -1592,7 +1592,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOSIGNALFORMAT.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVVIOSIGNALFORMAT_2048I_48_00_SMPTE372_3G_LEVEL_B
     path: ../NVAPIWrapper/cs_generated/_NVVIOSIGNALFORMAT.cs
@@ -1619,7 +1619,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOSIGNALFORMAT.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVVIOSIGNALFORMAT_1080P_59_94_SMPTE274_3G_LEVEL_B
     path: ../NVAPIWrapper/cs_generated/_NVVIOSIGNALFORMAT.cs
@@ -1646,7 +1646,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOSIGNALFORMAT.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVVIOSIGNALFORMAT_1080I_59_94_SMPTE274_3G_LEVEL_B
     path: ../NVAPIWrapper/cs_generated/_NVVIOSIGNALFORMAT.cs
@@ -1673,7 +1673,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOSIGNALFORMAT.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVVIOSIGNALFORMAT_2048I_59_94_SMPTE372_3G_LEVEL_B
     path: ../NVAPIWrapper/cs_generated/_NVVIOSIGNALFORMAT.cs
@@ -1700,7 +1700,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOSIGNALFORMAT.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVVIOSIGNALFORMAT_1080P_29_97_SMPTE274_3G_LEVEL_B
     path: ../NVAPIWrapper/cs_generated/_NVVIOSIGNALFORMAT.cs
@@ -1727,7 +1727,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOSIGNALFORMAT.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVVIOSIGNALFORMAT_2048P_29_97_SMPTE372_3G_LEVEL_B
     path: ../NVAPIWrapper/cs_generated/_NVVIOSIGNALFORMAT.cs
@@ -1754,7 +1754,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOSIGNALFORMAT.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVVIOSIGNALFORMAT_1080P_23_98_SMPTE274_3G_LEVEL_B
     path: ../NVAPIWrapper/cs_generated/_NVVIOSIGNALFORMAT.cs
@@ -1781,7 +1781,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOSIGNALFORMAT.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVVIOSIGNALFORMAT_2048P_23_98_SMPTE372_3G_LEVEL_B
     path: ../NVAPIWrapper/cs_generated/_NVVIOSIGNALFORMAT.cs
@@ -1808,7 +1808,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOSIGNALFORMAT.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVVIOSIGNALFORMAT_1080I_47_96_SMPTE274_3G_LEVEL_B
     path: ../NVAPIWrapper/cs_generated/_NVVIOSIGNALFORMAT.cs
@@ -1835,7 +1835,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOSIGNALFORMAT.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVVIOSIGNALFORMAT_2048I_47_96_SMPTE372_3G_LEVEL_B
     path: ../NVAPIWrapper/cs_generated/_NVVIOSIGNALFORMAT.cs
@@ -1862,7 +1862,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOSIGNALFORMAT.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVVIOSIGNALFORMAT_END
     path: ../NVAPIWrapper/cs_generated/_NVVIOSIGNALFORMAT.cs

@@ -19,7 +19,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_GPU_ECC_CONFIGURATION_INFO.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_GPU_ECC_CONFIGURATION_INFO
     path: ../NVAPIWrapper/cs_generated/NV_GPU_ECC_CONFIGURATION_INFO.cs
@@ -52,7 +52,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_GPU_ECC_CONFIGURATION_INFO.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: version
     path: ../NVAPIWrapper/cs_generated/NV_GPU_ECC_CONFIGURATION_INFO.cs
@@ -80,7 +80,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_GPU_ECC_CONFIGURATION_INFO.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: _bitfield
     path: ../NVAPIWrapper/cs_generated/NV_GPU_ECC_CONFIGURATION_INFO.cs
@@ -107,7 +107,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_GPU_ECC_CONFIGURATION_INFO.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: isEnabled
     path: ../NVAPIWrapper/cs_generated/NV_GPU_ECC_CONFIGURATION_INFO.cs
@@ -137,7 +137,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_GPU_ECC_CONFIGURATION_INFO.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: isEnabledByDefault
     path: ../NVAPIWrapper/cs_generated/NV_GPU_ECC_CONFIGURATION_INFO.cs

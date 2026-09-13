@@ -16,7 +16,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_JOIN_PRESENT_BARRIER_PARAMS.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: _NV_JOIN_PRESENT_BARRIER_PARAMS
     path: ../NVAPIWrapper/cs_generated/_NV_JOIN_PRESENT_BARRIER_PARAMS.cs
@@ -49,7 +49,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_JOIN_PRESENT_BARRIER_PARAMS.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: dwVersion
     path: ../NVAPIWrapper/cs_generated/_NV_JOIN_PRESENT_BARRIER_PARAMS.cs

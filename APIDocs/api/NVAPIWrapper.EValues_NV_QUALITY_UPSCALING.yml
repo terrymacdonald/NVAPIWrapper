@@ -19,7 +19,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_NV_QUALITY_UPSCALING.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: EValues_NV_QUALITY_UPSCALING
     path: ../NVAPIWrapper/cs_generated/EValues_NV_QUALITY_UPSCALING.cs
@@ -45,7 +45,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_NV_QUALITY_UPSCALING.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_QUALITY_UPSCALING_OFF
     path: ../NVAPIWrapper/cs_generated/EValues_NV_QUALITY_UPSCALING.cs
@@ -72,7 +72,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_NV_QUALITY_UPSCALING.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_QUALITY_UPSCALING_ON
     path: ../NVAPIWrapper/cs_generated/EValues_NV_QUALITY_UPSCALING.cs
@@ -99,7 +99,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_NV_QUALITY_UPSCALING.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_QUALITY_UPSCALING_NUM_VALUES
     path: ../NVAPIWrapper/cs_generated/EValues_NV_QUALITY_UPSCALING.cs
@@ -126,7 +126,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_NV_QUALITY_UPSCALING.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_QUALITY_UPSCALING_DEFAULT
     path: ../NVAPIWrapper/cs_generated/EValues_NV_QUALITY_UPSCALING.cs

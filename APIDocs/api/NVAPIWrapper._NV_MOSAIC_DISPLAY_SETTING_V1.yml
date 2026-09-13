@@ -20,7 +20,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_MOSAIC_DISPLAY_SETTING_V1.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: _NV_MOSAIC_DISPLAY_SETTING_V1
     path: ../NVAPIWrapper/cs_generated/_NV_MOSAIC_DISPLAY_SETTING_V1.cs
@@ -53,7 +53,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_MOSAIC_DISPLAY_SETTING_V1.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: version
     path: ../NVAPIWrapper/cs_generated/_NV_MOSAIC_DISPLAY_SETTING_V1.cs
@@ -81,7 +81,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_MOSAIC_DISPLAY_SETTING_V1.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: width
     path: ../NVAPIWrapper/cs_generated/_NV_MOSAIC_DISPLAY_SETTING_V1.cs
@@ -109,7 +109,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_MOSAIC_DISPLAY_SETTING_V1.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: height
     path: ../NVAPIWrapper/cs_generated/_NV_MOSAIC_DISPLAY_SETTING_V1.cs
@@ -137,7 +137,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_MOSAIC_DISPLAY_SETTING_V1.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: bpp
     path: ../NVAPIWrapper/cs_generated/_NV_MOSAIC_DISPLAY_SETTING_V1.cs
@@ -165,7 +165,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_MOSAIC_DISPLAY_SETTING_V1.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: freq
     path: ../NVAPIWrapper/cs_generated/_NV_MOSAIC_DISPLAY_SETTING_V1.cs

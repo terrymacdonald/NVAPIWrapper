@@ -41,7 +41,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIODATAFORMAT.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: _NVVIODATAFORMAT
     path: ../NVAPIWrapper/cs_generated/_NVVIODATAFORMAT.cs
@@ -67,7 +67,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIODATAFORMAT.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVVIODATAFORMAT_UNKNOWN
     path: ../NVAPIWrapper/cs_generated/_NVVIODATAFORMAT.cs
@@ -94,7 +94,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIODATAFORMAT.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVVIODATAFORMAT_R8G8B8_TO_YCRCB444
     path: ../NVAPIWrapper/cs_generated/_NVVIODATAFORMAT.cs
@@ -121,7 +121,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIODATAFORMAT.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVVIODATAFORMAT_R8G8B8A8_TO_YCRCBA4444
     path: ../NVAPIWrapper/cs_generated/_NVVIODATAFORMAT.cs
@@ -148,7 +148,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIODATAFORMAT.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVVIODATAFORMAT_R8G8B8Z10_TO_YCRCBZ4444
     path: ../NVAPIWrapper/cs_generated/_NVVIODATAFORMAT.cs
@@ -175,7 +175,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIODATAFORMAT.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVVIODATAFORMAT_R8G8B8_TO_YCRCB422
     path: ../NVAPIWrapper/cs_generated/_NVVIODATAFORMAT.cs
@@ -202,7 +202,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIODATAFORMAT.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVVIODATAFORMAT_R8G8B8A8_TO_YCRCBA4224
     path: ../NVAPIWrapper/cs_generated/_NVVIODATAFORMAT.cs
@@ -229,7 +229,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIODATAFORMAT.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVVIODATAFORMAT_R8G8B8Z10_TO_YCRCBZ4224
     path: ../NVAPIWrapper/cs_generated/_NVVIODATAFORMAT.cs
@@ -256,7 +256,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIODATAFORMAT.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVVIODATAFORMAT_X8X8X8_444_PASSTHRU
     path: ../NVAPIWrapper/cs_generated/_NVVIODATAFORMAT.cs
@@ -283,7 +283,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIODATAFORMAT.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVVIODATAFORMAT_X8X8X8A8_4444_PASSTHRU
     path: ../NVAPIWrapper/cs_generated/_NVVIODATAFORMAT.cs
@@ -310,7 +310,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIODATAFORMAT.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVVIODATAFORMAT_X8X8X8Z10_4444_PASSTHRU
     path: ../NVAPIWrapper/cs_generated/_NVVIODATAFORMAT.cs
@@ -337,7 +337,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIODATAFORMAT.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVVIODATAFORMAT_X10X10X10_444_PASSTHRU
     path: ../NVAPIWrapper/cs_generated/_NVVIODATAFORMAT.cs
@@ -364,7 +364,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIODATAFORMAT.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVVIODATAFORMAT_X10X8X8_444_PASSTHRU
     path: ../NVAPIWrapper/cs_generated/_NVVIODATAFORMAT.cs
@@ -391,7 +391,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIODATAFORMAT.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVVIODATAFORMAT_X10X8X8A10_4444_PASSTHRU
     path: ../NVAPIWrapper/cs_generated/_NVVIODATAFORMAT.cs
@@ -418,7 +418,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIODATAFORMAT.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVVIODATAFORMAT_X10X8X8Z10_4444_PASSTHRU
     path: ../NVAPIWrapper/cs_generated/_NVVIODATAFORMAT.cs
@@ -445,7 +445,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIODATAFORMAT.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVVIODATAFORMAT_DUAL_R8G8B8_TO_DUAL_YCRCB422
     path: ../NVAPIWrapper/cs_generated/_NVVIODATAFORMAT.cs
@@ -472,7 +472,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIODATAFORMAT.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVVIODATAFORMAT_DUAL_X8X8X8_TO_DUAL_422_PASSTHRU
     path: ../NVAPIWrapper/cs_generated/_NVVIODATAFORMAT.cs
@@ -499,7 +499,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIODATAFORMAT.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVVIODATAFORMAT_R10G10B10_TO_YCRCB422
     path: ../NVAPIWrapper/cs_generated/_NVVIODATAFORMAT.cs
@@ -526,7 +526,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIODATAFORMAT.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVVIODATAFORMAT_R10G10B10_TO_YCRCB444
     path: ../NVAPIWrapper/cs_generated/_NVVIODATAFORMAT.cs
@@ -553,7 +553,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIODATAFORMAT.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVVIODATAFORMAT_X12X12X12_444_PASSTHRU
     path: ../NVAPIWrapper/cs_generated/_NVVIODATAFORMAT.cs
@@ -580,7 +580,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIODATAFORMAT.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVVIODATAFORMAT_X12X12X12_422_PASSTHRU
     path: ../NVAPIWrapper/cs_generated/_NVVIODATAFORMAT.cs
@@ -607,7 +607,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIODATAFORMAT.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVVIODATAFORMAT_Y10CR10CB10_TO_YCRCB422
     path: ../NVAPIWrapper/cs_generated/_NVVIODATAFORMAT.cs
@@ -634,7 +634,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIODATAFORMAT.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVVIODATAFORMAT_Y8CR8CB8_TO_YCRCB422
     path: ../NVAPIWrapper/cs_generated/_NVVIODATAFORMAT.cs
@@ -661,7 +661,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIODATAFORMAT.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVVIODATAFORMAT_Y10CR8CB8A10_TO_YCRCBA4224
     path: ../NVAPIWrapper/cs_generated/_NVVIODATAFORMAT.cs
@@ -688,7 +688,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIODATAFORMAT.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVVIODATAFORMAT_R10G10B10_TO_RGB444
     path: ../NVAPIWrapper/cs_generated/_NVVIODATAFORMAT.cs
@@ -715,7 +715,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIODATAFORMAT.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVVIODATAFORMAT_R12G12B12_TO_YCRCB444
     path: ../NVAPIWrapper/cs_generated/_NVVIODATAFORMAT.cs
@@ -742,7 +742,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIODATAFORMAT.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVVIODATAFORMAT_R12G12B12_TO_YCRCB422
     path: ../NVAPIWrapper/cs_generated/_NVVIODATAFORMAT.cs

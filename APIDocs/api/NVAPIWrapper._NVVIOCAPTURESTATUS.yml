@@ -18,7 +18,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOCAPTURESTATUS.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: _NVVIOCAPTURESTATUS
     path: ../NVAPIWrapper/cs_generated/_NVVIOCAPTURESTATUS.cs
@@ -44,7 +44,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOCAPTURESTATUS.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVVIOSTATUS_STOPPED
     path: ../NVAPIWrapper/cs_generated/_NVVIOCAPTURESTATUS.cs
@@ -71,7 +71,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOCAPTURESTATUS.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVVIOSTATUS_RUNNING
     path: ../NVAPIWrapper/cs_generated/_NVVIOCAPTURESTATUS.cs
@@ -98,7 +98,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOCAPTURESTATUS.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVVIOSTATUS_ERROR
     path: ../NVAPIWrapper/cs_generated/_NVVIOCAPTURESTATUS.cs

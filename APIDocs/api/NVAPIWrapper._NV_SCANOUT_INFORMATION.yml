@@ -23,7 +23,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_SCANOUT_INFORMATION.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: _NV_SCANOUT_INFORMATION
     path: ../NVAPIWrapper/cs_generated/_NV_SCANOUT_INFORMATION.cs
@@ -56,7 +56,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_SCANOUT_INFORMATION.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: version
     path: ../NVAPIWrapper/cs_generated/_NV_SCANOUT_INFORMATION.cs
@@ -84,7 +84,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_SCANOUT_INFORMATION.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: sourceDesktopRect
     path: ../NVAPIWrapper/cs_generated/_NV_SCANOUT_INFORMATION.cs
@@ -112,7 +112,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_SCANOUT_INFORMATION.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: sourceViewportRect
     path: ../NVAPIWrapper/cs_generated/_NV_SCANOUT_INFORMATION.cs
@@ -140,7 +140,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_SCANOUT_INFORMATION.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: targetViewportRect
     path: ../NVAPIWrapper/cs_generated/_NV_SCANOUT_INFORMATION.cs
@@ -168,7 +168,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_SCANOUT_INFORMATION.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: targetDisplayWidth
     path: ../NVAPIWrapper/cs_generated/_NV_SCANOUT_INFORMATION.cs
@@ -196,7 +196,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_SCANOUT_INFORMATION.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: targetDisplayHeight
     path: ../NVAPIWrapper/cs_generated/_NV_SCANOUT_INFORMATION.cs
@@ -224,7 +224,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_SCANOUT_INFORMATION.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: cloneImportance
     path: ../NVAPIWrapper/cs_generated/_NV_SCANOUT_INFORMATION.cs
@@ -252,7 +252,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_SCANOUT_INFORMATION.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: sourceToTargetRotation
     path: ../NVAPIWrapper/cs_generated/_NV_SCANOUT_INFORMATION.cs

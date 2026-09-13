@@ -17,7 +17,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOSYNCSOURCE.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: _NVVIOSYNCSOURCE
     path: ../NVAPIWrapper/cs_generated/_NVVIOSYNCSOURCE.cs
@@ -43,7 +43,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOSYNCSOURCE.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVVIOSYNCSOURCE_SDISYNC
     path: ../NVAPIWrapper/cs_generated/_NVVIOSYNCSOURCE.cs
@@ -70,7 +70,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOSYNCSOURCE.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVVIOSYNCSOURCE_COMPSYNC
     path: ../NVAPIWrapper/cs_generated/_NVVIOSYNCSOURCE.cs

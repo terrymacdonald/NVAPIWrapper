@@ -17,7 +17,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_HDR_TONEMAPPING_METHOD.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: _NV_HDR_TONEMAPPING_METHOD
     path: ../NVAPIWrapper/cs_generated/_NV_HDR_TONEMAPPING_METHOD.cs
@@ -43,7 +43,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_HDR_TONEMAPPING_METHOD.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_HDR_TONEMAPPING_APP
     path: ../NVAPIWrapper/cs_generated/_NV_HDR_TONEMAPPING_METHOD.cs
@@ -70,7 +70,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_HDR_TONEMAPPING_METHOD.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_HDR_TONEMAPPING_GPU
     path: ../NVAPIWrapper/cs_generated/_NV_HDR_TONEMAPPING_METHOD.cs

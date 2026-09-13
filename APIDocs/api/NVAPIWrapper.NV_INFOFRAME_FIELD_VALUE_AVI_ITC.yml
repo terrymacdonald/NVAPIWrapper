@@ -18,7 +18,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AVI_ITC.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_INFOFRAME_FIELD_VALUE_AVI_ITC
     path: ../NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AVI_ITC.cs
@@ -44,7 +44,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AVI_ITC.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_INFOFRAME_FIELD_VALUE_AVI_ITC_VIDEO_CONTENT
     path: ../NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AVI_ITC.cs
@@ -71,7 +71,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AVI_ITC.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_INFOFRAME_FIELD_VALUE_AVI_ITC_ITCONTENT
     path: ../NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AVI_ITC.cs
@@ -98,7 +98,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AVI_ITC.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_INFOFRAME_FIELD_VALUE_AVI_ITC_AUTO
     path: ../NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AVI_ITC.cs

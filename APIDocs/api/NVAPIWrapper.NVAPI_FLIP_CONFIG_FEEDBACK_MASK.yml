@@ -18,7 +18,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NVAPI_FLIP_CONFIG_FEEDBACK_MASK.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_FLIP_CONFIG_FEEDBACK_MASK
     path: ../NVAPIWrapper/cs_generated/NVAPI_FLIP_CONFIG_FEEDBACK_MASK.cs
@@ -44,7 +44,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NVAPI_FLIP_CONFIG_FEEDBACK_MASK.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_FLIP_CONFIG_FEEDBACK_OK
     path: ../NVAPIWrapper/cs_generated/NVAPI_FLIP_CONFIG_FEEDBACK_MASK.cs
@@ -71,7 +71,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NVAPI_FLIP_CONFIG_FEEDBACK_MASK.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_FLIP_CONFIG_FEEDBACK_NO_IFLIP
     path: ../NVAPIWrapper/cs_generated/NVAPI_FLIP_CONFIG_FEEDBACK_MASK.cs
@@ -98,7 +98,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NVAPI_FLIP_CONFIG_FEEDBACK_MASK.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_FLIP_CONFIG_FEEDBACK_MIRRORING_DETECTED
     path: ../NVAPIWrapper/cs_generated/NVAPI_FLIP_CONFIG_FEEDBACK_MASK.cs

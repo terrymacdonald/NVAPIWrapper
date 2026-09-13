@@ -175,7 +175,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NvAPI_Status.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: _NvAPI_Status
     path: ../NVAPIWrapper/cs_generated/_NvAPI_Status.cs
@@ -201,7 +201,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NvAPI_Status.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_OK
     path: ../NVAPIWrapper/cs_generated/_NvAPI_Status.cs
@@ -228,7 +228,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NvAPI_Status.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_ERROR
     path: ../NVAPIWrapper/cs_generated/_NvAPI_Status.cs
@@ -255,7 +255,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NvAPI_Status.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_LIBRARY_NOT_FOUND
     path: ../NVAPIWrapper/cs_generated/_NvAPI_Status.cs
@@ -282,7 +282,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NvAPI_Status.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_NO_IMPLEMENTATION
     path: ../NVAPIWrapper/cs_generated/_NvAPI_Status.cs
@@ -309,7 +309,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NvAPI_Status.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_API_NOT_INITIALIZED
     path: ../NVAPIWrapper/cs_generated/_NvAPI_Status.cs
@@ -336,7 +336,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NvAPI_Status.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_INVALID_ARGUMENT
     path: ../NVAPIWrapper/cs_generated/_NvAPI_Status.cs
@@ -363,7 +363,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NvAPI_Status.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_NVIDIA_DEVICE_NOT_FOUND
     path: ../NVAPIWrapper/cs_generated/_NvAPI_Status.cs
@@ -390,7 +390,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NvAPI_Status.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_END_ENUMERATION
     path: ../NVAPIWrapper/cs_generated/_NvAPI_Status.cs
@@ -417,7 +417,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NvAPI_Status.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_INVALID_HANDLE
     path: ../NVAPIWrapper/cs_generated/_NvAPI_Status.cs
@@ -444,7 +444,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NvAPI_Status.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_INCOMPATIBLE_STRUCT_VERSION
     path: ../NVAPIWrapper/cs_generated/_NvAPI_Status.cs
@@ -471,7 +471,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NvAPI_Status.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_HANDLE_INVALIDATED
     path: ../NVAPIWrapper/cs_generated/_NvAPI_Status.cs
@@ -498,7 +498,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NvAPI_Status.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_OPENGL_CONTEXT_NOT_CURRENT
     path: ../NVAPIWrapper/cs_generated/_NvAPI_Status.cs
@@ -525,7 +525,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NvAPI_Status.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_INVALID_POINTER
     path: ../NVAPIWrapper/cs_generated/_NvAPI_Status.cs
@@ -552,7 +552,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NvAPI_Status.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_NO_GL_EXPERT
     path: ../NVAPIWrapper/cs_generated/_NvAPI_Status.cs
@@ -579,7 +579,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NvAPI_Status.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_INSTRUMENTATION_DISABLED
     path: ../NVAPIWrapper/cs_generated/_NvAPI_Status.cs
@@ -606,7 +606,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NvAPI_Status.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_NO_GL_NSIGHT
     path: ../NVAPIWrapper/cs_generated/_NvAPI_Status.cs
@@ -633,7 +633,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NvAPI_Status.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_EXPECTED_LOGICAL_GPU_HANDLE
     path: ../NVAPIWrapper/cs_generated/_NvAPI_Status.cs
@@ -660,7 +660,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NvAPI_Status.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_EXPECTED_PHYSICAL_GPU_HANDLE
     path: ../NVAPIWrapper/cs_generated/_NvAPI_Status.cs
@@ -687,7 +687,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NvAPI_Status.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_EXPECTED_DISPLAY_HANDLE
     path: ../NVAPIWrapper/cs_generated/_NvAPI_Status.cs
@@ -714,7 +714,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NvAPI_Status.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_INVALID_COMBINATION
     path: ../NVAPIWrapper/cs_generated/_NvAPI_Status.cs
@@ -741,7 +741,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NvAPI_Status.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_NOT_SUPPORTED
     path: ../NVAPIWrapper/cs_generated/_NvAPI_Status.cs
@@ -768,7 +768,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NvAPI_Status.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_PORTID_NOT_FOUND
     path: ../NVAPIWrapper/cs_generated/_NvAPI_Status.cs
@@ -795,7 +795,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NvAPI_Status.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_EXPECTED_UNATTACHED_DISPLAY_HANDLE
     path: ../NVAPIWrapper/cs_generated/_NvAPI_Status.cs
@@ -822,7 +822,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NvAPI_Status.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_INVALID_PERF_LEVEL
     path: ../NVAPIWrapper/cs_generated/_NvAPI_Status.cs
@@ -849,7 +849,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NvAPI_Status.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_DEVICE_BUSY
     path: ../NVAPIWrapper/cs_generated/_NvAPI_Status.cs
@@ -876,7 +876,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NvAPI_Status.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_NV_PERSIST_FILE_NOT_FOUND
     path: ../NVAPIWrapper/cs_generated/_NvAPI_Status.cs
@@ -903,7 +903,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NvAPI_Status.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_PERSIST_DATA_NOT_FOUND
     path: ../NVAPIWrapper/cs_generated/_NvAPI_Status.cs
@@ -930,7 +930,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NvAPI_Status.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_EXPECTED_TV_DISPLAY
     path: ../NVAPIWrapper/cs_generated/_NvAPI_Status.cs
@@ -957,7 +957,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NvAPI_Status.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_EXPECTED_TV_DISPLAY_ON_DCONNECTOR
     path: ../NVAPIWrapper/cs_generated/_NvAPI_Status.cs
@@ -984,7 +984,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NvAPI_Status.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_NO_ACTIVE_SLI_TOPOLOGY
     path: ../NVAPIWrapper/cs_generated/_NvAPI_Status.cs
@@ -1011,7 +1011,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NvAPI_Status.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_SLI_RENDERING_MODE_NOTALLOWED
     path: ../NVAPIWrapper/cs_generated/_NvAPI_Status.cs
@@ -1038,7 +1038,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NvAPI_Status.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_EXPECTED_DIGITAL_FLAT_PANEL
     path: ../NVAPIWrapper/cs_generated/_NvAPI_Status.cs
@@ -1065,7 +1065,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NvAPI_Status.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_ARGUMENT_EXCEED_MAX_SIZE
     path: ../NVAPIWrapper/cs_generated/_NvAPI_Status.cs
@@ -1092,7 +1092,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NvAPI_Status.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_DEVICE_SWITCHING_NOT_ALLOWED
     path: ../NVAPIWrapper/cs_generated/_NvAPI_Status.cs
@@ -1119,7 +1119,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NvAPI_Status.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_TESTING_CLOCKS_NOT_SUPPORTED
     path: ../NVAPIWrapper/cs_generated/_NvAPI_Status.cs
@@ -1146,7 +1146,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NvAPI_Status.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_UNKNOWN_UNDERSCAN_CONFIG
     path: ../NVAPIWrapper/cs_generated/_NvAPI_Status.cs
@@ -1173,7 +1173,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NvAPI_Status.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_TIMEOUT_RECONFIGURING_GPU_TOPO
     path: ../NVAPIWrapper/cs_generated/_NvAPI_Status.cs
@@ -1200,7 +1200,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NvAPI_Status.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_DATA_NOT_FOUND
     path: ../NVAPIWrapper/cs_generated/_NvAPI_Status.cs
@@ -1227,7 +1227,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NvAPI_Status.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_EXPECTED_ANALOG_DISPLAY
     path: ../NVAPIWrapper/cs_generated/_NvAPI_Status.cs
@@ -1254,7 +1254,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NvAPI_Status.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_NO_VIDLINK
     path: ../NVAPIWrapper/cs_generated/_NvAPI_Status.cs
@@ -1281,7 +1281,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NvAPI_Status.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_REQUIRES_REBOOT
     path: ../NVAPIWrapper/cs_generated/_NvAPI_Status.cs
@@ -1308,7 +1308,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NvAPI_Status.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_INVALID_HYBRID_MODE
     path: ../NVAPIWrapper/cs_generated/_NvAPI_Status.cs
@@ -1335,7 +1335,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NvAPI_Status.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_MIXED_TARGET_TYPES
     path: ../NVAPIWrapper/cs_generated/_NvAPI_Status.cs
@@ -1362,7 +1362,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NvAPI_Status.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_SYSWOW64_NOT_SUPPORTED
     path: ../NVAPIWrapper/cs_generated/_NvAPI_Status.cs
@@ -1389,7 +1389,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NvAPI_Status.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_IMPLICIT_SET_GPU_TOPOLOGY_CHANGE_NOT_ALLOWED
     path: ../NVAPIWrapper/cs_generated/_NvAPI_Status.cs
@@ -1416,7 +1416,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NvAPI_Status.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_REQUEST_USER_TO_CLOSE_NON_MIGRATABLE_APPS
     path: ../NVAPIWrapper/cs_generated/_NvAPI_Status.cs
@@ -1443,7 +1443,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NvAPI_Status.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_OUT_OF_MEMORY
     path: ../NVAPIWrapper/cs_generated/_NvAPI_Status.cs
@@ -1470,7 +1470,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NvAPI_Status.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_WAS_STILL_DRAWING
     path: ../NVAPIWrapper/cs_generated/_NvAPI_Status.cs
@@ -1497,7 +1497,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NvAPI_Status.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_FILE_NOT_FOUND
     path: ../NVAPIWrapper/cs_generated/_NvAPI_Status.cs
@@ -1524,7 +1524,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NvAPI_Status.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_TOO_MANY_UNIQUE_STATE_OBJECTS
     path: ../NVAPIWrapper/cs_generated/_NvAPI_Status.cs
@@ -1551,7 +1551,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NvAPI_Status.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_INVALID_CALL
     path: ../NVAPIWrapper/cs_generated/_NvAPI_Status.cs
@@ -1578,7 +1578,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NvAPI_Status.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_D3D10_1_LIBRARY_NOT_FOUND
     path: ../NVAPIWrapper/cs_generated/_NvAPI_Status.cs
@@ -1605,7 +1605,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NvAPI_Status.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_FUNCTION_NOT_FOUND
     path: ../NVAPIWrapper/cs_generated/_NvAPI_Status.cs
@@ -1632,7 +1632,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NvAPI_Status.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_INVALID_USER_PRIVILEGE
     path: ../NVAPIWrapper/cs_generated/_NvAPI_Status.cs
@@ -1659,7 +1659,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NvAPI_Status.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_EXPECTED_NON_PRIMARY_DISPLAY_HANDLE
     path: ../NVAPIWrapper/cs_generated/_NvAPI_Status.cs
@@ -1686,7 +1686,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NvAPI_Status.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_EXPECTED_COMPUTE_GPU_HANDLE
     path: ../NVAPIWrapper/cs_generated/_NvAPI_Status.cs
@@ -1713,7 +1713,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NvAPI_Status.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_STEREO_NOT_INITIALIZED
     path: ../NVAPIWrapper/cs_generated/_NvAPI_Status.cs
@@ -1740,7 +1740,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NvAPI_Status.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_STEREO_REGISTRY_ACCESS_FAILED
     path: ../NVAPIWrapper/cs_generated/_NvAPI_Status.cs
@@ -1767,7 +1767,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NvAPI_Status.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_STEREO_REGISTRY_PROFILE_TYPE_NOT_SUPPORTED
     path: ../NVAPIWrapper/cs_generated/_NvAPI_Status.cs
@@ -1794,7 +1794,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NvAPI_Status.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_STEREO_REGISTRY_VALUE_NOT_SUPPORTED
     path: ../NVAPIWrapper/cs_generated/_NvAPI_Status.cs
@@ -1821,7 +1821,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NvAPI_Status.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_STEREO_NOT_ENABLED
     path: ../NVAPIWrapper/cs_generated/_NvAPI_Status.cs
@@ -1848,7 +1848,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NvAPI_Status.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_STEREO_NOT_TURNED_ON
     path: ../NVAPIWrapper/cs_generated/_NvAPI_Status.cs
@@ -1875,7 +1875,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NvAPI_Status.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_STEREO_INVALID_DEVICE_INTERFACE
     path: ../NVAPIWrapper/cs_generated/_NvAPI_Status.cs
@@ -1902,7 +1902,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NvAPI_Status.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_STEREO_PARAMETER_OUT_OF_RANGE
     path: ../NVAPIWrapper/cs_generated/_NvAPI_Status.cs
@@ -1929,7 +1929,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NvAPI_Status.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_STEREO_FRUSTUM_ADJUST_MODE_NOT_SUPPORTED
     path: ../NVAPIWrapper/cs_generated/_NvAPI_Status.cs
@@ -1956,7 +1956,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NvAPI_Status.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_TOPO_NOT_POSSIBLE
     path: ../NVAPIWrapper/cs_generated/_NvAPI_Status.cs
@@ -1983,7 +1983,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NvAPI_Status.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_MODE_CHANGE_FAILED
     path: ../NVAPIWrapper/cs_generated/_NvAPI_Status.cs
@@ -2010,7 +2010,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NvAPI_Status.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_D3D11_LIBRARY_NOT_FOUND
     path: ../NVAPIWrapper/cs_generated/_NvAPI_Status.cs
@@ -2037,7 +2037,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NvAPI_Status.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_INVALID_ADDRESS
     path: ../NVAPIWrapper/cs_generated/_NvAPI_Status.cs
@@ -2064,7 +2064,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NvAPI_Status.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_STRING_TOO_SMALL
     path: ../NVAPIWrapper/cs_generated/_NvAPI_Status.cs
@@ -2091,7 +2091,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NvAPI_Status.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_MATCHING_DEVICE_NOT_FOUND
     path: ../NVAPIWrapper/cs_generated/_NvAPI_Status.cs
@@ -2118,7 +2118,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NvAPI_Status.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_DRIVER_RUNNING
     path: ../NVAPIWrapper/cs_generated/_NvAPI_Status.cs
@@ -2145,7 +2145,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NvAPI_Status.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_DRIVER_NOTRUNNING
     path: ../NVAPIWrapper/cs_generated/_NvAPI_Status.cs
@@ -2172,7 +2172,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NvAPI_Status.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_ERROR_DRIVER_RELOAD_REQUIRED
     path: ../NVAPIWrapper/cs_generated/_NvAPI_Status.cs
@@ -2199,7 +2199,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NvAPI_Status.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_SET_NOT_ALLOWED
     path: ../NVAPIWrapper/cs_generated/_NvAPI_Status.cs
@@ -2226,7 +2226,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NvAPI_Status.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_ADVANCED_DISPLAY_TOPOLOGY_REQUIRED
     path: ../NVAPIWrapper/cs_generated/_NvAPI_Status.cs
@@ -2253,7 +2253,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NvAPI_Status.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_SETTING_NOT_FOUND
     path: ../NVAPIWrapper/cs_generated/_NvAPI_Status.cs
@@ -2280,7 +2280,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NvAPI_Status.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_SETTING_SIZE_TOO_LARGE
     path: ../NVAPIWrapper/cs_generated/_NvAPI_Status.cs
@@ -2307,7 +2307,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NvAPI_Status.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_TOO_MANY_SETTINGS_IN_PROFILE
     path: ../NVAPIWrapper/cs_generated/_NvAPI_Status.cs
@@ -2334,7 +2334,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NvAPI_Status.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_PROFILE_NOT_FOUND
     path: ../NVAPIWrapper/cs_generated/_NvAPI_Status.cs
@@ -2361,7 +2361,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NvAPI_Status.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_PROFILE_NAME_IN_USE
     path: ../NVAPIWrapper/cs_generated/_NvAPI_Status.cs
@@ -2388,7 +2388,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NvAPI_Status.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_PROFILE_NAME_EMPTY
     path: ../NVAPIWrapper/cs_generated/_NvAPI_Status.cs
@@ -2415,7 +2415,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NvAPI_Status.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_EXECUTABLE_NOT_FOUND
     path: ../NVAPIWrapper/cs_generated/_NvAPI_Status.cs
@@ -2442,7 +2442,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NvAPI_Status.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_EXECUTABLE_ALREADY_IN_USE
     path: ../NVAPIWrapper/cs_generated/_NvAPI_Status.cs
@@ -2469,7 +2469,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NvAPI_Status.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_DATATYPE_MISMATCH
     path: ../NVAPIWrapper/cs_generated/_NvAPI_Status.cs
@@ -2496,7 +2496,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NvAPI_Status.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_PROFILE_REMOVED
     path: ../NVAPIWrapper/cs_generated/_NvAPI_Status.cs
@@ -2523,7 +2523,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NvAPI_Status.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_UNREGISTERED_RESOURCE
     path: ../NVAPIWrapper/cs_generated/_NvAPI_Status.cs
@@ -2550,7 +2550,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NvAPI_Status.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_ID_OUT_OF_RANGE
     path: ../NVAPIWrapper/cs_generated/_NvAPI_Status.cs
@@ -2577,7 +2577,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NvAPI_Status.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_DISPLAYCONFIG_VALIDATION_FAILED
     path: ../NVAPIWrapper/cs_generated/_NvAPI_Status.cs
@@ -2604,7 +2604,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NvAPI_Status.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_DPMST_CHANGED
     path: ../NVAPIWrapper/cs_generated/_NvAPI_Status.cs
@@ -2631,7 +2631,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NvAPI_Status.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_INSUFFICIENT_BUFFER
     path: ../NVAPIWrapper/cs_generated/_NvAPI_Status.cs
@@ -2658,7 +2658,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NvAPI_Status.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_ACCESS_DENIED
     path: ../NVAPIWrapper/cs_generated/_NvAPI_Status.cs
@@ -2685,7 +2685,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NvAPI_Status.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_MOSAIC_NOT_ACTIVE
     path: ../NVAPIWrapper/cs_generated/_NvAPI_Status.cs
@@ -2712,7 +2712,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NvAPI_Status.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_SHARE_RESOURCE_RELOCATED
     path: ../NVAPIWrapper/cs_generated/_NvAPI_Status.cs
@@ -2739,7 +2739,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NvAPI_Status.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_REQUEST_USER_TO_DISABLE_DWM
     path: ../NVAPIWrapper/cs_generated/_NvAPI_Status.cs
@@ -2766,7 +2766,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NvAPI_Status.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_D3D_DEVICE_LOST
     path: ../NVAPIWrapper/cs_generated/_NvAPI_Status.cs
@@ -2793,7 +2793,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NvAPI_Status.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_INVALID_CONFIGURATION
     path: ../NVAPIWrapper/cs_generated/_NvAPI_Status.cs
@@ -2820,7 +2820,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NvAPI_Status.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_STEREO_HANDSHAKE_NOT_DONE
     path: ../NVAPIWrapper/cs_generated/_NvAPI_Status.cs
@@ -2847,7 +2847,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NvAPI_Status.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_EXECUTABLE_PATH_IS_AMBIGUOUS
     path: ../NVAPIWrapper/cs_generated/_NvAPI_Status.cs
@@ -2874,7 +2874,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NvAPI_Status.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_DEFAULT_STEREO_PROFILE_IS_NOT_DEFINED
     path: ../NVAPIWrapper/cs_generated/_NvAPI_Status.cs
@@ -2901,7 +2901,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NvAPI_Status.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_DEFAULT_STEREO_PROFILE_DOES_NOT_EXIST
     path: ../NVAPIWrapper/cs_generated/_NvAPI_Status.cs
@@ -2928,7 +2928,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NvAPI_Status.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_CLUSTER_ALREADY_EXISTS
     path: ../NVAPIWrapper/cs_generated/_NvAPI_Status.cs
@@ -2955,7 +2955,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NvAPI_Status.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_DPMST_DISPLAY_ID_EXPECTED
     path: ../NVAPIWrapper/cs_generated/_NvAPI_Status.cs
@@ -2982,7 +2982,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NvAPI_Status.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_INVALID_DISPLAY_ID
     path: ../NVAPIWrapper/cs_generated/_NvAPI_Status.cs
@@ -3009,7 +3009,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NvAPI_Status.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_STREAM_IS_OUT_OF_SYNC
     path: ../NVAPIWrapper/cs_generated/_NvAPI_Status.cs
@@ -3036,7 +3036,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NvAPI_Status.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_INCOMPATIBLE_AUDIO_DRIVER
     path: ../NVAPIWrapper/cs_generated/_NvAPI_Status.cs
@@ -3063,7 +3063,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NvAPI_Status.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_VALUE_ALREADY_SET
     path: ../NVAPIWrapper/cs_generated/_NvAPI_Status.cs
@@ -3090,7 +3090,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NvAPI_Status.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_TIMEOUT
     path: ../NVAPIWrapper/cs_generated/_NvAPI_Status.cs
@@ -3117,7 +3117,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NvAPI_Status.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_GPU_WORKSTATION_FEATURE_INCOMPLETE
     path: ../NVAPIWrapper/cs_generated/_NvAPI_Status.cs
@@ -3144,7 +3144,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NvAPI_Status.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_STEREO_INIT_ACTIVATION_NOT_DONE
     path: ../NVAPIWrapper/cs_generated/_NvAPI_Status.cs
@@ -3171,7 +3171,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NvAPI_Status.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_SYNC_NOT_ACTIVE
     path: ../NVAPIWrapper/cs_generated/_NvAPI_Status.cs
@@ -3198,7 +3198,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NvAPI_Status.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_SYNC_MASTER_NOT_FOUND
     path: ../NVAPIWrapper/cs_generated/_NvAPI_Status.cs
@@ -3225,7 +3225,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NvAPI_Status.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_INVALID_SYNC_TOPOLOGY
     path: ../NVAPIWrapper/cs_generated/_NvAPI_Status.cs
@@ -3252,7 +3252,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NvAPI_Status.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_ECID_SIGN_ALGO_UNSUPPORTED
     path: ../NVAPIWrapper/cs_generated/_NvAPI_Status.cs
@@ -3279,7 +3279,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NvAPI_Status.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_ECID_KEY_VERIFICATION_FAILED
     path: ../NVAPIWrapper/cs_generated/_NvAPI_Status.cs
@@ -3306,7 +3306,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NvAPI_Status.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_FIRMWARE_OUT_OF_DATE
     path: ../NVAPIWrapper/cs_generated/_NvAPI_Status.cs
@@ -3333,7 +3333,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NvAPI_Status.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_FIRMWARE_REVISION_NOT_SUPPORTED
     path: ../NVAPIWrapper/cs_generated/_NvAPI_Status.cs
@@ -3360,7 +3360,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NvAPI_Status.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_LICENSE_CALLER_AUTHENTICATION_FAILED
     path: ../NVAPIWrapper/cs_generated/_NvAPI_Status.cs
@@ -3387,7 +3387,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NvAPI_Status.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_D3D_DEVICE_NOT_REGISTERED
     path: ../NVAPIWrapper/cs_generated/_NvAPI_Status.cs
@@ -3414,7 +3414,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NvAPI_Status.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_RESOURCE_NOT_ACQUIRED
     path: ../NVAPIWrapper/cs_generated/_NvAPI_Status.cs
@@ -3441,7 +3441,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NvAPI_Status.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_TIMING_NOT_SUPPORTED
     path: ../NVAPIWrapper/cs_generated/_NvAPI_Status.cs
@@ -3468,7 +3468,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NvAPI_Status.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_HDCP_ENCRYPTION_FAILED
     path: ../NVAPIWrapper/cs_generated/_NvAPI_Status.cs
@@ -3495,7 +3495,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NvAPI_Status.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_PCLK_LIMITATION_FAILED
     path: ../NVAPIWrapper/cs_generated/_NvAPI_Status.cs
@@ -3522,7 +3522,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NvAPI_Status.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_NO_CONNECTOR_FOUND
     path: ../NVAPIWrapper/cs_generated/_NvAPI_Status.cs
@@ -3549,7 +3549,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NvAPI_Status.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_HDCP_DISABLED
     path: ../NVAPIWrapper/cs_generated/_NvAPI_Status.cs
@@ -3576,7 +3576,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NvAPI_Status.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_API_IN_USE
     path: ../NVAPIWrapper/cs_generated/_NvAPI_Status.cs
@@ -3603,7 +3603,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NvAPI_Status.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_NVIDIA_DISPLAY_NOT_FOUND
     path: ../NVAPIWrapper/cs_generated/_NvAPI_Status.cs
@@ -3630,7 +3630,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NvAPI_Status.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_PRIV_SEC_VIOLATION
     path: ../NVAPIWrapper/cs_generated/_NvAPI_Status.cs
@@ -3657,7 +3657,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NvAPI_Status.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_INCORRECT_VENDOR
     path: ../NVAPIWrapper/cs_generated/_NvAPI_Status.cs
@@ -3684,7 +3684,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NvAPI_Status.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_DISPLAY_IN_USE
     path: ../NVAPIWrapper/cs_generated/_NvAPI_Status.cs
@@ -3711,7 +3711,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NvAPI_Status.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_UNSUPPORTED_CONFIG_NON_HDCP_HMD
     path: ../NVAPIWrapper/cs_generated/_NvAPI_Status.cs
@@ -3738,7 +3738,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NvAPI_Status.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_MAX_DISPLAY_LIMIT_REACHED
     path: ../NVAPIWrapper/cs_generated/_NvAPI_Status.cs
@@ -3765,7 +3765,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NvAPI_Status.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_INVALID_DIRECT_MODE_DISPLAY
     path: ../NVAPIWrapper/cs_generated/_NvAPI_Status.cs
@@ -3792,7 +3792,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NvAPI_Status.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_GPU_IN_DEBUG_MODE
     path: ../NVAPIWrapper/cs_generated/_NvAPI_Status.cs
@@ -3819,7 +3819,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NvAPI_Status.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_D3D_CONTEXT_NOT_FOUND
     path: ../NVAPIWrapper/cs_generated/_NvAPI_Status.cs
@@ -3846,7 +3846,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NvAPI_Status.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_STEREO_VERSION_MISMATCH
     path: ../NVAPIWrapper/cs_generated/_NvAPI_Status.cs
@@ -3873,7 +3873,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NvAPI_Status.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_GPU_NOT_POWERED
     path: ../NVAPIWrapper/cs_generated/_NvAPI_Status.cs
@@ -3900,7 +3900,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NvAPI_Status.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_ERROR_DRIVER_RELOAD_IN_PROGRESS
     path: ../NVAPIWrapper/cs_generated/_NvAPI_Status.cs
@@ -3927,7 +3927,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NvAPI_Status.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_WAIT_FOR_HW_RESOURCE
     path: ../NVAPIWrapper/cs_generated/_NvAPI_Status.cs
@@ -3954,7 +3954,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NvAPI_Status.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_REQUIRE_FURTHER_HDCP_ACTION
     path: ../NVAPIWrapper/cs_generated/_NvAPI_Status.cs
@@ -3981,7 +3981,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NvAPI_Status.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_DISPLAY_MUX_TRANSITION_FAILED
     path: ../NVAPIWrapper/cs_generated/_NvAPI_Status.cs
@@ -4008,7 +4008,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NvAPI_Status.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_INVALID_DSC_VERSION
     path: ../NVAPIWrapper/cs_generated/_NvAPI_Status.cs
@@ -4035,7 +4035,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NvAPI_Status.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_INVALID_DSC_SLICECOUNT
     path: ../NVAPIWrapper/cs_generated/_NvAPI_Status.cs
@@ -4062,7 +4062,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NvAPI_Status.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_INVALID_DSC_OUTPUT_BPP
     path: ../NVAPIWrapper/cs_generated/_NvAPI_Status.cs
@@ -4089,7 +4089,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NvAPI_Status.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_FAILED_TO_LOAD_FROM_DRIVER_STORE
     path: ../NVAPIWrapper/cs_generated/_NvAPI_Status.cs
@@ -4116,7 +4116,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NvAPI_Status.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_NO_VULKAN
     path: ../NVAPIWrapper/cs_generated/_NvAPI_Status.cs
@@ -4143,7 +4143,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NvAPI_Status.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_REQUEST_PENDING
     path: ../NVAPIWrapper/cs_generated/_NvAPI_Status.cs
@@ -4170,7 +4170,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NvAPI_Status.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_RESOURCE_IN_USE
     path: ../NVAPIWrapper/cs_generated/_NvAPI_Status.cs
@@ -4197,7 +4197,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NvAPI_Status.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_INVALID_IMAGE
     path: ../NVAPIWrapper/cs_generated/_NvAPI_Status.cs
@@ -4224,7 +4224,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NvAPI_Status.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_INVALID_PTX
     path: ../NVAPIWrapper/cs_generated/_NvAPI_Status.cs
@@ -4251,7 +4251,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NvAPI_Status.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_NVLINK_UNCORRECTABLE
     path: ../NVAPIWrapper/cs_generated/_NvAPI_Status.cs
@@ -4278,7 +4278,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NvAPI_Status.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_JIT_COMPILER_NOT_FOUND
     path: ../NVAPIWrapper/cs_generated/_NvAPI_Status.cs
@@ -4305,7 +4305,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NvAPI_Status.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_INVALID_SOURCE
     path: ../NVAPIWrapper/cs_generated/_NvAPI_Status.cs
@@ -4332,7 +4332,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NvAPI_Status.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_ILLEGAL_INSTRUCTION
     path: ../NVAPIWrapper/cs_generated/_NvAPI_Status.cs
@@ -4359,7 +4359,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NvAPI_Status.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_INVALID_PC
     path: ../NVAPIWrapper/cs_generated/_NvAPI_Status.cs
@@ -4386,7 +4386,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NvAPI_Status.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_LAUNCH_FAILED
     path: ../NVAPIWrapper/cs_generated/_NvAPI_Status.cs
@@ -4413,7 +4413,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NvAPI_Status.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_NOT_PERMITTED
     path: ../NVAPIWrapper/cs_generated/_NvAPI_Status.cs
@@ -4440,7 +4440,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NvAPI_Status.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_CALLBACK_ALREADY_REGISTERED
     path: ../NVAPIWrapper/cs_generated/_NvAPI_Status.cs
@@ -4467,7 +4467,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NvAPI_Status.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_CALLBACK_NOT_FOUND
     path: ../NVAPIWrapper/cs_generated/_NvAPI_Status.cs
@@ -4494,7 +4494,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NvAPI_Status.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_INVALID_OUTPUT_WIRE_FORMAT
     path: ../NVAPIWrapper/cs_generated/_NvAPI_Status.cs

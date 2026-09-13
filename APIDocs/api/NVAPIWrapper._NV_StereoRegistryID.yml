@@ -17,7 +17,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_StereoRegistryID.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: _NV_StereoRegistryID
     path: ../NVAPIWrapper/cs_generated/_NV_StereoRegistryID.cs
@@ -43,7 +43,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_StereoRegistryID.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_CONVERGENCE_ID
     path: ../NVAPIWrapper/cs_generated/_NV_StereoRegistryID.cs
@@ -70,7 +70,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_StereoRegistryID.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_FRUSTUM_ADJUST_MODE_ID
     path: ../NVAPIWrapper/cs_generated/_NV_StereoRegistryID.cs

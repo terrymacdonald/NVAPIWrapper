@@ -19,11 +19,11 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIMosaicHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_MOSAIC_TOPOLOGY
     path: ../NVAPIWrapper/NVAPIMosaicHelper.cs
-    startLine: 2295
+    startLine: 2428
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -53,11 +53,11 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIMosaicHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: version
     path: ../NVAPIWrapper/NVAPIMosaicHelper.cs
-    startLine: 2299
+    startLine: 2432
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -82,11 +82,11 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIMosaicHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: rowCount
     path: ../NVAPIWrapper/NVAPIMosaicHelper.cs
-    startLine: 2303
+    startLine: 2436
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -111,11 +111,11 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIMosaicHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: colCount
     path: ../NVAPIWrapper/NVAPIMosaicHelper.cs
-    startLine: 2307
+    startLine: 2440
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -140,11 +140,11 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIMosaicHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: gpuLayout
     path: ../NVAPIWrapper/NVAPIMosaicHelper.cs
-    startLine: 2311
+    startLine: 2444
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper

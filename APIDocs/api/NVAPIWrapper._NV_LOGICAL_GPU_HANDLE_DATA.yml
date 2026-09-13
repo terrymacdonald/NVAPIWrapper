@@ -18,7 +18,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_LOGICAL_GPU_HANDLE_DATA.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: _NV_LOGICAL_GPU_HANDLE_DATA
     path: ../NVAPIWrapper/cs_generated/_NV_LOGICAL_GPU_HANDLE_DATA.cs
@@ -51,7 +51,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_LOGICAL_GPU_HANDLE_DATA.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: hLogicalGpu
     path: ../NVAPIWrapper/cs_generated/_NV_LOGICAL_GPU_HANDLE_DATA.cs
@@ -79,7 +79,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_LOGICAL_GPU_HANDLE_DATA.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: adapterType
     path: ../NVAPIWrapper/cs_generated/_NV_LOGICAL_GPU_HANDLE_DATA.cs
@@ -107,7 +107,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_LOGICAL_GPU_HANDLE_DATA.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: reserved
     path: ../NVAPIWrapper/cs_generated/_NV_LOGICAL_GPU_HANDLE_DATA.cs

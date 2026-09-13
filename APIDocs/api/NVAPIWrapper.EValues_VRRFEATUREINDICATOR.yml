@@ -19,7 +19,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_VRRFEATUREINDICATOR.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: EValues_VRRFEATUREINDICATOR
     path: ../NVAPIWrapper/cs_generated/EValues_VRRFEATUREINDICATOR.cs
@@ -45,7 +45,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_VRRFEATUREINDICATOR.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: VRRFEATUREINDICATOR_DISABLED
     path: ../NVAPIWrapper/cs_generated/EValues_VRRFEATUREINDICATOR.cs
@@ -72,7 +72,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_VRRFEATUREINDICATOR.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: VRRFEATUREINDICATOR_ENABLED
     path: ../NVAPIWrapper/cs_generated/EValues_VRRFEATUREINDICATOR.cs
@@ -99,7 +99,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_VRRFEATUREINDICATOR.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: VRRFEATUREINDICATOR_NUM_VALUES
     path: ../NVAPIWrapper/cs_generated/EValues_VRRFEATUREINDICATOR.cs
@@ -126,7 +126,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_VRRFEATUREINDICATOR.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: VRRFEATUREINDICATOR_DEFAULT
     path: ../NVAPIWrapper/cs_generated/EValues_VRRFEATUREINDICATOR.cs

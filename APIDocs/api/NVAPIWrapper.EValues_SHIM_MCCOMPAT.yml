@@ -25,7 +25,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_SHIM_MCCOMPAT.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: EValues_SHIM_MCCOMPAT
     path: ../NVAPIWrapper/cs_generated/EValues_SHIM_MCCOMPAT.cs
@@ -51,7 +51,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_SHIM_MCCOMPAT.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SHIM_MCCOMPAT_INTEGRATED
     path: ../NVAPIWrapper/cs_generated/EValues_SHIM_MCCOMPAT.cs
@@ -78,7 +78,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_SHIM_MCCOMPAT.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SHIM_MCCOMPAT_ENABLE
     path: ../NVAPIWrapper/cs_generated/EValues_SHIM_MCCOMPAT.cs
@@ -105,7 +105,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_SHIM_MCCOMPAT.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SHIM_MCCOMPAT_USER_EDITABLE
     path: ../NVAPIWrapper/cs_generated/EValues_SHIM_MCCOMPAT.cs
@@ -132,7 +132,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_SHIM_MCCOMPAT.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SHIM_MCCOMPAT_MASK
     path: ../NVAPIWrapper/cs_generated/EValues_SHIM_MCCOMPAT.cs
@@ -159,7 +159,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_SHIM_MCCOMPAT.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SHIM_MCCOMPAT_VIDEO_MASK
     path: ../NVAPIWrapper/cs_generated/EValues_SHIM_MCCOMPAT.cs
@@ -186,7 +186,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_SHIM_MCCOMPAT.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SHIM_MCCOMPAT_VARYING_BIT
     path: ../NVAPIWrapper/cs_generated/EValues_SHIM_MCCOMPAT.cs
@@ -213,7 +213,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_SHIM_MCCOMPAT.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SHIM_MCCOMPAT_AUTO_SELECT
     path: ../NVAPIWrapper/cs_generated/EValues_SHIM_MCCOMPAT.cs
@@ -240,7 +240,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_SHIM_MCCOMPAT.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SHIM_MCCOMPAT_OVERRIDE_BIT
     path: ../NVAPIWrapper/cs_generated/EValues_SHIM_MCCOMPAT.cs
@@ -267,7 +267,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_SHIM_MCCOMPAT.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SHIM_MCCOMPAT_NUM_VALUES
     path: ../NVAPIWrapper/cs_generated/EValues_SHIM_MCCOMPAT.cs
@@ -294,7 +294,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_SHIM_MCCOMPAT.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SHIM_MCCOMPAT_DEFAULT
     path: ../NVAPIWrapper/cs_generated/EValues_SHIM_MCCOMPAT.cs

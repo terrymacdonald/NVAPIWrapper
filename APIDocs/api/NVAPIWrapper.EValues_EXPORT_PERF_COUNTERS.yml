@@ -19,7 +19,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_EXPORT_PERF_COUNTERS.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: EValues_EXPORT_PERF_COUNTERS
     path: ../NVAPIWrapper/cs_generated/EValues_EXPORT_PERF_COUNTERS.cs
@@ -45,7 +45,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_EXPORT_PERF_COUNTERS.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: EXPORT_PERF_COUNTERS_OFF
     path: ../NVAPIWrapper/cs_generated/EValues_EXPORT_PERF_COUNTERS.cs
@@ -72,7 +72,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_EXPORT_PERF_COUNTERS.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: EXPORT_PERF_COUNTERS_ON
     path: ../NVAPIWrapper/cs_generated/EValues_EXPORT_PERF_COUNTERS.cs
@@ -99,7 +99,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_EXPORT_PERF_COUNTERS.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: EXPORT_PERF_COUNTERS_NUM_VALUES
     path: ../NVAPIWrapper/cs_generated/EValues_EXPORT_PERF_COUNTERS.cs
@@ -126,7 +126,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_EXPORT_PERF_COUNTERS.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: EXPORT_PERF_COUNTERS_DEFAULT
     path: ../NVAPIWrapper/cs_generated/EValues_EXPORT_PERF_COUNTERS.cs

@@ -17,7 +17,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIStatusAndTimingTypes.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_TIMING_FLAG
     path: ../NVAPIWrapper/NVAPIStatusAndTimingTypes.cs
@@ -51,7 +51,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIStatusAndTimingTypes.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: flags
     path: ../NVAPIWrapper/NVAPIStatusAndTimingTypes.cs
@@ -80,7 +80,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIStatusAndTimingTypes.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: tvFormat
     path: ../NVAPIWrapper/NVAPIStatusAndTimingTypes.cs

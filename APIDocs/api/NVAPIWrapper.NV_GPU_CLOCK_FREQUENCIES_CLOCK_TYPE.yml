@@ -19,7 +19,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_GPU_CLOCK_FREQUENCIES_CLOCK_TYPE.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_GPU_CLOCK_FREQUENCIES_CLOCK_TYPE
     path: ../NVAPIWrapper/cs_generated/NV_GPU_CLOCK_FREQUENCIES_CLOCK_TYPE.cs
@@ -45,7 +45,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_GPU_CLOCK_FREQUENCIES_CLOCK_TYPE.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_GPU_CLOCK_FREQUENCIES_CURRENT_FREQ
     path: ../NVAPIWrapper/cs_generated/NV_GPU_CLOCK_FREQUENCIES_CLOCK_TYPE.cs
@@ -72,7 +72,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_GPU_CLOCK_FREQUENCIES_CLOCK_TYPE.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_GPU_CLOCK_FREQUENCIES_BASE_CLOCK
     path: ../NVAPIWrapper/cs_generated/NV_GPU_CLOCK_FREQUENCIES_CLOCK_TYPE.cs
@@ -99,7 +99,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_GPU_CLOCK_FREQUENCIES_CLOCK_TYPE.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_GPU_CLOCK_FREQUENCIES_BOOST_CLOCK
     path: ../NVAPIWrapper/cs_generated/NV_GPU_CLOCK_FREQUENCIES_CLOCK_TYPE.cs
@@ -126,7 +126,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_GPU_CLOCK_FREQUENCIES_CLOCK_TYPE.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_GPU_CLOCK_FREQUENCIES_CLOCK_TYPE_NUM
     path: ../NVAPIWrapper/cs_generated/NV_GPU_CLOCK_FREQUENCIES_CLOCK_TYPE.cs

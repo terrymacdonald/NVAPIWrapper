@@ -17,7 +17,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_GPU_WARPING_VERTICE_FORMAT.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_GPU_WARPING_VERTICE_FORMAT
     path: ../NVAPIWrapper/cs_generated/NV_GPU_WARPING_VERTICE_FORMAT.cs
@@ -43,7 +43,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_GPU_WARPING_VERTICE_FORMAT.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_GPU_WARPING_VERTICE_FORMAT_TRIANGLESTRIP_XYUVRQ
     path: ../NVAPIWrapper/cs_generated/NV_GPU_WARPING_VERTICE_FORMAT.cs
@@ -70,7 +70,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_GPU_WARPING_VERTICE_FORMAT.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_GPU_WARPING_VERTICE_FORMAT_TRIANGLES_XYUVRQ
     path: ../NVAPIWrapper/cs_generated/NV_GPU_WARPING_VERTICE_FORMAT.cs

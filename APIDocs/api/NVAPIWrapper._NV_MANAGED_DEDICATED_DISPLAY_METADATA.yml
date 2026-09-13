@@ -28,7 +28,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_MANAGED_DEDICATED_DISPLAY_METADATA.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: _NV_MANAGED_DEDICATED_DISPLAY_METADATA
     path: ../NVAPIWrapper/cs_generated/_NV_MANAGED_DEDICATED_DISPLAY_METADATA.cs
@@ -61,7 +61,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_MANAGED_DEDICATED_DISPLAY_METADATA.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: version
     path: ../NVAPIWrapper/cs_generated/_NV_MANAGED_DEDICATED_DISPLAY_METADATA.cs
@@ -89,7 +89,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_MANAGED_DEDICATED_DISPLAY_METADATA.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: displayId
     path: ../NVAPIWrapper/cs_generated/_NV_MANAGED_DEDICATED_DISPLAY_METADATA.cs
@@ -117,7 +117,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_MANAGED_DEDICATED_DISPLAY_METADATA.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: _bitfield
     path: ../NVAPIWrapper/cs_generated/_NV_MANAGED_DEDICATED_DISPLAY_METADATA.cs
@@ -144,7 +144,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_MANAGED_DEDICATED_DISPLAY_METADATA.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: bSetPosition
     path: ../NVAPIWrapper/cs_generated/_NV_MANAGED_DEDICATED_DISPLAY_METADATA.cs
@@ -174,7 +174,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_MANAGED_DEDICATED_DISPLAY_METADATA.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: bRemovePosition
     path: ../NVAPIWrapper/cs_generated/_NV_MANAGED_DEDICATED_DISPLAY_METADATA.cs
@@ -204,7 +204,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_MANAGED_DEDICATED_DISPLAY_METADATA.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: bPositionIsAvailable
     path: ../NVAPIWrapper/cs_generated/_NV_MANAGED_DEDICATED_DISPLAY_METADATA.cs
@@ -234,7 +234,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_MANAGED_DEDICATED_DISPLAY_METADATA.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: bSetName
     path: ../NVAPIWrapper/cs_generated/_NV_MANAGED_DEDICATED_DISPLAY_METADATA.cs
@@ -264,7 +264,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_MANAGED_DEDICATED_DISPLAY_METADATA.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: bRemoveName
     path: ../NVAPIWrapper/cs_generated/_NV_MANAGED_DEDICATED_DISPLAY_METADATA.cs
@@ -294,7 +294,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_MANAGED_DEDICATED_DISPLAY_METADATA.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: bNameIsAvailable
     path: ../NVAPIWrapper/cs_generated/_NV_MANAGED_DEDICATED_DISPLAY_METADATA.cs
@@ -324,7 +324,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_MANAGED_DEDICATED_DISPLAY_METADATA.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: reserved
     path: ../NVAPIWrapper/cs_generated/_NV_MANAGED_DEDICATED_DISPLAY_METADATA.cs
@@ -354,7 +354,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_MANAGED_DEDICATED_DISPLAY_METADATA.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: positionX
     path: ../NVAPIWrapper/cs_generated/_NV_MANAGED_DEDICATED_DISPLAY_METADATA.cs
@@ -382,7 +382,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_MANAGED_DEDICATED_DISPLAY_METADATA.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: positionY
     path: ../NVAPIWrapper/cs_generated/_NV_MANAGED_DEDICATED_DISPLAY_METADATA.cs
@@ -410,7 +410,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_MANAGED_DEDICATED_DISPLAY_METADATA.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: name
     path: ../NVAPIWrapper/cs_generated/_NV_MANAGED_DEDICATED_DISPLAY_METADATA.cs

@@ -26,7 +26,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIApi.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPIApi
     path: ../NVAPIWrapper/NVAPIApi.cs
@@ -64,7 +64,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIApi.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Finalize
     path: ../NVAPIWrapper/NVAPIApi.cs
@@ -93,7 +93,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIApi.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Initialize
     path: ../NVAPIWrapper/NVAPIApi.cs
@@ -124,7 +124,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIApi.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: IsNVAPIDllAvailable
     path: ../NVAPIWrapper/NVAPIApi.cs
@@ -162,7 +162,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIApi.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetInterfaceVersionString
     path: ../NVAPIWrapper/NVAPIApi.cs
@@ -193,7 +193,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIApi.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetAvailableFunctions
     path: ../NVAPIWrapper/NVAPIApi.cs
@@ -224,7 +224,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIApi.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: EnumeratePhysicalGpus
     path: ../NVAPIWrapper/NVAPIApi.cs
@@ -255,7 +255,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIApi.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: EnumerateLogicalGpus
     path: ../NVAPIWrapper/NVAPIApi.cs
@@ -286,7 +286,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIApi.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: EnumerateNvidiaDisplayHandles
     path: ../NVAPIWrapper/NVAPIApi.cs
@@ -317,7 +317,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIApi.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: EnumerateNvidiaUnAttachedDisplayHandles
     path: ../NVAPIWrapper/NVAPIApi.cs
@@ -348,7 +348,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIApi.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: EnumerateGSyncDevices
     path: ../NVAPIWrapper/NVAPIApi.cs
@@ -379,7 +379,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIApi.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Dispose
     path: ../NVAPIWrapper/NVAPIApi.cs

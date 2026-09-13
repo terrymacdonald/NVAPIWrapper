@@ -24,7 +24,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GSYNC_STATUS_PARAMS_V2.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: _NV_GSYNC_STATUS_PARAMS_V2
     path: ../NVAPIWrapper/cs_generated/_NV_GSYNC_STATUS_PARAMS_V2.cs
@@ -57,7 +57,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GSYNC_STATUS_PARAMS_V2.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: version
     path: ../NVAPIWrapper/cs_generated/_NV_GSYNC_STATUS_PARAMS_V2.cs
@@ -85,7 +85,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GSYNC_STATUS_PARAMS_V2.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: refreshRate
     path: ../NVAPIWrapper/cs_generated/_NV_GSYNC_STATUS_PARAMS_V2.cs
@@ -113,7 +113,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GSYNC_STATUS_PARAMS_V2.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: RJ45_IO
     path: ../NVAPIWrapper/cs_generated/_NV_GSYNC_STATUS_PARAMS_V2.cs
@@ -141,7 +141,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GSYNC_STATUS_PARAMS_V2.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: RJ45_Ethernet
     path: ../NVAPIWrapper/cs_generated/_NV_GSYNC_STATUS_PARAMS_V2.cs
@@ -169,7 +169,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GSYNC_STATUS_PARAMS_V2.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: houseSyncIncoming
     path: ../NVAPIWrapper/cs_generated/_NV_GSYNC_STATUS_PARAMS_V2.cs
@@ -197,7 +197,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GSYNC_STATUS_PARAMS_V2.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: bHouseSync
     path: ../NVAPIWrapper/cs_generated/_NV_GSYNC_STATUS_PARAMS_V2.cs
@@ -225,7 +225,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GSYNC_STATUS_PARAMS_V2.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: _bitfield
     path: ../NVAPIWrapper/cs_generated/_NV_GSYNC_STATUS_PARAMS_V2.cs
@@ -252,7 +252,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GSYNC_STATUS_PARAMS_V2.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: bInternalSlave
     path: ../NVAPIWrapper/cs_generated/_NV_GSYNC_STATUS_PARAMS_V2.cs
@@ -282,7 +282,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GSYNC_STATUS_PARAMS_V2.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: reserved
     path: ../NVAPIWrapper/cs_generated/_NV_GSYNC_STATUS_PARAMS_V2.cs

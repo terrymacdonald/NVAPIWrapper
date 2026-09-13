@@ -32,7 +32,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AUDIO_CODINGTYPE.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_INFOFRAME_FIELD_VALUE_AUDIO_CODINGTYPE
     path: ../NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AUDIO_CODINGTYPE.cs
@@ -58,7 +58,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AUDIO_CODINGTYPE.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_INFOFRAME_FIELD_VALUE_AUDIO_CODINGTYPE_IN_HEADER
     path: ../NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AUDIO_CODINGTYPE.cs
@@ -85,7 +85,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AUDIO_CODINGTYPE.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_INFOFRAME_FIELD_VALUE_AUDIO_CODINGTYPE_PCM
     path: ../NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AUDIO_CODINGTYPE.cs
@@ -112,7 +112,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AUDIO_CODINGTYPE.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_INFOFRAME_FIELD_VALUE_AUDIO_CODINGTYPE_AC3
     path: ../NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AUDIO_CODINGTYPE.cs
@@ -139,7 +139,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AUDIO_CODINGTYPE.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_INFOFRAME_FIELD_VALUE_AUDIO_CODINGTYPE_MPEG1
     path: ../NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AUDIO_CODINGTYPE.cs
@@ -166,7 +166,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AUDIO_CODINGTYPE.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_INFOFRAME_FIELD_VALUE_AUDIO_CODINGTYPE_MP3
     path: ../NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AUDIO_CODINGTYPE.cs
@@ -193,7 +193,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AUDIO_CODINGTYPE.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_INFOFRAME_FIELD_VALUE_AUDIO_CODINGTYPE_MPEG2
     path: ../NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AUDIO_CODINGTYPE.cs
@@ -220,7 +220,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AUDIO_CODINGTYPE.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_INFOFRAME_FIELD_VALUE_AUDIO_CODINGTYPE_AACLC
     path: ../NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AUDIO_CODINGTYPE.cs
@@ -247,7 +247,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AUDIO_CODINGTYPE.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_INFOFRAME_FIELD_VALUE_AUDIO_CODINGTYPE_DTS
     path: ../NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AUDIO_CODINGTYPE.cs
@@ -274,7 +274,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AUDIO_CODINGTYPE.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_INFOFRAME_FIELD_VALUE_AUDIO_CODINGTYPE_ATRAC
     path: ../NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AUDIO_CODINGTYPE.cs
@@ -301,7 +301,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AUDIO_CODINGTYPE.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_INFOFRAME_FIELD_VALUE_AUDIO_CODINGTYPE_DSD
     path: ../NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AUDIO_CODINGTYPE.cs
@@ -328,7 +328,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AUDIO_CODINGTYPE.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_INFOFRAME_FIELD_VALUE_AUDIO_CODINGTYPE_EAC3
     path: ../NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AUDIO_CODINGTYPE.cs
@@ -355,7 +355,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AUDIO_CODINGTYPE.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_INFOFRAME_FIELD_VALUE_AUDIO_CODINGTYPE_DTSHD
     path: ../NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AUDIO_CODINGTYPE.cs
@@ -382,7 +382,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AUDIO_CODINGTYPE.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_INFOFRAME_FIELD_VALUE_AUDIO_CODINGTYPE_MLP
     path: ../NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AUDIO_CODINGTYPE.cs
@@ -409,7 +409,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AUDIO_CODINGTYPE.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_INFOFRAME_FIELD_VALUE_AUDIO_CODINGTYPE_DST
     path: ../NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AUDIO_CODINGTYPE.cs
@@ -436,7 +436,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AUDIO_CODINGTYPE.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_INFOFRAME_FIELD_VALUE_AUDIO_CODINGTYPE_WMAPRO
     path: ../NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AUDIO_CODINGTYPE.cs
@@ -463,7 +463,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AUDIO_CODINGTYPE.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_INFOFRAME_FIELD_VALUE_AUDIO_CODINGTYPE_USE_CODING_EXTENSION_TYPE
     path: ../NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AUDIO_CODINGTYPE.cs
@@ -490,7 +490,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AUDIO_CODINGTYPE.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_INFOFRAME_FIELD_VALUE_AUDIO_CODINGTYPE_AUTO
     path: ../NVAPIWrapper/cs_generated/NV_INFOFRAME_FIELD_VALUE_AUDIO_CODINGTYPE.cs

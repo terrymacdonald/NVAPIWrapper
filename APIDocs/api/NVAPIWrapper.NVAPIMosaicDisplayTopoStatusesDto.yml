@@ -22,11 +22,11 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIMosaicHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPIMosaicDisplayTopoStatusesDto
     path: ../NVAPIWrapper/NVAPIMosaicHelper.cs
-    startLine: 2018
+    startLine: 2133
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -56,16 +56,18 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIMosaicHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Statuses
     path: ../NVAPIWrapper/NVAPIMosaicHelper.cs
-    startLine: 2020
+    startLine: 2140
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
+  summary: Gets or sets Statuses. Empty when no values are present.
+  example: []
   syntax:
-    content: public NVAPIMosaicDisplayTopoStatusDto[] Statuses { readonly get; set; }
+    content: public NVAPIMosaicDisplayTopoStatusDto[] Statuses { get; set; }
     parameters: []
     return:
       type: NVAPIWrapper.NVAPIMosaicDisplayTopoStatusDto[]
@@ -85,11 +87,11 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIMosaicHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: .ctor
     path: ../NVAPIWrapper/NVAPIMosaicHelper.cs
-    startLine: 2026
+    startLine: 2150
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -120,11 +122,11 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIMosaicHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Equals
     path: ../NVAPIWrapper/NVAPIMosaicHelper.cs
-    startLine: 2036
+    startLine: 2160
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -157,11 +159,11 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIMosaicHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Equals
     path: ../NVAPIWrapper/NVAPIMosaicHelper.cs
-    startLine: 2046
+    startLine: 2170
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -196,11 +198,11 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIMosaicHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetHashCode
     path: ../NVAPIWrapper/NVAPIMosaicHelper.cs
-    startLine: 2052
+    startLine: 2176
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -228,11 +230,11 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIMosaicHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: op_Equality
     path: ../NVAPIWrapper/NVAPIMosaicHelper.cs
-    startLine: 2060
+    startLine: 2184
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -269,11 +271,11 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIMosaicHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: op_Inequality
     path: ../NVAPIWrapper/NVAPIMosaicHelper.cs
-    startLine: 2068
+    startLine: 2192
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper

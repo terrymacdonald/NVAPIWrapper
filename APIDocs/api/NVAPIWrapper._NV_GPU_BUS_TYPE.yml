@@ -21,7 +21,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GPU_BUS_TYPE.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: _NV_GPU_BUS_TYPE
     path: ../NVAPIWrapper/cs_generated/_NV_GPU_BUS_TYPE.cs
@@ -47,7 +47,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GPU_BUS_TYPE.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_GPU_BUS_TYPE_UNDEFINED
     path: ../NVAPIWrapper/cs_generated/_NV_GPU_BUS_TYPE.cs
@@ -74,7 +74,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GPU_BUS_TYPE.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_GPU_BUS_TYPE_PCI
     path: ../NVAPIWrapper/cs_generated/_NV_GPU_BUS_TYPE.cs
@@ -101,7 +101,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GPU_BUS_TYPE.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_GPU_BUS_TYPE_AGP
     path: ../NVAPIWrapper/cs_generated/_NV_GPU_BUS_TYPE.cs
@@ -128,7 +128,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GPU_BUS_TYPE.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_GPU_BUS_TYPE_PCI_EXPRESS
     path: ../NVAPIWrapper/cs_generated/_NV_GPU_BUS_TYPE.cs
@@ -155,7 +155,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GPU_BUS_TYPE.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_GPU_BUS_TYPE_FPCI
     path: ../NVAPIWrapper/cs_generated/_NV_GPU_BUS_TYPE.cs
@@ -182,7 +182,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GPU_BUS_TYPE.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_GPU_BUS_TYPE_AXI
     path: ../NVAPIWrapper/cs_generated/_NV_GPU_BUS_TYPE.cs

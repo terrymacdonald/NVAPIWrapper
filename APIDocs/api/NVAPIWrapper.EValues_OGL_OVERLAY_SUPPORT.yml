@@ -20,7 +20,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_OGL_OVERLAY_SUPPORT.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: EValues_OGL_OVERLAY_SUPPORT
     path: ../NVAPIWrapper/cs_generated/EValues_OGL_OVERLAY_SUPPORT.cs
@@ -46,7 +46,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_OGL_OVERLAY_SUPPORT.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: OGL_OVERLAY_SUPPORT_OFF
     path: ../NVAPIWrapper/cs_generated/EValues_OGL_OVERLAY_SUPPORT.cs
@@ -73,7 +73,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_OGL_OVERLAY_SUPPORT.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: OGL_OVERLAY_SUPPORT_ON
     path: ../NVAPIWrapper/cs_generated/EValues_OGL_OVERLAY_SUPPORT.cs
@@ -100,7 +100,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_OGL_OVERLAY_SUPPORT.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: OGL_OVERLAY_SUPPORT_FORCE_SW
     path: ../NVAPIWrapper/cs_generated/EValues_OGL_OVERLAY_SUPPORT.cs
@@ -127,7 +127,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_OGL_OVERLAY_SUPPORT.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: OGL_OVERLAY_SUPPORT_NUM_VALUES
     path: ../NVAPIWrapper/cs_generated/EValues_OGL_OVERLAY_SUPPORT.cs
@@ -154,7 +154,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_OGL_OVERLAY_SUPPORT.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: OGL_OVERLAY_SUPPORT_DEFAULT
     path: ../NVAPIWrapper/cs_generated/EValues_OGL_OVERLAY_SUPPORT.cs

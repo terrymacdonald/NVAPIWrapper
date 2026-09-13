@@ -248,7 +248,6 @@ try
     Write-Host "  - Verify .NET 10.0 SDK is installed" -ForegroundColor Gray
     Write-Host "  - Check project files for errors" -ForegroundColor Gray
     Write-Host ""
-    Read-Host "Press Enter to exit"
     exit 1
 }
 
@@ -267,6 +266,4 @@ Write-Host "Next steps:" -ForegroundColor Cyan
 Write-Host "  - Run tests: .\test_nvapi.ps1" -ForegroundColor Gray
 Write-Host "  - Use in your project: Add reference to NVAPIWrapper\NVAPIWrapper.csproj" -ForegroundColor Gray
 Write-Host ""
-Write-Host "Press Enter to exit..."
-Read-Host
 

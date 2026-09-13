@@ -5,6 +5,8 @@ items:
   id: _NV_NGX_DRIVER_FEATURE_ID
   parent: NVAPIWrapper
   children:
+  - NVAPIWrapper._NV_NGX_DRIVER_FEATURE_ID.NV_NGX_DRIVER_FEATURE_ID_FRAME_PRESENT_NOTIFY_HYBRID
+  - NVAPIWrapper._NV_NGX_DRIVER_FEATURE_ID.NV_NGX_DRIVER_FEATURE_ID_RESERVED0
   - NVAPIWrapper._NV_NGX_DRIVER_FEATURE_ID.NV_NGX_DRIVER_FEATURE_ID_SET_FLIP_CONFIG_V2
   langs:
   - csharp
@@ -16,7 +18,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_NGX_DRIVER_FEATURE_ID.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: _NV_NGX_DRIVER_FEATURE_ID
     path: ../NVAPIWrapper/cs_generated/_NV_NGX_DRIVER_FEATURE_ID.cs
@@ -42,7 +44,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_NGX_DRIVER_FEATURE_ID.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_NGX_DRIVER_FEATURE_ID_SET_FLIP_CONFIG_V2
     path: ../NVAPIWrapper/cs_generated/_NV_NGX_DRIVER_FEATURE_ID.cs
@@ -53,6 +55,60 @@ items:
   example: []
   syntax:
     content: NV_NGX_DRIVER_FEATURE_ID_SET_FLIP_CONFIG_V2 = 3423695
+    return:
+      type: NVAPIWrapper._NV_NGX_DRIVER_FEATURE_ID
+- uid: NVAPIWrapper._NV_NGX_DRIVER_FEATURE_ID.NV_NGX_DRIVER_FEATURE_ID_FRAME_PRESENT_NOTIFY_HYBRID
+  commentId: F:NVAPIWrapper._NV_NGX_DRIVER_FEATURE_ID.NV_NGX_DRIVER_FEATURE_ID_FRAME_PRESENT_NOTIFY_HYBRID
+  id: NV_NGX_DRIVER_FEATURE_ID_FRAME_PRESENT_NOTIFY_HYBRID
+  parent: NVAPIWrapper._NV_NGX_DRIVER_FEATURE_ID
+  langs:
+  - csharp
+  - vb
+  name: NV_NGX_DRIVER_FEATURE_ID_FRAME_PRESENT_NOTIFY_HYBRID
+  nameWithType: _NV_NGX_DRIVER_FEATURE_ID.NV_NGX_DRIVER_FEATURE_ID_FRAME_PRESENT_NOTIFY_HYBRID
+  fullName: NVAPIWrapper._NV_NGX_DRIVER_FEATURE_ID.NV_NGX_DRIVER_FEATURE_ID_FRAME_PRESENT_NOTIFY_HYBRID
+  type: Field
+  source:
+    remote:
+      path: NVAPIWrapper/cs_generated/_NV_NGX_DRIVER_FEATURE_ID.cs
+      branch: develop
+      repo: https://github.com/terrymacdonald/NVAPIWrapper.git
+    id: NV_NGX_DRIVER_FEATURE_ID_FRAME_PRESENT_NOTIFY_HYBRID
+    path: ../NVAPIWrapper/cs_generated/_NV_NGX_DRIVER_FEATURE_ID.cs
+    startLine: 9
+  assemblies:
+  - NVAPIWrapper
+  namespace: NVAPIWrapper
+  example: []
+  syntax:
+    content: NV_NGX_DRIVER_FEATURE_ID_FRAME_PRESENT_NOTIFY_HYBRID = -2090143621
+    return:
+      type: NVAPIWrapper._NV_NGX_DRIVER_FEATURE_ID
+- uid: NVAPIWrapper._NV_NGX_DRIVER_FEATURE_ID.NV_NGX_DRIVER_FEATURE_ID_RESERVED0
+  commentId: F:NVAPIWrapper._NV_NGX_DRIVER_FEATURE_ID.NV_NGX_DRIVER_FEATURE_ID_RESERVED0
+  id: NV_NGX_DRIVER_FEATURE_ID_RESERVED0
+  parent: NVAPIWrapper._NV_NGX_DRIVER_FEATURE_ID
+  langs:
+  - csharp
+  - vb
+  name: NV_NGX_DRIVER_FEATURE_ID_RESERVED0
+  nameWithType: _NV_NGX_DRIVER_FEATURE_ID.NV_NGX_DRIVER_FEATURE_ID_RESERVED0
+  fullName: NVAPIWrapper._NV_NGX_DRIVER_FEATURE_ID.NV_NGX_DRIVER_FEATURE_ID_RESERVED0
+  type: Field
+  source:
+    remote:
+      path: NVAPIWrapper/cs_generated/_NV_NGX_DRIVER_FEATURE_ID.cs
+      branch: develop
+      repo: https://github.com/terrymacdonald/NVAPIWrapper.git
+    id: NV_NGX_DRIVER_FEATURE_ID_RESERVED0
+    path: ../NVAPIWrapper/cs_generated/_NV_NGX_DRIVER_FEATURE_ID.cs
+    startLine: 12
+  assemblies:
+  - NVAPIWrapper
+  namespace: NVAPIWrapper
+  example: []
+  syntax:
+    content: NV_NGX_DRIVER_FEATURE_ID_RESERVED0 = 1117400372
     return:
       type: NVAPIWrapper._NV_NGX_DRIVER_FEATURE_ID
 references:

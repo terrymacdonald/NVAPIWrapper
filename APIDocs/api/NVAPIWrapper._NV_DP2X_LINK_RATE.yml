@@ -28,7 +28,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_DP2X_LINK_RATE.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: _NV_DP2X_LINK_RATE
     path: ../NVAPIWrapper/cs_generated/_NV_DP2X_LINK_RATE.cs
@@ -54,7 +54,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_DP2X_LINK_RATE.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_DP2X_1_62Gbps
     path: ../NVAPIWrapper/cs_generated/_NV_DP2X_LINK_RATE.cs
@@ -81,7 +81,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_DP2X_LINK_RATE.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_DP2X_2_16Gbps
     path: ../NVAPIWrapper/cs_generated/_NV_DP2X_LINK_RATE.cs
@@ -108,7 +108,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_DP2X_LINK_RATE.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_DP2X_2_43Gbps
     path: ../NVAPIWrapper/cs_generated/_NV_DP2X_LINK_RATE.cs
@@ -135,7 +135,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_DP2X_LINK_RATE.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_DP2X_2_50Gbps
     path: ../NVAPIWrapper/cs_generated/_NV_DP2X_LINK_RATE.cs
@@ -162,7 +162,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_DP2X_LINK_RATE.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_DP2X_2_70Gbps
     path: ../NVAPIWrapper/cs_generated/_NV_DP2X_LINK_RATE.cs
@@ -189,7 +189,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_DP2X_LINK_RATE.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_DP2X_3_24Gbps
     path: ../NVAPIWrapper/cs_generated/_NV_DP2X_LINK_RATE.cs
@@ -216,7 +216,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_DP2X_LINK_RATE.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_DP2X_4_32Gbps
     path: ../NVAPIWrapper/cs_generated/_NV_DP2X_LINK_RATE.cs
@@ -243,7 +243,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_DP2X_LINK_RATE.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_DP2X_5_40Gbps
     path: ../NVAPIWrapper/cs_generated/_NV_DP2X_LINK_RATE.cs
@@ -270,7 +270,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_DP2X_LINK_RATE.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_DP2X_6_75Gbps
     path: ../NVAPIWrapper/cs_generated/_NV_DP2X_LINK_RATE.cs
@@ -297,7 +297,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_DP2X_LINK_RATE.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_DP2X_8_10Gbps
     path: ../NVAPIWrapper/cs_generated/_NV_DP2X_LINK_RATE.cs
@@ -324,7 +324,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_DP2X_LINK_RATE.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_DP2X_10_0Gbps
     path: ../NVAPIWrapper/cs_generated/_NV_DP2X_LINK_RATE.cs
@@ -351,7 +351,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_DP2X_LINK_RATE.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_DP2X_13_5Gbps
     path: ../NVAPIWrapper/cs_generated/_NV_DP2X_LINK_RATE.cs
@@ -378,7 +378,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_DP2X_LINK_RATE.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_DP2X_20_0Gbps
     path: ../NVAPIWrapper/cs_generated/_NV_DP2X_LINK_RATE.cs

@@ -28,7 +28,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_CHIPSET_INFO_v4.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_CHIPSET_INFO_v4
     path: ../NVAPIWrapper/cs_generated/NV_CHIPSET_INFO_v4.cs
@@ -61,7 +61,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_CHIPSET_INFO_v4.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: version
     path: ../NVAPIWrapper/cs_generated/NV_CHIPSET_INFO_v4.cs
@@ -89,7 +89,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_CHIPSET_INFO_v4.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: vendorId
     path: ../NVAPIWrapper/cs_generated/NV_CHIPSET_INFO_v4.cs
@@ -117,7 +117,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_CHIPSET_INFO_v4.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: deviceId
     path: ../NVAPIWrapper/cs_generated/NV_CHIPSET_INFO_v4.cs
@@ -145,7 +145,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_CHIPSET_INFO_v4.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: szVendorName
     path: ../NVAPIWrapper/cs_generated/NV_CHIPSET_INFO_v4.cs
@@ -173,7 +173,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_CHIPSET_INFO_v4.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: szChipsetName
     path: ../NVAPIWrapper/cs_generated/NV_CHIPSET_INFO_v4.cs
@@ -201,7 +201,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_CHIPSET_INFO_v4.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: flags
     path: ../NVAPIWrapper/cs_generated/NV_CHIPSET_INFO_v4.cs
@@ -229,7 +229,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_CHIPSET_INFO_v4.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: subSysVendorId
     path: ../NVAPIWrapper/cs_generated/NV_CHIPSET_INFO_v4.cs
@@ -257,7 +257,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_CHIPSET_INFO_v4.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: subSysDeviceId
     path: ../NVAPIWrapper/cs_generated/NV_CHIPSET_INFO_v4.cs
@@ -285,7 +285,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_CHIPSET_INFO_v4.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: szSubSysVendorName
     path: ../NVAPIWrapper/cs_generated/NV_CHIPSET_INFO_v4.cs
@@ -313,7 +313,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_CHIPSET_INFO_v4.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: HBvendorId
     path: ../NVAPIWrapper/cs_generated/NV_CHIPSET_INFO_v4.cs
@@ -341,7 +341,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_CHIPSET_INFO_v4.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: HBdeviceId
     path: ../NVAPIWrapper/cs_generated/NV_CHIPSET_INFO_v4.cs
@@ -369,7 +369,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_CHIPSET_INFO_v4.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: HBsubSysVendorId
     path: ../NVAPIWrapper/cs_generated/NV_CHIPSET_INFO_v4.cs
@@ -397,7 +397,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_CHIPSET_INFO_v4.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: HBsubSysDeviceId
     path: ../NVAPIWrapper/cs_generated/NV_CHIPSET_INFO_v4.cs

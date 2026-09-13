@@ -34,7 +34,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIApiHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPIChipSetInfoDto
     path: ../NVAPIWrapper/NVAPIApiHelper.cs
@@ -68,7 +68,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIApiHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: VendorId
     path: ../NVAPIWrapper/NVAPIApiHelper.cs
@@ -97,7 +97,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIApiHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: DeviceId
     path: ../NVAPIWrapper/NVAPIApiHelper.cs
@@ -126,7 +126,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIApiHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: VendorName
     path: ../NVAPIWrapper/NVAPIApiHelper.cs
@@ -155,7 +155,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIApiHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: ChipsetName
     path: ../NVAPIWrapper/NVAPIApiHelper.cs
@@ -184,7 +184,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIApiHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Flags
     path: ../NVAPIWrapper/NVAPIApiHelper.cs
@@ -213,7 +213,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIApiHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SubSystemVendorId
     path: ../NVAPIWrapper/NVAPIApiHelper.cs
@@ -242,7 +242,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIApiHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SubSystemDeviceId
     path: ../NVAPIWrapper/NVAPIApiHelper.cs
@@ -271,7 +271,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIApiHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SubSystemVendorName
     path: ../NVAPIWrapper/NVAPIApiHelper.cs
@@ -300,7 +300,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIApiHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: HbVendorId
     path: ../NVAPIWrapper/NVAPIApiHelper.cs
@@ -329,7 +329,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIApiHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: HbDeviceId
     path: ../NVAPIWrapper/NVAPIApiHelper.cs
@@ -358,7 +358,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIApiHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: HbSubSystemVendorId
     path: ../NVAPIWrapper/NVAPIApiHelper.cs
@@ -387,7 +387,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIApiHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: HbSubSystemDeviceId
     path: ../NVAPIWrapper/NVAPIApiHelper.cs
@@ -416,7 +416,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIApiHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: .ctor
     path: ../NVAPIWrapper/NVAPIApiHelper.cs
@@ -484,7 +484,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIApiHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: FromNative
     path: ../NVAPIWrapper/NVAPIApiHelper.cs
@@ -519,7 +519,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIApiHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Equals
     path: ../NVAPIWrapper/NVAPIApiHelper.cs
@@ -556,7 +556,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIApiHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Equals
     path: ../NVAPIWrapper/NVAPIApiHelper.cs
@@ -595,7 +595,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIApiHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetHashCode
     path: ../NVAPIWrapper/NVAPIApiHelper.cs
@@ -627,7 +627,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIApiHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: op_Equality
     path: ../NVAPIWrapper/NVAPIApiHelper.cs
@@ -668,7 +668,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIApiHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: op_Inequality
     path: ../NVAPIWrapper/NVAPIApiHelper.cs

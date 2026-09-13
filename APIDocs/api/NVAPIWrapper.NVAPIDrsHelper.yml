@@ -52,7 +52,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIDrsHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPIDrsHelper
     path: ../NVAPIWrapper/NVAPIDrsHelper.cs
@@ -90,7 +90,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIDrsHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Finalize
     path: ../NVAPIWrapper/NVAPIDrsHelper.cs
@@ -119,7 +119,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIDrsHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: CreateProfileInfo
     path: ../NVAPIWrapper/NVAPIDrsHelper.cs
@@ -149,7 +149,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIDrsHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: CreateApplicationInfo
     path: ../NVAPIWrapper/NVAPIDrsHelper.cs
@@ -179,7 +179,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIDrsHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: CreateSetting
     path: ../NVAPIWrapper/NVAPIDrsHelper.cs
@@ -209,7 +209,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIDrsHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: CreateSettingValues
     path: ../NVAPIWrapper/NVAPIDrsHelper.cs
@@ -239,7 +239,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIDrsHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: LoadSettings
     path: ../NVAPIWrapper/NVAPIDrsHelper.cs
@@ -270,7 +270,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIDrsHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SaveSettings
     path: ../NVAPIWrapper/NVAPIDrsHelper.cs
@@ -301,7 +301,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIDrsHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: LoadSettingsFromFile
     path: ../NVAPIWrapper/NVAPIDrsHelper.cs
@@ -339,7 +339,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIDrsHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SaveSettingsToFile
     path: ../NVAPIWrapper/NVAPIDrsHelper.cs
@@ -377,7 +377,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIDrsHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetNumProfiles
     path: ../NVAPIWrapper/NVAPIDrsHelper.cs
@@ -408,7 +408,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIDrsHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: EnumProfiles
     path: ../NVAPIWrapper/NVAPIDrsHelper.cs
@@ -439,7 +439,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIDrsHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: FindProfileByName
     path: ../NVAPIWrapper/NVAPIDrsHelper.cs
@@ -477,7 +477,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIDrsHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetCurrentGlobalProfile
     path: ../NVAPIWrapper/NVAPIDrsHelper.cs
@@ -508,7 +508,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIDrsHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SetCurrentGlobalProfile
     path: ../NVAPIWrapper/NVAPIDrsHelper.cs
@@ -546,7 +546,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIDrsHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetBaseProfile
     path: ../NVAPIWrapper/NVAPIDrsHelper.cs
@@ -577,7 +577,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIDrsHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetProfileInfo
     path: ../NVAPIWrapper/NVAPIDrsHelper.cs
@@ -612,7 +612,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIDrsHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SetProfileInfo
     path: ../NVAPIWrapper/NVAPIDrsHelper.cs
@@ -647,7 +647,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIDrsHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: CreateProfile
     path: ../NVAPIWrapper/NVAPIDrsHelper.cs
@@ -682,7 +682,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIDrsHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: DeleteProfile
     path: ../NVAPIWrapper/NVAPIDrsHelper.cs
@@ -717,7 +717,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIDrsHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: EnumApplications
     path: ../NVAPIWrapper/NVAPIDrsHelper.cs
@@ -752,7 +752,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIDrsHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetApplicationInfo
     path: ../NVAPIWrapper/NVAPIDrsHelper.cs
@@ -793,7 +793,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIDrsHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: FindApplicationByName
     path: ../NVAPIWrapper/NVAPIDrsHelper.cs
@@ -831,7 +831,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIDrsHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: CreateApplication
     path: ../NVAPIWrapper/NVAPIDrsHelper.cs
@@ -869,7 +869,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIDrsHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: DeleteApplication
     path: ../NVAPIWrapper/NVAPIDrsHelper.cs
@@ -910,7 +910,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIDrsHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: DeleteApplicationEx
     path: ../NVAPIWrapper/NVAPIDrsHelper.cs
@@ -948,7 +948,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIDrsHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetSetting
     path: ../NVAPIWrapper/NVAPIDrsHelper.cs
@@ -989,7 +989,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIDrsHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SetSetting
     path: ../NVAPIWrapper/NVAPIDrsHelper.cs
@@ -1027,7 +1027,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIDrsHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: EnumSettings
     path: ../NVAPIWrapper/NVAPIDrsHelper.cs
@@ -1062,7 +1062,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIDrsHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: EnumAvailableSettingIds
     path: ../NVAPIWrapper/NVAPIDrsHelper.cs
@@ -1093,7 +1093,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIDrsHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: EnumAvailableSettingValues
     path: ../NVAPIWrapper/NVAPIDrsHelper.cs
@@ -1131,7 +1131,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIDrsHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetSettingIdFromName
     path: ../NVAPIWrapper/NVAPIDrsHelper.cs
@@ -1169,7 +1169,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIDrsHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetSettingNameFromId
     path: ../NVAPIWrapper/NVAPIDrsHelper.cs
@@ -1207,7 +1207,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIDrsHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: DeleteProfileSetting
     path: ../NVAPIWrapper/NVAPIDrsHelper.cs
@@ -1248,7 +1248,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIDrsHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: RestoreAllDefaults
     path: ../NVAPIWrapper/NVAPIDrsHelper.cs
@@ -1279,7 +1279,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIDrsHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: RestoreProfileDefault
     path: ../NVAPIWrapper/NVAPIDrsHelper.cs
@@ -1314,7 +1314,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIDrsHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: RestoreProfileDefaultSetting
     path: ../NVAPIWrapper/NVAPIDrsHelper.cs
@@ -1355,7 +1355,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIDrsHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Dispose
     path: ../NVAPIWrapper/NVAPIDrsHelper.cs

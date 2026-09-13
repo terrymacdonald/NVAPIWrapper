@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/terrymacdonald/NVAPIWrapper/new/main/apiSpec/new?filename=NVAPIWrapper_NVAPIGpuIllumZoneControlDto.md&amp;value=---%0Auid%3A%20NVAPIWrapper.NVAPIGpuIllumZoneControlDto%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="docfx:docurl" content="https://github.com/terrymacdonald/NVAPIWrapper/new/develop/apiSpec/new?filename=NVAPIWrapper_NVAPIGpuIllumZoneControlDto.md&amp;value=---%0Auid%3A%20NVAPIWrapper.NVAPIGpuIllumZoneControlDto%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -89,7 +89,7 @@
 
 
   <h1 id="NVAPIWrapper_NVAPIGpuIllumZoneControlDto" data-uid="NVAPIWrapper.NVAPIGpuIllumZoneControlDto" class="text-break">
-Struct NVAPIGpuIllumZoneControlDto  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L3724"><i class="bi bi-code-slash"></i></a>
+Struct NVAPIGpuIllumZoneControlDto  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/develop/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L3898"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -147,7 +147,7 @@ Struct NVAPIGpuIllumZoneControlDto  <a class="header-action link-secondary" titl
 
   <h3 id="NVAPIWrapper_NVAPIGpuIllumZoneControlDto__ctor_NVAPIWrapper_NV_GPU_CLIENT_ILLUM_ZONE_TYPE_NVAPIWrapper_NV_GPU_CLIENT_ILLUM_CTRL_MODE_System_Byte___" data-uid="NVAPIWrapper.NVAPIGpuIllumZoneControlDto.#ctor(NVAPIWrapper.NV_GPU_CLIENT_ILLUM_ZONE_TYPE,NVAPIWrapper.NV_GPU_CLIENT_ILLUM_CTRL_MODE,System.Byte[])">
   NVAPIGpuIllumZoneControlDto(NV_GPU_CLIENT_ILLUM_ZONE_TYPE, NV_GPU_CLIENT_ILLUM_CTRL_MODE, byte[])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L3737"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/develop/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L3920"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Initializes a new instance of <a class="xref" href="NVAPIWrapper.NVAPIGpuIllumZoneControlDto.html">NVAPIGpuIllumZoneControlDto</a>.</p>
@@ -187,7 +187,7 @@ Struct NVAPIGpuIllumZoneControlDto  <a class="header-action link-secondary" titl
 
   <h3 id="NVAPIWrapper_NVAPIGpuIllumZoneControlDto_CtrlMode" data-uid="NVAPIWrapper.NVAPIGpuIllumZoneControlDto.CtrlMode">
   CtrlMode
-  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L3729"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/develop/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L3903"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Control mode for this illumination zone.</p>
@@ -219,16 +219,15 @@ Struct NVAPIGpuIllumZoneControlDto  <a class="header-action link-secondary" titl
 
   <h3 id="NVAPIWrapper_NVAPIGpuIllumZoneControlDto_DataRawBytes" data-uid="NVAPIWrapper.NVAPIGpuIllumZoneControlDto.DataRawBytes">
   DataRawBytes
-  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L3734"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/develop/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L3913"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Raw bytes for the type-discriminated union <code>data</code> field (64 bytes).
-Interpret using <a class="xref" href="NVAPIWrapper.NVAPIGpuIllumZoneControlDto.html#NVAPIWrapper_NVAPIGpuIllumZoneControlDto_Type">Type</a> to select the appropriate union member.</p>
+  <div class="markdown level1 summary"><p>Gets or sets DataRawBytes. Empty when no values are present.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public byte[] DataRawBytes { readonly get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public byte[] DataRawBytes { get; set; }</code></pre>
   </div>
 
 
@@ -252,7 +251,7 @@ Interpret using <a class="xref" href="NVAPIWrapper.NVAPIGpuIllumZoneControlDto.h
 
   <h3 id="NVAPIWrapper_NVAPIGpuIllumZoneControlDto_Type" data-uid="NVAPIWrapper.NVAPIGpuIllumZoneControlDto.Type">
   Type
-  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L3727"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/develop/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L3901"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Type of illumination zone.</p>
@@ -288,7 +287,7 @@ Interpret using <a class="xref" href="NVAPIWrapper.NVAPIGpuIllumZoneControlDto.h
 
   <h3 id="NVAPIWrapper_NVAPIGpuIllumZoneControlDto_Equals_NVAPIWrapper_NVAPIGpuIllumZoneControlDto_" data-uid="NVAPIWrapper.NVAPIGpuIllumZoneControlDto.Equals(NVAPIWrapper.NVAPIGpuIllumZoneControlDto)">
   Equals(NVAPIGpuIllumZoneControlDto)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L3765"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/develop/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L3948"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Indicates whether the current object is equal to another object of the same type.</p>
@@ -327,7 +326,7 @@ Interpret using <a class="xref" href="NVAPIWrapper.NVAPIGpuIllumZoneControlDto.h
 
   <h3 id="NVAPIWrapper_NVAPIGpuIllumZoneControlDto_Equals_System_Object_" data-uid="NVAPIWrapper.NVAPIGpuIllumZoneControlDto.Equals(System.Object)">
   Equals(object?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L3772"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/develop/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L3955"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Indicates whether this instance and a specified object are equal.</p>
@@ -366,7 +365,7 @@ Interpret using <a class="xref" href="NVAPIWrapper.NVAPIGpuIllumZoneControlDto.h
 
   <h3 id="NVAPIWrapper_NVAPIGpuIllumZoneControlDto_FromNative_NVAPIWrapper__NV_GPU_CLIENT_ILLUM_ZONE_CONTROL_V1_" data-uid="NVAPIWrapper.NVAPIGpuIllumZoneControlDto.FromNative(NVAPIWrapper._NV_GPU_CLIENT_ILLUM_ZONE_CONTROL_V1)">
   FromNative(_NV_GPU_CLIENT_ILLUM_ZONE_CONTROL_V1)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L3745"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/develop/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L3928"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Creates a DTO from the native <a class="xref" href="NVAPIWrapper._NV_GPU_CLIENT_ILLUM_ZONE_CONTROL_V1.html">_NV_GPU_CLIENT_ILLUM_ZONE_CONTROL_V1</a> struct.</p>
@@ -403,7 +402,7 @@ Interpret using <a class="xref" href="NVAPIWrapper.NVAPIGpuIllumZoneControlDto.h
 
   <h3 id="NVAPIWrapper_NVAPIGpuIllumZoneControlDto_GetHashCode" data-uid="NVAPIWrapper.NVAPIGpuIllumZoneControlDto.GetHashCode">
   GetHashCode()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L3774"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/develop/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L3957"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Returns the hash code for this instance.</p>
@@ -436,7 +435,7 @@ Interpret using <a class="xref" href="NVAPIWrapper.NVAPIGpuIllumZoneControlDto.h
 
   <h3 id="NVAPIWrapper_NVAPIGpuIllumZoneControlDto_ToNative" data-uid="NVAPIWrapper.NVAPIGpuIllumZoneControlDto.ToNative">
   ToNative()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L3752"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/develop/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L3935"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Converts this DTO back to the native <a class="xref" href="NVAPIWrapper._NV_GPU_CLIENT_ILLUM_ZONE_CONTROL_V1.html">_NV_GPU_CLIENT_ILLUM_ZONE_CONTROL_V1</a> struct.</p>
@@ -472,7 +471,7 @@ Interpret using <a class="xref" href="NVAPIWrapper.NVAPIGpuIllumZoneControlDto.h
 
   <h3 id="NVAPIWrapper_NVAPIGpuIllumZoneControlDto_op_Equality_NVAPIWrapper_NVAPIGpuIllumZoneControlDto_NVAPIWrapper_NVAPIGpuIllumZoneControlDto_" data-uid="NVAPIWrapper.NVAPIGpuIllumZoneControlDto.op_Equality(NVAPIWrapper.NVAPIGpuIllumZoneControlDto,NVAPIWrapper.NVAPIGpuIllumZoneControlDto)">
   operator ==(NVAPIGpuIllumZoneControlDto, NVAPIGpuIllumZoneControlDto)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L3776"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/develop/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L3959"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Equality operator.</p>
@@ -511,7 +510,7 @@ Interpret using <a class="xref" href="NVAPIWrapper.NVAPIGpuIllumZoneControlDto.h
 
   <h3 id="NVAPIWrapper_NVAPIGpuIllumZoneControlDto_op_Inequality_NVAPIWrapper_NVAPIGpuIllumZoneControlDto_NVAPIWrapper_NVAPIGpuIllumZoneControlDto_" data-uid="NVAPIWrapper.NVAPIGpuIllumZoneControlDto.op_Inequality(NVAPIWrapper.NVAPIGpuIllumZoneControlDto,NVAPIWrapper.NVAPIGpuIllumZoneControlDto)">
   operator !=(NVAPIGpuIllumZoneControlDto, NVAPIGpuIllumZoneControlDto)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L3778"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/develop/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L3961"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Inequality operator.</p>
@@ -550,7 +549,7 @@ Interpret using <a class="xref" href="NVAPIWrapper.NVAPIGpuIllumZoneControlDto.h
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L3724" class="edit-link">Edit this page</a>
+          <a href="https://github.com/terrymacdonald/NVAPIWrapper/blob/develop/NVAPIWrapper/NVAPIPhysicalGpuHelper.cs/#L3898" class="edit-link">Edit this page</a>
         </div>
 
 

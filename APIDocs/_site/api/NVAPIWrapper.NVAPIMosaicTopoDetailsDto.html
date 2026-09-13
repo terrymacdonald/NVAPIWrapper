@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/terrymacdonald/NVAPIWrapper/new/main/apiSpec/new?filename=NVAPIWrapper_NVAPIMosaicTopoDetailsDto.md&amp;value=---%0Auid%3A%20NVAPIWrapper.NVAPIMosaicTopoDetailsDto%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="docfx:docurl" content="https://github.com/terrymacdonald/NVAPIWrapper/new/develop/apiSpec/new?filename=NVAPIWrapper_NVAPIMosaicTopoDetailsDto.md&amp;value=---%0Auid%3A%20NVAPIWrapper.NVAPIMosaicTopoDetailsDto%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -89,7 +89,7 @@
 
 
   <h1 id="NVAPIWrapper_NVAPIMosaicTopoDetailsDto" data-uid="NVAPIWrapper.NVAPIMosaicTopoDetailsDto" class="text-break">
-Struct NVAPIMosaicTopoDetailsDto  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIMosaicHelper.cs/#L1156"><i class="bi bi-code-slash"></i></a>
+Struct NVAPIMosaicTopoDetailsDto  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/develop/NVAPIWrapper/NVAPIMosaicHelper.cs/#L1213"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -147,7 +147,7 @@ Struct NVAPIMosaicTopoDetailsDto  <a class="header-action link-secondary" title=
 
   <h3 id="NVAPIWrapper_NVAPIMosaicTopoDetailsDto__ctor_System_IntPtr_System_UInt32_System_UInt32_System_UInt32_NVAPIWrapper_NVAPIMosaicGpuLayoutCellDto___" data-uid="NVAPIWrapper.NVAPIMosaicTopoDetailsDto.#ctor(System.IntPtr,System.UInt32,System.UInt32,System.UInt32,NVAPIWrapper.NVAPIMosaicGpuLayoutCellDto[])">
   NVAPIMosaicTopoDetailsDto(nint, uint, uint, uint, NVAPIMosaicGpuLayoutCellDto[])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIMosaicHelper.cs/#L1173"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/develop/NVAPIWrapper/NVAPIMosaicHelper.cs/#L1249"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Create a Mosaic topology details DTO.</p>
@@ -196,7 +196,7 @@ Struct NVAPIMosaicTopoDetailsDto  <a class="header-action link-secondary" title=
 
   <h3 id="NVAPIWrapper_NVAPIMosaicTopoDetailsDto_ColCount" data-uid="NVAPIWrapper.NVAPIMosaicTopoDetailsDto.ColCount">
   ColCount
-  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIMosaicHelper.cs/#L1162"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/develop/NVAPIWrapper/NVAPIMosaicHelper.cs/#L1229"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -227,14 +227,15 @@ Struct NVAPIMosaicTopoDetailsDto  <a class="header-action link-secondary" title=
 
   <h3 id="NVAPIWrapper_NVAPIMosaicTopoDetailsDto_GpuLayout" data-uid="NVAPIWrapper.NVAPIMosaicTopoDetailsDto.GpuLayout">
   GpuLayout
-  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIMosaicHelper.cs/#L1163"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/develop/NVAPIWrapper/NVAPIMosaicHelper.cs/#L1235"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets or sets GpuLayout. Empty when no values are present.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public NVAPIMosaicGpuLayoutCellDto[] GpuLayout { readonly get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public NVAPIMosaicGpuLayoutCellDto[] GpuLayout { get; set; }</code></pre>
   </div>
 
 
@@ -254,18 +255,19 @@ Struct NVAPIMosaicTopoDetailsDto  <a class="header-action link-secondary" title=
 
 
 
-  <a id="NVAPIWrapper_NVAPIMosaicTopoDetailsDto_LogicalGpu_" data-uid="NVAPIWrapper.NVAPIMosaicTopoDetailsDto.LogicalGpu*"></a>
+  <a id="NVAPIWrapper_NVAPIMosaicTopoDetailsDto_HasLogicalGpu_" data-uid="NVAPIWrapper.NVAPIMosaicTopoDetailsDto.HasLogicalGpu*"></a>
 
-  <h3 id="NVAPIWrapper_NVAPIMosaicTopoDetailsDto_LogicalGpu" data-uid="NVAPIWrapper.NVAPIMosaicTopoDetailsDto.LogicalGpu">
-  LogicalGpu
-  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIMosaicHelper.cs/#L1159"><i class="bi bi-code-slash"></i></a>
+  <h3 id="NVAPIWrapper_NVAPIMosaicTopoDetailsDto_HasLogicalGpu" data-uid="NVAPIWrapper.NVAPIMosaicTopoDetailsDto.HasLogicalGpu">
+  HasLogicalGpu
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/develop/NVAPIWrapper/NVAPIMosaicHelper.cs/#L1220"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets whether this DTO references a logical GPU handle.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public NVAPILogicalGpuHelper? LogicalGpu { readonly get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public bool HasLogicalGpu { readonly get; set; }</code></pre>
   </div>
 
 
@@ -274,7 +276,39 @@ Struct NVAPIMosaicTopoDetailsDto  <a class="header-action link-secondary" title=
 
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="NVAPIWrapper.NVAPILogicalGpuHelper.html">NVAPILogicalGpuHelper</a></dt>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="NVAPIWrapper_NVAPIMosaicTopoDetailsDto_LogicalGpuHandleValue_" data-uid="NVAPIWrapper.NVAPIMosaicTopoDetailsDto.LogicalGpuHandleValue*"></a>
+
+  <h3 id="NVAPIWrapper_NVAPIMosaicTopoDetailsDto_LogicalGpuHandleValue" data-uid="NVAPIWrapper.NVAPIMosaicTopoDetailsDto.LogicalGpuHandleValue">
+  LogicalGpuHandleValue
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/develop/NVAPIWrapper/NVAPIMosaicHelper.cs/#L1225"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the logical GPU handle value, or 0 when no logical GPU handle is present.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public long LogicalGpuHandleValue { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
     <dd></dd>
   </dl>
 
@@ -289,7 +323,7 @@ Struct NVAPIMosaicTopoDetailsDto  <a class="header-action link-secondary" title=
 
   <h3 id="NVAPIWrapper_NVAPIMosaicTopoDetailsDto_RowCount" data-uid="NVAPIWrapper.NVAPIMosaicTopoDetailsDto.RowCount">
   RowCount
-  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIMosaicHelper.cs/#L1161"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/develop/NVAPIWrapper/NVAPIMosaicHelper.cs/#L1228"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -320,7 +354,7 @@ Struct NVAPIMosaicTopoDetailsDto  <a class="header-action link-secondary" title=
 
   <h3 id="NVAPIWrapper_NVAPIMosaicTopoDetailsDto_ValidityMask" data-uid="NVAPIWrapper.NVAPIMosaicTopoDetailsDto.ValidityMask">
   ValidityMask
-  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIMosaicHelper.cs/#L1160"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/develop/NVAPIWrapper/NVAPIMosaicHelper.cs/#L1227"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -355,7 +389,7 @@ Struct NVAPIMosaicTopoDetailsDto  <a class="header-action link-secondary" title=
 
   <h3 id="NVAPIWrapper_NVAPIMosaicTopoDetailsDto_Equals_NVAPIWrapper_NVAPIMosaicTopoDetailsDto_" data-uid="NVAPIWrapper.NVAPIMosaicTopoDetailsDto.Equals(NVAPIWrapper.NVAPIMosaicTopoDetailsDto)">
   Equals(NVAPIMosaicTopoDetailsDto)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIMosaicHelper.cs/#L1245"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/develop/NVAPIWrapper/NVAPIMosaicHelper.cs/#L1320"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Determine whether this instance equals another Mosaic topology details DTO.</p>
@@ -394,7 +428,7 @@ Struct NVAPIMosaicTopoDetailsDto  <a class="header-action link-secondary" title=
 
   <h3 id="NVAPIWrapper_NVAPIMosaicTopoDetailsDto_Equals_System_Object_" data-uid="NVAPIWrapper.NVAPIMosaicTopoDetailsDto.Equals(System.Object)">
   Equals(object?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIMosaicHelper.cs/#L1259"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/develop/NVAPIWrapper/NVAPIMosaicHelper.cs/#L1335"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Determine whether this instance equals another object.</p>
@@ -433,7 +467,7 @@ Struct NVAPIMosaicTopoDetailsDto  <a class="header-action link-secondary" title=
 
   <h3 id="NVAPIWrapper_NVAPIMosaicTopoDetailsDto_FromNative_NVAPIWrapper_NVAPIApiHelper_NVAPIWrapper_NV_MOSAIC_TOPO_DETAILS_" data-uid="NVAPIWrapper.NVAPIMosaicTopoDetailsDto.FromNative(NVAPIWrapper.NVAPIApiHelper,NVAPIWrapper.NV_MOSAIC_TOPO_DETAILS)">
   FromNative(NVAPIApiHelper, NV_MOSAIC_TOPO_DETAILS)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIMosaicHelper.cs/#L1199"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/develop/NVAPIWrapper/NVAPIMosaicHelper.cs/#L1275"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Create a Mosaic topology details DTO from native data.</p>
@@ -475,7 +509,7 @@ Struct NVAPIMosaicTopoDetailsDto  <a class="header-action link-secondary" title=
 
   <h3 id="NVAPIWrapper_NVAPIMosaicTopoDetailsDto_GetHashCode" data-uid="NVAPIWrapper.NVAPIMosaicTopoDetailsDto.GetHashCode">
   GetHashCode()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIMosaicHelper.cs/#L1265"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/develop/NVAPIWrapper/NVAPIMosaicHelper.cs/#L1341"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Get a hash code for this instance.</p>
@@ -508,7 +542,7 @@ Struct NVAPIMosaicTopoDetailsDto  <a class="header-action link-secondary" title=
 
   <h3 id="NVAPIWrapper_NVAPIMosaicTopoDetailsDto_ToNative" data-uid="NVAPIWrapper.NVAPIMosaicTopoDetailsDto.ToNative">
   ToNative()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIMosaicHelper.cs/#L1218"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/develop/NVAPIWrapper/NVAPIMosaicHelper.cs/#L1293"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Convert this DTO to native topology details data.</p>
@@ -545,7 +579,7 @@ Struct NVAPIMosaicTopoDetailsDto  <a class="header-action link-secondary" title=
 
   <h3 id="NVAPIWrapper_NVAPIMosaicTopoDetailsDto_op_Equality_NVAPIWrapper_NVAPIMosaicTopoDetailsDto_NVAPIWrapper_NVAPIMosaicTopoDetailsDto_" data-uid="NVAPIWrapper.NVAPIMosaicTopoDetailsDto.op_Equality(NVAPIWrapper.NVAPIMosaicTopoDetailsDto,NVAPIWrapper.NVAPIMosaicTopoDetailsDto)">
   operator ==(NVAPIMosaicTopoDetailsDto, NVAPIMosaicTopoDetailsDto)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIMosaicHelper.cs/#L1284"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/develop/NVAPIWrapper/NVAPIMosaicHelper.cs/#L1361"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Determine whether two Mosaic topology details DTOs are equal.</p>
@@ -587,7 +621,7 @@ Struct NVAPIMosaicTopoDetailsDto  <a class="header-action link-secondary" title=
 
   <h3 id="NVAPIWrapper_NVAPIMosaicTopoDetailsDto_op_Inequality_NVAPIWrapper_NVAPIMosaicTopoDetailsDto_NVAPIWrapper_NVAPIMosaicTopoDetailsDto_" data-uid="NVAPIWrapper.NVAPIMosaicTopoDetailsDto.op_Inequality(NVAPIWrapper.NVAPIMosaicTopoDetailsDto,NVAPIWrapper.NVAPIMosaicTopoDetailsDto)">
   operator !=(NVAPIMosaicTopoDetailsDto, NVAPIMosaicTopoDetailsDto)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIMosaicHelper.cs/#L1292"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/terrymacdonald/NVAPIWrapper/blob/develop/NVAPIWrapper/NVAPIMosaicHelper.cs/#L1369"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Determine whether two Mosaic topology details DTOs are not equal.</p>
@@ -629,7 +663,7 @@ Struct NVAPIMosaicTopoDetailsDto  <a class="header-action link-secondary" title=
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/terrymacdonald/NVAPIWrapper/blob/main/NVAPIWrapper/NVAPIMosaicHelper.cs/#L1156" class="edit-link">Edit this page</a>
+          <a href="https://github.com/terrymacdonald/NVAPIWrapper/blob/develop/NVAPIWrapper/NVAPIMosaicHelper.cs/#L1213" class="edit-link">Edit this page</a>
         </div>
 
 

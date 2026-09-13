@@ -21,7 +21,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOCHANNELSTATUS.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: _NVVIOCHANNELSTATUS
     path: ../NVAPIWrapper/cs_generated/_NVVIOCHANNELSTATUS.cs
@@ -54,7 +54,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOCHANNELSTATUS.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: smpte352
     path: ../NVAPIWrapper/cs_generated/_NVVIOCHANNELSTATUS.cs
@@ -82,7 +82,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOCHANNELSTATUS.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: signalFormat
     path: ../NVAPIWrapper/cs_generated/_NVVIOCHANNELSTATUS.cs
@@ -110,7 +110,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOCHANNELSTATUS.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: bitsPerComponent
     path: ../NVAPIWrapper/cs_generated/_NVVIOCHANNELSTATUS.cs
@@ -138,7 +138,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOCHANNELSTATUS.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: samplingFormat
     path: ../NVAPIWrapper/cs_generated/_NVVIOCHANNELSTATUS.cs
@@ -166,7 +166,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOCHANNELSTATUS.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: colorSpace
     path: ../NVAPIWrapper/cs_generated/_NVVIOCHANNELSTATUS.cs
@@ -194,7 +194,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOCHANNELSTATUS.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: linkID
     path: ../NVAPIWrapper/cs_generated/_NVVIOCHANNELSTATUS.cs

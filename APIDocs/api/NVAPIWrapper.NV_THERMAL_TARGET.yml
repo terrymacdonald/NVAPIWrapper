@@ -25,7 +25,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_THERMAL_TARGET.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_THERMAL_TARGET
     path: ../NVAPIWrapper/cs_generated/NV_THERMAL_TARGET.cs
@@ -51,7 +51,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_THERMAL_TARGET.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_THERMAL_TARGET_NONE
     path: ../NVAPIWrapper/cs_generated/NV_THERMAL_TARGET.cs
@@ -78,7 +78,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_THERMAL_TARGET.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_THERMAL_TARGET_GPU
     path: ../NVAPIWrapper/cs_generated/NV_THERMAL_TARGET.cs
@@ -105,7 +105,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_THERMAL_TARGET.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_THERMAL_TARGET_MEMORY
     path: ../NVAPIWrapper/cs_generated/NV_THERMAL_TARGET.cs
@@ -132,7 +132,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_THERMAL_TARGET.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_THERMAL_TARGET_POWER_SUPPLY
     path: ../NVAPIWrapper/cs_generated/NV_THERMAL_TARGET.cs
@@ -159,7 +159,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_THERMAL_TARGET.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_THERMAL_TARGET_BOARD
     path: ../NVAPIWrapper/cs_generated/NV_THERMAL_TARGET.cs
@@ -186,7 +186,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_THERMAL_TARGET.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_THERMAL_TARGET_VCD_BOARD
     path: ../NVAPIWrapper/cs_generated/NV_THERMAL_TARGET.cs
@@ -213,7 +213,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_THERMAL_TARGET.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_THERMAL_TARGET_VCD_INLET
     path: ../NVAPIWrapper/cs_generated/NV_THERMAL_TARGET.cs
@@ -240,7 +240,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_THERMAL_TARGET.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_THERMAL_TARGET_VCD_OUTLET
     path: ../NVAPIWrapper/cs_generated/NV_THERMAL_TARGET.cs
@@ -267,7 +267,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_THERMAL_TARGET.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_THERMAL_TARGET_ALL
     path: ../NVAPIWrapper/cs_generated/NV_THERMAL_TARGET.cs
@@ -294,7 +294,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_THERMAL_TARGET.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_THERMAL_TARGET_UNKNOWN
     path: ../NVAPIWrapper/cs_generated/NV_THERMAL_TARGET.cs

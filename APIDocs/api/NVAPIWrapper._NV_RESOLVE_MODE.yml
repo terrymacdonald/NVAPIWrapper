@@ -16,7 +16,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_RESOLVE_MODE.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: _NV_RESOLVE_MODE
     path: ../NVAPIWrapper/cs_generated/_NV_RESOLVE_MODE.cs
@@ -42,7 +42,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_RESOLVE_MODE.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_RESOLVE_MODE_SAMPLE_0
     path: ../NVAPIWrapper/cs_generated/_NV_RESOLVE_MODE.cs

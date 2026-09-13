@@ -27,7 +27,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_HDR_COLOR_DATA_V1.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: _mastering_display_data_e__Struct
     path: ../NVAPIWrapper/cs_generated/_NV_HDR_COLOR_DATA_V1.cs
@@ -60,7 +60,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_HDR_COLOR_DATA_V1.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: displayPrimary_x0
     path: ../NVAPIWrapper/cs_generated/_NV_HDR_COLOR_DATA_V1.cs
@@ -88,7 +88,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_HDR_COLOR_DATA_V1.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: displayPrimary_y0
     path: ../NVAPIWrapper/cs_generated/_NV_HDR_COLOR_DATA_V1.cs
@@ -116,7 +116,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_HDR_COLOR_DATA_V1.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: displayPrimary_x1
     path: ../NVAPIWrapper/cs_generated/_NV_HDR_COLOR_DATA_V1.cs
@@ -144,7 +144,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_HDR_COLOR_DATA_V1.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: displayPrimary_y1
     path: ../NVAPIWrapper/cs_generated/_NV_HDR_COLOR_DATA_V1.cs
@@ -172,7 +172,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_HDR_COLOR_DATA_V1.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: displayPrimary_x2
     path: ../NVAPIWrapper/cs_generated/_NV_HDR_COLOR_DATA_V1.cs
@@ -200,7 +200,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_HDR_COLOR_DATA_V1.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: displayPrimary_y2
     path: ../NVAPIWrapper/cs_generated/_NV_HDR_COLOR_DATA_V1.cs
@@ -228,7 +228,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_HDR_COLOR_DATA_V1.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: displayWhitePoint_x
     path: ../NVAPIWrapper/cs_generated/_NV_HDR_COLOR_DATA_V1.cs
@@ -256,7 +256,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_HDR_COLOR_DATA_V1.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: displayWhitePoint_y
     path: ../NVAPIWrapper/cs_generated/_NV_HDR_COLOR_DATA_V1.cs
@@ -284,7 +284,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_HDR_COLOR_DATA_V1.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: max_display_mastering_luminance
     path: ../NVAPIWrapper/cs_generated/_NV_HDR_COLOR_DATA_V1.cs
@@ -312,7 +312,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_HDR_COLOR_DATA_V1.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: min_display_mastering_luminance
     path: ../NVAPIWrapper/cs_generated/_NV_HDR_COLOR_DATA_V1.cs
@@ -340,7 +340,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_HDR_COLOR_DATA_V1.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: max_content_light_level
     path: ../NVAPIWrapper/cs_generated/_NV_HDR_COLOR_DATA_V1.cs
@@ -368,7 +368,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_HDR_COLOR_DATA_V1.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: max_frame_average_light_level
     path: ../NVAPIWrapper/cs_generated/_NV_HDR_COLOR_DATA_V1.cs

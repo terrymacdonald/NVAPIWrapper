@@ -19,7 +19,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_PHYSXINDICATOR.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: EValues_PHYSXINDICATOR
     path: ../NVAPIWrapper/cs_generated/EValues_PHYSXINDICATOR.cs
@@ -45,7 +45,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_PHYSXINDICATOR.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: PHYSXINDICATOR_DISABLED
     path: ../NVAPIWrapper/cs_generated/EValues_PHYSXINDICATOR.cs
@@ -72,7 +72,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_PHYSXINDICATOR.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: PHYSXINDICATOR_ENABLED
     path: ../NVAPIWrapper/cs_generated/EValues_PHYSXINDICATOR.cs
@@ -99,7 +99,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_PHYSXINDICATOR.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: PHYSXINDICATOR_NUM_VALUES
     path: ../NVAPIWrapper/cs_generated/EValues_PHYSXINDICATOR.cs
@@ -126,7 +126,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_PHYSXINDICATOR.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: PHYSXINDICATOR_DEFAULT
     path: ../NVAPIWrapper/cs_generated/EValues_PHYSXINDICATOR.cs

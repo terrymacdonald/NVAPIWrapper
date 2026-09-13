@@ -29,11 +29,11 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPIGSyncStatusParametersDto
     path: ../NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
-    startLine: 1349
+    startLine: 1427
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -63,11 +63,11 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: RefreshRate
     path: ../NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
-    startLine: 1351
+    startLine: 1429
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -92,16 +92,18 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Rj45Io
     path: ../NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
-    startLine: 1352
+    startLine: 1435
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
+  summary: Gets or sets Rj45Io. Empty when no values are present.
+  example: []
   syntax:
-    content: public _NVAPI_GSYNC_RJ45_IO[] Rj45Io { readonly get; set; }
+    content: public _NVAPI_GSYNC_RJ45_IO[] Rj45Io { get; set; }
     parameters: []
     return:
       type: NVAPIWrapper._NVAPI_GSYNC_RJ45_IO[]
@@ -121,16 +123,18 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Rj45Ethernet
     path: ../NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
-    startLine: 1353
+    startLine: 1445
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
+  summary: Gets or sets Rj45Ethernet. Empty when no values are present.
+  example: []
   syntax:
-    content: public uint[] Rj45Ethernet { readonly get; set; }
+    content: public uint[] Rj45Ethernet { get; set; }
     parameters: []
     return:
       type: System.UInt32[]
@@ -150,11 +154,11 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: HouseSyncIncoming
     path: ../NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
-    startLine: 1354
+    startLine: 1450
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -179,11 +183,11 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: IsHouseSyncConnected
     path: ../NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
-    startLine: 1355
+    startLine: 1451
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -208,11 +212,11 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: IsInternalSlave
     path: ../NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
-    startLine: 1356
+    startLine: 1452
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -237,11 +241,11 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: .ctor
     path: ../NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
-    startLine: 1367
+    startLine: 1463
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -287,11 +291,11 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: FromNative
     path: ../NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
-    startLine: 1388
+    startLine: 1484
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -322,11 +326,11 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: ToNative
     path: ../NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
-    startLine: 1411
+    startLine: 1507
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -353,11 +357,11 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Equals
     path: ../NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
-    startLine: 1437
+    startLine: 1533
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -390,11 +394,11 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Equals
     path: ../NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
-    startLine: 1452
+    startLine: 1548
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -429,11 +433,11 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetHashCode
     path: ../NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
-    startLine: 1458
+    startLine: 1554
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -461,11 +465,11 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: op_Equality
     path: ../NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
-    startLine: 1478
+    startLine: 1574
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -502,11 +506,11 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: op_Inequality
     path: ../NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
-    startLine: 1486
+    startLine: 1582
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper

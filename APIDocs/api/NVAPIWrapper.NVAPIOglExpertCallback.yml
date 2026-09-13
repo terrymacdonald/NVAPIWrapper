@@ -15,7 +15,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIOpenGLHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPIOglExpertCallback
     path: ../NVAPIWrapper/NVAPIOpenGLHelper.cs

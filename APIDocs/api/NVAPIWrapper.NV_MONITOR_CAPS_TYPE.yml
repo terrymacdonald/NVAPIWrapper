@@ -18,7 +18,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_MONITOR_CAPS_TYPE.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_MONITOR_CAPS_TYPE
     path: ../NVAPIWrapper/cs_generated/NV_MONITOR_CAPS_TYPE.cs
@@ -44,7 +44,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_MONITOR_CAPS_TYPE.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_MONITOR_CAPS_TYPE_HDMI_VSDB
     path: ../NVAPIWrapper/cs_generated/NV_MONITOR_CAPS_TYPE.cs
@@ -71,7 +71,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_MONITOR_CAPS_TYPE.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_MONITOR_CAPS_TYPE_HDMI_VCDB
     path: ../NVAPIWrapper/cs_generated/NV_MONITOR_CAPS_TYPE.cs
@@ -98,7 +98,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_MONITOR_CAPS_TYPE.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_MONITOR_CAPS_TYPE_GENERIC
     path: ../NVAPIWrapper/cs_generated/NV_MONITOR_CAPS_TYPE.cs

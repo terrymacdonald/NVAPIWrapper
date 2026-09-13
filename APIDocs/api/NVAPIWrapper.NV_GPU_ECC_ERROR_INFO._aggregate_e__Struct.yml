@@ -17,7 +17,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_GPU_ECC_ERROR_INFO.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: _aggregate_e__Struct
     path: ../NVAPIWrapper/cs_generated/NV_GPU_ECC_ERROR_INFO.cs
@@ -50,7 +50,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_GPU_ECC_ERROR_INFO.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: singleBitErrors
     path: ../NVAPIWrapper/cs_generated/NV_GPU_ECC_ERROR_INFO.cs
@@ -78,7 +78,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_GPU_ECC_ERROR_INFO.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: doubleBitErrors
     path: ../NVAPIWrapper/cs_generated/NV_GPU_ECC_ERROR_INFO.cs

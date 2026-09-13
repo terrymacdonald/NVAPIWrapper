@@ -17,7 +17,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_HDR_CMD.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_HDR_CMD
     path: ../NVAPIWrapper/cs_generated/NV_HDR_CMD.cs
@@ -43,7 +43,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_HDR_CMD.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_HDR_CMD_GET
     path: ../NVAPIWrapper/cs_generated/NV_HDR_CMD.cs
@@ -70,7 +70,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_HDR_CMD.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_HDR_CMD_SET
     path: ../NVAPIWrapper/cs_generated/NV_HDR_CMD.cs

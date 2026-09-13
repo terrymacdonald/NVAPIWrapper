@@ -11,9 +11,10 @@ items:
   - NVAPIWrapper.NVAPIMosaicGpuLayoutCellDto.Equals(System.Object)
   - NVAPIWrapper.NVAPIMosaicGpuLayoutCellDto.FromNative(NVAPIWrapper.NVAPIApiHelper,NVAPIWrapper.NV_MOSAIC_GPU_LAYOUT_CELL)
   - NVAPIWrapper.NVAPIMosaicGpuLayoutCellDto.GetHashCode
+  - NVAPIWrapper.NVAPIMosaicGpuLayoutCellDto.HasPhysicalGpu
   - NVAPIWrapper.NVAPIMosaicGpuLayoutCellDto.OverlapX
   - NVAPIWrapper.NVAPIMosaicGpuLayoutCellDto.OverlapY
-  - NVAPIWrapper.NVAPIMosaicGpuLayoutCellDto.PhysicalGpu
+  - NVAPIWrapper.NVAPIMosaicGpuLayoutCellDto.PhysicalGpuHandleValue
   - NVAPIWrapper.NVAPIMosaicGpuLayoutCellDto.ToNative
   - NVAPIWrapper.NVAPIMosaicGpuLayoutCellDto.op_Equality(NVAPIWrapper.NVAPIMosaicGpuLayoutCellDto,NVAPIWrapper.NVAPIMosaicGpuLayoutCellDto)
   - NVAPIWrapper.NVAPIMosaicGpuLayoutCellDto.op_Inequality(NVAPIWrapper.NVAPIMosaicGpuLayoutCellDto,NVAPIWrapper.NVAPIMosaicGpuLayoutCellDto)
@@ -27,11 +28,11 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIMosaicHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPIMosaicGpuLayoutCellDto
     path: ../NVAPIWrapper/NVAPIMosaicHelper.cs
-    startLine: 1297
+    startLine: 1374
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -47,35 +48,68 @@ items:
   - System.Object.Equals(System.Object,System.Object)
   - System.Object.GetType
   - System.Object.ReferenceEquals(System.Object,System.Object)
-- uid: NVAPIWrapper.NVAPIMosaicGpuLayoutCellDto.PhysicalGpu
-  commentId: P:NVAPIWrapper.NVAPIMosaicGpuLayoutCellDto.PhysicalGpu
-  id: PhysicalGpu
+- uid: NVAPIWrapper.NVAPIMosaicGpuLayoutCellDto.HasPhysicalGpu
+  commentId: P:NVAPIWrapper.NVAPIMosaicGpuLayoutCellDto.HasPhysicalGpu
+  id: HasPhysicalGpu
   parent: NVAPIWrapper.NVAPIMosaicGpuLayoutCellDto
   langs:
   - csharp
   - vb
-  name: PhysicalGpu
-  nameWithType: NVAPIMosaicGpuLayoutCellDto.PhysicalGpu
-  fullName: NVAPIWrapper.NVAPIMosaicGpuLayoutCellDto.PhysicalGpu
+  name: HasPhysicalGpu
+  nameWithType: NVAPIMosaicGpuLayoutCellDto.HasPhysicalGpu
+  fullName: NVAPIWrapper.NVAPIMosaicGpuLayoutCellDto.HasPhysicalGpu
   type: Property
   source:
     remote:
       path: NVAPIWrapper/NVAPIMosaicHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
-    id: PhysicalGpu
+    id: HasPhysicalGpu
     path: ../NVAPIWrapper/NVAPIMosaicHelper.cs
-    startLine: 1300
+    startLine: 1381
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
+  summary: Gets whether this DTO references a physical GPU handle.
+  example: []
   syntax:
-    content: public NVAPIPhysicalGpuHelper? PhysicalGpu { readonly get; set; }
+    content: public bool HasPhysicalGpu { readonly get; set; }
     parameters: []
     return:
-      type: NVAPIWrapper.NVAPIPhysicalGpuHelper
-    content.vb: Public Property PhysicalGpu As NVAPIPhysicalGpuHelper
-  overload: NVAPIWrapper.NVAPIMosaicGpuLayoutCellDto.PhysicalGpu*
+      type: System.Boolean
+    content.vb: Public Property HasPhysicalGpu As Boolean
+  overload: NVAPIWrapper.NVAPIMosaicGpuLayoutCellDto.HasPhysicalGpu*
+- uid: NVAPIWrapper.NVAPIMosaicGpuLayoutCellDto.PhysicalGpuHandleValue
+  commentId: P:NVAPIWrapper.NVAPIMosaicGpuLayoutCellDto.PhysicalGpuHandleValue
+  id: PhysicalGpuHandleValue
+  parent: NVAPIWrapper.NVAPIMosaicGpuLayoutCellDto
+  langs:
+  - csharp
+  - vb
+  name: PhysicalGpuHandleValue
+  nameWithType: NVAPIMosaicGpuLayoutCellDto.PhysicalGpuHandleValue
+  fullName: NVAPIWrapper.NVAPIMosaicGpuLayoutCellDto.PhysicalGpuHandleValue
+  type: Property
+  source:
+    remote:
+      path: NVAPIWrapper/NVAPIMosaicHelper.cs
+      branch: develop
+      repo: https://github.com/terrymacdonald/NVAPIWrapper.git
+    id: PhysicalGpuHandleValue
+    path: ../NVAPIWrapper/NVAPIMosaicHelper.cs
+    startLine: 1386
+  assemblies:
+  - NVAPIWrapper
+  namespace: NVAPIWrapper
+  summary: Gets the physical GPU handle value, or 0 when no physical GPU handle is present.
+  example: []
+  syntax:
+    content: public long PhysicalGpuHandleValue { get; }
+    parameters: []
+    return:
+      type: System.Int64
+    content.vb: Public ReadOnly Property PhysicalGpuHandleValue As Long
+  overload: NVAPIWrapper.NVAPIMosaicGpuLayoutCellDto.PhysicalGpuHandleValue*
 - uid: NVAPIWrapper.NVAPIMosaicGpuLayoutCellDto.DisplayOutputId
   commentId: P:NVAPIWrapper.NVAPIMosaicGpuLayoutCellDto.DisplayOutputId
   id: DisplayOutputId
@@ -90,11 +124,11 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIMosaicHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: DisplayOutputId
     path: ../NVAPIWrapper/NVAPIMosaicHelper.cs
-    startLine: 1301
+    startLine: 1388
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -119,11 +153,11 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIMosaicHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: OverlapX
     path: ../NVAPIWrapper/NVAPIMosaicHelper.cs
-    startLine: 1302
+    startLine: 1389
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -148,11 +182,11 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIMosaicHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: OverlapY
     path: ../NVAPIWrapper/NVAPIMosaicHelper.cs
-    startLine: 1303
+    startLine: 1390
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -177,11 +211,11 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIMosaicHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: .ctor
     path: ../NVAPIWrapper/NVAPIMosaicHelper.cs
-    startLine: 1312
+    startLine: 1399
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -221,11 +255,11 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIMosaicHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: FromNative
     path: ../NVAPIWrapper/NVAPIMosaicHelper.cs
-    startLine: 1336
+    startLine: 1423
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -259,11 +293,11 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIMosaicHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: ToNative
     path: ../NVAPIWrapper/NVAPIMosaicHelper.cs
-    startLine: 1347
+    startLine: 1433
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -290,11 +324,11 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIMosaicHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Equals
     path: ../NVAPIWrapper/NVAPIMosaicHelper.cs
-    startLine: 1363
+    startLine: 1449
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -327,11 +361,11 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIMosaicHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Equals
     path: ../NVAPIWrapper/NVAPIMosaicHelper.cs
-    startLine: 1376
+    startLine: 1463
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -366,11 +400,11 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIMosaicHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetHashCode
     path: ../NVAPIWrapper/NVAPIMosaicHelper.cs
-    startLine: 1382
+    startLine: 1469
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -398,11 +432,11 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIMosaicHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: op_Equality
     path: ../NVAPIWrapper/NVAPIMosaicHelper.cs
-    startLine: 1400
+    startLine: 1488
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -439,11 +473,11 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIMosaicHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: op_Inequality
     path: ../NVAPIWrapper/NVAPIMosaicHelper.cs
-    startLine: 1408
+    startLine: 1496
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -696,19 +730,40 @@ references:
   nameWithType.vb: Object
   fullName.vb: Object
   name.vb: Object
-- uid: NVAPIWrapper.NVAPIMosaicGpuLayoutCellDto.PhysicalGpu*
-  commentId: Overload:NVAPIWrapper.NVAPIMosaicGpuLayoutCellDto.PhysicalGpu
-  href: NVAPIWrapper.NVAPIMosaicGpuLayoutCellDto.html#NVAPIWrapper_NVAPIMosaicGpuLayoutCellDto_PhysicalGpu
-  name: PhysicalGpu
-  nameWithType: NVAPIMosaicGpuLayoutCellDto.PhysicalGpu
-  fullName: NVAPIWrapper.NVAPIMosaicGpuLayoutCellDto.PhysicalGpu
-- uid: NVAPIWrapper.NVAPIPhysicalGpuHelper
-  commentId: T:NVAPIWrapper.NVAPIPhysicalGpuHelper
-  parent: NVAPIWrapper
-  href: NVAPIWrapper.NVAPIPhysicalGpuHelper.html
-  name: NVAPIPhysicalGpuHelper
-  nameWithType: NVAPIPhysicalGpuHelper
-  fullName: NVAPIWrapper.NVAPIPhysicalGpuHelper
+- uid: NVAPIWrapper.NVAPIMosaicGpuLayoutCellDto.HasPhysicalGpu*
+  commentId: Overload:NVAPIWrapper.NVAPIMosaicGpuLayoutCellDto.HasPhysicalGpu
+  href: NVAPIWrapper.NVAPIMosaicGpuLayoutCellDto.html#NVAPIWrapper_NVAPIMosaicGpuLayoutCellDto_HasPhysicalGpu
+  name: HasPhysicalGpu
+  nameWithType: NVAPIMosaicGpuLayoutCellDto.HasPhysicalGpu
+  fullName: NVAPIWrapper.NVAPIMosaicGpuLayoutCellDto.HasPhysicalGpu
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: NVAPIWrapper.NVAPIMosaicGpuLayoutCellDto.PhysicalGpuHandleValue*
+  commentId: Overload:NVAPIWrapper.NVAPIMosaicGpuLayoutCellDto.PhysicalGpuHandleValue
+  href: NVAPIWrapper.NVAPIMosaicGpuLayoutCellDto.html#NVAPIWrapper_NVAPIMosaicGpuLayoutCellDto_PhysicalGpuHandleValue
+  name: PhysicalGpuHandleValue
+  nameWithType: NVAPIMosaicGpuLayoutCellDto.PhysicalGpuHandleValue
+  fullName: NVAPIWrapper.NVAPIMosaicGpuLayoutCellDto.PhysicalGpuHandleValue
+- uid: System.Int64
+  commentId: T:System.Int64
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int64
+  name: long
+  nameWithType: long
+  fullName: long
+  nameWithType.vb: Long
+  fullName.vb: Long
+  name.vb: Long
 - uid: NVAPIWrapper.NVAPIMosaicGpuLayoutCellDto.DisplayOutputId*
   commentId: Overload:NVAPIWrapper.NVAPIMosaicGpuLayoutCellDto.DisplayOutputId
   href: NVAPIWrapper.NVAPIMosaicGpuLayoutCellDto.html#NVAPIWrapper_NVAPIMosaicGpuLayoutCellDto_DisplayOutputId
@@ -838,17 +893,6 @@ references:
     name: NVAPIMosaicGpuLayoutCellDto
     href: NVAPIWrapper.NVAPIMosaicGpuLayoutCellDto.html
   - name: )
-- uid: System.Boolean
-  commentId: T:System.Boolean
-  parent: System
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.boolean
-  name: bool
-  nameWithType: bool
-  fullName: bool
-  nameWithType.vb: Boolean
-  fullName.vb: Boolean
-  name.vb: Boolean
 - uid: System.IEquatable`1.Equals(`0)
   commentId: M:System.IEquatable`1.Equals(`0)
   isExternal: true

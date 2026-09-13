@@ -28,7 +28,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_VULKAN_LATENCY_MARKER_TYPE.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_VULKAN_LATENCY_MARKER_TYPE
     path: ../NVAPIWrapper/cs_generated/NV_VULKAN_LATENCY_MARKER_TYPE.cs
@@ -54,7 +54,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_VULKAN_LATENCY_MARKER_TYPE.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: VULKAN_SIMULATION_START
     path: ../NVAPIWrapper/cs_generated/NV_VULKAN_LATENCY_MARKER_TYPE.cs
@@ -81,7 +81,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_VULKAN_LATENCY_MARKER_TYPE.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: VULKAN_SIMULATION_END
     path: ../NVAPIWrapper/cs_generated/NV_VULKAN_LATENCY_MARKER_TYPE.cs
@@ -108,7 +108,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_VULKAN_LATENCY_MARKER_TYPE.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: VULKAN_RENDERSUBMIT_START
     path: ../NVAPIWrapper/cs_generated/NV_VULKAN_LATENCY_MARKER_TYPE.cs
@@ -135,7 +135,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_VULKAN_LATENCY_MARKER_TYPE.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: VULKAN_RENDERSUBMIT_END
     path: ../NVAPIWrapper/cs_generated/NV_VULKAN_LATENCY_MARKER_TYPE.cs
@@ -162,7 +162,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_VULKAN_LATENCY_MARKER_TYPE.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: VULKAN_PRESENT_START
     path: ../NVAPIWrapper/cs_generated/NV_VULKAN_LATENCY_MARKER_TYPE.cs
@@ -189,7 +189,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_VULKAN_LATENCY_MARKER_TYPE.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: VULKAN_PRESENT_END
     path: ../NVAPIWrapper/cs_generated/NV_VULKAN_LATENCY_MARKER_TYPE.cs
@@ -216,7 +216,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_VULKAN_LATENCY_MARKER_TYPE.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: VULKAN_INPUT_SAMPLE
     path: ../NVAPIWrapper/cs_generated/NV_VULKAN_LATENCY_MARKER_TYPE.cs
@@ -243,7 +243,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_VULKAN_LATENCY_MARKER_TYPE.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: VULKAN_TRIGGER_FLASH
     path: ../NVAPIWrapper/cs_generated/NV_VULKAN_LATENCY_MARKER_TYPE.cs
@@ -270,7 +270,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_VULKAN_LATENCY_MARKER_TYPE.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: VULKAN_PC_LATENCY_PING
     path: ../NVAPIWrapper/cs_generated/NV_VULKAN_LATENCY_MARKER_TYPE.cs
@@ -297,7 +297,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_VULKAN_LATENCY_MARKER_TYPE.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: VULKAN_OUT_OF_BAND_RENDERSUBMIT_START
     path: ../NVAPIWrapper/cs_generated/NV_VULKAN_LATENCY_MARKER_TYPE.cs
@@ -324,7 +324,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_VULKAN_LATENCY_MARKER_TYPE.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: VULKAN_OUT_OF_BAND_RENDERSUBMIT_END
     path: ../NVAPIWrapper/cs_generated/NV_VULKAN_LATENCY_MARKER_TYPE.cs
@@ -351,7 +351,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_VULKAN_LATENCY_MARKER_TYPE.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: VULKAN_OUT_OF_BAND_PRESENT_START
     path: ../NVAPIWrapper/cs_generated/NV_VULKAN_LATENCY_MARKER_TYPE.cs
@@ -378,7 +378,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_VULKAN_LATENCY_MARKER_TYPE.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: VULKAN_OUT_OF_BAND_PRESENT_END
     path: ../NVAPIWrapper/cs_generated/NV_VULKAN_LATENCY_MARKER_TYPE.cs

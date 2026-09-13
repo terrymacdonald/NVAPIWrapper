@@ -29,7 +29,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GPU_DISPLAYIDS.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: _NV_GPU_DISPLAYIDS
     path: ../NVAPIWrapper/cs_generated/_NV_GPU_DISPLAYIDS.cs
@@ -62,7 +62,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GPU_DISPLAYIDS.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: version
     path: ../NVAPIWrapper/cs_generated/_NV_GPU_DISPLAYIDS.cs
@@ -90,7 +90,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GPU_DISPLAYIDS.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: connectorType
     path: ../NVAPIWrapper/cs_generated/_NV_GPU_DISPLAYIDS.cs
@@ -118,7 +118,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GPU_DISPLAYIDS.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: displayId
     path: ../NVAPIWrapper/cs_generated/_NV_GPU_DISPLAYIDS.cs
@@ -146,7 +146,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GPU_DISPLAYIDS.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: _bitfield
     path: ../NVAPIWrapper/cs_generated/_NV_GPU_DISPLAYIDS.cs
@@ -173,7 +173,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GPU_DISPLAYIDS.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: isDynamic
     path: ../NVAPIWrapper/cs_generated/_NV_GPU_DISPLAYIDS.cs
@@ -203,7 +203,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GPU_DISPLAYIDS.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: isMultiStreamRootNode
     path: ../NVAPIWrapper/cs_generated/_NV_GPU_DISPLAYIDS.cs
@@ -233,7 +233,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GPU_DISPLAYIDS.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: isActive
     path: ../NVAPIWrapper/cs_generated/_NV_GPU_DISPLAYIDS.cs
@@ -263,7 +263,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GPU_DISPLAYIDS.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: isCluster
     path: ../NVAPIWrapper/cs_generated/_NV_GPU_DISPLAYIDS.cs
@@ -293,7 +293,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GPU_DISPLAYIDS.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: isOSVisible
     path: ../NVAPIWrapper/cs_generated/_NV_GPU_DISPLAYIDS.cs
@@ -323,7 +323,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GPU_DISPLAYIDS.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: isWFD
     path: ../NVAPIWrapper/cs_generated/_NV_GPU_DISPLAYIDS.cs
@@ -353,7 +353,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GPU_DISPLAYIDS.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: isConnected
     path: ../NVAPIWrapper/cs_generated/_NV_GPU_DISPLAYIDS.cs
@@ -383,7 +383,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GPU_DISPLAYIDS.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: reservedInternal
     path: ../NVAPIWrapper/cs_generated/_NV_GPU_DISPLAYIDS.cs
@@ -413,7 +413,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GPU_DISPLAYIDS.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: isPhysicallyConnected
     path: ../NVAPIWrapper/cs_generated/_NV_GPU_DISPLAYIDS.cs
@@ -443,7 +443,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_GPU_DISPLAYIDS.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: reserved
     path: ../NVAPIWrapper/cs_generated/_NV_GPU_DISPLAYIDS.cs

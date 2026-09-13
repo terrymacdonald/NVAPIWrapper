@@ -5,6 +5,7 @@ items:
   id: NV_OUT_OF_BAND_CQ_TYPE
   parent: NVAPIWrapper
   children:
+  - NVAPIWrapper.NV_OUT_OF_BAND_CQ_TYPE.OUT_OF_BAND_EXPLICIT_COPY
   - NVAPIWrapper.NV_OUT_OF_BAND_CQ_TYPE.OUT_OF_BAND_IGNORE
   - NVAPIWrapper.NV_OUT_OF_BAND_CQ_TYPE.OUT_OF_BAND_PRESENT
   - NVAPIWrapper.NV_OUT_OF_BAND_CQ_TYPE.OUT_OF_BAND_RENDER
@@ -19,7 +20,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_OUT_OF_BAND_CQ_TYPE.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_OUT_OF_BAND_CQ_TYPE
     path: ../NVAPIWrapper/cs_generated/NV_OUT_OF_BAND_CQ_TYPE.cs
@@ -45,7 +46,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_OUT_OF_BAND_CQ_TYPE.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: OUT_OF_BAND_RENDER
     path: ../NVAPIWrapper/cs_generated/NV_OUT_OF_BAND_CQ_TYPE.cs
@@ -72,7 +73,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_OUT_OF_BAND_CQ_TYPE.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: OUT_OF_BAND_PRESENT
     path: ../NVAPIWrapper/cs_generated/NV_OUT_OF_BAND_CQ_TYPE.cs
@@ -99,7 +100,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_OUT_OF_BAND_CQ_TYPE.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: OUT_OF_BAND_IGNORE
     path: ../NVAPIWrapper/cs_generated/NV_OUT_OF_BAND_CQ_TYPE.cs
@@ -126,7 +127,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_OUT_OF_BAND_CQ_TYPE.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: OUT_OF_BAND_RENDER_PRESENT
     path: ../NVAPIWrapper/cs_generated/NV_OUT_OF_BAND_CQ_TYPE.cs
@@ -137,6 +138,33 @@ items:
   example: []
   syntax:
     content: OUT_OF_BAND_RENDER_PRESENT = 3
+    return:
+      type: NVAPIWrapper.NV_OUT_OF_BAND_CQ_TYPE
+- uid: NVAPIWrapper.NV_OUT_OF_BAND_CQ_TYPE.OUT_OF_BAND_EXPLICIT_COPY
+  commentId: F:NVAPIWrapper.NV_OUT_OF_BAND_CQ_TYPE.OUT_OF_BAND_EXPLICIT_COPY
+  id: OUT_OF_BAND_EXPLICIT_COPY
+  parent: NVAPIWrapper.NV_OUT_OF_BAND_CQ_TYPE
+  langs:
+  - csharp
+  - vb
+  name: OUT_OF_BAND_EXPLICIT_COPY
+  nameWithType: NV_OUT_OF_BAND_CQ_TYPE.OUT_OF_BAND_EXPLICIT_COPY
+  fullName: NVAPIWrapper.NV_OUT_OF_BAND_CQ_TYPE.OUT_OF_BAND_EXPLICIT_COPY
+  type: Field
+  source:
+    remote:
+      path: NVAPIWrapper/cs_generated/NV_OUT_OF_BAND_CQ_TYPE.cs
+      branch: develop
+      repo: https://github.com/terrymacdonald/NVAPIWrapper.git
+    id: OUT_OF_BAND_EXPLICIT_COPY
+    path: ../NVAPIWrapper/cs_generated/NV_OUT_OF_BAND_CQ_TYPE.cs
+    startLine: 18
+  assemblies:
+  - NVAPIWrapper
+  namespace: NVAPIWrapper
+  example: []
+  syntax:
+    content: OUT_OF_BAND_EXPLICIT_COPY = 4
     return:
       type: NVAPIWrapper.NV_OUT_OF_BAND_CQ_TYPE
 references:

@@ -19,7 +19,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_WKS_API_STEREO_EYES_EXCHANGE.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: EValues_WKS_API_STEREO_EYES_EXCHANGE
     path: ../NVAPIWrapper/cs_generated/EValues_WKS_API_STEREO_EYES_EXCHANGE.cs
@@ -45,7 +45,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_WKS_API_STEREO_EYES_EXCHANGE.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: WKS_API_STEREO_EYES_EXCHANGE_OFF
     path: ../NVAPIWrapper/cs_generated/EValues_WKS_API_STEREO_EYES_EXCHANGE.cs
@@ -72,7 +72,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_WKS_API_STEREO_EYES_EXCHANGE.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: WKS_API_STEREO_EYES_EXCHANGE_ON
     path: ../NVAPIWrapper/cs_generated/EValues_WKS_API_STEREO_EYES_EXCHANGE.cs
@@ -99,7 +99,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_WKS_API_STEREO_EYES_EXCHANGE.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: WKS_API_STEREO_EYES_EXCHANGE_NUM_VALUES
     path: ../NVAPIWrapper/cs_generated/EValues_WKS_API_STEREO_EYES_EXCHANGE.cs
@@ -126,7 +126,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_WKS_API_STEREO_EYES_EXCHANGE.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: WKS_API_STEREO_EYES_EXCHANGE_DEFAULT
     path: ../NVAPIWrapper/cs_generated/EValues_WKS_API_STEREO_EYES_EXCHANGE.cs

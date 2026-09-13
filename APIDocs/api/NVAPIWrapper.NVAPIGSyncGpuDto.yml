@@ -12,9 +12,12 @@ items:
   - NVAPIWrapper.NVAPIGSyncGpuDto.FromNative(NVAPIWrapper.NVAPIApiHelper,NVAPIWrapper._NV_GSYNC_GPU)
   - NVAPIWrapper.NVAPIGSyncGpuDto.FromNative(NVAPIWrapper.NVAPIApiHelper,NVAPIWrapper._NV_GSYNC_GPU*,System.Int32)
   - NVAPIWrapper.NVAPIGSyncGpuDto.GetHashCode
+  - NVAPIWrapper.NVAPIGSyncGpuDto.HasPhysicalGpu
+  - NVAPIWrapper.NVAPIGSyncGpuDto.HasProxyPhysicalGpu
   - NVAPIWrapper.NVAPIGSyncGpuDto.IsSynced
   - NVAPIWrapper.NVAPIGSyncGpuDto.PhysicalGpu
-  - NVAPIWrapper.NVAPIGSyncGpuDto.ProxyPhysicalGpu
+  - NVAPIWrapper.NVAPIGSyncGpuDto.PhysicalGpuHandleValue
+  - NVAPIWrapper.NVAPIGSyncGpuDto.ProxyPhysicalGpuHandleValue
   - NVAPIWrapper.NVAPIGSyncGpuDto.ToNative
   - NVAPIWrapper.NVAPIGSyncGpuDto.op_Equality(NVAPIWrapper.NVAPIGSyncGpuDto,NVAPIWrapper.NVAPIGSyncGpuDto)
   - NVAPIWrapper.NVAPIGSyncGpuDto.op_Inequality(NVAPIWrapper.NVAPIGSyncGpuDto,NVAPIWrapper.NVAPIGSyncGpuDto)
@@ -28,11 +31,11 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPIGSyncGpuDto
     path: ../NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
-    startLine: 558
+    startLine: 573
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -48,6 +51,68 @@ items:
   - System.Object.Equals(System.Object,System.Object)
   - System.Object.GetType
   - System.Object.ReferenceEquals(System.Object,System.Object)
+- uid: NVAPIWrapper.NVAPIGSyncGpuDto.HasPhysicalGpu
+  commentId: P:NVAPIWrapper.NVAPIGSyncGpuDto.HasPhysicalGpu
+  id: HasPhysicalGpu
+  parent: NVAPIWrapper.NVAPIGSyncGpuDto
+  langs:
+  - csharp
+  - vb
+  name: HasPhysicalGpu
+  nameWithType: NVAPIGSyncGpuDto.HasPhysicalGpu
+  fullName: NVAPIWrapper.NVAPIGSyncGpuDto.HasPhysicalGpu
+  type: Property
+  source:
+    remote:
+      path: NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
+      branch: develop
+      repo: https://github.com/terrymacdonald/NVAPIWrapper.git
+    id: HasPhysicalGpu
+    path: ../NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
+    startLine: 581
+  assemblies:
+  - NVAPIWrapper
+  namespace: NVAPIWrapper
+  summary: Gets whether this DTO references a physical GPU handle.
+  example: []
+  syntax:
+    content: public bool HasPhysicalGpu { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property HasPhysicalGpu As Boolean
+  overload: NVAPIWrapper.NVAPIGSyncGpuDto.HasPhysicalGpu*
+- uid: NVAPIWrapper.NVAPIGSyncGpuDto.PhysicalGpuHandleValue
+  commentId: P:NVAPIWrapper.NVAPIGSyncGpuDto.PhysicalGpuHandleValue
+  id: PhysicalGpuHandleValue
+  parent: NVAPIWrapper.NVAPIGSyncGpuDto
+  langs:
+  - csharp
+  - vb
+  name: PhysicalGpuHandleValue
+  nameWithType: NVAPIGSyncGpuDto.PhysicalGpuHandleValue
+  fullName: NVAPIWrapper.NVAPIGSyncGpuDto.PhysicalGpuHandleValue
+  type: Property
+  source:
+    remote:
+      path: NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
+      branch: develop
+      repo: https://github.com/terrymacdonald/NVAPIWrapper.git
+    id: PhysicalGpuHandleValue
+    path: ../NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
+    startLine: 586
+  assemblies:
+  - NVAPIWrapper
+  namespace: NVAPIWrapper
+  summary: Gets the physical GPU handle value, or 0 when no physical GPU handle is present.
+  example: []
+  syntax:
+    content: public long PhysicalGpuHandleValue { get; }
+    parameters: []
+    return:
+      type: System.Int64
+    content.vb: Public ReadOnly Property PhysicalGpuHandleValue As Long
+  overload: NVAPIWrapper.NVAPIGSyncGpuDto.PhysicalGpuHandleValue*
 - uid: NVAPIWrapper.NVAPIGSyncGpuDto.PhysicalGpu
   commentId: P:NVAPIWrapper.NVAPIGSyncGpuDto.PhysicalGpu
   id: PhysicalGpu
@@ -62,50 +127,95 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: PhysicalGpu
     path: ../NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
-    startLine: 562
+    startLine: 591
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
+  summary: Gets the physical GPU helper for in-process callers. Ignored during JSON serialization.
+  example: []
   syntax:
-    content: public NVAPIPhysicalGpuHelper PhysicalGpu { readonly get; set; }
+    content: >-
+      [JsonIgnore]
+
+      public NVAPIPhysicalGpuHelper PhysicalGpu { readonly get; set; }
     parameters: []
     return:
       type: NVAPIWrapper.NVAPIPhysicalGpuHelper
-    content.vb: Public Property PhysicalGpu As NVAPIPhysicalGpuHelper
+    content.vb: >-
+      <JsonIgnore>
+
+      Public Property PhysicalGpu As NVAPIPhysicalGpuHelper
   overload: NVAPIWrapper.NVAPIGSyncGpuDto.PhysicalGpu*
-- uid: NVAPIWrapper.NVAPIGSyncGpuDto.ProxyPhysicalGpu
-  commentId: P:NVAPIWrapper.NVAPIGSyncGpuDto.ProxyPhysicalGpu
-  id: ProxyPhysicalGpu
+  attributes:
+  - type: System.Text.Json.Serialization.JsonIgnoreAttribute
+    ctor: System.Text.Json.Serialization.JsonIgnoreAttribute.#ctor
+    arguments: []
+- uid: NVAPIWrapper.NVAPIGSyncGpuDto.HasProxyPhysicalGpu
+  commentId: P:NVAPIWrapper.NVAPIGSyncGpuDto.HasProxyPhysicalGpu
+  id: HasProxyPhysicalGpu
   parent: NVAPIWrapper.NVAPIGSyncGpuDto
   langs:
   - csharp
   - vb
-  name: ProxyPhysicalGpu
-  nameWithType: NVAPIGSyncGpuDto.ProxyPhysicalGpu
-  fullName: NVAPIWrapper.NVAPIGSyncGpuDto.ProxyPhysicalGpu
+  name: HasProxyPhysicalGpu
+  nameWithType: NVAPIGSyncGpuDto.HasProxyPhysicalGpu
+  fullName: NVAPIWrapper.NVAPIGSyncGpuDto.HasProxyPhysicalGpu
   type: Property
   source:
     remote:
       path: NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
-    id: ProxyPhysicalGpu
+    id: HasProxyPhysicalGpu
     path: ../NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
-    startLine: 563
+    startLine: 597
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
+  summary: Gets whether this DTO references a proxy physical GPU handle.
+  example: []
   syntax:
-    content: public NVAPIPhysicalGpuHelper? ProxyPhysicalGpu { readonly get; set; }
+    content: public bool HasProxyPhysicalGpu { readonly get; set; }
     parameters: []
     return:
-      type: NVAPIWrapper.NVAPIPhysicalGpuHelper
-    content.vb: Public Property ProxyPhysicalGpu As NVAPIPhysicalGpuHelper
-  overload: NVAPIWrapper.NVAPIGSyncGpuDto.ProxyPhysicalGpu*
+      type: System.Boolean
+    content.vb: Public Property HasProxyPhysicalGpu As Boolean
+  overload: NVAPIWrapper.NVAPIGSyncGpuDto.HasProxyPhysicalGpu*
+- uid: NVAPIWrapper.NVAPIGSyncGpuDto.ProxyPhysicalGpuHandleValue
+  commentId: P:NVAPIWrapper.NVAPIGSyncGpuDto.ProxyPhysicalGpuHandleValue
+  id: ProxyPhysicalGpuHandleValue
+  parent: NVAPIWrapper.NVAPIGSyncGpuDto
+  langs:
+  - csharp
+  - vb
+  name: ProxyPhysicalGpuHandleValue
+  nameWithType: NVAPIGSyncGpuDto.ProxyPhysicalGpuHandleValue
+  fullName: NVAPIWrapper.NVAPIGSyncGpuDto.ProxyPhysicalGpuHandleValue
+  type: Property
+  source:
+    remote:
+      path: NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
+      branch: develop
+      repo: https://github.com/terrymacdonald/NVAPIWrapper.git
+    id: ProxyPhysicalGpuHandleValue
+    path: ../NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
+    startLine: 602
+  assemblies:
+  - NVAPIWrapper
+  namespace: NVAPIWrapper
+  summary: Gets the proxy physical GPU handle value, or 0 when no proxy physical GPU handle is present.
+  example: []
+  syntax:
+    content: public long ProxyPhysicalGpuHandleValue { get; }
+    parameters: []
+    return:
+      type: System.Int64
+    content.vb: Public ReadOnly Property ProxyPhysicalGpuHandleValue As Long
+  overload: NVAPIWrapper.NVAPIGSyncGpuDto.ProxyPhysicalGpuHandleValue*
 - uid: NVAPIWrapper.NVAPIGSyncGpuDto.Connector
   commentId: P:NVAPIWrapper.NVAPIGSyncGpuDto.Connector
   id: Connector
@@ -120,11 +230,11 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Connector
     path: ../NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
-    startLine: 564
+    startLine: 604
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -149,11 +259,11 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: IsSynced
     path: ../NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
-    startLine: 565
+    startLine: 605
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -178,11 +288,11 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: .ctor
     path: ../NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
-    startLine: 574
+    startLine: 614
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -222,11 +332,11 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: FromNative
     path: ../NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
-    startLine: 610
+    startLine: 650
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -260,11 +370,11 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: FromNative
     path: ../NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
-    startLine: 635
+    startLine: 672
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -304,11 +414,11 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: ToNative
     path: ../NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
-    startLine: 653
+    startLine: 690
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -335,11 +445,11 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Equals
     path: ../NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
-    startLine: 673
+    startLine: 710
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -372,11 +482,11 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Equals
     path: ../NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
-    startLine: 686
+    startLine: 724
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -411,11 +521,11 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetHashCode
     path: ../NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
-    startLine: 692
+    startLine: 730
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -443,11 +553,11 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: op_Equality
     path: ../NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
-    startLine: 710
+    startLine: 749
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -484,11 +594,11 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: op_Inequality
     path: ../NVAPIWrapper/NVAPIQuadroGSyncHelper.cs
-    startLine: 718
+    startLine: 757
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -741,6 +851,40 @@ references:
   nameWithType.vb: Object
   fullName.vb: Object
   name.vb: Object
+- uid: NVAPIWrapper.NVAPIGSyncGpuDto.HasPhysicalGpu*
+  commentId: Overload:NVAPIWrapper.NVAPIGSyncGpuDto.HasPhysicalGpu
+  href: NVAPIWrapper.NVAPIGSyncGpuDto.html#NVAPIWrapper_NVAPIGSyncGpuDto_HasPhysicalGpu
+  name: HasPhysicalGpu
+  nameWithType: NVAPIGSyncGpuDto.HasPhysicalGpu
+  fullName: NVAPIWrapper.NVAPIGSyncGpuDto.HasPhysicalGpu
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: NVAPIWrapper.NVAPIGSyncGpuDto.PhysicalGpuHandleValue*
+  commentId: Overload:NVAPIWrapper.NVAPIGSyncGpuDto.PhysicalGpuHandleValue
+  href: NVAPIWrapper.NVAPIGSyncGpuDto.html#NVAPIWrapper_NVAPIGSyncGpuDto_PhysicalGpuHandleValue
+  name: PhysicalGpuHandleValue
+  nameWithType: NVAPIGSyncGpuDto.PhysicalGpuHandleValue
+  fullName: NVAPIWrapper.NVAPIGSyncGpuDto.PhysicalGpuHandleValue
+- uid: System.Int64
+  commentId: T:System.Int64
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int64
+  name: long
+  nameWithType: long
+  fullName: long
+  nameWithType.vb: Long
+  fullName.vb: Long
+  name.vb: Long
 - uid: NVAPIWrapper.NVAPIGSyncGpuDto.PhysicalGpu*
   commentId: Overload:NVAPIWrapper.NVAPIGSyncGpuDto.PhysicalGpu
   href: NVAPIWrapper.NVAPIGSyncGpuDto.html#NVAPIWrapper_NVAPIGSyncGpuDto_PhysicalGpu
@@ -754,12 +898,18 @@ references:
   name: NVAPIPhysicalGpuHelper
   nameWithType: NVAPIPhysicalGpuHelper
   fullName: NVAPIWrapper.NVAPIPhysicalGpuHelper
-- uid: NVAPIWrapper.NVAPIGSyncGpuDto.ProxyPhysicalGpu*
-  commentId: Overload:NVAPIWrapper.NVAPIGSyncGpuDto.ProxyPhysicalGpu
-  href: NVAPIWrapper.NVAPIGSyncGpuDto.html#NVAPIWrapper_NVAPIGSyncGpuDto_ProxyPhysicalGpu
-  name: ProxyPhysicalGpu
-  nameWithType: NVAPIGSyncGpuDto.ProxyPhysicalGpu
-  fullName: NVAPIWrapper.NVAPIGSyncGpuDto.ProxyPhysicalGpu
+- uid: NVAPIWrapper.NVAPIGSyncGpuDto.HasProxyPhysicalGpu*
+  commentId: Overload:NVAPIWrapper.NVAPIGSyncGpuDto.HasProxyPhysicalGpu
+  href: NVAPIWrapper.NVAPIGSyncGpuDto.html#NVAPIWrapper_NVAPIGSyncGpuDto_HasProxyPhysicalGpu
+  name: HasProxyPhysicalGpu
+  nameWithType: NVAPIGSyncGpuDto.HasProxyPhysicalGpu
+  fullName: NVAPIWrapper.NVAPIGSyncGpuDto.HasProxyPhysicalGpu
+- uid: NVAPIWrapper.NVAPIGSyncGpuDto.ProxyPhysicalGpuHandleValue*
+  commentId: Overload:NVAPIWrapper.NVAPIGSyncGpuDto.ProxyPhysicalGpuHandleValue
+  href: NVAPIWrapper.NVAPIGSyncGpuDto.html#NVAPIWrapper_NVAPIGSyncGpuDto_ProxyPhysicalGpuHandleValue
+  name: ProxyPhysicalGpuHandleValue
+  nameWithType: NVAPIGSyncGpuDto.ProxyPhysicalGpuHandleValue
+  fullName: NVAPIWrapper.NVAPIGSyncGpuDto.ProxyPhysicalGpuHandleValue
 - uid: NVAPIWrapper.NVAPIGSyncGpuDto.Connector*
   commentId: Overload:NVAPIWrapper.NVAPIGSyncGpuDto.Connector
   href: NVAPIWrapper.NVAPIGSyncGpuDto.html#NVAPIWrapper_NVAPIGSyncGpuDto_Connector
@@ -779,17 +929,6 @@ references:
   name: IsSynced
   nameWithType: NVAPIGSyncGpuDto.IsSynced
   fullName: NVAPIWrapper.NVAPIGSyncGpuDto.IsSynced
-- uid: System.Boolean
-  commentId: T:System.Boolean
-  parent: System
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.boolean
-  name: bool
-  nameWithType: bool
-  fullName: bool
-  nameWithType.vb: Boolean
-  fullName.vb: Boolean
-  name.vb: Boolean
 - uid: NVAPIWrapper.NVAPIGSyncGpuDto.#ctor*
   commentId: Overload:NVAPIWrapper.NVAPIGSyncGpuDto.#ctor
   href: NVAPIWrapper.NVAPIGSyncGpuDto.html#NVAPIWrapper_NVAPIGSyncGpuDto__ctor_NVAPIWrapper_NVAPIPhysicalGpuHelper_NVAPIWrapper__NVAPI_GSYNC_GPU_TOPOLOGY_CONNECTOR_NVAPIWrapper_NVAPIPhysicalGpuHelper_System_Boolean_

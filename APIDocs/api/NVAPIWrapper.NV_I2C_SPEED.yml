@@ -22,7 +22,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_I2C_SPEED.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_I2C_SPEED
     path: ../NVAPIWrapper/cs_generated/NV_I2C_SPEED.cs
@@ -48,7 +48,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_I2C_SPEED.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_I2C_SPEED_DEFAULT
     path: ../NVAPIWrapper/cs_generated/NV_I2C_SPEED.cs
@@ -75,7 +75,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_I2C_SPEED.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_I2C_SPEED_3KHZ
     path: ../NVAPIWrapper/cs_generated/NV_I2C_SPEED.cs
@@ -102,7 +102,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_I2C_SPEED.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_I2C_SPEED_10KHZ
     path: ../NVAPIWrapper/cs_generated/NV_I2C_SPEED.cs
@@ -129,7 +129,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_I2C_SPEED.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_I2C_SPEED_33KHZ
     path: ../NVAPIWrapper/cs_generated/NV_I2C_SPEED.cs
@@ -156,7 +156,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_I2C_SPEED.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_I2C_SPEED_100KHZ
     path: ../NVAPIWrapper/cs_generated/NV_I2C_SPEED.cs
@@ -183,7 +183,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_I2C_SPEED.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_I2C_SPEED_200KHZ
     path: ../NVAPIWrapper/cs_generated/NV_I2C_SPEED.cs
@@ -210,7 +210,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_I2C_SPEED.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_I2C_SPEED_400KHZ
     path: ../NVAPIWrapper/cs_generated/NV_I2C_SPEED.cs

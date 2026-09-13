@@ -18,7 +18,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVAPI_GSYNC_POLARITY.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: _NVAPI_GSYNC_POLARITY
     path: ../NVAPIWrapper/cs_generated/_NVAPI_GSYNC_POLARITY.cs
@@ -44,7 +44,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVAPI_GSYNC_POLARITY.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_GSYNC_POLARITY_RISING_EDGE
     path: ../NVAPIWrapper/cs_generated/_NVAPI_GSYNC_POLARITY.cs
@@ -71,7 +71,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVAPI_GSYNC_POLARITY.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_GSYNC_POLARITY_FALLING_EDGE
     path: ../NVAPIWrapper/cs_generated/_NVAPI_GSYNC_POLARITY.cs
@@ -98,7 +98,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVAPI_GSYNC_POLARITY.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_GSYNC_POLARITY_BOTH_EDGES
     path: ../NVAPIWrapper/cs_generated/_NVAPI_GSYNC_POLARITY.cs

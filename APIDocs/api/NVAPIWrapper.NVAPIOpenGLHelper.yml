@@ -20,7 +20,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIOpenGLHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPIOpenGLHelper
     path: ../NVAPIWrapper/NVAPIOpenGLHelper.cs
@@ -58,7 +58,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIOpenGLHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: ExpertModeSet
     path: ../NVAPIWrapper/NVAPIOpenGLHelper.cs
@@ -105,7 +105,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIOpenGLHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: ExpertModeGet
     path: ../NVAPIWrapper/NVAPIOpenGLHelper.cs
@@ -136,7 +136,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIOpenGLHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: ExpertModeDefaultsSet
     path: ../NVAPIWrapper/NVAPIOpenGLHelper.cs
@@ -180,7 +180,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIOpenGLHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: ExpertModeDefaultsGet
     path: ../NVAPIWrapper/NVAPIOpenGLHelper.cs
@@ -211,7 +211,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIOpenGLHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Dispose
     path: ../NVAPIWrapper/NVAPIOpenGLHelper.cs

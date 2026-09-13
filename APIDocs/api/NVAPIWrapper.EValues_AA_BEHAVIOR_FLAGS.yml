@@ -34,7 +34,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_AA_BEHAVIOR_FLAGS.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: EValues_AA_BEHAVIOR_FLAGS
     path: ../NVAPIWrapper/cs_generated/EValues_AA_BEHAVIOR_FLAGS.cs
@@ -60,7 +60,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_AA_BEHAVIOR_FLAGS.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: AA_BEHAVIOR_FLAGS_NONE
     path: ../NVAPIWrapper/cs_generated/EValues_AA_BEHAVIOR_FLAGS.cs
@@ -87,7 +87,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_AA_BEHAVIOR_FLAGS.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: AA_BEHAVIOR_FLAGS_TREAT_OVERRIDE_AS_APP_CONTROLLED
     path: ../NVAPIWrapper/cs_generated/EValues_AA_BEHAVIOR_FLAGS.cs
@@ -114,7 +114,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_AA_BEHAVIOR_FLAGS.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: AA_BEHAVIOR_FLAGS_TREAT_OVERRIDE_AS_ENHANCE
     path: ../NVAPIWrapper/cs_generated/EValues_AA_BEHAVIOR_FLAGS.cs
@@ -141,7 +141,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_AA_BEHAVIOR_FLAGS.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: AA_BEHAVIOR_FLAGS_DISABLE_OVERRIDE
     path: ../NVAPIWrapper/cs_generated/EValues_AA_BEHAVIOR_FLAGS.cs
@@ -168,7 +168,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_AA_BEHAVIOR_FLAGS.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: AA_BEHAVIOR_FLAGS_TREAT_ENHANCE_AS_APP_CONTROLLED
     path: ../NVAPIWrapper/cs_generated/EValues_AA_BEHAVIOR_FLAGS.cs
@@ -195,7 +195,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_AA_BEHAVIOR_FLAGS.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: AA_BEHAVIOR_FLAGS_TREAT_ENHANCE_AS_OVERRIDE
     path: ../NVAPIWrapper/cs_generated/EValues_AA_BEHAVIOR_FLAGS.cs
@@ -222,7 +222,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_AA_BEHAVIOR_FLAGS.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: AA_BEHAVIOR_FLAGS_DISABLE_ENHANCE
     path: ../NVAPIWrapper/cs_generated/EValues_AA_BEHAVIOR_FLAGS.cs
@@ -249,7 +249,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_AA_BEHAVIOR_FLAGS.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: AA_BEHAVIOR_FLAGS_MAP_VCAA_TO_MULTISAMPLING
     path: ../NVAPIWrapper/cs_generated/EValues_AA_BEHAVIOR_FLAGS.cs
@@ -276,7 +276,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_AA_BEHAVIOR_FLAGS.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: AA_BEHAVIOR_FLAGS_SLI_DISABLE_TRANSPARENCY_SUPERSAMPLING
     path: ../NVAPIWrapper/cs_generated/EValues_AA_BEHAVIOR_FLAGS.cs
@@ -303,7 +303,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_AA_BEHAVIOR_FLAGS.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: AA_BEHAVIOR_FLAGS_DISABLE_CPLAA
     path: ../NVAPIWrapper/cs_generated/EValues_AA_BEHAVIOR_FLAGS.cs
@@ -330,7 +330,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_AA_BEHAVIOR_FLAGS.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: AA_BEHAVIOR_FLAGS_SKIP_RT_DIM_CHECK_FOR_ENHANCE
     path: ../NVAPIWrapper/cs_generated/EValues_AA_BEHAVIOR_FLAGS.cs
@@ -357,7 +357,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_AA_BEHAVIOR_FLAGS.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: AA_BEHAVIOR_FLAGS_DISABLE_SLIAA
     path: ../NVAPIWrapper/cs_generated/EValues_AA_BEHAVIOR_FLAGS.cs
@@ -384,7 +384,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_AA_BEHAVIOR_FLAGS.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: AA_BEHAVIOR_FLAGS_DEFAULT
     path: ../NVAPIWrapper/cs_generated/EValues_AA_BEHAVIOR_FLAGS.cs
@@ -411,7 +411,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_AA_BEHAVIOR_FLAGS.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: AA_BEHAVIOR_FLAGS_AA_RT_BPP_DIV_4
     path: ../NVAPIWrapper/cs_generated/EValues_AA_BEHAVIOR_FLAGS.cs
@@ -438,7 +438,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_AA_BEHAVIOR_FLAGS.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: AA_BEHAVIOR_FLAGS_AA_RT_BPP_DIV_4_SHIFT
     path: ../NVAPIWrapper/cs_generated/EValues_AA_BEHAVIOR_FLAGS.cs
@@ -465,7 +465,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_AA_BEHAVIOR_FLAGS.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: AA_BEHAVIOR_FLAGS_NON_AA_RT_BPP_DIV_4
     path: ../NVAPIWrapper/cs_generated/EValues_AA_BEHAVIOR_FLAGS.cs
@@ -492,7 +492,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_AA_BEHAVIOR_FLAGS.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: AA_BEHAVIOR_FLAGS_NON_AA_RT_BPP_DIV_4_SHIFT
     path: ../NVAPIWrapper/cs_generated/EValues_AA_BEHAVIOR_FLAGS.cs
@@ -519,7 +519,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_AA_BEHAVIOR_FLAGS.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: AA_BEHAVIOR_FLAGS_MASK
     path: ../NVAPIWrapper/cs_generated/EValues_AA_BEHAVIOR_FLAGS.cs
@@ -546,7 +546,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_AA_BEHAVIOR_FLAGS.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: AA_BEHAVIOR_FLAGS_NUM_VALUES
     path: ../NVAPIWrapper/cs_generated/EValues_AA_BEHAVIOR_FLAGS.cs

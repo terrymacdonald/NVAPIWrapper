@@ -19,7 +19,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_COLOR_DATA_V4.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: _NV_COLOR_DATA_V4
     path: ../NVAPIWrapper/cs_generated/_NV_COLOR_DATA_V4.cs
@@ -52,7 +52,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_COLOR_DATA_V4.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: version
     path: ../NVAPIWrapper/cs_generated/_NV_COLOR_DATA_V4.cs
@@ -80,7 +80,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_COLOR_DATA_V4.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: size
     path: ../NVAPIWrapper/cs_generated/_NV_COLOR_DATA_V4.cs
@@ -108,7 +108,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_COLOR_DATA_V4.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: cmd
     path: ../NVAPIWrapper/cs_generated/_NV_COLOR_DATA_V4.cs
@@ -136,7 +136,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_COLOR_DATA_V4.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: data
     path: ../NVAPIWrapper/cs_generated/_NV_COLOR_DATA_V4.cs

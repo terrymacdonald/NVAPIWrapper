@@ -1,0 +1,751 @@
+### YamlMime:ManagedReference
+items:
+- uid: NVAPIWrapper.NVAPINvLinkStatusExDto
+  commentId: T:NVAPIWrapper.NVAPINvLinkStatusExDto
+  id: NVAPINvLinkStatusExDto
+  parent: NVAPIWrapper
+  children:
+  - NVAPIWrapper.NVAPINvLinkStatusExDto.Equals(NVAPIWrapper.NVAPINvLinkStatusExDto)
+  - NVAPIWrapper.NVAPINvLinkStatusExDto.Equals(System.Object)
+  - NVAPIWrapper.NVAPINvLinkStatusExDto.FromNative(NVAPIWrapper._NVLINK_GET_STATUS_EX_V1)
+  - NVAPIWrapper.NVAPINvLinkStatusExDto.GetHashCode
+  - NVAPIWrapper.NVAPINvLinkStatusExDto.LinkInfo
+  - NVAPIWrapper.NVAPINvLinkStatusExDto.LinkMaskCount
+  - NVAPIWrapper.NVAPINvLinkStatusExDto.LinkMasks
+  langs:
+  - csharp
+  - vb
+  name: NVAPINvLinkStatusExDto
+  nameWithType: NVAPINvLinkStatusExDto
+  fullName: NVAPIWrapper.NVAPINvLinkStatusExDto
+  type: Struct
+  source:
+    remote:
+      path: NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
+      branch: develop
+      repo: https://github.com/terrymacdonald/NVAPIWrapper.git
+    id: NVAPINvLinkStatusExDto
+    path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
+    startLine: 5166
+  assemblies:
+  - NVAPIWrapper
+  namespace: NVAPIWrapper
+  summary: Extended NVLINK status snapshot indexed by link number.
+  example: []
+  syntax:
+    content: 'public struct NVAPINvLinkStatusExDto : IEquatable<NVAPINvLinkStatusExDto>'
+    content.vb: Public Structure NVAPINvLinkStatusExDto Implements IEquatable(Of NVAPINvLinkStatusExDto)
+  implements:
+  - System.IEquatable{NVAPIWrapper.NVAPINvLinkStatusExDto}
+  inheritedMembers:
+  - System.ValueType.ToString
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+- uid: NVAPIWrapper.NVAPINvLinkStatusExDto.LinkMaskCount
+  commentId: P:NVAPIWrapper.NVAPINvLinkStatusExDto.LinkMaskCount
+  id: LinkMaskCount
+  parent: NVAPIWrapper.NVAPINvLinkStatusExDto
+  langs:
+  - csharp
+  - vb
+  name: LinkMaskCount
+  nameWithType: NVAPINvLinkStatusExDto.LinkMaskCount
+  fullName: NVAPIWrapper.NVAPINvLinkStatusExDto.LinkMaskCount
+  type: Property
+  source:
+    remote:
+      path: NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
+      branch: develop
+      repo: https://github.com/terrymacdonald/NVAPIWrapper.git
+    id: LinkMaskCount
+    path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
+    startLine: 5169
+  assemblies:
+  - NVAPIWrapper
+  namespace: NVAPIWrapper
+  summary: Number of valid entries in <xref href="NVAPIWrapper.NVAPINvLinkStatusExDto.LinkMasks" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public uint LinkMaskCount { readonly get; set; }
+    parameters: []
+    return:
+      type: System.UInt32
+    content.vb: Public Property LinkMaskCount As UInteger
+  overload: NVAPIWrapper.NVAPINvLinkStatusExDto.LinkMaskCount*
+- uid: NVAPIWrapper.NVAPINvLinkStatusExDto.LinkMasks
+  commentId: P:NVAPIWrapper.NVAPINvLinkStatusExDto.LinkMasks
+  id: LinkMasks
+  parent: NVAPIWrapper.NVAPINvLinkStatusExDto
+  langs:
+  - csharp
+  - vb
+  name: LinkMasks
+  nameWithType: NVAPINvLinkStatusExDto.LinkMasks
+  fullName: NVAPIWrapper.NVAPINvLinkStatusExDto.LinkMasks
+  type: Property
+  source:
+    remote:
+      path: NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
+      branch: develop
+      repo: https://github.com/terrymacdonald/NVAPIWrapper.git
+    id: LinkMasks
+    path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
+    startLine: 5172
+  assemblies:
+  - NVAPIWrapper
+  namespace: NVAPIWrapper
+  summary: Extended 64-bit NVLINK masks returned by the driver.
+  example: []
+  syntax:
+    content: public ulong[] LinkMasks { get; set; }
+    parameters: []
+    return:
+      type: System.UInt64[]
+    content.vb: Public Property LinkMasks As ULong()
+  overload: NVAPIWrapper.NVAPINvLinkStatusExDto.LinkMasks*
+- uid: NVAPIWrapper.NVAPINvLinkStatusExDto.LinkInfo
+  commentId: P:NVAPIWrapper.NVAPINvLinkStatusExDto.LinkInfo
+  id: LinkInfo
+  parent: NVAPIWrapper.NVAPINvLinkStatusExDto
+  langs:
+  - csharp
+  - vb
+  name: LinkInfo
+  nameWithType: NVAPINvLinkStatusExDto.LinkInfo
+  fullName: NVAPIWrapper.NVAPINvLinkStatusExDto.LinkInfo
+  type: Property
+  source:
+    remote:
+      path: NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
+      branch: develop
+      repo: https://github.com/terrymacdonald/NVAPIWrapper.git
+    id: LinkInfo
+    path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
+    startLine: 5175
+  assemblies:
+  - NVAPIWrapper
+  namespace: NVAPIWrapper
+  summary: Per-link status entries; the array index is the NVLINK link number.
+  example: []
+  syntax:
+    content: public NVAPINvLinkStatusInfoDto[] LinkInfo { get; set; }
+    parameters: []
+    return:
+      type: NVAPIWrapper.NVAPINvLinkStatusInfoDto[]
+    content.vb: Public Property LinkInfo As NVAPINvLinkStatusInfoDto()
+  overload: NVAPIWrapper.NVAPINvLinkStatusExDto.LinkInfo*
+- uid: NVAPIWrapper.NVAPINvLinkStatusExDto.FromNative(NVAPIWrapper._NVLINK_GET_STATUS_EX_V1)
+  commentId: M:NVAPIWrapper.NVAPINvLinkStatusExDto.FromNative(NVAPIWrapper._NVLINK_GET_STATUS_EX_V1)
+  id: FromNative(NVAPIWrapper._NVLINK_GET_STATUS_EX_V1)
+  parent: NVAPIWrapper.NVAPINvLinkStatusExDto
+  langs:
+  - csharp
+  - vb
+  name: FromNative(_NVLINK_GET_STATUS_EX_V1)
+  nameWithType: NVAPINvLinkStatusExDto.FromNative(_NVLINK_GET_STATUS_EX_V1)
+  fullName: NVAPIWrapper.NVAPINvLinkStatusExDto.FromNative(NVAPIWrapper._NVLINK_GET_STATUS_EX_V1)
+  type: Method
+  source:
+    remote:
+      path: NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
+      branch: develop
+      repo: https://github.com/terrymacdonald/NVAPIWrapper.git
+    id: FromNative
+    path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
+    startLine: 5178
+  assemblies:
+  - NVAPIWrapper
+  namespace: NVAPIWrapper
+  summary: Creates an extended NVLINK status DTO from native data.
+  example: []
+  syntax:
+    content: public static NVAPINvLinkStatusExDto FromNative(_NVLINK_GET_STATUS_EX_V1 native)
+    parameters:
+    - id: native
+      type: NVAPIWrapper._NVLINK_GET_STATUS_EX_V1
+    return:
+      type: NVAPIWrapper.NVAPINvLinkStatusExDto
+    content.vb: Public Shared Function FromNative(native As _NVLINK_GET_STATUS_EX_V1) As NVAPINvLinkStatusExDto
+  overload: NVAPIWrapper.NVAPINvLinkStatusExDto.FromNative*
+- uid: NVAPIWrapper.NVAPINvLinkStatusExDto.Equals(NVAPIWrapper.NVAPINvLinkStatusExDto)
+  commentId: M:NVAPIWrapper.NVAPINvLinkStatusExDto.Equals(NVAPIWrapper.NVAPINvLinkStatusExDto)
+  id: Equals(NVAPIWrapper.NVAPINvLinkStatusExDto)
+  parent: NVAPIWrapper.NVAPINvLinkStatusExDto
+  langs:
+  - csharp
+  - vb
+  name: Equals(NVAPINvLinkStatusExDto)
+  nameWithType: NVAPINvLinkStatusExDto.Equals(NVAPINvLinkStatusExDto)
+  fullName: NVAPIWrapper.NVAPINvLinkStatusExDto.Equals(NVAPIWrapper.NVAPINvLinkStatusExDto)
+  type: Method
+  source:
+    remote:
+      path: NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
+      branch: develop
+      repo: https://github.com/terrymacdonald/NVAPIWrapper.git
+    id: Equals
+    path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
+    startLine: 5189
+  assemblies:
+  - NVAPIWrapper
+  namespace: NVAPIWrapper
+  summary: Indicates whether the current object is equal to another object of the same type.
+  example: []
+  syntax:
+    content: public bool Equals(NVAPINvLinkStatusExDto other)
+    parameters:
+    - id: other
+      type: NVAPIWrapper.NVAPINvLinkStatusExDto
+      description: An object to compare with this object.
+    return:
+      type: System.Boolean
+      description: <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the current object is equal to the <code class="paramref">other</code> parameter; otherwise, <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
+    content.vb: Public Function Equals(other As NVAPINvLinkStatusExDto) As Boolean
+  overload: NVAPIWrapper.NVAPINvLinkStatusExDto.Equals*
+  implements:
+  - System.IEquatable{NVAPIWrapper.NVAPINvLinkStatusExDto}.Equals(NVAPIWrapper.NVAPINvLinkStatusExDto)
+- uid: NVAPIWrapper.NVAPINvLinkStatusExDto.Equals(System.Object)
+  commentId: M:NVAPIWrapper.NVAPINvLinkStatusExDto.Equals(System.Object)
+  id: Equals(System.Object)
+  parent: NVAPIWrapper.NVAPINvLinkStatusExDto
+  langs:
+  - csharp
+  - vb
+  name: Equals(object?)
+  nameWithType: NVAPINvLinkStatusExDto.Equals(object?)
+  fullName: NVAPIWrapper.NVAPINvLinkStatusExDto.Equals(object?)
+  type: Method
+  source:
+    remote:
+      path: NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
+      branch: develop
+      repo: https://github.com/terrymacdonald/NVAPIWrapper.git
+    id: Equals
+    path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
+    startLine: 5197
+  assemblies:
+  - NVAPIWrapper
+  namespace: NVAPIWrapper
+  summary: Indicates whether this instance and a specified object are equal.
+  example: []
+  syntax:
+    content: public override bool Equals(object? obj)
+    parameters:
+    - id: obj
+      type: System.Object
+      description: The object to compare with the current instance.
+    return:
+      type: System.Boolean
+      description: <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if <code class="paramref">obj</code> and this instance are the same type and represent the same value; otherwise, <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
+    content.vb: Public Overrides Function Equals(obj As Object) As Boolean
+  overridden: System.ValueType.Equals(System.Object)
+  overload: NVAPIWrapper.NVAPINvLinkStatusExDto.Equals*
+  nameWithType.vb: NVAPINvLinkStatusExDto.Equals(Object)
+  fullName.vb: NVAPIWrapper.NVAPINvLinkStatusExDto.Equals(Object)
+  name.vb: Equals(Object)
+- uid: NVAPIWrapper.NVAPINvLinkStatusExDto.GetHashCode
+  commentId: M:NVAPIWrapper.NVAPINvLinkStatusExDto.GetHashCode
+  id: GetHashCode
+  parent: NVAPIWrapper.NVAPINvLinkStatusExDto
+  langs:
+  - csharp
+  - vb
+  name: GetHashCode()
+  nameWithType: NVAPINvLinkStatusExDto.GetHashCode()
+  fullName: NVAPIWrapper.NVAPINvLinkStatusExDto.GetHashCode()
+  type: Method
+  source:
+    remote:
+      path: NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
+      branch: develop
+      repo: https://github.com/terrymacdonald/NVAPIWrapper.git
+    id: GetHashCode
+    path: ../NVAPIWrapper/NVAPIPhysicalGpuHelper.cs
+    startLine: 5199
+  assemblies:
+  - NVAPIWrapper
+  namespace: NVAPIWrapper
+  summary: Returns the hash code for this instance.
+  example: []
+  syntax:
+    content: public override int GetHashCode()
+    return:
+      type: System.Int32
+      description: A 32-bit signed integer that is the hash code for this instance.
+    content.vb: Public Overrides Function GetHashCode() As Integer
+  overridden: System.ValueType.GetHashCode
+  overload: NVAPIWrapper.NVAPINvLinkStatusExDto.GetHashCode*
+references:
+- uid: NVAPIWrapper
+  commentId: N:NVAPIWrapper
+  href: NVAPIWrapper.html
+  name: NVAPIWrapper
+  nameWithType: NVAPIWrapper
+  fullName: NVAPIWrapper
+- uid: System.IEquatable{NVAPIWrapper.NVAPINvLinkStatusExDto}
+  commentId: T:System.IEquatable{NVAPIWrapper.NVAPINvLinkStatusExDto}
+  parent: System
+  definition: System.IEquatable`1
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<NVAPINvLinkStatusExDto>
+  nameWithType: IEquatable<NVAPINvLinkStatusExDto>
+  fullName: System.IEquatable<NVAPIWrapper.NVAPINvLinkStatusExDto>
+  nameWithType.vb: IEquatable(Of NVAPINvLinkStatusExDto)
+  fullName.vb: System.IEquatable(Of NVAPIWrapper.NVAPINvLinkStatusExDto)
+  name.vb: IEquatable(Of NVAPINvLinkStatusExDto)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - uid: NVAPIWrapper.NVAPINvLinkStatusExDto
+    name: NVAPINvLinkStatusExDto
+    href: NVAPIWrapper.NVAPINvLinkStatusExDto.html
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: NVAPIWrapper.NVAPINvLinkStatusExDto
+    name: NVAPINvLinkStatusExDto
+    href: NVAPIWrapper.NVAPINvLinkStatusExDto.html
+  - name: )
+- uid: System.ValueType.ToString
+  commentId: M:System.ValueType.ToString
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  name: ToString()
+  nameWithType: ValueType.ToString()
+  fullName: System.ValueType.ToString()
+  spec.csharp:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.IEquatable`1
+  commentId: T:System.IEquatable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<T>
+  nameWithType: IEquatable<T>
+  fullName: System.IEquatable<T>
+  nameWithType.vb: IEquatable(Of T)
+  fullName.vb: System.IEquatable(Of T)
+  name.vb: IEquatable(Of T)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.ValueType
+  commentId: T:System.ValueType
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype
+  name: ValueType
+  nameWithType: ValueType
+  fullName: System.ValueType
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: NVAPIWrapper.NVAPINvLinkStatusExDto.LinkMasks
+  commentId: P:NVAPIWrapper.NVAPINvLinkStatusExDto.LinkMasks
+  href: NVAPIWrapper.NVAPINvLinkStatusExDto.html#NVAPIWrapper_NVAPINvLinkStatusExDto_LinkMasks
+  name: LinkMasks
+  nameWithType: NVAPINvLinkStatusExDto.LinkMasks
+  fullName: NVAPIWrapper.NVAPINvLinkStatusExDto.LinkMasks
+- uid: NVAPIWrapper.NVAPINvLinkStatusExDto.LinkMaskCount*
+  commentId: Overload:NVAPIWrapper.NVAPINvLinkStatusExDto.LinkMaskCount
+  href: NVAPIWrapper.NVAPINvLinkStatusExDto.html#NVAPIWrapper_NVAPINvLinkStatusExDto_LinkMaskCount
+  name: LinkMaskCount
+  nameWithType: NVAPINvLinkStatusExDto.LinkMaskCount
+  fullName: NVAPIWrapper.NVAPINvLinkStatusExDto.LinkMaskCount
+- uid: System.UInt32
+  commentId: T:System.UInt32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.uint32
+  name: uint
+  nameWithType: uint
+  fullName: uint
+  nameWithType.vb: UInteger
+  fullName.vb: UInteger
+  name.vb: UInteger
+- uid: NVAPIWrapper.NVAPINvLinkStatusExDto.LinkMasks*
+  commentId: Overload:NVAPIWrapper.NVAPINvLinkStatusExDto.LinkMasks
+  href: NVAPIWrapper.NVAPINvLinkStatusExDto.html#NVAPIWrapper_NVAPINvLinkStatusExDto_LinkMasks
+  name: LinkMasks
+  nameWithType: NVAPINvLinkStatusExDto.LinkMasks
+  fullName: NVAPIWrapper.NVAPINvLinkStatusExDto.LinkMasks
+- uid: System.UInt64[]
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.uint64
+  name: ulong[]
+  nameWithType: ulong[]
+  fullName: ulong[]
+  nameWithType.vb: ULong()
+  fullName.vb: ULong()
+  name.vb: ULong()
+  spec.csharp:
+  - uid: System.UInt64
+    name: ulong
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.uint64
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: System.UInt64
+    name: ULong
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.uint64
+  - name: (
+  - name: )
+- uid: NVAPIWrapper.NVAPINvLinkStatusExDto.LinkInfo*
+  commentId: Overload:NVAPIWrapper.NVAPINvLinkStatusExDto.LinkInfo
+  href: NVAPIWrapper.NVAPINvLinkStatusExDto.html#NVAPIWrapper_NVAPINvLinkStatusExDto_LinkInfo
+  name: LinkInfo
+  nameWithType: NVAPINvLinkStatusExDto.LinkInfo
+  fullName: NVAPIWrapper.NVAPINvLinkStatusExDto.LinkInfo
+- uid: NVAPIWrapper.NVAPINvLinkStatusInfoDto[]
+  isExternal: true
+  href: NVAPIWrapper.NVAPINvLinkStatusInfoDto.html
+  name: NVAPINvLinkStatusInfoDto[]
+  nameWithType: NVAPINvLinkStatusInfoDto[]
+  fullName: NVAPIWrapper.NVAPINvLinkStatusInfoDto[]
+  nameWithType.vb: NVAPINvLinkStatusInfoDto()
+  fullName.vb: NVAPIWrapper.NVAPINvLinkStatusInfoDto()
+  name.vb: NVAPINvLinkStatusInfoDto()
+  spec.csharp:
+  - uid: NVAPIWrapper.NVAPINvLinkStatusInfoDto
+    name: NVAPINvLinkStatusInfoDto
+    href: NVAPIWrapper.NVAPINvLinkStatusInfoDto.html
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: NVAPIWrapper.NVAPINvLinkStatusInfoDto
+    name: NVAPINvLinkStatusInfoDto
+    href: NVAPIWrapper.NVAPINvLinkStatusInfoDto.html
+  - name: (
+  - name: )
+- uid: NVAPIWrapper.NVAPINvLinkStatusExDto.FromNative*
+  commentId: Overload:NVAPIWrapper.NVAPINvLinkStatusExDto.FromNative
+  href: NVAPIWrapper.NVAPINvLinkStatusExDto.html#NVAPIWrapper_NVAPINvLinkStatusExDto_FromNative_NVAPIWrapper__NVLINK_GET_STATUS_EX_V1_
+  name: FromNative
+  nameWithType: NVAPINvLinkStatusExDto.FromNative
+  fullName: NVAPIWrapper.NVAPINvLinkStatusExDto.FromNative
+- uid: NVAPIWrapper._NVLINK_GET_STATUS_EX_V1
+  commentId: T:NVAPIWrapper._NVLINK_GET_STATUS_EX_V1
+  parent: NVAPIWrapper
+  href: NVAPIWrapper._NVLINK_GET_STATUS_EX_V1.html
+  name: _NVLINK_GET_STATUS_EX_V1
+  nameWithType: _NVLINK_GET_STATUS_EX_V1
+  fullName: NVAPIWrapper._NVLINK_GET_STATUS_EX_V1
+- uid: NVAPIWrapper.NVAPINvLinkStatusExDto
+  commentId: T:NVAPIWrapper.NVAPINvLinkStatusExDto
+  parent: NVAPIWrapper
+  href: NVAPIWrapper.NVAPINvLinkStatusExDto.html
+  name: NVAPINvLinkStatusExDto
+  nameWithType: NVAPINvLinkStatusExDto
+  fullName: NVAPIWrapper.NVAPINvLinkStatusExDto
+- uid: NVAPIWrapper.NVAPINvLinkStatusExDto.Equals*
+  commentId: Overload:NVAPIWrapper.NVAPINvLinkStatusExDto.Equals
+  href: NVAPIWrapper.NVAPINvLinkStatusExDto.html#NVAPIWrapper_NVAPINvLinkStatusExDto_Equals_NVAPIWrapper_NVAPINvLinkStatusExDto_
+  name: Equals
+  nameWithType: NVAPINvLinkStatusExDto.Equals
+  fullName: NVAPIWrapper.NVAPINvLinkStatusExDto.Equals
+- uid: System.IEquatable{NVAPIWrapper.NVAPINvLinkStatusExDto}.Equals(NVAPIWrapper.NVAPINvLinkStatusExDto)
+  commentId: M:System.IEquatable{NVAPIWrapper.NVAPINvLinkStatusExDto}.Equals(NVAPIWrapper.NVAPINvLinkStatusExDto)
+  parent: System.IEquatable{NVAPIWrapper.NVAPINvLinkStatusExDto}
+  definition: System.IEquatable`1.Equals(`0)
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  name: Equals(NVAPINvLinkStatusExDto)
+  nameWithType: IEquatable<NVAPINvLinkStatusExDto>.Equals(NVAPINvLinkStatusExDto)
+  fullName: System.IEquatable<NVAPIWrapper.NVAPINvLinkStatusExDto>.Equals(NVAPIWrapper.NVAPINvLinkStatusExDto)
+  nameWithType.vb: IEquatable(Of NVAPINvLinkStatusExDto).Equals(NVAPINvLinkStatusExDto)
+  fullName.vb: System.IEquatable(Of NVAPIWrapper.NVAPINvLinkStatusExDto).Equals(NVAPIWrapper.NVAPINvLinkStatusExDto)
+  spec.csharp:
+  - uid: System.IEquatable{NVAPIWrapper.NVAPINvLinkStatusExDto}.Equals(NVAPIWrapper.NVAPINvLinkStatusExDto)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  - name: (
+  - uid: NVAPIWrapper.NVAPINvLinkStatusExDto
+    name: NVAPINvLinkStatusExDto
+    href: NVAPIWrapper.NVAPINvLinkStatusExDto.html
+  - name: )
+  spec.vb:
+  - uid: System.IEquatable{NVAPIWrapper.NVAPINvLinkStatusExDto}.Equals(NVAPIWrapper.NVAPINvLinkStatusExDto)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  - name: (
+  - uid: NVAPIWrapper.NVAPINvLinkStatusExDto
+    name: NVAPINvLinkStatusExDto
+    href: NVAPIWrapper.NVAPINvLinkStatusExDto.html
+  - name: )
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: System.IEquatable`1.Equals(`0)
+  commentId: M:System.IEquatable`1.Equals(`0)
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  name: Equals(T)
+  nameWithType: IEquatable<T>.Equals(T)
+  fullName: System.IEquatable<T>.Equals(T)
+  nameWithType.vb: IEquatable(Of T).Equals(T)
+  fullName.vb: System.IEquatable(Of T).Equals(T)
+  spec.csharp:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  - name: (
+  - name: T
+  - name: )
+- uid: System.ValueType.Equals(System.Object)
+  commentId: M:System.ValueType.Equals(System.Object)
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  name: Equals(object)
+  nameWithType: ValueType.Equals(object)
+  fullName: System.ValueType.Equals(object)
+  nameWithType.vb: ValueType.Equals(Object)
+  fullName.vb: System.ValueType.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.ValueType.GetHashCode
+  commentId: M:System.ValueType.GetHashCode
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  name: GetHashCode()
+  nameWithType: ValueType.GetHashCode()
+  fullName: System.ValueType.GetHashCode()
+  spec.csharp:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+- uid: NVAPIWrapper.NVAPINvLinkStatusExDto.GetHashCode*
+  commentId: Overload:NVAPIWrapper.NVAPINvLinkStatusExDto.GetHashCode
+  href: NVAPIWrapper.NVAPINvLinkStatusExDto.html#NVAPIWrapper_NVAPINvLinkStatusExDto_GetHashCode
+  name: GetHashCode
+  nameWithType: NVAPINvLinkStatusExDto.GetHashCode
+  fullName: NVAPIWrapper.NVAPINvLinkStatusExDto.GetHashCode
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer

@@ -16,7 +16,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NVDX_SwapChainHandle__.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVDX_SwapChainHandle__
     path: ../NVAPIWrapper/cs_generated/NVDX_SwapChainHandle__.cs
@@ -49,7 +49,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NVDX_SwapChainHandle__.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: unused
     path: ../NVAPIWrapper/cs_generated/NVDX_SwapChainHandle__.cs

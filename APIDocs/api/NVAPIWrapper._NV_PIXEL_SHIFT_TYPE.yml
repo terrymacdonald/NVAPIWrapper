@@ -20,7 +20,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_PIXEL_SHIFT_TYPE.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: _NV_PIXEL_SHIFT_TYPE
     path: ../NVAPIWrapper/cs_generated/_NV_PIXEL_SHIFT_TYPE.cs
@@ -46,7 +46,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_PIXEL_SHIFT_TYPE.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_PIXEL_SHIFT_TYPE_NO_PIXEL_SHIFT
     path: ../NVAPIWrapper/cs_generated/_NV_PIXEL_SHIFT_TYPE.cs
@@ -73,7 +73,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_PIXEL_SHIFT_TYPE.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_PIXEL_SHIFT_TYPE_2x2_TOP_LEFT_PIXELS
     path: ../NVAPIWrapper/cs_generated/_NV_PIXEL_SHIFT_TYPE.cs
@@ -100,7 +100,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_PIXEL_SHIFT_TYPE.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_PIXEL_SHIFT_TYPE_2x2_BOTTOM_RIGHT_PIXELS
     path: ../NVAPIWrapper/cs_generated/_NV_PIXEL_SHIFT_TYPE.cs
@@ -127,7 +127,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_PIXEL_SHIFT_TYPE.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_PIXEL_SHIFT_TYPE_2x2_TOP_RIGHT_PIXELS
     path: ../NVAPIWrapper/cs_generated/_NV_PIXEL_SHIFT_TYPE.cs
@@ -154,7 +154,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_PIXEL_SHIFT_TYPE.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_PIXEL_SHIFT_TYPE_2x2_BOTTOM_LEFT_PIXELS
     path: ../NVAPIWrapper/cs_generated/_NV_PIXEL_SHIFT_TYPE.cs

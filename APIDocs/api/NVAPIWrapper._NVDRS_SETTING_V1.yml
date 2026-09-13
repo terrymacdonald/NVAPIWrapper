@@ -17,6 +17,8 @@ items:
   - NVAPIWrapper._NVDRS_SETTING_V1.settingType
   - NVAPIWrapper._NVDRS_SETTING_V1.u32CurrentValue
   - NVAPIWrapper._NVDRS_SETTING_V1.u32PredefinedValue
+  - NVAPIWrapper._NVDRS_SETTING_V1.u64CurrentValue
+  - NVAPIWrapper._NVDRS_SETTING_V1.u64PredefinedValue
   - NVAPIWrapper._NVDRS_SETTING_V1.version
   - NVAPIWrapper._NVDRS_SETTING_V1.wszCurrentValue
   - NVAPIWrapper._NVDRS_SETTING_V1.wszPredefinedValue
@@ -30,7 +32,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVDRS_SETTING_V1.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: _NVDRS_SETTING_V1
     path: ../NVAPIWrapper/cs_generated/_NVDRS_SETTING_V1.cs
@@ -63,7 +65,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVDRS_SETTING_V1.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: version
     path: ../NVAPIWrapper/cs_generated/_NVDRS_SETTING_V1.cs
@@ -91,7 +93,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVDRS_SETTING_V1.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: settingName
     path: ../NVAPIWrapper/cs_generated/_NVDRS_SETTING_V1.cs
@@ -119,7 +121,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVDRS_SETTING_V1.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: settingId
     path: ../NVAPIWrapper/cs_generated/_NVDRS_SETTING_V1.cs
@@ -147,7 +149,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVDRS_SETTING_V1.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: settingType
     path: ../NVAPIWrapper/cs_generated/_NVDRS_SETTING_V1.cs
@@ -175,7 +177,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVDRS_SETTING_V1.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: settingLocation
     path: ../NVAPIWrapper/cs_generated/_NVDRS_SETTING_V1.cs
@@ -203,7 +205,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVDRS_SETTING_V1.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: isCurrentPredefined
     path: ../NVAPIWrapper/cs_generated/_NVDRS_SETTING_V1.cs
@@ -231,7 +233,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVDRS_SETTING_V1.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: isPredefinedValid
     path: ../NVAPIWrapper/cs_generated/_NVDRS_SETTING_V1.cs
@@ -259,7 +261,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVDRS_SETTING_V1.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Anonymous1
     path: ../NVAPIWrapper/cs_generated/_NVDRS_SETTING_V1.cs
@@ -287,7 +289,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVDRS_SETTING_V1.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Anonymous2
     path: ../NVAPIWrapper/cs_generated/_NVDRS_SETTING_V1.cs
@@ -315,7 +317,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVDRS_SETTING_V1.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: u32PredefinedValue
     path: ../NVAPIWrapper/cs_generated/_NVDRS_SETTING_V1.cs
@@ -355,7 +357,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVDRS_SETTING_V1.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: binaryPredefinedValue
     path: ../NVAPIWrapper/cs_generated/_NVDRS_SETTING_V1.cs
@@ -395,7 +397,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVDRS_SETTING_V1.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: wszPredefinedValue
     path: ../NVAPIWrapper/cs_generated/_NVDRS_SETTING_V1.cs
@@ -421,6 +423,46 @@ items:
   - type: System.Diagnostics.CodeAnalysis.UnscopedRefAttribute
     ctor: System.Diagnostics.CodeAnalysis.UnscopedRefAttribute.#ctor
     arguments: []
+- uid: NVAPIWrapper._NVDRS_SETTING_V1.u64PredefinedValue
+  commentId: P:NVAPIWrapper._NVDRS_SETTING_V1.u64PredefinedValue
+  id: u64PredefinedValue
+  parent: NVAPIWrapper._NVDRS_SETTING_V1
+  langs:
+  - csharp
+  - vb
+  name: u64PredefinedValue
+  nameWithType: _NVDRS_SETTING_V1.u64PredefinedValue
+  fullName: NVAPIWrapper._NVDRS_SETTING_V1.u64PredefinedValue
+  type: Property
+  source:
+    remote:
+      path: NVAPIWrapper/cs_generated/_NVDRS_SETTING_V1.cs
+      branch: develop
+      repo: https://github.com/terrymacdonald/NVAPIWrapper.git
+    id: u64PredefinedValue
+    path: ../NVAPIWrapper/cs_generated/_NVDRS_SETTING_V1.cs
+    startLine: 77
+  assemblies:
+  - NVAPIWrapper
+  namespace: NVAPIWrapper
+  example: []
+  syntax:
+    content: >-
+      [UnscopedRef]
+
+      public ref ulong u64PredefinedValue { get; }
+    parameters: []
+    return:
+      type: System.UInt64
+    content.vb: >-
+      <UnscopedRef>
+
+      Public ReadOnly ByRef Property u64PredefinedValue As ULong
+  overload: NVAPIWrapper._NVDRS_SETTING_V1.u64PredefinedValue*
+  attributes:
+  - type: System.Diagnostics.CodeAnalysis.UnscopedRefAttribute
+    ctor: System.Diagnostics.CodeAnalysis.UnscopedRefAttribute.#ctor
+    arguments: []
 - uid: NVAPIWrapper._NVDRS_SETTING_V1.u32CurrentValue
   commentId: P:NVAPIWrapper._NVDRS_SETTING_V1.u32CurrentValue
   id: u32CurrentValue
@@ -435,11 +477,11 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVDRS_SETTING_V1.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: u32CurrentValue
     path: ../NVAPIWrapper/cs_generated/_NVDRS_SETTING_V1.cs
-    startLine: 77
+    startLine: 87
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -475,11 +517,11 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVDRS_SETTING_V1.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: binaryCurrentValue
     path: ../NVAPIWrapper/cs_generated/_NVDRS_SETTING_V1.cs
-    startLine: 87
+    startLine: 97
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -515,11 +557,11 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVDRS_SETTING_V1.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: wszCurrentValue
     path: ../NVAPIWrapper/cs_generated/_NVDRS_SETTING_V1.cs
-    startLine: 97
+    startLine: 107
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -537,6 +579,46 @@ items:
 
       Public ReadOnly Property wszCurrentValue As Span(Of UShort)
   overload: NVAPIWrapper._NVDRS_SETTING_V1.wszCurrentValue*
+  attributes:
+  - type: System.Diagnostics.CodeAnalysis.UnscopedRefAttribute
+    ctor: System.Diagnostics.CodeAnalysis.UnscopedRefAttribute.#ctor
+    arguments: []
+- uid: NVAPIWrapper._NVDRS_SETTING_V1.u64CurrentValue
+  commentId: P:NVAPIWrapper._NVDRS_SETTING_V1.u64CurrentValue
+  id: u64CurrentValue
+  parent: NVAPIWrapper._NVDRS_SETTING_V1
+  langs:
+  - csharp
+  - vb
+  name: u64CurrentValue
+  nameWithType: _NVDRS_SETTING_V1.u64CurrentValue
+  fullName: NVAPIWrapper._NVDRS_SETTING_V1.u64CurrentValue
+  type: Property
+  source:
+    remote:
+      path: NVAPIWrapper/cs_generated/_NVDRS_SETTING_V1.cs
+      branch: develop
+      repo: https://github.com/terrymacdonald/NVAPIWrapper.git
+    id: u64CurrentValue
+    path: ../NVAPIWrapper/cs_generated/_NVDRS_SETTING_V1.cs
+    startLine: 117
+  assemblies:
+  - NVAPIWrapper
+  namespace: NVAPIWrapper
+  example: []
+  syntax:
+    content: >-
+      [UnscopedRef]
+
+      public ref ulong u64CurrentValue { get; }
+    parameters: []
+    return:
+      type: System.UInt64
+    content.vb: >-
+      <UnscopedRef>
+
+      Public ReadOnly ByRef Property u64CurrentValue As ULong
+  overload: NVAPIWrapper._NVDRS_SETTING_V1.u64CurrentValue*
   attributes:
   - type: System.Diagnostics.CodeAnalysis.UnscopedRefAttribute
     ctor: System.Diagnostics.CodeAnalysis.UnscopedRefAttribute.#ctor
@@ -947,6 +1029,23 @@ references:
   - name: " "
   - name: T
   - name: )
+- uid: NVAPIWrapper._NVDRS_SETTING_V1.u64PredefinedValue*
+  commentId: Overload:NVAPIWrapper._NVDRS_SETTING_V1.u64PredefinedValue
+  href: NVAPIWrapper._NVDRS_SETTING_V1.html#NVAPIWrapper__NVDRS_SETTING_V1_u64PredefinedValue
+  name: u64PredefinedValue
+  nameWithType: _NVDRS_SETTING_V1.u64PredefinedValue
+  fullName: NVAPIWrapper._NVDRS_SETTING_V1.u64PredefinedValue
+- uid: System.UInt64
+  commentId: T:System.UInt64
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.uint64
+  name: ulong
+  nameWithType: ulong
+  fullName: ulong
+  nameWithType.vb: ULong
+  fullName.vb: ULong
+  name.vb: ULong
 - uid: NVAPIWrapper._NVDRS_SETTING_V1.u32CurrentValue*
   commentId: Overload:NVAPIWrapper._NVDRS_SETTING_V1.u32CurrentValue
   href: NVAPIWrapper._NVDRS_SETTING_V1.html#NVAPIWrapper__NVDRS_SETTING_V1_u32CurrentValue
@@ -965,3 +1064,9 @@ references:
   name: wszCurrentValue
   nameWithType: _NVDRS_SETTING_V1.wszCurrentValue
   fullName: NVAPIWrapper._NVDRS_SETTING_V1.wszCurrentValue
+- uid: NVAPIWrapper._NVDRS_SETTING_V1.u64CurrentValue*
+  commentId: Overload:NVAPIWrapper._NVDRS_SETTING_V1.u64CurrentValue
+  href: NVAPIWrapper._NVDRS_SETTING_V1.html#NVAPIWrapper__NVDRS_SETTING_V1_u64CurrentValue
+  name: u64CurrentValue
+  nameWithType: _NVDRS_SETTING_V1.u64CurrentValue
+  fullName: NVAPIWrapper._NVDRS_SETTING_V1.u64CurrentValue

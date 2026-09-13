@@ -16,7 +16,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_LICENSE_FEATURE_DETAILS_V4.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: _productName_e__FixedBuffer
     path: ../NVAPIWrapper/cs_generated/_NV_LICENSE_FEATURE_DETAILS_V4.cs
@@ -49,7 +49,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_LICENSE_FEATURE_DETAILS_V4.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: e0
     path: ../NVAPIWrapper/cs_generated/_NV_LICENSE_FEATURE_DETAILS_V4.cs

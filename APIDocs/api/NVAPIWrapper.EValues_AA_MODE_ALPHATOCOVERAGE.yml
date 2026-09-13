@@ -21,7 +21,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_AA_MODE_ALPHATOCOVERAGE.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: EValues_AA_MODE_ALPHATOCOVERAGE
     path: ../NVAPIWrapper/cs_generated/EValues_AA_MODE_ALPHATOCOVERAGE.cs
@@ -47,7 +47,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_AA_MODE_ALPHATOCOVERAGE.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: AA_MODE_ALPHATOCOVERAGE_MODE_MASK
     path: ../NVAPIWrapper/cs_generated/EValues_AA_MODE_ALPHATOCOVERAGE.cs
@@ -74,7 +74,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_AA_MODE_ALPHATOCOVERAGE.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: AA_MODE_ALPHATOCOVERAGE_MODE_OFF
     path: ../NVAPIWrapper/cs_generated/EValues_AA_MODE_ALPHATOCOVERAGE.cs
@@ -101,7 +101,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_AA_MODE_ALPHATOCOVERAGE.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: AA_MODE_ALPHATOCOVERAGE_MODE_ON
     path: ../NVAPIWrapper/cs_generated/EValues_AA_MODE_ALPHATOCOVERAGE.cs
@@ -128,7 +128,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_AA_MODE_ALPHATOCOVERAGE.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: AA_MODE_ALPHATOCOVERAGE_MODE_MAX
     path: ../NVAPIWrapper/cs_generated/EValues_AA_MODE_ALPHATOCOVERAGE.cs
@@ -155,7 +155,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_AA_MODE_ALPHATOCOVERAGE.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: AA_MODE_ALPHATOCOVERAGE_NUM_VALUES
     path: ../NVAPIWrapper/cs_generated/EValues_AA_MODE_ALPHATOCOVERAGE.cs
@@ -182,7 +182,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_AA_MODE_ALPHATOCOVERAGE.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: AA_MODE_ALPHATOCOVERAGE_DEFAULT
     path: ../NVAPIWrapper/cs_generated/EValues_AA_MODE_ALPHATOCOVERAGE.cs

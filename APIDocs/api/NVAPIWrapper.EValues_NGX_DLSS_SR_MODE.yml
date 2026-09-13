@@ -25,7 +25,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_NGX_DLSS_SR_MODE.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: EValues_NGX_DLSS_SR_MODE
     path: ../NVAPIWrapper/cs_generated/EValues_NGX_DLSS_SR_MODE.cs
@@ -51,7 +51,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_NGX_DLSS_SR_MODE.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NGX_DLSS_SR_MODE_NGX_DLSS_SR_MODE_PERFORMANCE
     path: ../NVAPIWrapper/cs_generated/EValues_NGX_DLSS_SR_MODE.cs
@@ -78,7 +78,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_NGX_DLSS_SR_MODE.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NGX_DLSS_SR_MODE_NGX_DLSS_SR_MODE_BALANCED
     path: ../NVAPIWrapper/cs_generated/EValues_NGX_DLSS_SR_MODE.cs
@@ -105,7 +105,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_NGX_DLSS_SR_MODE.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NGX_DLSS_SR_MODE_NGX_DLSS_SR_MODE_QUALITY
     path: ../NVAPIWrapper/cs_generated/EValues_NGX_DLSS_SR_MODE.cs
@@ -132,7 +132,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_NGX_DLSS_SR_MODE.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NGX_DLSS_SR_MODE_NGX_DLSS_SR_MODE_SNIPPET_CONTROLLED
     path: ../NVAPIWrapper/cs_generated/EValues_NGX_DLSS_SR_MODE.cs
@@ -159,7 +159,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_NGX_DLSS_SR_MODE.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NGX_DLSS_SR_MODE_NGX_DLSS_SR_MODE_DLAA
     path: ../NVAPIWrapper/cs_generated/EValues_NGX_DLSS_SR_MODE.cs
@@ -186,7 +186,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_NGX_DLSS_SR_MODE.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NGX_DLSS_SR_MODE_NGX_DLSS_SR_MODE_ULTRA_PERFORMANCE
     path: ../NVAPIWrapper/cs_generated/EValues_NGX_DLSS_SR_MODE.cs
@@ -213,7 +213,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_NGX_DLSS_SR_MODE.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NGX_DLSS_SR_MODE_NGX_DLSS_SR_MODE_CUSTOM
     path: ../NVAPIWrapper/cs_generated/EValues_NGX_DLSS_SR_MODE.cs
@@ -240,7 +240,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_NGX_DLSS_SR_MODE.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NGX_DLSS_SR_MODE_NGX_DLSS_SR_MODE_RESERVED_A
     path: ../NVAPIWrapper/cs_generated/EValues_NGX_DLSS_SR_MODE.cs
@@ -267,7 +267,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_NGX_DLSS_SR_MODE.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NGX_DLSS_SR_MODE_NUM_VALUES
     path: ../NVAPIWrapper/cs_generated/EValues_NGX_DLSS_SR_MODE.cs
@@ -294,7 +294,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_NGX_DLSS_SR_MODE.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NGX_DLSS_SR_MODE_DEFAULT
     path: ../NVAPIWrapper/cs_generated/EValues_NGX_DLSS_SR_MODE.cs

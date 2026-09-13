@@ -19,7 +19,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_NGX_DLSS_SR_OVERRIDE.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: EValues_NGX_DLSS_SR_OVERRIDE
     path: ../NVAPIWrapper/cs_generated/EValues_NGX_DLSS_SR_OVERRIDE.cs
@@ -45,7 +45,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_NGX_DLSS_SR_OVERRIDE.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NGX_DLSS_SR_OVERRIDE_OFF
     path: ../NVAPIWrapper/cs_generated/EValues_NGX_DLSS_SR_OVERRIDE.cs
@@ -72,7 +72,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_NGX_DLSS_SR_OVERRIDE.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NGX_DLSS_SR_OVERRIDE_ON
     path: ../NVAPIWrapper/cs_generated/EValues_NGX_DLSS_SR_OVERRIDE.cs
@@ -99,7 +99,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_NGX_DLSS_SR_OVERRIDE.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NGX_DLSS_SR_OVERRIDE_NUM_VALUES
     path: ../NVAPIWrapper/cs_generated/EValues_NGX_DLSS_SR_OVERRIDE.cs
@@ -126,7 +126,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_NGX_DLSS_SR_OVERRIDE.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NGX_DLSS_SR_OVERRIDE_DEFAULT
     path: ../NVAPIWrapper/cs_generated/EValues_NGX_DLSS_SR_OVERRIDE.cs

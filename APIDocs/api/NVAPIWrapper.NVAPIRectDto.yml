@@ -27,11 +27,11 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIMosaicHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPIRectDto
     path: ../NVAPIWrapper/NVAPIMosaicHelper.cs
-    startLine: 2074
+    startLine: 2198
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -61,11 +61,11 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIMosaicHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Left
     path: ../NVAPIWrapper/NVAPIMosaicHelper.cs
-    startLine: 2076
+    startLine: 2200
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -90,11 +90,11 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIMosaicHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Top
     path: ../NVAPIWrapper/NVAPIMosaicHelper.cs
-    startLine: 2077
+    startLine: 2201
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -119,11 +119,11 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIMosaicHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Right
     path: ../NVAPIWrapper/NVAPIMosaicHelper.cs
-    startLine: 2078
+    startLine: 2202
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -148,11 +148,11 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIMosaicHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Bottom
     path: ../NVAPIWrapper/NVAPIMosaicHelper.cs
-    startLine: 2079
+    startLine: 2203
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -177,11 +177,11 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIMosaicHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: .ctor
     path: ../NVAPIWrapper/NVAPIMosaicHelper.cs
-    startLine: 2088
+    startLine: 2212
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -221,11 +221,11 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIMosaicHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: FromNative
     path: ../NVAPIWrapper/NVAPIMosaicHelper.cs
-    startLine: 2101
+    startLine: 2225
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -256,11 +256,11 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIMosaicHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: ToNative
     path: ../NVAPIWrapper/NVAPIMosaicHelper.cs
-    startLine: 2110
+    startLine: 2234
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -287,11 +287,11 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIMosaicHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Equals
     path: ../NVAPIWrapper/NVAPIMosaicHelper.cs
-    startLine: 2126
+    startLine: 2250
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -324,11 +324,11 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIMosaicHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Equals
     path: ../NVAPIWrapper/NVAPIMosaicHelper.cs
-    startLine: 2136
+    startLine: 2260
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -363,11 +363,11 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIMosaicHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetHashCode
     path: ../NVAPIWrapper/NVAPIMosaicHelper.cs
-    startLine: 2142
+    startLine: 2266
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -395,11 +395,11 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIMosaicHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: op_Equality
     path: ../NVAPIWrapper/NVAPIMosaicHelper.cs
-    startLine: 2160
+    startLine: 2284
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -436,11 +436,11 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIMosaicHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: op_Inequality
     path: ../NVAPIWrapper/NVAPIMosaicHelper.cs
-    startLine: 2168
+    startLine: 2292
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper

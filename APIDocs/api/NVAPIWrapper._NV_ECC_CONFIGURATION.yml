@@ -18,7 +18,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_ECC_CONFIGURATION.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: _NV_ECC_CONFIGURATION
     path: ../NVAPIWrapper/cs_generated/_NV_ECC_CONFIGURATION.cs
@@ -44,7 +44,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_ECC_CONFIGURATION.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_ECC_CONFIGURATION_NOT_SUPPORTED
     path: ../NVAPIWrapper/cs_generated/_NV_ECC_CONFIGURATION.cs
@@ -71,7 +71,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_ECC_CONFIGURATION.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_ECC_CONFIGURATION_DEFERRED
     path: ../NVAPIWrapper/cs_generated/_NV_ECC_CONFIGURATION.cs
@@ -98,7 +98,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_ECC_CONFIGURATION.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_ECC_CONFIGURATION_IMMEDIATE
     path: ../NVAPIWrapper/cs_generated/_NV_ECC_CONFIGURATION.cs

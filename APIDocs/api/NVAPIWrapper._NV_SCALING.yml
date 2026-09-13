@@ -28,7 +28,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_SCALING.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: _NV_SCALING
     path: ../NVAPIWrapper/cs_generated/_NV_SCALING.cs
@@ -54,7 +54,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_SCALING.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_SCALING_DEFAULT
     path: ../NVAPIWrapper/cs_generated/_NV_SCALING.cs
@@ -81,7 +81,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_SCALING.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_SCALING_GPU_SCALING_TO_CLOSEST
     path: ../NVAPIWrapper/cs_generated/_NV_SCALING.cs
@@ -108,7 +108,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_SCALING.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_SCALING_GPU_SCALING_TO_NATIVE
     path: ../NVAPIWrapper/cs_generated/_NV_SCALING.cs
@@ -135,7 +135,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_SCALING.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_SCALING_GPU_SCANOUT_TO_NATIVE
     path: ../NVAPIWrapper/cs_generated/_NV_SCALING.cs
@@ -162,7 +162,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_SCALING.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_SCALING_GPU_SCALING_TO_ASPECT_SCANOUT_TO_NATIVE
     path: ../NVAPIWrapper/cs_generated/_NV_SCALING.cs
@@ -189,7 +189,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_SCALING.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_SCALING_GPU_SCALING_TO_ASPECT_SCANOUT_TO_CLOSEST
     path: ../NVAPIWrapper/cs_generated/_NV_SCALING.cs
@@ -216,7 +216,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_SCALING.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_SCALING_GPU_SCANOUT_TO_CLOSEST
     path: ../NVAPIWrapper/cs_generated/_NV_SCALING.cs
@@ -243,7 +243,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_SCALING.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_SCALING_GPU_INTEGER_ASPECT_SCALING
     path: ../NVAPIWrapper/cs_generated/_NV_SCALING.cs
@@ -270,7 +270,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_SCALING.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_SCALING_MONITOR_SCALING
     path: ../NVAPIWrapper/cs_generated/_NV_SCALING.cs
@@ -297,7 +297,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_SCALING.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_SCALING_ADAPTER_SCALING
     path: ../NVAPIWrapper/cs_generated/_NV_SCALING.cs
@@ -324,7 +324,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_SCALING.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_SCALING_CENTERED
     path: ../NVAPIWrapper/cs_generated/_NV_SCALING.cs
@@ -351,7 +351,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_SCALING.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_SCALING_ASPECT_SCALING
     path: ../NVAPIWrapper/cs_generated/_NV_SCALING.cs
@@ -378,7 +378,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_SCALING.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_SCALING_CUSTOMIZED
     path: ../NVAPIWrapper/cs_generated/_NV_SCALING.cs

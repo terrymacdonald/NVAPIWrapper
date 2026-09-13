@@ -18,7 +18,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOSYNCDELAY.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: _NVVIOSYNCDELAY
     path: ../NVAPIWrapper/cs_generated/_NVVIOSYNCDELAY.cs
@@ -51,7 +51,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOSYNCDELAY.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: version
     path: ../NVAPIWrapper/cs_generated/_NVVIOSYNCDELAY.cs
@@ -79,7 +79,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOSYNCDELAY.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: horizontalDelay
     path: ../NVAPIWrapper/cs_generated/_NVVIOSYNCDELAY.cs
@@ -107,7 +107,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOSYNCDELAY.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: verticalDelay
     path: ../NVAPIWrapper/cs_generated/_NVVIOSYNCDELAY.cs

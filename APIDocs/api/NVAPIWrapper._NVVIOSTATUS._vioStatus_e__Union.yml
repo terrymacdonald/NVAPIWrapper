@@ -17,7 +17,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOSTATUS.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: _vioStatus_e__Union
     path: ../NVAPIWrapper/cs_generated/_NVVIOSTATUS.cs
@@ -50,7 +50,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOSTATUS.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: inStatus
     path: ../NVAPIWrapper/cs_generated/_NVVIOSTATUS.cs
@@ -78,7 +78,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVVIOSTATUS.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: outStatus
     path: ../NVAPIWrapper/cs_generated/_NVVIOSTATUS.cs

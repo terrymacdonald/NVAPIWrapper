@@ -81,7 +81,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_DISPLAY_TV_FORMAT.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: _NV_DISPLAY_TV_FORMAT
     path: ../NVAPIWrapper/cs_generated/_NV_DISPLAY_TV_FORMAT.cs
@@ -107,7 +107,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_DISPLAY_TV_FORMAT.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_DISPLAY_TV_FORMAT_NONE
     path: ../NVAPIWrapper/cs_generated/_NV_DISPLAY_TV_FORMAT.cs
@@ -134,7 +134,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_DISPLAY_TV_FORMAT.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_DISPLAY_TV_FORMAT_SD_NTSCM
     path: ../NVAPIWrapper/cs_generated/_NV_DISPLAY_TV_FORMAT.cs
@@ -161,7 +161,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_DISPLAY_TV_FORMAT.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_DISPLAY_TV_FORMAT_SD_NTSCJ
     path: ../NVAPIWrapper/cs_generated/_NV_DISPLAY_TV_FORMAT.cs
@@ -188,7 +188,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_DISPLAY_TV_FORMAT.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_DISPLAY_TV_FORMAT_SD_PALM
     path: ../NVAPIWrapper/cs_generated/_NV_DISPLAY_TV_FORMAT.cs
@@ -215,7 +215,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_DISPLAY_TV_FORMAT.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_DISPLAY_TV_FORMAT_SD_PALBDGH
     path: ../NVAPIWrapper/cs_generated/_NV_DISPLAY_TV_FORMAT.cs
@@ -242,7 +242,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_DISPLAY_TV_FORMAT.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_DISPLAY_TV_FORMAT_SD_PALN
     path: ../NVAPIWrapper/cs_generated/_NV_DISPLAY_TV_FORMAT.cs
@@ -269,7 +269,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_DISPLAY_TV_FORMAT.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_DISPLAY_TV_FORMAT_SD_PALNC
     path: ../NVAPIWrapper/cs_generated/_NV_DISPLAY_TV_FORMAT.cs
@@ -296,7 +296,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_DISPLAY_TV_FORMAT.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_DISPLAY_TV_FORMAT_SD_576i
     path: ../NVAPIWrapper/cs_generated/_NV_DISPLAY_TV_FORMAT.cs
@@ -323,7 +323,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_DISPLAY_TV_FORMAT.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_DISPLAY_TV_FORMAT_SD_480i
     path: ../NVAPIWrapper/cs_generated/_NV_DISPLAY_TV_FORMAT.cs
@@ -350,7 +350,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_DISPLAY_TV_FORMAT.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_DISPLAY_TV_FORMAT_ED_480p
     path: ../NVAPIWrapper/cs_generated/_NV_DISPLAY_TV_FORMAT.cs
@@ -377,7 +377,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_DISPLAY_TV_FORMAT.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_DISPLAY_TV_FORMAT_ED_576p
     path: ../NVAPIWrapper/cs_generated/_NV_DISPLAY_TV_FORMAT.cs
@@ -404,7 +404,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_DISPLAY_TV_FORMAT.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_DISPLAY_TV_FORMAT_HD_720p
     path: ../NVAPIWrapper/cs_generated/_NV_DISPLAY_TV_FORMAT.cs
@@ -431,7 +431,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_DISPLAY_TV_FORMAT.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_DISPLAY_TV_FORMAT_HD_1080i
     path: ../NVAPIWrapper/cs_generated/_NV_DISPLAY_TV_FORMAT.cs
@@ -458,7 +458,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_DISPLAY_TV_FORMAT.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_DISPLAY_TV_FORMAT_HD_1080p
     path: ../NVAPIWrapper/cs_generated/_NV_DISPLAY_TV_FORMAT.cs
@@ -485,7 +485,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_DISPLAY_TV_FORMAT.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_DISPLAY_TV_FORMAT_HD_720p50
     path: ../NVAPIWrapper/cs_generated/_NV_DISPLAY_TV_FORMAT.cs
@@ -512,7 +512,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_DISPLAY_TV_FORMAT.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_DISPLAY_TV_FORMAT_HD_1080p24
     path: ../NVAPIWrapper/cs_generated/_NV_DISPLAY_TV_FORMAT.cs
@@ -539,7 +539,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_DISPLAY_TV_FORMAT.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_DISPLAY_TV_FORMAT_HD_1080i50
     path: ../NVAPIWrapper/cs_generated/_NV_DISPLAY_TV_FORMAT.cs
@@ -566,7 +566,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_DISPLAY_TV_FORMAT.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_DISPLAY_TV_FORMAT_HD_1080p50
     path: ../NVAPIWrapper/cs_generated/_NV_DISPLAY_TV_FORMAT.cs
@@ -593,7 +593,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_DISPLAY_TV_FORMAT.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_DISPLAY_TV_FORMAT_UHD_4Kp30
     path: ../NVAPIWrapper/cs_generated/_NV_DISPLAY_TV_FORMAT.cs
@@ -620,7 +620,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_DISPLAY_TV_FORMAT.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_DISPLAY_TV_FORMAT_UHD_4Kp30_3840
     path: ../NVAPIWrapper/cs_generated/_NV_DISPLAY_TV_FORMAT.cs
@@ -647,7 +647,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_DISPLAY_TV_FORMAT.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_DISPLAY_TV_FORMAT_UHD_4Kp25
     path: ../NVAPIWrapper/cs_generated/_NV_DISPLAY_TV_FORMAT.cs
@@ -674,7 +674,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_DISPLAY_TV_FORMAT.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_DISPLAY_TV_FORMAT_UHD_4Kp25_3840
     path: ../NVAPIWrapper/cs_generated/_NV_DISPLAY_TV_FORMAT.cs
@@ -701,7 +701,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_DISPLAY_TV_FORMAT.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_DISPLAY_TV_FORMAT_UHD_4Kp24
     path: ../NVAPIWrapper/cs_generated/_NV_DISPLAY_TV_FORMAT.cs
@@ -728,7 +728,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_DISPLAY_TV_FORMAT.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_DISPLAY_TV_FORMAT_UHD_4Kp24_3840
     path: ../NVAPIWrapper/cs_generated/_NV_DISPLAY_TV_FORMAT.cs
@@ -755,7 +755,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_DISPLAY_TV_FORMAT.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_DISPLAY_TV_FORMAT_UHD_4Kp24_SMPTE
     path: ../NVAPIWrapper/cs_generated/_NV_DISPLAY_TV_FORMAT.cs
@@ -782,7 +782,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_DISPLAY_TV_FORMAT.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_DISPLAY_TV_FORMAT_UHD_4Kp50_3840
     path: ../NVAPIWrapper/cs_generated/_NV_DISPLAY_TV_FORMAT.cs
@@ -809,7 +809,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_DISPLAY_TV_FORMAT.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_DISPLAY_TV_FORMAT_UHD_4Kp60_3840
     path: ../NVAPIWrapper/cs_generated/_NV_DISPLAY_TV_FORMAT.cs
@@ -836,7 +836,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_DISPLAY_TV_FORMAT.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_DISPLAY_TV_FORMAT_UHD_4Kp30_4096
     path: ../NVAPIWrapper/cs_generated/_NV_DISPLAY_TV_FORMAT.cs
@@ -863,7 +863,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_DISPLAY_TV_FORMAT.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_DISPLAY_TV_FORMAT_UHD_4Kp25_4096
     path: ../NVAPIWrapper/cs_generated/_NV_DISPLAY_TV_FORMAT.cs
@@ -890,7 +890,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_DISPLAY_TV_FORMAT.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_DISPLAY_TV_FORMAT_UHD_4Kp24_4096
     path: ../NVAPIWrapper/cs_generated/_NV_DISPLAY_TV_FORMAT.cs
@@ -917,7 +917,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_DISPLAY_TV_FORMAT.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_DISPLAY_TV_FORMAT_UHD_4Kp50_4096
     path: ../NVAPIWrapper/cs_generated/_NV_DISPLAY_TV_FORMAT.cs
@@ -944,7 +944,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_DISPLAY_TV_FORMAT.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_DISPLAY_TV_FORMAT_UHD_4Kp60_4096
     path: ../NVAPIWrapper/cs_generated/_NV_DISPLAY_TV_FORMAT.cs
@@ -971,7 +971,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_DISPLAY_TV_FORMAT.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_DISPLAY_TV_FORMAT_UHD_8Kp24_7680
     path: ../NVAPIWrapper/cs_generated/_NV_DISPLAY_TV_FORMAT.cs
@@ -998,7 +998,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_DISPLAY_TV_FORMAT.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_DISPLAY_TV_FORMAT_UHD_8Kp25_7680
     path: ../NVAPIWrapper/cs_generated/_NV_DISPLAY_TV_FORMAT.cs
@@ -1025,7 +1025,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_DISPLAY_TV_FORMAT.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_DISPLAY_TV_FORMAT_UHD_8Kp30_7680
     path: ../NVAPIWrapper/cs_generated/_NV_DISPLAY_TV_FORMAT.cs
@@ -1052,7 +1052,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_DISPLAY_TV_FORMAT.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_DISPLAY_TV_FORMAT_UHD_8Kp48_7680
     path: ../NVAPIWrapper/cs_generated/_NV_DISPLAY_TV_FORMAT.cs
@@ -1079,7 +1079,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_DISPLAY_TV_FORMAT.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_DISPLAY_TV_FORMAT_UHD_8Kp50_7680
     path: ../NVAPIWrapper/cs_generated/_NV_DISPLAY_TV_FORMAT.cs
@@ -1106,7 +1106,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_DISPLAY_TV_FORMAT.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_DISPLAY_TV_FORMAT_UHD_8Kp60_7680
     path: ../NVAPIWrapper/cs_generated/_NV_DISPLAY_TV_FORMAT.cs
@@ -1133,7 +1133,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_DISPLAY_TV_FORMAT.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_DISPLAY_TV_FORMAT_UHD_8Kp100_7680
     path: ../NVAPIWrapper/cs_generated/_NV_DISPLAY_TV_FORMAT.cs
@@ -1160,7 +1160,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_DISPLAY_TV_FORMAT.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_DISPLAY_TV_FORMAT_UHD_8Kp120_7680
     path: ../NVAPIWrapper/cs_generated/_NV_DISPLAY_TV_FORMAT.cs
@@ -1187,7 +1187,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_DISPLAY_TV_FORMAT.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_DISPLAY_TV_FORMAT_UHD_4Kp48_3840
     path: ../NVAPIWrapper/cs_generated/_NV_DISPLAY_TV_FORMAT.cs
@@ -1214,7 +1214,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_DISPLAY_TV_FORMAT.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_DISPLAY_TV_FORMAT_UHD_4Kp48_4096
     path: ../NVAPIWrapper/cs_generated/_NV_DISPLAY_TV_FORMAT.cs
@@ -1241,7 +1241,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_DISPLAY_TV_FORMAT.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_DISPLAY_TV_FORMAT_UHD_4Kp100_4096
     path: ../NVAPIWrapper/cs_generated/_NV_DISPLAY_TV_FORMAT.cs
@@ -1268,7 +1268,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_DISPLAY_TV_FORMAT.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_DISPLAY_TV_FORMAT_UHD_4Kp100_3840
     path: ../NVAPIWrapper/cs_generated/_NV_DISPLAY_TV_FORMAT.cs
@@ -1295,7 +1295,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_DISPLAY_TV_FORMAT.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_DISPLAY_TV_FORMAT_UHD_4Kp120_4096
     path: ../NVAPIWrapper/cs_generated/_NV_DISPLAY_TV_FORMAT.cs
@@ -1322,7 +1322,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_DISPLAY_TV_FORMAT.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_DISPLAY_TV_FORMAT_UHD_4Kp120_3840
     path: ../NVAPIWrapper/cs_generated/_NV_DISPLAY_TV_FORMAT.cs
@@ -1349,7 +1349,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_DISPLAY_TV_FORMAT.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_DISPLAY_TV_FORMAT_UHD_4Kp100_5120
     path: ../NVAPIWrapper/cs_generated/_NV_DISPLAY_TV_FORMAT.cs
@@ -1376,7 +1376,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_DISPLAY_TV_FORMAT.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_DISPLAY_TV_FORMAT_UHD_4Kp120_5120
     path: ../NVAPIWrapper/cs_generated/_NV_DISPLAY_TV_FORMAT.cs
@@ -1403,7 +1403,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_DISPLAY_TV_FORMAT.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_DISPLAY_TV_FORMAT_UHD_4Kp24_5120
     path: ../NVAPIWrapper/cs_generated/_NV_DISPLAY_TV_FORMAT.cs
@@ -1430,7 +1430,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_DISPLAY_TV_FORMAT.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_DISPLAY_TV_FORMAT_UHD_4Kp25_5120
     path: ../NVAPIWrapper/cs_generated/_NV_DISPLAY_TV_FORMAT.cs
@@ -1457,7 +1457,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_DISPLAY_TV_FORMAT.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_DISPLAY_TV_FORMAT_UHD_4Kp30_5120
     path: ../NVAPIWrapper/cs_generated/_NV_DISPLAY_TV_FORMAT.cs
@@ -1484,7 +1484,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_DISPLAY_TV_FORMAT.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_DISPLAY_TV_FORMAT_UHD_4Kp48_5120
     path: ../NVAPIWrapper/cs_generated/_NV_DISPLAY_TV_FORMAT.cs
@@ -1511,7 +1511,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_DISPLAY_TV_FORMAT.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_DISPLAY_TV_FORMAT_UHD_4Kp50_5120
     path: ../NVAPIWrapper/cs_generated/_NV_DISPLAY_TV_FORMAT.cs
@@ -1538,7 +1538,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_DISPLAY_TV_FORMAT.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_DISPLAY_TV_FORMAT_UHD_4Kp60_5120
     path: ../NVAPIWrapper/cs_generated/_NV_DISPLAY_TV_FORMAT.cs
@@ -1565,7 +1565,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_DISPLAY_TV_FORMAT.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_DISPLAY_TV_FORMAT_UHD_10Kp24_10240
     path: ../NVAPIWrapper/cs_generated/_NV_DISPLAY_TV_FORMAT.cs
@@ -1592,7 +1592,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_DISPLAY_TV_FORMAT.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_DISPLAY_TV_FORMAT_UHD_10Kp25_10240
     path: ../NVAPIWrapper/cs_generated/_NV_DISPLAY_TV_FORMAT.cs
@@ -1619,7 +1619,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_DISPLAY_TV_FORMAT.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_DISPLAY_TV_FORMAT_UHD_10Kp30_10240
     path: ../NVAPIWrapper/cs_generated/_NV_DISPLAY_TV_FORMAT.cs
@@ -1646,7 +1646,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_DISPLAY_TV_FORMAT.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_DISPLAY_TV_FORMAT_UHD_10Kp48_10240
     path: ../NVAPIWrapper/cs_generated/_NV_DISPLAY_TV_FORMAT.cs
@@ -1673,7 +1673,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_DISPLAY_TV_FORMAT.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_DISPLAY_TV_FORMAT_UHD_10Kp50_10240
     path: ../NVAPIWrapper/cs_generated/_NV_DISPLAY_TV_FORMAT.cs
@@ -1700,7 +1700,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_DISPLAY_TV_FORMAT.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_DISPLAY_TV_FORMAT_UHD_10Kp60_10240
     path: ../NVAPIWrapper/cs_generated/_NV_DISPLAY_TV_FORMAT.cs
@@ -1727,7 +1727,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_DISPLAY_TV_FORMAT.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_DISPLAY_TV_FORMAT_UHD_10Kp100_10240
     path: ../NVAPIWrapper/cs_generated/_NV_DISPLAY_TV_FORMAT.cs
@@ -1754,7 +1754,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_DISPLAY_TV_FORMAT.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_DISPLAY_TV_FORMAT_UHD_10Kp120_10240
     path: ../NVAPIWrapper/cs_generated/_NV_DISPLAY_TV_FORMAT.cs
@@ -1781,7 +1781,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_DISPLAY_TV_FORMAT.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_DISPLAY_TV_FORMAT_SD_OTHER
     path: ../NVAPIWrapper/cs_generated/_NV_DISPLAY_TV_FORMAT.cs
@@ -1808,7 +1808,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_DISPLAY_TV_FORMAT.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_DISPLAY_TV_FORMAT_ED_OTHER
     path: ../NVAPIWrapper/cs_generated/_NV_DISPLAY_TV_FORMAT.cs
@@ -1835,7 +1835,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_DISPLAY_TV_FORMAT.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_DISPLAY_TV_FORMAT_HD_OTHER
     path: ../NVAPIWrapper/cs_generated/_NV_DISPLAY_TV_FORMAT.cs
@@ -1862,7 +1862,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_DISPLAY_TV_FORMAT.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_DISPLAY_TV_FORMAT_ANY
     path: ../NVAPIWrapper/cs_generated/_NV_DISPLAY_TV_FORMAT.cs

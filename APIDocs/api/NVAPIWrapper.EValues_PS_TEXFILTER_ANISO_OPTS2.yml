@@ -19,7 +19,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_PS_TEXFILTER_ANISO_OPTS2.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: EValues_PS_TEXFILTER_ANISO_OPTS2
     path: ../NVAPIWrapper/cs_generated/EValues_PS_TEXFILTER_ANISO_OPTS2.cs
@@ -45,7 +45,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_PS_TEXFILTER_ANISO_OPTS2.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: PS_TEXFILTER_ANISO_OPTS2_OFF
     path: ../NVAPIWrapper/cs_generated/EValues_PS_TEXFILTER_ANISO_OPTS2.cs
@@ -72,7 +72,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_PS_TEXFILTER_ANISO_OPTS2.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: PS_TEXFILTER_ANISO_OPTS2_ON
     path: ../NVAPIWrapper/cs_generated/EValues_PS_TEXFILTER_ANISO_OPTS2.cs
@@ -99,7 +99,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_PS_TEXFILTER_ANISO_OPTS2.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: PS_TEXFILTER_ANISO_OPTS2_NUM_VALUES
     path: ../NVAPIWrapper/cs_generated/EValues_PS_TEXFILTER_ANISO_OPTS2.cs
@@ -126,7 +126,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_PS_TEXFILTER_ANISO_OPTS2.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: PS_TEXFILTER_ANISO_OPTS2_DEFAULT
     path: ../NVAPIWrapper/cs_generated/EValues_PS_TEXFILTER_ANISO_OPTS2.cs

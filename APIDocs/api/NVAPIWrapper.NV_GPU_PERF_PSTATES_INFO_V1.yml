@@ -20,7 +20,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_GPU_PERF_PSTATES_INFO_V1.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_GPU_PERF_PSTATES_INFO_V1
     path: ../NVAPIWrapper/cs_generated/NV_GPU_PERF_PSTATES_INFO_V1.cs
@@ -53,7 +53,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_GPU_PERF_PSTATES_INFO_V1.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: version
     path: ../NVAPIWrapper/cs_generated/NV_GPU_PERF_PSTATES_INFO_V1.cs
@@ -81,7 +81,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_GPU_PERF_PSTATES_INFO_V1.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: flags
     path: ../NVAPIWrapper/cs_generated/NV_GPU_PERF_PSTATES_INFO_V1.cs
@@ -109,7 +109,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_GPU_PERF_PSTATES_INFO_V1.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: numPstates
     path: ../NVAPIWrapper/cs_generated/NV_GPU_PERF_PSTATES_INFO_V1.cs
@@ -137,7 +137,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_GPU_PERF_PSTATES_INFO_V1.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: numClocks
     path: ../NVAPIWrapper/cs_generated/NV_GPU_PERF_PSTATES_INFO_V1.cs
@@ -165,7 +165,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_GPU_PERF_PSTATES_INFO_V1.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: pstates
     path: ../NVAPIWrapper/cs_generated/NV_GPU_PERF_PSTATES_INFO_V1.cs

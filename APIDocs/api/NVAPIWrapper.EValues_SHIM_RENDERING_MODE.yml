@@ -25,7 +25,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_SHIM_RENDERING_MODE.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: EValues_SHIM_RENDERING_MODE
     path: ../NVAPIWrapper/cs_generated/EValues_SHIM_RENDERING_MODE.cs
@@ -51,7 +51,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_SHIM_RENDERING_MODE.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SHIM_RENDERING_MODE_INTEGRATED
     path: ../NVAPIWrapper/cs_generated/EValues_SHIM_RENDERING_MODE.cs
@@ -78,7 +78,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_SHIM_RENDERING_MODE.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SHIM_RENDERING_MODE_ENABLE
     path: ../NVAPIWrapper/cs_generated/EValues_SHIM_RENDERING_MODE.cs
@@ -105,7 +105,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_SHIM_RENDERING_MODE.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SHIM_RENDERING_MODE_USER_EDITABLE
     path: ../NVAPIWrapper/cs_generated/EValues_SHIM_RENDERING_MODE.cs
@@ -132,7 +132,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_SHIM_RENDERING_MODE.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SHIM_RENDERING_MODE_MASK
     path: ../NVAPIWrapper/cs_generated/EValues_SHIM_RENDERING_MODE.cs
@@ -159,7 +159,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_SHIM_RENDERING_MODE.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SHIM_RENDERING_MODE_VIDEO_MASK
     path: ../NVAPIWrapper/cs_generated/EValues_SHIM_RENDERING_MODE.cs
@@ -186,7 +186,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_SHIM_RENDERING_MODE.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SHIM_RENDERING_MODE_VARYING_BIT
     path: ../NVAPIWrapper/cs_generated/EValues_SHIM_RENDERING_MODE.cs
@@ -213,7 +213,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_SHIM_RENDERING_MODE.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SHIM_RENDERING_MODE_AUTO_SELECT
     path: ../NVAPIWrapper/cs_generated/EValues_SHIM_RENDERING_MODE.cs
@@ -240,7 +240,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_SHIM_RENDERING_MODE.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SHIM_RENDERING_MODE_OVERRIDE_BIT
     path: ../NVAPIWrapper/cs_generated/EValues_SHIM_RENDERING_MODE.cs
@@ -267,7 +267,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_SHIM_RENDERING_MODE.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SHIM_RENDERING_MODE_NUM_VALUES
     path: ../NVAPIWrapper/cs_generated/EValues_SHIM_RENDERING_MODE.cs
@@ -294,7 +294,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_SHIM_RENDERING_MODE.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SHIM_RENDERING_MODE_DEFAULT
     path: ../NVAPIWrapper/cs_generated/EValues_SHIM_RENDERING_MODE.cs

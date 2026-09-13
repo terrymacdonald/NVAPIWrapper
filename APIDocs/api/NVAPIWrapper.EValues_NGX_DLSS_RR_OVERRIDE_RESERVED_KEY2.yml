@@ -17,7 +17,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_NGX_DLSS_RR_OVERRIDE_RESERVED_KEY2.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: EValues_NGX_DLSS_RR_OVERRIDE_RESERVED_KEY2
     path: ../NVAPIWrapper/cs_generated/EValues_NGX_DLSS_RR_OVERRIDE_RESERVED_KEY2.cs
@@ -43,7 +43,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_NGX_DLSS_RR_OVERRIDE_RESERVED_KEY2.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NGX_DLSS_RR_OVERRIDE_RESERVED_KEY2_DEFAULT
     path: ../NVAPIWrapper/cs_generated/EValues_NGX_DLSS_RR_OVERRIDE_RESERVED_KEY2.cs
@@ -70,7 +70,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/EValues_NGX_DLSS_RR_OVERRIDE_RESERVED_KEY2.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NGX_DLSS_RR_OVERRIDE_RESERVED_KEY2_NUM_VALUES
     path: ../NVAPIWrapper/cs_generated/EValues_NGX_DLSS_RR_OVERRIDE_RESERVED_KEY2.cs

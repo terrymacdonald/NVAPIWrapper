@@ -19,7 +19,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NVVIOTOPOLOGYTARGET.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVVIOTOPOLOGYTARGET
     path: ../NVAPIWrapper/cs_generated/NVVIOTOPOLOGYTARGET.cs
@@ -52,7 +52,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NVVIOTOPOLOGYTARGET.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: hPhysicalGpu
     path: ../NVAPIWrapper/cs_generated/NVVIOTOPOLOGYTARGET.cs
@@ -80,7 +80,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NVVIOTOPOLOGYTARGET.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: hVioHandle
     path: ../NVAPIWrapper/cs_generated/NVVIOTOPOLOGYTARGET.cs
@@ -108,7 +108,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NVVIOTOPOLOGYTARGET.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: vioId
     path: ../NVAPIWrapper/cs_generated/NVVIOTOPOLOGYTARGET.cs
@@ -136,7 +136,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NVVIOTOPOLOGYTARGET.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: outputId
     path: ../NVAPIWrapper/cs_generated/NVVIOTOPOLOGYTARGET.cs

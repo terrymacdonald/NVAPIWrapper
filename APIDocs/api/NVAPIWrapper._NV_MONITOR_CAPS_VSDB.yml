@@ -51,7 +51,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_MONITOR_CAPS_VSDB.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: _NV_MONITOR_CAPS_VSDB
     path: ../NVAPIWrapper/cs_generated/_NV_MONITOR_CAPS_VSDB.cs
@@ -84,7 +84,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_MONITOR_CAPS_VSDB.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: _bitfield1
     path: ../NVAPIWrapper/cs_generated/_NV_MONITOR_CAPS_VSDB.cs
@@ -111,7 +111,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_MONITOR_CAPS_VSDB.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: sourcePhysicalAddressB
     path: ../NVAPIWrapper/cs_generated/_NV_MONITOR_CAPS_VSDB.cs
@@ -141,7 +141,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_MONITOR_CAPS_VSDB.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: sourcePhysicalAddressA
     path: ../NVAPIWrapper/cs_generated/_NV_MONITOR_CAPS_VSDB.cs
@@ -171,7 +171,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_MONITOR_CAPS_VSDB.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: _bitfield2
     path: ../NVAPIWrapper/cs_generated/_NV_MONITOR_CAPS_VSDB.cs
@@ -198,7 +198,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_MONITOR_CAPS_VSDB.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: sourcePhysicalAddressD
     path: ../NVAPIWrapper/cs_generated/_NV_MONITOR_CAPS_VSDB.cs
@@ -228,7 +228,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_MONITOR_CAPS_VSDB.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: sourcePhysicalAddressC
     path: ../NVAPIWrapper/cs_generated/_NV_MONITOR_CAPS_VSDB.cs
@@ -258,7 +258,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_MONITOR_CAPS_VSDB.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: _bitfield3
     path: ../NVAPIWrapper/cs_generated/_NV_MONITOR_CAPS_VSDB.cs
@@ -285,7 +285,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_MONITOR_CAPS_VSDB.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: supportDualDviOperation
     path: ../NVAPIWrapper/cs_generated/_NV_MONITOR_CAPS_VSDB.cs
@@ -315,7 +315,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_MONITOR_CAPS_VSDB.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: reserved6
     path: ../NVAPIWrapper/cs_generated/_NV_MONITOR_CAPS_VSDB.cs
@@ -345,7 +345,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_MONITOR_CAPS_VSDB.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: supportDeepColorYCbCr444
     path: ../NVAPIWrapper/cs_generated/_NV_MONITOR_CAPS_VSDB.cs
@@ -375,7 +375,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_MONITOR_CAPS_VSDB.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: supportDeepColor30bits
     path: ../NVAPIWrapper/cs_generated/_NV_MONITOR_CAPS_VSDB.cs
@@ -405,7 +405,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_MONITOR_CAPS_VSDB.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: supportDeepColor36bits
     path: ../NVAPIWrapper/cs_generated/_NV_MONITOR_CAPS_VSDB.cs
@@ -435,7 +435,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_MONITOR_CAPS_VSDB.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: supportDeepColor48bits
     path: ../NVAPIWrapper/cs_generated/_NV_MONITOR_CAPS_VSDB.cs
@@ -465,7 +465,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_MONITOR_CAPS_VSDB.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: supportAI
     path: ../NVAPIWrapper/cs_generated/_NV_MONITOR_CAPS_VSDB.cs
@@ -495,7 +495,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_MONITOR_CAPS_VSDB.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: maxTmdsClock
     path: ../NVAPIWrapper/cs_generated/_NV_MONITOR_CAPS_VSDB.cs
@@ -523,7 +523,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_MONITOR_CAPS_VSDB.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: _bitfield4
     path: ../NVAPIWrapper/cs_generated/_NV_MONITOR_CAPS_VSDB.cs
@@ -550,7 +550,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_MONITOR_CAPS_VSDB.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: cnc0SupportGraphicsTextContent
     path: ../NVAPIWrapper/cs_generated/_NV_MONITOR_CAPS_VSDB.cs
@@ -580,7 +580,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_MONITOR_CAPS_VSDB.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: cnc1SupportPhotoContent
     path: ../NVAPIWrapper/cs_generated/_NV_MONITOR_CAPS_VSDB.cs
@@ -610,7 +610,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_MONITOR_CAPS_VSDB.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: cnc2SupportCinemaContent
     path: ../NVAPIWrapper/cs_generated/_NV_MONITOR_CAPS_VSDB.cs
@@ -640,7 +640,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_MONITOR_CAPS_VSDB.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: cnc3SupportGameContent
     path: ../NVAPIWrapper/cs_generated/_NV_MONITOR_CAPS_VSDB.cs
@@ -670,7 +670,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_MONITOR_CAPS_VSDB.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: reserved8
     path: ../NVAPIWrapper/cs_generated/_NV_MONITOR_CAPS_VSDB.cs
@@ -700,7 +700,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_MONITOR_CAPS_VSDB.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: hasVicEntries
     path: ../NVAPIWrapper/cs_generated/_NV_MONITOR_CAPS_VSDB.cs
@@ -730,7 +730,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_MONITOR_CAPS_VSDB.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: hasInterlacedLatencyField
     path: ../NVAPIWrapper/cs_generated/_NV_MONITOR_CAPS_VSDB.cs
@@ -760,7 +760,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_MONITOR_CAPS_VSDB.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: hasLatencyField
     path: ../NVAPIWrapper/cs_generated/_NV_MONITOR_CAPS_VSDB.cs
@@ -790,7 +790,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_MONITOR_CAPS_VSDB.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: videoLatency
     path: ../NVAPIWrapper/cs_generated/_NV_MONITOR_CAPS_VSDB.cs
@@ -818,7 +818,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_MONITOR_CAPS_VSDB.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: audioLatency
     path: ../NVAPIWrapper/cs_generated/_NV_MONITOR_CAPS_VSDB.cs
@@ -846,7 +846,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_MONITOR_CAPS_VSDB.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: interlacedVideoLatency
     path: ../NVAPIWrapper/cs_generated/_NV_MONITOR_CAPS_VSDB.cs
@@ -874,7 +874,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_MONITOR_CAPS_VSDB.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: interlacedAudioLatency
     path: ../NVAPIWrapper/cs_generated/_NV_MONITOR_CAPS_VSDB.cs
@@ -902,7 +902,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_MONITOR_CAPS_VSDB.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: _bitfield5
     path: ../NVAPIWrapper/cs_generated/_NV_MONITOR_CAPS_VSDB.cs
@@ -929,7 +929,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_MONITOR_CAPS_VSDB.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: reserved13
     path: ../NVAPIWrapper/cs_generated/_NV_MONITOR_CAPS_VSDB.cs
@@ -959,7 +959,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_MONITOR_CAPS_VSDB.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: has3dEntries
     path: ../NVAPIWrapper/cs_generated/_NV_MONITOR_CAPS_VSDB.cs
@@ -989,7 +989,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_MONITOR_CAPS_VSDB.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: _bitfield6
     path: ../NVAPIWrapper/cs_generated/_NV_MONITOR_CAPS_VSDB.cs
@@ -1016,7 +1016,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_MONITOR_CAPS_VSDB.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: hdmi3dLength
     path: ../NVAPIWrapper/cs_generated/_NV_MONITOR_CAPS_VSDB.cs
@@ -1046,7 +1046,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_MONITOR_CAPS_VSDB.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: hdmiVicLength
     path: ../NVAPIWrapper/cs_generated/_NV_MONITOR_CAPS_VSDB.cs
@@ -1076,7 +1076,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_MONITOR_CAPS_VSDB.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: hdmi_vic
     path: ../NVAPIWrapper/cs_generated/_NV_MONITOR_CAPS_VSDB.cs
@@ -1104,7 +1104,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_MONITOR_CAPS_VSDB.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: hdmi_3d
     path: ../NVAPIWrapper/cs_generated/_NV_MONITOR_CAPS_VSDB.cs

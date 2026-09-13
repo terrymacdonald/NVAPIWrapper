@@ -16,7 +16,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIInterfaceTable.g.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPIInterfaceTable
     path: ../NVAPIWrapper/NVAPIInterfaceTable.g.cs
@@ -53,7 +53,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIInterfaceTable.g.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Entries
     path: ../NVAPIWrapper/NVAPIInterfaceTable.g.cs

@@ -19,7 +19,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_MOSAIC_TOPO_GROUP.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_MOSAIC_TOPO_GROUP
     path: ../NVAPIWrapper/cs_generated/NV_MOSAIC_TOPO_GROUP.cs
@@ -52,7 +52,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_MOSAIC_TOPO_GROUP.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: version
     path: ../NVAPIWrapper/cs_generated/NV_MOSAIC_TOPO_GROUP.cs
@@ -80,7 +80,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_MOSAIC_TOPO_GROUP.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: brief
     path: ../NVAPIWrapper/cs_generated/NV_MOSAIC_TOPO_GROUP.cs
@@ -108,7 +108,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_MOSAIC_TOPO_GROUP.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: count
     path: ../NVAPIWrapper/cs_generated/NV_MOSAIC_TOPO_GROUP.cs
@@ -136,7 +136,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_MOSAIC_TOPO_GROUP.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: topos
     path: ../NVAPIWrapper/cs_generated/NV_MOSAIC_TOPO_GROUP.cs

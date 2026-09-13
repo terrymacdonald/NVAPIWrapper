@@ -17,7 +17,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_SCANOUT_INTENSITY_STATE_DATA.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: _NV_SCANOUT_INTENSITY_STATE_DATA
     path: ../NVAPIWrapper/cs_generated/_NV_SCANOUT_INTENSITY_STATE_DATA.cs
@@ -50,7 +50,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_SCANOUT_INTENSITY_STATE_DATA.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: version
     path: ../NVAPIWrapper/cs_generated/_NV_SCANOUT_INTENSITY_STATE_DATA.cs
@@ -78,7 +78,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_SCANOUT_INTENSITY_STATE_DATA.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: bEnabled
     path: ../NVAPIWrapper/cs_generated/_NV_SCANOUT_INTENSITY_STATE_DATA.cs

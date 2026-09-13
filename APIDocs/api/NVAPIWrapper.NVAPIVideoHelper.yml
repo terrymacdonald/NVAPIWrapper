@@ -28,7 +28,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIVideoHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPIVideoHelper
     path: ../NVAPIWrapper/NVAPIVideoHelper.cs
@@ -66,7 +66,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIVideoHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: EnumerateVioDevices
     path: ../NVAPIWrapper/NVAPIVideoHelper.cs
@@ -97,7 +97,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIVideoHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: QueryTopology
     path: ../NVAPIWrapper/NVAPIVideoHelper.cs
@@ -128,7 +128,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIVideoHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: StereoEnable
     path: ../NVAPIWrapper/NVAPIVideoHelper.cs
@@ -159,7 +159,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIVideoHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: StereoDisable
     path: ../NVAPIWrapper/NVAPIVideoHelper.cs
@@ -190,7 +190,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIVideoHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: StereoIsEnabled
     path: ../NVAPIWrapper/NVAPIVideoHelper.cs
@@ -221,7 +221,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIVideoHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: StereoIsWindowedModeSupported
     path: ../NVAPIWrapper/NVAPIVideoHelper.cs
@@ -252,7 +252,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIVideoHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: StereoSetDriverMode
     path: ../NVAPIWrapper/NVAPIVideoHelper.cs
@@ -287,7 +287,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIVideoHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: StereoSetDefaultProfile
     path: ../NVAPIWrapper/NVAPIVideoHelper.cs
@@ -325,7 +325,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIVideoHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: StereoGetDefaultProfile
     path: ../NVAPIWrapper/NVAPIVideoHelper.cs
@@ -356,7 +356,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIVideoHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: StereoCreateConfigurationProfileRegistryKey
     path: ../NVAPIWrapper/NVAPIVideoHelper.cs
@@ -391,7 +391,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIVideoHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: StereoDeleteConfigurationProfileRegistryKey
     path: ../NVAPIWrapper/NVAPIVideoHelper.cs
@@ -426,7 +426,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIVideoHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: StereoDeleteConfigurationProfileValue
     path: ../NVAPIWrapper/NVAPIVideoHelper.cs
@@ -464,7 +464,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIVideoHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Dispose
     path: ../NVAPIWrapper/NVAPIVideoHelper.cs

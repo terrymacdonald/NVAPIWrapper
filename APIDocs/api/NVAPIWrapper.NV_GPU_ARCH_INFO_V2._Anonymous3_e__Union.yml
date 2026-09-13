@@ -17,7 +17,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_GPU_ARCH_INFO_V2.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: _Anonymous3_e__Union
     path: ../NVAPIWrapper/cs_generated/NV_GPU_ARCH_INFO_V2.cs
@@ -50,7 +50,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_GPU_ARCH_INFO_V2.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: revision
     path: ../NVAPIWrapper/cs_generated/NV_GPU_ARCH_INFO_V2.cs
@@ -78,7 +78,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_GPU_ARCH_INFO_V2.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: revision_id
     path: ../NVAPIWrapper/cs_generated/NV_GPU_ARCH_INFO_V2.cs

@@ -112,7 +112,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIDisplayHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPIDisplayHelper
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
@@ -150,7 +150,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIDisplayHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: DisplayId
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
@@ -181,7 +181,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIDisplayHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: ConnectorType
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
@@ -212,7 +212,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIDisplayHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: IsDynamic
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
@@ -243,7 +243,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIDisplayHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: IsMultiStreamRootNode
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
@@ -274,7 +274,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIDisplayHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: IsActive
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
@@ -305,7 +305,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIDisplayHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: IsCluster
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
@@ -336,7 +336,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIDisplayHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: IsOSVisible
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
@@ -367,7 +367,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIDisplayHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: IsWfd
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
@@ -398,7 +398,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIDisplayHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: IsConnected
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
@@ -429,7 +429,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIDisplayHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: IsPhysicallyConnected
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
@@ -460,7 +460,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIDisplayHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: CreateEdidData
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
@@ -490,7 +490,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIDisplayHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: CreateTimingInput
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
@@ -520,7 +520,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIDisplayHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: CreateMonitorCapabilities
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
@@ -550,7 +550,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIDisplayHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: CreateDisplayPortInfo
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
@@ -580,7 +580,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIDisplayHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: CreateDisplayPortConfig
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
@@ -610,7 +610,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIDisplayHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: CreateHdmiSupportInfo
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
@@ -640,7 +640,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIDisplayHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: CreateVrrInfo
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
@@ -670,7 +670,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIDisplayHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: CreateAdaptiveSyncGetData
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
@@ -700,7 +700,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIDisplayHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: CreateAdaptiveSyncSetData
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
@@ -730,7 +730,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIDisplayHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: CreateVirtualRefreshRateGetData
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
@@ -760,7 +760,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIDisplayHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: CreateVirtualRefreshRateSetData
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
@@ -790,7 +790,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIDisplayHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: CreatePreferredStereoDisplayGet
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
@@ -820,7 +820,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIDisplayHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: CreatePreferredStereoDisplaySet
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
@@ -850,7 +850,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIDisplayHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: CreateInfoFrameData
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
@@ -880,7 +880,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIDisplayHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: CreateColorData
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
@@ -910,7 +910,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIDisplayHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: CreateHdrCapabilities
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
@@ -940,7 +940,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIDisplayHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: CreateHdrColorData
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
@@ -970,7 +970,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIDisplayHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: CreateHdrMetadata
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
@@ -1000,7 +1000,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIDisplayHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: CreateDisplayColorimetry
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
@@ -1030,7 +1030,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIDisplayHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: CreateCustomDisplay
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
@@ -1060,7 +1060,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIDisplayHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: CreateManagedDedicatedDisplayInfo
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
@@ -1090,7 +1090,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIDisplayHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: CreateManagedDedicatedDisplayMetadata
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
@@ -1120,7 +1120,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIDisplayHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: CreateDisplayIdInfoData
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
@@ -1150,7 +1150,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIDisplayHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: CreateTargetInfoData
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
@@ -1180,7 +1180,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIDisplayHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetPhysicalGpusFromDisplay
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
@@ -1211,7 +1211,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIDisplayHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetLogicalGpuFromDisplay
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
@@ -1242,7 +1242,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIDisplayHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetAssociatedNvidiaDisplayName
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
@@ -1273,7 +1273,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIDisplayHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetAssociatedDisplayOutputId
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
@@ -1304,7 +1304,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIDisplayHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetGpuAndOutputIdFromDisplayId
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
@@ -1335,7 +1335,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIDisplayHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetPhysicalGpuFromDisplayId
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
@@ -1366,7 +1366,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIDisplayHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetVBlankCounter
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
@@ -1397,7 +1397,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIDisplayHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetDisplayIdByDisplayName
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
@@ -1435,7 +1435,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIDisplayHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetGdiPrimaryDisplayId
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
@@ -1466,7 +1466,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIDisplayHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetSupportedViews
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
@@ -1497,7 +1497,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIDisplayHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetEdidData
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
@@ -1532,7 +1532,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIDisplayHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetTiming
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
@@ -1567,7 +1567,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIDisplayHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetMonitorCapabilities
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
@@ -1598,7 +1598,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIDisplayHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetMonitorColorCapabilities
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
@@ -1629,7 +1629,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIDisplayHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetDisplayPortInfo
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
@@ -1667,7 +1667,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIDisplayHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SetDisplayPort
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
@@ -1708,7 +1708,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIDisplayHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetHdmiSupportInfo
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
@@ -1746,7 +1746,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIDisplayHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetVrrInfo
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
@@ -1777,7 +1777,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIDisplayHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetAdaptiveSyncData
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
@@ -1808,7 +1808,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIDisplayHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SetAdaptiveSyncData
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
@@ -1843,7 +1843,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIDisplayHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetVirtualRefreshRateData
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
@@ -1874,7 +1874,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIDisplayHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SetVirtualRefreshRateData
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
@@ -1909,7 +1909,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIDisplayHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetPreferredStereoDisplay
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
@@ -1940,7 +1940,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIDisplayHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SetPreferredStereoDisplay
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
@@ -1975,7 +1975,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIDisplayHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: EnableHWCursor
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
@@ -2006,7 +2006,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIDisplayHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: DisableHWCursor
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
@@ -2037,7 +2037,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIDisplayHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SetRefreshRateOverride
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
@@ -2081,7 +2081,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIDisplayHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: InfoFrameControl
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
@@ -2116,7 +2116,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIDisplayHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: ColorControl
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
@@ -2151,7 +2151,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIDisplayHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetHdrCapabilities
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
@@ -2182,7 +2182,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIDisplayHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: HdrColorControl
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
@@ -2217,7 +2217,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIDisplayHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SetSourceColorSpace
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
@@ -2252,7 +2252,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIDisplayHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetSourceColorSpace
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
@@ -2290,7 +2290,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIDisplayHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SetSourceHdrMetadata
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
@@ -2325,7 +2325,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIDisplayHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetSourceHdrMetadata
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
@@ -2363,7 +2363,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIDisplayHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SetOutputMode
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
@@ -2398,7 +2398,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIDisplayHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetOutputMode
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
@@ -2429,7 +2429,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIDisplayHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SetHdrToneMapping
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
@@ -2464,7 +2464,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIDisplayHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetHdrToneMapping
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
@@ -2495,7 +2495,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIDisplayHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetColorimetry
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
@@ -2526,7 +2526,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIDisplayHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetDisplayIdInfo
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
@@ -2564,7 +2564,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIDisplayHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetDisplayIdsFromTarget
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
@@ -2595,7 +2595,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIDisplayHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetDisplayIdsFromTarget
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
@@ -2636,7 +2636,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIDisplayHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: EnumCustomDisplay
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
@@ -2677,7 +2677,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIDisplayHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: TryCustomDisplay
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
@@ -2718,7 +2718,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIDisplayHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetAssociatedNvidiaDisplayHandle
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
@@ -2756,7 +2756,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIDisplayHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: DeleteCustomDisplay
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
@@ -2797,7 +2797,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIDisplayHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SaveCustomDisplay
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
@@ -2841,7 +2841,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIDisplayHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: RevertCustomDisplayTrial
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
@@ -2879,7 +2879,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIDisplayHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetNvManagedDedicatedDisplays
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
@@ -2910,7 +2910,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIDisplayHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: AcquireDedicatedDisplay
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
@@ -2948,7 +2948,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIDisplayHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: ReleaseDedicatedDisplay
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
@@ -2986,7 +2986,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIDisplayHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetNvManagedDedicatedDisplayMetadata
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
@@ -3024,7 +3024,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIDisplayHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SetNvManagedDedicatedDisplayMetadata
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
@@ -3059,7 +3059,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIDisplayHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetScanoutCompositionParameter
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
@@ -3094,7 +3094,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIDisplayHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SetScanoutCompositionParameter
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
@@ -3129,7 +3129,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIDisplayHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetScanoutConfiguration
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
@@ -3160,7 +3160,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIDisplayHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetScanoutConfigurationEx
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
@@ -3191,7 +3191,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIDisplayHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetScanoutIntensityState
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
@@ -3222,7 +3222,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIDisplayHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SetScanoutIntensity
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
@@ -3257,7 +3257,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIDisplayHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetScanoutWarpingState
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
@@ -3288,7 +3288,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIDisplayHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SetScanoutWarping
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs
@@ -3323,7 +3323,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIDisplayHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Dispose
     path: ../NVAPIWrapper/NVAPIDisplayHelper.cs

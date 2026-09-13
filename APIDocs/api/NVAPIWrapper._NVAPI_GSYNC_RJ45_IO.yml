@@ -18,7 +18,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVAPI_GSYNC_RJ45_IO.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: _NVAPI_GSYNC_RJ45_IO
     path: ../NVAPIWrapper/cs_generated/_NVAPI_GSYNC_RJ45_IO.cs
@@ -44,7 +44,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVAPI_GSYNC_RJ45_IO.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_GSYNC_RJ45_OUTPUT
     path: ../NVAPIWrapper/cs_generated/_NVAPI_GSYNC_RJ45_IO.cs
@@ -71,7 +71,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVAPI_GSYNC_RJ45_IO.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_GSYNC_RJ45_INPUT
     path: ../NVAPIWrapper/cs_generated/_NVAPI_GSYNC_RJ45_IO.cs
@@ -98,7 +98,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVAPI_GSYNC_RJ45_IO.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPI_GSYNC_RJ45_UNUSED
     path: ../NVAPIWrapper/cs_generated/_NVAPI_GSYNC_RJ45_IO.cs

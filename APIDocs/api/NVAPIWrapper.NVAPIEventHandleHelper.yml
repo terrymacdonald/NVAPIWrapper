@@ -17,7 +17,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIEventHandleHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPIEventHandleHelper
     path: ../NVAPIWrapper/NVAPIEventHandleHelper.cs
@@ -55,7 +55,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIEventHandleHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Finalize
     path: ../NVAPIWrapper/NVAPIEventHandleHelper.cs
@@ -84,7 +84,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIEventHandleHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Dispose
     path: ../NVAPIWrapper/NVAPIEventHandleHelper.cs

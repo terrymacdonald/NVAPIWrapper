@@ -22,7 +22,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_QSYNC_EVENT.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_QSYNC_EVENT
     path: ../NVAPIWrapper/cs_generated/NV_QSYNC_EVENT.cs
@@ -48,7 +48,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_QSYNC_EVENT.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_QSYNC_EVENT_NONE
     path: ../NVAPIWrapper/cs_generated/NV_QSYNC_EVENT.cs
@@ -75,7 +75,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_QSYNC_EVENT.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_QSYNC_EVENT_SYNC_LOSS
     path: ../NVAPIWrapper/cs_generated/NV_QSYNC_EVENT.cs
@@ -102,7 +102,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_QSYNC_EVENT.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_QSYNC_EVENT_SYNC_GAIN
     path: ../NVAPIWrapper/cs_generated/NV_QSYNC_EVENT.cs
@@ -129,7 +129,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_QSYNC_EVENT.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_QSYNC_EVENT_HOUSESYNC_GAIN
     path: ../NVAPIWrapper/cs_generated/NV_QSYNC_EVENT.cs
@@ -156,7 +156,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_QSYNC_EVENT.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_QSYNC_EVENT_HOUSESYNC_LOSS
     path: ../NVAPIWrapper/cs_generated/NV_QSYNC_EVENT.cs
@@ -183,7 +183,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_QSYNC_EVENT.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_QSYNC_EVENT_RJ45_GAIN
     path: ../NVAPIWrapper/cs_generated/NV_QSYNC_EVENT.cs
@@ -210,7 +210,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_QSYNC_EVENT.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_QSYNC_EVENT_RJ45_LOSS
     path: ../NVAPIWrapper/cs_generated/NV_QSYNC_EVENT.cs

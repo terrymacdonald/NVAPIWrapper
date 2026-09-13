@@ -45,7 +45,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIApiHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NVAPIApiHelper
     path: ../NVAPIWrapper/NVAPIApiHelper.cs
@@ -83,7 +83,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIApiHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Finalize
     path: ../NVAPIWrapper/NVAPIApiHelper.cs
@@ -112,7 +112,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIApiHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Initialize
     path: ../NVAPIWrapper/NVAPIApiHelper.cs
@@ -143,7 +143,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIApiHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: IsNVAPIDllAvailable
     path: ../NVAPIWrapper/NVAPIApiHelper.cs
@@ -181,7 +181,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIApiHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: CreateDrsSession
     path: ../NVAPIWrapper/NVAPIApiHelper.cs
@@ -212,7 +212,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIApiHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: EnumeratePhysicalGpus
     path: ../NVAPIWrapper/NVAPIApiHelper.cs
@@ -243,7 +243,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIApiHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetPhysicalGpuFromGpuId
     path: ../NVAPIWrapper/NVAPIApiHelper.cs
@@ -281,7 +281,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIApiHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetLogicalGpuFromPhysicalGpu
     path: ../NVAPIWrapper/NVAPIApiHelper.cs
@@ -316,7 +316,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIApiHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetGpuIdFromPhysicalGpu
     path: ../NVAPIWrapper/NVAPIApiHelper.cs
@@ -351,7 +351,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIApiHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetDriverAndBranchVersion
     path: ../NVAPIWrapper/NVAPIApiHelper.cs
@@ -382,7 +382,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIApiHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetMosaicHelper
     path: ../NVAPIWrapper/NVAPIApiHelper.cs
@@ -413,7 +413,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIApiHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetVideoHelper
     path: ../NVAPIWrapper/NVAPIApiHelper.cs
@@ -444,7 +444,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIApiHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetOpenGLHelper
     path: ../NVAPIWrapper/NVAPIApiHelper.cs
@@ -475,7 +475,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIApiHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetChipSetInfo
     path: ../NVAPIWrapper/NVAPIApiHelper.cs
@@ -506,7 +506,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIApiHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetLidAndDockInfo
     path: ../NVAPIWrapper/NVAPIApiHelper.cs
@@ -537,7 +537,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIApiHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetDisplayDriverInfo
     path: ../NVAPIWrapper/NVAPIApiHelper.cs
@@ -568,7 +568,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIApiHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetPhysicalGpus
     path: ../NVAPIWrapper/NVAPIApiHelper.cs
@@ -599,7 +599,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIApiHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetLogicalGpus
     path: ../NVAPIWrapper/NVAPIApiHelper.cs
@@ -630,7 +630,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIApiHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: EnumerateLogicalGpus
     path: ../NVAPIWrapper/NVAPIApiHelper.cs
@@ -661,7 +661,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIApiHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: EnumerateTccPhysicalGpus
     path: ../NVAPIWrapper/NVAPIApiHelper.cs
@@ -692,7 +692,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIApiHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: EnumerateNvidiaUnAttachedDisplayHandles
     path: ../NVAPIWrapper/NVAPIApiHelper.cs
@@ -723,7 +723,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIApiHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: EnumerateGSyncDevices
     path: ../NVAPIWrapper/NVAPIApiHelper.cs
@@ -754,7 +754,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIApiHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetErrorMessage
     path: ../NVAPIWrapper/NVAPIApiHelper.cs
@@ -789,7 +789,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIApiHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetInterfaceVersionString
     path: ../NVAPIWrapper/NVAPIApiHelper.cs
@@ -820,7 +820,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIApiHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: RegisterEventCallback
     path: ../NVAPIWrapper/NVAPIApiHelper.cs
@@ -856,7 +856,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIApiHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: GetNgxOverrideState
     path: ../NVAPIWrapper/NVAPIApiHelper.cs
@@ -894,7 +894,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIApiHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: SetNgxOverrideState
     path: ../NVAPIWrapper/NVAPIApiHelper.cs
@@ -929,7 +929,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIApiHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: RegisterRiseCallback
     path: ../NVAPIWrapper/NVAPIApiHelper.cs
@@ -965,7 +965,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIApiHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: RequestRise
     path: ../NVAPIWrapper/NVAPIApiHelper.cs
@@ -1000,7 +1000,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIApiHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: UninstallRise
     path: ../NVAPIWrapper/NVAPIApiHelper.cs
@@ -1031,7 +1031,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIApiHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Dispose
     path: ../NVAPIWrapper/NVAPIApiHelper.cs

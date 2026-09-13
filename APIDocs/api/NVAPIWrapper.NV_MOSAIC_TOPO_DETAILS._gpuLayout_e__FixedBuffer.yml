@@ -16,11 +16,11 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIMosaicHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: _gpuLayout_e__FixedBuffer
     path: ../NVAPIWrapper/NVAPIMosaicHelper.cs
-    startLine: 2287
+    startLine: 2420
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper
@@ -50,11 +50,11 @@ items:
   source:
     remote:
       path: NVAPIWrapper/NVAPIMosaicHelper.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: e0_0
     path: ../NVAPIWrapper/NVAPIMosaicHelper.cs
-    startLine: 2290
+    startLine: 2423
   assemblies:
   - NVAPIWrapper
   namespace: NVAPIWrapper

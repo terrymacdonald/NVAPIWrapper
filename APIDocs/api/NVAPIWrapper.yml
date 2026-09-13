@@ -43,6 +43,9 @@ items:
   - NVAPIWrapper.EValues_NGX_DLSS_FG_OVERRIDE_RENDER_PRESET_SELECTION
   - NVAPIWrapper.EValues_NGX_DLSS_FG_OVERRIDE_RESERVED_KEY1
   - NVAPIWrapper.EValues_NGX_DLSS_FG_OVERRIDE_RESERVED_KEY2
+  - NVAPIWrapper.EValues_NGX_DLSS_NR_OVERRIDE
+  - NVAPIWrapper.EValues_NGX_DLSS_NR_OVERRIDE_RENDER_PRESET_SELECTION
+  - NVAPIWrapper.EValues_NGX_DLSS_NR_SL_OVERRIDE
   - NVAPIWrapper.EValues_NGX_DLSS_OVERRIDE_OPTIMAL_SETTINGS
   - NVAPIWrapper.EValues_NGX_DLSS_RR_MODE
   - NVAPIWrapper.EValues_NGX_DLSS_RR_OVERRIDE
@@ -101,6 +104,7 @@ items:
   - NVAPIWrapper.EValues_SLI_PREDEFINED_MODE
   - NVAPIWrapper.EValues_SLI_PREDEFINED_MODE_DX10
   - NVAPIWrapper.EValues_SLI_RENDERING_MODE
+  - NVAPIWrapper.EValues_SL_DLSS_OVERRIDE
   - NVAPIWrapper.EValues_VRPRERENDERLIMIT
   - NVAPIWrapper.EValues_VRRFEATUREINDICATOR
   - NVAPIWrapper.EValues_VRROVERLAYINDICATOR
@@ -192,6 +196,7 @@ items:
   - NVAPIWrapper.NVAPIGpuIlluminationSupportDto
   - NVAPIWrapper.NVAPIGpuInfoDto
   - NVAPIWrapper.NVAPIGpuMemoryInfoExDto
+  - NVAPIWrapper.NVAPIGpuOverclockStatusDto
   - NVAPIWrapper.NVAPIGpuPerfPstates20InfoDto
   - NVAPIWrapper.NVAPIGpuScanoutCompositionParameterDto
   - NVAPIWrapper.NVAPIGpuScanoutConfigurationDto
@@ -205,6 +210,7 @@ items:
   - NVAPIWrapper.NVAPIGpuThermalSensorDto
   - NVAPIWrapper.NVAPIGpuThermalSettingsDto
   - NVAPIWrapper.NVAPIGpuUtilizationSampleCallbackSettingsDto
+  - NVAPIWrapper.NVAPIGpuUuidDto
   - NVAPIWrapper.NVAPIGpuVirtualizationInfoDto
   - NVAPIWrapper.NVAPIGpuVrReadyDto
   - NVAPIWrapper.NVAPIGpuWorkstationFeatureQueryDto
@@ -243,8 +249,10 @@ items:
   - NVAPIWrapper.NVAPINGXOverrideSetDto
   - NVAPIWrapper.NVAPINGXOverrideStateDto
   - NVAPIWrapper.NVAPINvLinkCapsDto
+  - NVAPIWrapper.NVAPINvLinkCapsExDto
   - NVAPIWrapper.NVAPINvLinkDeviceInfoDto
   - NVAPIWrapper.NVAPINvLinkStatusDto
+  - NVAPIWrapper.NVAPINvLinkStatusExDto
   - NVAPIWrapper.NVAPINvLinkStatusInfoDto
   - NVAPIWrapper.NVAPINvManagedDedicatedDisplayInfoDto
   - NVAPIWrapper.NVAPINvManagedDedicatedDisplayMetadataDto
@@ -533,6 +541,8 @@ items:
   - NVAPIWrapper._NVAPI_GSYNC_SYNC_SOURCE
   - NVAPIWrapper._NVAPI_GSYNC_VIDEO_MODE
   - NVAPIWrapper._NVAPI_NVLINK_DEVICE_INFO_DEVICE_TYPE
+  - NVAPIWrapper._NVAPI_NVLINK_LINK_MASK_V1
+  - NVAPIWrapper._NVAPI_NVLINK_LINK_MASK_V1._masks_e__FixedBuffer
   - NVAPIWrapper._NVAPI_NVLINK_STATUS_LINK_STATE
   - NVAPIWrapper._NVAPI_NVLINK_STATUS_SUBLINK_RX_STATE
   - NVAPIWrapper._NVAPI_NVLINK_STATUS_SUBLINK_TX_STATE
@@ -579,6 +589,10 @@ items:
   - NVAPIWrapper._NVDRS_SETTING_VALUES._settingValues_e__FixedBuffer
   - NVAPIWrapper._NVDRS_SETTING_VALUES._settingValues_e__Union
   - NVAPIWrapper._NVDRS_SETTING_VALUES._settingValues_e__Union._wszValue_e__FixedBuffer
+  - NVAPIWrapper._NVLINK_GET_CAPS_EX_V1
+  - NVAPIWrapper._NVLINK_GET_CAPS_EX_V1._reserved_e__FixedBuffer
+  - NVAPIWrapper._NVLINK_GET_STATUS_EX_V1
+  - NVAPIWrapper._NVLINK_GET_STATUS_EX_V1._linkInfo_e__FixedBuffer
   - NVAPIWrapper._NVVIOANCPARITYCOMPUTATION
   - NVAPIWrapper._NVVIOBITSPERCOMPONENT
   - NVAPIWrapper._NVVIOCAPS
@@ -814,6 +828,8 @@ items:
   - NVAPIWrapper._NV_GPU_INFO_V2
   - NVAPIWrapper._NV_GPU_INFO_V2._reserved2_e__FixedBuffer
   - NVAPIWrapper._NV_GPU_OUTPUT_TYPE
+  - NVAPIWrapper._NV_GPU_OVERCLOCK_STATUS_V1
+  - NVAPIWrapper._NV_GPU_OVERCLOCK_STATUS_V1._rsvd_e__FixedBuffer
   - NVAPIWrapper._NV_GPU_PERF_PSTATES20_INFO_V2
   - NVAPIWrapper._NV_GPU_PERF_PSTATES20_INFO_V2._ov_e__Struct
   - NVAPIWrapper._NV_GPU_PERF_PSTATES20_INFO_V2._ov_e__Struct._voltages_e__FixedBuffer
@@ -838,7 +854,9 @@ items:
   - NVAPIWrapper._NV_GSYNC_CONTROL_PARAMS_V1
   - NVAPIWrapper._NV_GSYNC_CONTROL_PARAMS_V2
   - NVAPIWrapper._NV_GSYNC_DELAY
-  - NVAPIWrapper._NV_GSYNC_DISPLAY
+  - NVAPIWrapper._NV_GSYNC_DISPLAY_V1
+  - NVAPIWrapper._NV_GSYNC_DISPLAY_V2
+  - NVAPIWrapper._NV_GSYNC_DISPLAY_V2._reserved2_e__FixedBuffer
   - NVAPIWrapper._NV_GSYNC_GPU
   - NVAPIWrapper._NV_GSYNC_STATUS
   - NVAPIWrapper._NV_GSYNC_STATUS_PARAMS_V1
@@ -938,6 +956,8 @@ items:
   - NVAPIWrapper._NV_MULTIVIEW_PARAMS_V1._renderTargetIndexOffset_e__FixedBuffer
   - NVAPIWrapper._NV_NGX_DLSS_OVERRIDE_GET_STATE_PARAMS_V1
   - NVAPIWrapper._NV_NGX_DLSS_OVERRIDE_GET_STATE_PARAMS_V1._reserved_e__FixedBuffer
+  - NVAPIWrapper._NV_NGX_DLSS_OVERRIDE_GET_STATE_PARAMS_V2
+  - NVAPIWrapper._NV_NGX_DLSS_OVERRIDE_GET_STATE_PARAMS_V2._reserved_e__FixedBuffer
   - NVAPIWrapper._NV_NGX_DLSS_OVERRIDE_SET_STATE_PARAMS_V1
   - NVAPIWrapper._NV_NGX_DLSS_OVERRIDE_SET_STATE_PARAMS_V1._reserved_e__FixedBuffer
   - NVAPIWrapper._NV_NGX_DRIVER_FEATURE_ID
@@ -946,6 +966,14 @@ items:
   - NVAPIWrapper._NV_NGX_GET_DRIVER_FEATURE_SUPPORT_PARAMS_V1
   - NVAPIWrapper._NV_NGX_GET_DRIVER_FEATURE_SUPPORT_PARAMS_V1._featureSupportInfo_e__FixedBuffer
   - NVAPIWrapper._NV_NGX_GET_DRIVER_FEATURE_SUPPORT_PARAMS_V1._reserved_e__FixedBuffer
+  - NVAPIWrapper._NV_NGX_GET_RUNTIME_PARAMS_V1
+  - NVAPIWrapper._NV_NGX_GET_RUNTIME_PARAMS_V1._reserved_e__FixedBuffer
+  - NVAPIWrapper._NV_NGX_RUNTIME_KEY
+  - NVAPIWrapper._NV_NGX_RUNTIME_KEY_VALUE
+  - NVAPIWrapper._NV_NGX_SESSION_PARAMS_V1
+  - NVAPIWrapper._NV_NGX_SESSION_PARAMS_V1._reserved_e__FixedBuffer
+  - NVAPIWrapper._NV_NGX_SET_RUNTIME_PARAMS_V1
+  - NVAPIWrapper._NV_NGX_SET_RUNTIME_PARAMS_V1._reserved_e__FixedBuffer
   - NVAPIWrapper._NV_PHYSICAL_GPUS
   - NVAPIWrapper._NV_PHYSICAL_GPUS._gpuHandleData_e__FixedBuffer
   - NVAPIWrapper._NV_PHYSICAL_GPUS._reserved_e__FixedBuffer
@@ -978,6 +1006,7 @@ items:
   - NVAPIWrapper._NV_SET_ADAPTIVE_SYNC_DATA_V1
   - NVAPIWrapper._NV_SET_ADAPTIVE_SYNC_DATA_V1._reservedEx_e__FixedBuffer
   - NVAPIWrapper._NV_SET_REFLEX_SYNC_PARAMS
+  - NVAPIWrapper._NV_SET_REFLEX_SYNC_PARAMS._rsvd1_e__FixedBuffer
   - NVAPIWrapper._NV_SET_REFLEX_SYNC_PARAMS._rsvd_e__FixedBuffer
   - NVAPIWrapper._NV_SET_SLEEP_MODE_PARAMS
   - NVAPIWrapper._NV_SET_SLEEP_MODE_PARAMS._rsvd_e__FixedBuffer
@@ -2065,6 +2094,34 @@ references:
   name: NVAPIGpuGspInfoDto
   nameWithType: NVAPIGpuGspInfoDto
   fullName: NVAPIWrapper.NVAPIGpuGspInfoDto
+- uid: NVAPIWrapper.NVAPIGpuUuidDto
+  commentId: T:NVAPIWrapper.NVAPIGpuUuidDto
+  parent: NVAPIWrapper
+  href: NVAPIWrapper.NVAPIGpuUuidDto.html
+  name: NVAPIGpuUuidDto
+  nameWithType: NVAPIGpuUuidDto
+  fullName: NVAPIWrapper.NVAPIGpuUuidDto
+- uid: NVAPIWrapper.NVAPIGpuOverclockStatusDto
+  commentId: T:NVAPIWrapper.NVAPIGpuOverclockStatusDto
+  parent: NVAPIWrapper
+  href: NVAPIWrapper.NVAPIGpuOverclockStatusDto.html
+  name: NVAPIGpuOverclockStatusDto
+  nameWithType: NVAPIGpuOverclockStatusDto
+  fullName: NVAPIWrapper.NVAPIGpuOverclockStatusDto
+- uid: NVAPIWrapper.NVAPINvLinkCapsExDto
+  commentId: T:NVAPIWrapper.NVAPINvLinkCapsExDto
+  parent: NVAPIWrapper
+  href: NVAPIWrapper.NVAPINvLinkCapsExDto.html
+  name: NVAPINvLinkCapsExDto
+  nameWithType: NVAPINvLinkCapsExDto
+  fullName: NVAPIWrapper.NVAPINvLinkCapsExDto
+- uid: NVAPIWrapper.NVAPINvLinkStatusExDto
+  commentId: T:NVAPIWrapper.NVAPINvLinkStatusExDto
+  parent: NVAPIWrapper
+  href: NVAPIWrapper.NVAPINvLinkStatusExDto.html
+  name: NVAPINvLinkStatusExDto
+  nameWithType: NVAPINvLinkStatusExDto
+  fullName: NVAPIWrapper.NVAPINvLinkStatusExDto
 - uid: NVAPIWrapper.NVAPINvLinkCapsDto
   commentId: T:NVAPIWrapper.NVAPINvLinkCapsDto
   parent: NVAPIWrapper
@@ -2629,6 +2686,27 @@ references:
   name: EValues_NGX_DLSS_FG_OVERRIDE_RESERVED_KEY2
   nameWithType: EValues_NGX_DLSS_FG_OVERRIDE_RESERVED_KEY2
   fullName: NVAPIWrapper.EValues_NGX_DLSS_FG_OVERRIDE_RESERVED_KEY2
+- uid: NVAPIWrapper.EValues_NGX_DLSS_NR_OVERRIDE
+  commentId: T:NVAPIWrapper.EValues_NGX_DLSS_NR_OVERRIDE
+  parent: NVAPIWrapper
+  href: NVAPIWrapper.EValues_NGX_DLSS_NR_OVERRIDE.html
+  name: EValues_NGX_DLSS_NR_OVERRIDE
+  nameWithType: EValues_NGX_DLSS_NR_OVERRIDE
+  fullName: NVAPIWrapper.EValues_NGX_DLSS_NR_OVERRIDE
+- uid: NVAPIWrapper.EValues_NGX_DLSS_NR_OVERRIDE_RENDER_PRESET_SELECTION
+  commentId: T:NVAPIWrapper.EValues_NGX_DLSS_NR_OVERRIDE_RENDER_PRESET_SELECTION
+  parent: NVAPIWrapper
+  href: NVAPIWrapper.EValues_NGX_DLSS_NR_OVERRIDE_RENDER_PRESET_SELECTION.html
+  name: EValues_NGX_DLSS_NR_OVERRIDE_RENDER_PRESET_SELECTION
+  nameWithType: EValues_NGX_DLSS_NR_OVERRIDE_RENDER_PRESET_SELECTION
+  fullName: NVAPIWrapper.EValues_NGX_DLSS_NR_OVERRIDE_RENDER_PRESET_SELECTION
+- uid: NVAPIWrapper.EValues_NGX_DLSS_NR_SL_OVERRIDE
+  commentId: T:NVAPIWrapper.EValues_NGX_DLSS_NR_SL_OVERRIDE
+  parent: NVAPIWrapper
+  href: NVAPIWrapper.EValues_NGX_DLSS_NR_SL_OVERRIDE.html
+  name: EValues_NGX_DLSS_NR_SL_OVERRIDE
+  nameWithType: EValues_NGX_DLSS_NR_SL_OVERRIDE
+  fullName: NVAPIWrapper.EValues_NGX_DLSS_NR_SL_OVERRIDE
 - uid: NVAPIWrapper.EValues_NGX_DLSS_OVERRIDE_OPTIMAL_SETTINGS
   commentId: T:NVAPIWrapper.EValues_NGX_DLSS_OVERRIDE_OPTIMAL_SETTINGS
   parent: NVAPIWrapper
@@ -3035,6 +3113,13 @@ references:
   name: EValues_SLI_RENDERING_MODE
   nameWithType: EValues_SLI_RENDERING_MODE
   fullName: NVAPIWrapper.EValues_SLI_RENDERING_MODE
+- uid: NVAPIWrapper.EValues_SL_DLSS_OVERRIDE
+  commentId: T:NVAPIWrapper.EValues_SL_DLSS_OVERRIDE
+  parent: NVAPIWrapper
+  href: NVAPIWrapper.EValues_SL_DLSS_OVERRIDE.html
+  name: EValues_SL_DLSS_OVERRIDE
+  nameWithType: EValues_SL_DLSS_OVERRIDE
+  fullName: NVAPIWrapper.EValues_SL_DLSS_OVERRIDE
 - uid: NVAPIWrapper.EValues_VRPRERENDERLIMIT
   commentId: T:NVAPIWrapper.EValues_VRPRERENDERLIMIT
   parent: NVAPIWrapper
@@ -5985,6 +6070,36 @@ references:
   name: _NVAPI_NVLINK_DEVICE_INFO_DEVICE_TYPE
   nameWithType: _NVAPI_NVLINK_DEVICE_INFO_DEVICE_TYPE
   fullName: NVAPIWrapper._NVAPI_NVLINK_DEVICE_INFO_DEVICE_TYPE
+- uid: NVAPIWrapper._NVAPI_NVLINK_LINK_MASK_V1
+  commentId: T:NVAPIWrapper._NVAPI_NVLINK_LINK_MASK_V1
+  parent: NVAPIWrapper
+  href: NVAPIWrapper._NVAPI_NVLINK_LINK_MASK_V1.html
+  name: _NVAPI_NVLINK_LINK_MASK_V1
+  nameWithType: _NVAPI_NVLINK_LINK_MASK_V1
+  fullName: NVAPIWrapper._NVAPI_NVLINK_LINK_MASK_V1
+- uid: NVAPIWrapper._NVAPI_NVLINK_LINK_MASK_V1._masks_e__FixedBuffer
+  commentId: T:NVAPIWrapper._NVAPI_NVLINK_LINK_MASK_V1._masks_e__FixedBuffer
+  parent: NVAPIWrapper
+  href: NVAPIWrapper._NVAPI_NVLINK_LINK_MASK_V1.html
+  name: _NVAPI_NVLINK_LINK_MASK_V1._masks_e__FixedBuffer
+  nameWithType: _NVAPI_NVLINK_LINK_MASK_V1._masks_e__FixedBuffer
+  fullName: NVAPIWrapper._NVAPI_NVLINK_LINK_MASK_V1._masks_e__FixedBuffer
+  spec.csharp:
+  - uid: NVAPIWrapper._NVAPI_NVLINK_LINK_MASK_V1
+    name: _NVAPI_NVLINK_LINK_MASK_V1
+    href: NVAPIWrapper._NVAPI_NVLINK_LINK_MASK_V1.html
+  - name: .
+  - uid: NVAPIWrapper._NVAPI_NVLINK_LINK_MASK_V1._masks_e__FixedBuffer
+    name: _masks_e__FixedBuffer
+    href: NVAPIWrapper._NVAPI_NVLINK_LINK_MASK_V1._masks_e__FixedBuffer.html
+  spec.vb:
+  - uid: NVAPIWrapper._NVAPI_NVLINK_LINK_MASK_V1
+    name: _NVAPI_NVLINK_LINK_MASK_V1
+    href: NVAPIWrapper._NVAPI_NVLINK_LINK_MASK_V1.html
+  - name: .
+  - uid: NVAPIWrapper._NVAPI_NVLINK_LINK_MASK_V1._masks_e__FixedBuffer
+    name: _masks_e__FixedBuffer
+    href: NVAPIWrapper._NVAPI_NVLINK_LINK_MASK_V1._masks_e__FixedBuffer.html
 - uid: NVAPIWrapper._NVAPI_NVLINK_STATUS_LINK_STATE
   commentId: T:NVAPIWrapper._NVAPI_NVLINK_STATUS_LINK_STATE
   parent: NVAPIWrapper
@@ -6806,6 +6921,66 @@ references:
   - uid: NVAPIWrapper._NVDRS_SETTING_VALUES._settingValues_e__FixedBuffer
     name: _settingValues_e__FixedBuffer
     href: NVAPIWrapper._NVDRS_SETTING_VALUES._settingValues_e__FixedBuffer.html
+- uid: NVAPIWrapper._NVLINK_GET_CAPS_EX_V1
+  commentId: T:NVAPIWrapper._NVLINK_GET_CAPS_EX_V1
+  parent: NVAPIWrapper
+  href: NVAPIWrapper._NVLINK_GET_CAPS_EX_V1.html
+  name: _NVLINK_GET_CAPS_EX_V1
+  nameWithType: _NVLINK_GET_CAPS_EX_V1
+  fullName: NVAPIWrapper._NVLINK_GET_CAPS_EX_V1
+- uid: NVAPIWrapper._NVLINK_GET_CAPS_EX_V1._reserved_e__FixedBuffer
+  commentId: T:NVAPIWrapper._NVLINK_GET_CAPS_EX_V1._reserved_e__FixedBuffer
+  parent: NVAPIWrapper
+  href: NVAPIWrapper._NVLINK_GET_CAPS_EX_V1.html
+  name: _NVLINK_GET_CAPS_EX_V1._reserved_e__FixedBuffer
+  nameWithType: _NVLINK_GET_CAPS_EX_V1._reserved_e__FixedBuffer
+  fullName: NVAPIWrapper._NVLINK_GET_CAPS_EX_V1._reserved_e__FixedBuffer
+  spec.csharp:
+  - uid: NVAPIWrapper._NVLINK_GET_CAPS_EX_V1
+    name: _NVLINK_GET_CAPS_EX_V1
+    href: NVAPIWrapper._NVLINK_GET_CAPS_EX_V1.html
+  - name: .
+  - uid: NVAPIWrapper._NVLINK_GET_CAPS_EX_V1._reserved_e__FixedBuffer
+    name: _reserved_e__FixedBuffer
+    href: NVAPIWrapper._NVLINK_GET_CAPS_EX_V1._reserved_e__FixedBuffer.html
+  spec.vb:
+  - uid: NVAPIWrapper._NVLINK_GET_CAPS_EX_V1
+    name: _NVLINK_GET_CAPS_EX_V1
+    href: NVAPIWrapper._NVLINK_GET_CAPS_EX_V1.html
+  - name: .
+  - uid: NVAPIWrapper._NVLINK_GET_CAPS_EX_V1._reserved_e__FixedBuffer
+    name: _reserved_e__FixedBuffer
+    href: NVAPIWrapper._NVLINK_GET_CAPS_EX_V1._reserved_e__FixedBuffer.html
+- uid: NVAPIWrapper._NVLINK_GET_STATUS_EX_V1
+  commentId: T:NVAPIWrapper._NVLINK_GET_STATUS_EX_V1
+  parent: NVAPIWrapper
+  href: NVAPIWrapper._NVLINK_GET_STATUS_EX_V1.html
+  name: _NVLINK_GET_STATUS_EX_V1
+  nameWithType: _NVLINK_GET_STATUS_EX_V1
+  fullName: NVAPIWrapper._NVLINK_GET_STATUS_EX_V1
+- uid: NVAPIWrapper._NVLINK_GET_STATUS_EX_V1._linkInfo_e__FixedBuffer
+  commentId: T:NVAPIWrapper._NVLINK_GET_STATUS_EX_V1._linkInfo_e__FixedBuffer
+  parent: NVAPIWrapper
+  href: NVAPIWrapper._NVLINK_GET_STATUS_EX_V1.html
+  name: _NVLINK_GET_STATUS_EX_V1._linkInfo_e__FixedBuffer
+  nameWithType: _NVLINK_GET_STATUS_EX_V1._linkInfo_e__FixedBuffer
+  fullName: NVAPIWrapper._NVLINK_GET_STATUS_EX_V1._linkInfo_e__FixedBuffer
+  spec.csharp:
+  - uid: NVAPIWrapper._NVLINK_GET_STATUS_EX_V1
+    name: _NVLINK_GET_STATUS_EX_V1
+    href: NVAPIWrapper._NVLINK_GET_STATUS_EX_V1.html
+  - name: .
+  - uid: NVAPIWrapper._NVLINK_GET_STATUS_EX_V1._linkInfo_e__FixedBuffer
+    name: _linkInfo_e__FixedBuffer
+    href: NVAPIWrapper._NVLINK_GET_STATUS_EX_V1._linkInfo_e__FixedBuffer.html
+  spec.vb:
+  - uid: NVAPIWrapper._NVLINK_GET_STATUS_EX_V1
+    name: _NVLINK_GET_STATUS_EX_V1
+    href: NVAPIWrapper._NVLINK_GET_STATUS_EX_V1.html
+  - name: .
+  - uid: NVAPIWrapper._NVLINK_GET_STATUS_EX_V1._linkInfo_e__FixedBuffer
+    name: _linkInfo_e__FixedBuffer
+    href: NVAPIWrapper._NVLINK_GET_STATUS_EX_V1._linkInfo_e__FixedBuffer.html
 - uid: NVAPIWrapper._NVVIOANCPARITYCOMPUTATION
   commentId: T:NVAPIWrapper._NVVIOANCPARITYCOMPUTATION
   parent: NVAPIWrapper
@@ -9808,6 +9983,36 @@ references:
   name: _NV_GPU_OUTPUT_TYPE
   nameWithType: _NV_GPU_OUTPUT_TYPE
   fullName: NVAPIWrapper._NV_GPU_OUTPUT_TYPE
+- uid: NVAPIWrapper._NV_GPU_OVERCLOCK_STATUS_V1
+  commentId: T:NVAPIWrapper._NV_GPU_OVERCLOCK_STATUS_V1
+  parent: NVAPIWrapper
+  href: NVAPIWrapper._NV_GPU_OVERCLOCK_STATUS_V1.html
+  name: _NV_GPU_OVERCLOCK_STATUS_V1
+  nameWithType: _NV_GPU_OVERCLOCK_STATUS_V1
+  fullName: NVAPIWrapper._NV_GPU_OVERCLOCK_STATUS_V1
+- uid: NVAPIWrapper._NV_GPU_OVERCLOCK_STATUS_V1._rsvd_e__FixedBuffer
+  commentId: T:NVAPIWrapper._NV_GPU_OVERCLOCK_STATUS_V1._rsvd_e__FixedBuffer
+  parent: NVAPIWrapper
+  href: NVAPIWrapper._NV_GPU_OVERCLOCK_STATUS_V1.html
+  name: _NV_GPU_OVERCLOCK_STATUS_V1._rsvd_e__FixedBuffer
+  nameWithType: _NV_GPU_OVERCLOCK_STATUS_V1._rsvd_e__FixedBuffer
+  fullName: NVAPIWrapper._NV_GPU_OVERCLOCK_STATUS_V1._rsvd_e__FixedBuffer
+  spec.csharp:
+  - uid: NVAPIWrapper._NV_GPU_OVERCLOCK_STATUS_V1
+    name: _NV_GPU_OVERCLOCK_STATUS_V1
+    href: NVAPIWrapper._NV_GPU_OVERCLOCK_STATUS_V1.html
+  - name: .
+  - uid: NVAPIWrapper._NV_GPU_OVERCLOCK_STATUS_V1._rsvd_e__FixedBuffer
+    name: _rsvd_e__FixedBuffer
+    href: NVAPIWrapper._NV_GPU_OVERCLOCK_STATUS_V1._rsvd_e__FixedBuffer.html
+  spec.vb:
+  - uid: NVAPIWrapper._NV_GPU_OVERCLOCK_STATUS_V1
+    name: _NV_GPU_OVERCLOCK_STATUS_V1
+    href: NVAPIWrapper._NV_GPU_OVERCLOCK_STATUS_V1.html
+  - name: .
+  - uid: NVAPIWrapper._NV_GPU_OVERCLOCK_STATUS_V1._rsvd_e__FixedBuffer
+    name: _rsvd_e__FixedBuffer
+    href: NVAPIWrapper._NV_GPU_OVERCLOCK_STATUS_V1._rsvd_e__FixedBuffer.html
 - uid: NVAPIWrapper._NV_GPU_PERF_PSTATES20_INFO_V2
   commentId: T:NVAPIWrapper._NV_GPU_PERF_PSTATES20_INFO_V2
   parent: NVAPIWrapper
@@ -10021,6 +10226,7 @@ references:
   fullName: NVAPIWrapper._NV_GPU_TYPE
 - uid: NVAPIWrapper._NV_GPU_UUID_V1
   commentId: T:NVAPIWrapper._NV_GPU_UUID_V1
+  parent: NVAPIWrapper
   href: NVAPIWrapper._NV_GPU_UUID_V1.html
   name: _NV_GPU_UUID_V1
   nameWithType: _NV_GPU_UUID_V1
@@ -10108,13 +10314,42 @@ references:
   name: _NV_GSYNC_DELAY
   nameWithType: _NV_GSYNC_DELAY
   fullName: NVAPIWrapper._NV_GSYNC_DELAY
-- uid: NVAPIWrapper._NV_GSYNC_DISPLAY
-  commentId: T:NVAPIWrapper._NV_GSYNC_DISPLAY
+- uid: NVAPIWrapper._NV_GSYNC_DISPLAY_V1
+  commentId: T:NVAPIWrapper._NV_GSYNC_DISPLAY_V1
+  href: NVAPIWrapper._NV_GSYNC_DISPLAY_V1.html
+  name: _NV_GSYNC_DISPLAY_V1
+  nameWithType: _NV_GSYNC_DISPLAY_V1
+  fullName: NVAPIWrapper._NV_GSYNC_DISPLAY_V1
+- uid: NVAPIWrapper._NV_GSYNC_DISPLAY_V2
+  commentId: T:NVAPIWrapper._NV_GSYNC_DISPLAY_V2
   parent: NVAPIWrapper
-  href: NVAPIWrapper._NV_GSYNC_DISPLAY.html
-  name: _NV_GSYNC_DISPLAY
-  nameWithType: _NV_GSYNC_DISPLAY
-  fullName: NVAPIWrapper._NV_GSYNC_DISPLAY
+  href: NVAPIWrapper._NV_GSYNC_DISPLAY_V2.html
+  name: _NV_GSYNC_DISPLAY_V2
+  nameWithType: _NV_GSYNC_DISPLAY_V2
+  fullName: NVAPIWrapper._NV_GSYNC_DISPLAY_V2
+- uid: NVAPIWrapper._NV_GSYNC_DISPLAY_V2._reserved2_e__FixedBuffer
+  commentId: T:NVAPIWrapper._NV_GSYNC_DISPLAY_V2._reserved2_e__FixedBuffer
+  parent: NVAPIWrapper
+  href: NVAPIWrapper._NV_GSYNC_DISPLAY_V2.html
+  name: _NV_GSYNC_DISPLAY_V2._reserved2_e__FixedBuffer
+  nameWithType: _NV_GSYNC_DISPLAY_V2._reserved2_e__FixedBuffer
+  fullName: NVAPIWrapper._NV_GSYNC_DISPLAY_V2._reserved2_e__FixedBuffer
+  spec.csharp:
+  - uid: NVAPIWrapper._NV_GSYNC_DISPLAY_V2
+    name: _NV_GSYNC_DISPLAY_V2
+    href: NVAPIWrapper._NV_GSYNC_DISPLAY_V2.html
+  - name: .
+  - uid: NVAPIWrapper._NV_GSYNC_DISPLAY_V2._reserved2_e__FixedBuffer
+    name: _reserved2_e__FixedBuffer
+    href: NVAPIWrapper._NV_GSYNC_DISPLAY_V2._reserved2_e__FixedBuffer.html
+  spec.vb:
+  - uid: NVAPIWrapper._NV_GSYNC_DISPLAY_V2
+    name: _NV_GSYNC_DISPLAY_V2
+    href: NVAPIWrapper._NV_GSYNC_DISPLAY_V2.html
+  - name: .
+  - uid: NVAPIWrapper._NV_GSYNC_DISPLAY_V2._reserved2_e__FixedBuffer
+    name: _reserved2_e__FixedBuffer
+    href: NVAPIWrapper._NV_GSYNC_DISPLAY_V2._reserved2_e__FixedBuffer.html
 - uid: NVAPIWrapper._NV_GSYNC_GPU
   commentId: T:NVAPIWrapper._NV_GSYNC_GPU
   parent: NVAPIWrapper
@@ -11630,6 +11865,35 @@ references:
   - uid: NVAPIWrapper._NV_NGX_DLSS_OVERRIDE_GET_STATE_PARAMS_V1._reserved_e__FixedBuffer
     name: _reserved_e__FixedBuffer
     href: NVAPIWrapper._NV_NGX_DLSS_OVERRIDE_GET_STATE_PARAMS_V1._reserved_e__FixedBuffer.html
+- uid: NVAPIWrapper._NV_NGX_DLSS_OVERRIDE_GET_STATE_PARAMS_V2
+  commentId: T:NVAPIWrapper._NV_NGX_DLSS_OVERRIDE_GET_STATE_PARAMS_V2
+  href: NVAPIWrapper._NV_NGX_DLSS_OVERRIDE_GET_STATE_PARAMS_V2.html
+  name: _NV_NGX_DLSS_OVERRIDE_GET_STATE_PARAMS_V2
+  nameWithType: _NV_NGX_DLSS_OVERRIDE_GET_STATE_PARAMS_V2
+  fullName: NVAPIWrapper._NV_NGX_DLSS_OVERRIDE_GET_STATE_PARAMS_V2
+- uid: NVAPIWrapper._NV_NGX_DLSS_OVERRIDE_GET_STATE_PARAMS_V2._reserved_e__FixedBuffer
+  commentId: T:NVAPIWrapper._NV_NGX_DLSS_OVERRIDE_GET_STATE_PARAMS_V2._reserved_e__FixedBuffer
+  parent: NVAPIWrapper
+  href: NVAPIWrapper._NV_NGX_DLSS_OVERRIDE_GET_STATE_PARAMS_V2.html
+  name: _NV_NGX_DLSS_OVERRIDE_GET_STATE_PARAMS_V2._reserved_e__FixedBuffer
+  nameWithType: _NV_NGX_DLSS_OVERRIDE_GET_STATE_PARAMS_V2._reserved_e__FixedBuffer
+  fullName: NVAPIWrapper._NV_NGX_DLSS_OVERRIDE_GET_STATE_PARAMS_V2._reserved_e__FixedBuffer
+  spec.csharp:
+  - uid: NVAPIWrapper._NV_NGX_DLSS_OVERRIDE_GET_STATE_PARAMS_V2
+    name: _NV_NGX_DLSS_OVERRIDE_GET_STATE_PARAMS_V2
+    href: NVAPIWrapper._NV_NGX_DLSS_OVERRIDE_GET_STATE_PARAMS_V2.html
+  - name: .
+  - uid: NVAPIWrapper._NV_NGX_DLSS_OVERRIDE_GET_STATE_PARAMS_V2._reserved_e__FixedBuffer
+    name: _reserved_e__FixedBuffer
+    href: NVAPIWrapper._NV_NGX_DLSS_OVERRIDE_GET_STATE_PARAMS_V2._reserved_e__FixedBuffer.html
+  spec.vb:
+  - uid: NVAPIWrapper._NV_NGX_DLSS_OVERRIDE_GET_STATE_PARAMS_V2
+    name: _NV_NGX_DLSS_OVERRIDE_GET_STATE_PARAMS_V2
+    href: NVAPIWrapper._NV_NGX_DLSS_OVERRIDE_GET_STATE_PARAMS_V2.html
+  - name: .
+  - uid: NVAPIWrapper._NV_NGX_DLSS_OVERRIDE_GET_STATE_PARAMS_V2._reserved_e__FixedBuffer
+    name: _reserved_e__FixedBuffer
+    href: NVAPIWrapper._NV_NGX_DLSS_OVERRIDE_GET_STATE_PARAMS_V2._reserved_e__FixedBuffer.html
 - uid: NVAPIWrapper._NV_NGX_DLSS_OVERRIDE_SET_STATE_PARAMS_V1
   commentId: T:NVAPIWrapper._NV_NGX_DLSS_OVERRIDE_SET_STATE_PARAMS_V1
   href: NVAPIWrapper._NV_NGX_DLSS_OVERRIDE_SET_STATE_PARAMS_V1.html
@@ -11748,6 +12012,106 @@ references:
   - uid: NVAPIWrapper._NV_NGX_GET_DRIVER_FEATURE_SUPPORT_PARAMS_V1._reserved_e__FixedBuffer
     name: _reserved_e__FixedBuffer
     href: NVAPIWrapper._NV_NGX_GET_DRIVER_FEATURE_SUPPORT_PARAMS_V1._reserved_e__FixedBuffer.html
+- uid: NVAPIWrapper._NV_NGX_GET_RUNTIME_PARAMS_V1
+  commentId: T:NVAPIWrapper._NV_NGX_GET_RUNTIME_PARAMS_V1
+  href: NVAPIWrapper._NV_NGX_GET_RUNTIME_PARAMS_V1.html
+  name: _NV_NGX_GET_RUNTIME_PARAMS_V1
+  nameWithType: _NV_NGX_GET_RUNTIME_PARAMS_V1
+  fullName: NVAPIWrapper._NV_NGX_GET_RUNTIME_PARAMS_V1
+- uid: NVAPIWrapper._NV_NGX_GET_RUNTIME_PARAMS_V1._reserved_e__FixedBuffer
+  commentId: T:NVAPIWrapper._NV_NGX_GET_RUNTIME_PARAMS_V1._reserved_e__FixedBuffer
+  parent: NVAPIWrapper
+  href: NVAPIWrapper._NV_NGX_GET_RUNTIME_PARAMS_V1.html
+  name: _NV_NGX_GET_RUNTIME_PARAMS_V1._reserved_e__FixedBuffer
+  nameWithType: _NV_NGX_GET_RUNTIME_PARAMS_V1._reserved_e__FixedBuffer
+  fullName: NVAPIWrapper._NV_NGX_GET_RUNTIME_PARAMS_V1._reserved_e__FixedBuffer
+  spec.csharp:
+  - uid: NVAPIWrapper._NV_NGX_GET_RUNTIME_PARAMS_V1
+    name: _NV_NGX_GET_RUNTIME_PARAMS_V1
+    href: NVAPIWrapper._NV_NGX_GET_RUNTIME_PARAMS_V1.html
+  - name: .
+  - uid: NVAPIWrapper._NV_NGX_GET_RUNTIME_PARAMS_V1._reserved_e__FixedBuffer
+    name: _reserved_e__FixedBuffer
+    href: NVAPIWrapper._NV_NGX_GET_RUNTIME_PARAMS_V1._reserved_e__FixedBuffer.html
+  spec.vb:
+  - uid: NVAPIWrapper._NV_NGX_GET_RUNTIME_PARAMS_V1
+    name: _NV_NGX_GET_RUNTIME_PARAMS_V1
+    href: NVAPIWrapper._NV_NGX_GET_RUNTIME_PARAMS_V1.html
+  - name: .
+  - uid: NVAPIWrapper._NV_NGX_GET_RUNTIME_PARAMS_V1._reserved_e__FixedBuffer
+    name: _reserved_e__FixedBuffer
+    href: NVAPIWrapper._NV_NGX_GET_RUNTIME_PARAMS_V1._reserved_e__FixedBuffer.html
+- uid: NVAPIWrapper._NV_NGX_RUNTIME_KEY
+  commentId: T:NVAPIWrapper._NV_NGX_RUNTIME_KEY
+  parent: NVAPIWrapper
+  href: NVAPIWrapper._NV_NGX_RUNTIME_KEY.html
+  name: _NV_NGX_RUNTIME_KEY
+  nameWithType: _NV_NGX_RUNTIME_KEY
+  fullName: NVAPIWrapper._NV_NGX_RUNTIME_KEY
+- uid: NVAPIWrapper._NV_NGX_RUNTIME_KEY_VALUE
+  commentId: T:NVAPIWrapper._NV_NGX_RUNTIME_KEY_VALUE
+  href: NVAPIWrapper._NV_NGX_RUNTIME_KEY_VALUE.html
+  name: _NV_NGX_RUNTIME_KEY_VALUE
+  nameWithType: _NV_NGX_RUNTIME_KEY_VALUE
+  fullName: NVAPIWrapper._NV_NGX_RUNTIME_KEY_VALUE
+- uid: NVAPIWrapper._NV_NGX_SESSION_PARAMS_V1
+  commentId: T:NVAPIWrapper._NV_NGX_SESSION_PARAMS_V1
+  href: NVAPIWrapper._NV_NGX_SESSION_PARAMS_V1.html
+  name: _NV_NGX_SESSION_PARAMS_V1
+  nameWithType: _NV_NGX_SESSION_PARAMS_V1
+  fullName: NVAPIWrapper._NV_NGX_SESSION_PARAMS_V1
+- uid: NVAPIWrapper._NV_NGX_SESSION_PARAMS_V1._reserved_e__FixedBuffer
+  commentId: T:NVAPIWrapper._NV_NGX_SESSION_PARAMS_V1._reserved_e__FixedBuffer
+  parent: NVAPIWrapper
+  href: NVAPIWrapper._NV_NGX_SESSION_PARAMS_V1.html
+  name: _NV_NGX_SESSION_PARAMS_V1._reserved_e__FixedBuffer
+  nameWithType: _NV_NGX_SESSION_PARAMS_V1._reserved_e__FixedBuffer
+  fullName: NVAPIWrapper._NV_NGX_SESSION_PARAMS_V1._reserved_e__FixedBuffer
+  spec.csharp:
+  - uid: NVAPIWrapper._NV_NGX_SESSION_PARAMS_V1
+    name: _NV_NGX_SESSION_PARAMS_V1
+    href: NVAPIWrapper._NV_NGX_SESSION_PARAMS_V1.html
+  - name: .
+  - uid: NVAPIWrapper._NV_NGX_SESSION_PARAMS_V1._reserved_e__FixedBuffer
+    name: _reserved_e__FixedBuffer
+    href: NVAPIWrapper._NV_NGX_SESSION_PARAMS_V1._reserved_e__FixedBuffer.html
+  spec.vb:
+  - uid: NVAPIWrapper._NV_NGX_SESSION_PARAMS_V1
+    name: _NV_NGX_SESSION_PARAMS_V1
+    href: NVAPIWrapper._NV_NGX_SESSION_PARAMS_V1.html
+  - name: .
+  - uid: NVAPIWrapper._NV_NGX_SESSION_PARAMS_V1._reserved_e__FixedBuffer
+    name: _reserved_e__FixedBuffer
+    href: NVAPIWrapper._NV_NGX_SESSION_PARAMS_V1._reserved_e__FixedBuffer.html
+- uid: NVAPIWrapper._NV_NGX_SET_RUNTIME_PARAMS_V1
+  commentId: T:NVAPIWrapper._NV_NGX_SET_RUNTIME_PARAMS_V1
+  href: NVAPIWrapper._NV_NGX_SET_RUNTIME_PARAMS_V1.html
+  name: _NV_NGX_SET_RUNTIME_PARAMS_V1
+  nameWithType: _NV_NGX_SET_RUNTIME_PARAMS_V1
+  fullName: NVAPIWrapper._NV_NGX_SET_RUNTIME_PARAMS_V1
+- uid: NVAPIWrapper._NV_NGX_SET_RUNTIME_PARAMS_V1._reserved_e__FixedBuffer
+  commentId: T:NVAPIWrapper._NV_NGX_SET_RUNTIME_PARAMS_V1._reserved_e__FixedBuffer
+  parent: NVAPIWrapper
+  href: NVAPIWrapper._NV_NGX_SET_RUNTIME_PARAMS_V1.html
+  name: _NV_NGX_SET_RUNTIME_PARAMS_V1._reserved_e__FixedBuffer
+  nameWithType: _NV_NGX_SET_RUNTIME_PARAMS_V1._reserved_e__FixedBuffer
+  fullName: NVAPIWrapper._NV_NGX_SET_RUNTIME_PARAMS_V1._reserved_e__FixedBuffer
+  spec.csharp:
+  - uid: NVAPIWrapper._NV_NGX_SET_RUNTIME_PARAMS_V1
+    name: _NV_NGX_SET_RUNTIME_PARAMS_V1
+    href: NVAPIWrapper._NV_NGX_SET_RUNTIME_PARAMS_V1.html
+  - name: .
+  - uid: NVAPIWrapper._NV_NGX_SET_RUNTIME_PARAMS_V1._reserved_e__FixedBuffer
+    name: _reserved_e__FixedBuffer
+    href: NVAPIWrapper._NV_NGX_SET_RUNTIME_PARAMS_V1._reserved_e__FixedBuffer.html
+  spec.vb:
+  - uid: NVAPIWrapper._NV_NGX_SET_RUNTIME_PARAMS_V1
+    name: _NV_NGX_SET_RUNTIME_PARAMS_V1
+    href: NVAPIWrapper._NV_NGX_SET_RUNTIME_PARAMS_V1.html
+  - name: .
+  - uid: NVAPIWrapper._NV_NGX_SET_RUNTIME_PARAMS_V1._reserved_e__FixedBuffer
+    name: _reserved_e__FixedBuffer
+    href: NVAPIWrapper._NV_NGX_SET_RUNTIME_PARAMS_V1._reserved_e__FixedBuffer.html
 - uid: NVAPIWrapper._NV_PHYSICAL_GPUS
   commentId: T:NVAPIWrapper._NV_PHYSICAL_GPUS
   href: NVAPIWrapper._NV_PHYSICAL_GPUS.html
@@ -12090,6 +12454,29 @@ references:
   name: _NV_SET_REFLEX_SYNC_PARAMS
   nameWithType: _NV_SET_REFLEX_SYNC_PARAMS
   fullName: NVAPIWrapper._NV_SET_REFLEX_SYNC_PARAMS
+- uid: NVAPIWrapper._NV_SET_REFLEX_SYNC_PARAMS._rsvd1_e__FixedBuffer
+  commentId: T:NVAPIWrapper._NV_SET_REFLEX_SYNC_PARAMS._rsvd1_e__FixedBuffer
+  parent: NVAPIWrapper
+  href: NVAPIWrapper._NV_SET_REFLEX_SYNC_PARAMS.html
+  name: _NV_SET_REFLEX_SYNC_PARAMS._rsvd1_e__FixedBuffer
+  nameWithType: _NV_SET_REFLEX_SYNC_PARAMS._rsvd1_e__FixedBuffer
+  fullName: NVAPIWrapper._NV_SET_REFLEX_SYNC_PARAMS._rsvd1_e__FixedBuffer
+  spec.csharp:
+  - uid: NVAPIWrapper._NV_SET_REFLEX_SYNC_PARAMS
+    name: _NV_SET_REFLEX_SYNC_PARAMS
+    href: NVAPIWrapper._NV_SET_REFLEX_SYNC_PARAMS.html
+  - name: .
+  - uid: NVAPIWrapper._NV_SET_REFLEX_SYNC_PARAMS._rsvd1_e__FixedBuffer
+    name: _rsvd1_e__FixedBuffer
+    href: NVAPIWrapper._NV_SET_REFLEX_SYNC_PARAMS._rsvd1_e__FixedBuffer.html
+  spec.vb:
+  - uid: NVAPIWrapper._NV_SET_REFLEX_SYNC_PARAMS
+    name: _NV_SET_REFLEX_SYNC_PARAMS
+    href: NVAPIWrapper._NV_SET_REFLEX_SYNC_PARAMS.html
+  - name: .
+  - uid: NVAPIWrapper._NV_SET_REFLEX_SYNC_PARAMS._rsvd1_e__FixedBuffer
+    name: _rsvd1_e__FixedBuffer
+    href: NVAPIWrapper._NV_SET_REFLEX_SYNC_PARAMS._rsvd1_e__FixedBuffer.html
 - uid: NVAPIWrapper._NV_SET_REFLEX_SYNC_PARAMS._rsvd_e__FixedBuffer
   commentId: T:NVAPIWrapper._NV_SET_REFLEX_SYNC_PARAMS._rsvd_e__FixedBuffer
   parent: NVAPIWrapper

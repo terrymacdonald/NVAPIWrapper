@@ -17,7 +17,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_COMPUTE_GPU_TOPOLOGY_V1.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: _computeGpus_e__Struct
     path: ../NVAPIWrapper/cs_generated/NV_COMPUTE_GPU_TOPOLOGY_V1.cs
@@ -50,7 +50,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_COMPUTE_GPU_TOPOLOGY_V1.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: hPhysicalGpu
     path: ../NVAPIWrapper/cs_generated/NV_COMPUTE_GPU_TOPOLOGY_V1.cs
@@ -78,7 +78,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/NV_COMPUTE_GPU_TOPOLOGY_V1.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: flags
     path: ../NVAPIWrapper/cs_generated/NV_COMPUTE_GPU_TOPOLOGY_V1.cs

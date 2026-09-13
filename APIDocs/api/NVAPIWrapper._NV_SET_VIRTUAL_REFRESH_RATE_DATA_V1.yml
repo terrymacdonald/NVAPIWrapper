@@ -20,7 +20,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_SET_VIRTUAL_REFRESH_RATE_DATA_V1.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: _NV_SET_VIRTUAL_REFRESH_RATE_DATA_V1
     path: ../NVAPIWrapper/cs_generated/_NV_SET_VIRTUAL_REFRESH_RATE_DATA_V1.cs
@@ -53,7 +53,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_SET_VIRTUAL_REFRESH_RATE_DATA_V1.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: version
     path: ../NVAPIWrapper/cs_generated/_NV_SET_VIRTUAL_REFRESH_RATE_DATA_V1.cs
@@ -81,7 +81,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_SET_VIRTUAL_REFRESH_RATE_DATA_V1.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: frameIntervalUs
     path: ../NVAPIWrapper/cs_generated/_NV_SET_VIRTUAL_REFRESH_RATE_DATA_V1.cs
@@ -109,7 +109,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_SET_VIRTUAL_REFRESH_RATE_DATA_V1.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: rrx1k
     path: ../NVAPIWrapper/cs_generated/_NV_SET_VIRTUAL_REFRESH_RATE_DATA_V1.cs
@@ -137,7 +137,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_SET_VIRTUAL_REFRESH_RATE_DATA_V1.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: bIsGamingVrr
     path: ../NVAPIWrapper/cs_generated/_NV_SET_VIRTUAL_REFRESH_RATE_DATA_V1.cs
@@ -165,7 +165,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_SET_VIRTUAL_REFRESH_RATE_DATA_V1.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: reservedEx
     path: ../NVAPIWrapper/cs_generated/_NV_SET_VIRTUAL_REFRESH_RATE_DATA_V1.cs

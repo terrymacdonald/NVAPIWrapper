@@ -18,7 +18,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_ENCODER_TYPE.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: _NV_ENCODER_TYPE
     path: ../NVAPIWrapper/cs_generated/_NV_ENCODER_TYPE.cs
@@ -44,7 +44,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_ENCODER_TYPE.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_ENCODER_H264
     path: ../NVAPIWrapper/cs_generated/_NV_ENCODER_TYPE.cs
@@ -71,7 +71,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_ENCODER_TYPE.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_ENCODER_HEVC
     path: ../NVAPIWrapper/cs_generated/_NV_ENCODER_TYPE.cs
@@ -98,7 +98,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_ENCODER_TYPE.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: NV_ENCODER_UNKNOWN
     path: ../NVAPIWrapper/cs_generated/_NV_ENCODER_TYPE.cs

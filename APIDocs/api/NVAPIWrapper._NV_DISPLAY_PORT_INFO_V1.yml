@@ -55,7 +55,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_DISPLAY_PORT_INFO_V1.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: _NV_DISPLAY_PORT_INFO_V1
     path: ../NVAPIWrapper/cs_generated/_NV_DISPLAY_PORT_INFO_V1.cs
@@ -88,7 +88,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_DISPLAY_PORT_INFO_V1.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: version
     path: ../NVAPIWrapper/cs_generated/_NV_DISPLAY_PORT_INFO_V1.cs
@@ -116,7 +116,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_DISPLAY_PORT_INFO_V1.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: dpcd_ver
     path: ../NVAPIWrapper/cs_generated/_NV_DISPLAY_PORT_INFO_V1.cs
@@ -144,7 +144,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_DISPLAY_PORT_INFO_V1.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: maxLinkRate
     path: ../NVAPIWrapper/cs_generated/_NV_DISPLAY_PORT_INFO_V1.cs
@@ -172,7 +172,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_DISPLAY_PORT_INFO_V1.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: maxLaneCount
     path: ../NVAPIWrapper/cs_generated/_NV_DISPLAY_PORT_INFO_V1.cs
@@ -200,7 +200,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_DISPLAY_PORT_INFO_V1.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: curLinkRate
     path: ../NVAPIWrapper/cs_generated/_NV_DISPLAY_PORT_INFO_V1.cs
@@ -228,7 +228,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_DISPLAY_PORT_INFO_V1.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: curLaneCount
     path: ../NVAPIWrapper/cs_generated/_NV_DISPLAY_PORT_INFO_V1.cs
@@ -256,7 +256,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_DISPLAY_PORT_INFO_V1.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: colorFormat
     path: ../NVAPIWrapper/cs_generated/_NV_DISPLAY_PORT_INFO_V1.cs
@@ -284,7 +284,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_DISPLAY_PORT_INFO_V1.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: dynamicRange
     path: ../NVAPIWrapper/cs_generated/_NV_DISPLAY_PORT_INFO_V1.cs
@@ -312,7 +312,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_DISPLAY_PORT_INFO_V1.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: colorimetry
     path: ../NVAPIWrapper/cs_generated/_NV_DISPLAY_PORT_INFO_V1.cs
@@ -340,7 +340,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_DISPLAY_PORT_INFO_V1.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: bpc
     path: ../NVAPIWrapper/cs_generated/_NV_DISPLAY_PORT_INFO_V1.cs
@@ -368,7 +368,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_DISPLAY_PORT_INFO_V1.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: _bitfield
     path: ../NVAPIWrapper/cs_generated/_NV_DISPLAY_PORT_INFO_V1.cs
@@ -395,7 +395,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_DISPLAY_PORT_INFO_V1.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: isDp
     path: ../NVAPIWrapper/cs_generated/_NV_DISPLAY_PORT_INFO_V1.cs
@@ -425,7 +425,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_DISPLAY_PORT_INFO_V1.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: isInternalDp
     path: ../NVAPIWrapper/cs_generated/_NV_DISPLAY_PORT_INFO_V1.cs
@@ -455,7 +455,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_DISPLAY_PORT_INFO_V1.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: isColorCtrlSupported
     path: ../NVAPIWrapper/cs_generated/_NV_DISPLAY_PORT_INFO_V1.cs
@@ -485,7 +485,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_DISPLAY_PORT_INFO_V1.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: is6BPCSupported
     path: ../NVAPIWrapper/cs_generated/_NV_DISPLAY_PORT_INFO_V1.cs
@@ -515,7 +515,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_DISPLAY_PORT_INFO_V1.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: is8BPCSupported
     path: ../NVAPIWrapper/cs_generated/_NV_DISPLAY_PORT_INFO_V1.cs
@@ -545,7 +545,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_DISPLAY_PORT_INFO_V1.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: is10BPCSupported
     path: ../NVAPIWrapper/cs_generated/_NV_DISPLAY_PORT_INFO_V1.cs
@@ -575,7 +575,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_DISPLAY_PORT_INFO_V1.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: is12BPCSupported
     path: ../NVAPIWrapper/cs_generated/_NV_DISPLAY_PORT_INFO_V1.cs
@@ -605,7 +605,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_DISPLAY_PORT_INFO_V1.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: is16BPCSupported
     path: ../NVAPIWrapper/cs_generated/_NV_DISPLAY_PORT_INFO_V1.cs
@@ -635,7 +635,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_DISPLAY_PORT_INFO_V1.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: isYCrCb420Supported
     path: ../NVAPIWrapper/cs_generated/_NV_DISPLAY_PORT_INFO_V1.cs
@@ -665,7 +665,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_DISPLAY_PORT_INFO_V1.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: isYCrCb422Supported
     path: ../NVAPIWrapper/cs_generated/_NV_DISPLAY_PORT_INFO_V1.cs
@@ -695,7 +695,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_DISPLAY_PORT_INFO_V1.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: isYCrCb444Supported
     path: ../NVAPIWrapper/cs_generated/_NV_DISPLAY_PORT_INFO_V1.cs
@@ -725,7 +725,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_DISPLAY_PORT_INFO_V1.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: isRgb444SupportedOnCurrentMode
     path: ../NVAPIWrapper/cs_generated/_NV_DISPLAY_PORT_INFO_V1.cs
@@ -755,7 +755,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_DISPLAY_PORT_INFO_V1.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: isYCbCr444SupportedOnCurrentMode
     path: ../NVAPIWrapper/cs_generated/_NV_DISPLAY_PORT_INFO_V1.cs
@@ -785,7 +785,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_DISPLAY_PORT_INFO_V1.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: isYCbCr422SupportedOnCurrentMode
     path: ../NVAPIWrapper/cs_generated/_NV_DISPLAY_PORT_INFO_V1.cs
@@ -815,7 +815,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_DISPLAY_PORT_INFO_V1.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: isYCbCr420SupportedOnCurrentMode
     path: ../NVAPIWrapper/cs_generated/_NV_DISPLAY_PORT_INFO_V1.cs
@@ -845,7 +845,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_DISPLAY_PORT_INFO_V1.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: is6BPCSupportedOnCurrentMode
     path: ../NVAPIWrapper/cs_generated/_NV_DISPLAY_PORT_INFO_V1.cs
@@ -875,7 +875,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_DISPLAY_PORT_INFO_V1.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: is8BPCSupportedOnCurrentMode
     path: ../NVAPIWrapper/cs_generated/_NV_DISPLAY_PORT_INFO_V1.cs
@@ -905,7 +905,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_DISPLAY_PORT_INFO_V1.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: is10BPCSupportedOnCurrentMode
     path: ../NVAPIWrapper/cs_generated/_NV_DISPLAY_PORT_INFO_V1.cs
@@ -935,7 +935,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_DISPLAY_PORT_INFO_V1.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: is12BPCSupportedOnCurrentMode
     path: ../NVAPIWrapper/cs_generated/_NV_DISPLAY_PORT_INFO_V1.cs
@@ -965,7 +965,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_DISPLAY_PORT_INFO_V1.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: is16BPCSupportedOnCurrentMode
     path: ../NVAPIWrapper/cs_generated/_NV_DISPLAY_PORT_INFO_V1.cs
@@ -995,7 +995,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_DISPLAY_PORT_INFO_V1.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: isMonxvYCC601Capable
     path: ../NVAPIWrapper/cs_generated/_NV_DISPLAY_PORT_INFO_V1.cs
@@ -1025,7 +1025,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_DISPLAY_PORT_INFO_V1.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: isMonxvYCC709Capable
     path: ../NVAPIWrapper/cs_generated/_NV_DISPLAY_PORT_INFO_V1.cs
@@ -1055,7 +1055,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_DISPLAY_PORT_INFO_V1.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: isMonsYCC601Capable
     path: ../NVAPIWrapper/cs_generated/_NV_DISPLAY_PORT_INFO_V1.cs
@@ -1085,7 +1085,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_DISPLAY_PORT_INFO_V1.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: isMonAdobeYCC601Capable
     path: ../NVAPIWrapper/cs_generated/_NV_DISPLAY_PORT_INFO_V1.cs
@@ -1115,7 +1115,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_DISPLAY_PORT_INFO_V1.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: isMonAdobeRGBCapable
     path: ../NVAPIWrapper/cs_generated/_NV_DISPLAY_PORT_INFO_V1.cs
@@ -1145,7 +1145,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_DISPLAY_PORT_INFO_V1.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: isMonBT2020RGBCapable
     path: ../NVAPIWrapper/cs_generated/_NV_DISPLAY_PORT_INFO_V1.cs
@@ -1175,7 +1175,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_DISPLAY_PORT_INFO_V1.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: isMonBT2020YCCCapable
     path: ../NVAPIWrapper/cs_generated/_NV_DISPLAY_PORT_INFO_V1.cs
@@ -1205,7 +1205,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_DISPLAY_PORT_INFO_V1.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: isMonBT2020cYCCCapable
     path: ../NVAPIWrapper/cs_generated/_NV_DISPLAY_PORT_INFO_V1.cs
@@ -1235,7 +1235,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_DISPLAY_PORT_INFO_V1.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: reserved
     path: ../NVAPIWrapper/cs_generated/_NV_DISPLAY_PORT_INFO_V1.cs

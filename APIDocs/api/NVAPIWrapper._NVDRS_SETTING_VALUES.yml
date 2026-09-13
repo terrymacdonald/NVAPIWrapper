@@ -11,6 +11,7 @@ items:
   - NVAPIWrapper._NVDRS_SETTING_VALUES.settingType
   - NVAPIWrapper._NVDRS_SETTING_VALUES.settingValues
   - NVAPIWrapper._NVDRS_SETTING_VALUES.u32DefaultValue
+  - NVAPIWrapper._NVDRS_SETTING_VALUES.u64DefaultValue
   - NVAPIWrapper._NVDRS_SETTING_VALUES.version
   - NVAPIWrapper._NVDRS_SETTING_VALUES.wszDefaultValue
   langs:
@@ -23,7 +24,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVDRS_SETTING_VALUES.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: _NVDRS_SETTING_VALUES
     path: ../NVAPIWrapper/cs_generated/_NVDRS_SETTING_VALUES.cs
@@ -56,7 +57,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVDRS_SETTING_VALUES.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: version
     path: ../NVAPIWrapper/cs_generated/_NVDRS_SETTING_VALUES.cs
@@ -84,7 +85,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVDRS_SETTING_VALUES.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: numSettingValues
     path: ../NVAPIWrapper/cs_generated/_NVDRS_SETTING_VALUES.cs
@@ -112,7 +113,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVDRS_SETTING_VALUES.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: settingType
     path: ../NVAPIWrapper/cs_generated/_NVDRS_SETTING_VALUES.cs
@@ -140,7 +141,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVDRS_SETTING_VALUES.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: Anonymous
     path: ../NVAPIWrapper/cs_generated/_NVDRS_SETTING_VALUES.cs
@@ -168,7 +169,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVDRS_SETTING_VALUES.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: settingValues
     path: ../NVAPIWrapper/cs_generated/_NVDRS_SETTING_VALUES.cs
@@ -196,7 +197,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVDRS_SETTING_VALUES.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: u32DefaultValue
     path: ../NVAPIWrapper/cs_generated/_NVDRS_SETTING_VALUES.cs
@@ -236,7 +237,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVDRS_SETTING_VALUES.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: binaryDefaultValue
     path: ../NVAPIWrapper/cs_generated/_NVDRS_SETTING_VALUES.cs
@@ -276,7 +277,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NVDRS_SETTING_VALUES.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: wszDefaultValue
     path: ../NVAPIWrapper/cs_generated/_NVDRS_SETTING_VALUES.cs
@@ -298,6 +299,46 @@ items:
 
       Public ReadOnly Property wszDefaultValue As Span(Of UShort)
   overload: NVAPIWrapper._NVDRS_SETTING_VALUES.wszDefaultValue*
+  attributes:
+  - type: System.Diagnostics.CodeAnalysis.UnscopedRefAttribute
+    ctor: System.Diagnostics.CodeAnalysis.UnscopedRefAttribute.#ctor
+    arguments: []
+- uid: NVAPIWrapper._NVDRS_SETTING_VALUES.u64DefaultValue
+  commentId: P:NVAPIWrapper._NVDRS_SETTING_VALUES.u64DefaultValue
+  id: u64DefaultValue
+  parent: NVAPIWrapper._NVDRS_SETTING_VALUES
+  langs:
+  - csharp
+  - vb
+  name: u64DefaultValue
+  nameWithType: _NVDRS_SETTING_VALUES.u64DefaultValue
+  fullName: NVAPIWrapper._NVDRS_SETTING_VALUES.u64DefaultValue
+  type: Property
+  source:
+    remote:
+      path: NVAPIWrapper/cs_generated/_NVDRS_SETTING_VALUES.cs
+      branch: develop
+      repo: https://github.com/terrymacdonald/NVAPIWrapper.git
+    id: u64DefaultValue
+    path: ../NVAPIWrapper/cs_generated/_NVDRS_SETTING_VALUES.cs
+    startLine: 61
+  assemblies:
+  - NVAPIWrapper
+  namespace: NVAPIWrapper
+  example: []
+  syntax:
+    content: >-
+      [UnscopedRef]
+
+      public ref ulong u64DefaultValue { get; }
+    parameters: []
+    return:
+      type: System.UInt64
+    content.vb: >-
+      <UnscopedRef>
+
+      Public ReadOnly ByRef Property u64DefaultValue As ULong
+  overload: NVAPIWrapper._NVDRS_SETTING_VALUES.u64DefaultValue*
   attributes:
   - type: System.Diagnostics.CodeAnalysis.UnscopedRefAttribute
     ctor: System.Diagnostics.CodeAnalysis.UnscopedRefAttribute.#ctor
@@ -678,3 +719,20 @@ references:
   - name: " "
   - name: T
   - name: )
+- uid: NVAPIWrapper._NVDRS_SETTING_VALUES.u64DefaultValue*
+  commentId: Overload:NVAPIWrapper._NVDRS_SETTING_VALUES.u64DefaultValue
+  href: NVAPIWrapper._NVDRS_SETTING_VALUES.html#NVAPIWrapper__NVDRS_SETTING_VALUES_u64DefaultValue
+  name: u64DefaultValue
+  nameWithType: _NVDRS_SETTING_VALUES.u64DefaultValue
+  fullName: NVAPIWrapper._NVDRS_SETTING_VALUES.u64DefaultValue
+- uid: System.UInt64
+  commentId: T:System.UInt64
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.uint64
+  name: ulong
+  nameWithType: ulong
+  fullName: ulong
+  nameWithType.vb: ULong
+  fullName.vb: ULong
+  name.vb: ULong

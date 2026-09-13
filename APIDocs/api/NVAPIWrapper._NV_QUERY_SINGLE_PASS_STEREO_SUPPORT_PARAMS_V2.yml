@@ -20,7 +20,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_QUERY_SINGLE_PASS_STEREO_SUPPORT_PARAMS_V2.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: _NV_QUERY_SINGLE_PASS_STEREO_SUPPORT_PARAMS_V2
     path: ../NVAPIWrapper/cs_generated/_NV_QUERY_SINGLE_PASS_STEREO_SUPPORT_PARAMS_V2.cs
@@ -53,7 +53,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_QUERY_SINGLE_PASS_STEREO_SUPPORT_PARAMS_V2.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: version
     path: ../NVAPIWrapper/cs_generated/_NV_QUERY_SINGLE_PASS_STEREO_SUPPORT_PARAMS_V2.cs
@@ -81,7 +81,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_QUERY_SINGLE_PASS_STEREO_SUPPORT_PARAMS_V2.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: _bitfield
     path: ../NVAPIWrapper/cs_generated/_NV_QUERY_SINGLE_PASS_STEREO_SUPPORT_PARAMS_V2.cs
@@ -108,7 +108,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_QUERY_SINGLE_PASS_STEREO_SUPPORT_PARAMS_V2.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: bSinglePassStereoSupported
     path: ../NVAPIWrapper/cs_generated/_NV_QUERY_SINGLE_PASS_STEREO_SUPPORT_PARAMS_V2.cs
@@ -138,7 +138,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_QUERY_SINGLE_PASS_STEREO_SUPPORT_PARAMS_V2.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: bSinglePassStereoXYZWSupported
     path: ../NVAPIWrapper/cs_generated/_NV_QUERY_SINGLE_PASS_STEREO_SUPPORT_PARAMS_V2.cs
@@ -168,7 +168,7 @@ items:
   source:
     remote:
       path: NVAPIWrapper/cs_generated/_NV_QUERY_SINGLE_PASS_STEREO_SUPPORT_PARAMS_V2.cs
-      branch: main
+      branch: develop
       repo: https://github.com/terrymacdonald/NVAPIWrapper.git
     id: reserved
     path: ../NVAPIWrapper/cs_generated/_NV_QUERY_SINGLE_PASS_STEREO_SUPPORT_PARAMS_V2.cs
