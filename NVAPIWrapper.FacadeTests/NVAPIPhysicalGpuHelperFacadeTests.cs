@@ -560,6 +560,60 @@ namespace NVAPIWrapper.FacadeTests
         }
 
         [SkippableFact]
+        public void GetUuid_ShouldReturnDto()
+        {
+            var gpu = GetFirstGpuOrSkip();
+            var info = FacadeTestUtils.InvokeOrSkip(() => gpu.GetUuid(), "GPU UUID unsupported");
+            Skip.If(info == null, "GPU UUID not supported.");
+
+            var dto = info.Value;
+            Assert.Equal(16, dto.Value.Length);
+            Assert.True(dto.Equals(dto));
+            _ = dto.GetHashCode();
+        }
+
+        [SkippableFact]
+        public void GetOverclockStatus_ShouldReturnDto()
+        {
+            var gpu = GetFirstGpuOrSkip();
+            var info = FacadeTestUtils.InvokeOrSkip(() => gpu.GetOverclockStatus(), "GPU overclock status unsupported");
+            Skip.If(info == null, "GPU overclock status not supported.");
+
+            var dto = info.Value;
+            Assert.True(dto.Equals(dto));
+            _ = dto.GetHashCode();
+        }
+
+        [SkippableFact]
+        public void GetNvlinkCapsEx_ShouldReturnDto()
+        {
+            var gpu = GetFirstGpuOrSkip();
+            var info = FacadeTestUtils.InvokeOrSkip(() => gpu.GetNvlinkCapsEx(), "Extended NVLINK caps unsupported");
+            Skip.If(info == null, "Extended NVLINK caps not supported.");
+
+            var dto = info.Value;
+            Assert.True(dto.LinkMaskCount <= 128);
+            Assert.Equal((int)dto.LinkMaskCount, dto.LinkMasks.Length);
+            Assert.True(dto.Equals(dto));
+            _ = dto.GetHashCode();
+        }
+
+        [SkippableFact]
+        public void GetNvlinkStatusEx_ShouldReturnDto()
+        {
+            var gpu = GetFirstGpuOrSkip();
+            var info = FacadeTestUtils.InvokeOrSkip(() => gpu.GetNvlinkStatusEx(), "Extended NVLINK status unsupported");
+            Skip.If(info == null, "Extended NVLINK status not supported.");
+
+            var dto = info.Value;
+            Assert.True(dto.LinkMaskCount <= 128);
+            Assert.Equal((int)dto.LinkMaskCount, dto.LinkMasks.Length);
+            Assert.Equal(128, dto.LinkInfo.Length);
+            Assert.True(dto.Equals(dto));
+            _ = dto.GetHashCode();
+        }
+
+        [SkippableFact]
         public void GetGpuInfo_ShouldReturnDto()
         {
             var gpu = GetFirstGpuOrSkip();
